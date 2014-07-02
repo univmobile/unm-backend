@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns="http://univmobile.anwrs.com/university_menu" xmlns:university="http://univmobile.anwrs.com/university" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univmobile.anwrs.com/university_menu **">
+
+  <!--Define the title of the menu (current screen) with localization-->
+  <title>
+    <lang id="FR">Tests</lang>
+    <lang id="EN">Tests</lang> 
+  </title>
+
+
+
+<item>
+    <title>
+      <lang id="FR">Rue des facs</lang>
+      <lang id="EN">Rue des facs</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/ruedesfacs.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/ruedesfacs.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/ruedesfacs.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://www.ruedesfacs.fr" />
+
+  </item>
+<item>
+    <title>
+      <lang id="FR">UnivActus</lang>
+      <lang id="EN">UnivActus</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+ <link url="http://univmobile.fr/apps/univactus/?udid=" />
+</item>
+
+<!--
+<item>
+    <title>
+      <lang id="FR">Test Paris1</lang>
+      <lang id="EN">Test Paris1</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://www.univ-paris-diderot.fr/univmobile/index.php?univId=paris1&amp;udid=" />
+
+  </item>
+
+<item>
+    <title>
+      <lang id="FR">Test Paris7</lang>
+      <lang id="EN">Test Paris7</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://www.univ-paris-diderot.fr/univmobile/index.php?univId=paris7&amp;udid=" />
+
+  </item>
+
+<item>
+    <title>
+      <lang id="FR">Test Paris5</lang>
+      <lang id="EN">Test Paris5</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://www.univ-paris-diderot.fr/univmobile/index.php?univId=paris5&amp;udid=" />
+
+  </item>
+
+  <item>
+    <title>
+      <lang id="FR">Test crous Paris</lang>
+      <lang id="EN">Test crous Paris</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://www.univ-paris-diderot.fr/univmobile/index.php?univId=crousParis&amp;udid=" />
+
+  </item>
+
+
+  <item>
+    <title>
+      <lang id="FR">Test crous Creteil</lang>
+      <lang id="EN">Test crous Creteil</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://www.univ-paris-diderot.fr/univmobile/index.php?univId=crousCreteil&amp;udid=" />
+
+  </item>
+
+
+
+  <item>
+    <title>
+      <lang id="FR">Test crous Versailles</lang>
+      <lang id="EN">Test crous Versailles</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://www.univ-paris-diderot.fr/univmobile/index.php?univId=crousVersailles&amp;udid=" />
+
+  </item>
+
+
+
+
+<item>
+    <title>
+      <lang id="FR">Test Annuaire2</lang>
+      <lang id="EN">Test Annuaire2</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://entergo-unpidf.univ-paris1.fr/esup-annuaire2-0.2.2" />
+
+  </item>
+-->
+
+ <item>
+    <title>
+      <lang id="FR">Géocampus</lang>
+      <lang id="EN">Geocampus</lang>
+    </title>
+    <interfaces>
+      <iphone>false</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+    <link url="http://m.geocampus.fr/choix.php?univId=paris1,crousParis" />
+</item>
+
+<!--
+
+
+ <item>
+    <title>
+      <lang id="FR">Géocampus</lang>
+      <lang id="EN">Geocampus</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>false</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>40</width>
+      <height>40</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>60</width>
+      <height>60</height>
+      <format>big</format>
+    </icon>
+
+    <geocampus />
+  </item>
+-->
+
+
+
+  <!--The help is on a static page, if this tag is not displayed then the help is not displayed.  url is optional it can be use to have an external url-->
+  <help url="" />
+
+</menu>

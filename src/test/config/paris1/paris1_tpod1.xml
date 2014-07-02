@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns="http://univmobile.anwrs.com/university_menu" xmlns:university="http://univmobile.anwrs.com/university" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univmobile.anwrs.com/university_menu **">
+
+  <!--Define the title of the menu (current screen) with localization-->
+  <title>
+    <lang id="FR">Podcast de Paris 1</lang>
+    <lang id="EN">Podcast of Paris 1</lang> 
+  </title>
+
+  <item>
+    <title>
+      <lang id="FR">Présentation, découverte et actualités de l'université</lang>
+      <lang id="EN">Présentation, découverte et actualités de l'université</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+    
+    <podcast maxdisplay_perpage="8">
+        <rss category="L'Université Paris 1 Panthéon-Sorbonne" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3,pdf&amp;CODE_RUBRIQUE=epi-itu&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Les masters de Paris 1 " url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-546&amp;NOMBRE=20&amp;PJ=OUI" />
+
+        <rss category="Rencontres Forum Paris 1-Entreprises - 2008" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;CODE_RUBRIQUE=1241092594451&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Rencontres Forum Paris 1-Entreprises - 2009" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;CODE_RUBRIQUE=epi-217-itwpro2009&amp;NOMBRE=20&amp;PJ=OUI" />
+
+        <rss category="Rencontres Forum Juridique - 2007" url="http://epi.univ-paris1.fr/forum-juridique/2007/itunes" />
+        <rss category="Rencontres Forum Juridique - 2008" url="http://epi.univ-paris1.fr/forum-juridique/2008/itunes" />
+        <rss category="Rencontres Forum Juridique - 2009" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?FORMAT=mp3&amp;version=ITUNES&amp;CODE_RUBRIQUE=epi-182-itwpro-2009&amp;NOMBRE=20&amp;PJ=OUI" />
+
+        <rss category="Le numérique à Paris 1" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-541&amp;NOMBRE=50&amp;PJ=OUI" />
+    </podcast>
+  </item>
+
+  <item>
+    <title>
+      <lang id="FR">Cours, séminaires, conférences, colloques</lang>
+      <lang id="EN">Cours, séminaires, conférences, colloques</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+	<submenu id="tpod12" /> 
+  </item>
+
+  <item>
+    <title>
+      <lang id="FR">Départements, écoles, instituts, centres de formation</lang>
+      <lang id="EN">Départements, écoles, instituts, centres de formation</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+    
+    <podcast maxdisplay_perpage="8">
+        <rss category="CAVEJ - Droit constitutionnel et institutions politiques (L1)" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-561&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="CAVEJ - Droit administratif et institutions administratives (L2)" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;CODE_RUBRIQUE=epi-562&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="CAVEJ - Droit du travail (L3)" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-563&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="CAVEJ - Droit des services publics (M1)" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;CODE_RUBRIQUE=epi-564&amp;NOMBRE=20&amp;PJ=OUI" />
+    </podcast>
+  </item>
+    
+  <!--The help is on a static page, if this tag is not displayed then the help is not displayed.  url is optional it can be use to have an external url-->
+  <help url="" />
+
+</menu>

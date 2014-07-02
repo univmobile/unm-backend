@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<universities xmlns="http://univmobile.anwrs.com/universities" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univmobile.anwrs.com/universities **">
+  <university>
+    <name>Paris 1 Panthéon-Sorbonne</name>
+    <url>file:///home/univmobile/www/resources/config/paris1/config.xml</url>
+    <id>paris1</id>
+  </university>
+ 
+  <university>
+    <name>Paris 2 Panthéon-Assas</name>
+    <url>file:///home/univmobile/www/resources/config/paris2/config.xml</url>
+    <id>paris2</id>
+    <visibility>hidden</visibility>
+  </university>
+
+  <university>
+    <name>Paris 3 Sorbonne Nouvelle</name>
+    <url>file:///home/univmobile/www/resources/config/paris3/config.xml</url>
+    <id>paris3</id>
+  </university>
+
+  <university>
+    <name>Paris-Sorbonne</name>
+    <url>file:///home/univmobile/www/resources/config/paris4/config.xml</url>
+    <id>paris4</id>
+    <visibility>hidden</visibility>
+  </university>
+
+  <university>
+    <name>Paris Dauphine</name>
+    <url>file:///home/univmobile/www/resources/config/dauphine/config.xml</url>
+    <id>dauphine</id>
+    <visibility>hidden</visibility>
+  </university>
+
+   <university>
+    <name>Paris Nord</name>
+    <url>file:///home/univmobile/www/resources/config/paris13/config.xml</url>
+    <id>paris13</id>
+  </university>
+  <university>
+    <name>UVSQ</name>
+    <url>file:///home/univmobile/www/resources/config/uvsq/config.xml</url>
+    <id>uvsq</id>
+  </university>
+  <university>
+    <name>Muséum national d'Histoire naturelle</name>
+    <url>file:///home/univmobile/www/resources/config/museum/config.xml</url>
+    <id>museum</id>
+  </university>
+  <university>
+    <name>Evry-Val d'Essonne</name>
+    <url>file:///home/univmobile/www/resources/config/evry/config.xml</url>
+    <id>evry</id>
+  </university>
+
+ <university>
+    <name>Paris Descartes</name>
+    <url>file:///home/univmobile/www/resources/config/paris5/config.xml</url>
+    <id>paris5</id>
+    <visibility>hidden</visibility>
+  </university>
+
+ <university>
+    <name>UPMC</name>
+    <url>file:///home/univmobile/www/resources/config/paris6/config.xml</url>
+    <id>paris6</id>
+  </university>
+
+ <university>
+    <name>Paris Diderot</name>
+    <url>file:///home/univmobile/www/resources/config/paris7/config.xml</url>
+    <id>paris7</id>
+  </university>
+
+ <university>
+    <name>Paris Diderot Test</name>
+    <url>file:///home/univmobile/www/resources/config/paris7bis/config.xml</url>
+    <id>paris7bis</id>
+    <visibility>hidden</visibility>
+  </university>
+
+
+ <university>
+    <name>Paris 8</name>
+    <url>file:///home/univmobile/www/resources/config/paris8/config.xml</url>
+    <id>paris8</id>
+ </university>
+
+ <university>
+    <name>Paris Ouest Nanterre la Défense</name>
+    <url>file:///home/univmobile/www/resources/config/paris10/config.xml</url>
+    <id>paris10</id>   
+  </university>
+
+ <university>
+    <name>Paris-Sud</name>
+    <url>file:///home/univmobile/www/resources/config/paris11/config.xml</url>
+    <id>paris11</id>
+  </university>
+
+ <university>
+    <name>UPEC</name>
+    <url>file:///home/univmobile/www/resources/config/upec/config.xml</url>
+    <id>upec</id>
+  </university>
+
+<university>
+    <name>Cergy-Pontoise</name>
+    <url>file:///home/univmobile/www/resources/config/ucp/config.xml</url>
+    <id>ucp</id>
+  </university>
+
+
+ <university>
+    <name>CROUS de Créteil</name>
+    <url>file:///home/univmobile/www/resources/config/crousCreteil/config.xml</url>
+    <id>crousCreteil</id>
+    <visibility>hidden</visibility>
+  </university>
+
+ <university>
+    <name>CROUS de Poitiers</name>
+    <url>file:///home/univmobile/www/resources/config/crousPoitiers/config.xml</url>
+    <id>crousPoitiers</id>
+    <visibility>hidden</visibility>
+  </university>
+
+
+ <university>
+    <name>CROUS de Paris</name>
+    <url>file:///home/univmobile/www/resources/config/crousParis/config.xml</url>
+    <id>crousParis</id>
+    <visibility>hidden</visibility>
+  </university>
+
+ <university>
+    <name>CROUS Versailles</name>
+    <url>file:///home/univmobile/www/resources/config/crousVersailles/config.xml</url>
+    <id>crousVersailles</id>  
+  </university>
+
+ <university>
+    <name>ENS Cachan</name>
+    <url>file:///home/univmobile/www/resources/config/enscachan/config.xml</url>
+    <id>enscachan</id>
+  </university>
+
+
+
+  <university>
+    <name>ENSIIE</name>
+    <url>file:///home/univmobile/www/resources/config/ensiie/config.xml</url>
+    <id>ensiie</id>
+  </university>
+
+ <university>
+    <name>Tests</name>
+    <url>file:///home/univmobile/www/resources/config/testPush/config.xml</url>
+    <id>testPush</id>
+    <visibility>hidden</visibility>
+  </university>
+
+ <university>
+    <name>UNPIdF</name>
+    <url>file:///home/univmobile/www/resources/config/unpidf/config.xml</url>
+    <id>unpidf</id>
+  </university>
+
+ <university>
+    <name>École nationale des chartes</name>
+    <url>file:///home/univmobile/www/resources/config/enc/config.xml</url>
+    <id>enc</id>
+  </university>
+
+
+
+</universities>
+

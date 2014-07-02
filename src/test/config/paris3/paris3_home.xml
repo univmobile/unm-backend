@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns="http://univmobile.anwrs.com/university_menu" xmlns:university="http://univmobile.anwrs.com/university" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univmobile.anwrs.com/university_menu **">
+
+  <!--Define the title of the menu (current screen) with localization-->
+  <title>
+    <lang id="FR">Université Sorbonne Nouvelle Paris 3 </lang>
+    <lang id="EN">University of Sorbonne Nouvelle Paris 3 </lang> 
+  </title>
+
+<item>
+    <title>
+      <lang id="FR">Actualités</lang>
+      <lang id="EN">News</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <news maxdisplay_homepage="2" maxdisplay_perpage="8">
+      <rss url="http://www.univ-paris3.fr/adminsite/webservices/export_rss.jsp?NOMBRE=10&amp;CODE_RUBRIQUE=&amp;LANGUE=0#KLINK%23KLINK" />
+    </news>
+</item>
+
+
+
+
+<!-- 
+  <item>
+    <title>
+      <lang id="FR">Mon ENT</lang>
+      <lang id="EN">My ENT</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="https://cas.univ-paris3.fr/cas/login?service=http://isorbonne.univ-paris" />
+
+  </item>
+-->
+
+<item>
+    <title>
+      <lang id="FR">Catalogue SUDOC</lang>
+      <lang id="EN">SUDOC Catalogue</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconSudoc.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconSudoc.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconSudoc.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://m.sudoc.fr/sudocmobile/welcome.xhtml?iphone=true" />
+
+  </item>
+
+<item>
+    <title>
+      <lang id="FR">Rue des facs</lang>
+      <lang id="EN">Rue des facs</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/ruedesfacs.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/ruedesfacs.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/ruedesfacs.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="http://www.ruedesfacs.fr" />
+
+  </item>
+
+
+
+
+
+  <item>
+    <title>
+      <lang id="FR">Géocampus</lang>
+      <lang id="EN">Geocampus</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>false</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>40</width>
+      <height>40</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>60</width>
+      <height>60</height>
+      <format>big</format>
+    </icon>
+
+    <geocampus />
+  </item>
+
+<item>
+    <title>
+      <lang id="FR">Géocampus</lang>
+      <lang id="EN">Geocampus</lang>
+    </title>
+    <interfaces>
+      <iphone>false</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+    <link url="http://m.geocampus.fr/choix.php?univId=paris3" />
+</item>
+
+
+  <!--The help is on a static page, if this tag is not displayed then the help is not displayed.  url is optional it can be use to have an external url-->
+  <help url="" />
+
+</menu>

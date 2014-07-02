@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns="http://univmobile.anwrs.com/university_menu" xmlns:university="http://univmobile.anwrs.com/university" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univmobile.anwrs.com/university_menu **">
+
+  <!--Define the title of the menu (current screen) with localization-->
+  <title>
+    <lang id="FR">UNPIdF</lang>
+    <lang id="EN">UNPIdF</lang> 
+  </title>
+
+
+<item>
+    <title>
+      <lang id="FR">Maquette UnivActus</lang>
+      <lang id="EN">Maquette UnivActus</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+ <link url="http://univmobile.fr/apps/univactus/?udid=" />
+</item>
+
+
+
+ <item>
+    <title>
+      <lang id="FR">Maquette ENT UNPIdF</lang>
+      <lang id="EN">Maquette ENT UNPIdF</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="https://entergo-unpidf.univ-paris1.fr" />
+
+  </item>
+
+</menu>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<university xmlns="http://univmobile.anwrs.com/university" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univmobile.anwrs.com/university.xsd **">
+  <head>
+    <banner><!-- (multiple)(optional) define the banner for this university. It is possible to have three banners: big(=iPhone), medium and small. the size will depend of the mobile of the user-->
+      <url>/resources/img/banner/paris3_165px.gif</url><!--The URL to the image placed in the middle-->
+      <width>165</width><!--The real width of the image, number of pixels-->
+      <height>47</height><!--The real height of the image, number of pixels-->
+      <format>small</format><!--the format of the image: big, medium, small-->
+      <background-image-url></background-image-url><!--The URL to the image place in the background, extended on both sides of the logo-->
+      <background-color>#FFFFFF</background-color><!--The color of the background of the banner-->
+    </banner>
+    <banner>
+      <url>/resources/img/banner/paris3_224px.gif</url>
+      <width>224</width>
+      <height>63</height>
+      <format>medium</format>
+      <background-image-url></background-image-url>
+      <background-color>#FFFFFF</background-color>
+    </banner>
+    <banner>
+      <url>/resources/img/banner/paris3_320px.gif</url>
+      <width>320</width>
+      <height>90</height>
+      <format>big</format>
+      <background-image-url></background-image-url>
+      <background-color>#FFFFFF</background-color>
+    </banner>
+    <iphone-icon-url>/resources/img/banner/paris3_165px.gif</iphone-icon-url>
+    <iphone-banner-url>/resources/img/banner/paris3_320px.gif</iphone-banner-url>
+  </head>
+
+</university>

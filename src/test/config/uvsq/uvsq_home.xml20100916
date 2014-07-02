@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns="http://univmobile.anwrs.com/university_menu" xmlns:university="http://univmobile.anwrs.com/university" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univmobile.anwrs.com/university_menu **">
+
+  <!--Define the title of the menu (current screen) with localization-->
+  <title>
+    <lang id="FR">UVSQ</lang>
+    <lang id="EN">UVSQ</lang> 
+  </title>
+
+  <item>
+    <title>
+      <lang id="FR">Actualités</lang>
+      <lang id="EN">News</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconNews.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <news maxdisplay_homepage="2" maxdisplay_perpage="8">
+      <rss url="http://www.uvsq.fr/adminsite/webservices/export_rss.jsp" />
+    </news>
+  </item>
+
+  <item>
+    <title>
+      <lang id="FR">Mon ENT</lang>
+      <lang id="EN">My ENT</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconEnt.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+
+    <link url="https://cas-dev.uvsq.fr/login?service=https://portail.uvsq.fr/Login" />
+
+  </item>
+
+  <item>
+    <title>
+      <lang id="FR">Géocampus</lang>
+      <lang id="EN">Geocampus</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>false</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>40</width>
+      <height>40</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconGeo.gif</url>
+      <width>60</width>
+      <height>60</height>
+      <format>big</format>
+    </icon>
+
+    <geocampus />
+  </item>
+
+
+  <!--The help is on a static page, if this tag is not displayed then the help is not displayed.  url is optional it can be use to have an external url-->
+  <help url="" />
+
+</menu>

@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<menu xmlns="http://univmobile.anwrs.com/university_menu" xmlns:university="http://univmobile.anwrs.com/university" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://univmobile.anwrs.com/university_menu **">
+
+  <!--Define the title of the menu (current screen) with localization-->
+  <title>
+    <lang id="FR">Cours, séminaires, conférences, colloques</lang>
+    <lang id="EN">Cours, séminaires, conférences, colloques</lang> 
+  </title>
+
+  <item>
+    <title>
+      <lang id="FR">Droit, sciences politiques et sociales</lang>
+      <lang id="EN">Droit, sciences politiques et sociales</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+    
+    <podcast maxdisplay_perpage="8">
+        <rss category="Droit et internet" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?VERSION=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-287&amp;NOMBRE=30&amp;PJ=OUI" />
+        <rss category="Contraintes juridiques de l'Internet" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?VERSION=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-307&amp;NOMBRE=30&amp;PJ=OUI" />
+        <rss category="Droits d'auteur sur internet" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?VERSION=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-305&amp;NOMBRE=30&amp;PJ=OUI" />
+        <rss category="Echanges sécurisés sur internet" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?VERSION=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-306&amp;NOMBRE=30&amp;PJ=OUI" />
+        <rss category="Protection des libertés et TIC" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?VERSION=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-308&amp;NOMBRE=30&amp;PJ=OUI" />
+        <rss category="CAVEJ - Droit constitutionnel et institutions politiques (L1)" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-561&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="CAVEJ - Droit administratif et institutions administratives (L2)" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;CODE_RUBRIQUE=epi-562&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="CAVEJ - Droit du travail (L3)" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-563&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="CAVEJ - Droit des services publics (M1)" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;CODE_RUBRIQUE=epi-564&amp;NOMBRE=20&amp;PJ=OUI" />
+    </podcast>
+  </item>
+
+  <item>
+    <title>
+      <lang id="FR">Economie et Gestion</lang>
+      <lang id="EN">Economie et Gestion</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+    
+    <podcast maxdisplay_perpage="8">
+        <rss category="Neuroscience du consommateur" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-292&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Ethique de l'entreprise" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-315&amp;NOMBRE=20&amp;PJ=OUI" />
+    </podcast>
+  </item>
+
+  <item>
+    <title>
+      <lang id="FR">Mathématiques, informatique et applications</lang>
+      <lang id="EN">Mathématiques, informatique et applications</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+    
+    <podcast maxdisplay_perpage="8">
+        <rss category="Séminaires de probabilités et statistiques" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3&amp;CODE_RUBRIQUE=epi-359&amp;NOMBRE=100&amp;PJ=OUI" />
+        <rss category="Statistiques pour le traitement de l'image - session 1" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?TITLE=Stat-img-Session+1+%3A+Probl%E8mes+nouveaux+en+apprentissage+statistique&amp;version=ITUNES&amp;CODE_RUBRIQUE=pod-samos-statim0122-1&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Statistiques pour le traitement de l'image - session 2" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?TITLE=Stat-img-Session+2+%3A+Imagerie+bio-cellulaire&amp;version=ITUNES&amp;CODE_RUBRIQUE=pod-samos-statim0122-2&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Statistiques pour le traitement de l'image - session 3" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;TITLE=Stat-img-Session+3+%3A+Reconnaissance+de+formes+dans+des+images&amp;CODE_RUBRIQUE=pod-samos-statim0123-1&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Statistiques pour le traitement de l'image - session 4" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;TITLE=Stat-img-Session+4+%3A+Apprentissage+statistique+en+grande+dimension&amp;CODE_RUBRIQUE=pod-samos-statim0123-2&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Stochastic Dynamics - part 1" url="http://epi.univ-paris1.fr/samos-conf-stochastic-dynamics/11juin07/itunes" />
+        <rss category="Stochastic Dynamics - part 2" url="http://epi.univ-paris1.fr/samos-conf-stochastic-dynamics/12juin07/itunes" />
+        <rss category="Limit theorems and applications - session 1" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?TITLE=SAMOS+Limit+theorems+and+applications+20080114&amp;version=ITUNES&amp;CODE_RUBRIQUE=pod-samos-limthe0114&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Limit theorems and applications - session 2" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?VERSION=ITUNES&amp;TITLE=SAMOS+Limit+theorems+and+applications+20080115&amp;CODE_RUBRIQUE=pod-samos-limthe0115&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Limit theorems and applications - session 3" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?VERSION=ITUNES&amp;TITLE=SAMOS+Limit+theorems+and+applications+20080116&amp;CODE_RUBRIQUE=pod-samos-limthe0116&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Workshop on spatial statistics" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?VERSION=ITUNES&amp;TITLE=%3A+SAMOS+-+Workshop+on+spatial+statistics+%28Conf%E9rences%2C+2007%29+&amp;CODE_RUBRIQUE=epi-312&amp;NOMBRE=20&amp;PJ=OUI" />
+    </podcast>
+  </item>
+    
+    
+  <item>
+    <title>
+      <lang id="FR">Sciences humaines &amp; sociales</lang>
+      <lang id="EN">Sciences humaines &amp; sociales</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+    
+    <podcast maxdisplay_perpage="8">
+        <rss category="Masterclass Histoire des techniques Gilbert Simondon" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?VERSION=ITUNES&amp;CODE_RUBRIQUE=epi-319&amp;NOMBRE=20&amp;PJ=OUI" />
+        <rss category="Histoire de la notion de progrès" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;CODE_RUBRIQUE=epi-286&amp;NOMBRE=20&amp;PJ=OUI&amp;FORMAT=mp3" />
+    </podcast>
+  </item>
+    
+    
+  <item>
+    <title>
+      <lang id="FR">Arts</lang>
+      <lang id="EN">Arts</lang>
+    </title>
+    <interfaces>
+      <iphone>true</iphone>
+      <webmobile>true</webmobile>
+    </interfaces>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>small</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>medium</format>
+    </icon>
+    <icon>
+      <url>/resources/img/iconPodcast.gif</url>
+      <width>20</width>
+      <height>20</height>
+      <format>big</format>
+    </icon>
+    
+    <podcast maxdisplay_perpage="8">
+        <rss category="Ateliers de la recherche en design (Conférences, 2009)" url="http://epi.univ-paris1.fr/adminsite/webservices/export_rss.jsp?version=ITUNES&amp;FORMAT=mp3,pdf&amp;CODE_RUBRIQUE=epi-402&amp;NOMBRE=20&amp;PJ=OUI" />
+    </podcast>
+  </item>
+            
+  <!--The help is on a static page, if this tag is not displayed then the help is not displayed.  url is optional it can be use to have an external url-->
+  <help url="" />
+
+</menu>
