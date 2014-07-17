@@ -2,14 +2,13 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>fr.univmobile</groupId>
 	<artifactId>unm-backend</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 
 	<parent>
 		<groupId>fr.univmobile</groupId>
 		<artifactId>unm-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
+		<relativePath/>
 	</parent>
 
 	<name>unm-backend</name>
@@ -46,5 +45,33 @@
 			</url>
 		</site>
 	</distributionManagement>
+	<repositories>
+		<repository>
+			<id>vswip</id>
+			<name>Viewniverse Studio WIP Repository for releases</name>
+			<url>
+                http://univmobile.vswip.com/nexus/content/repositories/releases
+            </url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+		</repository>
+		<repository>
+			<id>vswip-snapshots</id>
+			<name>Viewniverse Studio WIP Repository for snapshots</name>
+			<url>
+                http://univmobile.vswip.com/nexus/content/repositories/snapshots
+            </url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+		</repository>
+	</repositories>
 
 </project>
