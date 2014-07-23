@@ -45,4 +45,26 @@
 		<servlet-name>BackendServlet</servlet-name>
 	</filter-mapping>
 
+	<servlet>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<servlet-class>fr.univmobile.web.commons.PlainContentServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/css</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/css/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/js</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/js/*</url-pattern>
+	</servlet-mapping>
+
 </web-app>
