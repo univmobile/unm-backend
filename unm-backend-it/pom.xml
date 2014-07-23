@@ -193,6 +193,40 @@
 				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
 				<tomcat.port>8380</tomcat.port>
 			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>selenium-maven-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>xvfb</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>xvfb</goal>
+								</goals>
+							</execution>
+							<execution>
+								<id>start-server</id>
+								<phase>process-test-classes</phase>
+								<goals>
+									<goal>start-server</goal>
+								</goals>
+								<configuration>
+									<background>true</background>
+								</configuration>
+							</execution>
+							<execution>
+								<id>stop-server</id>
+								<phase>prepare-package</phase>
+								<goals>
+									<goal>stop-server</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 		</profile>
 	</profiles>
 
