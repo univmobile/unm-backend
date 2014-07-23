@@ -30,9 +30,10 @@ public class SimpleSeleniumTest {
 		selenium.start();
 
 		selenium.open("/unm-backend" //
-				+ "?uid=tformica" //
-				+ "&eppn=tformica@univ-paris1.fr" //
-				+ "&remoteUser=tformica@univ-paris1.fr" //
+				+ "?NO_SHIB_uid=tformica" //
+				+ "&NO_SHIB_eppn=tformica@univ-paris1.fr" //
+				+ "&NO_SHIB_displayName=Toto+Formica" //
+				+ "&NO_SHIB_remoteUser=tformica@univ-paris1.fr" //
 		);
 
 		selenium.waitForPageToLoad(Integer.toString(10000));
