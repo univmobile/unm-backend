@@ -10,13 +10,16 @@ import org.junit.Test;
 import com.thoughtworks.selenium.DefaultSelenium;
 import com.thoughtworks.selenium.Selenium;
 
+import fr.univmobile.testutil.PropertiesUtils;
+
 public class SimpleSeleniumTest {
 
 	@Before
 	public void setUp() throws Exception {
 
 		final int seleniumPort = 8888;
-		final String url = "http://localhost:8080/";
+		final String url = "http://localhost:"
+				+ PropertiesUtils.getTestProperty("tomcat.port") + "/";
 
 		selenium = new DefaultSelenium("localhost", seleniumPort, "*firefox",
 				url);

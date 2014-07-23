@@ -152,11 +152,11 @@
 		<profile>
 			<id>dandriana</id>
 			<properties>
-				<ios.platformVersion.shouldBe>7.1</ios.platformVersion.shouldBe>
 				<cargo.containerId>tomcat7x</cargo.containerId>
 				<cargo.home>
 					/usr/local/apache-tomcat-7.0.39/
 				</cargo.home>
+				<tomcat.port>8080</tomcat.port>
 			</properties>
 			<build>
 				<plugins>
@@ -191,6 +191,7 @@
 			<properties>
 				<cargo.containerId>tomcat7x</cargo.containerId>
 				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
+				<tomcat.port>8380</tomcat.port>
 			</properties>
 		</profile>
 	</profiles>
