@@ -2,7 +2,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>unm-backend-app</artifactId>
+	<artifactId>unm-backend-app-noshib</artifactId>
 	<packaging>war</packaging>
 	
 	<parent>
@@ -11,14 +11,14 @@
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath/>
 	</parent>
-	
+
 	<dependencies>
 		<dependency>
-			<groupId>fr.univmobile</groupId>
+			<groupId>fr.univmobile</groupId>			
 			<artifactId>unm-backend-core</artifactId>
 		</dependency>	
 	</dependencies>
-
+	
 	<build>
 		<finalName>unm-backend</finalName>
 		<plugins>
@@ -75,9 +75,12 @@
 		</plugins>
 	</build>
 
-	<name>unm-backend-app</name>
+	<name>unm-backend-app-noshib</name>
 	<description>
-        J2EE webapp for UnivMobile backend web app.
+        J2EE webapp for UnivMobile backend web app,
+        intended to be testable with Continuous integration on
+        a plain environment,
+        and therefore without Shibboleth or even HTTPS.
     </description>
 	<url>
         http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}
@@ -91,12 +94,12 @@
             scm:git:https://github.com/univmobile/unm-backend.git
         </developerConnection>
 		<url>
-			https://github.com/univmobile/unm-backend/tree/master/unm-backend-app
+			https://github.com/univmobile/unm-backend/tree/master/unm-backend-app-noshib
         </url>
 	</scm>
 	<ciManagement>
 		<system>jenkins</system>
-		<url>http://univmobile.vswip.com/job/unm-backend-app</url>
+		<url>http://univmobile.vswip.com/job/unm-backend-app-noshib</url>
 	</ciManagement>
 	<licenses>
 		<license>
