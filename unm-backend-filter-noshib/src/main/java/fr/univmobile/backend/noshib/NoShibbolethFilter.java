@@ -42,13 +42,18 @@ import javax.servlet.http.HttpSession;
  * To mock the presence of Shibboleth, you must pass parameters within the HTTP
  * request:
  * <ul>
- * <li>NOSHIB_uid: will be transformed into a "<code>uid</code>" Shibboleth
+ * <li>NO_SHIB_uid: will be transformed into a "<code>uid</code>" Shibboleth
  * request attribute.
- * <li>NOSHIB_eppn: will be transformed into a "<code>eppn</code>" Shibboleth
+ * <li>NO_SHIB_eppn: will be transformed into a "<code>eppn</code>" Shibboleth
  * request attribute.
- * <li>NOSHIB_REMOTE_USER: will be transformed into a "<code>REMOTE_USER</code>"
+ * <li>NO_SHIB_displayName: will be transformed into a "<code>displayName</code>
+ * " Shibboleth request attribute.
+ * <li>NO_SHIB_remoteUser: will be transformed into a "<code>REMOTE_USER</code>"
  * Shibboleth request attribute.
  * </ul>
+ * 
+ * After the first request, thoses attributes are stored in session. To
+ * invalidate them, just pass the parameters with at least one value left empty.
  */
 public class NoShibbolethFilter implements Filter {
 
@@ -179,25 +184,32 @@ public class NoShibbolethFilter implements Filter {
 
 		request.setCharacterEncoding(UTF_8);
 
-		final String uidParam = request.getParameter("uid");
-		final String eppnParam = request.getParameter("eppn");
-		final String remoteUserParam = request.getParameter("remoteUser");
+		final String uidParam = //
+		request.getParameter("NO_SHIB_uid");
+		final String eppnParam = //
+		request.getParameter("NO_SHIB_eppn");
+		final String displayNameParam = //
+		request.getParameter("NO_SHIB_displayName");
+		final String remoteUserParam = //
+		request.getParameter("NO_SHIB_remoteUser");
 
 		final HttpSession httpSession = httpRequest.getSession();
 
 		final String HOLDER = NoShibbolethHolder.class.getName();
 
-		if (uidParam != null && eppnParam != null && remoteUserParam != null) {
+		if (uidParam != null && eppnParam != null && displayNameParam != null
+				&& remoteUserParam != null) {
 
 			if (isBlank(uidParam) || isBlank(eppnParam)
-					|| isBlank(remoteUserParam)) {
+					|| isBlank(displayNameParam) || isBlank(remoteUserParam)) {
 
 				httpSession.removeAttribute(HOLDER);
 
 			} else {
 
-				httpSession.setAttribute(HOLDER, new NoShibbolethHolder(
-						uidParam, eppnParam, remoteUserParam));
+				httpSession
+						.setAttribute(HOLDER, new NoShibbolethHolder(uidParam,
+								eppnParam, displayNameParam, remoteUserParam));
 			}
 		}
 
@@ -211,11 +223,13 @@ public class NoShibbolethFilter implements Filter {
 							+ " in order to mock the Shibboleth presence:" //
 							+ "\r\n           uid: " + uidParam //
 							+ "\r\n          eppn: " + eppnParam //
+							+ "\r\n   displayName: " + displayNameParam //
 							+ "\r\n    remoteUser: " + remoteUserParam);
 		}
 
 		request.setAttribute("uid", holder.uid);
 		request.setAttribute("eppn", holder.eppn);
+		request.setAttribute("displayName", holder.displayName);
 
 		return new HttpServletRequestWrapper(httpRequest) {
 			@Override
@@ -240,13 +254,15 @@ public class NoShibbolethFilter implements Filter {
 
 		public final String uid;
 		public final String eppn;
+		public final String displayName;
 		public final String remoteUser;
 
 		public NoShibbolethHolder(final String uid, final String eppn,
-				final String remoteUser) {
+				final String displayName, final String remoteUser) {
 
 			this.uid = checkNotNull(uid, "uid");
 			this.eppn = checkNotNull(eppn, "eppn");
+			this.displayName = checkNotNull(displayName, "displayName");
 			this.remoteUser = checkNotNull(remoteUser, "remoteUser");
 		}
 	}
