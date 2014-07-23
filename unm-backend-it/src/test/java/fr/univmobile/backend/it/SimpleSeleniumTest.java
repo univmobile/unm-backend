@@ -29,7 +29,11 @@ public class SimpleSeleniumTest {
 
 		selenium.start();
 
-		selenium.open("/unm-backend");
+		selenium.open("/unm-backend" //
+				+ "?uid=tformica" //
+				+ "&eppn=tformica@univ-paris1.fr" //
+				+ "&remoteUser=tformica@univ-paris1.fr" //
+		);
 
 		selenium.waitForPageToLoad(Integer.toString(10000));
 	}
