@@ -1,0 +1,95 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>unm-backend-filter-noshib</artifactId>
+	
+	<parent>
+		<groupId>fr.univmobile</groupId>
+		<artifactId>unm-backend-parent</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath/>
+	</parent>
+
+	<build>
+		<finalName>unm-backend-filter-noshib</finalName>
+	</build>
+
+	<name>unm-backend-filter-noshib</name>
+	<description>
+        J2EE servlet filter that mocks the use of Shibboleth
+        (and expectingly crashes if Shibboleth is indeed present.)
+    </description>
+	<url>
+        http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}
+    </url>
+
+	<scm>
+		<connection>
+            scm:git:https://github.com/univmobile/unm-backend.git
+        </connection>
+		<developerConnection>
+            scm:git:https://github.com/univmobile/unm-backend.git
+        </developerConnection>
+		<url>
+			https://github.com/univmobile/unm-backend/tree/master/unm-backend-filter-noshib
+        </url>
+	</scm>
+	<ciManagement>
+		<system>jenkins</system>
+		<url>http://univmobile.vswip.com/job/unm-backend-filter-noshib</url>
+	</ciManagement>
+	<licenses>
+		<license>
+			<name>LGPL v3</name>
+			<url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+		</license>
+	</licenses>
+	<distributionManagement>
+		<site>
+			<id>vswip</id>
+			<url>
+                dav:http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}
+            </url>
+		</site>
+	</distributionManagement>
+	
+	<repositories>
+		<repository>
+			<id>vswip</id>
+			<name>Viewniverse Studio WIP Repository for releases</name>
+			<url>
+                http://univmobile.vswip.com/nexus/content/repositories/releases
+            </url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>vswip-snapshots</id>
+			<name>Viewniverse Studio WIP Repository for snapshots</name>
+			<url>
+                http://univmobile.vswip.com/nexus/content/repositories/snapshots
+            </url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+	
+	<profiles>
+		<profile>
+			<id>dandriana</id>
+		</profile>
+		<profile>
+			<id>jenkins</id>
+		</profile>
+	</profiles>
+	
+</project>
