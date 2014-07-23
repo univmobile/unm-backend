@@ -221,10 +221,10 @@ public class NoShibbolethFilter implements Filter {
 			return error(response,
 					"The following HTTP parameters must be passed along with the request,"
 							+ " in order to mock the Shibboleth presence:" //
-							+ "\r\n           uid: " + uidParam //
-							+ "\r\n          eppn: " + eppnParam //
-							+ "\r\n   displayName: " + displayNameParam //
-							+ "\r\n    remoteUser: " + remoteUserParam);
+							+ "\r\n           NO_SHIB_uid: " + uidParam //
+							+ "\r\n          NO_SHIB_eppn: " + eppnParam //
+							+ "\r\n   NO_SHIB_displayName: " + displayNameParam //
+							+ "\r\n    NO_SHIB_remoteUser: " + remoteUserParam);
 		}
 
 		request.setAttribute("uid", holder.uid);
