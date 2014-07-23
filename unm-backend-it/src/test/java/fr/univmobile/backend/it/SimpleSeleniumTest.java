@@ -1,5 +1,8 @@
 package fr.univmobile.backend.it;
 
+import static org.apache.commons.lang3.StringUtils.containsIgnoreCase;
+import static org.junit.Assert.assertFalse;
+
 import java.io.File;
 
 import org.apache.commons.io.FileUtils;
@@ -51,5 +54,10 @@ public class SimpleSeleniumTest {
 		final String pageSource = selenium.getHtmlSource();
 
 		FileUtils.write(new File("target", "pageSource.html"), pageSource);
+
+		final String TEXT = "Shibboleth";
+
+		assertFalse("Page source should not contain text: \"" + TEXT + "\"",
+				containsIgnoreCase(pageSource, TEXT));
 	}
 }
