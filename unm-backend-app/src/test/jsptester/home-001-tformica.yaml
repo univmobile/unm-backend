@@ -1,0 +1,6 @@
+baseURL: ${baseURL}
+
+uid: tformica
+eppn: tformica@univ-paris1.fr
+displayName: Toto Formica
+remoteUser: tformica@univ-paris1.fr
