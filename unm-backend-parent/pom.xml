@@ -19,6 +19,16 @@
 				<artifactId>unm-backend-core</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
+			<dependency>
+				<groupId>fr.univmobile</groupId>
+				<artifactId>unm-backend-app</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>
+			<dependency>
+				<groupId>fr.univmobile</groupId>			
+				<artifactId>unm-backend-filter-noshib</artifactId>
+				<version>0.0.1-SNAPSHOT</version>
+			</dependency>	
 		</dependencies>	
 	</dependencyManagement>
 
