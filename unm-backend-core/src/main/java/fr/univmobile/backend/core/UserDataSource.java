@@ -6,7 +6,9 @@ public interface UserDataSource extends BackendDataSource<User> {
 	User getByRemoteUser(String remoteUser);
 
 	boolean isNullByRemoteUser(String remoteUser);
-	
+
 	@SearchAttribute("uid")
 	User getByUid(String uid);
+
+	boolean isNullByUid(String uid);
 }
