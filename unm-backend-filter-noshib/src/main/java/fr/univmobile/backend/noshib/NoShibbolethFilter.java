@@ -23,6 +23,9 @@ import javax.servlet.http.HttpServletRequestWrapper;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 /**
  * This filter mocks the presence of Shibboleth. It is intended to be used only
  * in integration tests. See the <code>unm-backend-app-noshib</code> webapp for
@@ -107,16 +110,30 @@ public class NoShibbolethFilter implements Filter {
 				"Host is denied access to this test app: " + HOSTNAME);
 	}
 
+	private static final Log log = LogFactory.getLog(NoShibbolethFilter.class);
+
 	@Override
 	public void doFilter(final ServletRequest request,
 			final ServletResponse response, final FilterChain chain)
 			throws IOException, ServletException {
 
+		if (log.isDebugEnabled()) {
+			log.debug("Entering service()...");
+		}
+
 		final ServletRequest validRequest = validate(request, response);
 
 		if (validRequest == null) {
 
+			if (log.isDebugEnabled()) {
+				log.debug("Request is not valid. Returning.");
+			}
+
 			return; // The error message has already been sent.
+		}
+
+		if (log.isDebugEnabled()) {
+			log.debug("Chaining request+response.");
 		}
 
 		chain.doFilter(validRequest, response);
@@ -127,6 +144,8 @@ public class NoShibbolethFilter implements Filter {
 	 */
 	private ServletRequest error(final ServletResponse response,
 			final String text) throws IOException, ServletException {
+
+		log.error("Sending error: " + split(text, "\r\n")[0]);
 
 		response.setCharacterEncoding(UTF_8);
 		response.setContentType("text/plain");

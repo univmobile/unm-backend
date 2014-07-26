@@ -4,19 +4,19 @@
 
 	<artifactId>unm-backend-app</artifactId>
 	<packaging>war</packaging>
-	
+
 	<parent>
 		<groupId>fr.univmobile</groupId>
 		<artifactId>unm-backend-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/>
+		<relativePath />
 	</parent>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-backend-core</artifactId>
-		</dependency>	
+		</dependency>
 		<dependency>
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-webapp-commons</artifactId>
@@ -68,11 +68,11 @@
 				        <warSourceDirectory>src/main/webapp</warSourceDirectory>
 						<webXml>src/main/webapp/WEB-INF/web.xml</webXml>
         				-->
-                        <webResource>
-                            <directory>src/main/webapp/META-INF</directory>
-                            <targetPath>META-INF</targetPath>
-                            <filtering>true</filtering>
-                        </webResource>
+						<webResource>
+							<directory>src/main/webapp/META-INF</directory>
+							<targetPath>META-INF</targetPath>
+							<filtering>true</filtering>
+						</webResource>
 					</webResources>
 				</configuration>
 			</plugin>
@@ -116,7 +116,7 @@
             </url>
 		</site>
 	</distributionManagement>
-	
+
 	<repositories>
 		<repository>
 			<id>vswip</id>
@@ -145,16 +145,16 @@
 			</snapshots>
 		</repository>
 	</repositories>
-	
+
 	<properties>
 		<appContextRoot>/${project.build.finalName}</appContextRoot>
 		<BUILD_NUMBER>??</BUILD_NUMBER>
 		<BUILD_ID>????/??/?? ??:??:??</BUILD_ID>
 		<BUILD_DISPLAY_NAME>#??</BUILD_DISPLAY_NAME>
 		<GIT_COMMIT>????????????????????????????????????????</GIT_COMMIT>
-		<baseURL/>
+		<baseURL />
 	</properties>
-	
+
 	<profiles>
 		<profile>
 			<id>dandriana</id>
@@ -166,5 +166,5 @@
 			<id>jenkins</id>
 		</profile>
 	</profiles>
-	
+
 </project>
