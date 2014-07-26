@@ -1,5 +1,7 @@
 package fr.univmobile.backend.core;
 
+import java.io.Serializable;
+
 import net.avcompris.binding.annotation.Namespaces;
 import net.avcompris.binding.annotation.XPath;
 
@@ -7,7 +9,7 @@ import org.joda.time.DateTime;
 
 @Namespaces("xmlns:atom=http://www.w3.org/2005/Atom")
 @XPath("/atom:entry")
-public interface Entry {
+public interface Entry extends Serializable {
 
 	@XPath("atom:id")
 	String getId();
@@ -32,16 +34,16 @@ public interface Entry {
 	 */
 	@XPath("atom:category/@term")
 	String getCategory();
-	
+
 	/**
 	 * e.g. "dandriana"
 	 */
 	@XPath("atom:author/atom:name")
 	String getAuthorName();
-	
+
 	@XPath("atom:author/atom:uri")
 	String getAuthorURI();
-	
+
 	@XPath("concat(atom:category/@term, ':', atom:title)")
 	@Override
 	String toString();
