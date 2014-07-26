@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/users/001:crezvani/1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/users/001:crezvani/1"/>
+<updated>2014-07-26T18:40:02Z</updated>
+<title>crezvani</title>
+<category term="users"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content>
+	<uid>crezvani</uid>
+	<cn>Rezvani Cyrus</cn>
+	<sn>Rezvani</sn>
+	<givenName>Cyrus</givenName>
+	<remoteUser>crezvani@univ-paris1.fr</remoteUser>
+	<mail>Cyrus.Rezvani@univ-paris1.fr</mail>
+	<supannCivilite>M.</supannCivilite>
+	<displayName>Cyrus Rezvani</displayName>
+</content>
+</entry>
+
