@@ -2,16 +2,6 @@
 <!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
 <log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
 
-    <root>
-        <level value="info"/>
-        <appender-ref ref="tmpfile"/>
-    </root>
-    <!--
-    <logger name="fr.univmobile">
-        <level value="info"/>
-    </logger>
-    -->
-
     <appender name="stdout" class="org.apache.log4j.ConsoleAppender">
         <param name="Target" value="System.out"/>
         <param name="Threshold" value="info"/>
@@ -31,5 +21,15 @@
             <param name="ConversionPattern" value="%d{ISO8601} %-5p [%F:%L] %m%n"/>
         </layout>
     </appender>
+
+    <!--
+    <logger name="fr.univmobile">
+        <level value="info"/>
+    </logger>
+    -->
+    <root>
+        <level value="info"/>
+        <appender-ref ref="tmpfile"/>
+    </root>
     
 </log4j:configuration>
