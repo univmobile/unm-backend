@@ -10,20 +10,22 @@ import com.avcompris.lang.NotImplementedException;
 
 import fr.univmobile.backend.core.Entry;
 
+// TODO Rmove this class. Unused.
 final class BackendDataEngineFileSystem<T extends Entry> implements
 		BackendDataEngine<T> {
 
 	public BackendDataEngineFileSystem(final File dataDir) throws IOException {
 
-		this.dataDir = checkNotNull(dataDir, "dataDir");
+		// this.dataDir =
+		checkNotNull(dataDir, "dataDir");
 
 		if (!dataDir.isDirectory()) {
 			throw new FileNotFoundException("dataDir should be a directory: "
 					+ dataDir.getCanonicalPath());
 		}
 	}
-	
-	private final File dataDir;
+
+	// private final File dataDir;
 
 	@Override
 	public void store(final T data) {

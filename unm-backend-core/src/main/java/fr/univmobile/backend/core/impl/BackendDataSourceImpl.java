@@ -4,8 +4,6 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.NoSuchElementException;
 
-import com.avcompris.lang.NotImplementedException;
-
 import fr.univmobile.backend.core.BackendDataSource;
 import fr.univmobile.backend.core.Entry;
 
@@ -45,19 +43,5 @@ abstract class BackendDataSourceImpl<T extends Entry> implements
 		checkNotNull(data, "data");
 		
 		return !data.isNullParent();
-	}
-
-	@Override
-	public final T getLatest(final T data) {
-
-		checkNotNull(data, "data");
-		throw new NotImplementedException();
-	}
-
-	@Override
-	public final boolean isLatest(final T data) {
-		checkNotNull(data, "data");
-
-		throw new NotImplementedException();
 	}
 }

@@ -20,7 +20,7 @@ import fr.univmobile.backend.core.BackendDataSource;
 import fr.univmobile.backend.core.Entry;
 import fr.univmobile.backend.core.SearchAttribute;
 
-public class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U extends Entry>
+public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U extends Entry>
 		extends BackendDataSourceImpl<U> implements InvocationHandler {
 
 	public static <T extends BackendDataSource<U>, U extends Entry> T newDataSource(
@@ -67,7 +67,7 @@ public class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U exten
 	/**
 	 * reload all data from the File System.
 	 */
-	public void reload() throws IOException {
+	public synchronized void reload() throws IOException {
 
 		cacheEngine.clear();
 
@@ -127,13 +127,29 @@ public class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U exten
 			log.debug("Non-@SearchAttribute method: " + methodName
 					+ ". Forwarding invocation to \"this.\"");
 		}
-		
+
 		try {
-			
-			return method.invoke(this,args);
-			
+
+			return method.invoke(this, args);
+
 		} catch (final InvocationTargetException e) {
 			throw e.getTargetException();
 		}
+	}
+
+	@Override
+	public U getLatest(final U data) {
+
+		checkNotNull(data, "data");
+
+		return cacheEngine.getAllVersions(data).iterator().next();
+	}
+
+	@Override
+	public boolean isLatest(final U data) {
+
+		checkNotNull(data, "data");
+
+		return data.getId().equals(getLatest(data).getId());
 	}
 }

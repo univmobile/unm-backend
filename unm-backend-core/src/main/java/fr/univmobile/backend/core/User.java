@@ -36,7 +36,7 @@ public interface User extends Entry {
 	@XPath("atom:content/atom:mail")
 	String getMail();
 	
-	@XPath("concat(atom:category/@term, ':', atom:content:atom:uid)")
+	@XPath("concat(atom:category/@term, ':', atom:content/atom:uid)")
 	@Override
 	String toString();
 }

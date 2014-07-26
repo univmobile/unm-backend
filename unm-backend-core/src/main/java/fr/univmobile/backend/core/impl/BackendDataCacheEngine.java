@@ -2,14 +2,15 @@ package fr.univmobile.backend.core.impl;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.capitalize;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
-
-import com.avcompris.lang.NotImplementedException;
 
 import fr.univmobile.backend.core.BackendDataSource;
 import fr.univmobile.backend.core.Entry;
@@ -30,11 +31,15 @@ final class BackendDataCacheEngine<T extends Entry> implements
 
 		// 2. INDEXES
 
-		// 2.1. "id" ATTRIBUTE
+		// 2.1. COREATTRIBUTES
 
-		indexes.put("id", new HashMap<String, T>());
+		indexes.put("id", new HashMap<String, List<T>>());
 
 		putAttributeMethod("id");
+
+		indexes.put("parentId", new HashMap<String, List<T>>());
+
+		putAttributeMethod("parentId");
 
 		// 2.2. OTHERS
 
@@ -49,7 +54,7 @@ final class BackendDataCacheEngine<T extends Entry> implements
 
 			final String attributeName = searchAttribute.value();
 
-			indexes.put(attributeName, new HashMap<String, T>());
+			indexes.put(attributeName, new HashMap<String, List<T>>());
 
 			putAttributeMethod(attributeName);
 		}
@@ -84,7 +89,7 @@ final class BackendDataCacheEngine<T extends Entry> implements
 		delegate.store(data);
 	}
 
-	public void cache(final T data) {
+	public synchronized void cache(final T data) {
 
 		checkNotNull(data, "data");
 
@@ -105,7 +110,37 @@ final class BackendDataCacheEngine<T extends Entry> implements
 				throw new RuntimeException(e);
 			}
 
-			indexes.get(attributeName).put(attributeValue.toString(), data);
+			if (isBlank((String) attributeValue)) {
+				continue;
+			}
+
+			final Map<String, List<T>> index = indexes.get(attributeName);
+
+			final String attributeValueAsString = attributeValue.toString();
+
+			List<T> cached = index.get(attributeValueAsString);
+
+			if (cached == null) {
+				cached = new ArrayList<T>();
+				index.put(attributeValueAsString, cached);
+			}
+
+			boolean isParent = false;
+
+			final String id = data.getId();
+
+			for (final T t : cached) {
+				if (!t.isNullParent() && id.equals(t.getParentId())) {
+					isParent = true;
+					break;
+				}
+			}
+
+			if (isParent) {
+				cached.add(data);
+			} else {
+				cached.add(0, data); // First element is HEAD
+			}
 		}
 	}
 
@@ -123,25 +158,69 @@ final class BackendDataCacheEngine<T extends Entry> implements
 					+ attributeValue);
 		}
 
-		final Map<String, T> index = indexes.get(attributeName);
+		final Map<String, List<T>> index = indexes.get(attributeName);
 
-		final T data = index.get(attributeValue);
+		final List<T> data = index.get(attributeValue);
 
-		if (data == null) {
+		if (data == null || data.isEmpty()) {
 			throw new NoSuchElementException("Cannot find cached data for: "
 					+ attributeName + "=" + attributeValue);
 		}
 
-		return data;
+		return data.iterator().next(); // HEAD is first element.
 	}
 
-	public void clear() {
+	public synchronized void clear() {
 
-		for (final Map<String, T> index : indexes.values()) {
+		for (final Map<String, List<T>> index : indexes.values()) {
 
 			index.clear();
 		}
 	}
 
-	private final Map<String, Map<String, T>> indexes = new HashMap<String, Map<String, T>>();
+	private final Map<String, Map<String, List<T>>> indexes = //
+	new HashMap<String, Map<String, List<T>>>();
+
+	public List<T> getAllVersions(final T data) {
+
+		final List<T> allVersions = new ArrayList<T>();
+
+		allVersions.add(data);
+
+		addAllDescendants(allVersions, data);
+
+		addAllAscendants(allVersions, data);
+
+		return allVersions;
+	}
+
+	private void addAllDescendants(final List<T> allVersions, final T data) {
+
+		final List<T> children = indexes.get("parentId").get(data.getId());
+
+		if (children == null) {
+			return;
+		}
+
+		for (final T child : children) {
+
+			allVersions.add(0,child);
+
+			addAllDescendants(allVersions, child);
+		}
+	}
+
+	private void addAllAscendants(final List<T> allVersions, final T data) {
+
+		if (data.isNullParent()) {
+			return;
+		}
+
+		for (final T parent : indexes.get("id").get(data.getParentId())) {
+
+			allVersions.add(parent);
+
+			addAllAscendants(allVersions, parent);
+		}
+	}
 }
