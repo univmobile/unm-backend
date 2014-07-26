@@ -170,6 +170,21 @@ final class BackendDataCacheEngine<T extends Entry> implements
 		return data.iterator().next(); // HEAD is first element.
 	}
 
+	public boolean isNullByAttribute(final String attributeName,
+			final Object attributeValue) {
+
+		if (attributeValue == null) {
+			throw new IllegalArgumentException("isNullBy: " + attributeName + "="
+					+ attributeValue);
+		}
+
+		final Map<String, List<T>> index = indexes.get(attributeName);
+
+		final List<T> data = index.get(attributeValue);
+
+		return data == null || data.isEmpty();
+	}
+
 	public synchronized void clear() {
 
 		for (final Map<String, List<T>> index : indexes.values()) {

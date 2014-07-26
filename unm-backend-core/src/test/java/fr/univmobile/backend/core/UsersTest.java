@@ -33,6 +33,18 @@ public class UsersTest {
 	}
 
 	@Test
+	public void test_crezvani_not_isNullByRemoteUser() throws Exception {
+
+		assertFalse(users.isNullByRemoteUser("crezvani@univ-paris1.fr"));
+	}
+
+	@Test
+	public void test_tformica_isNullByRemoteUser() throws Exception {
+
+		assertTrue(users.isNullByRemoteUser("tformica@univ-paris1.fr"));
+	}
+
+	@Test
 	public void test_getById_crezvaniAttributes() throws Exception {
 
 		final User crezvani = users

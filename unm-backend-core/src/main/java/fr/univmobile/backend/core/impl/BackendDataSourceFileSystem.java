@@ -47,8 +47,7 @@ public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U
 
 		// 1. PROXY
 
-		// this.dataSourceClass =
-		checkNotNull(dataSourceClass, "dataSourceClass");
+		this.dataSourceClass = checkNotNull(dataSourceClass, "dataSourceClass");
 		this.dataClass = checkNotNull(dataClass, "dataClass");
 
 		final Object proxy = Proxy.newProxyInstance(
@@ -83,7 +82,7 @@ public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U
 		}
 	}
 
-	// private final Class<T> dataSourceClass;
+	private final Class<T> dataSourceClass;
 	private final Class<U> dataClass;
 
 	private final T dataSource;
@@ -124,8 +123,28 @@ public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U
 		}
 
 		if (log.isDebugEnabled()) {
-			log.debug("Non-@SearchAttribute method: " + methodName
+			log.debug("No-@SearchAttribute method: " + methodName
 					+ ". Forwarding invocation to \"this.\"");
+		}
+
+		if (methodName.startsWith("isNullBy") && args != null
+				&& args.length == 1) {
+
+			final String methodName2 = "getBy" + methodName.substring(8);
+
+			final SearchAttribute searchAttribute2 = dataSourceClass.getMethod(
+					methodName2, method.getParameterTypes()).getAnnotation(
+					SearchAttribute.class);
+
+			if (searchAttribute2 == null) {
+				throw new RuntimeException("methodName: " + methodName
+						+ ", inferring: " + methodName2
+						+ ", but has no @SearchAttribute annotation.");
+			}
+			
+			final String attributeName = searchAttribute2.value();
+			
+			return cacheEngine.isNullByAttribute(attributeName, args[0]);
 		}
 
 		try {
