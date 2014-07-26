@@ -2,6 +2,7 @@ package fr.univmobile.backend;
 
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 
+import java.io.File;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
@@ -11,6 +12,9 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.core.User;
+import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.backend.core.impl.BackendDataSourceFileSystem;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.UnivMobileHttpUtils;
 
@@ -21,11 +25,25 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 	 */
 	private static final long serialVersionUID = -4796360020211862333L;
 
+	private UserDataSource users;
+
 	@Override
 	public void init() throws ServletException {
 
+		final File usersDir = new File(
+				"/Users/dandriana/Documents/workspace/unm-backend/unm-backend-core/src/test/data/users/001");
+
+		try {
+
+			users = BackendDataSourceFileSystem.newDataSource(
+					UserDataSource.class, User.class, usersDir);
+
+		} catch (final IOException e) {
+			throw new ServletException(e);
+		}
+
 		super.init( //
-		HomeController.class //
+		new HomeController(users) //
 		);
 	}
 
@@ -51,7 +69,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 			log.fatal("host: "
 					+ host
-					+ ", 403 Cannot Find REMOTE_USER."
+					+ ", 403 Cannot find REMOTE_USER."
 					+ " Shibboleth seems to be missing and filters not applied.");
 
 			UnivMobileHttpUtils.sendError403(request, response,
@@ -67,7 +85,25 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 					+ ", remoteUser: " + remoteUser);
 		}
 
-		// 3. OUTPUT
+		// 3. USER
+
+		if (users.isNullByRemoteUser(remoteUser)) {
+
+			log.fatal("host: " + host
+					+ ", 403 Unknown REMOTE_USER in the Database: "
+					+ remoteUser);
+
+			UnivMobileHttpUtils.sendError403(request, response,
+					"Unknown REMOTE_USER in the Database: "+remoteUser);
+
+			return;
+		}
+
+		final User user = users.getByRemoteUser(remoteUser);
+
+		request.getSession().setAttribute("user", user);
+
+		// 9. CHAIN
 
 		super.service(request, response);
 	}
