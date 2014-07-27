@@ -228,8 +228,8 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 			}
 		}
 
-		if (log.isInfoEnabled()) {
-			log.info("Saving: " + file.getCanonicalPath());
+		if (log.isWarnEnabled()) {
+			log.warn("Saving: " + file.getCanonicalPath());
 		}
 
 		final String id = "fr.univmobile:unm-backend:" //
