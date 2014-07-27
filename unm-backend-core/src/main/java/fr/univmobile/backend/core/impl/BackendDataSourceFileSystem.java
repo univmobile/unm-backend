@@ -190,36 +190,38 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 		final String[] primaryKey = BackendDataUtils.getInheritedAnnotation(
 				dataSourceClass, PrimaryKey.class).value();
 
-		final StringBuilder filename = new StringBuilder();
+		final StringBuilder sb = new StringBuilder();
 
 		for (final String attributeName : primaryKey) {
 
 			final Object value = BackendDataUtils.getAttribute(data,
 					attributeName);
 
-			filename.append(value).append('_');
+			sb.append(value).append('_');
 		}
 
-		filename.append(System.currentTimeMillis()).append('_');
-
-		filename.append(RandomUtils.nextInt(10000000, 99999999)).append(".xml");
+		final String baseFilename = sb.toString();
 
 		synchronized (this) { // TODO Use a real transactional lock.
 
 			while (true) {
 
-				final File outFile = new File(dataDir, filename.toString());
+				final String filename = baseFilename
+						+ System.currentTimeMillis() + "_"
+						+ RandomUtils.nextInt(10000000, 99999999) + ".xml";
+
+				final File outFile = new File(dataDir, filename);
 
 				if (outFile.isFile()) {
 					continue;
 				}
-				
+
 				if (log.isInfoEnabled()) {
 					log.info("Saving: " + outFile.getCanonicalPath());
 				}
 
 				dump(document, outFile);
-				
+
 				break;
 			}
 		}
