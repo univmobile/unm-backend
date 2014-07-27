@@ -82,7 +82,14 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 
 		cacheEngine.clear();
 
-		for (final File file : dataDir.listFiles()) {
+		final File[] files = dataDir.listFiles();
+
+		if (files == null) {
+			throw new IOException("Cannot list files in dataDir: "
+					+ dataDir.getCanonicalPath());
+		}
+
+		for (final File file : files) {
 
 			if (!file.isFile() || !file.getName().endsWith(".xml")) {
 				continue;
