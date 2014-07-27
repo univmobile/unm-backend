@@ -11,6 +11,7 @@ import javax.annotation.Nullable;
 import fr.univmobile.backend.core.BackendDataSource;
 import fr.univmobile.backend.core.Entry;
 import fr.univmobile.backend.core.EntryBuilder;
+import fr.univmobile.backend.core.PrimaryKey;
 import fr.univmobile.backend.core.Support;
 
 abstract class BackendDataUtils {
@@ -88,7 +89,7 @@ abstract class BackendDataUtils {
 		return type;
 	}
 
-	public static Object getAttribute(final Entry entry,
+	private static Object getAttribute(final Entry entry,
 			final String attributeName) {
 
 		checkNotNull(entry, "entry");
@@ -108,5 +109,31 @@ abstract class BackendDataUtils {
 		} catch (final IllegalAccessException e) {
 			throw new RuntimeException(e);
 		}
+	}
+
+	public static <E extends Entry, EB extends EntryBuilder<E>> String getPrimaryKey(
+			final E data,
+			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
+
+		final String[] primaryKey = getInheritedAnnotation(dataSourceClass,
+				PrimaryKey.class).value();
+
+		if (primaryKey.length == 0) {
+			throw new IllegalArgumentException(
+					"DataSource class declares an empty primary key: "
+							+ dataSourceClass.getName());
+		}
+
+		final StringBuilder sb = new StringBuilder();
+
+		for (final String attributeName : primaryKey) {
+
+			final Object value = BackendDataUtils.getAttribute(data,
+					attributeName);
+
+			sb.append('_').append(value);
+		}
+
+		return sb.toString().substring(1);
 	}
 }

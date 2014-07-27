@@ -12,6 +12,7 @@ import java.util.Map;
 
 import net.avcompris.binding.dom.helper.DomBinderUtils;
 
+import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -22,7 +23,6 @@ import com.avcompris.lang.NotImplementedException;
 import fr.univmobile.backend.core.BackendDataSource;
 import fr.univmobile.backend.core.Entry;
 import fr.univmobile.backend.core.EntryBuilder;
-import fr.univmobile.backend.core.PrimaryKey;
 import fr.univmobile.backend.core.SearchAttribute;
 
 public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB>, E extends Entry, EB extends EntryBuilder<E>>
@@ -187,44 +187,35 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 	protected void save(final Document document, final E data)
 			throws IOException {
 
-		final String[] primaryKey = BackendDataUtils.getInheritedAnnotation(
-				dataSourceClass, PrimaryKey.class).value();
-
-		final StringBuilder sb = new StringBuilder();
-
-		for (final String attributeName : primaryKey) {
-
-			final Object value = BackendDataUtils.getAttribute(data,
-					attributeName);
-
-			sb.append(value).append('_');
-		}
-
-		final String baseFilename = sb.toString();
+		final String primaryKey = BackendDataUtils.getPrimaryKey(data,
+				dataSourceClass);
+		File file = null;
 
 		synchronized (this) { // TODO Use a real transactional lock.
 
 			while (true) {
 
-				final String filename = baseFilename
+				final String filename = primaryKey + "_"
 						+ System.currentTimeMillis() + "_"
 						+ RandomUtils.nextInt(10000000, 99999999) + ".xml";
 
-				final File outFile = new File(dataDir, filename);
+				file = new File(dataDir, filename);
 
-				if (outFile.isFile()) {
+				if (file.isFile()) { // If file already exists, use another name
 					continue;
 				}
 
-				if (log.isInfoEnabled()) {
-					log.info("Saving: " + outFile.getCanonicalPath());
-				}
-
-				dump(document, outFile);
+				FileUtils.touch(file); // Acquire lock
 
 				break;
 			}
 		}
+
+		if (log.isInfoEnabled()) {
+			log.info("Saving: " + file.getCanonicalPath());
+		}
+
+		dump(document, file);
 
 		cacheEngine.cache(data);
 	}
