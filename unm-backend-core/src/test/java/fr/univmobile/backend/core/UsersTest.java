@@ -6,6 +6,8 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.NoSuchElementException;
 
 import org.junit.Before;
@@ -93,5 +95,37 @@ public class UsersTest {
 		assertFalse(users.hasParent(parent));
 
 		assertTrue(parent.isNullParent());
+	}
+
+	@Test
+	public void test_getAll() throws Exception {
+
+		final Map<String, User> allUsers = users.getAllBy("uid");
+
+		assertEquals(2, allUsers.size());
+
+		for (final User user : allUsers.values()) {
+
+			assertTrue(users.isLatest(user));
+		}
+
+		final Iterator<User> it = allUsers.values().iterator();
+
+		final User u0 = it.next();
+		final User u1 = it.next();
+
+		final User crezvani;
+		final User dandriana;
+
+		if ("dandriana".equals(u0.getUid())) {
+			dandriana = u0;
+			crezvani = u1;
+		} else {
+			dandriana = u1;
+			crezvani = u0;
+		}
+
+		assertEquals("crezvani", crezvani.getUid());
+		assertEquals("dandriana", dandriana.getUid());
 	}
 }

@@ -8,6 +8,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.Map;
 
 import net.avcompris.binding.dom.helper.DomBinderUtils;
 
@@ -141,9 +142,9 @@ public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U
 						+ ", inferring: " + methodName2
 						+ ", but has no @SearchAttribute annotation.");
 			}
-			
+
 			final String attributeName = searchAttribute2.value();
-			
+
 			return cacheEngine.isNullByAttribute(attributeName, args[0]);
 		}
 
@@ -170,5 +171,11 @@ public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U
 		checkNotNull(data, "data");
 
 		return data.getId().equals(getLatest(data).getId());
+	}
+
+	@Override
+	public Map<String, U> getAllBy(final String attributeName) {
+
+		return cacheEngine.getAllBy(attributeName);
 	}
 }

@@ -174,8 +174,8 @@ final class BackendDataCacheEngine<T extends Entry> implements
 			final Object attributeValue) {
 
 		if (attributeValue == null) {
-			throw new IllegalArgumentException("isNullBy: " + attributeName + "="
-					+ attributeValue);
+			throw new IllegalArgumentException("isNullBy: " + attributeName
+					+ "=" + attributeValue);
 		}
 
 		final Map<String, List<T>> index = indexes.get(attributeName);
@@ -219,7 +219,7 @@ final class BackendDataCacheEngine<T extends Entry> implements
 
 		for (final T child : children) {
 
-			allVersions.add(0,child);
+			allVersions.add(0, child);
 
 			addAllDescendants(allVersions, child);
 		}
@@ -237,5 +237,20 @@ final class BackendDataCacheEngine<T extends Entry> implements
 
 			addAllAscendants(allVersions, parent);
 		}
+	}
+
+	public Map<String, T> getAllBy(final String attributeName) {
+
+		final Map<String, T> all = new HashMap<String, T>();
+
+		for (final Map.Entry<String, List<T>> entry : indexes
+				.get(attributeName).entrySet()) {
+
+			final String attributeValue=entry.getKey();
+			
+			all.put(attributeValue, entry.getValue().iterator().next());
+		}
+		
+		return all;
 	}
 }
