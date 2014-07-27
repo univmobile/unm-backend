@@ -64,7 +64,7 @@ public class RegionsTest {
 
 		assertEquals("Île de France", builder.getLabel());
 
-		region.setLabel("Région parisienne");
+		builder.setLabel("Région parisienne");
 
 		assertEquals("Région parisienne", builder.getLabel());
 

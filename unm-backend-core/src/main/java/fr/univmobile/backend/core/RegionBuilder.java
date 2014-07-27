@@ -9,4 +9,6 @@ package fr.univmobile.backend.core;
 public interface RegionBuilder extends EntryBuilder<Region>, Region {
 
 	RegionBuilder setUid(String uid);
+
+	RegionBuilder setLabel(String label);
 }

@@ -16,8 +16,6 @@ public interface Region extends Entry {
 	@XPath("atom:content/atom:label")
 	String getLabel();
 
-	void setLabel(String label);
-
 	/**
 	 * e.g.
 	 * "http://univmobile.vswip.com/unm-backend-mock/listUniversities_ile_de_france"
