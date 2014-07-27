@@ -4,6 +4,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
@@ -50,6 +51,11 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 		cacheEngine = (BackendDataCacheEngine<E, EB>) engine;
 
 		this.dataDir = checkNotNull(dataDir, "dataDir");
+
+		if (!dataDir.isDirectory()) {
+			throw new FileNotFoundException("Cannot find dataDir: "
+					+ dataDir.getCanonicalPath());
+		}
 
 		// 1. PROXY
 
