@@ -28,7 +28,6 @@ public class CreateUsersTest {
 		FileUtils.copyDirectory(originalDataDir, tmpDataDir);
 
 		users = BackendDataSourceFileSystem.newDataSource(UserDataSource.class,
-		// User.class, UserBuilder.class,
 				tmpDataDir);
 	}
 
