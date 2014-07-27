@@ -1,18 +1,14 @@
 package fr.univmobile.backend;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeSet;
 
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
-import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.HttpRequired;
+import fr.univmobile.web.commons.Paths;
 
 @Paths({ "" })
 public class HomeController extends AbstractBackendController {
@@ -24,10 +20,6 @@ public class HomeController extends AbstractBackendController {
 
 	@Override
 	public String action() throws IOException {
-
-		// final String uid = getAttribute("uid", String.class);
-		// final String displayName = getAttribute("displayName", String.class);
-		// final String remoteUser = getRemoteUser();
 
 		if (getHttpInputs(Logout.class).isHttpValid()) {
 
