@@ -1,5 +1,9 @@
 <project name="unm-backend-app" default="repackage_war">
 
+	<property name="warFile" location="target/unm-backend.war"/>
+	<property name="dataDir" value="/tmp/unm-backend/data"/>
+	<property name="baseURL" value="http://locahost:8080/unm-backend/"/>
+	
 	<target name="repackage_war">
 	
 		<delete dir="target/unm-backend"/>
@@ -10,6 +14,7 @@
 				in="target/unm-backend/WEB-INF/web.xml"
 				out="target/unm-backend/WEB-INF/web.xml-repackaged">
 			<param name="dataDir" expression="${dataDir}"/>
+			<param name="baseURL" expression="${baseURL}"/>
 		</xslt>
 		
 		<move overwrite="true" tofile="target/unm-backend/WEB-INF/web.xml"
