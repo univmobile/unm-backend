@@ -12,6 +12,10 @@ import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.web.commons.AbstractController;
+import fr.univmobile.web.commons.HttpInputs;
+import fr.univmobile.web.commons.HttpMethods;
+import fr.univmobile.web.commons.HttpParameter;
+import fr.univmobile.web.commons.HttpRequired;
 
 abstract class AbstractBackendController extends AbstractController {
 
@@ -20,7 +24,7 @@ abstract class AbstractBackendController extends AbstractController {
 	protected AbstractBackendController( //
 			final UserDataSource users, //
 			final RegionDataSource regions //
-			) {
+	) {
 
 		this.users = checkNotNull(users, "users");
 		this.regions = checkNotNull(regions, "regions");
@@ -40,6 +44,32 @@ abstract class AbstractBackendController extends AbstractController {
 	}
 
 	protected final String entered() {
+
+		// 1. UPDATE?
+
+		final UpdateRegions ur = getHttpInputs(UpdateRegions.class);
+		
+		if (ur.isHttpValid()) {
+
+			final Region ile_de_france = regions.getByUid("ile_de_france");
+			final Region bretagne = regions.getByUid("bretagne");
+			final Region unrpcl = regions.getByUid("unrpcl");
+
+			if (!ile_de_france.getLabel().equals(ur.region_ile_de_france())) {
+				regions.update(ile_de_france)
+						.setLabel(ur.region_ile_de_france()).save();
+			}
+
+			if (!bretagne.getLabel().equals(ur.region_bretagne())) {
+				regions.update(bretagne).setLabel(ur.region_bretagne()).save();
+			}
+
+			if (!unrpcl.getLabel().equals(ur.region_unrpcl())) {
+				regions.update(unrpcl).setLabel(ur.region_unrpcl()).save();
+			}
+		}
+
+		// 2. VIEW
 
 		final Map<String, User> allUsers = users.getAllBy("uid");
 
@@ -64,5 +94,21 @@ abstract class AbstractBackendController extends AbstractController {
 		setAttribute("regions", r);
 
 		return "entered.jsp";
+	}
+
+	@HttpMethods("POST")
+	interface UpdateRegions extends HttpInputs {
+
+		@HttpRequired
+		@HttpParameter(trim = true)
+		String region_ile_de_france();
+
+		@HttpRequired
+		@HttpParameter(trim = true)
+		String region_bretagne();
+
+		@HttpRequired
+		@HttpParameter(trim = true)
+		String region_unrpcl();
 	}
 }
