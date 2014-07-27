@@ -78,4 +78,14 @@ public class RegionsTest {
 
 		assertEquals("Région parisienne", region2.getLabel());
 	}
+
+	@Test
+	public void test_setIleDeFranceLabelInlineSave() throws Exception {
+
+		final Region region = regions.getByUid("ile_de_france");
+
+		regions.update(region).setLabel("Région parisienne").save();
+
+		assertEquals("Région parisienne", region.getLabel());
+	}
 }

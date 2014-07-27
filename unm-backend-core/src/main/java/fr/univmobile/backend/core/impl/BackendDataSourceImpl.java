@@ -113,11 +113,18 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 		final EB entryBuilder = DomBinderUtils.xmlContentToJava(document,
 				builderClass);
 
+		final EntryBuilderWrapper<E, EB> wrapper = new EntryBuilderWrapper<E, EB>(
+				document, entryBuilder);
+
 		final Object proxy = Proxy.newProxyInstance(
 				dataSourceClass.getClassLoader(), new Class[] { builderClass },
-				new EntryBuilderWrapper<E, EB>(document, entryBuilder));
+				wrapper);
 
-		return builderClass.cast(proxy);
+		final EB builder = builderClass.cast(proxy);
+
+		wrapper.setBuilder(builder);
+
+		return builder;
 	}
 
 	@Override
@@ -131,11 +138,16 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 
 		final Document document = ((Node) node.node()).getOwnerDocument();
 
+		final EntryBuilderWrapper<E, EB> wrapper = new EntryBuilderWrapper<E, EB>(
+				document, rebind);
+
 		final Object proxy = Proxy.newProxyInstance(
 				dataSourceClass.getClassLoader(), new Class[] { builderClass },
-				new EntryBuilderWrapper<E, EB>(document, rebind));
+				wrapper);
 
 		final EB builder = builderClass.cast(proxy);
+
+		wrapper.setBuilder(builder);
 
 		builder.setParentId(data.getId());
 
@@ -149,10 +161,18 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 
 			this.document = checkNotNull(document, "document");
 			this.delegate = checkNotNull(delegate, "delegate");
+
+			wrapper = delegate;
+		}
+
+		private void setBuilder(final EB wrapper) {
+
+			this.wrapper = checkNotNull(wrapper, "wrapper");
 		}
 
 		private final Document document;
 		private final EB delegate;
+		private EB wrapper;
 
 		@Override
 		public Object invoke(final Object proxy, final Method method,
@@ -172,7 +192,18 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 				return null;
 			}
 
-			return method.invoke(delegate, args);
+			final Class<?> returnType = method.getReturnType();
+
+			final Object value = method.invoke(delegate, args);
+
+			if (returnType != null && returnType.isAssignableFrom(builderClass)) {
+
+				return wrapper;
+
+			} else {
+
+				return value;
+			}
 		}
 	}
 
