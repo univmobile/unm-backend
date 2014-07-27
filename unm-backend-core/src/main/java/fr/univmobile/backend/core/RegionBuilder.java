@@ -1,0 +1,12 @@
+package fr.univmobile.backend.core;
+
+
+/**
+ * Setter methods that cannot exist in the {@link Region} interface (when data
+ * is already stored), only in a builder (when data is composed before being
+ * stored.)
+ */
+public interface RegionBuilder extends EntryBuilder<Region>, Region {
+
+	RegionBuilder setUid(String uid);
+}
