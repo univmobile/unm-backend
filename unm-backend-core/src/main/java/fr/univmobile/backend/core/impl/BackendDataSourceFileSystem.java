@@ -204,13 +204,25 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 
 		filename.append(RandomUtils.nextInt(10000000, 99999999)).append(".xml");
 
-		final File outFile = new File(dataDir, filename.toString());
+		synchronized (this) { // TODO Use a real transactional lock.
 
-		if (log.isInfoEnabled()) {
-			log.info("Saving: " + outFile.getCanonicalPath());
+			while (true) {
+
+				final File outFile = new File(dataDir, filename.toString());
+
+				if (outFile.isFile()) {
+					continue;
+				}
+				
+				if (log.isInfoEnabled()) {
+					log.info("Saving: " + outFile.getCanonicalPath());
+				}
+
+				dump(document, outFile);
+				
+				break;
+			}
 		}
-
-		dump(document, outFile);
 
 		cacheEngine.cache(data);
 	}
