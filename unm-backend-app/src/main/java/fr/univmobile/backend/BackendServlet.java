@@ -23,6 +23,7 @@ import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.impl.BackendDataSourceFileSystem;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
+import fr.univmobile.web.commons.BuildInfoUtils;
 import fr.univmobile.web.commons.UnivMobileHttpUtils;
 
 public class BackendServlet extends AbstractUnivMobileServlet {
@@ -33,7 +34,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 	private static final long serialVersionUID = -4796360020211862333L;
 
 	private UserDataSource users;
-	
+
 	private RegionDataSource regions;
 
 	@Override
@@ -137,6 +138,11 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		request.getSession().setAttribute("user", user);
 
+		// 8. BUILD INFO
+
+		request.setAttribute("buildInfo",
+				BuildInfoUtils.loadBuildInfo(getServletContext()));
+		
 		// 9. CHAIN
 
 		super.service(request, response);
