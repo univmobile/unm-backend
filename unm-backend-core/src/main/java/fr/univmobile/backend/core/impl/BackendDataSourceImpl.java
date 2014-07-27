@@ -26,12 +26,15 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+import net.avcompris.binding.Binding;
 import net.avcompris.binding.dom.helper.DomBinderUtils;
+import net.avcompris.binding.helper.BinderUtils;
 
 import org.apache.commons.io.FileUtils;
 import org.joda.time.DateTime;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
+import org.w3c.dom.Node;
 
 import fr.univmobile.backend.core.BackendDataSource;
 import fr.univmobile.backend.core.Category;
@@ -115,6 +118,28 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 				new EntryBuilderWrapper<E, EB>(document, entryBuilder));
 
 		return builderClass.cast(proxy);
+	}
+
+	@Override
+	public final EB update(final E data) {
+
+		checkNotNull(data, "data");
+
+		final EB rebind = BinderUtils.rebind(data, builderClass);
+
+		final Binding<?> node = BinderUtils.rebind(data, Binding.class);
+
+		final Document document = ((Node) node.node()).getOwnerDocument();
+
+		final Object proxy = Proxy.newProxyInstance(
+				dataSourceClass.getClassLoader(), new Class[] { builderClass },
+				new EntryBuilderWrapper<E, EB>(document, rebind));
+
+		final EB builder = builderClass.cast(proxy);
+
+		builder.setParentId(data.getId());
+
+		return builder;
 	}
 
 	private class EntryBuilderWrapper<E_ extends E, EB_ extends EB> implements

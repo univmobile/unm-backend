@@ -19,5 +19,7 @@ public interface BackendDataSource<E extends Entry, EB extends EntryBuilder<E>> 
 	
 	EB create();
 	
+	EB update(E data);
+	
 	void reload() throws IOException;
 }
