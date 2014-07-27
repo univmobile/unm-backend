@@ -7,21 +7,13 @@
 	<parent>
 		<groupId>fr.univmobile</groupId>
 		<artifactId>unm-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.2-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
 	<build>
 		<finalName>unm-backend-core</finalName>
 	</build>
-
-	<dependencies>
-		<dependency>
-			<groupId>net.avcompris.commons</groupId>
-			<artifactId>avc-binding-dom</artifactId>
-			<version>0.1.3-SNAPSHOT</version>
-		</dependency>
-	</dependencies>
 
 	<name>unm-backend-core</name>
 	<description>
