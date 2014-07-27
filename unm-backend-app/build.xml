@@ -1,0 +1,24 @@
+<project name="unm-backend-app" default="repackage_war">
+
+	<target name="repackage_war">
+	
+		<delete dir="target/unm-backend"/>
+		
+		<unzip dest="target/unm-backend" src="${warFile}"/>
+		
+		<xslt style="src/main/xslt/repackage_war.xsl"
+				in="target/unm-backend/WEB-INF/web.xml"
+				out="target/unm-backend/WEB-INF/web.xml-repackaged">
+			<param name="dataDir" expression="${dataDir}"/>
+		</xslt>
+		
+		<move overwrite="true" tofile="target/unm-backend/WEB-INF/web.xml"
+				file="target/unm-backend/WEB-INF/web.xml-repackaged"/>
+			
+		<zip destfile="${warFile}">
+			<fileset dir="target/unm-backend"/>
+		</zip>
+		
+	</target>	
+	
+</project>
