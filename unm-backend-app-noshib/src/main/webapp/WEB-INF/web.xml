@@ -13,6 +13,10 @@
 			<param-name>baseURL</param-name>
 			<param-value>${baseURL}</param-value>
 		</init-param>
+		<init-param>
+			<param-name>dataDir</param-name>
+			<param-value>/tmp/unm-backend/dataDir</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>BackendServlet</servlet-name>
