@@ -16,20 +16,20 @@ abstract class AbstractBackendController extends AbstractController {
 	protected static final String DELEGATION_USER = "delegationUser";
 
 	protected AbstractBackendController(final UserDataSource users) {
-		
-		this.users=checkNotNull(users,"users");
+
+		this.users = checkNotNull(users, "users");
 	}
-	
+
 	protected final UserDataSource users;
 
 	protected final User getUser() {
-		
-		return getSessionAttribute("user",User.class);
+
+		return getSessionAttribute("user", User.class);
 	}
 
 	protected final User getDelegationUser() {
-		
-		return getSessionAttribute("delegationUser",User.class);
+
+		return getSessionAttribute("delegationUser", User.class);
 	}
 
 	protected final String entered() {
