@@ -6,7 +6,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Administration d’UnivMobile</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/styles.css">
 </head>
@@ -22,6 +21,7 @@
 </div>
 
 <div class="body">
+<form action="${baseURL}/" method="POST">
 
 <h1>Administration d’UnivMobile</h1>
 
@@ -76,7 +76,6 @@ ${u.mail}
 </div>
 
 <div id="div-regions">
-<form action="${baseURL}" method="POST">
 
 <h2>Régions : ${fn:length(regions)}</h2>
 
@@ -92,7 +91,7 @@ ${u.mail}
 <tbody>
 <c:forEach var="r" items="${regions}">
 <tr>
-<td class="none"></td>
+<td class="none">
 </td>
 <td>
 ${r.uid}
@@ -125,9 +124,9 @@ https://univmobile-dev.univ-paris1.fr/json/regions
 </a>
 </div>
 
-</form>
-</div>
+</div> <!-- end of #div-regions -->
 
-</div>
+</form>
+</div> <!-- end of div.body -->
 </body>
 </html>
