@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/users/001:dandriana/1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/users/001:dandriana/1"/>
+<id>fr.univmobile:unm-backend:test/users/001:dandriana_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/users/001:dandriana_1"/>
 <updated>2014-07-26T19:12:02Z</updated>
 <title>dandriana</title>
 <category term="users"/>
