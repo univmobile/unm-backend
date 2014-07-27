@@ -150,3 +150,9 @@ span.error {
 #div-regions {
 	margin-top: 3em;
 }
+#div-buildInfo {
+	margin-bottom: 2em;
+	text-align: center;
+	color: #ccc;
+	font-size: small;	
+}

@@ -11,7 +11,11 @@
 <body id="body-home">
 <div class="body">
 
-<h1>Administration d’UnivMobile</h1>
+<h1 title="Build ${buildInfo.buildDisplayName}
+${buildInfo.buildId}
+${buildInfo.gitCommitId}">
+Administration d’UnivMobile
+</h1>
 
 <div id="div-myself">
 <form action="${baseURL}/" method="POST">

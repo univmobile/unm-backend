@@ -7,3 +7,10 @@ remoteUser: tformica@univ-paris1.fr
 
 delegationUid: Zorro
 err_unknownDelegationUid: true
+
+buildInfo:
+  type: fr.univmobile.model.BuildInfo
+  value:
+    buildDisplayName: "#34"
+    buildId: 2014/07/16 15:45
+    gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70

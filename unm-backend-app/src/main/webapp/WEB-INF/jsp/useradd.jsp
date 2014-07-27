@@ -23,7 +23,11 @@
 <div class="body">
 <form action="${baseURL}/useradd" method="POST">
 
-<h1>Administration d’UnivMobile</h1>
+<h1 title="Build ${buildInfo.buildDisplayName}
+${buildInfo.buildId}
+${buildInfo.gitCommitId}">
+Administration d’UnivMobile
+</h1>
 
 <div class="div-useradd">
 
