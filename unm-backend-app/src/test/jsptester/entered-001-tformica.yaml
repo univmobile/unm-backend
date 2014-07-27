@@ -4,11 +4,20 @@ user:
   type: fr.univmobile.backend.core.User
   value:
     uid: tformica
+    mail: toto.formica@univ-paris1.fr
     
 delegationUser:
   type: fr.univmobile.backend.core.User
   value:
     uid: tformica
+    mail: toto.formica@univ-paris1.fr
 
 users:
-  type: fr.univmobile.backend.core.User[]
+   type: fr.univmobile.backend.core.User[]
+   value:
+     - uid: tformica
+       mail: toto.formica@univ-paris1.fr
+     - uid: crezvani
+       mail: cyrus.rezvani@univ-paris1.fr
+     - uid: dandriana
+       mail: david.andriana@univ-paris1.fr

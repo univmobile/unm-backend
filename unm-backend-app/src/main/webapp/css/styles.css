@@ -105,7 +105,8 @@ div.table.bottom a {
 	width: 30px;
 	text-align: right;
 }
-#body-entered td.none div.delegation {
+#body-entered td.none div.delegation,
+#body-entered td.none div.delegation.principal {
 	color: #090;
 }
 #body-entered td.none div.principal {

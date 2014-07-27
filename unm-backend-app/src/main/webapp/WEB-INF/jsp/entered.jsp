@@ -43,7 +43,9 @@
 <td class="none">
 <c:choose>
 <c:when test="${user.uid == u.uid}">
-	<div class="principal" title="Principal : ${user.uid}">1</div>
+	<div class="principal
+		<c:if test="${delegationUser.uid == u.uid}">delegation</c:if>
+		" title="Principal : ${user.uid}">1</div>
 </c:when>
 <c:when test="${delegationUser.uid == u.uid}">
 	<div class="delegation" title="Délégation : ${delegationUser.uid}">2</div>
