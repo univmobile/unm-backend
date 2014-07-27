@@ -43,7 +43,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		}
 
 		super.init( //
-		new HomeController(users) //
+		new HomeController(users), //
+		new UseraddController(users)
 		);
 	}
 

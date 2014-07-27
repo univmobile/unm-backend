@@ -1,0 +1,14 @@
+baseURL: ${baseURL}
+
+user:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    
+delegationUser:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+
+users:
+  type: fr.univmobile.backend.core.User[]

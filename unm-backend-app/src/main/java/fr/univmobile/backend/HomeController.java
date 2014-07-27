@@ -1,6 +1,10 @@
 package fr.univmobile.backend;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.TreeSet;
 
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
@@ -21,20 +25,28 @@ public class HomeController extends AbstractBackendController {
 	@Override
 	public String action() throws IOException {
 
-		System.out.println("HELLO HERE");
-		
 		// final String uid = getAttribute("uid", String.class);
 		// final String displayName = getAttribute("displayName", String.class);
 		// final String remoteUser = getRemoteUser();
 
-		if (getHttpInputs(Myself.class).isValid()) {
+		if (getHttpInputs(Logout.class).isValid()) {
 
-			setSessionAttribute("delegationUser", getUser());
+			removeSessionAttribute(DELEGATION_USER);
 
-			return "entered.jsp";
+			return "home.jsp";
 		}
 
-		System.out.println("HELLO HERE2");
+		if (hasSessionAttribute(DELEGATION_USER)) {
+
+			return entered();
+		}
+
+		if (getHttpInputs(Myself.class).isValid()) {
+
+			setSessionAttribute(DELEGATION_USER, getUser());
+
+			return entered();
+		}
 
 		final Delegation delegation = getHttpInputs(Delegation.class);
 
@@ -52,12 +64,10 @@ public class HomeController extends AbstractBackendController {
 
 			final User delegationUser = users.getByUid(delegationUid);
 
-			setSessionAttribute("delegationUser", delegationUser);
+			setSessionAttribute(DELEGATION_USER, delegationUser);
 
-			return "entered.jsp";
+			return entered();
 		}
-
-		System.out.println("HELLO HERE3");
 
 		return "home.jsp";
 	}
@@ -80,5 +90,29 @@ public class HomeController extends AbstractBackendController {
 		@Required
 		@HttpParameter("delegationPassword")
 		String password();
+	}
+
+	@HttpMethods({ "GET", "POST" })
+	interface Logout extends HttpInputs {
+
+		@Required
+		@HttpParameter("logout")
+		String _(); // ignored
+	}
+
+	private String entered() {
+
+		final Map<String, User> allUsers = users.getAllBy("uid");
+
+		final List<User> list = new ArrayList<User>();
+
+		for (final String uid : new TreeSet<String>(allUsers.keySet())) {
+
+			list.add(allUsers.get(uid));
+		}
+
+		setAttribute("users", list);
+
+		return "entered.jsp";
 	}
 }

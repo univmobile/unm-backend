@@ -10,7 +10,7 @@
 <title>Administration d’UnivMobile</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/styles.css">
 </head>
-<body id="body-entered" class="entered">
+<body id="body-useradd" class="entered">
 <div id="div-entered">
 <ul>
 <li> Principal : ${user.uid}
@@ -22,57 +22,58 @@
 </div>
 
 <div class="body">
+<form action="${baseURL}/useradd" method="POST">
 
 <h1>Administration d’UnivMobile</h1>
 
-<h2>Utilisateurs : ${fn:length(users)}</h2>
+<h2>Ajout d’un utilisateur</h2>
 
 <table>
-<thead>
-<tr>
-<th class="none">
-<th>uid</th>
-<th>mail</th>
-<th></th>
-<th class="none">
-</tr>
-</thead>
 <tbody>
-<c:forEach var="u" items="${users}">
 <tr>
-<td class="none">
-<c:choose>
-<c:when test="${user.uid == u.uid}">
-	<div class="principal" title="Principal : ${user.uid}">1</div>
-</c:when>
-<c:when test="${delegationUser.uid == u.uid}">
-	<div class="delegation" title="Délégation : ${delegationUser.uid}">2</div>
-</c:when>
-</c:choose>
-</td>
-<td>
-${u.uid}
-</td>
-<td>
-${u.mail}
-</td>
-<td class="edit">
-<!--
-<a href="${baseURL}?user=${u.uid}&amp;edit">Modifier…</a>
--->
-<div class="disabled">Modifier…</a>
-</td>
-<td class="none">
-</td>
+	<th>uid</th>
+	<td>
+	<input type="text" id="text-uid" name="uid" value="${useradd.uid}">
+	</td>
 </tr>
-</c:forEach>
+<tr>
+	<th>Civilité</th>
+	<td>
+	<select id="select-supannCivilite">
+		<option value="Mme">Mᵐᵉ</option>
+		<option value="M.">M.</option>
+	</select>
+	</td>
+</tr>
+<tr>
+	<th>Nom complet</th>
+	<td>
+	<input type="text" id="text-displayName" name="displayName" value="${useradd.displayName}">
+	</td>
+</tr>
+<tr>
+	<th>E-mail</th>
+	<td>
+	<input type="text" id="text-email" name="email" value="${useradd.mail}">
+	</td>
+</tr>
 </tbody>
 </table>
 
 <div class="table bottom">
-<a href="${baseURL}/useradd">Ajouter un utilisateur…</a>
+<!--
+<a href="${baseURL}/">Annuler</a>
+-->
+<button id="button-cancel"
+ onclick="document.location.href = '${baseURL}'; return false;">
+	Annuler
+</button>
+<button id="button-save" onclick="submit()">
+	Enregistrer
+</button>
 </div>
 
+</form>
 </div>
 </body>
 </html>

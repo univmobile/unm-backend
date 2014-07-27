@@ -1,0 +1,26 @@
+baseURL: ${baseURL}
+
+user:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    mail: tformica@univ-paris1.fr
+    displayName: Toto Formica
+    supannCivilite: M.
+    
+delegationUser:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    mail: tformica@univ-paris1.fr
+    displayName: Toto Formica
+    supannCivilite: M.
+
+useradd:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: toto
+    mail: toto@univ-paris1.fr
+    displayName: Toto Formica
+    supannCivilite: Mme
+    

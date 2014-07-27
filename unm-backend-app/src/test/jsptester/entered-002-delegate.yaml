@@ -1,0 +1,29 @@
+baseURL: ${baseURL}
+
+user:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: crezvani
+    remoteUser: crezvani@univ-paris1.fr
+    mail: cyrus.rezvani@univ-paris1.fr
+    
+delegationUser:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    remoteUser: 
+    mail: toto.formica@univ-paris1.fr
+
+users:
+   type: fr.univmobile.backend.core.User[]
+   value:
+     - uid: tformica
+       mail: toto.formica@univ-paris1.fr
+       remoteUser: 
+     - uid: crezvani
+       remoteUser: 
+       mail: cyrus.rezvani@univ-paris1.fr
+     - uid: dandriana
+       remoteUser: 
+       mail: david.andriana@univ-paris1.fr
+       
