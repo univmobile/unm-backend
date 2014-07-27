@@ -19,7 +19,7 @@ public interface Entry extends Serializable {
 	@XPath("atom:link[@rel = 'parent']/@href")
 	String getParentId();
 
-	@XPath("atom:link[@rel = 'parent']/@href")
+	@XPath("atom:link[@rel = 'parent']")
 	boolean isNullParent();
 
 	@XPath("atom:updated")

@@ -1,6 +1,7 @@
 package fr.univmobile.backend.core.impl;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 
 import java.io.File;
 import java.io.IOException;
@@ -184,8 +185,11 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 	}
 
 	@Override
-	protected void save(final Document document, final E data)
+	protected void save(final Document document, final EB builder)
 			throws IOException {
+
+		@SuppressWarnings("unchecked")
+		final E data = (E) builder;
 
 		final String primaryKey = BackendDataUtils.getPrimaryKey(data,
 				dataSourceClass);
@@ -214,6 +218,13 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 		if (log.isInfoEnabled()) {
 			log.info("Saving: " + file.getCanonicalPath());
 		}
+
+		final String id = "fr.univmobile:unm-backend:" //
+				+ dataDir.getName() + ":" //
+				+ substringBeforeLast(file.getName(), ".xml");
+
+		builder.setId(id);
+		builder.setSelf(id);
 
 		dump(document, file);
 

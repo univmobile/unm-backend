@@ -1,6 +1,7 @@
 package fr.univmobile.backend.core;
 
-import static org.junit.Assert.assertEquals;
+import static org.apache.commons.lang3.StringUtils.isBlank;
+import static org.junit.Assert.*;
 
 import java.io.File;
 import java.io.IOException;
@@ -72,8 +73,17 @@ public class CreateUsersTest {
 
 		assertEquals("dandriana", user.getAuthorName());
 
+		assertTrue(user.isNullId());
+		assertTrue(user.isNullSelf());
+		
 		final User saved = user.save();
 
+		assertFalse(user.isNullId());
+		assertFalse(user.isNullSelf());
+		assertFalse(isBlank(user.getSelf()));
+		
+		assertEquals(saved.getId(), user.getSelf());
+		
 		assertEquals("dandriana", saved.getAuthorName());
 		assertEquals("dandriana", saved.getTitle());
 

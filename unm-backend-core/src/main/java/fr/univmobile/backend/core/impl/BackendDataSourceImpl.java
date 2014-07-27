@@ -42,8 +42,7 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 		implements BackendDataSource<E, EB> {
 
 	protected BackendDataSourceImpl(final Class<S> dataSourceClass,
-			final BackendDataEngine<E, EB> engine
-	) {
+			final BackendDataEngine<E, EB> engine) {
 		this.dataSourceClass = checkNotNull(dataSourceClass, "dataSourceClass");
 		this.engine = checkNotNull(engine, "engine");
 		this.builderClass = BackendDataUtils
@@ -125,16 +124,10 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 
 			this.document = checkNotNull(document, "document");
 			this.delegate = checkNotNull(delegate, "delegate");
-			
-			@SuppressWarnings("unchecked")
-			final E entry = (E) delegate;
-
-			data = entry;
 		}
 
 		private final Document document;
 		private final EB delegate;
-		private final E data;
 
 		@Override
 		public Object invoke(final Object proxy, final Method method,
@@ -142,15 +135,15 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 
 			if ("save".equals(method.getName())) {
 
-				BackendDataSourceImpl.this.save(document, data);
+				BackendDataSourceImpl.this.save(document, delegate);
 
 				return delegate;
 			}
 
 			if ("dump".equals(method.getName())) {
 
-				dump(document, (File)args[0]);
-				
+				dump(document, (File) args[0]);
+
 				return null;
 			}
 
@@ -158,7 +151,8 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 		}
 	}
 
-	protected abstract void save(Document document, E data) throws IOException;
+	protected abstract void save(Document document, EB builder)
+			throws IOException;
 
 	protected static String dump(final Document document, final File outFile) {
 
@@ -208,8 +202,9 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 
 		final Document document = documentBuilder.newDocument();
 
-		final Element rootElement = document.createElementNS(NSURI, "atom:entry");
-		
+		final Element rootElement = document.createElementNS(NSURI,
+				"atom:entry");
+
 		document.appendChild(rootElement);
 
 		final Element updatedElement = document.createElementNS(NSURI,
