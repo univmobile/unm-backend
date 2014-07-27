@@ -2,8 +2,6 @@ package fr.univmobile.backend.core;
 
 import net.avcompris.binding.annotation.XPath;
 
-//@Namespaces("xmlns:atom=http://www.w3.org/2005/Atom")
-//@XPath("/entry")
 public interface User extends Entry {
 
 	/**
@@ -18,11 +16,15 @@ public interface User extends Entry {
 	@XPath("atom:content/atom:displayName")
 	String getDisplayName();
 
+	String setDisplayName(String displayName);
+
 	/**
 	 * e.g. "M."
 	 */
 	@XPath("atom:content/atom:supannCivilite")
 	String getSupannCivilite();
+
+	void setSupannCivilite(String supannCivilite);
 
 	/**
 	 * e.g. "dandriana@univ-paris1.fr"
@@ -30,12 +32,16 @@ public interface User extends Entry {
 	@XPath("atom:content/atom:remoteUser")
 	String getRemoteUser();
 
+	void setRemoteUser(String remoteUser);
+
 	/**
 	 * e.g. "David.Andriana@univ-paris1.fr"
 	 */
 	@XPath("atom:content/atom:mail")
 	String getMail();
-	
+
+	void setMail(String mail);
+
 	@XPath("concat(atom:category/@term, ':', atom:content/atom:uid)")
 	@Override
 	String toString();

@@ -12,44 +12,48 @@ import java.util.Map;
 
 import net.avcompris.binding.dom.helper.DomBinderUtils;
 
+import org.apache.commons.lang3.RandomUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.w3c.dom.Document;
 
 import com.avcompris.lang.NotImplementedException;
 
 import fr.univmobile.backend.core.BackendDataSource;
 import fr.univmobile.backend.core.Entry;
+import fr.univmobile.backend.core.EntryBuilder;
+import fr.univmobile.backend.core.PrimaryKey;
 import fr.univmobile.backend.core.SearchAttribute;
 
-public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U extends Entry>
-		extends BackendDataSourceImpl<U> implements InvocationHandler {
+public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB>, E extends Entry, EB extends EntryBuilder<E>>
+		extends BackendDataSourceImpl<S, E, EB> implements InvocationHandler {
 
-	public static <T extends BackendDataSource<U>, U extends Entry> T newDataSource(
-			final Class<T> dataSourceClass, final Class<U> dataClass,
-			final File dataDir) throws IOException {
+	public static <S extends BackendDataSource<E, EB>, E extends Entry, EB extends EntryBuilder<E>> S newDataSource(
+			final Class<S> dataSourceClass, final File dataDir)
+			throws IOException {
 
-		return new BackendDataSourceFileSystem<T, U>(dataSourceClass,
-				dataClass, dataDir).getDataSource();
+		return new BackendDataSourceFileSystem<S, E, EB>(dataSourceClass,
+				dataDir).getDataSource();
 	}
 
-	private final BackendDataCacheEngine<U> cacheEngine;
+	private final BackendDataCacheEngine<E, EB> cacheEngine;
 
-	private BackendDataSourceFileSystem(final Class<T> dataSourceClass,
-			final Class<U> dataClass, final File dataDir) throws IOException {
+	private BackendDataSourceFileSystem(final Class<S> dataSourceClass,
+			final File dataDir) throws IOException {
 
 		// 0. SUPER + INIT
 
-		super(new BackendDataCacheEngine<U>(dataSourceClass, dataClass,
-				new BackendDataEngineFileSystem<U>(dataDir)));
+		super(dataSourceClass, new BackendDataCacheEngine<E, EB>(
+				dataSourceClass));
 
-		cacheEngine = (BackendDataCacheEngine<U>) engine;
+		cacheEngine = (BackendDataCacheEngine<E, EB>) engine;
 
 		this.dataDir = checkNotNull(dataDir, "dataDir");
 
 		// 1. PROXY
 
 		this.dataSourceClass = checkNotNull(dataSourceClass, "dataSourceClass");
-		this.dataClass = checkNotNull(dataClass, "dataClass");
+		this.dataClass = BackendDataUtils.getDataClass(dataSourceClass);
 
 		final Object proxy = Proxy.newProxyInstance(
 				BackendDataSourceFileSystem.class.getClassLoader(),
@@ -77,18 +81,18 @@ public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U
 				continue;
 			}
 
-			final U data = DomBinderUtils.xmlContentToJava(file, dataClass);
+			final E data = DomBinderUtils.xmlContentToJava(file, dataClass);
 
 			cacheEngine.cache(data);
 		}
 	}
 
-	private final Class<T> dataSourceClass;
-	private final Class<U> dataClass;
+	private final Class<S> dataSourceClass;
+	private final Class<E> dataClass;
 
-	private final T dataSource;
+	private final S dataSource;
 
-	public T getDataSource() {
+	public S getDataSource() {
 
 		return dataSource;
 	}
@@ -158,7 +162,7 @@ public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U
 	}
 
 	@Override
-	public U getLatest(final U data) {
+	public E getLatest(final E data) {
 
 		checkNotNull(data, "data");
 
@@ -166,7 +170,7 @@ public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U
 	}
 
 	@Override
-	public boolean isLatest(final U data) {
+	public boolean isLatest(final E data) {
 
 		checkNotNull(data, "data");
 
@@ -174,8 +178,40 @@ public final class BackendDataSourceFileSystem<T extends BackendDataSource<U>, U
 	}
 
 	@Override
-	public Map<String, U> getAllBy(final String attributeName) {
+	public Map<String, E> getAllBy(final String attributeName) {
 
 		return cacheEngine.getAllBy(attributeName);
+	}
+
+	@Override
+	protected void save(final Document document, final E data)
+			throws IOException {
+
+		final String[] primaryKey = BackendDataUtils.getInheritedAnnotation(
+				dataSourceClass, PrimaryKey.class).value();
+
+		final StringBuilder filename = new StringBuilder();
+
+		for (final String attributeName : primaryKey) {
+
+			final Object value = BackendDataUtils.getAttribute(data,
+					attributeName);
+
+			filename.append(value).append('_');
+		}
+
+		filename.append(System.currentTimeMillis()).append('_');
+
+		filename.append(RandomUtils.nextInt(10000000, 99999999)).append(".xml");
+
+		final File outFile = new File(dataDir, filename.toString());
+
+		if (log.isInfoEnabled()) {
+			log.info("Saving: " + outFile.getCanonicalPath());
+		}
+
+		dump(document, outFile);
+
+		cacheEngine.cache(data);
 	}
 }

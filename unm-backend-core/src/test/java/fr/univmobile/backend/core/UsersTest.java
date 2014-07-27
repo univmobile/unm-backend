@@ -21,7 +21,7 @@ public class UsersTest {
 	public void setUp() throws Exception {
 
 		users = BackendDataSourceFileSystem.newDataSource(UserDataSource.class,
-				User.class, new File("src/test/data/users/001"));
+				new File("src/test/data/users/001"));
 	}
 
 	private UserDataSource users;

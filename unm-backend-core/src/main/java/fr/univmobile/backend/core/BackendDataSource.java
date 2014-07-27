@@ -2,17 +2,19 @@ package fr.univmobile.backend.core;
 
 import java.util.Map;
 
-public interface BackendDataSource<T extends Entry> {
+public interface BackendDataSource<E extends Entry, EB extends EntryBuilder<E>> {
 
-	T getById(String id);
+	E getById(String id);
 
-	T getParent(T data);
+	E getParent(E data);
 
-	boolean hasParent(T data);
+	boolean hasParent(E data);
 
-	T getLatest(T data);
+	E getLatest(E data);
 
-	boolean isLatest(T data);
+	boolean isLatest(E data);
+
+	public Map<String, E> getAllBy(String attributeName);
 	
-	public Map<String,T> getAllBy(String attributeName);
+	EB create();
 }

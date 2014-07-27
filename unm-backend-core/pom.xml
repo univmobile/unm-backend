@@ -3,17 +3,25 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>unm-backend-core</artifactId>
-	
+
 	<parent>
 		<groupId>fr.univmobile</groupId>
 		<artifactId>unm-parent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/>
+		<relativePath />
 	</parent>
 
 	<build>
 		<finalName>unm-backend-core</finalName>
 	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>net.avcompris.commons</groupId>
+			<artifactId>avc-binding-dom</artifactId>
+			<version>0.1.3-SNAPSHOT</version>
+		</dependency>
+	</dependencies>
 
 	<name>unm-backend-core</name>
 	<description>
@@ -52,7 +60,7 @@
             </url>
 		</site>
 	</distributionManagement>
-	
+
 	<repositories>
 		<repository>
 			<id>vswip</id>
@@ -81,7 +89,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
-	
+
 	<profiles>
 		<profile>
 			<id>dandriana</id>
@@ -90,5 +98,5 @@
 			<id>jenkins</id>
 		</profile>
 	</profiles>
-	
+
 </project>

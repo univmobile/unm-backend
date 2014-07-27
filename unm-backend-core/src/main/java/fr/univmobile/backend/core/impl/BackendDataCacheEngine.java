@@ -12,32 +12,32 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import com.avcompris.lang.NotImplementedException;
+
 import fr.univmobile.backend.core.BackendDataSource;
 import fr.univmobile.backend.core.Entry;
+import fr.univmobile.backend.core.EntryBuilder;
 import fr.univmobile.backend.core.SearchAttribute;
 
-final class BackendDataCacheEngine<T extends Entry> implements
-		BackendDataEngine<T> {
+final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
+		implements BackendDataEngine<E, EB> {
 
 	public BackendDataCacheEngine(
-			final Class<? extends BackendDataSource<T>> dataSourceClass,
-			final Class<T> dataClass, final BackendDataEngine<T> delegate) {
-
-		this.delegate = checkNotNull(delegate, "delegate");
+			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
 
 		checkNotNull(dataSourceClass, "dataSourceClass");
 
-		this.dataClass = checkNotNull(dataClass, "dataClass");
+		this.dataClass = BackendDataUtils.getDataClass(dataSourceClass);
 
 		// 2. INDEXES
 
 		// 2.1. COREATTRIBUTES
 
-		indexes.put("id", new HashMap<String, List<T>>());
+		indexes.put("id", new HashMap<String, List<E>>());
 
 		putAttributeMethod("id");
 
-		indexes.put("parentId", new HashMap<String, List<T>>());
+		indexes.put("parentId", new HashMap<String, List<E>>());
 
 		putAttributeMethod("parentId");
 
@@ -54,13 +54,13 @@ final class BackendDataCacheEngine<T extends Entry> implements
 
 			final String attributeName = searchAttribute.value();
 
-			indexes.put(attributeName, new HashMap<String, List<T>>());
+			indexes.put(attributeName, new HashMap<String, List<E>>());
 
 			putAttributeMethod(attributeName);
 		}
 	}
 
-	private final Class<T> dataClass;
+	private final Class<E> dataClass;
 
 	private void putAttributeMethod(final String attributeName) {
 
@@ -79,17 +79,17 @@ final class BackendDataCacheEngine<T extends Entry> implements
 
 	private final Map<String, Method> methods = new HashMap<String, Method>();
 
-	private final BackendDataEngine<T> delegate;
-
 	@Override
-	public void store(final T data) {
+	public void store(final E data) {
 
 		cache(data);
 
-		delegate.store(data);
+		// delegate.store(data);
+
+		throw new NotImplementedException();
 	}
 
-	public synchronized void cache(final T data) {
+	public synchronized void cache(final E data) {
 
 		checkNotNull(data, "data");
 
@@ -114,14 +114,14 @@ final class BackendDataCacheEngine<T extends Entry> implements
 				continue;
 			}
 
-			final Map<String, List<T>> index = indexes.get(attributeName);
+			final Map<String, List<E>> index = indexes.get(attributeName);
 
 			final String attributeValueAsString = attributeValue.toString();
 
-			List<T> cached = index.get(attributeValueAsString);
+			List<E> cached = index.get(attributeValueAsString);
 
 			if (cached == null) {
-				cached = new ArrayList<T>();
+				cached = new ArrayList<E>();
 				index.put(attributeValueAsString, cached);
 			}
 
@@ -129,8 +129,8 @@ final class BackendDataCacheEngine<T extends Entry> implements
 
 			final String id = data.getId();
 
-			for (final T t : cached) {
-				if (!t.isNullParent() && id.equals(t.getParentId())) {
+			for (final E E : cached) {
+				if (!E.isNullParent() && id.equals(E.getParentId())) {
 					isParent = true;
 					break;
 				}
@@ -145,12 +145,12 @@ final class BackendDataCacheEngine<T extends Entry> implements
 	}
 
 	@Override
-	public T getById(final String id) {
+	public E getById(final String id) {
 
 		return getByAttribute("id", id);
 	}
 
-	public T getByAttribute(final String attributeName,
+	public E getByAttribute(final String attributeName,
 			final Object attributeValue) {
 
 		if (attributeValue == null) {
@@ -158,9 +158,9 @@ final class BackendDataCacheEngine<T extends Entry> implements
 					+ attributeValue);
 		}
 
-		final Map<String, List<T>> index = indexes.get(attributeName);
+		final Map<String, List<E>> index = indexes.get(attributeName);
 
-		final List<T> data = index.get(attributeValue);
+		final List<E> data = index.get(attributeValue);
 
 		if (data == null || data.isEmpty()) {
 			throw new NoSuchElementException("Cannot find cached data for: "
@@ -178,27 +178,27 @@ final class BackendDataCacheEngine<T extends Entry> implements
 					+ "=" + attributeValue);
 		}
 
-		final Map<String, List<T>> index = indexes.get(attributeName);
+		final Map<String, List<E>> index = indexes.get(attributeName);
 
-		final List<T> data = index.get(attributeValue);
+		final List<E> data = index.get(attributeValue);
 
 		return data == null || data.isEmpty();
 	}
 
 	public synchronized void clear() {
 
-		for (final Map<String, List<T>> index : indexes.values()) {
+		for (final Map<String, List<E>> index : indexes.values()) {
 
 			index.clear();
 		}
 	}
 
-	private final Map<String, Map<String, List<T>>> indexes = //
-	new HashMap<String, Map<String, List<T>>>();
+	private final Map<String, Map<String, List<E>>> indexes = //
+	new HashMap<String, Map<String, List<E>>>();
 
-	public List<T> getAllVersions(final T data) {
+	public List<E> getAllVersions(final E data) {
 
-		final List<T> allVersions = new ArrayList<T>();
+		final List<E> allVersions = new ArrayList<E>();
 
 		allVersions.add(data);
 
@@ -209,15 +209,15 @@ final class BackendDataCacheEngine<T extends Entry> implements
 		return allVersions;
 	}
 
-	private void addAllDescendants(final List<T> allVersions, final T data) {
+	private void addAllDescendants(final List<E> allVersions, final E data) {
 
-		final List<T> children = indexes.get("parentId").get(data.getId());
+		final List<E> children = indexes.get("parentId").get(data.getId());
 
 		if (children == null) {
 			return;
 		}
 
-		for (final T child : children) {
+		for (final E child : children) {
 
 			allVersions.add(0, child);
 
@@ -225,13 +225,13 @@ final class BackendDataCacheEngine<T extends Entry> implements
 		}
 	}
 
-	private void addAllAscendants(final List<T> allVersions, final T data) {
+	private void addAllAscendants(final List<E> allVersions, final E data) {
 
 		if (data.isNullParent()) {
 			return;
 		}
 
-		for (final T parent : indexes.get("id").get(data.getParentId())) {
+		for (final E parent : indexes.get("id").get(data.getParentId())) {
 
 			allVersions.add(parent);
 
@@ -239,18 +239,18 @@ final class BackendDataCacheEngine<T extends Entry> implements
 		}
 	}
 
-	public Map<String, T> getAllBy(final String attributeName) {
+	public Map<String, E> getAllBy(final String attributeName) {
 
-		final Map<String, T> all = new HashMap<String, T>();
+		final Map<String, E> all = new HashMap<String, E>();
 
-		for (final Map.Entry<String, List<T>> entry : indexes
+		for (final Map.Entry<String, List<E>> entry : indexes
 				.get(attributeName).entrySet()) {
 
-			final String attributeValue=entry.getKey();
-			
+			final String attributeValue = entry.getKey();
+
 			all.put(attributeValue, entry.getValue().iterator().next());
 		}
-		
+
 		return all;
 	}
 }

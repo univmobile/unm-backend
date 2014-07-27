@@ -36,16 +36,15 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		try {
 
 			users = BackendDataSourceFileSystem.newDataSource(
-					UserDataSource.class, User.class, usersDir);
+					UserDataSource.class, usersDir);
 
 		} catch (final IOException e) {
 			throw new ServletException(e);
 		}
 
 		super.init( //
-		new HomeController(users), //
-		new UseraddController(users)
-		);
+				new HomeController(users), //
+				new UseraddController(users));
 	}
 
 	private static final Log log = LogFactory.getLog(BackendServlet.class);
@@ -95,7 +94,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 					+ remoteUser);
 
 			UnivMobileHttpUtils.sendError403(request, response,
-					"Unknown REMOTE_USER in the Database: "+remoteUser);
+					"Unknown REMOTE_USER in the Database: " + remoteUser);
 
 			return;
 		}

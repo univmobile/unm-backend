@@ -1,6 +1,9 @@
 package fr.univmobile.backend.core;
 
-public interface UserDataSource extends BackendDataSource<User> {
+@Category("users")
+@PrimaryKey("uid")
+@Support(data = User.class, builder = UserBuilder.class)
+public interface UserDataSource extends BackendDataSource<User, UserBuilder> {
 
 	@SearchAttribute("remoteUser")
 	User getByRemoteUser(String remoteUser);

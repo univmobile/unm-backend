@@ -1,10 +1,11 @@
 package fr.univmobile.backend.core.impl;
 
 import fr.univmobile.backend.core.Entry;
+import fr.univmobile.backend.core.EntryBuilder;
 
-public interface BackendDataEngine<T extends Entry> {
+public interface BackendDataEngine<E extends Entry, EB extends EntryBuilder<E>> {
 
-	void store(T data);
-	
-	T getById(String id);
+	void store(E data);
+
+	E getById(String id);
 }

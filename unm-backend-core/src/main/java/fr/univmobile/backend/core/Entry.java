@@ -2,6 +2,8 @@ package fr.univmobile.backend.core;
 
 import java.io.Serializable;
 
+import javax.xml.soap.Node;
+
 import net.avcompris.binding.annotation.Namespaces;
 import net.avcompris.binding.annotation.XPath;
 
@@ -47,4 +49,6 @@ public interface Entry extends Serializable {
 	@XPath("concat(atom:category/@term, ':', atom:title)")
 	@Override
 	String toString();
+	
+	Node node();
 }
