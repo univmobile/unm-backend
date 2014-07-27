@@ -1,5 +1,6 @@
 package fr.univmobile.backend.core;
 
+import java.io.IOException;
 import java.util.Map;
 
 public interface BackendDataSource<E extends Entry, EB extends EntryBuilder<E>> {
@@ -17,4 +18,6 @@ public interface BackendDataSource<E extends Entry, EB extends EntryBuilder<E>> 
 	public Map<String, E> getAllBy(String attributeName);
 	
 	EB create();
+	
+	void reload() throws IOException;
 }

@@ -111,10 +111,17 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 	public Object invoke(final Object proxy, final Method method,
 			final Object[] args) throws Throwable {
 
+		final String methodName = method.getName();
+
+		if ("reload".equals(methodName)) {
+
+			reload();
+
+			return null;
+		}
+
 		final SearchAttribute searchAttribute = method
 				.getAnnotation(SearchAttribute.class);
-
-		final String methodName = method.getName();
 
 		if (searchAttribute != null) {
 

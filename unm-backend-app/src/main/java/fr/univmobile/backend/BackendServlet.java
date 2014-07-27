@@ -1,11 +1,13 @@
 package fr.univmobile.backend;
 
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.io.File;
 import java.io.IOException;
 
 import javax.servlet.ServletException;
+import javax.servlet.UnavailableException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
@@ -30,8 +32,13 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 	@Override
 	public void init() throws ServletException {
 
-		final File usersDir = new File(
-				"/Users/dandriana/Documents/workspace/unm-backend/unm-backend-core/src/test/data/users/001");
+		final String dataDir = getServletConfig().getInitParameter("dataDir");
+
+		if (isBlank(dataDir)) {
+			throw new UnavailableException("Cannot find init-param: dataDir");
+		}
+
+		final File usersDir = new File(dataDir, "users");
 
 		try {
 
@@ -105,6 +112,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 9. CHAIN
 
+		users.reload();
+		
 		super.service(request, response);
 	}
 }
