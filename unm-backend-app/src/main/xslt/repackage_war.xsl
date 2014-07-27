@@ -3,7 +3,7 @@
 	xmlns:j2ee="http://java.sun.com/xml/ns/j2ee">
 
 <xsl:param name="dataDir" select="'/tmp/unm-backend/data'"/>
-<xsl:param name="baseURL" select="'http://locahost:8080/unm-backend/'"/>
+<xsl:param name="baseURL" select="'http://localhost:8080/unm-backend/'"/>
 
 <xsl:template match="*">
 

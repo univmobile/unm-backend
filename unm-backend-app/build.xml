@@ -2,7 +2,7 @@
 
 	<property name="warFile" location="target/unm-backend.war"/>
 	<property name="dataDir" value="/tmp/unm-backend/data"/>
-	<property name="baseURL" value="http://locahost:8080/unm-backend/"/>
+	<property name="baseURL" value="http://localhost:8080/unm-backend/"/>
 	
 	<target name="repackage_war">
 	
