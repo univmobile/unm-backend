@@ -73,6 +73,9 @@ body.entered div.body {
 #body-entered td {
 	padding: 2px 30px;
 }
+#body-entered #div-regions td.label {
+	padding: 2px 2px;
+}
 #body-entered th {
 	background-color: #9bc9e1;
 }
@@ -124,7 +127,8 @@ div.table.bottom a {
 #body-useradd div.table.bottom {
 	margin-top: 2em;
 }
-#body-useradd button {
+#body-useradd button,
+#div-regions button {
 	margin-left: 6em;
 	margin-right: 6em;	
 }
@@ -134,9 +138,15 @@ div.table.bottom a {
 #body-useradd input {
 	width: 20em;
 }
+#div-regions input {
+	width: 20em;
+}
 span.error {
 	color: #900;
 	font-weight: bold;
 	font-size: small;
 	text-decoration: underline;
+}
+#div-regions {
+	margin-top: 3em;
 }

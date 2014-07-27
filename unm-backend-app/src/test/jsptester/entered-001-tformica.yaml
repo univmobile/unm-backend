@@ -21,3 +21,17 @@ users:
        mail: cyrus.rezvani@univ-paris1.fr
      - uid: dandriana
        mail: david.andriana@univ-paris1.fr
+
+regions:
+   type: fr.univmobile.backend.core.Region[]
+   value:
+     - uid: bretagne
+       label: Bretagne
+       url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_bretagne
+     - uid: ile_de_france
+       label: Île de France
+       url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_ile_de_france
+     - uid: unrpcl
+       label: Limousin/Poitou-Charentes
+       url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_unrpcl
+       

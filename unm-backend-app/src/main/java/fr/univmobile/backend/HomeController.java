@@ -2,6 +2,7 @@ package fr.univmobile.backend;
 
 import java.io.IOException;
 
+import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.web.commons.HttpInputs;
@@ -13,9 +14,10 @@ import fr.univmobile.web.commons.Paths;
 @Paths({ "" })
 public class HomeController extends AbstractBackendController {
 
-	public HomeController(final UserDataSource users) {
+	public HomeController(final UserDataSource users,
+			final RegionDataSource regions) {
 
-		super(users);
+		super(users, regions);
 	}
 
 	@Override

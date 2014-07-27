@@ -30,11 +30,11 @@
 <table>
 <thead>
 <tr>
-<th class="none">
+<th class="none"></th>
 <th>uid</th>
 <th>mail</th>
 <th></th>
-<th class="none">
+<th class="none"></th>
 </tr>
 </thead>
 <tbody>
@@ -73,6 +73,59 @@ ${u.mail}
 
 <div class="table bottom">
 <a href="${baseURL}/useradd">Ajouter un utilisateur…</a>
+</div>
+
+<div id="div-regions">
+<form action="${baseURL}" method="POST">
+
+<h2>Régions : ${fn:length(regions)}</h2>
+
+<table>
+<thead>
+<tr>
+<th class="none"></th>
+<th>id</th>
+<th>label</th>
+<th class="none"></th>
+</tr>
+</thead>
+<tbody>
+<c:forEach var="r" items="${regions}">
+<tr>
+<td class="none"></td>
+</td>
+<td>
+${r.uid}
+</td>
+<td class="label">
+<input type="text" id="text-region_${r.uid}" name="region_${r.uid}"
+	value="${r.label}"/>
+</td>
+<td class="none">
+</td>
+</tr>
+</c:forEach>
+</tbody>
+</table>
+
+<div class="table bottom">
+<button id="button-cancel"
+ onclick="document.location.href = '${baseURL}'; return false;">
+	Annuler
+</button>
+<button id="button-submit" onclick="submit()">
+	Enregistrer
+</button>
+</div>
+
+<div class="table bottom">
+JSON :
+<a href="https://univmobile-dev.univ-paris1.fr/json/regions">
+https://univmobile-dev.univ-paris1.fr/json/regions
+</a>
+</div>
+
+</form>
 </div>
 
 </div>
