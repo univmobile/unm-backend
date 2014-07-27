@@ -1,5 +1,7 @@
 package fr.univmobile.backend.core;
 
+import javax.annotation.Nullable;
+
 import net.avcompris.binding.annotation.XPath;
 
 public interface User extends Entry {
@@ -16,12 +18,13 @@ public interface User extends Entry {
 	@XPath("atom:content/atom:displayName")
 	String getDisplayName();
 
-	String setDisplayName(String displayName);
+	void setDisplayName(String displayName);
 
 	/**
 	 * e.g. "M."
 	 */
 	@XPath("atom:content/atom:supannCivilite")
+	@Nullable
 	String getSupannCivilite();
 
 	void setSupannCivilite(String supannCivilite);
