@@ -70,6 +70,15 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		final String remoteUser = request.getRemoteUser();
 		final String requestURI = request.getRequestURI();
 
+		final Object displayName = request.getAttribute("displayName");
+		final Object uid = request.getAttribute("uid");
+
+		if (log.isInfoEnabled()) {
+			log.info("Shibbolet: uid=" + uid //
+					+ ", remoteUser=" + remoteUser //
+					+ ", displayName=" + displayName);
+		}
+
 		// 2. VALIDATE: SHIBBOLETH MUST BE HERE
 
 		if (remoteUser == null) {
@@ -94,6 +103,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 3. USER
 
+		users.reload();
+
 		if (users.isNullByRemoteUser(remoteUser)) {
 
 			log.fatal("host: " + host
@@ -112,8 +123,6 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 9. CHAIN
 
-		users.reload();
-		
 		super.service(request, response);
 	}
 }
