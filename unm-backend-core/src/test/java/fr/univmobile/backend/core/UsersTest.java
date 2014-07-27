@@ -50,7 +50,7 @@ public class UsersTest {
 	public void test_getById_crezvaniAttributes() throws Exception {
 
 		final User crezvani = users
-				.getById("fr.univmobile:unm-backend:test/users/001:crezvani/1");
+				.getById("fr.univmobile:unm-backend:test/users/001:crezvani_1");
 
 		assertEquals("crezvani", crezvani.getUid());
 
