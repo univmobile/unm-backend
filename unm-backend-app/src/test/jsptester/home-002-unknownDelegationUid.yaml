@@ -6,4 +6,4 @@ displayName: Toto Formica
 remoteUser: tformica@univ-paris1.fr
 
 delegationUid: Zorro
-errorUnknownDelegationUid: true
+err_unknownDelegationUid: true

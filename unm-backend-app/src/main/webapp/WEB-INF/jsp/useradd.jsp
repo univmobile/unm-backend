@@ -26,6 +26,20 @@
 
 <h1>Administration d’UnivMobile</h1>
 
+<div class="div-useradd">
+
+<c:if test="${err_duplicateUid}">
+<div class="error">
+	ERREUR — un utilisateur avec cet uid = ${useradd.uid} existe déjà en base
+</div>
+</c:if>
+<c:if test="${err_duplicateRemoteUser}">
+<div class="error">
+	ERREUR — un utilisateur avec ce REMOTE_USER = ${useradd.remoteUser} 
+	existe déjà en base
+</div>
+</c:if>
+
 <h2>Ajout d’un utilisateur</h2>
 
 <table>
@@ -34,13 +48,26 @@
 	<th>uid</th>
 	<td>
 	<input type="text" id="text-uid" name="uid" value="${useradd.uid}">
+	<c:if test="${err_useradd_uid}">
+		<span class="error" title="Le champ est mal formé">Incorrect</span>
+	</c:if>
+	</td>
+</tr>
+<tr>
+	<th>REMOTE_USER</th>
+	<td>
+	<input type="text" id="text-remoteUser" name="remoteUser" value="${useradd.remoteUser}">
+	<c:if test="${err_useradd_remoteUser}">
+		<span class="error" title="Le champ est mal formé">Incorrect</span>
+	</c:if>
 	</td>
 </tr>
 <tr>
 	<th>Civilité</th>
 	<td>
-	<select id="select-supannCivilite">
-		<option value="Mme">Mᵐᵉ</option>
+	<select id="select-supannCivilite" name="supannCivilite">
+		<option value="aucune">(aucune)</option>
+		<option value="Mme" selected>Mᵐᵉ</option>
 		<option value="M.">M.</option>
 	</select>
 	</td>
@@ -49,12 +76,18 @@
 	<th>Nom complet</th>
 	<td>
 	<input type="text" id="text-displayName" name="displayName" value="${useradd.displayName}">
+	<c:if test="${err_useradd_displayName}">
+		<span class="error" title="Le champ est mal formé">Incorrect</span>
+	</c:if>
 	</td>
 </tr>
 <tr>
 	<th>E-mail</th>
 	<td>
-	<input type="text" id="text-email" name="email" value="${useradd.mail}">
+	<input type="text" id="text-mail" name="mail" value="${useradd.mail}">
+	<c:if test="${err_useradd_mail}">
+		<span class="error" title="Le champ est mal formé">Incorrect</span>
+	</c:if>
 	</td>
 </tr>
 </tbody>
@@ -71,6 +104,8 @@
 <button id="button-save" onclick="submit()">
 	Enregistrer
 </button>
+</div>
+
 </div>
 
 </form>

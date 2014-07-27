@@ -2,6 +2,7 @@ package fr.univmobile.backend.core;
 
 @Category("users")
 @PrimaryKey("uid")
+@Unique("remoteUser")
 @Support(data = User.class, builder = UserBuilder.class)
 public interface UserDataSource extends BackendDataSource<User, UserBuilder> {
 

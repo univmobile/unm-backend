@@ -36,7 +36,7 @@ ${displayName}
 </div>
 
 <div id="div-delegation">
-<c:if test="${errorUnknownDelegationUid}">
+<c:if test="${err_unknownDelegationUid}">
 <div class="error">
 	ERREUR — 
 	<span class="message">

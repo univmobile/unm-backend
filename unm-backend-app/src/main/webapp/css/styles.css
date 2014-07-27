@@ -28,6 +28,8 @@ div.error {
 	background-color: #900;
 	color: #fff;
 	padding: 1em;
+	text-align: center;
+	margin-bottom: 1px;
 }
 div.error span.message {
 	xfont-style: italic;
@@ -128,4 +130,13 @@ div.table.bottom a {
 }
 #body-useradd div.table.bottom a {
 	font-size: small;
+}
+#body-useradd input {
+	width: 20em;
+}
+span.error {
+	color: #900;
+	font-weight: bold;
+	font-size: small;
+	text-decoration: underline;
 }

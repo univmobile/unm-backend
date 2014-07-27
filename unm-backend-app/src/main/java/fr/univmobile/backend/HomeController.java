@@ -12,7 +12,7 @@ import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.Paths;
-import fr.univmobile.web.commons.Required;
+import fr.univmobile.web.commons.HttpRequired;
 
 @Paths({ "" })
 public class HomeController extends AbstractBackendController {
@@ -29,7 +29,7 @@ public class HomeController extends AbstractBackendController {
 		// final String displayName = getAttribute("displayName", String.class);
 		// final String remoteUser = getRemoteUser();
 
-		if (getHttpInputs(Logout.class).isValid()) {
+		if (getHttpInputs(Logout.class).isHttpValid()) {
 
 			removeSessionAttribute(DELEGATION_USER);
 
@@ -41,22 +41,22 @@ public class HomeController extends AbstractBackendController {
 			return entered();
 		}
 
-		if (getHttpInputs(Myself.class).isValid()) {
+		if (getHttpInputs(Myself.class).isHttpValid()) {
 
 			setSessionAttribute(DELEGATION_USER, getUser());
 
 			return entered();
 		}
 
-		final Delegation delegation = getHttpInputs(Delegation.class);
+		final Delegation form = getHttpInputs(Delegation.class);
 
-		if (delegation.isValid()) {
+		if (form.isHttpValid()) {
 
-			final String delegationUid = delegation.uid();
+			final String delegationUid = form.uid();
 
 			if (users.isNullByUid(delegationUid)) {
 
-				setAttribute("errorUnknownDelegationUid", true);
+				setAttribute("err_unknownDelegationUid", true);
 				setAttribute("delegationUid", delegationUid);
 
 				return "home.jsp";
@@ -75,7 +75,7 @@ public class HomeController extends AbstractBackendController {
 	@HttpMethods("POST")
 	interface Myself extends HttpInputs {
 
-		@Required
+		@HttpRequired
 		@HttpParameter("myself")
 		String _(); // ignored
 	}
@@ -83,11 +83,11 @@ public class HomeController extends AbstractBackendController {
 	@HttpMethods("POST")
 	interface Delegation extends HttpInputs {
 
-		@Required
+		@HttpRequired
 		@HttpParameter("delegationUid")
 		String uid();
 
-		@Required
+		@HttpRequired
 		@HttpParameter("delegationPassword")
 		String password();
 	}
@@ -95,24 +95,8 @@ public class HomeController extends AbstractBackendController {
 	@HttpMethods({ "GET", "POST" })
 	interface Logout extends HttpInputs {
 
-		@Required
+		@HttpRequired
 		@HttpParameter("logout")
 		String _(); // ignored
-	}
-
-	private String entered() {
-
-		final Map<String, User> allUsers = users.getAllBy("uid");
-
-		final List<User> list = new ArrayList<User>();
-
-		for (final String uid : new TreeSet<String>(allUsers.keySet())) {
-
-			list.add(allUsers.get(uid));
-		}
-
-		setAttribute("users", list);
-
-		return "entered.jsp";
 	}
 }

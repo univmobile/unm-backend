@@ -27,4 +27,4 @@ useradd:
     supannCivilite: Mme
     remoteUser: tformica@univ-paris1.fr 
 
-err_useradd_displayName: true
+err_duplicateRemoteUser: true
