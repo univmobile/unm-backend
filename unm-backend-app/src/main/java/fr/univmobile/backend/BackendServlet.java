@@ -5,6 +5,9 @@ import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Map;
+import java.util.TreeSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.UnavailableException;
@@ -14,6 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.core.Region;
+import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.impl.BackendDataSourceFileSystem;
@@ -28,6 +33,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 	private static final long serialVersionUID = -4796360020211862333L;
 
 	private UserDataSource users;
+	
+	private RegionDataSource regions;
 
 	@Override
 	public void init() throws ServletException {
@@ -39,19 +46,23 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		}
 
 		final File usersDir = new File(dataDir, "users");
+		final File regionsDir = new File(dataDir, "regions");
 
 		try {
 
 			users = BackendDataSourceFileSystem.newDataSource(
 					UserDataSource.class, usersDir);
 
+			regions = BackendDataSourceFileSystem.newDataSource(
+					RegionDataSource.class, regionsDir);
+
 		} catch (final IOException e) {
 			throw new ServletException(e);
 		}
 
 		super.init( //
-				new HomeController(users), //
-				new UseraddController(users));
+				new HomeController(users, regions), //
+				new UseraddController(users, regions));
 	}
 
 	private static final Log log = LogFactory.getLog(BackendServlet.class);
@@ -69,6 +80,11 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		final String userAgent = request.getHeader("User-Agent");
 		final String remoteUser = request.getRemoteUser();
 		final String requestURI = request.getRequestURI();
+
+		if (requestURI.contains("/json")) {
+
+			serveJSON(request, response);
+		}
 
 		final Object displayName = request.getAttribute("displayName");
 		final Object uid = request.getAttribute("uid");
@@ -124,5 +140,55 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		// 9. CHAIN
 
 		super.service(request, response);
+	}
+
+	private void serveJSON(final HttpServletRequest request,
+			final HttpServletResponse response) throws IOException,
+			ServletException {
+
+		// http://univmobile.vswip.com/unm-backend-mock/regions
+
+		// https://univmobile-dev.univ-paris1.fr/json/regions
+
+		response.setCharacterEncoding(UTF_8);
+		response.setContentType("text/plain");
+
+		final Map<String, Region> allRegions = regions.getAllBy("uid");
+		final PrintWriter out = response.getWriter();
+
+		out.print("{\"region\":[");
+
+		boolean start = true;
+
+		for (final String uid : new TreeSet<String>(allRegions.keySet())) {
+
+			if (start) {
+				start = false;
+			} else {
+				out.print(",");
+			}
+
+			final Region region = allRegions.get(uid);
+
+			out.println("{");
+			out.println("\t\"id\":\"" //
+					+ escapeJSON(region.getUid()) + "\",");
+			out.println("\t\"label\":\"" //
+					+ escapeJSON(region.getLabel()) + "\",");
+			out.println("\t\"url\":\"" //
+					+ escapeJSON(region.getUrl()) + "\"");
+			out.print("}");
+		}
+
+		out.println("]}");
+
+		out.flush();
+
+		out.close();
+	}
+
+	private static String escapeJSON(final String json) {
+
+		return json.replace("\"", "\\\"");
 	}
 }
