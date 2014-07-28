@@ -20,7 +20,20 @@ public class SimpleSeleniumTest {
 	@Before
 	public void setUp() throws Exception {
 
+		// 1. DATA
+
+		final File dataDir = new File("/tmp/unm-backend/dataDir");
+
+		dataDir.mkdirs();
+
+		FileUtils.deleteDirectory(dataDir);
+
+		FileUtils.copyDirectory(new File("src/test/data"), dataDir);
+
+		// 2. WEBAPP
+
 		final int seleniumPort = 8888;
+
 		final String url = "http://localhost:"
 				+ PropertiesUtils.getTestProperty("tomcat.port") + "/";
 
@@ -60,9 +73,19 @@ public class SimpleSeleniumTest {
 
 		FileUtils.write(new File("target", "pageSource.html"), pageSource);
 
-		final String TEXT = "Shibboleth";
+		final String SHIBBOLETH = "Shibboleth";
 
-		assertFalse("Page source should not contain text: \"" + TEXT + "\"",
-				containsIgnoreCase(pageSource, TEXT));
+		assertFalse("Page source should not contain text: \"" + SHIBBOLETH
+				+ "\"", containsIgnoreCase(pageSource, SHIBBOLETH));
+
+		final String EXCEPTION = "Exception";
+
+		assertFalse("Page source should not contain text: \"" + EXCEPTION
+				+ "\"", containsIgnoreCase(pageSource, EXCEPTION));
+
+		final String FORBIDDEN = "FORBIDDEN";
+
+		assertFalse("Page source should not contain text: \"" + FORBIDDEN
+				+ "\"", containsIgnoreCase(pageSource, FORBIDDEN));
 	}
 }

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/regions/001:unrpcl_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/regions/001:unrpcl_1"/>
+<title>Limousin/Poitou-Charentes</title>
+<updated>2014-07-27T20:06:02Z</updated>
+<category term="regions"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content>
+	<uid>unrpcl</uid>
+	<label>Limousin/Poitou-Charentes</label>
+	<url>http://univmobile.vswip.com/unm-backend-mock/listUniversities_unrpcl</url>
+</content>
+</entry>
