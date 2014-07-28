@@ -82,5 +82,10 @@ public class SimpleSeleniumTest {
 
 		assertFalse("Page source should not contain text: \"" + EXCEPTION
 				+ "\"", containsIgnoreCase(pageSource, EXCEPTION));
+
+		final String FORBIDDEN = "FORBIDDEN";
+
+		assertFalse("Page source should not contain text: \"" + FORBIDDEN
+				+ "\"", containsIgnoreCase(pageSource, FORBIDDEN));
 	}
 }

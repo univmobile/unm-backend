@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/users/001:tformica_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/users/001:crezvani_1"/>
+<updated>2014-07-28T02:45:02Z</updated>
+<title>tformica</title>
+<category term="users"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content>
+	<uid>tformica</uid>
+	<cn>Formica Toto</cn>
+	<sn>Formica</sn>
+	<givenName>Toto</givenName>
+	<remoteUser>tformica@univ-paris1.fr</remoteUser>
+	<mail>Toto.Formica@univ-paris1.fr</mail>
+	<supannCivilite>M.</supannCivilite>
+	<displayName>Toto Formica</displayName>
+</content>
+</entry>
+
