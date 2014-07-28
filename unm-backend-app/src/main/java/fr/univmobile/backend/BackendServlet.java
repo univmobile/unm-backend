@@ -118,10 +118,14 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 					+ ", remoteUser: " + remoteUser);
 		}
 
-		// 3. USER
+		// 3. DATA
+
+		regions.reload();
 
 		users.reload();
 
+		// 4. USER
+		
 		if (users.isNullByRemoteUser(remoteUser)) {
 
 			log.fatal("host: " + host
