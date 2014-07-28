@@ -60,9 +60,14 @@ public class SimpleSeleniumTest {
 
 		FileUtils.write(new File("target", "pageSource.html"), pageSource);
 
-		final String TEXT = "Shibboleth";
+		final String SHIBBOLETH = "Shibboleth";
 
-		assertFalse("Page source should not contain text: \"" + TEXT + "\"",
-				containsIgnoreCase(pageSource, TEXT));
+		assertFalse("Page source should not contain text: \"" + SHIBBOLETH + "\"",
+				containsIgnoreCase(pageSource, SHIBBOLETH));
+
+		final String EXCEPTION = "Exception";
+
+		assertFalse("Page source should not contain text: \"" + EXCEPTION + "\"",
+				containsIgnoreCase(pageSource, EXCEPTION));
 	}
 }
