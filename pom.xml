@@ -15,6 +15,9 @@
 	<description>
 		Backend for UnivMobile applications.
 	</description>
+	<url>
+        http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}/
+    </url>
 
 	<scm>
 		<connection>
