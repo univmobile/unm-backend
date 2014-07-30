@@ -1,5 +1,7 @@
 package fr.univmobile.backend.core;
 
+import fr.univmobile.commons.datasource.EntryBuilder;
+
 
 /**
  * Setter methods that cannot exist in the {@link Region} interface (when data

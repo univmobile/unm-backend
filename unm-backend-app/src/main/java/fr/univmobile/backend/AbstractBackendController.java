@@ -7,10 +7,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
-import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.commons.datasource.Region;
 import fr.univmobile.web.commons.AbstractController;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;

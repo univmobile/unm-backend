@@ -10,7 +10,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univmobile.backend.core.impl.BackendDataSourceFileSystem;
+import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class RegionsTest {
 

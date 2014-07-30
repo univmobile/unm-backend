@@ -2,6 +2,7 @@ package fr.univmobile.backend.core;
 
 import javax.annotation.Nullable;
 
+import fr.univmobile.commons.datasource.Entry;
 import net.avcompris.binding.annotation.XPath;
 
 public interface User extends Entry {

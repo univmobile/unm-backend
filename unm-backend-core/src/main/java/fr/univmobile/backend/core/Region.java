@@ -1,5 +1,6 @@
 package fr.univmobile.backend.core;
 
+import fr.univmobile.commons.datasource.Entry;
 import net.avcompris.binding.annotation.XPath;
 
 public interface Region extends Entry {

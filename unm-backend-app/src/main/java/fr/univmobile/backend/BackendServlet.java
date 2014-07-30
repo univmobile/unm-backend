@@ -17,11 +17,11 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
-import fr.univmobile.backend.core.impl.BackendDataSourceFileSystem;
+import fr.univmobile.commons.datasource.Region;
+import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.BuildInfoUtils;
 import fr.univmobile.web.commons.UnivMobileHttpUtils;

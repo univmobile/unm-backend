@@ -13,7 +13,7 @@ import java.util.NoSuchElementException;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univmobile.backend.core.impl.BackendDataSourceFileSystem;
+import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class UsersTest {
 
