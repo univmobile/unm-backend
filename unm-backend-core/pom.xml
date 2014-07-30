@@ -14,6 +14,12 @@
 	<build>
 		<finalName>unm-backend-core</finalName>
 	</build>
+	<dependencies>
+		<dependency>
+			<groupId>fr.univmobile</groupId>
+			<artifactId>unm-commons-datasource</artifactId>
+		</dependency>	
+	</dependencies>
 
 	<name>unm-backend-core</name>
 	<description>

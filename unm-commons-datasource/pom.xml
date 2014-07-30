@@ -2,45 +2,18 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>unm-backend-parent</artifactId>
-	<packaging>pom</packaging>
+	<artifactId>unm-commons-datasource</artifactId>
 
 	<parent>
 		<groupId>fr.univmobile</groupId>
-		<artifactId>unm-webapp-parent</artifactId>
+		<artifactId>unm-parent</artifactId>
 		<version>0.0.4-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
-	<dependencyManagement>
-		<dependencies>
-			<dependency>
-				<groupId>fr.univmobile</groupId>
-				<artifactId>unm-commons-datasource</artifactId>
-				<version>0.0.4-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.univmobile</groupId>
-				<artifactId>unm-backend-core</artifactId>
-				<version>0.0.4-SNAPSHOT</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.univmobile</groupId>
-				<artifactId>unm-backend-app</artifactId>
-				<version>0.0.4-SNAPSHOT</version>
-				<type>war</type>
-			</dependency>
-			<dependency>
-				<groupId>fr.univmobile</groupId>
-				<artifactId>unm-backend-filter-noshib</artifactId>
-				<version>0.0.4-SNAPSHOT</version>
-			</dependency>
-		</dependencies>
-	</dependencyManagement>
-
-	<name>unm-backend-parent</name>
+	<name>unm-commons-datasource</name>
 	<description>
-		Parent POM for UnivMobile backend projects.
+        Java core for the UnivMobile backend web app.
     </description>
 	<url>
         http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}
@@ -54,12 +27,12 @@
             scm:git:https://github.com/univmobile/unm-backend.git
         </developerConnection>
 		<url>
-			https://github.com/univmobile/unm-backend/tree/master/unm-backend-parent
+			https://github.com/univmobile/unm-backend/tree/master/unm-commons-datasource
         </url>
 	</scm>
 	<ciManagement>
 		<system>jenkins</system>
-		<url>http://univmobile.vswip.com/job/unm-backend-parent</url>
+		<url>http://univmobile.vswip.com/job/unm-commons-datasource</url>
 	</ciManagement>
 	<licenses>
 		<license>
