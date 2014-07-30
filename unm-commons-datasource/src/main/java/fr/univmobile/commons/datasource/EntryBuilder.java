@@ -1,4 +1,4 @@
-package fr.univmobile.backend.core;
+package fr.univmobile.commons.datasource;
 
 import net.avcompris.binding.annotation.XPath;
 

@@ -1,4 +1,4 @@
-package fr.univmobile.backend.core;
+package fr.univmobile.commons.datasource;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,10 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.TYPE)
-public @interface Support {
+@Target(ElementType.METHOD)
+public @interface SearchAttribute {
 
-	Class<? extends Entry> data();
-
-	Class<? extends EntryBuilder<?>> builder();
+	String value();
 }

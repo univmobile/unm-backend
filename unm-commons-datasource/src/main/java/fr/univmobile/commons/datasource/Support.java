@@ -1,4 +1,4 @@
-package fr.univmobile.backend.core;
+package fr.univmobile.commons.datasource;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,7 +7,9 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.TYPE)
-public @interface Unique {
+public @interface Support {
 
-	String[] value();
+	Class<? extends Entry> data();
+
+	Class<? extends EntryBuilder<?>> builder();
 }

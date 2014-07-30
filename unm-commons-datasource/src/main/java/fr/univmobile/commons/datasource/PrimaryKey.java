@@ -1,4 +1,4 @@
-package fr.univmobile.backend.core;
+package fr.univmobile.commons.datasource;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -6,8 +6,8 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
-@Target(ElementType.METHOD)
-public @interface SearchAttribute {
+@Target(ElementType.TYPE)
+public @interface PrimaryKey {
 
-	String value();
+	String[] value();
 }

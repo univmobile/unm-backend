@@ -1,4 +1,4 @@
-package fr.univmobile.backend.core.impl;
+package fr.univmobile.commons.datasource.impl;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
@@ -36,10 +36,10 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import fr.univmobile.backend.core.BackendDataSource;
-import fr.univmobile.backend.core.Category;
-import fr.univmobile.backend.core.Entry;
-import fr.univmobile.backend.core.EntryBuilder;
+import fr.univmobile.commons.datasource.BackendDataSource;
+import fr.univmobile.commons.datasource.Category;
+import fr.univmobile.commons.datasource.Entry;
+import fr.univmobile.commons.datasource.EntryBuilder;
 
 abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E extends Entry, EB extends EntryBuilder<E>>
 		implements BackendDataSource<E, EB> {

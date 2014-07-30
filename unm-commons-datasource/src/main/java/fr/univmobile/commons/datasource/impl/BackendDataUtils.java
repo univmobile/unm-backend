@@ -1,4 +1,4 @@
-package fr.univmobile.backend.core.impl;
+package fr.univmobile.commons.datasource.impl;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.capitalize;
@@ -8,11 +8,11 @@ import java.lang.reflect.InvocationTargetException;
 
 import javax.annotation.Nullable;
 
-import fr.univmobile.backend.core.BackendDataSource;
-import fr.univmobile.backend.core.Entry;
-import fr.univmobile.backend.core.EntryBuilder;
-import fr.univmobile.backend.core.PrimaryKey;
-import fr.univmobile.backend.core.Support;
+import fr.univmobile.commons.datasource.BackendDataSource;
+import fr.univmobile.commons.datasource.Entry;
+import fr.univmobile.commons.datasource.EntryBuilder;
+import fr.univmobile.commons.datasource.PrimaryKey;
+import fr.univmobile.commons.datasource.Support;
 
 abstract class BackendDataUtils {
 

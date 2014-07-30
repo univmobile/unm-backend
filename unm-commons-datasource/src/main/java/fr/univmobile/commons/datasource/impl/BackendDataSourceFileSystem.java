@@ -1,4 +1,4 @@
-package fr.univmobile.backend.core.impl;
+package fr.univmobile.commons.datasource.impl;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
@@ -22,10 +22,10 @@ import org.w3c.dom.Document;
 
 import com.avcompris.lang.NotImplementedException;
 
-import fr.univmobile.backend.core.BackendDataSource;
-import fr.univmobile.backend.core.Entry;
-import fr.univmobile.backend.core.EntryBuilder;
-import fr.univmobile.backend.core.SearchAttribute;
+import fr.univmobile.commons.datasource.BackendDataSource;
+import fr.univmobile.commons.datasource.Entry;
+import fr.univmobile.commons.datasource.EntryBuilder;
+import fr.univmobile.commons.datasource.SearchAttribute;
 
 public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB>, E extends Entry, EB extends EntryBuilder<E>>
 		extends BackendDataSourceImpl<S, E, EB> implements InvocationHandler {
