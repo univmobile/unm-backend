@@ -20,7 +20,7 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 
 	@Inject
 	public RegionJSONClientImpl( //
-			@Named("RegionJSONClientImpl.RegionClient") //
+			@Named("RegionJSONClientImpl")//
 			final RegionClient regionClient) {
 
 		this.regionClient = checkNotNull(regionClient, "regionClient");
