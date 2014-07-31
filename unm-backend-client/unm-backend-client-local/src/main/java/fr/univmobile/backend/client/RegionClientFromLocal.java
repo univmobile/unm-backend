@@ -10,11 +10,14 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
+import javax.inject.Inject;
+
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.DataBeans;
 
 public class RegionClientFromLocal implements RegionClient {
 
+	@Inject
 	public RegionClientFromLocal(final RegionDataSource dataSource) {
 
 		this.dataSource = checkNotNull(dataSource, "dataSource");

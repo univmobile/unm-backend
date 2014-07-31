@@ -4,6 +4,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
 
+import javax.inject.Inject;
+
 import net.avcompris.binding.annotation.XPath;
 import net.avcompris.binding.json.JsonBinder;
 import net.avcompris.binding.json.impl.DomJsonBinder;
@@ -14,6 +16,7 @@ import fr.univmobile.backend.client.json.RegionJSONClient;
 
 public class RegionClientFromJSON implements RegionClient {
 
+	@Inject
 	public RegionClientFromJSON(final RegionJSONClient jsonClient) {
 
 		this.jsonClient = checkNotNull(jsonClient, "jsonClient");

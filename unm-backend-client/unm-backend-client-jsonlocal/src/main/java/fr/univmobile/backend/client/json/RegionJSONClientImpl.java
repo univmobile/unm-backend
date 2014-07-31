@@ -6,6 +6,9 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
+import javax.inject.Inject;
+import javax.inject.Named;
+
 import org.json.simple.JSONArray;
 import org.json.simple.JSONAware;
 import org.json.simple.JSONObject;
@@ -15,7 +18,10 @@ import fr.univmobile.backend.client.RegionClient;
 
 public class RegionJSONClientImpl implements RegionJSONClient {
 
-	public RegionJSONClientImpl(final RegionClient regionClient) {
+	@Inject
+	public RegionJSONClientImpl( //
+			@Named("RegionJSONClientImpl.RegionClient") //
+			final RegionClient regionClient) {
 
 		this.regionClient = checkNotNull(regionClient, "regionClient");
 	}
