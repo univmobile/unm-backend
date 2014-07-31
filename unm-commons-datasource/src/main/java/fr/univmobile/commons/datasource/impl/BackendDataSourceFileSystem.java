@@ -82,6 +82,10 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 
 		cacheEngine.clear();
 
+		if (log.isDebugEnabled()) {
+			log.debug("Listing files in: " + dataDir.getCanonicalPath() + "...");
+		}
+
 		final File[] files = dataDir.listFiles();
 
 		if (files == null) {
@@ -93,6 +97,11 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 
 			if (!file.isFile() || !file.getName().endsWith(".xml")) {
 				continue;
+			}
+
+			if (log.isDebugEnabled()) {
+				log.debug("Reading XML file: " + file.getCanonicalPath()
+						+ "...");
 			}
 
 			final E data = DomBinderUtils.xmlContentToJava(file, dataClass);

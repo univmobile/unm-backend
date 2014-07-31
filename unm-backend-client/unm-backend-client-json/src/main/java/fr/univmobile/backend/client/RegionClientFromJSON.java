@@ -10,6 +10,8 @@ import net.avcompris.binding.annotation.XPath;
 import net.avcompris.binding.json.JsonBinder;
 import net.avcompris.binding.json.impl.DomJsonBinder;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.json.simple.JSONValue;
 
 import fr.univmobile.backend.client.json.RegionJSONClient;
@@ -24,10 +26,23 @@ public class RegionClientFromJSON implements RegionClient {
 
 	private final RegionJSONClient jsonClient;
 
+	private static Log log = LogFactory.getLog(RegionClientFromJSON.class);
+
 	@Override
 	public Region[] getRegions() throws IOException {
 
+		if (log.isDebugEnabled()) {
+			log.debug("getRegions()...");
+		}
+
 		final String json = jsonClient.getRegionsJSON();
+
+		if (log.isDebugEnabled()) {
+			log.debug("json.length(): " + json.length());
+			log.debug("json: "
+					+ (json.length() <= 80 ? json
+							: (json.substring(0, 80) + "...")));
+		}
 
 		final Object jsonObject = JSONValue.parse(json);
 
