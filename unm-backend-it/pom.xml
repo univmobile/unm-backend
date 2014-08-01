@@ -157,7 +157,6 @@
 				</cargo.home>
 				<tomcat.port>8080</tomcat.port>
 			</properties>
-			<!--  
 			<build>
 				<plugins>
 					<plugin>
@@ -185,7 +184,6 @@
 					</plugin>
 				</plugins>
 			</build>
-			-->
 		</profile>
 		<profile>
 			<id>jenkins</id>
