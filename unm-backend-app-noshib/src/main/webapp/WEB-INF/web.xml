@@ -34,6 +34,9 @@
 			<param-value>
 				Davids-MacBook-Pro.local
 				unm-ci
+				unm-ios7
+				unm-ios6a.local
+				unm-ios6a
 			</param-value>
 		</init-param>
 		<init-param>
