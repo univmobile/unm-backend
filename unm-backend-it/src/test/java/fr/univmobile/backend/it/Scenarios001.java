@@ -14,7 +14,8 @@ public class Scenarios001 extends SeleniumEnabledTest {
 	@Override
 	public String getDefaultBrowser() {
 
-		return "*custom /usr/bin/chromium";
+		//return "*custom /usr/bin/chromium";
+		return super.getDefaultBrowser(); //return "*firefox";
 	}
 
 	private static final int PAUSE = 2000;
