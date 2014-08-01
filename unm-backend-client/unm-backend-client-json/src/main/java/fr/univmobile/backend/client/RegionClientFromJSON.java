@@ -54,6 +54,33 @@ public class RegionClientFromJSON implements RegionClient {
 		return regionsJSON.getRegions();
 	}
 
+	@Override
+	public University[] getUniversitiesByRegion(final String regionId)
+			throws IOException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getUniversitiesByRegion():" + regionId + "...");
+		}
+
+		final String json = jsonClient.getUniversitiesJSONByRegion(regionId);
+
+		if (log.isDebugEnabled()) {
+			log.debug("json.length(): " + json.length());
+			log.debug("json: "
+					+ (json.length() <= 80 ? json
+							: (json.substring(0, 80) + "...")));
+		}
+
+		final Object jsonObject = JSONValue.parse(json);
+
+		final JsonBinder binder = new DomJsonBinder();
+
+		final UniversitiesJSON universitiesJSON = binder.bind(jsonObject,
+				UniversitiesJSON.class);
+
+		return universitiesJSON.getUniversities();
+	}
+
 	@XPath("/*")
 	public interface RegionsJSON {
 
@@ -70,6 +97,22 @@ public class RegionClientFromJSON implements RegionClient {
 
 			@XPath("@url")
 			String getUrl();
+		}
+	}
+
+	@XPath("/*")
+	public interface UniversitiesJSON {
+
+		@XPath("universities")
+		UniversityJSON[] getUniversities();
+
+		interface UniversityJSON extends University {
+
+			@XPath("@id")
+			String getId();
+
+			@XPath("@title")
+			String getTitle();
 		}
 	}
 }

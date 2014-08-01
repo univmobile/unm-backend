@@ -9,24 +9,30 @@ import java.util.Map;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.json.simple.JSONArray;
 import org.json.simple.JSONAware;
 import org.json.simple.JSONObject;
 
 import fr.univmobile.backend.client.Region;
 import fr.univmobile.backend.client.RegionClient;
+import fr.univmobile.backend.client.University;
 
 public class RegionJSONClientImpl implements RegionJSONClient {
 
 	@Inject
 	public RegionJSONClientImpl( //
-			@Named("RegionJSONClientImpl") //
+			@Named("RegionJSONClientImpl")//
 			final RegionClient regionClient) {
 
 		this.regionClient = checkNotNull(regionClient, "regionClient");
 	}
 
 	private final RegionClient regionClient;
+
+	private static final Log log = LogFactory
+			.getLog(RegionJSONClientImpl.class);
 
 	@Override
 	public String getRegionsJSON() throws IOException {
@@ -48,6 +54,35 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 		}
 
 		final String s = json.toJSONString();
+
+		return s;
+	}
+
+	@Override
+	public String getUniversitiesJSONByRegion(final String regionId)
+			throws IOException {
+
+		final University[] universities = regionClient
+				.getUniversitiesByRegion(regionId);
+
+		final JSONMap json = new JSONMap();
+
+		final JSONList list = new JSONList();
+
+		json.put("universities", list);
+
+		for (final University university : universities) {
+
+			list.add(new JSONMap() //
+					.put("id", university.getId()) //
+					.put("title", university.getTitle()));
+		}
+
+		final String s = json.toJSONString();
+
+		if (log.isDebugEnabled()) {
+			log.debug("getUniversitiesJSONByRegion():" + regionId + ":" + s);
+		}
 
 		return s;
 	}

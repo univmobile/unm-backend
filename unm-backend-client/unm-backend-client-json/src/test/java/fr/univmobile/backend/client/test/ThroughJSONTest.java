@@ -13,6 +13,7 @@ import fr.univmobile.backend.client.Region;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromJSON;
 import fr.univmobile.backend.client.RegionClientFromLocal;
+import fr.univmobile.backend.client.University;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
@@ -47,7 +48,7 @@ public class ThroughJSONTest {
 	private RegionClient client;
 
 	@Test
-	public void testThroughJSON() throws IOException {
+	public void testThroughJSON_region() throws IOException {
 
 		final Region[] regions = client.getRegions();
 
@@ -57,5 +58,17 @@ public class ThroughJSONTest {
 
 		assertEquals("ile_de_france", region.getId());
 		assertEquals("Île de France", region.getLabel());
+	}
+
+	@Test
+	public void testThroughJSON_university() throws IOException {
+
+		final University[] universities = client
+				.getUniversitiesByRegion("bretagne");
+
+		final University university = universities[1];
+
+		assertEquals("rennes2", university.getId());
+		assertEquals("Université Rennes 2", university.getTitle());
 	}
 }
