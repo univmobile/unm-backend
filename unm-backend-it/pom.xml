@@ -156,6 +156,7 @@
 					/usr/local/apache-tomcat-7.0.39/
 				</cargo.home>
 				<tomcat.port>8080</tomcat.port>
+				<defaultBrowser>*firefox</defaultBrowser>
 			</properties>
 			<build>
 				<plugins>
@@ -223,6 +224,7 @@
 			<id>unm_ci</id>
 			<properties>
 				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
+				<defaultBrowser>*custom /usr/bin/chromium</defaultBrowser>
 			</properties>
 			<build>
 				<plugins>
@@ -246,6 +248,7 @@
 			<id>unm_ios7</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
+				<defaultBrowser>*firefox</defaultBrowser>
 			</properties>
 		</profile>
 	</profiles>

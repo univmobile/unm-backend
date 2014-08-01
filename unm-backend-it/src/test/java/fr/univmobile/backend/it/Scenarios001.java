@@ -1,11 +1,14 @@
 package fr.univmobile.backend.it;
 
+import java.io.IOException;
+
 import org.junit.Test;
 
 import fr.univmobile.it.commons.DeviceNames;
 import fr.univmobile.it.commons.Scenario;
 import fr.univmobile.it.commons.Scenarios;
 import fr.univmobile.it.commons.SeleniumEnabledTest;
+import fr.univmobile.testutil.PropertiesUtils;
 
 @Scenarios("Scénarios simples")
 @DeviceNames({ "*firefox", "*safari" })
@@ -14,8 +17,17 @@ public class Scenarios001 extends SeleniumEnabledTest {
 	@Override
 	public String getDefaultBrowser() {
 
-		//return "*custom /usr/bin/chromium";
-		return super.getDefaultBrowser(); //return "*firefox";
+		// e.g. "*firefox"
+		// e.g. "*safari"
+		// e.g. "*custom /usr/bin/chromium";
+
+		try {
+
+			return PropertiesUtils.getTestProperty("defaultBrowser");
+
+		} catch (final IOException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 	private static final int PAUSE = 2000;
