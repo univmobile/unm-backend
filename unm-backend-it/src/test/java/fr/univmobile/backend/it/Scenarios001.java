@@ -11,6 +11,12 @@ import fr.univmobile.it.commons.SeleniumEnabledTest;
 @DeviceNames({ "*firefox", "*safari" })
 public class Scenarios001 extends SeleniumEnabledTest {
 
+	@Override
+	public String getDefaultBrowser() {
+		
+		return "*custom /usr/bin/chromium";
+	}
+	
 	private static final int PAUSE = 2000;
 
 	@Scenario("Aller-retour sur la page « Ajouter un utilisateur »")
