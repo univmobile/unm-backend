@@ -32,7 +32,6 @@
 			</testResource>
 		</testResources>
 		<plugins>
-			<!--  
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>selenium-maven-plugin</artifactId>
@@ -40,7 +39,6 @@
 					<port>8888</port>
 				</configuration>
 			</plugin>
-			-->
 			<plugin>
 				<groupId>org.codehaus.cargo</groupId>
 				<artifactId>cargo-maven2-plugin</artifactId>
@@ -196,7 +194,6 @@
 				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
 				<tomcat.port>8380</tomcat.port>
 			</properties>
-			<!--  
 			<build>
 				<plugins>
 					<plugin>
@@ -231,7 +228,6 @@
 					</plugin>
 				</plugins>
 			</build>
-			-->
 		</profile>
 	</profiles>
 
