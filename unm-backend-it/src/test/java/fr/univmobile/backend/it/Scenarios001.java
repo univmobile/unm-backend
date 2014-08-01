@@ -11,11 +11,11 @@ import fr.univmobile.it.commons.SeleniumEnabledTest;
 @DeviceNames({ "*firefox", "*safari" })
 public class Scenarios001 extends SeleniumEnabledTest {
 
-	// / @Override
-	// /public String getDefaultBrowser() {
-	// /
-	// /return "*custom /usr/bin/chromium";
-	// /}
+	// @Override
+	// public String getDefaultBrowser() {
+	//
+	// return "*custom /usr/bin/chromium";
+	// }
 
 	private static final int PAUSE = 2000;
 
@@ -38,18 +38,18 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		takeScreenshot("entered.png");
 
-		/*
-		 * elementById("link-useradd").click();
-		 * 
-		 * pause(PAUSE);
-		 * 
-		 * takeScreenshot("useradd.png");
-		 * 
-		 * elementById("button-cancel").click();
-		 * 
-		 * pause(PAUSE);
-		 * 
-		 * takeScreenshot("home2.png");
-		 */
+		savePageSource("pageEntered.html");
+
+		elementById("link-useradd").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("useradd.png");
+
+		elementById("button-cancel").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("home2.png");
 	}
 }
