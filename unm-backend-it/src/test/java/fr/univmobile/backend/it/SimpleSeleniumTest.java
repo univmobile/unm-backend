@@ -9,9 +9,13 @@ import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-
-import com.thoughtworks.selenium.DefaultSelenium;
-import com.thoughtworks.selenium.Selenium;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import fr.univmobile.testutil.PropertiesUtils;
 
@@ -32,44 +36,44 @@ public class SimpleSeleniumTest {
 
 		// 2. WEBAPP
 
-		final int seleniumPort = 8888;
+		final RemoteWebDriver driver = new FirefoxDriver();
 
 		final String url = "http://localhost:"
-				+ PropertiesUtils.getTestProperty("tomcat.port") + "/";
+				+ PropertiesUtils.getTestProperty("tomcat.port");
 
-		selenium = new DefaultSelenium("localhost", seleniumPort, "*firefox",
-				url);
-
-		selenium.start();
-
-		selenium.open("/unm-backend" //
+		driver.get(url + "/unm-backend" //
 				+ "?NO_SHIB_uid=tformica" //
 				+ "&NO_SHIB_eppn=tformica@univ-paris1.fr" //
 				+ "&NO_SHIB_displayName=Toto+Formica" //
 				+ "&NO_SHIB_remoteUser=tformica@univ-paris1.fr" //
 		);
 
-		selenium.waitForPageToLoad(Integer.toString(10000));
+		(new WebDriverWait(driver, 10)).until(new ExpectedCondition<Boolean>() {
+			public Boolean apply(final WebDriver driver) {
+				return driver.getTitle().length() != 0;
+			}
+		});
 	}
 
-	private Selenium selenium;
+	private WebDriver driver = new FirefoxDriver();
 
 	@After
 	public void tearDown() throws Exception {
 
-		selenium.stop();
+		driver.quit();
 	}
 
 	@Test
 	public void testHomePage() throws Exception {
 
-		final String KWARGS = "";
+		final File file = // ((TakesScreenshot) augmentedDriver)
+		((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
-		final File file = new File("target", "home.png");
+		FileUtils.copyFile(file, new File("target", "home.png"));
 
-		selenium.captureEntirePageScreenshot(file.getCanonicalPath(), KWARGS);
+		System.out.println("Deleting: " + file.getCanonicalPath() + "...");
 
-		final String pageSource = selenium.getHtmlSource();
+		final String pageSource = driver.getPageSource();
 
 		FileUtils.write(new File("target", "pageSource.html"), pageSource);
 
