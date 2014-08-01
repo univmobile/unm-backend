@@ -11,11 +11,11 @@ import fr.univmobile.it.commons.SeleniumEnabledTest;
 @DeviceNames({ "*firefox", "*safari" })
 public class Scenarios001 extends SeleniumEnabledTest {
 
-	// @Override
-	// public String getDefaultBrowser() {
-	//
-	// return "*custom /usr/bin/chromium";
-	// }
+	@Override
+	public String getDefaultBrowser() {
+
+		return "*custom /usr/bin/chromium";
+	}
 
 	private static final int PAUSE = 2000;
 
