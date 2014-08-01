@@ -15,7 +15,7 @@
 		<dependency>
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-it-commons</artifactId>
-		</dependency>	
+		</dependency>
 		<dependency>
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-backend-app-noshib</artifactId>
