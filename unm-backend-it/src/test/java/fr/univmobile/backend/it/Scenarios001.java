@@ -5,12 +5,14 @@ import java.io.IOException;
 import org.junit.Test;
 
 import fr.univmobile.it.commons.BrowserNames;
+import fr.univmobile.it.commons.DeviceNames;
 import fr.univmobile.it.commons.Scenario;
 import fr.univmobile.it.commons.Scenarios;
 import fr.univmobile.it.commons.SeleniumEnabledTest;
 import fr.univmobile.testutil.PropertiesUtils;
 
 @Scenarios("Scénarios simples")
+@DeviceNames("Firefox")
 public class Scenarios001 extends SeleniumEnabledTest {
 
 	@BrowserNames
