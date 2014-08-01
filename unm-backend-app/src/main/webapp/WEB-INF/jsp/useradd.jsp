@@ -16,7 +16,7 @@
 <c:if test="${user.uid != delegationUser.uid}">
 <li> Délégation : ${delegationUser.uid}
 </c:if>
-<li> <a href="${baseURL}/?logout">Déconnexion</a>
+<li> <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
 </ul>
 </div>
 
@@ -98,7 +98,7 @@ Administration d’UnivMobile
 
 <div class="table bottom">
 <!--
-<a href="${baseURL}/">Annuler</a>
+<a id="link-cancel" href="${baseURL}/">Annuler</a>
 -->
 <button id="button-cancel"
  onclick="document.location.href = '${baseURL}'; return false;">

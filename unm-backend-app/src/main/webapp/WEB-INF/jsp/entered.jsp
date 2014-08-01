@@ -16,7 +16,7 @@
 <c:if test="${user.uid != delegationUser.uid}">
 <li> Délégation : ${delegationUser.uid}
 </c:if>
-<li> <a href="${baseURL}/?logout">Déconnexion</a>
+<li> <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
 </ul>
 </div>
 
@@ -64,7 +64,7 @@ ${u.mail}
 </td>
 <td class="edit">
 <!--
-<a href="${baseURL}?user=${u.uid}&amp;edit">Modifier…</a>
+<a id="link-edit_xxx" href="${baseURL}?user=${u.uid}&amp;edit">Modifier…</a>
 -->
 <div class="disabled">Modifier…</a>
 </td>
@@ -76,7 +76,7 @@ ${u.mail}
 </table>
 
 <div class="table bottom">
-<a href="${baseURL}/useradd">Ajouter un utilisateur…</a>
+<a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
 </div>
 
 <div id="div-regions">
@@ -123,7 +123,7 @@ ${r.uid}
 
 <div class="table bottom">
 JSON :
-<a href="https://univmobile-dev.univ-paris1.fr/json/regions">
+<a id="link-json" href="https://univmobile-dev.univ-paris1.fr/json/regions">
 https://univmobile-dev.univ-paris1.fr/json/regions
 </a>
 </div>
