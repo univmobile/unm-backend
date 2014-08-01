@@ -4,17 +4,16 @@ import java.io.IOException;
 
 import org.junit.Test;
 
-import fr.univmobile.it.commons.DeviceNames;
+import fr.univmobile.it.commons.BrowserNames;
 import fr.univmobile.it.commons.Scenario;
 import fr.univmobile.it.commons.Scenarios;
 import fr.univmobile.it.commons.SeleniumEnabledTest;
 import fr.univmobile.testutil.PropertiesUtils;
 
 @Scenarios("Scénarios simples")
-@DeviceNames({ "*firefox", "*safari" })
 public class Scenarios001 extends SeleniumEnabledTest {
 
-	@Override
+	@BrowserNames
 	public String getDefaultBrowser() {
 
 		// e.g. "*firefox"
@@ -30,7 +29,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		}
 	}
 
-	private static final int PAUSE = 2000;
+	private static final int PAUSE = 10000;
 
 	@Scenario("Aller-retour sur la page « Ajouter un utilisateur »")
 	@Test
