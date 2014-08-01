@@ -257,6 +257,16 @@
 				-->
 			</properties>
 		</profile>
+		<profile>
+			<id>unm_ios6a</id>
+			<properties>
+				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
+				<defaultBrowser>*chrome</defaultBrowser>
+				<!--  
+				<defaultBrowser>*firefox</defaultBrowser>
+				-->
+			</properties>
+		</profile>
 	</profiles>
 
 </project>
