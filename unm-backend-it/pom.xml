@@ -248,7 +248,7 @@
 			<id>unm_ios7</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
-				<defaultBrowser>*firefox</defaultBrowser>
+				<defaultBrowser>*safari</defaultBrowser>
 			</properties>
 		</profile>
 	</profiles>
