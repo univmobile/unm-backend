@@ -189,7 +189,6 @@
 			<id>jenkins</id>
 			<properties>
 				<cargo.containerId>tomcat7x</cargo.containerId>
-				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
 				<tomcat.port>8380</tomcat.port>
 			</properties>
 			<build>
@@ -198,13 +197,6 @@
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>selenium-maven-plugin</artifactId>
 						<executions>
-							<execution>
-								<id>xvfb</id>
-								<phase>process-test-classes</phase>
-								<goals>
-									<goal>xvfb</goal>
-								</goals>
-							</execution>
 							<execution>
 								<id>start-server</id>
 								<phase>process-test-classes</phase>
@@ -228,9 +220,9 @@
 			</build>
 		</profile>
 		<profile>
-			<id>unm_ios7</id>
+			<id>unm_ci</id>
 			<properties>
-				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
+				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
 			</properties>
 			<build>
 				<plugins>
@@ -239,26 +231,22 @@
 						<artifactId>selenium-maven-plugin</artifactId>
 						<executions>
 							<execution>
-								<id>start-server</id>
+								<id>xvfb</id>
 								<phase>process-test-classes</phase>
 								<goals>
-									<goal>start-server</goal>
-								</goals>
-								<configuration>
-									<background>true</background>
-								</configuration>
-							</execution>
-							<execution>
-								<id>stop-server</id>
-								<phase>prepare-package</phase>
-								<goals>
-									<goal>stop-server</goal>
+									<goal>xvfb</goal>
 								</goals>
 							</execution>
 						</executions>
 					</plugin>
 				</plugins>
 			</build>
+		</profile>
+		<profile>
+			<id>unm_ios7</id>
+			<properties>
+				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
+			</properties>
 		</profile>
 	</profiles>
 
