@@ -227,6 +227,12 @@
 				</plugins>
 			</build>
 		</profile>
+		<profile>
+			<id>unm_ios7</id>
+			<properties>
+				<cargo.home>/usr/local/apache-tomcat-7.0.3</cargo.home>
+			</properties>
+		</profile>
 	</profiles>
 
 </project>
