@@ -11,12 +11,12 @@ import fr.univmobile.it.commons.SeleniumEnabledTest;
 @DeviceNames({ "*firefox", "*safari" })
 public class Scenarios001 extends SeleniumEnabledTest {
 
-	@Override
-	public String getDefaultBrowser() {
-		
-		return "*custom /usr/bin/chromium";
-	}
-	
+	// / @Override
+	// /public String getDefaultBrowser() {
+	// /
+	// /return "*custom /usr/bin/chromium";
+	// /}
+
 	private static final int PAUSE = 2000;
 
 	@Scenario("Aller-retour sur la page « Ajouter un utilisateur »")
@@ -29,8 +29,8 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		elementById("button-myself").shouldBeVisible();
 
-		elementById("div-myself")
-				.textShouldContain("Votre connexion est authentifiée");
+		elementById("div-myself").textShouldContain(
+				"Votre connexion est authentifiée");
 
 		elementById("button-myself").click();
 
@@ -39,17 +39,17 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		takeScreenshot("entered.png");
 
 		/*
-		elementById("link-useradd").click();
-
-		pause(PAUSE);
-
-		takeScreenshot("useradd.png");
-
-		elementById("button-cancel").click();
-
-		pause(PAUSE);
-
-		takeScreenshot("home2.png");
-		*/
+		 * elementById("link-useradd").click();
+		 * 
+		 * pause(PAUSE);
+		 * 
+		 * takeScreenshot("useradd.png");
+		 * 
+		 * elementById("button-cancel").click();
+		 * 
+		 * pause(PAUSE);
+		 * 
+		 * takeScreenshot("home2.png");
+		 */
 	}
 }
