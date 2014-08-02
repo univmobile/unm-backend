@@ -6,8 +6,6 @@ import static org.apache.commons.lang3.StringUtils.isBlank;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.Map;
-import java.util.TreeSet;
 
 import javax.servlet.ServletException;
 import javax.servlet.UnavailableException;
@@ -17,7 +15,10 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import fr.univmobile.backend.core.Region;
+import fr.univmobile.backend.client.RegionClient;
+import fr.univmobile.backend.client.RegionClientFromLocal;
+import fr.univmobile.backend.client.json.RegionJSONClient;
+import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
@@ -85,7 +86,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		if (requestURI.contains("/json")) {
 
 			serveJSON(request, response);
-			
+
 			return;
 		}
 
@@ -127,7 +128,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		users.reload();
 
 		// 4. USER
-		
+
 		if (users.isNullByRemoteUser(remoteUser)) {
 
 			log.fatal("host: " + host
@@ -148,7 +149,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		request.setAttribute("buildInfo",
 				BuildInfoUtils.loadBuildInfo(getServletContext()));
-		
+
 		// 9. CHAIN
 
 		super.service(request, response);
@@ -165,42 +166,19 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		response.setCharacterEncoding(UTF_8);
 		response.setContentType("application/json");
 
-		final Map<String, Region> allRegions = regions.getAllBy("uid");
+		final RegionClient regionClient = new RegionClientFromLocal(regions);
+
+		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
+				regionClient);
+
+		final String json = regionJSONClient.getRegionsJSON();
+
 		final PrintWriter out = response.getWriter();
 
-		out.print("{\"region\":[");
-
-		boolean start = true;
-
-		for (final String uid : new TreeSet<String>(allRegions.keySet())) {
-
-			if (start) {
-				start = false;
-			} else {
-				out.print(",");
-			}
-
-			final Region region = allRegions.get(uid);
-
-			out.println("{");
-			out.println("\t\"id\":\"" //
-					+ escapeJSON(region.getUid()) + "\",");
-			out.println("\t\"label\":\"" //
-					+ escapeJSON(region.getLabel()) + "\",");
-			out.println("\t\"url\":\"" //
-					+ escapeJSON(region.getUrl()) + "\"");
-			out.print("}");
-		}
-
-		out.println("]}");
+		out.print(json);
 
 		out.flush();
 
 		out.close();
-	}
-
-	private static String escapeJSON(final String json) {
-
-		return json.replace("\"", "\\\"");
 	}
 }
