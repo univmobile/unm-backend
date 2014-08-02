@@ -1,0 +1,96 @@
+<body>
+
+Classes de communication avec le backend J2EE UnivMobile.
+
+<p>
+
+Le projet <strong>unm-backend-client</strong>
+contient les classes de communication entre le 
+client Java de l’application mobile web UnivMobile,
+et le backend J2EE UnivMobile.
+
+<p>
+
+La communication HTTP+JSON avec le backend UnivMobile fait intervenir 
+plusieurs composants :
+
+<ul>
+<li style="font-size: small; list-style-type: disc;">
+<strong>unm-backend-client-api</strong> — L’API applicative : 
+elle manipule des objets applicatifs, comme « Region » et « University ».
+<li style="font-size: small; list-style-type: disc;">
+<strong>unm-backend-client-local</strong> — 
+L’implémentation de base de l’API applicative : 
+elle s’appuie sur des classes d’accès aux
+données, qu’on trouve dans un autre projet,
+unm-backend-core.
+<li style="font-size: small; list-style-type: disc;">
+<strong>unm-backend-client-json</strong> (ce projet) — 
+L’implémentation de l’API applicative qui
+         utilise des flux JSON en entrée.
+<li style="font-size: small; list-style-type: disc;">
+<strong>unm-backend-client-jsonapi</strong> — 
+L’API JSON : elle manipule la version JSON
+         (texte) des objets applicatifs.
+<li style="font-size: small; list-style-type: disc;">
+<strong>unm-backend-client-jsonlocal</strong> — 
+L’implémentation de base de l’API JSON : 
+         elle produit des flux JSON (textes) à partir
+         d’objets applicatifs en mémoire.
+</ul>
+
+<p>
+
+Les tests d’intégration, avec une web app J2EE déployée
+(unm-backend.war — projet <strong>unm-backend-app</strong>) 
+sont dans le projet
+<strong>unm-backend-it</strong>.
+    
+Les tests unitaires qui utilisent un couplage local,
+sont dans ce projet <strong>unm-backend-client-json</strong>.
+
+<h2>Diagrammes</h2>
+
+Si tout était en local et que nous utilisions seulement Java, pas JSON, nous
+aurions le diagramme suivant :
+
+<div>
+<img src="../images/RegionClient.svg">
+</div>
+
+<ol>
+<li style="list-style-type: decimal;">
+Le code applicatif récupère une instance de la classe
+<a href="../../../unm-backend-client-api/${project.version}/apidocs/fr/univmobile/backend/client/RegionClient.html"
+	target="_top">RegionClient</a>
+(projet <strong>unm-backend-client-api</strong>),
+qui va être de type
+<a href="../../../unm-backend-client-local/${project.version}/apidocs/fr/univmobile/backend/client/RegionClientFromLocal.html"
+	target="_top">RegionClientFromLocal</a>
+(projet <strong>unm-backend-client-local</strong>).
+<li style="list-style-type: decimal;">
+Il invoke la méthode
+<a href="../../../unm-backend-client-api/${project.version}/apidocs/fr/univmobile/backend/client/RegionClient.html#getRegions()"
+	target="_top">getRegions()</a>
+<li style="list-style-type: decimal;">
+Le code de 
+<a href="../../../unm-backend-client-local/${project.version}/apidocs/fr/univmobile/backend/client/RegionClientFromLocal.html"
+	target="_top">RegionClientFromLocal</a>
+s’appuie sur une instance de la classe
+<a href="../../../unm-backend-core/${project.version}/apidocs/fr/univmobile/backend/core/RegionDataSource.html"
+	target="_top">RegionDataSource</a>
+(projet <strong>unm-backend-core</strong>).
+<li style="list-style-type: decimal;">
+Cet objet a été créé à l’aide de la méthode
+<a href="../../../unm-commons-datasource/${project.version}/apidocs/fr/univmobile/commons/datasource/impl/BackendDataSourceFileSystem.html#newDataSource(java.lang.Class, java.io.File)"
+	target="_top">newDataSource(Class, File)</a>
+de la classe
+<a href="../../../unm-commons-datasource/${project.version}/apidocs/fr/univmobile/commons/datasource/impl/BackendDataSourceFileSystem.html"
+	target="_top">BackendDataSourceFileSystem</a>
+(projet <strong>unm-commons-datasource</strong>).
+<li style="list-style-type: decimal;">
+Cette implémentation utilise des fichiers XML pour récupérer et stocker les
+données.
+</ol>
+
+</body>

@@ -36,11 +36,6 @@
 			</dependency>
 			<dependency>
 				<groupId>fr.univmobile</groupId>
-				<artifactId>unm-backend-client-local</artifactId>
-				<version>${project.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>fr.univmobile</groupId>
 				<artifactId>unm-backend-core</artifactId>
 				<version>${project.version}</version>
 			</dependency>
@@ -93,46 +88,6 @@
 			</plugin>
 		</plugins>
 	</build>
-	
-	<reporting>
-		<plugins>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-				<!--  
-				<executions>
-					<execution>
-						<id>attach-javadocs</id>
-						<phase>site</phase>
-						<goals>
-							<goal>javadoc</goal>
-						</goals>
-						<configuration>
-							<
-						</configuration>
-					</execution>
-				</executions>
-				-->
-				<configuration>
-					<!-- 
-						Note about UmlGraph: You must have the Graphviz binary 
-						in your PATH, or the images will not be generated.
-						See: http://maven.apache.org/plugins/maven-javadoc-plugin/examples/alternate-doclet.html
-					-->
-					<!--  
-					<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
-					<docletArtifact>
-						<groupId>org.umlgraph</groupId>
-						<artifactId>doclet</artifactId>
-						<version>5.1</version>
-					</docletArtifact>
-					<additionalparam>-views</additionalparam>
-					<useStandardDocletOptions>true</useStandardDocletOptions>
-					-->
-				</configuration>
-			</plugin>
-		</plugins>
-	</reporting>
 
 	<modules>
 		<module>unm-backend-client-api</module>
