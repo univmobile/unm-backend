@@ -85,6 +85,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		if (requestURI.contains("/json")) {
 
 			serveJSON(request, response);
+			
+			return;
 		}
 
 		final Object displayName = request.getAttribute("displayName");
