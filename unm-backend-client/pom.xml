@@ -46,7 +46,94 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>xmldoclet</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>javadoc</goal>
+						</goals>
+						<configuration>
+							<doclet>fr.univmobile.devel.xmldoclet.XMLDoclet</doclet>
+							<docletArtifact>
+								<groupId>fr.univmobile</groupId>
+								<artifactId>unm-devel-xmldoclet</artifactId>
+								<version>0.0.4-SNAPSHOT</version>
+							</docletArtifact>
+							<useStandardDocletOptions>false</useStandardDocletOptions>
+							<!--
+							<additionalparam>-Dtarget/xmldoclet.xml</additionalparam>
+							-->
+						</configuration>
+					</execution>
+				</executions>
+				<configuration>
+					<!-- 
+						Note about UmlGraph: You must have the Graphviz binary 
+						in your PATH, or the images will not be generated.
+						See: http://maven.apache.org/plugins/maven-javadoc-plugin/examples/alternate-doclet.html
+					-->
+					<!--  
+					<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+					<docletArtifact>
+						<groupId>org.umlgraph</groupId>
+						<artifactId>doclet</artifactId>
+						<version>5.1</version>
+					</docletArtifact>
+					<additionalparam>-views</additionalparam>
+					<useStandardDocletOptions>true</useStandardDocletOptions>
+					-->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 	
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<!--  
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<phase>site</phase>
+						<goals>
+							<goal>javadoc</goal>
+						</goals>
+						<configuration>
+							<
+						</configuration>
+					</execution>
+				</executions>
+				-->
+				<configuration>
+					<!-- 
+						Note about UmlGraph: You must have the Graphviz binary 
+						in your PATH, or the images will not be generated.
+						See: http://maven.apache.org/plugins/maven-javadoc-plugin/examples/alternate-doclet.html
+					-->
+					<!--  
+					<doclet>org.umlgraph.doclet.UmlGraphDoc</doclet>
+					<docletArtifact>
+						<groupId>org.umlgraph</groupId>
+						<artifactId>doclet</artifactId>
+						<version>5.1</version>
+					</docletArtifact>
+					<additionalparam>-views</additionalparam>
+					<useStandardDocletOptions>true</useStandardDocletOptions>
+					-->
+				</configuration>
+			</plugin>
+		</plugins>
+	</reporting>
+
 	<modules>
 		<module>unm-backend-client-api</module>
 		<module>unm-backend-client-jsonapi</module>
