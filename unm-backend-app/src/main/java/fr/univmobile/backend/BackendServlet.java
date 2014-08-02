@@ -163,7 +163,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		// https://univmobile-dev.univ-paris1.fr/json/regions
 
 		response.setCharacterEncoding(UTF_8);
-		response.setContentType("text/plain");
+		response.setContentType("application/json");
 
 		final Map<String, Region> allRegions = regions.getAllBy("uid");
 		final PrintWriter out = response.getWriter();
