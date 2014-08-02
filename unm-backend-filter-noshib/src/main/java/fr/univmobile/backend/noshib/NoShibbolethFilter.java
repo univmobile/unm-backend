@@ -203,6 +203,13 @@ public class NoShibbolethFilter implements Filter {
 
 		request.setCharacterEncoding(UTF_8);
 
+		final String requestURI = httpRequest.getRequestURI();
+		
+		if (requestURI.contains("/json")) {
+			
+			return request; // Do not filter /json
+		}
+		
 		final String uidParam = //
 		request.getParameter("NO_SHIB_uid");
 		final String eppnParam = //
