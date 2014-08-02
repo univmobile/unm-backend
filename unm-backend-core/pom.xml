@@ -13,6 +13,33 @@
 
 	<build>
 		<finalName>unm-backend-core</finalName>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>xmldoclet</id>
+						<phase>prepare-package</phase>
+						<goals>
+							<goal>javadoc</goal>
+						</goals>
+						<configuration>
+							<doclet>fr.univmobile.devel.xmldoclet.XMLDoclet</doclet>
+							<docletArtifact>
+								<groupId>fr.univmobile</groupId>
+								<artifactId>unm-devel-xmldoclet</artifactId>
+								<version>0.0.4-SNAPSHOT</version>
+							</docletArtifact>
+							<useStandardDocletOptions>false</useStandardDocletOptions>
+							<!--  
+							<additionalparam>-Dd=target/xmldoclet.xml</additionalparam>
+							-->
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
 	</build>
 	<dependencies>
 		<dependency>
