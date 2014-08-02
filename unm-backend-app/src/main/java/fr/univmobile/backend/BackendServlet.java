@@ -15,7 +15,6 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
@@ -37,6 +36,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 	private UserDataSource users;
 
 	private RegionDataSource regions;
+
+	private RegionJSONClient regionJSONClient;
 
 	@Override
 	public void init() throws ServletException {
@@ -61,6 +62,9 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		} catch (final IOException e) {
 			throw new ServletException(e);
 		}
+
+		regionJSONClient = new RegionJSONClientImpl(new RegionClientFromLocal(
+				regions));
 
 		super.init( //
 				new HomeController(users, regions), //
@@ -165,11 +169,6 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		response.setCharacterEncoding(UTF_8);
 		response.setContentType("application/json");
-
-		final RegionClient regionClient = new RegionClientFromLocal(regions);
-
-		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
-				regionClient);
 
 		final String json = regionJSONClient.getRegionsJSON();
 
