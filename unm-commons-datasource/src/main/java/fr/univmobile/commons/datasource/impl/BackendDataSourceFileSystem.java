@@ -129,6 +129,10 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 
 		final String methodName = method.getName();
 
+		if (log.isDebugEnabled()) {
+			log.debug("invoke:" + methodName + "()...");
+		}
+
 		if ("reload".equals(methodName)) {
 
 			reload();
@@ -146,7 +150,7 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 			if (!methodName.startsWith("getBy")) {
 				throw new NotImplementedException(
 						"Method name should be of the form \"getByXxx()\": "
-								+ methodName);
+								+ methodName+"()");
 			}
 
 			if (args == null || args.length != 1) {
@@ -159,7 +163,7 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 
 		if (log.isDebugEnabled()) {
 			log.debug("No-@SearchAttribute method: " + methodName
-					+ ". Forwarding invocation to \"this.\"");
+					+ "(). Forwarding invocation to \"this.\"");
 		}
 
 		if (methodName.startsWith("isNullBy") && args != null
@@ -173,8 +177,8 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 
 			if (searchAttribute2 == null) {
 				throw new RuntimeException("methodName: " + methodName
-						+ ", inferring: " + methodName2
-						+ ", but has no @SearchAttribute annotation.");
+						+ "(), inferring: " + methodName2
+						+ "(), but has no @SearchAttribute annotation.");
 			}
 
 			final String attributeName = searchAttribute2.value();
