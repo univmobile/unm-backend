@@ -37,6 +37,8 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 	@Override
 	public String getRegionsJSON() throws IOException {
 
+		log.debug("getRegionsJSON()...");
+
 		final Region[] regions = regionClient.getRegions();
 
 		final JSONMap json = new JSONMap();
@@ -61,6 +63,10 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 	@Override
 	public String getUniversitiesJSONByRegion(final String regionId)
 			throws IOException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getUniversitiesJSONByRegion():" + regionId + "...");
+		}
 
 		final University[] universities = regionClient
 				.getUniversitiesByRegion(regionId);
