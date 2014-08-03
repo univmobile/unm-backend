@@ -70,9 +70,16 @@ public class TestBackendTest {
 	@Test
 	public void testReadMobileWebDataDir() throws IOException {
 
-		final String dataDir = TestBackend.readMobilewebAppDataDir(new File(
+		final String dataDir = TestBackend.readMobilewebAppLocalDataDir(new File(
 				"src/test/WEB-INF/002-unm-mobileweb-app-local_web.xml"));
 
 		assertEquals("/tmp/unm-mobileweb/dataDir", dataDir);
+	}
+	
+	@Test(expected=IllegalArgumentException.class)
+	public void testBlankDataDir() throws IOException {
+		
+		TestBackend.readMobilewebAppLocalDataDir(new File(
+				"src/test/WEB-INF/003-unm-mobileweb-app_web.xml"));
 	}
 }

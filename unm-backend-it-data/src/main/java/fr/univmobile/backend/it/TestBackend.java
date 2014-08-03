@@ -4,6 +4,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.apache.commons.lang3.StringUtils.CR;
 import static org.apache.commons.lang3.StringUtils.LF;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 import static org.apache.commons.lang3.StringUtils.substringBefore;
 
@@ -282,7 +283,7 @@ public abstract class TestBackend {
 	}
 
 	@Test
-	public static String readMobilewebAppDataDir(final File webXmlFile)
+	public static String readMobilewebAppLocalDataDir(final File webXmlFile)
 			throws IOException {
 
 		final MobilewebAppWebXml webDescriptor = DomBinderUtils
@@ -290,6 +291,11 @@ public abstract class TestBackend {
 
 		final String dataDirRegions = webDescriptor
 				.getMobilewebAppDataDirRegions();
+
+		if (isBlank(dataDirRegions)) {
+			throw new IllegalArgumentException("No dataDir in: "
+					+ webXmlFile.getCanonicalPath());
+		}
 
 		return substringBefore(dataDirRegions, ("/regions"));
 	}
