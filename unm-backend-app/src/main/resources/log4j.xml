@@ -28,7 +28,7 @@
     </logger>
     -->
     <root>
-        <level value="info"/>
+        <level value="debug"/>
         <appender-ref ref="tmpfile"/>
     </root>
     
