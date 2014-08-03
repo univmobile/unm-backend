@@ -12,7 +12,7 @@
 <content>
 	<uid>bretagne</uid>
 	<label>Bretagne</label>
-	<url>http://localhost:8380/unm-backend/json/listUniversities_bretagne</url>
+	<url>${baseURL}/json/listUniversities_bretagne</url>
 	<universities>
 		<university>
 			<id>ubo</id>

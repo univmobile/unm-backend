@@ -12,6 +12,6 @@
 <content>
 	<uid>ile_de_france</uid>
 	<label>Île de France</label>
-	<url>http://localhost:8380/unm-backend/json/listUniversities_ile_de_france</url>
+	<url>${baseURL}/json/listUniversities_ile_de_france</url>
 </content>
 </entry>
