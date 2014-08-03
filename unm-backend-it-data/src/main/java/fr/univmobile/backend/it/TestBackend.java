@@ -241,7 +241,7 @@ public abstract class TestBackend {
 		String getBackendAppDataDir();
 	}
 
-	public static String readBackendAppLogFile(final File log4jXmlFile)
+	public static String readLog4jLogFile(final File log4jXmlFile)
 			throws IOException, SAXException, ParserConfigurationException {
 
 		final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
@@ -258,15 +258,15 @@ public abstract class TestBackend {
 
 		final Document document = documentBuilder.parse(log4jXmlFile);
 
-		final BackendAppLog4JXml log4jConfig = DomBinderUtils.xmlContentToJava(
-				document, BackendAppLog4JXml.class);
+		final Log4JXml log4jConfig = DomBinderUtils.xmlContentToJava(document,
+				Log4JXml.class);
 
 		return log4jConfig.getLogFile();
 	}
 
 	@Namespaces("xmlns:log4j=http://jakarta.apache.org/log4j/")
 	@XPath("/log4j:configuration")
-	private interface BackendAppLog4JXml {
+	private interface Log4JXml {
 
 		@XPath("appender/param[@name = 'File']/@value")
 		String getLogFile();

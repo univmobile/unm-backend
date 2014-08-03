@@ -52,7 +52,7 @@ public class TestBackendTest {
 	public void testReadBackendLogFile() throws Exception {
 
 		final String logFile = TestBackend
-				.readBackendAppLogFile(new File(
+				.readLog4jLogFile(new File(
 						"src/test/WEB-INF/classes/001-unm-backend-app-noshib_log4j.xml"));
 
 		assertEquals("/tmp/unm-backend.log", logFile);

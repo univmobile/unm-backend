@@ -28,7 +28,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		TestBackend.setUpData("001", new File(dataDir));
 
-		final String logFile = TestBackend.readBackendAppLogFile(new File(
+		final String logFile = TestBackend.readLog4jLogFile(new File(
 				"target", "unm-backend-app-noshib/WEB-INF/classes/log4j.xml"));
 
 		System.out.println("Log file: " + logFile);
