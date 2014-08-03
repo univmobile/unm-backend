@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<servlet>
+		<servlet-name>UnivMobileServlet</servlet-name>
+		<servlet-class>fr.univmobile.mobileweb.UnivMobileServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>baseURL</param-name>
+			<param-value>http://localhost:8380/unm-mobileweb/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>inject:File ref:dataDirRegions</param-name>
+			<param-value>/tmp/unm-mobileweb/dataDir/regions</param-value>
+		</init-param>
+		<init-param>
+			<param-name>inject-packages</param-name>
+			<param-value>
+				fr.univmobile.mobileweb
+				fr.univmobile.commons.datasource
+				fr.univmobile.commons.datasource.impl
+				fr.univmobile.backend.core
+				fr.univmobile.backend.client
+				fr.univmobile.backend.client.json
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>inject:RegionClient into:UnivMobileServlet</param-name>
+			<param-value>RegionClientFromJSON</param-value>
+		</init-param>
+		<init-param>
+			<param-name>inject:RegionJSONClient into:RegionClientFromJSON</param-name>
+			<param-value>RegionJSONClientImpl</param-value>
+		</init-param>
+		<init-param>
+			<param-name>inject:RegionClient into:RegionJSONClientImpl</param-name>
+			<param-value>RegionClientFromLocal</param-value>
+		</init-param>
+		<init-param>
+			<param-name>inject:RegionDataSource into:RegionClientFromLocal</param-name>
+			<param-value>factory:BackendDataSourceFileSystem:regions</param-value>
+		</init-param>
+		<init-param>
+			<param-name>inject:Class into:factory:BackendDataSourceFileSystem:regions</param-name>
+			<param-value>class:RegionDataSource</param-value>
+		</init-param>
+		<init-param>
+			<param-name>inject:ref:File into:factory:BackendDataSourceFileSystem:regions</param-name>
+			<param-value>ref:dataDirRegions</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>UnivMobileServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<servlet-class>fr.univmobile.web.commons.PlainContentServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/css</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/css/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/js</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/js/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>

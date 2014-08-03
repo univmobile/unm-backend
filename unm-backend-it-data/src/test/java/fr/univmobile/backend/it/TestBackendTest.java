@@ -57,4 +57,22 @@ public class TestBackendTest {
 
 		assertEquals("/tmp/unm-backend.log", logFile);
 	}
+
+	@Test
+	public void testReadMobileWebBaseURL() throws IOException {
+
+		final String baseURL = TestBackend.readMobilewebAppBaseURL(new File(
+				"src/test/WEB-INF/002-unm-mobileweb-app-local_web.xml"));
+
+		assertEquals("http://localhost:8380/unm-mobileweb/", baseURL);
+	}
+
+	@Test
+	public void testReadMobileWebDataDir() throws IOException {
+
+		final String dataDir = TestBackend.readMobilewebAppDataDir(new File(
+				"src/test/WEB-INF/002-unm-mobileweb-app-local_web.xml"));
+
+		assertEquals("/tmp/unm-mobileweb/dataDir", dataDir);
+	}
 }

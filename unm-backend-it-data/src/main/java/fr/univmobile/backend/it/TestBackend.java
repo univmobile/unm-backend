@@ -5,6 +5,7 @@ import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.apache.commons.lang3.StringUtils.CR;
 import static org.apache.commons.lang3.StringUtils.LF;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
+import static org.apache.commons.lang3.StringUtils.substringBefore;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -269,5 +270,39 @@ public abstract class TestBackend {
 
 		@XPath("appender/param[@name = 'File']/@value")
 		String getLogFile();
+	}
+
+	public static String readMobilewebAppBaseURL(final File webXmlFile)
+			throws IOException {
+
+		final MobilewebAppWebXml webDescriptor = DomBinderUtils
+				.xmlContentToJava(webXmlFile, MobilewebAppWebXml.class);
+
+		return webDescriptor.getMobilewebAppBaseURL();
+	}
+
+	@Test
+	public static String readMobilewebAppDataDir(final File webXmlFile)
+			throws IOException {
+
+		final MobilewebAppWebXml webDescriptor = DomBinderUtils
+				.xmlContentToJava(webXmlFile, MobilewebAppWebXml.class);
+
+		final String dataDirRegions = webDescriptor
+				.getMobilewebAppDataDirRegions();
+
+		return substringBefore(dataDirRegions, ("/regions"));
+	}
+
+	@Namespaces("xmlns:j2ee=http://java.sun.com/xml/ns/j2ee")
+	@XPath("/j2ee:web-app")
+	private interface MobilewebAppWebXml {
+
+		@XPath("j2ee:servlet/j2ee:init-param[j2ee:param-name = 'baseURL']/j2ee:param-value")
+		String getMobilewebAppBaseURL();
+
+		@XPath("j2ee:servlet/j2ee:init-param"
+				+ "[j2ee:param-name = 'inject:File ref:dataDirRegions']/j2ee:param-value")
+		String getMobilewebAppDataDirRegions();
 	}
 }
