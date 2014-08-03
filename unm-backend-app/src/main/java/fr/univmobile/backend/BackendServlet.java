@@ -2,6 +2,8 @@ package fr.univmobile.backend;
 
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.apache.commons.lang3.StringUtils.isBlank;
+import static org.apache.commons.lang3.StringUtils.substringAfter;
+import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 
 import java.io.File;
 import java.io.IOException;
@@ -91,7 +93,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 			log.info("requestURI: " + requestURI);
 		}
 
-		if (requestURI.contains("/json")) {
+		if (requestURI.contains("/json/")) {
 
 			serveJSON(request, response);
 
@@ -169,14 +171,50 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		log.info("serveJSON()...");
 
+		final String requestURI = request.getRequestURI();
+
+		final String path = substringAfter(requestURI, "/json/");
+
 		// http://univmobile.vswip.com/unm-backend-mock/regions
 
 		// https://univmobile-dev.univ-paris1.fr/json/regions
 
+		if ("regions".equals(path) || "regions.json".equals(path)) {
+
+			serveJSON(regionJSONClient.getRegionsJSON(), response);
+
+			return;
+		}
+
+		if (path.startsWith("listUniversities_")) {
+
+			String regionId = substringAfter(path, "listUniversities_");
+
+			if (regionId.endsWith(".json")) {
+				regionId = substringBeforeLast(regionId, ".json");
+			}
+
+			if (!regions.isNullByUid(regionId)) {
+
+				serveJSON(
+						regionJSONClient.getUniversitiesJSONByRegion(regionId),
+						response);
+
+				return;
+			}
+		}
+
+		final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
+
+		UnivMobileHttpUtils.sendError404(request, response, uriPath);
+	}
+
+	private static void serveJSON(final String json,
+			final HttpServletResponse response) throws IOException,
+			ServletException {
+
 		response.setCharacterEncoding(UTF_8);
 		response.setContentType("application/json");
-
-		final String json = regionJSONClient.getRegionsJSON();
 
 		final PrintWriter out = response.getWriter();
 
