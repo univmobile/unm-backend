@@ -12,6 +12,6 @@
 <content>
 	<uid>unrpcl</uid>
 	<label>Limousin/Poitou-Charentes</label>
-	<url>http://univmobile.vswip.com/unm-backend-mock/listUniversities_unrpcl</url>
+	<url>http://localhost:8380/unm-backend/json/listUniversities_unrpcl</url>
 </content>
 </entry>
