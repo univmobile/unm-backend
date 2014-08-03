@@ -98,7 +98,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		final Object uid = request.getAttribute("uid");
 
 		if (log.isInfoEnabled()) {
-			log.info("Shibbolet: uid=" + uid //
+			log.info("Shibboleth: uid=" + uid //
 					+ ", remoteUser=" + remoteUser //
 					+ ", displayName=" + displayName);
 		}
