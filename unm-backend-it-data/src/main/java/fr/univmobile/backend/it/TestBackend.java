@@ -18,6 +18,9 @@ import java.util.Collection;
 import java.util.List;
 
 import javax.annotation.Nullable;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import net.avcompris.binding.annotation.Namespaces;
 import net.avcompris.binding.annotation.XPath;
@@ -27,6 +30,8 @@ import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.joda.time.DateTime;
 import org.junit.Test;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 import com.google.common.collect.Iterables;
 
@@ -236,10 +241,24 @@ public abstract class TestBackend {
 	}
 
 	public static String readBackendAppLogFile(final File log4jXmlFile)
-			throws IOException {
+			throws IOException, SAXException, ParserConfigurationException {
+
+		final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
+				.newInstance();
+
+		documentBuilderFactory.setNamespaceAware(true);
+
+		final String LOAD_EXTERNAL_DTD = "http://apache.org/xml/features/nonvalidating/load-external-dtd";
+
+		documentBuilderFactory.setFeature(LOAD_EXTERNAL_DTD, false);
+
+		final DocumentBuilder documentBuilder = documentBuilderFactory
+				.newDocumentBuilder();
+
+		final Document document = documentBuilder.parse(log4jXmlFile);
 
 		final BackendAppLog4JXml log4jConfig = DomBinderUtils.xmlContentToJava(
-				log4jXmlFile, BackendAppLog4JXml.class);
+				document, BackendAppLog4JXml.class);
 
 		return log4jConfig.getLogFile();
 	}
