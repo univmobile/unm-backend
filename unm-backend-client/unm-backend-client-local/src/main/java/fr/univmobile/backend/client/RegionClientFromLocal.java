@@ -13,6 +13,9 @@ import java.util.TreeSet;
 
 import javax.inject.Inject;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.DataBeans;
 
@@ -26,8 +29,13 @@ public class RegionClientFromLocal implements RegionClient {
 
 	private final RegionDataSource dataSource;
 
+	private static final Log log = LogFactory
+			.getLog(RegionClientFromLocal.class);
+
 	@Override
 	public Region[] getRegions() throws IOException {
+
+		log.debug("getRegions()...");
 
 		final Map<String, fr.univmobile.backend.core.Region> dsRegions //
 		= dataSource.getAllBy("uid");
@@ -74,6 +82,10 @@ public class RegionClientFromLocal implements RegionClient {
 	@Override
 	public University[] getUniversitiesByRegion(final String regionId)
 			throws IOException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getUniversitiesByRegion():" + regionId + "...");
+		}
 
 		final fr.univmobile.backend.core.University[] dsUniversities//
 		= dataSource.getByUid(regionId).getUniversities();
