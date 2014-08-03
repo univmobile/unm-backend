@@ -13,5 +13,23 @@
 	<uid>bretagne</uid>
 	<label>Bretagne</label>
 	<url>http://univmobile.vswip.com/unm-backend-mock/listUniversities_bretagne</url>
+	<universities>
+		<university>
+			<id>ubo</id>
+			<title>Université de Bretagne Occidentale</title>
+		</university>
+		<university>
+			<id>rennes1</id>
+			<title>Université de Rennes 1</title>
+		</university>
+		<university>
+			<id>rennes2</id>
+			<title>Université Rennes 2</title>
+		</university>
+		<university>
+			<id>enscr</id>
+			<title>École Nationale Supérieure de Chimie de Rennes</title>
+		</university>
+	</universities>
 </content>
 </entry>
