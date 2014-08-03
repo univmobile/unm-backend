@@ -114,7 +114,6 @@
 									<outputDirectory>${project.build.directory}/unm-backend-app-noshib</outputDirectory>
 								</artifactItem>
 							</artifactItems>
-							<outputDirectory>${project.build.directory}/wars</outputDirectory>
 							<overWriteReleases>true</overWriteReleases>
 							<overWriteSnapshots>true</overWriteSnapshots>
 						</configuration>
