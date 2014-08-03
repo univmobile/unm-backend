@@ -1,6 +1,8 @@
 package fr.univmobile.backend.it;
 
 import static org.apache.commons.lang3.StringUtils.containsIgnoreCase;
+import static org.apache.commons.lang3.StringUtils.substringAfter;
+import static org.apache.commons.lang3.StringUtils.substringBefore;
 import static org.junit.Assert.assertFalse;
 
 import java.io.File;
@@ -13,36 +15,43 @@ import org.junit.Test;
 import com.thoughtworks.selenium.DefaultSelenium;
 import com.thoughtworks.selenium.Selenium;
 
-import fr.univmobile.testutil.PropertiesUtils;
-
 public class SimpleSeleniumTest {
 
 	@Before
 	public void setUp() throws Exception {
 
-		// 1. DATA
+		// 0. ENVIRONMENT
 
-		final File dataDir = new File("/tmp/unm-backend/dataDir");
+		// "http://localhost:8380/unm-backend/"
+		final String baseURL = TestBackend.readBackendAppBaseURL(new File(
+				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
 
-		dataDir.mkdirs();
+		// "/unm-backend/"
+		final String contextRoot = "/"
+				+ substringAfter(substringAfter(baseURL, "://"), "/");
 
-		FileUtils.deleteDirectory(dataDir);
+		// "http://localhost:"
+		// + PropertiesUtils.getTestProperty("tomcat.port") + "/";
+		final String url = substringBefore(baseURL, contextRoot) + "/";
 
-		FileUtils.copyDirectory(new File("src/test/data"), dataDir);
+		// "/tmp/unm-backend/dataDir"
+		final String dataDir = TestBackend.readBackendAppDataDir(new File(
+				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
+
+		// 1. INJECT DATA
+
+		TestBackend.setUpData("001", new File(dataDir));
 
 		// 2. WEBAPP
 
 		final int seleniumPort = 8888;
-
-		final String url = "http://localhost:"
-				+ PropertiesUtils.getTestProperty("tomcat.port") + "/";
 
 		selenium = new DefaultSelenium("localhost", seleniumPort, "*firefox",
 				url);
 
 		selenium.start();
 
-		selenium.open("/unm-backend" //
+		selenium.open(contextRoot //
 				+ "?NO_SHIB_uid=tformica" //
 				+ "&NO_SHIB_eppn=tformica@univ-paris1.fr" //
 				+ "&NO_SHIB_displayName=Toto+Formica" //

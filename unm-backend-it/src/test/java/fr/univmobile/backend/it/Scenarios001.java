@@ -1,7 +1,9 @@
 package fr.univmobile.backend.it;
 
+import java.io.File;
 import java.io.IOException;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import fr.univmobile.it.commons.BrowserNames;
@@ -14,6 +16,23 @@ import fr.univmobile.testutil.PropertiesUtils;
 @Scenarios("Scénarios simples")
 @DeviceNames("Firefox")
 public class Scenarios001 extends SeleniumEnabledTest {
+
+	@Before
+	public void setUpData() throws Exception {
+
+		// 0. ENVIRONMENT
+
+		// "/tmp/unm-backend/dataDir"
+		final String dataDir = TestBackend.readBackendAppDataDir(new File(
+				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
+
+		TestBackend.setUpData("001", new File(dataDir));
+
+		final String logFile = TestBackend.readBackendAppLogFile(new File(
+				"target", "unm-backend-app-noshib/WEB-INF/classes/log4j.xml"));
+
+		System.out.println("Log file: " + logFile);
+	}
 
 	@BrowserNames
 	public String getDefaultBrowser() {
