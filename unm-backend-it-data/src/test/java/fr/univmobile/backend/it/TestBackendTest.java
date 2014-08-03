@@ -47,4 +47,13 @@ public class TestBackendTest {
 
 		assertEquals("/tmp/unm-backend/dataDir", dataDir);
 	}
+	
+	@Test
+	public void testReadBackendLogFile() throws IOException {
+		
+		final String logFile=TestBackend.readBackendAppLogFile(new File(
+				"src/test/WEB-INF/classes/001-unm-backend-app-noshib_log4j.xml"));
+		
+		assertEquals("/tmp/unm-backend.log",logFile);
+	}
 }

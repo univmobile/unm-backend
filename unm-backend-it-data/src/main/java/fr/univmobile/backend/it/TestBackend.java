@@ -208,16 +208,20 @@ public abstract class TestBackend {
 	public static String readBackendAppBaseURL(final File webXmlFile)
 			throws IOException {
 
-		return DomBinderUtils.xmlContentToJava(webXmlFile,
-				BackendAppWebXml.class).getBackendAppBaseURL();
+		final BackendAppWebXml webDescriptor = DomBinderUtils.xmlContentToJava(
+				webXmlFile, BackendAppWebXml.class);
+
+		return webDescriptor.getBackendAppBaseURL();
 	}
 
 	@Test
 	public static String readBackendAppDataDir(final File webXmlFile)
 			throws IOException {
 
-		return DomBinderUtils.xmlContentToJava(webXmlFile,
-				BackendAppWebXml.class).getBackendAppDataDir();
+		final BackendAppWebXml webDescriptor = DomBinderUtils.xmlContentToJava(
+				webXmlFile, BackendAppWebXml.class);
+
+		return webDescriptor.getBackendAppDataDir();
 	}
 
 	@Namespaces("xmlns:j2ee=http://java.sun.com/xml/ns/j2ee")
@@ -229,5 +233,22 @@ public abstract class TestBackend {
 
 		@XPath("j2ee:servlet/j2ee:init-param[j2ee:param-name = 'dataDir']/j2ee:param-value")
 		String getBackendAppDataDir();
+	}
+
+	public static String readBackendAppLogFile(final File log4jXmlFile)
+			throws IOException {
+
+		final BackendAppLog4JXml log4jConfig = DomBinderUtils.xmlContentToJava(
+				log4jXmlFile, BackendAppLog4JXml.class);
+
+		return log4jConfig.getLogFile();
+	}
+
+	@Namespaces("xmlns:log4j=http://jakarta.apache.org/log4j/")
+	@XPath("/log4j:configuration")
+	private interface BackendAppLog4JXml {
+
+		@XPath("appender/param[@name = 'File']/@value")
+		String getLogFile();
 	}
 }
