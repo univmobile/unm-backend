@@ -163,6 +163,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 			final HttpServletResponse response) throws IOException,
 			ServletException {
 
+		log.debug("serveJSON()...");
+
 		// http://univmobile.vswip.com/unm-backend-mock/regions
 
 		// https://univmobile-dev.univ-paris1.fr/json/regions
