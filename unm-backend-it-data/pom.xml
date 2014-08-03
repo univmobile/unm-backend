@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>unm-backend-it-data</artifactId>
+
+	<parent>
+		<groupId>fr.univmobile</groupId>
+		<artifactId>unm-it-parent</artifactId>
+		<version>0.0.4-SNAPSHOT</version>
+		<relativePath />
+	</parent>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>generate-documentation</id>
+						<phase>process-resources</phase>
+						<goals>
+							<goal>run</goal>
+						</goals>
+						<configuration>
+							<target>
+								<fileset id="resources" dir="src/main/resources">
+									<include name="**/*.xml" />
+								</fileset>
+								<property name="resource.paths" refid="resources" />
+								<loadresource property="resource.paths.filtered">
+									<propertyresource name="resource.paths" />
+									<filterchain>
+										<tokenfilter>
+											<filetokenizer />
+											<replacestring from=";" to="&#10;" />
+										</tokenfilter>
+									</filterchain>
+								</loadresource>
+								<echo file="target/classes/resource.paths" message="${resource.paths.filtered}" />
+							</target>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<name>unm-backend-it-data</name>
+	<description>
+		Shared resources for all unm-backend-it test projects,
+		and unm-it projects that use data stored as XML files :
+		unm-mobileweb-it, 
+		unm-mobileweb-app-local-it,
+		unm-ios-it
+		and unm-android-it.
+    </description>
+	<url>
+        http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}/
+    </url>
+
+	<scm>
+		<connection>
+            scm:git:https://github.com/univmobile/unm-backend.git
+        </connection>
+		<developerConnection>
+            scm:git:https://github.com/univmobile/unm-backend.git
+        </developerConnection>
+		<url>
+			https://github.com/univmobile/unm-backend/tree/master/unm-backend-it-data
+        </url>
+	</scm>
+	<ciManagement>
+		<system>jenkins</system>
+		<url>http://univmobile.vswip.com/job/unm-backend-it-data</url>
+	</ciManagement>
+	<licenses>
+		<license>
+			<name>LGPL v3</name>
+			<url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
+		</license>
+	</licenses>
+	<distributionManagement>
+		<site>
+			<id>vswip</id>
+			<url>
+                dav:http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}
+            </url>
+		</site>
+	</distributionManagement>
+
+	<repositories>
+		<repository>
+			<id>vswip</id>
+			<name>Viewniverse Studio WIP Repository for releases</name>
+			<url>
+                http://univmobile.vswip.com/nexus/content/repositories/releases
+            </url>
+			<releases>
+				<enabled>true</enabled>
+			</releases>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>vswip-snapshots</id>
+			<name>Viewniverse Studio WIP Repository for snapshots</name>
+			<url>
+                http://univmobile.vswip.com/nexus/content/repositories/snapshots
+            </url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
+
+</project>
