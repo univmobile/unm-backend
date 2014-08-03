@@ -2,6 +2,8 @@ package fr.univmobile.backend.it;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
+import static org.apache.commons.lang3.StringUtils.CR;
+import static org.apache.commons.lang3.StringUtils.LF;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 
 import java.io.File;
@@ -19,6 +21,7 @@ import javax.annotation.Nullable;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
+import org.joda.time.DateTime;
 
 import com.google.common.collect.Iterables;
 
@@ -49,6 +52,12 @@ public abstract class TestBackend {
 		final String prefix = "data/" + testDataId + "/";
 
 		int count = 0;
+
+		final File reportFile = new File(destDir, "TestBackend.setUpData.log");
+
+		FileUtils.write(reportFile, "# " + new DateTime() + CR + LF, UTF_8);
+		FileUtils.write(reportFile, "# TestBackend.setUp():" + CR + LF, //
+				UTF_8, true);
 
 		for (final String resourcePath : resourcePaths) {
 
@@ -90,6 +99,9 @@ public abstract class TestBackend {
 					is.close();
 				}
 
+				FileUtils.write(reportFile, "#   " + destPath + CR + LF, //
+						UTF_8, true);
+
 				++count;
 			}
 		}
@@ -99,9 +111,13 @@ public abstract class TestBackend {
 					+ testDataId + ", prefix: " + prefix);
 		}
 
-		System.out.println("Copied " + count //
+		final String message = "Copied " + count //
 				+ " XML File" + (count > 1 ? "s" : "") //
-				+ " from: " + prefix + " to: " + destDir.getCanonicalPath());
+				+ " from: " + prefix + " to: " + destDir.getCanonicalPath();
+
+		FileUtils.write(reportFile, "# " + message + CR + LF, UTF_8, true);
+
+		System.out.println(message);
 	}
 
 	private static String[] loadResourcePaths() throws IOException {
