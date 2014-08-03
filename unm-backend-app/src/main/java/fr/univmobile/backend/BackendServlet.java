@@ -87,6 +87,10 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		final String remoteUser = request.getRemoteUser();
 		final String requestURI = request.getRequestURI();
 
+		if (log.isInfoEnabled()) {
+			log.info("requestURI: " + requestURI);
+		}
+
 		if (requestURI.contains("/json")) {
 
 			serveJSON(request, response);
@@ -163,7 +167,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 			final HttpServletResponse response) throws IOException,
 			ServletException {
 
-		log.debug("serveJSON()...");
+		log.info("serveJSON()...");
 
 		// http://univmobile.vswip.com/unm-backend-mock/regions
 
