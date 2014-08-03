@@ -19,9 +19,14 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import net.avcompris.binding.annotation.Namespaces;
+import net.avcompris.binding.annotation.XPath;
+import net.avcompris.binding.dom.helper.DomBinderUtils;
+
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.io.IOUtils;
 import org.joda.time.DateTime;
+import org.junit.Test;
 
 import com.google.common.collect.Iterables;
 
@@ -42,6 +47,9 @@ public abstract class TestBackend {
 	 */
 	public static void setUpData(final String testDataId, final File destDir)
 			throws IOException {
+
+		System.out.println("Copying XML Resources to: "
+				+ destDir.getCanonicalPath() + "...");
 
 		destDir.mkdirs();
 
@@ -112,7 +120,7 @@ public abstract class TestBackend {
 		}
 
 		final String message = "Copied " + count //
-				+ " XML File" + (count > 1 ? "s" : "") //
+				+ " XML Resource" + (count > 1 ? "s" : "") //
 				+ " from: " + prefix + " to: " + destDir.getCanonicalPath();
 
 		FileUtils.write(reportFile, "# " + message + CR + LF, UTF_8, true);
@@ -195,5 +203,31 @@ public abstract class TestBackend {
 		}
 
 		return is;
+	}
+
+	public static String readBackendAppBaseURL(final File webXmlFile)
+			throws IOException {
+
+		return DomBinderUtils.xmlContentToJava(webXmlFile,
+				BackendAppWebXml.class).getBackendAppBaseURL();
+	}
+
+	@Test
+	public static String readBackendAppDataDir(final File webXmlFile)
+			throws IOException {
+
+		return DomBinderUtils.xmlContentToJava(webXmlFile,
+				BackendAppWebXml.class).getBackendAppDataDir();
+	}
+
+	@Namespaces("xmlns:j2ee=http://java.sun.com/xml/ns/j2ee")
+	@XPath("/j2ee:web-app")
+	private interface BackendAppWebXml {
+
+		@XPath("j2ee:servlet/j2ee:init-param[j2ee:param-name = 'baseURL']/j2ee:param-value")
+		String getBackendAppBaseURL();
+
+		@XPath("j2ee:servlet/j2ee:init-param[j2ee:param-name = 'dataDir']/j2ee:param-value")
+		String getBackendAppDataDir();
 	}
 }

@@ -1,5 +1,6 @@
 package fr.univmobile.backend.it;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
 
@@ -27,5 +28,23 @@ public class TestBackendTest {
 		assertNotEquals(
 				"reportFile.length() should not be zero: "
 						+ reportFile.getCanonicalPath(), 0, reportFile.length());
+	}
+
+	@Test
+	public void testReadBackendAppBaseURL() throws IOException {
+
+		final String baseURL = TestBackend.readBackendAppBaseURL(new File(
+				"src/test/WEB-INF/001-unm-backend-app-noshib_web.xml"));
+
+		assertEquals("http://localhost:8380/unm-backend/", baseURL);
+	}
+
+	@Test
+	public void testReadBackendAppDataDir() throws IOException {
+
+		final String dataDir = TestBackend.readBackendAppDataDir(new File(
+				"src/test/WEB-INF/001-unm-backend-app-noshib_web.xml"));
+
+		assertEquals("/tmp/unm-backend/dataDir", dataDir);
 	}
 }

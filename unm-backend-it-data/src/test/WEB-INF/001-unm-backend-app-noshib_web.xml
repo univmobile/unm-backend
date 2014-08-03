@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+
+	<servlet>
+		<servlet-name>BackendServlet</servlet-name>
+		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+		<init-param>
+			<param-name>baseURL</param-name>
+			<param-value>http://localhost:8380/unm-backend/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>dataDir</param-name>
+			<param-value>/tmp/unm-backend/dataDir</param-value>
+		</init-param>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BackendServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+	
+	<!-- Use NoShibbolethFilter only when Shibboleth is not available (-it.) -->
+	<!-- It will crash on a production environment, with Shibboleth/HTTPS. -->
+	 
+	<filter>
+		<filter-name>NoShibbolethFilter</filter-name>
+		<filter-class>fr.univmobile.backend.noshib.NoShibbolethFilter</filter-class>
+		<init-param>
+			<param-name>hosts.allow</param-name>
+			<param-value>
+				Davids-MacBook-Pro.local
+				unm-ci
+				unm-ios7
+				unm-ios6a.local
+				unm-ios6a
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>hosts.deny</param-name>
+			<param-value>
+				univmobile-dev
+			</param-value>
+		</init-param>
+	</filter>	
+	
+	<filter-mapping>
+		<filter-name>NoShibbolethFilter</filter-name>
+		<servlet-name>BackendServlet</servlet-name>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<servlet-class>fr.univmobile.web.commons.PlainContentServlet</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/css</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/css/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/js</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/js/*</url-pattern>
+	</servlet-mapping>
+
+</web-app>
