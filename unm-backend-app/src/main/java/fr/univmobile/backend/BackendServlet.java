@@ -8,6 +8,7 @@ import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
 
 import javax.servlet.ServletException;
 import javax.servlet.UnavailableException;
@@ -91,7 +92,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		request.setCharacterEncoding(UTF_8);
 
-		final String host = request.getHeader("Host");
+		// final String host = request.getHeader("Host");
+		final String remoteAddr = request.getRemoteAddr();
 		final String userAgent = request.getHeader("User-Agent");
 		final String remoteUser = request.getRemoteUser();
 		final String requestURI = request.getRequestURI();
@@ -101,10 +103,36 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		// }
 
 		if (log.isInfoEnabled()) {
-			log.info("host: " + host //
+			log.info("remoteAddr: " + remoteAddr//
 					+ ", requestURI: " + requestURI //
 					+ ", userAgent: \"" + userAgent + "\"" //
 					+ ", remoteUser: " + remoteUser);
+		}
+
+		if (log.isDebugEnabled()) {
+			log.debug("  request.authType: " + request.getAuthType());
+			log.debug("  request.contentType: " + request.getContentType());
+			log.debug("  request.contextPath: " + request.getContextPath());
+			log.debug("  request.localAddr: " + request.getLocalAddr());
+			log.debug("  request.localName: " + request.getLocalName());
+			log.debug("  request.localPort: " + request.getLocalPort());
+			log.debug("  request.method: " + request.getMethod());
+			log.debug("  request.pathInfo: " + request.getPathInfo());
+			log.debug("  request.protocol: " + request.getProtocol());
+			log.debug("  request.queryString: " + request.getQueryString());
+			log.debug("  request.remoteAddr: " + request.getRemoteAddr());
+			log.debug("  request.remoteHost: " + request.getRemoteHost());
+			log.debug("  request.remoteUser: " + request.getRemoteUser());
+			log.debug("  request.requestURI: " + request.getRequestURI());
+			log.debug("  request.scheme: " + request.getScheme());
+			log.debug("  request.serverName: " + request.getServerName());
+			log.debug("  request.serverPort: " + request.getServerPort());
+			for (final Enumeration<?> e = request.getHeaderNames(); e
+					.hasMoreElements();) {
+				final String headerName = e.nextElement().toString();
+				final String headerValue = request.getHeader(headerName);
+				log.debug("  request.header." + headerName + ": " + headerValue);
+			}
 		}
 
 		if (requestURI.contains("/json/") || requestURI.endsWith("/json")) {
@@ -127,8 +155,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		if (remoteUser == null) {
 
-			log.fatal("host: "
-					+ host
+			log.fatal("remoteAddr: "
+					+ remoteAddr
 					+ ", 403 Cannot find REMOTE_USER."
 					+ " Shibboleth seems to be missing and filters not applied.");
 
@@ -148,7 +176,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		if (users.isNullByRemoteUser(remoteUser)) {
 
-			log.fatal("host: " + host
+			log.fatal("remoteAddr: " + remoteAddr
 					+ ", 403 Unknown REMOTE_USER in the Database: "
 					+ remoteUser);
 
