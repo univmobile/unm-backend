@@ -1,6 +1,7 @@
 package fr.univmobile.backend.client.json;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.io.IOException;
 import java.util.List;
@@ -25,6 +26,10 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 	public RegionJSONClientImpl( //
 			final String baseURL, @Named("RegionJSONClientImpl")//
 			final RegionClient regionClient) {
+
+		if (isBlank(baseURL)) {
+			throw new IllegalArgumentException("Argument is mandatory: baseURL");
+		}
 
 		this.baseURL = checkNotNull(baseURL, "baseURL");
 		this.regionClient = checkNotNull(regionClient, "regionClient");
