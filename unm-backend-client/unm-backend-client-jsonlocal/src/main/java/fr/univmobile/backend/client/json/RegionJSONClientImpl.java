@@ -62,9 +62,7 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 					.put("url", filterURL(region.getUrl())));
 		}
 
-		final String s = json.toJSONString();
-
-		return s;
+		return json.toJSONString();
 	}
 
 	private String filterURL(final String url) {
