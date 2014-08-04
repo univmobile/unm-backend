@@ -65,8 +65,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 			throw new ServletException(e);
 		}
 
-		regionJSONClient = new RegionJSONClientImpl(new RegionClientFromLocal(
-				regions));
+		regionJSONClient = new RegionJSONClientImpl(getBaseURL(),
+				new RegionClientFromLocal(regions));
 
 		super.init( //
 				new HomeController(users, regions), //
@@ -89,9 +89,9 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		final String remoteUser = request.getRemoteUser();
 		final String requestURI = request.getRequestURI();
 
-		//if (log.isInfoEnabled()) {
-		//	log.info("requestURI: " + requestURI);
-		//}
+		// if (log.isInfoEnabled()) {
+		// log.info("requestURI: " + requestURI);
+		// }
 
 		if (log.isInfoEnabled()) {
 			log.info("host: " + host //
