@@ -4,21 +4,18 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.io.IOException;
-import java.util.List;
-import java.util.Map;
 
 import javax.inject.Inject;
 import javax.inject.Named;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONAware;
-import org.json.simple.JSONObject;
 
 import fr.univmobile.backend.client.Region;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.University;
+import fr.univmobile.backend.json.JSONList;
+import fr.univmobile.backend.json.JSONMap;
 
 public class RegionJSONClientImpl implements RegionJSONClient {
 
@@ -113,47 +110,5 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 		}
 
 		return s;
-	}
-}
-
-class JSONList implements JSONAware {
-
-	private final JSONArray jsonArray = new JSONArray();
-
-	@SuppressWarnings("unchecked")
-	private final List<Object> list = (List<Object>) jsonArray;
-
-	public JSONList add(final Object item) {
-
-		list.add(item);
-
-		return this;
-	}
-
-	@Override
-	public String toJSONString() {
-
-		return jsonArray.toJSONString();
-	}
-}
-
-class JSONMap implements JSONAware {
-
-	@Override
-	public String toJSONString() {
-
-		return jsonObject.toJSONString();
-	}
-
-	private final JSONObject jsonObject = new JSONObject();
-
-	@SuppressWarnings("unchecked")
-	private final Map<String, Object> map = (Map<String, Object>) jsonObject;
-
-	public JSONMap put(final String key, final Object value) {
-
-		map.put(key, value);
-
-		return this;
 	}
 }
