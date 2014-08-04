@@ -65,12 +65,12 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 			throw new ServletException(e);
 		}
 
-		regionJSONClient = new RegionJSONClientImpl(getBaseURL(),
-				new RegionClientFromLocal(regions));
-
 		super.init( //
 				new HomeController(users, regions), //
 				new UseraddController(users, regions));
+
+		regionJSONClient = new RegionJSONClientImpl(getBaseURL(),
+				new RegionClientFromLocal(regions));
 	}
 
 	private static final Log log = LogFactory.getLog(BackendServlet.class);
