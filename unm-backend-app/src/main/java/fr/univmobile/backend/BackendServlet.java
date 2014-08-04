@@ -89,8 +89,15 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		final String remoteUser = request.getRemoteUser();
 		final String requestURI = request.getRequestURI();
 
+		//if (log.isInfoEnabled()) {
+		//	log.info("requestURI: " + requestURI);
+		//}
+
 		if (log.isInfoEnabled()) {
-			log.info("requestURI: " + requestURI);
+			log.info("host: " + host //
+					+ ", requestURI: " + requestURI //
+					+ ", userAgent: \"" + userAgent + "\"" //
+					+ ", remoteUser: " + remoteUser);
 		}
 
 		if (requestURI.contains("/json/")) {
@@ -122,13 +129,6 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 					"Cannot find REMOTE_USER");
 
 			return;
-		}
-
-		if (log.isInfoEnabled()) {
-			log.info("host: " + host //
-					+ ", requestURI: " + requestURI //
-					+ ", userAgent: \"" + userAgent + "\"" //
-					+ ", remoteUser: " + remoteUser);
 		}
 
 		// 3. DATA

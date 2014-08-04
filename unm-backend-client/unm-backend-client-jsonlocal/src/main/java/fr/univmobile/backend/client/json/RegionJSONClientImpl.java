@@ -23,12 +23,14 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 
 	@Inject
 	public RegionJSONClientImpl( //
-			@Named("RegionJSONClientImpl")//
+			final String baseURL, @Named("RegionJSONClientImpl")//
 			final RegionClient regionClient) {
 
+		this.baseURL = checkNotNull(baseURL, "baseURL");
 		this.regionClient = checkNotNull(regionClient, "regionClient");
 	}
 
+	private final String baseURL;
 	private final RegionClient regionClient;
 
 	private static final Log log = LogFactory
@@ -52,12 +54,29 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 			list.add(new JSONMap() //
 					.put("id", region.getId()) //
 					.put("label", region.getLabel()) //
-					.put("url", region.getUrl()));
+					.put("url", filterURL(region.getUrl())));
 		}
 
 		final String s = json.toJSONString();
 
 		return s;
+	}
+
+	private String filterURL(final String url) {
+
+		if (!url.contains("${baseURL}")) {
+			return url;
+		}
+
+		String u = url;
+
+		if (baseURL.endsWith("/")) {
+			u = u.replace("${baseURL}/", baseURL);
+		}
+
+		u = u.replace("${baseURL}", baseURL);
+
+		return u;
 	}
 
 	@Override

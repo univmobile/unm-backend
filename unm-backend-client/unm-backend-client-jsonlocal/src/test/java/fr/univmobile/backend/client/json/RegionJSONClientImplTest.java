@@ -25,13 +25,34 @@ public class RegionJSONClientImplTest {
 		when(regionClient.getRegions()).thenReturn(new Region[] { region });
 
 		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
-				regionClient);
+				"(dummy baseURL)", regionClient);
 
 		final String s = regionJSONClient.getRegionsJSON();
 
 		assertEquals("{\"region\":[{\"id\":\"aa\"," //
 				+ "\"label\":\"bb\"," //
 				+ "\"url\":\"cc\"}]}", s);
+	}
+
+	@Test
+	public void testFilterURL() throws Exception {
+
+		final RegionClient regionClient = mock(RegionClient.class);
+
+		final Region region = mock(Region.class);
+
+		when(region.getUrl()).thenReturn("${baseURL}/json/regions");
+
+		when(regionClient.getRegions()).thenReturn(new Region[] { region });
+
+		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
+				"http://toto/tralala/", regionClient);
+
+		final String s = regionJSONClient.getRegionsJSON();
+
+		assertEquals("{\"region\":[{\"id\":null," //
+				+ "\"label\":null," //
+				+ "\"url\":\"http:\\/\\/toto\\/tralala\\/json\\/regions\"}]}", s);
 	}
 
 	@Test
@@ -48,7 +69,7 @@ public class RegionJSONClientImplTest {
 		when(regionClient.getRegions()).thenReturn(new Region[] { region });
 
 		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
-				regionClient);
+				"(dummy baseURL)", regionClient);
 
 		final String s = regionJSONClient.getRegionsJSON();
 

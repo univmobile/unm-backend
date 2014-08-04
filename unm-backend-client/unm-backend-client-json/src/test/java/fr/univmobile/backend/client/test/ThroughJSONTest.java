@@ -40,7 +40,7 @@ public class ThroughJSONTest {
 				dataSource);
 
 		final RegionJSONClientImpl regionJSONClient = new RegionJSONClientImpl(
-				regionClient);
+				"(dummy baseURL)", regionClient);
 
 		client = new RegionClientFromJSON(regionJSONClient);
 	}
