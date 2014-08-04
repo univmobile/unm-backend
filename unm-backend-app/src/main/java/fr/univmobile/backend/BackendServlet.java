@@ -17,12 +17,16 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.client.Region;
+import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.backend.json.JSONList;
+import fr.univmobile.backend.json.JSONMap;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.BuildInfoUtils;
@@ -38,6 +42,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 	private UserDataSource users;
 
 	private RegionDataSource regions;
+
+	private RegionClient regionClient;
 
 	private RegionJSONClient regionJSONClient;
 
@@ -69,8 +75,9 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 				new HomeController(users, regions), //
 				new UseraddController(users, regions));
 
-		regionJSONClient = new RegionJSONClientImpl(getBaseURL(),
-				new RegionClientFromLocal(regions));
+		regionClient = new RegionClientFromLocal(regions);
+
+		regionJSONClient = new RegionJSONClientImpl(getBaseURL(), regionClient);
 	}
 
 	private static final Log log = LogFactory.getLog(BackendServlet.class);
@@ -100,7 +107,7 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 					+ ", remoteUser: " + remoteUser);
 		}
 
-		if (requestURI.contains("/json/")) {
+		if (requestURI.contains("/json/") || requestURI.endsWith("/json")) {
 
 			serveJSON(request, response);
 
@@ -173,6 +180,13 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		final String requestURI = request.getRequestURI();
 
+		if (requestURI.endsWith("/json/") || requestURI.endsWith("/json")) {
+
+			serveJSONendPoints(response);
+
+			return;
+		}
+
 		final String path = substringAfter(requestURI, "/json/");
 
 		// http://univmobile.vswip.com/unm-backend-mock/regions
@@ -223,5 +237,38 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 		out.flush();
 
 		out.close();
+	}
+
+	private void serveJSONendPoints(final HttpServletResponse response)
+			throws IOException, ServletException {
+
+		final JSONMap json = new JSONMap();
+
+		final JSONList list = new JSONList();
+
+		json.put("endPoints", list);
+
+		list.add(new JSONMap() //
+				.put("url", composeJSONendPoint("/regions" // + ".json"
+						)));
+
+		for (final Region region : regionClient.getRegions()) {
+
+			list.add(new JSONMap() //
+					.put("url", composeJSONendPoint("/listUniversities_"
+							+ region.getId() // + ".json"
+					)));
+		}
+
+		serveJSON(json.toJSONString(), response);
+	}
+
+	private String composeJSONendPoint(final String path) {
+
+		final String baseURL = getBaseURL();
+
+		return baseURL + (baseURL.endsWith("/") ? "" : "/") //
+				+ "json" //
+				+ (path.startsWith("/") ? "" : "/") + path;
 	}
 }
