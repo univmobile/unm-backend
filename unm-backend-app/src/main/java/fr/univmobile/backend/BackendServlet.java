@@ -208,7 +208,13 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		final String requestURI = request.getRequestURI();
 
+		if (log.isDebugEnabled()) {
+			log.debug("requestURI: " + requestURI);
+		}
+
 		if (requestURI.endsWith("/json/") || requestURI.endsWith("/json")) {
+
+			log.debug("serveJSONendPoints()...");
 
 			serveJSONendPoints(response);
 
@@ -217,13 +223,24 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		final String path = substringAfter(requestURI, "/json/");
 
+		if (log.isDebugEnabled()) {
+			log.debug("path: " + path);
+		}
+
 		// http://univmobile.vswip.com/unm-backend-mock/regions
 
 		// https://univmobile-dev.univ-paris1.fr/json/regions
 
 		if ("regions".equals(path) || "regions.json".equals(path)) {
 
-			serveJSON(regionJSONClient.getRegionsJSON(), response);
+			final String regionsJSON = regionJSONClient.getRegionsJSON();
+
+			if (log.isDebugEnabled()) {
+				log.debug("serveJSON(regionJSON.length: "
+						+ regionsJSON.length() + ")");
+			}
+
+			serveJSON(regionsJSON, response);
 
 			return;
 		}
@@ -269,6 +286,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 	private void serveJSONendPoints(final HttpServletResponse response)
 			throws IOException, ServletException {
+
+		log.debug("serveJSONendPoints()...");
 
 		final JSONMap json = new JSONMap();
 
