@@ -38,8 +38,8 @@
 			<param-value>RegionJSONHttpClient</param-value>
 		</init-param>
 		<init-param>
-			<param-name>inject:ref:String into:RegionJSONHttpClient</param-name>
-			<param-value>ref:jsonURL</param-value>
+			<param-name>inject:String into:RegionJSONHttpClient</param-name>
+			<param-value>${ref:jsonURL}</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>

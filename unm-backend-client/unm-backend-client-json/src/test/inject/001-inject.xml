@@ -23,8 +23,8 @@
 		<param-value>RegionClientFromLocal</param-value>
 	</init-param>
 	<init-param>
-		<param-name>inject:ref:String into:RegionJSONClientImpl</param-name>
-		<param-value>ref:baseURL</param-value>
+		<param-name>inject:String into:RegionJSONClientImpl</param-name>
+		<param-value>${ref:baseURL}</param-value>
 	</init-param>
 	<init-param>
 		<param-name>inject:String ref:baseURL</param-name>

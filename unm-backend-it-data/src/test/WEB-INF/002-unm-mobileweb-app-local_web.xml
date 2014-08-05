@@ -49,8 +49,8 @@
 			<param-value>class:RegionDataSource</param-value>
 		</init-param>
 		<init-param>
-			<param-name>inject:ref:File into:factory:BackendDataSourceFileSystem:regions</param-name>
-			<param-value>ref:dataDirRegions</param-value>
+			<param-name>inject:File into:factory:BackendDataSourceFileSystem:regions</param-name>
+			<param-value>${ref:dataDirRegions}</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>
