@@ -100,7 +100,7 @@ public class MyUsersTest {
 	@Test
 	public void test_getAll() throws Exception {
 
-		final Map<String, MyUser> allUsers = users.getAllBy("uid");
+		final Map<String, MyUser> allUsers = users.getAllBy(String.class, "uid");
 
 		assertEquals(2, allUsers.size());
 

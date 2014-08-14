@@ -150,7 +150,7 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 			if (!methodName.startsWith("getBy")) {
 				throw new NotImplementedException(
 						"Method name should be of the form \"getByXxx()\": "
-								+ methodName+"()");
+								+ methodName + "()");
 			}
 
 			if (args == null || args.length != 1) {
@@ -212,9 +212,10 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 	}
 
 	@Override
-	public Map<String, E> getAllBy(final String attributeName) {
+	public <K> Map<K, E> getAllBy(final Class<K> keyClass,
+			final String attributeName) {
 
-		return cacheEngine.getAllBy(attributeName);
+		return cacheEngine.getAllBy(keyClass, attributeName);
 	}
 
 	@Override

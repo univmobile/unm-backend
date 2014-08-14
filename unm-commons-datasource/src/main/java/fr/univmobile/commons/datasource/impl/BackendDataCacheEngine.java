@@ -33,11 +33,11 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 
 		// 2.1. COREATTRIBUTES
 
-		indexes.put("id", new HashMap<String, List<E>>());
+		indexes.put("id", new HashMap<Object, List<E>>());
 
 		putAttributeMethod("id");
 
-		indexes.put("parentId", new HashMap<String, List<E>>());
+		indexes.put("parentId", new HashMap<Object, List<E>>());
 
 		putAttributeMethod("parentId");
 
@@ -54,7 +54,7 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 
 			final String attributeName = searchAttribute.value();
 
-			indexes.put(attributeName, new HashMap<String, List<E>>());
+			indexes.put(attributeName, new HashMap<Object, List<E>>());
 
 			putAttributeMethod(attributeName);
 		}
@@ -110,11 +110,29 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 				throw new RuntimeException(e);
 			}
 
-			if (isBlank((String) attributeValue)) {
+			if (attributeValue == null) {
 				continue;
 			}
+			
+			if (attributeValue instanceof String) {
+				
+				if (isBlank((String) attributeValue)) {
+					continue;
+				}
 
-			final Map<String, List<E>> index = indexes.get(attributeName);
+				// OK
+
+			} else if (attributeValue instanceof Integer) {
+				
+				// OK
+				
+			} else {
+				throw new IllegalStateException("Unknown key type: "
+						+attributeValue.getClass().getName()
+						+" for attribute: "+attributeName);
+			}
+
+			final Map<Object, List<E>> index = indexes.get(attributeName);
 
 			final String attributeValueAsString = attributeValue.toString();
 
@@ -158,7 +176,7 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 					+ attributeValue);
 		}
 
-		final Map<String, List<E>> index = indexes.get(attributeName);
+		final Map<Object, List<E>> index = indexes.get(attributeName);
 
 		final List<E> data = index.get(attributeValue);
 
@@ -178,7 +196,7 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 					+ "=" + attributeValue);
 		}
 
-		final Map<String, List<E>> index = indexes.get(attributeName);
+		final Map<Object, List<E>> index = indexes.get(attributeName);
 
 		final List<E> data = index.get(attributeValue);
 
@@ -187,14 +205,14 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 
 	public synchronized void clear() {
 
-		for (final Map<String, List<E>> index : indexes.values()) {
+		for (final Map<Object, List<E>> index : indexes.values()) {
 
 			index.clear();
 		}
 	}
 
-	private final Map<String, Map<String, List<E>>> indexes = //
-	new HashMap<String, Map<String, List<E>>>();
+	private final Map<String, Map<Object, List<E>>> indexes = //
+	new HashMap<String, Map<Object, List<E>>>();
 
 	public List<E> getAllVersions(final E data) {
 
@@ -239,16 +257,19 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 		}
 	}
 
-	public Map<String, E> getAllBy(final String attributeName) {
+	public <K> Map<K, E> getAllBy(
+			final Class<K> keyClass, 
+			final String attributeName) {
 
-		final Map<String, E> all = new HashMap<String, E>();
+		final Map<K, E> all = new HashMap<K, E>();
 
-		for (final Map.Entry<String, List<E>> entry : indexes
+		for (final Map.Entry<Object, List<E>> entry : indexes
 				.get(attributeName).entrySet()) {
 
-			final String attributeValue = entry.getKey();
+			final Object attributeValue = entry.getKey();
 
-			all.put(attributeValue, entry.getValue().iterator().next());
+			all.put(keyClass.cast(attributeValue), //
+					entry.getValue().iterator().next());
 		}
 
 		return all;

@@ -15,11 +15,11 @@ public interface BackendDataSource<E extends Entry, EB extends EntryBuilder<E>> 
 
 	boolean isLatest(E data);
 
-	public Map<String, E> getAllBy(String attributeName);
-	
+	public <K> Map<K, E> getAllBy(Class<K> keyClass, String attributeName);
+
 	EB create();
-	
+
 	EB update(E data);
-	
+
 	void reload() throws IOException;
 }

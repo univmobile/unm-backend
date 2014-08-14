@@ -54,7 +54,7 @@ public class CreateMyUsersTest {
 	@Test
 	public void test_counts() throws Exception {
 
-		assertEquals(2, users.getAllBy("uid").size());
+		assertEquals(2, users.getAllBy(String.class, "uid").size());
 
 		assertEquals(3, countFiles());
 	}
@@ -86,7 +86,7 @@ public class CreateMyUsersTest {
 		assertEquals("dandriana", saved.getAuthorName());
 		assertEquals("dandriana", saved.getTitle());
 
-		assertEquals(3, users.getAllBy("uid").size());
+		assertEquals(3, users.getAllBy(String.class, "uid").size());
 		assertEquals(4, countFiles());
 	}
 }

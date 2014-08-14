@@ -71,7 +71,7 @@ abstract class AbstractBackendController extends AbstractController {
 
 		// 2. VIEW
 
-		final Map<String, User> allUsers = users.getAllBy("uid");
+		final Map<String, User> allUsers = users.getAllBy(String.class, "uid");
 
 		final List<User> u = new ArrayList<User>();
 
@@ -82,7 +82,7 @@ abstract class AbstractBackendController extends AbstractController {
 
 		setAttribute("users", u);
 
-		final Map<String, Region> allRegions = regions.getAllBy("uid");
+		final Map<String, Region> allRegions = regions.getAllBy(String.class, "uid");
 
 		final List<Region> r = new ArrayList<Region>();
 

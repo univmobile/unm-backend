@@ -38,7 +38,7 @@ public class RegionClientFromLocal implements RegionClient {
 		log.debug("getRegions()...");
 
 		final Map<String, fr.univmobile.backend.core.Region> dsRegions //
-		= dataSource.getAllBy("uid");
+		= dataSource.getAllBy(String.class, "uid");
 
 		final Region[] regions = new Region[dsRegions.size()];
 

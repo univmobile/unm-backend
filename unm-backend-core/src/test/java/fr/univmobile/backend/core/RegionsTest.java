@@ -36,7 +36,7 @@ public class RegionsTest {
 	@Test
 	public void test_count() throws Exception {
 
-		assertEquals(3, regions.getAllBy("uid").size());
+		assertEquals(3, regions.getAllBy(String.class, "uid").size());
 	}
 
 	@Test
