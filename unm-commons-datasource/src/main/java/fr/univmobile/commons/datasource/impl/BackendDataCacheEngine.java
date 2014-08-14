@@ -134,13 +134,13 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 
 			final Map<Object, List<E>> index = indexes.get(attributeName);
 
-			final String attributeValueAsString = attributeValue.toString();
+			final Object key = attributeValue; // attributeValue.toString();
 
-			List<E> cached = index.get(attributeValueAsString);
+			List<E> cached = index.get(key);
 
 			if (cached == null) {
 				cached = new ArrayList<E>();
-				index.put(attributeValueAsString, cached);
+				index.put(key, cached);
 			}
 
 			boolean isParent = false;

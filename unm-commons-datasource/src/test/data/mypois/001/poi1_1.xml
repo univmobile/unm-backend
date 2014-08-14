@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/001:poi1_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/001:poi1_1.xml"/>
+<title>Université Panthéon-Sorbonne - Paris I</title>
+<updated>2014-08-14T11:01:00Z</updated>
+<!--
+	created_at: 2010-05-11 10:52:30
+	updated_at: 2014-03-31 12:14:33
+	created_by: NULL
+	updated_by: super admin
+-->
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1"
+	poiType="1"
+	poiTypeLabel="Université"
+	logo="/images/universities/logos/univ_paris1.jpg"
+	coordinates="48.84650925911,2.3459243774"
+	active="true"
+	type="point"
+	createdAt="2010-05-11 10:52:30"
+	updatedAt="2014-03-31 12:14:33"
+	updatedBy="super admin"
+	name="Université Panthéon-Sorbonne - Paris I">
+	<universityId>paris1</universityId> <!-- universityId.maxOccurs = unbounded -->
+	<description> <!-- mixed, universityId.maxOccurs = 1 --> 
+Université Panthéon-Sorbonne - Paris I comprend 297 formations. Il s'agit d'une université dans la région Ile de France.
+                                    
+			L'université Paris 1 - Panthéon-Sorbonne est le premier pôle universitaire français, comprenant plus de 40 000 étudiants répartis en 14 unités de Formation et de Recherche (UFR) et de 5 instituts.  
+ 
+L'université offre un éventail complet de formation répartis en plusieurs pôles : le pôle sciences économiques et gestion, le pôle sciences humaines, le pôle sciences juridiques et politiques. Elle est basée au coeur du quartier latin de Paris entre le Panthéon et le
+                		Plus d'informations sur cette école	
+	</description>
+	<!-- address.maxOccurs = unbounded -->
+	<address zip="75231"
+			country="FR"
+			latitude="48.85"
+			longitude="2.35"			
+			city="PARIS"> 
+		<fullAddress> <!-- mixed, fullAddress.maxOccurs = 1 -->
+		12 place du Panthéon 75231 PARIS
+		</fullAddress>
+		<phone>01 44 07 80 00</phone> <!-- phone.maxOccurs = unbounded -->
+		<url>http://www.univ-paris1.fr/</url> <!-- url.maxOccurs = unbounded -->
+		<!--
+		<floor></floor>
+		<openingHours></openingHours>
+		<itinerary></itinerary>
+		<fax></fax>
+		<email></email>		
+		-->
+	</address>
+	
+</content>
+</entry>
