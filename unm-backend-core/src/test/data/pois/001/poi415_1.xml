@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/001:poi415_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/001:poi415_1.xml"/>
+<title>Centre Broca</title>
+<updated>2014-08-14T21:55:00Z</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="415"
+	coordinates="48.838311445098,2.348552942276"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-05 09:59:38"
+	updatedAt="2014-03-31 12:14:33"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	name="Centre Broca"
+	parentUid="1">
+	<poiType id="2" label="Site"/> <!-- = tags. maxOccurs = unbounded -->
+	<!-- universityId is unnecessary if parentUid?! -->
+	<!--
+	<universityId>paris1</universityId>
+	-->
+</content>
+</entry>
