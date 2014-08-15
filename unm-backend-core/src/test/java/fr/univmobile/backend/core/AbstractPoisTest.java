@@ -28,6 +28,10 @@ public abstract class AbstractPoisTest {
 			return;
 		}
 
+		final long start = System.currentTimeMillis();
+
+		System.out.println("Copying data...");
+
 		final File tmpDataDir = new File("target/PoisTest");
 
 		if (tmpDataDir.isDirectory()) {
@@ -36,12 +40,19 @@ public abstract class AbstractPoisTest {
 
 		FileUtils.copyDirectory(originalDataDir, tmpDataDir);
 
+		final long elapsedCopy = System.currentTimeMillis() - start;
+
+		System.out.println("Copying data: Done. (" + elapsedCopy + " ms.)");
+
 		System.out.println("Loading data...");
-		
+
 		pois = BackendDataSourceFileSystem.newDataSource(PoiDataSource.class,
 				tmpDataDir);
-		
-		System.out.println("Loadind data: Done.");		
+
+		final long elapsedLoad = System.currentTimeMillis() - start
+				- elapsedCopy;
+
+		System.out.println("Loadind data: Done (" + elapsedLoad + " ms.)");
 	}
 
 	private static PoiDataSource pois;
