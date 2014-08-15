@@ -19,7 +19,7 @@
 	updatedBy="rrivoire"
 	name="Université Versailles Saint-Quentin-en-Yvelines">
 	<poiType id="1" label="Université"/> <!-- = tags. maxOccurs = unbounded -->
-	<universityId>paris1</universityId> <!-- universityId.maxOccurs = unbounded -->
+	<university id="paris1"/> <!-- university.maxOccurs = unbounded -->
 	<description> <!-- mixed, universityId.maxOccurs = 1 --> 
 L'Université de Versailles Saint-Quentin-en-Yvelines (UVSQ) propose près de 250 formations et possède 33 laboratoires. C'est une université  créée en 1991, implantée dans le département des Yvelines et depuis 2002 dans les Hauts-de-Seine. 
 Elle accueille environ 18 000 étudiants et emploie environ 1 900 personnes dont 950 enseignants. 
