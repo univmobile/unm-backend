@@ -42,6 +42,8 @@ public interface Poi extends Entry {
 	@XPath("atom:content/atom:poiType/@categoryId")
 	int[] getPoiCategoryIds();
 
+	boolean isNullPoiCategoryIds();
+	
 	/**
 	 * e.g. "Plans"
 	 */
