@@ -219,6 +219,18 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 	}
 
 	@Override
+	public final Map<String, E> getAllByString(final String attributeName) {
+
+		return getAllBy(String.class, attributeName);
+	}
+
+	@Override
+	public final Map<Integer, E> getAllByInt(final String attributeName) {
+
+		return getAllBy(Integer.class, attributeName);
+	}
+
+	@Override
 	protected void save(final Document document, final EB builder)
 			throws IOException {
 
