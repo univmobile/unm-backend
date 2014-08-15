@@ -56,7 +56,7 @@ public abstract class AbstractPoisTest {
 		final long elapsedLoad = System.currentTimeMillis() - start
 				- elapsedCopy;
 
-		System.out.println("Loadind data: Done (" + elapsedLoad + " ms.)");
+		System.out.println("Loadind data: Done. (" + elapsedLoad + " ms.)");
 		
 		poisByClass.put(this.getClass(), pois);
 	}
