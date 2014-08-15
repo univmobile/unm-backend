@@ -27,7 +27,7 @@ public abstract class AbstractPoisTest {
 	public final void setUp() throws Exception {
 
 		pois = poisByClass.get(this.getClass());
-		
+
 		if (pois != null) { // Load data only once
 			return;
 		}
@@ -36,7 +36,8 @@ public abstract class AbstractPoisTest {
 
 		System.out.println("Copying data...");
 
-		final File tmpDataDir = new File("target/PoisTest");
+		final File tmpDataDir = new File("target/"
+				+ this.getClass().getSimpleName());
 
 		if (tmpDataDir.isDirectory()) {
 			FileUtils.forceDelete(tmpDataDir);
@@ -57,7 +58,7 @@ public abstract class AbstractPoisTest {
 				- elapsedCopy;
 
 		System.out.println("Loadind data: Done. (" + elapsedLoad + " ms.)");
-		
+
 		poisByClass.put(this.getClass(), pois);
 	}
 

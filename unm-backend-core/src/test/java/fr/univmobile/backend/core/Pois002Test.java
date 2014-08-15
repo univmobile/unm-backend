@@ -12,10 +12,10 @@ public class Pois002Test extends AbstractPoisTest {
 
 		super(new File("src/test/data/pois/002"));
 	}
-	
+
 	@Test
 	public void testCount() throws Exception {
-		
+
 		assertEquals(7440, pois.getAllByInt("uid").size());
 	}
 }

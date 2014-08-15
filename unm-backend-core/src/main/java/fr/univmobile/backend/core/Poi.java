@@ -92,6 +92,8 @@ public interface Poi extends Entry {
 
 	int sizeOfUniversities();
 
+	boolean isNullUniversities();
+	
 	@XPath("atom:content/atom:address/atom:url")
 	String[] getUrls();
 
