@@ -13,5 +13,27 @@
 	<uid>unrpcl</uid>
 	<label>Limousin/Poitou-Charentes</label>
 	<url>${baseURL}/json/listUniversities_unrpcl</url>
+	<universities>
+		<university>
+			<id>ulr</id>
+			<title>Université de La Rochelle</title>
+		</university>
+		<university>
+			<id>ul</id>
+			<title>Université de Limoges</title>
+		</university>
+		<university>
+			<id>up</id>
+			<title>Université de Poitiers</title>
+		</university>
+		<university>
+			<id>ensma</id>
+			<title>ISAE-ENSMA</title>
+		</university>
+		<university>
+			<id>crousp</id>
+			<title>CROUS PCL</title>
+		</university>
+	</universities>
 </content>
 </entry>
