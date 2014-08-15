@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3179_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3179_1.xml"/>
+<title>Service Commun de Documentation</title>
+<updated>2014-08-15T01:47:03.682+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3179"
+	coordinates="48.839915131828,2.354801818"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T13:49:16.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3009"
+	name="Service Commun de Documentation">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi : 9h - 19h30
+Samedi : 10h - 17h30</openingHours>
+		<phone>0145874829</phone>
+		<email>bibliotheque@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

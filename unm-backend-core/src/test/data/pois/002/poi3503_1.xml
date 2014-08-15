@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3503_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3503_1.xml"/>
+<title>BU L1-L2</title>
+<updated>2014-08-15T01:47:07.371+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3503"
+	coordinates="48.846382906929,2.3592462390661"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:18:27.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2824"
+	name="BU L1-L2">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Rez de Chaussée</floor>
+		<openingHours>Lundi au Vendredi : 09h00-21h00
+Samedi : 10h00-20h00</openingHours>
+		<url>http://www.jubil.upmc.fr/fr/bibliotheques_sciences/bib_l1l2.html</url>
+		<phone>01 44 27 38 38</phone>
+		<email>BIBL1L2@upmc.fr </email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6610_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6610_1.xml"/>
+<title></title>
+<updated>2014-08-15T01:47:38.718+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6610"
+	coordinates="48.705066870391,2.1594893932343"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-05T22:26:04.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-07-05T23:53:12.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	name="">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6661_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6661_1.xml"/>
+<title>Cafétéria Saint Martin</title>
+<updated>2014-08-15T01:47:39.091+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6661"
+	coordinates="49.042640843038,2.084836140275"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T14:59:19.000+02:00"
+	updatedAt="2011-09-02T16:09:32.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6658"
+	name="Cafétéria Saint Martin">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>De 11h30 à 13h30</openingHours>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi954_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi954_1.xml"/>
+<title>Centre Nogent-sur-Marne</title>
+<updated>2014-08-15T01:46:43.723+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="954"
+	coordinates="48.832751207933,2.46758937"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-04T11:34:38.000+01:00"
+	updatedAt="2011-06-20T17:22:08.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="817"
+	name="Centre Nogent-sur-Marne">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER A 
+Station Nogent-sur-Marne
+Métro 1 
+Station Château de Vincennes 
+Bus 114 et 210</itinerary>
+		<fullAddress>45 bis avenue de la Belle Gabrielle
+94736 Nogent-sur-Marne </fullAddress>
+	</address>
+	<child uid="906" active="true"/>
+	<child uid="909" active="true"/>
+	<child uid="677" active="true"/>
+	<child uid="6287" active="true"/>
+	<child uid="6288" active="true"/>
+	<child uid="6289" active="true"/>
+</content>
+</entry>

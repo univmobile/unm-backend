@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6972_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6972_1.xml"/>
+<title>Article X</title>
+<updated>2014-08-15T01:47:41.722+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6972"
+	coordinates="48.90281754153,2.2133588790894"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T11:06:45.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Article X">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Article X est une association qui regroupe principalement des étudiants en droit, dont l'objectif principal est de dynamiser la faculté en proposant à tous les étudiants de nombreuses activités. Mais Article X, c'est également un local convivial, un lieu de discussion et d'échange, de rigolade, voire de conseil, grâce à la très large représentativité de ses membres (de la 1ère année jusqu'aux 3èmes cycles et thésards!). </description>
+	<address>
+		<floor>Bâtiment R - Salle R 205 - 2ème étage</floor>
+		<phone>01 40 97 77 20</phone>
+		<email>articledix@hotmail.com</email>
+	</address>
+</content>
+</entry>

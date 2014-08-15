@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5094_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5094_1.xml"/>
+<title>polygone</title>
+<updated>2014-08-15T01:47:23.333+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5094"
+	coordinates="48.790687255052,2.3308547213674|48.790738500079,2.3308426514268|48.790740267148,2.3308667913079|48.791031832676,2.3308158293366|48.791028298559,2.3307608440518|48.791050386789,2.3307554796338|48.791042435027,2.3305958881974|48.790887817188,2.3306173458695|48.790883399528,2.3305663838983|48.790718178782,2.3305878415704|48.79072347999,2.3306119814515|48.790674885555,2.3306173458695|48.790687255052,2.3308547213674"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-30T13:58:30.000+02:00"
+	updatedAt="2011-06-10T15:12:22.000+02:00"
+	deletedAt="2011-06-01T11:36:36.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	name="polygone">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

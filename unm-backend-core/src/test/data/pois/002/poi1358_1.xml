@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1358_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1358_1.xml"/>
+<title>Amphithéâtres A1, A2, A3, A4, A5, A6</title>
+<updated>2014-08-15T01:46:46.676+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1358"
+	coordinates="48.89932588676,2.332995459437"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:19:54.000+01:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1785"
+	name="Amphithéâtres A1, A2, A3, A4, A5, A6">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>Hall principal Niveau -1</floor>
+		<itinerary>Métro 13 Porte de Saint Ouen</itinerary>
+		<fullAddress>16 rue Henri Huchard
+75018 Paris</fullAddress>
+	</address>
+</content>
+</entry>

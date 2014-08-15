@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4264_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4264_1.xml"/>
+<title>Fondation Maison des sciences de l’homme </title>
+<updated>2014-08-15T01:47:15.564+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4264"
+	coordinates="48.83601711729,2.3722093552351"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T14:55:52.000+02:00"
+	updatedAt="2011-05-20T15:06:03.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3634"
+	name="Fondation Maison des sciences de l’homme ">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4265" active="true"/>
+</content>
+</entry>

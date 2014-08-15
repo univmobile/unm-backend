@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7115_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7115_1.xml"/>
+<title>Salles Serpolet, Lavande, Romarin, Canelle et Capucine</title>
+<updated>2014-08-15T01:47:43.405+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7115"
+	coordinates="48.777969316131,2.047233581543"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-04T15:38:16.000+01:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	parentUid="555"
+	name="Salles Serpolet, Lavande, Romarin, Canelle et Capucine">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Salles Serpolet et Romarin : 38 places
+Salles Lavande, Canelle et Capucine : 32 places</description>
+	<address>
+		<floor>Bâtiment Rabelais</floor>
+	</address>
+</content>
+</entry>

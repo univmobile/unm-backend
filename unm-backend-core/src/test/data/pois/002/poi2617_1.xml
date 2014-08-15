@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2617_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2617_1.xml"/>
+<title>Restaurant Vauban</title>
+<updated>2014-08-15T01:46:58.508+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2617"
+	coordinates="48.776674444723,2.0467206090"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T14:28:09.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="d.rasse"
+	parentUid="2594"
+	name="Restaurant Vauban">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du Lundi au Vendredi : 11h30 - 13h45</openingHours>
+		<phone>0134520805</phone>
+	</address>
+</content>
+</entry>

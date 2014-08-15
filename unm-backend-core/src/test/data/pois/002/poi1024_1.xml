@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1024_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1024_1.xml"/>
+<title>Centre Broca</title>
+<updated>2014-08-15T01:46:44.222+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1024"
+	coordinates="48.838353814511,2.3486280441284"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-11T15:51:40.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="415"
+	name="Centre Broca">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B 
+Station Port-Royal
+Métro 7 Station Censier Daubenton ou Les Gobelins
+Bus 27, 47, 83 et 91</itinerary>
+		<fullAddress>21 rue Broca
+75005 Paris</fullAddress>
+	</address>
+	<child uid="418" active="true"/>
+	<child uid="419" active="true"/>
+	<child uid="828" active="true"/>
+	<child uid="883" active="true"/>
+	<child uid="6389" active="true"/>
+	<child uid="6392" active="true"/>
+	<child uid="6396" active="true"/>
+	<child uid="6397" active="true"/>
+	<child uid="6399" active="true"/>
+	<child uid="6400" active="true"/>
+	<child uid="6402" active="true"/>
+	<child uid="6409" active="true"/>
+	<child uid="6412" active="true"/>
+	<child uid="6413" active="true"/>
+	<child uid="6414" active="true"/>
+	<child uid="6418" active="true"/>
+	<child uid="6419" active="true"/>
+	<child uid="6420" active="true"/>
+	<child uid="6421" active="true"/>
+</content>
+</entry>

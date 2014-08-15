@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1633_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1633_1.xml"/>
+<title>Compagnie Tellem Chao</title>
+<updated>2014-08-15T01:46:49.427+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1633"
+	coordinates="48.845070207964,2.35695093870"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T14:50:28.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Compagnie Tellem Chao">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Ateliers de théâtre, danse, chant, conte, musique, création de costumes, décors
+</description>
+	<address>
+		<floor>Campus Jussieu</floor>
+		<openingHours>Lundi 18h30-22h30
+Mercredi: 18h30-22h30</openingHours>
+		<url>http://www.tellemchao.fr</url>
+		<phone>0149341799</phone>
+		<email>compagnie@tellemchao.fr</email>
+	</address>
+</content>
+</entry>

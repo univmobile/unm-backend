@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi476_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi476_1.xml"/>
+<title>Evry bâtiment Pelvoux</title>
+<updated>2014-08-15T01:46:40.206+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="476"
+	coordinates="48.613973444301,2.4289548397064"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T13:55:51.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="268"
+	name="Evry bâtiment Pelvoux">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<openingHours>RER D, arrêt Évry-Courcouronnes
+RER C, changement Juvisy</openingHours>
+		<fullAddress>40, rue de Pelvoux
+
+91020 Courcouronnes- Évry Cedex</fullAddress>
+	</address>
+	<child uid="5195" active="true"/>
+	<child uid="5124" active="true"/>
+	<child uid="3001" active="true"/>
+	<child uid="2999" active="true"/>
+	<child uid="2385" active="true"/>
+	<child uid="569" active="true"/>
+	<child uid="5184" active="true"/>
+	<child uid="5192" active="true"/>
+	<child uid="5193" active="true"/>
+	<child uid="5194" active="true"/>
+</content>
+</entry>

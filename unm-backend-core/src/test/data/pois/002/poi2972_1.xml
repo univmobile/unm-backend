@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2972_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2972_1.xml"/>
+<title>Sciences économiques, parcours Analyse économique</title>
+<updated>2014-08-15T01:47:01.614+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2972"
+	coordinates="48.830136964622,2.36959822475"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:16:33.000+02:00"
+	updatedAt="2011-09-09T11:28:17.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2948"
+	name="Sciences économiques, parcours Analyse économique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence 3 et masters</description>
+	<address>
+		<openingHours>Du lundi au vendredi :
+9h30 / 13h00 - 14h00 / 17h00</openingHours>
+		<url>http://www.msg-paris2.net/index-604.html</url>
+		<phone>01 44 06 90 72</phone>
+		<email>maria.alonso@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

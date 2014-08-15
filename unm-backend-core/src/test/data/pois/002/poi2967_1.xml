@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2967_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2967_1.xml"/>
+<title>Management et nouvelles technologies</title>
+<updated>2014-08-15T01:47:01.587+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2967"
+	coordinates="48.830051535018,2.369409"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:12:22.000+02:00"
+	updatedAt="2011-09-09T11:28:32.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2948"
+	name="Management et nouvelles technologies">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence 3 et Masters</description>
+	<address>
+		<url>http://mnt.u-paris2.fr/</url>
+		<phone>01 44 06 90 78</phone>
+		<email>dmatseraka@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

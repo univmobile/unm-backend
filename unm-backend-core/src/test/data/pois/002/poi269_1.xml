@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi269_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi269_1.xml"/>
+<title>IUT Romero - Evry</title>
+<updated>2014-08-15T01:46:38.891+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="269"
+	coordinates="48.622300108216,2.42739915"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-16T13:53:50.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="268"
+	name="IUT Romero - Evry">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D, arrêt : Évry-Courcouronnes
+RER C, changement Juvisy</itinerary>
+		<fullAddress>Cours Monseigneur Roméro
+
+91025   Evry Cedex
+</fullAddress>
+	</address>
+	<child uid="5159" active="true"/>
+	<child uid="5158" active="true"/>
+	<child uid="2734" active="true"/>
+	<child uid="2736" active="true"/>
+	<child uid="272" active="true"/>
+	<child uid="5177" active="true"/>
+	<child uid="5179" active="true"/>
+	<child uid="5835" active="true"/>
+	<child uid="5842" active="true"/>
+</content>
+</entry>

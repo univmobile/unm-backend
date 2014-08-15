@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6160_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6160_1.xml"/>
+<title>BDE STAPS</title>
+<updated>2014-08-15T01:47:34.483+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6160"
+	coordinates="48.839388970531,2.5877027213573"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:02:42.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="BDE STAPS">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Parce que nous sommes fiers d'être en STAPS, le BDE te permettra de participer à la vie culturelle, sportive et associative de la filière STAPS</description>
+	<address>
+		<floor>Bureau 2b077</floor>
+		<url>http://www.univ-mlv.fr/vie-du-campus/vie-associative-et-culturelle/les-associations/bde-staps/</url>
+		<phone>06 80 83 12 82</phone>
+		<email>bde.staps.mlv@gmail.com</email>
+	</address>
+</content>
+</entry>

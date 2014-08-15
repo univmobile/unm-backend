@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1700_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1700_1.xml"/>
+<title>Association STARTING-BLOCK</title>
+<updated>2014-08-15T01:46:50.039+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1700"
+	coordinates="48.861357201044,2.406155392527"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T16:15:31.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1162"
+	name="Association STARTING-BLOCK">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<url>http://www.starting-block.org</url>
+		<phone>0153267925</phone>
+		<email>info@starting-block.org</email>
+	</address>
+</content>
+</entry>

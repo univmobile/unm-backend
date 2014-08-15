@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4144_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4144_1.xml"/>
+<title>UMR 8549</title>
+<updated>2014-08-15T01:47:14.216+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4144"
+	coordinates="48.84282332885,2.3465793393552"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:58:13.000+02:00"
+	updatedAt="2011-06-03T17:01:16.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4137"
+	name="UMR 8549">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de physique théorique de l'Ecole Normale Supérieure (LPTENS) - UMR 8549</description>
+	<address>
+		<url>http://www.lpt.ens.fr/</url>
+		<phone>01 44 32 34 83</phone>
+		<email>beatrice.fixois@lpt.ens.fr</email>
+	</address>
+</content>
+</entry>

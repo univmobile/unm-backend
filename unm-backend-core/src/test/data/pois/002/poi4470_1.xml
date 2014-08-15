@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4470_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4470_1.xml"/>
+<title>Bibliothèque Universitaire d'Évry</title>
+<updated>2014-08-15T01:47:17.650+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4470"
+	coordinates="48.623486995197,2.4259842932224"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:54:25.000+02:00"
+	updatedAt="2011-09-06T12:08:56.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="4438"
+	name="Bibliothèque Universitaire d'Évry">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER :
+- ligne D : gare d'Évry Courcouronnes</itinerary>
+		<fullAddress>2 rue André Lalande 
+91025 Evry Cedex</fullAddress>
+	</address>
+	<child uid="4464" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi523_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi523_1.xml"/>
+<title>UFR Lettres, Sciences de l'Homme et des Sociétés</title>
+<updated>2014-08-15T01:46:40.604+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="523"
+	coordinates="48.955792685496,2.341241240501"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T18:49:07.000+02:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	deletedAt="2011-03-22T14:47:54.000+01:00"
+	createdBy="yasmine"
+	updatedBy="Kevin Mazille"
+	name="UFR Lettres, Sciences de l'Homme et des Sociétés">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>UFR Lettres, Sciences de l'Homme et des Sociétés</description>
+	<address>
+		<floor>Aile A, 1 er étage (A212)</floor>
+		<itinerary>Aile A, 1 er étage (A212)</itinerary>
+		<url>www.univ-paris13.fr/lshs</url>
+		<phone>01 49 40 39 91</phone>
+		<email>sec-ufrlarrouniv-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

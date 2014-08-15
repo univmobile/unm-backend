@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi24_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi24_1.xml"/>
+<title>Service de l'information et de l'orientation</title>
+<updated>2014-08-15T01:46:38.267+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="24"
+	coordinates="48.780401362897,2.0442992448"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T11:03:41.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-05T13:58:17.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Service de l'information et de l'orientation">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		zipCode="78280"
+		city="GUYANCOURT"
+		countryCode="FR">
+		<openingHours>Sur rendez-vous : le lundi
+Maryline RUFFET  Conseillère d'Orientation Psychologue 
+
+Heures d'ouverture au public :
+Lundi de 9h30 à 17 h
+Mardi de 9h30 à 12h
+Mercredi de 9h30 à 12h et de 13h30 à 17h
+Jeudi de 9h30 à 17h
+Vendredi de 13h30 à 17h
+
+Les plages de fermeture du service permettent au personnel d'accomplir les tâches administratives nécessaires au bon fonctionnement du service. Merci de les respecter.</openingHours>
+		<phone>01 39 25 56 10  </phone>
+		<fax>01 39 25 56 15</fax>
+		<email>orientation.sqy@uvsq.fr </email>
+		<fullAddress>Mezzanine Bureau 101
+47 boulevard Vauban 78280 GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

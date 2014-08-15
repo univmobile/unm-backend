@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi672_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi672_1.xml"/>
+<title>Bibliothèque Sainte Genevieve</title>
+<updated>2014-08-15T01:46:41.047+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="672"
+	coordinates="48.847013193773,2.346118837"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T15:53:32.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1021"
+	name="Bibliothèque Sainte Genevieve">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi au vendredi
+10h00-22h00
+</openingHours>
+		<itinerary>RER B
+Station Luxembourg
+
+Métro 10
+Station Maubert-Mutualité 
+
+Bus 84, 89, 82, 38, 27, 21, 85</itinerary>
+		<phone>01 44 41 97 97</phone>
+		<email>bsgmail@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

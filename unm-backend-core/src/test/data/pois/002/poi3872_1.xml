@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3872_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3872_1.xml"/>
+<title>Hygiène - CFA</title>
+<updated>2014-08-15T01:47:11.184+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3872"
+	coordinates="48.846137144382,2.3579239100218"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:28:05.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2813"
+	name="Hygiène - CFA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La formation prépare à des compétences transversales de bon niveau et un savoir-faire dans le domaine de l'hygiène, de la surveillance et de la prévention.</description>
+	<address>
+		<url>http://www.cfa.upmc.fr/cfa_upmc/detail/Fiche_formation?item_id=45084647</url>
+		<phone>01 44 27 71 40</phone>
+		<email>valerie.messent@upmc.fr</email>
+	</address>
+</content>
+</entry>

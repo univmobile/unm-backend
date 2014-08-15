@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2734_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2734_1.xml"/>
+<title>Amphi QLIO</title>
+<updated>2014-08-15T01:46:59.635+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2734"
+	coordinates="48.622220027967,2.42702633142"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T17:13:39.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="269"
+	name="Amphi QLIO">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>Bâtiment QLIO, Hall d'entrée</floor>
+	</address>
+</content>
+</entry>

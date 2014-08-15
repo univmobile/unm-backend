@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2432_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2432_1.xml"/>
+<title>Institut de Psychologie Henri Pieron</title>
+<updated>2014-08-15T01:46:56.767+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2432"
+	coordinates="48.901631330756,2.3935174942"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:08:06.000+02:00"
+	updatedAt="2011-06-14T17:24:36.000+02:00"
+	deletedAt="2011-06-08T10:16:51.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	name="Institut de Psychologie Henri Pieron">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 9 : Marcel sembat
+Bus 123-126 Place Marcel Sembat
+       175  René Descartes
+RER C:Issy-Val de Seine</itinerary>
+		<fullAddress>71 avenue Édouard vaillant 
+92774 Boulogne-Billancourt</fullAddress>
+	</address>
+</content>
+</entry>

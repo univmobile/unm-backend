@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi159_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi159_1.xml"/>
+<title>UFR des sciences sociales</title>
+<updated>2014-08-15T01:46:38.568+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="159"
+	coordinates="48.623545502517,2.424728"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-01T11:34:27.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-07-19T12:01:35.000+02:00"
+	createdBy="yasmine"
+	updatedBy="plopes"
+	name="UFR des sciences sociales">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Ces quatre domaines de recherche et d’enseignement relèvent des sciences sociales, c’est-à-dire qu’ils s’attachent à comprendre les rapports entre les individus humains que nous sommes et la société que nous constituons tous ensemble – et qui nous constitue aussi bien par notre rapport permanent aux autres –, que ce soit en étudiant un passé qui peut-être ancien ou très récent (département d’Histoire) ou en cherchant à mieux comprendre le monde dans lequel nous vivons présentement (département de Sociologie). Le département d’AES adopte une approche pluridisciplinaire des phénomènes sociaux, et articule dans la formation qu’il propose la sociologie, le droit, l’histoire et des éléments d’économie et gestion. La présence de cette dernière discipline dans notre U.F.R. relève d’un choix de ses responsables : affirmer le primat de la dimension humaine dans son champ d’action (et refuser de le réduire à un ensemble de techniques ou à la simple application de postulats économiques).
+</description>
+	<address
+		zipCode="91025"
+		city="Evry Cedex"
+		countryCode="FR">
+		<phone>01 69 47 73 81</phone>
+		<fax>01 69 91 14 23</fax>
+		<email>corinne.garault@univ-evry.fr</email>
+		<fullAddress>Rue Pierre Bérégovoy 91025 Evry Cedex</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6439_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6439_1.xml"/>
+<title>1er degré</title>
+<updated>2014-08-15T01:47:37.223+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6439"
+	coordinates="48.532031541558,2.6526336371899"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T14:51:14.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5247"
+	name="1er degré">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://www.creteil.iufm.fr/</url>
+		<phone>01 64 41 35 16</phone>
+		<email>isabelle.porcon@u-pec.fr</email>
+	</address>
+</content>
+</entry>

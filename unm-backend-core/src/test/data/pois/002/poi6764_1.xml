@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6764_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6764_1.xml"/>
+<title>Résidence Universitaire J.B Lamarck</title>
+<updated>2014-08-15T01:47:40.035+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6764"
+	coordinates="48.766352399215,1.9474909454584"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T10:30:11.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6760"
+	name="Résidence Universitaire J.B Lamarck">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Studios : 108 logements pour étudiants et apprentis célibataires et 2 logements pour handicapés.
+Tarifs : de 310€ à 354€ charges comprises.</description>
+	<address>
+		<openingHours>Du lundi au vendredi, de 09h00 à 12h30 et de 14h30 à 18h00.
+
+Attention :
+Juillet : 9h00-12h00 / 14h00-18h00 du lundi au vendredi
+Août : de 14h30 à 18h00 du lundi au vendredi</openingHours>
+		<phone>01 30 66 62 28 </phone>
+		<fax> 01 30 62 65 39</fax>
+		<email>residence.lamarck@crous-versailles.fr</email>
+	</address>
+</content>
+</entry>

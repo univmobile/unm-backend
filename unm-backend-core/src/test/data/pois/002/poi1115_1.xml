@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1115_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1115_1.xml"/>
+<title>Droit public et fiscal</title>
+<updated>2014-08-15T01:46:44.971+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1115"
+	coordinates="48.855977235031,2.3611363582"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-18T14:43:16.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1001"
+	name="Droit public et fiscal">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>3e étage, 307-8</floor>
+		<itinerary>Métro 1
+Station Saint Paul
+Bus 76 et 96
+Arrêt Saint Paul</itinerary>
+		<phone>01 44 78 33 21</phone>
+		<email>eddrpub@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

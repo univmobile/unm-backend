@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6808_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6808_1.xml"/>
+<title>Cafétéria La Sandwicherie</title>
+<updated>2014-08-15T01:47:40.415+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6808"
+	coordinates="48.902501560338,2.2145082056522"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T12:11:19.000+02:00"
+	updatedAt="2012-02-03T12:30:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6805"
+	name="Cafétéria La Sandwicherie">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>de 8h à 17h30
+
+Ouverture le samedi
+de 12h à 14h</openingHours>
+	</address>
+</content>
+</entry>

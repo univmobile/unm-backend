@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6776_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6776_1.xml"/>
+<title>Résidence Universitaire Flora Tristan</title>
+<updated>2014-08-15T01:47:40.146+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6776"
+	coordinates="48.635495334575,2.4302939325571"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T10:49:48.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6773"
+	name="Résidence Universitaire Flora Tristan">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Chambres individuelles : 148 chambres individuelles (cabine trifonction)
+Tarifs : 227€ charges comprises
+171 logements type T1 de dont 15 accessibles aux personnes à mobilité réduite
+Tarifs : 263 à 440€ charges comprises
+
+Extension :
+Près du Centre-ville, quartier des pyramides.
+A 20 mn à pied de l'Université.
+94 T1 bis
+Tarifs : de 298€ charges comprises. </description>
+	<address>
+		<openingHours>L'accueil du public pour toutes les résidences d'Evry s'effectue
+à la résidence LE DRAGUEUR, 4 allée Jean Rostand.
+
+Horaires d'ouverture du secrétariat :
+Du lundi au vendredi : de 8h15 à 12h00
+Mardi et jeudi : 13h30 à 16h00
+</openingHours>
+		<phone>01 60 78 14 92</phone>
+	</address>
+</content>
+</entry>

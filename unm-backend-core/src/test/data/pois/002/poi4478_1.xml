@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4478_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4478_1.xml"/>
+<title>Mesures physiques</title>
+<updated>2014-08-15T01:47:17.720+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4478"
+	coordinates="48.711226475076,2.1702846139669"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:00:17.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4436"
+	name="Mesures physiques">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 605, bureau 103</floor>
+		<url>http://www.iut-orsay.u-psud.fr/fr/departements/mesures_physiques.html</url>
+		<phone>01 69 33 60 63</phone>
+		<fax>01 69 33 60 80</fax>
+		<email>dpt-mphy.iut-orsay@u-psud.fr</email>
+	</address>
+</content>
+</entry>

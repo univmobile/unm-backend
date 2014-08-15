@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5693_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5693_1.xml"/>
+<title>Campus d'Orsay - COSEC Leo Lagrange (Bâtiment 335 bis)</title>
+<updated>2014-08-15T01:47:28.951+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5693"
+	coordinates="48.70176089358,2.1619878709316"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:47:43.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-06-30T11:27:48.000+02:00"
+	createdBy="j.richer"
+	updatedBy="Fatma ARAS"
+	name="Campus d'Orsay - COSEC Leo Lagrange (Bâtiment 335 bis)">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B direction Saint-Rémy-lès-Chevreuse en venant de Paris (arrêts Le Guichet, Orsay-Ville ou Bures-sur-Yvette).</itinerary>
+		<fax>test</fax>
+		<fullAddress>Campus universitaire d'Orsay
+Bâtiment 335 bis, Rue Pierre de Coubertin
+91440 Bures-sur-Yvette</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3381_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3381_1.xml"/>
+<title>IPGP - UMR 7154</title>
+<updated>2014-08-15T01:47:05.966+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3381"
+	coordinates="48.847836915989,2.354988735169"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:44:03.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3365"
+	name="IPGP - UMR 7154">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>L’institut de physique du globe de Paris est un grand établissement d’enseignement supérieur et de recherche</description>
+	<address>
+		<floor>2è étage</floor>
+		<url>http://www.ipgp.jussieu.fr/</url>
+	</address>
+</content>
+</entry>

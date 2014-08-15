@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi281_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi281_1.xml"/>
+<title>Centre Pierre Mendès France</title>
+<updated>2014-08-15T01:46:38.951+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="281"
+	coordinates="48.827185585978,2.36462071"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-16T15:27:44.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre Pierre Mendès France">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64, 83
+Arrêt Tolbiac-Baudricourt</itinerary>
+		<fullAddress>90 rue de Tolbiac 
+75013 Paris</fullAddress>
+	</address>
+	<child uid="1023" active="true"/>
+</content>
+</entry>

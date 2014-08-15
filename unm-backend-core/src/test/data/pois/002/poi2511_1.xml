@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2511_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2511_1.xml"/>
+<title>IUT Descartes</title>
+<updated>2014-08-15T01:46:57.471+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2511"
+	coordinates="48.841944492062,2.2679445147514"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T15:24:09.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2510"
+	name="IUT Descartes">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Bus: 22 - 62 - 72 - PC1
+Métro: Église d’auteuil -Mirabeau - Exelmans -Chardon Lagache
+RER C: ligne Austerlitz -Versailles, Station Pont du
+Garigliano
+Tramway: T3:Pont du Garigliano Bd Victor (terminus)</itinerary>
+		<fullAddress>143 Avenue de Versailles 
+75016  PARIS
+</fullAddress>
+	</address>
+	<child uid="2699" active="true"/>
+	<child uid="2679" active="true"/>
+	<child uid="2678" active="true"/>
+	<child uid="2677" active="true"/>
+	<child uid="2676" active="true"/>
+	<child uid="2675" active="true"/>
+	<child uid="2673" active="true"/>
+	<child uid="3454" active="true"/>
+	<child uid="3692" active="true"/>
+	<child uid="4739" active="true"/>
+</content>
+</entry>

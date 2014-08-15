@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6143_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6143_1.xml"/>
+<title>Institut de linguistique française</title>
+<updated>2014-08-15T01:47:34.236+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6143"
+	coordinates="48.823275470322,2.3412660509348"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:50:36.000+02:00"
+	updatedAt="2011-09-15T11:40:38.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="2421"
+	name="Institut de linguistique française">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>44 Rue de l’Amiral Mouchez
+75014 PARIS</description>
+	<address>
+		<url>http://www.ilf.cnrs.fr/</url>
+		<phone>01 43 13 56 45</phone>
+		<fax>01 43 13 56 59</fax>
+	</address>
+</content>
+</entry>

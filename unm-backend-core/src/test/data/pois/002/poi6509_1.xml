@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6509_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6509_1.xml"/>
+<title>Nanterre bâtiment R - Maison de l'étudiant</title>
+<updated>2014-08-15T01:47:37.896+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6509"
+	coordinates="48.902493685011,2.2130759060383|48.902292687805,2.2133333981037|48.902447843614,2.2136552631855|48.902634735199,2.2134084999561|48.902493685011,2.2130759060383"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-06-30T11:52:55.000+02:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	deletedAt="2011-06-30T12:04:28.000+02:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	name="Nanterre bâtiment R - Maison de l'étudiant">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER A : Nanterre Université</itinerary>
+		<fullAddress>200 avenue de la République
+92001 Nanterre Cedex</fullAddress>
+	</address>
+</content>
+</entry>

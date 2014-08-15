@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5084_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5084_1.xml"/>
+<title>Restaurant l'Encyclopédie (VIP)</title>
+<updated>2014-08-15T01:47:23.285+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5084"
+	coordinates="48.791070222009,2.329460978508"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-30T12:36:36.000+02:00"
+	updatedAt="2011-06-10T15:09:45.000+02:00"
+	deletedAt="2011-05-31T11:44:56.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	name="Restaurant l'Encyclopédie (VIP)">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Sur réservation
+
+Service à table</description>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>11h30 - 15h00</openingHours>
+	</address>
+</content>
+</entry>

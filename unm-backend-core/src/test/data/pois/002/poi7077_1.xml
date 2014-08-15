@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7077_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7077_1.xml"/>
+<title>Amphithéâtre D</title>
+<updated>2014-08-15T01:47:43.007+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7077"
+	coordinates="48.94667915193,2.3611432313919"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-23T15:23:29.000+01:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="Marion MAINFRAY"
+	updatedBy="Marion MAINFRAY"
+	parentUid="3449"
+	name="Amphithéâtre D">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+</content>
+</entry>

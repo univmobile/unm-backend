@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5648_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5648_1.xml"/>
+<title>RU  L' Agora</title>
+<updated>2014-08-15T01:47:28.425+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5648"
+	coordinates="48.793163375572,2.4446605145931"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T12:17:32.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4646"
+	name="RU  L' Agora">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>1er étage</floor>
+		<openingHours>De 11h30 à 14h
+</openingHours>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

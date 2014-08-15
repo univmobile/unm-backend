@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5804_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5804_1.xml"/>
+<title>EEC - M1-2</title>
+<updated>2014-08-15T01:47:30.278+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5804"
+	coordinates="48.838047282771,2.5933729112148"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:09:42.000+02:00"
+	updatedAt="2011-06-15T15:48:51.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4598"
+	name="EEC - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master Expertise de l'emploi et des compétences</description>
+	<address>
+		<floor>B012</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-droit-economie-gestion/mention-expertise-economique/master-expertise-de-lemploi-et-des-competences/</url>
+		<phone>01 60 95 70 69</phone>
+		<fax>01 60 95 70 59</fax>
+		<email>Samia.Dida@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

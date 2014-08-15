@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1985_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1985_1.xml"/>
+<title>Théâtre Bernard Marie Koltès</title>
+<updated>2014-08-15T01:46:53.134+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1985"
+	coordinates="48.903964980502,2.21733659505"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T15:01:37.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2461"
+	name="Théâtre Bernard Marie Koltès">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>1er étage</floor>
+	</address>
+</content>
+</entry>

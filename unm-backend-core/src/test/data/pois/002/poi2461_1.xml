@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2461_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2461_1.xml"/>
+<title>Nanterre bâtiment L</title>
+<updated>2014-08-15T01:46:57.006+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2461"
+	coordinates="48.903765972698,2.217289656"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:41:20.000+02:00"
+	updatedAt="2013-02-13T14:29:35.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="1210"
+	name="Nanterre bâtiment L">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER :
+- ligne A : station Nanterre Université</itinerary>
+		<fullAddress>200, Avenue de la République
+92001 NANTERRE CEDEX</fullAddress>
+	</address>
+	<child uid="1473" active="true"/>
+	<child uid="3184" active="true"/>
+	<child uid="2058" active="true"/>
+	<child uid="1991" active="true"/>
+	<child uid="1989" active="true"/>
+	<child uid="1501" active="true"/>
+	<child uid="1481" active="true"/>
+	<child uid="1490" active="true"/>
+	<child uid="1523" active="true"/>
+	<child uid="1483" active="true"/>
+	<child uid="1502" active="true"/>
+	<child uid="1480" active="true"/>
+	<child uid="1474" active="true"/>
+	<child uid="1499" active="true"/>
+	<child uid="1495" active="true"/>
+	<child uid="1521" active="true"/>
+	<child uid="1985" active="true"/>
+	<child uid="1983" active="true"/>
+	<child uid="6989" active="true"/>
+	<child uid="7000" active="true"/>
+</content>
+</entry>

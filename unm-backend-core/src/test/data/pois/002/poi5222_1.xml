@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5222_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5222_1.xml"/>
+<title>Campus d'Orsay - Bâtiment 220</title>
+<updated>2014-08-15T01:47:24.441+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5222"
+	coordinates="48.698179532645,2.1663437783718"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T18:53:45.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4404"
+	name="Campus d'Orsay - Bâtiment 220">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B direction Saint-Rémy-lès-Chevreuse en venant de Paris (arrêts Le Guichet, Orsay-Ville ou Bures-sur-Yvette).</itinerary>
+		<fullAddress>Campus universitaire d'Orsay
+Bâtiment 220, Rue André Ampère
+91440 Bures-sur-Yvette</fullAddress>
+	</address>
+	<child uid="5224" active="true"/>
+	<child uid="5368" active="true"/>
+	<child uid="5455" active="true"/>
+	<child uid="5474" active="true"/>
+	<child uid="5492" active="true"/>
+	<child uid="5878" active="true"/>
+	<child uid="5926" active="true"/>
+</content>
+</entry>

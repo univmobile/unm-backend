@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1500_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1500_1.xml"/>
+<title>Bureau des relations internationales</title>
+<updated>2014-08-15T01:46:48.264+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1500"
+	coordinates="48.830113937197,2.38104455173"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:11:03.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="Bureau des relations internationales">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Plusieurs contacts : 
+Pour la mobilité sortante : 0157275505
+Pour la mobilité entrante en Europe : 01572755205
+Pour la mobilité sortante hors Europe : 0157275736</description>
+	<address>
+		<floor>Aile A, 2e étage</floor>
+		<openingHours>Lundi : 9h-12h et 14h-16h
+Mardi : 9h-12h
+Mercredi : 9h12h et 14h-16h
+Jeudi : 9h-12h et 14h-16h
+Vendredi : 9h-12h</openingHours>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<phone>voir description</phone>
+		<fullAddress>5 rue Thomas Mann 
+75013 Paris </fullAddress>
+	</address>
+</content>
+</entry>

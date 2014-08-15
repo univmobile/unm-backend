@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4417_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4417_1.xml"/>
+<title>ER 2</title>
+<updated>2014-08-15T01:47:17.043+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4417"
+	coordinates="48.866387319065,2.400381769985"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:10:31.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4413"
+	name="ER 2">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Interactions cellulaires tumorales et leur environnement et réponse aux agents anti-cancéreux - ER 2</description>
+	<address>
+		<phone>01 56 01 78 79</phone>
+		<email>jean-francois.bernaudin@upmc.fr</email>
+	</address>
+</content>
+</entry>

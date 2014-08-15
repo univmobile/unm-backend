@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1467_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1467_1.xml"/>
+<title>UFR Sc. Humaines Cliniques (SHC)</title>
+<updated>2014-08-15T01:46:47.881+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1467"
+	coordinates="48.875151290845,2.3526349291"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:23:24.000+02:00"
+	updatedAt="2011-06-22T14:59:26.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1767"
+	name="UFR Sc. Humaines Cliniques (SHC)">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<openingHours>Lundi et Mercredi : 9h30-12h30 
+Mardi : 9h30-12h30 et 13h30-16h30
+Jeudi : 14h-16h30</openingHours>
+		<itinerary>Métro 4,5,7 Gare de l'est
+Métro 4,5 Gare du Nord
+RER E,B,D Gare du Nord</itinerary>
+		<phone>0157276372</phone>
+		<email>liliane.deltell@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1432_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1432_1.xml"/>
+<title>UFR Géographie, Histoire et Sc. de la Société</title>
+<updated>2014-08-15T01:46:47.549+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1432"
+	coordinates="48.829990339288,2.38064691424"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T14:40:39.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1774"
+	name="UFR Géographie, Histoire et Sc. de la Société">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>UFR pour les étudiants de L1 et L2 en histoire, géographie ou sciences économiques et sociales</description>
+	<address>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<phone>0157276310</phone>
+	</address>
+</content>
+</entry>

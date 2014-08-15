@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi206_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi206_1.xml"/>
+<title>Salle vidéo géographie</title>
+<updated>2014-08-15T01:46:38.642+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="206"
+	coordinates="48.827545775411,2.36451141536"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-05T11:20:04.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2010-09-05T10:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Salle vidéo géographie">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address
+		zipCode="75634"
+		city="Paris cedex 13"
+		countryCode="FR">
+		<floor>Aile C, 12e étage</floor>
+		<fullAddress>Bureau C12-05
+90, rue de Tolbiac 75634 Paris cedex 13</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4700_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4700_1.xml"/>
+<title>Résidence Hermitage</title>
+<updated>2014-08-15T01:47:19.704+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4700"
+	coordinates="48.939818831179,2.3540756106377"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T11:32:20.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	deletedAt="2011-05-26T11:32:52.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Résidence Hermitage">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+</content>
+</entry>

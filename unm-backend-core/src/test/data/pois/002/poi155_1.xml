@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi155_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi155_1.xml"/>
+<title>Salles C201 à 218</title>
+<updated>2014-08-15T01:46:38.559+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="155"
+	coordinates="48.623586723607,2.423862397"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-01T11:27:46.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-07-19T12:01:35.000+02:00"
+	createdBy="yasmine"
+	updatedBy="plopes"
+	name="Salles C201 à 218">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Département informatique</description>
+	<address
+		zipCode="91025"
+		city="Evry Cedex"
+		countryCode="FR">
+		<floor>Aile C, 2e étage</floor>
+		<itinerary>RER D : arrêt Évry-Courcouronnes
+RER C : avec un changement à Juvisy</itinerary>
+		<fullAddress>Rue Pierre Bérégovoy 91025 Evry Cedex</fullAddress>
+	</address>
+</content>
+</entry>

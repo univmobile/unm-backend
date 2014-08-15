@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2710_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2710_1.xml"/>
+<title>BU Médecine - Cochin</title>
+<updated>2014-08-15T01:46:59.402+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2710"
+	coordinates="48.837008568145,2.3394227027893"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:31:19.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="5675"
+	name="BU Médecine - Cochin">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>1er étage</floor>
+		<openingHours>Lundi - Vendredi
+9h30 à 23h30
+Samedi ,
+Dimanche 
+12h00 à 19h00
+d’ouverture leweek-end.
+Services réduits de 
+19h00 à 23h30</openingHours>
+		<phone>01 44 41 22 87</phone>
+		<fax>01 44 41 22 86</fax>
+	</address>
+</content>
+</entry>

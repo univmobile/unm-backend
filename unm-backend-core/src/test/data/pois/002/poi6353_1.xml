@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6353_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6353_1.xml"/>
+<title>Économie M2 pro.</title>
+<updated>2014-08-15T01:47:36.318+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6353"
+	coordinates="48.827162071604,2.3644229024649"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T13:55:41.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1023"
+	name="Économie M2 pro.">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>01 44 07 88 76</phone>
+		<email>ecom2p@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

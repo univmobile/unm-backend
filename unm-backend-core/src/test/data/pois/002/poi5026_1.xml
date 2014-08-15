@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5026_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5026_1.xml"/>
+<title>CMFA - Ambitions France Allemagne</title>
+<updated>2014-08-15T01:47:22.917+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5026"
+	coordinates="49.038803290364,2.0749166607857"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T17:05:32.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3849"
+	name="CMFA - Ambitions France Allemagne">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<email>ambitions.cmfa@free.fr</email>
+	</address>
+</content>
+</entry>

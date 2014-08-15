@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2673_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2673_1.xml"/>
+<title>Carrières sociales</title>
+<updated>2014-08-15T01:46:58.958+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2673"
+	coordinates="48.841927163044,2.267967984"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T15:53:30.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2511"
+	name="Carrières sociales">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>01 42 86 48 03</phone>
+	</address>
+</content>
+</entry>

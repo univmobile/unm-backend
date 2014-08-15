@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2011_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2011_1.xml"/>
+<title>Institut français de géopolitique (IFG)</title>
+<updated>2014-08-15T01:46:53.341+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2011"
+	coordinates="48.946858831801,2.361229"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T15:54:56.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="Marion MAINFRAY"
+	parentUid="3449"
+	name="Institut français de géopolitique (IFG)">
+	<poiType id="7" label="Zones WiFi" categoryId="5" categoryLabel="Bornes CMS &amp; Zones WiFi"/>
+	<description>Coordonné par Carine Moin.</description>
+	<address>
+		<floor>3ème étage, Coordination bureau D307 (Carine Moin)</floor>
+		<url>http://www.geopolitique.net/</url>
+		<phone>01 49 40 73 00</phone>
+		<fax>01 49 40 73 01</fax>
+		<email>geopolitique@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

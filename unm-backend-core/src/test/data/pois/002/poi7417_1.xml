@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7417_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7417_1.xml"/>
+<title>Auditorium de la Grande Galerie de l'Evolution</title>
+<updated>2014-08-15T01:47:46.045+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7417"
+	coordinates="48.841959732177,2.3563380539417"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-30T15:24:58.000+02:00"
+	updatedAt="2013-05-03T12:58:27.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7379"
+	name="Auditorium de la Grande Galerie de l'Evolution">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Accès par l'entrée publique de la Grande Galerie de l'Evolution</description>
+</content>
+</entry>

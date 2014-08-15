@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4334_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4334_1.xml"/>
+<title>Centre multidisciplinaire bâtiment i</title>
+<updated>2014-08-15T01:47:16.249+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4334"
+	coordinates="48.787933597228,2.4444526433945"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:22:13.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="super admin"
+	updatedBy="Gérald MORIN"
+	parentUid="4332"
+	name="Centre multidisciplinaire bâtiment i">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro ligne 8
+Station Créteil Université 
+
+
+</itinerary>
+		<fullAddress>61, avenue du Général de Gaulle 
+94 010 Créteil Cedex </fullAddress>
+	</address>
+	<child uid="5324" active="true"/>
+	<child uid="5323" active="true"/>
+	<child uid="5322" active="true"/>
+	<child uid="5320" active="true"/>
+	<child uid="4341" active="true"/>
+	<child uid="5009" active="true"/>
+	<child uid="5117" active="true"/>
+	<child uid="5255" active="true"/>
+	<child uid="5257" active="true"/>
+	<child uid="5258" active="true"/>
+	<child uid="5260" active="true"/>
+	<child uid="5261" active="true"/>
+	<child uid="5262" active="true"/>
+	<child uid="5264" active="true"/>
+	<child uid="5265" active="true"/>
+	<child uid="5266" active="true"/>
+	<child uid="5298" active="true"/>
+	<child uid="5299" active="true"/>
+	<child uid="5375" active="true"/>
+	<child uid="5381" active="true"/>
+	<child uid="5383" active="true"/>
+	<child uid="5460" active="true"/>
+	<child uid="5488" active="true"/>
+	<child uid="5536" active="true"/>
+	<child uid="5542" active="true"/>
+	<child uid="5543" active="true"/>
+	<child uid="5561" active="true"/>
+	<child uid="5604" active="true"/>
+	<child uid="6070" active="true"/>
+	<child uid="6090" active="true"/>
+	<child uid="6097" active="true"/>
+	<child uid="6108" active="true"/>
+	<child uid="6133" active="true"/>
+	<child uid="6187" active="true"/>
+</content>
+</entry>

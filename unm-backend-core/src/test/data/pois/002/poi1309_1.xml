@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1309_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1309_1.xml"/>
+<title>Polygone</title>
+<updated>2014-08-15T01:46:46.085+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1309"
+	coordinates="48.899095371797,2.3323819041252|48.899123583785,2.3333260416985|48.899603185138,2.3333153128624|48.899631396839,2.3332294821739|48.899920565855,2.3331865668297|48.899913512973,2.3320922255516|48.899976988883,2.3320600390434|48.899969936008,2.331802546978|48.899285802404,2.3318132758141|48.899095371797,2.3323"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T16:30:01.000+01:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	deletedAt="2011-06-03T14:50:11.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	name="Polygone">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 13 Porte de Saint Ouen</itinerary>
+		<fullAddress>16 rue Henri Huchard
+75018 Paris</fullAddress>
+	</address>
+</content>
+</entry>

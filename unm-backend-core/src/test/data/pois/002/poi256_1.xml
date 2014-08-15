@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi256_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi256_1.xml"/>
+<title>Evry bâtiment Ile-de-France</title>
+<updated>2014-08-15T01:46:38.789+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="256"
+	coordinates="48.624076616377,2.427243590354"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-16T10:49:49.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="raphael"
+	updatedBy="Basile Michel"
+	parentUid="268"
+	name="Evry bâtiment Ile-de-France">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D, arrêt Évry-Courcouronnes
+RER C, changement Juvisy</itinerary>
+		<fullAddress>Boulevard François Mitterrand
+
+91025 EVRY Cedex</fullAddress>
+	</address>
+	<child uid="2995" active="true"/>
+	<child uid="2963" active="true"/>
+	<child uid="2924" active="true"/>
+	<child uid="2919" active="true"/>
+	<child uid="2889" active="true"/>
+	<child uid="2305" active="true"/>
+	<child uid="2304" active="true"/>
+	<child uid="487" active="true"/>
+	<child uid="485" active="true"/>
+	<child uid="573" active="true"/>
+	<child uid="558" active="true"/>
+	<child uid="258" active="true"/>
+	<child uid="535" active="true"/>
+	<child uid="541" active="true"/>
+	<child uid="571" active="true"/>
+	<child uid="5126" active="true"/>
+	<child uid="5148" active="true"/>
+	<child uid="5161" active="true"/>
+	<child uid="5164" active="true"/>
+	<child uid="5169" active="true"/>
+	<child uid="5172" active="true"/>
+	<child uid="5175" active="true"/>
+	<child uid="5182" active="true"/>
+	<child uid="5187" active="true"/>
+	<child uid="6194" active="true"/>
+</content>
+</entry>

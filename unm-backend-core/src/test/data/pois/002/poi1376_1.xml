@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1376_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1376_1.xml"/>
+<title>Physique-Chimie (L1-L2) et Sciences de la terre... (L1 STEP)</title>
+<updated>2014-08-15T01:46:46.909+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1376"
+	coordinates="48.828775650187,2.3827470839024"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:41:33.000+01:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="j.richer"
+	parentUid="1775"
+	name="Physique-Chimie (L1-L2) et Sciences de la terre... (L1 STEP)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Département de formation de Licence L1, L2 sciences exactes (SE)</description>
+	<address>
+		<floor>Bâtiment Condorcet, 1er étage</floor>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=LICSTS&amp;g=sm</url>
+		<phone>01 57 27 59 48</phone>
+		<fax>01 57 27 76 45</fax>
+		<email>michel.coat@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

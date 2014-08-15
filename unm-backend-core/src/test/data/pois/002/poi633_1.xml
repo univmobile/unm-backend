@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi633_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi633_1.xml"/>
+<title>Bibliothèque Droit social</title>
+<updated>2014-08-15T01:46:40.899+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="633"
+	coordinates="48.845245428679,2.3459672"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T16:40:36.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T16:59:15.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Bibliothèque Droit social">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address
+		countryCode="FR">
+		<openingHours>Lundi
+9h30-18h30
+Mardi au vendredi
+9h30-17h00</openingHours>
+		<itinerary>RER B 
+Station Luxembourg
+Métro 10
+Station Cardinal-Lemoine</itinerary>
+		<phone>01 44 07 78 16</phone>
+		<email>Beatrice.Robinet@univ-paris1.fr</email>
+		<fullAddress>1 rue d'Ulm
+75005 Paris</fullAddress>
+	</address>
+</content>
+</entry>

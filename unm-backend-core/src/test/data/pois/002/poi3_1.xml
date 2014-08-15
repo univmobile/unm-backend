@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3_1.xml"/>
+<title>Université d'Evry - Val d'Essone</title>
+<updated>2014-08-15T01:46:38.187+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3"
+	logo="/images/universities/logos/univ_evry.jpg"
+	coordinates="48.624264546717,2.425725460052"
+	active="true"
+	markerType="point"
+	createdAt="2010-05-11T10:52:33.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	updatedBy="raphael"
+	name="Université d'Evry - Val d'Essone">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="evry"/>
+	<description>Université d'Evry - Val d'Essone comprend 19 formations. Il s'agit d'une université dans la région Ile de France.
+            
+                        
+			L'université d'Evry - Val d'Essonne (UEVE) est relativement jeune avec une création en 1991 et se situe dans une agglomération en expansion et compte actuellement 11 000 étudiants.  
+Elle délivre des formations de pointe, en lien avec une activité de recherche dans les domaines de la biologie et de la santé en général, des sciences et des technologies,  des sciences de la technologie de l'information et de la communication ainsi que dans les sciences humaines et sociales autour de l'organisation de l'entreprise.</description>
+	<address
+		countryCode="FR"
+		latitude="48.62"
+		longitude="2.43">
+		<floor>null</floor>
+		<url>Http://www.univ-evry.fr/</url>
+		<phone>0169477000</phone>
+		<fullAddress>Boulevard François Mitterrand 91025 EVRY</fullAddress>
+	</address>
+	<child uid="5127" active="true"/>
+	<child uid="268" active="true"/>
+	<child uid="5136" active="true"/>
+	<child uid="5142" active="true"/>
+</content>
+</entry>

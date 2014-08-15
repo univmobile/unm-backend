@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6425_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6425_1.xml"/>
+<title>Droit fiscal M1</title>
+<updated>2014-08-15T01:47:37.104+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6425"
+	coordinates="48.847003485798,2.3449869453907"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-23T11:14:50.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1027"
+	name="Droit fiscal M1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://ecolededroitdelasorbonne.univ-paris1.fr</url>
+		<phone>01 44 07 79 42 </phone>
+		<fax>01 44 07 75 09</fax>
+		<email>ufr01mai@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

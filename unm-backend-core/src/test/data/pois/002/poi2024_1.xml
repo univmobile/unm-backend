@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2024_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2024_1.xml"/>
+<title>Sc. fondamentales et appliquées L1-3</title>
+<updated>2014-08-15T01:46:53.446+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2024"
+	coordinates="48.818634204212,2.13627856224"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T16:18:19.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="501"
+	name="Sc. fondamentales et appliquées L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment A (Blaise Pascal - Le Chesnay)</floor>
+		<phone>0139253101</phone>
+		<email>Brigitte.filloux@uvsq.fr </email>
+	</address>
+</content>
+</entry>

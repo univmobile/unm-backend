@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1687_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1687_1.xml"/>
+<title>Postes adaptés braille et synthèse vocale</title>
+<updated>2014-08-15T01:46:49.912+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1687"
+	coordinates="48.83026896383,2.381326854"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T16:01:04.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="Postes adaptés braille et synthèse vocale">
+	<poiType id="30" label="Accessibilité PMR ordinateur" categoryId="7" categoryLabel="Relais handicap"/>
+	<description>Deux poste adaptés (plage braille et synthèse vocale) sont à votre disposition à l'étage des lettres et arts (2e étage) et à l'étage des sciences humaines et sociales (3e étage).
+Postes informatiques avec accès internet, munis d’une plage braille 40 colonnes, ainsi que des logiciels Dragon, Zoom text et Jaws.</description>
+</content>
+</entry>

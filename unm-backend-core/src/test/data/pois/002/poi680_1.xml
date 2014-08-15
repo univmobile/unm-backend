@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi680_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi680_1.xml"/>
+<title>UFR 04 Arts plastiques et sciences de l’art</title>
+<updated>2014-08-15T01:46:41.121+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="680"
+	coordinates="48.841884943749,2.280448973178"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T16:24:52.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T17:18:49.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="UFR 04 Arts plastiques et sciences de l’art">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		countryCode="FR">
+		<openingHours>Lundi au vendredi
+9h30 - 12h00  
+14h00 - 16h00
+</openingHours>
+		<phone>01 44 07 84 88</phone>
+		<email>ufr 04@univ-paris1.fr</email>
+		<fullAddress>47 rue des Bergers
+ 75015 Paris</fullAddress>
+	</address>
+</content>
+</entry>

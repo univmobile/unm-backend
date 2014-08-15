@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi578_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi578_1.xml"/>
+<title>Administration</title>
+<updated>2014-08-15T01:46:40.818+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="578"
+	coordinates="48.618512852152,2.306367158889"
+	active="true"
+	markerType="point"
+	createdAt="2010-11-18T12:10:00.000+01:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2011-05-31T14:53:45.000+02:00"
+	createdBy="pdeljurie"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Administration">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		countryCode="FR">
+		<floor>Bâtiment de Communs</floor>
+	</address>
+</content>
+</entry>

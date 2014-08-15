@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2942_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2942_1.xml"/>
+<title>DAPS</title>
+<updated>2014-08-15T01:47:01.343+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2942"
+	coordinates="48.847992659989,2.358467727899"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:09:11.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	deletedAt="2011-05-04T17:10:45.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	name="DAPS">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<address>
+		<floor>Bâtiment B</floor>
+		<openingHours>du mardi au jeudi de 09h30 à 16h15
+lundi et vendredi ouverture de 12h à 16h15</openingHours>
+	</address>
+</content>
+</entry>

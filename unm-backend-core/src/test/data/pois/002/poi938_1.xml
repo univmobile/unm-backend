@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi938_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi938_1.xml"/>
+<title>Laboratoire médiévistique occidentale de Paris LAMOP</title>
+<updated>2014-08-15T01:46:43.577+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="938"
+	coordinates="48.849214266817,2.344"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T16:57:11.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1002"
+	name="Laboratoire médiévistique occidentale de Paris LAMOP">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Salle Peroy, esc. R.R.2, 2e étage, G768</floor>
+		<itinerary>RER B 
+Station Saint Michel ou Luxembourg
+Métro 10 
+Station Cluny-La Sorbonne
+Bus 21, 27, 38, 82 et 85
+</itinerary>
+		<url>http://lamop.univ-paris1.fr/</url>
+		<phone>01 40 46 33 21</phone>
+	</address>
+</content>
+</entry>

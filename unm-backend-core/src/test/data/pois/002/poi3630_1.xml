@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3630_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3630_1.xml"/>
+<title>Réseau universités sans frontières (RUSF)</title>
+<updated>2014-08-15T01:47:08.787+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3630"
+	coordinates="48.946333090204,2.3606839030981"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:11:13.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Réseau universités sans frontières (RUSF)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>En mettant en relation tous les acteurs syndicaux, associatifs et individuels, les élu-e-s et les responsables de la communauté universitaire, RUSF cherche à soutenir les étudiant-e-s étranger-e-s menacé-e-s d’expulsion ou en difficulté de renouvellement de leur titre de séjour par tous les moyens (permanences, intervention auprès des universités, motion dans les conseils, pétitions, interventions dans les médias, mobilisation autour de cas individuels sur le modèle de RESF, rassemblements devant les préfectures, mobilisation pour la fermeture des centres de rétention...).
+Kamel 06 50 75 46 07 – Nicolas 06 24 73 57 58
+Habib 06 75 87 81 71 – Saïd 06 26 73 36 35
+Amy 06 20 10 23 38 – Raphaël 06 75 02 48 01</description>
+	<address>
+		<floor>1er étage Bâtiment A, bureau de la vie étudiante</floor>
+		<openingHours>Lundi et jeudi
+14h-16h</openingHours>
+		<phone> 06 50 75 46 07</phone>
+	</address>
+</content>
+</entry>

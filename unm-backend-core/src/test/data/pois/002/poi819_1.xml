@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi819_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi819_1.xml"/>
+<title>Carré Colbert</title>
+<updated>2014-08-15T01:46:42.173+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="819"
+	coordinates="48.86664857504,2.33919203"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T15:04:24.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Carré Colbert">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 3 
+Station Bourse </itinerary>
+		<fullAddress>2 rue Vivienne
+75002 Paris </fullAddress>
+	</address>
+	<child uid="1029" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2232_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2232_1.xml"/>
+<title>Laboratoire REEDS</title>
+<updated>2014-08-15T01:46:55.294+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2232"
+	coordinates="48.779081838997,2.04501673579"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T16:46:07.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2011-06-03T15:07:53.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	name="Laboratoire REEDS">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>0139255625</phone>
+		<email>marie-francoise.vannier@reeds.uvsq.fr</email>
+	</address>
+</content>
+</entry>

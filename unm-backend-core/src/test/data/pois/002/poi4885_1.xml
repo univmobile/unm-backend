@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4885_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4885_1.xml"/>
+<title>Services des sports</title>
+<updated>2014-08-15T01:47:21.492+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4885"
+	coordinates="48.870390420853,2.2737823426723"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:00:01.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Services des sports">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<description>Nous vous proposons plus de 30 sports tous encadrés par des enseignants diplômés et de qualité.
+Nos installations sont toutes près de Dauphine et le sous-sol de l'université est équipé d'une salle de sports de 1200m² comprenant une salle de danse, une salle de combat, une salle de tennis de table, une salle de musculation et un terrain de squash. Vestiares, douches et commodités sont attenants.</description>
+	<address>
+		<floor>Rez-de-chaussée, dans le Hall d'Honneur. </floor>
+		<openingHours>Du lundi au vendredi : 
+10h00 / 13h30
+
+ </openingHours>
+		<phone>01 44 05 43 04</phone>
+		<email>Sportsping@dauphinepong.fr</email>
+	</address>
+</content>
+</entry>

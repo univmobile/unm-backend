@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3251_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3251_1.xml"/>
+<title>Ecole de marketing Sorbonne Assas (EMSA)</title>
+<updated>2014-08-15T01:47:04.564+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3251"
+	coordinates="48.860634798587,2.302991431206"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:28:29.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2891"
+	name="Ecole de marketing Sorbonne Assas (EMSA)">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://www.emsaparis.eu/</url>
+		<phone>01 53 59 44 65</phone>
+		<email>contact@emsaparis.eu</email>
+	</address>
+</content>
+</entry>

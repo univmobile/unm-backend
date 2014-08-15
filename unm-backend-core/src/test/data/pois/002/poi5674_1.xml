@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5674_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5674_1.xml"/>
+<title>STIC - LP</title>
+<updated>2014-08-15T01:47:28.728+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5674"
+	coordinates="48.954470615935,2.8782235085964"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:29:33.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5672"
+	name="STIC - LP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Services et Technologies de l'Information et de la Communication - Licence Professionelle</description>
+	<address>
+		<floor>Bureau A103</floor>
+		<phone>01 64 36 44 06</phone>
+		<fax>01 64 36 44 55</fax>
+		<email>Chantal.Jean-Louis@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5028_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5028_1.xml"/>
+<title>UFR Pharmacie</title>
+<updated>2014-08-15T01:47:22.939+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5028"
+	coordinates="48.761981331969,2.2726356983185"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T17:07:13.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4984"
+	name="UFR Pharmacie">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Secrétariat général et administration de la faculté</description>
+	<address>
+		<floor>Bâtiment A, bureau AH 120</floor>
+		<url>http://www.pharmacie.u-psud.fr/fr/la_faculte/services_administratifs.html</url>
+		<phone>01 46 83 53 36</phone>
+		<fax>01 46 83 57 35</fax>
+		<email>jacqueline.damiens@u-psud.fr</email>
+	</address>
+</content>
+</entry>

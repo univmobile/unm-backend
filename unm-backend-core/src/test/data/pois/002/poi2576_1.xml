@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2576_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2576_1.xml"/>
+<title>Psychologie L2</title>
+<updated>2014-08-15T01:46:58.184+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2576"
+	coordinates="48.901768291392,2.393511291"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T17:14:40.000+02:00"
+	updatedAt="2011-06-14T17:24:36.000+02:00"
+	deletedAt="2011-06-08T10:16:51.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	name="Psychologie L2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1er étage /Bureau 1054</floor>
+		<openingHours>lundi – jeudi
+9h30-12h00
+13h30-16h30
+Vendredi
+9h30-12h00</openingHours>
+	</address>
+</content>
+</entry>

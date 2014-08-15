@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1375_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1375_1.xml"/>
+<title>Sciences du vivant (L1-L2)</title>
+<updated>2014-08-15T01:46:46.891+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1375"
+	coordinates="48.828297135338,2.3820805549622"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:37:54.000+01:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="j.richer"
+	parentUid="1777"
+	name="Sciences du vivant (L1-L2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Buffon, Rez-de-chaussée, bureau RH24A</floor>
+		<openingHours>Lundi : 13h30-17h
+Mardi : 9h45-12h et 13h30-17h
+Mercredi, jeudi, vendredi : 9h45-12h</openingHours>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=760</url>
+		<phone>01 57 27 59 20 </phone>
+		<email>scolsnv@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

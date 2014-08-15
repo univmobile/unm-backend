@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2709_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2709_1.xml"/>
+<title>BU Médecine - Cordeliers</title>
+<updated>2014-08-15T01:46:59.389+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2709"
+	coordinates="48.850664141608,2.3405599594116"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:30:35.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2463"
+	name="BU Médecine - Cordeliers">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi-Vendredi
+9h30 – 22h00
+Samedi
+9h30- 12h00
+horaires reduits
+Lundi-Vendredi
+9h30 - 19h00</openingHours>
+		<phone>01 53 10 50 71</phone>
+		<email>bucordeliers@medecine.parisdescartes.fr</email>
+	</address>
+</content>
+</entry>

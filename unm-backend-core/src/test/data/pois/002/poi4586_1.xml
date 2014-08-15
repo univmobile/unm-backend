@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4586_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4586_1.xml"/>
+<title>Pôle Universitaire Léonard de Vinci</title>
+<updated>2014-08-15T01:47:18.820+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4586"
+	coordinates="48.896135258059,2.2367450594902"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:36:05.000+02:00"
+	updatedAt="2011-05-26T17:18:55.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4584"
+	name="Pôle Universitaire Léonard de Vinci">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro :
+- ligne 1 : station Grande Arche de la Défense
+RER 
+- ligne A : station Grande Arche de la Défense
+SNCF : station &quot;La Défense&quot;
+
+Sur le Parvis de La Défense, suivre le fléchage et emprunter la passerelle piétonne qui enjambe le Boulevard Circulaire (accès Place Carpeaux, à côté du Pouce de César).</itinerary>
+		<fullAddress>2 Avenue Léonard de Vinci
+92400 Courbevoie</fullAddress>
+	</address>
+	<child uid="4770" active="true"/>
+	<child uid="4769" active="true"/>
+	<child uid="4765" active="true"/>
+	<child uid="4766" active="true"/>
+	<child uid="4596" active="true"/>
+	<child uid="4574" active="true"/>
+	<child uid="4591" active="true"/>
+	<child uid="4756" active="true"/>
+	<child uid="4764" active="true"/>
+	<child uid="4812" active="true"/>
+	<child uid="4833" active="true"/>
+	<child uid="4841" active="true"/>
+	<child uid="4844" active="true"/>
+	<child uid="4845" active="true"/>
+</content>
+</entry>

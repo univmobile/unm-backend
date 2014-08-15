@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7264_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7264_1.xml"/>
+<title>Département design</title>
+<updated>2014-08-15T01:47:44.990+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7264"
+	coordinates="48.79067793375,2.3276907205582"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T11:29:53.000+01:00"
+	updatedAt="2012-12-17T14:47:38.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7221"
+	name="Département design">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La première mission du département est la formation des futurs professeurs d'arts appliqués des lycées, soit au niveau de l'enseignement secondaire, soit post-bac. Il prépare pour cela ses étudiants aux épreuves de l'agrégation d'arts, option d'arts appliqués. Les deux premières années de leur scolarité sont consacrées à l'obtention des diplômes de niveau 2 exigibles pour toute candidature à une agrégation ; la troisième année et la quatrième année sont actuellement consacrées à la préparation de l'agrégation et à la présentation du Master 2 ou l'inverse.
+</description>
+	<address>
+		<floor>Rez-de-chaussée</floor>
+		<url>http://www.design.ens-cachan.fr/</url>
+		<phone>01 47 40 21 78</phone>
+		<fax>01 47 40 24 38</fax>
+	</address>
+</content>
+</entry>

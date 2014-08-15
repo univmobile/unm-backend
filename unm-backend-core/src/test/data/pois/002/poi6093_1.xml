@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6093_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6093_1.xml"/>
+<title>Institut  Francilien d'Ingénierie des Services</title>
+<updated>2014-08-15T01:47:33.644+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6093"
+	coordinates="48.841815951192,2.574270889163"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T16:29:33.000+02:00"
+	updatedAt="2011-06-14T16:29:58.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="Institut  Francilien d'Ingénierie des Services">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<phone>01 60 95 78 05 </phone>
+		<email>Beatrice.Garnier@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

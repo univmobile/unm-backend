@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6866_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6866_1.xml"/>
+<title>Cafétéria Malakkof</title>
+<updated>2014-08-15T01:47:40.877+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6866"
+	coordinates="48.824519591663,2.3026415705681"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-05T11:37:29.000+02:00"
+	updatedAt="2011-09-05T11:38:45.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6865"
+	name="Cafétéria Malakkof">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi de 8h15 à 17h30</openingHours>
+		<url>http://www.crous-paris.fr/</url>
+	</address>
+</content>
+</entry>

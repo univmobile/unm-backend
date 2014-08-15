@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi798_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi798_1.xml"/>
+<title>UEFAPS Unité d'Ens. de Form. des Activités Ph</title>
+<updated>2014-08-15T01:46:41.976+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="798"
+	coordinates="48.827174108374,2.36444234"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-16T17:10:12.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1023"
+	name="UEFAPS Unité d'Ens. de Form. des Activités Ph">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<address>
+		<floor>Aile C, 8e étage, 8.01</floor>
+		<openingHours>Lundi au vendredi
+10h00-12h00
+14h00-16h00
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+Bus 62, 64 et 83
+Arrêt Tolbiac-Baudricourt</itinerary>
+		<url>http://uefaps.univ-paris1.fr/</url>
+		<phone>01 44 07 88 96</phone>
+		<email>uefaps@univ-paris1.fr</email>
+		<fullAddress>90 rue de Tolbiac
+75013 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

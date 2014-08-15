@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3403_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3403_1.xml"/>
+<title>SEPP5 </title>
+<updated>2014-08-15T01:47:06.206+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3403"
+	coordinates="48.843024020835,2.33564799651"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:52:49.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2450"
+	name="SEPP5 ">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+</content>
+</entry>

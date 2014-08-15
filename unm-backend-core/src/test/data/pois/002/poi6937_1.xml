@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6937_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6937_1.xml"/>
+<title>UFR Information et communication</title>
+<updated>2014-08-15T01:47:41.459+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6937"
+	coordinates="48.894536516854,2.2748498618603"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-26T17:02:52.000+02:00"
+	updatedAt="2011-09-26T17:04:17.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3719"
+	name="UFR Information et communication">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<url>www.celsa.fr</url>
+		<phone>01 46 43 76 76</phone>
+		<email>information@celsa.paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

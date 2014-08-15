@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1095_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1095_1.xml"/>
+<title>Institut d'Etudes Judiciaires Jean Domat</title>
+<updated>2014-08-15T01:46:44.757+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1095"
+	coordinates="48.847004721353,2.34455376863"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-15T17:35:47.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1027"
+	name="Institut d'Etudes Judiciaires Jean Domat">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>Aile Saint Jacques, esc. O, 2e étage </floor>
+		<itinerary>RER B 
+Station Luxembourg
+Bus 21, 27, 38, 82, 84, 85 et 89 </itinerary>
+		<url>http://www.univ-paris1.fr/ufr/iap0/</url>
+		<phone>01 44 07 77 62</phone>
+		<email>iap@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

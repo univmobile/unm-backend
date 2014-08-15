@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5862_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5862_1.xml"/>
+<title>G.E.I.I. / S.R.C New connections</title>
+<updated>2014-08-15T01:47:30.974+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5862"
+	coordinates="48.974924895263,2.3771741241217"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T17:18:59.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="4066"
+	name="G.E.I.I. / S.R.C New connections">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+</content>
+</entry>

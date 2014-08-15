@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2173_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2173_1.xml"/>
+<title>LEME et SITEC</title>
+<updated>2014-08-15T01:46:54.909+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2173"
+	coordinates="48.824831018165,2.19945296645"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:46:44.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2451"
+	name="LEME et SITEC">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau D12.2.1</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h30 - 13h30 / 17h
+Mercredi ouverture à 8h30</openingHours>
+	</address>
+</content>
+</entry>

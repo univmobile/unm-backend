@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4092_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4092_1.xml"/>
+<title>ESPE Antony-Jouhaux </title>
+<updated>2014-08-15T01:47:13.590+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4092"
+	coordinates="48.734953239011,2.306853979826"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:04:58.000+02:00"
+	updatedAt="2013-06-27T14:19:32.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Fatma ARAS"
+	parentUid="4089"
+	name="ESPE Antony-Jouhaux ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accès routier
+DEPUIS PARIS PORTE D’ORLÉANS PAR L’A6 : (A)
+Prendre l’A6 direction LYON puis suivre l’A10 vers
+PALAISEAU/BORDEAUX. Emprunter la sortie LONGJUMEAU garder votre
+droite (puis voir loupe).
+DEPUIS PARIS PORTE D’ORLÉANS PAR LA N20 : (B)
+Rejoindre la PORTE D’ORLÉANS direction ANTONY jusqu’à la Croix de
+Berny (puis voir loupe).
+Accès transports en commun
+DEPUIS PARIS
+Prendre le RER B direction ST-RÉMY-LÈS-CHEVREUSE. Arrêt FONTAINE MICHALON (puis 800 m à pied) ou 
+arrêt RER ANTONY puis BUS PALADIN
+ligne1 arrêt CHAMPAGNE (puis 50 m à pied</itinerary>
+		<fullAddress>26, Avenue Léon Jouhaux
+92160 Antony </fullAddress>
+	</address>
+	<child uid="6032" active="true"/>
+	<child uid="7471" active="true"/>
+</content>
+</entry>

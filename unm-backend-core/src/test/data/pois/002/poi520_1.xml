@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi520_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi520_1.xml"/>
+<title>Restaurant U l'Allée Verte</title>
+<updated>2014-08-15T01:46:40.590+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="520"
+	coordinates="48.958045271831,2.338768243789"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T17:57:08.000+02:00"
+	updatedAt="2011-05-31T11:58:05.000+02:00"
+	deletedAt="2010-09-07T20:07:02.000+02:00"
+	createdBy="yasmine"
+	updatedBy="rchervet"
+	name="Restaurant U l'Allée Verte">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

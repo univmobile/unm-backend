@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4454_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4454_1.xml"/>
+<title>Stage 3 ème année</title>
+<updated>2014-08-15T01:47:17.477+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4454"
+	coordinates="48.626782686664,2.4311985075474"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:43:46.000+02:00"
+	updatedAt="2011-10-13T11:39:20.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="super admin"
+	parentUid="4440"
+	name="Stage 3 ème année">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<phone>01 69 36 73 13</phone>
+		<email>stage@ensiie.fr</email>
+	</address>
+</content>
+</entry>

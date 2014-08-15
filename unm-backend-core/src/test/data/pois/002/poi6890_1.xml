@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6890_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6890_1.xml"/>
+<title> Scolarité Examens M2</title>
+<updated>2014-08-15T01:47:41.054+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6890"
+	coordinates="48.846900389926,2.3442838713527"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-09T15:48:03.000+02:00"
+	updatedAt="2011-09-09T15:50:12.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="2842"
+	name=" Scolarité Examens M2">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>Bureau 109</floor>
+		<openingHours>Bureaux ouverts au public
+du lundi au vendredi de 10h à 16h
+</openingHours>
+		<url>http://www.u-paris2.fr</url>
+		<phone>01 44 41 55 96</phone>
+		<email>frédérique.penaud@u-paris2.fr </email>
+	</address>
+</content>
+</entry>

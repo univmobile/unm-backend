@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3372_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3372_1.xml"/>
+<title>Recherche sur le Français Contemporain</title>
+<updated>2014-08-15T01:47:05.897+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3372"
+	coordinates="48.83984089937,2.35474750399"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:38:26.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-17T17:02:34.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	name="Recherche sur le Français Contemporain">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<url>http://ed268.univ-paris3.fr/ea1483/index.html</url>
+		<phone>0146611215</phone>
+		<email>anne.salazar-orvig@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2934_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2934_1.xml"/>
+<title>Laboratoire “Statistique et Génome” </title>
+<updated>2014-08-15T01:47:01.268+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2934"
+	coordinates="48.628669776193,2.42798790335"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:04:05.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2011-05-31T14:37:46.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Laboratoire “Statistique et Génome” ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>2ème étage</floor>
+		<phone>01 60 87 38 00</phone>
+		<email>michele.ilbert@genopole.cnrs.fr</email>
+	</address>
+</content>
+</entry>

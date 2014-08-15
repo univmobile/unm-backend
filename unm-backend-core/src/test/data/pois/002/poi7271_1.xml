@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7271_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7271_1.xml"/>
+<title>LBPA</title>
+<updated>2014-08-15T01:47:45.068+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7271"
+	coordinates="48.788070552544,2.3270912468433"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T16:02:59.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7215"
+	name="LBPA">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>La biologie pratiquée au laboratoire de biologie et pharmacologie appliqué ( LBPA) est une biologie intégrative, basée sur des technologies de pointe complémentaires. La diversité de ces approches permet d'accroitre nos connaissances des processus de la dynamique moléculaire jusqu'aux fonctions cellulaires et tissulaires.
+Les membres du LBPA travaillent dans des domaines qui relèvent de la Biologie fondamentale et particulièrement de la Biophysique moléculaire avec des retombées sur la Bio-santé.</description>
+	<address>
+		<url>http://www.lbpa.ens-cachan.fr/</url>
+		<phone>01 47 40 76 70</phone>
+		<fax>01 47 40 76 71</fax>
+		<email>secretariat@lbpa.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

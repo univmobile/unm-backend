@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7314_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7314_1.xml"/>
+<title>Restaurant administratif</title>
+<updated>2014-08-15T01:47:45.454+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7314"
+	coordinates="48.841305462084,2.3599469661713"
+	active="true"
+	markerType="point"
+	createdAt="2013-03-18T16:17:30.000+01:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:50:08.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Restaurant administratif">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Interdit au public
+Accès exclusif aux personnels et étudiants du muséum</description>
+	<address>
+		<itinerary>Interdit au public</itinerary>
+	</address>
+</content>
+</entry>

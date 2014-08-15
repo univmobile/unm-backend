@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7441_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7441_1.xml"/>
+<title>Salle Chevalier</title>
+<updated>2014-08-15T01:47:46.371+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7441"
+	coordinates="48.841743251457,2.3592925071716"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-30T16:53:07.000+02:00"
+	updatedAt="2013-05-03T12:34:53.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7409"
+	name="Salle Chevalier">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>Salle de cours
+Entrée par le bâtiment 135
+2ème étage</description>
+</content>
+</entry>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7242_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7242_1.xml"/>
+<title>CROUS de Créteil (campus de Cachan)</title>
+<updated>2014-08-15T01:47:44.727+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7242"
+	coordinates="48.79000820932,2.330174446106"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-12T14:59:35.000+01:00"
+	updatedAt="2013-01-14T09:34:11.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7209"
+	name="CROUS de Créteil (campus de Cachan)">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>Le campus de Cachan est un des pôles importants du CROUS de Créteil, avec plus de 1000 places en logement, et une offre de restauration forte et variée. Sur place, les étudiants ont à faire avec l’équipe hébergement (gérée par un directeur), et l’équipe restauration (gérée par une directrice).</description>
+	<address>
+		<floor>Plateforme d’accueil : 70 rue Camille DESMOULIN, entre les bâtiments A et B</floor>
+		<openingHours>Lundi, mardi et vendredi : 8h30-17h
+Mercredi : 8h30-14h 
+Jeudi : 11h-19h (sauf en périodes scolaires)
+Attention en période de congés scolaires, l’accueil est fermé entre 13h et 13h30</openingHours>
+		<itinerary>RER ligne B - station Arcueil-Cachan, puis Bus 187 - arrêt division Leclerc ou le Bus 184 - arrêt Camille Desmoulins.
+OU station Bagneux puis 10’ à pied en suivant « ENS Cachan »</itinerary>
+		<url>www.crous-creteil.fr</url>
+		<phone>01 41 98 68 90</phone>
+		<fax>01 45 47 21 53</fax>
+		<email>residence.cachan@crous-creteil.fr</email>
+	</address>
+	<child uid="7243" active="true"/>
+	<child uid="7244" active="true"/>
+	<child uid="7245" active="true"/>
+	<child uid="7246" active="true"/>
+	<child uid="7247" active="true"/>
+	<child uid="7248" active="true"/>
+	<child uid="7249" active="true"/>
+	<child uid="7250" active="true"/>
+	<child uid="7251" active="true"/>
+</content>
+</entry>

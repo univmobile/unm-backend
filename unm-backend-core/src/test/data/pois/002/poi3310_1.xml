@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3310_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3310_1.xml"/>
+<title>Restaurant Censier </title>
+<updated>2014-08-15T01:47:05.266+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3310"
+	coordinates="48.840781904523,2.35566280782"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:00:27.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3009"
+	name="Restaurant Censier ">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Restaurant universitaire</description>
+	<address>
+		<floor>1er étage - 3 rue Censier - 75005 - Paris</floor>
+		<openingHours>Du lundi au vendredi : 
+11h00 à 14h30 
+</openingHours>
+	</address>
+</content>
+</entry>

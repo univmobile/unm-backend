@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7261_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7261_1.xml"/>
+<title>Département de génie civil (DGC)</title>
+<updated>2014-08-15T01:47:44.957+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7261"
+	coordinates="48.786947007222,2.3251573741436"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T10:11:13.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7216"
+	name="Département de génie civil (DGC)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La principale mission du département Génie civil consiste à organiser une formation prédoctorale qui ouvre aux étudiants les voies de l'enseignement et de la recherche, tout en leur donnant la possibilité d'évoluer vers l'ingénierie si tel est leur projet, dans les multiples champs d'application que fédère le génie civil.
+La formation permet de développer chez chaque étudiant les qualités scientifiques et humaines requises pour poursuivre une carrière dans l'enseignement, la recherche fondamentale et appliquée, la recherche-développement et le transfert des innovations vers la pratique.
+Dans la filière Génie civil, les applications spécifiques offertes à Cachan concernent les structures, les bâtiments, l'énergie et l'environnement.</description>
+	<address>
+		<floor>entre les escaliers 7 et 8, au dernier étage</floor>
+		<url>http://www.dgc.ens-cachan.fr/</url>
+		<phone>01 47 40 74 60</phone>
+		<fax>01 47 40 74 65</fax>
+		<email>pascale@dgc.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

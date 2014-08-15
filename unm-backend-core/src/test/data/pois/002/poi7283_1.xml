@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7283_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7283_1.xml"/>
+<title>Institut d'Alembert (IDA)</title>
+<updated>2014-08-15T01:47:45.194+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7283"
+	coordinates="48.788089107752,2.3269128799438"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T11:55:46.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7215"
+	name="Institut d'Alembert (IDA)">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>L'institut d'Alembert (IDA) est une entité fédérative pluridisciplinaire dont la vocation est de mener des activités de recherche fondamentales et appliquées dans les domaines de l'imagerie biophotonique, de la microfluidique et de la conception des matériaux et nanomatériaux fonctionnels. Les principaux débouchés se situent dans les domaines de l'imagerie en super-résolution et de nouvelles générations de biocapteurs et biopuces pour les études fondamentales en science de la vie et le diagnostic.
+Véritable interface entre physique, chimie et biologie, l'IDA ambitionne de contribuer à la compréhension de mécanismes cellulaires fondamentaux ainsi qu'à leurs dysfonctionnements par la mise en oeuvre d'effets photoniques tels que la fluorescence, l'optique non-linéaire et plus généralement la nanophotonique.
+La présence, au sein de l'IDA et sur le site de l'Ecole Normale Supérieure de Cachan, de quatre unités de recherche complémentaires, permet de couvrir idéalement le champ transversal requis pour ce type de recherches. Celui-ci englobe la physique fondamentale et appliquée (LPQM et SATIE), la chimie (PPSM) et les sciences de la vie (LBPA).</description>
+	<address>
+		<url>http://www.ida.ens-cachan.fr/</url>
+		<phone>01 47 40 21 47</phone>
+		<fax>01 47 40 20 65</fax>
+		<email>secretariat@ida.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

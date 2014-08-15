@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi759_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi759_1.xml"/>
+<title>UFR 12 Travail et études sociales, AES et droit social</title>
+<updated>2014-08-15T01:46:41.762+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="759"
+	coordinates="48.827289355179,2.364543266594"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T17:42:42.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T16:14:05.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="UFR 12 Travail et études sociales, AES et droit social">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		countryCode="FR">
+		<floor>Aile  B, 14e étage, 14.06</floor>
+		<openingHours>Lundi
+au vendredi
+9h30 – 12h30
+14h 30- 16h
+</openingHours>
+		<phone>01 44 07 89 42</phone>
+		<email>raufr12@univ-paris1.fr</email>
+		<fullAddress>90 rue de Tolbiac
+75013 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

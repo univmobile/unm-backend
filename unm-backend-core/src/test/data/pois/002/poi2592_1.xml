@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2592_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2592_1.xml"/>
+<title>Structure et dynamique des langues  </title>
+<updated>2014-08-15T01:46:58.257+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2592"
+	coordinates="48.796922698457,2.358717173337"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T17:28:20.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Structure et dynamique des langues  ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 49 58 38 25</phone>
+		<email>sedyl@vjf.cnrs.fr</email>
+	</address>
+</content>
+</entry>

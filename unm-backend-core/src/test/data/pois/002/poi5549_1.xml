@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5549_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5549_1.xml"/>
+<title>UFR STAPS</title>
+<updated>2014-08-15T01:47:27.358+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5549"
+	coordinates="48.833860603432,2.2910939902067"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:20:33.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2426"
+	name="UFR STAPS">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>Lundi-vendredi
+09h30-12h30
+13h30-17h00
+mercredi fermé
+</openingHours>
+	</address>
+</content>
+</entry>

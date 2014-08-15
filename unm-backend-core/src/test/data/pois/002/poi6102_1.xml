@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6102_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6102_1.xml"/>
+<title>Restaurant universitaire de Cachan</title>
+<updated>2014-08-15T01:47:33.758+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6102"
+	coordinates="48.79107575873,2.329289317131"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T16:51:57.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4541"
+	name="Restaurant universitaire de Cachan">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="6103" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6281_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6281_1.xml"/>
+<title>Bâtiment B</title>
+<updated>2014-08-15T01:47:35.657+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6281"
+	coordinates="48.799756323817,2.1414166688919|48.799845397463,2.1415809541941|48.799734092199,2.1419671922922|48.799704057403,2.1419832855463|48.799560950188,2.1418706327677|48.799537982325,2.1419671922922|48.799687420465,2.1420764923096|48.79984289456,2.1421810984612|48.799981436894,2.1416211873293|48.799958469224,2.1415326744318|48.799811829235,2.1412590891123|48.799775758079,2.1413683891296|48.799756323817,2.1414166688919"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-06-20T16:08:30.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2012-02-04T10:51:30.000+01:00"
+	createdBy="haromoys"
+	updatedBy="rrivoire"
+	name="Bâtiment B">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

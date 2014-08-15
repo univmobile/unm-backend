@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1450_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1450_1.xml"/>
+<title>Métiers des études du conseil et de l'intervention </title>
+<updated>2014-08-15T01:46:47.722+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1450"
+	coordinates="48.82596453074,2.3661294579506"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:02:22.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="j.richer"
+	parentUid="1772"
+	name="Métiers des études du conseil et de l'intervention ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 112</floor>
+		<openingHours>Lundi, Mardi, Jeudi,  Vendredi : 10h-12h et 14h-16h
+Mercredi : 10h-12h</openingHours>
+		<itinerary>Métro 14 Olympiades
+Métro 7 Tolbiac
+Bus 62, 64, 83 Tolbiac Baudricourt</itinerary>
+		<phone>0157277176</phone>
+	</address>
+</content>
+</entry>

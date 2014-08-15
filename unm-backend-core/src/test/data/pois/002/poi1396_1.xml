@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1396_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1396_1.xml"/>
+<title>UFR Mathématiques</title>
+<updated>2014-08-15T01:46:47.211+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1396"
+	coordinates="48.833043000072,2.3684482276"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:57:17.000+01:00"
+	updatedAt="2011-06-22T15:01:00.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1770"
+	name="UFR Mathématiques">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Bureau 5C20</floor>
+		<openingHours>Tous les jours : 9h-17h</openingHours>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<phone>0157279295</phone>
+		<email>chiettini@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

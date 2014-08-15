@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3463_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3463_1.xml"/>
+<title>Université René Descartes</title>
+<updated>2014-08-15T01:47:06.922+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3463"
+	coordinates="48.851052254263,2.34033331274"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:08:13.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-05-26T14:24:07.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Université René Descartes">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

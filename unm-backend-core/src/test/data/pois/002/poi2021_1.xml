@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2021_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2021_1.xml"/>
+<title>Amphithéâtre A4</title>
+<updated>2014-08-15T01:46:53.433+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2021"
+	coordinates="48.945114852779,2.363468706607"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T16:17:25.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Amphithéâtre A4">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+</content>
+</entry>

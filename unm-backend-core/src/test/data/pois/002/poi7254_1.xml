@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7254_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7254_1.xml"/>
+<title>Forum ENS Cachan</title>
+<updated>2014-08-15T01:47:44.875+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7254"
+	coordinates="48.788640783341,2.3271368443966"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-12T15:53:19.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Forum ENS Cachan">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le Forum de l'ENS Cachan est un lieu de rencontre entre les étudiants de l'École normale supérieure de Cachan et les acteurs de la société civile, entreprises, organismes publics et grands Corps d'État. Son objectif est d'établir des liens privilégiés entre les entreprises partenaires et les normaliens, pour tout ce qui concerne leur vie après l'école, notamment dans le monde de la recherche. </description>
+	<address>
+		<url>http://www.forum.ens-cachan.fr/</url>
+		<phone>01 47 40 76 05</phone>
+		<fax>01 47 40 76 98</fax>
+		<email>contact@forum.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

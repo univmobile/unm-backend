@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7270_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7270_1.xml"/>
+<title>LSV</title>
+<updated>2014-08-15T01:47:45.057+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7270"
+	coordinates="48.788993886696,2.3269021511078"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T15:58:17.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="LSV">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Fondé en 1997, le Laboratoire Spécification et Vérification (LSV) est le laboratoire d'informatique de l'ENS de Cachan, et est aussi affilié au Centre National de la Recherche Scientifique (CNRS) en tant qu'UMR 8643.  La recherche au LSV est centrée sur la vérification de logiciels et systèmes critiques, et sur la vérification de la sécurité des systèmes informatiques.</description>
+	<address>
+		<floor>rez-de-chaussée de l'aile gauche</floor>
+		<url>http://www.lsv.ens-cachan.fr/</url>
+		<phone>01 47 40 75 20</phone>
+		<fax>01 47 40 75 21</fax>
+		<email>lsv@lsv.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

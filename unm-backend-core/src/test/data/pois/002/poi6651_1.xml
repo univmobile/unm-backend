@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6651_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6651_1.xml"/>
+<title>Résidence Universitaire Fleming V2</title>
+<updated>2014-08-15T01:47:39.006+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6651"
+	coordinates="48.69526408936,2.1891723945737"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T11:36:54.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6649"
+	name="Résidence Universitaire Fleming V2">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Cette résidence Universitaire est située à 15 mn à pied du campus universitaire. Proche du Centre d'Orsay et du Centre Commercial les Ulis 2
+. 
+Chambres individuelles : 300.
+Tarif : 146€ charges comprises.
+
+Logements conventionnés : 223 (T1) dont 2 accessibles aux personnes à mobilité réduites.
+Tarif : 307 à 395€ charges comprises.</description>
+	<address>
+		<openingHours>Du lundi au vendredi, de 8h30 à 12h30 et de 13h30 à 17h.
+
+Attention :
+Juillet et août : de 09h00 à 13h00 et 13h30 à 16 h00
+du 14 au 20 juillet inclus : aucun encaissement ou décaissement en espèces.
+
+</openingHours>
+		<phone>01 69 18 97 97</phone>
+	</address>
+</content>
+</entry>

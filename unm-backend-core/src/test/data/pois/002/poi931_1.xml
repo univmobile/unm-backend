@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi931_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi931_1.xml"/>
+<title>Centre rue du Four</title>
+<updated>2014-08-15T01:46:43.491+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="931"
+	coordinates="48.852771456599,2.3353672027588"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T16:02:06.000+01:00"
+	updatedAt="2011-06-23T14:59:54.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Fatma ARAS"
+	parentUid="1"
+	name="Centre rue du Four">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro  4 et 10
+Station Odéon ou Saint-Germain-des-Près, Mabillon
+
+Bus 63, 70, 86, 87 et 96</itinerary>
+		<fullAddress>13 rue du Four
+75006 Paris </fullAddress>
+	</address>
+	<child uid="1118" active="true"/>
+</content>
+</entry>

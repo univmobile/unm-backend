@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6967_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6967_1.xml"/>
+<title>UCEF</title>
+<updated>2014-08-15T01:47:41.667+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6967"
+	coordinates="48.902829883357,2.2133186459541"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T10:51:50.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="UCEF">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Bâtiment R - Salles RR07 et RRCL02 - rdc</floor>
+	</address>
+</content>
+</entry>

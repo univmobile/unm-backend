@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5840_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5840_1.xml"/>
+<title>Site des Cerclades</title>
+<updated>2014-08-15T01:47:30.733+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5840"
+	coordinates="49.037477751464,2.0808775350451"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:50:15.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Fatma ARAS"
+	parentUid="3900"
+	name="Site des Cerclades">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Pluridisciplinaire</description>
+	<address>
+		<openingHours>du lundi au vendredi 9h-20h, samedi 9h-19h - Fermeture entre 1 et 15 aout:
+étudiants (LMD), enseignants chercheurs</openingHours>
+		<url>http://www.u-cergy.fr/fr/bibliotheque.html</url>
+		<phone>01 34 25 60 74</phone>
+		<fax>01 34 25 60 75</fax>
+	</address>
+</content>
+</entry>

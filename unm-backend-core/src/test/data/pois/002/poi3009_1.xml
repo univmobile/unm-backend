@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3009_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3009_1.xml"/>
+<title>Centre universitaire Censier</title>
+<updated>2014-08-15T01:47:02.050+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3009"
+	coordinates="48.839497775122,2.354142665863"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:09:09.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3006"
+	name="Centre universitaire Censier">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<floor>13, rue de Santeuil 75005 - Paris</floor>
+		<itinerary>Métro ligne 7 : Censier-Daubenton
+Bus 47</itinerary>
+	</address>
+	<child uid="7064" active="true"/>
+	<child uid="3116" active="true"/>
+	<child uid="7061" active="true"/>
+	<child uid="3315" active="true"/>
+	<child uid="3249" active="true"/>
+	<child uid="3245" active="true"/>
+	<child uid="3242" active="true"/>
+	<child uid="3238" active="true"/>
+	<child uid="3233" active="true"/>
+	<child uid="3231" active="true"/>
+	<child uid="3179" active="true"/>
+	<child uid="3151" active="true"/>
+	<child uid="3150" active="true"/>
+	<child uid="3148" active="true"/>
+	<child uid="3147" active="true"/>
+	<child uid="3143" active="true"/>
+	<child uid="3142" active="true"/>
+	<child uid="3140" active="true"/>
+	<child uid="3134" active="true"/>
+	<child uid="3101" active="true"/>
+	<child uid="3096" active="true"/>
+	<child uid="3092" active="true"/>
+	<child uid="3090" active="true"/>
+	<child uid="3087" active="true"/>
+	<child uid="3199" active="true"/>
+	<child uid="3220" active="true"/>
+	<child uid="3222" active="true"/>
+	<child uid="3227" active="true"/>
+	<child uid="3261" active="true"/>
+	<child uid="3264" active="true"/>
+	<child uid="3266" active="true"/>
+	<child uid="3270" active="true"/>
+	<child uid="3273" active="true"/>
+	<child uid="3276" active="true"/>
+	<child uid="3279" active="true"/>
+	<child uid="3281" active="true"/>
+	<child uid="3285" active="true"/>
+	<child uid="3289" active="true"/>
+	<child uid="3293" active="true"/>
+	<child uid="3301" active="true"/>
+	<child uid="3310" active="true"/>
+	<child uid="6901" active="true"/>
+	<child uid="6902" active="true"/>
+	<child uid="6906" active="true"/>
+	<child uid="6907" active="true"/>
+	<child uid="6908" active="true"/>
+	<child uid="6909" active="true"/>
+</content>
+</entry>

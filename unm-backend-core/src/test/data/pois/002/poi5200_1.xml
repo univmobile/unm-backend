@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5200_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5200_1.xml"/>
+<title>École doctorale 145 : Sciences du végétal</title>
+<updated>2014-08-15T01:47:24.228+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5200"
+	coordinates="48.711211873666,2.1676513552666"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T17:05:03.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5174"
+	name="École doctorale 145 : Sciences du végétal">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>École doctorale (ED) 145 : Sciences du végétal : du gène à l'écosystème</description>
+	<address>
+		<floor>Bâtiment 630, 	bureau 182</floor>
+		<url>http://www.ed-sciences-du-vegetal.u-psud.fr/</url>
+		<phone>01 69 15 33 05</phone>
+		<email>ecodoc.sdv@u-psud.fr</email>
+	</address>
+</content>
+</entry>

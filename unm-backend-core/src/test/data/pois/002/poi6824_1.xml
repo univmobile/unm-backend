@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6824_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6824_1.xml"/>
+<title>Cafétéria La coulée verte</title>
+<updated>2014-08-15T01:47:40.562+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6824"
+	coordinates="48.781974353644,2.2860413789749"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T14:37:21.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6821"
+	name="Cafétéria La coulée verte">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>de 8h30 à 16h du lundi au vendredi
+de 11h15 à 14h15 le samedi</openingHours>
+	</address>
+</content>
+</entry>

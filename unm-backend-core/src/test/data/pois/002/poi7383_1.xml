@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7383_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7383_1.xml"/>
+<title>Ménagerie</title>
+<updated>2014-08-15T01:47:45.780+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7383"
+	coordinates="48.845159171728,2.3632434010506|48.845010898773,2.3630931973457|48.844022401186,2.3592415452003|48.844368377561,2.3583510518074|48.844947353086,2.3582330346107|48.845448655756,2.358823120594|48.845858166889,2.3599818348885|48.846260614222,2.3604646325111|48.846655997926,2.3607435822487|48.846747782982,2.3609045147896|48.845159171728,2.3632434010506"
+	active="true"
+	markerType="polygon"
+	createdAt="2013-04-24T16:33:08.000+02:00"
+	updatedAt="2013-05-03T12:58:27.000+02:00"
+	deletedAt="2013-04-25T09:45:56.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Ménagerie">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accessible à la visite
+Vérifiez les horaires sur www.mnhn;fr
+
+Bus :
+Lignes 24, 57, 61, 63, 67, 89 et 91 - Batobus : arrêt Jardin des Plantes
+
+Metro, RER :
+M5 : Austerlitz - M7 : Censier Daubenton - M 10 : Jussieu ou Austerlitz - RER C
+
+Gare SNCF :
+Gare d'Austerlitz et Gare de Lyon</itinerary>
+		<fullAddress>57, Rue Cuvier
+75005 paris</fullAddress>
+	</address>
+</content>
+</entry>

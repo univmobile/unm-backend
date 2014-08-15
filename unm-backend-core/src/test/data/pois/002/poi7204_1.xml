@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7204_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7204_1.xml"/>
+<title>Jardin Tropical</title>
+<updated>2014-08-15T01:47:44.358+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7204"
+	coordinates="49.040166816537,2.0740221440792|49.039994505985,2.0743601024151|49.039748347017,2.0740865170956|49.039934724633,2.0737592875957|49.040166816537,2.0740221440792"
+	active="true"
+	markerType="polygon"
+	createdAt="2012-03-23T14:04:21.000+01:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	deletedAt="2012-03-23T14:04:36.000+01:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Jardin Tropical">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

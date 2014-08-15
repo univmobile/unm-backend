@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5910_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5910_1.xml"/>
+<title>Restaurant U</title>
+<updated>2014-08-15T01:47:31.533+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5910"
+	coordinates="48.810974176097,2.3528364300728"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T14:22:48.000+02:00"
+	updatedAt="2011-07-26T16:28:21.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4860"
+	name="Restaurant U">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>au CHU du Kremlin-Bicêtre</floor>
+		<openingHours>11h30 - 14h00</openingHours>
+		<phone>01-46-71-79-87</phone>
+		<email>restaurant.kremlin@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

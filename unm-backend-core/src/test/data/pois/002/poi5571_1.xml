@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5571_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5571_1.xml"/>
+<title>Parcours élève ingénieur Polytech (PeiP)</title>
+<updated>2014-08-15T01:47:27.552+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5571"
+	coordinates="48.709024151201,2.1709102392197"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:47:47.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4419"
+	name="Parcours élève ingénieur Polytech (PeiP)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Cycle préparatoire de Polytech (Bac +1/+2)</description>
+	<address>
+		<floor>Bâtiment 332</floor>
+		<openingHours>Du lundi au jeudi
+8h45-12h30
+13h15-17h00
+Vendredi
+8h45-13h45 </openingHours>
+		<url>http://www.polytech.u-psud.fr/fr/formations2/peip.html</url>
+		<phone>01 69 33 86 00</phone>
+		<fax>01 69 15 54 50 </fax>
+		<email>brigitte.payelle@u-psud.fr</email>
+	</address>
+</content>
+</entry>

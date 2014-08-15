@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6077_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6077_1.xml"/>
+<title>BU de Copernic Recherche</title>
+<updated>2014-08-15T01:47:33.451+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6077"
+	coordinates="48.839333920846,2.5869470089674"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:27:21.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="BU de Copernic Recherche">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Collections :
+-Informatique, Électronique,
+-Système de communication
+-Mathématiques
+-Linguistique</description>
+	<address>
+		<floor>3è étage</floor>
+		<openingHours>Lundi à jeudi 9h00-12h30/13h15-18h00
+vendredi 9h00-12h30/13h15-16h00</openingHours>
+		<url>http://www.univ-mlv.fr/bibliotheque/bibliotheques/bibliotheque-de-copernic-recherche/</url>
+		<phone>01 60 95 76 17</phone>
+		<email>bibrech@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

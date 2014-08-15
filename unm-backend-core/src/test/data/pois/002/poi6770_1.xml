@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6770_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6770_1.xml"/>
+<title>Résidence Universitaire Les Aunettes</title>
+<updated>2014-08-15T01:47:40.101+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6770"
+	coordinates="48.617577755637,2.4335213005543"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T10:41:57.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6625"
+	name="Résidence Universitaire Les Aunettes">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Cette Résidence Universitaire es située à côté du parc les Coquibus, près du centre-ville. A 15 mn à pied de l'Université. 
+Studios : 22. Logements pour deux étudiants célibataires (T1 bis) : 91 soit 182 lits. 
+Laverie.
+Tarifs : de 268€ à 337€ charges comprises.
+
+</description>
+	<address>
+		<openingHours>L'accueil du public pour toutes les résidences d'Evry s'effectue à la résidence LE DRAGUEUR, 4 allée Jean Rostand.
+
+Du lundi au vendredi : de 8h15 à 12h00
+Mardi et jeudi : 13h30 à 16h00</openingHours>
+		<phone>01 60 91 72 20</phone>
+	</address>
+</content>
+</entry>

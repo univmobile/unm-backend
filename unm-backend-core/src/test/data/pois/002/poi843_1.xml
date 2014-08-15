@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi843_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi843_1.xml"/>
+<title>UFR 07 Etudes internationales et européennes</title>
+<updated>2014-08-15T01:46:42.414+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="843"
+	coordinates="48.847826244792,2.3433843"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T17:21:36.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1027"
+	name="UFR 07 Etudes internationales et européennes">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor> Aile Soufflot, 2 et 3e étage</floor>
+		<openingHours>Lundi au vendredi
+09h30-12h30
+14h00-16h00
+</openingHours>
+		<itinerary>RER B 
+Station Luxembourg
+Bus 21, 27, 38, 82, 84, 85 et 89 </itinerary>
+		<phone>01 44 07 75 12</phone>
+	</address>
+</content>
+</entry>

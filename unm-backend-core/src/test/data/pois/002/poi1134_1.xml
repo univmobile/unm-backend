@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1134_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1134_1.xml"/>
+<title>UFR 05 Droit des Affaires</title>
+<updated>2014-08-15T01:46:45.158+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1134"
+	coordinates="48.846969007749,2.34489910304"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-18T16:18:07.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1027"
+	name="UFR 05 Droit des Affaires">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Aile Cujas, 4e étage, 400</floor>
+		<openingHours>Lundi-vendredi
+10h00-12h00
+14h00-16h00
+Sauf mardi
+09h30-16h30</openingHours>
+		<itinerary>RER B
+Station Luxembourg
+Bus 21, 27, 38, 82, 84, 85 et 89 </itinerary>
+		<phone>01 44 07 77 35</phone>
+		<email>ufr05@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

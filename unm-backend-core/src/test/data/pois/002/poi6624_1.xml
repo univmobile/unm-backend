@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6624_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6624_1.xml"/>
+<title>Résidence Universitaire Le Dragueur</title>
+<updated>2014-08-15T01:47:38.835+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6624"
+	coordinates="48.627645961752,2.4317745119333"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T09:48:16.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6622"
+	name="Résidence Universitaire Le Dragueur">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Cette Résidence Universitaire est située au cœur de la ville, près de l’IUT.
+Studios (T1) : 104. Logements deux pièces (T2) : 6.
+Laverie.
+Tarifs : de 346€ à 424€ charges comprises.</description>
+	<address>
+		<openingHours>Du lundi au vendredi : de 8h15 à 12h00
+Mardi et jeudi : 13h30 à 16h00
+
+Attention : l'accueil et le secrétariat seront fermés au public du 10 au 15 août 2009. Du 17 au 21 août de 8h30 à 12h30.</openingHours>
+		<phone>01 60 91 72 20</phone>
+	</address>
+</content>
+</entry>

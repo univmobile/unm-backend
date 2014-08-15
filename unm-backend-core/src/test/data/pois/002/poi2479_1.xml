@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2479_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2479_1.xml"/>
+<title>Siège Paris Descartes </title>
+<updated>2014-08-15T01:46:57.197+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2479"
+	coordinates="48.851378444272,2.34098844"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:56:08.000+02:00"
+	updatedAt="2011-07-18T16:56:38.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="François Cadé"
+	parentUid="2477"
+	name="Siège Paris Descartes ">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 4 et 10 : Odéon
+RER B et C St. Michel Notre Dames 
+Bus: 21-27-38-63-85-86-87-96</itinerary>
+	</address>
+	<child uid="3377" active="true"/>
+	<child uid="3379" active="true"/>
+	<child uid="3319" active="true"/>
+	<child uid="2785" active="true"/>
+	<child uid="2792" active="true"/>
+	<child uid="2762" active="true"/>
+	<child uid="2772" active="true"/>
+	<child uid="2766" active="true"/>
+	<child uid="2750" active="true"/>
+	<child uid="2743" active="true"/>
+	<child uid="2696" active="true"/>
+	<child uid="2527" active="true"/>
+	<child uid="3291" active="true"/>
+	<child uid="3408" active="true"/>
+	<child uid="3715" active="true"/>
+	<child uid="3743" active="true"/>
+</content>
+</entry>

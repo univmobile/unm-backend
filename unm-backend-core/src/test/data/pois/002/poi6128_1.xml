@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6128_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6128_1.xml"/>
+<title>BU de l'UFR SITEC</title>
+<updated>2014-08-15T01:47:34.081+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6128"
+	coordinates="48.82575299881,2.1989765390754"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:11:15.000+02:00"
+	updatedAt="2011-09-29T11:33:26.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="super admin"
+	parentUid="2424"
+	name="BU de l'UFR SITEC">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bâtiment E-1er étage bureau 111-113</floor>
+		<phone>01 40 97 78 67</phone>
+	</address>
+</content>
+</entry>

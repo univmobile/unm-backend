@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7249_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7249_1.xml"/>
+<title>Bâtiment I</title>
+<updated>2014-08-15T01:47:44.811+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7249"
+	coordinates="48.790780747735,2.3297654092312"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-12T15:21:02.000+01:00"
+	updatedAt="2012-12-17T14:47:38.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7242"
+	name="Bâtiment I">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER ligne B - station Arcueil-Cachan, puis Bus 187 - arrêt division Leclerc ou le Bus 184 - arrêt Camille Desmoulins.
+OU station Bagneux puis 10’ à pied en suivant « ENS Cachan »</itinerary>
+		<fullAddress>76, rue Camille Desmoulins
+94230 CACHAN</fullAddress>
+	</address>
+	<child uid="7290" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5500_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5500_1.xml"/>
+<title>Résidence Universitaire Les Rives de l'Yvette</title>
+<updated>2014-08-15T01:47:26.888+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5500"
+	coordinates="48.699198787751,2.1636957675219"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T15:55:31.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5497"
+	name="Résidence Universitaire Les Rives de l'Yvette">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Cette Résidence Universitaire est située près du centre de Bures, à l’entrée de l’Université.
+
+Chambres individuelles : 602. Salle de musique, de ping-pong.
+Tarif : 146€ charges comprises.</description>
+	<address>
+		<openingHours>Horaires d'ouverture du secrétariat pendant toute l'année : lundi, mardi, jeudi, vendredi, de 9h15 à 12h30 et de 13h30 à 16h15.
+Attention :
+Horaires d'ouverture du secrétariat pendant l'été : du lundi au vendredi, de 9h à 12h15.</openingHours>
+		<phone>01 69 15 77 02</phone>
+	</address>
+</content>
+</entry>

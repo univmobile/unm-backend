@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi311_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi311_1.xml"/>
+<title>Polygone 1</title>
+<updated>2014-08-15T01:46:39.073+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="311"
+	coordinates="48.956445341316,2.341135114475|48.956443580091,2.3418217599828|48.955992704247,2.3418271244009|48.955990943006,2.3411431611021|48.956445341316,2.34113511447"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-07-20T16:32:20.000+02:00"
+	updatedAt="2011-05-31T11:58:05.000+02:00"
+	deletedAt="2010-09-07T14:39:12.000+02:00"
+	createdBy="raphael"
+	updatedBy="rchervet"
+	name="Polygone 1">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

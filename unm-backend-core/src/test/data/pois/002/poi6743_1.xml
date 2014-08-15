@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6743_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6743_1.xml"/>
+<title>Restaurant Bullier</title>
+<updated>2014-08-15T01:47:39.855+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6743"
+	coordinates="48.840462000663,2.3374405503273"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-17T20:01:27.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6744"
+	name="Restaurant Bullier">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Chaque samedi : formule mega pizza de 11h30 à 14h
+Le dimanche (d'octobre à fin juin) : brunch à partir de 10h30 </description>
+	<address>
+		<openingHours>RU ouvert 7j/7 du lundi au dimanche de 11h30 à 14h00 et le soir de 18h15 à 20h00
+Cafétéria du lundi au vendredi de 11h00 à 14h30
+</openingHours>
+		<itinerary>RER B : Port Royal</itinerary>
+		<url>http://www.crous-paris.fr</url>
+	</address>
+</content>
+</entry>

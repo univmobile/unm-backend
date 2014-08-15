@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7240_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7240_1.xml"/>
+<title>Association sportive (BDS)</title>
+<updated>2014-08-15T01:47:44.692+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7240"
+	coordinates="48.790293233526,2.3278392478824"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-12T14:37:52.000+01:00"
+	updatedAt="2012-12-17T16:19:24.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7221"
+	name="Association sportive (BDS)">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Les activités sportives et physiques proposées par le BDS sont soit encadrées par des enseignants, soit proposées en pratique autonome.
+Certaines activités font l'objet d'une pratique compétitive dans le cadre de la FFSU.
+Le BDS organise des événements tout au long de l'année :
+- Week-end des équipes en compétition (WEC)
+- InterENS Sports
+- Challenge ENSYMPIADES
+- Nuit du Volley</description>
+	<address>
+		<floor>Hall du bâtiment Cournot</floor>
+		<url>http://www.bds.ens-cachan.fr/</url>
+		<email>bds@crans.org</email>
+	</address>
+</content>
+</entry>

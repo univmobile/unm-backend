@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi419_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi419_1.xml"/>
+<title>Bibliothèque Broca</title>
+<updated>2014-08-15T01:46:39.900+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="419"
+	coordinates="48.838269075648,2.34858512"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-05T10:03:09.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="raphael"
+	updatedBy="Pascale.randriantiana "
+	parentUid="1024"
+	name="Bibliothèque Broca">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Domaine sciences juridiques, gestion des entreprises</description>
+	<address>
+		<floor>Rez-de-chaussée</floor>
+		<openingHours>Lundi au mercredi 
+09h00 à 20h00
+Jeudi et vendredi 
+09h00 à 19h00
+Samedi 
+09h00-13h00</openingHours>
+		<itinerary>Métro 7
+Station Censier-Daubenton
+
+Bus 27, 47, 83 et 91
+Arrêt Claude Bernard, Monge, Gobelins ou Pascal</itinerary>
+		<url>http://www.univ-paris1.fr/bibliotheques/trouver/une-bibliotheque/bibliotheque-broca/</url>
+		<phone>01 53 55 28 48</phone>
+		<email>bibbroca@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

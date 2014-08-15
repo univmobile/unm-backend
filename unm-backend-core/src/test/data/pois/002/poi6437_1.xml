@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6437_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6437_1.xml"/>
+<title>Génétique (M1-M2)</title>
+<updated>2014-08-15T01:47:37.201+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6437"
+	coordinates="48.827823913208,2.3805838823318"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T14:44:26.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1778"
+	name="Génétique (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Lamarck, rez-de-chaussée haut, bureau 52</floor>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=167</url>
+		<phone>01 57 27 82 25</phone>
+		<email>laetitia.aurelio@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

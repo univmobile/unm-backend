@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3005_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3005_1.xml"/>
+<title>Laboratoire de neurophysiologie</title>
+<updated>2014-08-15T01:47:02.003+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3005"
+	coordinates="48.855596910882,2.33170565217"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:05:44.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2331"
+	name="Laboratoire de neurophysiologie">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Director: Serge CHARPAK
+INSERM U603 - CNRS UMR 8154
+3rd Floor</description>
+	<address>
+		<phone>01 42 86 41 50</phone>
+		<fax>01 42 86 41 51</fax>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3771_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3771_1.xml"/>
+<title>Institut de Formation Doctorale</title>
+<updated>2014-08-15T01:47:10.230+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3771"
+	coordinates="48.85042090045,2.3415624350309"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:39:09.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3740"
+	name="Institut de Formation Doctorale">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>Escalier C 1er étage</floor>
+		<url>http://www.ifd.upmc.fr/fr/</url>
+	</address>
+</content>
+</entry>

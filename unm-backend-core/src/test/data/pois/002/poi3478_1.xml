@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3478_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3478_1.xml"/>
+<title>Mathématiques - M1-2</title>
+<updated>2014-08-15T01:47:07.072+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3478"
+	coordinates="48.847703190667,2.358355745673"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:21:58.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2830"
+	name="Mathématiques - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Cette mention a pour objectif de donner une formation approfondie en mathématiques pures ou en mathématiques appliquées, préparant directement aux métiers de la recherche et de l’industrie au sens le plus large. </description>
+	<address>
+		<floor>couloir C, 1è étage, bureau 110</floor>
+		<openingHours>Lundi au Vendredi : 9h00-11h30/13h30-17h</openingHours>
+		<url>http://www.master.math@upmc.fr</url>
+		<phone>01 44 27 37 56</phone>
+		<email>master.math@upmc.fr</email>
+	</address>
+</content>
+</entry>

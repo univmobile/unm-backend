@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3955_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3955_1.xml"/>
+<title>Sorbonne Art</title>
+<updated>2014-08-15T01:47:12.050+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3955"
+	coordinates="48.842142524975,2.3359807580709"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:20:12.000+02:00"
+	updatedAt="2011-09-26T16:46:05.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3728"
+	name="Sorbonne Art">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le &quot;Sorbonne Art&quot; est un journal semestriel fait par les étudiants et pour les étudiants. Née au centre d’archéologie et d’histoire de l’art, la publication axe sa ligne éditoriale autour de ce sujet d’étude et s’intéresse particulièrement à l’actualité artistique en Ile de France.</description>
+	<address>
+		<url>http://sorbonne-art.fr/accueil</url>
+		<email>sorbonne.art@gmail.com</email>
+	</address>
+</content>
+</entry>

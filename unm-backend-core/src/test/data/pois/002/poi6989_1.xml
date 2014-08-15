@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6989_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6989_1.xml"/>
+<title>Association des Etudiants de la Licence Humanités : Les alhu</title>
+<updated>2014-08-15T01:47:41.994+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6989"
+	coordinates="48.904049564119,2.2173231840134"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:17:07.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2461"
+	name="Association des Etudiants de la Licence Humanités : Les alhu">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Cette Association est apolitique, non syndicale et à but non lucratif. Elle a pour missions :
+- de faciliter la vie des étudiants de la Licence Humanités, en leur apportant toute aide pertinente (conseils, entraide, etc.).
+- d’organiser des événements culturels ouverts à tous les étudiants (Humanités ou non).
+- de contribuer à l’animation du Forum des étudiants de la Licence Humanités, et de développer de nouveaux espaces de discussion sur Internet, si besoin est.
+- de mettre en relation les différentes promotions d’étudiants de la Licence Humanités, pendant et après leurs études à l’Université Paris Ouest Nanterre La Défense, en organisant des rencontres et en constituant un réseau d’étudiants et anciens étudiants. Pour cela, elle tiendra à jour un annuaire des anciens étudiants.
+- d’assurer la promotion de la Licence Humanités auprès de différents partenaires. </description>
+	<address>
+		<floor>Bâtiment L - Bureau 109 - 1er étage</floor>
+		<url>http://www.u-paris10.fr/05570396/0/fiche___pagelibre/</url>
+		<phone>06 08 05 20 49</phone>
+		<email>les.alhumes@gmail.com</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6809_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6809_1.xml"/>
+<title>Cafétéria Les quais des grésillons</title>
+<updated>2014-08-15T01:47:40.425+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6809"
+	coordinates="48.914701309572,2.30294264853"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T12:29:15.000+02:00"
+	updatedAt="2012-02-03T12:30:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5437"
+	name="Cafétéria Les quais des grésillons">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>92 avenue des grésillons - 92600 ASNIERES</fullAddress>
+	</address>
+	<child uid="6811" active="true"/>
+</content>
+</entry>

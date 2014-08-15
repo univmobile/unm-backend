@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi822_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi822_1.xml"/>
+<title>BIbliothèque de Droit Social</title>
+<updated>2014-08-15T01:46:42.197+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="822"
+	coordinates="48.845264963011,2.3458506"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T15:23:35.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1016"
+	name="BIbliothèque de Droit Social">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>2e étage</floor>
+		<openingHours>Lundi 
+09h30-18h30
+Mardi au vendredi
+09h30-17h00
+</openingHours>
+		<itinerary>Bus 21, 27, 47, 84 et 89</itinerary>
+		<phone>01 44 07 78 16</phone>
+		<email>Beatrice.Robinet@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

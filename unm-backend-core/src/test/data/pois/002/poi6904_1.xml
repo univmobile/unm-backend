@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6904_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6904_1.xml"/>
+<title>Bibliothèque interuniversitaire Sainte-Geneviève</title>
+<updated>2014-08-15T01:47:41.174+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6904"
+	coordinates="48.847070176622,2.3458170890808"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-13T11:48:43.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Martine HATTON"
+	updatedBy="Jean-François Maynier"
+	parentUid="6896"
+	name="Bibliothèque interuniversitaire Sainte-Geneviève">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Du lundi au samedi10h à 22h
+Des horaires spécifiques s'appliquent pendant les vacances de Noël, de Pâques et d'été.</openingHours>
+		<phone>01 44 41 97 97</phone>
+		<email>bsgmail@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

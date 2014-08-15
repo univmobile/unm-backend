@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2056_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2056_1.xml"/>
+<title>AES L1-3</title>
+<updated>2014-08-15T01:46:53.768+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2056"
+	coordinates="48.780372052966,2.0442905277"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T16:59:54.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	deletedAt="2011-06-20T15:45:30.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="haromoys"
+	name="AES L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Batiment Vauban - Bureau 418 </floor>
+		<phone>0139255384</phone>
+		<email>nathalie.pierron@uvsq.fr</email>
+	</address>
+</content>
+</entry>

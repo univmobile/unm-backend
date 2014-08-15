@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7372_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7372_1.xml"/>
+<title>Jardin des Plantes</title>
+<updated>2014-08-15T01:47:45.681+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7372"
+	coordinates="48.843402579661,2.3609232902527"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-24T15:11:20.000+02:00"
+	updatedAt="2013-05-03T12:58:45.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7371"
+	name="Jardin des Plantes">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="7402" active="true"/>
+	<child uid="7401" active="true"/>
+	<child uid="7399" active="true"/>
+	<child uid="7400" active="true"/>
+	<child uid="7398" active="true"/>
+	<child uid="7397" active="true"/>
+	<child uid="7396" active="true"/>
+	<child uid="7382" active="true"/>
+	<child uid="7381" active="true"/>
+	<child uid="7380" active="true"/>
+	<child uid="7379" active="true"/>
+	<child uid="7378" active="true"/>
+	<child uid="7377" active="true"/>
+	<child uid="7376" active="true"/>
+	<child uid="7374" active="true"/>
+</content>
+</entry>

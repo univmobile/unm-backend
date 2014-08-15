@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2943_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2943_1.xml"/>
+<title>Dpt. Activités Physiques et Sportives</title>
+<updated>2014-08-15T01:47:01.344+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2943"
+	coordinates="48.847984864334,2.358466386795"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:09:19.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2806"
+	name="Dpt. Activités Physiques et Sportives">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+</content>
+</entry>

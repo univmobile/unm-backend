@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1886_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1886_1.xml"/>
+<title>Société d'ethnologie</title>
+<updated>2014-08-15T01:46:52.039+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1886"
+	coordinates="48.904159638619,2.2100168466568"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:45:30.000+02:00"
+	updatedAt="2011-12-15T16:08:04.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2507"
+	name="Société d'ethnologie">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>La Société d’ethnologie est une association de type 1901. Elle a pour objectif de contribuer aux progrès de l’ethnologie, de la sociologie comparative, de la préhistoire et de l’ethnomusicologie. </description>
+	<address>
+		<floor>MAE - Bureau 365D, 3ème étage</floor>
+		<openingHours>Lundi : 9h30-13h et 14h -17h30
+Mardi, mercredi, jeudi : 9h30 à 13h </openingHours>
+		<url>http://www.mae.u-paris10.fr/socethno/editions.htm</url>
+		<phone>01 46 69 26 10</phone>
+		<email>société.ethnologie@mae.u-paris10.fr</email>
+	</address>
+</content>
+</entry>

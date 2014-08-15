@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5875_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5875_1.xml"/>
+<title>Fluides, automatique et systèmes thermiques (FAST)</title>
+<updated>2014-08-15T01:47:31.129+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5875"
+	coordinates="48.707361496368,2.1774159371853"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T17:39:31.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5874"
+	name="Fluides, automatique et systèmes thermiques (FAST)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Unité mixte de recherche (UMR) 7608.</description>
+	<address>
+		<floor>Bâtiment 502, bureau 205</floor>
+		<url>http://www.fast.u-psud.fr/</url>
+		<phone>01 69 15 80 90</phone>
+		<fax>01 69 15 80 60</fax>
+		<email>contact@fast.u-psud.fr</email>
+	</address>
+</content>
+</entry>

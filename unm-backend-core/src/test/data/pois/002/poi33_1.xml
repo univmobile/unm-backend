@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi33_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi33_1.xml"/>
+<title>Le Service d'Accueil des Etudiants Handicapés</title>
+<updated>2014-08-15T01:46:38.288+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="33"
+	coordinates="48.779885269799,2.04446017742"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T14:22:58.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-05T13:54:07.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Le Service d'Accueil des Etudiants Handicapés">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>L’objectif du SAEH est d’améliorer l’accessibilité à l’enseignement et au savoir des étudiants en situation de handicap en mettant en place tous les aménagements auxquels ils ont droit. Il accompagne et suit les étudiants durant leurs études.
+
+Missions du service :
+- Repérage des futurs étudiants et préparation à la rentrée universitaire.
+- Accueil et suivi tout au long de l’année des étudiants handicapés.
+- Participation à l’analyse des besoins de l’étudiant, en liaison avec le SUMPPS et les MDPH.
+- Mise en place et gestion des aides matérielles et humaines.
+- Mise en place et suivi des actions de communication et de sensibilisation.
+- Coordination avec les UFR et leurs équipes enseignantes, les scolarités etc…
+- Coordination et mutualisation de compétences, notamment dans la prise en considération de la situation de handicap de l’étudiant avec d’autres services de l’UVSQ : DRIP, DVE..
+- Travail autour de l’insertion professionnelle des étudiants handicapés.
+
+Aides apportées par le SAEH :
+- Prêt de matériel : ordinateurs portables, logiciels spécifiques, dictaphones, clés USB, cartes de photocopies etc…
+- Mise à disposition d’une imprimante braille, d’un four relief, d’un télé-agrandisseur
+- Suivi des contrats des preneurs de notes, secrétaires d’examens, tuteurs (soutien pédagogique)
+- Organisation annuel d’un forum emploi handicap pour permettre aux étudiants handicapés de rencontrer les entreprises
+- Organisation d’opération de communication et de sensibilisation pour lutter contre les représentations collectives du handicap (Journée Handivalides…)
+- Diffusion d’offres de stage, d’emploi et/ou de job d’été
+- Diffusion d’informations culturelles et sportives
+
+</description>
+	<address
+		zipCode="78280"
+		city="GUYANCOURT"
+		countryCode="FR">
+		<phone>01 39 25 51 12  </phone>
+		<email>christine.barthelemy@uvsq.fr</email>
+		<fullAddress>UVSQ / UFR SSH
+Service d'accueil des étudiants handicapés
+5-7 boulevard d d'Alembert
+
+ 78280 GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

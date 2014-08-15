@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4691_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4691_1.xml"/>
+<title>Résidence Universitaire Vauban </title>
+<updated>2014-08-15T01:47:19.629+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4691"
+	coordinates="48.779780695512,2.044276446104"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T10:39:52.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	createdBy="yasmine"
+	updatedBy="d.rasse"
+	parentUid="4686"
+	name="Résidence Universitaire Vauban ">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Cette Résidence Universitaire est située dans le centre-ville, au cœur de l’université. A 5 minutes à pied de la gare. 
+Elle dispose d'une bibliothèque, de salles de travail, d'une salle de télévision.
+Studios : 94. Logements pour deux étudiants célibataires (T1bis) : 17 soit 34 lits. Logements deux pièces (T2) : 4 lits.
+Tarifs : de 305€ à 485€ charges comprises.</description>
+	<address>
+		<floor>1 ère étage </floor>
+		<openingHours>Du lundi au vendredi, de 8h35 à 13h00 et de 14h45 à 18h15.
+
+Attention :
+Juillet : de 8h30 à 12h00 et de 14h00 à 16h00 du lundi au vendredi
+Août : de 8h30 à 12h00 du lundi au vendredi</openingHours>
+		<phone>01 34 52 08 05</phone>
+		<fax>01 34 52 08 07</fax>
+		<email>residence.vauban@crous-versailles.fr</email>
+	</address>
+</content>
+</entry>

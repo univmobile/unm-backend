@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6841_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6841_1.xml"/>
+<title>Résidence Universitaire de Bagneux</title>
+<updated>2014-08-15T01:47:40.685+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6841"
+	coordinates="48.790855200121,2.3170537501574"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T15:48:39.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6839"
+	name="Résidence Universitaire de Bagneux">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>À 10 min à pied du RER, résidence située dans une Cité HLM.
+Résidence traditionnelle réhabilitée - réouverture prévue à la rentrée 2011-2012.
+148 T1 bis de 324 € à 339 € charges comprises. Logement pour deux étudiants comprenant une cuisine équipée, une salle de bain et deux chambres individuelles.
+
+14 T1 à 424 € accessibles uniquement aux personnes à mobilité réduite sur justificatifs.</description>
+	<address>
+		<openingHours>de 8h45 à 11h45 et de 14h00 à 16h30</openingHours>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi543_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi543_1.xml"/>
+<title>Polygone 1</title>
+<updated>2014-08-15T01:46:40.673+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="543"
+	coordinates="48.652824833954,1.8534788489342|48.652443869513,1.8537229299545|48.652392483392,1.8535324931145|48.652773448221,1.8532884120941|48.652824833954,1.853478848"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-10-08T10:01:49.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	deletedAt="2011-06-03T15:04:07.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	name="Polygone 1">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>19 allée des Vignes
+78120 Rambouillet</fullAddress>
+	</address>
+</content>
+</entry>

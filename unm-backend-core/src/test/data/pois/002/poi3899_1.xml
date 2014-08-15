@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3899_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3899_1.xml"/>
+<title>Littérature et histoires</title>
+<updated>2014-08-15T01:47:11.469+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3899"
+	coordinates="48.947156549937,2.3616551980376"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:52:39.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Littérature et histoires">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 1579 - Littérature et histoires appartenant à l'École doctorale (ED) 31 : Pratiques et théories du sens.
+Directrice : Tiphaine Samoyault</description>
+	<address>
+		<floor>3ème étage Bâtiment D, bureau 321</floor>
+		<url>http://www.litterature-et-histoires.univ-paris8.fr/</url>
+		<phone>01 49 40 73 31</phone>
+		<email> tiphainesamoyault@wanadoo.fr</email>
+	</address>
+</content>
+</entry>

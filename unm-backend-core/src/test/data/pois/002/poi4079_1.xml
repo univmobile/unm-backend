@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4079_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4079_1.xml"/>
+<title>Médecine préventive universitaire (SUMPPS)</title>
+<updated>2014-08-15T01:47:13.421+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4079"
+	coordinates="48.945680331442,2.3610198497772"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:50:56.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="Marion MAINFRAY"
+	parentUid="2600"
+	name="Médecine préventive universitaire (SUMPPS)">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Le service universitaire de médecine préventive et de promotion de la santé (SUMPPS) est composé de médecins, infirmières, psychologues et de secrétaires.
+</description>
+	<address>
+		<floor>1er étage Maison de l'étudiant</floor>
+		<openingHours>Du lundi au vendredi
+9h-17h</openingHours>
+		<url>http://www.univ-paris8.fr/Service-de-medecine-preventive</url>
+		<phone>01 49 40 65 10</phone>
+		<fax>01 49 40 65 11</fax>
+		<email>medecine.preventive@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

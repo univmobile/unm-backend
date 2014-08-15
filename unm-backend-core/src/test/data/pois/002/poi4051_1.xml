@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4051_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4051_1.xml"/>
+<title>UMR 7587</title>
+<updated>2014-08-15T01:47:13.116+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4051"
+	coordinates="48.841141370993,2.3472465388477"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:00:30.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4048"
+	name="UMR 7587">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut Langevin &quot;ondes et images&quot; (LAO) - UMR 7587</description>
+	<address>
+		<url>http://www.institut-langevin.espci.fr/</url>
+		<phone>01 45 87 01 88</phone>
+		<email>mathias.fink@upmc.fr</email>
+	</address>
+</content>
+</entry>

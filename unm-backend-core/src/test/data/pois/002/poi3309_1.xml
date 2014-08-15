@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3309_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3309_1.xml"/>
+<title>CMCP - UMR 7574</title>
+<updated>2014-08-15T01:47:05.254+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3309"
+	coordinates="48.846241278832,2.35696887597"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:59:59.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3304"
+	name="CMCP - UMR 7574">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le laboratoire de chimie de la matière condensée de Paris (CMCP) est une unité mixte du CNRS, répartie sur deux sites : l'UPMC (site Jussieu) et l’Ecole Nationale Supérieure de Chimie de Paris (site ENSCP). Le LCMCP est également placé sous la co-tutelle du Collège de France et de l’Ecole Pratique des Hautes Etudes. Ses membres dépendent des sections 11 et 15 du CNRS et de la section 33 du CNU.
+Il est actuellement dirigé par Clément Sanchez, directeur de recherche au CNRS.</description>
+	<address>
+		<floor>5è étage</floor>
+		<url>http://www.labos.upmc.fr/lcmcp/</url>
+	</address>
+</content>
+</entry>

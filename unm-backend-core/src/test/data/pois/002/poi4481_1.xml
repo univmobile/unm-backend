@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4481_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4481_1.xml"/>
+<title>Association des Élèves de l'ENSIIE</title>
+<updated>2014-08-15T01:47:17.759+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4481"
+	coordinates="48.626428723948,2.4311009421945"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:01:42.000+02:00"
+	updatedAt="2012-05-15T10:42:06.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Stéphanie ROCHE"
+	parentUid="4440"
+	name="Association des Élèves de l'ENSIIE">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le Bureau des Élèves est le bureau de l'Association des Élèves de l'ENSIIE (AEIIE), et à ce titre l'organe central de la vie associative iienne. Coordonner les activités des clubs étudiants, organiser des manifestations au nom des élèves et pour les élèves, leur proposer des services au quotidien ; les attributions du BdE sont très diverses, mais toutes ont en commun de contribuer avant tout à entretenir au sein de la communauté des étudiants un esprit solidaire et dynamique.
+
+L'école accueille plus de 30 associations, autour de thèmes très diverses :
+IImage : en charge de l'image de l'école
+Muzzik : pour faire de la musique à l'école
+ITV : association vidéo
+DansIIe : pour danser à l'école, ou devenir Pompom girl
+NightIIE's : l'association qui organise les soirées de l'école
+CuIsIne : cuisiner à l'école
+MisterIIE : concours annuel de Mister IIE
+Gala : organisation du gala annuel de l'école
+SkIIE : vacances au ski
+LanPartIIE : nuit du jeu vidéo à l'école
+Origine : club de robotique
+2ie4L : participation au 4L Trophy au Maroc
+KartIIE : competition kart interne/externe
+ASIIE : association sportive
+IIE ++ : aide aux devoirs
+Liien : lien entre les élèves et l'admin
+LuIIE : association jeunx de société
+IImondE  : le journal de l'école
+CID : club d'infographie de l'école
+Com'dIIe : impro, théâtre
+OrigamIE : club d'origamie
+Bakaclub : club de manga
+EchecIIE : club d'échec
+BD : club de BD
+GuIIldE : club de jeun de rôle
+...</description>
+	<address>
+		<url>www.bde.iiens.net</url>
+		<phone>01 69 36 74 87</phone>
+		<email> bde@ensiie.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2058_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2058_1.xml"/>
+<title>Entrée du batiment L</title>
+<updated>2014-08-15T01:46:53.780+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2058"
+	coordinates="48.903659570397,2.217119336"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T17:02:44.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2461"
+	name="Entrée du batiment L">
+	<poiType id="14" label="Entrée PMR" categoryId="7" categoryLabel="Relais handicap"/>
+</content>
+</entry>

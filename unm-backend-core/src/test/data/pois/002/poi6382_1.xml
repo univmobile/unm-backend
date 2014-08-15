@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6382_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6382_1.xml"/>
+<title>Développment du médicament Licence pro</title>
+<updated>2014-08-15T01:47:36.639+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6382"
+	coordinates="48.788862618199,2.4441193789244"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T16:02:26.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4528"
+	name="Développment du médicament Licence pro">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Développement du médicament, santé humaine et animale (DMSHA)</description>
+	<address>
+		<floor>L1</floor>
+		<url>http://iut.u-pec.fr/formations/licences-professionnelles/</url>
+		<phone>01 45 17 17 80</phone>
+		<email>gb-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

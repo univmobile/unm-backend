@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4483_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4483_1.xml"/>
+<title>Geographie L1-3</title>
+<updated>2014-08-15T01:47:17.781+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4483"
+	coordinates="49.038948204714,2.0743761956692"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:02:42.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3851"
+	name="Geographie L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Yvette DUBOIS</description>
+	<address>
+		<phone>01 34 25 64 36</phone>
+	</address>
+</content>
+</entry>

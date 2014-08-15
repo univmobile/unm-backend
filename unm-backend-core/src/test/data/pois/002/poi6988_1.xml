@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6988_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6988_1.xml"/>
+<title>Les Ailes de Nanterre</title>
+<updated>2014-08-15T01:47:41.983+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6988"
+	coordinates="48.902325247071,2.2145980596542"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:13:02.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2495"
+	name="Les Ailes de Nanterre">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Les Ailes de Nanterre ont pour but de favoriser l’intégration des étudiants étrangers dans toutes leurs démarches administratives. Il nous est apparu en effet nécessaire d’aider des personnes ayant peu accès à l’information dans toutes leurs démarches.
+
+Mais les Ailes de Nanterre tentent de favoriser aussi l’intégration de chaque étudiant au sein de l’université. Un de ces principaux objectif est de créer une vraie sensation d’appartenance à l’université Paris Ouest. Les lacunes associatives du secteur universitaire face aux écoles de commerce est aujourd’hui avéré. C’est pour cela qu’à travers la rencontre des étudiants entre eux, il est possible d’obtenir cette cohésion souhaitée. </description>
+	<address>
+		<floor>Bâtiment F</floor>
+		<openingHours>La permanence est assurée par Antoine Pamard qui sera à l'université tous les mardis et jeudis dans notre futur local. Pour l'instant chaque étudiant peut joindre l'association en passant par lui au 06 12 76 05 10 </openingHours>
+		<phone>06 20 29 40 45</phone>
+		<email>olivier.regerat89@hotmail.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5891_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5891_1.xml"/>
+<title>Cafétéria de l' Illustration</title>
+<updated>2014-08-15T01:47:31.328+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5891"
+	coordinates="48.913918283113,2.4185062944889"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T10:18:16.000+02:00"
+	updatedAt="2011-07-26T16:12:42.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4856"
+	name="Cafétéria de l' Illustration">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>8h00 - 20h00</openingHours>
+		<phone>01-48-22-09-52</phone>
+		<email>restaurant.bobigny@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

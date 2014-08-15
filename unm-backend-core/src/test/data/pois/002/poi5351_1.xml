@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5351_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5351_1.xml"/>
+<title>Chimie (L3)</title>
+<updated>2014-08-15T01:47:25.458+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5351"
+	coordinates="48.702976888699,2.1819166839123"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T14:56:12.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4573"
+	name="Chimie (L3)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 460, bureau B 136</floor>
+		<url>http://www.u-psud.fr/fr/les_formations/les_formations_par_diplome/licences/sciences_technologies_sante/chimie/l3_chimie.html</url>
+		<phone>01 69 15 63 93</phone>
+		<fax>01 69 15 58 87</fax>
+		<email>catherine.gregoire@u-psud.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1245_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1245_1.xml"/>
+<title>Site Garancière</title>
+<updated>2014-08-15T01:46:45.995+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1245"
+	coordinates="48.850805102691,2.336154431104"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T15:10:37.000+01:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Site Garancière">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 4 Saint-Sulpice
+Métro 10, 4 Odéon
+
+</itinerary>
+		<fullAddress>5 rue Garancière
+75006 Paris</fullAddress>
+	</address>
+	<child uid="1786" active="true"/>
+</content>
+</entry>

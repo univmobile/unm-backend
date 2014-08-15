@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1744_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1744_1.xml"/>
+<title>Santé publique M1-2</title>
+<updated>2014-08-15T01:46:50.473+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1744"
+	coordinates="48.913221002271,2.42045760154"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T23:33:47.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="348"
+	name="Santé publique M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1er étage - bureau 139.</floor>
+		<url>http://www-smbh.univ-paris13.fr/smbh/enseig/enseig_lmd/enseig_lmd_master/choixens_lmd_master_.html#</url>
+		<phone>01 48 38 76 41</phone>
+		<fax>01 48 38 76 19</fax>
+		<email>mstces@smbh.univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

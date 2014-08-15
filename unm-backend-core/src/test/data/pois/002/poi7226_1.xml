@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7226_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7226_1.xml"/>
+<title>Salle Condorcet</title>
+<updated>2014-08-15T01:47:44.521+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7226"
+	coordinates="48.788442538969,2.3270791769028"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-06T16:46:17.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Salle Condorcet">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>Capacité d'accueil : 100 places</description>
+	<address>
+		<floor>Aile P, Niveau 2</floor>
+	</address>
+</content>
+</entry>

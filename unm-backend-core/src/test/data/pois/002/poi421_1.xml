@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi421_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi421_1.xml"/>
+<title>Centre Saint Charles</title>
+<updated>2014-08-15T01:46:39.925+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="421"
+	coordinates="48.841794444319,2.2806742787361"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-05T10:32:50.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre Saint Charles">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="1025" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1030_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1030_1.xml"/>
+<title>Boutique publications de la Sorbonne</title>
+<updated>2014-08-15T01:46:44.313+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1030"
+	coordinates="48.845373342949,2.342388"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-11T16:01:39.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="850"
+	name="Boutique publications de la Sorbonne">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<openingHours>10h00-13h00
+14h00-17h30 </openingHours>
+		<itinerary>RER B 
+Station Luxembourg
+
+Bus 21, 27, 38, 84 et 85</itinerary>
+		<fullAddress>212 rue Saint-Jacques
+75005 Paris </fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7272_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7272_1.xml"/>
+<title>LPQM</title>
+<updated>2014-08-15T01:47:45.079+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7272"
+	coordinates="48.788088224171,2.3269718885422"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T16:10:07.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7215"
+	name="LPQM">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le laboratoire de photonique quantique et moléculaire (UMR 8537) est une unité mixte de recherche du CNRS dépendant de l'INSIS et de l'Ecole normale supérieure de Cachan. Il a été créé le 1er janvier 1998 par Joseph Zyss qui en fut le directeur jusqu'à la fin 2005. Le laboratoire a été initié dans le cadre d' une convention tripartite regroupant trois partenaires fondateurs: le CNRS, l'ENS Cachan et France Telecom R&amp;D.
+Le laboratoire appartient à la fédération de recherche Institut d'Alembert (IFR 121) créée le 1er janvier 2002, qui l'associe à trois autres laboratoires de l'ENS Cachan : en Chimie (PPSM), Biologie (LBPA), et Physique appliquée (SATIE) autour du thème de la photonique moléculaire appliquée aux biotechnologies et aux télécommunications.</description>
+	<address>
+		<url>http://www.lpqm.ens-cachan.fr/</url>
+		<phone>01 47 40 55 65</phone>
+		<fax>01 47 40 55 67</fax>
+		<email>ginette.puyhaubert@lpqm.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

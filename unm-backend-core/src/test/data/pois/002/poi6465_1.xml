@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6465_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6465_1.xml"/>
+<title>Chimie L1-2</title>
+<updated>2014-08-15T01:47:37.513+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6465"
+	coordinates="48.788741952196,2.4427883327007"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T17:09:51.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4525"
+	name="Chimie L1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Responsables pédagogiques
+François Raulin - 01 45 17 15 58 - raulin@lisa.univ-paris12.fr
+Hervé Cottin - 01 45 17 15 63 - herve.cottin@lisa.u-pec.fr</description>
+	<address>
+		<floor>Bâtiment P2</floor>
+		<url>http://sciences-tech.u-pec.fr/formations/</url>
+		<phone>01 45 17 15 58</phone>
+		<email>raulin@lisa.univ-paris12.fr</email>
+	</address>
+</content>
+</entry>

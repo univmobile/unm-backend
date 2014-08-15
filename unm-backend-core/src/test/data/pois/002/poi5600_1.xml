@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5600_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5600_1.xml"/>
+<title>ACUP12</title>
+<updated>2014-08-15T01:47:27.877+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5600"
+	coordinates="48.792875474135,2.4453847110271"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:19:37.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4645"
+	name="ACUP12">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>salle 401</floor>
+		<fax>test</fax>
+		<email>damien.dubat@gmail.com</email>
+	</address>
+</content>
+</entry>

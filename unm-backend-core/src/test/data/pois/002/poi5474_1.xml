@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5474_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5474_1.xml"/>
+<title>Information, systèmes et technologie (M1-M2 IST-EEA)</title>
+<updated>2014-08-15T01:47:26.604+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5474"
+	coordinates="48.698189151392,2.1659038960934"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T15:10:46.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5222"
+	name="Information, systèmes et technologie (M1-M2 IST-EEA)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 220, bureau 320</floor>
+		<url>http://www.master-ist.u-psud.fr/</url>
+		<phone>01 69 15 72 23 </phone>
+		<fax>01 69 15 40 40</fax>
+		<email>sec-master-ist.sciences@u-psud.fr</email>
+	</address>
+</content>
+</entry>

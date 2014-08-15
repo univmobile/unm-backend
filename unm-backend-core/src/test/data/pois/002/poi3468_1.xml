@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3468_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3468_1.xml"/>
+<title>Biologie Moléculaire et Cellulaire - M1-2</title>
+<updated>2014-08-15T01:47:06.956+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3468"
+	coordinates="48.846639876637,2.358635365963"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:11:18.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2767"
+	name="Biologie Moléculaire et Cellulaire - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1è étage</floor>
+		<openingHours>Lundi au vendredi : 9h00-11h30/13h30-14h00</openingHours>
+		<url>http://www.master.bmc.upmc.fr/</url>
+		<phone>01 44 27 34 36</phone>
+		<email>master.bmc@upmc.fr</email>
+	</address>
+</content>
+</entry>

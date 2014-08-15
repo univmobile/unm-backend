@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3697_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3697_1.xml"/>
+<title>Bibliothèque universitaire de Paris 8</title>
+<updated>2014-08-15T01:47:09.471+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3697"
+	coordinates="48.945675046625,2.3627713322639"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T15:15:07.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="yasmine"
+	parentUid="2605"
+	name="Bibliothèque universitaire de Paris 8">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi
+11h30-20h
+Mardi, mercredi, jeudi et vendredi
+9h-20h
+Samedi
+10h-17h30</openingHours>
+		<url>http://www.bu.univ-paris8.fr/</url>
+		<phone>01 49 40 69 69</phone>
+		<fax>01 49 40 69 82</fax>
+		<email>info@bu.univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

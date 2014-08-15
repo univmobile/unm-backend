@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7411_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7411_1.xml"/>
+<title>URFIST</title>
+<updated>2014-08-15T01:47:45.971+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7411"
+	coordinates="48.850032282811,2.3506879806519"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-29T16:15:03.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7361"
+	name="URFIST">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Les formations proposées par l'Urfist de Paris se déroulent soit à Paris, soit sur à Caen et se déclinent en plusieurs formules :
+
+- le catalogue général des stages trimestriellement actualisé, tout public,
+- une programmation spécifique pour les doctorants des Cies et des Ecoles doctorales,
+- des séances - ponctuelles - d’échanges et de rencontres, tout public,
+- des actions de formations sur demande ou à visée nationale.
+
+Qui peut s’inscrire ?
+
+Les stages de l'URFIST s'adressent en priorité aux usagers universitaires, et plus particulièrement à trois types de public :
+
+- Les personnels des bibliothèques et centres documentaires de l'enseignement supérieur
+- Les personnels enseignants
+- Les doctorants
+
+Les professionnels de l'information (bibliothécaires, documentalistes) exerçant dans d’autres structures peuvent également s'inscrire dans la limite des places disponibles.
+
+En savoir plus : http://urfist.enc.sorbonne.fr/formations</description>
+	<address>
+		<floor>17 rue des Bernardins, 75005 Paris</floor>
+		<url>http://urfist.enc.sorbonne.fr/formations</url>
+		<phone>01 43 26 85 22</phone>
+		<fax>01 56 24 97 33</fax>
+		<email>secretariat-urfist@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

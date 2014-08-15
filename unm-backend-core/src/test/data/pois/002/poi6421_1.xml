@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6421_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6421_1.xml"/>
+<title>Recherche-Organisation appliquée M1-2</title>
+<updated>2014-08-15T01:47:37.062+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6421"
+	coordinates="48.838408541617,2.3486950993538"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-23T10:29:12.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1024"
+	name="Recherche-Organisation appliquée M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://iae.univ-paris 1.fr</url>
+		<phone>01 53 55 27 42</phone>
+		<email>aigle.iae@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

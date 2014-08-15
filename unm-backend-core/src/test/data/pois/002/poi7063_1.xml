@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7063_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7063_1.xml"/>
+<title>Département : Etudes Ibériques et Latino-Américaines (EILA)</title>
+<updated>2014-08-15T01:47:42.884+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7063"
+	coordinates="48.840214502563,2.3538261651993"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-17T13:43:38.000+01:00"
+	updatedAt="2012-01-17T13:44:46.000+01:00"
+	createdBy="Jean-François Maynier"
+	updatedBy="Jean-François Maynier"
+	parentUid="7062"
+	name="Département : Etudes Ibériques et Latino-Américaines (EILA)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6656_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6656_1.xml"/>
+<title>Restaurant Universitaire Neuville I</title>
+<updated>2014-08-15T01:47:39.041+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6656"
+	coordinates="49.017554866258,2.0737874507904"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T14:46:08.000+02:00"
+	updatedAt="2012-02-10T14:08:47.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6653"
+	name="Restaurant Universitaire Neuville I">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>De 11h30 à 13h30</openingHours>
+	</address>
+</content>
+</entry>

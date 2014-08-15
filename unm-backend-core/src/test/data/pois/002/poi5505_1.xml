@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5505_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5505_1.xml"/>
+<title>Résidence Universitaire La Pacaterie</title>
+<updated>2014-08-15T01:47:26.923+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5505"
+	coordinates="48.701072133421,2.1826965361834"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T16:01:47.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5502"
+	name="Résidence Universitaire La Pacaterie">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<address>
+		<phone>01 69 15 75 90</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6010_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6010_1.xml"/>
+<title>Résidence universitaire Les rives de l’Yvette (Bâtiment 231)</title>
+<updated>2014-08-15T01:47:32.681+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6010"
+	coordinates="48.699170079542,2.1637688577175"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T13:06:41.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-06-14T13:07:14.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	name="Résidence universitaire Les rives de l’Yvette (Bâtiment 231)">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi297_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi297_1.xml"/>
+<title>IUT Rostand</title>
+<updated>2014-08-15T01:46:38.980+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="297"
+	coordinates="48.625513615606,2.43265557306"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-19T11:58:52.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-09-05T13:44:35.000+02:00"
+	createdBy="plopes"
+	updatedBy="raphael"
+	name="IUT Rostand">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

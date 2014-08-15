@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi534_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi534_1.xml"/>
+<title>Polygone </title>
+<updated>2014-08-15T01:46:40.627+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="534"
+	coordinates="48.68592354624,2.3799026012421|48.686199783641,2.3802834749222|48.686107704676,2.380428314209|48.685941253811,2.3802244663239|48.68581375916,2.3804014921188|48.68571459643,2.3802673816681|48.68592354624,2.379902601242"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-09-17T14:04:48.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	deletedAt="2011-05-31T14:47:50.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Polygone ">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<fullAddress>4, rue Condorcet
+91260 Juvisy sur Orge</fullAddress>
+	</address>
+</content>
+</entry>

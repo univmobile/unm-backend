@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3929_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3929_1.xml"/>
+<title>Service de l'Aide Sociale et Financière de l'Etudiant</title>
+<updated>2014-08-15T01:47:11.767+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3929"
+	coordinates="48.848049700543,2.3429390788078"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:31:09.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Service de l'Aide Sociale et Financière de l'Etudiant">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>OU au 01 40 46 25 74</description>
+	<address>
+		<floor>Cour Saint-Jacques, pièce D673</floor>
+		<openingHours>Accueil téléphonique uniquement : 
+14h00 / 17h00
+Du lundi au vendredi : 
+9h00 / 12h30</openingHours>
+		<phone>01 40 46 25 87 </phone>
+		<email>contact.bourses@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

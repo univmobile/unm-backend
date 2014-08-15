@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3462_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3462_1.xml"/>
+<title>Biologie Intégrative et Physiologie - M1-2</title>
+<updated>2014-08-15T01:47:06.909+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3462"
+	coordinates="48.84790349536,2.358743995428"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:06:39.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2806"
+	name="Biologie Intégrative et Physiologie - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Cette mention permet aussi de comprendre l’émergence des grandes fonctions du vivant au cours de l’évolution.</description>
+	<address>
+		<floor>3è étage bureau 314</floor>
+		<openingHours>Lundi au Vendredi : 9h00-11h30/13h30-17h</openingHours>
+		<url>http://www.master.bip.upmc.fr/</url>
+		<phone>01 44 27 35 18</phone>
+		<email>dominique.belle@upmc.fr</email>
+	</address>
+</content>
+</entry>

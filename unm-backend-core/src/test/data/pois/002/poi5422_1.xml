@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5422_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5422_1.xml"/>
+<title>Cafétéria des Sciences</title>
+<updated>2014-08-15T01:47:26.028+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5422"
+	coordinates="48.623704329028,2.4268955737352"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T11:38:13.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5420"
+	name="Cafétéria des Sciences">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Rue du père André Jarlan - 91000 Évry</description>
+	<address>
+		<phone>01 60 77 58 90</phone>
+	</address>
+</content>
+</entry>

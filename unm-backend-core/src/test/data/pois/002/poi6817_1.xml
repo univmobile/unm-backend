@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6817_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6817_1.xml"/>
+<title>Résidence Universitaire Simone Weil</title>
+<updated>2014-08-15T01:47:40.485+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6817"
+	coordinates="48.828134303887,2.233604863286"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T12:49:07.000+02:00"
+	updatedAt="2012-02-03T12:30:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6815"
+	name="Résidence Universitaire Simone Weil">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Résidence conventionnée 155 lits type T1 - dont 9 logements adaptés pour étudiants handicapés en fauteuil (autonomes).
+
+Tarifs : de 378€ à 488€ charges comprises.</description>
+	<address>
+		<phone>01 46 08 17 42 </phone>
+	</address>
+</content>
+</entry>

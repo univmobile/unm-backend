@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5654_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5654_1.xml"/>
+<title>Génie Urbain - L2</title>
+<updated>2014-08-15T01:47:28.500+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5654"
+	coordinates="48.842359651231,2.5774412602186"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T12:23:57.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5647"
+	name="Génie Urbain - L2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 106</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-licences-generales/domaine-sciences-technologies-sante/mention-sciences-pour-lingenieur/licence-parcours-genie-urbain/</url>
+		<phone>01 49 32 91 50</phone>
+		<fax>01 49 32 91 59</fax>
+		<email>Madly.Margaretta@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

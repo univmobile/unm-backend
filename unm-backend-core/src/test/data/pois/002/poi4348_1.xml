@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4348_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4348_1.xml"/>
+<title>BU de langues et cultures étrangères</title>
+<updated>2014-08-15T01:47:16.404+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4348"
+	coordinates="48.904509460087,2.212160602212"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:37:05.000+02:00"
+	updatedAt="2013-02-13T12:18:00.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2464"
+	name="BU de langues et cultures étrangères">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bureau 108, 1er étage</floor>
+		<openingHours>Du lundi au jeudi : 
+9h30 / 18h00
+Vendredi : 
+9h30 / 13h00</openingHours>
+		<phone>01 40 97 75 81</phone>
+	</address>
+</content>
+</entry>

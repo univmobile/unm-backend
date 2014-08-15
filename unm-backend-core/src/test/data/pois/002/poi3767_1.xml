@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3767_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3767_1.xml"/>
+<title>Institut Henri-Poincaré</title>
+<updated>2014-08-15T01:47:10.195+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3767"
+	coordinates="48.844537915362,2.3433700762689"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:33:39.000+02:00"
+	updatedAt="2011-06-03T15:08:05.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3762"
+	name="Institut Henri-Poincaré">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://www.ihp.fr/fr</url>
+		<phone>01 44 27 67 89</phone>
+	</address>
+</content>
+</entry>

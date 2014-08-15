@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5202_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5202_1.xml"/>
+<title>Ecole Montsouris </title>
+<updated>2014-08-15T01:47:24.250+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5202"
+	coordinates="48.821835854636,2.3326581716537"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T17:08:14.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5196"
+	name="Ecole Montsouris ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro ligne 6 Station Glacière</itinerary>
+		<fullAddress>42, boulevard Jourdan 75014 Paris
+</fullAddress>
+	</address>
+	<child uid="5204" active="true"/>
+</content>
+</entry>

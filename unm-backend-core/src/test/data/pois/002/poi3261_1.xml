@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3261_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3261_1.xml"/>
+<title>Voix lusophone</title>
+<updated>2014-08-15T01:47:04.695+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3261"
+	coordinates="48.840103610554,2.354673072695"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:31:18.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3009"
+	name="Voix lusophone">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>oix Lusophones est une association d'étudiants créée en janvier 2007 et officiellement déclarée à la préfecture (loi 1901). Elle a pour objectif de fournir une information sur la vie universitaire aux étudiants de Portugais et de promouvoir et diffuser la culture lusophone.</description>
+	<address>
+		<url>http://voixlusophones.canalblog.com/</url>
+		<email>voixlusophones-contact@yahoo.fr</email>
+	</address>
+</content>
+</entry>

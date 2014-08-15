@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1790_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1790_1.xml"/>
+<title>Le Millenium</title>
+<updated>2014-08-15T01:46:50.925+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1790"
+	coordinates="48.904054177475,2.21663385629"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T15:06:23.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2485"
+	name="Le Millenium">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>Rdc du Restaurant Universitaire</floor>
+		<openingHours>Du lundi au vendredi :
+9h15 / 14h45</openingHours>
+	</address>
+</content>
+</entry>

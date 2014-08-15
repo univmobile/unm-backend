@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5806_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5806_1.xml"/>
+<title>Interactions et dynamique des environnements de surface</title>
+<updated>2014-08-15T01:47:30.299+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5806"
+	coordinates="48.706339309012,2.1797320246696"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:12:00.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4593"
+	name="Interactions et dynamique des environnements de surface">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Unité mixte de recherche (UMR) 8148</description>
+	<address>
+		<floor>Bâtiment 504, bureau 226</floor>
+		<url>http://ides.geol.u-psud.fr/</url>
+		<phone>01 69 15 49 31</phone>
+		<fax>01 69 15 49 11 </fax>
+		<email>thi-kim-ngan.ho@u-psud.fr</email>
+	</address>
+</content>
+</entry>

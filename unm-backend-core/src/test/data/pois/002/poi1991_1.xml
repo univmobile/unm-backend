@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1991_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1991_1.xml"/>
+<title>Les dynamiques de l'invention philosophique</title>
+<updated>2014-08-15T01:46:53.195+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1991"
+	coordinates="48.903853024928,2.217533737"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T15:09:22.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2461"
+	name="Les dynamiques de l'invention philosophique">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description> Ou 01 40 97 56 24 ou 01 40 97 56 25</description>
+	<address>
+		<floor>Bureaux L 427, 428, 430, 4ème étage</floor>
+		<phone>01 40 97 73 53</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5545_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5545_1.xml"/>
+<title>Confédaration étudiante</title>
+<updated>2014-08-15T01:47:27.296+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5545"
+	coordinates="48.787855841785,2.4442541599274"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:18:11.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5565"
+	name="Confédaration étudiante">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Bureau 9, 1er étage</floor>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

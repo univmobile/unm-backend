@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi348_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi348_1.xml"/>
+<title>Bobigny UFR SMBH</title>
+<updated>2014-08-15T01:46:39.312+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="348"
+	coordinates="48.913088795743,2.4197830259"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T11:08:28.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="340"
+	name="Bobigny UFR SMBH">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Gare de Saint Denis-RER-Tramway 1</itinerary>
+		<fullAddress>1 rue de Chablis
+93000 Bobigny</fullAddress>
+	</address>
+	<child uid="1906" active="true"/>
+	<child uid="1896" active="true"/>
+	<child uid="1895" active="true"/>
+	<child uid="1894" active="true"/>
+	<child uid="1897" active="true"/>
+	<child uid="1899" active="true"/>
+	<child uid="1898" active="true"/>
+	<child uid="1203" active="true"/>
+	<child uid="1201" active="true"/>
+	<child uid="1202" active="true"/>
+	<child uid="1204" active="true"/>
+	<child uid="1205" active="true"/>
+	<child uid="1198" active="true"/>
+	<child uid="1197" active="true"/>
+	<child uid="1200" active="true"/>
+	<child uid="1744" active="true"/>
+	<child uid="1746" active="true"/>
+	<child uid="1874" active="true"/>
+	<child uid="351" active="true"/>
+</content>
+</entry>

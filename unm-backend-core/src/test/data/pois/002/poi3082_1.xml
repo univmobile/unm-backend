@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3082_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3082_1.xml"/>
+<title>Centre de recherche médecine, sciences, santé </title>
+<updated>2014-08-15T01:47:02.796+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3082"
+	coordinates="48.855415181956,2.3316442966461"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:56:03.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2331"
+	name="Centre de recherche médecine, sciences, santé ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Secrétaire général : Jean-Guy Gay</description>
+	<address>
+		<phone>01 49 58 36 36 </phone>
+		<fax>01 49 58 34 38</fax>
+		<email>jggay@vjf.cnrs.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3525_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3525_1.xml"/>
+<title>Sciences juridiques L1-3</title>
+<updated>2014-08-15T01:47:07.651+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3525"
+	coordinates="48.824335608802,2.3025844059885"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:46:26.000+02:00"
+	updatedAt="2011-06-14T17:10:50.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2447"
+	name="Sciences juridiques L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>Lundi-Mardi
+13h30-16h30
+Mercredi-Vendredi
+9h30-12h00</openingHours>
+		<phone>01 41 17 30 00</phone>
+	</address>
+</content>
+</entry>

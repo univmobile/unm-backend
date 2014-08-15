@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi883_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi883_1.xml"/>
+<title>Amphithéâtre</title>
+<updated>2014-08-15T01:46:42.874+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="883"
+	coordinates="48.838208228362,2.3486662"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T15:54:40.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1024"
+	name="Amphithéâtre">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Capacité 72 places.</description>
+	<address>
+		<itinerary>RER B 
+Station Port-Royal
+Métro 7 
+Station Censier Daubenton ou Les Gobelins
+Bus  27, 47, 83 et 91</itinerary>
+	</address>
+</content>
+</entry>

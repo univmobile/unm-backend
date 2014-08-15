@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4940_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4940_1.xml"/>
+<title>Économie-Gestion (L1-L2 site d'Orsay)</title>
+<updated>2014-08-15T01:47:22.046+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4940"
+	coordinates="48.700092496275,2.1687158569694"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T15:04:55.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4897"
+	name="Économie-Gestion (L1-L2 site d'Orsay)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Inscriptions pédagogiques, gestion des résultats, relevés de notes, etc.</description>
+	<address>
+		<floor>Bâtiment 236 bis</floor>
+		<url>http://www.u-psud.fr/fr/les_formations/les_formations_par_diplome/licences/deg/l1_economie_gestion.html</url>
+		<phone>01 69 15 46 06</phone>
+		<fax>01 69 15 46 08</fax>
+		<email>licence1-2-economie-gestion.droit-eco-gestion@u-psud.fr</email>
+	</address>
+</content>
+</entry>

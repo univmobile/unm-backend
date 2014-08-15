@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6697_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6697_1.xml"/>
+<title>Résidence Universitaire de Fontenay aux roses</title>
+<updated>2014-08-15T01:47:39.376+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6697"
+	coordinates="48.791941373705,2.2961881756783"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-21T14:33:33.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6695"
+	name="Résidence Universitaire de Fontenay aux roses">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Cette Résidence Universitaire est située à  5 min du Centre-ville.
+Studios : 180 T1 ; 3 logements pour handicapés ; 20 T1 Bis;
+4 logements T1 réservés aux chercheurs et doctorants.  Connexion internet dans toutes les chambres.
+Tarifs : de 305€ à 384€ charges comprises (sauf enseignants chercheurs) </description>
+	<address>
+		<openingHours>Du lundi au vendredi, de 8h45 à 12h et de 13h30 à 17h (fermé le vendredi après-midi).
+
+Attention :
+Du 1er juillet au 22 juillet : de 8h45 à 11h45 et de 13h30 à 16h30 (fermé le vendredi après-midi)
+Du 25 juillet au 26 août : 9h30 à 11h45 et de 13h30 à 16h00
+
+NB : pas d'admissions du 25 juillet au 26 août</openingHours>
+		<phone>01 41 87 08 75</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1485_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1485_1.xml"/>
+<title>UFR Médecine - site Bichat</title>
+<updated>2014-08-15T01:46:48.087+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1485"
+	coordinates="48.899433444394,2.332083843648"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:47:58.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1785"
+	name="UFR Médecine - site Bichat">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<openingHours>Du Lundi au Vendredi : 14h-16h30</openingHours>
+		<itinerary>Métro 13 Porte de Saint Ouen</itinerary>
+		<phone>0157277851</phone>
+		<email>llsl@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

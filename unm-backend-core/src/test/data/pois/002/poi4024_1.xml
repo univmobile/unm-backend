@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4024_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4024_1.xml"/>
+<title>Cafétéria du Restaurant universitaire</title>
+<updated>2014-08-15T01:47:12.810+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4024"
+	coordinates="48.94649694651,2.3622201383114"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:27:08.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2602"
+	name="Cafétéria du Restaurant universitaire">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>La cafétériat vous propose des sandwiches, des salades ou des boissons chaudes et froides à consommer sur place ou à emporter.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment Crous</floor>
+		<openingHours>Du lundi au vendredi
+12h00-15h</openingHours>
+		<url>http://www.crous-creteil.fr/spip.php?article73</url>
+		<email>restaurant.paris8@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

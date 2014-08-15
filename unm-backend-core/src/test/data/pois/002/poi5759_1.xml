@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5759_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5759_1.xml"/>
+<title>Scolarité L2 CB-SVT </title>
+<updated>2014-08-15T01:47:29.752+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5759"
+	coordinates="48.788465011234,2.4430599063635"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:33:32.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="yasmine"
+	updatedBy="Sihé NEYA"
+	parentUid="4525"
+	name="Scolarité L2 CB-SVT ">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<openingHours>Lundi: 13h-17h
+Mardi-jeudi: 13h-17h30
+Vendredi: 9h30-12h30
+Fermé le mercredi toute la journée</openingHours>
+		<url>http://sciences-tech.u-pec.fr</url>
+		<phone>01 45 17 13 45</phone>
+		<email>diaw@u-pec.fr </email>
+	</address>
+</content>
+</entry>

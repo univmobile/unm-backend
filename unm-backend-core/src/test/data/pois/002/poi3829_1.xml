@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3829_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3829_1.xml"/>
+<title>Restaurant Cuvier </title>
+<updated>2014-08-15T01:47:10.750+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3829"
+	coordinates="48.846230371897,2.3583000898361"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-16T11:59:42.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3824"
+	name="Restaurant Cuvier ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : Jussieu
+Bus : 63 24 67 89 </itinerary>
+		<fullAddress>8 bis rue  Cuvier 75 005 
+Accès par l'Université Paris 6 ou par le quai Saint bernud </fullAddress>
+	</address>
+	<child uid="6701" active="true"/>
+</content>
+</entry>

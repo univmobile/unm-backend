@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4973_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4973_1.xml"/>
+<title>SUMPPS</title>
+<updated>2014-08-15T01:47:22.406+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4973"
+	coordinates="49.017334183467,2.0744672231376"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T15:56:38.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3935"
+	name="SUMPPS">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Niveau bibliothèque</floor>
+		<openingHours>Lundi - Vendredi
+8H30 à 16H30</openingHours>
+		<phone>01 34 25 70 85</phone>
+		<email>sante@ml.u-cergy.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2036_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2036_1.xml"/>
+<title>CEREG</title>
+<updated>2014-08-15T01:46:53.554+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2036"
+	coordinates="48.904368327032,2.21246838569"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T16:35:54.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2464"
+	name="CEREG">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Centre d'étude et de recherche sur l'espace germanophone</description>
+	<address>
+		<email>pailhes@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

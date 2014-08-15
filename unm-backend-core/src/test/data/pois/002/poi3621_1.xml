@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3621_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3621_1.xml"/>
+<title>Graine de Chimiste</title>
+<updated>2014-08-15T01:47:08.695+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3621"
+	coordinates="48.846170681596,2.3589672893286"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:01:29.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2824"
+	name="Graine de Chimiste">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Graine de Chimiste conçoit et anime des activités scientifiques, encadrées par des étudiants, pour tout public à partir de 4 ans.</description>
+	<address>
+		<floor>3è étage, bureau 301</floor>
+		<phone>01 44 27 30 71</phone>
+		<email>grainedechimiste@upmc.fr</email>
+	</address>
+</content>
+</entry>

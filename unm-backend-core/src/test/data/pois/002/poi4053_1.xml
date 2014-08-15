@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4053_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4053_1.xml"/>
+<title>Accueil handicap</title>
+<updated>2014-08-15T01:47:13.141+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4053"
+	coordinates="48.944227014854,2.3627196997404"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:02:28.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Accueil handicap">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<description>« L’accueil handicap et accessibilité » participe à la promotion de votre intégration pédagogique et de votre autonomie. Il fonctionne avec les autres services de l’université pour vous aider dans la définition de votre plan d’accompagnement personnalisé et des aménagements du cursus.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment A, bureaux 047-048-049</floor>
+		<url>http://www.univ-paris8.fr/Service-Accueil-handicap</url>
+		<phone>01 49 40 67 92</phone>
+		<fax>01 49 40 70 87</fax>
+		<email>accueil.handicap@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

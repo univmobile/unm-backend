@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2148_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2148_1.xml"/>
+<title>Infirmerie</title>
+<updated>2014-08-15T01:46:54.641+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2148"
+	coordinates="48.825015242015,2.19815075397"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:14:43.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2439"
+	name="Infirmerie">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bâtiment F, rdc</floor>
+	</address>
+</content>
+</entry>

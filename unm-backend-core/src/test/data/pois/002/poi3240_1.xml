@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3240_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3240_1.xml"/>
+<title>Institut des hautes études internationales </title>
+<updated>2014-08-15T01:47:04.440+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3240"
+	coordinates="48.846929513906,2.3443482443"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:23:21.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="Institut des hautes études internationales ">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<openingHours>Du lundi au jeudi :
+10h00 / 12h00 - 14h00 / 16h00
+Le vendredi : 
+10h00 / 12h00</openingHours>
+		<url>http://www.u-paris2.fr/IHEI/0/fiche___pagelibre/&amp;RH=P2-IHEI</url>
+		<phone>01 44 41 55 49</phone>
+		<email>ihei@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

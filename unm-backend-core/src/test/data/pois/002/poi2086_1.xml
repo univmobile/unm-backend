@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2086_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2086_1.xml"/>
+<title>UFR AES - Économie et gestion</title>
+<updated>2014-08-15T01:46:53.944+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2086"
+	coordinates="48.9469618832,2.3613940179348"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T17:42:24.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="UFR AES - Économie et gestion">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Fabienne LEGRAS-BESSEIGE (Responsable administrative et financière).</description>
+	<address>
+		<floor>1er étage Bâtiment D, bureau 102</floor>
+		<url>http://aes-ecoges.univ-paris8.fr/</url>
+		<phone>01 49 40 72 54</phone>
+		<email>ufr.aes-ecoges@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

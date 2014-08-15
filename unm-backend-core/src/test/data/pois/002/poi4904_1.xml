@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4904_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4904_1.xml"/>
+<title>Dauphine Junior Conseil</title>
+<updated>2014-08-15T01:47:21.672+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4904"
+	coordinates="48.86953151186,2.2733974456787"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:21:30.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Dauphine Junior Conseil">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Depuis 25 ans, les étudiants de la Junior-Entreprise de l'Université Paris-Dauphine sont à votre service pour mieux répondre à vos problématiques complexes et variées, afin de vous apporter un conseil de qualité, grâce à leur rigueur, leurs compétences, leur dynamisme et leur motivation.</description>
+	<address>
+		<floor>Local P 420</floor>
+		<url>http://www.juniordauphine.com/</url>
+	</address>
+</content>
+</entry>

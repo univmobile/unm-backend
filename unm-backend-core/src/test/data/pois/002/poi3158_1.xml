@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3158_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3158_1.xml"/>
+<title>Accueil des étudiants handicapés</title>
+<updated>2014-08-15T01:47:03.612+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3158"
+	coordinates="48.842677807171,2.3327319324"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T17:20:14.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2846"
+	name="Accueil des étudiants handicapés">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<address>
+		<openingHours>Lundi et jeudi :
+10h00 / 16h00
+Mardi et vendredi :
+9h00 / 12h00</openingHours>
+		<phone>01 44 41 57 13</phone>
+		<email>muriel.joubert@u-paris2.fr  </email>
+	</address>
+</content>
+</entry>

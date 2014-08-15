@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7023_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7023_1.xml"/>
+<title>Bâtiment B</title>
+<updated>2014-08-15T01:47:42.431+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7023"
+	coordinates="48.626860041344,2.5623705983162"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-22T14:50:09.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="4505"
+	name="Bâtiment B">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D, Station Lieusaint Moissy
+</itinerary>
+		<fullAddress>Département GEA
+36 rue Georges Charpak
+77567 Lieusaint Cedex
+</fullAddress>
+	</address>
+	<child uid="5727" active="true"/>
+	<child uid="7145" active="true"/>
+	<child uid="7024" active="true"/>
+	<child uid="7151" active="true"/>
+</content>
+</entry>

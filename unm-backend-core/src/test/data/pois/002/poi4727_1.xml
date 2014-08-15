@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4727_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4727_1.xml"/>
+<title>Droit français et européen enseigné en anglais  </title>
+<updated>2014-08-15T01:47:19.919+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4727"
+	coordinates="49.038732921048,2.0751573890448"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T14:20:17.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3849"
+	name="Droit français et européen enseigné en anglais  ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Mme  Glenda GAMBUS </description>
+	<address>
+		<floor>Bureau B 329 </floor>
+		<phone>01 34 25 60 05 </phone>
+		<email>llm.droit@ml.u-cergy.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3878_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3878_1.xml"/>
+<title>AGEPUR - CFA</title>
+<updated>2014-08-15T01:47:11.247+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3878"
+	coordinates="48.846098311789,2.3577737063169"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:33:38.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2813"
+	name="AGEPUR - CFA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Aménagement et Gestion Ecologique des Paysages Urbains
+Les objectifs de la formation</description>
+	<address>
+		<url>http://www.cfa.upmc.fr/cfa_upmc/detail/Fiche_formation?item_id=82061677</url>
+		<phone>01 44 27 71 40</phone>
+		<email>emmanuel.gendreau@upmc.fr</email>
+	</address>
+</content>
+</entry>

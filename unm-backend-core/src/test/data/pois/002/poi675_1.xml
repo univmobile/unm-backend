@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi675_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi675_1.xml"/>
+<title>ISST </title>
+<updated>2014-08-15T01:46:41.072+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="675"
+	coordinates="48.778283933468,2.3181045"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T16:04:15.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="972"
+	name="ISST ">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Institut des Sciences Sociales du travail</description>
+	<address>
+		<phone>01 79 41 90 00</phone>
+		<email>raisst@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

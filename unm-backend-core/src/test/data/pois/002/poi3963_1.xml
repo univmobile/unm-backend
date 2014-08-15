@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3963_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3963_1.xml"/>
+<title>ED 517</title>
+<updated>2014-08-15T01:47:12.141+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3963"
+	coordinates="48.698687879306,2.1763249486685"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:28:41.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3957"
+	name="ED 517">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Particules, Noyaux et Cosmos (ED 517)</description>
+	<address>
+		<url>http://ed517.ed.univ-paris-diderot.fr/</url>
+		<phone>01 69 15 73 31</phone>
+		<email>loeffel@ipno.in2p3.fr</email>
+	</address>
+</content>
+</entry>

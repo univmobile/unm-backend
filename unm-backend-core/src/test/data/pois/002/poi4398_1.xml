@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4398_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4398_1.xml"/>
+<title>Université Paris-Sud </title>
+<updated>2014-08-15T01:47:16.865+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4398"
+	coordinates=""
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T13:51:29.000+02:00"
+	updatedAt="2013-11-29T12:32:59.000+01:00"
+	createdBy="super admin"
+	updatedBy="MJRAMAGE"
+	name="Université Paris-Sud ">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="paris11"/>
+	<address
+		latitude="48.70"
+		longitude="2.18">
+		<url>http://www.u-psud.fr/fr/index.html</url>
+	</address>
+	<child uid="4426" active="true"/>
+	<child uid="4538" active="true"/>
+	<child uid="4529" active="true"/>
+	<child uid="4523" active="true"/>
+	<child uid="4404" active="true"/>
+	<child uid="4534" active="true"/>
+	<child uid="4541" active="true"/>
+	<child uid="6508" active="true"/>
+	<child uid="6569" active="true"/>
+	<child uid="6571" active="true"/>
+	<child uid="6575" active="true"/>
+	<child uid="6592" active="true"/>
+</content>
+</entry>

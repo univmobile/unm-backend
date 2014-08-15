@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6184_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6184_1.xml"/>
+<title>BU Pitié-Salpêtrière</title>
+<updated>2014-08-15T01:47:34.660+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6184"
+	coordinates="48.837710031022,2.3606604337692"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T17:13:12.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3686"
+	name="BU Pitié-Salpêtrière">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Accessible aux étudiants en médecine, en orthophonie et psychomotricité; aux praticiens hospitaliers, enseignants, médecins, chercheurs de laboratoire</description>
+	<address>
+		<openingHours>Lundi,mardi, mercredi, vendredi : 9h-23h (Prêts et retours sur automates à partir de 18h45)
+Jeudi : 10h -23h
+Samedi : 10h-20h</openingHours>
+		<url>http://jubil.upmc.fr/repons/portal/bookmark?MainTab=CMSShowChannelDoc&amp;ShowDocChannel=presentation/SCDM/Pitie/index</url>
+		<phone>01 45 86 26 40</phone>
+	</address>
+</content>
+</entry>

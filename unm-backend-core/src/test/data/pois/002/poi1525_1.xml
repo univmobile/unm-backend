@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1525_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1525_1.xml"/>
+<title>Accueil du CREFOP</title>
+<updated>2014-08-15T01:46:48.516+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1525"
+	coordinates="48.903092087686,2.217170298"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:39:39.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2467"
+	name="Accueil du CREFOP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>OU 01 40 97 78 75</description>
+	<address>
+		<floor>Couloir de droite, Rdc</floor>
+		<openingHours>Lundi, mercredi et vendredi :
+8h30 / 17h
+Mardi et Jeudi :
+8h30 / 18h30</openingHours>
+		<phone>01 40 97 78 66</phone>
+		<email>accueil.crefop@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

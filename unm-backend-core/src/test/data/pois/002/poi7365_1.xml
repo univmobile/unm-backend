@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7365_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7365_1.xml"/>
+<title>CTHS</title>
+<updated>2014-08-15T01:47:45.636+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7365"
+	coordinates="48.825669636584,2.2809049487114"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-18T14:43:17.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7364"
+	name="CTHS">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Le Comité des travaux historiques et scientifiques, créé en 1834, est depuis 2007 un « institut » rattaché à l'École nationale des chartes.
+
+Le CTHS est chargé :
+
+– de concourir aux recherches et aux publications portant sur les sciences de l’homme et de la société, sur les sciences de la nature et de la vie et concernant plus particulièrement la France et ses régions ;
+– de contribuer à la diffusion et à la valorisation des connaissances historiques et scientifiques sur le territoire national, en Europe et dans le monde francophone ;
+– d’assurer, en matière de publication, l’édition de textes, de répertoires, d’orientations de recherche, de bases de données et d’instruments de travail ;
+– d’organiser annuellement le Congrès national des sociétés historiques et scientifiques ;
+– de favoriser le développement des activités des sociétés savantes et de leurs fédérations et coordonner leurs recherches régionales et locales de nature historique et scientifique ;
+– de développer les échanges entre recherche publique et recherche associative, entre enseignants, chercheurs et étudiants. 
+
+En savoir plus : http://cths.fr/hi/index.php</description>
+	<address>
+		<floor>60, boulevard du Lycée, 92170 Vanves</floor>
+		<url>http://cths.fr</url>
+		<fax>+33 (0)1 55 95 89 66</fax>
+		<email>secretariat.general@cths.fr</email>
+	</address>
+</content>
+</entry>

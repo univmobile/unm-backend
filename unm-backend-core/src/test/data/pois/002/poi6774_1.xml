@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6774_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6774_1.xml"/>
+<title>Restaurant Necker</title>
+<updated>2014-08-15T01:47:40.134+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6774"
+	coordinates="48.843651797773,2.3140778392553"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T10:44:43.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6772"
+	name="Restaurant Necker">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Restaurant : semaine de 11h30 à 14h00
+Cafétéria : semaine de 8h00 à 17h00</openingHours>
+		<url>http://www.crous-paris.fr/</url>
+	</address>
+</content>
+</entry>

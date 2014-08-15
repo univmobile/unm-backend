@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3045_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3045_1.xml"/>
+<title>Nouvelles approches métho. pour l'aide à la décision</title>
+<updated>2014-08-15T01:47:02.403+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3045"
+	coordinates="48.845316475858,2.31493011116"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:29:17.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2937"
+	name="Nouvelles approches métho. pour l'aide à la décision">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 44 49 46 12 </phone>
+		<fax>01 44 49 46 10 </fax>
+	</address>
+</content>
+</entry>

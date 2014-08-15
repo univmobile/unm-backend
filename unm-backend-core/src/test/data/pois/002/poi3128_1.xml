@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3128_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3128_1.xml"/>
+<title>Centre de recherche cardiovasculaire</title>
+<updated>2014-08-15T01:47:03.243+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3128"
+	coordinates="48.838045,2.2754"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:43:39.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="3108"
+	name="Centre de recherche cardiovasculaire">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 43 95 95 60 </phone>
+		<fax> 01 45 40 50 49 </fax>
+	</address>
+</content>
+</entry>

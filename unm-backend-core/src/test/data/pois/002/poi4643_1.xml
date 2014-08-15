@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4643_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4643_1.xml"/>
+<title>Gestion de Patrimoine M1</title>
+<updated>2014-08-15T01:47:19.297+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4643"
+	coordinates="48.896104149551,2.2366166487336"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T17:06:44.000+02:00"
+	updatedAt="2011-05-26T17:18:55.000+02:00"
+	deletedAt="2011-05-24T17:08:19.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Gestion de Patrimoine M1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

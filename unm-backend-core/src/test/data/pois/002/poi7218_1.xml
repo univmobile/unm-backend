@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7218_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7218_1.xml"/>
+<title>Bâtiment Iris</title>
+<updated>2014-08-15T01:47:44.441+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7218"
+	coordinates="48.789336708832,2.3260277509689"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-06T15:52:07.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7210"
+	name="Bâtiment Iris">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER ligne B : arrêt Bagneux
+Bus 184 Porte d'Italie - L'Hay-les-Roses : arrêt Camille Desmoulins
+Bus 187 Porte d'Orléans - Fresnes : arrêt Camille Desmoulins
+Bus 197 Porte d'Orléans - Bourg-la-Reine : arrêt RER Bagneux
+Bus 162 Villejuif - Cachan - Meudon : arrêt Mairie de Cachan</itinerary>
+		<fullAddress>61, avenue du Président Wilson
+94235 Cachan cedex</fullAddress>
+	</address>
+	<child uid="7296" active="true"/>
+	<child uid="7297" active="true"/>
+</content>
+</entry>

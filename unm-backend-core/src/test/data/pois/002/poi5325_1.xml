@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5325_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5325_1.xml"/>
+<title>Biologie-Chimie-Sciences de la terre (L1 BCST)</title>
+<updated>2014-08-15T01:47:25.176+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5325"
+	coordinates="48.701284589463,2.1664135158062"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T14:08:42.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4583"
+	name="Biologie-Chimie-Sciences de la terre (L1 BCST)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 333, bureau 35</floor>
+		<url>http://www.u-psud.fr/fr/les_formations/les_formations_par_diplome/licences/sciences_technologies_sante/bcst.html</url>
+		<phone>01 69 15 74 44</phone>
+		<email>florence.wampach@u-psud.fr</email>
+	</address>
+</content>
+</entry>

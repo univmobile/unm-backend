@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5244_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5244_1.xml"/>
+<title>polygone</title>
+<updated>2014-08-15T01:47:24.517+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5244"
+	coordinates="48.764976372817,2.4834787845612|48.765018804226,2.4835860729218|48.765149634178,2.4834680557251|48.765283999719,2.4833124876022|48.765223888864,2.4831998348236|48.765163777936,2.4832534790039|48.765107202879,2.4832963943481|48.764976372817,2.4834787845612"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-31T22:31:37.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	deletedAt="2011-06-08T14:32:10.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	name="polygone">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<url>http://www.creteil.iufm.fr</url>
+		<phone>01 49 56 37 16  </phone>
+	</address>
+</content>
+</entry>
