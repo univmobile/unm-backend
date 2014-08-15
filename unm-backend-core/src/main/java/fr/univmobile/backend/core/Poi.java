@@ -82,6 +82,9 @@ public interface Poi extends Entry {
 	@XPath("atom:content/@updatedBy")
 	String getUpdatedBy();
 
+	@XPath("not(not(atom:content/@deletedAt))")
+	boolean isDeleted();
+
 	@XPath("atom:content/atom:university/@id")
 	String[] getUniversities();
 
@@ -136,6 +139,8 @@ public interface Poi extends Entry {
 
 	int sizeOfChildren();
 
+	boolean isNullChildren();
+	
 	enum MarkerType {
 
 		POINT("point"), POLYGON("polygon"), OVERLAY("overlay");
