@@ -23,6 +23,8 @@ import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
+import fr.univmobile.backend.core.PoiDataSource;
+import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
@@ -33,7 +35,7 @@ import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.BuildInfoUtils;
 import fr.univmobile.web.commons.UnivMobileHttpUtils;
 
-public class BackendServlet extends AbstractUnivMobileServlet {
+public final class BackendServlet extends AbstractUnivMobileServlet {
 
 	/**
 	 * for serialization.
@@ -44,6 +46,10 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 	private RegionDataSource regions;
 
+	private PoiDataSource pois;
+
+	private PoiTreeDataSource poiTrees;
+
 	private RegionClient regionClient;
 
 	private RegionJSONClient regionJSONClient;
@@ -51,6 +57,10 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 	@Override
 	public void init() throws ServletException {
 
+		if (log.isInfoEnabled()) {
+			log.info(this + ": init()...");
+		}
+		
 		final String dataDir = getServletConfig().getInitParameter("dataDir");
 
 		if (isBlank(dataDir)) {
@@ -59,6 +69,8 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 
 		final File usersDir = new File(dataDir, "users");
 		final File regionsDir = new File(dataDir, "regions");
+		final File poisDir = new File(dataDir, "pois");
+		final File poiTreesDir = new File(dataDir, "poitrees");
 
 		try {
 
@@ -68,13 +80,21 @@ public class BackendServlet extends AbstractUnivMobileServlet {
 			regions = BackendDataSourceFileSystem.newDataSource(
 					RegionDataSource.class, regionsDir);
 
+			poiTrees = BackendDataSourceFileSystem.newDataSource(
+					PoiTreeDataSource.class, poiTreesDir);
+			
+			poiTrees.getByUid("poitree"); // check for "poitree"
+
+			pois = BackendDataSourceFileSystem.newDataSource(
+					PoiDataSource.class, poisDir);
+			
 		} catch (final IOException e) {
 			throw new ServletException(e);
 		}
 
 		super.init( //
-				new HomeController(users, regions), //
-				new UseraddController(users, regions));
+				new HomeController(users, regions, pois, poiTrees), //
+				new UseraddController(users, regions, pois, poiTrees));
 
 		regionClient = new RegionClientFromLocal(regions);
 

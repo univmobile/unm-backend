@@ -6,6 +6,8 @@ import java.io.IOException;
 
 import javax.annotation.Nullable;
 
+import fr.univmobile.backend.core.PoiDataSource;
+import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.UserBuilder;
 import fr.univmobile.backend.core.UserDataSource;
@@ -20,9 +22,10 @@ import fr.univmobile.web.commons.Regexp;
 public class UseraddController extends AbstractBackendController {
 
 	public UseraddController(final UserDataSource users,
-			final RegionDataSource regions) {
+			final RegionDataSource regions, final PoiDataSource pois,
+			final PoiTreeDataSource poiTrees) {
 
-		super(users, regions);
+		super(users, regions, pois, poiTrees);
 	}
 
 	@Override

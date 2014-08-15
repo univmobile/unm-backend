@@ -87,8 +87,9 @@ ${u.mail}
 <thead>
 <tr>
 <th class="none"></th>
-<th>id</th>
-<th>label</th>
+<th class="uid">id</th>
+<th class="label">label</th>
+<th class="universityCount">universités</th>
 <th class="none"></th>
 </tr>
 </thead>
@@ -97,12 +98,15 @@ ${u.mail}
 <tr>
 <td class="none">
 </td>
-<td>
+<td class="uid">
 ${r.uid}
 </td>
 <td class="label">
 <input type="text" id="text-region_${r.uid}" name="region_${r.uid}"
 	value="${r.label}"/>
+</td>
+<td class="universityCount">
+${r.universityCount}
 </td>
 <td class="none">
 </td>
@@ -129,6 +133,42 @@ https://univmobile-dev.univ-paris1.fr/json/regions
 </div>
 
 </div> <!-- end of #div-regions -->
+
+<div id="div-pois">
+
+<h2>
+<a href="${baseURL}/pois">POIs : ${pois.count}</a>
+</h2>
+
+<table>
+<tbody>
+<c:forEach var="r" items="${pois.regions}">
+<tr>
+<th class="region" colspan="2">
+	Région : ${r.label}
+</th>	
+<th class="poiCount">POIs</th>
+</tr>
+<c:forEach var="u" items="${r.universities}">
+<tr>
+<td class="id">
+${u.id}
+</td>
+<td class="title">
+${u.title}
+</td>
+<td class="poiCount">
+<a href="${baseURL}/pois/?univ=${u.id}">
+${u.poiCount}
+</a>
+</td>
+</tr>
+</c:forEach>
+</c:forEach>
+</tbody>
+</table>
+
+</div> <!-- end of #div-pois -->
 
 </form>
 </div> <!-- end of div.body -->

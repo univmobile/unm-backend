@@ -147,12 +147,24 @@ span.error {
 	font-size: small;
 	text-decoration: underline;
 }
-#div-regions {
+#div-regions,
+#div-pois {
 	margin-top: 3em;
+}
+#div-regions td.universityCount,
+#div-pois td.poiCount {
+	text-align: right;
+}
+#div-regions td.universityCount {
+	padding-right: 4em;
 }
 #div-buildInfo {
 	margin-bottom: 2em;
 	text-align: center;
 	color: #ccc;
 	font-size: small;	
+}
+h2 a {
+	text-decoration: none;
+}
 }
