@@ -18,14 +18,14 @@ import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
-public class ThroughJSONTest {
+public class RegionThroughJSONTest {
 
 	@Before
 	public void setUp() throws Exception {
 
 		final File originalDataDir = new File("src/test/data/regions/001");
 
-		final File tmpDataDir = new File("target/RegionsTest");
+		final File tmpDataDir = new File("target/RegionThroughJSONTest");
 
 		if (tmpDataDir.isDirectory()) {
 			FileUtils.forceDelete(tmpDataDir);
