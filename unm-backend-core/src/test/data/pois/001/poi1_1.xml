@@ -24,8 +24,9 @@
 	updatedAt="2014-03-31 12:14:33"
 	updatedBy="super admin"
 	name="Université Panthéon-Sorbonne - Paris I">
-	<poiType id="1" label="Université"/> <!-- = tags. maxOccurs = unbounded -->
-	<universityId>paris1</universityId> <!-- universityId.maxOccurs = unbounded -->
+	<poiType categoryId="1" categoryLabel="Plans"
+		id="1" label="Université"/> <!-- = tags. maxOccurs = unbounded -->
+	<university id="paris1"/> <!-- university.maxOccurs = unbounded -->
 	<description> <!-- mixed, universityId.maxOccurs = 1 --> 
 Université Panthéon-Sorbonne - Paris I comprend 297 formations. Il s'agit d'une université dans la région Ile de France.
                                     
@@ -55,32 +56,32 @@ L'université offre un éventail complet de formation répartis en plusieurs pô
 	</address>
 	
 	<!-- root_id: 1, lft: 1, rgt: 792, level: 0 -->
-	<child uid="931"/>
-	<child uid="817"/>
-	<child uid="815"/>
-	<child uid="795"/>
-	<child uid="787"/>
-	<child uid="785"/>
-	<child uid="781"/>
-	<child uid="778"/>
-	<child uid="775"/>
-	<child uid="773"/>
-	<child uid="632"/>
-	<child uid="770"/>
-	<child uid="641"/>
-	<child uid="656"/>
-	<child uid="281"/>
-	<child uid="240"/>
-	<child uid="415"/>
-	<child uid="421"/>
-	<child uid="782"/>
-	<child uid="791"/>
-	<child uid="812"/>
-	<child uid="819"/>
-	<child uid="850"/>
-	<child uid="852"/>
-	<child uid="890"/>
-	<child uid="945"/>
+	<child uid="931" active="true"/>
+	<child uid="817" active="true"/>
+	<child uid="815" active="true"/>
+	<child uid="795" active="true"/>
+	<child uid="787" active="true"/>
+	<child uid="785" active="true"/>
+	<child uid="781" active="true"/>
+	<child uid="778" active="true"/>
+	<child uid="775" active="true"/>
+	<child uid="773" active="true"/>
+	<child uid="632" active="true"/>
+	<child uid="770" active="true"/>
+	<child uid="641" active="true"/>
+	<child uid="656" active="true"/>
+	<child uid="281" active="true"/>
+	<child uid="240" active="true"/>
+	<child uid="415" active="true"/>
+	<child uid="421" active="true"/>
+	<child uid="782" active="true"/>
+	<child uid="791" active="true"/>
+	<child uid="812" active="true"/>
+	<child uid="819" active="true"/>
+	<child uid="850" active="true"/>
+	<child uid="852" active="true"/>
+	<child uid="890" active="true"/>
+	<child uid="945" active="true"/>
 	
 </content>
 </entry>
