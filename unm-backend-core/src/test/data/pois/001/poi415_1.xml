@@ -20,9 +20,9 @@
 	name="Centre Broca"
 	parentUid="1">
 	<poiType id="2" label="Site"/> <!-- = tags. maxOccurs = unbounded -->
-	<!-- universityId is unnecessary if parentUid?! -->
+	<!-- university is unnecessary if parentUid?! -->
 	<!--
-	<universityId>paris1</universityId>
+	<university id="paris1"/>
 	-->
 </content>
 </entry>
