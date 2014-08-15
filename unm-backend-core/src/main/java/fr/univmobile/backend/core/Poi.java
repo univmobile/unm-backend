@@ -37,6 +37,18 @@ public interface Poi extends Entry {
 	String[] getPoiTypeLabels();
 
 	/**
+	 * e.g. 1 (poiCategoryLabel = "Plans")
+	 */
+	@XPath("atom:content/atom:poiType/@categoryId")
+	int[] getPoiCategoryIds();
+
+	/**
+	 * e.g. "Plans"
+	 */
+	@XPath("atom:content/atom:poiType/@categoryLabel")
+	String[] getPoiCategoryLabels();
+
+	/**
 	 * e.g. "/images/universities/logos/univ_paris1.jpg"
 	 */
 	@XPath("atom:content/@logo")
@@ -70,8 +82,8 @@ public interface Poi extends Entry {
 	@XPath("atom:content/@updatedBy")
 	String getUpdatedBy();
 
-	@XPath("atom:content/atom:universities/atom:university")
-	University[] getUniversities();
+	@XPath("atom:content/atom:university/@id")
+	String[] getUniversities();
 
 	int sizeOfUniversities();
 
@@ -113,17 +125,17 @@ public interface Poi extends Entry {
 		@XPath("atom:fullAddress")
 		String getFullAddress();
 	}
-	
+
 	@XPath("atom:content/@parentUid")
 	int getParentUid();
-	
+
 	boolean isNullParentUid();
 
-	@XPath("atom:content/atom:child/@uid")
+	@XPath("atom:content/atom:child[@active = 'true']/@uid")
 	int[] getChildren();
-	
+
 	int sizeOfChildren();
-	
+
 	enum MarkerType {
 
 		POINT("point"), POLYGON("polygon"), OVERLAY("overlay");
