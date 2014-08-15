@@ -30,4 +30,7 @@ public interface Region extends Entry {
 	University[] getUniversities();
 
 	int sizeOfUniversities();
+	
+	@XPath("count(atom:content/atom:universities/atom:university)")
+	int getUniversityCount();
 }
