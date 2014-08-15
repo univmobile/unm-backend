@@ -5,6 +5,8 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.util.HashMap;
+import java.util.Map;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Before;
@@ -24,6 +26,8 @@ public abstract class AbstractPoisTest {
 	@Before
 	public final void setUp() throws Exception {
 
+		pois = poisByClass.get(this.getClass());
+		
 		if (pois != null) { // Load data only once
 			return;
 		}
@@ -53,9 +57,13 @@ public abstract class AbstractPoisTest {
 				- elapsedCopy;
 
 		System.out.println("Loadind data: Done (" + elapsedLoad + " ms.)");
+		
+		poisByClass.put(this.getClass(), pois);
 	}
 
-	private static PoiDataSource pois;
+	protected PoiDataSource pois;
+
+	private static final Map<Class<? extends AbstractPoisTest>, PoiDataSource> poisByClass = new HashMap<Class<? extends AbstractPoisTest>, PoiDataSource>();
 
 	@Test
 	public final void test_paris1_University() throws Exception {
