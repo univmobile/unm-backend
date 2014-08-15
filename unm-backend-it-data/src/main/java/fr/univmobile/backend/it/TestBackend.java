@@ -17,6 +17,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.Collections;
 import java.util.List;
 
 import javax.annotation.Nullable;
@@ -141,8 +142,6 @@ public abstract class TestBackend {
 
 		if (is == null) {
 			System.err.println("Cannot load resource.paths from classLoader.");
-			System.err
-					.println("Fallback: Trying local files in src/main/resources/");
 			return loadLocalResourcePaths();
 		}
 
@@ -163,8 +162,17 @@ public abstract class TestBackend {
 
 		final List<String> resourcePaths = new ArrayList<String>();
 
+		System.err.println( //
+				"Fallback: Trying local files in src/main/resources/");
+
 		resourcePaths.addAll(loadLocalResourcePaths("", new File(
 				"src/main/resources")));
+
+		System.err.println( //
+				"Fallback: Trying local files in ../unm-backend-it-data/src/main/resources/");
+
+		resourcePaths.addAll(loadLocalResourcePaths("", new File(
+				"../unm-backend-it-data/src/main/resources")));
 
 		return Iterables.toArray(resourcePaths, String.class);
 	}
@@ -173,8 +181,10 @@ public abstract class TestBackend {
 			final String prefix, final File dir) throws IOException {
 
 		if (!dir.isDirectory()) {
-			throw new FileNotFoundException("Not a directory: "
-					+ dir.getCanonicalPath());
+			// throw new FileNotFoundException("Not a directory: "
+			// + dir.getCanonicalPath());
+			System.err.println("Not a directory: " + dir.getCanonicalPath());
+			return Collections.emptyList();
 		}
 
 		final List<String> resourcePaths = new ArrayList<String>();
