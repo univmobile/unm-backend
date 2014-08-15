@@ -11,6 +11,7 @@ import org.junit.Test;
 import fr.univmobile.backend.client.Region;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromJSON;
+import fr.univmobile.backend.client.University;
 import fr.univmobile.backend.client.http.RegionJSONHttpClient;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 
@@ -66,5 +67,44 @@ public class RegionJSONHttpClientTest {
 		assertEquals(3, regions.length);
 
 		assertEquals("Île de France", regions[1].getLabel());
+	}
+
+	@Test
+	public void testGetUniversities_bretagne() throws IOException {
+
+		final RegionClient client = new RegionClientFromJSON(regionJSONClient);
+
+		final University[] universities = client
+				.getUniversitiesByRegion("bretagne");
+
+		assertEquals(4, universities.length);
+
+		assertEquals("Université Rennes 2", universities[1].getTitle());
+	}
+
+	@Test
+	public void testGetUniversities_ile_de_france() throws IOException {
+
+		final RegionClient client = new RegionClientFromJSON(regionJSONClient);
+
+		final University[] universities = client
+				.getUniversitiesByRegion("ile_de_france");
+
+		assertEquals(18, universities.length);
+
+		assertEquals("Cergy-Pontoise", universities[1].getTitle());
+	}
+
+	@Test
+	public void testGetUniversities_unrpcl() throws IOException {
+
+		final RegionClient client = new RegionClientFromJSON(regionJSONClient);
+
+		final University[] universities = client
+				.getUniversitiesByRegion("unrpcl");
+
+		assertEquals(5, universities.length);
+
+		assertEquals("ISAE-ENSMA", universities[1].getTitle());
 	}
 }
