@@ -33,5 +33,6 @@ Bus 114 et 210
 94736 Nogent-sur-Marne </fullAddress>
 	</address>
 	<child uid="954" active="true"/>
+	<attachment id="9" title="nogent.jpg" type="image" url="/uploads/poi/bea5832d8836c5a33159bf469a5e4de0b1adc88f.jpg"/>
 </content>
 </entry>

@@ -33,5 +33,6 @@ Bus 57 et 67 </itinerary>
 	<child uid="922" active="true"/>
 	<child uid="898" active="true"/>
 	<child uid="6213" active="true"/>
+	<attachment id="43" title="mse.jpg" type="image" url="/uploads/poi/11eda26cc33c26208a64ec6c4d962c3a3b2dd4e2.jpg"/>
 </content>
 </entry>

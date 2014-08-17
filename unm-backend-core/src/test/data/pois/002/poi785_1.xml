@@ -32,5 +32,6 @@ Bus 58, 82, 83, 91</itinerary>
 75006 Paris </fullAddress>
 	</address>
 	<child uid="960" active="true"/>
+	<attachment id="14" title="centre michelet.jpg" type="image" url="/uploads/poi/1cd59412d75f62b6b09f92f936a54e4a15855125.jpg"/>
 </content>
 </entry>

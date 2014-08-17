@@ -21,5 +21,6 @@
 	name="Brasserie Les Chênes">
 	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
 	<description>33, boulevard du Port 95000 CERGY PONTOISE</description>
+	<attachment id="238" title="les chênes.jpg" type="image" url="/uploads/poi/8b5f16be636b0743b297997dc1bc2e6f83228ea8.jpg"/>
 </content>
 </entry>

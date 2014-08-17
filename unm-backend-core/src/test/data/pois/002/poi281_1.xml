@@ -30,5 +30,6 @@ Arrêt Tolbiac-Baudricourt</itinerary>
 75013 Paris</fullAddress>
 	</address>
 	<child uid="1023" active="true"/>
+	<attachment id="32" title="pmf_01.jpg" type="image" url="/uploads/poi/6fe6180c4cf7c056c0b34c411c8a6efebb04a454.jpg"/>
 </content>
 </entry>

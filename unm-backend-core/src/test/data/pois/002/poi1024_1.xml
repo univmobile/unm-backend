@@ -47,5 +47,6 @@ Bus 27, 47, 83 et 91</itinerary>
 	<child uid="6419" active="true"/>
 	<child uid="6420" active="true"/>
 	<child uid="6421" active="true"/>
+	<attachment id="35" title="broca.jpg" type="image" url="/uploads/poi/553e6dbc4b187a9899fe8eab3e7d0830438203eb.jpg"/>
 </content>
 </entry>

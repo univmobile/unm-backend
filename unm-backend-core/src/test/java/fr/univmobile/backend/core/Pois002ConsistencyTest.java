@@ -17,7 +17,7 @@ import org.junit.Test;
  * annotation because of issues with Java heap space when JUnit attempts to
  * populate a huge StringBuilder.
  */
-public class Pois002ConsistencyTest extends AbstractPoisTest {
+public class Pois002ConsistencyTest extends AbstractPoisIleDeFranceTest {
 
 	public Pois002ConsistencyTest() {
 

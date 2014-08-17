@@ -29,5 +29,6 @@ Bus 21, 83 et 91</itinerary>
 	</address>
 	<child uid="3651" active="true"/>
 	<child uid="3652" active="true"/>
+	<attachment id="31" title="arago.jpg" type="image" url="/uploads/poi/07f9061b1ae1ed2a8919212202b5f94a8122d479.jpg"/>
 </content>
 </entry>

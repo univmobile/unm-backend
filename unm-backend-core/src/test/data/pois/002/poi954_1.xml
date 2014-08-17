@@ -35,5 +35,6 @@ Bus 114 et 210</itinerary>
 	<child uid="6287" active="true"/>
 	<child uid="6288" active="true"/>
 	<child uid="6289" active="true"/>
+	<attachment id="10" title="nogent.jpg" type="image" url="/uploads/poi/b07d003beedfc1124a1a225c5412de7b54ba815a.jpg"/>
 </content>
 </entry>

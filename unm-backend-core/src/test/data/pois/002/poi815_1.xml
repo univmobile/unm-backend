@@ -31,5 +31,6 @@ Bus 21, 27, 38, 82, 84, 85 et 89
 75005 Paris</fullAddress>
 	</address>
 	<child uid="958" active="true"/>
+	<attachment id="50" title="wa_zoom-1.jpg" type="image" url="/uploads/poi/b5f2fab00de74ed362fdde9eb486222734a0bdea.jpg"/>
 </content>
 </entry>

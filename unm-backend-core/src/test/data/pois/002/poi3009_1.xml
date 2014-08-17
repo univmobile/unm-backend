@@ -72,5 +72,6 @@ Bus 47</itinerary>
 	<child uid="6907" active="true"/>
 	<child uid="6908" active="true"/>
 	<child uid="6909" active="true"/>
+	<attachment id="211" title="Centre-universitaire-Censier.jpg" type="image" url="/uploads/poi/c066330db0b136e381cb97db6ff9b4960b7d4fef.jpg"/>
 </content>
 </entry>

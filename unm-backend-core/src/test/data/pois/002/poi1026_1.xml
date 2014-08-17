@@ -37,5 +37,6 @@ Bus 27 et 47</itinerary>
 	<child uid="6225" active="true"/>
 	<child uid="6226" active="true"/>
 	<child uid="6229" active="true"/>
+	<attachment id="39" title="albert_chatelet.jpg" type="image" url="/uploads/poi/e14a456312ad00233776be65dd73925c643a8954.jpg"/>
 </content>
 </entry>

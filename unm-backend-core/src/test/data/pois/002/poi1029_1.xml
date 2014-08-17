@@ -29,5 +29,6 @@ Station Bourse </itinerary>
 	<child uid="925" active="true"/>
 	<child uid="916" active="true"/>
 	<child uid="926" active="true"/>
+	<attachment id="44" title="Carré Colbert.jpg" type="image" url="/uploads/poi/a0eb4325552577baed298b7e29e4b3cb35746ed9.jpg"/>
 </content>
 </entry>

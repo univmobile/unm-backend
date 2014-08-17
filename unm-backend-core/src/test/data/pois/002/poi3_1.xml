@@ -10,10 +10,10 @@
 	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
 </author>
 <content uid="3"
-	logo="/images/universities/logos/univ_evry.jpg"
 	coordinates="48.624264546717,2.425725460052"
 	active="true"
 	markerType="point"
+	logo="/images/universities/logos/univ_evry.jpg"
 	createdAt="2010-05-11T10:52:33.000+02:00"
 	updatedAt="2011-06-15T17:30:00.000+02:00"
 	updatedBy="raphael"

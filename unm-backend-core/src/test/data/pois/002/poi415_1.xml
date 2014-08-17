@@ -21,5 +21,6 @@
 	name="Centre Broca">
 	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
 	<child uid="1024" active="true"/>
+	<attachment id="34" title="broca.jpg" type="image" url="/uploads/poi/790fdfceb8df212cd1d91bbe539b5ae3c4fed660.jpg"/>
 </content>
 </entry>

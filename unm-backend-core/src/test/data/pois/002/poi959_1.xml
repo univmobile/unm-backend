@@ -34,5 +34,6 @@ Bus 27, 38, 83 et 91
 	<child uid="860" active="true"/>
 	<child uid="674" active="true"/>
 	<child uid="6312" active="true"/>
+	<attachment id="13" title="cassin.jpg" type="image" url="/uploads/poi/2cdc0ac6f953d3666f9f4cf1023c4affc232aee7.jpg"/>
 </content>
 </entry>

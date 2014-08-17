@@ -29,5 +29,6 @@ Bus 63, 70, 86, 87 et 96</itinerary>
 75006 Paris </fullAddress>
 	</address>
 	<child uid="1118" active="true"/>
+	<attachment id="7" title="Campus dufour.jpg" type="image" url="/uploads/poi/ea2a95b102db583a2523adf6e73ff33d0fbcd9e6.jpg"/>
 </content>
 </entry>

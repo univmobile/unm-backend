@@ -51,5 +51,6 @@ Bus 21, 27, 38, 82 et 85 </itinerary>
 	<child uid="6269" active="true"/>
 	<child uid="6270" active="true"/>
 	<child uid="6271" active="true"/>
+	<attachment id="27" title="geographie_01.jpg" type="image" url="/uploads/poi/c0fda83441653046c895523b22a91a073898e102.jpg"/>
 </content>
 </entry>

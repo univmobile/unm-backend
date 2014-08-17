@@ -28,5 +28,6 @@ Station Bourg-la-Reine</itinerary>
 	</address>
 	<child uid="855" active="true"/>
 	<child uid="675" active="true"/>
+	<attachment id="17" title="bourg_la_reine.jpg" type="image" url="/uploads/poi/ec994cadd319c5ce31bd4109555b04926add081b.jpg"/>
 </content>
 </entry>

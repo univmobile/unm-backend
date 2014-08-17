@@ -29,5 +29,6 @@ Bus 27, 38, 83, 91</itinerary>
 75013 Paris</fullAddress>
 	</address>
 	<child uid="959" active="true"/>
+	<attachment id="12" title="cassin.jpg" type="image" url="/uploads/poi/7befd4c10d99ce83f8d8e8aa1a2cd63e6a9d945a.jpg"/>
 </content>
 </entry>

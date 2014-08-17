@@ -35,5 +35,6 @@ Bus 62 et 64</itinerary>
 	<child uid="6256" active="true"/>
 	<child uid="6257" active="true"/>
 	<child uid="6258" active="true"/>
+	<attachment id="21" title="Mahler.jpg" type="image" url="/uploads/poi/5f5c3fa85401d0b19b761d88bd4da05d8b5c3e6d.jpg"/>
 </content>
 </entry>

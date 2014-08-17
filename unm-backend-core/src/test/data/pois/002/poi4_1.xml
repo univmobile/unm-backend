@@ -10,10 +10,10 @@
 	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
 </author>
 <content uid="4"
-	logo="/images/universities/logos/univ_versailles.jpg"
 	coordinates="48.810028931039,2.1018218994141"
 	active="true"
 	markerType="point"
+	logo="/images/universities/logos/univ_versailles.jpg"
 	createdAt="2010-05-11T10:52:34.000+02:00"
 	updatedAt="2012-02-06T08:57:32.000+01:00"
 	updatedBy="rrivoire"

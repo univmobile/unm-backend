@@ -33,5 +33,6 @@
 75013 Paris</fullAddress>
 	</address>
 	<child uid="1022" active="true"/>
+	<attachment id="30" title="arago.jpg" type="image" url="/uploads/poi/6c2b388490b40e7242a0dec5a1aa24fc69c91609.jpg"/>
 </content>
 </entry>

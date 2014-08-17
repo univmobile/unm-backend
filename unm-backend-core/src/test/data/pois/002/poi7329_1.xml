@@ -10,9 +10,9 @@
 	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
 </author>
 <content uid="7329"
-	logo="/uploads/images/university_ecole-nationale-des-chartes_1365675145.png"
 	coordinates="48.848627339149,2.3430007696152"
 	markerType="point"
+	logo="/uploads/images/university_ecole-nationale-des-chartes_1365675145.png"
 	createdAt="2013-04-11T12:11:51.000+02:00"
 	updatedAt="2013-07-10T13:21:37.000+02:00"
 	createdBy="super admin"

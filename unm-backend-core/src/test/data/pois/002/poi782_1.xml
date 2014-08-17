@@ -29,5 +29,6 @@ Bus  27 et 47</itinerary>
 75005 Paris</fullAddress>
 	</address>
 	<child uid="1026" active="true"/>
+	<attachment id="38" title="albert_chatelet.jpg" type="image" url="/uploads/poi/918d4a15645591d182cb8e631f12d87f52d23d56.jpg"/>
 </content>
 </entry>

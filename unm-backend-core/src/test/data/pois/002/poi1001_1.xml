@@ -47,5 +47,6 @@ Bus 76 et 96</itinerary>
 	<child uid="6366" active="true"/>
 	<child uid="6367" active="true"/>
 	<child uid="7492" active="true"/>
+	<attachment id="19" title="Mahler.jpg" type="image" url="/uploads/poi/ac1b0ae97a6a010960a9c190f7a5f519bcc2ad34.jpg"/>
 </content>
 </entry>

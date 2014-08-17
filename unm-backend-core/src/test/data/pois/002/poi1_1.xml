@@ -10,10 +10,10 @@
 	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
 </author>
 <content uid="1"
-	logo="/images/universities/logos/univ_paris1.jpg"
 	coordinates="48.84650925911,2.3459243774"
 	active="true"
 	markerType="point"
+	logo="/images/universities/logos/univ_paris1.jpg"
 	createdAt="2010-05-11T10:52:30.000+02:00"
 	updatedAt="2014-03-31T12:14:33.000+02:00"
 	updatedBy="super admin"

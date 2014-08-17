@@ -90,5 +90,6 @@ Bus 62, 64 et 83</itinerary>
 	<child uid="6352" active="true"/>
 	<child uid="6353" active="true"/>
 	<child uid="6354" active="true"/>
+	<attachment id="33" title="pmf_01.jpg" type="image" url="/uploads/poi/21aa60d26f554a18ebee585d31e2434f77e28895.jpg"/>
 </content>
 </entry>

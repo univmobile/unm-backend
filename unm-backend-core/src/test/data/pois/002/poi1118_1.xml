@@ -31,5 +31,6 @@ Bus 63, 70, 86, 87 et 96</itinerary>
 	<child uid="913" active="true"/>
 	<child uid="930" active="true"/>
 	<child uid="1120" active="true"/>
+	<attachment id="8" title="rue-du-four.jpg" type="image" url="/uploads/poi/68cff4b050fc6003b608c25c672582031669bc25.jpg"/>
 </content>
 </entry>

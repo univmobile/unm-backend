@@ -20,5 +20,6 @@
 	parentUid="2610"
 	name="Amphithéâtre X">
 	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<attachment id="95" title="jpg_10-bat-l-amphi-x.jpg" type="image" url="/uploads/poi/36c6a95b09d78a537cac1eac705a65e218183900.jpg"/>
 </content>
 </entry>

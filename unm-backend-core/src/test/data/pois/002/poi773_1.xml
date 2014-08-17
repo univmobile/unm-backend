@@ -32,5 +32,6 @@ Bus 21, 27, 38, 82 et 85 </itinerary>
 </fullAddress>
 	</address>
 	<child uid="1002" active="true"/>
+	<attachment id="22" title="sorbonne_02.jpg" type="image" url="/uploads/poi/6f2325ae896e9624d5df2b089681d28abe8dee25.jpg"/>
 </content>
 </entry>

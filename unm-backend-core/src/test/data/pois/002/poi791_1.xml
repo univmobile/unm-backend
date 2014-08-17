@@ -28,5 +28,6 @@ Bus 21, 27, 38, 82, 84, 85 et 89</itinerary>
 75005 Paris</fullAddress>
 	</address>
 	<child uid="1027" active="true"/>
+	<attachment id="40" title="pantheon_16.jpg" type="image" url="/uploads/poi/e2a1cc4cf8c4e1b926ffab5b93c5a13784a26b0d.jpg"/>
 </content>
 </entry>

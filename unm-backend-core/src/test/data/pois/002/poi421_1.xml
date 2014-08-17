@@ -21,5 +21,6 @@
 	name="Centre Saint Charles">
 	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
 	<child uid="1025" active="true"/>
+	<attachment id="36" title="st-charles.jpg" type="image" url="/uploads/poi/f69541dba36f744af421c8e8d402bed26642cf94.jpg"/>
 </content>
 </entry>

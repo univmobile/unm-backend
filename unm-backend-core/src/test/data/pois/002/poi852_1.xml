@@ -33,5 +33,6 @@ Bus 63, 86 et 87
 75006 Paris </fullAddress>
 	</address>
 	<child uid="1031" active="true"/>
+	<attachment id="47" title="wa_zoom-2.jpg" type="image" url="/uploads/poi/b3ee6fb3de11ffa14a3dffe4cbf23f4afe11ecb7.jpg"/>
 </content>
 </entry>

@@ -28,5 +28,6 @@ Bus 76 et 96</itinerary>
 75004 Paris</fullAddress>
 	</address>
 	<child uid="1001" active="true"/>
+	<attachment id="18" title="Mahler.jpg" type="image" url="/uploads/poi/7f08cd6adca94b01d9e497035596ca051a4d8049.jpg"/>
 </content>
 </entry>

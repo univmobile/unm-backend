@@ -34,5 +34,6 @@ Bus 58, 82, 83 et 91
 	<child uid="707" active="true"/>
 	<child uid="706" active="true"/>
 	<child uid="6254" active="true"/>
+	<attachment id="15" title="centre michelet.jpg" type="image" url="/uploads/poi/e08946aa463daa63a341d8c93d1e58f5d5922673.jpg"/>
 </content>
 </entry>

@@ -29,5 +29,6 @@ Station Cardinal-Lemoine</itinerary>
 75005 Paris </fullAddress>
 	</address>
 	<child uid="1016" active="true"/>
+	<attachment id="24" title="ulm.jpg" type="image" url="/uploads/poi/2758c5a11ab7e28485f11e7bb08802050378ea48.jpg"/>
 </content>
 </entry>

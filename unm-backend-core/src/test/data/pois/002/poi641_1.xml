@@ -25,5 +25,6 @@
 75005 Paris</fullAddress>
 	</address>
 	<child uid="1021" active="true"/>
+	<attachment id="28" title="cujas.jpg" type="image" url="/uploads/poi/4106f7ce98a9ab8c2b28918a4324956617ff3f3d.jpg"/>
 </content>
 </entry>

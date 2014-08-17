@@ -49,5 +49,6 @@ Bus 42, 62 et 88</itinerary>
 	<child uid="6205" active="true"/>
 	<child uid="6206" active="true"/>
 	<child uid="6427" active="true"/>
+	<attachment id="37" title="st-charles.jpg" type="image" url="/uploads/poi/cfb0a0fa373d3277ed40600b3ae91af6b8e852b0.jpg"/>
 </content>
 </entry>

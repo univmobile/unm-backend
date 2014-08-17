@@ -27,5 +27,6 @@ Station Bourse </itinerary>
 75002 Paris </fullAddress>
 	</address>
 	<child uid="1029" active="true"/>
+	<attachment id="2" title="couloir.JPG" type="image" url="/uploads/poi/a4b541d8bc26fbb0a95cc719632a390ea2c5336d.jpg"/>
 </content>
 </entry>

@@ -31,5 +31,6 @@ Bus 21, 27, 38, 84 et 85</itinerary>
 </fullAddress>
 	</address>
 	<child uid="1030" active="true"/>
+	<attachment id="45" title="Publications de la Sorbonne.jpg" type="image" url="/uploads/poi/791037e1180aa24ea65c68793434dacb6f286031.jpg"/>
 </content>
 </entry>

@@ -30,5 +30,6 @@ Arrêt Tolbiac-Bibliothèque F. Mitterrand</itinerary>
 75013 Paris</fullAddress>
 	</address>
 	<child uid="1018" active="true"/>
+	<attachment id="20" title="rue_tolbiac.jpg" type="image" url="/uploads/poi/96aca78489223b8db531ed52811a168176869f86.jpg"/>
 </content>
 </entry>
