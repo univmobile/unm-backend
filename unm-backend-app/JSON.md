@@ -126,7 +126,9 @@ Tailles typiques :
 
 TODO : catégories ad hoc, listes et arborescences de POIs
 
-TODO : contexte de recherche
+TODO : contextes de recherche (favoris, université, filtres) (onglets du haut)
+
+TODO : détails et commentaires (onglets du bas)
 
 ### Flux JSON : universités en tant que points of interest (POIs) 
 
