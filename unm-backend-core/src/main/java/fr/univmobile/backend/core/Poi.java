@@ -24,6 +24,10 @@ public interface Poi extends Entry {
 	@XPath("atom:content/@name")
 	String getName();
 
+	@XPath("atom:content/atom:description")
+	@Nullable
+	String getDescription();
+	
 	/**
 	 * e.g. 1 (poiTypeLabel = "Université")
 	 */
@@ -150,6 +154,44 @@ public interface Poi extends Entry {
 		POINT("point"), POLYGON("polygon"), OVERLAY("overlay");
 
 		private MarkerType(final String label) {
+
+			this.label = checkNotNull(label, "label");
+		}
+
+		public final String label;
+
+		@Override
+		public String toString() {
+
+			return label;
+		}
+	}
+	
+	@XPath("atom:content/atom:attachment")
+	Attachment[] getAttachments();
+	
+	int sizeOfAttachments();
+	
+	interface Attachment {
+		
+		@XPath("@id")
+		int getId();
+		
+		@XPath("@title")
+		String getTitle();
+		
+		@XPath("@type")
+		AttachmentType getType();		
+		
+		@XPath("@url")
+		String getUrl();
+	}
+	
+	enum AttachmentType {
+
+		IMAGE("image");
+
+		private AttachmentType(final String label) {
 
 			this.label = checkNotNull(label, "label");
 		}

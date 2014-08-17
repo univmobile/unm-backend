@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi297_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi297_1.xml"/>
+<title>Amphi Blanchot</title>
+<updated>2014-08-17T21:32:57.967+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20297"
+	coordinates="45.835047849096,1.244389414787"
+	active="true"
+	markerType="point"
+	parentUid="20298"
+	name="Amphi Blanchot">
+	<poiType id="11" label="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

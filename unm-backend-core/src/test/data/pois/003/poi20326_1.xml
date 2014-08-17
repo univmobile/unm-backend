@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi326_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi326_1.xml"/>
+<title>Service Universitaire de Médecine Préventive et de Promotion</title>
+<updated>2014-08-17T21:32:58.097+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20326"
+	coordinates="45.817434719403,1.23055458068"
+	active="true"
+	markerType="point"
+	parentUid="20321"
+	name="Service Universitaire de Médecine Préventive et de Promotion">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; social"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

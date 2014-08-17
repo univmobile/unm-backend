@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi285_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi285_1.xml"/>
+<title>Biologie</title>
+<updated>2014-08-17T21:32:57.904+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20285"
+	coordinates="45.838546975784,1.236873865127"
+	active="true"
+	markerType="point"
+	parentUid="20087"
+	name="Biologie">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

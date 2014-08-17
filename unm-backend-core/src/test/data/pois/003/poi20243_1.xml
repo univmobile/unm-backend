@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi243_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi243_1.xml"/>
+<title>Site Condorcet</title>
+<updated>2014-08-17T21:32:57.679+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20243"
+	coordinates="45.822913848997,1.226488351821"
+	active="true"
+	markerType="point"
+	parentUid="20036"
+	name="Site Condorcet">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="20260" active="true"/>
+	<child uid="20261" active="true"/>
+	<child uid="20262" active="true"/>
+	<child uid="20263" active="true"/>
+</content>
+</entry>

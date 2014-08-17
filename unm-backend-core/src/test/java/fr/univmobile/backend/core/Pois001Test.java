@@ -6,7 +6,7 @@ import java.io.File;
 
 import org.junit.Test;
 
-public class Pois001Test extends AbstractPoisTest {
+public class Pois001Test extends AbstractPoisIleDeFranceTest {
 
 	public Pois001Test() {
 

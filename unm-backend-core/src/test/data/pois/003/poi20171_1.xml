@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi171_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi171_1.xml"/>
+<title>Institut du Littoral et de l’Environnement (ILE)</title>
+<updated>2014-08-17T21:32:58.795+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20171"
+	coordinates="46.142656196876,-1.157281994819"
+	active="true"
+	markerType="point"
+	parentUid="20118"
+	name="Institut du Littoral et de l’Environnement (ILE)">
+	<poiType id="6" label="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+</content>
+</entry>

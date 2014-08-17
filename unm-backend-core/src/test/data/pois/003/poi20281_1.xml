@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi281_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi281_1.xml"/>
+<title>Amphithéâtres (FST)</title>
+<updated>2014-08-17T21:32:57.879+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20281"
+	coordinates="45.837702340285,1.237367391586"
+	active="true"
+	markerType="point"
+	parentUid="20087"
+	name="Amphithéâtres (FST)">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fax>test</fax>
+	</address>
+	<child uid="20360" active="true"/>
+	<child uid="20361" active="true"/>
+	<child uid="20362" active="true"/>
+	<child uid="20363" active="true"/>
+</content>
+</entry>

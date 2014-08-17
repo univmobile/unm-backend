@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi333_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi333_1.xml"/>
+<title>Laboratoire Chimie Thérapeutique et Chimie Organique</title>
+<updated>2014-08-17T21:32:58.126+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20333"
+	coordinates="45.813318242459,1.234883666038"
+	active="true"
+	markerType="point"
+	parentUid="20069"
+	name="Laboratoire Chimie Thérapeutique et Chimie Organique">
+	<poiType id="19" label="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

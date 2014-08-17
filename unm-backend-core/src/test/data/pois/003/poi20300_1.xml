@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi300_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi300_1.xml"/>
+<title>Gestion des Entreprises et Administrations (IUT - Brive)</title>
+<updated>2014-08-17T21:32:57.983+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20300"
+	coordinates="45.15453748888,1.508468985557"
+	active="true"
+	markerType="point"
+	parentUid="20037"
+	name="Gestion des Entreprises et Administrations (IUT - Brive)">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fax>test</fax>
+	</address>
+	<child uid="20309" active="true"/>
+</content>
+</entry>
