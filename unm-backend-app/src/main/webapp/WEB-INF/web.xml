@@ -44,5 +44,13 @@
 		<servlet-name>PlainContentServlet</servlet-name>
 		<url-pattern>/js/*</url-pattern>
 	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/img</url-pattern>
+	</servlet-mapping>	
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/img/*</url-pattern>
+	</servlet-mapping>
 
 </web-app>
