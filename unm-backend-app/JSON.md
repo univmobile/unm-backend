@@ -11,6 +11,12 @@ L’application UnivMobile utilise les flux JSON pour la communication entre ses
   
 Sauf mention contraire (informations personnelles de l’utilisateur, messages e-mail, etc.), les flux JSON de cette documentation sont en accès libre.
 
+### Principes
+
+Une URL unique de plus haut niveau permet, au runtime, de retrouver toutes les URLs des flux JSON servis par l’application. Dans notre cas, c’est l’URL « Liste des endpoints JSON », dont le flux contient notamment l’URL du flux JSON de la liste des régions, flux JSON qui contient les URLs des flux JSON des universités, etc.
+
+Chaque URL permet de remonter à une URL parente. Par exemple, les URLs pour les flux JSON des universités ne sont plus sous la forme « /json/listUniversities_bretagne » mais sous la forme « /json/regions/bretagne », étant donné que « /json/regions » est une URL qui fonctionne.
+
 ### Notes
 
 Dans ce document, l’expression « ${baseURL} » est à remplacer par l’URL de base par laquelle sont accessibles les web services de l’application web unm-backend déployée sur le serveur.
@@ -55,8 +61,7 @@ URL : `${baseURL}/json`
 Exemple de flux :
 
     {'regions': {'url': '${baseURL}/json/regions'},
-     'pois':    {'url': '${baseURL}/json/pois'},
-      ...
+     'pois':    {'url': '${baseURL}/json/pois'}
     }
 
 Tailles typiques :
@@ -79,14 +84,14 @@ Cette URL est fournie par le flux JSON « Liste des endpoints JSON ».
 
 Exemple de flux :
 
-    {'regions':   [
+    {'regions': [
         {'id':       'bretagne',   
          'label':    'Bretagne',
-         'url':      '${baseURL}/json/listUniversities_bretagne',
+         'url':      '${baseURL}/json/regions/bretagne',
          'poiCount': '200'},         
         {'id':       'ile_de_france',   
          'label':    'Île de France',
-         'url':      '${baseURL}/json/listUniversities_ile_de_france',
+         'url':      '${baseURL}/json/regions/ile_de_france',
          'poiCount': '210'},
         ...
     ]}
@@ -102,14 +107,14 @@ Tailles typiques :
 Contexte : on affiche la liste des universités d’une région donnée,
 afin d’offrir de sélectionner son université de rattachement.
 
-URL générique : `${baseURL}/json/listUniversities_<universityId>`
+URL générique : `${baseURL}/json/regions/<regionId>`
 
 Ces URLs sont fournies par le flux JSON « Liste des régions ».
 
 Exemples :
 
-  * `${baseURL}/json/listUniversities_bretagne`
-  * `${baseURL}/json/listUniversities_ile_de_france`
+  * `${baseURL}/json/regions/bretagne`
+  * `${baseURL}/json/regions/ile_de_france`
   
 Exemple de flux :
 
@@ -129,7 +134,7 @@ Exemple de flux :
 
 Tailles typiques :
 
-| xxx_bretagne | xxx_ile_de_france | xxx_unrpcl |
+| bretagne | ile_de_france | unrpcl |
 | :--: | :--: | :--: |
 | < 1 Ko | < 1 Ko | < 1 Ko |
 
