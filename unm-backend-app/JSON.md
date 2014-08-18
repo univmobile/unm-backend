@@ -5,9 +5,9 @@ Flux JSON
 
 L’application UnivMobile utilise les flux JSON pour la communication entre ses différents éléments déployés. C’est la partie dite « backend » (projets Maven : unm-backend) qui sert ces flux. Ils sont en particulier consommés par :
 
-  * L’application Mobile web : unm-mobileweb → unm-backend
-  * L’application iOS : unm-ios → unm-backend
-  * L’application Android : unm-android → unm-backend
+  * L’application Mobile web : unm-mobileweb → (JSON) unm-backend
+  * L’application iOS : unm-ios → (JSON) unm-backend
+  * L’application Android : unm-android → (JSON) unm-backend
   
 Sauf mention contraire (informations personnelles de l’utilisateur, messages e-mail, etc.), les flux JSON de cette documentation sont en accès libre.
 
@@ -46,19 +46,18 @@ Et aussi :
 
 ### Flux JSON : liste des endpoints JSON
 
-Contexte : on permet d’avoir en un seul coup d’œil la liste des endpoints qui renvoient du JSON. Pour ceux qui demandent des paramètres, des exemples sont fournis.
+Contexte : on permet d’avoir en un seul coup d’œil la liste des endpoints de plus haut niveau qui renvoient du JSON. 
+
+Pour ceux qui demandent des paramètres, des exemples sont fournis.
 
 URL : `${baseURL}/json`
 
 Exemple de flux :
 
-    {'endpoints': [
-        {'url': '${baseURL}/json/regions'},
-        {'url': '${baseURL}/json/listUniversities_bretagne'},
-        {'url': '${baseURL}/json/listUniversities_ile_de_france'},
-        ...
-    ]}
-
+    {'regions': {'url': '${baseURL}/json/regions'},
+     'pois':    {'url': '${baseURL}/json/pois'},
+      ...
+    }
 
 Tailles typiques :
 
@@ -76,15 +75,19 @@ on affiche d’abord la liste des régions de rattachement.
 
 URL : `${baseURL}/json/regions`
 
+Cette URL est fournie par le flux JSON « Liste des endpoints JSON ».
+
 Exemple de flux :
 
-    {'region': [
-        {'id': 'bretagne',   
-         'label': 'Bretagne',
-         'url': '${baseURL}/json/listUniversities_bretagne'},
-        {'id': 'ile_de_france',   
-         'label': 'Île de France',
-         'url': '${baseURL}/json/listUniversities_ile_de_france'},
+    {'regions':   [
+        {'id':       'bretagne',   
+         'label':    'Bretagne',
+         'url':      '${baseURL}/json/listUniversities_bretagne',
+         'poiCount': '200'},         
+        {'id':       'ile_de_france',   
+         'label':    'Île de France',
+         'url':      '${baseURL}/json/listUniversities_ile_de_france',
+         'poiCount': '210'},
         ...
     ]}
 
@@ -101,6 +104,8 @@ afin d’offrir de sélectionner son université de rattachement.
 
 URL générique : `${baseURL}/json/listUniversities_<universityId>`
 
+Ces URLs sont fournies par le flux JSON « Liste des régions ».
+
 Exemples :
 
   * `${baseURL}/json/listUniversities_bretagne`
@@ -108,11 +113,16 @@ Exemples :
   
 Exemple de flux :
 
-    {'universities': [
-        {'id': 'crousVersailles',   
-         'title': 'CROUS Versailles'},
-        {'id': 'ucp',   
-         'title': 'Cergy-Pontoise'},
+    {
+    'regionId':     'bretagne',
+     'regionLabel':  'Bretagne',
+     'universities': [
+        {'id':       'crousVersailles',   
+         'title':    'CROUS Versailles',
+         'poiCount': '127'},
+        {'id':       'ucp',   
+         'title':    'Cergy-Pontoise',
+         'poiCount': '48'},
         ...
     ]}
 
