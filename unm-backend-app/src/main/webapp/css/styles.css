@@ -10,6 +10,9 @@ div.body {
 h1 {
 	text-align: center;
 }
+#body-pois h1 {
+	margin-top: 0;
+}
 #div-myself {
 	border: 8px solid #090;
 	padding: 8px 16px;
@@ -36,6 +39,9 @@ div.error span.message {
 }
 body.entered {
 	margin: 0 0 8px;
+}
+body#body-pois.entered {
+	margin-bottom: 0;
 }
 body.entered div.body {
 	margin-top: 8px;
@@ -167,4 +173,55 @@ span.error {
 h2 a {
 	text-decoration: none;
 }
+div.pois h2 {
+	font-size: 12px;
+	text-align: left;
+	margin: 0;
+	padding: 0 8px;
+}
+div.pois div ul {
+	font-size: 12px;
+}
+#body-pois #div-left {
+	width: 300px;
+}
+#body-pois #div-left-top div.ui-tabs-panel {
+	xbackground-color: #ff0;
+	padding-left: 0;
+	padding-right: 0;
+}
+#ul-pois li.poi:hover {
+	xbackground-color: #ff0;
+}
+#ul-pois {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#ul-pois ul {
+	padding: 0;
+	margin: 0 0 2em;
+	border-bottom: 1px solid #ccc;	
+}
+#ul-pois li.poi {	
+	margin: 0;
+	xborder-collapse: collapse;
+	border-top: 1px solid #ccc;
+}
+#ul-pois li.poi a {
+	display: block;
+	padding: 0.5em 8px 0.5em 24px;
+	text-decoration: none;
+	color: #00f;
+	background-repeat: no-repeat;
+	background-image: url(../img/markers/marker_greenA@2x.png);
+	background-size: 17px 30px;
+	background-position: 2px 5px;
+}
+#ul-pois li.poi.selected {
+	background-color: #eef;
+}
+div.infoWindow {
+	width: 20em;
+	height: 4em;
 }
