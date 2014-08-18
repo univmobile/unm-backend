@@ -136,9 +136,12 @@ body {
 	
 	var map;
 	var infoWindow = null;
+	var swallowNextClick = false;
 
 	function onfocusPoi(poiId) {
-	
+
+		swallowNextClick = false;
+
 		for (var i = 0; i < pois.length; ++i) {
 			
 			var poi = pois[i];
@@ -146,6 +149,16 @@ body {
 			if (poi.id == poiId) {
 		
 				selectPoi(poi);
+							
+				var newCenter = new google.maps.LatLng(poi.lat, poi.lng);
+				
+				if (newCenter.equals(map.getCenter())) {
+
+					if (infoWindow == null || infoWindow.poi.id != poiId) {
+				
+						swallowNextClick = true; // Do not toggle
+					}
+				}
 				
 				openInfoWindow(poi);	
 				
@@ -155,7 +168,7 @@ body {
 	}
 	
 	function onclickPoi(poiId) {
-	
+
 		for (var i = 0; i < pois.length; ++i) {
 			
 			var poi = pois[i];
@@ -170,9 +183,12 @@ body {
 
 					if (infoWindow != null && infoWindow.poi.id == poiId) {
 				
-						infoWindow.close(); // Toggle infoWindow
+						if (!swallowNextClick) {
+						
+							infoWindow.close(); // Toggle infoWindow
 					
-						infoWindow = null;
+							infoWindow = null;
+						}
 
 					} else {
 				
@@ -189,6 +205,8 @@ body {
 				break;
 			}
 		}
+		
+		swallowNextClick = false;
 	}
 
 	/**
@@ -216,7 +234,12 @@ body {
 	 */
 	function openInfoWindow(poi) {
 	
-		if (infoWindow != null) infoWindow.close();
+		if (infoWindow != null) {
+			
+			if (infoWindow.poi.id == poi.id) return;
+			
+			infoWindow.close();
+		}
 		
 		var div = $('#div-hidden div.infoWindow').clone();
 		
@@ -228,7 +251,6 @@ body {
 		if (poi.image == null || poi.image == '') {
 			imgDiv.addClass('hidden');
 		} else {
-//			alert('img:'+img+ ', '+poi.image);
 			imgDiv.removeClass('hidden');
 			var img = imgDiv.children('img');
 			img.attr('src', poi.image);
