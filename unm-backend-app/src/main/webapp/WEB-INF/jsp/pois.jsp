@@ -72,8 +72,12 @@ body {
 		lat: ${poi.latitude},
 		lng: ${poi.longitude},<c:if test="${poi.address != null}">
 		address: "${poi.address}",</c:if><c:if test="${poi.image != null}">
-		image: "${poi.image}",</c:if><c:if test="${poi.url != null}">
+		image: "${poi.image}",
+		imageWidth: ${poi.imageWidth},
+		imageHeight: ${poi.imageHeight},</c:if><c:if test="${poi.url != null}">
 		url: "${poi.url}",</c:if>
+		markerType: "${poi.markerType}",
+		markerIndex: "${poi.markerIndex}",
 		id: ${poi.id}
 	},</c:forEach></c:forEach>];
 
@@ -114,24 +118,18 @@ body {
 		$('#div-map').css('height', height);
 	}
 	
-	var markerBaseURL = '${baseURL}/img/markers/marker_green';
-	var markerBaseSize = new google.maps.Size(22, 40);	
-	var markerSuffix = '.png';	
-	var markerSize = markerBaseSize;
+	var markerImageBaseURL = '${baseURL}/img/markers/marker_green';
+	var markerImageBaseSize = new google.maps.Size(22, 40);	
+	var markerImageSuffix = '.png';	
+	var markerImageSize = markerImageBaseSize;
 	
 	if (window.devicePixelRatio > 1.5) { // Retina display
-		markerSuffix = '@2x.png';
-		markerSize = new google.maps.Size(44, 80);
+		markerImageSuffix = '@2x.png';
+		markerImageSize = new google.maps.Size(44, 80);
 	}
 
-	var markerImage = {
-		url: markerBaseURL + 'A' + markerSuffix,
-		size: markerSize,
-		scaledSize: markerBaseSize,
-		origin: new google.maps.Point(0, 0),
-		anchor: new google.maps.Point(11, 40)
-	};
-	
+	var markerImageBaseOrigin = new google.maps.Point(0, 0);
+	var markerImageBaseAnchor = new google.maps.Point(11, 40);	
 	var markerAnchorPoint = new google.maps.Point(5, -28); // For infoWindows
 	
 	// 3. INTERACTION
@@ -139,6 +137,23 @@ body {
 	var map;
 	var infoWindow = null;
 
+	function onfocusPoi(poiId) {
+	
+		for (var i = 0; i < pois.length; ++i) {
+			
+			var poi = pois[i];
+			
+			if (poi.id == poiId) {
+		
+				selectPoi(poi);
+				
+				openInfoWindow(poi);	
+				
+				break;
+			}
+		}
+	}
+	
 	function onclickPoi(poiId) {
 	
 		for (var i = 0; i < pois.length; ++i) {
@@ -203,16 +218,26 @@ body {
 	
 		if (infoWindow != null) infoWindow.close();
 		
-		// document.getElementById('div-infoWindow').innerHTML = poi.name;
-		
-		// $('#div-infoWindow').html(poi.name);
-		
-//		alert('fff'+
-//		document.getElementById('div-infoWindow').innerHTML);
-		
 		var div = $('#div-hidden div.infoWindow').clone();
 		
-		div.html(poi.name);
+		div.children('span.name').html(poi.name);
+		div.children('span.address').html(poi.address);
+		
+		var imgDiv = div.children('div');
+				
+		if (poi.image == null || poi.image == '') {
+			imgDiv.addClass('hidden');
+		} else {
+//			alert('img:'+img+ ', '+poi.image);
+			imgDiv.removeClass('hidden');
+			var img = imgDiv.children('img');
+			img.attr('src', poi.image);
+			if (poi.imageWidth < poi.imageHeight) {
+				img.removeClass('height100').addClass('width100');				
+			} else {
+				img.removeClass('width100').addClass('height100');
+			}
+		}
 		
 		div = div[0];
 		
@@ -282,6 +307,14 @@ body {
 			var lng = poi.lng;
 			var name = poi.name;
 
+			var markerImage = {
+				url: markerImageBaseURL + poi.markerIndex + markerImageSuffix,
+				size: markerImageSize,
+				scaledSize: markerImageBaseSize,
+				origin: markerImageBaseOrigin,
+				anchor: markerImageBaseAnchor
+			};
+
 			var marker = new google.maps.Marker({
 				position: new google.maps.LatLng(lat, lng),
 				map: map,
@@ -325,6 +358,7 @@ body {
 <jsp:include page="div-entered.h.jsp"/>
 
 <div class="xbody">
+<form>
 
 <div id="div-left">
 
@@ -356,8 +390,12 @@ body {
 	<h2>${category.name}</h2>
 	<ul>
 	<c:forEach var="poi" items="${category.pois}">
-		<li class="poi" id="li-poi-${poi.id}" onclick="onclickPoi(${poi.id});">
-		<a href="#">
+		<li class="poi ${poi.markerIndex}"	
+			onclick="onclickPoi(${poi.id});"	
+			id="li-poi-${poi.id}">
+		<a href="#"
+			id="link-poi-${poi.id}"
+			onfocus="onfocusPoi(${poi.id});">
 		${poi.name}
 		</a>
 	</c:forEach>
@@ -399,7 +437,53 @@ body {
 	
 	<div id="div-left-bottom-tabs-1">
 
-	Détails
+	<div id="div-details" class="hidden">
+	<div class="name">
+	</div>
+	<div class="floor">
+		<div class="title">Emplacement</div>
+		<div class="content"></div>
+	</div>
+	<div class="active">
+		<div class="title">Statut</div>
+		<div class="content">
+			<label for="radio-active-yes">Actif</label>
+			<input type="radio" name="active" value="yes"
+				id="radio-active-yes">
+			<label for="radio-active-no">Inactif</label>
+			<input type="radio" name="active" value="no"
+				id="radio-active-no">
+		</div>
+	</div>	
+	<div class="openingHours">
+		<div class="title">Horaires</div>
+		<div class="content"></div>
+	</div>	
+	<div class="phone">
+		<div class="title">Téléphone</div>
+		<div class="content"></div>
+	</div>	
+	<div class="fullAddress">
+		<div class="title">Adresse</div>
+		<div class="content"></div>
+	</div>	
+	<div class="email">
+		<div class="title">E-mail</div>
+		<div class="content"></div>
+	</div>	
+	<div class="itinerary">
+		<div class="title">Accès</div>
+		<div class="content"></div>
+	</div>	
+	<div class="url">
+		<div class="title">Site web</div>
+		<div class="content"></div>
+	</div>	
+	<div class="coordinates">
+		<div class="title">Coordonnées Maps</div>
+		<div class="content"></div>
+	</div>	
+	</div>
 
 	</div> <!-- end of #div-left-bottom-tabs-1 -->
 	
@@ -421,11 +505,19 @@ body {
 
 </div> <!-- end of #div-right -->
 
+</form>
 </div> <!-- end of div.body -->
 
 <div id="div-hidden" style="display: none;">
 <div class="infoWindow">
-	Hello World!
+<div class="img">
+	<img>
+</div>
+<span class="name">
+</span>
+<br>
+<span class="address">
+</span>
 </div> <!-- end of #div-infoWindow -->
 </div> <!-- end of div[@style = 'display: none;'] -->
 

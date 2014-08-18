@@ -214,14 +214,66 @@ div.pois div ul {
 	text-decoration: none;
 	color: #00f;
 	background-repeat: no-repeat;
-	background-image: url(../img/markers/marker_greenA@2x.png);
 	background-size: 17px 30px;
 	background-position: 2px 5px;
+	background-image: url(../img/markers/marker_greenEllipsis@2x.png);
 }
+#ul-pois li.poi.A a { background-image: url(../img/markers/marker_greenA@2x.png); }
+#ul-pois li.poi.B a { background-image: url(../img/markers/marker_greenB@2x.png); }
+#ul-pois li.poi.C a { background-image: url(../img/markers/marker_greenC@2x.png); }
+#ul-pois li.poi.D a { background-image: url(../img/markers/marker_greenD@2x.png); }
+#ul-pois li.poi.E a { background-image: url(../img/markers/marker_greenE@2x.png); }
+#ul-pois li.poi.F a { background-image: url(../img/markers/marker_greenF@2x.png); }
+#ul-pois li.poi.G a { background-image: url(../img/markers/marker_greenG@2x.png); }
+#ul-pois li.poi.H a { background-image: url(../img/markers/marker_greenH@2x.png); }
+#ul-pois li.poi.I a { background-image: url(../img/markers/marker_greenI@2x.png); }
+#ul-pois li.poi.J a { background-image: url(../img/markers/marker_greenJ@2x.png); }
+#ul-pois li.poi.K a { background-image: url(../img/markers/marker_greenK@2x.png); }
+#ul-pois li.poi.L a { background-image: url(../img/markers/marker_greenL@2x.png); }
+#ul-pois li.poi.M a { background-image: url(../img/markers/marker_greenM@2x.png); }
+#ul-pois li.poi.N a { background-image: url(../img/markers/marker_greenN@2x.png); }
+#ul-pois li.poi.O a { background-image: url(../img/markers/marker_greenO@2x.png); }
+#ul-pois li.poi.P a { background-image: url(../img/markers/marker_greenP@2x.png); }
+#ul-pois li.poi.Q a { background-image: url(../img/markers/marker_greenQ@2x.png); }
+#ul-pois li.poi.R a { background-image: url(../img/markers/marker_greenR@2x.png); }
+#ul-pois li.poi.S a { background-image: url(../img/markers/marker_greenS@2x.png); }
+#ul-pois li.poi.T a { background-image: url(../img/markers/marker_greenT@2x.png); }
+#ul-pois li.poi.U a { background-image: url(../img/markers/marker_greenU@2x.png); }
+#ul-pois li.poi.V a { background-image: url(../img/markers/marker_greenV@2x.png); }
+#ul-pois li.poi.W a { background-image: url(../img/markers/marker_greenW@2x.png); }
+#ul-pois li.poi.X a { background-image: url(../img/markers/marker_greenX@2x.png); }
+#ul-pois li.poi.Y a { background-image: url(../img/markers/marker_greenY@2x.png); }
+#ul-pois li.poi.Z a { background-image: url(../img/markers/marker_greenZ@2x.png); }
 #ul-pois li.poi.selected {
 	background-color: #eef;
 }
 div.infoWindow {
 	width: 20em;
 	height: 4em;
+	position: relative;
+}
+div.infoWindow .hidden {
+	display: none;
+}
+div.infoWindow div.img {
+	xposition: absolute;
+	xtop: 0px;
+	xright: 0px;
+	float: right;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	margin: 0;
+	background-color: #f00;
+}
+div.infoWindow img.width100 {
+	width: 100%;
+	margin: auto;
+}
+div.infoWindow img.height100 {
+	height: 100%;
+	margin: auto;
+}
+div.infoWindow span.name {
+	font-weight: bold;
 }
