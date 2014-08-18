@@ -113,16 +113,17 @@ Exemples :
   
 Exemple de flux :
 
-    {
-    'regionId':     'bretagne',
+    {'regionId':     'bretagne',
      'regionLabel':  'Bretagne',
      'universities': [
         {'id':       'crousVersailles',   
          'title':    'CROUS Versailles',
-         'poiCount': '127'},
+         'poiCount': '127',
+         'poisUrl':  '${baseURL}/json/universities/crousVersailles/pois'},
         {'id':       'ucp',   
          'title':    'Cergy-Pontoise',
-         'poiCount': '48'},
+         'poiCount': '48',
+         'poisUrl':  '${baseURL}/json/universities/ucp/pois'},
         ...
     ]}
 
