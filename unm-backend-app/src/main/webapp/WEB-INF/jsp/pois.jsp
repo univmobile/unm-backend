@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
 <title>Administration d’UnivMobile</title>
-<link type="text/css" rel="stylesheet" href="${baseURL}/css/styles.css">
+<link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <!--
 <link type="text/css" rel="stylesheet" href="${baseURL}/js/jquery-ui-1.11.1.custom/jquery-ui.min.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css">
@@ -441,6 +441,12 @@ body {
 			id="link-poi-${poi.id}"
 			onfocus="onfocusPoi(${poi.id});">
 		${poi.name}
+		<c:if test="${poi.address != null}">
+			<br>
+			<span class="address">
+				${poi.address}
+			</span>
+		</c:if>
 		</a>
 	</c:forEach>
 	</ul>
