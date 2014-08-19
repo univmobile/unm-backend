@@ -50,7 +50,7 @@ pois:
             image: null
             imageWidth: 200
             imageHeight: 100
-            markerType: G
+            markerType: green
             markerIndex: A
           - id: 931
             name: Centre rue du Four
@@ -61,7 +61,7 @@ pois:
             image: http://admin.univmobile.fr/uploads/poi/ac1b0ae97a6a010960a9c190f7a5f519bcc2ad34.jpg
             imageWidth: 200
             imageHeight: 300
-            markerType: G
+            markerType: green
             markerIndex: B
     - name: "Région : Île de France"
       pois:
@@ -76,7 +76,7 @@ pois:
             longitude: 2.3459243774
             url: Http://www.univ-paris1.fr/
             logo: http://admin.univmobile.fr/images/universities/logos/univ_paris1.jpg 
-            markerType: G
+            markerType: green
             markerIndex: C
           - id: 2931
             name: Centre rue du Four
@@ -84,6 +84,6 @@ pois:
             coordinates: 49.852771456599,2.3353672027588
             latitude: 49.852771456599
             longitude: 2.3353672027588
-            markerType: G
+            markerType: green
             markerIndex: D
       
