@@ -36,7 +36,7 @@ abstract class AbstractBackendController extends AbstractController {
 		this.regions = checkNotNull(regions, "regions");
 		this.pois = checkNotNull(pois, "pois");
 
-		poiTree = checkNotNull(poiTrees, "poiTrees").getByUid("poitree");
+		poiTree = checkNotNull(poiTrees, "poiTrees").getByUid("ile_de_france");
 	}
 
 	protected final UserDataSource users;

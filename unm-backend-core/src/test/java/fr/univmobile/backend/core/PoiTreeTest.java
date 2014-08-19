@@ -28,7 +28,7 @@ public class PoiTreeTest {
 		final PoiTreeDataSource poiTrees = BackendDataSourceFileSystem
 				.newDataSource(PoiTreeDataSource.class, tmpDataDir);
 
-		poiTree = poiTrees.getByUid("poitree");
+		poiTree = poiTrees.getByUid("ile_de_france");
 	}
 
 	private PoiTree poiTree;

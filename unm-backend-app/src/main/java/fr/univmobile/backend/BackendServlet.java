@@ -83,7 +83,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			poiTrees = BackendDataSourceFileSystem.newDataSource(
 					PoiTreeDataSource.class, poiTreesDir);
 			
-			poiTrees.getByUid("poitree"); // check for "poitree"
+			poiTrees.getByUid("ile_de_france"); // check for "poitree"
 
 			pois = BackendDataSourceFileSystem.newDataSource(
 					PoiDataSource.class, poisDir);
