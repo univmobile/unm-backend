@@ -174,6 +174,12 @@ public abstract class TestBackend {
 		resourcePaths.addAll(loadLocalResourcePaths("", new File(
 				"../unm-backend-it-data/src/main/resources")));
 
+		System.err.println( //
+				"Fallback: Trying local files in ../../../workspace/unm-backend/unm-backend-it-data/src/main/resources/");
+
+		resourcePaths.addAll(loadLocalResourcePaths("", new File(
+				"../../../workspace/unm-backend/unm-backend-it-data/src/main/resources")));
+
 		return Iterables.toArray(resourcePaths, String.class);
 	}
 
