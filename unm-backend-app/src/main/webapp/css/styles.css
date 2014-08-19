@@ -277,3 +277,54 @@ div.infoWindow img.height100 {
 div.infoWindow span.name {
 	font-weight: bold;
 }
+#div-details.hidden,
+#div-details div.field.hidden {
+	display: none;
+}
+#body-pois #div-left-bottom div.ui-tabs-panel {
+	xbackground-color: #ff0;
+	padding-left: 0;
+	padding-right: 0;
+}
+#div-details {
+	font-size: 12px;
+}
+#div-details div.name {
+	font-size: 120%;
+	font-weight: bold;
+	margin: 0 0 0.4em;
+	padding: 0 8px;
+}
+#div-details div.field.active div.title {
+	display: none;
+}
+#div-details div.field.active label,
+#div-details div.field.active span {
+	font-style: italic;
+}
+#div-details div.field.active label {
+	margin-left: 2em;
+}
+#div-details div.field {
+	margin-top: 0.4em;
+	border-top: 1px solid #ccc;
+	padding: 0.4em 8px;
+}
+#div-details div.field.name,
+#div-details div.field.active {
+	margin-top: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: none;
+}
+#div-details div.field div.title {
+	color: #bbb;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+}
+#div-details-buttons {
+	margin-top: 0.4em;
+	border-top: 1px solid #ccc;
+	padding: 1em 8px 0;
+	font-size: 10px;
+}

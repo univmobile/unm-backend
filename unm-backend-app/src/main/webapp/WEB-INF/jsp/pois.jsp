@@ -70,11 +70,16 @@ body {
 			var="poi" items="${category.pois}">{
 		name: "${poi.name}",
 		lat: ${poi.latitude},
-		lng: ${poi.longitude},<c:if test="${poi.address != null}">
-		address: "${poi.address}",</c:if><c:if test="${poi.image != null}">
+		lng: ${poi.longitude},<c:if test="${poi.address != null and poi.address != ''}">
+		address: "${poi.address}",</c:if><c:if test="${poi.floor != null and poi.floor != ''}">
+		floor: "${poi.floor}",</c:if><c:if test="${poi.openingHours != null and poi.openingHours != ''}">
+		openingHours: "${poi.openingHours}",</c:if><c:if test="${poi.phone != null and poi.phone != ''}">
+		phone: "${poi.phone}",</c:if><c:if test="${poi.email != null and poi.email != ''}">
+		email: "${poi.email}",</c:if><c:if test="${poi.itinerary != null and poi.itinerary != ''}">
+		itinerary: "${poi.itinerary}",</c:if><c:if test="${poi.image != null and poi.image != ''}">
 		image: "${poi.image}",
 		imageWidth: ${poi.imageWidth},
-		imageHeight: ${poi.imageHeight},</c:if><c:if test="${poi.url != null}">
+		imageHeight: ${poi.imageHeight},</c:if><c:if test="${poi.url != null and poi.url != ''}">
 		url: "${poi.url}",</c:if>
 		markerType: "${poi.markerType}",
 		markerIndex: "${poi.markerIndex}",
@@ -216,17 +221,31 @@ body {
 	
 		var liId = 'li-poi-' + poi.id;
 		
-		$('li.poi').each(function() {
-			
-			if ($(this).attr('id') == liId) {
-				
-				$(this).addClass('selected');
-				
-			} else {
-				
-				$(this).removeClass('selected');
-			}
+		$('li.poi').each(function() {			
+			$(this).toggleClass('selected', $(this).attr('id') == liId);
 		});
+		
+		$('#div-details').removeClass('hidden');
+		
+		$('#div-details div.name').html(poi.name);
+		
+		$('#div-details div.field.active span.id').html(poi.id);
+		
+		setDetailsField('floor',        poi.floor);
+		setDetailsField('openingHours', poi.openingHours);
+		setDetailsField('phone',        poi.phone);
+		setDetailsField('address',      poi.address);
+		setDetailsField('email',        poi.email);
+		setDetailsField('itinerary',    poi.itinerary);
+		setDetailsField('url',          poi.url);
+		setDetailsField('coordinates',  poi.lat + ',' + poi.lng);
+	}
+	
+	function setDetailsField(fieldName, content) {
+	
+		$('#div-details div.field.' + fieldName)
+			.toggleClass('hidden', content == null)
+			.children('div.content').html(content);
 	}
 	
 	/**
@@ -248,7 +267,7 @@ body {
 		
 		var imgDiv = div.children('div');
 				
-		if (poi.image == null || poi.image == '') {
+		if (poi.image == null) {
 			imgDiv.addClass('hidden');
 		} else {
 			imgDiv.removeClass('hidden');
@@ -312,7 +331,10 @@ body {
 			resize: resizeTop
 		});
 
-		$('#div-left-top-tabs').tabs('option', 'disabled', [2]);
+		$('#div-left-top-tabs').tabs('option', 'disabled', [1, 2, 3]);
+		// $('#div-left-top-tabs').tabs('option', 'disabled', [2]);
+
+		$('#div-left-bottom-tabs').tabs('option', 'disabled', [1]);
 
 		// 3. MAIN COMPONENTS LAYOUT
 		
@@ -460,53 +482,77 @@ body {
 	<div id="div-left-bottom-tabs-1">
 
 	<div id="div-details" class="hidden">
-	<div class="name">
+	<div class="field name">
 	</div>
-	<div class="floor">
+	<div class="field active">
+		<div class="title">Statut</div>
+		<div class="content">
+			<span>POI </span><span class="id"></span>
+			<label for="radio-active-yes">Actif</label>
+			<input type="radio" name="active" value="yes" checked
+				id="radio-active-yes" disabled>
+			<label for="radio-active-no">Inactif</label>
+			<input type="radio" name="active" value="no"
+				id="radio-active-no" disabled>
+		</div>
+	</div>	
+	<div class="field floor">
 		<div class="title">Emplacement</div>
 		<div class="content"></div>
 	</div>
-	<div class="active">
-		<div class="title">Statut</div>
-		<div class="content">
-			<label for="radio-active-yes">Actif</label>
-			<input type="radio" name="active" value="yes"
-				id="radio-active-yes">
-			<label for="radio-active-no">Inactif</label>
-			<input type="radio" name="active" value="no"
-				id="radio-active-no">
-		</div>
-	</div>	
-	<div class="openingHours">
+	<div class="field openingHours">
 		<div class="title">Horaires</div>
 		<div class="content"></div>
 	</div>	
-	<div class="phone">
+	<div class="field phone">
 		<div class="title">Téléphone</div>
 		<div class="content"></div>
 	</div>	
-	<div class="fullAddress">
+	<div class="field address">
 		<div class="title">Adresse</div>
 		<div class="content"></div>
 	</div>	
-	<div class="email">
+	<div class="field email">
 		<div class="title">E-mail</div>
 		<div class="content"></div>
 	</div>	
-	<div class="itinerary">
+	<div class="field itinerary">
 		<div class="title">Accès</div>
 		<div class="content"></div>
 	</div>	
-	<div class="url">
+	<div class="field url">
 		<div class="title">Site web</div>
 		<div class="content"></div>
 	</div>	
-	<div class="coordinates">
-		<div class="title">Coordonnées Maps</div>
+	<div class="field coordinates">
+		<div class="title">Coordonnées Lat/Lng</div>
 		<div class="content"></div>
 	</div>	
-	</div>
 
+	<div id="div-details-buttons">
+	
+	<button id="button-edit" disabled>
+		Modifier…
+	</button>
+
+	<!--
+	<button id="button-save">
+		Annuler
+	</button>
+
+	<button id="button-save">
+		Enregistrer
+	</button>
+
+	<button id="button-apply">
+		Appliquer
+	</button>
+	-->
+	
+	</div> <!-- end of #div-details-buttons -->
+	
+	</div> <!-- end of #div-details -->
+	
 	</div> <!-- end of #div-left-bottom-tabs-1 -->
 	
 	<div id="div-left-bottom-tabs-2">
