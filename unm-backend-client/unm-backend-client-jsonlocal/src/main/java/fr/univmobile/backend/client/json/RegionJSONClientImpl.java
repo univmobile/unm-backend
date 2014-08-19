@@ -49,7 +49,7 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 
 		final JSONList list = new JSONList();
 
-		json.put("region", list);
+		json.put("regions", list);
 
 		for (final Region region : regions) {
 

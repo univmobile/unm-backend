@@ -84,7 +84,7 @@ public class RegionClientFromJSON implements RegionClient {
 	@XPath("/*")
 	public interface RegionsJSON {
 
-		@XPath("region")
+		@XPath("regions")
 		RegionJSON[] getRegions();
 
 		interface RegionJSON extends Region {
