@@ -74,6 +74,7 @@ public abstract class AbstractPoisIleDeFranceTest extends AbstractPoisTest {
 		assertEquals(2, centreBroca.getPoiTypeIds()[0]);
 		assertEquals("Site", centreBroca.getPoiTypeLabels()[0]);
 		assertEquals(1, centreBroca.getParentUid());
-		assertEquals(1,centreBroca.sizeOfAttachments());
+		assertEquals(1, centreBroca.sizeOfChildren());
+		assertEquals(1, centreBroca.sizeOfAttachments());
 	}
 }
