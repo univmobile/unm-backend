@@ -57,7 +57,7 @@ public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
 					.put("url", filterURL(url)) //
 					.put("pois", new JSONMap() //
 							.put("count", region.getPoiCount()) //
-							.put("url", region.getPoisUrl())));
+							.put("url", filterURL(region.getPoisUrl()))));
 		}
 
 		return json.toJSONString();
@@ -87,10 +87,10 @@ public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
 					.put("id", university.getId()) //
 					.put("title", university.getTitle()) //
 					.put("config", new JSONMap() //
-							.put("url", university.getConfigUrl())) //
+							.put("url", filterURL(university.getConfigUrl()))) //
 					.put("pois", new JSONMap() //
 							.put("count", university.getPoiCount()) //
-							.put("url", university.getPoisUrl())));
+							.put("url", filterURL(university.getPoisUrl()))));
 		}
 
 		final String s = json.toJSONString();
