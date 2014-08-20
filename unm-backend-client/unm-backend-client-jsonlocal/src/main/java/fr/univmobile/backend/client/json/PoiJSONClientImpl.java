@@ -21,7 +21,7 @@ public class PoiJSONClientImpl extends AbstractJSONClientImpl implements
 
 	@Inject
 	public PoiJSONClientImpl( //
-			final String baseURL, @Named("PoiJSONClientImpl")//
+			final String baseURL, @Named("PoiJSONClientImpl") //
 			final PoiClient poiClient) {
 
 		super(baseURL);

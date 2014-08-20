@@ -21,7 +21,7 @@ public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
 
 	@Inject
 	public RegionJSONClientImpl( //
-			final String baseURL, @Named("RegionJSONClientImpl")//
+			final String baseURL, @Named("RegionJSONClientImpl") //
 			final RegionClient regionClient) {
 
 		super(baseURL);
