@@ -179,7 +179,8 @@ public class NoShibbolethFilter implements Filter {
 
 		final String httpHost = httpRequest.getHeader("host");
 
-		if (httpHost == null || !httpHost.startsWith("localhost")) {
+		if (httpHost == null || (!httpHost.startsWith("localhost") //
+				&& !"univmobile.vswip.com".equals(httpHost))) {
 
 			return error(response, "HTTP host must be localhost (test env): "
 					+ httpHost);
@@ -204,12 +205,12 @@ public class NoShibbolethFilter implements Filter {
 		request.setCharacterEncoding(UTF_8);
 
 		final String requestURI = httpRequest.getRequestURI();
-		
+
 		if (requestURI.contains("/json")) {
-			
+
 			return request; // Do not filter /json
 		}
-		
+
 		final String uidParam = //
 		request.getParameter("NO_SHIB_uid");
 		final String eppnParam = //
