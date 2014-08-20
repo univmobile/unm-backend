@@ -30,6 +30,7 @@ public class RegionJSONClientImplTest {
 		final String s = regionJSONClient.getRegionsJSON();
 
 		assertEquals("{\"regions\":[{\"id\":\"aa\"," //
+				+"\"pois\":{\"count\":0,\"url\":null}," //
 				+ "\"label\":\"bb\"," //
 				+ "\"url\":\"cc\"}]}", s);
 	}
@@ -51,6 +52,7 @@ public class RegionJSONClientImplTest {
 		final String s = regionJSONClient.getRegionsJSON();
 
 		assertEquals("{\"regions\":[{\"id\":null," //
+				+"\"pois\":{\"count\":0,\"url\":null}," //
 				 + "\"label\":null," //
 				+ "\"url\":\"http:\\/\\/toto\\/tralala\\/json\\/regions\"}]}", s);
 	}
@@ -74,6 +76,7 @@ public class RegionJSONClientImplTest {
 		final String s = regionJSONClient.getRegionsJSON();
 
 		assertEquals("{\"regions\":[{\"id\":\"a\\\"a\"," //
+				+"\"pois\":{\"count\":0,\"url\":null}," //
 				+ "\"label\":\"b\\\\b\"," //
 				+ "\"url\":\"cc\"}]}", s);
 	}

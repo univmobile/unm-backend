@@ -31,6 +31,7 @@ public class FilterURLTest {
 		final String s = regionJSONClient.getRegionsJSON();
 
 		assertEquals("{\"regions\":[{\"id\":null," //
+				+"\"pois\":{\"count\":0,\"url\":null}," //
 				+ "\"label\":null," //
 				+ "\"url\":\"http:\\/\\/toto\\/tralala\\/json\\/regions\"}]}",
 				s);

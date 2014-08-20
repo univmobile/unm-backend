@@ -35,11 +35,23 @@
 		<param-value>factory:BackendDataSourceFileSystem:r</param-value>
 	</init-param>
 	<init-param>
+		<param-name>inject:PoiTreeDataSource into:RegionClientFromLocal</param-name>
+		<param-value>factory:BackendDataSourceFileSystem:pt</param-value>
+	</init-param>
+	<init-param>
 		<param-name>inject:Class into:factory:BackendDataSourceFileSystem:r</param-name>
 		<param-value>class:RegionDataSource</param-value>
 	</init-param>
 	<init-param>
 		<param-name>inject:File into:factory:BackendDataSourceFileSystem:r</param-name>
 		<param-value>src/test/data/regions/001</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:Class into:factory:BackendDataSourceFileSystem:pt</param-name>
+		<param-value>class:PoiTreeDataSource</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:File into:factory:BackendDataSourceFileSystem:pt</param-name>
+		<param-value>src/test/data/poitrees/001</param-value>
 	</init-param>
 </init-params>

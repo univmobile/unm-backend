@@ -15,6 +15,7 @@ import fr.univmobile.backend.client.RegionClientFromJSON;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.University;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
+import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
@@ -23,14 +24,20 @@ public class RegionThroughJSONTest {
 	@Before
 	public void setUp() throws Exception {
 
-		final RegionDataSource dataSource = BackendDataSourceFileSystem
+		final RegionDataSource regions = BackendDataSourceFileSystem
 				.newDataSource(
 						RegionDataSource.class,
 						copyDirectory(new File("src/test/data/regions/001"),
 								new File("target/RegionThroughJSONTest")));
 
+		final PoiTreeDataSource poitrees = BackendDataSourceFileSystem
+				.newDataSource(
+						PoiTreeDataSource.class,
+						copyDirectory(new File("src/test/data/poitrees/001"),
+								new File("target/PoiThroughJSONTest_poitrees")));
+
 		final RegionClientFromLocal regionClient = new RegionClientFromLocal(
-				dataSource);
+				regions, poitrees);
 
 		final RegionJSONClientImpl regionJSONClient = new RegionJSONClientImpl(
 				"(dummy baseURL)", regionClient);
@@ -51,6 +58,8 @@ public class RegionThroughJSONTest {
 
 		assertEquals("ile_de_france", region.getId());
 		assertEquals("Île de France", region.getLabel());
+		
+		assertEquals(4715, region.getPoiCount());
 	}
 
 	@Test

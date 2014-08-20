@@ -37,6 +37,7 @@ public class RegionClientFromJSON implements RegionClient {
 
 		final String json = jsonClient.getRegionsJSON();
 
+		System.out.println(json);
 		if (log.isDebugEnabled()) {
 			log.debug("json.length(): " + json.length());
 			log.debug("json: "
@@ -90,13 +91,24 @@ public class RegionClientFromJSON implements RegionClient {
 		interface RegionJSON extends Region {
 
 			@XPath("@id")
+			@Override
 			String getId();
 
 			@XPath("@label")
+			@Override
 			String getLabel();
 
 			@XPath("@url")
+			@Override
 			String getUrl();
+
+			@XPath("pois/@count")
+			@Override
+			int getPoiCount();
+
+			@XPath("pois/@url")
+			@Override
+			String getPoisUrl();
 		}
 	}
 
@@ -109,9 +121,11 @@ public class RegionClientFromJSON implements RegionClient {
 		interface UniversityJSON extends University {
 
 			@XPath("@id")
+			@Override
 			String getId();
 
 			@XPath("@title")
+			@Override
 			String getTitle();
 		}
 	}

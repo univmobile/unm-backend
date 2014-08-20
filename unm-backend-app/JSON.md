@@ -60,7 +60,8 @@ URL : `${baseURL}/json`
 
 Exemple de flux :
 
-    {'regions': {'url': '${baseURL}/json/regions'},
+    {
+     'regions': {'url': '${baseURL}/json/regions'},
      'pois':    {'url': '${baseURL}/json/pois'}
     }
 
@@ -84,17 +85,32 @@ Cette URL est fournie par le flux JSON « Liste des endpoints JSON ».
 
 Exemple de flux :
 
-    {'regions': [
-        {'id':       'bretagne',   
+    {
+     'regions': 
+      [
+        {
+         'id':       'bretagne',   
          'label':    'Bretagne',
          'url':      '${baseURL}/json/regions/bretagne',
-         'poiCount': '200'},         
-        {'id':       'ile_de_france',   
+         'pois': 
+            {
+               'count':   200,
+               'url':     '${baseURL}/json/regions/bretagne/pois'
+            }
+        },                                                    
+        {
+         'id':       'ile_de_france',   
          'label':    'Île de France',
          'url':      '${baseURL}/json/regions/ile_de_france',
-         'poiCount': '210'},
+         'pois':       
+            {
+               'count':   110,
+               'url':     '${baseURL}/json/regions/ile_de_france/pois'
+            }
+        },
         ...
-    ]}
+      ]
+    }
 
 Tailles typiques :
 
@@ -118,19 +134,33 @@ Exemples :
   
 Exemple de flux :
 
-    {'regionId':     'bretagne',
+    {
+     'regionId':     'bretagne',
      'regionLabel':  'Bretagne',
-     'universities': [
-        {'id':       'crousVersailles',   
+     
+     'universities': 
+      [
+        {
+         'id':       'crousVersailles',   
          'title':    'CROUS Versailles',
-         'poiCount': '127',
-         'poisUrl':  '${baseURL}/json/universities/crousVersailles/pois'},
-        {'id':       'ucp',   
+         'pois:         
+           {
+             'count':   127,
+             'url':     '${baseURL}/json/regions/ile_de_france/crousVersailles/pois'
+           }
+        },                         
+        {
+         'id':       'ucp',   
          'title':    'Cergy-Pontoise',
-         'poiCount': '48',
-         'poisUrl':  '${baseURL}/json/universities/ucp/pois'},
+         'pois':
+           {
+             'count':   48,
+             'url':     '${baseURL}/json/regions/ile_de_france/ucp/pois'
+           }
+        },
         ...
-    ]}
+      ]
+    }
 
 Tailles typiques :
 

@@ -13,6 +13,7 @@ import fr.univmobile.backend.client.Region;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.University;
+import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
@@ -25,10 +26,18 @@ public class RegionClientFromLocalTest {
 				"src/test/data/regions/001"), new File(
 				"target/RegionClientFromLocalTest"));
 
-		final RegionDataSource dataSource = BackendDataSourceFileSystem
+		final RegionDataSource regions = BackendDataSourceFileSystem
 				.newDataSource(RegionDataSource.class, tmpDataDir);
 
-		client = new RegionClientFromLocal(dataSource);
+		final PoiTreeDataSource poitrees = BackendDataSourceFileSystem
+				.newDataSource(
+						PoiTreeDataSource.class,
+						copyDirectory(
+								new File("src/test/data/poitrees/001"),
+								new File(
+										"target/PoiClientFromLocalTest_poitrees")));
+
+		client = new RegionClientFromLocal(regions, poitrees);
 	}
 
 	private RegionClient client;
@@ -44,6 +53,8 @@ public class RegionClientFromLocalTest {
 
 		assertEquals("ile_de_france", region.getId());
 		assertEquals("Île de France", region.getLabel());
+
+		assertEquals(4715, region.getPoiCount());
 	}
 
 	@Test

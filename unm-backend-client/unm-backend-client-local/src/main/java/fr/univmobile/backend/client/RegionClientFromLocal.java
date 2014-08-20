@@ -16,18 +16,22 @@ import javax.inject.Inject;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.DataBeans;
 
 public class RegionClientFromLocal implements RegionClient {
 
 	@Inject
-	public RegionClientFromLocal(final RegionDataSource dataSource) {
+	public RegionClientFromLocal(final RegionDataSource regions,
+			final PoiTreeDataSource poitrees) {
 
-		this.dataSource = checkNotNull(dataSource, "dataSource");
+		this.regions = checkNotNull(regions, "regions");
+		this.poitrees = checkNotNull(poitrees, "poitrees");
 	}
 
-	private final RegionDataSource dataSource;
+	private final RegionDataSource regions;
+	private final PoiTreeDataSource poitrees;
 
 	private static final Log log = LogFactory
 			.getLog(RegionClientFromLocal.class);
@@ -38,7 +42,7 @@ public class RegionClientFromLocal implements RegionClient {
 		log.debug("getRegions()...");
 
 		final Map<String, fr.univmobile.backend.core.Region> dsRegions //
-		= dataSource.getAllBy(String.class, "uid");
+		= regions.getAllBy(String.class, "uid");
 
 		final Region[] regions = new Region[dsRegions.size()];
 
@@ -67,11 +71,29 @@ public class RegionClientFromLocal implements RegionClient {
 
 		for (final fr.univmobile.backend.core.Region dsRegion : sortedSet) {
 
+			final String regionId = dsRegion.getUid(); // REGION.ID ==
+														// DS_REGION.UID!
+
+			final int poiCount;
+
+			if (poitrees.isNullByUid(regionId)) {
+
+				poiCount = 0; // e.g. bretagne
+
+			} else {
+
+				poiCount = poitrees.getByUid(regionId).sizeOfAllPois();
+			}
+
+			final String url = dsRegion.getUrl();
+
 			regions[i] = DataBeans //
 					.instantiate(MutableRegion.class) //
-					.setId(dsRegion.getUid()) // REGION.ID == DS_REGION.UID!
+					.setId(regionId) //
 					.setLabel(dsRegion.getLabel()) //
-					.setUrl(dsRegion.getUrl());
+					.setUrl(url) //
+					.setPoiCount(poiCount) //
+					.setPoisUrl(url + "/pois");
 
 			++i;
 		}
@@ -88,7 +110,7 @@ public class RegionClientFromLocal implements RegionClient {
 		}
 
 		final fr.univmobile.backend.core.University[] dsUniversities//
-		= dataSource.getByUid(regionId).getUniversities();
+		= regions.getByUid(regionId).getUniversities();
 
 		final University[] universities = new University[dsUniversities.length];
 
@@ -135,6 +157,10 @@ public class RegionClientFromLocal implements RegionClient {
 		MutableRegion setLabel(String label);
 
 		MutableRegion setUrl(String url);
+
+		MutableRegion setPoiCount(int poiCount);
+
+		MutableRegion setPoisUrl(String poisUrl);
 	}
 
 	private interface MutableUniversity extends University {

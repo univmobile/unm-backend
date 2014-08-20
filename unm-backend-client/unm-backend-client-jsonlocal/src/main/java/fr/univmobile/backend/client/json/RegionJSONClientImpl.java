@@ -49,10 +49,15 @@ public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
 
 		for (final Region region : regions) {
 
+			final String url = region.getUrl();
+
 			list.add(new JSONMap() //
 					.put("id", region.getId()) //
 					.put("label", region.getLabel()) //
-					.put("url", filterURL(region.getUrl())));
+					.put("url", filterURL(url)) //
+					.put("pois", new JSONMap() //
+							.put("count", region.getPoiCount()) //
+							.put("url", region.getPoisUrl())));
 		}
 
 		return json.toJSONString();

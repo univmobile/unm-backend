@@ -8,4 +8,8 @@ public interface Region {
 	String getLabel();
 
 	String getUrl();
+	
+	int getPoiCount();
+	
+	String getPoisUrl();
 }
