@@ -1,7 +1,9 @@
 package fr.univmobile.backend.client.test;
 
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
@@ -28,28 +30,32 @@ public class PoiThroughJSONTest {
 	public void setUp() throws Exception {
 
 		final RegionDataSource regionDataSource = BackendDataSourceFileSystem
-				.newDataSource(RegionDataSource.class, copyDirectory(new File("src/test/data/regions/001"),
-						new File("target/PoiThroughJSONTest_regions")));
+				.newDataSource(
+						RegionDataSource.class,
+						copyDirectory(new File("src/test/data/regions/001"),
+								new File("target/PoiThroughJSONTest_regions")));
 
 		final PoiDataSource poiDataSource = BackendDataSourceFileSystem
-				.newDataSource(PoiDataSource.class, 
+				.newDataSource(
+						PoiDataSource.class,
 						copyDirectory(new File("src/test/data/pois/001"),
-						new File("target/PoiThroughJSONTest_pois")));
+								new File("target/PoiThroughJSONTest_pois")));
 
 		final PoiTreeDataSource poitreeDataSource = BackendDataSourceFileSystem
-				.newDataSource(PoiTreeDataSource.class, 
+				.newDataSource(
+						PoiTreeDataSource.class,
 						copyDirectory(new File("src/test/data/poitrees/001"),
-						new File("target/PoiThroughJSONTest_poitrees")));
+								new File("target/PoiThroughJSONTest_poitrees")));
 
 		final PoiClientFromLocal poiClient = new PoiClientFromLocal(
-				poiDataSource,poitreeDataSource,regionDataSource);
+				poiDataSource, poitreeDataSource, regionDataSource);
 
-		final PoiJSONClientImpl poiJSONClient = new PoiJSONClientImpl(
-				"(dummy baseURL)", poiClient);
+		poiJSONClient = new PoiJSONClientImpl("(dummy baseURL)", poiClient);
 
 		client = new PoiClientFromJSON(poiJSONClient);
 	}
 
+	private PoiJSONClientImpl poiJSONClient;
 	private PoiClient client;
 
 	@Test
@@ -76,7 +82,7 @@ public class PoiThroughJSONTest {
 
 		final Poi[] pois = groups[1].getPois();
 
-		assertEquals(23, pois.length);
+		assertEquals(16, pois.length);
 
 		for (final Poi poi : pois) {
 
@@ -105,30 +111,24 @@ public class PoiThroughJSONTest {
 		assertEquals("green", poi.getMarkerType());
 		assertEquals("C", poi.getMarkerIndex());
 	}
-/*
+
 	@Test
-	public void testThroughJSON_poi() throws IOException {
+	public void testThroughJSON_noEmptyCoordinates() throws IOException {
 
-		final Region[] regions = client.getRegions();
+		final String json = poiJSONClient.getPoisJSON();
 
-		assertEquals(3, regions.length);
-
-		final Region region = regions[1];
-
-		assertEquals("ile_de_france", region.getId());
-		assertEquals("Île de France", region.getLabel());
+		assertFalse(json.contains("\"coordinates\":\"\""));
 	}
 
 	@Test
-	public void testThroughJSON_university() throws IOException {
+	public void testThroughJSON_noBlankCoordinates() throws IOException {
 
-		final University[] universities = client
-				.getUniversitiesByRegion("bretagne");
+		for (final PoiGroup group : client.getPois()) {
 
-		final University university = universities[1];
+			for (final Poi poi : group.getPois()) {
 
-		assertEquals("rennes2", university.getId());
-		assertEquals("Université Rennes 2", university.getTitle());
+				assertFalse(isBlank(poi.getCoordinates()));
+			}
+		}
 	}
-	*/
 }

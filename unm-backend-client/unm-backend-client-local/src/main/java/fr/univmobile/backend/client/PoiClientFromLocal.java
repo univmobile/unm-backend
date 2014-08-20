@@ -1,6 +1,7 @@
 package fr.univmobile.backend.client;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 import static org.apache.commons.lang3.StringUtils.substringBefore;
 
@@ -119,6 +120,10 @@ public class PoiClientFromLocal implements PoiClient {
 				final String latitude = substringBefore(coordinates, ",");
 				final String longitude = substringAfter(coordinates, ",");
 
+				if (isBlank(coordinates)) {
+					continue; // Skip empty POIs
+				}
+
 				final MutablePoi poi = DataBeans //
 						.instantiate(MutablePoi.class) //
 						.setId(poiUid) //
@@ -157,30 +162,6 @@ public class PoiClientFromLocal implements PoiClient {
 				markerIndex = (markerIndex + 1) % 26;
 
 				poiGroup.addToPois(poi);
-
-				/*
-				 * 
-				 * assertEquals(2, poi.getId());
-				 * assertEquals("Université Paris 13", poi.getName());
-				 * assertEquals
-				 * ("Avenue Jean-Baptiste Clément 93430 Villetaneuse",
-				 * poi.getAddress());
-				 * assertEquals("48.956368610524,2.3387575149536",
-				 * poi.getCoordinates()); assertEquals("48.956368610524",
-				 * poi.getLatitude()); // 48.96 assertEquals("2.3387575149536",
-				 * poi.getLongitude()); // 2.34
-				 * assertEquals("Http://www.univ-paris13.fr/", poi.getUrl());
-				 * assertEquals("0149403000", poi.getPhone());
-				 * assertEquals("0149403893", poi.getFax());
-				 * 
-				 * assertNull(poi.getEmail()); assertNull(poi.getFloor());
-				 * assertNull(poi.getImage()); assertNull(poi.getItinerary());
-				 * assertNull(poi.getOpeningHours());
-				 * 
-				 * assertEquals("green", poi.getMarkerType()); assertEquals("D",
-				 * poi.getMarkerType());
-				 */
-				// .setGroupLabel("Région : " + dsRegion.getLabel()));
 			}
 		}
 

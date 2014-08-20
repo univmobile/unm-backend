@@ -1,7 +1,9 @@
 package fr.univmobile.backend.client.test;
 
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
 
@@ -77,7 +79,7 @@ public class PoiClientFromLocalTest {
 
 		final Poi[] pois = groups[1].getPois();
 
-		assertEquals(23, pois.length);
+		assertEquals(16, pois.length);
 
 		for (final Poi poi : pois) {
 
@@ -118,5 +120,17 @@ public class PoiClientFromLocalTest {
 
 		assertEquals(4, poi.getId());
 		assertNull(poi.getAddress());
+	}
+
+	@Test
+	public void testThroughJSON_noBlankCoordinates() throws IOException {
+
+		for (final PoiGroup group : client.getPois()) {
+
+			for (final Poi poi : group.getPois()) {
+
+				assertFalse(isBlank(poi.getCoordinates()));
+			}
+		}
 	}
 }
