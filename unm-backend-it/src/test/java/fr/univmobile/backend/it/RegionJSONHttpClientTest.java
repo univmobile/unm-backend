@@ -1,6 +1,7 @@
 package fr.univmobile.backend.it;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 
 import java.io.File;
 import java.io.IOException;
@@ -67,6 +68,14 @@ public class RegionJSONHttpClientTest {
 		assertEquals(3, regions.length);
 
 		assertEquals("Île de France", regions[1].getLabel());
+	}
+
+	@Test
+	public void testAllURLsAreFiltered() throws IOException {
+
+		final String json = regionJSONClient.getRegionsJSON();
+
+		assertFalse(json.contains("${baseURL}"));
 	}
 
 	@Test
