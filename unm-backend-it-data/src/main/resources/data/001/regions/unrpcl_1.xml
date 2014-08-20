@@ -12,7 +12,7 @@
 <content>
 	<uid>unrpcl</uid>
 	<label>Limousin/Poitou-Charentes</label>
-	<url>${baseURL}/json/listUniversities_unrpcl</url>
+	<url>${baseURL}/json/regions/unrpcl</url>
 	<universities>
 		<university>
 			<id>ulr</id>

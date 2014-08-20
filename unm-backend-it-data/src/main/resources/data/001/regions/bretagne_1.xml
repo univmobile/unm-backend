@@ -12,7 +12,7 @@
 <content>
 	<uid>bretagne</uid>
 	<label>Bretagne</label>
-	<url>${baseURL}/json/listUniversities_bretagne</url>
+	<url>${baseURL}/json/regions/bretagne</url>
 	<universities>
 		<university>
 			<id>ubo</id>

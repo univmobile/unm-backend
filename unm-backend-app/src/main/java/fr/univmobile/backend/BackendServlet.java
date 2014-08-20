@@ -60,7 +60,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		if (log.isInfoEnabled()) {
 			log.info(this + ": init()...");
 		}
-		
+
 		final String dataDir = getServletConfig().getInitParameter("dataDir");
 
 		if (isBlank(dataDir)) {
@@ -82,12 +82,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			poiTrees = BackendDataSourceFileSystem.newDataSource(
 					PoiTreeDataSource.class, poiTreesDir);
-			
+
 			poiTrees.getByUid("ile_de_france"); // check for "poitree"
 
 			pois = BackendDataSourceFileSystem.newDataSource(
 					PoiDataSource.class, poisDir);
-			
+
 		} catch (final IOException e) {
 			throw new ServletException(e);
 		}
@@ -251,7 +251,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// https://univmobile-dev.univ-paris1.fr/json/regions
 
-		if ("regions".equals(path) || "regions.json".equals(path)) {
+		if ("regions".equals(path) || "regions/".equals(path)
+				|| "regions.json".equals(path)) {
 
 			final String regionsJSON = regionJSONClient.getRegionsJSON();
 
@@ -265,9 +266,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			return;
 		}
 
-		if (path.startsWith("listUniversities_")) {
+		if (path.startsWith("regions/")) {
 
-			String regionId = substringAfter(path, "listUniversities_");
+			String regionId = substringAfter(path, "regions/");
 
 			if (regionId.endsWith(".json")) {
 				regionId = substringBeforeLast(regionId, ".json");
@@ -319,13 +320,15 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				.put("url", composeJSONendPoint("/regions" // + ".json"
 						)));
 
+		/*
 		for (final Region region : regionClient.getRegions()) {
 
 			list.add(new JSONMap() //
-					.put("url", composeJSONendPoint("/listUniversities_"
+					.put("url", composeJSONendPoint("/regions/"
 							+ region.getId() // + ".json"
 					)));
 		}
+		*/
 
 		serveJSON(json.toJSONString(), response);
 	}
