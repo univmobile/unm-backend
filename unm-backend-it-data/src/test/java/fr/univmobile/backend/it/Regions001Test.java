@@ -49,7 +49,7 @@ public class Regions001Test {
 		assertEquals("ile_de_france", ile_de_france.getUid());
 		assertEquals("Île de France", ile_de_france.getLabel());
 		assertTrue(ile_de_france.getUrl().startsWith(
-				"${baseURL}/json/listUniversities_"));
+				"${baseURL}/json/regions/"));
 //				"http://univmobile.vswip.com/"));
 
 		assertEquals(18, ile_de_france.sizeOfUniversities());
