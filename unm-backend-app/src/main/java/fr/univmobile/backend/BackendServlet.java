@@ -337,9 +337,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final JSONMap json = new JSONMap();
 
-		json.put("regions", composeJSONendPoint("/regions" // + ".json"
-				)).put("pois", composeJSONendPoint("/pois" // + ".json"
-				));
+		json.put("regions", new JSONMap().put( //
+				"url", composeJSONendPoint("/regions" // +".json"
+				)));
+		json.put("pois", new JSONMap().put( //
+				"url", composeJSONendPoint("/pois" // + ".json"
+				)));
 
 		/*
 		 * for (final Region region : regionClient.getRegions()) {
