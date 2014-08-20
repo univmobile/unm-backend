@@ -14,17 +14,17 @@ import org.junit.Test;
 import fr.univmobile.backend.core.AbstractPoisTest;
 import fr.univmobile.backend.core.Poi;
 
-public class PoiTreeUtilsTest extends AbstractPoisTest {
+public class PoiTreeUtils003Test extends AbstractPoisTest {
 
-	public PoiTreeUtilsTest() {
+	public PoiTreeUtils003Test() {
 
-		super(new File("src/test/data/pois/002"));
+		super(new File("src/test/data/pois/003"));
 	}
 
 	@Test
 	public void testCount() throws Exception {
 
-		assertEquals(7440, pois.getAllByInt("uid").size());
+		assertEquals(277, pois.getAllByInt("uid").size());
 	}
 
 	@Test
@@ -33,7 +33,7 @@ public class PoiTreeUtilsTest extends AbstractPoisTest {
 		final PoiTreeUtils tree = new PoiTreeUtils(pois);
 
 		final OutputStream os = new FileOutputStream(new File("target",
-				"testPoiTree.xml"));
+				"testPoiTree003.xml"));
 		try {
 
 			final PrintWriter pw = new PrintWriter(new OutputStreamWriter(os,
@@ -49,6 +49,6 @@ public class PoiTreeUtilsTest extends AbstractPoisTest {
 
 		final Poi[] roots = tree.getRoots();
 		
-		assertEquals(23, roots.length);
+		assertEquals(5, roots.length);
 	}
 }

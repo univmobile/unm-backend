@@ -1,7 +1,6 @@
 package fr.univmobile.backend.client.json;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.io.IOException;
 
@@ -17,22 +16,19 @@ import fr.univmobile.backend.client.University;
 import fr.univmobile.backend.json.JSONList;
 import fr.univmobile.backend.json.JSONMap;
 
-public class RegionJSONClientImpl implements RegionJSONClient {
+public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
+		RegionJSONClient {
 
 	@Inject
 	public RegionJSONClientImpl( //
 			final String baseURL, @Named("RegionJSONClientImpl")//
 			final RegionClient regionClient) {
 
-		if (isBlank(baseURL)) {
-			throw new IllegalArgumentException("Argument is mandatory: baseURL");
-		}
+		super(baseURL);
 
-		this.baseURL = checkNotNull(baseURL, "baseURL");
 		this.regionClient = checkNotNull(regionClient, "regionClient");
 	}
 
-	private final String baseURL;
 	private final RegionClient regionClient;
 
 	private static final Log log = LogFactory
@@ -60,23 +56,6 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 		}
 
 		return json.toJSONString();
-	}
-
-	private String filterURL(final String url) {
-
-		if (!url.contains("${baseURL}")) {
-			return url;
-		}
-
-		String u = url;
-
-		if (baseURL.endsWith("/")) {
-			u = u.replace("${baseURL}/", baseURL);
-		}
-
-		u = u.replace("${baseURL}", baseURL);
-
-		return u;
 	}
 
 	@Override

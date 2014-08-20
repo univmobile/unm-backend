@@ -1,6 +1,10 @@
 package fr.univmobile.backend.json;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 import java.util.Map;
+
+import javax.annotation.Nullable;
 
 import org.json.simple.JSONAware;
 import org.json.simple.JSONObject;
@@ -18,9 +22,11 @@ public class JSONMap implements JSONAware {
 	@SuppressWarnings("unchecked")
 	private final Map<String, Object> map = (Map<String, Object>) jsonObject;
 
-	public JSONMap put(final String key, final Object value) {
+	public JSONMap put(final String key, @Nullable final Object value) {
 
-		map.put(key, value);
+		checkNotNull("key", key);
+
+		map.put(key, value); // Even when value == null
 
 		return this;
 	}

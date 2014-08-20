@@ -51,7 +51,7 @@ public class RegionJSONClientImplTest {
 		final String s = regionJSONClient.getRegionsJSON();
 
 		assertEquals("{\"regions\":[{\"id\":null," //
-				+ "\"label\":null," //
+				 + "\"label\":null," //
 				+ "\"url\":\"http:\\/\\/toto\\/tralala\\/json\\/regions\"}]}", s);
 	}
 

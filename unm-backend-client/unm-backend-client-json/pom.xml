@@ -43,6 +43,11 @@
 			<artifactId>unm-backend-client-jsonlocal</artifactId>
 			<scope>test</scope>
 		</dependency>	
+		<dependency>
+			<groupId>fr.univmobile</groupId>
+			<artifactId>unm-testutil</artifactId>
+			<scope>test</scope>
+		</dependency>	
 	</dependencies>
 	<build>
 		<resources>

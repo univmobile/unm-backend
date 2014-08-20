@@ -134,6 +134,7 @@ public interface Poi extends Entry {
 		String getLongitude();
 
 		@XPath("atom:fullAddress")
+		@Nullable
 		String getFullAddress();
 	}
 

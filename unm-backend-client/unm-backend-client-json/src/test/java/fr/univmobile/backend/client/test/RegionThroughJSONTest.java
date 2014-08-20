@@ -1,11 +1,11 @@
 package fr.univmobile.backend.client.test;
 
+import static fr.univmobile.testutil.TestUtils.copyDirectory;
 import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
 
-import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -23,18 +23,11 @@ public class RegionThroughJSONTest {
 	@Before
 	public void setUp() throws Exception {
 
-		final File originalDataDir = new File("src/test/data/regions/001");
-
-		final File tmpDataDir = new File("target/RegionThroughJSONTest");
-
-		if (tmpDataDir.isDirectory()) {
-			FileUtils.forceDelete(tmpDataDir);
-		}
-
-		FileUtils.copyDirectory(originalDataDir, tmpDataDir);
-
 		final RegionDataSource dataSource = BackendDataSourceFileSystem
-				.newDataSource(RegionDataSource.class, tmpDataDir);
+				.newDataSource(
+						RegionDataSource.class,
+						copyDirectory(new File("src/test/data/regions/001"),
+								new File("target/RegionThroughJSONTest")));
 
 		final RegionClientFromLocal regionClient = new RegionClientFromLocal(
 				dataSource);
