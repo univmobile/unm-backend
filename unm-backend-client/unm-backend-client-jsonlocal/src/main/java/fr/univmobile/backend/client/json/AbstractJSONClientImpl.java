@@ -3,6 +3,8 @@ package fr.univmobile.backend.client.json;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
+import javax.annotation.Nullable;
+
 abstract class AbstractJSONClientImpl {
 
 	protected AbstractJSONClientImpl( //
@@ -20,9 +22,9 @@ abstract class AbstractJSONClientImpl {
 	// private static final Log log =
 	// LogFactory.getLog(AbstractJSONClientImpl.class);
 
-	protected final String filterURL(final String url) {
+	protected final @Nullable String filterURL(@Nullable final String url) {
 
-		if (!url.contains("${baseURL}")) {
+		if (url == null || !url.contains("${baseURL}")) {
 			return url;
 		}
 
