@@ -71,9 +71,18 @@ public class RegionJSONHttpClientTest {
 	}
 
 	@Test
-	public void testAllURLsAreFiltered() throws IOException {
+	public void testAllURLsAreFiltered_regions() throws IOException {
 
 		final String json = regionJSONClient.getRegionsJSON();
+
+		assertFalse(json.contains("${baseURL}"));
+	}
+
+	@Test
+	public void testAllURLsAreFiltered_universities() throws IOException {
+
+		final String json = regionJSONClient
+				.getUniversitiesJSONByRegion("bretagne");
 
 		assertFalse(json.contains("${baseURL}"));
 	}
