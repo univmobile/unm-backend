@@ -120,7 +120,8 @@ public class PoiClientFromLocal implements PoiClient {
 				final String latitude = substringBefore(coordinates, ",");
 				final String longitude = substringAfter(coordinates, ",");
 
-				if (isBlank(coordinates)) {
+				if (isBlank(coordinates) || isBlank(latitude)
+						|| isBlank(longitude)) {
 					continue; // Skip empty POIs
 				}
 
