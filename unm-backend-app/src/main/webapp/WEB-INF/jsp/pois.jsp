@@ -13,7 +13,7 @@
 <link type="text/css" rel="stylesheet" href="${baseURL}/js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css">
 -->
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 <style type="text/css">
 body {
 	xposition: relative;
@@ -56,7 +56,7 @@ body {
 <!--
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.custom/jquery-ui.min.js"></script>
 -->
-<script src="//code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/ui/1.11.1/jquery-ui.js"></script>
 <!--
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=${API_KEY}"></script>
 -->
@@ -121,6 +121,8 @@ body {
 		var height = $(window).height() - $('#div-entered').height() - 4;
 		$('#div-left').css('height', height);
 		$('#div-map').css('height', height);
+
+		google.maps.event.trigger(map, 'resize');
 	}
 	
 	var markerImageBaseURL = '${baseURL}/img/markers/marker_green';
@@ -322,7 +324,6 @@ body {
 			stop: function(event, ui) {			
 			
 				resizeHeights();
-				google.maps.event.trigger(map, 'resize');
 			}
 		});
 	
