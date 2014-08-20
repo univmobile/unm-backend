@@ -18,9 +18,12 @@ import javax.servlet.http.HttpServletResponse;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import fr.univmobile.backend.client.Region;
+import fr.univmobile.backend.client.PoiClient;
+import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
+import fr.univmobile.backend.client.json.PoiJSONClient;
+import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.PoiDataSource;
@@ -28,7 +31,6 @@ import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
-import fr.univmobile.backend.json.JSONList;
 import fr.univmobile.backend.json.JSONMap;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
@@ -50,9 +52,11 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 	private PoiTreeDataSource poiTrees;
 
-	private RegionClient regionClient;
+	// private RegionClient regionClient;
 
 	private RegionJSONClient regionJSONClient;
+
+	private PoiJSONClient poiJSONClient;
 
 	@Override
 	public void init() throws ServletException {
@@ -96,9 +100,15 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new HomeController(users, regions, pois, poiTrees), //
 				new UseraddController(users, regions, pois, poiTrees));
 
-		regionClient = new RegionClientFromLocal(regions);
+		final RegionClient regionClient = new RegionClientFromLocal(regions,
+				poiTrees);
 
 		regionJSONClient = new RegionJSONClientImpl(getBaseURL(), regionClient);
+
+		final PoiClient poiClient = new PoiClientFromLocal(pois, poiTrees,
+				regions);
+
+		poiJSONClient = new PoiJSONClientImpl(getBaseURL(), poiClient);
 	}
 
 	private static final Log log = LogFactory.getLog(BackendServlet.class);
@@ -266,6 +276,21 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			return;
 		}
 
+		if ("pois".equals(path) || "pois/".equals(path)
+				|| "pois.json".equals(path)) {
+
+			final String poisJSON = poiJSONClient.getPoisJSON();
+
+			if (log.isDebugEnabled()) {
+				log.debug("serveJSON(poisJSON.length: " + poisJSON.length()
+						+ ")");
+			}
+
+			serveJSON(poisJSON, response);
+
+			return;
+		}
+
 		if (path.startsWith("regions/")) {
 
 			String regionId = substringAfter(path, "regions/");
@@ -312,23 +337,16 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final JSONMap json = new JSONMap();
 
-		final JSONList list = new JSONList();
-
-		json.put("endPoints", list);
-
-		list.add(new JSONMap() //
-				.put("url", composeJSONendPoint("/regions" // + ".json"
-						)));
+		json.put("regions", composeJSONendPoint("/regions" // + ".json"
+				)).put("pois", composeJSONendPoint("/pois" // + ".json"
+				));
 
 		/*
-		for (final Region region : regionClient.getRegions()) {
-
-			list.add(new JSONMap() //
-					.put("url", composeJSONendPoint("/regions/"
-							+ region.getId() // + ".json"
-					)));
-		}
-		*/
+		 * for (final Region region : regionClient.getRegions()) {
+		 * 
+		 * list.add(new JSONMap() // .put("url", composeJSONendPoint("/regions/"
+		 * + region.getId() // + ".json" ))); }
+		 */
 
 		serveJSON(json.toJSONString(), response);
 	}

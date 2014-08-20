@@ -2,6 +2,7 @@ package fr.univmobile.backend.client.test;
 
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -55,10 +56,12 @@ public class RegionClientFromLocalTest {
 		assertEquals("Île de France", region.getLabel());
 
 		assertEquals(4715, region.getPoiCount());
+		final String poisUrl = region.getPoisUrl();
+		assertTrue(poisUrl, poisUrl.endsWith("ile_de_france/pois"));
 	}
 
 	@Test
-	public void test_university() throws IOException {
+	public void test_university_rennes2() throws IOException {
 
 		final University[] universities = client
 				.getUniversitiesByRegion("bretagne");
@@ -68,4 +71,23 @@ public class RegionClientFromLocalTest {
 		assertEquals("rennes2", university.getId());
 		assertEquals("Université Rennes 2", university.getTitle());
 	}
+
+	@Test
+	public void test_university_ucp() throws IOException {
+
+		final University[] universities = client
+				.getUniversitiesByRegion("ile_de_france");
+
+		final University university = universities[3];
+
+		assertEquals("ensiie", university.getId());
+		assertEquals("ENSIIE", university.getTitle());
+		assertEquals(27, university.getPoiCount());
+		final String poisUrl = university.getPoisUrl();
+		assertTrue(poisUrl, poisUrl.endsWith("ile_de_france/ensiie/pois"));
+		final String configUrl = university.getConfigUrl();
+		assertTrue(configUrl, configUrl.endsWith("ile_de_france/ensiie"));
+	}
+
+	// 3792
 }

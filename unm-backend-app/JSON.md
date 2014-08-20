@@ -135,14 +135,18 @@ Exemples :
 Exemple de flux :
 
     {
-     'regionId':     'bretagne',
-     'regionLabel':  'Bretagne',
+     'id':        'bretagne',
+     'label':     'Bretagne',
      
      'universities': 
       [
         {
          'id':       'crousVersailles',   
          'title':    'CROUS Versailles',
+         'config':
+           {
+             'url':     '${baseURL}/json/regions/ile_de_france/crousVersailles'
+           }
          'pois:         
            {
              'count':   127,
@@ -152,6 +156,10 @@ Exemple de flux :
         {
          'id':       'ucp',   
          'title':    'Cergy-Pontoise',
+         'config':
+           {
+             'url':     '${baseURL}/json/regions/ile_de_france/ucp'
+           }
          'pois':
            {
              'count':   48,
@@ -161,12 +169,16 @@ Exemple de flux :
         ...
       ]
     }
-
+     
 Tailles typiques :
 
 | bretagne | ile_de_france | unrpcl |
 | :--: | :--: | :--: |
-| < 1 Ko | < 1 Ko | < 1 Ko |
+| < 1 Ko | < 3 Ko | < 1 Ko |
+
+### FLux JSON : configuration UnivMobile pour une université
+
+TODO : URL = ${baseURL}/json/regions/ile_de_france/ucp
 
 ### Flux JSON : points of interest (POIs), introduction
 
@@ -176,10 +188,22 @@ TODO : contextes de recherche (favoris, université, filtres) (onglets du haut)
 
 TODO : détails et commentaires (onglets du bas)
 
+TODO : forme des URL, « /pois » semblant être le fragment terminal (permet d’ajouter des paramètres).
+
 ### Flux JSON : universités en tant que points of interest (POIs) 
 
-TODO : catégories = régions, POIs = universités
+Contexte : on affiche la localisation des universités sur la Métropole.
+
+URL : `${baseURL}/json/pois`
+
+Cette URL est fournie par le flux JSON « Liste des endpoints JSON ».
+
+En tant que POIs, les universités sont regroupées
+sous des groupes qui correspondent à leurs régions.
+
 
 ### Flux JSON : points of interest (POIs) au sein d’une université
+
+TODO : URL = ${baseURL}/json/regions/ile_de_france/ucp/pois
 
 TODO : catégories = catégories / tags, POIs = POIs

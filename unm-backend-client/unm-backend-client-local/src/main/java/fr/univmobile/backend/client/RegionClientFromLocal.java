@@ -109,8 +109,11 @@ public class RegionClientFromLocal implements RegionClient {
 			log.debug("getUniversitiesByRegion():" + regionId + "...");
 		}
 
+		final fr.univmobile.backend.core.Region region = regions
+				.getByUid(regionId);
+
 		final fr.univmobile.backend.core.University[] dsUniversities//
-		= regions.getByUid(regionId).getUniversities();
+		= region.getUniversities();
 
 		final University[] universities = new University[dsUniversities.length];
 
@@ -137,12 +140,31 @@ public class RegionClientFromLocal implements RegionClient {
 
 		sortedSet.addAll(Arrays.asList(dsUniversities));
 
+		final String url = region.getUrl();
+
 		for (final fr.univmobile.backend.core.University dsUniversity : sortedSet) {
+
+			final String universityId = dsUniversity.getId();
+
+			final int poiCount;
+
+			if (poitrees.isNullByUid(regionId)) {
+
+				poiCount = 0; // e.g. bretagne
+
+			} else {
+
+				poiCount = poitrees.getByUid(regionId)
+						.sizeOfAllPoisByUniversityId(universityId);
+			}
 
 			universities[i] = DataBeans //
 					.instantiate(MutableUniversity.class) //
-					.setId(dsUniversity.getId()) //
-					.setTitle(dsUniversity.getTitle());
+					.setId(universityId) //
+					.setTitle(dsUniversity.getTitle()) //
+					.setConfigUrl(url + "/" + universityId) //
+					.setPoiCount(poiCount) //
+					.setPoisUrl(url + "/" + universityId + "/pois");
 
 			++i;
 		}
@@ -168,5 +190,11 @@ public class RegionClientFromLocal implements RegionClient {
 		MutableUniversity setId(String id);
 
 		MutableUniversity setTitle(String title);
+
+		MutableUniversity setConfigUrl(String configUrl);
+
+		MutableUniversity setPoiCount(int poiCount);
+
+		MutableUniversity setPoisUrl(String poisUrl);
 	}
 }

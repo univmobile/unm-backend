@@ -74,7 +74,8 @@ public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
 		final University[] universities = regionClient
 				.getUniversitiesByRegion(regionId);
 
-		final JSONMap json = new JSONMap();
+		final JSONMap json = new JSONMap().put("id", regionId).put("label",
+				getRegionLabelById(regionId));
 
 		final JSONList list = new JSONList();
 
@@ -84,7 +85,12 @@ public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
 
 			list.add(new JSONMap() //
 					.put("id", university.getId()) //
-					.put("title", university.getTitle()));
+					.put("title", university.getTitle()) //
+					.put("config", new JSONMap() //
+							.put("url", university.getConfigUrl())) //
+					.put("pois", new JSONMap() //
+							.put("count", university.getPoiCount()) //
+							.put("url", university.getPoisUrl())));
 		}
 
 		final String s = json.toJSONString();
@@ -94,5 +100,20 @@ public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
 		}
 
 		return s;
+	}
+
+	private String getRegionLabelById(final String regionId) throws IOException {
+
+		checkNotNull(regionId, "regionId");
+
+		for (final Region region : regionClient.getRegions()) {
+
+			if (regionId.equals(region.getId())) {
+
+				return region.getLabel();
+			}
+		}
+
+		throw new IllegalArgumentException("Unknown regionId: " + regionId);
 	}
 }
