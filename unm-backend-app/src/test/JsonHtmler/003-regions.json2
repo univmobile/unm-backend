@@ -1,0 +1,31 @@
+{
+    "regions":[
+        {
+            "id":    "bretagne",
+            "label": "Bretagne",
+            "url":   "http://univmobile.vswip.com/unm-backend/json/regions/bretagne",
+            "pois":{
+                "count": 0,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/bretagne/pois"
+            }
+        },
+        {
+            "id":    "ile_de_france",
+            "label": "Île de France",
+            "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france",
+            "pois":{
+                "count": 4715,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/pois"
+            }
+        },
+        {
+            "id":    "unrpcl",
+            "label": "Limousin/Poitou-Charentes",
+            "url":   "http://univmobile.vswip.com/unm-backend/json/regions/unrpcl",
+            "pois":{
+                "count": 277,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/unrpcl/pois"
+            }
+        }
+    ]
+}
