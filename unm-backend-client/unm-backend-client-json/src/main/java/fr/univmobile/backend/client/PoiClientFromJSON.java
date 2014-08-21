@@ -32,14 +32,12 @@ public class PoiClientFromJSON implements PoiClient {
 	@Override
 	public PoiGroup[] getPois() throws IOException {
 
-		System.out.println("dddd");
 		if (log.isDebugEnabled()) {
 			log.debug("getPois()...");
 		}
 
 		final String json = jsonClient.getPoisJSON();
 
-		System.out.println(json);
 		if (log.isDebugEnabled()) {
 			log.debug("json.length(): " + json.length());
 			log.debug("json: "
