@@ -150,7 +150,7 @@ public class PoiClientFromLocal implements PoiClient {
 					if (!image.startsWith("/upload")) {
 						throw new NotImplementedException("Image URL: " + image);
 					}
-					poi.setImage(image);
+					poi.setImageUrl("${baseURL}" + image);
 					poi.setImageWidth(100).setImageHeight(100); // TODO get img
 				} else {
 					poi.setImageWidth(0).setImageHeight(0);
@@ -204,7 +204,7 @@ public class PoiClientFromLocal implements PoiClient {
 
 		MutablePoi setUrl(@Nullable String url);
 
-		MutablePoi setImage(@Nullable String image);
+		MutablePoi setImageUrl(@Nullable String image);
 
 		MutablePoi setImageWidth(int width);
 

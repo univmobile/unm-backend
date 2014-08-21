@@ -110,6 +110,23 @@ public class PoiClientFromLocalTest {
 	}
 
 	@Test
+	public void test_poi20036() throws IOException {
+
+		final PoiGroup[] groups = client.getPois();
+
+		final Poi[] pois = groups[2].getPois();
+
+		final Poi poi = pois[2];
+
+		assertEquals(20036, poi.getId());
+		assertEquals("Université de Limoges", poi.getName());
+
+		assertEquals(
+				"${baseURL}/uploads/poi/c99abda0f5d42a24d0cf1ef0d0476b8b6ed4311a.png",
+				poi.getImageUrl());
+	}
+
+	@Test
 	public void test_poi4() throws IOException {
 
 		final PoiGroup[] groups = client.getPois();
