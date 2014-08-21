@@ -77,12 +77,13 @@ public class PoiJSONClientImpl extends AbstractJSONClientImpl implements
 
 				final String imageUrl = poi.getImageUrl();
 
-				map.put("image", new JSONMap().put("url", //
-						imageUrl == null //
-						? null
-								: filterURL("${baseURL}" + imageUrl)))
-						.put("width", poi.getImageWidth()) //
-						.put("height", poi.getImageHeight());
+				map.put("image",
+						new JSONMap().put("url", //
+								imageUrl == null //
+								? null
+										: filterURL("${baseURL}" + imageUrl)) //
+								.put("width", poi.getImageWidth()) //
+								.put("height", poi.getImageHeight()));
 
 				pois.add(map);
 			}
