@@ -104,7 +104,7 @@ public class PoiThroughJSONTest {
 
 		assertNull(poi.getEmail());
 		assertNull(poi.getFloor());
-		assertNull(poi.getImage());
+		assertNull(poi.getImageUrl());
 		assertNull(poi.getItinerary());
 		assertNull(poi.getOpeningHours());
 

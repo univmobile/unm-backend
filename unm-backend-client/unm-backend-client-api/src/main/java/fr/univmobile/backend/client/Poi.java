@@ -40,7 +40,7 @@ public interface Poi {
 	String getUrl();
 	
 	@Nullable
-	String getImage();
+	String getImageUrl();
 	
 	int getImageWidth();
 	

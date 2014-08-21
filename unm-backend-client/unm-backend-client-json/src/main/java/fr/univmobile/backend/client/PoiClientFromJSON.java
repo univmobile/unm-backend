@@ -135,17 +135,17 @@ public class PoiClientFromJSON implements PoiClient {
 			@Nullable
 			String getUrl();
 
-			@XPath("@image")
+			@XPath("image/@url")
 			@Override
 			@Nullable
-			String getImage();
+			String getImageUrl();
 
 			@Override
-			@XPath("@imageWidth")
+			@XPath("image/@width")
 			int getImageWidth();
 
 			@Override
-			@XPath("@imageHeight")
+			@XPath("image/@Height")
 			int getImageHeight();
 
 			/**

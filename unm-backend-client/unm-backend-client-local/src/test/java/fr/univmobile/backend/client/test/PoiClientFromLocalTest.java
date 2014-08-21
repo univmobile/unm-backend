@@ -101,7 +101,7 @@ public class PoiClientFromLocalTest {
 
 		assertNull(poi.getEmail());
 		assertNull(poi.getFloor());
-		assertNull(poi.getImage());
+		assertNull(poi.getImageUrl());
 		assertNull(poi.getItinerary());
 		assertNull(poi.getOpeningHours());
 

@@ -21,7 +21,7 @@ public class PoiJSONClientImpl extends AbstractJSONClientImpl implements
 
 	@Inject
 	public PoiJSONClientImpl( //
-			final String baseURL, @Named("PoiJSONClientImpl") //
+			final String baseURL, @Named("PoiJSONClientImpl")//
 			final PoiClient poiClient) {
 
 		super(baseURL);
@@ -56,7 +56,7 @@ public class PoiJSONClientImpl extends AbstractJSONClientImpl implements
 
 			for (final Poi poi : group.getPois()) {
 
-				pois.add(new JSONMap() //
+				final JSONMap map = new JSONMap() //
 						.put("id", poi.getId()) //
 						.put("name", poi.getName()) //
 						.put("coordinates", poi.getCoordinates()) //
@@ -69,12 +69,22 @@ public class PoiJSONClientImpl extends AbstractJSONClientImpl implements
 						.put("phone", poi.getPhone()) //
 						.put("fax", poi.getFax()) //
 						.put("email", poi.getEmail()) //
-						.put("url", poi.getUrl()).put("image", poi.getImage()) //
-						.put("imageWidth", poi.getImageWidth()) //
-						.put("imageHeight", poi.getImageHeight()) //
+						.put("url", poi.getUrl()) //
 						.put("markerType", poi.getMarkerType()) //
-						.put("markerIndex", poi.getMarkerIndex()) //
-				);
+						.put("markerIndex", poi.getMarkerIndex());
+
+				// TODO: Do not add the fields if null
+
+				final String imageUrl = poi.getImageUrl();
+
+				map.put("image", new JSONMap().put("url", //
+						imageUrl == null //
+						? null
+								: filterURL("${baseURL}" + imageUrl)))
+						.put("width", poi.getImageWidth()) //
+						.put("height", poi.getImageHeight());
+
+				pois.add(map);
 			}
 		}
 
