@@ -32,6 +32,7 @@ import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.json.JSONMap;
+import fr.univmobile.backend.json.JsonHtmler;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.BuildInfoUtils;
@@ -235,6 +236,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			final HttpServletResponse response) throws IOException,
 			ServletException {
 
+		final boolean beautify = request.getParameter("html") != null;
+
 		log.info("serveJSON()...");
 
 		final String requestURI = request.getRequestURI();
@@ -247,7 +250,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			log.debug("serveJSONendPoints()...");
 
-			serveJSONendPoints(response);
+			serveJSONendPoints(beautify, response);
 
 			return;
 		}
@@ -272,7 +275,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						+ regionsJSON.length() + ")");
 			}
 
-			serveJSON(regionsJSON, response);
+			final String json = "{\"url\":\"" + composeJSONendPoint("/regions")
+					+ "\"" + substringAfter(regionsJSON, "{");
+
+			serveJSON(json, beautify, response);
 
 			return;
 		}
@@ -287,7 +293,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						+ ")");
 			}
 
-			serveJSON(poisJSON, response);
+			final String json = "{\"url\":\"" + composeJSONendPoint("/pois")
+					+ "\"" + substringAfter(poisJSON, "{");
+
+			serveJSON(json, beautify, response);
 
 			return;
 		}
@@ -302,9 +311,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			if (!regions.isNullByUid(regionId)) {
 
-				serveJSON(
-						regionJSONClient.getUniversitiesJSONByRegion(regionId),
-						response);
+				final String universityJSON = regionJSONClient
+						.getUniversitiesJSONByRegion(regionId);
+
+				final String json = "{\"url\":\""
+						+ composeJSONendPoint("/regions/" + regionId) + "\""
+						+ substringAfter(universityJSON, "{");
+
+				serveJSON(json, beautify, response);
 
 				return;
 			}
@@ -315,28 +329,50 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		UnivMobileHttpUtils.sendError404(request, response, uriPath);
 	}
 
-	private static void serveJSON(final String json,
+	private static void serveJSON(final String json, final boolean beautify,
 			final HttpServletResponse response) throws IOException,
 			ServletException {
 
 		response.setCharacterEncoding(UTF_8);
-		response.setContentType("application/json");
 
 		final PrintWriter out = response.getWriter();
 
-		out.print(json);
+		if (beautify) {
+
+			response.setContentType("text/html");
+
+			out.println("<!DOCTYPE html>");
+			out.println("<html dir='ltr'>");
+			out.println("<head>");
+			out.println("<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>");
+			out.println("<title>JSON</title>");
+			out.println("</head>");
+			out.println("<body>");
+			out.println(JsonHtmler.jsonToHtml(json));
+			out.println("</body>");
+			out.println("</html>");
+
+		} else {
+
+			response.setContentType("application/json");
+
+			out.print(json);
+		}
 
 		out.flush();
 
 		out.close();
 	}
 
-	private void serveJSONendPoints(final HttpServletResponse response)
-			throws IOException, ServletException {
+	private void serveJSONendPoints(final boolean beautify,
+			final HttpServletResponse response) throws IOException,
+			ServletException {
 
 		log.debug("serveJSONendPoints()...");
 
 		final JSONMap json = new JSONMap();
+
+		json.put("url", composeJSONendPoint(""));
 
 		json.put("regions", new JSONMap().put( //
 				"url", composeJSONendPoint("/regions" // +".json"
@@ -352,7 +388,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		 * + region.getId() // + ".json" ))); }
 		 */
 
-		serveJSON(json.toJSONString(), response);
+		serveJSON(json.toJSONString(), beautify, response);
 	}
 
 	private String composeJSONendPoint(final String path) {
@@ -361,6 +397,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		return baseURL + (baseURL.endsWith("/") ? "" : "/") //
 				+ "json" //
-				+ (path.startsWith("/") ? "" : "/") + path;
+				+ (path.startsWith("/") || "".equals(path) ? "" : "/") + path;
 	}
 }

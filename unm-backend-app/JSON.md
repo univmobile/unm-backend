@@ -19,7 +19,10 @@ Chaque URL permet de remonter à une URL parente. Par exemple, les URLs pour les
 
 Dans chaque flux JSON est renseignée l’URL qui permet de retrouver le flux sur le serveur — en général c’est celle qui a initialement permis de récupérer le flux.
 
-### Notes
+Toutes les URLs sont données par des champs JSON de nom `"url"`.
+Exemple : « "regions": {"url": "xxx/json/regions"} » au lieu de : « "regions":"xxx/json/regions" ».
+
+### Note : ${baseURL}
 
 Dans ce document, l’expression « ${baseURL} » est à remplacer par l’URL de base par laquelle sont accessibles les web services de l’application web unm-backend déployée sur le serveur.
 
@@ -55,6 +58,12 @@ Et aussi :
 
  * ${baseURL}/json/regions
  * ${baseURL}/json/regions.json
+ 
+### Note : HTML beautifier
+
+Sur les flux JSON servis par l’application web unm-backend, le paramètre HTTP « ?html » permet d’obtenir un affichage HTML correspondant au flux JSON, avec indentation et liens cliquables.
+
+Exemple : http://univmobile.vswip.com/unm-backend/json?html pour avoir les endpoints cliquables en développement.
 
 ### Flux JSON : liste des endpoints JSON
 
