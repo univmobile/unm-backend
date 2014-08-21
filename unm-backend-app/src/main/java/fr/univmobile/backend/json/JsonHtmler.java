@@ -14,7 +14,13 @@ import org.apache.commons.lang3.NotImplementedException;
 
 /**
  * A class that transform JSON streams into HTML fragments, with indentation and
- * links.
+ * HTML links.
+ * <p>
+ * Scalar values are printed out before
+ * array and/or map values;
+ * Map keys are sorted alphabetically.
+ * <p>
+ * Only "<code>url</code>" keys are transformed into HTML links.  
  */
 public class JsonHtmler {
 

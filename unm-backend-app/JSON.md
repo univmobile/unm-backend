@@ -17,6 +17,8 @@ Une URL unique de plus haut niveau permet, au runtime, de retrouver toutes les U
 
 Chaque URL permet de remonter à une URL parente. Par exemple, les URLs pour les flux JSON des universités ne sont plus sous la forme « /json/listUniversities_bretagne » mais sous la forme « /json/regions/bretagne », étant donné que « /json/regions » est une URL qui fonctionne.
 
+Dans chaque flux JSON est renseignée l’URL qui permet de retrouver le flux sur le serveur — en général c’est celle qui a initialement permis de récupérer le flux.
+
 ### Notes
 
 Dans ce document, l’expression « ${baseURL} » est à remplacer par l’URL de base par laquelle sont accessibles les web services de l’application web unm-backend déployée sur le serveur.
@@ -29,16 +31,20 @@ Exemple en intégration continue (Jenkins) :
 
   * ${baseURL} = `http://localhost:8380/unm-backend`
   
-Exemple en développement :
+Exemple en développement (poste de développeur) :
 
   * ${baseURL} = `http://localhost:8080/unm-backend`
+
+Exemple en développement (déploiement) :
+
+  * ${baseURL} = `http://univmobile.vswip.com/unm-backend`
   
 Attention, il ne s’agit pas forcément de l’URL de base de la partie HTML de l’application web unm-backend, qui, contrairement aux flux JSON, doit être protégée à la fois par HTTPS et par la fédération d’identité Shibboleth.
 
 Exemple en intégration :
 
   * L’IHM HTML est accessible à : https://univmobile-dev.univ-paris1.fr/testSP/ (protégée par Shibboleth), donc on pourrait penser que ${baseURL} = https://univmobile-dev.univ-paris1.fr/testSP
-  * mais en fait les flux JSON sont sur : https://univmobile-dev.univ-paris1.fr/json/... ; en réalité, ${baseURL} = https://univmobile-dev.univ-paris1.fr
+  * mais en fait les flux JSON sont sur : https://univmobile-dev.univ-paris1.fr/json/... En réalité, ${baseURL} = https://univmobile-dev.univ-paris1.fr
 
 On essaie de rendre tolérante la syntaxe des URLs. En particulier, les URLs suivantes sont équivalentes :
 
@@ -61,8 +67,15 @@ URL : `${baseURL}/json`
 Exemple de flux :
 
     {
-     'regions': {'url': '${baseURL}/json/regions'},
-     'pois':    {'url': '${baseURL}/json/pois'}
+        "url":"${baseURL}/json",   
+             
+        "regions":{
+            "url":"${baseURL}/json/regions"
+        },
+        
+        "pois":{
+            "url":"${baseURL}/json/pois"
+        }
     }
 
 Tailles typiques :
@@ -86,30 +99,29 @@ Cette URL est fournie par le flux JSON « Liste des endpoints JSON ».
 Exemple de flux :
 
     {
-     'regions': 
-      [
-        {
-         'id':       'bretagne',   
-         'label':    'Bretagne',
-         'url':      '${baseURL}/json/regions/bretagne',
-         'pois': 
+        'url':'${baseURL}/json/regions',
+        
+        'regions':[
             {
-               'count':   200,
-               'url':     '${baseURL}/json/regions/bretagne/pois'
-            }
-        },                                                    
-        {
-         'id':       'ile_de_france',   
-         'label':    'Île de France',
-         'url':      '${baseURL}/json/regions/ile_de_france',
-         'pois':       
+                'id':    'bretagne',   
+                'label': 'Bretagne',
+                'url':   '${baseURL}/json/regions/bretagne',
+                'pois':{
+                    'count': 200,
+                    'url':   '${baseURL}/json/regions/bretagne/pois'
+                }
+            },                                                    
             {
-               'count':   110,
-               'url':     '${baseURL}/json/regions/ile_de_france/pois'
-            }
-        },
-        ...
-      ]
+                'id':    'ile_de_france',   
+                'label': 'Île de France',
+                'url':   '${baseURL}/json/regions/ile_de_france',
+                'pois':{
+                    'count': 110,
+                    'url':   '${baseURL}/json/regions/ile_de_france/pois'
+                }
+            },
+            ...
+        ]
     }
 
 Tailles typiques :
@@ -135,39 +147,35 @@ Exemples :
 Exemple de flux :
 
     {
-     'id':        'bretagne',
-     'label':     'Bretagne',
+        'url':   '${baseURL}/json/regions/ile_de_france',
+        'id':    'ile_de_france',
+        'label': 'Île de France',
      
-     'universities': 
-      [
-        {
-         'id':       'crousVersailles',   
-         'title':    'CROUS Versailles',
-         'config':
-           {
-             'url':     '${baseURL}/json/regions/ile_de_france/crousVersailles'
-           }
-         'pois:         
-           {
-             'count':   127,
-             'url':     '${baseURL}/json/regions/ile_de_france/crousVersailles/pois'
-           }
-        },                         
-        {
-         'id':       'ucp',   
-         'title':    'Cergy-Pontoise',
-         'config':
-           {
-             'url':     '${baseURL}/json/regions/ile_de_france/ucp'
-           }
-         'pois':
-           {
-             'count':   48,
-             'url':     '${baseURL}/json/regions/ile_de_france/ucp/pois'
-           }
-        },
-        ...
-      ]
+        'universities':[
+            {
+                'id':    'crousVersailles',   
+                'title': 'CROUS Versailles',
+                'config':{
+                    'url':'${baseURL}/json/regions/ile_de_france/crousVersailles'
+                },
+                'pois:{
+                   'count': 127,
+                   'url':   '${baseURL}/json/regions/ile_de_france/crousVersailles/pois'
+                }
+            },                         
+            {
+                'id':    'ucp',   
+                'title': 'Cergy-Pontoise',
+                'config':{
+                    'url':'${baseURL}/json/regions/ile_de_france/ucp'
+                },
+                'pois':{
+                    'count': 48,
+                    'url':   '${baseURL}/json/regions/ile_de_france/ucp/pois'
+                }
+            },
+            ...
+        ]
     }
      
 Tailles typiques :
