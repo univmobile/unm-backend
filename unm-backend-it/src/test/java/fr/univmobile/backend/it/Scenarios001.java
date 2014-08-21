@@ -85,4 +85,29 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		takeScreenshot("home2.png");
 	}
+
+	@Scenario("Voir les POIs de plus haut niveau")
+	@Test
+	public void pois000() throws Exception {
+
+		takeScreenshot("home.png");
+
+		elementById("button-myself").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("entered.png");
+
+		elementById("link-pois").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("pois.png");
+
+		elementById("link-poi-3792").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("ucp.png");
+	}
 }

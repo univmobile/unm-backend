@@ -137,7 +137,7 @@ https://univmobile-dev.univ-paris1.fr/json/regions
 <div id="div-pois">
 
 <h2>
-<a href="${baseURL}/pois">POIs : ${pois.count}</a>
+<a href="${baseURL}/pois" id="link-pois">POIs : ${pois.count}</a>
 </h2>
 
 <table>

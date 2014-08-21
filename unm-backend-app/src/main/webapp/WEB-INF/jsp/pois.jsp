@@ -62,6 +62,8 @@ body {
 -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
 <script type="text/javascript">
+
+	<% pageContext.setAttribute("newLine", "\n"); %>
 	
 	// 0. GENERATED
 	
@@ -71,7 +73,8 @@ body {
 		name: "${poi.name}",
 		lat: ${poi.latitude},
 		lng: ${poi.longitude},<c:if test="${poi.address != null and poi.address != ''}">
-		address: "${poi.address}",</c:if><c:if test="${poi.floor != null and poi.floor != ''}">
+		address: "${fn:replace(poi.address, newLine, ' ')}",</c:if><c:if
+			test="${poi.floor != null and poi.floor != ''}">
 		floor: "${poi.floor}",</c:if><c:if test="${poi.openingHours != null and poi.openingHours != ''}">
 		openingHours: "${poi.openingHours}",</c:if><c:if test="${poi.phone != null and poi.phone != ''}">
 		phone: "${poi.phone}",</c:if><c:if test="${poi.email != null and poi.email != ''}">
@@ -329,7 +332,11 @@ body {
 	
 		$('#div-left-top').resizable({
 			handles: 's',
-			resize: resizeTop
+			resize: resizeTop,
+			stop: function(event, ui) {			
+			
+				resizeHeights();
+			} 
 		});
 
 		$('#div-left-top-tabs').tabs('option', 'disabled', [1, 2, 3]);
