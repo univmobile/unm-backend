@@ -16,11 +16,10 @@ import org.apache.commons.lang3.NotImplementedException;
  * A class that transform JSON streams into HTML fragments, with indentation and
  * HTML links.
  * <p>
- * Scalar values are printed out before
- * array and/or map values;
- * Map keys are sorted alphabetically.
+ * Scalar values are printed out before array and/or map values; Map keys are
+ * sorted alphabetically.
  * <p>
- * Only "<code>url</code>" keys are transformed into HTML links.  
+ * Only "<code>url</code>" keys are transformed into HTML links.
  */
 public class JsonHtmler {
 
@@ -169,6 +168,7 @@ public class JsonHtmler {
 				throw new NotImplementedException("c=" + c);
 
 			case ',':
+			case '}':
 				nextChar = c;
 				break loop;
 
@@ -378,8 +378,8 @@ public class JsonHtmler {
 		public Field(final String key, final String value,
 				final boolean isScalar) {
 
-			this.key = key;
-			this.value = value;
+			this.key = checkNotNull(key, "key");
+			this.value = checkNotNull(value, "value");
 			this.isScalar = isScalar;
 		}
 

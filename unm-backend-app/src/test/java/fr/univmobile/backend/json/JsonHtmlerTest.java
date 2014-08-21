@@ -87,6 +87,22 @@ public class JsonHtmlerTest {
 				new File("src/test/JsonHtmler/005-pois.json2"));
 	}
 
+	@Test
+	public void test006_pois_imageUrls_json() throws Exception {
+
+		assertJsonHtmler(
+				new File("src/test/JsonHtmler/006-pois_imageUrls.html"),
+				new File("src/test/JsonHtmler/006-pois_imageUrls.json"));
+	}
+
+	@Test
+	public void test006_pois_imageUrls_json2() throws Exception {
+
+		assertJsonHtmler(
+				new File("src/test/JsonHtmler/006-pois_imageUrls.html"),
+				new File("src/test/JsonHtmler/006-pois_imageUrls.json2"));
+	}
+
 	@Test(expected = EOFException.class)
 	public void testEOF_length0() throws Exception {
 
