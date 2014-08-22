@@ -294,7 +294,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			}
 
 			final String json = "{\"url\":\"" + composeJSONendPoint("/regions")
-					+ "\"" + substringAfter(regionsJSON, "{");
+					+ "\"," + substringAfter(regionsJSON, "{");
 
 			serveJSON(json, beautify, response);
 
@@ -312,7 +312,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			}
 
 			final String json = "{\"url\":\"" + composeJSONendPoint("/pois")
-					+ "\"" + substringAfter(poisJSON, "{");
+					+ "\"," + substringAfter(poisJSON, "{");
 
 			serveJSON(json, beautify, response);
 
@@ -333,7 +333,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						.getUniversitiesJSONByRegion(regionId);
 
 				final String json = "{\"url\":\""
-						+ composeJSONendPoint("/regions/" + regionId) + "\""
+						+ composeJSONendPoint("/regions/" + regionId) + "\","
 						+ substringAfter(universityJSON, "{");
 
 				serveJSON(json, beautify, response);
