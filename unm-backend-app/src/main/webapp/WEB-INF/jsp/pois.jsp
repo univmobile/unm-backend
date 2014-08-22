@@ -79,8 +79,8 @@ body {
 		openingHours: "${poi.openingHours}",</c:if><c:if test="${poi.phone != null and poi.phone != ''}">
 		phone: "${poi.phone}",</c:if><c:if test="${poi.email != null and poi.email != ''}">
 		email: "${poi.email}",</c:if><c:if test="${poi.itinerary != null and poi.itinerary != ''}">
-		itinerary: "${poi.itinerary}",</c:if><c:if test="${poi.image != null and poi.image != ''}">
-		image: "${poi.image}",
+		itinerary: "${poi.itinerary}",</c:if><c:if test="${poi.imageUrl != null and poi.imageUrl != ''}">
+		imageUrl: "${poi.imageUrl}",
 		imageWidth: ${poi.imageWidth},
 		imageHeight: ${poi.imageHeight},</c:if><c:if test="${poi.url != null and poi.url != ''}">
 		url: "${poi.url}",</c:if>
@@ -272,12 +272,12 @@ body {
 		
 		var imgDiv = div.children('div');
 				
-		if (poi.image == null) {
+		if (poi.imageUrl == null) {
 			imgDiv.addClass('hidden');
 		} else {
 			imgDiv.removeClass('hidden');
 			var img = imgDiv.children('img');
-			img.attr('src', poi.image);
+			img.attr('src', poi.imageUrl);
 			if (poi.imageWidth < poi.imageHeight) {
 				img.removeClass('height100').addClass('width100');				
 			} else {
