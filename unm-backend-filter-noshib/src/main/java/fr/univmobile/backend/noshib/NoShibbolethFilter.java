@@ -211,6 +211,11 @@ public class NoShibbolethFilter implements Filter {
 			return request; // Do not filter /json
 		}
 
+		if (requestURI.contains("/uploads")) {
+
+			return request; // Do not filter /uploads
+		}
+
 		final String uidParam = //
 		request.getParameter("NO_SHIB_uid");
 		final String eppnParam = //

@@ -7,14 +7,17 @@ import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
 import javax.servlet.ServletException;
+import javax.servlet.ServletOutputStream;
 import javax.servlet.UnavailableException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -29,8 +32,11 @@ import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
+import fr.univmobile.backend.core.UploadManager;
+import fr.univmobile.backend.core.UploadNotFoundException;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.backend.core.impl.UploadManagerImpl;
 import fr.univmobile.backend.json.JSONMap;
 import fr.univmobile.backend.json.JsonHtmler;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
@@ -52,6 +58,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private PoiDataSource pois;
 
 	private PoiTreeDataSource poiTrees;
+
+	private UploadManager uploadManager;
 
 	// private RegionClient regionClient;
 
@@ -76,6 +84,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final File regionsDir = new File(dataDir, "regions");
 		final File poisDir = new File(dataDir, "pois");
 		final File poiTreesDir = new File(dataDir, "poitrees");
+		final File uploadsDir = new File(dataDir, "uploads");
 
 		try {
 
@@ -92,6 +101,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			pois = BackendDataSourceFileSystem.newDataSource(
 					PoiDataSource.class, poisDir);
+
+			uploadManager = new UploadManagerImpl(uploadsDir);
 
 		} catch (final IOException e) {
 			throw new ServletException(e);
@@ -170,6 +181,13 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		if (requestURI.contains("/json/") || requestURI.endsWith("/json")) {
 
 			serveJSON(request, response);
+
+			return;
+		}
+
+		if (requestURI.contains("/uploads/")) {
+
+			serveUpload(request, response);
 
 			return;
 		}
@@ -377,16 +395,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		json.put("regions", new JSONMap().put( //
 				"url", composeJSONendPoint("/regions" // +".json"
 				)));
+
 		json.put("pois", new JSONMap().put( //
 				"url", composeJSONendPoint("/pois" // + ".json"
 				)));
-
-		/*
-		 * for (final Region region : regionClient.getRegions()) {
-		 * 
-		 * list.add(new JSONMap() // .put("url", composeJSONendPoint("/regions/"
-		 * + region.getId() // + ".json" ))); }
-		 */
 
 		serveJSON(json.toJSONString(), beautify, response);
 	}
@@ -398,5 +410,44 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		return baseURL + (baseURL.endsWith("/") ? "" : "/") //
 				+ "json" //
 				+ (path.startsWith("/") || "".equals(path) ? "" : "/") + path;
+	}
+
+	private void serveUpload(final HttpServletRequest request,
+			final HttpServletResponse response) throws IOException,
+			ServletException {
+
+		// e.g. "/uploads/poi/d70eeb8c7837b9b1c2edd4a62511a7460b14c82b.jpg"
+		//
+		final String uploadPath = "/"
+				+ UnivMobileHttpUtils.extractUriPath(request);
+
+		final InputStream is;
+		final String mimeType;
+
+		try {
+
+			is = uploadManager.getUploadAsStream(uploadPath);
+			mimeType = uploadManager.getUploadMimeType(uploadPath);
+
+		} catch (UploadNotFoundException e) {
+
+			UnivMobileHttpUtils.sendError404(request, response, uploadPath);
+
+			return;
+		}
+
+		response.setContentType(mimeType);
+
+		final ServletOutputStream os = response.getOutputStream();
+
+		try {
+
+			IOUtils.copy(is, os);
+
+		} finally {
+			is.close();
+		}
+
+		os.close();
 	}
 }
