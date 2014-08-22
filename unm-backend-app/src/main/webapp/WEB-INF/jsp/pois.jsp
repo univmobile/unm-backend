@@ -427,7 +427,8 @@ body {
 	<div id="div-left-top-tabs-1">
 	
 	<!--
-	<h1 title="Build ${buildInfo.buildDisplayName}
+	<h1 title="Version ${buildInfo.appVersion}
+	Build ${buildInfo.buildDisplayName}
 	${buildInfo.buildId}
 	${buildInfo.gitCommitId}">
 	Administration d’UnivMobile

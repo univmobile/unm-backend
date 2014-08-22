@@ -11,7 +11,8 @@
 <body id="body-home">
 <div class="body">
 
-<h1 title="Build ${buildInfo.buildDisplayName}
+<h1 title="Version ${buildInfo.appVersion}
+Build ${buildInfo.buildDisplayName}
 ${buildInfo.buildId}
 ${buildInfo.gitCommitId}">
 Administration d’UnivMobile

@@ -23,7 +23,8 @@
 <div class="body">
 <form action="${baseURL}/" method="POST">
 
-<h1 title="Build ${buildInfo.buildDisplayName}
+<h1 title="Version ${buildInfo.appVersion}
+Build ${buildInfo.buildDisplayName}
 ${buildInfo.buildId}
 ${buildInfo.gitCommitId}">
 Administration d’UnivMobile

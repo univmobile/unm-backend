@@ -2,7 +2,8 @@
 
 <div id="div-entered">
 <ul>
-<li title="Build ${buildInfo.buildDisplayName}
+<li title="Version ${buildInfo.appVersion}
+Build ${buildInfo.buildDisplayName}
 ${buildInfo.buildId}
 ${buildInfo.gitCommitId}">
  UnivMobile : administration
