@@ -36,6 +36,10 @@
 							<target>
 								<fileset id="resources" dir="src/main/resources">
 									<include name="**/*.xml" />
+									<include name="**/*.jpg" />
+									<include name="**/*.jpeg" />
+									<include name="**/*.gif" />
+									<include name="**/*.png" />
 								</fileset>
 								<property name="resource.paths" refid="resources" />
 								<loadresource property="resource.paths.filtered">

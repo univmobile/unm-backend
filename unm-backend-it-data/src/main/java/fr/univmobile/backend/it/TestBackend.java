@@ -77,49 +77,50 @@ public abstract class TestBackend {
 
 		for (final String resourcePath : resourcePaths) {
 
-			if (resourcePath.startsWith(prefix)) {
+			if (!resourcePath.startsWith(prefix)) {
+				continue;
+			}
 
-				final String destPath = substringAfter(resourcePath, prefix);
+			final String destPath = substringAfter(resourcePath, prefix);
 
-				InputStream is = getResourceAsStream(resourcePath);
+			InputStream is = getResourceAsStream(resourcePath);
 
-				if (is == null) {
+			if (is == null) {
 
-					System.err.println( //
-							"Cannot load resource from classLoader: "
-									+ resourcePath);
-					System.err.println( //
-							"Fallback: Trying local file in src/main/resources/");
+				System.err.println( //
+						"Cannot load resource from classLoader: "
+								+ resourcePath);
+				System.err.println( //
+						"Fallback: Trying local file in src/main/resources/");
 
-					is = new FileInputStream(new File("src/main/resources",
-							resourcePath));
-				}
+				is = new FileInputStream(new File("src/main/resources",
+						resourcePath));
+			}
 
+			try {
+
+				final File outFile = new File(destDir, destPath)
+						.getCanonicalFile();
+
+				FileUtils.forceMkdir(outFile.getParentFile());
+
+				final OutputStream os = new FileOutputStream(outFile);
 				try {
 
-					final File outFile = new File(destDir, destPath)
-							.getCanonicalFile();
-
-					FileUtils.forceMkdir(outFile.getParentFile());
-
-					final OutputStream os = new FileOutputStream(outFile);
-					try {
-
-						IOUtils.copy(is, os);
-
-					} finally {
-						os.close();
-					}
+					IOUtils.copy(is, os);
 
 				} finally {
-					is.close();
+					os.close();
 				}
 
-				FileUtils.write(reportFile, "#   " + destPath + CR + LF, //
-						UTF_8, true);
-
-				++count;
+			} finally {
+				is.close();
 			}
+
+			FileUtils.write(reportFile, "#   " + destPath + CR + LF, //
+					UTF_8, true);
+
+			++count;
 		}
 
 		if (count == 0) {
@@ -177,8 +178,11 @@ public abstract class TestBackend {
 		System.err.println( //
 				"Fallback: Trying local files in ../../../workspace/unm-backend/unm-backend-it-data/src/main/resources/");
 
-		resourcePaths.addAll(loadLocalResourcePaths("", new File(
-				"../../../workspace/unm-backend/unm-backend-it-data/src/main/resources")));
+		resourcePaths
+				.addAll(loadLocalResourcePaths(
+						"",
+						new File(
+								"../../../workspace/unm-backend/unm-backend-it-data/src/main/resources")));
 
 		return Iterables.toArray(resourcePaths, String.class);
 	}

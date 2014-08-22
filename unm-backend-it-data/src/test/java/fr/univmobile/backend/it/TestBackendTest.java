@@ -1,5 +1,6 @@
 package fr.univmobile.backend.it;
 
+import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
 import static org.junit.Assert.assertTrue;
@@ -28,6 +29,11 @@ public class TestBackendTest {
 		assertNotEquals(
 				"reportFile.length() should not be zero: "
 						+ reportFile.getCanonicalPath(), 0, reportFile.length());
+
+		final String report = FileUtils.readFileToString(reportFile, UTF_8);
+
+		assertTrue("reportFile should contain: uploads/",
+				report.contains("uploads/"));
 	}
 
 	@Test
@@ -70,15 +76,16 @@ public class TestBackendTest {
 	@Test
 	public void testReadMobileWebDataDir() throws IOException {
 
-		final String dataDir = TestBackend.readMobilewebAppLocalDataDir(new File(
-				"src/test/WEB-INF/002-unm-mobileweb-app-local_web.xml"));
+		final String dataDir = TestBackend
+				.readMobilewebAppLocalDataDir(new File(
+						"src/test/WEB-INF/002-unm-mobileweb-app-local_web.xml"));
 
 		assertEquals("/tmp/unm-mobileweb/dataDir", dataDir);
 	}
-	
-	@Test(expected=IllegalArgumentException.class)
+
+	@Test(expected = IllegalArgumentException.class)
 	public void testBlankDataDir() throws IOException {
-		
+
 		TestBackend.readMobilewebAppLocalDataDir(new File(
 				"src/test/WEB-INF/003-unm-mobileweb-app_web.xml"));
 	}
