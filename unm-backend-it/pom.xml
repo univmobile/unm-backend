@@ -6,7 +6,7 @@
 
 	<parent>
 		<groupId>fr.univmobile</groupId>
-		<artifactId>unm-it-parent</artifactId>
+		<artifactId>unm-backend-it-parent</artifactId>
 		<version>0.0.4-SNAPSHOT</version>
 		<relativePath />
 	</parent>
@@ -14,22 +14,7 @@
 	<dependencies>
 		<dependency>
 			<groupId>fr.univmobile</groupId>
-			<artifactId>unm-it-commons</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>fr.univmobile</groupId>
-			<artifactId>unm-backend-app-noshib</artifactId>
-			<type>war</type>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-mobileweb-core</artifactId>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>fr.univmobile</groupId>
-			<artifactId>unm-backend-it-data</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
@@ -48,75 +33,6 @@
 				<configuration>
 					<port>8888</port>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.codehaus.cargo</groupId>
-				<artifactId>cargo-maven2-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>start</id>
-						<phase>test-compile</phase>
-						<goals>
-							<goal>start</goal>
-							<!--  
-							<goal>redeploy</goal>
-							-->
-						</goals>
-					</execution>
-				</executions>
-				<configuration>
-					<container>
-						<containerId>${cargo.containerId}</containerId>
-						<type>installed</type>
-						<home>${cargo.home}</home>
-						<output>${project.build.directory}/${cargo.containerId}/tomcat.log</output>
-						<log>${project.build.directory}/cargo.log</log>
-					</container>
-					<configuration>
-						<type>standalone</type>
-						<home>${project.build.directory}/${cargo.containerId}</home>
-						<properties>
-							<cargo.servlet.port>8380</cargo.servlet.port>
-							<cargo.tomcat.ajp.port>8309</cargo.tomcat.ajp.port>
-						</properties>
-					</configuration>
-					<deployables>
-						<deployable>
-							<groupId>fr.univmobile</groupId>
-							<artifactId>unm-backend-app-noshib</artifactId>
-							<type>war</type>
-							<properties>
-								<context>/unm-backend</context>
-							</properties>
-						</deployable>
-					</deployables>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-dependency-plugin</artifactId>
-				<executions>
-					<execution>
-						<id>unpack</id>
-						<phase>process-test-resources</phase>
-						<goals>
-							<goal>unpack</goal>
-						</goals>
-						<configuration>
-							<artifactItems>
-								<artifactItem>
-									<groupId>fr.univmobile</groupId>
-									<artifactId>unm-backend-app-noshib</artifactId>
-									<type>war</type>
-									<overWrite>true</overWrite>
-									<outputDirectory>${project.build.directory}/unm-backend-app-noshib</outputDirectory>
-								</artifactItem>
-							</artifactItems>
-							<overWriteReleases>true</overWriteReleases>
-							<overWriteSnapshots>true</overWriteSnapshots>
-						</configuration>
-					</execution>
-				</executions>
 			</plugin>
 		</plugins>
 	</build>
@@ -186,14 +102,6 @@
 	<profiles>
 		<profile>
 			<id>dandriana</id>
-			<properties>
-				<cargo.containerId>tomcat7x</cargo.containerId>
-				<cargo.home>
-					/usr/local/apache-tomcat-7.0.39/
-				</cargo.home>
-				<tomcat.port>8380</tomcat.port>
-				<defaultBrowser>*firefox</defaultBrowser>
-			</properties>
 			<build>
 				<plugins>
 					<plugin>
@@ -224,10 +132,6 @@
 		</profile>
 		<profile>
 			<id>jenkins</id>
-			<properties>
-				<cargo.containerId>tomcat7x</cargo.containerId>
-				<tomcat.port>8380</tomcat.port>
-			</properties>
 			<build>
 				<plugins>
 					<plugin>
@@ -258,13 +162,6 @@
 		</profile>
 		<profile>
 			<id>unm_ci</id>
-			<properties>
-				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
-				<!--  
-				<defaultBrowser>*custom /usr/bin/chromium</defaultBrowser>
-				-->
-				<defaultBrowser>*firefox</defaultBrowser>
-			</properties>
 			<build>
 				<plugins>
 					<plugin>
@@ -294,13 +191,6 @@
 		-->
 		<profile>
 			<id>unm_ios6a</id>
-			<properties>
-				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
-				<!--  
-				<defaultBrowser>*googlechrome</defaultBrowser>
-				-->
-				<defaultBrowser>*firefox</defaultBrowser>
-			</properties>
 		</profile>
 	</profiles>
 
