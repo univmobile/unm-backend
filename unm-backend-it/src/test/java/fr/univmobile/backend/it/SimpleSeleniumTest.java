@@ -75,7 +75,7 @@ public class SimpleSeleniumTest {
 
 		final String KWARGS = "";
 
-		final File file = new File("target", "home.png");
+		final File file = new File("target", "testHomePage.png");
 
 		selenium.captureEntirePageScreenshot(file.getCanonicalPath(), KWARGS);
 
@@ -101,6 +101,13 @@ public class SimpleSeleniumTest {
 
 	@Test
 	public void testNoHardcodedUnivmobileDevUnivParis1() throws Exception {
+
+		final String KWARGS = "";
+
+		final File file = new File("target",
+				"testNoHardcodedUnivmobileDevUnivParis1.png");
+
+		selenium.captureEntirePageScreenshot(file.getCanonicalPath(), KWARGS);
 
 		selenium.click("button-myself");
 
