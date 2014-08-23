@@ -109,7 +109,9 @@ public class SimpleSeleniumTest {
 
 		selenium.captureEntirePageScreenshot(file.getCanonicalPath(), KWARGS);
 
-		selenium.click("identifier=button-myself");
+		// selenium.click("identifier=button-myself"); // Doesn’t work
+
+		selenium.getEval("window.document.getElementById('button-myself').click();");
 
 		selenium.waitForPageToLoad("10000");
 
