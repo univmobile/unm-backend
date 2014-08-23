@@ -102,6 +102,12 @@ public class SimpleSeleniumTest {
 	@Test
 	public void testNoHardcodedUnivmobileDevUnivParis1() throws Exception {
 
+		// selenium.click("identifier=button-myself"); // Doesn’t work
+
+		selenium.getEval("window.document.getElementById('button-myself').click();");
+
+		selenium.waitForPageToLoad("10000");
+
 		final String KWARGS = "";
 
 		final File file = new File("target",
@@ -109,13 +115,9 @@ public class SimpleSeleniumTest {
 
 		selenium.captureEntirePageScreenshot(file.getCanonicalPath(), KWARGS);
 
-		// selenium.click("identifier=button-myself"); // Doesn’t work
-
-		selenium.getEval("window.document.getElementById('button-myself').click();");
-
-		selenium.waitForPageToLoad("10000");
-
 		final String pageSource = selenium.getHtmlSource();
+
+		FileUtils.write(new File("target", "entered.html"), pageSource);
 
 		// We test that the "entered" page doesn’t contain the hardcoded line:
 		// "JSON : https://univmobile-dev.univ-paris1.fr/json/regions"
@@ -140,7 +142,7 @@ public class SimpleSeleniumTest {
 				+ HTTPS_UNIVMOBILE_DEV + "\"",
 				containsIgnoreCase(pageSource, HTTPS_UNIVMOBILE_DEV));
 
-		final String UNIV_PARIS1 = "univ-paris1.fr";
+		final String UNIV_PARIS1 = "univ-paris1.fr/json";
 
 		assertFalse("Page source should not contain text: \"" + UNIV_PARIS1
 				+ "\"", containsIgnoreCase(pageSource, UNIV_PARIS1));
