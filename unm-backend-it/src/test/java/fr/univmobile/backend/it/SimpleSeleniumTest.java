@@ -129,6 +129,11 @@ public class SimpleSeleniumTest {
 		assertTrue("Page source should contain text: \"" + JSON + "\"",
 				containsIgnoreCase(pageSource, JSON));
 
+		final String JSON_REGIONS = "/json/regions";
+
+		assertTrue("Page source should contain text: \"" + JSON_REGIONS + "\"",
+				containsIgnoreCase(pageSource, JSON_REGIONS));
+
 		final String HTTPS_UNIVMOBILE_DEV = "https://univmobile-dev";
 
 		assertFalse("Page source should not contain text: \""
@@ -139,5 +144,11 @@ public class SimpleSeleniumTest {
 
 		assertFalse("Page source should not contain text: \"" + UNIV_PARIS1
 				+ "\"", containsIgnoreCase(pageSource, UNIV_PARIS1));
+
+		final String BASE_URL = "baseURL"; // "${baseURL}"
+
+		assertFalse(
+				"Page source should not contain text: \"" + BASE_URL + "\"",
+				containsIgnoreCase(pageSource, BASE_URL));
 	}
 }

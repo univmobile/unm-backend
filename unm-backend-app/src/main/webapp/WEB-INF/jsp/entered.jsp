@@ -128,8 +128,8 @@ ${r.universityCount}
 
 <div class="table bottom">
 JSON :
-<a id="link-json" href="https://univmobile-dev.univ-paris1.fr/json/regions">
-https://univmobile-dev.univ-paris1.fr/json/regions
+<a id="link-json" href="${baseURL}/json/regions">
+${baseURL}/json/regions
 </a>
 </div>
 
