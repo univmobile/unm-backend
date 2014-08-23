@@ -109,7 +109,7 @@ public class SimpleSeleniumTest {
 
 		selenium.captureEntirePageScreenshot(file.getCanonicalPath(), KWARGS);
 
-		selenium.click("button-myself");
+		selenium.click("id=button-myself");
 
 		selenium.waitForPageToLoad("10000");
 
