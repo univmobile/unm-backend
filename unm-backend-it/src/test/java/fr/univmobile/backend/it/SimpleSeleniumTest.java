@@ -4,6 +4,7 @@ import static org.apache.commons.lang3.StringUtils.containsIgnoreCase;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 import static org.apache.commons.lang3.StringUtils.substringBefore;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
@@ -96,5 +97,38 @@ public class SimpleSeleniumTest {
 
 		assertFalse("Page source should not contain text: \"" + FORBIDDEN
 				+ "\"", containsIgnoreCase(pageSource, FORBIDDEN));
+	}
+
+	@Test
+	public void testNoHardcodedUnivmobileDevUnivParis1() throws Exception {
+
+		selenium.click("button-myself");
+
+		selenium.waitForPageToLoad("10000");
+
+		final String pageSource = selenium.getHtmlSource();
+
+		// We test that the "entered" page doesn’t contain the hardcoded line:
+		// "JSON : https://univmobile-dev.univ-paris1.fr/json/regions"
+		// Because univmobile-dev is the integration platform, not the dev / ci
+		// one.
+		// The "entered" page should only contain a line like this one:
+		// "JSON : http://localhost:8380/unm-backend/json/regions"
+
+		final String JSON = "JSON";
+
+		assertTrue("Page source should contain text: \"" + JSON + "\"",
+				containsIgnoreCase(pageSource, JSON));
+
+		final String HTTPS_UNIVMOBILE_DEV = "https://univmobile-dev";
+
+		assertFalse("Page source should not contain text: \""
+				+ HTTPS_UNIVMOBILE_DEV + "\"",
+				containsIgnoreCase(pageSource, HTTPS_UNIVMOBILE_DEV));
+
+		final String UNIV_PARIS1 = "univ-paris1.fr";
+
+		assertFalse("Page source should not contain text: \"" + UNIV_PARIS1
+				+ "\"", containsIgnoreCase(pageSource, UNIV_PARIS1));
 	}
 }
