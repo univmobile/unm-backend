@@ -18,7 +18,6 @@
 		<dependency>
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-backend-core</artifactId>
-			<version>${project.version}</version>
 		</dependency>	
 	</dependencies>
 
