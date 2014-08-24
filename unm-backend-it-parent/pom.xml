@@ -173,23 +173,21 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
+ 
 	<profiles>
 		<profile>
 			<id>dandriana</id>
 			<properties>
 				<cargo.containerId>tomcat7x</cargo.containerId>
-				<cargo.home>
-					/usr/local/apache-tomcat-7.0.39/
-				</cargo.home>
+				<cargo.home>/usr/local/apache-tomcat-7.0.39/</cargo.home>
 				<tomcat.port>8380</tomcat.port>
-				<defaultBrowser>*firefox</defaultBrowser>
 			</properties>
 		</profile>
 		<profile>
 			<id>jenkins</id>
 			<properties>
 				<cargo.containerId>tomcat7x</cargo.containerId>
+				<!-- <cargo.home>/opt/apache-tomcat-7.0.39</cargo.home> -->
 				<tomcat.port>8380</tomcat.port>
 			</properties>
 		</profile>
@@ -197,29 +195,18 @@
 			<id>unm_ci</id>
 			<properties>
 				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
-				<!--  
-				<defaultBrowser>*custom /usr/bin/chromium</defaultBrowser>
-				-->
-				<defaultBrowser>*firefox</defaultBrowser>
 			</properties>
 		</profile>
-		<!--  
 		<profile>
 			<id>unm_ios7</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
-				<defaultBrowser>*firefox</defaultBrowser>
 			</properties>
 		</profile>
-		-->
 		<profile>
 			<id>unm_ios6a</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
-				<!--  
-				<defaultBrowser>*googlechrome</defaultBrowser>
-				-->
-				<defaultBrowser>*firefox</defaultBrowser>
 			</properties>
 		</profile>
 	</profiles>
