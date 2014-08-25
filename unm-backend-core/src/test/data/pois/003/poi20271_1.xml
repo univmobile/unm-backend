@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi271_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi271_1.xml"/>
+<id>fr.univmobile:unm-backend:test/pois/003:poi271_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi271_1.xml"/>
 <title>Terrains de sport de l'ISAE-ENSMA</title>
 <updated>2014-08-17T18:50:01.556+02:00</updated>
 <category term="pois"/>

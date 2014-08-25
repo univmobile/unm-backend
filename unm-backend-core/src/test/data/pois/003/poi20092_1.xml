@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi92_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi92_1.xml"/>
+<id>fr.univmobile:unm-backend:test/pois/003:poi92_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi92_1.xml"/>
 <title>ASUR Association Sportive de l'Université de La Rochelle </title>
 <updated>2014-08-17T21:32:58.541+02:00</updated>
 <category term="pois"/>
