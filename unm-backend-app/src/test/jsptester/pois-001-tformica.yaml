@@ -16,6 +16,7 @@ delegationUser:
 buildInfo:
   type: fr.univmobile.model.BuildInfo
   value:
+    appVersion: 0.0.4-SNAPSHOT
     buildDisplayName: "#34"
     buildId: 2014/07/16 15:45
     gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70
@@ -47,7 +48,7 @@ pois:
             longitude: 2.3459243774
             url: Http://www.univ-paris1.fr/
             logo: http://admin.univmobile.fr/images/universities/logos/univ_paris1.jpg
-            image: null
+            imageUrl: null
             imageWidth: 200
             imageHeight: 100
             markerType: green
@@ -58,7 +59,7 @@ pois:
             coordinates: 48.852771456599,2.3353672027588
             latitude: 48.852771456599
             longitude: 2.3353672027588
-            image: http://admin.univmobile.fr/uploads/poi/ac1b0ae97a6a010960a9c190f7a5f519bcc2ad34.jpg
+            imageUrl: http://admin.univmobile.fr/uploads/poi/ac1b0ae97a6a010960a9c190f7a5f519bcc2ad34.jpg
             imageWidth: 200
             imageHeight: 300
             markerType: green
