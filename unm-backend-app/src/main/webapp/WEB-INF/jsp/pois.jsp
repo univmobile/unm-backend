@@ -92,6 +92,9 @@ body {
 
 	// 1. DATA
 	
+	/**
+	 *	return the POI with the given id, or null.
+	 */
 	function getPoiById(poiId) {
 	
 		for (var i = 0; i < pois.length; ++i) {
@@ -107,7 +110,15 @@ body {
 		return null;
 	}
 	
-	$('#div-details div.field.active span.id').html
+	/**
+	 *	return the POI currently selected, or null.
+	 */
+	function getSelectedPoi() {
+	
+		var poiId = $('#div-details div.field.active span.id').html();
+		
+		return getPoiById(poiId);
+	}
 	
 	// 2. LAYOUT
 	
@@ -142,9 +153,15 @@ body {
 	function resizeHeights() {
 	
 		var height = $(window).height() - $('#div-entered').height() - 4;
+		
 		$('#div-left').css('height', height);
 		$('#div-map').css('height', height);
 
+		var leftTopHeight = $('#div-left-top').height();
+		var leftBottomHeight = height - leftTopHeight - 5;
+		console.log('leftBottomHeight: ' + leftBottomHeight);
+		$('#div-left-bottom').css('height', leftBottomHeight); 
+		
 		google.maps.event.trigger(map, 'resize');
 	}
 	
@@ -246,7 +263,9 @@ body {
 		
 		$('#div-comments').removeClass('hidden');
 		
-		$('#div-details div.name').html(poi.name);
+		// $('#div-details div.name').html(poi.name);
+		
+		$('div.field.name').html(poi.name);
 		
 		$('#div-details div.field.active span.id').html(poi.id);
 		
@@ -291,7 +310,21 @@ body {
 			url: poi.commentsUrl,
 			dataType: 'json',
 			error: function(jqXHR, textStatus, errorThrown) {
-				timeline.html(textStatus + ': ' + errorThrown);
+
+				var divError = $(document.createElement('div'));
+				var divErrorThrown = $(document.createElement('div'));
+					
+				divError.addClass('error').html(
+					'Une erreur s’est produite lors de la récupération des commentaires.'
+				);
+				
+				divError.append(divErrorThrown);
+				
+				divErrorThrown.addClass('errorThrown').html(
+					textStatus + ': ' + errorThrown
+				);
+				
+				timeline.html(divError);
 			},
 			success: function(json) {
 				
@@ -391,6 +424,84 @@ body {
 		infoWindow.open(map, poi.marker);
 	}
 	
+	/**
+	 * open a dialog to add a comment under the selected POI. 
+	 */
+	function openAddCommentDialog() {
+		
+		var poi = getSelectedPoi();
+		
+		if (poi == null) {
+			return;
+		}
+		
+		$('#div-addCommentDialog').dialog('option', 'title', poi.name);
+		
+		$('#div-addCommentDialog #text-message').val('');
+		
+		$('#div-addCommentDialog').dialog('open');
+		
+		var postCommentUrl = '${postCommentUrl}';
+		
+		$.ajax({
+			url: postCommentUrl,
+			error: function(jqXHR, textStatus, errorThrown) {
+				
+				console.log(textStatus + ': ' + errorThrown);
+				
+				$('#div-addCommentDialog').dialog('close');
+				
+				alert('ERREUR : '
+					+ 'impossible de contacter le serveur pour l’envoi de commentaires.'
+					+ '\r\n\r\n' + textStatus + ': ' + errorThrown
+					+ '\r\n\r\n' + 'url: ' + postCommentUrl  
+					+ '\r\n\r\n' + jqXHR.responseText
+				);
+			},
+		});		
+	}
+
+	function closeAddCommentDialog() {
+	
+		$('#div-addCommentDialog').dialog('close');		
+	}
+	
+	/**
+	 *	send a comment to the backend server.	 
+	 */
+	function postComment() {
+	
+		var postCommentUrl = '${postCommentUrl}';
+		
+		$.ajax({
+			type: 'POST',
+			url: postCommentUrl,
+			data: {
+				username: '${user.uid}',
+				message: $('#text-message').val()
+			},
+			error: function(jqXHR, textStatus, errorThrown) {
+				
+				console.log(textStatus + ': ' + errorThrown);
+				
+				alert('ERREUR : '
+					+ 'impossible d’envoyer le commentaire.'
+					+ '\r\n\r\n' + textStatus + ': ' + errorThrown
+					+ '\r\n\r\n' + 'url: ' + postCommentUrl  
+					+ '\r\n\r\n' + jqXHR.responseText
+				);
+			},
+			success: function(data) {
+				
+				// var comments = json.comments;
+				
+				console.log('postComment: OK');
+			
+				//var ul = $(document.createElement('ul'));
+			}
+		});
+	}
+	
 	// 8. INIT
 	
 	function initialize() {
@@ -418,8 +529,7 @@ body {
 			activate: function(event, ui) {
 				var li = ui.newTab[0];
 				if (li.id == 'li-left-bottom-tabs-comments') {	
-					var poiId = $('#div-details div.field.active span.id').html();
-					var poi = getPoiById(poiId);
+					var poi = getSelectedPoi();
 					if (poi != null) {
 						loadPoiComments(poi);
 					}
@@ -427,6 +537,21 @@ body {
 			}
 		});
 
+		$('#div-addCommentDialog').dialog({
+			autoOpen: false,
+			resizable: false,
+			width: 400,
+			height: 200,
+			modal: true
+		});
+		
+		$('#div-addCommentDialog img.profileImage')
+			.attr('src', '${delegationUser.profileImageUrl}'); 
+		$('#div-addCommentDialog div.displayName')
+			.html('${delegationUser.displayName}');
+		$('#div-addCommentDialog div.username')
+			.html('@${delegationUser.uid}');
+		
 		// 2. MAIN COMPONENTS BEHAVIOUR
 		
 		$('#div-left').resizable({
@@ -510,12 +635,17 @@ body {
 		<c:if test="${not empty selectedPoiId}"> <!-- used in devel tests -->
 		selectPoi(getPoiById(${selectedPoiId}));
 		</c:if>
-		<c:if test="${mode == 'comments'}"> <!-- used in devel tests -->
+		<c:if test="${fn:contains(mode, 'comments')}"> <!-- used in devel tests -->
 		$('#div-left-bottom-tabs').tabs('option', 'active', 1);
+		</c:if>
+		<c:if test="${fn:contains(mode, 'addComment')}"> <!-- used in devel tests -->
+		openAddCommentDialog();
 		</c:if>
 	}
 	
 	google.maps.event.addDomListener(window, 'load', initialize);
+	
+	$(window).resize(resizeHeights);
 	
 </script>
 </head>
@@ -702,14 +832,14 @@ body {
 	</div>
 
 	<div id="div-comments" class="hidden">
+
+	<div class="field name"></div>
 	
-	<div id="div-comments-timeline">
-	
-	</div>
+	<div id="div-comments-timeline"></div>
 	
 	<div id="div-comments-buttons">
 	
-	<button id="button-addComment" disabled>
+	<button id="button-addComment" onclick="openAddCommentDialog(); return false;">
 		Ajouter un commentaire…
 	</button>
 	
@@ -735,6 +865,7 @@ body {
 </div> <!-- end of div.body -->
 
 <div id="div-hidden" style="display: none;">
+
 <div class="infoWindow">
 <div class="img">
 	<img>
@@ -745,7 +876,30 @@ body {
 <span class="address">
 </span>
 </div> <!-- end of #div-infoWindow -->
+
 </div> <!-- end of div[@style = 'display: none;'] -->
+
+<div id="div-addCommentDialog" title="Ajouter un commentaire" class="hidden">
+<img class="profileImage">
+<div class="displayName"></div>
+<div class="username"></div>
+<div class="message">
+	<textarea id="text-message" name="message"></textarea>
+</div>
+<div class="timestamp">
+	<!-- TODO: Request backend, reserve a new commentId, display server time -->
+</div>
+<div id="div-addCommentDialog-buttons">
+	<button id="button-cancel"
+			onclick="closeAddCommentDialog(); return false;">
+		Annuler
+	</button>
+	<button id="button-postComment"
+			onclick="postComment(); closeAddCommentDialog(); return false;">
+		Envoyer le commentaire
+	</button>
+</div> <!-- end of #div-addCommentDialog-buttons -->
+</div> <!-- end of #div-addCommentDialog -->
 
 </body>
 </html>

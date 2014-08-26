@@ -111,7 +111,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		super.init( //
 				new HomeController(users, regions, pois, poiTrees), //
 				new UseraddController(users, regions, pois, poiTrees), //
-				new AdminGeocampusController(users, regions, pois, poiTrees));
+				new AdminGeocampusController(users, regions, pois, poiTrees), //
+				new CommentController());
 
 		final RegionClient regionClient = new RegionClientFromLocal(regions,
 				poiTrees);

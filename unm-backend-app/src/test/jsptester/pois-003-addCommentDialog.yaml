@@ -14,6 +14,7 @@ delegationUser:
     uid: tformica
     displayName: Toto Formica
     mail: toto.formica@univ-paris1.fr
+    profileImageUrl: http://unpidf.univ-paris1.fr/wp-content/themes/wp-creativix/images/logos/1338991426.png
        
 buildInfo:
   type: fr.univmobile.model.BuildInfo
@@ -31,8 +32,10 @@ map:
 
 selectedPoiId: 1
 
-mode: comments
-    
+mode: comments addComment
+
+postCommentUrl: http://192.168.0.40:8080/unm-backend/comment?NO_SHIB_uid=xx&NO_SHIB_eppn=yy&NO_SHIB_displayName=zz&NO_SHIB_remoteUser=crezvani@univ-paris1.fr
+
 pois:
   type: fr.univmobile.model.PoiCategory[]
   value:

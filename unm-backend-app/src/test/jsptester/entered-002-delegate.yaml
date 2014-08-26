@@ -4,6 +4,7 @@ user:
   type: fr.univmobile.backend.core.User
   value:
     uid: crezvani
+    displayName: Cyrus Rezvani
     remoteUser: crezvani@univ-paris1.fr
     mail: cyrus.rezvani@univ-paris1.fr
     
@@ -11,6 +12,7 @@ delegationUser:
   type: fr.univmobile.backend.core.User
   value:
     uid: tformica
+    displayName: Toto Formica
     remoteUser: 
     mail: toto.formica@univ-paris1.fr
 

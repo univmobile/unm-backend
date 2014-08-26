@@ -4,12 +4,14 @@ user:
   type: fr.univmobile.backend.core.User
   value:
     uid: tformica
+    displayName: Toto Formica
     mail: toto.formica@univ-paris1.fr
     
 delegationUser:
   type: fr.univmobile.backend.core.User
   value:
     uid: tformica
+    displayName: Toto Formica
     mail: toto.formica@univ-paris1.fr
 
 users:
