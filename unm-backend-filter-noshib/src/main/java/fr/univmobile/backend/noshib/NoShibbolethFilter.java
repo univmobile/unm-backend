@@ -182,8 +182,9 @@ public class NoShibbolethFilter implements Filter {
 		if (httpHost == null || (!httpHost.startsWith("localhost") //
 				&& !"univmobile.vswip.com".equals(httpHost))) {
 
-			return error(response, "HTTP host must be localhost (test env): "
-					+ httpHost);
+			return error(response,
+					"HTTP host must be localhost or univmobile.vswip.com (test env): "
+							+ httpHost);
 		}
 
 		final String remoteUser = httpRequest.getRemoteUser();
