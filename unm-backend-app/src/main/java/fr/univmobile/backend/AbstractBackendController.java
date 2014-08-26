@@ -21,6 +21,7 @@ import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
+import fr.univmobile.web.commons.View;
 
 abstract class AbstractBackendController extends AbstractController {
 
@@ -54,7 +55,7 @@ abstract class AbstractBackendController extends AbstractController {
 		return getSessionAttribute("delegationUser", User.class);
 	}
 
-	protected final String entered() {
+	protected final View entered() {
 
 		// 1. UPDATE?
 
@@ -154,7 +155,7 @@ abstract class AbstractBackendController extends AbstractController {
 
 		// 9 END
 
-		return "entered.jsp";
+		return new View("entered.jsp");
 	}
 
 	@HttpMethods("POST")

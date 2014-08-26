@@ -13,6 +13,7 @@ import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.web.commons.Paths;
+import fr.univmobile.web.commons.View;
 
 @Paths({ "pois", "pois/" })
 public class AdminGeocampusController extends AbstractBackendController {
@@ -29,7 +30,7 @@ public class AdminGeocampusController extends AbstractBackendController {
 	private final PoiClient poiClient;
 
 	@Override
-	public String action() throws IOException {
+	public View action() throws IOException {
 
 		setAttribute("map", new Map("48.84650925911,2.3459243774", 13));
 
@@ -42,7 +43,7 @@ public class AdminGeocampusController extends AbstractBackendController {
 			list.add(new Pois(poiGroup));
 		}
 
-		return "pois.jsp";
+		return new View("pois.jsp");
 	}
 
 	public static class Pois {

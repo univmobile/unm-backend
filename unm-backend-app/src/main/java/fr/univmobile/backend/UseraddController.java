@@ -17,6 +17,7 @@ import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.Regexp;
+import fr.univmobile.web.commons.View;
 
 @Paths({ "useradd" })
 public class UseraddController extends AbstractBackendController {
@@ -29,7 +30,7 @@ public class UseraddController extends AbstractBackendController {
 	}
 
 	@Override
-	public String action() throws IOException {
+	public View action() throws IOException {
 
 		// 1. HTTP
 
@@ -37,7 +38,7 @@ public class UseraddController extends AbstractBackendController {
 
 		if (!form.isHttpValid()) {
 
-			return "useradd.jsp";
+			return new View("useradd.jsp");
 		}
 
 		// 2. APPLICATION VALIDATION
@@ -78,7 +79,7 @@ public class UseraddController extends AbstractBackendController {
 
 			setAttribute("useradd", user); // Show the data in the view
 
-			return "useradd.jsp";
+			return new View("useradd.jsp");
 		}
 
 		// 3. SAVE DATA

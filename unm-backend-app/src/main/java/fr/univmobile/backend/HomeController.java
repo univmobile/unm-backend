@@ -12,6 +12,7 @@ import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
 import fr.univmobile.web.commons.Paths;
+import fr.univmobile.web.commons.View;
 
 @Paths({ "" })
 public class HomeController extends AbstractBackendController {
@@ -24,13 +25,13 @@ public class HomeController extends AbstractBackendController {
 	}
 
 	@Override
-	public String action() throws IOException {
+	public View action() throws IOException {
 
 		if (getHttpInputs(Logout.class).isHttpValid()) {
 
 			removeSessionAttribute(DELEGATION_USER);
 
-			return "home.jsp";
+			return new View("home.jsp");
 		}
 
 		if (hasSessionAttribute(DELEGATION_USER)) {
@@ -56,7 +57,7 @@ public class HomeController extends AbstractBackendController {
 				setAttribute("err_unknownDelegationUid", true);
 				setAttribute("delegationUid", delegationUid);
 
-				return "home.jsp";
+				return new View("home.jsp");
 			}
 
 			final User delegationUser = users.getByUid(delegationUid);
@@ -66,7 +67,7 @@ public class HomeController extends AbstractBackendController {
 			return entered();
 		}
 
-		return "home.jsp";
+		return new View("home.jsp");
 	}
 
 	@HttpMethods("POST")
