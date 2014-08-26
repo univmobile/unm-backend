@@ -255,7 +255,7 @@ div.infoWindow {
 	height: 4em;
 	position: relative;
 }
-div.infoWindow .hidden {
+.hidden {
 	display: none;
 }
 div.infoWindow div.img {
@@ -279,10 +279,6 @@ div.infoWindow img.height100 {
 }
 div.infoWindow span.name {
 	font-weight: bold;
-}
-#div-details.hidden,
-#div-details div.field.hidden {
-	display: none;
 }
 #body-pois #div-left-bottom div.ui-tabs-panel {
 	xbackground-color: #ff0;
@@ -325,9 +321,74 @@ div.infoWindow span.name {
 	font-weight: bold;
 	margin-bottom: 0.2em;
 }
-#div-details-buttons {
+#div-details-buttons,
+#div-comments-buttons {
 	margin-top: 0.4em;
-	border-top: 1px solid #ccc;
 	padding: 1em 8px 0;
 	font-size: 10px;
+}
+#div-details-buttons {
+	border-top: 1px solid #ccc;
+}
+div.noPoiSelected {
+	font-size: small;
+	font-style: italic;
+	color: #ccc;
+	margin: 0 8px;
+}
+#div-left-bottom {
+	overflow: scroll;
+}
+#div-left-bottom-tabs-details {
+	xposition: relative;
+	xoverflow: auto;
+	xheight: 100%;
+	xbackground-color: #ff0;
+	xposition: relative;
+	xoverflow: auto;
+}
+#div-details {
+	xheight: 100%;
+	xbackground-color: #ff0;
+	xposition: relative;
+	xoverflow: auto;
+}
+#div-comments img.profileImage {
+	width: 32px;
+	height: 32px;
+}
+#div-comments ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0 4px;
+}
+#div-comments li {
+	position: relative;
+}
+#div-comments div.displayName {
+	position: absolute;
+	top: -3px;
+	left: 40px;
+	font-size: 12px;
+	font-weight: bold;
+}
+#div-comments div.username {
+	position: absolute;
+	top: 14px;
+	left: 40px;
+	font-size: 12px;
+	color: #aaa;
+}
+#div-comments div.text {
+	xfont-family: 'Times New Roman', serif;
+	font-size: 16px;
+}
+#div-comments div.timestamp {
+	font-size: 12px;
+	padding: 8px 0 16px;
+	border-bottom: 1px solid #ccc;
+}
+#div-comments div.timestamp a {
+	color: #aaa;
+	text-decoration: none;
 }

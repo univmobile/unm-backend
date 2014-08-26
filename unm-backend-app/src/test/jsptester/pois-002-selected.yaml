@@ -26,6 +26,10 @@ map:
   value:
     center: 48.84650925911,2.3459243774
     zoom: 13
+
+selectedPoiId: 1
+
+mode: comments
     
 pois:
   type: fr.univmobile.model.PoiCategory[]

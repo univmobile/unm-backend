@@ -86,10 +86,30 @@ body {
 		url: "${poi.url}",</c:if>
 		markerType: "${poi.markerType}",
 		markerIndex: "${poi.markerIndex}",
+		commentsUrl: "${poi.commentsUrl}",
 		id: ${poi.id}
 	},</c:forEach></c:forEach>];
 
-	// 1. LAYOUT
+	// 1. DATA
+	
+	function getPoiById(poiId) {
+	
+		for (var i = 0; i < pois.length; ++i) {
+			
+			var poi = pois[i];
+			
+			if (poi.id == poiId) {
+			
+				return poi;
+			}
+		}
+		
+		return null;
+	}
+	
+	$('#div-details div.field.active span.id').html
+	
+	// 2. LAYOUT
 	
 	function resizeLeft(event, ui) {
 	
@@ -152,67 +172,57 @@ body {
 
 		swallowNextClick = false;
 
-		for (var i = 0; i < pois.length; ++i) {
-			
-			var poi = pois[i];
-			
-			if (poi.id == poiId) {
+		var poi = getPoiById(poiId);
 		
-				selectPoi(poi);
-							
-				var newCenter = new google.maps.LatLng(poi.lat, poi.lng);
-				
-				if (newCenter.equals(map.getCenter())) {
+		if (poi != null) {
+	
+			selectPoi(poi);
+						
+			var newCenter = new google.maps.LatLng(poi.lat, poi.lng);
+			
+			if (newCenter.equals(map.getCenter())) {
 
-					if (infoWindow == null || infoWindow.poi.id != poiId) {
-				
-						swallowNextClick = true; // Do not toggle
-					}
+				if (infoWindow == null || infoWindow.poi.id != poiId) {
+			
+					swallowNextClick = true; // Do not toggle
 				}
-				
-				openInfoWindow(poi);	
-				
-				break;
 			}
+			
+			openInfoWindow(poi);	
 		}
 	}
 	
 	function onclickPoi(poiId) {
 
-		for (var i = 0; i < pois.length; ++i) {
+		var poi = getPoiById(poiId); 
 			
-			var poi = pois[i];
-			
-			if (poi.id == poiId) {
+		if (poi != null) {
 		
-				selectPoi(poi);
+			selectPoi(poi);
+		
+			var newCenter = new google.maps.LatLng(poi.lat, poi.lng);
 			
-				var newCenter = new google.maps.LatLng(poi.lat, poi.lng);
-				
-				if (newCenter.equals(map.getCenter())) {
+			if (newCenter.equals(map.getCenter())) {
 
-					if (infoWindow != null && infoWindow.poi.id == poiId) {
-				
-						if (!swallowNextClick) {
-						
-							infoWindow.close(); // Toggle infoWindow
+				if (infoWindow != null && infoWindow.poi.id == poiId) {
+			
+					if (!swallowNextClick) {
 					
-							infoWindow = null;
-						}
-
-					} else {
+						infoWindow.close(); // Toggle infoWindow
 				
-						openInfoWindow(poi);	
+						infoWindow = null;
 					}
-				
+
 				} else {
-				
-					map.setCenter(newCenter);
-				
+			
 					openInfoWindow(poi);	
 				}
-				
-				break;
+			
+			} else {
+			
+				map.setCenter(newCenter);
+			
+				openInfoWindow(poi);	
 			}
 		}
 		
@@ -230,7 +240,11 @@ body {
 			$(this).toggleClass('selected', $(this).attr('id') == liId);
 		});
 		
+		$('div.noPoiSelected').addClass('hidden');
+				
 		$('#div-details').removeClass('hidden');
+		
+		$('#div-comments').removeClass('hidden');
 		
 		$('#div-details div.name').html(poi.name);
 		
@@ -244,6 +258,15 @@ body {
 		setDetailsField('itinerary',    poi.itinerary);
 		setDetailsField('url',          poi.url);
 		setDetailsField('coordinates',  poi.lat + ',' + poi.lng);
+		
+		var active = $('#div-left-bottom-tabs').tabs('option', 'active');
+		
+		if (active == 1) {
+		
+			$('div-comments-timeline').html(''); // Empty the timeline
+				
+			loadPoiComments(poi);
+		}
 	}
 	
 	function setDetailsField(fieldName, content) {
@@ -251,6 +274,74 @@ body {
 		$('#div-details div.field.' + fieldName)
 			.toggleClass('hidden', content == null)
 			.children('div.content').html(content);
+	}
+	
+	function loadPoiComments(poi) {
+	
+		var timeline = $('#div-comments-timeline');
+		
+		if (poi == null) {
+		
+			timeline.html('');
+			
+			return;
+		}
+		
+		$.ajax({
+			url: poi.commentsUrl,
+			dataType: 'json',
+			error: function(jqXHR, textStatus, errorThrown) {
+				timeline.html(textStatus + ': ' + errorThrown);
+			},
+			success: function(json) {
+				
+				var comments = json.comments;
+				
+				// console.log('setComments');
+			
+				var ul = $(document.createElement('ul'));
+				
+				for (var i = 0; i < comments.length; ++i) {
+				
+					var comment = comments[i];
+					
+					var li = $(document.createElement('li'));
+					
+					ul.append(li);
+					
+					var imgProfileImage = $(document.createElement('img'));
+					var divDisplayName = $(document.createElement('div'));
+					var divUsername = $(document.createElement('div'));
+					var divText = $(document.createElement('div'));
+					var divTimestamp = $(document.createElement('div'));
+					var anchorTimestamp = $(document.createElement('a'));
+					
+					li.append(imgProfileImage);
+					li.append(divDisplayName);
+					li.append(divUsername);
+					li.append(divText);
+					li.append(divTimestamp);
+					
+					imgProfileImage.addClass('profileImage')
+						.attr('src', comment.author.profileImage.url);
+					divDisplayName.addClass('displayName')
+						.html(comment.author.displayName);
+					divUsername.addClass('username')
+						.html('@' + comment.author.username);
+					divTimestamp.addClass('timestamp')
+						.append(anchorTimestamp);
+					anchorTimestamp.attr('href', comment.url)
+						.attr('title', comment.postedAt)
+						.html(comment.displayPostedAt);
+						
+					var message = comment.text;
+					
+					divText.addClass('text').html(message);
+				}
+				
+				timeline.html(ul); // Erase previous content
+			}
+		});
 	}
 	
 	/**
@@ -316,7 +407,25 @@ body {
 		);
 	
 		$('#div-left-top-tabs').tabs();
-		$('#div-left-bottom-tabs').tabs();
+		
+		$('#div-left-bottom-tabs').tabs({
+			beforeActivate: function(event, ui) {
+				var li = ui.newTab[0];
+				if (li.id == 'li-left-bottom-tabs-comments') {
+					$('div-comments-timeline').html(''); // Empty the timeline
+				}
+			},
+			activate: function(event, ui) {
+				var li = ui.newTab[0];
+				if (li.id == 'li-left-bottom-tabs-comments') {	
+					var poiId = $('#div-details div.field.active span.id').html();
+					var poi = getPoiById(poiId);
+					if (poi != null) {
+						loadPoiComments(poi);
+					}
+				}
+			}
+		});
 
 		// 2. MAIN COMPONENTS BEHAVIOUR
 		
@@ -342,7 +451,7 @@ body {
 		$('#div-left-top-tabs').tabs('option', 'disabled', [1, 2, 3]);
 		// $('#div-left-top-tabs').tabs('option', 'disabled', [2]);
 
-		$('#div-left-bottom-tabs').tabs('option', 'disabled', [1]);
+		// $('#div-left-bottom-tabs').tabs('option', 'disabled', [1]);
 
 		// 3. MAIN COMPONENTS LAYOUT
 		
@@ -398,7 +507,12 @@ body {
 			);
 		}
 		
-		// 9. END
+		<c:if test="${not empty selectedPoiId}"> <!-- used in devel tests -->
+		selectPoi(getPoiById(${selectedPoiId}));
+		</c:if>
+		<c:if test="${mode == 'comments'}"> <!-- used in devel tests -->
+		$('#div-left-bottom-tabs').tabs('option', 'active', 1);
+		</c:if>
 	}
 	
 	google.maps.event.addDomListener(window, 'load', initialize);
@@ -418,13 +532,17 @@ body {
 
 	<div id="div-left-top-tabs" class="pois">
 	<ul>
-		<li><a href="#div-left-top-tabs-1">Tous</a></li>
-    	<li><a href="#div-left-top-tabs-3">Université</a></li>
-	    <li><a href="#div-left-top-tabs-2">Favoris</a></li>
-	    <li><a href="#div-left-top-tabs-4">Recherche</a></li>
+		<li id="li-left-top-tabs-all">
+			<a href="#div-left-top-tabs-all">Tous</a>
+    	<li id="li-left-top-tabs-university">
+    		<a href="#div-left-top-tabs-university">Université</a>
+	    <li id="li-left-top-tabs-favorites">
+	    	<a href="#div-left-top-tabs-favorites">Favoris</a>
+	    <li id="li-left-top-tabs-search">
+	    	<a href="#div-left-top-tabs-search">Recherche</a>
 	</ul>
 	
-	<div id="div-left-top-tabs-1">
+	<div id="div-left-top-tabs-all">
 	
 	<!--
 	<h1 title="Version ${buildInfo.appVersion}
@@ -462,25 +580,25 @@ body {
 	</c:forEach>
 	</ul>
 	
-	</div> <!-- end of #div-left-top-tabs-1 -->
+	</div> <!-- end of #div-left-top-tabs-all -->
 
-	<div id="div-left-top-tabs-2">
+	<div id="div-left-top-tabs-favorites">
 	
 		Favoris
 		
-	</div> <!-- end of #div-left-top-tabs-2 -->
+	</div> <!-- end of #div-left-top-tabs-favorites -->
 
-	<div id="div-left-top-tabs-3">
+	<div id="div-left-top-tabs-university">
 	
 		Université
 		
-	</div> <!-- end of #div-left-top-tabs-3 -->
+	</div> <!-- end of #div-left-top-tabs-university -->
 
-	<div id="div-left-top-tabs-4">
+	<div id="div-left-top-tabs-search">
 	
 		Recherche
 		
-	</div> <!-- end of #div-left-top-tabs-4 -->
+	</div> <!-- end of #div-left-top-tabs-search -->
 	
 	</div> <!-- end of #div-left-top-tabs -->
 	
@@ -490,13 +608,20 @@ body {
 
 	<div id="div-left-bottom-tabs">
 	<ul>
-		<li><a href="#div-left-bottom-tabs-1">Détails</a></li>
-	    <li><a href="#div-left-bottom-tabs-2">Commentaires</a></li>
+		<li id="li-left-bottom-tabs-details">
+			<a href="#div-left-bottom-tabs-details">Détails</a>
+	    <li id="li-left-bottom-tabs-comments">
+	    	<a href="#div-left-bottom-tabs-comments">Commentaires</a>
 	</ul>
 	
-	<div id="div-left-bottom-tabs-1">
+	<div id="div-left-bottom-tabs-details">
+
+	<div class="noPoiSelected">
+		Sélectionnez un POI dans la liste ou sur la carte
+	</div>
 
 	<div id="div-details" class="hidden">
+
 	<div class="field name">
 	</div>
 	<div class="field active">
@@ -568,13 +693,31 @@ body {
 	
 	</div> <!-- end of #div-details -->
 	
-	</div> <!-- end of #div-left-bottom-tabs-1 -->
+	</div> <!-- end of #div-left-bottom-tabs-details -->
 	
-	<div id="div-left-bottom-tabs-2">
+	<div id="div-left-bottom-tabs-comments">
 
-	Commentaires
+	<div class="noPoiSelected">
+		Sélectionnez un POI dans la liste ou sur la carte
+	</div>
 
-	</div> <!-- end of #div-left-bottom-tabs-2 -->
+	<div id="div-comments" class="hidden">
+	
+	<div id="div-comments-timeline">
+	
+	</div>
+	
+	<div id="div-comments-buttons">
+	
+	<button id="button-addComment" disabled>
+		Ajouter un commentaire…
+	</button>
+	
+	</div> <!-- end of #div-comments-buttons -->
+	
+	</div> <!-- end of #div-comments -->
+
+	</div> <!-- end of #div-left-bottom-tabs-comments -->
 
 	</div> <!-- end of #div-left-bottom-tabs -->
 	

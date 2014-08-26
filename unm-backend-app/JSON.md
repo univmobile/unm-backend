@@ -59,7 +59,7 @@ Et aussi :
  * ${baseURL}/json/regions
  * ${baseURL}/json/regions.json
  
-### Note : HTML beautifier
+### Note : ?html beautifier
 
 Sur les flux JSON servis par l’application web unm-backend, le paramètre HTTP « ?html » permet d’obtenir un affichage HTML correspondant au flux JSON, avec indentation et liens cliquables.
 
@@ -108,25 +108,25 @@ Cette URL est fournie par le flux JSON « Liste des endpoints JSON ».
 Exemple de flux :
 
     {
-        'url':'${baseURL}/json/regions',
+        "url":"${baseURL}/json/regions",
         
-        'regions':[
+        "regions":[
             {
-                'id':    'bretagne',   
-                'label': 'Bretagne',
-                'url':   '${baseURL}/json/regions/bretagne',
-                'pois':{
-                    'count': 200,
-                    'url':   '${baseURL}/json/regions/bretagne/pois'
+                "id":    "bretagne",   
+                "label": "Bretagne",
+                "url":   "${baseURL}/json/regions/bretagne",
+                "pois":{
+                    "count": 200,
+                    "url":   "${baseURL}/json/regions/bretagne/pois"
                 }
             },                                                    
             {
-                'id':    'ile_de_france',   
-                'label': 'Île de France',
-                'url':   '${baseURL}/json/regions/ile_de_france',
-                'pois':{
-                    'count': 110,
-                    'url':   '${baseURL}/json/regions/ile_de_france/pois'
+                "id":    "ile_de_france",   
+                "label": "Île de France",
+                "url":   "${baseURL}/json/regions/ile_de_france",
+                "pois":{
+                    "count": 110,
+                    "url":   "${baseURL}/json/regions/ile_de_france/pois"
                 }
             },
             ...
@@ -156,31 +156,31 @@ Exemples :
 Exemple de flux :
 
     {
-        'url':   '${baseURL}/json/regions/ile_de_france',
-        'id':    'ile_de_france',
-        'label': 'Île de France',
+        "url":   "${baseURL}/json/regions/ile_de_france",
+        "id":    "ile_de_france",
+        "label": "Île de France",
      
-        'universities':[
+        "universities":[
             {
-                'id':    'crousVersailles',   
-                'title': 'CROUS Versailles',
-                'config':{
-                    'url':'${baseURL}/json/regions/ile_de_france/crousVersailles'
+                "id":    "crousVersailles",   
+                "title": "CROUS Versailles",
+                "config":{
+                    "url":"${baseURL}/json/regions/ile_de_france/crousVersailles"
                 },
-                'pois:{
-                   'count': 127,
-                   'url':   '${baseURL}/json/regions/ile_de_france/crousVersailles/pois'
+                "pois":{
+                   "count": 127,
+                   "url":   "${baseURL}/json/regions/ile_de_france/crousVersailles/pois"
                 }
             },                         
             {
-                'id':    'ucp',   
-                'title': 'Cergy-Pontoise',
-                'config':{
-                    'url':'${baseURL}/json/regions/ile_de_france/ucp'
+                "id":    "ucp",   
+                "title": "Cergy-Pontoise",
+                "config":{
+                    "url":"${baseURL}/json/regions/ile_de_france/ucp"
                 },
-                'pois':{
-                    'count': 48,
-                    'url':   '${baseURL}/json/regions/ile_de_france/ucp/pois'
+                "pois":{
+                    "count": 48,
+                    "url":   "${baseURL}/json/regions/ile_de_france/ucp/pois"
                 }
             },
             ...
@@ -205,7 +205,165 @@ TODO : contextes de recherche (favoris, université, filtres) (onglets du haut)
 
 TODO : détails et commentaires (onglets du bas)
 
-TODO : forme des URL, « /pois » semblant être le fragment terminal (permet d’ajouter des paramètres).
+Dans les URLs qui servent des POIs (Points of interest), le fragment « /pois » se trouve toujours en fin d’URL. Exemples :
+
+  * http://localhost:8380/unm-backend/json/pois
+  * http://localhost:8380/unm-backend/json/regions/bretagne/pois
+  * http://localhost:8380/unm-backend/json/regions/bretagne/rennes2/pois
+
+En effet, les POIs pouvant être filtrés par critères de recherche passés en paramètres hTTP, il est pertinent de placer le fragment en fin d’URL.
+
+Exemples : 
+
+  * json/regions/bretagne/pois?type=amphitheatre
+  * json/pois?id=4431
+
+Les POIS sont toujours servis dans une liste et regroupés.
+
+Exemple :
+
+    {
+        "url":"http://univmobile.vswip.com/unm-backend/json/pois",
+        "groups":[
+            {
+                "groupLabel":"Région : Bretagne",
+                "pois":[
+                    {
+                        ... POI 1
+                    },
+                    {
+                        ... POI 2
+                    },
+                    ...
+                ]
+            },
+            {
+                "groupLabel":"Région : Île de France",
+                "pois":[
+                    ...
+                ]
+            },
+            ...            
+        ]
+    }
+    
+Note : même pour retrouver le POI d’un identifiant donné, on obtiendra une liste — avec un seul élément.
+
+Exemple :
+
+    {
+        "url":"http://univmobile.vswip.com/unm-backend/json/pois?id=4431",
+        "groups":[
+            {
+                "groupLabel":null,
+                "pois":[
+                    {
+                        "id":   4431,
+                        "name": "ENSIEE",
+                        ...
+                    }
+                ]
+            }
+        ]
+    }
+
+Voici un exemple JSON d’un POI :
+
+    {
+       "id":           4431,
+       "name":         "ENSIIE",
+       "coordinates":  "48.627078,2.431309",
+       "lat":          "48.627078",
+       "lng":          "2.431309",
+       "address":      "18 Allée Jean Rostand",
+       "floor":        null,
+       "itinerary":    null,       
+       "openingHours": null,
+       "url":          "http://www.ensiie.fr/",
+       "email":        null,
+       "fax":          null,
+       "phone":        null,
+       "image":{
+           "url":    null,
+           "width":  0,
+           "height": 0
+       },
+       
+       "markerIndex":  "A",
+       "markerType":   "green",
+       
+       "comments":{
+           "url":"${baseURL}/json/pois/4431/comments"
+       }
+    }
+
+Le champ « url » du JSON ne correspond pas à l’identifiant du POI, parce que le POI n’est pas servi tel quel mais toujours dans une liste qui, elle, a un champ « url » technique.
+
+Les champs « marker* » du POI sont utilisés pour le dessin sur les cartes Google Maps.
+
+La partie « comments » pointe vers le JSON des commentaires attachés au POI.
+
+Pour le flux JSON des commentaires, l’API est inspirée de l’API Twitter.
+
+En voici un exemple :
+
+    {
+        "url":"${baseURL}/json/pois/4431/comments",
+        "context":[
+            {
+                "poi":{
+                    "id":   4431,
+                    "name": "ENSIEE"
+                }
+            }   
+        ],
+        "comments":[
+            {
+                "id":       "9120122",
+                "postedAt": "2014-08-15 09:34:45.894+02:00",                                               
+                "source":   "UnivMobile",
+                "author":{
+                    "username":    "dandriana",
+                    "displayName": "David Andriana",
+                    "timeZone":    "Central European Time Zone (UTC+01:00)",
+                    "lang":        "fr",
+                    "profileImage": {
+                        "url":"http://unpidf.univ-paris1.fr/wp-content/themes/wp-creativix/images/logos/1338991426.png"
+                    }
+                },
+                "coordinates":{
+                    "type": "Point"
+                    "lat":  "48.627078",
+                    "lng":  "2.431309"
+                },
+                "lang":"fr",
+                "entities":{
+                    "hashtags":[
+                        {
+                            "indices": [28, 34],
+                            "text":    "unpidf"
+                        }
+                    ],
+                    "urls":[
+                        {
+                            "indices":     [36, 65],
+                            "url":         "http://unpidf.univ-paris1.fr/",
+                            "displayUrl":  "http://unpidf.univ-paris1.fr/",
+                            "expandedUrl": "http://unpidf.univ-paris1.fr/",
+                        }
+                    ]
+                },
+                "text":"Une application de l’UNPIdF #unpidf http://unpidf.univ-paris1.fr/"
+            },
+            {   
+                "id":       "9120123",
+                "postedAt": "2014-08-15 11:02:45.894+02:00",                                               
+                "source":   "UnivMobile",
+                ...
+            },
+            ...
+        ]
+    }
 
 ### Flux JSON : universités en tant que points of interest (POIs) 
 
@@ -224,3 +382,9 @@ sous des groupes qui correspondent à leurs régions.
 TODO : URL = ${baseURL}/json/regions/ile_de_france/ucp/pois
 
 TODO : catégories = catégories / tags, POIs = POIs
+
+### Flux JSON : commentaires (comments), introduction
+
+TODO : exemple de flux JSON.
+
+TODO : url = permalink.
