@@ -388,3 +388,8 @@ TODO : catégories = catégories / tags, POIs = POIs
 TODO : exemple de flux JSON.
 
 TODO : url = permalink.
+
+TODO : envoi d’un commentaire :
+
+  * GET unm-backend/comment pour préparer l’envoi (vérifie notamment que Shibboleth est utilisé).
+  * POST unm-backend/comment + username + message pour envoyer le message.
