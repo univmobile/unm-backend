@@ -35,7 +35,9 @@ public interface Poi {
 	String getLatitude();
 	
 	String getLongitude();
-	
+
+	String getCommentsUrl();
+
 	@Nullable
 	String getUrl();
 	

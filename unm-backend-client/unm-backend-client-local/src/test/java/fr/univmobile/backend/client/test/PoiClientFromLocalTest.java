@@ -150,4 +150,16 @@ public class PoiClientFromLocalTest {
 			}
 		}
 	}
+
+	@Test
+	public void testThroughJSON_noBlankCommentsUrl() throws IOException {
+
+		for (final PoiGroup group : client.getPois()) {
+
+			for (final Poi poi : group.getPois()) {
+
+				assertFalse(isBlank(poi.getCommentsUrl()));
+			}
+		}
+	}
 }

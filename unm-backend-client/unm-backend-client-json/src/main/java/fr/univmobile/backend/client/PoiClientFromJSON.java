@@ -133,6 +133,10 @@ public class PoiClientFromJSON implements PoiClient {
 			@Nullable
 			String getUrl();
 
+			@XPath("comments/@url")
+			@Override
+			String getCommentsUrl();
+
 			@XPath("image/@url")
 			@Override
 			@Nullable

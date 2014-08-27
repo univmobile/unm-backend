@@ -162,6 +162,8 @@ public class PoiClientFromLocal implements PoiClient {
 
 				markerIndex = (markerIndex + 1) % 26;
 
+				poi.setCommentsUrl("${baseURL}/json/comments/poi" + poiUid);
+
 				poiGroup.addToPois(poi);
 			}
 		}
@@ -203,6 +205,8 @@ public class PoiClientFromLocal implements PoiClient {
 		MutablePoi setLongitude(String longitude);
 
 		MutablePoi setUrl(@Nullable String url);
+
+		MutablePoi setCommentsUrl(String commentsUrl);
 
 		MutablePoi setImageUrl(@Nullable String image);
 

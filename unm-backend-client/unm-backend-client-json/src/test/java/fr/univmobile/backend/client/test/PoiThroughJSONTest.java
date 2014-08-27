@@ -147,4 +147,18 @@ public class PoiThroughJSONTest {
 			}
 		}
 	}
+
+	@Test
+	public void testThroughJSON_commentsUrls() throws Exception {
+
+		for (final PoiGroup group : client.getPois()) {
+
+			for (final Poi poi : group.getPois()) {
+
+				final String commentsUrl = poi.getCommentsUrl();
+				
+				assertFalse(isBlank(commentsUrl));
+			}
+		}
+	}
 }
