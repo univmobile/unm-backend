@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/poitrees/002:poitree_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/poitrees/002:poitree_1.xml"/>
+<title>PoiTree</title>
+<updated>2014-08-15T18:11:09.233+02:00</updated>
+<category term="poitrees"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="ile_de_france">
+<poi uid="1" name="Université Panthéon-Sorbonne - Paris I" universityId="paris1" typeId="1" typeLabel="Université" categoryId="1" categoryLabel="Plans">
+	<poi uid="415" name="Centre Broca" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+	</poi>
+</poi>
+<poi uid="4" name="Université Versailles Saint-Quentin-en-Yvelines" universityId="paris1" typeId="1" typeLabel="Université" categoryId="1" categoryLabel="Plans">
+</poi>
+</content>
+</entry>

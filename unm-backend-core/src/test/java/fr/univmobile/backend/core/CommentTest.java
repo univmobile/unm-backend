@@ -2,6 +2,7 @@ package fr.univmobile.backend.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -48,12 +49,26 @@ public class CommentTest {
 
 		commentThreads = BackendDataSourceFileSystem.newDataSource(
 				CommentThreadDataSource.class, dataDir_comment_threads);
+
+		final File originalDataDir_pois = new File("src/test/data/pois/001");
+
+		final File dataDir_pois = new File("target/CommentTest_pois");
+
+		if (dataDir_pois.isDirectory()) {
+			FileUtils.forceDelete(dataDir_pois);
+		}
+
+		FileUtils.copyDirectory(originalDataDir_pois, dataDir_pois);
+
+		pois = BackendDataSourceFileSystem.newDataSource(PoiDataSource.class,
+				dataDir_pois);
 	}
 
 	private CommentDataSource comments;
 	private CommentThreadDataSource commentThreads;
 	private File dataDir_comments;
 	private File dataDir_comment_threads;
+	private PoiDataSource pois;
 
 	private final TransactionManager tx = TransactionManager.getInstance();
 
@@ -129,7 +144,7 @@ public class CommentTest {
 	public void testCreateComment_existing_thread_415() throws Exception {
 
 		final int POI_UID = 415;
-		
+
 		assertEquals(3, comments.getAllBy(Integer.class, "uid").size());
 		assertEquals(1, commentThreads.getAllBy(Integer.class, "uid").size());
 		assertEquals(3, getFileCount(dataDir_comments));
@@ -183,5 +198,27 @@ public class CommentTest {
 		assertEquals(1, newThread.getAllComments()[0].getUid());
 		assertEquals(2, newThread.getAllComments()[1].getUid());
 		assertEquals(45, newThread.getAllComments()[2].getUid());
+	}
+
+	@Test
+	public void testGetComments_1_noComment() throws Exception {
+
+		final int POI_UID = 1;
+
+		assertTrue(commentThreads.isNullByPoiId(POI_UID));
+	}
+
+	@Test
+	public void testGetComments_415() throws Exception {
+
+		final int POI_UID = 415;
+
+		assertNotNull(pois.getByUid(POI_UID));
+
+		assertFalse(commentThreads.isNullByPoiId(POI_UID));
+
+		final CommentThread commentThread = commentThreads.getByPoiId(POI_UID);
+
+		assertEquals(2, commentThread.sizeOfAllComments());
 	}
 }

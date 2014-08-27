@@ -25,6 +25,8 @@ public interface CommentThread extends Entry<CommentThread> {
 	@XPath("descendant-or-self::atom:comment")
 	CommentRef[] getAllComments();
 
+	int sizeOfAllComments();
+	
 	interface Context {
 
 		@XPath("@id")
