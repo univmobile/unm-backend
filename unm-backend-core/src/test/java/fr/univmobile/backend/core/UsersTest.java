@@ -2,6 +2,7 @@ package fr.univmobile.backend.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
@@ -127,5 +128,14 @@ public class UsersTest {
 
 		assertEquals("crezvani", crezvani.getUid());
 		assertEquals("dandriana", dandriana.getUid());
+	}
+
+	@Test
+	public void test_profileImageUrl() throws Exception {
+
+		final User crezvani = users
+				.getById("fr.univmobile:unm-backend:test/users/001:crezvani_1");
+
+		assertNull(crezvani.getProfileImageUrl());
 	}
 }

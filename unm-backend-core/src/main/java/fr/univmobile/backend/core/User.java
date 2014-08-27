@@ -49,4 +49,8 @@ public interface User extends Entry<User> {
 	@XPath("concat(atom:category/@term, ':', atom:content/atom:uid)")
 	@Override
 	String toString();
+	
+	@XPath("@profileImageUrl")
+	@Nullable
+	String getProfileImageUrl();
 }
