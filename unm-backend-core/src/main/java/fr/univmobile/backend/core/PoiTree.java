@@ -3,7 +3,7 @@ package fr.univmobile.backend.core;
 import net.avcompris.binding.annotation.XPath;
 import fr.univmobile.commons.datasource.Entry;
 
-public interface PoiTree extends Entry {
+public interface PoiTree extends Entry<PoiTree> {
 
 	@XPath("atom:content/atom:poi")
 	PoiTree[] getRoots();

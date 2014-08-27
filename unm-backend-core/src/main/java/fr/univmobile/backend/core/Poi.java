@@ -10,7 +10,7 @@ import org.joda.time.DateTime;
 
 import fr.univmobile.commons.datasource.Entry;
 
-public interface Poi extends Entry {
+public interface Poi extends Entry<Poi> {
 
 	/**
 	 * e.g. 1

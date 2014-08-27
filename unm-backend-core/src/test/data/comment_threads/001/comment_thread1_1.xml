@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/comment_threads/001:comment_thread1_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/comment_threads/001:comment_thread1_1.xml"/>
+<title>CommentThread</title>
+<updated>2014-08-25T09:11:09.233+02:00</updated>
+<category term="comment_threads"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1">
+<context id="fr.univmobile:unm-backend:test/pois/001:poi415_1"
+	type="local:poi" uid="415"/> <!-- = context.maxOccurs = unbounded -->
+<comment uid="1">
+	<comment uid="2"/>
+</comment>
+</content>
+</entry>

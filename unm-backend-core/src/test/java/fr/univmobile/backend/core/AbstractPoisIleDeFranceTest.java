@@ -5,14 +5,8 @@ import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
-import java.util.HashMap;
-import java.util.Map;
 
-import org.apache.commons.io.FileUtils;
-import org.junit.Before;
 import org.junit.Test;
-
-import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public abstract class AbstractPoisIleDeFranceTest extends AbstractPoisTest {
 

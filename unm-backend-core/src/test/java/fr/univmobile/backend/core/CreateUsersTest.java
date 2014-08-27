@@ -1,7 +1,9 @@
 package fr.univmobile.backend.core;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +13,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
+import fr.univmobile.commons.tx.Lock;
+import fr.univmobile.commons.tx.TransactionManager;
 
 public class CreateUsersTest {
 
@@ -74,15 +78,21 @@ public class CreateUsersTest {
 
 		assertTrue(user.isNullId());
 		assertTrue(user.isNullSelf());
-		
-		final User saved = user.save();
+
+		final TransactionManager tx = TransactionManager.getInstance();
+
+		final Lock lock = tx.acquireLock(5000, "users", "toto");
+
+		final User saved = lock.save(user);
+
+		lock.commit();
 
 		assertFalse(user.isNullId());
 		assertFalse(user.isNullSelf());
 		assertFalse(isBlank(user.getSelf()));
-		
+
 		assertEquals(saved.getId(), user.getSelf());
-		
+
 		assertEquals("dandriana", saved.getAuthorName());
 		assertEquals("dandriana", saved.getTitle());
 

@@ -11,6 +11,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
+import fr.univmobile.commons.tx.Lock;
+import fr.univmobile.commons.tx.TransactionManager;
 
 public class RegionsTest {
 
@@ -67,8 +69,14 @@ public class RegionsTest {
 		builder.setLabel("Région parisienne");
 
 		assertEquals("Région parisienne", builder.getLabel());
+		
+		final TransactionManager tx = TransactionManager.getInstance();
 
-		builder.save();
+		final Lock lock = tx.acquireLock(5000, "users", "toto");
+
+		lock.save(builder);
+		
+		lock.commit();
 
 		regions.reload();
 
@@ -84,8 +92,14 @@ public class RegionsTest {
 
 		final Region region = regions.getByUid("ile_de_france");
 
-		regions.update(region).setLabel("Région parisienne").save();
+		final TransactionManager tx = TransactionManager.getInstance();
 
-		assertEquals("Région parisienne", region.getLabel());
+		final Lock lock = tx.acquireLock(5000, "users", "toto");
+
+		lock.save(regions.update(region).setLabel("Région parisienne"));
+
+		lock.commit();
+		
+		assertEquals("Région parisienne", regions.reload(region).getLabel());
 	}
 }

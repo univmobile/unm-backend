@@ -3,7 +3,7 @@ package fr.univmobile.backend.core;
 import net.avcompris.binding.annotation.XPath;
 import fr.univmobile.commons.datasource.Entry;
 
-public interface Region extends Entry {
+public interface Region extends Entry<Region> {
 
 	/**
 	 * e.g. "ile_de_france"
