@@ -13,4 +13,9 @@ public class TransactionException extends Exception {
 
 		super(message);
 	}
+
+	public TransactionException(@Nullable final Throwable cause) {
+
+		super(cause);
+	}
 }

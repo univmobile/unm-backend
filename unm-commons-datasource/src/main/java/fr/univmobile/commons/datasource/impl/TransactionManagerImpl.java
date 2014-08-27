@@ -115,7 +115,7 @@ public class TransactionManagerImpl extends TransactionManager {
 		 * Update all links to resources tagged by the corresponding "save()"
 		 * methods.
 		 */
-		public synchronized void commit() throws IOException {
+		public synchronized void commit() throws TransactionException {
 
 			for (final EntryBuilderImpl<?> data : stagedData) {
 
@@ -133,7 +133,7 @@ public class TransactionManagerImpl extends TransactionManager {
 			// return entryBuilderImpl.cache();
 		}
 
-		public synchronized void release() throws IOException {
+		public synchronized void release() throws TransactionException {
 
 			stagedData.clear();
 
@@ -141,13 +141,19 @@ public class TransactionManagerImpl extends TransactionManager {
 		}
 
 		public <E extends Entry<E>> E save(final EntryBuilder<E> entryBuilder)
-				throws IOException {
+				throws TransactionException {
 
 			final EntryBuilderImpl<E> data = (EntryBuilderImpl<E>) entryBuilder;
 
 			stagedData.add(data);
+		
+			try {
+			
+				return data.save();
 
-			return data.save();
+			} catch (final IOException e) {
+				throw new TransactionException(e);
+			}			
 		}
 
 		private final List<EntryBuilderImpl<?>> stagedData = new ArrayList<EntryBuilderImpl<?>>();
