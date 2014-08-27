@@ -82,6 +82,10 @@ public class PoiJSONClientImpl extends AbstractJSONClientImpl implements
 						.put("width", poi.getImageWidth()) //
 						.put("height", poi.getImageHeight()));
 
+				map.put("comments", new JSONMap() //
+						.put("url", filterURL("${baseURL}/json/comments/poi"
+								+ poi.getId())));
+
 				pois.add(map);
 			}
 		}
