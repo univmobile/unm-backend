@@ -17,7 +17,7 @@ public class MyPoisTest {
 
 		final File originalDataDir = new File("src/test/data/mypois/001");
 
-		final File tmpDataDir = new File("target/PoisTest");
+		final File tmpDataDir = new File("target/MyPoisTest");
 
 		if (tmpDataDir.isDirectory()) {
 			FileUtils.forceDelete(tmpDataDir);

@@ -41,7 +41,9 @@ import fr.univmobile.commons.datasource.Category;
 import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
 
-abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E extends Entry, EB extends EntryBuilder<E>>
+abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, //
+E extends Entry<E>, //
+EB extends EntryBuilder<E>> //
 		implements BackendDataSource<E, EB> {
 
 	protected BackendDataSourceImpl(final Class<S> dataSourceClass,
@@ -117,8 +119,9 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 				document, entryBuilder);
 
 		final Object proxy = Proxy.newProxyInstance(
-				dataSourceClass.getClassLoader(), new Class[] { builderClass },
-				wrapper);
+				dataSourceClass.getClassLoader(), new Class[] { //
+				builderClass, EntryBuilderImpl.class //
+				}, wrapper);
 
 		final EB builder = builderClass.cast(proxy);
 
@@ -132,18 +135,37 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 
 		checkNotNull(data, "data");
 
-		final EB rebind = BinderUtils.rebind(data, builderClass);
+		// final EB rebind = BinderUtils.rebind(data, builderClass);
 
 		final Binding<?> node = BinderUtils.rebind(data, Binding.class);
 
 		final Document document = ((Node) node.node()).getOwnerDocument();
 
+		final Document newDocument;
+
+		try {
+
+			newDocument = getDocumentBuilder().newDocument();
+
+		} catch (final ParserConfigurationException e) {
+			throw new RuntimeException(e);
+		}
+
+		final Node newRoot = newDocument.importNode(
+				document.getDocumentElement(), true);
+
+		newDocument.appendChild(newRoot);
+
+		final EB rebind = DomBinderUtils.xmlContentToJava(newDocument,
+				builderClass);
+
 		final EntryBuilderWrapper<E, EB> wrapper = new EntryBuilderWrapper<E, EB>(
-				document, rebind);
+				newDocument, rebind);
 
 		final Object proxy = Proxy.newProxyInstance(
-				dataSourceClass.getClassLoader(), new Class[] { builderClass },
-				wrapper);
+				dataSourceClass.getClassLoader(), new Class<?>[] { //
+				builderClass, EntryBuilderImpl.class //
+				}, wrapper);
 
 		final EB builder = builderClass.cast(proxy);
 
@@ -162,6 +184,11 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 			this.document = checkNotNull(document, "document");
 			this.delegate = checkNotNull(delegate, "delegate");
 
+			@SuppressWarnings("unchecked")
+			final E entry = (E) delegate;
+			
+			this.entry=entry;
+
 			wrapper = delegate;
 		}
 
@@ -172,6 +199,7 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 
 		private final Document document;
 		private final EB delegate;
+		private final E entry;
 		private EB wrapper;
 
 		@Override
@@ -183,6 +211,13 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 				BackendDataSourceImpl.this.save(document, delegate);
 
 				return delegate;
+			}
+
+			if ("cache".equals(method.getName())) {
+
+				BackendDataSourceImpl.this.cache(entry);
+
+				return null;
 			}
 
 			if ("dump".equals(method.getName())) {
@@ -209,6 +244,8 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 
 	protected abstract void save(Document document, EB builder)
 			throws IOException;
+
+	protected abstract void cache(E data) throws IOException;
 
 	protected static String dump(final Document document, final File outFile) {
 
@@ -250,13 +287,16 @@ abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, E exten
 
 	private static final String NSURI = "http://www.w3.org/2005/Atom";
 
+	private static DocumentBuilder getDocumentBuilder()
+			throws ParserConfigurationException {
+
+		return DocumentBuilderFactory.newInstance().newDocumentBuilder();
+	}
+
 	private static Document createDocument()
 			throws ParserConfigurationException {
 
-		final DocumentBuilder documentBuilder = DocumentBuilderFactory
-				.newInstance().newDocumentBuilder();
-
-		final Document document = documentBuilder.newDocument();
+		final Document document = getDocumentBuilder().newDocument();
 
 		final Element rootElement = document.createElementNS(NSURI,
 				"atom:entry");

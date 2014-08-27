@@ -9,7 +9,7 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 public @interface Support {
 
-	Class<? extends Entry> data();
+	Class<? extends Entry<?>> data();
 
 	Class<? extends EntryBuilder<?>> builder();
 }

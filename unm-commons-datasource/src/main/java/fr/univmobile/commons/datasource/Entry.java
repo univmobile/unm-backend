@@ -11,7 +11,7 @@ import org.joda.time.DateTime;
 
 @Namespaces("xmlns:atom=http://www.w3.org/2005/Atom")
 @XPath("/atom:entry")
-public interface Entry extends Serializable {
+public interface Entry<T extends Entry<?>> extends Serializable {
 
 	@XPath("atom:id")
 	String getId();

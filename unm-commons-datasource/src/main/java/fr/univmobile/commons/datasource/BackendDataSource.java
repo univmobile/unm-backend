@@ -3,7 +3,7 @@ package fr.univmobile.commons.datasource;
 import java.io.IOException;
 import java.util.Map;
 
-public interface BackendDataSource<E extends Entry, EB extends EntryBuilder<E>> {
+public interface BackendDataSource<E extends Entry<E>, EB extends EntryBuilder<E>> {
 
 	E getById(String id);
 
@@ -24,6 +24,8 @@ public interface BackendDataSource<E extends Entry, EB extends EntryBuilder<E>> 
 	EB create();
 
 	EB update(E data);
+	
+	E reload(E data) throws IOException;
 
 	void reload() throws IOException;
 }

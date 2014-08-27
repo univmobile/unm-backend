@@ -11,6 +11,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
+import fr.univmobile.commons.tx.Lock;
+import fr.univmobile.commons.tx.TransactionManager;
 
 public class MyRegionsTest {
 
@@ -19,7 +21,7 @@ public class MyRegionsTest {
 
 		final File originalDataDir = new File("src/test/data/myregions/001");
 
-		final File tmpDataDir = new File("target/RegionsTest");
+		final File tmpDataDir = new File("target/MyRegionsTest");
 
 		if (tmpDataDir.isDirectory()) {
 			FileUtils.forceDelete(tmpDataDir);
@@ -68,7 +70,13 @@ public class MyRegionsTest {
 
 		assertEquals("Région parisienne", builder.getLabel());
 
-		builder.save();
+		final TransactionManager tx = TransactionManager.getInstance();
+
+		final Lock lock = tx.acquireLock(5000, "regions", "ile_de_france");
+
+		lock.save(builder);
+
+		lock.commit();
 
 		regions.reload();
 
@@ -84,8 +92,62 @@ public class MyRegionsTest {
 
 		final MyRegion region = regions.getByUid("ile_de_france");
 
-		regions.update(region).setLabel("Région parisienne").save();
+		assertEquals("Île de France", region.getLabel());
 
-		assertEquals("Région parisienne", region.getLabel());
+		final TransactionManager tx = TransactionManager.getInstance();
+
+		final Lock lock = tx.acquireLock(5000, "regions", "ile_de_france");
+
+		lock.save(regions.update(region).setLabel("Région parisienne"));
+
+		lock.commit();
+
+		assertEquals("Île de France", region.getLabel());
+
+		assertEquals("Région parisienne", regions.reload(region).getLabel());
+
+		// assertEquals("Région parisienne", region.getLabel()); // CAREFUL
+
+		assertEquals("Île de France", region.getLabel());
+	}
+
+	@Test
+	public void test_setIleDeFranceCommit() throws Exception {
+
+		final MyRegion region0 = regions.getByUid("ile_de_france");
+
+		assertEquals("Île de France", region0.getLabel());
+
+		final TransactionManager tx = TransactionManager.getInstance();
+
+		final Lock lock = tx.acquireLock(5000, "regions", "ile_de_france");
+
+		lock.save(regions.update(region0).setLabel("Région parisienne"));
+
+		lock.commit();
+
+		final MyRegion region1 = regions.getByUid("ile_de_france");
+
+		assertEquals("Région parisienne", region1.getLabel());
+	}
+
+	@Test
+	public void test_setIleDeFranceRollback() throws Exception {
+
+		final MyRegion region0 = regions.getByUid("ile_de_france");
+
+		assertEquals("Île de France", region0.getLabel());
+
+		final TransactionManager tx = TransactionManager.getInstance();
+
+		final Lock lock = tx.acquireLock(5000, "regions", "ile_de_france");
+
+		lock.save(regions.update(region0).setLabel("Région parisienne"));
+
+		lock.release();
+
+		final MyRegion region1 = regions.getByUid("ile_de_france");
+
+		assertEquals("Île de France", region1.getLabel());
 	}
 }

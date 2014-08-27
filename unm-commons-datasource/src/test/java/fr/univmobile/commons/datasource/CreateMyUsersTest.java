@@ -1,7 +1,9 @@
 package fr.univmobile.commons.datasource;
 
 import static org.apache.commons.lang3.StringUtils.isBlank;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -11,6 +13,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
+import fr.univmobile.commons.tx.Lock;
+import fr.univmobile.commons.tx.TransactionManager;
 
 public class CreateMyUsersTest {
 
@@ -19,7 +23,7 @@ public class CreateMyUsersTest {
 
 		final File originalDataDir = new File("src/test/data/myusers/001");
 
-		tmpDataDir = new File("target/CreateUsersTest");
+		tmpDataDir = new File("target/CreateMyUsersTest");
 
 		if (tmpDataDir.isDirectory()) {
 			FileUtils.forceDelete(tmpDataDir);
@@ -62,6 +66,8 @@ public class CreateMyUsersTest {
 	@Test
 	public void test_create() throws Exception {
 
+		final TransactionManager tx = TransactionManager.getInstance();
+		
 		final MyUserBuilder user = users.create();
 
 		assertEquals("users", user.getCategory());
@@ -74,9 +80,13 @@ public class CreateMyUsersTest {
 
 		assertTrue(user.isNullId());
 		assertTrue(user.isNullSelf());
-		
-		final MyUser saved = user.save();
 
+		final Lock lock = tx.acquireLock(5000, "users", "toto");
+
+		final MyUser saved = lock.save(user);
+
+		lock.commit();
+		
 		assertFalse(user.isNullId());
 		assertFalse(user.isNullSelf());
 		assertFalse(isBlank(user.getSelf()));

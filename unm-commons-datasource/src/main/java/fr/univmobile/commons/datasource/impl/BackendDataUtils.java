@@ -8,6 +8,8 @@ import java.lang.reflect.InvocationTargetException;
 
 import javax.annotation.Nullable;
 
+import org.apache.commons.lang3.NotImplementedException;
+
 import fr.univmobile.commons.datasource.BackendDataSource;
 import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
@@ -16,7 +18,7 @@ import fr.univmobile.commons.datasource.Support;
 
 abstract class BackendDataUtils {
 
-	public static <E extends Entry, EB extends EntryBuilder<E>> Class<E> getDataClass(
+	public static <E extends Entry<E>, EB extends EntryBuilder<E>> Class<E> getDataClass(
 			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
 
 		final Support support = getInheritedAnnotation(dataSourceClass,
@@ -76,7 +78,7 @@ abstract class BackendDataUtils {
 		return null;
 	}
 
-	public static <E extends Entry, EB extends EntryBuilder<E>> Class<? extends EB> getBuilderClass(
+	public static <E extends Entry<E>, EB extends EntryBuilder<E>> Class<? extends EB> getBuilderClass(
 			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
 
 		final Support support = getInheritedAnnotation(dataSourceClass,
@@ -89,7 +91,7 @@ abstract class BackendDataUtils {
 		return type;
 	}
 
-	private static Object getAttribute(final Entry entry,
+	private static Object getAttribute(final Entry<?> entry,
 			final String attributeName) {
 
 		checkNotNull(entry, "entry");
@@ -111,7 +113,28 @@ abstract class BackendDataUtils {
 		}
 	}
 
-	public static <E extends Entry, EB extends EntryBuilder<E>> String getPrimaryKey(
+	public static <E extends Entry<E>, EB extends EntryBuilder<E>> String getPrimaryKeyName(
+			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
+
+		final String[] primaryKey = getInheritedAnnotation(dataSourceClass,
+				PrimaryKey.class).value();
+
+		if (primaryKey.length == 0) {
+			throw new IllegalArgumentException(
+					"DataSource class declares an empty primary key: "
+							+ dataSourceClass.getName());
+		}
+
+		if (primaryKey.length != 1) {
+			throw new NotImplementedException(
+					"primaryKey is not unique for DataSource class: "
+							+ dataSourceClass.getName());
+		}
+
+		return primaryKey[0];
+	}
+
+	public static <E extends Entry<E>, EB extends EntryBuilder<E>> String getPrimaryKeyValue(
 			final E data,
 			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
 

@@ -27,10 +27,13 @@ import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
 import fr.univmobile.commons.datasource.SearchAttribute;
 
-public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB>, E extends Entry, EB extends EntryBuilder<E>>
-		extends BackendDataSourceImpl<S, E, EB> implements InvocationHandler {
+public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB>, //
+E extends Entry<E>, //
+EB extends EntryBuilder<E>> //
+		extends BackendDataSourceImpl<S, E, EB> //
+		implements InvocationHandler {
 
-	public static <S extends BackendDataSource<E, EB>, E extends Entry, EB extends EntryBuilder<E>> S newDataSource(
+	public static <S extends BackendDataSource<E, EB>, E extends Entry<E>, EB extends EntryBuilder<E>> S newDataSource(
 			final Class<S> dataSourceClass, final File dataDir)
 			throws IOException {
 
@@ -135,9 +138,14 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 
 		if ("reload".equals(methodName)) {
 
-			reload();
+			if (args == null || args.length == 0) {
 
-			return null;
+				reload();
+
+				return null;
+			}
+
+			return reload(dataClass.cast(args[0]));
 		}
 
 		final SearchAttribute searchAttribute = method
@@ -219,13 +227,13 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 	}
 
 	@Override
-	public final Map<String, E> getAllByString(final String attributeName) {
+	public Map<String, E> getAllByString(final String attributeName) {
 
 		return getAllBy(String.class, attributeName);
 	}
 
 	@Override
-	public final Map<Integer, E> getAllByInt(final String attributeName) {
+	public Map<Integer, E> getAllByInt(final String attributeName) {
 
 		return getAllBy(Integer.class, attributeName);
 	}
@@ -237,8 +245,9 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 		@SuppressWarnings("unchecked")
 		final E data = (E) builder;
 
-		final String primaryKey = BackendDataUtils.getPrimaryKey(data,
+		final String primaryKey = BackendDataUtils.getPrimaryKeyValue(data,
 				dataSourceClass);
+
 		File file = null;
 
 		synchronized (this) { // TODO Use a real transactional lock.
@@ -274,6 +283,25 @@ public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB
 
 		dump(document, file);
 
+		// cacheEngine.cache(data);
+	}
+
+	@Override
+	protected void cache(final E data) throws IOException {
+
 		cacheEngine.cache(data);
+	}
+
+	@Override
+	public E reload(final E data) throws IOException {
+
+		final String primaryKey = BackendDataUtils.getPrimaryKeyValue(data,
+				dataSourceClass);
+
+		final E cached = cacheEngine.getByPrimaryKey(primaryKey);
+
+		// BinderUtils.attach(data, cached);
+
+		return cached;
 	}
 }

@@ -12,6 +12,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.NoSuchElementException;
 
+import javax.annotation.Nullable;
+
 import com.avcompris.lang.NotImplementedException;
 
 import fr.univmobile.commons.datasource.BackendDataSource;
@@ -19,13 +21,13 @@ import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
 import fr.univmobile.commons.datasource.SearchAttribute;
 
-final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
+final class BackendDataCacheEngine<E extends Entry<E>, EB extends EntryBuilder<E>>
 		implements BackendDataEngine<E, EB> {
 
 	public BackendDataCacheEngine(
 			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
 
-		checkNotNull(dataSourceClass, "dataSourceClass");
+		this.dataSourceClass = checkNotNull(dataSourceClass, "dataSourceClass");
 
 		this.dataClass = BackendDataUtils.getDataClass(dataSourceClass);
 
@@ -41,7 +43,11 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 
 		putAttributeMethod("parentId");
 
-		// 2.2. OTHERS
+		// 2.2. PRIMARY KEY
+
+		primaryKeyName = BackendDataUtils.getPrimaryKeyName(dataSourceClass);
+
+		// 2.3. OTHERS
 
 		for (final Method method : dataSourceClass.getMethods()) {
 
@@ -60,6 +66,10 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 		}
 	}
 
+	@Nullable
+	private final String primaryKeyName;
+
+	private final Class<? extends BackendDataSource<E, EB>> dataSourceClass;
 	private final Class<E> dataClass;
 
 	private void putAttributeMethod(final String attributeName) {
@@ -113,9 +123,9 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 			if (attributeValue == null) {
 				continue;
 			}
-			
+
 			if (attributeValue instanceof String) {
-				
+
 				if (isBlank((String) attributeValue)) {
 					continue;
 				}
@@ -123,13 +133,13 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 				// OK
 
 			} else if (attributeValue instanceof Integer) {
-				
+
 				// OK
-				
+
 			} else {
 				throw new IllegalStateException("Unknown key type: "
-						+attributeValue.getClass().getName()
-						+" for attribute: "+attributeName);
+						+ attributeValue.getClass().getName()
+						+ " for attribute: " + attributeName);
 			}
 
 			final Map<Object, List<E>> index = indexes.get(attributeName);
@@ -160,6 +170,17 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 				cached.add(0, data); // First element is HEAD
 			}
 		}
+	}
+
+	public E getByPrimaryKey(final String primaryKey) {
+
+		if (primaryKeyName == null) {
+			throw new IllegalStateException(
+					"No primary key is defined (see the @PrimaryKey-annotation) for class: "
+							+ dataSourceClass.getName());
+		}
+
+		return getByAttribute(primaryKeyName, primaryKey);
 	}
 
 	@Override
@@ -257,8 +278,7 @@ final class BackendDataCacheEngine<E extends Entry, EB extends EntryBuilder<E>>
 		}
 	}
 
-	public <K> Map<K, E> getAllBy(
-			final Class<K> keyClass, 
+	public <K> Map<K, E> getAllBy(final Class<K> keyClass,
 			final String attributeName) {
 
 		final Map<K, E> all = new HashMap<K, E>();

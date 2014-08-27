@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 import fr.univmobile.commons.datasource.Entry;
 import net.avcompris.binding.annotation.XPath;
 
-public interface MyUser extends Entry {
+public interface MyUser extends Entry<MyUser> {
 
 	/**
 	 * e.g. "dandriana"

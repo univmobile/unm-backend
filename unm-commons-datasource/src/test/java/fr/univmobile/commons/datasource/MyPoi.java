@@ -3,7 +3,7 @@ package fr.univmobile.commons.datasource;
 import fr.univmobile.commons.datasource.Entry;
 import net.avcompris.binding.annotation.XPath;
 
-public interface MyPoi extends Entry {
+public interface MyPoi extends Entry<MyPoi> {
 
 	/**
 	 * e.g. { "paris1" }

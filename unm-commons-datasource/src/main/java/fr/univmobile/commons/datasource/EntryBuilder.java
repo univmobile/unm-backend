@@ -2,26 +2,26 @@ package fr.univmobile.commons.datasource;
 
 import net.avcompris.binding.annotation.XPath;
 
-public interface EntryBuilder<T extends Entry> extends Entry {
+public interface EntryBuilder<E extends Entry<E>> extends Entry<E> {
 
 	boolean isNullId();
 
-	EntryBuilder<T> setId(String id);
+	EntryBuilder<E> setId(String id);
 
 	@XPath("atom:link[@rel = 'self']/@href")
 	String getSelf();
 
 	boolean isNullSelf();
 
-	EntryBuilder<T> setSelf(String id);
+	EntryBuilder<E> setSelf(String id);
 
-	EntryBuilder<T> setParentId(String parentId);
+	EntryBuilder<E> setParentId(String parentId);
 
-	EntryBuilder<T> setAuthorName(String authorName);
+	EntryBuilder<E> setAuthorName(String authorName);
 
-	EntryBuilder<T> setTitle(String title);
+	EntryBuilder<E> setTitle(String title);
 
-	T save();
+	// E save() throws IOException;
 
 	// void dump(File file) throws IOException;
 }
