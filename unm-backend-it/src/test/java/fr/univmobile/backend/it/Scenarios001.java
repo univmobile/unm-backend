@@ -110,4 +110,35 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		takeScreenshot("ucp.png");
 	}
+
+	@Scenario("Voir les commentaires d’un POI")
+	@Test
+	public void comments000() throws Exception {
+
+		takeScreenshot("home.png");
+
+		elementById("button-myself").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("entered.png");
+
+		elementById("link-pois").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("pois.png");
+
+		elementById("link-poi-3792").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("ucp.png");
+
+		elementById("li-left-bottom-tabs-comments").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("ucp-details.png");
+	}
 }
