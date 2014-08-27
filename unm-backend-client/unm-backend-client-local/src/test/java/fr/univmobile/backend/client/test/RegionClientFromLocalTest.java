@@ -36,7 +36,7 @@ public class RegionClientFromLocalTest {
 						copyDirectory(
 								new File("src/test/data/poitrees/001"),
 								new File(
-										"target/PoiClientFromLocalTest_poitrees")));
+										"target/RegionClientFromLocalTest_poitrees")));
 
 		client = new RegionClientFromLocal(regions, poitrees);
 	}
