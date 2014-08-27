@@ -136,7 +136,21 @@ public class JsonHtmler {
 
 			case '\\':
 				final char c2 = nextChar();
-				sb.append(c2);
+				switch (c2) {
+				case '/': // "\/"
+					sb.append(c2);
+					break;
+				case 'u': // "\uABCD"
+					final String hex = new StringBuilder().append(nextChar())
+							.append(nextChar()).append(nextChar())
+							.append(nextChar()).toString();
+					sb.append((char) Integer.parseInt(hex, 16));
+					break;
+				default: // "\n", etc.
+					sb.append(c);
+					sb.append(c2);
+					break;
+				}
 				break;
 
 			case '"':

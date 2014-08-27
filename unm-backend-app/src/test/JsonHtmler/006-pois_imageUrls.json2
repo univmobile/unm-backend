@@ -317,7 +317,7 @@
                     }
                 },
                 {
-                    "address":      "18 Allée Jean Rostandn",
+                    "address":      "18 Allée Jean Rostand\n",
                     "coordinates":  "48.627078,2.431309",
                     "email":        null,
                     "fax":          null,
