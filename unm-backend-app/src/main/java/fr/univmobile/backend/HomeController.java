@@ -7,6 +7,8 @@ import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -17,15 +19,15 @@ import fr.univmobile.web.commons.View;
 @Paths({ "" })
 public class HomeController extends AbstractBackendController {
 
-	public HomeController(final UserDataSource users,
-			final RegionDataSource regions, final PoiDataSource pois,
-			final PoiTreeDataSource poiTrees) {
+	public HomeController(final TransactionManager tx,
+			final UserDataSource users, final RegionDataSource regions,
+			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
 
-		super(users, regions, pois, poiTrees);
+		super(tx, users, regions, pois, poiTrees);
 	}
 
 	@Override
-	public View action() throws IOException {
+	public View action() throws IOException, TransactionException {
 
 		if (getHttpInputs(Logout.class).isHttpValid()) {
 

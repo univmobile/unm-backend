@@ -3,6 +3,7 @@ package fr.univmobile.backend;
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
+import static org.apache.commons.lang3.StringUtils.substringBefore;
 import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 
 import java.io.File;
@@ -21,14 +22,20 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.client.CommentClient;
+import fr.univmobile.backend.client.CommentClientFromLocal;
 import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
+import fr.univmobile.backend.client.json.CommentJSONClient;
+import fr.univmobile.backend.client.json.CommentJSONClientImpl;
 import fr.univmobile.backend.client.json.PoiJSONClient;
 import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
+import fr.univmobile.backend.core.CommentDataSource;
+import fr.univmobile.backend.core.CommentThreadDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -40,6 +47,7 @@ import fr.univmobile.backend.core.impl.UploadManagerImpl;
 import fr.univmobile.backend.json.JSONMap;
 import fr.univmobile.backend.json.JsonHtmler;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
+import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.BuildInfoUtils;
 import fr.univmobile.web.commons.UnivMobileHttpUtils;
@@ -52,20 +60,16 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private static final long serialVersionUID = -4796360020211862333L;
 
 	private UserDataSource users;
-
 	private RegionDataSource regions;
-
 	private PoiDataSource pois;
-
-	private PoiTreeDataSource poiTrees;
-
+	// private PoiTreeDataSource poiTrees;
 	private UploadManager uploadManager;
+	private CommentThreadDataSource commentThreads;
 
 	// private RegionClient regionClient;
-
 	private RegionJSONClient regionJSONClient;
-
 	private PoiJSONClient poiJSONClient;
+	private CommentJSONClient commentJSONClient;
 
 	@Override
 	public void init() throws ServletException {
@@ -80,11 +84,24 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			throw new UnavailableException("Cannot find init-param: dataDir");
 		}
 
+		final TransactionManager tx = TransactionManager.getInstance();
+
 		final File usersDir = new File(dataDir, "users");
 		final File regionsDir = new File(dataDir, "regions");
 		final File poisDir = new File(dataDir, "pois");
 		final File poiTreesDir = new File(dataDir, "poitrees");
 		final File uploadsDir = new File(dataDir, "uploads");
+		final File commentsDir = new File(dataDir, "comments");
+		final File commentThreadsDir = new File(dataDir, "comment_threads");
+
+		// final UserDataSource users;
+		// final RegionDataSource regions;
+		// final UploadManager uploadManager;
+		// final RegionJSONClient regionJSONClient;
+		// final PoiDataSource pois;
+		final PoiTreeDataSource poiTrees;
+		final CommentDataSource comments;
+		// final CommentThreadDataSource commentThreads;
 
 		try {
 
@@ -104,25 +121,39 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			uploadManager = new UploadManagerImpl(uploadsDir);
 
+			comments = BackendDataSourceFileSystem.newDataSource(
+					CommentDataSource.class, commentsDir);
+
+			commentThreads = BackendDataSourceFileSystem.newDataSource(
+					CommentThreadDataSource.class, commentThreadsDir);
+
 		} catch (final IOException e) {
 			throw new ServletException(e);
 		}
 
-		super.init( //
-				new HomeController(users, regions, pois, poiTrees), //
-				new UseraddController(users, regions, pois, poiTrees), //
-				new AdminGeocampusController(users, regions, pois, poiTrees), //
-				new CommentController());
+		super.init(new HomeController(tx, users, regions, pois, poiTrees), //
+				new UseraddController(tx, users, regions, pois, poiTrees), //
+				new AdminGeocampusController( tx, users, regions, pois,
+						poiTrees), //
+				new CommentController(tx, comments, commentThreads, users,
+						regions, pois, poiTrees));
 
-		final RegionClient regionClient = new RegionClientFromLocal(regions,
-				poiTrees);
+		final String baseURL = getBaseURL();
+		
+		final RegionClient regionClient = new RegionClientFromLocal(baseURL,
+				regions, poiTrees);
 
-		regionJSONClient = new RegionJSONClientImpl(getBaseURL(), regionClient);
+		regionJSONClient = new RegionJSONClientImpl(regionClient);
 
-		final PoiClient poiClient = new PoiClientFromLocal(pois, poiTrees,
-				regions);
+		final PoiClient poiClient = new PoiClientFromLocal(baseURL, pois,
+				poiTrees, regions);
 
-		poiJSONClient = new PoiJSONClientImpl(getBaseURL(), poiClient);
+		poiJSONClient = new PoiJSONClientImpl(poiClient);
+
+		final CommentClient commentClient = new CommentClientFromLocal(baseURL,
+				comments, commentThreads);
+
+		commentJSONClient = new CommentJSONClientImpl(commentClient);
 	}
 
 	private static final Log log = LogFactory.getLog(BackendServlet.class);
@@ -336,6 +367,44 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				final String json = "{\"url\":\""
 						+ composeJSONendPoint("/regions/" + regionId) + "\","
 						+ substringAfter(universityJSON, "{");
+
+				serveJSON(json, beautify, response);
+
+				return;
+			}
+		}
+
+		if (path.startsWith("comments/poi")) {
+
+			String poiIdStr = substringAfter(path, "comments/poi");
+
+			if (poiIdStr.endsWith(".json")) {
+				poiIdStr = substringBeforeLast(poiIdStr, ".json");
+			}
+
+			if (poiIdStr.contains("/")) {
+				poiIdStr = substringBefore(poiIdStr, "/");
+			}
+
+			final int poiId;
+
+			try {
+				poiId = Integer.parseInt(poiIdStr);
+			} catch (final NumberFormatException e) {
+				final String uriPath = UnivMobileHttpUtils
+						.extractUriPath(request);
+				UnivMobileHttpUtils.sendError404(request, response, uriPath);
+				return;
+			}
+
+			if (!pois.isNullByUid(poiId)) {
+
+				final String commentsJSON = commentJSONClient
+						.getCommentsJSONByPoiId(poiId);
+
+				final String json = "{\"url\":\""
+						+ composeJSONendPoint("/comments/poi" + poiId) + "\","
+						+ substringAfter(commentsJSON, "{");
 
 				serveJSON(json, beautify, response);
 

@@ -12,25 +12,31 @@ import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
 @Paths({ "pois", "pois/" })
 public class AdminGeocampusController extends AbstractBackendController {
 
-	public AdminGeocampusController(final UserDataSource users,
+	public AdminGeocampusController(
+			final TransactionManager tx, final UserDataSource users,
 			final RegionDataSource regions, final PoiDataSource pois,
 			final PoiTreeDataSource poiTrees) {
 
-		super(users, regions, pois, poiTrees);
+		super(tx, users, regions, pois, poiTrees);
 
-		poiClient = new PoiClientFromLocal(pois, poiTrees, regions);
+		//poiClient = 
 	}
 
-	private final PoiClient poiClient;
+	private PoiClient getPoiClient() {
+		
+		return new PoiClientFromLocal(getBaseURL(), pois, poiTrees, regions);
+	}
 
 	@Override
-	public View action() throws IOException {
+	public View action() throws IOException, TransactionException {
 
 		setAttribute("map", new Map("48.84650925911,2.3459243774", 13));
 
@@ -38,7 +44,7 @@ public class AdminGeocampusController extends AbstractBackendController {
 
 		setAttribute("pois", list);
 
-		for (final PoiGroup poiGroup : poiClient.getPois()) {
+		for (final PoiGroup poiGroup :getPoiClient().getPois()) {
 
 			list.add(new Pois(poiGroup));
 		}

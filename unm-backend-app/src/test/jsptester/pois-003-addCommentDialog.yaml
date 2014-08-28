@@ -34,7 +34,7 @@ selectedPoiId: 1
 
 mode: comments addComment
 
-postCommentUrl: http://192.168.0.40:8080/unm-backend/comment?NO_SHIB_uid=xx&NO_SHIB_eppn=yy&NO_SHIB_displayName=zz&NO_SHIB_remoteUser=crezvani@univ-paris1.fr
+postCommentUrl: http://localhost:8080/unm-backend/comment?NO_SHIB_uid=xx&NO_SHIB_eppn=yy&NO_SHIB_displayName=zz&NO_SHIB_remoteUser=crezvani@univ-paris1.fr
 
 pois:
   type: fr.univmobile.model.PoiCategory[]
@@ -62,7 +62,7 @@ pois:
             imageHeight: 100
             markerType: green
             markerIndex: A
-            commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments1
+            commentsUrl: http://localhost:8080/unm-backend-mock/comments1
           - id: 931
             name: Centre rue du Four
             address: 13 rue du Four 75006 Paris
@@ -74,7 +74,7 @@ pois:
             imageHeight: 300
             markerType: green
             markerIndex: B
-            commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments2
+            commentsUrl: http://localhost:8080/unm-backend-mock/comments2
     - name: "Région : Île de France"
       pois:
         type: fr.univmobile.model.Poi[]
@@ -90,7 +90,7 @@ pois:
             logo: http://admin.univmobile.fr/images/universities/logos/univ_paris1.jpg 
             markerType: green
             markerIndex: C
-            commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments3
+            commentsUrl: http://localhost:8080/unm-backend-mock/comments3
           - id: 2931
             name: Centre rue du Four
             address: 13 rue du Four 75006 Paris
@@ -99,5 +99,5 @@ pois:
             longitude: 2.3353672027588
             markerType: green
             markerIndex: D
-            commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments4
+            commentsUrl: http://localhost:8080/unm-backend-mock/comments4
       

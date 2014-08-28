@@ -11,6 +11,9 @@ import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.UserBuilder;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.commons.tx.Lock;
+import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -22,15 +25,15 @@ import fr.univmobile.web.commons.View;
 @Paths({ "useradd" })
 public class UseraddController extends AbstractBackendController {
 
-	public UseraddController(final UserDataSource users,
-			final RegionDataSource regions, final PoiDataSource pois,
-			final PoiTreeDataSource poiTrees) {
+	public UseraddController(final TransactionManager tx,
+			final UserDataSource users, final RegionDataSource regions,
+			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
 
-		super(users, regions, pois, poiTrees);
+		super(tx, users, regions, pois, poiTrees);
 	}
 
 	@Override
-	public View action() throws IOException {
+	public View action() throws IOException, TransactionException {
 
 		// 1. HTTP
 
@@ -43,11 +46,27 @@ public class UseraddController extends AbstractBackendController {
 
 		// 2. APPLICATION VALIDATION
 
+		final String uid = form.uid();
+
+		final Lock lock = tx.acquireLock(5000, "users", uid);
+		try {
+
+			return useradd(lock, form);
+
+		} finally {
+			lock.release();
+		}
+	}
+
+	private View useradd(final Lock lock, final Useradd form)
+			throws IOException, TransactionException {
+
+		final String uid = form.uid();
+
 		final UserBuilder user = users.create();
 
 		user.setAuthorName(getDelegationUser().getUid());
 
-		final String uid = form.uid();
 		final String remoteUser = form.remoteUser();
 
 		user.setUid(uid);
@@ -86,7 +105,9 @@ public class UseraddController extends AbstractBackendController {
 
 		// Otherwise, we’re clear: Save the data.
 
-		user.save();
+		lock.save(user);
+
+		lock.commit();
 
 		return entered();
 	}

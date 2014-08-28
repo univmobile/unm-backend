@@ -16,6 +16,9 @@ import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.University;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.commons.tx.Lock;
+import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.AbstractController;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
@@ -28,22 +31,26 @@ abstract class AbstractBackendController extends AbstractController {
 	protected static final String DELEGATION_USER = "delegationUser";
 
 	protected AbstractBackendController( //
+			final TransactionManager tx, //
 			final UserDataSource users, //
 			final RegionDataSource regions, //
 			final PoiDataSource pois, //
 			final PoiTreeDataSource poiTrees //
 	) {
+		this.tx = checkNotNull(tx, "tx");
 		this.users = checkNotNull(users, "users");
 		this.regions = checkNotNull(regions, "regions");
 		this.pois = checkNotNull(pois, "pois");
 
-		poiTree = checkNotNull(poiTrees, "poiTrees").getByUid("ile_de_france");
+		this.poiTrees = checkNotNull(poiTrees, "poiTrees");
+		// .getByUid("ile_de_france");
 	}
 
+	protected final TransactionManager tx;
 	protected final UserDataSource users;
 	protected final RegionDataSource regions;
 	protected final PoiDataSource pois;
-	protected final PoiTree poiTree;
+	protected final PoiTreeDataSource poiTrees;
 
 	protected final User getUser() {
 
@@ -55,7 +62,7 @@ abstract class AbstractBackendController extends AbstractController {
 		return getSessionAttribute("delegationUser", User.class);
 	}
 
-	protected final View entered() {
+	protected final View entered() throws TransactionException {
 
 		// 1. UPDATE?
 
@@ -68,16 +75,15 @@ abstract class AbstractBackendController extends AbstractController {
 			final Region unrpcl = regions.getByUid("unrpcl");
 
 			if (!ile_de_france.getLabel().equals(ur.region_ile_de_france())) {
-				regions.update(ile_de_france)
-						.setLabel(ur.region_ile_de_france()).save();
+				updateRegionLabel(ile_de_france, ur.region_ile_de_france());
 			}
 
 			if (!bretagne.getLabel().equals(ur.region_bretagne())) {
-				regions.update(bretagne).setLabel(ur.region_bretagne()).save();
+				updateRegionLabel(bretagne, ur.region_bretagne());
 			}
 
 			if (!unrpcl.getLabel().equals(ur.region_unrpcl())) {
-				regions.update(unrpcl).setLabel(ur.region_unrpcl()).save();
+				updateRegionLabel(unrpcl, ur.region_unrpcl());
 			}
 		}
 
@@ -111,6 +117,8 @@ abstract class AbstractBackendController extends AbstractController {
 		}
 
 		// 2.3. POIS
+
+		final PoiTree poiTree = poiTrees.getByUid("ile_de_france"); // TODO
 
 		final PoisInfo pois = instantiate(PoisInfo.class).setCount(
 				poiTree.sizeOfAllPois());
@@ -156,6 +164,21 @@ abstract class AbstractBackendController extends AbstractController {
 		// 9 END
 
 		return new View("entered.jsp");
+	}
+
+	private void updateRegionLabel(final Region region, final String label)
+			throws TransactionException {
+
+		final Lock lock = tx.acquireLock(5000, "regions", region.getUid());
+		try {
+
+			lock.save(regions.update(region).setLabel(label));
+
+			lock.commit();
+
+		} finally {
+			lock.release();
+		}
 	}
 
 	@HttpMethods("POST")

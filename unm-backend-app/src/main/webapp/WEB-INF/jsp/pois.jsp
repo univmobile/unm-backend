@@ -470,7 +470,13 @@ body {
 	 *	send a comment to the backend server.	 
 	 */
 	function postComment() {
-	
+		
+		var poi = getSelectedPoi();
+		
+		if (poi == null) {
+			return;
+		}
+		
 		var postCommentUrl = '${postCommentUrl}';
 		
 		$.ajax({
@@ -478,6 +484,7 @@ body {
 			url: postCommentUrl,
 			data: {
 				username: '${user.uid}',
+				poi_id: poi.id,
 				message: $('#text-message').val()
 			},
 			error: function(jqXHR, textStatus, errorThrown) {
