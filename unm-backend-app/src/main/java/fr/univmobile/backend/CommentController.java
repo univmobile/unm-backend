@@ -56,7 +56,7 @@ public class CommentController extends AbstractBackendController {
 
 		if (isHttpGet()) {
 
-			return new View("text/plain", UTF_8, Locale.ENGLISH, "comment.jsp");
+			return new View("text/plain", UTF_8, Locale.ENGLISH, "comment_OK.jsp");
 		}
 
 		if (!isHttpPost()) {
