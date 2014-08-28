@@ -47,10 +47,10 @@ public class PoiThroughJSONTest {
 						copyDirectory(new File("src/test/data/poitrees/001"),
 								new File("target/PoiThroughJSONTest_poitrees")));
 
-		final PoiClientFromLocal poiClient = new PoiClientFromLocal(
+		final PoiClientFromLocal poiClient = new PoiClientFromLocal("(dummy baseURL)",
 				poiDataSource, poitreeDataSource, regionDataSource);
 
-		poiJSONClient = new PoiJSONClientImpl("(dummy baseURL)", poiClient);
+		poiJSONClient = new PoiJSONClientImpl( poiClient);
 
 		client = new PoiClientFromJSON(poiJSONClient);
 	}
@@ -134,6 +134,14 @@ public class PoiThroughJSONTest {
 		final String json = poiJSONClient.getPoisJSON();
 
 		assertFalse(json.contains("\"coordinates\":\"\""));
+	}
+
+	@Test
+	public void testThroughJSON_noUnfilteredUrl() throws IOException {
+
+		final String json = poiJSONClient.getPoisJSON();
+
+		assertFalse(json.contains("${baseURL}"));
 	}
 
 	@Test

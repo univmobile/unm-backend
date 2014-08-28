@@ -27,12 +27,15 @@ import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.DataBeans;
 
-public class PoiClientFromLocal implements PoiClient {
+public class PoiClientFromLocal extends AbstractClientFromLocal implements PoiClient {
 
 	@Inject
-	public PoiClientFromLocal(final PoiDataSource poiDataSource,
+	public PoiClientFromLocal(final String baseURL,
+			final PoiDataSource poiDataSource,
 			final PoiTreeDataSource poitreeDataSource,
 			final RegionDataSource regionDataSource) {
+
+		super(baseURL);
 
 		this.poiDataSource = checkNotNull(poiDataSource, "poiDataSource");
 
@@ -150,7 +153,7 @@ public class PoiClientFromLocal implements PoiClient {
 					if (!image.startsWith("/upload")) {
 						throw new NotImplementedException("Image URL: " + image);
 					}
-					poi.setImageUrl("${baseURL}" + image);
+					poi.setImageUrl(composeURL( image));
 					poi.setImageWidth(100).setImageHeight(100); // TODO get img
 				} else {
 					poi.setImageWidth(0).setImageHeight(0);
@@ -162,7 +165,8 @@ public class PoiClientFromLocal implements PoiClient {
 
 				markerIndex = (markerIndex + 1) % 26;
 
-				poi.setCommentsUrl("${baseURL}/json/comments/poi" + poiUid);
+				poi.setCommentsUrl(composeURL( "/json/comments/poi"
+						+ poiUid));
 
 				poiGroup.addToPois(poi);
 			}

@@ -28,19 +28,23 @@ public class CommentThroughJSONTest {
 		final CommentDataSource commentDataSource = BackendDataSourceFileSystem
 				.newDataSource(
 						CommentDataSource.class,
-						copyDirectory(new File("src/test/data/comments/001"),
-								new File("target/CommentThroughJSONTest_comments")));
+						copyDirectory(
+								new File("src/test/data/comments/001"),
+								new File(
+										"target/CommentThroughJSONTest_comments")));
 
 		final CommentThreadDataSource commentThreadDataSource = BackendDataSourceFileSystem
 				.newDataSource(
 						CommentThreadDataSource.class,
-						copyDirectory(new File("src/test/data/comment_threads/001"),
-								new File("target/CommentThroughJSONTest_comment_threads")));
+						copyDirectory(
+								new File("src/test/data/comment_threads/001"),
+								new File(
+										"target/CommentThroughJSONTest_comment_threads")));
 
 		final CommentClientFromLocal commentClient = new CommentClientFromLocal(
-				commentDataSource, commentThreadDataSource);
+				"(dummy baseURL)", commentDataSource, commentThreadDataSource);
 
-		commentJSONClient = new CommentJSONClientImpl("(dummy baseURL)", commentClient);
+		commentJSONClient = new CommentJSONClientImpl(commentClient);
 
 		client = new CommentClientFromJSON(commentJSONClient);
 	}
@@ -62,7 +66,7 @@ public class CommentThroughJSONTest {
 		final Comment[] comments = client.getCommentsByPoiId(415);
 
 		assertEquals(3, comments.length);
-		
+
 		final Comment comment = comments[1];
 
 		assertEquals("2", comment.getId());

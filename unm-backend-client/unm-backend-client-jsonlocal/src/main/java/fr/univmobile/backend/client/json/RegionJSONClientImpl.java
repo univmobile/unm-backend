@@ -16,15 +16,11 @@ import fr.univmobile.backend.client.University;
 import fr.univmobile.backend.json.JSONList;
 import fr.univmobile.backend.json.JSONMap;
 
-public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
-		RegionJSONClient {
+public class RegionJSONClientImpl implements RegionJSONClient {
 
 	@Inject
-	public RegionJSONClientImpl( //
-			final String baseURL, @Named("RegionJSONClientImpl") //
+	public RegionJSONClientImpl(@Named("RegionJSONClientImpl")//
 			final RegionClient regionClient) {
-
-		super(baseURL);
 
 		this.regionClient = checkNotNull(regionClient, "regionClient");
 	}
@@ -54,10 +50,10 @@ public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
 			list.add(new JSONMap() //
 					.put("id", region.getId()) //
 					.put("label", region.getLabel()) //
-					.put("url", filterURL(url)) //
+					.put("url", url) //
 					.put("pois", new JSONMap() //
 							.put("count", region.getPoiCount()) //
-							.put("url", filterURL(region.getPoisUrl()))));
+							.put("url", region.getPoisUrl())));
 		}
 
 		return json.toJSONString();
@@ -87,10 +83,10 @@ public class RegionJSONClientImpl extends AbstractJSONClientImpl implements
 					.put("id", university.getId()) //
 					.put("title", university.getTitle()) //
 					.put("config", new JSONMap() //
-							.put("url", filterURL(university.getConfigUrl()))) //
+							.put("url", university.getConfigUrl())) //
 					.put("pois", new JSONMap() //
 							.put("count", university.getPoiCount()) //
-							.put("url", filterURL(university.getPoisUrl()))));
+							.put("url", university.getPoisUrl())));
 		}
 
 		final String s = json.toJSONString();

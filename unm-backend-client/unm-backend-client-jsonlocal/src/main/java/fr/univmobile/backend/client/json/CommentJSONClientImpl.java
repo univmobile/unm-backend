@@ -15,15 +15,11 @@ import fr.univmobile.backend.client.CommentClient;
 import fr.univmobile.backend.json.JSONList;
 import fr.univmobile.backend.json.JSONMap;
 
-public class CommentJSONClientImpl extends AbstractJSONClientImpl implements
-		CommentJSONClient {
+public class CommentJSONClientImpl implements CommentJSONClient {
 
 	@Inject
-	public CommentJSONClientImpl( //
-			final String baseURL, @Named("CommentJSONClientImpl")//
+	public CommentJSONClientImpl(@Named("CommentJSONClientImpl")//
 			final CommentClient commentClient) {
-
-		super(baseURL);
 
 		this.commentClient = checkNotNull(commentClient, "commentClient");
 	}

@@ -12,7 +12,7 @@
 <content>
 	<uid>ile_de_france</uid>
 	<label>Île de France</label>
-	<url>http://univmobile.vswip.com/unm-backend-mock/listUniversities_ile_de_france</url>
+	<url>${baseURL}/listUniversities_ile_de_france</url>
 	<universities>
 		<university>
 			<id>paris1</id>

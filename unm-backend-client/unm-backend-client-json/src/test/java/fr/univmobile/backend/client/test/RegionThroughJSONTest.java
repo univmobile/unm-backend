@@ -38,10 +38,9 @@ public class RegionThroughJSONTest {
 								new File("target/PoiThroughJSONTest_poitrees")));
 
 		final RegionClientFromLocal regionClient = new RegionClientFromLocal(
-				regions, poitrees);
+				"(dummy baseURL)", regions, poitrees);
 
-		regionJSONClient = new RegionJSONClientImpl("(dummy baseURL)",
-				regionClient);
+		regionJSONClient = new RegionJSONClientImpl(regionClient);
 
 		client = new RegionClientFromJSON(regionJSONClient);
 	}

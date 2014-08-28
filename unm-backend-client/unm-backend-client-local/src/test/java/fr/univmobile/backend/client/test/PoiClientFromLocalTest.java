@@ -49,7 +49,8 @@ public class PoiClientFromLocalTest {
 								new File(
 										"target/PoiClientFromLocalTest_regions")));
 
-		client = new PoiClientFromLocal(poiDataSource, poitreeDataSource,
+		client = new PoiClientFromLocal(
+				"http://toto/",poiDataSource, poitreeDataSource,
 				regionDataSource);
 	}
 
@@ -122,7 +123,7 @@ public class PoiClientFromLocalTest {
 		assertEquals("Université de Limoges", poi.getName());
 
 		assertEquals(
-				"${baseURL}/uploads/poi/c99abda0f5d42a24d0cf1ef0d0476b8b6ed4311a.png",
+				"http://toto/uploads/poi/c99abda0f5d42a24d0cf1ef0d0476b8b6ed4311a.png",
 				poi.getImageUrl());
 	}
 
@@ -159,6 +160,20 @@ public class PoiClientFromLocalTest {
 			for (final Poi poi : group.getPois()) {
 
 				assertFalse(isBlank(poi.getCommentsUrl()));
+			}
+		}
+	}
+
+	@Test
+	public void testThroughJSON_unfilteredCommentsUrl() throws IOException {
+
+		for (final PoiGroup group : client.getPois()) {
+
+			for (final Poi poi : group.getPois()) {
+
+				final String commentsUrl = poi.getCommentsUrl();
+
+				assertFalse(commentsUrl.contains("${baseURL}"));
 			}
 		}
 	}

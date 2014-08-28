@@ -16,11 +16,15 @@ import fr.univmobile.backend.core.CommentThread.CommentRef;
 import fr.univmobile.backend.core.CommentThreadDataSource;
 import fr.univmobile.commons.DataBeans;
 
-public class CommentClientFromLocal implements CommentClient {
+public class CommentClientFromLocal extends AbstractClientFromLocal implements
+		CommentClient {
 
 	@Inject
-	public CommentClientFromLocal(final CommentDataSource commentDataSource,
+	public CommentClientFromLocal(final String baseURL,
+			final CommentDataSource commentDataSource,
 			final CommentThreadDataSource commentThreadDataSource) {
+
+		super(baseURL);
 
 		this.commentDataSource = checkNotNull(commentDataSource,
 				"commentDataSource");

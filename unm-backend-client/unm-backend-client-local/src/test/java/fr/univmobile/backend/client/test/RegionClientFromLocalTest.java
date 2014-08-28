@@ -2,6 +2,7 @@ package fr.univmobile.backend.client.test;
 
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
@@ -38,7 +39,7 @@ public class RegionClientFromLocalTest {
 								new File(
 										"target/RegionClientFromLocalTest_poitrees")));
 
-		client = new RegionClientFromLocal(regions, poitrees);
+		client = new RegionClientFromLocal("http://toto", regions, poitrees);
 	}
 
 	private RegionClient client;
@@ -54,6 +55,8 @@ public class RegionClientFromLocalTest {
 
 		assertEquals("ile_de_france", region.getId());
 		assertEquals("Île de France", region.getLabel());
+
+		assertFalse(region.getUrl().contains("${baseURL}"));
 
 		assertEquals(4715, region.getPoiCount());
 		final String poisUrl = region.getPoisUrl();
@@ -87,7 +90,8 @@ public class RegionClientFromLocalTest {
 		assertTrue(poisUrl, poisUrl.endsWith("ile_de_france/ensiie/pois"));
 		final String configUrl = university.getConfigUrl();
 		assertTrue(configUrl, configUrl.endsWith("ile_de_france/ensiie"));
-	}
 
-	// 3792
+		assertFalse(poisUrl.contains("${baseURL}"));
+		assertFalse(configUrl.contains("${baseURL}"));
+	}
 }

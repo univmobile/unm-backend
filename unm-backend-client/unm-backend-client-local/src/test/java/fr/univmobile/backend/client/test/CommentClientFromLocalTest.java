@@ -37,7 +37,7 @@ public class CommentClientFromLocalTest {
 								new File(
 										"target/CommentClientFromLocalTest_comment_threads")));
 
-		client = new CommentClientFromLocal(comments, commentThreads);
+		client = new CommentClientFromLocal("http://dummy/", comments, commentThreads);
 	}
 
 	private CommentClient client;

@@ -20,11 +20,14 @@ import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.DataBeans;
 
-public class RegionClientFromLocal implements RegionClient {
+public class RegionClientFromLocal extends AbstractClientFromLocal implements
+		RegionClient {
 
 	@Inject
-	public RegionClientFromLocal(final RegionDataSource regions,
-			final PoiTreeDataSource poitrees) {
+	public RegionClientFromLocal(final String baseURL,
+			final RegionDataSource regions, final PoiTreeDataSource poitrees) {
+
+		super(baseURL);
 
 		this.regions = checkNotNull(regions, "regions");
 		this.poitrees = checkNotNull(poitrees, "poitrees");
@@ -85,7 +88,7 @@ public class RegionClientFromLocal implements RegionClient {
 				poiCount = poitrees.getByUid(regionId).sizeOfAllPois();
 			}
 
-			final String url = dsRegion.getUrl();
+			final String url = filterURL(dsRegion.getUrl());
 
 			regions[i] = DataBeans //
 					.instantiate(MutableRegion.class) //
@@ -140,7 +143,7 @@ public class RegionClientFromLocal implements RegionClient {
 
 		sortedSet.addAll(Arrays.asList(dsUniversities));
 
-		final String url = region.getUrl();
+		final String url = filterURL(region.getUrl());
 
 		for (final fr.univmobile.backend.core.University dsUniversity : sortedSet) {
 

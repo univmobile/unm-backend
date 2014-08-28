@@ -25,7 +25,8 @@ public class RegionJSONClientImplTest {
 		when(regionClient.getRegions()).thenReturn(new Region[] { region });
 
 		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
-				"(dummy baseURL)", regionClient);
+				//"(dummy baseURL)", 
+				regionClient);
 
 		final String s = regionJSONClient.getRegionsJSON();
 
@@ -42,12 +43,13 @@ public class RegionJSONClientImplTest {
 
 		final Region region = mock(Region.class);
 
-		when(region.getUrl()).thenReturn("${baseURL}/json/regions");
+		when(region.getUrl()).thenReturn("http://toto/tralala/json/regions");
 
 		when(regionClient.getRegions()).thenReturn(new Region[] { region });
 
 		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
-				"http://toto/tralala/", regionClient);
+				//"http://toto/tralala/", 
+				regionClient);
 
 		final String s = regionJSONClient.getRegionsJSON();
 
@@ -71,7 +73,8 @@ public class RegionJSONClientImplTest {
 		when(regionClient.getRegions()).thenReturn(new Region[] { region });
 
 		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
-				"(dummy baseURL)", regionClient);
+				//"(dummy baseURL)", 
+				regionClient);
 
 		final String s = regionJSONClient.getRegionsJSON();
 

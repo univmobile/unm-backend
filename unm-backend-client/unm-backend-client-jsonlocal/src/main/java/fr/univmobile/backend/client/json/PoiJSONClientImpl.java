@@ -16,15 +16,11 @@ import fr.univmobile.backend.client.PoiGroup;
 import fr.univmobile.backend.json.JSONList;
 import fr.univmobile.backend.json.JSONMap;
 
-public class PoiJSONClientImpl extends AbstractJSONClientImpl implements
-		PoiJSONClient {
+public class PoiJSONClientImpl implements PoiJSONClient {
 
 	@Inject
-	public PoiJSONClientImpl( //
-			final String baseURL, @Named("PoiJSONClientImpl")//
+	public PoiJSONClientImpl(@Named("PoiJSONClientImpl")//
 			final PoiClient poiClient) {
-
-		super(baseURL);
 
 		this.poiClient = checkNotNull(poiClient, "poiClient");
 	}
@@ -78,12 +74,12 @@ public class PoiJSONClientImpl extends AbstractJSONClientImpl implements
 				final String imageUrl = poi.getImageUrl();
 
 				map.put("image", new JSONMap() //
-						.put("url", filterURL(imageUrl)) //
+						.put("url", imageUrl) //
 						.put("width", poi.getImageWidth()) //
 						.put("height", poi.getImageHeight()));
 
 				map.put("comments", new JSONMap() //
-						.put("url", filterURL(poi.getCommentsUrl())));
+						.put("url", poi.getCommentsUrl()));
 
 				pois.add(map);
 			}
