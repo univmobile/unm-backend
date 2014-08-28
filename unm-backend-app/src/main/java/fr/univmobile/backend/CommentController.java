@@ -9,16 +9,15 @@ import java.util.Locale;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.avcompris.lang.NotImplementedException;
-
 import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
+import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.CommentThreadDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.UserDataSource;
-import fr.univmobile.commons.tx.Lock;
+import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.HttpInputs;
@@ -54,44 +53,32 @@ public class CommentController extends AbstractBackendController {
 
 		log.info("action()...");
 
-		if (isHttpGet()) {
-
-			return new View("text/plain", UTF_8, Locale.ENGLISH, "comment_OK.jsp");
-		}
-
-		if (!isHttpPost()) {
-			throw new IllegalStateException(
-					"HTTP method is neither GET nor POST");
-		}
-
 		final PostComment postComment = getHttpInputs(PostComment.class);
 
 		if (!postComment.isHttpValid()) {
+
+			if (isHttpGet()) {
+
+				getDelegationUser(); // Check that the user is authentified.
+
+				return new View("text/plain", UTF_8, Locale.ENGLISH,
+						"comment_OK.jsp");
+			}
+
 			throw new IllegalArgumentException("Invalid form");
 		}
 
-		final int poi_id = postComment.poi_id();
-
-		final Lock lock = tx.acquireLock(5000, "comments\\poi", poi_id);
-		try {
-
-			return addComment(lock, postComment);
-
-		} finally {
-			lock.release();
+		if (!isHttpPost()) {
+			throw new IllegalStateException("HTTP form method should be POST");
 		}
-	}
 
-	private View addComment(final Lock lock, final PostComment postComment)
-			throws IOException {
-
-		final int poi_id = postComment.poi_id();
+		final int poiId = postComment.poi_id();
 		final String username = postComment.username();
 		final String message = postComment.message();
 
 		if (log.isInfoEnabled()) {
 			log.info("addComment(): username=" + username //
-					+ ", poi_id=" + poi_id //
+					+ ", poi_id=" + poiId //
 					+ ", message=" + message);
 		}
 
@@ -99,54 +86,21 @@ public class CommentController extends AbstractBackendController {
 
 		comment.setAuthorName(getDelegationUser().getUid());
 
-		throw new NotImplementedException();
-		/*
-		final String uid = form.uid();
-		final String remoteUser = form.remoteUser();
+		final CommentManager commentManager = new CommentManagerImpl(comments,
+				commentThreads);
 
-		user.setUid(uid);
-		user.setRemoteUser(remoteUser);
-		user.setTitle(uid);
-		user.setDisplayName(form.displayName());
-		user.setMail(form.mail());
-		if (form.supannCivilite() != null) {
-			user.setSupannCivilite(form.supannCivilite());
-		}
+		comment.setMessage(message);
 
-		boolean hasErrors = false;
+		commentManager.addToCommentThreadByPoiId(poiId, comment);
 
-		if (!isBlank(uid)) {
-			if (!users.isNullByUid(uid)) {
-				hasErrors = true;
-				setAttribute("err_duplicateUid", true);
-			}
-		}
+		setAttribute("commentId", comment.getUid());
 
-		if (!isBlank(remoteUser)) {
-			if (!users.isNullByRemoteUser(remoteUser)) {
-				hasErrors = true;
-				setAttribute("err_duplicateRemoteUser", true);
-			}
-		}
-
-		if (!validate(form, "err_useradd") || hasErrors) {
-
-			setAttribute("useradd", user); // Show the data in the view
-
-			return new View("useradd.jsp");
-		}
-
-		// 3. SAVE DATA
-
-		// Otherwise, we’re clear: Save the data.
-
-		user.save();
-		*/
+		return new View("text/plain", UTF_8, Locale.ENGLISH, "comment_OK.jsp");
 	}
 
 	private static final Log log = LogFactory.getLog(CommentController.class);
 
-	@HttpMethods("POST")
+	@HttpMethods({ "POST", "GET" })
 	interface PostComment extends HttpInputs {
 
 		@HttpRequired
