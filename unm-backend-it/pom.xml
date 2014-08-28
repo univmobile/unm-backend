@@ -104,6 +104,7 @@
 			<id>dandriana</id>
 			<properties>
 				<defaultBrowser>*firefox</defaultBrowser>
+				<tomcat.port>8080</tomcat.port> <!-- for PropertiesUtils -->
 			</properties>
 			<build>
 				<plugins>
