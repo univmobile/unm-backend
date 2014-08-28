@@ -364,6 +364,7 @@ div.noPoiSelected {
 	xoverflow: auto;
 }
 img.profileImage {
+	display: block;
 	width: 32px;
 	height: 32px;
 }

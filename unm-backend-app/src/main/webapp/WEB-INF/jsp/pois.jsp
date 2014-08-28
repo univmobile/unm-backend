@@ -355,8 +355,10 @@ body {
 					li.append(divText);
 					li.append(divTimestamp);
 					
-					imgProfileImage.addClass('profileImage')
-						.attr('src', comment.author.profileImage.url);
+					imgProfileImage.addClass('profileImage');
+					if (comment.author.profileImage != null) {
+						imgProfileImage.attr('src', comment.author.profileImage.url);
+					}
 					divDisplayName.addClass('displayName')
 						.html(comment.author.displayName);
 					divUsername.addClass('username')
