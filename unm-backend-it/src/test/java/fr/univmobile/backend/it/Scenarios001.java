@@ -6,6 +6,8 @@ import java.io.IOException;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.thoughtworks.selenium.Selenium;
+
 import fr.univmobile.it.commons.BrowserNames;
 import fr.univmobile.it.commons.DeviceNames;
 import fr.univmobile.it.commons.Scenario;
@@ -28,8 +30,8 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		TestBackend.setUpData("001", new File(dataDir));
 
-		final String logFile = TestBackend.readLog4jLogFile(new File(
-				"target", "unm-backend-app-noshib/WEB-INF/classes/log4j.xml"));
+		final String logFile = TestBackend.readLog4jLogFile(new File("target",
+				"unm-backend-app-noshib/WEB-INF/classes/log4j.xml"));
 
 		System.out.println("Log file: " + logFile);
 	}
@@ -50,7 +52,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		}
 	}
 
-	private static final int PAUSE = 10000;
+	private static final int PAUSE = 5000;
 
 	@Scenario("Aller-retour sur la page « Ajouter un utilisateur »")
 	@Test
@@ -135,8 +137,11 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		takeScreenshot("ucp.png");
 
-		elementById("li-left-bottom-tabs-comments").click();
-
+		final String labelledBy = 
+				elementById("li-left-bottom-tabs-comments").attr("aria-labelledby");
+		
+		elementById(labelledBy).click();
+		
 		pause(PAUSE);
 
 		takeScreenshot("ucp-details.png");
