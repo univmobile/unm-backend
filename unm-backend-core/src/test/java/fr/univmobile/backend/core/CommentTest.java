@@ -12,6 +12,7 @@ import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.TransactionManager;
@@ -141,6 +142,44 @@ public class CommentTest {
 	}
 
 	@Test
+	public void testCommentManager_createComment_new_thread_3792() throws Exception {
+
+		final int POI_UID = 3792;
+
+		assertEquals(3, comments.getAllBy(Integer.class, "uid").size());
+		assertEquals(1, commentThreads.getAllBy(Integer.class, "uid").size());
+		assertEquals(3, getFileCount(dataDir_comments));
+		assertEquals(1, getFileCount(dataDir_comment_threads));
+
+		final CommentBuilder comment = comments.create();
+
+		final CommentManager commentManager =
+				new CommentManagerImpl(comments,commentThreads);
+
+//		comment.setUid(commentManager.newCommentUid());
+		comment.setMessage("Hello World!");
+		
+		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
+
+		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
+		assertEquals(2, commentThreads.getAllBy(Integer.class, "uid").size());
+		assertEquals(4, getFileCount(dataDir_comments));
+		assertEquals(2, getFileCount(dataDir_comment_threads));
+
+		comments.reload();
+		commentThreads.reload();
+
+		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
+		assertEquals(2, commentThreads.getAllBy(Integer.class, "uid").size());
+
+		final CommentThread newThread = commentThreads.getByPoiId(POI_UID);
+
+		assertEquals(1, newThread.getAllComments().length);
+		final int uid= newThread.getAllComments()[0].getUid();
+		assertEquals("Hello World!",comments.getByUid(uid).getMessage());
+	}
+
+	@Test
 	public void testCreateComment_existing_thread_415() throws Exception {
 
 		final int POI_UID = 415;
@@ -198,6 +237,38 @@ public class CommentTest {
 		assertEquals(1, newThread.getAllComments()[0].getUid());
 		assertEquals(2, newThread.getAllComments()[1].getUid());
 		assertEquals(45, newThread.getAllComments()[2].getUid());
+	}
+
+	@Test
+	public void testCommentManager_createComment_existing_thread_415() throws Exception {
+		
+		final int POI_UID = 415;
+
+		assertEquals(3, comments.getAllBy(Integer.class, "uid").size());
+		assertEquals(1, commentThreads.getAllBy(Integer.class, "uid").size());
+		assertEquals(3, getFileCount(dataDir_comments));
+		assertEquals(1, getFileCount(dataDir_comment_threads));
+
+		final CommentManager commentManager =
+				new CommentManagerImpl(comments,commentThreads);
+
+		final CommentBuilder comment = comments.create();
+
+		//comment.setUid(commentManager.newCommentUid());
+		comment.setMessage("Hello World!");
+
+		commentManager.addToCommentThreadByPoiId(POI_UID,comment);
+
+		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
+		assertEquals(1, commentThreads.getAllBy(Integer.class, "uid").size());
+		assertEquals(4, getFileCount(dataDir_comments));
+		assertEquals(2, getFileCount(dataDir_comment_threads));
+
+		comments.reload();
+		commentThreads.reload();
+
+		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
+		assertEquals(1, commentThreads.getAllBy(Integer.class, "uid").size());
 	}
 
 	@Test
