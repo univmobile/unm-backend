@@ -59,7 +59,7 @@ abstract class AbstractBackendController extends AbstractController {
 
 	protected final User getDelegationUser() {
 
-		return getSessionAttribute("delegationUser", User.class);
+		return getSessionAttribute(DELEGATION_USER, User.class);
 	}
 
 	protected final View entered() throws TransactionException {
