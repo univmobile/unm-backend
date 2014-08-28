@@ -2,6 +2,9 @@ package fr.univmobile.commons.tx;
 
 import javax.annotation.Nullable;
 
+/**
+ * Raise this exception when a lock takes too long a time to acquire. 
+ */
 public class LockTimeoutException extends TransactionException {
 
 	/**

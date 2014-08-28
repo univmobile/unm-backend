@@ -24,6 +24,9 @@ public abstract class TransactionManager {
 
 	private static TransactionManager instance;
 
+	public abstract Lock acquireLock(int timeoutMs, String lockType)
+			throws TransactionException;
+
 	public abstract Lock acquireLock(int timeoutMs, String lockType, Object id)
 			throws TransactionException;
 }

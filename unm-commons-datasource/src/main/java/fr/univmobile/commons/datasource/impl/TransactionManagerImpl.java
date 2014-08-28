@@ -50,9 +50,18 @@ public class TransactionManagerImpl extends TransactionManager {
 	public synchronized Lock acquireLock(final int timeoutMs,
 			final String lockType, final Object id) throws TransactionException {
 
+		final String key = lockType + ":" + id;
+
+		return acquireLock(timeoutMs, key);
+	}
+
+	@Override
+	public synchronized Lock acquireLock(final int timeoutMs,
+			final String lockType) throws TransactionException {
+
 		final long start = System.currentTimeMillis();
 
-		final String key = lockType + ":" + id;
+		final String key = lockType;
 
 		while (System.currentTimeMillis() < start + timeoutMs) {
 
@@ -146,14 +155,14 @@ public class TransactionManagerImpl extends TransactionManager {
 			final EntryBuilderImpl<E> data = (EntryBuilderImpl<E>) entryBuilder;
 
 			stagedData.add(data);
-		
+
 			try {
-			
+
 				return data.save();
 
 			} catch (final IOException e) {
 				throw new TransactionException(e);
-			}			
+			}
 		}
 
 		private final List<EntryBuilderImpl<?>> stagedData = new ArrayList<EntryBuilderImpl<?>>();

@@ -18,4 +18,8 @@ public class TransactionException extends Exception {
 
 		super(cause);
 	}
+
+	public TransactionException() {
+
+	}
 }
