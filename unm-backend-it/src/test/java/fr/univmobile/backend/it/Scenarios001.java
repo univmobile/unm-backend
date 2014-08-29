@@ -52,7 +52,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		}
 	}
 
-	private static final int PAUSE = 5000;
+	private static final int PAUSE = 10000;
 
 	@Scenario("Aller-retour sur la page « Ajouter un utilisateur »")
 	@Test
