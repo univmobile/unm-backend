@@ -209,6 +209,12 @@
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
 			</properties>
 		</profile>
+		<profile>
+			<id>ks3haxm</id>
+			<properties>
+				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
+			</properties>
+		</profile>
 	</profiles>
 
 </project>
