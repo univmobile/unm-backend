@@ -64,7 +64,7 @@ public class HomeJSONHttpClientTest {
 
 		final String jsonBaseURL = client.getHome().getUrl();
 
-		System.out.println("URL returned by the JSON client: " + jsonBaseURL);
+		System.out.println("URL returned by the JSON client (jsonBaseURL): " + jsonBaseURL);
 
 		assertEquals(jsonURL, jsonBaseURL);
 	}
