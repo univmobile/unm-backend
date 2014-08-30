@@ -11,7 +11,7 @@
 		<load-on-startup>1</load-on-startup>
 		<init-param>
 			<param-name>baseURL</param-name>
-			<param-value>http://localhost:8080/unm-backend/</param-value>
+			<param-value>http://localhost:8380/unm-backend/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>dataDir</param-name>
