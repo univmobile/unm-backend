@@ -22,6 +22,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.client.AbstractClientFromLocal;
 import fr.univmobile.backend.client.CommentClient;
 import fr.univmobile.backend.client.CommentClientFromLocal;
 import fr.univmobile.backend.client.PoiClient;
@@ -131,15 +132,15 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			throw new ServletException(e);
 		}
 
-		super.init(new HomeController(tx, users, regions, pois, poiTrees), //
+		super.init(
+				new HomeController(tx, users, regions, pois, poiTrees), //
 				new UseraddController(tx, users, regions, pois, poiTrees), //
-				new AdminGeocampusController( tx, users, regions, pois,
-						poiTrees), //
+				new AdminGeocampusController(tx, users, regions, pois, poiTrees), //
 				new CommentController(tx, comments, commentThreads, users,
 						regions, pois, poiTrees));
 
 		final String baseURL = getBaseURL();
-		
+
 		final RegionClient regionClient = new RegionClientFromLocal(baseURL,
 				regions, poiTrees);
 
@@ -286,9 +287,13 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			final HttpServletResponse response) throws IOException,
 			ServletException {
 
-		final boolean beautify = request.getParameter("html") != null;
-
 		log.info("serveJSON()...");
+
+		// 1. CONTEXT
+
+		final String host = request.getHeader("host");
+
+		final boolean beautify = request.getParameter("html") != null;
 
 		final String requestURI = request.getRequestURI();
 
@@ -296,11 +301,40 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			log.debug("requestURI: " + requestURI);
 		}
 
+		// 2. BASE URL
+
+		final String baseURL;
+
+		final boolean rewriteHost = host != null //
+				&& host.startsWith("10.0.2.2"); // Android emulator
+
+		if (rewriteHost) {
+
+			final String fromConfig = getBaseURL();
+
+			final String protocol = substringBefore(fromConfig, "//");
+
+			final String part2 = substringAfter(fromConfig, "//");
+
+			baseURL = protocol + "//" + host + "/" + substringAfter(part2, "/");
+
+			AbstractClientFromLocal.setThreadLocalBaseURL(baseURL);
+			// poiJSONClient.setThreadLocalBaseURL(baseURL);
+			// regionJSONClient.setThreadLocalBaseURL(baseURL);
+			// commentJSONClient.setThreadLocalBaseURL(baseURL);
+
+		} else {
+
+			baseURL = getBaseURL(); // From configuration
+		}
+
+		// 3. DISPATCH
+
 		if (requestURI.endsWith("/json/") || requestURI.endsWith("/json")) {
 
 			log.debug("serveJSONendPoints()...");
 
-			serveJSONendPoints(beautify, response);
+			serveJSONendPoints(baseURL, beautify, response);
 
 			return;
 		}
@@ -325,8 +359,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						+ regionsJSON.length() + ")");
 			}
 
-			final String json = "{\"url\":\"" + composeJSONendPoint("/regions")
-					+ "\"," + substringAfter(regionsJSON, "{");
+			final String json = "{\"url\":\""
+					+ composeJSONendPoint(baseURL, "/regions") + "\","
+					+ substringAfter(regionsJSON, "{");
 
 			serveJSON(json, beautify, response);
 
@@ -343,8 +378,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						+ ")");
 			}
 
-			final String json = "{\"url\":\"" + composeJSONendPoint("/pois")
-					+ "\"," + substringAfter(poisJSON, "{");
+			final String json = "{\"url\":\""
+					+ composeJSONendPoint(baseURL, "/pois") + "\","
+					+ substringAfter(poisJSON, "{");
 
 			serveJSON(json, beautify, response);
 
@@ -365,8 +401,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						.getUniversitiesJSONByRegion(regionId);
 
 				final String json = "{\"url\":\""
-						+ composeJSONendPoint("/regions/" + regionId) + "\","
-						+ substringAfter(universityJSON, "{");
+						+ composeJSONendPoint(baseURL, "/regions/" + regionId)
+						+ "\"," + substringAfter(universityJSON, "{");
 
 				serveJSON(json, beautify, response);
 
@@ -403,8 +439,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						.getCommentsJSONByPoiId(poiId);
 
 				final String json = "{\"url\":\""
-						+ composeJSONendPoint("/comments/poi" + poiId) + "\","
-						+ substringAfter(commentsJSON, "{");
+						+ composeJSONendPoint(baseURL, "/comments/poi" + poiId)
+						+ "\"," + substringAfter(commentsJSON, "{");
 
 				serveJSON(json, beautify, response);
 
@@ -452,30 +488,28 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		out.close();
 	}
 
-	private void serveJSONendPoints(final boolean beautify,
-			final HttpServletResponse response) throws IOException,
-			ServletException {
+	private void serveJSONendPoints(final String baseURL,
+			final boolean beautify, final HttpServletResponse response)
+			throws IOException, ServletException {
 
 		log.debug("serveJSONendPoints()...");
 
 		final JSONMap json = new JSONMap();
 
-		json.put("url", composeJSONendPoint(""));
+		json.put("url", composeJSONendPoint(baseURL, ""));
 
 		json.put("regions", new JSONMap().put( //
-				"url", composeJSONendPoint("/regions" // +".json"
+				"url", composeJSONendPoint(baseURL, "/regions" // +".json"
 				)));
 
 		json.put("pois", new JSONMap().put( //
-				"url", composeJSONendPoint("/pois" // + ".json"
+				"url", composeJSONendPoint(baseURL, "/pois" // + ".json"
 				)));
 
 		serveJSON(json.toJSONString(), beautify, response);
 	}
 
-	private String composeJSONendPoint(final String path) {
-
-		final String baseURL = getBaseURL();
+	private String composeJSONendPoint(final String baseURL, final String path) {
 
 		return baseURL + (baseURL.endsWith("/") ? "" : "/") //
 				+ "json" //
