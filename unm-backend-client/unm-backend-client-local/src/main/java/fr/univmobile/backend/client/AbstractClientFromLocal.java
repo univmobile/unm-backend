@@ -5,10 +5,18 @@ import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import javax.annotation.Nullable;
 
-abstract class AbstractClientFromLocal {
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
-	protected AbstractClientFromLocal( //
-			final String baseURL) {
+public abstract class AbstractClientFromLocal {
+
+	/**
+	 * Constructor, with a default <tt>baseURL</tt> configuration parameter. The
+	 * Controller layer may change this value for a given request.
+	 * 
+	 * @param baseURL
+	 */
+	protected AbstractClientFromLocal(final String baseURL) {
 
 		if (isBlank(baseURL)) {
 			throw new IllegalArgumentException("Argument is mandatory: baseURL");
@@ -19,12 +27,33 @@ abstract class AbstractClientFromLocal {
 
 	private final String baseURL;
 
-	// private static final Log log =
-	// LogFactory.getLog(AbstractClientFromLocal.class);
+	public final String getBaseURL() {
+
+		final String threadLocalBaseURL = //
+		AbstractClientFromLocal.threadLocalBaseURL.get();
+
+		return threadLocalBaseURL != null ? threadLocalBaseURL : this.baseURL;
+	}
+
+	private static final ThreadLocal<String> threadLocalBaseURL = new ThreadLocal<String>();
+
+	public static void setThreadLocalBaseURL(final String baseURL) {
+
+		if (log.isDebugEnabled()) {
+			log.debug("setThreadLocalBaseURL(): " + baseURL);
+		}
+
+		checkNotNull(baseURL, "baseURL");
+
+		threadLocalBaseURL.set(baseURL);
+	}
+
+	private static final Log log = LogFactory
+			.getLog(AbstractClientFromLocal.class);
 
 	protected final String composeURL(final String path) {
 
-		return composeURL(baseURL, path);
+		return composeURL(getBaseURL(), path);
 	}
 
 	public static String composeURL(final String baseURL, final String path) {
@@ -59,7 +88,7 @@ abstract class AbstractClientFromLocal {
 	protected final @Nullable
 	String filterURL(@Nullable final String url) {
 
-		return filterURL(baseURL, url);
+		return filterURL(getBaseURL(), url);
 	}
 
 	public static @Nullable
