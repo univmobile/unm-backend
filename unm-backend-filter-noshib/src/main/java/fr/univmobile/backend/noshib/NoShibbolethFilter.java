@@ -180,11 +180,13 @@ public class NoShibbolethFilter implements Filter {
 		final String httpHost = httpRequest.getHeader("host");
 
 		if (httpHost == null || (!httpHost.startsWith("localhost") //
+				&& !httpHost.startsWith("127.0.0.1") //
 				&& !httpHost.startsWith("192.168.0.40") //
 				&& !httpHost.startsWith("10.0.2.2") //
 		&& !"univmobile.vswip.com".equals(httpHost))) {
 
 			return error(response, "HTTP host must be localhost,"
+					+ " 127.0.0.1," //
 					+ " 192.168.0.40 (mbpro)," //
 					+ " 10.0.2.2 (ks3haxm)" //
 					+ " or univmobile.vswip.com (test env): " + httpHost);
