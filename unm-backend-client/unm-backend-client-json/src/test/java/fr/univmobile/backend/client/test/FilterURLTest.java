@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import org.junit.After;
 import org.junit.Test;
 
 import fr.univmobile.backend.client.AbstractClientFromLocal;
@@ -15,6 +16,12 @@ import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 
 public class FilterURLTest {
 
+	@After
+	public void tearDown() throws Exception {
+		
+		AbstractClientFromLocal.resetThreadLocalBaseURL();
+	}
+	
 	@Test
 	public void testFilterURL() throws Exception {
 

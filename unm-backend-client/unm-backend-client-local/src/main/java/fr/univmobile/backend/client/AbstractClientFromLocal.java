@@ -48,6 +48,15 @@ public abstract class AbstractClientFromLocal {
 		threadLocalBaseURL.set(baseURL);
 	}
 
+	public static void resetThreadLocalBaseURL() {
+		
+		if (log.isDebugEnabled()) {
+			log.debug("resetThreadLocalBaseURL()");
+		}
+
+		threadLocalBaseURL.remove();
+	}
+
 	private static final Log log = LogFactory
 			.getLog(AbstractClientFromLocal.class);
 
