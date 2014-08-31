@@ -17,7 +17,7 @@ import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "pois", "pois/" })
+@Paths({ "geocampus", "geocampus/" })
 public class AdminGeocampusController extends AbstractBackendController {
 
 	public AdminGeocampusController(
@@ -49,7 +49,7 @@ public class AdminGeocampusController extends AbstractBackendController {
 			list.add(new Pois(poiGroup));
 		}
 
-		return new View("pois.jsp");
+		return new View("geocampus_pois.jsp");
 	}
 
 	public static class Pois {

@@ -90,7 +90,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 	@Scenario("Voir les POIs de plus haut niveau")
 	@Test
-	public void pois000() throws Exception {
+	public void Geocampus_000() throws Exception {
 
 		takeScreenshot("home.png");
 
@@ -100,11 +100,11 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		takeScreenshot("entered.png");
 
-		elementById("link-pois").click();
+		elementById("link-geocampus").click();
 
 		pause(PAUSE);
 
-		takeScreenshot("pois.png");
+		takeScreenshot("geocampus.png");
 
 		elementById("link-poi-3792").click();
 

@@ -138,6 +138,12 @@ ${baseURL}/json/regions
 <div id="div-pois">
 
 <h2>
+<a href="${baseURL}/geocampus" id="link-geocampus">Géocampus</a>
+</h2>
+
+<hr>
+
+<h2>
 <a href="${baseURL}/pois" id="link-pois">POIs : ${pois.count}</a>
 </h2>
 
