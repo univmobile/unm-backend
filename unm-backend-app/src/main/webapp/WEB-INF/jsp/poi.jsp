@@ -192,7 +192,7 @@ POI : <c:out value="${poi.name}"/>
 
 <div id="div-poi-buttons">
 <button id="button-cancel"
-		onclick="document.location.href = '${baseURL}'; return false">
+		onclick="document.location.href = '${baseURL}/pois'; return false">
 	Annuler
 </button>
 <button id="button-save" disabled>
