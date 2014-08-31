@@ -141,7 +141,7 @@ public class PoiClientFromLocalTest {
 	}
 
 	@Test
-	public void testThroughJSON_noBlankCoordinates() throws IOException {
+	public void test_noBlankCoordinates() throws IOException {
 
 		for (final PoiGroup group : client.getPois()) {
 
@@ -153,7 +153,7 @@ public class PoiClientFromLocalTest {
 	}
 
 	@Test
-	public void testThroughJSON_noBlankCommentsUrl() throws IOException {
+	public void test_noBlankCommentsUrl() throws IOException {
 
 		for (final PoiGroup group : client.getPois()) {
 
@@ -165,7 +165,7 @@ public class PoiClientFromLocalTest {
 	}
 
 	@Test
-	public void testThroughJSON_unfilteredCommentsUrl() throws IOException {
+	public void test_unfilteredCommentsUrl() throws IOException {
 
 		for (final PoiGroup group : client.getPois()) {
 
