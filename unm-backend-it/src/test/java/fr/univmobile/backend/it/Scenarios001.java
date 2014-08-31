@@ -148,7 +148,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		takeScreenshot("entered.png");
 
-		elementById("link-pois").click();
+		elementById("link-geocampus").click();
 
 		pause(PAUSE);
 
