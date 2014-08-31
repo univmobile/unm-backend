@@ -27,29 +27,13 @@ th.id,
 td.id {
 	display: none;
 }
-#div-query {
-	background-color: #f8f8f8;
-	padding: 1em;
-	xborder-bottom: 1px solid #f8f8f8;
-}
-#div-resultInfo {
-	margin-top: 1em;
-}
-#div-resultInfo span {
-	xfont-style: italic;
-	xcolor: #ccc;
-}
-#button-export {
-	margin-top: 2px;
-	float: right;
-}
 </style>
 </head>
 <body id="body-pois" class="entered">
 
 <jsp:include page="div-entered.h.jsp"/>
 
-<div class="body">
+<div class="body results">
 
 <h1 title="Version ${buildInfo.appVersion}
 Build ${buildInfo.buildDisplayName}
@@ -94,7 +78,7 @@ POIs : ${poisInfo.count}
 	</c:otherwise>
 	</c:choose>
 </span>
-<button id="button-export">
+<button id="button-export" disabled>
 	Export…
 </button>
 </div>

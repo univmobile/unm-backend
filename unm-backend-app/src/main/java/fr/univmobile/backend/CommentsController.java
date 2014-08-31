@@ -1,8 +1,12 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static org.apache.commons.lang3.StringUtils.substringAfter;
 
 import java.io.IOException;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import fr.univmobile.backend.client.ClientException;
 import fr.univmobile.backend.client.Comment;
@@ -18,6 +22,7 @@ import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.commons.DataBeans;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.PageNotFoundException;
@@ -25,16 +30,16 @@ import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "pois/${id}" })
-public class PoiController extends AbstractBackendController {
+@Paths({ "comments", "comments/", "comments/${context}" })
+public class CommentsController extends AbstractBackendController {
 
-	@PathVariable("${id}")
-	private int getPoiId() {
+	@PathVariable("${context}")
+	private String getCommentsContext() {
 
-		return getPathIntVariable("${id}");
+		return getPathStringVariable("${context}");
 	}
 
-	public PoiController(final TransactionManager tx,
+	public CommentsController(final TransactionManager tx,
 			final CommentDataSource comments,
 			final CommentThreadDataSource commentThreads,
 			final UserDataSource users, final RegionDataSource regions,
@@ -42,9 +47,8 @@ public class PoiController extends AbstractBackendController {
 
 		super(tx, users, regions, pois, poiTrees);
 
-		this.comments = checkNotNull(comments, "commentDataSource");
-		this.commentThreads = checkNotNull(commentThreads,
-				"commentThreadDataSource");
+		this.comments = checkNotNull(comments, "comments");
+		this.commentThreads = checkNotNull(commentThreads, "commentThreads");
 	}
 
 	private final CommentDataSource comments;
@@ -56,44 +60,81 @@ public class PoiController extends AbstractBackendController {
 	}
 
 	private CommentClient getCommentClient() {
-		
-		return new CommentClientFromLocal(
-				getBaseURL(), comments, commentThreads);
+
+		return new CommentClientFromLocal(getBaseURL(), comments,
+				commentThreads);
 	}
+
+	private static final Log log = LogFactory.getLog(CommentsController.class);
 
 	@Override
 	public View action() throws IOException, TransactionException,
 			ClientException, PageNotFoundException {
 
-		final int id = getPoiId();
+		final String context = getCommentsContext();
+
+		if (!context.startsWith("poi")) {
+			throw new PageNotFoundException();
+		}
+
+		final int poiId;
+
+		try {
+
+			poiId = Integer.parseInt(substringAfter(context, "poi"));
+
+		} catch (final NumberFormatException e) {
+			throw new PageNotFoundException();
+		}
+
+		if (log.isDebugEnabled()) {
+			log.debug("Found poiId: " + poiId);
+		}
 
 		// 1. POI
-		
+
 		final Poi poi;
 
 		try {
 
-			poi = getPoiClient().getPoi(id);
+			poi = getPoiClient().getPoi(poiId);
 
 		} catch (final PoiNotFoundException e) {
-
 			throw new PageNotFoundException();
 		}
 
 		setAttribute("poi", poi);
-		
+
 		// 2. COMMENTS
-		
-		// Implementation note: Do not set "commentCount" as a property in
-		// "poi", since it would mean that each time you fetch some POI info
-		// (say, for a list of POIs), you want to fetch its comment count.
 
-		final Comment[] comments = getCommentClient().getCommentsByPoiId(id);
+		final Comment[] comments = getCommentClient().getCommentsByPoiId(poiId);
 
-		setAttribute("commentCount", comments.length);
+		setAttribute("comments", comments);
+
+		// 3. COMMENTS INFO
+
+		setAttribute(
+				"commentsInfo",
+				DataBeans
+						.instantiate(CommentsInfo.class)
+						.setContext(
+								"Commentaires pour le POI " + poiId + " : "
+										+ poi.getName())
+						.setResultCount(comments.length));
 
 		// 9. END
 
-		return new View("poi.jsp");
+		return new View("comments.jsp");
+	}
+
+	private static interface CommentsInfo {
+
+		int getResultCount();
+
+		CommentsInfo setResultCount(int resultCount);
+
+		String getContext();
+
+		CommentsInfo setContext(String context);
 	}
 }

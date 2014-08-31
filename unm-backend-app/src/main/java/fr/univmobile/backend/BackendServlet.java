@@ -4,7 +4,6 @@ import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 import static org.apache.commons.lang3.StringUtils.substringBefore;
-import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 
 import java.io.File;
 import java.io.IOException;
@@ -45,12 +44,18 @@ import fr.univmobile.backend.core.UploadNotFoundException;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.impl.UploadManagerImpl;
-import fr.univmobile.backend.json.JSONMap;
+import fr.univmobile.backend.json.AbstractJSONController;
+import fr.univmobile.backend.json.CommentsJSONController;
+import fr.univmobile.backend.json.EndpointsJSONController;
 import fr.univmobile.backend.json.JsonHtmler;
+import fr.univmobile.backend.json.PoisJSONController;
+import fr.univmobile.backend.json.RegionsJSONController;
+import fr.univmobile.backend.json.UniversitiesJSONController;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.BuildInfoUtils;
+import fr.univmobile.web.commons.PageNotFoundException;
 import fr.univmobile.web.commons.UnivMobileHttpUtils;
 
 public final class BackendServlet extends AbstractUnivMobileServlet {
@@ -68,9 +73,11 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private CommentThreadDataSource commentThreads;
 
 	// private RegionClient regionClient;
-	private RegionJSONClient regionJSONClient;
-	private PoiJSONClient poiJSONClient;
-	private CommentJSONClient commentJSONClient;
+	// private RegionJSONClient regionJSONClient;
+	// private PoiJSONClient poiJSONClient;
+	// private CommentJSONClient commentJSONClient;
+
+	private AbstractJSONController[] jsonControllers;
 
 	@Override
 	public void init() throws ServletException {
@@ -94,6 +101,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final File uploadsDir = new File(dataDir, "uploads");
 		final File commentsDir = new File(dataDir, "comments");
 		final File commentThreadsDir = new File(dataDir, "comment_threads");
+
+		// 2. DATASOURCES AND CLIENTS
 
 		// final UserDataSource users;
 		// final RegionDataSource regions;
@@ -132,31 +141,54 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			throw new ServletException(e);
 		}
 
+		// 2. MAIN CONTROLLERS
+
 		super.init(
 				new HomeController(tx, users, regions, pois, poiTrees), //
 				new UseraddController(tx, users, regions, pois, poiTrees), //
 				new AdminGeocampusController(tx, users, regions, pois, poiTrees), //
 				new PoisController(tx, users, regions, pois, poiTrees), //
-				new PoiController(tx, users, regions, pois, poiTrees), //
+				new PoiController(tx, comments, commentThreads, users, regions,
+						pois, poiTrees), //
+				new CommentsController(tx, comments, commentThreads, users,
+						regions, pois, poiTrees), //
 				new CommentController(tx, comments, commentThreads, users,
-						regions, pois, poiTrees));
+						regions, pois, poiTrees) //
+		);
+
+		// 3. JSON CONTROLLERS
 
 		final String baseURL = getBaseURL();
 
 		final RegionClient regionClient = new RegionClientFromLocal(baseURL,
 				regions, poiTrees);
 
-		regionJSONClient = new RegionJSONClientImpl(regionClient);
+		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
+				regionClient);
 
 		final PoiClient poiClient = new PoiClientFromLocal(baseURL, pois,
 				poiTrees, regions);
 
-		poiJSONClient = new PoiJSONClientImpl(poiClient);
+		final PoiJSONClient poiJSONClient = new PoiJSONClientImpl(poiClient);
 
 		final CommentClient commentClient = new CommentClientFromLocal(baseURL,
 				comments, commentThreads);
 
-		commentJSONClient = new CommentJSONClientImpl(commentClient);
+		final CommentJSONClient commentJSONClient = new CommentJSONClientImpl(
+				commentClient);
+
+		this.jsonControllers = new AbstractJSONController[] {
+				new EndpointsJSONController(), //
+				new RegionsJSONController(regionJSONClient), //
+				new UniversitiesJSONController(regions, regionJSONClient), //
+				new PoisJSONController(poiJSONClient), //
+				new CommentsJSONController(pois, commentJSONClient) //
+		};
+
+		for (final AbstractJSONController jsonController : jsonControllers) {
+
+			jsonController.init(this);
+		}
 	}
 
 	private static final Log log = LogFactory.getLog(BackendServlet.class);
@@ -175,10 +207,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final String userAgent = request.getHeader("User-Agent");
 		final String remoteUser = request.getRemoteUser();
 		final String requestURI = request.getRequestURI();
-
-		// if (log.isInfoEnabled()) {
-		// log.info("requestURI: " + requestURI);
-		// }
 
 		if (log.isInfoEnabled()) {
 			log.info("remoteAddr: " + remoteAddr//
@@ -321,9 +349,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			baseURL = protocol + "//" + host + "/" + substringAfter(part2, "/");
 
 			AbstractClientFromLocal.setThreadLocalBaseURL(baseURL);
-			// poiJSONClient.setThreadLocalBaseURL(baseURL);
-			// regionJSONClient.setThreadLocalBaseURL(baseURL);
-			// commentJSONClient.setThreadLocalBaseURL(baseURL);
 
 		} else {
 
@@ -332,125 +357,77 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 3. DISPATCH
 
-		if (requestURI.endsWith("/json/") || requestURI.endsWith("/json")) {
-
-			log.debug("serveJSONendPoints()...");
-
-			serveJSONendPoints(baseURL, beautify, response);
-
-			return;
-		}
-
-		final String path = substringAfter(requestURI, "/json/");
+		final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
 
 		if (log.isDebugEnabled()) {
-			log.debug("path: " + path);
+			log.debug("uriPath: " + uriPath);
 		}
+
+		for (final AbstractJSONController jsonController : jsonControllers) {
+
+			if (log.isDebugEnabled()) {
+				log.debug("jsonController: "
+						+ jsonController.getClass().getName());
+			}
+
+			if (jsonController.hasPath(uriPath)) {
+
+				if (log.isDebugEnabled()) {
+					log.debug("Found JSONController: "
+							+ jsonController.getClass().getName());
+				}
+
+				setThreadLocal(jsonController, request);
+
+				final String json;
+
+				try {
+
+					json = jsonController.actionJSON(baseURL);
+
+				} catch (final PageNotFoundException e) {
+
+					UnivMobileHttpUtils
+							.sendError404(request, response, uriPath);
+
+					return;
+
+				} catch (final Exception e) {
+
+					UnivMobileHttpUtils.sendError500(request, response, e);
+
+					return;
+				}
+
+				serveJSON(json, beautify, response);
+
+				return;
+			}
+		}
+
+		// final String path = substringAfter(requestURI, "/json/");
+
+		// if (log.isDebugEnabled()) {
+		// log.debug("path: " + path);
+		// }
 
 		// http://univmobile.vswip.com/unm-backend-mock/regions
 
 		// https://univmobile-dev.univ-paris1.fr/json/regions
-
-		if ("regions".equals(path) || "regions/".equals(path)
-				|| "regions.json".equals(path)) {
-
-			final String regionsJSON = regionJSONClient.getRegionsJSON();
-
-			if (log.isDebugEnabled()) {
-				log.debug("serveJSON(regionJSON.length: "
-						+ regionsJSON.length() + ")");
-			}
-
-			final String json = "{\"url\":\""
-					+ composeJSONendPoint(baseURL, "/regions") + "\","
-					+ substringAfter(regionsJSON, "{");
-
-			serveJSON(json, beautify, response);
-
-			return;
-		}
-
-		if ("pois".equals(path) || "pois/".equals(path)
-				|| "pois.json".equals(path)) {
-
-			final String poisJSON = poiJSONClient.getPoisJSON();
-
-			if (log.isDebugEnabled()) {
-				log.debug("serveJSON(poisJSON.length: " + poisJSON.length()
-						+ ")");
-			}
-
-			final String json = "{\"url\":\""
-					+ composeJSONendPoint(baseURL, "/pois") + "\","
-					+ substringAfter(poisJSON, "{");
-
-			serveJSON(json, beautify, response);
-
-			return;
-		}
-
-		if (path.startsWith("regions/")) {
-
-			String regionId = substringAfter(path, "regions/");
-
-			if (regionId.endsWith(".json")) {
-				regionId = substringBeforeLast(regionId, ".json");
-			}
-
-			if (!regions.isNullByUid(regionId)) {
-
-				final String universityJSON = regionJSONClient
-						.getUniversitiesJSONByRegion(regionId);
-
-				final String json = "{\"url\":\""
-						+ composeJSONendPoint(baseURL, "/regions/" + regionId)
-						+ "\"," + substringAfter(universityJSON, "{");
-
-				serveJSON(json, beautify, response);
-
-				return;
-			}
-		}
-
-		if (path.startsWith("comments/poi")) {
-
-			String poiIdStr = substringAfter(path, "comments/poi");
-
-			if (poiIdStr.endsWith(".json")) {
-				poiIdStr = substringBeforeLast(poiIdStr, ".json");
-			}
-
-			if (poiIdStr.contains("/")) {
-				poiIdStr = substringBefore(poiIdStr, "/");
-			}
-
-			final int poiId;
-
-			try {
-				poiId = Integer.parseInt(poiIdStr);
-			} catch (final NumberFormatException e) {
-				final String uriPath = UnivMobileHttpUtils
-						.extractUriPath(request);
-				UnivMobileHttpUtils.sendError404(request, response, uriPath);
-				return;
-			}
-
-			if (!pois.isNullByUid(poiId)) {
-
-				final String commentsJSON = commentJSONClient
-						.getCommentsJSONByPoiId(poiId);
-
-				final String json = "{\"url\":\""
-						+ composeJSONendPoint(baseURL, "/comments/poi" + poiId)
-						+ "\"," + substringAfter(commentsJSON, "{");
-
-				serveJSON(json, beautify, response);
-
-				return;
-			}
-		}
-
-		final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
+		/*
+		 * if ("regions".equals(path) || "regions/".equals(path) ||
+		 * "regions.json".equals(path)) {
+		 * 
+		 * final String json = new RegionsJSONController(regionJSONClient)
+		 * .actionJSON(baseURL);
+		 * 
+		 * serveJSON(json, beautify, response);
+		 * 
+		 * return; }
+		 */
+		/*
+		 * if (path.startsWith("regions/")) { }
+		 */
 
 		UnivMobileHttpUtils.sendError404(request, response, uriPath);
 	}
@@ -488,34 +465,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		out.flush();
 
 		out.close();
-	}
-
-	private void serveJSONendPoints(final String baseURL,
-			final boolean beautify, final HttpServletResponse response)
-			throws IOException, ServletException {
-
-		log.debug("serveJSONendPoints()...");
-
-		final JSONMap json = new JSONMap();
-
-		json.put("url", composeJSONendPoint(baseURL, ""));
-
-		json.put("regions", new JSONMap().put( //
-				"url", composeJSONendPoint(baseURL, "/regions" // +".json"
-				)));
-
-		json.put("pois", new JSONMap().put( //
-				"url", composeJSONendPoint(baseURL, "/pois" // + ".json"
-				)));
-
-		serveJSON(json.toJSONString(), beautify, response);
-	}
-
-	private String composeJSONendPoint(final String baseURL, final String path) {
-
-		return baseURL + (baseURL.endsWith("/") ? "" : "/") //
-				+ "json" //
-				+ (path.startsWith("/") || "".equals(path) ? "" : "/") + path;
 	}
 
 	private void serveUpload(final HttpServletRequest request,

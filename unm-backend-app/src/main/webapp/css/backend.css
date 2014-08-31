@@ -298,13 +298,13 @@ div.infoWindow span.name {
 	padding-left: 0;
 	padding-right: 0;
 }
-#div-details,
-#div-comments {
+#body-geocampus #div-details,
+#body-geocampus #div-comments {
 	font-size: 12px;
 	xbackground-color: #ff0;
 }
-#div-details div.name,
-div.field.name {
+#body-geocampus #div-details div.name,
+#body-geocampus div.field.name {
 	font-size: 120%;
 	font-weight: bold;
 	margin: 0 0 0.4em;
@@ -337,9 +337,9 @@ div.field.name {
 	font-weight: bold;
 	margin-bottom: 0.2em;
 }
-#div-details-buttons,
-#div-comments-buttons,
-#div-addCommentDialog-buttons {
+#body-geocampus #div-details-buttons,
+#body-geocampus #div-comments-buttons,
+#body-geocampus #div-addCommentDialog-buttons {
 	margin-top: 0.4em;
 	padding: 1em 8px 0;
 	font-size: 10px;
@@ -348,7 +348,7 @@ div.field.name {
 	border-top: 1px solid #ccc;
 	text-align: right;
 }
-#div-comments-buttons {
+#body-geocampus #div-comments-buttons {
 	text-align: right;
 }
 #div-addCommentDialog-buttons {
@@ -382,13 +382,13 @@ img.profileImage {
 	width: 32px;
 	height: 32px;
 }
-#div-comments ul {
+#body-geocampus #div-comments ul {
 	list-style-type: none;
 	padding: 0;
 	xmargin: 0 4px;
 	margin: 0;
 }
-#div-comments li {
+#body-geocampus #div-comments li {
 	position: relative;
 	padding: 8px 8px 0;
 	margin: 0 -4px;
@@ -396,12 +396,12 @@ img.profileImage {
 	border-bottom: 1px solid #ccc;
 	xbackground-color: #ff0;
 }
-#div-comments div.displayName {
+#body-geocampus #div-comments div.displayName {
 	position: absolute;
 	top: 7px;
 	left: 48px;
 }
-#div-comments div.username {
+#body-geocampus #div-comments div.username {
 	position: absolute;
 	top: 18px;
 	left: 48px;
@@ -424,20 +424,20 @@ div.username {
 	font-size: 12px;
 	color: #aaa;
 }
-#div-comments div.text,
-#div-addCommentDialog textarea {
+#body-geocampus #div-comments div.text,
+#body-geocampus #div-addCommentDialog textarea {
 	font-family: 'Times New Roman', serif;
 	font-size: 16px;
 }
-#div-comments div.timestamp {
+#body-geocampus #div-comments div.timestamp {
 	font-size: 12px;
 	padding: 8px 0 12px;
 }
-#div-comments div.timestamp a {
+#body-geocampus #div-comments div.timestamp a {
 	color: #aaa;
 	text-decoration: none;
 }
-#div-comments div.error {
+#body-geocampus #div-comments div.error {
 	background-color: #eee;
 	color: #900;
 	xpadding: 1em;
@@ -446,11 +446,11 @@ div.username {
 	font-size: 12px;
 	font-weight: bold;
 }
-#div-comments div.errorThrown {
+#body-geocampus #div-comments div.errorThrown {
 	font-weight: normal;
 	margin-top: 8px;
 }
-#div-comments-timeline {
+#body-geocampus #div-comments-timeline {
 	margin-top: 8px;
 }
 div.ui-dialog-titlebar {
@@ -468,6 +468,57 @@ div.ui-dialog-titlebar {
 	width: 100%;
 	height: 80px;
 }
-#text-query {
-	width: 20em;
+div.body.poi tr.id #span-active-yes,
+div.body.poi tr.id #span-active-no {
+	margin-left: 1em;
+	font-style: italic;
+}
+div.body.poi table {
+	border-collapse: collapse;
+}
+div.body.poi th {
+	text-align: right;
+	padding-right: 8px;
+}
+div.body.poi th, 
+div.body.poi td {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	vertical-align: baseline;
+}
+div.body.poi tr.textarea th {
+	vertical-align: top;
+	padding-top: 10px;
+	xbackground-color: #ff0;
+}
+div.body.poi td ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+div.body.results #div-query {
+	background-color: #f8f8f8;
+	padding: 1em;
+	xborder-bottom: 1px solid #f8f8f8;
+}
+div.body.results #div-resultInfo {
+	margin-top: 1em;
+}
+div.body.results #div-resultInfo span {
+	xfont-style: italic;
+	xcolor: #ccc;
+}
+div.body.results #button-export {
+	margin-top: 2px;
+	float: right;
+}
+#span-active-yes.selected {
+	background-color: #cfc;
+}
+#span-active-no.selected {
+	background-color: #fcc;
+}
+#span-active-yes,
+#span-active-no {
+	padding: 0 0 0 8px;
 }

@@ -21,14 +21,14 @@ import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.commons.tx.TransactionManager;
-import fr.univmobile.web.commons.AbstractController;
+import fr.univmobile.web.commons.AbstractJspController;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
 import fr.univmobile.web.commons.View;
 
-abstract class AbstractBackendController extends AbstractController {
+abstract class AbstractBackendController extends AbstractJspController {
 
 	protected static final String DELEGATION_USER = "delegationUser";
 

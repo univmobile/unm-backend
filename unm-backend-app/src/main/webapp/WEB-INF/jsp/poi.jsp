@@ -6,7 +6,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<title>Administration d’UnivMobile — POI</title>
+<title>Administration d’UnivMobile — POI : <c:out
+	value="${poi.name}"/></title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <style type="text/css">
 input.text {
@@ -21,33 +22,6 @@ textarea {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 12px;
 }
-tr.id label {
-	margin-left: 1em;
-	font-style: italic;
-}
-table {
-	border-collapse: collapse;
-}
-th {
-	text-align: right;
-	padding-right: 8px;
-}
-th, 
-td {
-	padding-top: 8px;
-	padding-bottom: 8px;
-	vertical-align: baseline;
-}
-tr.textarea th {
-	vertical-align: top;
-	padding-top: 10px;
-	xbackground-color: #ff0;
-}
-td ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
 #div-poi-buttons {
 	margin-top: 2em;
 	text-align: center;
@@ -61,7 +35,7 @@ td ul {
 
 <jsp:include page="div-entered_modal.h.jsp"/>
 
-<div class="body">
+<div class="body poi">
 <form method="POST" action="${baseURL}/pois">
 
 <h1 title="Version ${buildInfo.appVersion}
@@ -77,7 +51,7 @@ Administration d’UnivMobile
 POI : <c:out value="${poi.name}"/>
 </h2>
 
-<table>
+<table id="table-poi">
 <tbody>
 <tr class="name">
 <th>
@@ -97,12 +71,16 @@ POI : <c:out value="${poi.name}"/>
 <td>
 	<span id="text-id">POI ${poi.id}</span>
 	<input type="hidden" name="id" value="${poi.id}">
+	<span id="span-active-yes" class="selected">
 	<label for="radio-active-yes">Actif</label>
 	<input type="radio" name="active" value="yes" checked
 		id="radio-active-yes" disabled>
+	</span>
+	<span id="span-active-no">
 	<label for="radio-active-no">Inactif</label>
 	<input type="radio" name="active" value="no"
 		id="radio-active-no" disabled>
+	</span>
 </td>
 </tr>
 <tr class="universityIds">
