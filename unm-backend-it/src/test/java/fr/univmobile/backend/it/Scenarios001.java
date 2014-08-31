@@ -128,12 +128,22 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		pause(PAUSE);
 
 		takeScreenshot("pois.png");
+		
+		elementById("div-resultInfo").shouldBeVisible();
 
 		elementById("link-poi-3792-name").click();
 
 		pause(PAUSE);
 
 		takeScreenshot("ucp.png");
+
+		elementById("button-cancel").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("pois2.png");
+		
+		elementById("div-resultInfo").shouldBeVisible();
 	}
 
 	@Scenario("Voir les commentaires d’un POI")
