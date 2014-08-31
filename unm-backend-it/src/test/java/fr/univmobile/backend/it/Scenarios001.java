@@ -54,7 +54,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 	@Scenario("Aller-retour sur la page « Ajouter un utilisateur »")
 	@Test
-	public void sc001() throws Exception {
+	public void useradd_001() throws Exception {
 
 		takeScreenshot("home.png");
 
@@ -144,6 +144,57 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		takeScreenshot("pois2.png");
 		
 		elementById("div-resultInfo").shouldBeVisible();
+	}
+
+	@Scenario("Voir les commentaires d’un POI")
+	@Test
+	public void Comments_000() throws Exception {
+
+		takeScreenshot("home.png");
+
+		elementById("button-myself").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("entered.png");
+
+		elementById("link-pois").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("pois.png");
+		
+		elementById("div-resultInfo").shouldBeVisible();
+
+		elementById("link-poi-3792-name").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("ucp.png");
+
+		elementById("link-comments").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("comments_poi3792.png");
+		
+		elementById("link-poi").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("ucp2.png");
+
+		elementById("link-comments").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("comments2_poi3792.png");
+		
+		elementById("button-back").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("ucp3.png");
 	}
 
 	@Scenario("Voir les commentaires d’un POI")
