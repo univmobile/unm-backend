@@ -9,6 +9,7 @@ import java.io.File;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
+import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -142,7 +143,8 @@ public class CommentTest {
 	}
 
 	@Test
-	public void testCommentManager_createComment_new_thread_3792() throws Exception {
+	public void testCommentManager_createComment_new_thread_3792()
+			throws Exception {
 
 		final int POI_UID = 3792;
 
@@ -153,12 +155,12 @@ public class CommentTest {
 
 		final CommentBuilder comment = comments.create();
 
-		final CommentManager commentManager =
-				new CommentManagerImpl(comments,commentThreads);
+		final CommentManager commentManager = new CommentManagerImpl(comments,
+				commentThreads);
 
-//		comment.setUid(commentManager.newCommentUid());
+		// comment.setUid(commentManager.newCommentUid());
 		comment.setMessage("Hello World!");
-		
+
 		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
 
 		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
@@ -175,8 +177,8 @@ public class CommentTest {
 		final CommentThread newThread = commentThreads.getByPoiId(POI_UID);
 
 		assertEquals(1, newThread.getAllComments().length);
-		final int uid= newThread.getAllComments()[0].getUid();
-		assertEquals("Hello World!",comments.getByUid(uid).getMessage());
+		final int uid = newThread.getAllComments()[0].getUid();
+		assertEquals("Hello World!", comments.getByUid(uid).getMessage());
 	}
 
 	@Test
@@ -240,8 +242,9 @@ public class CommentTest {
 	}
 
 	@Test
-	public void testCommentManager_createComment_existing_thread_415() throws Exception {
-		
+	public void testCommentManager_createComment_existing_thread_415()
+			throws Exception {
+
 		final int POI_UID = 415;
 
 		assertEquals(3, comments.getAllBy(Integer.class, "uid").size());
@@ -249,15 +252,15 @@ public class CommentTest {
 		assertEquals(3, getFileCount(dataDir_comments));
 		assertEquals(1, getFileCount(dataDir_comment_threads));
 
-		final CommentManager commentManager =
-				new CommentManagerImpl(comments,commentThreads);
+		final CommentManager commentManager = new CommentManagerImpl(comments,
+				commentThreads);
 
 		final CommentBuilder comment = comments.create();
 
-		//comment.setUid(commentManager.newCommentUid());
+		// comment.setUid(commentManager.newCommentUid());
 		comment.setMessage("Hello World!");
 
-		commentManager.addToCommentThreadByPoiId(POI_UID,comment);
+		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
 
 		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
 		assertEquals(1, commentThreads.getAllBy(Integer.class, "uid").size());
@@ -280,7 +283,7 @@ public class CommentTest {
 	}
 
 	@Test
-	public void testGetComments_415() throws Exception {
+	public void testGetComments_poi415() throws Exception {
 
 		final int POI_UID = 415;
 
@@ -291,5 +294,13 @@ public class CommentTest {
 		final CommentThread commentThread = commentThreads.getByPoiId(POI_UID);
 
 		assertEquals(2, commentThread.sizeOfAllComments());
+	}
+
+	@Test
+	public void testGetComment_1() throws Exception {
+
+		final Comment comment = comments.getByUid(1);
+
+		assertEquals(new DateTime(2014, 8, 24, 9, 50, 0), comment.getPostedAt());
 	}
 }

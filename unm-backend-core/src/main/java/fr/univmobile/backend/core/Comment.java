@@ -2,6 +2,9 @@ package fr.univmobile.backend.core;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 import net.avcompris.binding.annotation.XPath;
+
+import org.joda.time.DateTime;
+
 import fr.univmobile.commons.datasource.Entry;
 
 public interface Comment extends Entry<Comment> {
@@ -18,6 +21,9 @@ public interface Comment extends Entry<Comment> {
 	@XPath("atom:content/@postedBy")
 	String getPostedBy();
 
+	@XPath("atom:content/@postedAt")
+	DateTime getPostedAt();
+	
 	@XPath("atom:content/atom:context")
 	Context[] getContexts();
 	
