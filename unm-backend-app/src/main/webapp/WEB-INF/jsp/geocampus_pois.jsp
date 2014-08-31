@@ -126,7 +126,7 @@ body {
 	
 	function resizeLeft(event, ui) {
 	
-		var totalWidth = $('#body-pois').width() - 4;
+		var totalWidth = $('#body-geocampus').width() - 4;
 		
 		var width = $('#div-left').width();
 				
@@ -660,7 +660,7 @@ body {
 	
 </script>
 </head>
-<body id="body-pois" class="entered">
+<body id="body-geocampus" class="entered">
 
 <jsp:include page="div-entered.h.jsp"/>
 

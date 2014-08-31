@@ -10,7 +10,7 @@ div.body {
 h1 {
 	text-align: center;
 }
-#body-pois h1 {
+#body-geocampus h1 {
 	margin-top: 0;
 }
 #div-myself {
@@ -40,7 +40,7 @@ div.error span.message {
 body.entered {
 	margin: 0 0 8px;
 }
-body#body-pois.entered {
+body#body-geocampus.entered {
 	margin-bottom: 0;
 }
 body.entered div.body {
@@ -182,10 +182,10 @@ div.pois h2 {
 div.pois div ul {
 	font-size: 12px;
 }
-#body-pois #div-left {
+#body-geocampus #div-left {
 	width: 300px;
 }
-#body-pois #div-left-top div.ui-tabs-panel {
+#body-geocampus #div-left-top div.ui-tabs-panel {
 	xbackground-color: #ff0;
 	padding-left: 0;
 	padding-right: 0;
@@ -280,7 +280,7 @@ div.infoWindow img.height100 {
 div.infoWindow span.name {
 	font-weight: bold;
 }
-#body-pois #div-left-bottom div.ui-tabs-panel {
+#body-geocampus #div-left-bottom div.ui-tabs-panel {
 	padding-left: 0;
 	padding-right: 0;
 }
