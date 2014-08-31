@@ -20,18 +20,15 @@ import fr.univmobile.web.commons.View;
 @Paths({ "geocampus", "geocampus/" })
 public class AdminGeocampusController extends AbstractBackendController {
 
-	public AdminGeocampusController(
-			final TransactionManager tx, final UserDataSource users,
-			final RegionDataSource regions, final PoiDataSource pois,
-			final PoiTreeDataSource poiTrees) {
+	public AdminGeocampusController(final TransactionManager tx,
+			final UserDataSource users, final RegionDataSource regions,
+			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
 
 		super(tx, users, regions, pois, poiTrees);
-
-		//poiClient = 
 	}
 
 	private PoiClient getPoiClient() {
-		
+
 		return new PoiClientFromLocal(getBaseURL(), pois, poiTrees, regions);
 	}
 
@@ -44,7 +41,7 @@ public class AdminGeocampusController extends AbstractBackendController {
 
 		setAttribute("pois", list);
 
-		for (final PoiGroup poiGroup :getPoiClient().getPois()) {
+		for (final PoiGroup poiGroup : getPoiClient().getPois()) {
 
 			list.add(new Pois(poiGroup));
 		}
