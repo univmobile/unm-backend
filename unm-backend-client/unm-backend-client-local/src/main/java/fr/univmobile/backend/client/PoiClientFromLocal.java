@@ -68,7 +68,7 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		final MutablePoi poi = createPoiFromData(dsPoi);
 
 		if (poi == null) {
-			throw new ClientException("Cannot find POI with id: " + id);
+			throw new PoiNotFoundException(id);
 		}
 
 		return poi;
