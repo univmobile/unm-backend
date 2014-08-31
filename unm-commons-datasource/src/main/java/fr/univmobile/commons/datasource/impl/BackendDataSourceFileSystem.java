@@ -133,7 +133,17 @@ EB extends EntryBuilder<E>> //
 		final String methodName = method.getName();
 
 		if (log.isDebugEnabled()) {
-			log.debug("invoke:" + methodName + "()...");
+			if (args == null || args.length == 0) {
+				log.debug("invoke: " + methodName + "()...");
+			} else if (args[0] == null) {
+				log.debug("invoke: " + methodName + "():" + args[0] + "...");
+			} else if (args[0].getClass().isPrimitive()) {
+				log.debug("invoke: " + methodName + "():" + args[0] + "...");
+			} else if (String.class.equals(args[0].getClass())) {
+				log.debug("invoke: " + methodName + "():" + args[0] + "...");
+			} else {
+				log.debug("invoke: " + methodName + "()...");
+			}
 		}
 
 		if ("reload".equals(methodName)) {
