@@ -123,7 +123,7 @@ abstract class AbstractBackendController extends AbstractController {
 		final PoisInfo pois = instantiate(PoisInfo.class).setCount(
 				poiTree.sizeOfAllPois());
 
-		setAttribute("pois", pois);
+		setAttribute("poisInfo", pois);
 
 		for (final String uid : new TreeSet<String>(allRegions.keySet())) {
 

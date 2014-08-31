@@ -136,6 +136,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new HomeController(tx, users, regions, pois, poiTrees), //
 				new UseraddController(tx, users, regions, pois, poiTrees), //
 				new AdminGeocampusController(tx, users, regions, pois, poiTrees), //
+				new PoiController(tx, users, regions, pois, poiTrees), //
 				new CommentController(tx, comments, commentThreads, users,
 						regions, pois, poiTrees));
 
