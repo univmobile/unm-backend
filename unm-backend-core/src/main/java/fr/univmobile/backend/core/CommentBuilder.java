@@ -1,5 +1,7 @@
 package fr.univmobile.backend.core;
 
+import org.joda.time.DateTime;
+
 import fr.univmobile.commons.datasource.EntryBuilder;
 
 
@@ -17,4 +19,12 @@ public interface CommentBuilder extends EntryBuilder<Comment>, Comment{
 	CommentBuilder setPostedBy(String postedBy);
 
 	CommentBuilder setMessage(String message);
+
+	CommentBuilder setPostedAt(DateTime date);
+	
+	boolean isNullPostedBy();
+
+	boolean isNullMessage();
+	
+	boolean isNullPostedAt();
 }

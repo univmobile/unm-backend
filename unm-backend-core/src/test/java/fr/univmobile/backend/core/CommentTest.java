@@ -160,6 +160,8 @@ public class CommentTest {
 
 		// comment.setUid(commentManager.newCommentUid());
 		comment.setMessage("Hello World!");
+		comment.setPostedAt(new DateTime());
+		comment.setPostedBy("Dummy");
 
 		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
 
@@ -257,8 +259,12 @@ public class CommentTest {
 
 		final CommentBuilder comment = comments.create();
 
+		final DateTime now = new DateTime();
+
 		// comment.setUid(commentManager.newCommentUid());
 		comment.setMessage("Hello World!");
+		comment.setPostedAt(now);
+		comment.setPostedBy("Toto");
 
 		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
 
@@ -272,6 +278,22 @@ public class CommentTest {
 
 		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
 		assertEquals(1, commentThreads.getAllBy(Integer.class, "uid").size());
+	}
+
+	@Test(expected = IllegalArgumentException.class)
+	public void test_createComment_existing_thread_415_noDate()
+			throws Exception {
+
+		final int POI_UID = 415;
+
+		final CommentManager commentManager = new CommentManagerImpl(comments,
+				commentThreads);
+
+		final CommentBuilder comment = comments.create();
+
+		comment.setMessage("Hello World!");
+
+		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
 	}
 
 	@Test

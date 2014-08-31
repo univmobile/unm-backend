@@ -105,6 +105,16 @@ public class CommentManagerImpl implements CommentManager {
 			final CommentBuilder comment) throws TransactionException {
 
 		checkNotNull(comment, "comment");
+		
+		if(comment.isNullPostedAt()) {
+			throw new IllegalArgumentException("Comment.postedAt should not be null");
+		}
+		if(comment.isNullPostedBy()) {
+			throw new IllegalArgumentException("Comment.postedBy should not be null");
+		}
+		if(comment.isNullMessage()) {
+			throw new IllegalArgumentException("Comment.message should not be null");
+		}
 
 		final Lock lock = tx.acquireLock(5000, "comments\\poi", poiId);
 
