@@ -7,6 +7,7 @@ import static org.junit.Assert.assertNull;
 import java.io.File;
 import java.io.IOException;
 
+import org.joda.time.DateTime;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -37,7 +38,8 @@ public class CommentClientFromLocalTest {
 								new File(
 										"target/CommentClientFromLocalTest_comment_threads")));
 
-		client = new CommentClientFromLocal("http://dummy/", comments, commentThreads);
+		client = new CommentClientFromLocal("http://dummy/", comments,
+				commentThreads);
 	}
 
 	private CommentClient client;
@@ -56,13 +58,6 @@ public class CommentClientFromLocalTest {
 		assertNull(comment.getAuthorLang());
 
 		assertEquals("Une bien belle application.", comment.getText());
-		/*
-		 * <content uid="2" active="true" postedAt="2014-08-25 09:17:00"
-		 * postedBy="André" title="Une belle application"> <context
-		 * id="fr.univmobile:unm-backend:test/pois/001:poi415_1"
-		 * type="local:poi" uid="415"/> <reference uid="1"/> <message> Une bien
-		 * belle application. </message> </content> </entry>
-		 */
 	}
 
 	@Test
@@ -71,5 +66,22 @@ public class CommentClientFromLocalTest {
 		final Comment[] comments = client.getCommentsByPoiId(1);
 
 		assertEquals(0, comments.length);
+	}
+
+	@Test
+	public void test_getComment_1() throws IOException {
+
+		final Comment comment = client.getCommentsByPoiId(415)[0];
+
+		assertEquals("1", comment.getId());
+
+		assertEquals(new DateTime(2014, 8, 24, 9, 50, 0), comment.getPostedAt());
+
+		assertEquals("24 août — 9 h 50", comment.getDisplayPostedAt());
+
+		assertEquals("Dimanche 24 août 2014, 9 h 50",
+				comment.getDisplayFullPostedAt());
+
+		assertEquals("9 h 50", comment.getDisplayPostedAtTime());
 	}
 }

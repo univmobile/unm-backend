@@ -8,7 +8,7 @@ import org.joda.time.DateTime;
  *            "id":              "9120122",
  "url":             "http://localhost:8380/unm-backend-mock/json/comments/dandriana/9120122",
  "postedAt":        "2014-08-15 09:34:45.894+02:00",                                               
- "displayPostedAt": "15 août — 9 h 34",
+ "displayPostedAt": "",
  "source":   "UnivMobile",
  "author":{
  "username":    "dandriana",
@@ -52,7 +52,20 @@ public interface Comment {
 
 	DateTime getPostedAt();
 
+	/**
+	 * e.g. "15 août — 9 h 34"
+	 */
 	String getDisplayPostedAt();
+
+	/**
+	 * e.g. "Vendredi 15 août 2014, 9 h 34"
+	 */
+	String getDisplayFullPostedAt();
+
+	/**
+	 * e.g. "9 h 34"
+	 */
+	String getDisplayPostedAtTime();
 
 	String getSource();
 

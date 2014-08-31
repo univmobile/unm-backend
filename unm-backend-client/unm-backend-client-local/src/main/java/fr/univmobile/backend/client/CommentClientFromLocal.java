@@ -3,12 +3,16 @@ package fr.univmobile.backend.client;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
+import java.util.Locale;
 
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.joda.time.DateTime;
+import org.joda.time.format.DateTimeFormat;
+import org.joda.time.format.DateTimeFormatter;
 
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentThread;
@@ -66,12 +70,18 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 			final fr.univmobile.backend.core.Comment dsComment = commentDataSource
 					.getByUid(uid);
 
+			final DateTime postedAt = dsComment.getPostedAt();
+
 			final MutableComment comment = DataBeans //
 					.instantiate(MutableComment.class) //
 					.setId(Integer.toString(uid)) //
 					.setAuthorUsername(dsComment.getAuthorName()) //
 					.setAuthorDisplayName(dsComment.getPostedBy()) //
-					.setText(dsComment.getMessage());
+					.setText(dsComment.getMessage()) //
+					.setPostedAt(postedAt) //
+					.setDisplayFullPostedAt(formatDateFull(postedAt)) //
+					.setDisplayPostedAt(formatDate(postedAt)) //
+					.setDisplayPostedAtTime(formatTime(postedAt)); //
 
 			comments[i] = comment;
 		}
@@ -86,6 +96,14 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 		MutableComment setUrl(String url);
 
 		MutableComment setText(String text);
+
+		MutableComment setPostedAt(DateTime date);
+
+		MutableComment setDisplayPostedAt(String date);
+
+		MutableComment setDisplayFullPostedAt(String date);
+
+		MutableComment setDisplayPostedAtTime(String date);
 
 		MutableComment setAuthorUsername(@Nullable String address);
 
