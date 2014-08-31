@@ -8,6 +8,7 @@ import java.util.Locale;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.joda.time.DateTime;
 
 import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
@@ -53,6 +54,8 @@ public class CommentController extends AbstractBackendController {
 
 		log.info("action()...");
 
+		final DateTime now = new DateTime();
+
 		final PostComment postComment = getHttpInputs(PostComment.class);
 
 		if (!postComment.isHttpValid()) {
@@ -90,6 +93,8 @@ public class CommentController extends AbstractBackendController {
 				commentThreads);
 
 		comment.setMessage(message);
+		comment.setPostedBy(getDelegationUser().getDisplayName());
+		comment.setPostedAt(now);
 
 		commentManager.addToCommentThreadByPoiId(poiId, comment);
 
