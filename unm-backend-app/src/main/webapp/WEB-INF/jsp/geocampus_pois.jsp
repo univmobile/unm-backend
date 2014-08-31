@@ -577,6 +577,7 @@ body {
 	
 		$('#div-left-top').resizable({
 			handles: 's',
+			minHeight: 200,
 			resize: resizeTop,
 			stop: function(event, ui) {			
 			
