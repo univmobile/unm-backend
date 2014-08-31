@@ -14,6 +14,7 @@ delegationUser:
     uid: tformica
     displayName: Toto Formica
     mail: toto.formica@univ-paris1.fr
+    profileImageUrl: http://unpidf.univ-paris1.fr/wp-content/themes/wp-creativix/images/logos/1338991426.png
        
 buildInfo:
   type: fr.univmobile.model.BuildInfo
