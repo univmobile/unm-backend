@@ -57,4 +57,6 @@ public interface Poi {
 	 * e.g. "A"
 	 */
 	String getMarkerIndex();
+	
+	String[] getUniversityIds();
 }

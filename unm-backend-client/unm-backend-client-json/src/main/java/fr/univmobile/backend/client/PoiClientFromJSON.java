@@ -15,6 +15,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.json.simple.JSONValue;
 
+import com.avcompris.lang.NotImplementedException;
+
 import fr.univmobile.backend.client.json.PoiJSONClient;
 
 public class PoiClientFromJSON implements PoiClient {
@@ -52,6 +54,12 @@ public class PoiClientFromJSON implements PoiClient {
 		final PoisJSON poisJSON = binder.bind(jsonObject, PoisJSON.class);
 
 		return poisJSON.getPois();
+	}
+
+	@Override
+	public Poi getPoi(int id) throws IOException {
+
+		throw new NotImplementedException();
 	}
 
 	@XPath("/*")

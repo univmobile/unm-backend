@@ -8,7 +8,9 @@ import static org.apache.commons.lang3.StringUtils.substringBefore;
 import java.io.IOException;
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
+import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -20,6 +22,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import com.avcompris.lang.NotImplementedException;
+import com.google.common.collect.Iterables;
 
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTree;
@@ -52,6 +55,24 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 	private final RegionDataSource regionDataSource;
 
 	private static final Log log = LogFactory.getLog(PoiClientFromLocal.class);
+
+	@Override
+	public Poi getPoi(int id) throws IOException, ClientException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getPoi(): " + id + "...");
+		}
+
+		final fr.univmobile.backend.core.Poi dsPoi = poiDataSource.getByUid(id);
+
+		final MutablePoi poi = createPoiFromData(dsPoi);
+
+		if (poi == null) {
+			throw new ClientException("Cannot find POI with id: " + id);
+		}
+
+		return poi;
+	}
 
 	@Override
 	public PoiGroup[] getPois() throws IOException {
@@ -120,44 +141,10 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 				final fr.univmobile.backend.core.Poi dsPoi = poiDataSource
 						.getByUid(poiUid);
 
-				final String coordinates = dsPoi.getCoordinates();
-				final String latitude = substringBefore(coordinates, ",");
-				final String longitude = substringAfter(coordinates, ",");
+				final MutablePoi poi = createPoiFromData(dsPoi);
 
-				if (isBlank(coordinates) || isBlank(latitude)
-						|| isBlank(longitude)) {
+				if (poi == null) {
 					continue; // Skip empty POIs
-				}
-
-				final MutablePoi poi = DataBeans //
-						.instantiate(MutablePoi.class) //
-						.setId(poiUid) //
-						.setName(dsPoi.getName()) //
-						.setCoordinates(coordinates) //
-						.setLatitude(latitude) //
-						.setLongitude(longitude);
-
-				if (dsPoi.getAddresses().length != 0) {
-					poi.setAddress(dsPoi.getAddresses()[0].getFullAddress());
-				}
-				if (dsPoi.getUrls().length != 0) {
-					poi.setUrl(dsPoi.getUrls()[0]);
-				}
-				if (dsPoi.getPhones().length != 0) {
-					poi.setPhone(dsPoi.getPhones()[0]);
-				}
-				if (dsPoi.getFaxes().length != 0) {
-					poi.setFax(dsPoi.getFaxes()[0]);
-				}
-				if (dsPoi.getAttachments().length != 0) {
-					final String image = dsPoi.getAttachments()[0].getUrl();
-					if (!image.startsWith("/upload")) {
-						throw new NotImplementedException("Image URL: " + image);
-					}
-					poi.setImageUrl(composeURL(image));
-					poi.setImageWidth(100).setImageHeight(100); // TODO get img
-				} else {
-					poi.setImageWidth(0).setImageHeight(0);
 				}
 
 				poi.setMarkerType("green");
@@ -166,13 +153,76 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 
 				markerIndex = (markerIndex + 1) % 26;
 
-				poi.setCommentsUrl(composeURL("/json/comments/poi" + poiUid));
-
 				poiGroup.addToPois(poi);
 			}
 		}
 
 		return poiGroups;
+	}
+
+	@Nullable
+	private MutablePoi createPoiFromData(
+			final fr.univmobile.backend.core.Poi dsPoi) {
+
+		final int poiUid = dsPoi.getUid();
+
+		final String coordinates = dsPoi.getCoordinates();
+		final String latitude = substringBefore(coordinates, ",");
+		final String longitude = substringAfter(coordinates, ",");
+
+		if (isBlank(coordinates) || isBlank(latitude) || isBlank(longitude)) {
+			return null;
+		}
+
+		final MutablePoi poi = DataBeans //
+				.instantiate(MutablePoi.class) //
+				.setId(poiUid) //
+				.setName(dsPoi.getName()) //
+				.setCoordinates(coordinates) //
+				.setLatitude(latitude) //
+				.setLongitude(longitude);
+
+		if (dsPoi.getAddresses().length != 0) {
+			poi.setAddress(dsPoi.getAddresses()[0].getFullAddress());
+		}
+		if (dsPoi.getUrls().length != 0) {
+			poi.setUrl(dsPoi.getUrls()[0]);
+		}
+		if (dsPoi.getPhones().length != 0) {
+			poi.setPhone(dsPoi.getPhones()[0]);
+		}
+		if (dsPoi.getFaxes().length != 0) {
+			poi.setFax(dsPoi.getFaxes()[0]);
+		}
+		if (dsPoi.getAttachments().length != 0) {
+			final String image = dsPoi.getAttachments()[0].getUrl();
+			if (!image.startsWith("/upload")) {
+				throw new NotImplementedException("Image URL: " + image);
+			}
+			poi.setImageUrl(composeURL(image));
+			poi.setImageWidth(100).setImageHeight(100); // TODO get img
+		} else {
+			poi.setImageWidth(0).setImageHeight(0);
+		}
+
+		poi.setCommentsUrl(composeURL("/json/comments/poi" + poiUid));
+
+		// UNIVERSITIES
+		
+		final String[] dsUniversities = dsPoi.getUniversities();
+
+		final List<String> universityIds = new ArrayList<String>();
+
+		for (final String dsUniversity : dsUniversities) {
+
+			universityIds.add(dsUniversity);
+		}
+
+		poi.setUniversityIds(Iterables.toArray(universityIds, String.class));
+		
+		// END
+		
+		return poi;
 	}
 
 	private interface MutablePoiGroup extends PoiGroup {
@@ -227,5 +277,7 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		 * e.g. "A"
 		 */
 		MutablePoi setMarkerIndex(String markerIndex);
+
+		MutablePoi setUniversityIds(String[] universityIds);
 	}
 }

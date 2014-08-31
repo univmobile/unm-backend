@@ -49,9 +49,8 @@ public class PoiClientFromLocalTest {
 								new File(
 										"target/PoiClientFromLocalTest_regions")));
 
-		client = new PoiClientFromLocal(
-				"http://toto/",poiDataSource, poitreeDataSource,
-				regionDataSource);
+		client = new PoiClientFromLocal("http://toto/", poiDataSource,
+				poitreeDataSource, regionDataSource);
 	}
 
 	private PoiClient client;
@@ -176,5 +175,40 @@ public class PoiClientFromLocalTest {
 				assertFalse(commentsUrl.contains("${baseURL}"));
 			}
 		}
+	}
+
+	@Test
+	public void test_getUniversityIds_fromPoi1164() throws Exception {
+
+		final Poi poi = client.getPoi(1164);
+
+		assertEquals(1164, poi.getId());
+
+		final String[] universityIds = poi.getUniversityIds();
+
+		assertEquals(1, universityIds.length);
+
+		assertEquals("paris8", universityIds[0]);
+	}
+
+	@Test
+	public void test_getUniversityIds_fromPoiGroups() throws Exception {
+/*
+		final Poi[] pois = client.getPois()[1].getPois();
+		for (int i = 0; i<pois.length;++i) {
+			if (pois[i].getId()==1164) {
+				throw new Exception(""+i);
+			}
+		}
+		*/
+		final Poi poi = client.getPois()[1].getPois()[10];
+
+		assertEquals(1164, poi.getId());
+
+		final String[] universityIds = poi.getUniversityIds();
+
+		assertEquals(1, universityIds.length);
+
+		assertEquals("paris8", universityIds[0]);
 	}
 }
