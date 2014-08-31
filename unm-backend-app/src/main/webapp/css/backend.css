@@ -68,21 +68,31 @@ body.entered div.body {
 #div-entered a:active{
 	color: #f00;
 }
-#body-entered table {
+#body-entered table,
+#body-pois table {
 	border-collapse: collapse;	
 }
 #body-entered th,
-#body-entered td {
+#body-entered td,
+#body-pois th,
+#body-pois td {
 	border: 1px solid #000;	
+	vertical-align: top
 }
 #body-entered th,
-#body-entered td {
+#body-entered td,
+#body-pois th,
+#body-pois td {
 	padding: 2px 30px;
+}
+#body-pois td.id {
+	text-align: center;
 }
 #body-entered #div-regions td.label {
 	padding: 2px 2px;
 }
-#body-entered th {
+#body-entered th,
+#body-pois th {
 	background-color: #9bc9e1;
 }
 h2 {
@@ -99,6 +109,10 @@ td.edit {
 }
 div.disabled {
 	color: #ccc;
+}
+div.emptyArray {
+	color: #ccc;
+	font-style: italic;
 }
 div.table.bottom {
 	text-align: center;
@@ -453,4 +467,7 @@ div.ui-dialog-titlebar {
 #div-addCommentDialog textarea {
 	width: 100%;
 	height: 80px;
+}
+#text-query {
+	width: 20em;
 }

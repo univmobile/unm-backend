@@ -144,12 +144,12 @@ ${baseURL}/json/regions
 <hr>
 
 <h2>
-<a href="${baseURL}/pois" id="link-pois">POIs : ${pois.count}</a>
+<a href="${baseURL}/pois" id="link-pois">POIs : ${poisInfo.count}</a>
 </h2>
 
 <table>
 <tbody>
-<c:forEach var="r" items="${pois.regions}">
+<c:forEach var="r" items="${poisInfo.regions}">
 <tr>
 <th class="region" colspan="2">
 	Région : ${r.label}

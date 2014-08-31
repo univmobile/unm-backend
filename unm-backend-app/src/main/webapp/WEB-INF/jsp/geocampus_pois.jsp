@@ -664,7 +664,7 @@ body {
 
 <jsp:include page="div-entered.h.jsp"/>
 
-<div class="xbody">
+<div> <!-- Not <div class="body"> -->
 <form>
 
 <div id="div-left">

@@ -31,10 +31,11 @@ map:
     center: 48.84650925911,2.3459243774
     zoom: 13
 
-selectedPoiId: 1
+poisInfo:
+  type: fr.univmobile.model.PoisInfo
+  value:
+    count: 7430
 
-mode: comments
-    
 pois:
   type: fr.univmobile.model.PoiCategory[]
   value:
@@ -61,8 +62,11 @@ pois:
             imageHeight: 100
             markerType: green
             markerIndex: A
-            #commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments1
-            commentsUrl: http://localhost:8080/unm-backend-mock/comments1
+            commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments1
+            universityIds:
+             type: String[]
+             value:
+              - paris1              
           - id: 931
             name: Centre rue du Four
             address: 13 rue du Four 75006 Paris
@@ -75,6 +79,15 @@ pois:
             markerType: green
             markerIndex: B
             commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments2
+            universityIds:
+             type: String[]
+             value:
+              - paris1
+              - paris13
+    - name: "Région : Limousin/Poitou-Charentes "
+      pois:
+        type: fr.univmobile.model.Poi[]
+        value:
     - name: "Région : Île de France"
       pois:
         type: fr.univmobile.model.Poi[]
@@ -91,6 +104,10 @@ pois:
             markerType: green
             markerIndex: C
             commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments3
+            universityIds:
+             type: String[]
+             value:
+               - paris1
           - id: 2931
             name: Centre rue du Four
             address: 13 rue du Four 75006 Paris
@@ -100,4 +117,8 @@ pois:
             markerType: green
             markerIndex: D
             commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments4
+            universityIds:
+             type: String[]
+             value:
+              - paris1
       

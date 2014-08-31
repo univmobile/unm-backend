@@ -53,7 +53,7 @@ buildInfo:
     buildId: 2014/07/16 15:45
     gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70
     
-pois:
+poisInfo:
   type: fr.univmobile.model.PoisInfo
   value:
     count: 7430

@@ -1,5 +1,6 @@
 baseURL: ${baseURL}
 API_KEY: ${API_KEY}
+sessionToken: 642643144f1e793acc71bf646c4a86f2eb88b960
 
 user:
   type: fr.univmobile.backend.core.User
