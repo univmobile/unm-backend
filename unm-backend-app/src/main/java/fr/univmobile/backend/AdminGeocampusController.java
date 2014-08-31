@@ -46,6 +46,8 @@ public class AdminGeocampusController extends AbstractBackendController {
 			list.add(new Pois(poiGroup));
 		}
 
+		setAttribute("postCommentUrl", getBaseURL() + "/comment");
+
 		return new View("geocampus_pois.jsp");
 	}
 
