@@ -193,14 +193,7 @@ public class PoiClientFromLocalTest {
 
 	@Test
 	public void test_getUniversityIds_fromPoiGroups() throws Exception {
-/*
-		final Poi[] pois = client.getPois()[1].getPois();
-		for (int i = 0; i<pois.length;++i) {
-			if (pois[i].getId()==1164) {
-				throw new Exception(""+i);
-			}
-		}
-		*/
+		
 		final Poi poi = client.getPois()[1].getPois()[10];
 
 		assertEquals(1164, poi.getId());
