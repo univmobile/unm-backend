@@ -148,7 +148,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 	@Scenario("Voir les commentaires d’un POI")
 	@Test
-	public void comments000() throws Exception {
+	public void Geocampus_comments000() throws Exception {
 
 		takeScreenshot("home.png");
 
