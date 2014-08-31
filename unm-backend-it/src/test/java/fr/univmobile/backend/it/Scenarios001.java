@@ -6,8 +6,6 @@ import java.io.IOException;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.thoughtworks.selenium.Selenium;
-
 import fr.univmobile.it.commons.BrowserNames;
 import fr.univmobile.it.commons.DeviceNames;
 import fr.univmobile.it.commons.Scenario;
@@ -107,6 +105,31 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		takeScreenshot("geocampus.png");
 
 		elementById("link-poi-3792").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("ucp.png");
+	}
+
+	@Scenario("Voir les POIs de plus haut niveau")
+	@Test
+	public void POIs_000() throws Exception {
+
+		takeScreenshot("home.png");
+
+		elementById("button-myself").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("entered.png");
+
+		elementById("link-pois").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("pois.png");
+
+		elementById("link-poi-3792-name").click();
 
 		pause(PAUSE);
 
