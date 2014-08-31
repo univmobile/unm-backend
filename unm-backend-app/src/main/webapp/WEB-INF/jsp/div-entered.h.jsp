@@ -6,7 +6,9 @@
 Build ${buildInfo.buildDisplayName}
 ${buildInfo.buildId}
 ${buildInfo.gitCommitId}">
+<a href="${baseURL}/">
  UnivMobile : administration
+</a>
 <li> Principal : ${user.uid}
 <c:if test="${user.uid != delegationUser.uid}">
 <li> Délégation : ${delegationUser.uid}
