@@ -8,6 +8,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
+import javax.annotation.Nullable;
+
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTree;
 import fr.univmobile.backend.core.PoiTreeDataSource;
@@ -200,9 +202,27 @@ abstract class AbstractBackendController extends AbstractController {
 
 interface PoisInfo {
 
+	/**
+	 * Total count of POIs in the DataBase.
+	 */
 	int getCount();
 
 	PoisInfo setCount(int count);
+
+	/**
+	 * e.g. "POIs de plus haut niveau"
+	 */
+	@Nullable
+	String getContext();
+	
+	PoisInfo setContext(String context);
+
+	/**
+	 * Count of POIs returned by the search.
+	 */
+	int getResultCount();
+	
+	PoisInfo setResultCount(int count);
 
 	Region[] getRegions();
 

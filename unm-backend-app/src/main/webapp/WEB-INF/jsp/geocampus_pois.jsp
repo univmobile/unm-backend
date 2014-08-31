@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<title>Administration d’UnivMobile</title>
+<title>Administration d’UnivMobile — Géocampus</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <!--
 <link type="text/css" rel="stylesheet" href="${baseURL}/js/jquery-ui-1.11.1.custom/jquery-ui.min.css">

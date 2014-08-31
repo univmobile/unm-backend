@@ -6,19 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<title>Administration d’UnivMobile</title>
+<title>Administration d’UnivMobile — Ajouter un utilisateur</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 </head>
 <body id="body-useradd" class="entered">
-<div id="div-entered">
-<ul>
-<li> Principal : ${user.uid}
-<c:if test="${user.uid != delegationUser.uid}">
-<li> Délégation : ${delegationUser.uid}
-</c:if>
-<li> <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
-</ul>
-</div>
+
+<jsp:include page="div-entered_modal.h.jsp"/>
 
 <div class="body">
 <form action="${baseURL}/useradd" method="POST">

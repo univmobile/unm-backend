@@ -167,8 +167,8 @@ span.error {
 	font-size: small;
 	text-decoration: underline;
 }
-#div-regions,
-#div-pois {
+#body-entered #div-regions,
+#body-entered #div-pois {
 	margin-top: 3em;
 }
 #div-regions td.universityCount,

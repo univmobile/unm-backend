@@ -1,27 +1,31 @@
 package fr.univmobile.backend;
 
-import static fr.univmobile.commons.DataBeans.instantiate;
-
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
+import fr.univmobile.backend.client.ClientException;
+import fr.univmobile.backend.client.Poi;
 import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
-import fr.univmobile.backend.client.PoiGroup;
+import fr.univmobile.backend.client.PoiNotFoundException;
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTree;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.UserDataSource;
-import fr.univmobile.backend.model.Pois;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.commons.tx.TransactionManager;
+import fr.univmobile.web.commons.PageNotFoundException;
+import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "pois", "pois/" })
+@Paths({ "pois/${id}" })
 public class PoiController extends AbstractBackendController {
+
+	@PathVariable("${id}")
+	private int getPoiId() {
+
+		return getPathIntVariable("${id}");
+	}
 
 	public PoiController(final TransactionManager tx,
 			final UserDataSource users, final RegionDataSource regions,
@@ -36,30 +40,26 @@ public class PoiController extends AbstractBackendController {
 	}
 
 	@Override
-	public View action() throws IOException, TransactionException {
+	public View action() throws IOException, TransactionException,
+			ClientException, PageNotFoundException {
 
-		// 1. POIS INFO
-		
-		final PoiTree poiTree = poiTrees.getByUid("ile_de_france"); // TODO
+		final int id = getPoiId();
 
-		final PoisInfo pois = instantiate(PoisInfo.class).setCount(
-				poiTree.sizeOfAllPois());
+		final Poi poi;
 
-		setAttribute("poisInfo", pois);
+		try {
 
-		// 2. POIS DATA
-		
-		final List<Pois> list = new ArrayList<Pois>();
+			poi = getPoiClient().getPoi(id);
 
-		setAttribute("pois", list);
+		} catch (final PoiNotFoundException e) {
 
-		for (final PoiGroup poiGroup : getPoiClient().getPois()) {
-
-			list.add(new Pois(poiGroup));
+			throw new PageNotFoundException();
 		}
 
-		// 9. END
+		setAttribute("poi", poi);
 		
-		return new View("pois.jsp");
+		// 9. END
+
+		return new View("poi.jsp");
 	}
 }

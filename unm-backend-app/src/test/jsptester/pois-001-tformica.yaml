@@ -25,16 +25,12 @@ buildInfo:
     buildId: 2014/07/16 15:45
     gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70
 
-map:
-  type: fr.univmobile.model.MapOptions
-  value:
-    center: 48.84650925911,2.3459243774
-    zoom: 13
-
 poisInfo:
   type: fr.univmobile.model.PoisInfo
   value:
     count: 7430
+    context: POIs de plus haut niveau
+    resultCount: 34
 
 pois:
   type: fr.univmobile.model.PoiCategory[]

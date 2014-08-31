@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<title>Administration d’UnivMobile</title>
+<title>Administration d’UnivMobile — POIs</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <style type="text/css">
 td.id,
@@ -26,6 +26,22 @@ td.universityIds ul {
 th.id,
 td.id {
 	display: none;
+}
+#div-query {
+	background-color: #f8f8f8;
+	padding: 1em;
+	xborder-bottom: 1px solid #f8f8f8;
+}
+#div-resultInfo {
+	margin-top: 1em;
+}
+#div-resultInfo span {
+	xfont-style: italic;
+	xcolor: #ccc;
+}
+#button-export {
+	margin-top: 2px;
+	float: right;
 }
 </style>
 </head>
@@ -55,6 +71,32 @@ POIs : ${poisInfo.count}
 	Rechercher
 </button>
 </form>
+</div>
+
+<div id="div-resultInfo">
+<span>
+	→
+	<c:choose>
+	<c:when test="${not empty poisInfo.context}">
+		<c:out value="${poisInfo.context}"/>
+		<c:if test="${not empty poisInfo.resultCount}">
+			(${poisInfo.resultCount})
+		</c:if>
+	</c:when>
+	<c:when test="${empty poisInfo.resultCount || poisInfo.resultCount == 0}">
+		Aucun résultat
+	</c:when>
+	<c:when test="${poisInfo.resultCount == 1}">
+		Un résultat
+	</c:when>
+	<c:otherwise>
+		${poisInfo.resultCount} résultats
+	</c:otherwise>
+	</c:choose>
+</span>
+<button id="button-export">
+	Export…
+</button>
 </div>
 
 <c:forEach var="poiGroup" items="${pois}">
@@ -98,14 +140,16 @@ POIs : ${poisInfo.count}
 	</c:forEach>
 	</ul>
 </td>
-<td class="id" onclick="window.location.href = '${href}'">
-	<a href="${href}">${poi.id}</a>
+<td class="id" onclick="document.location.href = '${href}'">
+	<a href="${href}" id="link-poi-${poi.id}-id">${poi.id}</a>
 </td>
-<td class="name" onclick="window.location.href = '${href}'">
-	<a href="${href}">${poi.name}</a>
+<td class="name" onclick="document.location.href = '${href}'">
+	<a href="${href}" id="link-poi-${poi.id}-name">
+	<c:out value="${poi.name}"/>
+	</a>
 </td>
 <td class="address">
-	${poi.address}
+	<c:out value="${poi.address}"/>
 </td>
 </tr>
 </c:forEach>

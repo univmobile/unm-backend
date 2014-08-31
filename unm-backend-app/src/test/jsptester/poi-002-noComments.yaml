@@ -1,0 +1,55 @@
+baseURL: ${baseURL}
+API_KEY: ${API_KEY}
+sessionToken: 642643144f1e793acc71bf646c4a86f2eb88b960
+
+user:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+    
+delegationUser:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+    profileImageUrl: http://unpidf.univ-paris1.fr/wp-content/themes/wp-creativix/images/logos/1338991426.png
+       
+buildInfo:
+  type: fr.univmobile.model.BuildInfo
+  value:
+    appVersion: 0.0.4-SNAPSHOT
+    buildDisplayName: "#34"
+    buildId: 2014/07/16 15:45
+    gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70
+
+poi:
+    type: fr.univmobile.model.Poi
+    value:
+        id: 1
+        name: Université Panthéon-Sorbonne - Paris I
+        address: 12 place du Panthéon 75231 PARIS
+        phone: 0144078000
+        floor: null
+        email: null
+        fax: null
+        openingHours: null
+        itinerary: null
+        coordinates: 48.84650925911,2.3459243774
+        latitude: 48.84650925911
+        longitude: 2.3459243774
+        url: Http://www.univ-paris1.fr/
+        logo: http://admin.univmobile.fr/images/universities/logos/univ_paris1.jpg
+        imageUrl: null
+        imageWidth: 200
+        imageHeight: 100
+        markerType: green
+        markerIndex: A
+        commentsUrl: http://192.168.0.40:8080/unm-backend-mock/comments1
+        universityIds:
+         type: String[]
+         value:
+          - paris1              
+
