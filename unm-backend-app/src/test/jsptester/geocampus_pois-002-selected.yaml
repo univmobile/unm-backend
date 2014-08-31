@@ -34,7 +34,9 @@ map:
 selectedPoiId: 1
 
 mode: comments
-    
+
+postCommentUrl: http://localhost:8080/unm-backend/comment?NO_SHIB_uid=xx&NO_SHIB_eppn=yy&NO_SHIB_displayName=zz&NO_SHIB_remoteUser=crezvani@univ-paris1.fr
+
 pois:
   type: fr.univmobile.model.PoiCategory[]
   value:

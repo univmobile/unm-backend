@@ -30,7 +30,9 @@ map:
   value:
     center: 48.84650925911,2.3459243774
     zoom: 13
-    
+
+postCommentUrl: http://localhost:8080/unm-backend/comment?NO_SHIB_uid=xx&NO_SHIB_eppn=yy&NO_SHIB_displayName=zz&NO_SHIB_remoteUser=crezvani@univ-paris1.fr
+
 pois:
   type: fr.univmobile.model.PoiCategory[]
   value:
