@@ -270,8 +270,8 @@ EB extends EntryBuilder<E>> //
 			}
 		}
 
-		if (log.isWarnEnabled()) {
-			log.warn("Saving: " + file.getCanonicalPath());
+		if (log.isDebugEnabled()) {
+			log.debug("Saving: " + file.getCanonicalPath());
 		}
 
 		final String id = "fr.univmobile:unm-backend:" //
