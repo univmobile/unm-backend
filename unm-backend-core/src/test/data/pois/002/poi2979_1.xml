@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2979_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2979_1.xml"/>
+<title>Amphithéâtre Zola</title>
+<updated>2014-08-15T01:47:01.697+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2979"
+	coordinates="48.785580941074,2.05099605023"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:22:35.000+02:00"
+	updatedAt="2012-02-05T16:39:53.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="rrivoire"
+	parentUid="2595"
+	name="Amphithéâtre Zola">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>350 places</description>
+</content>
+</entry>

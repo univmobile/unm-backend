@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5812_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5812_1.xml"/>
+<title>EMEPDPUTSTAEDD - M1-2</title>
+<updated>2014-08-15T01:47:30.385+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5812"
+	coordinates="48.841988947299,2.5746008008718"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:21:18.000+02:00"
+	updatedAt="2011-06-08T16:22:33.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="EMEPDPUTSTAEDD - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>CONCOURS DE PREPARATION AU PROFESSORAT DES ECOLES : Master Education et métiers de l'enseignement du premier degré, parcours Utilisation d'une thématique scientifique et technologique pour les apprentissages environnement et développement durable
+
+</description>
+	<address>
+		<floor>Bureau 109</floor>
+		<phone>01 49 32 91 67</phone>
+		<fax>01 49 32 91 66</fax>
+		<email>Monique.Germany@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

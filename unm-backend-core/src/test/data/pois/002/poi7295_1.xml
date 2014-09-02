@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7295_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7295_1.xml"/>
+<title>Cafétéria L'Équinoxe</title>
+<updated>2014-08-15T01:47:45.345+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7295"
+	coordinates="48.791079057294,2.3291605710983"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T14:47:38.000+01:00"
+	updatedAt="2012-12-17T14:50:21.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7243"
+	name="Cafétéria L'Équinoxe">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Petit-déjeuner et formules sur place ou à emporter</description>
+	<address>
+		<floor>Rez-de-chaussée</floor>
+		<openingHours>Service non stop de 7h15 à 14h30
+Petit-déjeuner de 7h15 à 10h</openingHours>
+	</address>
+</content>
+</entry>

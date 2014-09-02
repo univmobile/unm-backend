@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1828_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1828_1.xml"/>
+<title>Assistante sociale des personnels</title>
+<updated>2014-08-15T01:46:51.329+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1828"
+	coordinates="48.90370779086,2.2103977203"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T16:59:38.000+02:00"
+	updatedAt="2011-11-15T12:32:55.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="2516"
+	name="Assistante sociale des personnels">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Réservé aux personnels de l'Université
+
+Etudiants : vous pouvez rencontrer les assistantes sociales du CROUS au bâtiment E</description>
+	<address>
+		<floor>Salle 205, 2ème étage</floor>
+		<email>rrebourcet@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

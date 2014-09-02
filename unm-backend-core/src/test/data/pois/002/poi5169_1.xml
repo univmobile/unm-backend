@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5169_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5169_1.xml"/>
+<title>FEEVE</title>
+<updated>2014-08-15T01:47:23.842+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5169"
+	coordinates="48.624087372128,2.4270263314247"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T15:59:19.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="256"
+	name="FEEVE">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Fédération des Étudiants d’Évry-Val-d’Essonne
+Valoriser et dynamiser la vie étudiante sur le campus d’Évry, dans les résidences universitaires d’Évry, et à travers les différents sites de l’Université.</description>
+	<address>
+		<floor>Local 21</floor>
+		<phone>06 48 30 15 13</phone>
+		<email>feeeve@yahoo.fr</email>
+	</address>
+</content>
+</entry>

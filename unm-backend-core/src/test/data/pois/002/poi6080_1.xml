@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6080_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6080_1.xml"/>
+<title>Communication politique et publique M1-2</title>
+<updated>2014-08-15T01:47:33.488+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6080"
+	coordinates="48.796556634999,2.4482989311218"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:43:43.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4902"
+	name="Communication politique et publique M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 413</floor>
+		<url>http://lettres-sh.u-pec.fr/departements/communication/equipe-pedagogique/ollivier-yaniv-caroline-297296.kjsp?RH=DEP_COM</url>
+		<phone>01 45 17 71 89</phone>
+		<email>yaniv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

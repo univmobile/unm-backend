@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4397_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4397_1.xml"/>
+<title>UMR_S 839</title>
+<updated>2014-08-15T01:47:16.854+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4397"
+	coordinates="48.83893538258,2.3542471043766"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T13:50:38.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4395"
+	name="UMR_S 839">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut du Fer à Moulin - UMR_S 839</description>
+	<address>
+		<url>http://www.u839.idf.inserm.fr/</url>
+		<phone>01.45.87.61.50</phone>
+		<email>djita.Sissoko@fer-a-moulin.inserm.fr</email>
+	</address>
+</content>
+</entry>

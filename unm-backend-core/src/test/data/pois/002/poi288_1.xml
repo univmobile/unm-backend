@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi288_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi288_1.xml"/>
+<title>Entrée principale - A CORRIGER</title>
+<updated>2014-08-15T01:46:38.970+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="288"
+	coordinates="48.614597637084,2.427163124084"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-19T01:09:40.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	deletedAt="2010-09-05T13:43:44.000+02:00"
+	createdBy="raphael"
+	updatedBy="raphael"
+	name="Entrée principale - A CORRIGER">
+	<poiType id="6" label="Entrée principale" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

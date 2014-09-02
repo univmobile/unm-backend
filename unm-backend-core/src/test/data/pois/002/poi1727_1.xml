@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1727_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1727_1.xml"/>
+<title>Restaurant universitaire Allée Verte</title>
+<updated>2014-08-15T01:46:50.252+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1727"
+	coordinates="48.93984475917,2.35400117933"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T21:29:26.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="390"
+	name="Restaurant universitaire Allée Verte">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Restaurant universitaire Allée Verte.</description>
+	<address>
+		<openingHours>11h30 - 13h45</openingHours>
+	</address>
+</content>
+</entry>

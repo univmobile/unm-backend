@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6014_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6014_1.xml"/>
+<title>Résidence universitaire de l’Île (Bâtiment 227)</title>
+<updated>2014-08-15T01:47:32.718+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6014"
+	coordinates="48.699000131261,2.1578948199749"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T13:29:27.000+02:00"
+	updatedAt="2013-06-20T15:59:07.000+02:00"
+	createdBy="j.richer"
+	updatedBy="anaelle.royer"
+	parentUid="6013"
+	name="Résidence universitaire de l’Île (Bâtiment 227)">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<address>
+		<floor>Bâtiment 227</floor>
+		<openingHours>Du lundi au vendredi
+9h00-12h30
+13h30-16h15
+
+JUILLET-AOUT
+Lundi, mercredi, vendredi : 09h00 - 12h00
+Mardi, jeudi toute la journée : de 09h00 à 12h00 et de 14h00 à 16h30</openingHours>
+		<url>http://www.crous-versailles.fr/_logement__liste_91.htm</url>
+		<phone>01 69 07 68 96</phone>
+	</address>
+</content>
+</entry>

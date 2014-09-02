@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4426_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4426_1.xml"/>
+<title>IUT d’Orsay</title>
+<updated>2014-08-15T01:47:17.141+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4426"
+	coordinates="48.711586966338,2.1702075004578"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:22:59.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4398"
+	name="IUT d’Orsay">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="6530" active="true"/>
+	<child uid="6531" active="true"/>
+	<child uid="6529" active="true"/>
+	<child uid="4436" active="true"/>
+	<child uid="4458" active="true"/>
+	<child uid="4475" active="true"/>
+	<child uid="6044" active="true"/>
+	<child uid="6130" active="true"/>
+</content>
+</entry>

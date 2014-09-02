@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="unm-backend-client-json" default="all">
+
+	<target name="all" depends="copy-images">
+
+	</target>
+
+	<target name="copy-images">
+		
+		<copy todir="target/site/images">
+			<fileset dir="src/site/diagrams">
+				<include name="*.svg"/> 
+			</fileset>
+		</copy>
+		
+	</target>
+
+</project>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2614_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2614_1.xml"/>
+<title>licence sciences juridiques, sciences économiques et gestion</title>
+<updated>2014-08-15T01:46:58.493+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2614"
+	coordinates="48.855288440456,2.332303449511"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T14:20:56.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	deletedAt="2011-05-03T14:24:54.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	name="licence sciences juridiques, sciences économiques et gestion">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

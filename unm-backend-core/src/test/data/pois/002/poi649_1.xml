@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi649_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi649_1.xml"/>
+<title>LMDE</title>
+<updated>2014-08-15T01:46:40.959+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="649"
+	coordinates="48.827124666357,2.3644208"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T18:22:54.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T16:14:05.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="LMDE">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address
+		countryCode="FR">
+		<floor>Aile C, 9e étage, 9.05</floor>
+		<openingHours>Lundi au vendredi
+9h30 -13h00
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64, 83
+Arrêt Tolbiac-Baudricourt</itinerary>
+		<phone>01 40 92 54 85 </phone>
+		<email>http://www.lmde.com</email>
+		<fullAddress>90 rue de Tolbiac
+75013 PARIS
+</fullAddress>
+	</address>
+</content>
+</entry>

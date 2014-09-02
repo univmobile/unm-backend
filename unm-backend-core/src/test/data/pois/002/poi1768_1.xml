@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1768_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1768_1.xml"/>
+<title>Pôle universitaire scientifique et technologique </title>
+<updated>2014-08-15T01:46:50.633+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1768"
+	coordinates="48.782111177952,2.21751429140"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T14:51:24.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="505"
+	name="Pôle universitaire scientifique et technologique ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>0139254833</phone>
+	</address>
+</content>
+</entry>

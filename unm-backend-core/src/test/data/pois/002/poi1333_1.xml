@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1333_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1333_1.xml"/>
+<title>Amphithéâtre B2 (Henri Lefèbvre)</title>
+<updated>2014-08-15T01:46:46.302+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1333"
+	coordinates="48.90301662657,2.210796028"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T16:59:04.000+01:00"
+	updatedAt="2011-11-15T16:24:37.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2502"
+	name="Amphithéâtre B2 (Henri Lefèbvre)">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>RDC</floor>
+	</address>
+</content>
+</entry>

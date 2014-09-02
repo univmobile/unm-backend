@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2250_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2250_1.xml"/>
+<title>Laboratoire universitaire Santé-Environnement-Vieillissement</title>
+<updated>2014-08-15T01:46:55.372+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2250"
+	coordinates="48.778047734985,2.047135680913"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T17:36:37.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2011-06-03T15:06:19.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	name="Laboratoire universitaire Santé-Environnement-Vieillissement">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>0144963204</phone>
+		<email>joel.ankri@spr.aphp.fr</email>
+	</address>
+</content>
+</entry>

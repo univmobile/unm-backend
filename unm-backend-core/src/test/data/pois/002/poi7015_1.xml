@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7015_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7015_1.xml"/>
+<title>Licence et Masters Ethnologie</title>
+<updated>2014-08-15T01:47:42.326+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7015"
+	coordinates="48.90222651137,2.2119064629078"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-21T14:03:44.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="6956"
+	name="Licence et Masters Ethnologie">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Sabrina ZITOUT</description>
+	<address>
+		<floor>D.213A</floor>
+		<phone>01 40 97 77 62</phone>
+		<email>sabrina.zitout@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi701_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi701_1.xml"/>
+<title>Centre René Cassin</title>
+<updated>2014-08-15T01:46:41.195+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="701"
+	coordinates="48.836119014438,2.3459418118|48.836034271795,2.3465533554554|48.835907157562,2.3465050756931|48.836009555164,2.3459042608738|48.836119014438,2.345941811"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-02-11T15:04:04.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-02-11T15:04:55.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Centre René Cassin">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<itinerary>Métro 7
+Les Gobelins</itinerary>
+		<fullAddress>17, rue St Hippolyte
+75013 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

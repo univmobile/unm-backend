@@ -4,6 +4,7 @@ user:
   type: fr.univmobile.backend.core.User
   value:
     uid: crezvani
+    displayName: Cyrus Rezvani
     remoteUser: crezvani@univ-paris1.fr
     mail: cyrus.rezvani@univ-paris1.fr
     
@@ -11,6 +12,7 @@ delegationUser:
   type: fr.univmobile.backend.core.User
   value:
     uid: tformica
+    displayName: Toto Formica
     remoteUser: 
     mail: toto.formica@univ-paris1.fr
 
@@ -33,16 +35,63 @@ regions:
      - uid: bretagne
        label: Bretagne
        url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_bretagne
+       universityCount: 4
      - uid: ile_de_france
        label: Île de France
        url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_ile_de_france
+       universityCount: 18
      - uid: unrpcl
        label: Limousin/Poitou-Charentes
        url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_unrpcl
+       universityCount: 5
 
 buildInfo:
   type: fr.univmobile.model.BuildInfo
   value:
+    appVersion: 0.0.4-SNAPSHOT
     buildDisplayName: "#34"
     buildId: 2014/07/16 15:45
     gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70
+    
+poisInfo:
+  type: fr.univmobile.model.PoisInfo
+  value:
+    count: 7430
+    regions:
+      type: fr.univmobile.backend.core.Region2[]
+      value:
+        - uid: bretagne
+          label: Bretagne
+          universities:
+            type: fr.univmobile.backend.core.University[]
+            value:
+              - id: ubo
+                title: Université de Bretagne Occidentale
+                poiCount: 103
+              - id: rennes1
+                title: Université de Rennes 1
+                poiCount: 923
+              - id: rennes2
+                title: Université Rennes 2
+                poiCount: 92
+              - id: enscr
+                title: École Nationale Supérieure de Chimie de Rennes
+                poiCount: 0
+        - uid: ile_de_france
+          label: Île de France
+          universities:
+            type: fr.univmobile.backend.core.University[]
+            value:
+              - id: paris1
+                title: Paris 1 Panthéon-Sorbonne
+                poiCount: 103
+              - id: paris3
+                title: Paris 3 Sorbonne Nouvelle
+                poiCount: 923
+              - id: paris13
+                title: Paris Nord
+                poiCount: 92
+              - id: uvsq
+                title: UVSQ
+                poiCount: 0
+                 

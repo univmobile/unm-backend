@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3442_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3442_1.xml"/>
+<title>Licence Ingénierie Mécanique</title>
+<updated>2014-08-15T01:47:06.651+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3442"
+	coordinates="48.845110777095,2.357100471854"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:28:19.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	deletedAt="2011-05-10T16:29:52.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	name="Licence Ingénierie Mécanique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

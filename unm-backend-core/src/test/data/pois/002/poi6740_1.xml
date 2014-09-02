@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6740_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6740_1.xml"/>
+<title>Cafétéria Javelot</title>
+<updated>2014-08-15T01:47:39.819+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6740"
+	coordinates="48.825643325595,2.3675443232059"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-17T19:53:59.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6739"
+	name="Cafétéria Javelot">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi de 8h00 à 16h00 </openingHours>
+		<url>http://www.crous-paris.fr</url>
+	</address>
+	<attachment id="185" title="javelot_1.jpg" type="image" url="/uploads/poi/b5d032cafc2cd8576eb7aad62f1ba5a0a4f3cbe3.jpg"/>
+</content>
+</entry>

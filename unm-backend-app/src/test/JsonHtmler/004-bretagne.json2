@@ -1,0 +1,50 @@
+{
+    "id":    "bretagne",
+    "label": "Bretagne",
+    "universities":[
+        {
+            "id":    "enscr",
+            "title": "École Nationale Supérieure de Chimie de Rennes",
+            "pois":{
+                "count": 0,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/bretagne/enscr/pois"
+            },
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/bretagne/enscr"
+            }
+        },
+        {
+            "id":    "rennes2",
+            "title": "Université Rennes 2",
+            "pois":{
+                "count": 0,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/bretagne/rennes2/pois"
+            },
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/bretagne/rennes2"
+            }
+        },
+        {
+            "id":    "ubo",
+            "title": "Université de Bretagne Occidentale",
+            "pois":{
+                "count": 0,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/bretagne/ubo/pois"
+            },
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/bretagne/ubo"
+            }
+        },
+        {
+            "id":    "rennes1",
+            "title": "Université de Rennes 1",
+            "pois":{
+                "count": 0,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/bretagne/rennes1/pois"
+            },
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/bretagne/rennes1"
+            }
+        }
+    ]
+}

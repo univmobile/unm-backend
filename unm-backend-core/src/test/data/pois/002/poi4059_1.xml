@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4059_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4059_1.xml"/>
+<title>UMR 8507</title>
+<updated>2014-08-15T01:47:13.202+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4059"
+	coordinates="48.70873641629,2.1638278663158"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:12:06.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4055"
+	name="UMR 8507">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de génie électrique de Paris (LGEP) - UMR 8507</description>
+	<address>
+		<url>http://www.lgep.supelec.fr/</url>
+		<phone>01 69 85 16 32</phone>
+		<email>francoise.richard@lgep.supelec.fr</email>
+	</address>
+	<attachment id="93" title="4600344499916924830.gif" type="image" url="/uploads/poi/e9b6ee40d8ac9b41ad88aa586f079c12fc42a8c1.gif"/>
+</content>
+</entry>

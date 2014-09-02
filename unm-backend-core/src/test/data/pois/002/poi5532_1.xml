@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5532_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5532_1.xml"/>
+<title>LMDE</title>
+<updated>2014-08-15T01:47:27.182+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5532"
+	coordinates="48.788283495229,2.4439537525177"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T16:58:31.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	deletedAt="2011-06-03T16:58:59.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="LMDE">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+</content>
+</entry>

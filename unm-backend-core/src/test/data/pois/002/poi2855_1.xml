@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2855_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2855_1.xml"/>
+<title>Campus Jussieu patio 15/26</title>
+<updated>2014-08-15T01:47:00.642+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2855"
+	coordinates="48.847341476677,2.3542906902"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T15:11:15.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2715"
+	name="Campus Jussieu patio 15/26">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3551" active="true"/>
+</content>
+</entry>

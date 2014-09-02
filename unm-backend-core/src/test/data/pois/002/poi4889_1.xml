@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4889_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4889_1.xml"/>
+<title>Droit (L2)</title>
+<updated>2014-08-15T01:47:21.534+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4889"
+	coordinates="48.781985841598,2.2842429578304"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:05:06.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4664"
+	name="Droit (L2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Inscriptions pédagogiques, gestion des résultats, relevés de notes, etc.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment B, bureau 013</floor>
+		<openingHours>Tous les jours
+9h00-12h00
+13h30-16h30
+Sauf le jeudi (fermé l'après midi)</openingHours>
+		<url>http://www.jm.u-psud.fr/fr/vie_etudiante/service_des_etudes_et_de_la_vie_de_l_etudiant.html</url>
+		<phone>01 40 91 18 55</phone>
+		<email>laurence.vagnair@u-psud.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6083_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6083_1.xml"/>
+<title>BU IUT champs</title>
+<updated>2014-08-15T01:47:33.531+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6083"
+	coordinates="48.837123645206,2.5848790258169"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:48:50.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5668"
+	name="BU IUT champs">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Collections :
+-Génie civil
+-Génie thermique
+-Réseaux informatiques
+-Urbanisme
+-Communication et culture générale</description>
+	<address>
+		<floor>Rez de CHaussée</floor>
+		<openingHours>Lundi-jeudi: 9h00-17h30
+Vendredi: 9h00-17h00 </openingHours>
+		<url>http://www.univ-mlv.fr/bibliotheque/bibliotheques/bibliotheque-iut-champs/</url>
+		<phone>01 60 95 85 30</phone>
+		<email>bibch@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

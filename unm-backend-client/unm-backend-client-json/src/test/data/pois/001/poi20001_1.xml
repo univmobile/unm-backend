@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1_1.xml"/>
+<title>Université de La Rochelle</title>
+<updated>2014-08-17T21:32:58.440+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20001"
+	coordinates="46.147781451042,-1.155002117"
+	active="true"
+	markerType="point"
+	name="Université de La Rochelle">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="ulr"/>
+	<description>ULR aka Université de La Rochelle (17)</description>
+	<address>
+		<url>http://www.univ-larochelle.fr</url>
+		<phone>05 46 45 91 14</phone>
+		<fax>05 46 44 93 76</fax>
+		<email>mguerin@univ-lr.fr</email>
+	</address>
+	<child uid="20015" active="true"/>
+	<child uid="20024" active="true"/>
+	<child uid="20025" active="true"/>
+	<child uid="20089" active="true"/>
+	<child uid="20095" active="true"/>
+	<child uid="20096" active="true"/>
+	<child uid="20098" active="true"/>
+	<child uid="20117" active="true"/>
+	<child uid="20135" active="true"/>
+	<child uid="20154" active="true"/>
+</content>
+</entry>

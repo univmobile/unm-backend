@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5576_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5576_1.xml"/>
+<title>Cycle ingénieur Polytech (3ème année)</title>
+<updated>2014-08-15T01:47:27.611+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5576"
+	coordinates="48.709038369743,2.1714721620083"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:56:42.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4419"
+	name="Cycle ingénieur Polytech (3ème année)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 620</floor>
+		<url>http://intranet.ifips.u-psud.fr//ii/index.php?id=298</url>
+		<phone>01 69 33 86 11</phone>
+		<fax>01 69 41 99 58</fax>
+		<email>angelique.perrin@u-psud.fr</email>
+	</address>
+</content>
+</entry>

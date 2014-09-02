@@ -1,8 +1,9 @@
 package fr.univmobile.backend.core;
 
 import net.avcompris.binding.annotation.XPath;
+import fr.univmobile.commons.datasource.Entry;
 
-public interface Region extends Entry {
+public interface Region extends Entry<Region> {
 
 	/**
 	 * e.g. "ile_de_france"
@@ -24,4 +25,12 @@ public interface Region extends Entry {
 	String getUrl();
 
 	void setUrl(String url);
+
+	@XPath("atom:content/atom:universities/atom:university")
+	University[] getUniversities();
+
+	int sizeOfUniversities();
+	
+	@XPath("count(atom:content/atom:universities/atom:university)")
+	int getUniversityCount();
 }

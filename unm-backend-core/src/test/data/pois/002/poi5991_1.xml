@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5991_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5991_1.xml"/>
+<title>Relations internationales</title>
+<updated>2014-08-15T01:47:32.464+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5991"
+	coordinates="48.776070199261,2.2879765927792"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T11:37:44.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5601"
+	name="Relations internationales">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Mobilité étudiante</description>
+	<address>
+		<floor>Bureau 222</floor>
+		<url>http://www.iut-sceaux.u-psud.fr/fr/international.html</url>
+		<phone>01 40 91 24 35</phone>
+		<email>palmyre.schreiber@iut-sceaux.u-psud.fr</email>
+	</address>
+</content>
+</entry>

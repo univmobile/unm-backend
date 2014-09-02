@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1652_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1652_1.xml"/>
+<title></title>
+<updated>2014-08-15T01:46:49.633+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1652"
+	coordinates="48.845070207964,2.35695093870"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T15:20:13.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	deletedAt="2011-04-01T15:20:47.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	name="">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+</content>
+</entry>

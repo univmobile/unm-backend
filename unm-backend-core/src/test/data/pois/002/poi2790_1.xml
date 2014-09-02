@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2790_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2790_1.xml"/>
+<title>Campus Jussieu bâtiment Esclangon</title>
+<updated>2014-08-15T01:47:00.069+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2790"
+	coordinates="48.845237867946,2.35733114182"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T14:09:30.000+02:00"
+	updatedAt="2011-12-02T12:49:20.000+01:00"
+	createdBy="Martin Gobert"
+	updatedBy="Christian COUSQUER"
+	parentUid="2715"
+	name="Campus Jussieu bâtiment Esclangon">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3856" active="true"/>
+	<child uid="3774" active="true"/>
+	<child uid="3256" active="true"/>
+	<child uid="3257" active="true"/>
+	<child uid="3260" active="true"/>
+	<child uid="3451" active="true"/>
+	<child uid="3488" active="true"/>
+	<child uid="3519" active="true"/>
+	<child uid="3553" active="true"/>
+	<child uid="3623" active="true"/>
+	<child uid="3624" active="true"/>
+	<child uid="3625" active="true"/>
+	<child uid="3641" active="true"/>
+	<child uid="3658" active="true"/>
+	<child uid="3778" active="true"/>
+	<child uid="3781" active="true"/>
+	<child uid="3783" active="true"/>
+	<child uid="3784" active="true"/>
+	<child uid="3788" active="true"/>
+	<child uid="3789" active="true"/>
+	<child uid="3790" active="true"/>
+	<child uid="3858" active="true"/>
+	<child uid="3860" active="true"/>
+</content>
+</entry>

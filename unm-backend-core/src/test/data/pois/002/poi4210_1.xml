@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4210_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4210_1.xml"/>
+<title>SYRTE - UMR 8630</title>
+<updated>2014-08-15T01:47:14.960+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4210"
+	coordinates="48.836332562324,2.336065582931"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T14:08:25.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3753"
+	name="SYRTE - UMR 8630">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Système de Référence Temps-Espace</description>
+	<address>
+		<url>http://syrte.obspm.fr/</url>
+		<phone>01 40 51 20 01</phone>
+		<email>marine.pailler@obspm.fr</email>
+	</address>
+</content>
+</entry>

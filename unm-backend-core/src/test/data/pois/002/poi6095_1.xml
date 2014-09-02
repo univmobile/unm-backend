@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6095_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6095_1.xml"/>
+<title>Langues et Civilisations</title>
+<updated>2014-08-15T01:47:33.677+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6095"
+	coordinates="48.839355517049,2.5868021696806"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T16:37:57.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="Langues et Civilisations">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>3B043</floor>
+		<openingHours>lundi, mardi, jeudi: 10h30-12h30/13h30-15h30
+mercredis, vendredis: 10h30-12h30</openingHours>
+		<url>http://langues.univ-mlv.fr</url>
+		<phone>01 60 95 74 35</phone>
+		<email>corinne.vancon@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3740_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3740_1.xml"/>
+<title>Campus des Cordeliers bâtiment H</title>
+<updated>2014-08-15T01:47:09.965+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3740"
+	coordinates="48.850460244467,2.3414286598563"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:00:18.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2723"
+	name="Campus des Cordeliers bâtiment H">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : 4/10 (Odéon)
+Bus : 58/63/70/86/87/96</itinerary>
+		<fullAddress>12 rue de l'école de médecine
+75006 Paris</fullAddress>
+	</address>
+	<child uid="4010" active="true"/>
+	<child uid="3747" active="true"/>
+	<child uid="3744" active="true"/>
+	<child uid="3771" active="true"/>
+	<child uid="3969" active="true"/>
+	<child uid="4074" active="true"/>
+	<child uid="4321" active="true"/>
+	<child uid="4381" active="true"/>
+</content>
+</entry>

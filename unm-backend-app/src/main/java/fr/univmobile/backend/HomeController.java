@@ -2,32 +2,38 @@ package fr.univmobile.backend;
 
 import java.io.IOException;
 
+import fr.univmobile.backend.core.PoiDataSource;
+import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
 import fr.univmobile.web.commons.Paths;
+import fr.univmobile.web.commons.View;
 
 @Paths({ "" })
 public class HomeController extends AbstractBackendController {
 
-	public HomeController(final UserDataSource users,
-			final RegionDataSource regions) {
+	public HomeController(final TransactionManager tx,
+			final UserDataSource users, final RegionDataSource regions,
+			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
 
-		super(users, regions);
+		super(tx, users, regions, pois, poiTrees);
 	}
 
 	@Override
-	public String action() throws IOException {
+	public View action() throws IOException, TransactionException {
 
 		if (getHttpInputs(Logout.class).isHttpValid()) {
 
 			removeSessionAttribute(DELEGATION_USER);
 
-			return "home.jsp";
+			return new View("home.jsp");
 		}
 
 		if (hasSessionAttribute(DELEGATION_USER)) {
@@ -53,7 +59,7 @@ public class HomeController extends AbstractBackendController {
 				setAttribute("err_unknownDelegationUid", true);
 				setAttribute("delegationUid", delegationUid);
 
-				return "home.jsp";
+				return new View("home.jsp");
 			}
 
 			final User delegationUser = users.getByUid(delegationUid);
@@ -63,7 +69,7 @@ public class HomeController extends AbstractBackendController {
 			return entered();
 		}
 
-		return "home.jsp";
+		return new View("home.jsp");
 	}
 
 	@HttpMethods("POST")

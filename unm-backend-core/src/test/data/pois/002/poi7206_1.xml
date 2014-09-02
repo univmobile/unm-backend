@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7206_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7206_1.xml"/>
+<title>site test</title>
+<updated>2014-08-15T01:47:44.359+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7206"
+	coordinates="49.200924726748,2.4908065795898"
+	active="true"
+	markerType="point"
+	createdAt="2012-03-23T14:14:04.000+01:00"
+	updatedAt="2013-06-26T11:10:16.000+02:00"
+	deletedAt="2012-03-23T14:15:43.000+01:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="site test">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

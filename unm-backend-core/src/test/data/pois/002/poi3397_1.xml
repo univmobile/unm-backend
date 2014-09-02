@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3397_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3397_1.xml"/>
+<title>ED 268 - Langage et langues : description, théorisation</title>
+<updated>2014-08-15T01:47:06.145+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3397"
+	coordinates="48.840860607673,2.3557305335999"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:50:20.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="3012"
+	name="ED 268 - Langage et langues : description, théorisation">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Structure(s) de rattachement :
+    Ecoles Doctorales</description>
+	<address>
+		<url>http://www.univ-paris3.fr/ed268</url>
+		<phone>01 45 87 79 39</phone>
+		<email>ed268@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

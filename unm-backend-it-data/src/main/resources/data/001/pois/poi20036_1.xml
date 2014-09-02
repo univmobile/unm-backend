@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi36_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi36_1.xml"/>
+<title>Université de Limoges</title>
+<updated>2014-08-17T21:32:57.427+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20036"
+	coordinates="45.826257386857,1.25846028327"
+	active="true"
+	markerType="point"
+	name="Université de Limoges">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="ul"/>
+	<description>UL aka Université de Limoges</description>
+	<address>
+		<phone>05 55 14 91 00</phone>
+	</address>
+	<child uid="20037" active="true"/>
+	<child uid="20065" active="true"/>
+	<child uid="20087" active="true"/>
+	<child uid="20220" active="true"/>
+	<child uid="20238" active="true"/>
+	<child uid="20239" active="true"/>
+	<child uid="20241" active="true"/>
+	<child uid="20242" active="true"/>
+	<child uid="20243" active="true"/>
+	<child uid="20246" active="true"/>
+	<child uid="20258" active="true"/>
+	<child uid="20319" active="true"/>
+	<child uid="20356" active="true"/>
+	<child uid="20364" active="true"/>
+	<child uid="20386" active="true"/>
+	<child uid="20392" active="true"/>
+	<child uid="20394" active="true"/>
+	<child uid="20395" active="true"/>
+	<attachment id="2" title="Carre-UL-150.png" type="image" url="/uploads/poi/c99abda0f5d42a24d0cf1ef0d0476b8b6ed4311a.png"/>
+</content>
+</entry>

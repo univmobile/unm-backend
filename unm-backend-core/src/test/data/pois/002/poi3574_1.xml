@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3574_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3574_1.xml"/>
+<title>RU Espace Jussieu</title>
+<updated>2014-08-15T01:47:08.172+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3574"
+	coordinates="48.846960623581,2.3602815717459"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:24:51.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3571"
+	name="RU Espace Jussieu">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Stands pizza, pâtes et plats mijotés de 11h30 à 14h00</description>
+	<address>
+		<floor>Rez de Chaussée</floor>
+		<openingHours>Lundi au Vendredi : 11h30-14h00</openingHours>
+		<url>http://www.upmc.fr/fr/vie_des_campus/logement_et_restauration/resto_u.html</url>
+	</address>
+</content>
+</entry>

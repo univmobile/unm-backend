@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi747_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi747_1.xml"/>
+<title>Association Droit du sport</title>
+<updated>2014-08-15T01:46:41.661+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="747"
+	coordinates="48.846925821927,2.344583272"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T17:07:54.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	parentUid="1027"
+	name="Association Droit du sport">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone>06 60 86 12 23</phone>
+		<email>jeffreymond@gmail.com</email>
+		<fullAddress>12 place du Panthéon
+75005 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

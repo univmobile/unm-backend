@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1475_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1475_1.xml"/>
+<title>Bibliothèque de l'institut de recherche </title>
+<updated>2014-08-15T01:46:47.958+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1475"
+	coordinates="48.833076104653,2.36857680603"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:30:56.000+02:00"
+	updatedAt="2011-06-22T15:01:00.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1770"
+	name="Bibliothèque de l'institut de recherche ">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>bâtiment Chevaleret 6e étage plateau 2 salle 6E8</floor>
+		<openingHours>Lundi, mardi, jeudi: 9h30-18h15
+Mercredi: 9h30-16h45
+Vendredi: 9h30-15h</openingHours>
+		<phone>0157279138</phone>
+		<email>barberon@math.jussieu.fr</email>
+	</address>
+</content>
+</entry>

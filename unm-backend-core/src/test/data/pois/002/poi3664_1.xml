@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3664_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3664_1.xml"/>
+<title>Résidence Universitaire Vauban</title>
+<updated>2014-08-15T01:47:09.085+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3664"
+	coordinates="48.7795565817,2.0442040264606|48.779899468308,2.0448584854603|48.779941887107,2.0445151627064|48.779800490971,2.0442362129688|48.77999137566,2.0440109074116|48.780009050131,2.0436675846577|48.7795565817,2.0442040264606"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-13T14:15:44.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	deletedAt="2011-05-26T10:03:51.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="yasmine"
+	name="Résidence Universitaire Vauban">
+	<poiType id="31" label="Résidence universitaire "/>
+</content>
+</entry>

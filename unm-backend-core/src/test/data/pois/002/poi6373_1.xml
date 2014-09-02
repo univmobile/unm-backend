@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6373_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6373_1.xml"/>
+<title>Droit comparé et international M2</title>
+<updated>2014-08-15T01:47:36.552+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6373"
+	coordinates="48.846923556743,2.3443841189146"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T14:37:30.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1027"
+	name="Droit comparé et international M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 309 et 309 bis </floor>
+		<url>http://www.univ-paris1.fr/ufr/ufr070/</url>
+		<phone>01.44.07.77.52</phone>
+		<email>m2ufr7@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

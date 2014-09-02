@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/001:poi1_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/001:poi1_1.xml"/>
+<title>Université Panthéon-Sorbonne - Paris I</title>
+<updated>2014-08-14T11:01:00Z</updated>
+<!--
+	created_at: 2010-05-11 10:52:30
+	updated_at: 2014-03-31 12:14:33
+	created_by: NULL
+	updated_by: super admin
+-->
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1"
+	logo="/images/universities/logos/univ_paris1.jpg"
+	coordinates="48.84650925911,2.3459243774"
+	active="true"
+	markerType="point"
+	createdAt="2010-05-11 10:52:30"
+	updatedAt="2014-03-31 12:14:33"
+	updatedBy="super admin"
+	name="Université Panthéon-Sorbonne - Paris I">
+	<poiType categoryId="1" categoryLabel="Plans"
+		id="1" label="Université"/> <!-- = tags.maxOccurs = unbounded -->
+	<university id="paris1"/> <!-- university.maxOccurs = unbounded -->
+	<description> <!-- mixed, universityId.maxOccurs = 1 --> 
+Université Panthéon-Sorbonne - Paris I comprend 297 formations. Il s'agit d'une université dans la région Ile de France.
+                                    
+			L'université Paris 1 - Panthéon-Sorbonne est le premier pôle universitaire français, comprenant plus de 40 000 étudiants répartis en 14 unités de Formation et de Recherche (UFR) et de 5 instituts.  
+ 
+L'université offre un éventail complet de formation répartis en plusieurs pôles : le pôle sciences économiques et gestion, le pôle sciences humaines, le pôle sciences juridiques et politiques. Elle est basée au coeur du quartier latin de Paris entre le Panthéon et le
+                		Plus d'informations sur cette école	
+	</description>
+	<!-- address.maxOccurs = unbounded -->
+	<address zipCode="75231"
+			countryCode="FR"
+			latitude="48.85"
+			longitude="2.35"			
+			city="PARIS"> 
+		<fullAddress> <!-- mixed, fullAddress.maxOccurs = 1 -->
+		12 place du Panthéon 75231 PARIS
+		</fullAddress>
+		<phone>0144078000</phone> <!-- phone.maxOccurs = unbounded -->
+		<url>Http://www.univ-paris1.fr/</url> <!-- url.maxOccurs = unbounded -->
+		<!--
+		<floor></floor> (mixed)
+		<openingHours></openingHours>
+		<itinerary></itinerary>
+		<fax></fax> (unbounded)
+		<email></email>	(unbounded)
+		-->
+	</address>
+	
+	<!-- root_id: 1, lft: 1, rgt: 792, level: 0 -->
+	<child uid="931" active="true"/>
+	<child uid="817" active="true"/>
+	<child uid="815" active="true"/>
+	<child uid="795" active="true"/>
+	<child uid="787" active="true"/>
+	<child uid="785" active="true"/>
+	<child uid="781" active="true"/>
+	<child uid="778" active="true"/>
+	<child uid="775" active="true"/>
+	<child uid="773" active="true"/>
+	<child uid="632" active="true"/>
+	<child uid="770" active="true"/>
+	<child uid="641" active="true"/>
+	<child uid="656" active="true"/>
+	<child uid="281" active="true"/>
+	<child uid="240" active="true"/>
+	<child uid="415" active="true"/>
+	<child uid="421" active="true"/>
+	<child uid="782" active="true"/>
+	<child uid="791" active="true"/>
+	<child uid="812" active="true"/>
+	<child uid="819" active="true"/>
+	<child uid="850" active="true"/>
+	<child uid="852" active="true"/>
+	<child uid="890" active="true"/>
+	<child uid="945" active="true"/>
+	
+</content>
+</entry>

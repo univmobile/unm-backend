@@ -1,0 +1,524 @@
+body {
+	background-color: #fff;
+	font-family: sans-serif;
+	margin: 8px;
+}
+div.body {
+	width: 800px;
+	margin: auto;
+}
+h1 {
+	text-align: center;
+}
+#body-geocampus h1 {
+	margin-top: 0;
+}
+#div-myself {
+	border: 8px solid #090;
+	padding: 8px 16px;
+	text-align: center;
+}
+#div-delegation {
+	background-color: #eee;
+	margin-top: 2em;
+	text-align: center;
+	color: #999;
+}
+#div-delegation div.layout {
+	padding: 8px 16px;
+}
+div.error {
+	background-color: #900;
+	color: #fff;
+	padding: 1em;
+	text-align: center;
+	margin-bottom: 1px;
+}
+div.error span.message {
+	xfont-style: italic;
+}
+body.entered {
+	margin: 0 0 8px;
+}
+body#body-geocampus.entered {
+	margin-bottom: 0;
+}
+body.entered div.body {
+	margin-top: 8px;
+}
+#div-entered {
+	background-color: #79b8d9;
+	color: #fff;
+	font-size: small;
+	padding: 2px 0;
+	text-align: center;
+}
+#div-entered ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+#div-entered li {
+	display: inline-block;
+	margin: 0 2em 0 1em;
+}
+#div-entered a {
+	color: #fff;	
+}
+#div-entered a:active{
+	color: #f00;
+}
+#body-entered table,
+#body-pois table {
+	border-collapse: collapse;	
+}
+#body-entered th,
+#body-entered td,
+#body-pois th,
+#body-pois td {
+	border: 1px solid #000;	
+	vertical-align: top
+}
+#body-entered th,
+#body-entered td,
+#body-pois th,
+#body-pois td {
+	padding: 2px 30px;
+}
+#body-pois td.id {
+	text-align: center;
+}
+#body-entered #div-regions td.label {
+	padding: 2px 2px;
+}
+#body-entered th,
+#body-pois th {
+	background-color: #9bc9e1;
+}
+h2 {
+	text-align: center;	
+}
+table {
+	margin: auto;	
+}
+table a {
+	text-decoration: none;
+}
+td.edit {
+	font-size: small;
+}
+div.disabled {
+	color: #ccc;
+}
+div.emptyArray {
+	color: #ccc;
+	font-style: italic;
+}
+div.table.bottom {
+	text-align: center;
+	margin-top: 1em;	
+}
+div.table.bottom a {
+	text-decoration: none;	
+}
+#body-entered th.none,
+#body-entered td.none {
+	border: none;
+	padding: 0 2px;
+	font-weight: bold;	
+	background-color: transparent;
+	width: 30px;
+	text-align: right;
+}
+#body-entered td.none div.delegation,
+#body-entered td.none div.delegation.principal {
+	color: #090;
+}
+#body-entered td.none div.principal {
+	color: #900;
+}
+#body-useradd th {
+	text-align: left;
+}
+#body-useradd th,
+#body-useradd td {
+	padding: 0.5em 0.2em;	
+}
+#body-useradd div.table.bottom {
+	margin-top: 2em;
+}
+#body-useradd button,
+#div-regions button {
+	margin-left: 6em;
+	margin-right: 6em;	
+}
+#body-useradd div.table.bottom a {
+	font-size: small;
+}
+#body-useradd input {
+	width: 20em;
+}
+#div-regions input {
+	width: 20em;
+}
+span.error {
+	color: #900;
+	font-weight: bold;
+	font-size: small;
+	text-decoration: underline;
+}
+#body-entered #div-regions,
+#body-entered #div-pois {
+	margin-top: 3em;
+}
+#div-regions td.universityCount,
+#div-pois td.poiCount {
+	text-align: right;
+}
+#div-regions td.universityCount {
+	padding-right: 4em;
+}
+#div-buildInfo {
+	margin-bottom: 2em;
+	text-align: center;
+	color: #ccc;
+	font-size: small;	
+}
+h2 a {
+	text-decoration: none;
+}
+div.pois h2 {
+	font-size: 12px;
+	text-align: left;
+	margin: 0;
+	padding: 0 8px;
+}
+div.pois div ul {
+	font-size: 12px;
+}
+#body-geocampus #div-left {
+	width: 300px;
+}
+#body-geocampus #div-left-top div.ui-tabs-panel {
+	xbackground-color: #ff0;
+	padding-left: 0;
+	padding-right: 0;
+}
+#ul-pois li.poi:hover {
+	xbackground-color: #ff0;
+}
+#ul-pois {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+#ul-pois ul {
+	padding: 0;
+	margin: 0 0 2em;
+	border-bottom: 1px solid #ccc;	
+}
+#ul-pois li.poi {	
+	margin: 0;
+	xborder-collapse: collapse;
+	border-top: 1px solid #ccc;
+}
+#ul-pois li.poi a {
+	display: block;
+	padding: 0.5em 8px 0.5em 24px;
+	text-decoration: none;
+	color: #00f;
+	background-repeat: no-repeat;
+	background-size: 17px 30px;
+	background-position: 2px 5px;
+	background-image: url(../img/markers/marker_greenEllipsis@2x.png);
+}
+#ul-pois li.poi a span.address {
+	color: #000;
+}
+#ul-pois li.poi.A a { background-image: url(../img/markers/marker_greenA@2x.png); }
+#ul-pois li.poi.B a { background-image: url(../img/markers/marker_greenB@2x.png); }
+#ul-pois li.poi.C a { background-image: url(../img/markers/marker_greenC@2x.png); }
+#ul-pois li.poi.D a { background-image: url(../img/markers/marker_greenD@2x.png); }
+#ul-pois li.poi.E a { background-image: url(../img/markers/marker_greenE@2x.png); }
+#ul-pois li.poi.F a { background-image: url(../img/markers/marker_greenF@2x.png); }
+#ul-pois li.poi.G a { background-image: url(../img/markers/marker_greenG@2x.png); }
+#ul-pois li.poi.H a { background-image: url(../img/markers/marker_greenH@2x.png); }
+#ul-pois li.poi.I a { background-image: url(../img/markers/marker_greenI@2x.png); }
+#ul-pois li.poi.J a { background-image: url(../img/markers/marker_greenJ@2x.png); }
+#ul-pois li.poi.K a { background-image: url(../img/markers/marker_greenK@2x.png); }
+#ul-pois li.poi.L a { background-image: url(../img/markers/marker_greenL@2x.png); }
+#ul-pois li.poi.M a { background-image: url(../img/markers/marker_greenM@2x.png); }
+#ul-pois li.poi.N a { background-image: url(../img/markers/marker_greenN@2x.png); }
+#ul-pois li.poi.O a { background-image: url(../img/markers/marker_greenO@2x.png); }
+#ul-pois li.poi.P a { background-image: url(../img/markers/marker_greenP@2x.png); }
+#ul-pois li.poi.Q a { background-image: url(../img/markers/marker_greenQ@2x.png); }
+#ul-pois li.poi.R a { background-image: url(../img/markers/marker_greenR@2x.png); }
+#ul-pois li.poi.S a { background-image: url(../img/markers/marker_greenS@2x.png); }
+#ul-pois li.poi.T a { background-image: url(../img/markers/marker_greenT@2x.png); }
+#ul-pois li.poi.U a { background-image: url(../img/markers/marker_greenU@2x.png); }
+#ul-pois li.poi.V a { background-image: url(../img/markers/marker_greenV@2x.png); }
+#ul-pois li.poi.W a { background-image: url(../img/markers/marker_greenW@2x.png); }
+#ul-pois li.poi.X a { background-image: url(../img/markers/marker_greenX@2x.png); }
+#ul-pois li.poi.Y a { background-image: url(../img/markers/marker_greenY@2x.png); }
+#ul-pois li.poi.Z a { background-image: url(../img/markers/marker_greenZ@2x.png); }
+#ul-pois li.poi.selected {
+	background-color: #eef;
+}
+div.infoWindow {
+	width: 20em;
+	height: 4em;
+	position: relative;
+}
+.hidden {
+	display: none;
+}
+div.infoWindow div.img {
+	xposition: absolute;
+	xtop: 0px;
+	xright: 0px;
+	float: right;
+	width: 50px;
+	height: 50px;
+	overflow: hidden;
+	margin: 0;
+	background-color: #f00;
+}
+div.infoWindow img.width100 {
+	width: 100%;
+	margin: auto;
+}
+div.infoWindow img.height100 {
+	height: 100%;
+	margin: auto;
+}
+div.infoWindow span.name {
+	font-weight: bold;
+}
+#body-geocampus #div-left-bottom div.ui-tabs-panel {
+	padding-left: 0;
+	padding-right: 0;
+}
+#body-geocampus #div-details,
+#body-geocampus #div-comments {
+	font-size: 12px;
+	xbackground-color: #ff0;
+}
+#body-geocampus #div-details div.name,
+#body-geocampus div.field.name {
+	font-size: 120%;
+	font-weight: bold;
+	margin: 0 0 0.4em;
+	padding: 0 8px;
+}
+#div-details div.field.active div.title {
+	display: none;
+}
+#div-details div.field.active label,
+#div-details div.field.active span {
+	font-style: italic;
+}
+#div-details div.field.active label {
+	margin-left: 2em;
+}
+#div-details div.field {
+	margin-top: 0.4em;
+	border-top: 1px solid #ccc;
+	padding: 0.4em 8px;
+}
+#div-details div.field.name,
+#div-details div.field.active {
+	margin-top: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	border: none;
+}
+#div-details div.field div.title {
+	color: #bbb;
+	font-weight: bold;
+	margin-bottom: 0.2em;
+}
+#body-geocampus #div-details-buttons,
+#body-geocampus #div-comments-buttons,
+#body-geocampus #div-addCommentDialog-buttons {
+	margin-top: 0.4em;
+	padding: 1em 8px 0;
+	font-size: 10px;
+}
+#div-details-buttons {
+	border-top: 1px solid #ccc;
+	text-align: right;
+}
+#body-geocampus #div-comments-buttons {
+	text-align: right;
+}
+#div-addCommentDialog-buttons {
+	text-align: right;
+}
+div.noPoiSelected {
+	font-size: small;
+	font-style: italic;
+	color: #ccc;
+	margin: 0 8px;
+}
+#div-left-bottom {
+	overflow: scroll;
+	xbackground-color: #ff0;
+}
+#div-left-bottom-tabs-details {
+	xposition: relative;
+	xoverflow: auto;
+	xheight: 100%;
+	xposition: relative;
+	xoverflow: auto;
+}
+#div-details {
+	xheight: 100%;
+	xbackground-color: #ff0;
+	xposition: relative;
+	xoverflow: auto;
+}
+img.profileImage {
+	display: block;
+	width: 32px;
+	height: 32px;
+}
+#body-geocampus #div-comments ul {
+	list-style-type: none;
+	padding: 0;
+	xmargin: 0 4px;
+	margin: 0;
+}
+#body-geocampus #div-comments li {
+	position: relative;
+	padding: 8px 8px 0;
+	margin: 0 -4px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
+	xbackground-color: #ff0;
+}
+#body-geocampus #div-comments div.displayName {
+	position: absolute;
+	top: 7px;
+	left: 48px;
+}
+#body-geocampus #div-comments div.username {
+	position: absolute;
+	top: 18px;
+	left: 48px;
+}
+#div-addCommentDialog div.displayName {
+	position: absolute;
+	top: 7px;
+	left: 48px;
+}
+#div-addCommentDialog div.username {
+	position: absolute;
+	top: 18px;
+	left: 48px;
+}
+div.displayName {
+	font-size: 12px;
+	font-weight: bold;
+}
+div.username {
+	font-size: 12px;
+	color: #aaa;
+}
+#body-geocampus #div-comments div.text,
+#body-geocampus #div-addCommentDialog textarea {
+	font-family: 'Times New Roman', serif;
+	font-size: 16px;
+}
+#body-geocampus #div-comments div.timestamp {
+	font-size: 12px;
+	padding: 8px 0 12px;
+}
+#body-geocampus #div-comments div.timestamp a {
+	color: #aaa;
+	text-decoration: none;
+}
+#body-geocampus #div-comments div.error {
+	background-color: #eee;
+	color: #900;
+	xpadding: 1em;
+	text-align: left;
+	xmargin-bottom: 1px;
+	font-size: 12px;
+	font-weight: bold;
+}
+#body-geocampus #div-comments div.errorThrown {
+	font-weight: normal;
+	margin-top: 8px;
+}
+#body-geocampus #div-comments-timeline {
+	margin-top: 8px;
+}
+div.ui-dialog-titlebar {
+	font-size: 12px;
+}
+#div-addCommentDialog {
+	padding: 8px 7px 8px 4px;
+	font-size: 12px;
+	position: relative;
+}
+#div-addCommentDialog button {
+	font-size: 10px;
+}
+#div-addCommentDialog textarea {
+	width: 100%;
+	height: 80px;
+}
+div.body.poi tr.id #span-active-yes,
+div.body.poi tr.id #span-active-no {
+	margin-left: 1em;
+	font-style: italic;
+}
+div.body.poi table {
+	border-collapse: collapse;
+}
+div.body.poi th {
+	text-align: right;
+	padding-right: 8px;
+}
+div.body.poi th, 
+div.body.poi td {
+	padding-top: 8px;
+	padding-bottom: 8px;
+	vertical-align: baseline;
+}
+div.body.poi tr.textarea th {
+	vertical-align: top;
+	padding-top: 10px;
+	xbackground-color: #ff0;
+}
+div.body.poi td ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+div.body.results #div-query {
+	background-color: #f8f8f8;
+	padding: 1em;
+	xborder-bottom: 1px solid #f8f8f8;
+}
+div.body.results #div-resultInfo {
+	margin-top: 1em;
+}
+div.body.results #div-resultInfo span {
+	xfont-style: italic;
+	xcolor: #ccc;
+}
+div.body.results #button-export {
+	margin-top: 2px;
+	float: right;
+}
+#span-active-yes.selected {
+	background-color: #cfc;
+}
+#span-active-no.selected {
+	background-color: #fcc;
+}
+#span-active-yes,
+#span-active-no {
+	padding: 0 0 0 8px;
+}

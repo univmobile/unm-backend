@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4543_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4543_1.xml"/>
+<title>Université Paris Dauphine</title>
+<updated>2014-08-15T01:47:18.395+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4543"
+	coordinates="48.870244104473,2.2734524309635"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:08:04.000+02:00"
+	updatedAt="2011-05-27T15:28:17.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4542"
+	name="Université Paris Dauphine">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Bus : 
+- ligne PC1 : arrêt Porte Dauphine
+Métro :
+- Ligne 2 : station Porte Dauphine, sortie Avenue Bugeaud
+RER : 
+- ligne C : station Avenue Foch</itinerary>
+		<fullAddress>Place du Maréchal de Lattre de Tassigny
+75775 PARIS Cedex 16 </fullAddress>
+	</address>
+	<child uid="4953" active="true"/>
+	<child uid="4942" active="true"/>
+	<child uid="4943" active="true"/>
+	<child uid="4944" active="true"/>
+	<child uid="4939" active="true"/>
+	<child uid="4941" active="true"/>
+	<child uid="4931" active="true"/>
+	<child uid="4933" active="true"/>
+	<child uid="4928" active="true"/>
+	<child uid="4927" active="true"/>
+	<child uid="4925" active="true"/>
+	<child uid="4921" active="true"/>
+	<child uid="4918" active="true"/>
+	<child uid="4915" active="true"/>
+	<child uid="4906" active="true"/>
+	<child uid="4904" active="true"/>
+	<child uid="4903" active="true"/>
+	<child uid="4909" active="true"/>
+	<child uid="4908" active="true"/>
+	<child uid="4900" active="true"/>
+	<child uid="4896" active="true"/>
+	<child uid="4894" active="true"/>
+	<child uid="4892" active="true"/>
+	<child uid="4880" active="true"/>
+	<child uid="4881" active="true"/>
+	<child uid="4878" active="true"/>
+	<child uid="4877" active="true"/>
+	<child uid="4876" active="true"/>
+	<child uid="4874" active="true"/>
+	<child uid="4871" active="true"/>
+	<child uid="4850" active="true"/>
+	<child uid="4830" active="true"/>
+	<child uid="4809" active="true"/>
+	<child uid="4807" active="true"/>
+	<child uid="4800" active="true"/>
+	<child uid="4794" active="true"/>
+	<child uid="4791" active="true"/>
+	<child uid="4789" active="true"/>
+	<child uid="4785" active="true"/>
+	<child uid="4782" active="true"/>
+	<child uid="4752" active="true"/>
+	<child uid="4749" active="true"/>
+	<child uid="4748" active="true"/>
+	<child uid="4747" active="true"/>
+	<child uid="4746" active="true"/>
+	<child uid="4745" active="true"/>
+	<child uid="4651" active="true"/>
+	<child uid="4625" active="true"/>
+	<child uid="4616" active="true"/>
+	<child uid="4566" active="true"/>
+	<child uid="4563" active="true"/>
+	<child uid="4548" active="true"/>
+	<child uid="4551" active="true"/>
+	<child uid="4555" active="true"/>
+	<child uid="4559" active="true"/>
+	<child uid="4569" active="true"/>
+	<child uid="4571" active="true"/>
+	<child uid="4597" active="true"/>
+	<child uid="4599" active="true"/>
+	<child uid="4614" active="true"/>
+	<child uid="4631" active="true"/>
+	<child uid="4632" active="true"/>
+	<child uid="4635" active="true"/>
+	<child uid="4639" active="true"/>
+	<child uid="4647" active="true"/>
+	<child uid="4758" active="true"/>
+	<child uid="4759" active="true"/>
+	<child uid="4760" active="true"/>
+	<child uid="4767" active="true"/>
+	<child uid="4768" active="true"/>
+	<child uid="4773" active="true"/>
+	<child uid="4776" active="true"/>
+	<child uid="4803" active="true"/>
+	<child uid="4813" active="true"/>
+	<child uid="4831" active="true"/>
+	<child uid="4832" active="true"/>
+	<child uid="4837" active="true"/>
+	<child uid="4838" active="true"/>
+	<child uid="4839" active="true"/>
+	<child uid="4847" active="true"/>
+	<child uid="4885" active="true"/>
+	<child uid="4947" active="true"/>
+	<child uid="4954" active="true"/>
+	<child uid="4956" active="true"/>
+	<child uid="4958" active="true"/>
+	<child uid="4962" active="true"/>
+</content>
+</entry>

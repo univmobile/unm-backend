@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi981_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi981_1.xml"/>
+<title>Gymnase</title>
+<updated>2014-08-15T01:46:43.885+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="981"
+	coordinates="48.958492137167,2.3413146659"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-09T15:46:57.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille"
+	updatedBy="Kevin Mazille"
+	parentUid="334"
+	name="Gymnase">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<address>
+		<fullAddress>Institut Galilée
+Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

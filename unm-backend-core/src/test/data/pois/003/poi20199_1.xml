@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi199_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi199_1.xml"/>
+<title>FLASH 2</title>
+<updated>2014-08-17T21:32:58.829+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20199"
+	coordinates="46.152127694036,-1.15336060523"
+	active="true"
+	markerType="point"
+	parentUid="20096"
+	name="FLASH 2">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>1, parvis Fernand Braudel
+17000 La Rochelle</fullAddress>
+	</address>
+	<child uid="20200" active="true"/>
+</content>
+</entry>

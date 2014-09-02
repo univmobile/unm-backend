@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3422_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3422_1.xml"/>
+<title>Bibliothèque d'histoire du droit</title>
+<updated>2014-08-15T01:47:06.423+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3422"
+	coordinates="48.847491691665,2.346590571105"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:04:46.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2910"
+	name="Bibliothèque d'histoire du droit">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Public concerné : étudiants de masters et doctorants</description>
+	<address>
+		<openingHours>Du lundi au vendredi :
+9h00 / 12h00 - 13h30 / 17h30</openingHours>
+		<phone>01 56 81 76 96</phone>
+	</address>
+</content>
+</entry>

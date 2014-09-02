@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/001:poi4_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/001:poi4_1.xml"/>
+<title>Université Versailles Saint-Quentin-en-Yvelines</title>
+<updated>2014-08-14T21:51:00Z</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4"
+	logo="/images/universities/logos/univ_versailles.jpg"
+	coordinates="48.810028931039,2.1018218994141"
+	active="true"
+	markerType="point"
+	createdAt="2010-05-11 10:52:34"
+	updatedAt="2012-02-06 08:57:32"
+	updatedBy="rrivoire"
+	name="Université Versailles Saint-Quentin-en-Yvelines">
+	<poiType id="1" label="Université"/> <!-- = tags. maxOccurs = unbounded -->
+	<university id="paris1"/> <!-- university.maxOccurs = unbounded -->
+	<description> <!-- mixed, universityId.maxOccurs = 1 --> 
+L'Université de Versailles Saint-Quentin-en-Yvelines (UVSQ) propose près de 250 formations et possède 33 laboratoires. C'est une université  créée en 1991, implantée dans le département des Yvelines et depuis 2002 dans les Hauts-de-Seine. 
+Elle accueille environ 18 000 étudiants et emploie environ 1 900 personnes dont 950 enseignants. 
+L'université est pluridisciplinaire : sciences, sciences sociales et humaines, droit, science politique, médecine, technologique.
+	</description>
+	<!-- address.maxOccurs = unbounded -->
+	<address latitude="48.80"
+			longitude="2.14">	
+		<phone>01 39 25 78 00</phone> <!-- phone.maxOccurs = unbounded -->
+		<url>http://www.uvsq.fr/</url> <!-- url.maxOccurs = unbounded -->
+		<floor>Siège : 55 avenue de Parie à Versailles</floor>
+		<fax>01 39 25 78 01</fax>
+		<email>contact@uvsq.fr</email>
+		<!--
+		<openingHours></openingHours>
+		<itinerary></itinerary>
+		-->
+	</address>
+	
+</content>
+</entry>

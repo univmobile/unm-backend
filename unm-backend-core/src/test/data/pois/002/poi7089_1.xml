@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7089_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7089_1.xml"/>
+<title>Borne carte d'étudiant multiservices - Accueil</title>
+<updated>2014-08-15T01:47:43.131+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7089"
+	coordinates="48.945662715381,2.3628652095795"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-01T16:16:04.000+01:00"
+	updatedAt="2012-02-01T16:20:26.000+01:00"
+	createdBy="Marion MAINFRAY"
+	updatedBy="Marion MAINFRAY"
+	parentUid="2605"
+	name="Borne carte d'étudiant multiservices - Accueil">
+	<poiType id="9" label="Borne CMS" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>Hall d'accueil</floor>
+	</address>
+</content>
+</entry>

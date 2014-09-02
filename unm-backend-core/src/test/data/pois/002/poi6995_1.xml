@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6995_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6995_1.xml"/>
+<title>Association Solidaire des Etudiants en Gestion Associative</title>
+<updated>2014-08-15T01:47:42.065+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6995"
+	coordinates="48.902625743251,2.2113472223282"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:36:06.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2494"
+	name="Association Solidaire des Etudiants en Gestion Associative">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association Solidaire des Etudiants en Gestion Associative (ASEGA)
+- Promouvoir la licence professionnelle Métiers de la Gestion des Associations
+- Développer un réseau et un esprit de cohésion entre les différentes promotions de la licence professionnelle
+- Réaliser ou soutenir des actions en lien avec la vie associative (solidarité, culture, insertion, éducation, santé, environnement…)
+- Animer au travers de telles actions la vie étudiante sur le campus de l’Université Paris Ouest Nanterre
+- Accompagner les projets associatifs des étudiants ou anciens étudiants de la licence.
+- Véhiculer des valeurs de solidarité </description>
+	<address>
+		<floor>Bâtiment C</floor>
+		<openingHours>Tous les mercredis de 12h30 à 16h30</openingHours>
+		<url>http://licence.mga.over-blog.com/</url>
+		<phone>06 73 49 36 15</phone>
+		<email>asega.parisouest@gmail.com</email>
+	</address>
+</content>
+</entry>

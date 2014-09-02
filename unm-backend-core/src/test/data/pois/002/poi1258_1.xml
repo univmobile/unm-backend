@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1258_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1258_1.xml"/>
+<title>Pôle des métiers du Livre</title>
+<updated>2014-08-15T01:46:46.040+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1258"
+	coordinates="48.843433000159,2.2151402011514|48.843501843397,2.2151241078973|48.843517730285,2.2152515128255|48.843569803937,2.2152273729444|48.84363952959,2.2156873717904|48.8435848082,2.2157155349851|48.843594516838,2.2157825902104|48.843524791123,2.215802706778|48.843433000159,2.215140201151"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T15:20:37.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-29T14:36:48.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Pôle des métiers du Livre">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

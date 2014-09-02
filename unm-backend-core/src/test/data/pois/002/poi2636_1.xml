@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2636_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2636_1.xml"/>
+<title>Services de scolarité Paes, 2A,3A, 4A,5A et 6A</title>
+<updated>2014-08-15T01:46:58.650+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2636"
+	coordinates="48.84300790579,2.33593784272"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T15:00:18.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2450"
+	name="Services de scolarité Paes, 2A,3A, 4A,5A et 6A">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>RDC </floor>
+		<openingHours>Lundi-vendredi
+13h00 - 16h00
+Mercredi
+9h00 - 12h00</openingHours>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,111 @@
+<classes-diagram>
+
+<instance 
+	name="Code applicatif" 
+	centerX="40" centerY="150">
+<label>
+	<line>Code</line>
+	<line>applicatif</line>
+</label>
+<uses name="RegionClient"/>
+</instance>
+
+<instance 
+	name="Code métier" 
+	centerX="855" centerY="50">
+<label>
+	<line>Code</line>
+	<line>métier</line>
+</label>
+<uses name="RegionDataSource"/>
+</instance>
+
+<package name="fr.univmobile.backend.client">
+
+	<class name="RegionClient.1" centerX="520" centerY="150">
+	<method name="getRegions"/>
+	<explicitDependency name="Region.1" full="false"/>
+	</class>
+
+	<class name="Region" centerX="170" centerY="60">
+	<method name="getId"/>
+	<method name="getLabel"/>
+	</class>
+
+	<!-- 
+	<class name="String" centerX="345" centerY="60"/>
+	 -->
+
+	<class name="Region.1" centerX="520" centerY="60">
+	<method name="getId"/>
+	<method name="getLabel"/>
+	</class>
+
+	<class name="RegionClient" centerX="170" centerY="150">
+	<method name="getRegions"/>
+	</class>
+
+	<class name="RegionClientFromLocal" centerX="690" centerY="150">
+	<explicitImplements name="RegionClient.1"/>
+	<constructor/>
+	</class>
+
+	<class name="RegionClientFromJSON" centerX="170" centerY="250">
+	<constructor/>
+	</class>
+
+	<class name="RegionJSONClient" centerX="345" centerY="250">
+	<method name="getRegionsJSON"/>
+	</class>
+
+	<class name="RegionJSONClientImpl" centerX="520" centerY="250">
+	<explicitDependency name="RegionClient.1" full="true"/>
+	<constructor/>
+	</class>
+	
+</package>
+
+<class name="RegionDataSource" centerX="855" centerY="150">
+	<instance refMethodName="create"
+		label="create()">
+	<uses name="Region" package="fr.univmobile.backend.core"/>
+	</instance>
+	<instance refMethodName="update"
+		label="update()">
+	<uses name="Region" package="fr.univmobile.backend.core"/>
+	</instance>
+	<instance refMethodName="getById"
+		label="getById(String)">
+	<uses name="Region" package="fr.univmobile.backend.core"/>
+	</instance>
+	<instance refMethodName="getByUid"
+		label="getByUid(String)">
+	<uses name="Region" package="fr.univmobile.backend.core"/>
+	</instance>
+	<instance refMethodName="getAllBy"
+		label="getAllBy(&quot;uid&quot;): Map">
+	<uses name="Region" package="fr.univmobile.backend.core"/>
+	</instance>
+</class>
+
+<instance
+	refClassName="BackendDataSourceFileSystem"
+	name="BackendDataSourceFileSystem.newDataSource(RegionDataSource.class)" 
+	centerX="855" centerY="260">
+<label>
+	<line>BackendDataSourceFileSystem</line>
+	<line>.newDataSource(RegionDataSource.class)</line>
+</label>
+<uses name="XML Files"/>
+<explicitImplements name="RegionDataSource"/>
+<note dx="-100">Lit et stocke les données sur le système de fichiers</note>
+</instance>
+
+<resource name="XML Files"  centerX="855" centerY="330">
+<label>
+	<line>Fichiers</line>
+	<line>XML</line>
+</label>
+</resource>
+
+</classes-diagram>

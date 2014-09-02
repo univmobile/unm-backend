@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3199_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3199_1.xml"/>
+<title>Bibliothèque Orient et Monde arabe</title>
+<updated>2014-08-15T01:47:03.946+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3199"
+	coordinates="48.839858067287,2.35488530248"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:01:44.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3009"
+	name="Bibliothèque Orient et Monde arabe">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>4e étage - Porte 400</floor>
+		<openingHours>Du lundi au vendredi : 9h30 - 18h
+
+Fermé pendant les vacances de Noël, la deuxième semaine des vacances de Pâques, la dernière semaine de juillet ainsi que tout le mois d'août. 
+</openingHours>
+		<phone>0145874260</phone>
+	</address>
+</content>
+</entry>

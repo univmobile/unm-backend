@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5946_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5946_1.xml"/>
+<title>Service relations internationales</title>
+<updated>2014-08-15T01:47:31.955+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5946"
+	coordinates="49.038678068808,2.0750293135643"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:40:53.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3849"
+	name="Service relations internationales">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Tour des Chênes, bureau 313</floor>
+		<phone>01 34 25 67 21 </phone>
+		<fax>01 34 25 62 93 </fax>
+		<email>solenn.funck@u-cergy.fr </email>
+	</address>
+</content>
+</entry>

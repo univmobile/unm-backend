@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6604_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6604_1.xml"/>
+<title>Campus de Gif sur Yvette, Batiment 11</title>
+<updated>2014-08-15T01:47:38.712+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6604"
+	coordinates="48.70601123109,2.1324051171541|48.705844846021,2.1325284987688|48.705726252072,2.1326384693384|48.705678460402,2.1325258165598|48.705754573041,2.1324533969164|48.705791744287,2.1325150877237|48.705970519901,2.1323568373919|48.70601123109,2.1324051171541"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-07-05T11:40:16.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-07-05T15:40:39.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	name="Campus de Gif sur Yvette, Batiment 11">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B direction Saint-Rémy-lès-Chevreuse en venant de Paris (arrêts Gif sur Yvette).</itinerary>
+		<fullAddress>Campus de Gif sur Yvette
+Bâtiment 11
+Avenue de la Terrasse 
+91198 Gif-sur-Yvette cedex </fullAddress>
+	</address>
+</content>
+</entry>

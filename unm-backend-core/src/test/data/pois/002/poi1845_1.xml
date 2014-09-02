@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1845_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1845_1.xml"/>
+<title>Stages et emplois</title>
+<updated>2014-08-15T01:46:51.445+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1845"
+	coordinates="48.903033390827,2.2172494"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:17:44.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="super admin"
+	parentUid="2467"
+	name="Stages et emplois">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Bureau 04, Rdc</floor>
+		<openingHours>Du lundi au jeudi :
+9h / 15h45
+Vendredi :
+9h / 12h45</openingHours>
+	</address>
+</content>
+</entry>

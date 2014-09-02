@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/comments/001:comment3_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/comments/001:comment3_1.xml"/>
+<title>Troisième commentaire</title>
+<updated>2014-08-27T12:52:00Z</updated>
+<category term="comments"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3"
+	active="true"
+	postedAt="2014-08-27 13:54:00"
+	postedBy="Dominique"
+	title="Troisième commentaire">
+<context id="fr.univmobile:unm-backend:test/pois/001:poi415_1"
+	type="local:poi" uid="415"/> <!-- = context.maxOccurs = unbounded -->
+<message>Ceci est un troisième commentaire.</message>
+</content>
+</entry>

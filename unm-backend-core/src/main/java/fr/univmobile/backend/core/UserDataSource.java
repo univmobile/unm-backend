@@ -1,5 +1,12 @@
 package fr.univmobile.backend.core;
 
+import fr.univmobile.commons.datasource.BackendDataSource;
+import fr.univmobile.commons.datasource.Category;
+import fr.univmobile.commons.datasource.PrimaryKey;
+import fr.univmobile.commons.datasource.SearchAttribute;
+import fr.univmobile.commons.datasource.Support;
+import fr.univmobile.commons.datasource.Unique;
+
 @Category("users")
 @PrimaryKey("uid")
 @Unique("remoteUser")

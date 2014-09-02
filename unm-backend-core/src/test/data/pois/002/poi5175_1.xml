@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5175_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5175_1.xml"/>
+<title>LEA</title>
+<updated>2014-08-15T01:47:23.909+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5175"
+	coordinates="48.623969472156,2.4270142614841"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:09:56.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="256"
+	name="LEA">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association Langues Étrangères Appliquées de l’Université d’Évry</description>
+	<address>
+		<phone>07 69 82 98 92</phone>
+		<email>stephanie.genty@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

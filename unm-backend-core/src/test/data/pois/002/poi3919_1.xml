@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3919_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3919_1.xml"/>
+<title>Arts des images et art contemporain</title>
+<updated>2014-08-15T01:47:11.677+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3919"
+	coordinates="48.943836175023,2.3630606755614"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:22:12.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Arts des images et art contemporain">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 4010 : Arts des images et art contemporain appartenant à l'École doctorale (ED) 159 : Esthétique, sciences et technologies des arts.
+Directeur : François Soulages
+Contact au département d’Arts plastiques</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment A, bureau 069</floor>
+		<url>http://www.ai-ac.fr/</url>
+		<phone>01 49 40 66 02</phone>
+		<email>francois.soulages@wanadoo.fr</email>
+	</address>
+</content>
+</entry>

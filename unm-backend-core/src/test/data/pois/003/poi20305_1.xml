@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi305_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi305_1.xml"/>
+<title>Génie Mécanique et Productique (La Borie)</title>
+<updated>2014-08-17T21:32:58.004+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20305"
+	coordinates="45.836502636853,1.23127877712"
+	active="true"
+	markerType="point"
+	parentUid="20274"
+	name="Génie Mécanique et Productique (La Borie)">
+	<poiType id="27" label="Département IUT" categoryId="8" categoryLabel="Administration"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

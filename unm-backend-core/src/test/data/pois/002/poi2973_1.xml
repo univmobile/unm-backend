@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2973_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2973_1.xml"/>
+<title>Amphithéâtre Diderot</title>
+<updated>2014-08-15T01:47:01.625+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2973"
+	coordinates="48.779356298339,2.04462312161"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:17:00.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="rrivoire"
+	parentUid="2594"
+	name="Amphithéâtre Diderot">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Rez-de-Chausée ; 530 places</description>
+</content>
+</entry>

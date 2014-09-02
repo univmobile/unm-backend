@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6683_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6683_1.xml"/>
+<title>Résidence Universitaire Le Square</title>
+<updated>2014-08-15T01:47:39.263+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6683"
+	coordinates="49.048127411239,2.0267180353403"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-21T09:41:02.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6654"
+	name="Résidence Universitaire Le Square">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER A : Station Cergy-Saint-Christophe</itinerary>
+		<fullAddress>9, square de l'échiquier - 95800 Cergy Pontoise</fullAddress>
+	</address>
+	<child uid="6685" active="true"/>
+</content>
+</entry>

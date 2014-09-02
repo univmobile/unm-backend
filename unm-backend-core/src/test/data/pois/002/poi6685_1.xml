@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6685_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6685_1.xml"/>
+<title>Résidence Universitaire Le Square</title>
+<updated>2014-08-15T01:47:39.283+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6685"
+	coordinates="49.04816081297,2.0265329629183"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-21T09:43:07.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6683"
+	name="Résidence Universitaire Le Square">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Cette Résidence Universitaire est située dans le quartier de Saint-Christophe, à 10 min de l’Université St-Christophe, à une station de l’Université et du quartier de la Préfecture.
+Studios T1 : 221. Appartements deux étudiants célibataires (T1 bis) : 4 soit 8 lits
+Tarifs : de 319€ à 339€ charges comprises.</description>
+	<address>
+		<openingHours>Du lundi au vendredi, de 8h30 à 12h00 et de 13h00 à 16h30.
+
+Attention :
+Juillet et août : l'accueil du public s'effectue du lundi au vendredi, de 9h00 à 12h30 et de 14h00 à 17h00, à la résidence LA CROIX ST-SYLVERE (Quartier Croix St-Sylvère).</openingHours>
+		<phone>01 30 30 38 53</phone>
+	</address>
+	<attachment id="226" title="square.jpg" type="image" url="/uploads/poi/8412c1eff1d86802d29d2c5fd3430beca6a7f863.jpg"/>
+</content>
+</entry>

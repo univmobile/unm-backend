@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6993_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6993_1.xml"/>
+<title>Association du petit organe des étudiants de Nanterre</title>
+<updated>2014-08-15T01:47:42.040+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6993"
+	coordinates="48.902367562312,2.2118943929672"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:28:03.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2495"
+	name="Association du petit organe des étudiants de Nanterre">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’association du Petit Organe des étudiants de Nanterre (APODEN) est un groupe d’étudiants de l’université Paris Ouest ayant décidé de créer un journal sur le campus de Nanterre. Le but de cette association est d’animer et de rassembler les étudiants des différentes U.F.R. autour d’une publication ayant un style et une personnalité qui leur sera propre puisque ceux qui le voudront seront invités à y exprimer leurs talents. C'est de cette ambition de remplir une fonction utile à la vie de l'organisme universitaire qu'est née l'idée du journal étudiant Le Petit Organe des étudiants de Nanterre.</description>
+	<address>
+		<floor>Bâtiment D</floor>
+		<url>http://www.u-paris10.fr/APODEN/0/fiche___associationetudiant/</url>
+		<email>lepetitorgane@gmail.com</email>
+	</address>
+</content>
+</entry>

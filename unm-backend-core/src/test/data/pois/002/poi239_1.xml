@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi239_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi239_1.xml"/>
+<title>Salles informatiques</title>
+<updated>2014-08-15T01:46:38.691+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="239"
+	coordinates="48.623512821159,2.423847913742"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-08T01:42:16.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-07-16T15:30:33.000+02:00"
+	createdBy="raphael"
+	updatedBy="raphael"
+	name="Salles informatiques">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address
+		countryCode="FR">
+		<floor>Aile C, 2ème et 3ème étages</floor>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3775_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3775_1.xml"/>
+<title>BU Malesherbes</title>
+<updated>2014-08-15T01:47:10.255+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3775"
+	coordinates="48.883846181887,2.3109359666705"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:43:27.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3702"
+	name="BU Malesherbes">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Accessible aux étudiants, enseignants-chercheurs et personnel non enseignant de l'université Paris-Sorbonne.`
+Disciplines : études germaniques, nordiques, slaves, italiennes et roumaines, littérature et Langue françaises : lettres classiques et modernes, musicologie, langues étrangères appliquées.</description>
+	<address>
+		<openingHours>Du lundi au vendredi :
+8h30 / 20h00
+Samedi : 
+9h00 / 13h00</openingHours>
+		<phone>01 43 18 41 74</phone>
+	</address>
+</content>
+</entry>

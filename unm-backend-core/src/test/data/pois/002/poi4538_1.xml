@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4538_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4538_1.xml"/>
+<title>Faculté de pharmacie</title>
+<updated>2014-08-15T01:47:18.335+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4538"
+	coordinates="48.762455175591,2.2715198993683"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:05:05.000+02:00"
+	updatedAt="2013-11-29T11:55:32.000+01:00"
+	createdBy="j.richer"
+	updatedBy="MJRAMAGE"
+	parentUid="4398"
+	name="Faculté de pharmacie">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4984" active="true"/>
+	<child uid="4985" active="true"/>
+	<child uid="4986" active="true"/>
+	<child uid="4987" active="true"/>
+	<child uid="4988" active="true"/>
+	<child uid="4989" active="true"/>
+	<child uid="4990" active="true"/>
+	<child uid="4991" active="true"/>
+	<child uid="4992" active="true"/>
+</content>
+</entry>

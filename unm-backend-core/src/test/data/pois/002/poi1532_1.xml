@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1532_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1532_1.xml"/>
+<title>Stade Elizabeth </title>
+<updated>2014-08-15T01:46:48.614+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1532"
+	coordinates="48.82077778985,2.328445762395"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:46:33.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1162"
+	name="Stade Elizabeth ">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<address>
+		<itinerary>Métro 4 : Porte d'Orléans
+Bus 36 : Porte d'Orléans </itinerary>
+		<fullAddress>7 avenue Paul Appele 
+75014 Paris</fullAddress>
+	</address>
+</content>
+</entry>

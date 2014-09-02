@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi29_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi29_1.xml"/>
+<title>L'Institut Supérieur de Management</title>
+<updated>2014-08-15T01:46:38.278+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="29"
+	coordinates="48.779620151419,2.04414367675"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T11:04:46.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-05T13:58:46.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="L'Institut Supérieur de Management">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Créé au printemps 2010, L’ISM-UVSQ associe des départements de formation et des laboratoires de recherche.
+
+Il a pour mission fondamentale le développement de la recherche et de la formation, la diffusion et la valorisation des connaissances et des savoir-faire dans le domaine des sciences de gestion et du management.
+
+Il entend développer et promouvoir le management intégré et responsable des organisations. Pour ce faire, il prend, dans le cadre de l’Université, les initiatives et dispositions nécessaires pour organiser et développer la coopération universitaire et institutionnelle, aux plans européen et international, en matière de recherche, de formation et de coopération avec le milieu socio-économique.</description>
+	<address
+		zipCode="78280"
+		city="GUYANCOURT"
+		countryCode="FR">
+		<phone>01 39 25 50 02</phone>
+		<fax>01 39 25 53 55</fax>
+		<email>annie.bartoli@uvsq.fr </email>
+		<fullAddress>47 boulevard Vauban 78280 GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

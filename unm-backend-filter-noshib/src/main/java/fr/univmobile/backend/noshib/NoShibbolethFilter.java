@@ -179,10 +179,17 @@ public class NoShibbolethFilter implements Filter {
 
 		final String httpHost = httpRequest.getHeader("host");
 
-		if (httpHost == null || !httpHost.startsWith("localhost")) {
+		if (httpHost == null || (!httpHost.startsWith("localhost") //
+				&& !httpHost.startsWith("127.0.0.1") //
+				&& !httpHost.startsWith("192.168.0.40") //
+				&& !httpHost.startsWith("10.0.2.2") //
+		&& !"univmobile.vswip.com".equals(httpHost))) {
 
-			return error(response, "HTTP host must be localhost (test env): "
-					+ httpHost);
+			return error(response, "HTTP host must be localhost,"
+					+ " 127.0.0.1," //
+					+ " 192.168.0.40 (mbpro)," //
+					+ " 10.0.2.2 (ks3haxm)" //
+					+ " or univmobile.vswip.com (test env): " + httpHost);
 		}
 
 		final String remoteUser = httpRequest.getRemoteUser();
@@ -202,6 +209,18 @@ public class NoShibbolethFilter implements Filter {
 		}
 
 		request.setCharacterEncoding(UTF_8);
+
+		final String requestURI = httpRequest.getRequestURI();
+
+		if (requestURI.contains("/json")) {
+
+			return request; // Do not filter /json
+		}
+
+		if (requestURI.contains("/uploads")) {
+
+			return request; // Do not filter /uploads
+		}
 
 		final String uidParam = //
 		request.getParameter("NO_SHIB_uid");

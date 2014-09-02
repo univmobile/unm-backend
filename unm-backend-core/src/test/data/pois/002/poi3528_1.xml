@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3528_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3528_1.xml"/>
+<title>UFR 919</title>
+<updated>2014-08-15T01:47:07.689+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3528"
+	coordinates="48.845874781094,2.356986310333"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:52:03.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3425"
+	name="UFR 919">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>a Faculté d'Ingénierie (UFR 919) recouvre trois domaines scientifiques : l'électronique, la mécanique et l'informatique.</description>
+	<address>
+		<floor>2è étage bureau 201A</floor>
+		<url>http://www.ingenierie.upmc.fr/fr/index.html</url>
+		<phone>01 44 27 23 80</phone>
+		<email>annie.bacon@upmc.fr</email>
+	</address>
+</content>
+</entry>

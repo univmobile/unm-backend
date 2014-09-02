@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5413_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5413_1.xml"/>
+<title>Pôle Universitaire d'Evry Val-d'Essonne</title>
+<updated>2014-08-15T01:47:25.952+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5413"
+	coordinates="48.623325242633,2.4263826012611"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T11:04:28.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="3642"
+	name="Pôle Universitaire d'Evry Val-d'Essonne">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="6773" active="true"/>
+	<child uid="6625" active="true"/>
+	<child uid="6622" active="true"/>
+	<child uid="5420" active="true"/>
+	<child uid="5417" active="true"/>
+	<child uid="5414" active="true"/>
+	<child uid="5423" active="true"/>
+	<child uid="5426" active="true"/>
+	<child uid="6777" active="true"/>
+</content>
+</entry>

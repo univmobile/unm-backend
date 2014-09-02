@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi779_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi779_1.xml"/>
+<title>BU Informatique</title>
+<updated>2014-08-15T01:46:41.865+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="779"
+	coordinates="48.960123877767,2.343349456787"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-16T09:58:15.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2011-02-16T10:03:28.000+01:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="BU Informatique">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address
+		countryCode="FR">
+		<floor>aIle G  </floor>
+		<email>bcdsfjsdgfjisdjhcv</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3439_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3439_1.xml"/>
+<title>Bibliothèque de droit public</title>
+<updated>2014-08-15T01:47:06.623+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3439"
+	coordinates="48.847174860706,2.344110868871"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:23:31.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="Bibliothèque de droit public">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Public concerné : étudiants de masters et doctorants travaillant sur le droit public</description>
+	<address>
+		<openingHours>Du lundi au vendredi :
+9h30 / 19h00 
+Samedi : 
+10h00 / 18h00</openingHours>
+		<phone>01 44 07 78 53</phone>
+	</address>
+</content>
+</entry>

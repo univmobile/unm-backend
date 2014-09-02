@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3598_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3598_1.xml"/>
+<title>Alliance des étudiants amazighs en France (AEAF)</title>
+<updated>2014-08-15T01:47:08.415+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3598"
+	coordinates="48.946350706029,2.3607402294874"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:48:04.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Alliance des étudiants amazighs en France (AEAF)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Défendre les droits relatifs à la langue et à la culture amazighs (berbères) au sein des universités françaises et les intérêts moraux et matériels des étudiants.</description>
+	<address>
+		<phone>06 21 16 17 83</phone>
+		<email>oubrik2000@yahoo.fr</email>
+	</address>
+</content>
+</entry>

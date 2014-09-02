@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi264_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi264_1.xml"/>
+<title>Evry bâtiment Maupertuis</title>
+<updated>2014-08-15T01:46:38.843+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="264"
+	coordinates="48.623335525764,2.4270129203796"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-16T11:44:50.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="raphael"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="268"
+	name="Evry bâtiment Maupertuis">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D, arrêt Évry-Courcouronnes
+RER C, changement à Juvisy</itinerary>
+		<fullAddress>Rue du Père André Jarlan
+
+ 91025 Evry Cédex</fullAddress>
+	</address>
+	<child uid="572" active="true"/>
+	<child uid="2989" active="true"/>
+	<child uid="2964" active="true"/>
+	<child uid="2941" active="true"/>
+	<child uid="2344" active="true"/>
+	<child uid="2340" active="true"/>
+	<child uid="2308" active="true"/>
+	<child uid="1858" active="true"/>
+	<child uid="1850" active="true"/>
+	<child uid="474" active="true"/>
+	<child uid="469" active="true"/>
+	<child uid="468" active="true"/>
+	<child uid="568" active="true"/>
+	<child uid="267" active="true"/>
+	<child uid="5144" active="true"/>
+	<child uid="5145" active="true"/>
+	<child uid="5185" active="true"/>
+</content>
+</entry>

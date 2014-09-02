@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5758_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5758_1.xml"/>
+<title>Responsable Point de Vente - LP</title>
+<updated>2014-08-15T01:47:29.742+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5758"
+	coordinates="48.954509041515,2.878095433116"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:32:55.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5672"
+	name="Responsable Point de Vente - LP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau A114</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-licences-professionnelles/domaine-sciences-humaines-et-sociales/mention-management-des-organisations/licence-professionnelle-responsable-point-de-vente/</url>
+		<phone>01 64 36 44 56</phone>
+		<fax>01 64 36 44 55</fax>
+		<email>Brigitte.Dugue@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

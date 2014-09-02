@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi415_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi415_1.xml"/>
+<title>Centre Broca</title>
+<updated>2014-08-15T01:46:39.874+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="415"
+	coordinates="48.838311445098,2.348552942276"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-05T09:59:38.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre Broca">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="1024" active="true"/>
+	<attachment id="34" title="broca.jpg" type="image" url="/uploads/poi/790fdfceb8df212cd1d91bbe539b5ae3c4fed660.jpg"/>
+</content>
+</entry>

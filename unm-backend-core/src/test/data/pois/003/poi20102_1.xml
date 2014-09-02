@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi102_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi102_1.xml"/>
+<title>Maison de l'étudiant</title>
+<updated>2014-08-17T21:32:58.574+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20102"
+	coordinates="46.151934189163,-1.15568"
+	active="true"
+	markerType="point"
+	parentUid="20099"
+	name="Maison de l'étudiant">
+	<poiType id="24" label="Culture" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+	<description>Point d’accueil de l’Espace Culture de l’Université, la Maison de l’Étudiant renseigne sur l’actualité culturelle de la ville et de l’université, mais aussi, sur la vie étudiante et associative.</description>
+	<address>
+		<url>http://www.univ-larochelle.fr/La-Maison-de-l-Etudiant</url>
+		<email>culture@univ-lr.fr</email>
+	</address>
+</content>
+</entry>

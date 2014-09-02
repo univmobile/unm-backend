@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/poitrees/002:unrpcl_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/poitrees/002:unrpcl_1.xml"/>
+<title>PoiTree</title>
+<updated>2014-08-20T02:57:09.233+02:00</updated>
+<category term="poitrees"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="unrpcl">
+<poi uid="20181" name="ISAE-ENSMA" universityId="ensma" typeId="1" typeLabel="Université" categoryId="1" categoryLabel="Plans">
+    <poi uid="20268" name="ISAE-ENSMA" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20269" name="Bâtiment principal" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20187" name="Bibliothèque de l'ISAE-ENSMA" typeId="5" typeLabel="Bibliothèque" categoryId="9" categoryLabel="Bibliothèques"/>
+            <poi uid="20188" name="Services administratifs" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20189" name="A11 et  A12" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20190" name="Salles de cours et de bureaux d'études" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+        </poi>
+        <poi uid="20270" name="Gymnase de l'lSAE-ENSMA" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20193" name="Gymnase" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+        </poi>
+        <poi uid="20271" name="Terrains de sport de l'ISAE-ENSMA" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+    </poi>
+</poi>
+<poi uid="20160" name="CROUS de Poitiers" universityId="crousp" typeId="1" typeLabel="Université" categoryId="1" categoryLabel="Plans"/>
+<poi uid="20002" name="Université de Poitiers" universityId="up" typeId="1" typeLabel="Université" categoryId="1" categoryLabel="Plans">
+    <poi uid="20048" name="UFR Sciences Fondamentales et Appliquées" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20049" name="UFR Sciences Fondamentales et Appliquées" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20217" name="UFR Sciences Fondamentales et Appliquées" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+    </poi>
+    <poi uid="20050" name="Pôle Droit" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20051" name="Bibliothèque" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20216" name="Bibliothèque (Droit)" typeId="5" typeLabel="Bibliothèque" categoryId="9" categoryLabel="Bibliothèques"/>
+        </poi>
+    </poi>
+</poi>
+<poi uid="20036" name="Université de Limoges" universityId="ul" typeId="1" typeLabel="Université" categoryId="1" categoryLabel="Plans">
+    <poi uid="20037" name="Institut Universitaire de Technologie du Limousin" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20255" name="Génie Mécanique et Productique (IUT - La Souterraine)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20318" name="Génie Mécanique et Productique (La Souterraine)" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20272" name="Administration (IUT - La Borie)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20273" name="Informatique (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20311" name="Informatique" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20274" name="Génie Mécanique et Productique (IUT - La Borie)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20305" name="Génie Mécanique et Productique (La Borie)" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20275" name="Services et Réseaux de Communication (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20303" name="Services et Réseaux de Communication" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20276" name="Techniques de Commercialisation (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20304" name="Techniques de Commercialisation" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20277" name="Mesures Physiques (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20306" name="Mesures Physiques" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20278" name="Génie Biologique (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20307" name="Génie Biologique" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20279" name="Gestion des Entreprises et Administrations (IUT - La Borie)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20308" name="Gestion des Entreprises et Administrations (La Borie)" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20280" name="Amphithéâtre (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20300" name="Gestion des Entreprises et Administrations (IUT - Brive)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20309" name="Gestion des Entreprises et Administrations (Brive)" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20301" name="Génie Electrique et Informatique Industrielle (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20310" name="Génie Electrique et Informatique Industrielle" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20312" name="Génie Industriel et Maintenance (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20313" name="Génie Industriel et Maintenance" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20314" name="Hygiène Sécurité Environnement (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20315" name="Hygiène Sécurité Environnement" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20316" name="Génie Civil (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20317" name="Génie Civil" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+    </poi>
+    <poi uid="20065" name="Faculté des Lettres et Sciences Humaines" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20066" name="Restaurant universitaire" typeId="8" typeLabel="Restaurant" categoryId="4" categoryLabel="Restauration"/>
+        <poi uid="20321" name="Faculté des Lettres et Sciences Humaines" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20326" name="Service Universitaire de Médecine Préventive et de Promotion" typeId="10" typeLabel="Santé" categoryId="12" categoryLabel="Santé &amp; social"/>
+        </poi>
+        <poi uid="20322" name="Bibliothèque Universitaire (F.L.S.H.)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20067" name="Bibliothèque Universitaire (F.L.S.H.)" typeId="5" typeLabel="Bibliothèque" categoryId="9" categoryLabel="Bibliothèques"/>
+            <poi uid="20324" name="Service Commun de la Documentation (SCD F.L.S.H.)" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20325" name="Presses Universitaires de Limoges (PULIM)" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+    </poi>
+    <poi uid="20087" name="Faculté des Sciences et Techniques" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20281" name="Amphithéâtres (FST)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20360" name="Amphi Billy" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20361" name="Amphi Couty" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20362" name="Amphi Duchaigne" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20363" name="Amphi Joliet" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+        </poi>
+        <poi uid="20282" name="Bibliothèque Universitaire (FST)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20323" name="Bibliothèque Universitaire (FST)" typeId="5" typeLabel="Bibliothèque" categoryId="9" categoryLabel="Bibliothèques"/>
+        </poi>
+        <poi uid="20283" name="Chimie" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20284" name="Physique" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20285" name="Biologie" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20286" name="Mathématiques" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20287" name="Administration (FST)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20288" name="Pôle Technologique" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20289" name="Pôle Céramique" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20290" name="XLIM (Institut de Recherche)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20291" name="Service Commun Informatique" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20292" name="Géologie" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20296" name="Anglais (FST)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20298" name="Amphithéâtre Blanchot" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20297" name="Amphi Blanchot" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+        </poi>
+        <poi uid="20299" name="Hôtel Burgy" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20358" name="Salles de cours" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20359" name="Salles de cours" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20384" name="Salles TP (Meymac)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20390" name="Institut de Recherche sur l'Enseignement des Mathématiques" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20391" name="Institut de Recherche sur l'Enseignement des Mathématiques" typeId="28" typeLabel="Institut de Recherche" categoryId="15" categoryLabel="Laboratoires"/>
+        </poi>
+    </poi>
+    <poi uid="20220" name="IUFM du Limousin" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20399" name="Bâtiment A (IUFM Tulle)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20400" name="Annexe (IUFM Tulle)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20401" name="Gymnase (IUFM Tulle)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20402" name="Gymnase (IUFM Tulle)" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+        </poi>
+    </poi>
+    <poi uid="20238" name="Résidence universitaire de Vanteaux" typeId="25" typeLabel="Résidence Universitaire" categoryId="14" categoryLabel="Résidence"/>
+    <poi uid="20239" name="Site des Jacobins" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20075" name="Carrefour des Etudiants" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20377" name="Direction de la Coopération Internationale" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20378" name="Division de la Gestion des Etudiants et des Enseignements" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20379" name="Carrefour des étudiants" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+    </poi>
+    <poi uid="20241" name="Faculté de Droit et des Sciences Economiques" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20252" name="Forum A" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20353" name="Laboratoire d’Analyse et Prospective Économiques" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20354" name="Institut Sciences de l’Homme et de la Société" typeId="28" typeLabel="Institut de Recherche" categoryId="15" categoryLabel="Laboratoires"/>
+        </poi>
+        <poi uid="20254" name="Turgot - Faculté de Droit et des Sciences Economiques" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20355" name="Forum B" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+    </poi>
+    <poi uid="20242" name="Facultés de Médecine et de Pharmacie" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20069" name="Facultés de Médecine et de Pharmacie" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20327" name="Laboratoire Bactériologie-Virologie" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20328" name="Laboratoire d'Anatomie" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20329" name="Laboratoire d'Anglais" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20330" name="Laboratoire de Biochimie Médicale" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20331" name="Laboratoire de Parasitologie-Mycologie" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20332" name="Laboratoire Immunologie" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20333" name="Laboratoire Chimie Thérapeutique et Chimie Organique" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20334" name="Laboratoire Chimie Thérapeutique et Chimie Organique" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20335" name="Laboratoire de Biochimie Pharmacie" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20336" name="Laboratoire de Botanique et Cryptogamie" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20337" name="Laboratoire de Chimie Physique-Chimie Minérale" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20338" name="Laboratoire de Microbiologie-Parasitologie" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20339" name="Laboratoire de Pharmacologie Pharmaceutique" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20340" name="Laboratoire de Physiologie Pharmacie" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20341" name="Laboratoire de Toxicologie" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20342" name="Laboratoire Pharmacie d'application" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20343" name="Laboratoire Pharmacie Galénique" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20345" name="Administration" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20349" name="Institut GEIST" typeId="28" typeLabel="Institut de Recherche" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20350" name="IPAM" typeId="28" typeLabel="Institut de Recherche" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20351" name="Bibliothèque Universitaire (Santé)" typeId="5" typeLabel="Bibliothèque" categoryId="9" categoryLabel="Bibliothèques"/>
+            <poi uid="20352" name="Service Commun de la Documentation (SCD Méd.-Pharma.)" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+    </poi>
+    <poi uid="20243" name="Site Condorcet" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20260" name="I.U.F.M." typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20261" name="SUFOP" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20262" name="CFA Sup" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+        <poi uid="20263" name="CRIP" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+    </poi>
+    <poi uid="20246" name="Ecole Nationale Supérieure d'Ingénieurs de Limoges" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20247" name="ENSIL" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20380" name="Amphithéâtre" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20381" name="Administration" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20382" name="Bibliothèque Universitaire (ENSIL)" typeId="5" typeLabel="Bibliothèque" categoryId="9" categoryLabel="Bibliothèques"/>
+            <poi uid="20383" name="Service Commun de la Documentation (SCD ENSIL)" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20385" name="Ondes et Systèmes Associés (XLIM)" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+        </poi>
+    </poi>
+    <poi uid="20258" name="Campus de Guéret" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20403" name="Bâtiment A (IUFM Guéret)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+    </poi>
+    <poi uid="20319" name="Sciences et Techniques des Activités Physiques et Sportives" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20320" name="Sciences et Techniques des Activités Physiques et Sportives" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+    </poi>
+    <poi uid="20356" name="Institut d'Administration des Entreprises" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20251" name="IAE - Institut d'administration des entreprises" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+    </poi>
+    <poi uid="20364" name="Hôtel de l'Université" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20235" name="Hotel de l'Université" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20365" name="Bureau des charges et moyens" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20366" name="DRH Biatoss" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20367" name="DRH Enseignants" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20368" name="Interface Informatique de gestion" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20369" name="Marchés Publics" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20370" name="Présidence" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20371" name="Secrétariat Général" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20372" name="Service Communication" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20373" name="Services Centraux" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20374" name="Service Recherche et Valorisation de la Recherche" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20375" name="Services Financiers et Agence Comptable" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20376" name="Service Patrimoine / Hygiène et sécurité" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+    </poi>
+    <poi uid="20386" name="École Nationale Supérieure de Céramique Industrielle" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20248" name="Centre Européen de la Céramique" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+    </poi>
+    <poi uid="20392" name="Technopole" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+        <poi uid="20393" name="Agence pour la Valorisation de la Recherche Universitaire du" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+    </poi>
+    <poi uid="20394" name="Complexe sportif (La Borrie)" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20294" name="Gymnase Universitaire" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20060" name="Gymnase Universitaire" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+            <poi uid="20295" name="SUAPS" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+        </poi>
+        <poi uid="20387" name="Terrains tennis (synthétique)" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+        <poi uid="20388" name="Terrain tennis (gazon)" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+        <poi uid="20389" name="Terrain volley" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+    </poi>
+    <poi uid="20395" name="Complexe sportif (Tulle)" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20396" name="Stade" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+        <poi uid="20397" name="Gymnase René Cassin" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+        <poi uid="20398" name="Terrain rugby" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+    </poi>
+</poi>
+<poi uid="20001" name="Université de La Rochelle" universityId="ulr" typeId="1" typeLabel="Université" categoryId="1" categoryLabel="Plans">
+    <poi uid="20015" name="UFR Sciences Fondamentales et Sciences pour l’Ingénieur" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20104" name="Bâtiment d’Orbigny" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20113" name="Amphi 400" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20114" name="Amphi 300" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20161" name="Bâtiment d'Orbigny" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+            <poi uid="20212" name="Services administratifs de l'UFR Sciences Fondamentales" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20105" name="Bâtiment Fourrier" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20162" name="Bâtiment Fourrier" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20106" name="Bâtiment Pascal" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20121" name="Laboratoire Mathématiques, Image et Applications (MIA)" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20122" name="Laboratoire Informatique, Image et Interaction (L3i)" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20163" name="Bâtiment Pascal" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20107" name="Maison des Sciences de l’Ingénieur (MSI)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20108" name="Amphi 100" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20164" name="Maison des Sciences de l’Ingénieur (MSI)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20115" name="Centre Commun d'Analyses (CCA-LASAT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20116" name="Fondation Université de La Rochelle" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20120" name="SOCMOM" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20165" name="Centre Commun d'Analyses (CCA- LASAT)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20145" name="Bâtiment Marie Curie" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20166" name="Bâtiment Marie Curie" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+            <poi uid="20204" name="Laboratoire des Sciences de l'Ingenieur pour l'Environnement" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20206" name="LIttoral ENvironnement et Sociétés" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+        </poi>
+    </poi>
+    <poi uid="20024" name="Pôle Communication, Multimédia et Réseaux" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20023" name="Pôle Communication Multimédia et Réseaux (PCMR)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20012" name="Direction du Système d'Information (DSI)" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20103" name="Pôle Communication Multimédia et Réseaux" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20167" name="Pôle Communication Multimédia et Réseaux (PCMR)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+            <poi uid="20202" name="Cellule d'Accompagnement aux Technologies de l'nformation" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20207" name="Service Inter-Universitaire de Médecine Préventive" typeId="10" typeLabel="Santé" categoryId="12" categoryLabel="Santé &amp; social"/>
+        </poi>
+    </poi>
+    <poi uid="20025" name="Bibliothèque Universitaire" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20143" name="Bibliothèque Universitaire" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20026" name="Bibliothèque Universitaire" typeId="5" typeLabel="Bibliothèque" categoryId="9" categoryLabel="Bibliothèques"/>
+            <poi uid="20201" name="Bibliothèque Universitaire" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+            <poi uid="20203" name="Bibliothèque Universitaire" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+    </poi>
+    <poi uid="20089" name="Gymnase Universitaire de Bongraine" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20090" name="Gymnase Universitaire de Bongraine" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20092" name="ASUR Association Sportive de l'Université de La Rochelle " typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+            <poi uid="20093" name="SUAPSE" typeId="24" typeLabel="Culture" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+            <poi uid="20094" name="SUAPSE" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+        </poi>
+    </poi>
+    <poi uid="20095" name="Technoforum" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20011" name="Technoforum" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20056" name="Service des Études et de la Vie Étudiante (SEVE)" typeId="4" typeLabel="Scolarité" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20168" name="Technoforum" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+            <poi uid="20208" name="Maison de la Réussite et de l’Insertion Professionnelle" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20209" name="Service des Relations Internationales" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20211" name="Collège des Écoles Doctorales" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+    </poi>
+    <poi uid="20096" name="UFR des Lettres, Langues, Arts et Sciences Humaines" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20020" name="FLASH 1" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20109" name="Amphi 400" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20110" name="Amphi 100" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20111" name="Amphi 250B" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20112" name="Amphi 250A" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20147" name="Centre de Recherches en Histoire Internationale et" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20169" name="FLASH 1" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+            <poi uid="20213" name="Services administratifs de l'UFR des Lettres, Langues, Arts " typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20199" name="FLASH 2" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20200" name="FLASH 2" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+    </poi>
+    <poi uid="20098" name="Maison de l'étudiant" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20099" name="Maison de l'étudiant" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20101" name="Maison de l'étudiant" typeId="13" typeLabel="Social" categoryId="12" categoryLabel="Santé &amp; social"/>
+            <poi uid="20102" name="Maison de l'étudiant" typeId="24" typeLabel="Culture" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+            <poi uid="20170" name="Maison de l'étudiant" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+    </poi>
+    <poi uid="20117" name="Institut du Littoral et de l’Environnement (ILE)" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20118" name="Institut du Littoral et de l’Environnement (ILE)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20119" name="LIttoral ENvironnement et Sociétés" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20171" name="Institut du Littoral et de l’Environnement (ILE)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+    </poi>
+    <poi uid="20135" name="UFR Droit, Science Politique et Gestion" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20136" name="Bâtiment Gestion Management" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20137" name="Amphi A01" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20151" name="Centre de Recherche en Sciences de Gestion (CEREGE-LR-MOS)" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20172" name="Bâtiment Gestion Management" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+            <poi uid="20215" name="Services administratifs de l'Institut de Gestion" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+        <poi uid="20138" name="Bâtiment Schoelcher" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20142" name="Amphi Valin" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20173" name="Bâtiment Schoelcher" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20139" name="Bâtiment Tocqueville" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20140" name="Amphi Riviero" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20141" name="Amphi Esmein" typeId="11" typeLabel="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+            <poi uid="20148" name="Centre d’Études Internationales sur la Romanité (CEIR)" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20149" name="Centre d’Études Juridiques et Politiques (CEJEP)" typeId="19" typeLabel="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20152" name="Institut Pierre Pescatore (IPP) Droits, Libertés, [...]" typeId="28" typeLabel="Institut de Recherche" categoryId="15" categoryLabel="Laboratoires"/>
+            <poi uid="20174" name="Bâtiment Tocqueville" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+            <poi uid="20214" name="Services administratifs de l'UFR Droit, Science Politique" typeId="26" typeLabel="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+        </poi>
+    </poi>
+    <poi uid="20154" name="Institut Universitaire de Technologie (IUT)" typeId="2" typeLabel="Site" categoryId="1" categoryLabel="Plans">
+        <poi uid="20028" name="Administration (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20057" name="Scolarité" typeId="4" typeLabel="Scolarité" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20153" name="Association Sportive de l'IUT" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+            <poi uid="20175" name="Administration (IUT)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20029" name="Techniques de Commercialisation (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20155" name="Techniques de Commercialisation (TC)" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20176" name="Techniques de Commercialisation (IUT)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20030" name="Génie Civil (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20156" name="Génie Civil (GC)" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20177" name="Génie Civil (IUT)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20031" name="Réseaux &amp; Télécommunications (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20157" name="Réseaux &amp; Télécommunications (R&amp;T)" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20178" name="Techniques de Commercialisation (IUT)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20032" name="Informatique (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20158" name="Informatique" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20179" name="Informatique (IUT)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20033" name="Génie Biologique (IUT)" typeId="3" typeLabel="Bâtiment" categoryId="1" categoryLabel="Plans">
+            <poi uid="20159" name="Génie Biologique (GB)" typeId="27" typeLabel="Département IUT" categoryId="8" categoryLabel="Administration"/>
+            <poi uid="20180" name="Génie Biologique (IUT)" typeId="6" typeLabel="Entrée principale" categoryId="10" categoryLabel="Accès &amp; Adresses"/>
+        </poi>
+        <poi uid="20088" name="Terrain de foot" typeId="12" typeLabel="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+    </poi>
+</poi>
+</content>
+</entry>

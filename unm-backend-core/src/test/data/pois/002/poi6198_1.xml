@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6198_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6198_1.xml"/>
+<title>École Doctorale Arts plastiques</title>
+<updated>2014-08-15T01:47:34.817+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6198"
+	coordinates="48.842048171855,2.2803792357445"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-16T12:21:28.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1025"
+	name="École Doctorale Arts plastiques">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Bureau 456</floor>
+		<openingHours>Lundi-jeudi : 9h30-12h  et 14h-16h 
+Vendredi : 14h-16h</openingHours>
+		<url>http://ufr04-arts.univ-paris1.fr/</url>
+		<phone>01 44 07 84 77</phone>
+		<email>juliette.vivies@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

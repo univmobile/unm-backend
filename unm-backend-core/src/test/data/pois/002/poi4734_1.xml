@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4734_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4734_1.xml"/>
+<title>Bibliothèque de la recherche</title>
+<updated>2014-08-15T01:47:20.008+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4734"
+	coordinates="48.782030114383,2.284847125411"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T14:44:04.000+02:00"
+	updatedAt="2013-06-20T10:12:55.000+02:00"
+	createdBy="j.richer"
+	updatedBy="anaelle.royer"
+	parentUid="4659"
+	name="Bibliothèque de la recherche">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>La Bibliothèque de la recherche de la Faculté Jean Monnet centralise et gère la documentation mutualisée par les 7 équipes de recherche reconnues par la Faculté.</description>
+	<address>
+		<floor>2ème étage Bâtiment A, bureau 205</floor>
+		<openingHours>Horaires (jusqu'au 29 juin inclus) :
+
+- du lundi au vendredi : 9h - 19h
+- le samedi : de 9h à 17h
+
+Attention, horaires réduits pendant les vacances d'été, consulter le site web. </openingHours>
+		<url>http://recherche.jm.u-psud.fr/index.php?/93-doc</url>
+		<phone>01 40 91 19 47</phone>
+		<fax>01 40 91 18 34</fax>
+		<email>bibliotheque.recherche@jm.u-psud.fr</email>
+	</address>
+</content>
+</entry>

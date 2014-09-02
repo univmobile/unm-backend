@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2254_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2254_1.xml"/>
+<title>Physiopathologie et Pharmacologie Clinique de la Douleur</title>
+<updated>2014-08-15T01:46:55.377+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2254"
+	coordinates="48.777945218958,2.047124952077"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T17:39:12.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2011-06-03T15:06:19.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	name="Physiopathologie et Pharmacologie Clinique de la Douleur">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>0149095946</phone>
+		<email>didier.bouhassira@apr.ap-hop-paris.fr</email>
+	</address>
+</content>
+</entry>

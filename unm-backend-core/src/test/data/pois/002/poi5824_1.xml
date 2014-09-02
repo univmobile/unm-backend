@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5824_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5824_1.xml"/>
+<title>Institut de chimie moléculaire et des matériaux d'Orsay</title>
+<updated>2014-08-15T01:47:30.535+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5824"
+	coordinates="48.703197213809,2.174663990736"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:37:04.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="Fatma ARAS"
+	parentUid="5823"
+	name="Institut de chimie moléculaire et des matériaux d'Orsay">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Unité mixte de recherche (UMR) 8182</description>
+	<address>
+		<floor>Bâtiment 420, Rez de jardin</floor>
+		<url>http://www.icmmo.u-psud.fr/</url>
+		<phone>01 69 15 47 48</phone>
+		<fax>01 69 15 47 47</fax>
+		<email>catherine.charles-pauwels@u-psud.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1164_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1164_1.xml"/>
+<title>Université Paris 8 Vincennes Saint-Denis</title>
+<updated>2014-08-15T01:46:45.431+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1164"
+	coordinates="48.945715563546,2.3633909225464"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-22T16:58:12.000+01:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="martin"
+	updatedBy="yasmine"
+	name="Université Paris 8 Vincennes Saint-Denis">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="paris8"/>
+	<address
+		zipCode="93526"
+		city="Saint-Denis cedex"
+		countryCode="FR"
+		latitude="48.94"
+		longitude="2.36">
+		<fullAddress>2, rue de la Liberté </fullAddress>
+	</address>
+	<child uid="1982" active="true"/>
+	<child uid="1981" active="true"/>
+	<child uid="1990" active="true"/>
+	<child uid="6946" active="true"/>
+</content>
+</entry>

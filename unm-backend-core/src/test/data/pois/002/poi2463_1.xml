@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2463_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2463_1.xml"/>
+<title>Faculté de Médecine Cordeliers </title>
+<updated>2014-08-15T01:46:57.022+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2463"
+	coordinates="48.850659729214,2.3405130207539"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:42:48.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3974"
+	name="Faculté de Médecine Cordeliers ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 4 , 10 : Odéon
+RER B et C Saint Michel Notre Dames
+Bus:21-27-38-63-85-86-87-96</itinerary>
+		<fullAddress>15 rue de l'école de médecine 
+75006 paris</fullAddress>
+	</address>
+	<child uid="2809" active="true"/>
+	<child uid="2808" active="true"/>
+	<child uid="2709" active="true"/>
+	<child uid="2573" active="true"/>
+	<child uid="2571" active="true"/>
+	<child uid="2570" active="true"/>
+	<child uid="2563" active="true"/>
+	<child uid="2533" active="true"/>
+	<child uid="2531" active="true"/>
+	<child uid="3042" active="true"/>
+	<child uid="3302" active="true"/>
+	<child uid="3391" active="true"/>
+	<child uid="3404" active="true"/>
+	<child uid="3700" active="true"/>
+	<child uid="5560" active="true"/>
+	<child uid="6111" active="true"/>
+</content>
+</entry>

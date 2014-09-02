@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi99_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi99_1.xml"/>
+<title>Maison de l'étudiant</title>
+<updated>2014-08-17T21:32:58.565+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20099"
+	coordinates="46.151910297132,-1.155737042427"
+	active="true"
+	markerType="point"
+	parentUid="20098"
+	name="Maison de l'étudiant">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>22, rue Cardinal
+17000 La Rochelle</fullAddress>
+	</address>
+	<child uid="20101" active="true"/>
+	<child uid="20102" active="true"/>
+	<child uid="20170" active="true"/>
+</content>
+</entry>

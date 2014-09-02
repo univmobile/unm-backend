@@ -16,7 +16,7 @@
     	<param name="Append" value="true"/>
     	<param name="MaxFileSize" value="100000KB"/>
     	<param name="MaxBackupIndex" value="3"/>
-        <param name="Threshold" value="info"/>
+        <param name="Threshold" value="debug"/>
         <layout class="org.apache.log4j.PatternLayout">
             <param name="ConversionPattern" value="%d{ISO8601} %-5p [%F:%L] %m%n"/>
         </layout>
@@ -28,7 +28,7 @@
     </logger>
     -->
     <root>
-        <level value="info"/>
+        <level value="debug"/>
         <appender-ref ref="tmpfile"/>
     </root>
     

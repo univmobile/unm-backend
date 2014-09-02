@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4165_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4165_1.xml"/>
+<title>Site ESPE - Centre formation Gennevilliers </title>
+<updated>2014-08-15T01:47:14.513+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4165"
+	coordinates="48.935948272225,2.3029339313507"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T17:22:44.000+02:00"
+	updatedAt="2013-06-27T14:21:24.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Fatma ARAS"
+	parentUid="3792"
+	name="Site ESPE - Centre formation Gennevilliers ">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4167" active="true"/>
+</content>
+</entry>

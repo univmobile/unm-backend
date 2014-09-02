@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3412_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3412_1.xml"/>
+<title>Bibliothèque d'Assas</title>
+<updated>2014-08-15T01:47:06.314+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3412"
+	coordinates="48.843149638639,2.333241216838"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:57:44.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2846"
+	name="Bibliothèque d'Assas">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Du lundi au jeudi : 
+8h45 / 21h
+Vendredi :
+8h45 / 19h 
+Samedi : 8h45 / 17h</openingHours>
+		<phone>01 44 41 58 93</phone>
+		<email>bu@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

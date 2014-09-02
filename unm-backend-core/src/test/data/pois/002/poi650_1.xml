@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi650_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi650_1.xml"/>
+<title>CROUS Service des Bourses</title>
+<updated>2014-08-15T01:46:40.960+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="650"
+	coordinates="48.827061097978,2.364549636"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T20:05:54.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T16:14:05.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="CROUS Service des Bourses">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address
+		countryCode="FR">
+		<floor>Aile B, 11e étage, 11.05</floor>
+		<openingHours>Lundi au vendredi 9h30-12h
+14-16h
+Mardi
+9h30-16h30
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64, 83
+Arrêt Tolbiac-Baudricourt
+</itinerary>
+		<phone>01 44 07 88 33 </phone>
+		<email>bourses@univ-paris1.fr</email>
+		<fullAddress>90 rue de Tolbiac
+75013 Paris</fullAddress>
+	</address>
+</content>
+</entry>

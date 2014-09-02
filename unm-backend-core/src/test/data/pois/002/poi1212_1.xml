@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1212_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1212_1.xml"/>
+<title>Site de Saint Cloud</title>
+<updated>2014-08-15T01:46:45.868+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1212"
+	coordinates="48.84342323265,2.2151438891888|48.843523849679,2.2158063948154|48.843590927585,2.2157876193523|48.843585631964,2.215720564127|48.843638588149,2.2156937420368|48.843569745098,2.2152243554592|48.843516788841,2.2152431309223|48.843495606323,2.2151224315166|48.84342323265,2.215143889"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T14:24:15.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-29T14:38:27.000+02:00"
+	createdBy="marine gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Site de Saint Cloud">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro :
+Ligne 9, station Pont de Sèvres
+Ligne 10, station Boulogne/Pont de Saint cloud
+Bus :
+160, 460, 467, arrêt Collège Gounod
+Tram: 
+T.2 station Parc de Saint Cloud</itinerary>
+		<fullAddress>11 avenue Pozzo di Borgo
+92210 Saint Cloud</fullAddress>
+	</address>
+</content>
+</entry>

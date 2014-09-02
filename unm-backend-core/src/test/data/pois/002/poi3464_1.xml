@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3464_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3464_1.xml"/>
+<title>UFR Sciences de l’éducation, Psychanalyse, Com/FLE (SEPF)</title>
+<updated>2014-08-15T01:47:06.925+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3464"
+	coordinates="48.944308021661,2.3629054427147"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:09:15.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="UFR Sciences de l’éducation, Psychanalyse, Com/FLE (SEPF)">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Danièle Lemeunier (responsable administrative).
+L’UFR SEPF regroupe trois départements : Sciences de l’éducation, Psychanalyse, Communication/Français Langue Etrangère.</description>
+	<address>
+		<floor>4ème étage Bâtiment A, bureau 457</floor>
+		<url>http://www.ufr-sepf.univ-paris8.fr/</url>
+		<phone>01 49 40 66 50</phone>
+		<email>dlemeunier@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

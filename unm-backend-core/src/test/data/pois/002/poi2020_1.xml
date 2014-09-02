@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2020_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2020_1.xml"/>
+<title>Accueil du bâtiment B</title>
+<updated>2014-08-15T01:46:53.432+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2020"
+	coordinates="48.903232078312,2.2113418579"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T16:16:50.000+02:00"
+	updatedAt="2011-11-15T16:24:37.000+01:00"
+	deletedAt="2011-05-26T14:42:20.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Accueil du bâtiment B">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Rdc</floor>
+	</address>
+</content>
+</entry>

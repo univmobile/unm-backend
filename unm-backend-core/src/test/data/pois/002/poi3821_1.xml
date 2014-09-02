@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3821_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3821_1.xml"/>
+<title>Résidence la Croix St-Sylvère</title>
+<updated>2014-08-15T01:47:10.691+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3821"
+	coordinates="49.076007687145,2.1105813235044"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-16T10:55:42.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	deletedAt="2011-05-26T11:11:01.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Résidence la Croix St-Sylvère">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Résidence - Quartier Croix St-Sylvère - 95014 Cergy-Pontoise.
+Dans le quartier de la Préfecture, près de l’IPSL, Essec 
+Tarifs : 144€ charges comprises.
+Chambres individuelles : 200 lits.</description>
+	<address>
+		<openingHours>Horaires d'ouverture du secrétariat : du lundi au vendredi, de 8h30 à 12h00 et de 14h00 à 16h00.
+Attention :
+Juillet et août, du lundi au vendredi, de 9h00 à 12h30.
+
+</openingHours>
+		<phone>01 30 30 38 53</phone>
+	</address>
+</content>
+</entry>

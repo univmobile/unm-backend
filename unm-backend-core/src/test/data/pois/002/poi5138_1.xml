@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5138_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5138_1.xml"/>
+<title>UFR STAPS</title>
+<updated>2014-08-15T01:47:23.540+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5138"
+	coordinates="48.702002318895,2.1632116287947"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T14:48:10.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4411"
+	name="UFR STAPS">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Directrice : Mme Christine Le Scanff</description>
+	<address>
+		<floor>Bâtiment 335</floor>
+		<url>http://www.staps.u-psud.fr/fr/ufr_staps/presentation.html</url>
+		<phone>01 69 15 66 66</phone>
+		<email>christine.le-scanff@staps.u-psud.fr</email>
+	</address>
+</content>
+</entry>

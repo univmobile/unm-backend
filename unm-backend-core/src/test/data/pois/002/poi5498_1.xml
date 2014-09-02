@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5498_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5498_1.xml"/>
+<title>Ingénierie mathématique (M1 IM)</title>
+<updated>2014-08-15T01:47:26.875+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5498"
+	coordinates="48.703500749372,2.1766612306237"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T15:54:51.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4580"
+	name="Ingénierie mathématique (M1 IM)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 425, bureau 27</floor>
+		<url>http://webens-ng.math.u-psud.fr/IM/</url>
+		<phone>01 69 15 79 91</phone>
+		<fax>01 69 15 57 94</fax>
+		<email>MasterIM@math.u-psud.fr</email>
+	</address>
+</content>
+</entry>

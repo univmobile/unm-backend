@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6720_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6720_1.xml"/>
+<title>Cafétéria Institut Catholique de Paris</title>
+<updated>2014-08-15T01:47:39.596+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6720"
+	coordinates="48.848078588519,2.3296929895878"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-16T18:44:37.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6709"
+	name="Cafétéria Institut Catholique de Paris">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 4 : Saint Sulpice</itinerary>
+		<fullAddress>21 rue d'Assas
+75006 Paris </fullAddress>
+	</address>
+	<child uid="6721" active="true"/>
+</content>
+</entry>

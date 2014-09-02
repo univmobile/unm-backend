@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5584_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5584_1.xml"/>
+<title>MAGMa</title>
+<updated>2014-08-15T01:47:27.678+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5584"
+	coordinates="48.787845238761,2.4444472789764"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:04:33.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	deletedAt="2011-06-08T11:06:21.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="MAGMa">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>1er étage, bureau 14</floor>
+		<fax>test</fax>
+		<email>will-labejof@yahoo.fr</email>
+	</address>
+</content>
+</entry>

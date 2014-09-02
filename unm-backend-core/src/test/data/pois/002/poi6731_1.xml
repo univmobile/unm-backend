@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6731_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6731_1.xml"/>
+<title>Restaurant Citeaux</title>
+<updated>2014-08-15T01:47:39.720+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6731"
+	coordinates="48.847022254545,2.3800420761108"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-16T19:19:44.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	deletedAt="2011-08-16T19:20:47.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Restaurant Citeaux">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+</content>
+</entry>

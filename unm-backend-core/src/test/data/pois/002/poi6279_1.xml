@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6279_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6279_1.xml"/>
+<title>Guyancourt Vauban</title>
+<updated>2014-08-15T01:47:35.645+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6279"
+	coordinates="48.780026665696,2.0441865921021"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-20T15:45:12.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="haromoys"
+	updatedBy="rrivoire"
+	parentUid="359"
+	name="Guyancourt Vauban">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Gare Saint-Quentin-en-Yvelines (Montigny le Bretonneux)</itinerary>
+		<fullAddress>Bâtiment Vauban
+47 boulevard Vauban 
+78280 Guyancourt</fullAddress>
+	</address>
+	<child uid="7139" active="true"/>
+	<child uid="7135" active="true"/>
+	<child uid="7112" active="true"/>
+	<child uid="7110" active="true"/>
+	<child uid="7111" active="true"/>
+	<child uid="7113" active="true"/>
+	<child uid="7117" active="true"/>
+	<child uid="7118" active="true"/>
+	<child uid="7119" active="true"/>
+	<child uid="7120" active="true"/>
+	<child uid="7134" active="true"/>
+	<child uid="7138" active="true"/>
+</content>
+</entry>

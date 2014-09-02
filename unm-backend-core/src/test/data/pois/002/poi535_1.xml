@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi535_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi535_1.xml"/>
+<title>Restaurant le Sablier</title>
+<updated>2014-08-15T01:46:40.628+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="535"
+	coordinates="48.624164790077,2.42680639028"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-17T14:12:36.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="yasmine"
+	updatedBy="pdeljurie"
+	parentUid="256"
+	name="Restaurant le Sablier">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address
+		countryCode="FR">
+		<floor>RDC</floor>
+		<openingHours>11h00 - 14h00</openingHours>
+		<itinerary>RER D </itinerary>
+	</address>
+</content>
+</entry>

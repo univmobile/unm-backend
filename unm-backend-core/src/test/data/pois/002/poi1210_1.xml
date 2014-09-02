@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1210_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1210_1.xml"/>
+<title>Site de Nanterre</title>
+<updated>2014-08-15T01:46:45.854+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1210"
+	coordinates="48.904212295597,2.2145095467"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T14:15:30.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="marine gianfermi"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="1161"
+	name="Site de Nanterre">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>SNCF; gare saint Lazare prendre le train en direction de &quot;Nanterre Université&quot;
+RER A station Nanterre Université
+Arrêt &quot;Nanterre Université&quot; par les ligne 267, 304, 357.
+Arrêt &quot;Université Paris X&quot; et &quot;École du petit Nanterre&quot; par les lignes 167, 367.</itinerary>
+		<phone>01 40 97 72 00</phone>
+		<fullAddress>200 avenue de la république
+92001 NANTERRE</fullAddress>
+	</address>
+	<child uid="6925" active="true"/>
+	<child uid="6511" active="true"/>
+	<child uid="2520" active="true"/>
+	<child uid="2518" active="true"/>
+	<child uid="2516" active="true"/>
+	<child uid="2507" active="true"/>
+	<child uid="2504" active="true"/>
+	<child uid="2502" active="true"/>
+	<child uid="2499" active="true"/>
+	<child uid="2495" active="true"/>
+	<child uid="2494" active="true"/>
+	<child uid="2491" active="true"/>
+	<child uid="2488" active="true"/>
+	<child uid="2486" active="true"/>
+	<child uid="2485" active="true"/>
+	<child uid="2482" active="true"/>
+	<child uid="2481" active="true"/>
+	<child uid="2478" active="true"/>
+	<child uid="2475" active="true"/>
+	<child uid="2473" active="true"/>
+	<child uid="2470" active="true"/>
+	<child uid="2469" active="true"/>
+	<child uid="2467" active="true"/>
+	<child uid="2464" active="true"/>
+	<child uid="2461" active="true"/>
+	<child uid="2190" active="true"/>
+</content>
+</entry>

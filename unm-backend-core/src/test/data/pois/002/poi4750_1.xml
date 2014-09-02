@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4750_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4750_1.xml"/>
+<title>Campus d'Orsay - Bibliothèque (Bâtiment 407)</title>
+<updated>2014-08-15T01:47:20.157+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4750"
+	coordinates="48.702687408033,2.1776251494884"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T15:16:34.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4404"
+	name="Campus d'Orsay - Bibliothèque (Bâtiment 407)">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B direction Saint-Rémy-lès-Chevreuse en venant de Paris (arrêts Le Guichet, Orsay-Ville ou Bures-sur-Yvette).</itinerary>
+		<fullAddress>Campus universitaire d'Orsay
+Bâtiment 407
+Rue du Doyen Poitou
+91405 Orsay Cedex</fullAddress>
+	</address>
+	<child uid="4753" active="true"/>
+	<child uid="4754" active="true"/>
+	<child uid="4755" active="true"/>
+	<child uid="5735" active="true"/>
+	<child uid="5856" active="true"/>
+	<child uid="5967" active="true"/>
+	<child uid="6116" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4325_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4325_1.xml"/>
+<title>Laboratoires Constant Burg</title>
+<updated>2014-08-15T01:47:16.143+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4325"
+	coordinates="48.843890099847,2.3456957191229"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:17:10.000+02:00"
+	updatedAt="2011-05-24T15:06:49.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2727"
+	name="Laboratoires Constant Burg">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER : B (Luxembourd)
+Métro : 7/10</itinerary>
+		<fullAddress>12 rue de Lhomond
+75005 Paris</fullAddress>
+	</address>
+	<child uid="4333" active="true"/>
+	<child uid="4331" active="true"/>
+</content>
+</entry>

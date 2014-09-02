@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3111_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3111_1.xml"/>
+<title>DFLE M1-2</title>
+<updated>2014-08-15T01:47:03.110+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3111"
+	coordinates="48.849459425885,2.34445855021"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:31:23.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-17T14:02:32.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	name="DFLE M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<openingHours>Lundi, Mercredi, Jeudi, de 10h00 à 12h30 et de 14h15 à 17h15
+Mardi et Vendredi, le matin uniquement, de 10h00 à 12h30
+</openingHours>
+		<phone>0140462929</phone>
+		<email>dept-dfle@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

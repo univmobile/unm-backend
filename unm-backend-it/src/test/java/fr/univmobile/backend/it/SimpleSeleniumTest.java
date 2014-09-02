@@ -1,7 +1,10 @@
 package fr.univmobile.backend.it;
 
 import static org.apache.commons.lang3.StringUtils.containsIgnoreCase;
+import static org.apache.commons.lang3.StringUtils.substringAfter;
+import static org.apache.commons.lang3.StringUtils.substringBefore;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 
@@ -13,36 +16,43 @@ import org.junit.Test;
 import com.thoughtworks.selenium.DefaultSelenium;
 import com.thoughtworks.selenium.Selenium;
 
-import fr.univmobile.testutil.PropertiesUtils;
-
 public class SimpleSeleniumTest {
 
 	@Before
 	public void setUp() throws Exception {
 
-		// 1. DATA
+		// 0. ENVIRONMENT
 
-		final File dataDir = new File("/tmp/unm-backend/dataDir");
+		// "http://localhost:8380/unm-backend/"
+		final String baseURL = TestBackend.readBackendAppBaseURL(new File(
+				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
 
-		dataDir.mkdirs();
+		// "/unm-backend/"
+		final String contextRoot = "/"
+				+ substringAfter(substringAfter(baseURL, "://"), "/");
 
-		FileUtils.deleteDirectory(dataDir);
+		// "http://localhost:"
+		// + PropertiesUtils.getTestProperty("tomcat.port") + "/";
+		final String url = substringBefore(baseURL, contextRoot) + "/";
 
-		FileUtils.copyDirectory(new File("src/test/data"), dataDir);
+		// "/tmp/unm-backend/dataDir"
+		final String dataDir = TestBackend.readBackendAppDataDir(new File(
+				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
+
+		// 1. INJECT DATA
+
+		TestBackend.setUpData("001", new File(dataDir));
 
 		// 2. WEBAPP
 
 		final int seleniumPort = 8888;
-
-		final String url = "http://localhost:"
-				+ PropertiesUtils.getTestProperty("tomcat.port") + "/";
 
 		selenium = new DefaultSelenium("localhost", seleniumPort, "*firefox",
 				url);
 
 		selenium.start();
 
-		selenium.open("/unm-backend" //
+		selenium.open(contextRoot //
 				+ "?NO_SHIB_uid=tformica" //
 				+ "&NO_SHIB_eppn=tformica@univ-paris1.fr" //
 				+ "&NO_SHIB_displayName=Toto+Formica" //
@@ -65,7 +75,7 @@ public class SimpleSeleniumTest {
 
 		final String KWARGS = "";
 
-		final File file = new File("target", "home.png");
+		final File file = new File("target", "testHomePage.png");
 
 		selenium.captureEntirePageScreenshot(file.getCanonicalPath(), KWARGS);
 
@@ -87,5 +97,60 @@ public class SimpleSeleniumTest {
 
 		assertFalse("Page source should not contain text: \"" + FORBIDDEN
 				+ "\"", containsIgnoreCase(pageSource, FORBIDDEN));
+	}
+
+	@Test
+	public void testNoHardcodedUnivmobileDevUnivParis1() throws Exception {
+
+		// selenium.click("identifier=button-myself"); // Doesn’t work
+
+		selenium.getEval("window.document.getElementById('button-myself').click();");
+
+		selenium.waitForPageToLoad("10000");
+
+		final String KWARGS = "";
+
+		final File file = new File("target",
+				"testNoHardcodedUnivmobileDevUnivParis1.png");
+
+		selenium.captureEntirePageScreenshot(file.getCanonicalPath(), KWARGS);
+
+		final String pageSource = selenium.getHtmlSource();
+
+		FileUtils.write(new File("target", "entered.html"), pageSource);
+
+		// We test that the "entered" page doesn’t contain the hardcoded line:
+		// "JSON : https://univmobile-dev.univ-paris1.fr/json/regions"
+		// Because univmobile-dev is the integration platform, not the dev / ci
+		// one.
+		// The "entered" page should only contain a line like this one:
+		// "JSON : http://localhost:8380/unm-backend/json/regions"
+
+		final String JSON = "JSON";
+
+		assertTrue("Page source should contain text: \"" + JSON + "\"",
+				containsIgnoreCase(pageSource, JSON));
+
+		final String JSON_REGIONS = "/json/regions";
+
+		assertTrue("Page source should contain text: \"" + JSON_REGIONS + "\"",
+				containsIgnoreCase(pageSource, JSON_REGIONS));
+
+		final String HTTPS_UNIVMOBILE_DEV = "https://univmobile-dev";
+
+		assertFalse("Page source should not contain text: \""
+				+ HTTPS_UNIVMOBILE_DEV + "\"",
+				containsIgnoreCase(pageSource, HTTPS_UNIVMOBILE_DEV));
+
+		final String UNIV_PARIS1 = "univ-paris1.fr/json";
+
+		assertFalse("Page source should not contain text: \"" + UNIV_PARIS1
+				+ "\"", containsIgnoreCase(pageSource, UNIV_PARIS1));
+
+		final String BASE_URL = "baseURL"; // "${baseURL}"
+
+		assertFalse(
+				"Page source should not contain text: \"" + BASE_URL + "\"",
+				containsIgnoreCase(pageSource, BASE_URL));
 	}
 }

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2375_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2375_1.xml"/>
+<title>Droit (L1-L3)</title>
+<updated>2014-08-15T01:46:56.431+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2375"
+	coordinates="48.94448330595,2.36309722065"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T17:03:22.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Droit (L1-L3)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2ème étage Bâtiment A, bureau 233</floor>
+		<openingHours>Lundi, mardi et vendredi
+10h-12h
+Jeudi
+10h-12h
+14h-16h</openingHours>
+		<url>http://www-droit.univ-paris8.fr/</url>
+		<phone>01 49 40 66 28</phone>
+		<fax>01 49 40 65 06</fax>
+		<email>kamel.khelifa@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

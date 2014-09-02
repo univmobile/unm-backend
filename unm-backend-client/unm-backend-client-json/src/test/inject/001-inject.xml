@@ -1,0 +1,57 @@
+<init-params>
+	<init-param>
+		<param-name>inject-packages</param-name>
+		<param-value>
+			fr.univmobile.commons.datasource
+			fr.univmobile.commons.datasource.impl
+			fr.univmobile.backend.core
+			fr.univmobile.backend.client
+			fr.univmobile.backend.client.json
+			fr.univmobile.backend.client.test
+		</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:RegionClient into:DependencyInjectionClientTest</param-name>
+		<param-value>RegionClientFromJSON</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:RegionJSONClient into:RegionClientFromJSON</param-name>
+		<param-value>RegionJSONClientImpl</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:RegionClient into:RegionJSONClientImpl</param-name>
+		<param-value>RegionClientFromLocal</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:String into:RegionJSONClientImpl</param-name>
+		<param-value>${ref:baseURL}</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:String ref:baseURL</param-name>
+		<param-value>(dummy baseURL)</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:RegionDataSource into:RegionClientFromLocal</param-name>
+		<param-value>factory:BackendDataSourceFileSystem:r</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:PoiTreeDataSource into:RegionClientFromLocal</param-name>
+		<param-value>factory:BackendDataSourceFileSystem:pt</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:Class into:factory:BackendDataSourceFileSystem:r</param-name>
+		<param-value>class:RegionDataSource</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:File into:factory:BackendDataSourceFileSystem:r</param-name>
+		<param-value>src/test/data/regions/001</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:Class into:factory:BackendDataSourceFileSystem:pt</param-name>
+		<param-value>class:PoiTreeDataSource</param-value>
+	</init-param>
+	<init-param>
+		<param-name>inject:File into:factory:BackendDataSourceFileSystem:pt</param-name>
+		<param-value>src/test/data/poitrees/001</param-value>
+	</init-param>
+</init-params>

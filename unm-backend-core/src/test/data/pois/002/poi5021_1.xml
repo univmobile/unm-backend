@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5021_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5021_1.xml"/>
+<title>Scolarité Institut de préparation à l'administration général</title>
+<updated>2014-08-15T01:47:22.873+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5021"
+	coordinates="48.787447859409,2.4440261721611"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T17:04:06.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4533"
+	name="Scolarité Institut de préparation à l'administration général">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Centre multidisciplinaire de Créteil (CMC)/Institut de préparation à l'administration général (IPAG)	</description>
+	<address>
+		<floor>Niveau dalle, Bureau016</floor>
+		<phone>01.45.17.19.40</phone>
+		<email>ipag@univ-paris12.fr</email>
+	</address>
+</content>
+</entry>

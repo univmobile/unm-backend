@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7137_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7137_1.xml"/>
+<title>Faculté de droit et science politique (DSP)</title>
+<updated>2014-08-15T01:47:43.677+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7137"
+	coordinates="48.785802347622,2.0513427257538"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-05T19:24:19.000+01:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	name="Faculté de droit et science politique (DSP)">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+</content>
+</entry>

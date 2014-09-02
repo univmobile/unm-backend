@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7347_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7347_1.xml"/>
+<title>Jardin des Plantes</title>
+<updated>2014-08-15T01:47:45.496+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7347"
+	coordinates="48.844108777746,2.3605397343636"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-11T14:16:17.000+02:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-11T14:21:15.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Jardin des Plantes">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

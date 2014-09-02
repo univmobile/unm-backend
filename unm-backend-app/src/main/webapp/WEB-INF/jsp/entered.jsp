@@ -7,7 +7,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
 <title>Administration d’UnivMobile</title>
-<link type="text/css" rel="stylesheet" href="${baseURL}/css/styles.css">
+<link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 </head>
 <body id="body-entered" class="entered">
 <div id="div-entered">
@@ -16,14 +16,15 @@
 <c:if test="${user.uid != delegationUser.uid}">
 <li> Délégation : ${delegationUser.uid}
 </c:if>
-<li> <a href="${baseURL}/?logout">Déconnexion</a>
+<li> <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
 </ul>
 </div>
 
 <div class="body">
 <form action="${baseURL}/" method="POST">
 
-<h1 title="Build ${buildInfo.buildDisplayName}
+<h1 title="Version ${buildInfo.appVersion}
+Build ${buildInfo.buildDisplayName}
 ${buildInfo.buildId}
 ${buildInfo.gitCommitId}">
 Administration d’UnivMobile
@@ -64,7 +65,7 @@ ${u.mail}
 </td>
 <td class="edit">
 <!--
-<a href="${baseURL}?user=${u.uid}&amp;edit">Modifier…</a>
+<a id="link-edit_xxx" href="${baseURL}?user=${u.uid}&amp;edit">Modifier…</a>
 -->
 <div class="disabled">Modifier…</a>
 </td>
@@ -76,7 +77,7 @@ ${u.mail}
 </table>
 
 <div class="table bottom">
-<a href="${baseURL}/useradd">Ajouter un utilisateur…</a>
+<a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
 </div>
 
 <div id="div-regions">
@@ -87,8 +88,9 @@ ${u.mail}
 <thead>
 <tr>
 <th class="none"></th>
-<th>id</th>
-<th>label</th>
+<th class="uid">id</th>
+<th class="label">label</th>
+<th class="universityCount">universités</th>
 <th class="none"></th>
 </tr>
 </thead>
@@ -97,12 +99,15 @@ ${u.mail}
 <tr>
 <td class="none">
 </td>
-<td>
+<td class="uid">
 ${r.uid}
 </td>
 <td class="label">
 <input type="text" id="text-region_${r.uid}" name="region_${r.uid}"
 	value="${r.label}"/>
+</td>
+<td class="universityCount">
+${r.universityCount}
 </td>
 <td class="none">
 </td>
@@ -123,12 +128,54 @@ ${r.uid}
 
 <div class="table bottom">
 JSON :
-<a href="https://univmobile-dev.univ-paris1.fr/json/regions">
-https://univmobile-dev.univ-paris1.fr/json/regions
+<a id="link-json" href="${baseURL}/json/regions">
+${baseURL}/json/regions
 </a>
 </div>
 
 </div> <!-- end of #div-regions -->
+
+<div id="div-pois">
+
+<h2>
+<a href="${baseURL}/geocampus" id="link-geocampus">Géocampus</a>
+</h2>
+
+<hr>
+
+<h2>
+<a href="${baseURL}/pois" id="link-pois">POIs : ${poisInfo.count}</a>
+</h2>
+
+<table>
+<tbody>
+<c:forEach var="r" items="${poisInfo.regions}">
+<tr>
+<th class="region" colspan="2">
+	Région : ${r.label}
+</th>	
+<th class="poiCount">POIs</th>
+</tr>
+<c:forEach var="u" items="${r.universities}">
+<tr>
+<td class="id">
+${u.id}
+</td>
+<td class="title">
+${u.title}
+</td>
+<td class="poiCount">
+<a href="${baseURL}/pois/?univ=${u.id}">
+${u.poiCount}
+</a>
+</td>
+</tr>
+</c:forEach>
+</c:forEach>
+</tbody>
+</table>
+
+</div> <!-- end of #div-pois -->
 
 </form>
 </div> <!-- end of div.body -->

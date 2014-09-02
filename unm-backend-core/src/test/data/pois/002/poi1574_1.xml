@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1574_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1574_1.xml"/>
+<title>Master 2, Inginierie Immobilière</title>
+<updated>2014-08-15T01:46:49.002+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1574"
+	coordinates="48.90299329473,2.215669602155"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T17:24:11.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	deletedAt="2011-04-01T17:52:43.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Master 2, Inginierie Immobilière">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 313 A, 3ème étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h30 / 12h30 - 13h30 / 16h30</openingHours>
+		<phone>01 40 97 73 93 </phone>
+		<email>vbertoni@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

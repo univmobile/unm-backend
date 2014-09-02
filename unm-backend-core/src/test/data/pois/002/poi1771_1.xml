@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1771_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1771_1.xml"/>
+<title>Site Charles V</title>
+<updated>2014-08-15T01:46:50.681+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1771"
+	coordinates="48.85314543396,2.3627351"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T14:54:01.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	parentUid="1216"
+	name="Site Charles V">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 7 Sully-Morland
+Métro 1 Saint Paul</itinerary>
+	</address>
+	<child uid="1330" active="true"/>
+	<child uid="1381" active="true"/>
+	<child uid="1421" active="true"/>
+	<child uid="6300" active="true"/>
+	<child uid="6302" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5668_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5668_1.xml"/>
+<title>IUT Champs</title>
+<updated>2014-08-15T01:47:28.659+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5668"
+	coordinates="48.837017719004,2.5849085301161"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:17:14.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4531"
+	name="IUT Champs">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER : A Noisy Champs</itinerary>
+		<fax>test</fax>
+		<fullAddress>Site de Champs sur Marne
+Cité Descartes
+77420 Champs sur Marne</fullAddress>
+	</address>
+	<child uid="5683" active="true"/>
+	<child uid="5669" active="true"/>
+	<child uid="5688" active="true"/>
+	<child uid="5689" active="true"/>
+	<child uid="5691" active="true"/>
+	<child uid="5695" active="true"/>
+	<child uid="5698" active="true"/>
+	<child uid="5713" active="true"/>
+	<child uid="5714" active="true"/>
+	<child uid="5736" active="true"/>
+	<child uid="5737" active="true"/>
+	<child uid="5744" active="true"/>
+	<child uid="5748" active="true"/>
+	<child uid="5755" active="true"/>
+	<child uid="5757" active="true"/>
+	<child uid="5766" active="true"/>
+	<child uid="5772" active="true"/>
+	<child uid="5955" active="true"/>
+	<child uid="6051" active="true"/>
+	<child uid="6052" active="true"/>
+	<child uid="6059" active="true"/>
+	<child uid="6060" active="true"/>
+	<child uid="6066" active="true"/>
+	<child uid="6083" active="true"/>
+	<child uid="6094" active="true"/>
+	<child uid="6109" active="true"/>
+</content>
+</entry>

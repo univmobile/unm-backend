@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5443_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5443_1.xml"/>
+<title>Brasserie de l'IUT</title>
+<updated>2014-08-15T01:47:26.229+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5443"
+	coordinates="48.843530572185,2.215530462563"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T12:53:25.000+02:00"
+	updatedAt="2012-02-03T12:30:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5441"
+	name="Brasserie de l'IUT">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>De 11h30 à 14h30</openingHours>
+		<phone>01 55 39 12 80</phone>
+	</address>
+	<attachment id="164" title="IUT de St cloud.jpg" type="image" url="/uploads/poi/2939ed73d0778ef607c71170d212fefafa43b7f7.jpg"/>
+</content>
+</entry>

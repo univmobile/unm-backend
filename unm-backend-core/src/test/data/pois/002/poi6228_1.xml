@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6228_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6228_1.xml"/>
+<title>Gestion des Sites culturels et naturels et Valorisation Tour</title>
+<updated>2014-08-15T01:47:35.174+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6228"
+	coordinates="48.841747414564,2.3487685248256"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-16T17:16:36.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-06-16T17:18:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Gestion des Sites culturels et naturels et Valorisation Tour">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<openingHours>Lundi-vendredi : 10h-12h et 14h-16h
+excepté mercredi : 10h-12h</openingHours>
+		<url>http://www.univ-paris1.fr/ufr/irest/</url>
+		<phone>01 55 43 46 58</phone>
+		<email>irest@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

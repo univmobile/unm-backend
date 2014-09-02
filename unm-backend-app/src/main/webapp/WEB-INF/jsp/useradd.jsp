@@ -6,24 +6,18 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<title>Administration d’UnivMobile</title>
-<link type="text/css" rel="stylesheet" href="${baseURL}/css/styles.css">
+<title>Administration d’UnivMobile — Ajouter un utilisateur</title>
+<link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 </head>
 <body id="body-useradd" class="entered">
-<div id="div-entered">
-<ul>
-<li> Principal : ${user.uid}
-<c:if test="${user.uid != delegationUser.uid}">
-<li> Délégation : ${delegationUser.uid}
-</c:if>
-<li> <a href="${baseURL}/?logout">Déconnexion</a>
-</ul>
-</div>
+
+<jsp:include page="div-entered_modal.h.jsp"/>
 
 <div class="body">
 <form action="${baseURL}/useradd" method="POST">
 
-<h1 title="Build ${buildInfo.buildDisplayName}
+<h1 title="Version ${buildInfo.appVersion}
+Build ${buildInfo.buildDisplayName}
 ${buildInfo.buildId}
 ${buildInfo.gitCommitId}">
 Administration d’UnivMobile
@@ -98,7 +92,7 @@ Administration d’UnivMobile
 
 <div class="table bottom">
 <!--
-<a href="${baseURL}/">Annuler</a>
+<a id="link-cancel" href="${baseURL}/">Annuler</a>
 -->
 <button id="button-cancel"
  onclick="document.location.href = '${baseURL}'; return false;">

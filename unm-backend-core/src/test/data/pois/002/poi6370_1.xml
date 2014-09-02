@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6370_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6370_1.xml"/>
+<title>Génie électrique et informatique industrielle DUT</title>
+<updated>2014-08-15T01:47:36.510+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6370"
+	coordinates="48.788489132802,2.4426810443401"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T14:27:56.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4528"
+	name="Génie électrique et informatique industrielle DUT">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Secrétaire du département Génie électrique et informatique. 4 options: 
+   - Conception, réalisation et programmation de cartes électroniques ;
+   - Instrumentation de précision ;
+   - Automatisation et le contrôle des processus industriels ;
+   - Électronique embarquée dans un objet mobile (avionique, robotique, etc.) ;
+   - Implantation, la gestion et la maintenance des réseaux industriels, réseaux de terrain et réseaux informatiques
+</description>
+	<address>
+		<url>http://iut.u-pec.fr/formations/dut/</url>
+		<phone>01 45 17 17 55 </phone>
+		<email>geii-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

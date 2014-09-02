@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1780_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1780_1.xml"/>
+<title>Paris Rive Gauche Lavoisier</title>
+<updated>2014-08-15T01:46:50.794+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1780"
+	coordinates="48.827047413108,2.3832117766142"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T14:58:45.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="j.richer"
+	parentUid="1215"
+	name="Paris Rive Gauche Lavoisier">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+	</address>
+	<child uid="6443" active="true"/>
+	<child uid="6442" active="true"/>
+	<child uid="1674" active="true"/>
+	<child uid="1327" active="true"/>
+	<child uid="1325" active="true"/>
+	<child uid="1322" active="true"/>
+	<child uid="1318" active="true"/>
+	<child uid="1316" active="true"/>
+	<child uid="1391" active="true"/>
+	<child uid="6388" active="true"/>
+</content>
+</entry>

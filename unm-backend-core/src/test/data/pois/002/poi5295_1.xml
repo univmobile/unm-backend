@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5295_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5295_1.xml"/>
+<title>Bibliothèque du centre Fontainebleau </title>
+<updated>2014-08-15T01:47:24.943+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5295"
+	coordinates="48.398276609097,2.6864469051361"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T09:54:41.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	deletedAt="2011-06-01T15:32:13.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Bibliothèque du centre Fontainebleau ">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Du lundi au jeudi de 9h à 17h, le vendredi de 9h à 16h
+</openingHours>
+		<url>http://bibliotheque.u-pec.fr/bibliotheques/centre-de-fontainebleau/</url>
+		<phone>01.60.74.68.31 </phone>
+	</address>
+</content>
+</entry>

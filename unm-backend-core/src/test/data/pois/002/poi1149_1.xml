@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1149_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1149_1.xml"/>
+<title>Licence Histoire</title>
+<updated>2014-08-15T01:46:45.293+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1149"
+	coordinates="48.955465385699,2.3403239"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-22T15:05:23.000+01:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	deletedAt="2011-03-29T22:12:36.000+02:00"
+	createdBy="Kevin Mazille"
+	updatedBy="Kevin Mazille Paris 8"
+	name="Licence Histoire">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Après une première année commune aux parcours d'Histoire et de Géographie, le parcours Histoire se définit progressivement en deuxième année. Il se propose de permettre aux étudiants d'acquérir des connaissances historiques à la fois générales et plus spécialisées en permettant, au niveau de la troisième année, de se familiariser avec les techniques historiques telles que l'archéologie, la paléographie et l'épigraphie. Il s'agit aussi d'amener l'étudiant à maîtriser les techniques d'expression et les techniques informatiques qui lui permettront de valoriser et d'utiliser ses savoirs. L'étude d'une langue vivante est obligatoire pendant les trois années du parcours.</description>
+	<address>
+		<floor>2ème étage.</floor>
+		<itinerary>Bâtiment Lettres et Communication - Aile E.</itinerary>
+		<url>http://www.univ-paris13.fr/lshs/</url>
+		<phone>01 49 40 31 93 </phone>
+		<email>acc-cfc@univ-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE </fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi859_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi859_1.xml"/>
+<title>Amphithéâtre 1 Colliard</title>
+<updated>2014-08-15T01:46:42.565+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="859"
+	coordinates="48.83601026137,2.346102073"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T15:23:38.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="959"
+	name="Amphithéâtre 1 Colliard">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Capacité 500 places.</description>
+	<address>
+		<itinerary>Métro 6 et 7
+Station Glacière ou Saint-Jacques, Les Gobelins
+Bus 27, 38, 83 et 91
+</itinerary>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi213_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi213_1.xml"/>
+<title>Services administratifs de l'UFR des Lettres, Langues, Arts </title>
+<updated>2014-08-17T21:32:58.873+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20213"
+	coordinates="46.151861986593,-1.1533820629"
+	active="true"
+	markerType="point"
+	parentUid="20020"
+	name="Services administratifs de l'UFR des Lettres, Langues, Arts ">
+	<poiType id="26" label="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+	<address>
+		<url>http://fllash.univ-larochelle.fr/</url>
+		<phone>05 46 45 68 00 </phone>
+		<email>accueil.flash@univ-lr.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4622_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4622_1.xml"/>
+<title>IFU</title>
+<updated>2014-08-15T01:47:19.097+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4622"
+	coordinates="48.837603002607,2.5871927663684"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:57:22.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4531"
+	name="IFU">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER : A (Noisy Champs)</itinerary>
+		<fullAddress>2 rue nobel
+77420 Champs sur Marne</fullAddress>
+	</address>
+	<child uid="6049" active="true"/>
+	<child uid="4628" active="true"/>
+	<child uid="6029" active="true"/>
+	<child uid="6030" active="true"/>
+	<child uid="6031" active="true"/>
+	<child uid="6033" active="true"/>
+	<child uid="6039" active="true"/>
+	<child uid="6040" active="true"/>
+	<child uid="6041" active="true"/>
+	<child uid="6042" active="true"/>
+	<child uid="6043" active="true"/>
+	<child uid="6045" active="true"/>
+	<child uid="6046" active="true"/>
+	<child uid="6075" active="true"/>
+	<child uid="6092" active="true"/>
+</content>
+</entry>

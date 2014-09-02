@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5536_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5536_1.xml"/>
+<title>Antenne emplois, jobs</title>
+<updated>2014-08-15T01:47:27.217+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5536"
+	coordinates="48.787919459883,2.4443319439888"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T17:18:16.000+02:00"
+	updatedAt="2012-06-06T09:43:37.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4334"
+	name="Antenne emplois, jobs">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>1er étage, bâtiment i3</floor>
+		<url>http://www.u-pec.fr/etudiant/vie-etudiante/</url>
+		<phone>01.45.17.65.20</phone>
+	</address>
+</content>
+</entry>

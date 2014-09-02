@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1330_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1330_1.xml"/>
+<title>Laboratoire de recherche sur les cultures anglophones</title>
+<updated>2014-08-15T01:46:46.279+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1330"
+	coordinates="48.853167612487,2.36289404332"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T16:58:25.000+01:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1771"
+	name="Laboratoire de recherche sur les cultures anglophones">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>RDC</floor>
+		<itinerary>Métro 7 Sully-Morland
+Métro 1 Saint Paul</itinerary>
+	</address>
+</content>
+</entry>

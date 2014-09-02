@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4915_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4915_1.xml"/>
+<title>Les anciens de dauphine</title>
+<updated>2014-08-15T01:47:21.767+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4915"
+	coordinates="48.869870254853,2.2736415266991"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:38:07.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Les anciens de dauphine">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Accueil téléphonique standard association
+Lundi au jeudi : 10h00 / 12h30 - 14h00 / 17h30
+Vendredi : 10h00 / 12h30 - 14h00 / 16h30</description>
+	<address>
+		<floor>Bureau B 124</floor>
+		<openingHours>Lundi : 14h00 / 17H30
+Du mardi, au jeudi : 10h00 / 12h30 - 14h00 / 17h30
+Vendredi : 10h00 / 12h30 - 14h00 / 16h30
+
+ 
+
+</openingHours>
+		<phone>01 44 05 44 99</phone>
+		<email>contact@anciens-dauphine.org</email>
+	</address>
+</content>
+</entry>

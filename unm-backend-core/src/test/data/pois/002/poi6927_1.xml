@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6927_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6927_1.xml"/>
+<title>Institut National d’Histoire de l’Art</title>
+<updated>2014-08-15T01:47:41.351+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6927"
+	coordinates="48.866799952469,2.3393219523132"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-26T16:41:27.000+02:00"
+	updatedAt="2011-09-26T16:46:05.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3770"
+	name="Institut National d’Histoire de l’Art">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2740_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2740_1.xml"/>
+<title>Amphi du Château</title>
+<updated>2014-08-15T01:46:59.688+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2740"
+	coordinates="48.619321214027,2.305736839771"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T17:19:02.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	deletedAt="2011-05-31T14:44:41.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Amphi du Château">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>1er étage</floor>
+	</address>
+</content>
+</entry>

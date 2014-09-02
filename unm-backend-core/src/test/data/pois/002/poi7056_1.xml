@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7056_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7056_1.xml"/>
+<title>Ressources humaines</title>
+<updated>2014-08-15T01:47:42.798+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7056"
+	coordinates="48.902940269107,2.2173567116261"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-10T15:49:55.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="7051"
+	name="Ressources humaines">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Salim BELKADI</description>
+	<address>
+		<floor>M R02</floor>
+		<phone>0140977107</phone>
+		<email>salim.belkadi@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

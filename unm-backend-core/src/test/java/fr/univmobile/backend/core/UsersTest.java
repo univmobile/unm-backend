@@ -2,6 +2,7 @@ package fr.univmobile.backend.core;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertSame;
 import static org.junit.Assert.assertTrue;
 
@@ -13,7 +14,7 @@ import java.util.NoSuchElementException;
 import org.junit.Before;
 import org.junit.Test;
 
-import fr.univmobile.backend.core.impl.BackendDataSourceFileSystem;
+import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class UsersTest {
 
@@ -100,7 +101,7 @@ public class UsersTest {
 	@Test
 	public void test_getAll() throws Exception {
 
-		final Map<String, User> allUsers = users.getAllBy("uid");
+		final Map<String, User> allUsers = users.getAllBy(String.class, "uid");
 
 		assertEquals(2, allUsers.size());
 
@@ -127,5 +128,14 @@ public class UsersTest {
 
 		assertEquals("crezvani", crezvani.getUid());
 		assertEquals("dandriana", dandriana.getUid());
+	}
+
+	@Test
+	public void test_profileImageUrl() throws Exception {
+
+		final User crezvani = users
+				.getById("fr.univmobile:unm-backend:test/users/001:crezvani_1");
+
+		assertNull(crezvani.getProfileImageUrl());
 	}
 }

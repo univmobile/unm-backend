@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4541_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4541_1.xml"/>
+<title>IUT de Cachan</title>
+<updated>2014-08-15T01:47:18.359+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4541"
+	coordinates="48.787707399241,2.3299920558929"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:07:22.000+02:00"
+	updatedAt="2013-11-29T12:34:11.000+01:00"
+	createdBy="j.richer"
+	updatedBy="MJRAMAGE"
+	parentUid="4398"
+	name="IUT de Cachan">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<floor>9 avenue de la division LECLERC, 94230 CACHAN</floor>
+	</address>
+	<child uid="5146" active="true"/>
+	<child uid="5147" active="true"/>
+	<child uid="5149" active="true"/>
+	<child uid="5150" active="true"/>
+	<child uid="5152" active="true"/>
+	<child uid="5155" active="true"/>
+	<child uid="5156" active="true"/>
+	<child uid="6102" active="true"/>
+</content>
+</entry>

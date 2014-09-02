@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6388_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6388_1.xml"/>
+<title>Chimie (L3)</title>
+<updated>2014-08-15T01:47:36.722+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6388"
+	coordinates="48.826888050314,2.3830729722977"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T16:29:33.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1780"
+	name="Chimie (L3)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Lavoisier, 1er étage, bureau 120</floor>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=755</url>
+		<phone>01 57 27 88 02</phone>
+		<email>melanie.gallais@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

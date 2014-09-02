@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7085_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7085_1.xml"/>
+<title>SMEREP</title>
+<updated>2014-08-15T01:47:43.083+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7085"
+	coordinates="48.945810690101,2.3624709248543"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-26T17:51:13.000+01:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="Marion MAINFRAY"
+	updatedBy="Marion MAINFRAY"
+	parentUid="2605"
+	name="SMEREP">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Mutuelle étudiante - Rez-de-chaussée extérieur</description>
+	<address>
+		<url>http://www.smerep.fr/</url>
+		<phone>01 56 54 36 34</phone>
+	</address>
+</content>
+</entry>

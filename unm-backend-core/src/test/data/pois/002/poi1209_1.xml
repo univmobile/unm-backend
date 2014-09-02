@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1209_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1209_1.xml"/>
+<title>Bâtiment SUAPS</title>
+<updated>2014-08-15T01:46:45.853+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1209"
+	coordinates="48.903776698094,2.2127419710"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T14:13:48.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-03-25T15:09:13.000+01:00"
+	createdBy="marine gianfermi"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bâtiment SUAPS">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<openingHours>Lundi au vendredi de 8h à 21h</openingHours>
+		<phone>01 40 97 76 71</phone>
+		<fullAddress>200 avenue de la République 
+92001 Nanterre</fullAddress>
+	</address>
+</content>
+</entry>

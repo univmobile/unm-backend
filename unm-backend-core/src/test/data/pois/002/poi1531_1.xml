@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1531_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1531_1.xml"/>
+<title>Le SUMPPS Hôpital Fernand Widal</title>
+<updated>2014-08-15T01:46:48.601+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1531"
+	coordinates="48.881636151296,2.358581721782"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:45:44.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Le SUMPPS Hôpital Fernand Widal">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Secteur orange Porte 5</floor>
+		<openingHours>Sur RDV 9h30-12h30, 14h-18h</openingHours>
+		<itinerary>RER E, B, D et Métro 4, 5 Gare du Nord
+Métro 2 La chapelle</itinerary>
+		<phone>0140054915</phone>
+		<fullAddress>200 rue du Faubourg Saint-Denis
+75010 Paris</fullAddress>
+	</address>
+</content>
+</entry>

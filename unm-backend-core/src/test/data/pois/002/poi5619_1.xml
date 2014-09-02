@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5619_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5619_1.xml"/>
+<title>Psychologie L1</title>
+<updated>2014-08-15T01:47:28.093+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5619"
+	coordinates="48.834444364374,2.247630469501"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:42:56.000+02:00"
+	updatedAt="2011-06-14T17:05:08.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5550"
+	name="Psychologie L1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Julie Sao</description>
+	<address>
+		<floor>Bureau 1051 1er étage </floor>
+		<phone>01 55 20 59 03</phone>
+	</address>
+</content>
+</entry>

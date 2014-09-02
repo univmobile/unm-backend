@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi934_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi934_1.xml"/>
+<title>Identités, Relations Internationales et Civilisations Europe</title>
+<updated>2014-08-15T01:46:43.537+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="934"
+	coordinates="48.849449012421,2.3443693667"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T16:21:52.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-03-15T16:48:11.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Identités, Relations Internationales et Civilisations Europe">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<itinerary>RER B 
+Station Saint Michel ou Luxembourg
+Métro 10 
+Station Cluny-La Sorbonne
+Bus 21, 27, 38, 82 et 85
+</itinerary>
+		<url>http://irice.univ-paris1.fr/</url>
+		<phone>01 40 46 27 90 </phone>
+		<email>irice@univ-paris1.fr</email>
+		<fullAddress>17 rue de la Sorbonne
+75005 Paris</fullAddress>
+	</address>
+</content>
+</entry>

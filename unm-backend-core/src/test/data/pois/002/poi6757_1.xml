@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6757_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6757_1.xml"/>
+<title>Cafétéria Cochin</title>
+<updated>2014-08-15T01:47:39.963+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6757"
+	coordinates="48.837864681021,2.3394763469696"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T10:19:15.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6749"
+	name="Cafétéria Cochin">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B : Port Royal 
+Bus 83 et 91 </itinerary>
+		<fullAddress>24 rue du faubourg Saint Jacques
+75014 Paris </fullAddress>
+	</address>
+	<child uid="6750" active="true"/>
+</content>
+</entry>

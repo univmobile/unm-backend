@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7363_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7363_1.xml"/>
+<title>CTHS</title>
+<updated>2014-08-15T01:47:45.613+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7363"
+	coordinates="48.825669636584,2.2809049487114"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-18T14:38:45.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7329"
+	name="CTHS">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>Le Comité des travaux historiques et scientifiques, créé en 1834, est depuis 2007 un « institut » rattaché à l'École nationale des chartes.
+Il est chargé de :
+- concourir aux recherches et aux publications portant sur les sciences de l'homme et de la société, sur les sciences de la nature et de la vie et concernant plus particulièrement la France et ses régions,
+
+- contribuer à la diffusion et à la valorisation des connaissances historiques et scientifiques sur le territoire national, en Europe et dans le monde francophone,
+
+- assurer en matière de publications l'édition de textes, de répertoires, d'orientations de recherche, de bases de données et d'instruments de travail,
+
+- organiser annuellement de Congrès national des sociétés historiques et scientifiques,
+
+- favoriser le développement des activités des sociétés savantes et de leurs fédérations et de coordonner leurs recherches régionales et locales de nature historique et scientifique,
+
+ - développer les échanges entre recherche publique et recherche associative, entre enseignants, chercheurs et étudiants.</description>
+	<address>
+		<url>http://cths.fr</url>
+	</address>
+	<child uid="7364" active="true"/>
+</content>
+</entry>

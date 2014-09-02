@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3370_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3370_1.xml"/>
+<title>LKB - UMR 8552</title>
+<updated>2014-08-15T01:47:05.874+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3370"
+	coordinates="48.847821913,2.35502427443"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:37:01.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3365"
+	name="LKB - UMR 8552">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le Laboratoire Kastler Brossel (LKB) est un des acteurs majeurs de la physique fondamentale des systèmes quantiques.</description>
+	<address>
+		<floor>Pyramie 14-24</floor>
+		<url>http://www.lkb.ens.fr/</url>
+	</address>
+</content>
+</entry>

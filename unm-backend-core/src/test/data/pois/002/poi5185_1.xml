@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5185_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5185_1.xml"/>
+<title>UFR Sciences fondamentales et appliquées</title>
+<updated>2014-08-15T01:47:24.032+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5185"
+	coordinates="48.623071590915,2.4274984002113"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:34:09.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="264"
+	name="UFR Sciences fondamentales et appliquées">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<email>maria.barbosa@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

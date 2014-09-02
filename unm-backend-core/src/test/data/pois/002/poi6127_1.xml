@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6127_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6127_1.xml"/>
+<title>Assistantes Sociales</title>
+<updated>2014-08-15T01:47:34.067+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6127"
+	coordinates="48.839039429024,2.5879172980785"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:11:07.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="Assistantes Sociales">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bureau 0S036</floor>
+		<openingHours>Lundi-Vendredi:9h30-12h30/14h00-17h00
+Fermé le mercredi après-midi</openingHours>
+		<url>http://www.univ-mlv.fr/vie-du-campus/vie-etudiante/informations-sante-sociale-handicap/</url>
+		<phone>01 60 95 70 34</phone>
+		<fax>01 60 95 70 70</fax>
+		<email>marie-helene.bocard@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

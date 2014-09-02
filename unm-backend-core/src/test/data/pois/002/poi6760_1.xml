@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6760_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6760_1.xml"/>
+<title>Résidence Universitaire J.B Lamarck</title>
+<updated>2014-08-15T01:47:39.991+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6760"
+	coordinates="48.766537942904,1.9474044442177"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T10:27:12.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="4679"
+	name="Résidence Universitaire J.B Lamarck">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Ligne Montparnasse (station La Verrière) ou Ligne La Défense
+Bus : 412 ou 411 (arrêt Franche-Comté Bourgogne) ou 401 depuis Saint-Quentin en Yvelines centre ville.</itinerary>
+		<fullAddress>3, Rue du Théâtre - 78990 Elancourt</fullAddress>
+	</address>
+	<child uid="6764" active="true"/>
+</content>
+</entry>

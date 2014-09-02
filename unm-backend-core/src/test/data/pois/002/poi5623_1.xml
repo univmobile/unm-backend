@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5623_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5623_1.xml"/>
+<title>IUT de Vitry</title>
+<updated>2014-08-15T01:47:28.134+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5623"
+	coordinates="48.778076074188,2.3744040727615"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:44:55.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	deletedAt="2011-06-20T12:01:05.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	name="IUT de Vitry">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fax>test</fax>
+		<fullAddress>122 rue Paul Armangot 94400 Vitry Sur Seine
+</fullAddress>
+	</address>
+</content>
+</entry>

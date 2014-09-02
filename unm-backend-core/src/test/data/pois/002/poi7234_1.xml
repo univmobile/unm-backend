@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7234_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7234_1.xml"/>
+<title>Bibliothèque Durkheim</title>
+<updated>2014-08-15T01:47:44.621+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7234"
+	coordinates="48.79045299982,2.3273085057735"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-07T14:20:07.000+01:00"
+	updatedAt="2013-01-14T09:38:20.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7220"
+	name="Bibliothèque Durkheim">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Née de la volonté de créer un outil commun en mutualisant les fonds des laboratoires de sciences sociales de l'ENS Cachan : l'IDHE, l'ISP et le STEF, la bibliothèque Durkheim est une bibliothèque spécialisée en sciences sociales, ouverte aux étudiants à partir du L3, master, doctorants, post-doctorants, chercheurs et membres du personnel de l'ENS Cachan.</description>
+	<address>
+		<floor>3e étage</floor>
+		<openingHours>Lundi : 14h - 17h30
+Mardi : 14h - 17h30
+Mercredi : 9h30 - 12h30
+Jeudi : 14h - 17h30
+Vendredi : 14h - 17h</openingHours>
+		<url>http://www.bibli.ens-cachan.fr/version-francaise/bibliotheque-durkheim/</url>
+		<phone>01 47 40 68 12</phone>
+		<email>bib.durkheim@ens-cachan.fr</email>
+	</address>
+	<attachment id="254" title="com.univ.collaboratif.utils.jpg" type="image" url="/uploads/poi/aab4bb36badf093d12321753c8dda2b6c9a4db40.jpg"/>
+</content>
+</entry>

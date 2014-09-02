@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4461_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4461_1.xml"/>
+<title>Bibliothèque</title>
+<updated>2014-08-15T01:47:17.560+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4461"
+	coordinates="48.711227699259,2.1708924695849"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:48:13.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4458"
+	name="Bibliothèque">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bâtiment 604</floor>
+		<openingHours>Du lundi au jeudi
+8h30-17h30
+Vendredi
+8h30-17h00
+</openingHours>
+		<url>http://www.iut-orsay.u-psud.fr/fr/services/bibliotheque.html</url>
+		<phone>01 69 33 60 17</phone>
+		<fax>01 60 19 33 18</fax>
+		<email>bibliotheque.iut-orsay@u-psud.fr</email>
+	</address>
+</content>
+</entry>

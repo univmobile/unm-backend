@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2354_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2354_1.xml"/>
+<title>polygone</title>
+<updated>2014-08-15T01:46:56.182+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2354"
+	coordinates="48.843089635733,2.3358788341"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T16:36:20.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	deletedAt="2011-04-29T14:26:30.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	name="polygone">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B: Luxembourg ou Port-Royal
+Bus: 38, 82, 83 
+Métro 4 vavin </itinerary>
+		<fullAddress>4 avenue observatoire  75006  paris</fullAddress>
+	</address>
+</content>
+</entry>

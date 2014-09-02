@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5310_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5310_1.xml"/>
+<title>Restaurant U de l'Arlequin</title>
+<updated>2014-08-15T01:47:25.031+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5310"
+	coordinates="48.791096727861,2.3287689685822"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T10:52:59.000+02:00"
+	updatedAt="2011-07-26T14:26:10.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="yasmine"
+	parentUid="4860"
+	name="Restaurant U de l'Arlequin">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>2ème et 3ème étage</floor>
+		<openingHours>11h15 - 14h00</openingHours>
+		<phone>01-41-98-39-80</phone>
+		<email>restaurant.cachan@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

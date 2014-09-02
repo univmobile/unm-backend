@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3660_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3660_1.xml"/>
+<title>AEGP6</title>
+<updated>2014-08-15T01:47:09.050+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3660"
+	coordinates="48.845910164511,2.3559890314937"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T14:07:43.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2838"
+	name="AEGP6">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association des étudiants en géologie de l'upmc
+Elle regroupe les étudiants en Sciences de la Terre de tous niveaux.</description>
+	<address>
+		<floor>2è étage</floor>
+		<openingHours>Permanence du lundi au vendredi de 12h30 à 14h</openingHours>
+		<email>aeg_p6@yahoo.Fr</email>
+	</address>
+</content>
+</entry>

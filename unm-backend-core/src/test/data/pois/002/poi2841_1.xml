@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2841_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2841_1.xml"/>
+<title>Campus Jussieu couloir 56/66</title>
+<updated>2014-08-15T01:47:00.525+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2841"
+	coordinates="48.845633759859,2.3563420772552"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T14:55:02.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2715"
+	name="Campus Jussieu couloir 56/66">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3456" active="true"/>
+</content>
+</entry>

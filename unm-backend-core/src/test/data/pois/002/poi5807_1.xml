@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5807_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5807_1.xml"/>
+<title>IPCP - M1-2</title>
+<updated>2014-08-15T01:47:30.312+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5807"
+	coordinates="48.842153440154,2.5777785480022"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:12:34.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5647"
+	name="IPCP - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master Ingénierie de la production et de la conception de produits</description>
+	<address>
+		<floor>Bureau 106</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-sciences-technologies-sante/mention-genie-des-systemes-industriels/master-ingenierie-de-la-production-et-de-la-conception-de-produits/</url>
+		<phone>01 49 32 91 50</phone>
+		<fax>01 49 32 91 59</fax>
+		<email>Madly.Margaretta@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

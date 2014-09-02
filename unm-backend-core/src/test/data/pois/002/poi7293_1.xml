@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7293_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7293_1.xml"/>
+<title>Resto U L'Arlequin</title>
+<updated>2014-08-15T01:47:45.310+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7293"
+	coordinates="48.791185080603,2.3289459943771"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T14:39:00.000+01:00"
+	updatedAt="2012-12-17T14:46:07.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7243"
+	name="Resto U L'Arlequin">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>L’Arlequin est composé de boutiques : Grilladerie, Régions du Monde et Pizzeria.</description>
+	<address>
+		<floor>1er étage</floor>
+		<openingHours>Service de 11h15 à 14h30 et le soir de 19h à 20h30</openingHours>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1812_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1812_1.xml"/>
+<title>Institut supérieur de management</title>
+<updated>2014-08-15T01:46:51.173+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1812"
+	coordinates="48.779894931879,2.04426705837"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T16:44:56.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	deletedAt="2011-06-20T15:45:30.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="haromoys"
+	name="Institut supérieur de management">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<phone>0139255002</phone>
+	</address>
+</content>
+</entry>

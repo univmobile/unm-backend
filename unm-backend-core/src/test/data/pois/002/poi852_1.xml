@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi852_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi852_1.xml"/>
+<title>Centre Thénard</title>
+<updated>2014-08-15T01:46:42.486+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="852"
+	coordinates="48.850413517006,2.3461577296"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T19:58:37.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre Thénard">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>Formation continue</description>
+	<address>
+		<itinerary>Métro 10 
+Station Cluny-La Sorbonne
+
+Bus 63, 86 et 87
+
+ </itinerary>
+		<phone>01 44 07 86 75</phone>
+		<fullAddress>1 rue Thénard
+75006 Paris </fullAddress>
+	</address>
+	<child uid="1031" active="true"/>
+	<attachment id="47" title="wa_zoom-2.jpg" type="image" url="/uploads/poi/b3ee6fb3de11ffa14a3dffe4cbf23f4afe11ecb7.jpg"/>
+</content>
+</entry>

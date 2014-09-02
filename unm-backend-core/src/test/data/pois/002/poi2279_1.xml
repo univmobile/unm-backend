@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2279_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2279_1.xml"/>
+<title>Polygone 1</title>
+<updated>2014-08-15T01:46:55.487+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2279"
+	coordinates="48.909904231407,2.303473725915|48.90978964483,2.3035582154989|48.909904231407,2.3038867861032|48.91001441056,2.3038009554148|48.909998544777,2.303754016757|48.909940370196,2.3037942498922|48.909920978654,2.3037325590849|48.909960643164,2.3037043958902|48.909925385823,2.3035890609026|48.909885721285,2.3036199063063|48.909868092592,2.3035622388124|48.909919215786,2.3035220056772|48.909904231407,2.3034737"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-27T14:00:45.000+02:00"
+	updatedAt="2011-06-03T15:21:09.000+02:00"
+	deletedAt="2011-06-03T15:21:09.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	name="Polygone 1">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : ligne 13 - station Mairie de clichy
+Autobus :
+- ligne 54 - arrêt Léon Blum
+- ligne 74 - arrêt Hôpital Beaujon
+- ligne 174 - arrêt Mairie de Clichy
+- ligne 340 - arrêt Léon Blum
+</itinerary>
+		<fullAddress>104 quai de Clichy
+92110 Clichy </fullAddress>
+	</address>
+</content>
+</entry>

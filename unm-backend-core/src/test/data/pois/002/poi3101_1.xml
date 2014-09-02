@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3101_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3101_1.xml"/>
+<title>Département : Littérature Générale et Comparée (LGC)</title>
+<updated>2014-08-15T01:47:02.997+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3101"
+	coordinates="48.840338075223,2.3539012670517"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:21:07.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="3009"
+	name="Département : Littérature Générale et Comparée (LGC)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Organisation
+    Secrétariat pour la licence et l'agrégation</description>
+	<address>
+		<floor>Bureau 409</floor>
+		<openingHours>    Ouverture au public :
+    Du lundi au vendredi : 10h-12h /14h-16h</openingHours>
+		<url>http://www.univ-paris3.fr/dept-lgc</url>
+		<phone>01 45 87 41 31</phone>
+		<fax>01 45 87 48 85</fax>
+		<email>dept-lgc@univ-paris3.fr</email>
+	</address>
+	<attachment id="210" title="Centre-universitaire-Censier.jpg" type="image" url="/uploads/poi/1f901c7ae721509d6f849d2ce4d9a29c650b9c68.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6882_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6882_1.xml"/>
+<title>Scolarité Assas : capacité, transferts, équivalences</title>
+<updated>2014-08-15T01:47:40.957+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6882"
+	coordinates="48.84332314499,2.3336532711983"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-09T11:33:58.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="2846"
+	name="Scolarité Assas : capacité, transferts, équivalences">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Capacité, transferts, équivalences, auditeurs libres, bourses</description>
+	<address>
+		<floor>1er étage</floor>
+		<openingHours>Lundi et jeudi : 10h00 - 16h00 
+Mardi, mercredi, vendredi : 9h00 - 12h00</openingHours>
+		<url>http://www.u-paris2.fr</url>
+		<phone>01 44 41 57 13</phone>
+		<email>muriel.joubert@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6326_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6326_1.xml"/>
+<title>Lettres (L3-M2)</title>
+<updated>2014-08-15T01:47:36.045+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6326"
+	coordinates="48.829703134916,2.3811266943812"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T16:48:10.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1774"
+	name="Lettres (L3-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>L3 Lettres
+M1 et M2 Lettres, Arts et Pensée Contemporaine (LAPC)</description>
+	<address>
+		<floor>Grands Moulins - Bâtiment C, 6ème étage, bureau 692</floor>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=universite&amp;np=FORMUFR&amp;code=106</url>
+		<phone>01 57 27 63 53</phone>
+		<email>amoulin@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

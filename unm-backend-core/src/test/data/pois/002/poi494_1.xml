@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi494_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi494_1.xml"/>
+<title>polygone1</title>
+<updated>2014-08-15T01:46:40.317+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="494"
+	coordinates="48.777920355845,2.047965824604|48.778229670961,2.0481804013252|48.777872632772,2.0494249463081|48.777647626703,2.049226462841|48.777592833243,2.0491835474968|48.777893312771,2.0481160283089|48.777920355845,2.047965"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-09-07T14:55:52.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2011-06-03T15:04:07.000+02:00"
+	createdBy="haromoys"
+	updatedBy="yasmine"
+	name="polygone1">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>11 boulevard d'Alembert
+78280 Guyancourt</fullAddress>
+	</address>
+</content>
+</entry>

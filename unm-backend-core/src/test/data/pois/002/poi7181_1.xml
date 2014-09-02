@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7181_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7181_1.xml"/>
+<title>Bibliothèque de l'institut de chimie et matériaux de Paris E</title>
+<updated>2014-08-15T01:47:44.121+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7181"
+	coordinates="48.770029701532,2.3700910806656"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-14T16:15:43.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="7178"
+	name="Bibliothèque de l'institut de chimie et matériaux de Paris E">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>2-8, rue Henri Dunant, 94320 THIAIS</floor>
+		<openingHours>Du lundi au vendredi de 13h30 à 17h30</openingHours>
+		<phone>01 49 78 11 81</phone>
+	</address>
+</content>
+</entry>

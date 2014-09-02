@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3494_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3494_1.xml"/>
+<title>SDUEE - M1-2</title>
+<updated>2014-08-15T01:47:07.241+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3494"
+	coordinates="48.846127973123,2.3556492291391"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T13:47:09.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2828"
+	name="SDUEE - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master mention sciences de l'univers, environnement et écologie</description>
+	<address>
+		<floor>1è étage bureau 107</floor>
+		<openingHours>Lundi au Vendredi : 9h00-11h30/13h30-17h</openingHours>
+		<url>http://www.master.sduee.upmc.fr/</url>
+		<phone>01 44 27 36 00</phone>
+		<email>master.sduee.scolarite@listes.upmc.fr</email>
+	</address>
+</content>
+</entry>

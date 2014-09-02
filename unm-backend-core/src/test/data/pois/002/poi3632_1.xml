@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3632_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3632_1.xml"/>
+<title>Sud étudiant</title>
+<updated>2014-08-15T01:47:08.814+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3632"
+	coordinates="48.944290405116,2.3628142476082"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:12:44.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Sud étudiant">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<url>www.sud-etudiant.org/syndicats/paris-8</url>
+		<phone>06 38 37 16 70</phone>
+		<email>paris8@sud-etudiant.org</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6894_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6894_1.xml"/>
+<title>Sorbonne- Bd St-Jacques</title>
+<updated>2014-08-15T01:47:41.077+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6894"
+	coordinates="48.849598448908,2.3444223403931"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-13T10:55:36.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-17T14:03:02.000+01:00"
+	createdBy="Martine HATTON"
+	updatedBy="Jean-François Maynier"
+	name="Sorbonne- Bd St-Jacques">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro ligne 4 : Saint-Michel
+RER B / Saint-Michel Notre-Dame</itinerary>
+		<fullAddress>46 rue Saint-Jacques -
+75230 Paris Cedex 05</fullAddress>
+	</address>
+</content>
+</entry>

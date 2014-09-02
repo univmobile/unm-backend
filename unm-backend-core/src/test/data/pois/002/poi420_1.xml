@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi420_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi420_1.xml"/>
+<title>Restaurant Tolbiac</title>
+<updated>2014-08-15T01:46:39.913+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="420"
+	coordinates="48.829194126217,2.37152338027"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-05T10:07:16.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="1018"
+	name="Restaurant Tolbiac">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Lundi au vendredi
+11h00-14h00</openingHours>
+		<itinerary>RER C et Métro 14
+Station F. Mitterrand	
+
+Bus 62 et 64
+Arrêt Bibliothèque F. Mitterrand</itinerary>
+	</address>
+</content>
+</entry>

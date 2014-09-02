@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3583_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3583_1.xml"/>
+<title>CROUS de Paris</title>
+<updated>2014-08-15T01:47:08.292+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3583"
+	coordinates=""
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:32:55.000+02:00"
+	updatedAt="2011-09-05T11:50:23.000+02:00"
+	createdBy="super admin"
+	updatedBy="super admin"
+	name="CROUS de Paris">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="crousParis"/>
+	<address
+		zipCode="75231"
+		city=" Paris cedex 05"
+		countryCode="FR"
+		latitude="48.84"
+		longitude="2.34">
+		<url>http://www.crous-paris.fr</url>
+		<phone>01 40 51 36 00</phone>
+		<fax> 01 40 51 36 99 </fax>
+		<fullAddress>39, avenue Georges Bernanos
+
+</fullAddress>
+	</address>
+	<child uid="6788" active="true"/>
+	<child uid="3824" active="true"/>
+	<child uid="6709" active="true"/>
+	<child uid="6725" active="true"/>
+	<child uid="6728" active="true"/>
+	<child uid="6732" active="true"/>
+	<child uid="6749" active="true"/>
+	<child uid="6759" active="true"/>
+	<child uid="6800" active="true"/>
+	<child uid="6818" active="true"/>
+	<child uid="6861" active="true"/>
+	<child uid="6864" active="true"/>
+	<child uid="6867" active="true"/>
+</content>
+</entry>

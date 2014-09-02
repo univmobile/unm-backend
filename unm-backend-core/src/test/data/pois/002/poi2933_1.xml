@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2933_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2933_1.xml"/>
+<title>Bureau des bourses</title>
+<updated>2014-08-15T01:47:01.257+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2933"
+	coordinates="48.846446450794,2.35555753111"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:02:41.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2761"
+	name="Bureau des bourses">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>bat Scalarité, 1è étage</floor>
+		<url>http://www.upmc.fr/fr/vie_des_campus/bourses.html</url>
+		<phone>01 44 27 25 18</phone>
+	</address>
+</content>
+</entry>

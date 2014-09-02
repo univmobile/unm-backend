@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4528_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4528_1.xml"/>
+<title>Centre multidisciplinaire bâtiment L</title>
+<updated>2014-08-15T01:47:18.250+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4528"
+	coordinates="48.788955009812,2.4446833133698"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:53:22.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4332"
+	name="Centre multidisciplinaire bâtiment L">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro ligne 8
+Station Créteil Université </itinerary>
+		<fullAddress>61, avenue du Général de Gaulle
+94010 Créteil cedex
+</fullAddress>
+	</address>
+	<child uid="6365" active="true"/>
+	<child uid="6372" active="true"/>
+	<child uid="6370" active="true"/>
+	<child uid="5181" active="true"/>
+	<child uid="5276" active="true"/>
+	<child uid="5277" active="true"/>
+	<child uid="5278" active="true"/>
+	<child uid="6375" active="true"/>
+	<child uid="6378" active="true"/>
+	<child uid="6382" active="true"/>
+	<child uid="6384" active="true"/>
+	<child uid="6391" active="true"/>
+	<child uid="6395" active="true"/>
+	<child uid="6398" active="true"/>
+</content>
+</entry>

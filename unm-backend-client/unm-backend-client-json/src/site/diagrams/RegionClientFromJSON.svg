@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" version="1.1" width="985" height="351">
+<defs>
+<marker id="markerArrow" markerWidth="13" markerHeight="13" refX="10" refY="6" orient="auto">
+<polyline points="2,11 10,6 2,2" style="fill: none; stroke: #000"/>
+</marker>
+</defs>
+<style>g.box rect { fill: #eee;     stroke: #000; }g.box.class rect { fill: #ffc; }g.box.interface rect { fill: #ffc; }g.box.class text.instance.firstLine { font-weight: bold; }g.box text { font-family: Helvetica;     font-size: 12px;     text-anchor: middle; }circle.interface { fill: #fff;     stroke: #000; }line { stroke: #000; }text.class { font-weight: bold; }text.interface { font-weight: normal; }text.instance { font-style: normal; }g.interface text{ font-style: italic; }</style>
+<rect x="0" y="0" width="985" height="351" fill="none" stroke="none"/>
+<g class="box instance">
+<rect x="5" y="130" width="70" height="40"/>
+<text x="40" y="147" class="instance firstLine">Code</text>
+<text class="instance secondLine" x="40" y="161">applicatif</text>
+</g>
+<line x1="75" y1="150" x2="98.5" y2="150" stroke="#000" stroke-width="1px" marker-end="url(#markerArrow)" stroke-dasharray="3,3"/>
+<g class="box instance">
+<rect x="832" y="30" width="46" height="40"/>
+<text x="855" y="47" class="instance firstLine">Code</text>
+<text class="instance secondLine" x="855" y="61">métier</text>
+</g>
+<line x1="855" y1="70" x2="855" y2="94.5" stroke="#000" stroke-width="1px" marker-end="url(#markerArrow)" stroke-dasharray="3,3"/>
+<g class="box interface">
+<rect x="449" y="123" width="142" height="54"/>
+<circle class="interface" cx="583" cy="131" r="5"/>
+<text x="520" y="140" class="interface">RegionClient</text>
+<line x1="449" y1="150" x2="591" y2="150"/>
+<text x="520" y="167">getRegions(): Region[]</text>
+</g>
+<line x1="520" y1="123" x2="520" y2="94.5" stroke="#000" stroke-width="1px" marker-end="url(#markerArrow)" stroke-dasharray="3,3"/>
+<g class="box interface">
+<rect x="111" y="26" width="118" height="68"/>
+<circle class="interface" cx="221" cy="34" r="5"/>
+<text x="170" y="43" class="interface">Region</text>
+<line x1="111" y1="53" x2="229" y2="53"/>
+<text x="170" y="70">getId(): String</text>
+<text x="170" y="84">getLabel(): String</text>
+</g>
+<g class="box interface">
+<rect x="461" y="26" width="118" height="68"/>
+<circle class="interface" cx="571" cy="34" r="5"/>
+<text x="520" y="43" class="interface">Region</text>
+<line x1="461" y1="53" x2="579" y2="53"/>
+<text x="520" y="70">getId(): String</text>
+<text x="520" y="84">getLabel(): String</text>
+</g>
+<g class="box interface">
+<rect x="99" y="123" width="142" height="54"/>
+<circle class="interface" cx="233" cy="131" r="5"/>
+<text x="170" y="140" class="interface">RegionClient</text>
+<line x1="99" y1="150" x2="241" y2="150"/>
+<text x="170" y="167">getRegions(): Region[]</text>
+</g>
+<line x1="170" y1="123" x2="170" y2="94.5" stroke="#000" stroke-width="1px" marker-end="url(#markerArrow)" stroke-dasharray="3,3"/>
+<g class="box class">
+<rect x="612" y="123" width="156" height="54"/>
+<text x="690" y="140" class="class">RegionClientFromLocal</text>
+<line x1="612" y1="150" x2="768" y2="150"/>
+<text x="690" y="167">&lt;init&gt;(RegionDataSource)</text>
+</g>
+<line x1="768" y1="150" x2="789.5" y2="150" stroke="#000" stroke-width="1px" marker-end="url(#markerArrow)"/>
+<line x1="612" y1="150" x2="591" y2="150" stroke="#000" stroke-width="1px"/>
+<polygon points="591.5,150 603.5,143 603.5,157" fill="#fff" stroke="#000" stroke-width="1px"/>
+<g class="box class">
+<rect x="93" y="223" width="154" height="54"/>
+<text x="170" y="240" class="class">RegionClientFromJSON</text>
+<line x1="93" y1="250" x2="247" y2="250"/>
+<text x="170" y="267">&lt;init&gt;(RegionJSONClient)</text>
+</g>
+<line x1="247" y1="250" x2="267.5" y2="250" stroke="#000" stroke-width="1px" marker-end="url(#markerArrow)"/>
+<line x1="170" y1="223" x2="170" y2="201" stroke="#000" stroke-width="1px"/>
+<line x1="170" y1="201" x2="170" y2="201" stroke="#000" stroke-width="1px"/>
+<line x1="170" y1="201" x2="170" y2="177" stroke="#000" stroke-width="1px"/>
+<line x1="170" y1="201" x2="170" y2="182" stroke="#000" stroke-width="1px"/>
+<polygon points="170,177.5 177,189.5 163,189.5" fill="#fff" stroke="#000" stroke-width="1px"/>
+<g class="box interface">
+<rect x="268" y="223" width="154" height="54"/>
+<circle class="interface" cx="414" cy="231" r="5"/>
+<text x="345" y="240" class="interface">RegionJSONClient</text>
+<line x1="268" y1="250" x2="422" y2="250"/>
+<text x="345" y="267">getRegionsJSON(): String</text>
+</g>
+<g class="box class">
+<rect x="445" y="223" width="150" height="54"/>
+<text x="520" y="240" class="class">RegionJSONClientImpl</text>
+<line x1="445" y1="250" x2="595" y2="250"/>
+<text x="520" y="267">&lt;init&gt;(RegionClient)</text>
+</g>
+<line x1="520" y1="223" x2="520" y2="177.5" stroke="#000" stroke-width="1px" marker-end="url(#markerArrow)"/>
+<line x1="445" y1="250" x2="422" y2="250" stroke="#000" stroke-width="1px"/>
+<polygon points="422.5,250 434.5,243 434.5,257" fill="#fff" stroke="#000" stroke-width="1px"/>
+<g class="box interface">
+<rect x="790" y="95" width="130" height="110"/>
+<circle class="interface" cx="912" cy="103" r="5"/>
+<text x="855" y="112" class="interface">RegionDataSource</text>
+<line x1="790" y1="122" x2="920" y2="122"/>
+<text x="855" y="139">create()</text>
+<text x="855" y="153">update()</text>
+<text x="855" y="167">getById(String)</text>
+<text x="855" y="181">getByUid(String)</text>
+<text x="855" y="195">getAllBy("uid"): Map</text>
+</g>
+<g class="box class">
+<rect x="726" y="240" width="258" height="40"/>
+<text x="855" y="257" class="instance firstLine">BackendDataSourceFileSystem</text>
+<text class="instance secondLine" x="855" y="271">.newDataSource(RegionDataSource.class)</text>
+</g>
+<line x1="855" y1="280" x2="855" y2="309.5" stroke="#000" stroke-width="1px" marker-end="url(#markerArrow)" stroke-dasharray="3,3"/>
+<line x1="855" y1="240" x2="855" y2="229" stroke="#000" stroke-width="1px"/>
+<line x1="855" y1="229" x2="855" y2="229" stroke="#000" stroke-width="1px"/>
+<line x1="855" y1="229" x2="855" y2="205" stroke="#000" stroke-width="1px"/>
+<line x1="855" y1="229" x2="855" y2="210" stroke="#000" stroke-width="1px"/>
+<polygon points="855,205.5 862,217.5 848,217.5" fill="#fff" stroke="#000" stroke-width="1px"/>
+<g class="box instance">
+<rect x="826" y="310" width="58" height="40"/>
+<text x="855" y="327" class="instance firstLine">Fichiers</text>
+<text class="instance secondLine" x="855" y="341">XML</text>
+</g>
+</svg>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5221_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5221_1.xml"/>
+<title>École doctorale 288 : Ondes et matière (EDOM)</title>
+<updated>2014-08-15T01:47:24.421+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5221"
+	coordinates="48.701397123498,2.1764749847353"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T18:43:24.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5219"
+	name="École doctorale 288 : Ondes et matière (EDOM)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>École doctorale (ED) 288 : Ondes et matière</description>
+	<address>
+		<floor>Bâtiment 350</floor>
+		<url>http://www.edom.u-psud.fr/</url>
+		<phone>01 69 15 75 26 </phone>
+		<fax>01 69 15 75 30</fax>
+		<email>martine.basset@u-psud.fr</email>
+	</address>
+</content>
+</entry>

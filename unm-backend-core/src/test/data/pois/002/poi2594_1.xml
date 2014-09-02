@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2594_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2594_1.xml"/>
+<title>Guyancourt d'Alembert </title>
+<updated>2014-08-15T01:46:58.272+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2594"
+	coordinates="48.779284156035,2.04478606581"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T13:49:31.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="rrivoire"
+	parentUid="359"
+	name="Guyancourt d'Alembert ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Gare Saint-Quentin-en-Yvelines (Montigny le Bretonneux)</itinerary>
+		<fullAddress>5/7 Boulevard d'Alembert
+78280 GUYANCOURT</fullAddress>
+	</address>
+	<child uid="2975" active="true"/>
+	<child uid="2974" active="true"/>
+	<child uid="2973" active="true"/>
+	<child uid="2971" active="true"/>
+	<child uid="2209" active="true"/>
+	<child uid="1885" active="true"/>
+	<child uid="1882" active="true"/>
+	<child uid="1881" active="true"/>
+	<child uid="1880" active="true"/>
+	<child uid="1877" active="true"/>
+	<child uid="1873" active="true"/>
+	<child uid="1870" active="true"/>
+	<child uid="1866" active="true"/>
+	<child uid="1861" active="true"/>
+	<child uid="1859" active="true"/>
+	<child uid="1854" active="true"/>
+	<child uid="1852" active="true"/>
+	<child uid="1848" active="true"/>
+	<child uid="1846" active="true"/>
+	<child uid="1844" active="true"/>
+	<child uid="1839" active="true"/>
+	<child uid="1838" active="true"/>
+	<child uid="1837" active="true"/>
+	<child uid="2210" active="true"/>
+	<child uid="2694" active="true"/>
+	<child uid="2690" active="true"/>
+	<child uid="2686" active="true"/>
+	<child uid="2660" active="true"/>
+	<child uid="1818" active="true"/>
+	<child uid="2618" active="true"/>
+	<child uid="2574" active="true"/>
+	<child uid="2567" active="true"/>
+	<child uid="2561" active="true"/>
+	<child uid="2558" active="true"/>
+	<child uid="2556" active="true"/>
+	<child uid="2543" active="true"/>
+	<child uid="2617" active="true"/>
+</content>
+</entry>

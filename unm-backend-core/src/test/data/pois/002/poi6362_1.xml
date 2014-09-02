@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6362_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6362_1.xml"/>
+<title>DU de Sciences sociales et protection de l'enfance</title>
+<updated>2014-08-15T01:47:36.433+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6362"
+	coordinates="48.796150902471,2.4487374722958"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T14:11:01.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	deletedAt="2011-06-22T14:11:56.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="DU de Sciences sociales et protection de l'enfance">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

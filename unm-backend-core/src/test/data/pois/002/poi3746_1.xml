@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3746_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3746_1.xml"/>
+<title>Centre d’études catalanes</title>
+<updated>2014-08-15T01:47:10.024+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3746"
+	coordinates="48.857986370959,2.3565791174769"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:06:15.000+02:00"
+	updatedAt="2011-09-26T16:46:05.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3745"
+	name="Centre d’études catalanes">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro:
+Ligne 1 : station Hôtel de Ville
+Ligne 11 : stations Rambuteau, Hôtel de Ville</itinerary>
+		<fullAddress>9, rue Sainte-Croix de la Bretonnerie
+75004 Paris
+
+
+</fullAddress>
+	</address>
+	<child uid="3869" active="true"/>
+</content>
+</entry>

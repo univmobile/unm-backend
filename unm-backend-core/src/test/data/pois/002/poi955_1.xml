@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi955_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi955_1.xml"/>
+<title>Amphi Becquerel</title>
+<updated>2014-08-15T01:46:43.737+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="955"
+	coordinates="48.958586887126,2.340"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-04T11:36:46.000+01:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	deletedAt="2011-03-09T15:05:52.000+01:00"
+	createdBy="Kevin Mazille"
+	updatedBy="Kevin Mazille"
+	name="Amphi Becquerel">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Amphithéatre Becquerel</description>
+	<address>
+		<floor>Hall C</floor>
+		<itinerary>Étage 1</itinerary>
+		<url>http://www-galilee.univ-paris13.fr/</url>
+		<fullAddress>Institut Galilée
+Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

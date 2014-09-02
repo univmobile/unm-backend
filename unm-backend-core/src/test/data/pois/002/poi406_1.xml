@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi406_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi406_1.xml"/>
+<title>Stade Auguste Delaune</title>
+<updated>2014-08-15T01:46:39.807+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="406"
+	coordinates="48.946618553878,2.35541939735"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T17:22:48.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="raphael"
+	updatedBy="Kevin Mazille"
+	parentUid="385"
+	name="Stade Auguste Delaune">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+	<child uid="407" active="true"/>
+</content>
+</entry>

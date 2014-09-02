@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi133_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi133_1.xml"/>
+<title>Bornes CMS</title>
+<updated>2014-08-15T01:46:38.511+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="133"
+	coordinates="48.623681162555,2.4248299"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-30T13:58:53.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	deletedAt="2011-04-05T16:05:10.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Bornes CMS">
+	<poiType id="9" label="Borne CMS" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		countryCode="FR">
+		<floor>RDC</floor>
+		<itinerary>RER D : arrêt Évry-Courcouronnes
+RER C : avec un changement à Juvisy</itinerary>
+		<fullAddress>Rue Pierre Bérégovoy 91025 Evry Cedex</fullAddress>
+	</address>
+</content>
+</entry>

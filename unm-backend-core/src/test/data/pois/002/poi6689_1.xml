@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6689_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6689_1.xml"/>
+<title>Résidence Universitaire Les Chênes d'Or</title>
+<updated>2014-08-15T01:47:39.328+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6689"
+	coordinates="49.038030269967,2.0730451494455"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-21T10:05:13.000+02:00"
+	updatedAt="2012-02-10T14:06:13.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6687"
+	name="Résidence Universitaire Les Chênes d'Or">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>A 2mn à pied de l’Université les Chênes, dans le centre-ville.
+Studios : 45 lits. Logements pour deux étudiants célibataires (T1bis) : 54 soit 108 lits.
+Tarifs : de 296€ à 369€ charges comprises.</description>
+	<address>
+		<openingHours>Du lundi au vendredi, de 8h30 à 12h00 et de 13h00 à 16h30.
+
+Attention :
+Juillet et août : l'accueil du public s'effectue du lundi au vendredi, de 9h00 à 12h30 et de 14h00 à 17h00, à la résidence LA CROIX ST-SYLVERE (Quartier Croix St-Sylvère).</openingHours>
+		<phone>01 30 30 38 53</phone>
+	</address>
+	<attachment id="245" title="les chenes d'or.jpg" type="image" url="/uploads/poi/1a7131005aba373ed789ab8e2400f9ad54cbe557.jpg"/>
+</content>
+</entry>

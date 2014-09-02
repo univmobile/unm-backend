@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi203_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi203_1.xml"/>
+<title>Centre d'Éducation Permanente</title>
+<updated>2014-08-15T01:46:38.638+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="203"
+	coordinates="48.827151153158,2.3642867803"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-05T11:14:46.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-09-05T10:16:28.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Centre d'Éducation Permanente">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Centre d'Éducation Permanente
+
+Aile C, 19e étage
+Bureau C19-01</description>
+	<address
+		zipCode="75634"
+		city="Paris cedex 13"
+		countryCode="FR">
+		<floor>Aile C, 19e étage</floor>
+		<phone>01 44 07 78 00</phone>
+		<email> lpaulin@univ-paris1.fr </email>
+		<fullAddress>Bureau C19-01
+90, rue de Tolbiac 75634 Paris cedex 13</fullAddress>
+	</address>
+</content>
+</entry>

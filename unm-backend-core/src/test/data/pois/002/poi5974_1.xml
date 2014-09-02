@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5974_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5974_1.xml"/>
+<title>Département droit européen Master 2</title>
+<updated>2014-08-15T01:47:32.279+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5974"
+	coordinates="48.793389512126,2.4446762725711"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T11:16:12.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	deletedAt="2011-06-14T11:16:33.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Département droit européen Master 2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

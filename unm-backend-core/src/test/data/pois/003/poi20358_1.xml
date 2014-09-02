@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi358_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi358_1.xml"/>
+<title>Salles de cours</title>
+<updated>2014-08-17T21:32:58.211+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20358"
+	coordinates="45.837448199661,1.236337423324"
+	active="true"
+	markerType="point"
+	parentUid="20087"
+	name="Salles de cours">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

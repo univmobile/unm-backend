@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3231_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3231_1.xml"/>
+<title>Equip'arts</title>
+<updated>2014-08-15T01:47:04.297+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3231"
+	coordinates="48.840368409324,2.35446386039"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:20:18.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3009"
+	name="Equip'arts">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Créée en octobre 2006, l'association Equip'arts regroupe les étudiants du master 2 « Métiers de la production théâtrale » l'Université Sorbonne Nouvelle - Paris3, les membres de l'équipe pédagogique mais aussi des professionnels associés qui ont envie de faire partager leurs expériences.</description>
+	<address>
+		<url>http://www.equiparts.fr/</url>
+		<email>equiparts@gmail.com</email>
+	</address>
+</content>
+</entry>

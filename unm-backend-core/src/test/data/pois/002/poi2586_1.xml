@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2586_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2586_1.xml"/>
+<title>Atelier théâtre</title>
+<updated>2014-08-15T01:46:58.215+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2586"
+	coordinates="48.996453404623,1.70975200831"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T17:20:24.000+02:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="515"
+	name="Atelier théâtre">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<openingHours>Tous les lundis de 19h00 à 21h00</openingHours>
+		<phone>0130969933</phone>
+		<email>magali.cabrol@tsqy.org</email>
+	</address>
+</content>
+</entry>

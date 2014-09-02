@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3976_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3976_1.xml"/>
+<title>Polygone</title>
+<updated>2014-08-15T01:47:12.295+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3976"
+	coordinates="48.841996206943,2.2826113365591|48.841891614995,2.2828909568489|48.841897352112,2.2828990034759|48.841843511452,2.2830337844789|48.841831595888,2.2830264084041|48.841785257558,2.2831404022872|48.8414171973,2.2827984206378|48.841485160669,2.2826736979187|48.841523996838,2.2827058844268|48.841648890224,2.2824068181217|48.84166786693,2.2824195586145|48.84169522868,2.2823431156576|48.841828947985,2.2824550978839|48.841840422232,2.2824363224208|48.841876610225,2.2824732027948|48.841869107838,2.2824946604669|48.841996206943,2.2826113365591"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-17T16:50:53.000+02:00"
+	updatedAt="2011-09-05T14:18:32.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3975"
+	name="Polygone">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

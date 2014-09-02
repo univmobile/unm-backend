@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4306_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4306_1.xml"/>
+<title>Service des diplômes</title>
+<updated>2014-08-15T01:47:15.943+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4306"
+	coordinates="48.84857824189,2.3438235372305"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T15:27:25.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Service des diplômes">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>OU 01 40 46 26 20 OU 01 40 46 26 21
+Le service des diplômes est chargé de garantir et de délivrer :
+les diplômes de licence et de master, les diplômes d’université (DU), les duplicatas de diplômes et les certificats administratifs (délivrés en cas de destruction, vol ou perte d’un diplôme déjà délivré), les relevés de notes des années antérieures à 1996-1997.
+</description>
+	<address>
+		<floor>À l’angle de la galerie Gerson et la galerie Richelieu</floor>
+		<openingHours>Du lundi au vendredi :
+9h00 / 12h00 - 13h30 / 17h00
+Permanence téléphonique :
+Du lundi au vendredi : 
+9h00 / 12h00 - 13h30 / 17h00
+</openingHours>
+		<phone>01 40 46 32 62</phone>
+	</address>
+</content>
+</entry>

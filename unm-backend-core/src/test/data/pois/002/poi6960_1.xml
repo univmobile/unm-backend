@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6960_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6960_1.xml"/>
+<title>IUT Fontainebleau </title>
+<updated>2014-08-15T01:47:41.580+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6960"
+	coordinates="48.398030851313,2.6868438720703"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-09T16:25:28.000+01:00"
+	updatedAt="2012-06-06T09:46:35.000+02:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="4516"
+	name="IUT Fontainebleau ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>Route forestière Hurtault
+77300 Fontainebleau 
+Tel : 01 60 74 68 00</fullAddress>
+	</address>
+	<child uid="7167" active="true"/>
+	<child uid="7168" active="true"/>
+	<child uid="7173" active="true"/>
+	<child uid="7172" active="true"/>
+	<child uid="5677" active="true"/>
+	<child uid="6961" active="true"/>
+	<child uid="7164" active="true"/>
+	<child uid="7166" active="true"/>
+	<child uid="7169" active="true"/>
+	<child uid="7170" active="true"/>
+	<child uid="7171" active="true"/>
+	<child uid="7192" active="true"/>
+</content>
+</entry>

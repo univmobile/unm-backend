@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2926_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2926_1.xml"/>
+<title>Bureau du français</title>
+<updated>2014-08-15T01:47:01.207+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2926"
+	coordinates="48.847313441404,2.35963013023"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T16:58:21.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2800"
+	name="Bureau du français">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Les étudiants peuvent également suivre des cours de français pendant l’année universitaire à raison de 2 heures à 7 heures par semaine sur un ou deux semestres en fonction de leur niveau initial (évalué par un test de placement obligatoire), au même tarif de 250 euros pour 30 heures, sauf pour les étudiants inscrits en licence, master (Erasmus ou non).</description>
+	<address>
+		<floor>Maison de la vie étudiante - 1er étage bureau 105</floor>
+		<phone>01 44 27 74 23</phone>
+		<email>coursdefrancais@upmc.fr</email>
+	</address>
+</content>
+</entry>

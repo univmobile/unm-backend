@@ -2,9 +2,10 @@ package fr.univmobile.backend.core;
 
 import javax.annotation.Nullable;
 
+import fr.univmobile.commons.datasource.Entry;
 import net.avcompris.binding.annotation.XPath;
 
-public interface User extends Entry {
+public interface User extends Entry<User> {
 
 	/**
 	 * e.g. "dandriana"
@@ -48,4 +49,8 @@ public interface User extends Entry {
 	@XPath("concat(atom:category/@term, ':', atom:content/atom:uid)")
 	@Override
 	String toString();
+	
+	@XPath("@profileImageUrl")
+	@Nullable
+	String getProfileImageUrl();
 }

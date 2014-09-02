@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7039_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7039_1.xml"/>
+<title>Scolarité enseignement à distance</title>
+<updated>2014-08-15T01:47:42.600+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7039"
+	coordinates="48.901878172583,2.2129243612289"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-05T17:20:08.000+01:00"
+	updatedAt="2012-01-06T12:56:25.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="2499"
+	name="Scolarité enseignement à distance">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>2e étage</floor>
+		<openingHours>du lundi au vendredi
+9h-12h et 13h30-17h</openingHours>
+		<url>www.u-paris10.fr/comete</url>
+		<phone>0140977609</phone>
+		<email>comete@u-paris10.fr</email>
+	</address>
+	<child uid="7047" active="true"/>
+	<child uid="7046" active="true"/>
+	<child uid="7044" active="true"/>
+	<child uid="7041" active="true"/>
+	<child uid="7043" active="true"/>
+	<child uid="7042" active="true"/>
+	<child uid="7040" active="true"/>
+	<child uid="7045" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4033_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4033_1.xml"/>
+<title>Site Saint-Christophe</title>
+<updated>2014-08-15T01:47:12.924+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4033"
+	coordinates="49.053745479353,2.0389775745571"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:40:32.000+02:00"
+	updatedAt="2011-06-14T14:59:15.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3792"
+	name="Site Saint-Christophe">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4035" active="true"/>
+</content>
+</entry>

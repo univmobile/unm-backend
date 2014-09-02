@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2985_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2985_1.xml"/>
+<title>Information et communication</title>
+<updated>2014-08-15T01:47:01.767+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2985"
+	coordinates="48.842955978647,2.332862019538"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:26:06.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2846"
+	name="Information et communication">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Bureau ouvert pour : la licence double cursus en Histoire/Information – Médias et la licence en sciences politiques et sociales mention Information et communication
+</description>
+	<address>
+		<floor>Immeuble rue Notre-Dame des Champs, 1er étage</floor>
+		<openingHours>Lundi et jeudi : 
+10h00 / 16h00
+Mardi, Mercredi et vendredi : 
+9h00 / 12h00
+</openingHours>
+		<url>http://ifp.u-paris2.fr/</url>
+	</address>
+</content>
+</entry>

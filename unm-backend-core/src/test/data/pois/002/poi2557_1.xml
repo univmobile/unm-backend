@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2557_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2557_1.xml"/>
+<title>Site d’enseignement de Riquet</title>
+<updated>2014-08-15T01:46:57.973+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2557"
+	coordinates="48.889081255683,2.376331239"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:43:32.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2293"
+	name="Site d’enseignement de Riquet">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : ligne 7 - station Riquet
+Autobus :
+- ligne 54 - arrêt Riquet
+- ligne 60 - arrêt Crimée</itinerary>
+		<fullAddress>10 rue Riquet
+75019 Paris</fullAddress>
+	</address>
+	<child uid="2315" active="true"/>
+</content>
+</entry>

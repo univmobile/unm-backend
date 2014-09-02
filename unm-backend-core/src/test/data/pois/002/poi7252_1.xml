@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7252_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7252_1.xml"/>
+<title>Cachan Normale Sup Conseil (CNS Conseil)</title>
+<updated>2014-08-15T01:47:44.845+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7252"
+	coordinates="48.789782020685,2.3301932215691"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-12T15:36:49.000+01:00"
+	updatedAt="2012-12-17T14:47:38.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7245"
+	name="Cachan Normale Sup Conseil (CNS Conseil)">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Cachan Normale Sup Conseil (CNS Conseil) est une association étudiante de l'ENS Cachan, de type Junior-Entreprise. Son objectif est de mettre en relation des entreprises ou des entités publiques qui veulent faire réaliser des études, avec des étudiants (normaliens ou auditeurs libres) de l'ENS Cachan, capables de prendre en charge ces demandes. Ces missions sont pour l'étudiant une occasion de valoriser ses compétences, d'acquérir un supplément d'expérience et de percevoir un complément de rémunération.</description>
+	<address>
+		<floor>Bat B 3e étage</floor>
+		<url>http://www.cnsconseil.com/</url>
+		<phone>01 47 40 34 50</phone>
+		<fax>01 47 40 34 50</fax>
+		<email>contact@cnsconseil.com</email>
+	</address>
+	<attachment id="262" title="cns-conseil.jpg" type="image" url="/uploads/poi/f79137f426515480aadc7105271ab9d165928c85.jpg"/>
+</content>
+</entry>

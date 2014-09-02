@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1215_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1215_1.xml"/>
+<title>Site Paris Rive Gauche</title>
+<updated>2014-08-15T01:46:45.871+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1215"
+	coordinates="48.829632610027,2.381479"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T14:34:55.000+01:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	parentUid="1162"
+	name="Site Paris Rive Gauche">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<fullAddress>5 rue Thomas Mann
+75013 Paris</fullAddress>
+	</address>
+	<child uid="1782"/>
+	<child uid="1781" active="true"/>
+	<child uid="1780" active="true"/>
+	<child uid="1778" active="true"/>
+	<child uid="1777" active="true"/>
+	<child uid="1775" active="true"/>
+	<child uid="1774" active="true"/>
+	<child uid="2453" active="true"/>
+</content>
+</entry>

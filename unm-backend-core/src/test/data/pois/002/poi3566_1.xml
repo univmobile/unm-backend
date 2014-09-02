@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3566_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3566_1.xml"/>
+<title>Département des Langues</title>
+<updated>2014-08-15T01:47:08.102+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3566"
+	coordinates="48.846843230391,2.3585706576705"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:10:14.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3563"
+	name="Département des Langues">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<url>http://www.langues.upmc.fr/fr/index.html</url>
+	</address>
+</content>
+</entry>

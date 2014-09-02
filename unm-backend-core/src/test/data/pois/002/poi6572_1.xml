@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6572_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6572_1.xml"/>
+<title>Institut de Génétique et de Microbiologie (IGM) UMR 8621</title>
+<updated>2014-08-15T01:47:38.457+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6572"
+	coordinates="48.703284364125,2.1735146641731"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-04T11:18:17.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="6565"
+	name="Institut de Génétique et de Microbiologie (IGM) UMR 8621">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://www.igmors.u-psud.fr</url>
+		<phone>01 69 15 57 16</phone>
+		<fax>01 69 15 70 06</fax>
+		<email>catherine.drouet@igmors.u-psud.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1919_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1919_1.xml"/>
+<title>Service des relations internationales hors programme d'échan</title>
+<updated>2014-08-15T01:46:52.442+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1919"
+	coordinates="48.903738586091,2.2103762626"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-06T14:45:10.000+02:00"
+	updatedAt="2011-11-15T12:32:55.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="2516"
+	name="Service des relations internationales hors programme d'échan">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Pour les étudiants étrangers hors programme d'échange.</description>
+	<address>
+		<floor>Bureau 103b, 1er étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h
+13h / 16h30
+Mardi : 
+9h / 13h</openingHours>
+		<phone>01 40 97 76 27</phone>
+		<email>etudiant.etranger@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

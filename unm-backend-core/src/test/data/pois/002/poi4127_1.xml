@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4127_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4127_1.xml"/>
+<title>Bureau de la VAE (Validation des Acquis de l’Expérience)</title>
+<updated>2014-08-15T01:47:13.973+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4127"
+	coordinates="48.944476949342,2.3635059222579"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:43:20.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Bureau de la VAE (Validation des Acquis de l’Expérience)">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>La validation des acquis est une démarche qui permet de valoriser les connaissances et les compétences en vue de s’inscrire dans une formation universitaire (décret 1985) ou bien d’obtenir tout ou partie d’un diplôme (décret 2002).</description>
+	<address>
+		<floor>2ème étage Bâtiment A, bureau 2279</floor>
+		<url>http://www.validexper.com/</url>
+		<phone>01 49 40 70 64</phone>
+		<fax>01 49 40 65 57</fax>
+		<email>vae@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>
