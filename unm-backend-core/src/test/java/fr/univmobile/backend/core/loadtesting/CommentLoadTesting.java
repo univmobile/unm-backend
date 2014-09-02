@@ -18,15 +18,30 @@ public class CommentLoadTesting extends AbstractLoadTesting {
 
 		int count = 10000;
 
-		if (args != null && args.length == 1) {
+		String taskName = "taskCreateComment_new_threads";
+		// "taskCreateComment_existing_thread_415"
 
-			count = Integer.parseInt(args[0]);
+		if (args != null) {
+
+			if (args.length >= 1) {
+
+				count = Integer.parseInt(args[0]);
+			}
+
+			if (args.length >= 2) {
+
+				taskName = args[1];
+			}
 		}
 
 		final CommentLoadTesting testing = new CommentLoadTesting();
 
-		testing.launch(count, // testing.taskCreateComment_new_threads());
-				testing.taskCreateComment_existing_thread_415());
+		final Task task = (Task) testing.getClass().getDeclaredMethod(taskName)
+				.invoke(testing);
+
+		final File reportFile = new File("target", taskName + ".csv");
+
+		testing.launch(count, task, reportFile);
 	}
 
 	private CommentLoadTesting() throws Exception {
@@ -69,8 +84,15 @@ public class CommentLoadTesting extends AbstractLoadTesting {
 	private final CommentThreadDataSource commentThreads;
 	private final CommentManager commentManager;
 
+	@SuppressWarnings("unused")
 	private Task taskCreateComment_new_threads() {
 		return new Task() {
+
+			@Override
+			public String getName() {
+
+				return "taskCreateComment_new_threads";
+			}
 
 			@Override
 			public void doTask(final int i) throws Exception {
@@ -88,8 +110,15 @@ public class CommentLoadTesting extends AbstractLoadTesting {
 		};
 	}
 
+	@SuppressWarnings("unused")
 	private Task taskCreateComment_existing_thread_415() {
 		return new Task() {
+
+			@Override
+			public String getName() {
+
+				return "taskCreateComment_existing_thread_415";
+			}
 
 			private static final int POI_UID = 415;
 
