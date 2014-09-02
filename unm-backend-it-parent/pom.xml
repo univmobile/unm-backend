@@ -57,6 +57,7 @@
 				<configuration>
 					<container>
 						<containerId>${cargo.containerId}</containerId>
+						<timeout>300000</timeout>
 						<type>installed</type>
 						<home>${cargo.home}</home>
 						<output>${project.build.directory}/${cargo.containerId}/tomcat.log</output>
