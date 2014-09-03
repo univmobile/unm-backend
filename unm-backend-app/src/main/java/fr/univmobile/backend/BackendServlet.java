@@ -335,12 +335,15 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final String baseURL;
 
-		final boolean rewriteHost = host != null //
-				&& host.startsWith("10.0.2.2"); // Android emulator
-
-		if (rewriteHost) {
-
-			final String fromConfig = getBaseURL();
+		//final boolean rewriteHost;
+		
+		if (host==null) {
+			
+			baseURL = getBaseURL(); // From configuration
+			
+		} else if (host.startsWith("10.0.2.2")) { // Android emulator
+			
+			final String fromConfig = getBaseURL(); // From configuration
 
 			final String protocol = substringBefore(fromConfig, "//");
 
@@ -349,9 +352,21 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			baseURL = protocol + "//" + host + "/" + substringAfter(part2, "/");
 
 			AbstractClientFromLocal.setThreadLocalBaseURL(baseURL);
+			
+		} else if (host.startsWith("univmobile-dev.univ-paris1.fr")) {
+			
+			final String fromConfig = getBaseURL(); // From configuration
 
+			final String protocol = substringBefore(fromConfig, "//");
+
+			//final String part2 = substringAfter(fromConfig, "//");
+
+			baseURL = protocol + "//" + host; // "/json" will be appended 
+
+			AbstractClientFromLocal.setThreadLocalBaseURL(baseURL);
+			
 		} else {
-
+			
 			baseURL = getBaseURL(); // From configuration
 		}
 
