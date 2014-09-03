@@ -1,6 +1,6 @@
 #!/bin/sh
 
-VERSION=0.0.4-SNAPSHOT
+VERSION=0.0.5-SNAPSHOT
 
 export M2_REPO="${HOME}/.m2/repository"
 
