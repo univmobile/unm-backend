@@ -2,6 +2,7 @@ package fr.univmobile.backend;
 
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.apache.commons.lang3.StringUtils.isBlank;
+import static org.apache.commons.lang3.StringUtils.split;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 import static org.apache.commons.lang3.StringUtils.substringBefore;
 
@@ -11,6 +12,7 @@ import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.Enumeration;
 
+import javax.annotation.Nullable;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.UnavailableException;
@@ -79,6 +81,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 	private AbstractJSONController[] jsonControllers;
 
+	@Nullable
+	private String[] optional_jsonBaseURLs;
+
 	@Override
 	public void init() throws ServletException {
 
@@ -86,11 +91,28 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			log.info(this + ": init()...");
 		}
 
+		// 0. SERVLET INIT PARAMETERS
+
 		final String dataDir = getServletConfig().getInitParameter("dataDir");
 
 		if (isBlank(dataDir)) {
 			throw new UnavailableException("Cannot find init-param: dataDir");
 		}
+
+		final String optional_jsonBaseURLs = getServletConfig()
+				.getInitParameter("optional-jsonBaseURLs");
+
+		if (isBlank(optional_jsonBaseURLs)) {
+
+			this.optional_jsonBaseURLs = null;
+
+		} else {
+
+			this.optional_jsonBaseURLs = //
+			split(optional_jsonBaseURLs.replace(',', ' '));
+		}
+
+		// 1. TTRANSACTION MANAGER + DATA
 
 		final TransactionManager tx = TransactionManager.getInstance();
 
@@ -335,39 +357,63 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final String baseURL;
 
-		//final boolean rewriteHost;
-		
-		if (host==null) {
-			
+		// final boolean rewriteHost;
+
+		if (host == null || optional_jsonBaseURLs == null) {
+
 			baseURL = getBaseURL(); // From configuration
-			
-		} else if (host.startsWith("10.0.2.2")) { // Android emulator
-			
-			final String fromConfig = getBaseURL(); // From configuration
 
-			final String protocol = substringBefore(fromConfig, "//");
-
-			final String part2 = substringAfter(fromConfig, "//");
-
-			baseURL = protocol + "//" + host + "/" + substringAfter(part2, "/");
-
-			AbstractClientFromLocal.setThreadLocalBaseURL(baseURL);
-			
-		} else if (host.startsWith("univmobile-dev.univ-paris1.fr")) {
-			
-			final String fromConfig = getBaseURL(); // From configuration
-
-			final String protocol = substringBefore(fromConfig, "//");
-
-			//final String part2 = substringAfter(fromConfig, "//");
-
-			baseURL = protocol + "//" + host; // "/json" will be appended 
-
-			AbstractClientFromLocal.setThreadLocalBaseURL(baseURL);
-			
 		} else {
-			
-			baseURL = getBaseURL(); // From configuration
+
+			String jsonBaseURL = null;
+
+			for (final String optional_jsonBaseURL : optional_jsonBaseURLs) {
+
+				final String protocol = substringBefore(optional_jsonBaseURL,
+						"://");
+
+				final String requestProtocolUpperCase = //
+				request.getProtocol().toUpperCase();
+
+				if (requestProtocolUpperCase.startsWith("HTTPS/")) {
+					if (!protocol.equals("https")) {
+						continue;
+					}
+				} else if (requestProtocolUpperCase.startsWith("HTTP/")) {
+					if (!protocol.equals("http")) {
+						continue;
+					}
+				} else {
+					continue;
+				}
+
+				final String part2 = substringAfter(optional_jsonBaseURL, "//");
+
+				if (!part2.startsWith(host)) {
+					continue;
+				}
+
+				final String baseURI = "/" + substringAfter(part2, "/");
+
+				if (!requestURI.startsWith(baseURI)) {
+					continue;
+				}
+
+				jsonBaseURL = optional_jsonBaseURL;
+
+				break;
+			}
+
+			if (jsonBaseURL != null) {
+
+				baseURL = jsonBaseURL;
+
+				AbstractClientFromLocal.setThreadLocalBaseURL(baseURL);
+
+			} else {
+
+				baseURL = getBaseURL(); // From configuration
+			}
 		}
 
 		// 3. DISPATCH
