@@ -5,6 +5,7 @@ import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.split;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 import static org.apache.commons.lang3.StringUtils.substringBefore;
+import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 
 import java.io.File;
 import java.io.IOException;
@@ -110,6 +111,28 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			this.optional_jsonBaseURLs = //
 			split(optional_jsonBaseURLs.replace(',', ' '));
+
+			for (int i = 0; i < this.optional_jsonBaseURLs.length; ++i) {
+
+				final String optional_jsonBaseURL = this.optional_jsonBaseURLs[i];
+
+				if (optional_jsonBaseURL.endsWith("/json/")) {
+
+					this.optional_jsonBaseURLs[i] = substringBeforeLast(
+							optional_jsonBaseURL, "json/");
+
+				} else if (optional_jsonBaseURL.endsWith("/json")) {
+
+					this.optional_jsonBaseURLs[i] = substringBeforeLast(
+							optional_jsonBaseURL, "json");
+
+				} else {
+
+					throw new UnavailableException(
+							"optional-jsonBaseURL should end with \"/json/\" or \"/json\": "
+									+ optional_jsonBaseURL);
+				}
+			}
 		}
 
 		// 1. TTRANSACTION MANAGER + DATA
