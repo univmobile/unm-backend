@@ -1,6 +1,8 @@
 Intégration avec Shibboleth
 ===========================
 
+Documentation parente : [unm-backend](README.md)
+
 ### Java et Shibboleth : configuration
 
 La configuration suivante est testée avec succès :

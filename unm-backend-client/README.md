@@ -1,5 +1,7 @@
 # unm-backend-client
 
+Documentation parente : [unm-backend](../README.md "Documentation parente : unm-dbackend/README.md")
+
 Ce projet contient les classes de communication entre le client Java de l’application mobile web UnivMobile,
 et le backend J2EE UnivMobile.
 
@@ -30,4 +32,6 @@ unm-backend-it.
 Les tests unitaires qui utilisent un couplage local,
 sont dans le projet unm-backend-client-json.
 
-Voir le projet unm-backend-client-json pour des diagrammes explicatifs.
+Voir le projet unm-backend-client-json pour des diagrammes explicatifs : [JavaDocs, Classes de communication avec le backend J2EE UnivMobile.](http://univmobile.vswip.com/nexus/content/sites/pub/unm-backend-client-json/0.0.4/apidocs/)
+
+

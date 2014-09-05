@@ -1,6 +1,8 @@
 Flux JSON
 =========
 
+Documentation parente : [unm-backend](README.md)
+
 ### Introduction
 
 L’application UnivMobile utilise les flux JSON pour la communication entre ses différents éléments déployés. C’est la partie dite « backend » (projets Maven : unm-backend) qui sert ces flux. Ils sont en particulier consommés par :

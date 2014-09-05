@@ -1,6 +1,8 @@
 UnivMobile — Liste des universités
 ==================================
 
+Documentation parente : [unm-backend](README.md)
+
 Les données ci-dessous se retrouvent dans les fichiers XML de tests unitaires du projet Maven unm-backend-core, et dans les fichiers XML de tests d’intégration du projet Maven unm-backend-it-data.
 
 Elles sont reprises ici à fin de référence pour les développeurs, mais ce document est à voir comme une liste d’exemples ; il est possible qu’il ne soit pas synchronisé. Pour des détails, se reporter aux fichiers XML.

@@ -1,6 +1,8 @@
 Développement d’unm-backend
 ===========================
 
+Documentation parente : [unm-backend](README.md)
+
 ### Architecture logicielle
 
 L’application web unm-backend est servie par une servlet J2EE. Les composants sont ensuite organisés en couches :
