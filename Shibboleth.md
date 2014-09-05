@@ -1,5 +1,5 @@
-Développement d’unm-backend-app
-===============================
+Intégration avec Shibboleth
+===========================
 
 ### Java et Shibboleth : configuration
 
