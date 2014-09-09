@@ -1,41 +1,29 @@
 package fr.univmobile.backend.sysadmin;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static org.apache.commons.lang3.CharEncoding.UTF_8;
-import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
-import java.util.HashMap;
-import java.util.Map;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
+import javax.annotation.Nullable;
 import javax.xml.parsers.ParserConfigurationException;
 
-import net.avcompris.binding.dom.DomBinder;
-import net.avcompris.binding.dom.impl.DefaultDomBinder;
-import net.avcompris.binding.yaml.impl.DomYamlBinder;
-
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
-import org.jvyaml.YAML;
-import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 import fr.univmobile.backend.core.Comment;
+import fr.univmobile.backend.core.Comment.Context;
+import fr.univmobile.backend.core.Comment.ContextType;
 import fr.univmobile.backend.core.Poi;
 import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.User;
@@ -44,58 +32,22 @@ import fr.univmobile.commons.datasource.Entry;
 /**
  * Code for the "index" command-line tool.
  */
-class Indexation extends Tool {
+class IndexationTool extends AbstractTool {
 
-	public Indexation(final File dataDir, final ConnectionType dbType,
+	public IndexationTool(final File dataDir, final ConnectionType dbType,
 			final Connection cxn) throws IOException,
 			ParserConfigurationException {
 
+		super(dbType, cxn);
+
 		this.dataDir = checkNotNull(dataDir, "dataDir");
-		this.dbType = checkNotNull(dbType, "dbType").toString();
-		this.cxn = checkNotNull(cxn, "cxn");
-
-		final Object yaml;
-
-		final InputStream is = Indexation.class.getClassLoader()
-				.getResourceAsStream("sql.yaml");
-		try {
-
-			final Reader reader = new InputStreamReader(is, UTF_8);
-
-			yaml = YAML.load(reader);
-
-		} finally {
-			is.close();
-		}
-
-		sqlBundle = new DomYamlBinder().bind(yaml, SqlBundle.class);
-
-		if (sqlBundle.isNullQueriesByDbType(this.dbType)) {
-			throw new RuntimeException("Cannot find SQL queries for dbType: "
-					+ dbType);
-		}
-
-		final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
-				.newInstance();
-
-		documentBuilderFactory.setNamespaceAware(true);
-		documentBuilderFactory.setValidating(false);
-
-		documentBuilder = documentBuilderFactory.newDocumentBuilder();
 	}
 
-	private final DomBinder domBinder = DefaultDomBinder.getInstance();
 	private final File dataDir;
-	private final String dbType;
-	private final SqlBundle sqlBundle;
-	private final Connection cxn;
-	private static final String tablePrefix = "unm_";
-
-	public static final String[] CATEGORIES = new String[] { "users",
-			"regions", "pois", "comments" };
 
 	@Override
-	public void run() throws IOException, SQLException, SAXException {
+	@Nullable
+	public Result run() throws IOException, SQLException, SAXException {
 
 		if (!doesTableExist(tablePrefix + "categories")) {
 			executeUpdate("createTable_categories");
@@ -126,28 +78,42 @@ class Indexation extends Tool {
 
 		// 2. CLEAR ALL
 
-		for (final String category : CATEGORIES) {
+		final String[] reverseCategories = ArrayUtils.clone(CATEGORIES);
+
+		ArrayUtils.reverse(reverseCategories);
+
+		for (final String category : reverseCategories) {
 
 			clearCategory(category);
 		}
 
 		// 3. INSERT REVFILES
 
+		// final Map<String, Integer> counts = new HashMap<String, Integer>();
+
 		for (final String category : CATEGORIES) {
 
-			final File categoryDir = new File(getCategoryPath(category));
+			final File categoryDir = getCategoryDir(category);
+
+			int count = 0;
 
 			for (final File file : categoryDir.listFiles()) {
 
 				loadRevfile(category, file.getName());
+
+				++count;
 			}
+
+			// counts.put(category,count);
+
+			System.out.println("  " + category + ": " + count);
 		}
 
 		// 4. REVFILE PARENTS
 
 		for (final String category : CATEGORIES) {
 
-			final File categoryDir = new File(getCategoryPath(category));
+			final File categoryDir = getCategoryDir(category);
 
 			for (final File file : categoryDir.listFiles()) {
 
@@ -193,17 +159,36 @@ class Indexation extends Tool {
 			public void loadEntity(final Comment comment,
 					final int activeRevfileId) throws SQLException {
 
+				final DateTime initialPostedAt = comment.getPostedAt();
+				final DateTime activePostedAt = comment.getPostedAt();
+				final Context mainContext = comment.getMainContext();
+				final ContextType contextType = mainContext.getType();
+				final int poiUid;
+
+				if (contextType == ContextType.LOCAL_POI) {
+					poiUid = mainContext.getUid();
+				} else {
+					throw new IllegalStateException("Unknown contextType: "
+							+ contextType);
+				}
+
 				executeUpdate("createComment", activeRevfileId,
-						comment.getUid());
+						comment.getUid(), //
+						initialPostedAt, activePostedAt, //
+						poiUid);
 			}
 		});
 
-		// 9. UNLOCK ALL
+		// 8. UNLOCK ALL
 
 		unlockCategory("users");
 		unlockCategory("regions");
 		unlockCategory("pois");
 		unlockCategory("comments");
+
+		// 9. END
+
+		return null;
 	}
 
 	private <U extends Entry<U>> void loadEntities(final String category,
@@ -247,20 +232,8 @@ class Indexation extends Tool {
 
 						final String path = rs1.getString(2);
 
-						final File file = new File(categoryDir, path);
-
-						final Document document;
-
-						final InputStream is = new FileInputStream(file);
-						try {
-
-							document = documentBuilder.parse(is);
-
-						} finally {
-							is.close();
-						}
-
-						final U entity = domBinder.bind(document, clazz);
+						final U entity = loadEntity(
+								new File(categoryDir, path), clazz);
 
 						loader.loadEntity(entity, revfileId);
 
@@ -299,22 +272,6 @@ class Indexation extends Tool {
 		executeUpdate("clearCategory_2_deleteRevfiles", category);
 	}
 
-	private final Map<String, File> categoryDirs = new HashMap<String, File>();
-
-	private File getCategoryDir(final String category) {
-
-		final File categoryDir = categoryDirs.get(category);
-
-		if (categoryDir == null) {
-			throw new IllegalStateException(
-					"Path has not been initialized for category: " + category);
-		}
-
-		return categoryDir;
-	}
-
-	private final DocumentBuilder documentBuilder;
-
 	private void loadRevfile(final String category, final String path)
 			throws SQLException, IOException, SAXException {
 
@@ -329,18 +286,7 @@ class Indexation extends Tool {
 					+ file.getCanonicalPath());
 		}
 
-		final Document document;
-
-		final InputStream is = new FileInputStream(file);
-		try {
-
-			document = documentBuilder.parse(is);
-
-		} finally {
-			is.close();
-		}
-
-		final Entry<?> entry = domBinder.bind(document, Entry.class);
+		final Entry<?> entry = loadEntity(file);
 
 		final String atomId = entry.getId();
 
@@ -387,18 +333,7 @@ class Indexation extends Tool {
 					+ file.getCanonicalPath());
 		}
 
-		final Document document;
-
-		final InputStream is = new FileInputStream(file);
-		try {
-
-			document = documentBuilder.parse(is);
-
-		} finally {
-			is.close();
-		}
-
-		final Entry<?> entry = domBinder.bind(document, Entry.class);
+		final Entry<?> entry = loadEntity(file);
 
 		if (entry.isNullParent()) {
 			return;
@@ -429,8 +364,22 @@ class Indexation extends Tool {
 		final String NULL_SCHEMA_PATTERN = null;
 		final String[] ALL_TYPES = null;
 
+		final String tablenamePattern;
+
+		switch (dbType) {
+
+		case MYSQL:
+			tablenamePattern = tablename;
+			break;
+		case H2:// H2: Use uppercase when unquoted
+			tablenamePattern = tablename.toUpperCase();
+			break;
+		default:
+			throw new IllegalStateException("Unknown dbType: " + dbType);
+		}
+
 		final ResultSet rs = cxn.getMetaData().getTables(NULL_CATALOG,
-				NULL_SCHEMA_PATTERN, tablename, ALL_TYPES);
+				NULL_SCHEMA_PATTERN, tablenamePattern, ALL_TYPES);
 		try {
 
 			return rs.next() ? true : false; // Keep the long syntax for clarity
@@ -440,98 +389,7 @@ class Indexation extends Tool {
 		}
 	}
 
-	private int executeUpdate(final String queryId, final Object... params)
-			throws SQLException {
-
-		final String sql = getSql(queryId);
-
-		final PreparedStatement pstmt = cxn.prepareStatement(sql);
-		try {
-
-			setSqlParams(pstmt, params);
-
-			try {
-
-				return pstmt.executeUpdate();
-
-			} catch (final SQLException e) {
-
-				errorLogQuery(queryId, sql, params);
-
-				throw e;
-			}
-
-		} finally {
-			pstmt.close();
-		}
-	}
-
-	private static void setSqlParams(final PreparedStatement pstmt,
-			final Object... params) throws SQLException {
-
-		for (int i = 0; i < params.length; ++i) {
-
-			final int index = i + 1;
-
-			final Object param = params[i];
-
-			if (param instanceof String) {
-
-				pstmt.setString(index, (String) param);
-
-			} else if (param instanceof Integer) {
-
-				pstmt.setInt(index, (Integer) param);
-
-			} else if (param instanceof DateTime) {
-
-				pstmt.setTimestamp(index, new Timestamp(((DateTime) param)
-						.toDate().getTime()));
-
-			} else {
-
-				throw new IllegalArgumentException("Param #" + index
-						+ " should be String, Integer or DateTime: " + param);
-			}
-		}
-	}
-
-	private static final Log log = LogFactory.getLog(Indexation.class);
-
-	private final Map<String, String> sqlQueries = new HashMap<String, String>();
-
-	private String getSql(final String queryId) {
-
-		if (log.isDebugEnabled()) {
-			log.debug("getSql():" + queryId);
-		}
-
-		final String cachedSql = sqlQueries.get(queryId);
-
-		if (cachedSql != null) {
-
-			if (log.isDebugEnabled()) {
-				log.debug("SQL (cached): " + cachedSql);
-			}
-
-			return cachedSql;
-		}
-
-		final String sql = sqlBundle.getQuery(queryId, dbType);
-
-		if (isBlank(sql)) {
-			throw new RuntimeException("Cannot find SQL query for id: "
-					+ queryId + " (dbType: " + dbType + ")");
-		}
-
-		final String filteredSql = sql.replace("${prefix}", tablePrefix);
-
-		if (log.isDebugEnabled()) {
-			log.debug("SQL (new): " + filteredSql);
-		}
-
-		return filteredSql;
-	}
+	private static final Log log = LogFactory.getLog(IndexationTool.class);
 
 	private boolean doesCategoryExist(final String category)
 			throws SQLException {
@@ -557,111 +415,6 @@ class Indexation extends Tool {
 		}
 	}
 
-	private String getCategoryPath(final String category) throws SQLException {
-
-		return executeQueryGetString("getCategoryPath", category);
-	}
-
-	private String executeQueryGetString(final String queryId,
-			final Object... params) throws SQLException {
-
-		final String sql = getSql(queryId);
-
-		final PreparedStatement pstmt = cxn.prepareStatement(sql);
-		try {
-
-			setSqlParams(pstmt, params);
-
-			final ResultSet rs;
-			try {
-
-				rs = pstmt.executeQuery();
-
-			} catch (final SQLException e) {
-
-				errorLogQuery(queryId, sql, params);
-
-				throw e;
-			}
-			try {
-
-				if (!rs.next()) {
-
-					log.fatal("Query did not return any result: " + queryId);
-
-					errorLogQuery(queryId, sql, params);
-
-					throw new RuntimeException("Cannot execute query: "
-							+ queryId);
-				}
-
-				return rs.getString(1);
-
-			} finally {
-				rs.close();
-			}
-
-		} finally {
-			pstmt.close();
-		}
-	}
-
-	private int executeQueryGetInt(final String queryId, final Object... params)
-			throws SQLException {
-
-		final String sql = getSql(queryId);
-
-		final PreparedStatement pstmt = cxn.prepareStatement(sql);
-		try {
-
-			setSqlParams(pstmt, params);
-
-			final ResultSet rs;
-			try {
-
-				rs = pstmt.executeQuery();
-
-			} catch (final SQLException e) {
-
-				errorLogQuery(queryId, sql, params);
-
-				throw e;
-			}
-			try {
-
-				if (!rs.next()) {
-
-					log.fatal("Query did not return any result: " + queryId);
-
-					errorLogQuery(queryId, sql, params);
-
-					throw new RuntimeException("Cannot execute query: "
-							+ queryId);
-				}
-
-				return rs.getInt(1);
-
-			} finally {
-				rs.close();
-			}
-
-		} finally {
-			pstmt.close();
-		}
-	}
-
-	private static void errorLogQuery(final String queryId, final String sql,
-			final Object... params) {
-
-		log.fatal("Query in error: " + queryId);
-
-		for (int i = 0; i < params.length; ++i) {
-			log.fatal("  Param #" + (i + 1) + ": " + params[i]);
-		}
-
-		log.fatal("SQL: " + sql);
-	}
-
 	private void createCategoryIfNeeded(final String category)
 			throws SQLException, IOException {
 
@@ -676,7 +429,7 @@ class Indexation extends Tool {
 					+ " is not a directory: " + categoryDir.getCanonicalPath());
 		}
 
-		categoryDirs.put(category, categoryDir);
+		setCategoryDir(category, categoryDir);
 
 		executeUpdate("createCategory", category,
 				categoryDir.getCanonicalPath());

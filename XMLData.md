@@ -198,12 +198,21 @@ En gros, il s’agit d’une copie des fichiers XML.
 
 Un utilitaire est prévu pour une sauvegarde à chaud :
 
-    $ java -jar unm-backend-sysadmin.jar lockedfiles \
+    $ java -jar unm-backend-sysadmin.jar backup \
         -dburl jdbc:mysql://localhost:3306/univmobile \
         -dbusername xxx -dbpassword
 
-  * à chaud
-  
+Voir : [Outil en ligne de commande](CLI.md)
+
+On peut également faire une sauvegarde de tous les fichiers XML avec un outil système
+(cp), mais on aura alors aussi les fichiers en cours d’écriture
+— marqués dans la table unm_revfiles avec un champ locked_since à NOT NULL. 
+
+Préférer un backup qui contienne également la base de données, pour
+enregistrer l’état des fichiers : verrouillés / non verrouillés.
+
+
+
 ### Liste des fichiers verrouillés
 
 Lorsqu’ils sont accédés en écriture (en itération 3,
@@ -215,7 +224,10 @@ Ils ne sont pas éligibles à la lecture par l’application.
 
 Pour avoir la liste des fichiers marqués comme verrouillés :
 
-    $ java -jar unm-backend-sysadmin.jar lockedfiles \
+    $ java -jar unm-backend-sysadmin.jar lock \
         -dburl jdbc:mysql://localhost:3306/univmobile \
         -dbusername xxx -dbpassword
     xxx
+
+Voir : [Outil en ligne de commande](CLI.md)
+

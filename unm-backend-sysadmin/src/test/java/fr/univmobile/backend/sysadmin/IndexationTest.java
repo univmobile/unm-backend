@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,9 +23,9 @@ public class IndexationTest {
 
 		final File dbFile = new File("target/IndexationTest.h2.db");
 
-		if (dbFile.exists()) {
-			dbFile.delete();
-		}
+		FileUtils.deleteQuietly(dbFile);
+
+		assertFalse(dbFile.exists());
 
 		final String url = "jdbc:h2:./target/IndexationTest";
 
@@ -54,7 +55,7 @@ public class IndexationTest {
 		assertFalse(doesTableExist("unm_entities_pois"));
 		assertFalse(doesTableExist("unm_entities_comments"));
 
-		final Indexation indexation = new Indexation( //
+		final AbstractTool indexation = new IndexationTool( //
 				new File("src/test/data/001"), H2, cxn);
 
 		indexation.run();
@@ -124,5 +125,16 @@ public class IndexationTest {
 		} finally {
 			rs.close();
 		}
+	}
+
+	@Test
+	public void testIndexationIdempotent() throws Exception {
+
+		final AbstractTool indexation = new IndexationTool( //
+				new File("src/test/data/001"), H2, cxn);
+
+		indexation.run();
+
+		indexation.run();
 	}
 }

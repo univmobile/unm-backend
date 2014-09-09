@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/comments/001:comment1_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/comments/001:comment1_1.xml"/>
+<id>fr.univmobile:unm-backend:test/comments/001:comment3_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/comments/001:comment3_1.xml"/>
 <title>Oui, mais si on danse ?</title>
 <updated>2014-08-24T09:49:00Z</updated>
 <category term="comments"/>
@@ -9,7 +9,7 @@
 	<name>dandriana</name>
 	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
 </author>
-<content uid="1"
+<content uid="3"
 	active="true"
 	markerType="point"
 	postedAt="2014-08-24 09:50:00"

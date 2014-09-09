@@ -21,7 +21,7 @@ public class Regions001Test {
 		final File originalDataDir = new File(
 				"src/main/resources/data/001/regions");
 
-		final File tmpDataDir = new File("target/RegionsTest");
+		final File tmpDataDir = new File("target/Regions001Test");
 
 		if (tmpDataDir.isDirectory()) {
 			FileUtils.forceDelete(tmpDataDir);
