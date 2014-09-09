@@ -1,6 +1,6 @@
 package fr.univmobile.backend.core;
 
-import fr.univmobile.commons.datasource.BackendDataSource;
+import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Category;
 import fr.univmobile.commons.datasource.PrimaryKey;
 import fr.univmobile.commons.datasource.SearchAttribute;
@@ -11,7 +11,7 @@ import fr.univmobile.commons.datasource.Unique;
 @PrimaryKey("uid")
 @Unique("remoteUser")
 @Support(data = User.class, builder = UserBuilder.class)
-public interface UserDataSource extends BackendDataSource<User, UserBuilder> {
+public interface UserDataSource extends RevDataSource<User, UserBuilder> {
 
 	@SearchAttribute("remoteUser")
 	User getByRemoteUser(String remoteUser);

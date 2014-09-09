@@ -22,18 +22,18 @@ import org.w3c.dom.Document;
 
 import com.avcompris.lang.NotImplementedException;
 
-import fr.univmobile.commons.datasource.BackendDataSource;
+import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
 import fr.univmobile.commons.datasource.SearchAttribute;
 
-public final class BackendDataSourceFileSystem<S extends BackendDataSource<E, EB>, //
+public final class BackendDataSourceFileSystem<S extends RevDataSource<E, EB>, //
 E extends Entry<E>, //
 EB extends EntryBuilder<E>> //
 		extends BackendDataSourceImpl<S, E, EB> //
 		implements InvocationHandler {
 
-	public static <S extends BackendDataSource<E, EB>, E extends Entry<E>, EB extends EntryBuilder<E>> S newDataSource(
+	public static <S extends RevDataSource<E, EB>, E extends Entry<E>, EB extends EntryBuilder<E>> S newDataSource(
 			final Class<S> dataSourceClass, final File dataDir)
 			throws IOException {
 

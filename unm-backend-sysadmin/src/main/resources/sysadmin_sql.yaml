@@ -310,10 +310,10 @@ bundle:
         ${prefix}revfiles,
         ${prefix}categories;  
   
-  getComments:
-    mysql.h2:
-      SELECT path FROM ${prefix}entities_comments, ${prefix}revfiles
-        WHERE unm_active_revfile_id = ${prefix}revfiles.id
-        ORDER BY active_posted_at DESC
-        LIMIT ?;
+#  getComments:
+#    mysql.h2:
+#      SELECT path FROM ${prefix}entities_comments, ${prefix}revfiles
+#        WHERE unm_active_revfile_id = ${prefix}revfiles.id
+#        ORDER BY active_posted_at DESC
+#        LIMIT ?;
         

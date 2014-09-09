@@ -1,31 +1,46 @@
 package fr.univmobile.backend.core.impl;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.avcompris.lang.NotImplementedException;
+import com.google.common.collect.Iterables;
+
+import fr.univmobile.backend.core.Comment;
 import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
-import fr.univmobile.backend.core.CommentThreadBuilder;
-import fr.univmobile.backend.core.CommentThreadDataSource;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.SequenceTimeoutException;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.commons.tx.TransactionManager;
 
-public class CommentManagerImpl implements CommentManager {
+public class CommentManagerImpl extends AbstractDbManagerImpl implements
+		CommentManager {
 
 	public CommentManagerImpl(final CommentDataSource comments,
-			final CommentThreadDataSource commentThreads) {
+			final ConnectionType dbType, final Connection cxn)
+			throws IOException {
+
+		super(dbType, cxn);
 
 		this.comments = checkNotNull(comments, "comments");
-		this.commentThreads = checkNotNull(commentThreads, "commentThreads");
+		// this.commentThreads = checkNotNull(commentThreads, "commentThreads");
 
 		tx = TransactionManager.getInstance();
 
 		this.maxCommentUid[0] = //
 		calcMaxUid(comments.getAllByInt("uid").keySet());
 
-		this.maxCommentThreadUid[0] = //
-		calcMaxUid(commentThreads.getAllByInt("uid").keySet());
+		// this.maxCommentThreadUid[0] = //
+		// calcMaxUid(commentThreads.getAllByInt("uid").keySet());
 	}
 
 	private static int calcMaxUid(final Iterable<Integer> uids) {
@@ -43,10 +58,11 @@ public class CommentManagerImpl implements CommentManager {
 	}
 
 	private final CommentDataSource comments;
-	private final CommentThreadDataSource commentThreads;
+	// private final CommentThreadDataSource commentThreads;
 	private final TransactionManager tx;
 	private int[] maxCommentUid = new int[1];
-	private int[] maxCommentThreadUid = new int[1];
+
+	// private int[] maxCommentThreadUid = new int[1];
 
 	private int newCommentUid() throws TransactionException {
 
@@ -76,28 +92,27 @@ public class CommentManagerImpl implements CommentManager {
 
 	private int newCommentThreadUid() throws TransactionException {
 
-		final long start = System.currentTimeMillis();
+		/*
+		 * final long start = System.currentTimeMillis();
+		 * 
+		 * while (System.currentTimeMillis() < start + 5000) {
+		 * 
+		 * final Lock lock = tx.acquireLock(5000, "comment_threads.uid"); try {
+		 * 
+		 * final int newUid = maxCommentThreadUid[0] + 1;
+		 * 
+		 * maxCommentThreadUid[0] = newUid;
+		 * 
+		 * if (comments.isNullByUid(newUid)) {
+		 * 
+		 * return newUid; }
+		 * 
+		 * } finally { lock.release(); } }
+		 * 
+		 * throw new SequenceTimeoutException();
+		 */
 
-		while (System.currentTimeMillis() < start + 5000) {
-
-			final Lock lock = tx.acquireLock(5000, "comment_threads.uid");
-			try {
-
-				final int newUid = maxCommentThreadUid[0] + 1;
-
-				maxCommentThreadUid[0] = newUid;
-
-				if (comments.isNullByUid(newUid)) {
-
-					return newUid;
-				}
-
-			} finally {
-				lock.release();
-			}
-		}
-
-		throw new SequenceTimeoutException();
+		throw new NotImplementedException();
 	}
 
 	@Override
@@ -105,48 +120,88 @@ public class CommentManagerImpl implements CommentManager {
 			final CommentBuilder comment) throws TransactionException {
 
 		checkNotNull(comment, "comment");
-		
-		if(comment.isNullPostedAt()) {
-			throw new IllegalArgumentException("Comment.postedAt should not be null");
+
+		if (comment.isNullPostedAt()) {
+			throw new IllegalArgumentException(
+					"Comment.postedAt should not be null");
 		}
-		if(comment.isNullPostedBy()) {
-			throw new IllegalArgumentException("Comment.postedBy should not be null");
+		if (comment.isNullPostedBy()) {
+			throw new IllegalArgumentException(
+					"Comment.postedBy should not be null");
 		}
-		if(comment.isNullMessage()) {
-			throw new IllegalArgumentException("Comment.message should not be null");
-		}
-
-		final Lock lock = tx.acquireLock(5000, "comments\\poi", poiId);
-
-		final CommentThreadBuilder commentThread;
-
-		if (commentThreads.isNullByPoiId(poiId)) {
-
-			commentThread = commentThreads.create();
-
-			commentThread.setUid(newCommentThreadUid());
-
-			commentThread
-					.getContent()
-					.addToContexts()
-					.setId("fr.univmobile:unm-backend:test/pois/001:poi"
-							+ poiId + "_1").setType("local:poi").setUid(poiId);
-
-		} else {
-
-			commentThread = commentThreads.update(commentThreads
-					.getByPoiId(poiId));
+		if (comment.isNullMessage()) {
+			throw new IllegalArgumentException(
+					"Comment.message should not be null");
 		}
 
-		final int uid = newCommentUid();
+		/*
+		 * final Lock lock = tx.acquireLock(5000, "comments\\poi", poiId);
+		 * 
+		 * final CommentThreadBuilder commentThread;
+		 * 
+		 * if (commentThreads.isNullByPoiId(poiId)) {
+		 * 
+		 * //commentThread = commentThreads.create();
+		 * 
+		 * //commentThread.setUid(newCommentThreadUid());
+		 * 
+		 * commentThread .getContent() .addToContexts()
+		 * .setId("fr.univmobile:unm-backend:test/pois/001:poi" + poiId +
+		 * "_1").setType("local:poi").setUid(poiId);
+		 * 
+		 * } else {
+		 * 
+		 * commentThread = commentThreads.update(commentThreads
+		 * .getByPoiId(poiId)); }
+		 * 
+		 * final int uid = newCommentUid();
+		 * 
+		 * comment.setUid(uid);
+		 * 
+		 * commentThread.getContent().addToComments().setUid(uid);
+		 * 
+		 * lock.save(comment); lock.save(commentThread);
+		 * 
+		 * lock.commit();
+		 */
 
-		comment.setUid(uid);
+		throw new NotImplementedException();
+	}
 
-		commentThread.getContent().addToComments().setUid(uid);
+	@Override
+	public Comment[] getMostRecentComments(final int limit)
+			throws SQLException, IOException {
 
-		lock.save(comment);
-		lock.save(commentThread);
+		final List<Comment> comments = new ArrayList<Comment>();
 
-		lock.commit();
+		final PreparedStatement pstmt = cxn
+				.prepareStatement(getSql("getMostRecentCommentUids"));
+		try {
+			pstmt.setInt(1, limit); // LIMIT
+
+			final ResultSet rs = pstmt.executeQuery();
+			try {
+
+				while (rs.next()) {
+
+					final int uid = rs.getInt(1);
+
+					final Comment comment = this.comments.getByUid(uid);
+
+					// final int uid = comment.getUid();
+					// final int poiUid = comment.getMainContext().getUid();
+
+					comments.add(comment);
+				}
+
+			} finally {
+				rs.close();
+			}
+
+		} finally {
+			pstmt.close();
+		}
+
+		return Iterables.toArray(comments, Comment.class);
 	}
 }

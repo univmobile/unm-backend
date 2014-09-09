@@ -13,6 +13,12 @@
 
 	<build>
 		<finalName>unm-backend-core</finalName>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>false</filtering> <!-- Keep sql.yaml unfiltered. -->
+			</resource>
+		</resources>
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -46,6 +52,11 @@
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-commons-datasource</artifactId>
 		</dependency>	
+		<dependency>
+			<groupId>net.avcompris.commons</groupId>
+			<artifactId>avc-binding-yaml</artifactId>
+			<version>0.1.1-SNAPSHOT</version>
+		</dependency>
 	</dependencies>
 
 	<name>unm-backend-core</name>

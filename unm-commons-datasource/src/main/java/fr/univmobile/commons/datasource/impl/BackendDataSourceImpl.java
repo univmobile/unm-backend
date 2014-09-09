@@ -36,15 +36,15 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 
-import fr.univmobile.commons.datasource.BackendDataSource;
+import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Category;
 import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
 
-abstract class BackendDataSourceImpl<S extends BackendDataSource<E, EB>, //
+abstract class BackendDataSourceImpl<S extends RevDataSource<E, EB>, //
 E extends Entry<E>, //
 EB extends EntryBuilder<E>> //
-		implements BackendDataSource<E, EB> {
+		implements RevDataSource<E, EB> {
 
 	protected BackendDataSourceImpl(final Class<S> dataSourceClass,
 			final BackendDataEngine<E, EB> engine) {

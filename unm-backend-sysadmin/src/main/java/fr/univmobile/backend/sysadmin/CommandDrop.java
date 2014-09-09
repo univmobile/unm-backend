@@ -1,6 +1,6 @@
 package fr.univmobile.backend.sysadmin;
 
-import static fr.univmobile.backend.sysadmin.ConnectionType.MYSQL;
+import static fr.univmobile.backend.core.impl.ConnectionType.MYSQL;
 
 import java.io.IOException;
 import java.sql.Connection;
@@ -11,6 +11,8 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.xml.sax.SAXException;
 
 import com.beust.jcommander.Parameters;
+
+import fr.univmobile.backend.core.impl.ConnectionType;
 
 /**
  * command-line arguments for command-line command: "drop"

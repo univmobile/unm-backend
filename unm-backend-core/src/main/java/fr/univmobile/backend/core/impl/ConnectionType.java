@@ -1,4 +1,4 @@
-package fr.univmobile.backend.sysadmin;
+package fr.univmobile.backend.core.impl;
 
 /**
  * Different SQL connection types: MySQL, H2…

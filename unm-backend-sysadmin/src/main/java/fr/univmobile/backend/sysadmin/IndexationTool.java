@@ -12,6 +12,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 
+import static fr.univmobile.backend.core.impl.ConnectionType.*;
 import javax.annotation.Nullable;
 import javax.xml.parsers.ParserConfigurationException;
 
@@ -24,6 +25,7 @@ import org.xml.sax.SAXException;
 import fr.univmobile.backend.core.Comment;
 import fr.univmobile.backend.core.Comment.Context;
 import fr.univmobile.backend.core.Comment.ContextType;
+import fr.univmobile.backend.core.impl.ConnectionType;
 import fr.univmobile.backend.core.Poi;
 import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.User;

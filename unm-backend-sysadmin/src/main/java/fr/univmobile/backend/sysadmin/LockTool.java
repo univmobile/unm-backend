@@ -14,6 +14,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.joda.time.DateTime;
 import org.xml.sax.SAXException;
 
+import fr.univmobile.backend.core.impl.ConnectionType;
 import fr.univmobile.backend.sysadmin.dao.Category;
 
 /**
