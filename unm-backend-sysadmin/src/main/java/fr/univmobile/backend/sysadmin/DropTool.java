@@ -20,10 +20,16 @@ class DropTool extends AbstractTool {
 	}
 
 	@Override
-	public void run() throws IOException, SQLException, SAXException {
+	public Result run() throws IOException, SQLException, SAXException {
 
-		executeUpdate("dropAllTables");
+		final int result = executeUpdate("dropAllTables");
 
 		System.out.println("Done.");
+
+		return new Result() {
+			{
+				setRowCount(result);
+			}
+		};
 	}
 }

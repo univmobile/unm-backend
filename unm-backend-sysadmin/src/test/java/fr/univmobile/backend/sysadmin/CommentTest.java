@@ -1,7 +1,7 @@
 package fr.univmobile.backend.sysadmin;
 
 import static fr.univmobile.backend.sysadmin.ConnectionType.H2;
-import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.*;
 
 import java.io.File;
 import java.sql.Connection;
@@ -51,6 +51,8 @@ public class CommentTest {
 
 		final AbstractTool commentTool = new CommentTool(30, H2, cxn);
 		
-		commentTool.run();
+		final Result result = commentTool.run();
+		
+		assertEquals(3,result.getRowCount());
 	}
 }

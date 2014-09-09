@@ -20,11 +20,13 @@ public class Main {
 		final CommandLock commandLock = new CommandLock();
 		final CommandUnlock commandUnlock = new CommandUnlock();
 		final CommandDrop commandDrop = new CommandDrop();
+		final CommandComment commandComment = new CommandComment();
 
 		jc.addCommand("index", commandIndex);
 		jc.addCommand("lock", commandLock);
 		jc.addCommand("unlock", commandUnlock);
 		jc.addCommand("drop", commandDrop);
+		jc.addCommand("comment", commandComment);
 
 		try {
 
@@ -65,6 +67,10 @@ public class Main {
 		} else if ("drop".equals(command)) {
 
 			dbCommand = commandDrop;
+
+		} else if ("comment".equals(command)) {
+
+			dbCommand = commandComment;
 
 		} else {
 

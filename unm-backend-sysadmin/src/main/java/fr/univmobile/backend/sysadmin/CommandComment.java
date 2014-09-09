@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+import javax.annotation.Nullable;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
@@ -46,4 +47,29 @@ class CommandComment extends AbstractDbCommand {
 		return limit;
 	}
 
+	@Parameter(names = { "-a", "-add" }, description = "Add a new comment", arity = 0)
+	private boolean add;
+
+	public boolean isAdd() {
+
+		return add;
+	}
+
+	@Parameter(names = { "-u", "-user" }, description = "The User's UID to add a new comment with")
+	private String user;
+
+	@Nullable
+	public String getUser() {
+
+		return user;
+	}
+
+	@Parameter(names = { "-m", "-message" }, description = "The comment message")
+	private String message;
+
+	@Nullable
+	public String getMessage() {
+
+		return message;
+	}
 }

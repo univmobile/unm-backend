@@ -28,7 +28,7 @@ class LockTool extends AbstractTool {
 	}
 
 	@Override
-	public void run() throws IOException, SQLException, SAXException {
+	public Result run() throws IOException, SQLException, SAXException {
 
 		final List<Category> lockedCategories = new ArrayList<Category>();
 
@@ -58,11 +58,13 @@ class LockTool extends AbstractTool {
 
 		for (final Category lockedCategory : lockedCategories) {
 
-			System.out
-					.println("  " + lockedCategory.id + ", since: "
+			System.out.println( //
+					"  " + lockedCategory.id + ", since: "
 							+ lockedCategory.lockedSince + " -- "
 							+ lockedCategory.path);
 
 		}
+
+		return new Result(lockedCategories.size());
 	}
 }

@@ -30,10 +30,12 @@ class CommentTool extends AbstractTool {
 	private final int limit;
 
 	@Override
-	public void run() throws IOException, SQLException, SAXException {
+	public CommentResult run() throws IOException, SQLException, SAXException {
 
 		final File commentsDir = getCategoryDir("comments");
 
+		final CommentResult result = new CommentResult();
+		
 		final PreparedStatement pstmt = cxn
 				.prepareStatement(getSql("getComments"));
 		try {
@@ -61,6 +63,8 @@ class CommentTool extends AbstractTool {
 					final int uid = comment.getUid();
 					final int poiUid = comment.getMainContext().getUid();
 
+					result.addComment(comment);
+					
 					System.out.println("#" + count + ": poi=" + poiUid
 							+ " uid=" + uid + " " + comment.getPostedAt()
 							+ " - " + comment.getPostedBy() + " - "
@@ -69,6 +73,9 @@ class CommentTool extends AbstractTool {
 			} finally {
 				rs.close();
 			}
+			
+		return result;
+		
 		} finally {
 			pstmt.close();
 		}

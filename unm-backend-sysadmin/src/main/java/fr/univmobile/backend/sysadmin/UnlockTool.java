@@ -20,10 +20,12 @@ class UnlockTool extends AbstractTool {
 	}
 
 	@Override
-	public void run() throws IOException, SQLException, SAXException {
+	public Result run() throws IOException, SQLException, SAXException {
 
 		final int result = executeUpdate("unlockCategories");
 
 		System.out.println("Done unlocking categories: " + result);
+
+		return new Result(result);
 	}
 }

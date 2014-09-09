@@ -194,7 +194,7 @@ bundle:
         KEY unm_entities_comments_idx_unm_active_revfile_id (unm_active_revfile_id),
         KEY unm_entities_comments_idx_poi_uid (poi_uid),
         FOREIGN KEY (poi_uid) REFERENCES ${prefix}entities_pois (uid)
-          ON DELETE RESTRICT ON UPDATE RESTRICT 
+          ON DELETE RESTRICT ON UPDATE RESTRICT,
         FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id)
           ON DELETE RESTRICT ON UPDATE RESTRICT 
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;

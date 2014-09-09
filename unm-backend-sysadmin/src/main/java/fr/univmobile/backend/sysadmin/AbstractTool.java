@@ -18,6 +18,7 @@ import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.annotation.Nullable;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -88,7 +89,8 @@ abstract class AbstractTool {
 
 	private static final Log log = LogFactory.getLog(AbstractTool.class);
 
-	public abstract void run() throws IOException, SQLException, SAXException;
+	@Nullable
+	public abstract Result run() throws IOException, SQLException, SAXException;
 
 	private final Map<String, String> sqlQueries = new HashMap<String, String>();
 

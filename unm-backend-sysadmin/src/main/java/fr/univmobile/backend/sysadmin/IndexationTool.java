@@ -12,8 +12,10 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
 
+import javax.annotation.Nullable;
 import javax.xml.parsers.ParserConfigurationException;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
@@ -44,7 +46,8 @@ class IndexationTool extends AbstractTool {
 	private final File dataDir;
 
 	@Override
-	public void run() throws IOException, SQLException, SAXException {
+	@Nullable
+	public Result run() throws IOException, SQLException, SAXException {
 
 		if (!doesTableExist(tablePrefix + "categories")) {
 			executeUpdate("createTable_categories");
@@ -75,7 +78,11 @@ class IndexationTool extends AbstractTool {
 
 		// 2. CLEAR ALL
 
-		for (final String category : CATEGORIES) {
+		final String[] reverseCategories = ArrayUtils.clone(CATEGORIES);
+
+		ArrayUtils.reverse(reverseCategories);
+
+		for (final String category : reverseCategories) {
 
 			clearCategory(category);
 		}
@@ -172,12 +179,16 @@ class IndexationTool extends AbstractTool {
 			}
 		});
 
-		// 9. UNLOCK ALL
+		// 8. UNLOCK ALL
 
 		unlockCategory("users");
 		unlockCategory("regions");
 		unlockCategory("pois");
 		unlockCategory("comments");
+
+		// 9. END
+
+		return null;
 	}
 
 	private <U extends Entry<U>> void loadEntities(final String category,
