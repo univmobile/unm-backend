@@ -174,14 +174,33 @@ Exemple de temps de construction de cet index en ligne de commande :
         -data /var/univmobile/data/ \
         -dburl jdbc:mysql://localhost:3306/univmobile \
         -dbusername xxx -dbpassword
-    xxx
+    The DB Connection password: 
+    Running: index...
+      users: 4
+      regions: 3
+      pois: 7440
+      comments: 3
+    Elapsed time: 15620 ms.
+    Done.
     
 Si les tables unm_categories, unm_revfiles, unm_entities_xxx n’existent pas, elles
 sont créées à l’indexation.
 
-
-
 ### Structures arborescentes
+
+Sémantiquement, les fichiers XML peuvent être organisés selon plusieurs
+types de relations. 
+
+Ainsi, les POIs (Points of Interest) sont reliés entre eux de façon arborescente :
+un POI est en général un sous-POI.
+
+De même les commentaires : ils sont pour la plupart rangés sous un POI.
+Il y a également des commentaires rangés sous d’autres commentaires,
+dans les cas de fils de discussion.
+
+L’indexation agrège ces informations sémantiques dans une vue 
+technique plus facile à manipuler, et surtout
+plus rapide en insertion.
 
 TODO : poitrees
 
