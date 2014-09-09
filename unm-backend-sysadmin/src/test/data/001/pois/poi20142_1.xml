@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi142_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi142_1.xml"/>
+<title>Amphi Valin</title>
+<updated>2014-08-17T21:32:58.703+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20142"
+	coordinates="46.139065447234,-1.153538972139"
+	active="true"
+	markerType="point"
+	parentUid="20138"
+	name="Amphi Valin">
+	<poiType id="11" label="Amphithéâtre" categoryId="16" categoryLabel="Amphithéâtres"/>
+</content>
+</entry>

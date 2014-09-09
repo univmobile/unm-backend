@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi28_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi28_1.xml"/>
+<title>Administration (IUT)</title>
+<updated>2014-08-17T21:32:58.491+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20028"
+	coordinates="46.141784596031,-1.151912212371"
+	active="true"
+	markerType="point"
+	parentUid="20154"
+	name="Administration (IUT)">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>15, rue François de Vaux de Foletier
+17000 La Rochelle</fullAddress>
+	</address>
+	<child uid="20057" active="true"/>
+	<child uid="20153" active="true"/>
+	<child uid="20175" active="true"/>
+</content>
+</entry>

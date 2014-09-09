@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/comments/001:comment2_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/comments/001:comment2_1.xml"/>
+<title>Une belle application</title>
+<updated>2014-08-25T09:16:00Z</updated>
+<category term="comments"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2"
+	active="true"
+	postedAt="2014-08-25 09:17:00"
+	postedBy="André"
+	title="Une belle application">
+<context id="fr.univmobile:unm-backend:test/pois/001:poi415_1"
+	type="local:poi" uid="415"/>
+<reference uid="1"/>
+<message>
+Une bien belle application.
+</message>
+</content>
+</entry>

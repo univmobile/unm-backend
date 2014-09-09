@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi202_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi202_1.xml"/>
+<title>Cellule d'Accompagnement aux Technologies de l'nformation</title>
+<updated>2014-08-17T21:32:58.840+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20202"
+	coordinates="46.148117790776,-1.15670531988"
+	active="true"
+	markerType="point"
+	parentUid="20023"
+	name="Cellule d'Accompagnement aux Technologies de l'nformation">
+	<poiType id="26" label="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+	<address>
+		<url>http://www.univ-larochelle.fr/Cellule-d-Accompagnement-aux</url>
+		<phone>05 16 49 67 06</phone>
+	</address>
+</content>
+</entry>

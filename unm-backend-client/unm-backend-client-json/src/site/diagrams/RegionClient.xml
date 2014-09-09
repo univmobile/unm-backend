@@ -12,7 +12,7 @@
 
 <instance 
 	name="Code métier" 
-	centerX="550" centerY="50">
+	centerX="570" centerY="50">
 <label>
 	<line>Code</line>
 	<line>métier</line>
@@ -35,13 +35,13 @@
 	<class name="University" display="none"/>
 	-->
 
-	<class name="RegionClientFromLocal" centerX="370" centerY="150">
-	<constructor/>
+	<class name="RegionClientFromLocal" centerX="380" centerY="150">
+	<constructor label="&lt;init&gt;(…RegionDataSource…)"/>
 	</class>
 	
 </package>
 
-<class name="RegionDataSource" centerX="550" centerY="150">
+<class name="RegionDataSource" centerX="570" centerY="150">
 	<instance refMethodName="create"
 		label="create()">
 	<uses name="Region" package="fr.univmobile.backend.core"/>
@@ -67,7 +67,7 @@
 <instance
 	refClassName="BackendDataSourceFileSystem"
 	name="BackendDataSourceFileSystem.newDataSource(RegionDataSource.class)" 
-	centerX="550" centerY="260">
+	centerX="570" centerY="260">
 <label>
 	<line>BackendDataSourceFileSystem</line>
 	<line>.newDataSource(RegionDataSource.class)</line>
@@ -77,7 +77,7 @@
 <note dx="-100">Lit et stocke les données sur le système de fichiers</note>
 </instance>
 
-<resource name="XML Files"  centerX="550" centerY="330">
+<resource name="XML Files"  centerX="570" centerY="330">
 <label>
 	<line>Fichiers</line>
 	<line>XML</line>

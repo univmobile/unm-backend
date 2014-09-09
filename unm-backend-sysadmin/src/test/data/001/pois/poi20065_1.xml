@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi65_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi65_1.xml"/>
+<title>Faculté des Lettres et Sciences Humaines</title>
+<updated>2014-08-17T21:32:57.479+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20065"
+	coordinates="45.816627151189,1.230747699737"
+	active="true"
+	markerType="point"
+	parentUid="20036"
+	name="Faculté des Lettres et Sciences Humaines">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="20066" active="true"/>
+	<child uid="20321" active="true"/>
+	<child uid="20322" active="true"/>
+</content>
+</entry>

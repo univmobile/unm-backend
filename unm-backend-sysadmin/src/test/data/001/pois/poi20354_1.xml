@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi354_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi354_1.xml"/>
+<title>Institut Sciences de l’Homme et de la Société</title>
+<updated>2014-08-17T21:32:58.197+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20354"
+	coordinates="45.82530789572,1.260305643081"
+	active="true"
+	markerType="point"
+	parentUid="20252"
+	name="Institut Sciences de l’Homme et de la Société">
+	<poiType id="28" label="Institut de Recherche" categoryId="15" categoryLabel="Laboratoires"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>
