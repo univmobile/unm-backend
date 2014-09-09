@@ -1,9 +1,12 @@
 package fr.univmobile.backend.it;
 
+import static fr.univmobile.backend.core.impl.ConnectionType.MYSQL;
 import static org.junit.Assert.assertEquals;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -12,6 +15,7 @@ import fr.univmobile.backend.client.HomeClient;
 import fr.univmobile.backend.client.HomeClientFromJSON;
 import fr.univmobile.backend.client.http.HomeJSONHttpClient;
 import fr.univmobile.backend.client.json.HomeJSONClient;
+import fr.univmobile.testutil.PropertiesUtils;
 
 public class HomeJSONHttpClientTest {
 
@@ -24,7 +28,17 @@ public class HomeJSONHttpClientTest {
 		final String dataDir = TestBackend.readBackendAppDataDir(new File(
 				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
 
-		TestBackend.setUpData("001", new File(dataDir));
+		final Connection cxn = DriverManager.getConnection(
+				PropertiesUtils.getTestProperty("mysqlUrl"),
+				PropertiesUtils.getTestProperty("mysqlUsername"),
+				PropertiesUtils.getTestProperty("mysqlPassword"));
+		try {
+
+			TestBackend.setUpData("001", new File(dataDir), MYSQL, cxn);
+
+		} finally {
+			cxn.close();
+		}
 
 		// 1. WEB
 
@@ -64,7 +78,8 @@ public class HomeJSONHttpClientTest {
 
 		final String jsonBaseURL = client.getHome().getUrl();
 
-		System.out.println("URL returned by the JSON client (jsonBaseURL): " + jsonBaseURL);
+		System.out.println("URL returned by the JSON client (jsonBaseURL): "
+				+ jsonBaseURL);
 
 		assertEquals(jsonURL, jsonBaseURL);
 	}

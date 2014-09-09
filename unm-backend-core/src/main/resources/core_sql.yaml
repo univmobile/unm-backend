@@ -1,0 +1,38 @@
+bundle:
+
+  getMostRecentCommentUids:
+    mysql.h2:
+      SELECT uid FROM ${prefix}entities_comments, ${prefix}revfiles
+        WHERE unm_active_revfile_id = ${prefix}revfiles.id
+        ORDER BY active_posted_at DESC
+        LIMIT ?;
+        
+  sizeOfCommentThreads:
+    mysql.h2:
+      SELECT COUNT(DISTINCT poi_uid) AS count FROM ${prefix}entities_comments
+        WHERE unm_status = 1;
+          
+  sizeOfCommentsByPoiId:
+    mysql.h2:
+      SELECT COUNT(uid) FROM ${prefix}entities_comments
+        WHERE unm_status = 1 AND poi_uid = ?;
+        
+  getCommentsByPoiId:
+    mysql.h2:
+      SELECT uid, active_posted_at FROM ${prefix}entities_comments
+        WHERE unm_status = 1 AND poi_uid = ?
+        ORDER BY active_posted_at DESC;
+        
+  createRevfile:
+    mysql.h2:
+      INSERT INTO ${prefix}revfiles
+        (category_id, path, atom_id, locked_since, status)
+        VALUES (?, ?, ?, ?, ?);
+        
+  createComment:
+    mysql.h2:
+      INSERT INTO ${prefix}entities_comments
+        (unm_active_revfile_id, unm_status, uid,
+          initial_posted_at, active_posted_at, poi_uid)
+        VALUES (?, 1, ?, ?, ?, ?);
+        

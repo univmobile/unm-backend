@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 
 import org.apache.commons.lang3.NotImplementedException;
 
-import fr.univmobile.commons.datasource.BackendDataSource;
+import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
 import fr.univmobile.commons.datasource.PrimaryKey;
@@ -19,7 +19,7 @@ import fr.univmobile.commons.datasource.Support;
 abstract class BackendDataUtils {
 
 	public static <E extends Entry<E>, EB extends EntryBuilder<E>> Class<E> getDataClass(
-			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
+			final Class<? extends RevDataSource<E, EB>> dataSourceClass) {
 
 		final Support support = getInheritedAnnotation(dataSourceClass,
 				Support.class);
@@ -79,7 +79,7 @@ abstract class BackendDataUtils {
 	}
 
 	public static <E extends Entry<E>, EB extends EntryBuilder<E>> Class<? extends EB> getBuilderClass(
-			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
+			final Class<? extends RevDataSource<E, EB>> dataSourceClass) {
 
 		final Support support = getInheritedAnnotation(dataSourceClass,
 				Support.class);
@@ -114,7 +114,7 @@ abstract class BackendDataUtils {
 	}
 
 	public static <E extends Entry<E>, EB extends EntryBuilder<E>> String getPrimaryKeyName(
-			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
+			final Class<? extends RevDataSource<E, EB>> dataSourceClass) {
 
 		final String[] primaryKey = getInheritedAnnotation(dataSourceClass,
 				PrimaryKey.class).value();
@@ -136,7 +136,7 @@ abstract class BackendDataUtils {
 
 	public static <E extends Entry<E>, EB extends EntryBuilder<E>> String getPrimaryKeyValue(
 			final E data,
-			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
+			final Class<? extends RevDataSource<E, EB>> dataSourceClass) {
 
 		final String[] primaryKey = getInheritedAnnotation(dataSourceClass,
 				PrimaryKey.class).value();

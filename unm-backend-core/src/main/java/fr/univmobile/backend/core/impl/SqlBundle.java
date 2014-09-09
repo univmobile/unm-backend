@@ -1,4 +1,4 @@
-package fr.univmobile.backend.sysadmin;
+package fr.univmobile.backend.core.impl;
 
 import net.avcompris.binding.annotation.XPath;
 
@@ -25,7 +25,7 @@ import net.avcompris.binding.annotation.XPath;
  * </pre>
  */
 @XPath("/bundle")
-public interface SqlBundle {
+interface SqlBundle {
 
 	/**
 	 * For instance with dbType = \"mysql\",

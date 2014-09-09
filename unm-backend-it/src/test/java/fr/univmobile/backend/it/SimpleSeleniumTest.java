@@ -1,5 +1,6 @@
 package fr.univmobile.backend.it;
 
+import static fr.univmobile.backend.core.impl.ConnectionType.MYSQL;
 import static org.apache.commons.lang3.StringUtils.containsIgnoreCase;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 import static org.apache.commons.lang3.StringUtils.substringBefore;
@@ -7,6 +8,8 @@ import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.After;
@@ -15,6 +18,8 @@ import org.junit.Test;
 
 import com.thoughtworks.selenium.DefaultSelenium;
 import com.thoughtworks.selenium.Selenium;
+
+import fr.univmobile.testutil.PropertiesUtils;
 
 public class SimpleSeleniumTest {
 
@@ -41,7 +46,17 @@ public class SimpleSeleniumTest {
 
 		// 1. INJECT DATA
 
-		TestBackend.setUpData("001", new File(dataDir));
+		final Connection cxn = DriverManager.getConnection(
+				PropertiesUtils.getTestProperty("mysqlUrl"),
+				PropertiesUtils.getTestProperty("mysqlUsername"),
+				PropertiesUtils.getTestProperty("mysqlPassword"));
+		try {
+
+			TestBackend.setUpData("001", new File(dataDir), MYSQL, cxn);
+
+		} finally {
+			cxn.close();
+		}
 
 		// 2. WEBAPP
 

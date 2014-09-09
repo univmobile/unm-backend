@@ -15,6 +15,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -38,6 +40,10 @@ import org.xml.sax.SAXException;
 
 import com.google.common.collect.Iterables;
 
+import fr.univmobile.backend.core.Indexation;
+import fr.univmobile.backend.core.impl.ConnectionType;
+import fr.univmobile.backend.core.impl.IndexationImpl;
+
 /**
  * Utilities to load data, extract packaging information, etc.
  * 
@@ -53,8 +59,10 @@ public abstract class TestBackend {
 	 *            the local destination directory where to install the XML, for
 	 *            instance "<code>/tmp/unm-backend/dirData</code>".
 	 */
-	public static void setUpData(final String testDataId, final File destDir)
-			throws IOException {
+	public static void setUpData(final String testDataId, final File destDir,
+			final ConnectionType dbType, final Connection cxn)
+			throws IOException, SQLException, ParserConfigurationException,
+			SAXException {
 
 		System.out.println("Copying XML Resources to: "
 				+ destDir.getCanonicalPath() + "...");
@@ -135,6 +143,12 @@ public abstract class TestBackend {
 		FileUtils.write(reportFile, "# " + message + CR + LF, UTF_8, true);
 
 		System.out.println(message);
+
+		System.out.println("Indexation...");
+
+		final Indexation indexation = new IndexationImpl(destDir, dbType, cxn);
+
+		indexation.indexData(null);
 	}
 
 	private static String[] loadResourcePaths() throws IOException {

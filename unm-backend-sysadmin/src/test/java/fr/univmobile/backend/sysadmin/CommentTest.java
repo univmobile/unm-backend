@@ -1,6 +1,6 @@
 package fr.univmobile.backend.sysadmin;
 
-import static fr.univmobile.backend.sysadmin.ConnectionType.H2;
+import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static org.junit.Assert.*;
 
 import java.io.File;

@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 
 import com.avcompris.lang.NotImplementedException;
 
-import fr.univmobile.commons.datasource.BackendDataSource;
+import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
 import fr.univmobile.commons.datasource.SearchAttribute;
@@ -25,7 +25,7 @@ final class BackendDataCacheEngine<E extends Entry<E>, EB extends EntryBuilder<E
 		implements BackendDataEngine<E, EB> {
 
 	public BackendDataCacheEngine(
-			final Class<? extends BackendDataSource<E, EB>> dataSourceClass) {
+			final Class<? extends RevDataSource<E, EB>> dataSourceClass) {
 
 		this.dataSourceClass = checkNotNull(dataSourceClass, "dataSourceClass");
 
@@ -69,7 +69,7 @@ final class BackendDataCacheEngine<E extends Entry<E>, EB extends EntryBuilder<E
 	@Nullable
 	private final String primaryKeyName;
 
-	private final Class<? extends BackendDataSource<E, EB>> dataSourceClass;
+	private final Class<? extends RevDataSource<E, EB>> dataSourceClass;
 	private final Class<E> dataClass;
 
 	private void putAttributeMethod(final String attributeName) {

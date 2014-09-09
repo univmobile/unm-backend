@@ -1,10 +1,13 @@
 package fr.univmobile.backend.it;
 
+import static fr.univmobile.backend.core.impl.ConnectionType.MYSQL;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -15,6 +18,7 @@ import fr.univmobile.backend.client.RegionClientFromJSON;
 import fr.univmobile.backend.client.University;
 import fr.univmobile.backend.client.http.RegionJSONHttpClient;
 import fr.univmobile.backend.client.json.RegionJSONClient;
+import fr.univmobile.testutil.PropertiesUtils;
 
 public class RegionJSONHttpClientTest {
 
@@ -27,7 +31,17 @@ public class RegionJSONHttpClientTest {
 		final String dataDir = TestBackend.readBackendAppDataDir(new File(
 				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
 
-		TestBackend.setUpData("001", new File(dataDir));
+		final Connection cxn = DriverManager.getConnection(
+				PropertiesUtils.getTestProperty("mysqlUrl"),
+				PropertiesUtils.getTestProperty("mysqlUsername"),
+				PropertiesUtils.getTestProperty("mysqlPassword"));
+		try {
+
+		TestBackend.setUpData("001", new File(dataDir), MYSQL, cxn);
+		
+		} finally {
+			cxn.close();
+		}
 
 		// 1. WEB
 

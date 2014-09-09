@@ -1,7 +1,11 @@
 package fr.univmobile.backend.it;
 
+import static fr.univmobile.backend.core.impl.ConnectionType.MYSQL;
+
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +30,17 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		final String dataDir = TestBackend.readBackendAppDataDir(new File(
 				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
 
-		TestBackend.setUpData("001", new File(dataDir));
+		final Connection cxn = DriverManager.getConnection(
+				PropertiesUtils.getTestProperty("mysqlUrl"),
+				PropertiesUtils.getTestProperty("mysqlUsername"),
+				PropertiesUtils.getTestProperty("mysqlPassword"));
+		try {
+
+			TestBackend.setUpData("001", new File(dataDir), MYSQL, cxn);
+
+		} finally {
+			cxn.close();
+		}
 
 		final String logFile = TestBackend.readLog4jLogFile(new File("target",
 				"unm-backend-app-noshib/WEB-INF/classes/log4j.xml"));
@@ -128,7 +142,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		pause(PAUSE);
 
 		takeScreenshot("pois.png");
-		
+
 		elementById("div-resultInfo").shouldBeVisible();
 
 		elementById("link-poi-3792-name").click();
@@ -142,7 +156,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		pause(PAUSE);
 
 		takeScreenshot("pois2.png");
-		
+
 		elementById("div-resultInfo").shouldBeVisible();
 	}
 
@@ -163,7 +177,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		pause(PAUSE);
 
 		takeScreenshot("pois.png");
-		
+
 		elementById("div-resultInfo").shouldBeVisible();
 
 		elementById("link-poi-3792-name").click();
@@ -177,7 +191,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		pause(PAUSE);
 
 		takeScreenshot("comments_poi3792.png");
-		
+
 		elementById("link-poi").click();
 
 		pause(PAUSE);
@@ -189,7 +203,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		pause(PAUSE);
 
 		takeScreenshot("comments2_poi3792.png");
-		
+
 		elementById("button-back").click();
 
 		pause(PAUSE);
@@ -221,11 +235,11 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		takeScreenshot("ucp.png");
 
-		final String labelledBy = 
-				elementById("li-left-bottom-tabs-comments").attr("aria-labelledby");
-		
+		final String labelledBy = elementById("li-left-bottom-tabs-comments")
+				.attr("aria-labelledby");
+
 		elementById(labelledBy).click();
-		
+
 		pause(PAUSE);
 
 		takeScreenshot("ucp-details.png");

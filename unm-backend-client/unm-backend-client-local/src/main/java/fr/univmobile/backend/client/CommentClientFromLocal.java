@@ -3,6 +3,7 @@ package fr.univmobile.backend.client;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.annotation.Nullable;
 import javax.inject.Inject;
@@ -12,9 +13,9 @@ import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 
 import fr.univmobile.backend.core.CommentDataSource;
+import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.CommentThread;
 import fr.univmobile.backend.core.CommentThread.CommentRef;
-import fr.univmobile.backend.core.CommentThreadDataSource;
 import fr.univmobile.commons.DataBeans;
 
 public class CommentClientFromLocal extends AbstractClientFromLocal implements
@@ -23,36 +24,35 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 	@Inject
 	public CommentClientFromLocal(final String baseURL,
 			final CommentDataSource commentDataSource,
-			final CommentThreadDataSource commentThreadDataSource) {
+			final CommentManager commentManager) {
 
 		super(baseURL);
 
 		this.commentDataSource = checkNotNull(commentDataSource,
 				"commentDataSource");
 
-		this.commentThreadDataSource = checkNotNull(commentThreadDataSource,
-				"commentThreadDataSource");
+		this.commentManager = checkNotNull(commentManager, "commentManager");
 	}
 
 	private final CommentDataSource commentDataSource;
-	private final CommentThreadDataSource commentThreadDataSource;
+	private final CommentManager commentManager;
 
 	private static final Log log = LogFactory
 			.getLog(CommentClientFromLocal.class);
 
 	@Override
-	public Comment[] getCommentsByPoiId(final int poiId) throws IOException {
+	public Comment[] getCommentsByPoiId(final int poiId) throws IOException,
+			SQLException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("getCommentsByPoiId():" + poiId + "...");
 		}
 
-		if (commentThreadDataSource.isNullByPoiId(poiId)) {
+		if (commentManager.isNullByPoiId(poiId)) {
 			return new Comment[0];
 		}
 
-		final CommentThread commentThread = commentThreadDataSource
-				.getByPoiId(poiId);
+		final CommentThread commentThread = commentManager.getByPoiId(poiId);
 
 		final CommentRef[] commentRefs = commentThread.getAllComments();
 

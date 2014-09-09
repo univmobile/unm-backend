@@ -4,6 +4,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -17,7 +18,7 @@ import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.PoiNotFoundException;
 import fr.univmobile.backend.core.CommentDataSource;
-import fr.univmobile.backend.core.CommentThreadDataSource;
+import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -41,18 +42,18 @@ public class CommentsController extends AbstractBackendController {
 
 	public CommentsController(final TransactionManager tx,
 			final CommentDataSource comments,
-			final CommentThreadDataSource commentThreads,
-			final UserDataSource users, final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
+			final CommentManager commentManager, final UserDataSource users,
+			final RegionDataSource regions, final PoiDataSource pois,
+			final PoiTreeDataSource poiTrees) {
 
 		super(tx, users, regions, pois, poiTrees);
 
 		this.comments = checkNotNull(comments, "comments");
-		this.commentThreads = checkNotNull(commentThreads, "commentThreads");
+		this.commentManager = checkNotNull(commentManager, "commentManager");
 	}
 
 	private final CommentDataSource comments;
-	private final CommentThreadDataSource commentThreads;
+	private final CommentManager commentManager;
 
 	private PoiClient getPoiClient() {
 
@@ -62,14 +63,14 @@ public class CommentsController extends AbstractBackendController {
 	private CommentClient getCommentClient() {
 
 		return new CommentClientFromLocal(getBaseURL(), comments,
-				commentThreads);
+				commentManager);
 	}
 
 	private static final Log log = LogFactory.getLog(CommentsController.class);
 
 	@Override
-	public View action() throws IOException, TransactionException,
-			ClientException, PageNotFoundException {
+	public View action() throws IOException, SQLException,
+			TransactionException, ClientException, PageNotFoundException {
 
 		final String context = getCommentsContext();
 

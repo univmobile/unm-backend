@@ -5,11 +5,11 @@ import java.io.File;
 import org.apache.commons.io.FileUtils;
 import org.joda.time.DateTime;
 
+import com.avcompris.lang.NotImplementedException;
+
 import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
-import fr.univmobile.backend.core.CommentThreadDataSource;
-import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class CommentLoadTesting extends AbstractLoadTesting {
@@ -74,14 +74,16 @@ public class CommentLoadTesting extends AbstractLoadTesting {
 		FileUtils.copyDirectory(originalDataDir_comment_threads,
 				dataDir_comment_threads);
 
-		commentThreads = BackendDataSourceFileSystem.newDataSource(
-				CommentThreadDataSource.class, dataDir_comment_threads);
+		throw new NotImplementedException();
+		
+//		commentThreads = BackendDataSourceFileSystem.newDataSource(
+	//			CommentThreadDataSource.class, dataDir_comment_threads);
 
-		commentManager = new CommentManagerImpl(comments, commentThreads);
+		//commentManager = new CommentManagerImpl(comments, commentThreads);
 	}
 
 	private final CommentDataSource comments;
-	private final CommentThreadDataSource commentThreads;
+	//private final CommentThreadDataSource commentThreads;
 	private final CommentManager commentManager;
 
 	@SuppressWarnings("unused")

@@ -3,6 +3,7 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import fr.univmobile.backend.client.ClientException;
 import fr.univmobile.backend.client.Comment;
@@ -13,7 +14,7 @@ import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.PoiNotFoundException;
 import fr.univmobile.backend.core.CommentDataSource;
-import fr.univmobile.backend.core.CommentThreadDataSource;
+import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -36,19 +37,18 @@ public class PoiController extends AbstractBackendController {
 
 	public PoiController(final TransactionManager tx,
 			final CommentDataSource comments,
-			final CommentThreadDataSource commentThreads,
-			final UserDataSource users, final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
+			final CommentManager commentManager, final UserDataSource users,
+			final RegionDataSource regions, final PoiDataSource pois,
+			final PoiTreeDataSource poiTrees) {
 
 		super(tx, users, regions, pois, poiTrees);
 
 		this.comments = checkNotNull(comments, "commentDataSource");
-		this.commentThreads = checkNotNull(commentThreads,
-				"commentThreadDataSource");
+		this.commentManager = checkNotNull(commentManager, "commentManager");
 	}
 
 	private final CommentDataSource comments;
-	private final CommentThreadDataSource commentThreads;
+	private final CommentManager commentManager;
 
 	private PoiClient getPoiClient() {
 
@@ -56,19 +56,19 @@ public class PoiController extends AbstractBackendController {
 	}
 
 	private CommentClient getCommentClient() {
-		
-		return new CommentClientFromLocal(
-				getBaseURL(), comments, commentThreads);
+
+		return new CommentClientFromLocal(getBaseURL(), comments,
+				commentManager);
 	}
 
 	@Override
-	public View action() throws IOException, TransactionException,
-			ClientException, PageNotFoundException {
+	public View action() throws IOException, SQLException,
+			TransactionException, ClientException, PageNotFoundException {
 
 		final int id = getPoiId();
 
 		// 1. POI
-		
+
 		final Poi poi;
 
 		try {
@@ -81,9 +81,9 @@ public class PoiController extends AbstractBackendController {
 		}
 
 		setAttribute("poi", poi);
-		
+
 		// 2. COMMENTS
-		
+
 		// Implementation note: Do not set "commentCount" as a property in
 		// "poi", since it would mean that each time you fetch some POI info
 		// (say, for a list of POIs), you want to fetch its comment count.

@@ -8,6 +8,8 @@ import javax.xml.parsers.ParserConfigurationException;
 
 import org.xml.sax.SAXException;
 
+import fr.univmobile.backend.core.impl.ConnectionType;
+
 /**
  * Code for the "drop" command-line tool.
  */

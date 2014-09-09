@@ -14,6 +14,7 @@ import javax.xml.parsers.ParserConfigurationException;
 import org.joda.time.DateTime;
 import org.xml.sax.SAXException;
 
+import fr.univmobile.backend.core.impl.ConnectionType;
 import fr.univmobile.backend.sysadmin.dao.Category;
 
 /**
@@ -32,26 +33,31 @@ class LockTool extends AbstractTool {
 
 		final List<Category> lockedCategories = new ArrayList<Category>();
 
-		final PreparedStatement pstmt = cxn
-				.prepareStatement(getSql("getLockedCategories"));
+		final Connection cxn = getConnection();
 		try {
-			final ResultSet rs = pstmt.executeQuery();
+			final PreparedStatement pstmt = cxn
+					.prepareStatement(getSql("getLockedCategories"));
 			try {
+				final ResultSet rs = pstmt.executeQuery();
+				try {
 
-				while (rs.next()) {
+					while (rs.next()) {
 
-					final String id = rs.getString(1);
-					final String path = rs.getString(2);
-					final Timestamp lockedSince = rs.getTimestamp(3);
+						final String id = rs.getString(1);
+						final String path = rs.getString(2);
+						final Timestamp lockedSince = rs.getTimestamp(3);
 
-					lockedCategories.add(new Category(id, path, new DateTime(
-							lockedSince)));
+						lockedCategories.add(new Category(id, path,
+								new DateTime(lockedSince)));
+					}
+				} finally {
+					rs.close();
 				}
 			} finally {
-				rs.close();
+				pstmt.close();
 			}
 		} finally {
-			pstmt.close();
+			cxn.close();
 		}
 
 		System.out.println("Locked categories: " + lockedCategories.size());

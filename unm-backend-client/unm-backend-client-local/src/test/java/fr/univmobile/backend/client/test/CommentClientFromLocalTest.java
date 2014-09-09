@@ -1,13 +1,15 @@
 package fr.univmobile.backend.client.test;
 
+import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNull;
 
 import java.io.File;
-import java.io.IOException;
+import java.sql.Connection;
 
 import org.joda.time.DateTime;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,7 +17,8 @@ import fr.univmobile.backend.client.Comment;
 import fr.univmobile.backend.client.CommentClient;
 import fr.univmobile.backend.client.CommentClientFromLocal;
 import fr.univmobile.backend.core.CommentDataSource;
-import fr.univmobile.backend.core.CommentThreadDataSource;
+import fr.univmobile.backend.core.CommentManager;
+import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class CommentClientFromLocalTest {
@@ -30,22 +33,38 @@ public class CommentClientFromLocalTest {
 		final CommentDataSource comments = BackendDataSourceFileSystem
 				.newDataSource(CommentDataSource.class, tmpDataDir_comments);
 
-		final CommentThreadDataSource commentThreads = BackendDataSourceFileSystem
-				.newDataSource(
-						CommentThreadDataSource.class,
-						copyDirectory(
-								new File("src/test/data/comment_threads/001"),
-								new File(
-										"target/CommentClientFromLocalTest_comment_threads")));
+		/*
+		 * final CommentThreadDataSource commentThreads =
+		 * BackendDataSourceFileSystem .newDataSource(
+		 * CommentThreadDataSource.class, copyDirectory( new
+		 * File("src/test/data/comment_threads/001"), new File(
+		 * "target/CommentClientFromLocalTest_comment_threads")));
+		 */
+		final Connection cxn = null;
+
+		final CommentManager commentManager = new CommentManagerImpl(comments,
+				H2, cxn);
 
 		client = new CommentClientFromLocal("http://dummy/", comments,
-				commentThreads);
+				commentManager);
 	}
 
 	private CommentClient client;
+	private Connection cxn;
+
+	@After
+	public void tearDown() throws Exception {
+
+		if (cxn != null) {
+
+			cxn.close();
+
+			cxn = null;
+		}
+	}
 
 	@Test
-	public void test_getComments_poi415() throws IOException {
+	public void test_getComments_poi415() throws Exception {
 
 		final Comment[] comments = client.getCommentsByPoiId(415);
 
@@ -61,7 +80,7 @@ public class CommentClientFromLocalTest {
 	}
 
 	@Test
-	public void test_getEmptyComments_poi1() throws IOException {
+	public void test_getEmptyComments_poi1() throws Exception {
 
 		final Comment[] comments = client.getCommentsByPoiId(1);
 
@@ -69,7 +88,7 @@ public class CommentClientFromLocalTest {
 	}
 
 	@Test
-	public void test_getComment_1() throws IOException {
+	public void test_getComment_1() throws Exception {
 
 		final Comment comment = client.getCommentsByPoiId(415)[0];
 

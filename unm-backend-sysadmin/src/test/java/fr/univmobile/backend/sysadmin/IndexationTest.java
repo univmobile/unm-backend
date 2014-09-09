@@ -1,6 +1,6 @@
 package fr.univmobile.backend.sysadmin;
 
-import static fr.univmobile.backend.sysadmin.ConnectionType.H2;
+import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
@@ -58,7 +58,9 @@ public class IndexationTest {
 		final AbstractTool indexation = new IndexationTool( //
 				new File("src/test/data/001"), H2, cxn);
 
-		indexation.run();
+		final Result result = indexation.run();
+		
+		assertEquals(286, result.getRowCount());
 
 		assertEquals(4, getRowCount("unm_categories"));
 		assertEquals(286, getRowCount("unm_revfiles"));

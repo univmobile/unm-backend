@@ -21,6 +21,8 @@ public interface EntryBuilder<E extends Entry<E>> extends Entry<E> {
 
 	EntryBuilder<E> setTitle(String title);
 
+	EntryBuilder<E> setLocalRevfile(String id);
+
 	// E save() throws IOException;
 
 	// void dump(File file) throws IOException;

@@ -16,7 +16,7 @@
 	postedBy="Dominique"
 	title="Oui, mais si on danse ?">
 <context id="fr.univmobile:unm-backend:test/pois/001:poi415_1"
-	type="local:poi" uid="415"/> <!-- = context.maxOccurs = unbounded -->
+	type="local:poi" uid="1164"/> <!-- = context.maxOccurs = unbounded -->
 <!-- 
 <Shibboleth
 	remoteUser="crezvani@univ-paris1.fr"

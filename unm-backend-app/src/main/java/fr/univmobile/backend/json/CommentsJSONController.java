@@ -6,6 +6,7 @@ import static org.apache.commons.lang3.StringUtils.substringBefore;
 import static org.apache.commons.lang3.StringUtils.substringBeforeLast;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -42,7 +43,7 @@ public class CommentsJSONController extends AbstractJSONController {
 
 	@Override
 	public String actionJSON(final String baseURL) throws IOException,
-			TransactionException, PageNotFoundException {
+			SQLException, TransactionException, PageNotFoundException {
 
 		log.debug("actionJSON()...");
 
