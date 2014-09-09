@@ -54,7 +54,7 @@ public class IndexationTest {
 		assertFalse(doesTableExist("unm_entities_pois"));
 		assertFalse(doesTableExist("unm_entities_comments"));
 
-		final Indexation indexation = new Indexation( //
+		final AbstractTool indexation = new IndexationTool( //
 				new File("src/test/data/001"), H2, cxn);
 
 		indexation.run();
@@ -124,5 +124,16 @@ public class IndexationTest {
 		} finally {
 			rs.close();
 		}
+	}
+
+	@Test
+	public void testIndexationIdempotent() throws Exception {
+
+		final AbstractTool indexation = new IndexationTool( //
+				new File("src/test/data/001"), H2, cxn);
+		
+		indexation.run();
+		
+		indexation.run();
 	}
 }

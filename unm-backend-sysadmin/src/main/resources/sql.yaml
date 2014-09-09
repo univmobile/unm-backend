@@ -58,7 +58,7 @@ bundle:
         FOREIGN KEY (category_id) REFERENCES ${prefix}categories (id)
           ON DELETE RESTRICT ON UPDATE RESTRICT,
         FOREIGN KEY (parent_id) REFERENCES ${prefix}revfiles (id)
-          ON DELETE RESTRICT ON UPDATE RESTRICT
+          ON DELETE CASCADE ON UPDATE RESTRICT
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
   createTable_entities_users:
@@ -274,4 +274,25 @@ bundle:
       INSERT INTO ${prefix}entities_comments
         (unm_active_revfile_id, unm_status, uid)
         VALUES (?, 1, ?);
+        
+  getLockedCategories:
+    mysql.h2:
+      SELECT id, absolute_path, locked_since FROM ${prefix}categories
+        WHERE locked_since IS NOT NULL;
+        
+  unlockCategories:
+    mysql.h2:
+      UPDATE ${prefix}categories
+        SET locked_since = NULL;
+        
+  dropAllTables:
+    mysql.h2:
+      DROP TABLE IF EXISTS
+        ${prefix}entities_comments,
+        ${prefix}entities_pois,  
+        ${prefix}entities_regions,
+        ${prefix}entities_users,  
+        ${prefix}revfiles,
+        ${prefix}categories;  
+  
         

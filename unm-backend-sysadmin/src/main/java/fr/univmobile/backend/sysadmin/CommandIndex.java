@@ -1,6 +1,15 @@
 package fr.univmobile.backend.sysadmin;
 
+import static fr.univmobile.backend.sysadmin.ConnectionType.MYSQL;
+
 import java.io.File;
+import java.io.IOException;
+import java.sql.Connection;
+import java.sql.SQLException;
+
+import javax.xml.parsers.ParserConfigurationException;
+
+import org.xml.sax.SAXException;
 
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.Parameters;
@@ -9,45 +18,44 @@ import com.beust.jcommander.Parameters;
  * command-line arguments for command-line command: "index"
  */
 @Parameters(commandDescription = "Load XML Data into Database indices")
-class CommandIndex {
+class CommandIndex extends AbstractDbCommand {
 
 	@Parameter(names = { "-data", "-datadir", "-dataDir" }, required = true, description = "The local directory where the XML Data is stored", converter = FileConverter.class, validateValueWith = DataDirValidator.class)
 	private File dataDir;
-
-	@Parameter(names = { "-dbtype", "-dbType" }, required = false, description = "The DB Connection type, e.g.: mysql")
-	private String dbType = "mysql";
-
-	@Parameter(names = { "-dburl", "-dbUrl", "-dbURL" }, required = true, description = "The DB Connection URL, e.g.: jdbc:mysql://localhost:3306/univmobile")
-	private String dbUrl;
-
-	@Parameter(names = { "-dbusername", "-dbUsername", "-dbUserName" }, required = true, description = "The DB Connection username")
-	private String dbUsername;
-
-	@Parameter(names = { "-dbpassword", "-dbPassword" }, required = true, description = "The DB Connection password", password = true)
-	private String dbPassword;
 
 	public File getDataDir() {
 
 		return dataDir;
 	}
 
-	public String getDbType() {
+	@Override
+	public void execute() throws IOException, SQLException,
+			ParserConfigurationException, SAXException, ClassNotFoundException {
 
-		return dbType;
-	}
+		System.out.println("Running: index...");
 
-	public String getDbUrl() {
-		
-		return dbUrl;
-	}
-	
-	public String getDbUsername() {
-		
-		return dbUsername;
-	}
-	
-	public String getDbPassword() {
+		final long start = System.currentTimeMillis();
 
-		return dbPassword;
+		final File dataDir = getDataDir();
+
+		final ConnectionType dbType = MYSQL;
+
+		final Connection cxn = loadConnection();
+		try {
+
+			final AbstractTool indexation = new IndexationTool(dataDir, dbType,
+					cxn);
+
+			indexation.run();
+
+		} finally {
+			cxn.close();
+		}
+
+		final long elapsed = System.currentTimeMillis() - start;
+
+		System.out.println("Elapsed time: " + elapsed + " ms.");
+
+		System.out.println("Done.");
 	}
 }
