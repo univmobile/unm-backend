@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi87_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi87_1.xml"/>
+<title>Faculté des Sciences et Techniques</title>
+<updated>2014-08-17T21:32:57.573+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20087"
+	coordinates="45.836812843023,1.239202022552"
+	active="true"
+	markerType="point"
+	parentUid="20036"
+	name="Faculté des Sciences et Techniques">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="20281" active="true"/>
+	<child uid="20282" active="true"/>
+	<child uid="20283" active="true"/>
+	<child uid="20284" active="true"/>
+	<child uid="20285" active="true"/>
+	<child uid="20286" active="true"/>
+	<child uid="20287" active="true"/>
+	<child uid="20288" active="true"/>
+	<child uid="20289" active="true"/>
+	<child uid="20290" active="true"/>
+	<child uid="20291" active="true"/>
+	<child uid="20292" active="true"/>
+	<child uid="20296" active="true"/>
+	<child uid="20298" active="true"/>
+	<child uid="20299" active="true"/>
+	<child uid="20358" active="true"/>
+	<child uid="20359" active="true"/>
+	<child uid="20384" active="true"/>
+	<child uid="20390" active="true"/>
+</content>
+</entry>

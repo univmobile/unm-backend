@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi75_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi75_1.xml"/>
+<title>Carrefour des Etudiants</title>
+<updated>2014-08-17T21:32:57.551+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20075"
+	coordinates="45.824377079632,1.26336336135"
+	active="true"
+	markerType="point"
+	parentUid="20239"
+	name="Carrefour des Etudiants">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="20377" active="true"/>
+	<child uid="20378" active="true"/>
+	<child uid="20379" active="true"/>
+</content>
+</entry>

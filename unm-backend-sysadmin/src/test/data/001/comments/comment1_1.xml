@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/comments/001:comment1_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/comments/001:comment1_1.xml"/>
+<title>Oui, mais si on danse ?</title>
+<updated>2014-08-24T09:49:00Z</updated>
+<category term="comments"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1"
+	active="true"
+	postedAt="2014-08-24 09:50:00"
+	postedBy="Dominique"
+	title="Oui, mais si on danse ?">
+<context id="fr.univmobile:unm-backend:test/pois/001:poi415_1"
+	type="local:poi" uid="415"/> <!-- = context.maxOccurs = unbounded -->
+<!-- 
+<Shibboleth
+	remoteUser="crezvani@univ-paris1.fr"
+	eppn="crezvani@univ-paris1.fr"/>
+<OAuth
+	user="xxx"/>
+<Facebook
+	page="universite.paris.ouest"
+	post="647714705306057"
+	comment_id="647837275293800"
+	url="https://www.facebook.com/universite.paris.ouest/posts/647714705306057?comment_id=647837275293800"/>
+<Twitter
+	username="Alliancy_lemag"
+	status="438240246120325120"
+	url="https://twitter.com/Alliancy_lemag/status/438240246120325120"/>	 
+-->
+<message>
+J’aime bien l’application, mais si on danse ?
+</message>
+</content>
+</entry>

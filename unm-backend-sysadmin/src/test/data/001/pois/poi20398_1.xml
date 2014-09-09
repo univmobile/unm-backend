@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi398_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi398_1.xml"/>
+<title>Terrain rugby</title>
+<updated>2014-08-17T21:32:58.386+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20398"
+	coordinates="45.278464622224,1.782657802104"
+	active="true"
+	markerType="point"
+	parentUid="20395"
+	name="Terrain rugby">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

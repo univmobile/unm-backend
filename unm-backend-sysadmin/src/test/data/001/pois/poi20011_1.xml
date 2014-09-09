@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi11_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi11_1.xml"/>
+<title>Technoforum</title>
+<updated>2014-08-17T21:32:58.446+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20011"
+	coordinates="46.147780986483,-1.1550182104"
+	active="true"
+	markerType="point"
+	parentUid="20095"
+	name="Technoforum">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>23 avenue Albert Einstein
+17 000 La Rochelle</fullAddress>
+	</address>
+	<child uid="20056" active="true"/>
+	<child uid="20168" active="true"/>
+	<child uid="20208" active="true"/>
+	<child uid="20209" active="true"/>
+	<child uid="20211" active="true"/>
+</content>
+</entry>

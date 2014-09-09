@@ -7,13 +7,14 @@ Documentation parente : [unm-devel](../../../unm-devel/blob/develop/README.md "
 
 Documentations dans ce répertoire :
 
-  * [Architecture d’unm-backend](https://github.com/univmobile/unm-backend/blob/develop//Arch.md "Arch.md") 
-  * [Développement d’unm-backend](https://github.com/univmobile/unm-backend/blob/develop//Devel.md "Devel.md")
-  * [Flux JSON](https://github.com/univmobile/unm-backend/blob/develop//JSON.md "JSON.md")
-  * [Intégration avec Shibboleth](https://github.com/univmobile/unm-backend/blob/develop//Shibboleth.md "Shibboleth.md") 
-  * [Données de tests](https://github.com/univmobile/unm-backend/blob/develop//Tests.md "Tests.md") 
-  * [UnivMobile — Liste des universités](https://github.com/univmobile/unm-backend/blob/develop//Universities.md "Universities.md") 
-  * [unm-backend-app](https://github.com/univmobile/unm-backend/blob/develop//unm-backend-app.md "unm-backend-app.md")
+  * [Architecture d’unm-backend](https://github.com/univmobile/unm-backend/blob/develop/Arch.md "Arch.md") 
+  * [Développement d’unm-backend](https://github.com/univmobile/unm-backend/blob/develop/Devel.md "Devel.md")
+  * [Flux JSON](https://github.com/univmobile/unm-backend/blob/develop/JSON.md "JSON.md")
+  * [Intégration avec Shibboleth](https://github.com/univmobile/unm-backend/blob/develop/Shibboleth.md "Shibboleth.md") 
+  * [Données XML](https://github.com/univmobile/unm-backend/blob/develop/XMLData.md "XMLData.md") 
+  * [Données de tests](https://github.com/univmobile/unm-backend/blob/develop/Tests.md "Tests.md") 
+  * [Liste des universités](https://github.com/univmobile/unm-backend/blob/develop/Universities.md "Universities.md") 
+  * [unm-backend-app](https://github.com/univmobile/unm-backend/blob/develop/unm-backend-app.md "unm-backend-app.md")
 
  
 ### Projets Maven

@@ -1,0 +1,277 @@
+bundle:
+
+  createTable_categories:
+    mysql.h2: |
+      CREATE TABLE ${prefix}categories (
+        id VARCHAR(20) NOT NULL,
+        absolute_path VARCHAR(255) NOT NULL,
+        locked_since TIMESTAMP NULL DEFAULT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_categories_unique_absolute_path (absolute_path)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  createTable_revfiles:
+    h2: |
+      CREATE TABLE ${prefix}revfiles (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        category_id VARCHAR(20) NOT NULL,
+        path VARCHAR(200) NOT NULL,
+        atom_id VARCHAR(255) NOT NULL,
+        entity_id BIGINT(20) NULL DEFAULT NULL,
+        rev BIGINT(20) NOT NULL DEFAULT 0,
+        parent_id BIGINT(20) DEFAULT NULL,
+        locked_since TIMESTAMP NULL DEFAULT NULL,
+        status TINYINT(4) NOT NULL DEFAULT 0,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_revfiles_unique_category_id_path (category_id, path),
+        UNIQUE KEY unm_revfiles_unique_category_id_atom_id (category_id, atom_id)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+      CREATE INDEX unm_revfiles_idx_category_id
+        ON ${prefix}revfiles (category_id);
+      CREATE INDEX unm_revfiles_idx_entity_id
+        ON ${prefix}revfiles (entity_id);
+      CREATE INDEX unm_revfiles_idx_parent_id 
+        ON ${prefix}revfiles (parent_id);
+      ALTER TABLE ${prefix}revfiles
+        ADD CONSTRAINT unm_revfiles_fk_unm_categories
+        FOREIGN KEY (category_id) REFERENCES ${prefix}categories (id); 
+      ALTER TABLE ${prefix}revfiles
+        ADD CONSTRAINT unm_revfiles_fk_unm_revfiles
+        FOREIGN KEY (parent_id) REFERENCES ${prefix}revfiles (id); 
+    mysql: |
+      CREATE TABLE ${prefix}revfiles (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        category_id VARCHAR(20) NOT NULL,
+        path VARCHAR(200) NOT NULL,
+        atom_id VARCHAR(255) NOT NULL,
+        entity_id BIGINT(20) NULL DEFAULT NULL,
+        rev BIGINT(20) NOT NULL DEFAULT 0,
+        parent_id BIGINT(20) DEFAULT NULL,
+        locked_since TIMESTAMP NULL DEFAULT NULL,
+        status TINYINT(4) NOT NULL DEFAULT 0,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_revfiles_unique_category_id_path (category_id, path),
+        UNIQUE KEY unm_revfiles_unique_category_id_atom_id (category_id, atom_id),
+        KEY unm_revfiles_idx_category_id (category_id),
+        KEY unm_revfiles_idx_entity_id (entity_id),
+        KEY unm_revfiles_idx_parent_id (parent_id),
+        FOREIGN KEY (category_id) REFERENCES ${prefix}categories (id)
+          ON DELETE RESTRICT ON UPDATE RESTRICT,
+        FOREIGN KEY (parent_id) REFERENCES ${prefix}revfiles (id)
+          ON DELETE RESTRICT ON UPDATE RESTRICT
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  createTable_entities_users:
+    h2: |
+      CREATE TABLE ${prefix}entities_users (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        unm_locked_since TIMESTAMP NULL DEFAULT NULL,
+        unm_active_revfile_id BIGINT(20) NOT NULL,
+        unm_status TINYINT(4) NOT NULL DEFAULT 0,
+        uid VARCHAR(40) NOT NULL,
+        remoteUser VARCHAR(200) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_entities_users_unique_uid (uid),
+        UNIQUE KEY unm_entities_users_unique_remoteUser (remoteUser)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+      CREATE INDEX unm_entities_users_idx_unm_active_revfile_id
+        ON ${prefix}entities_users (unm_active_revfile_id);
+      ALTER TABLE ${prefix}entities_users
+        ADD CONSTRAINT unm_entities_users_fk_revfiles
+        FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id);
+    mysql: |
+      CREATE TABLE ${prefix}entities_users (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        unm_locked_since TIMESTAMP NULL DEFAULT NULL,
+        unm_active_revfile_id BIGINT(20) NOT NULL,
+        unm_status TINYINT(4) NOT NULL DEFAULT 0,
+        uid VARCHAR(40) NOT NULL,
+        remoteUser VARCHAR(200) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_entities_users_unique_uid (uid),
+        UNIQUE KEY unm_entities_users_unique_remoteUser (remoteUser),
+        KEY unm_entities_users_idx_unm_active_revfile_id (unm_active_revfile_id),
+        FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id)
+          ON DELETE RESTRICT ON UPDATE RESTRICT 
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+      
+  createTable_entities_regions:
+    h2: |
+      CREATE TABLE ${prefix}entities_regions (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        unm_locked_since TIMESTAMP NULL DEFAULT NULL,
+        unm_active_revfile_id BIGINT(20) NOT NULL,
+        unm_status TINYINT(4) NOT NULL DEFAULT 0,
+        uid VARCHAR(40) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_entities_regions_unique_uid (uid)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+      CREATE INDEX unm_regions_idx_revfile
+        ON ${prefix}entities_regions (unm_active_revfile_id);
+      ALTER TABLE ${prefix}entities_regions
+        ADD CONSTRAINT unm_entities_regions_fk_revfiles
+        FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id);
+    mysql: |
+      CREATE TABLE ${prefix}entities_regions (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        unm_locked_since TIMESTAMP NULL DEFAULT NULL,
+        unm_active_revfile_id BIGINT(20) NOT NULL,
+        unm_status TINYINT(4) NOT NULL DEFAULT 0,
+        uid VARCHAR(40) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_entities_regions_unique_uid (uid),
+        KEY unm_regions_idx_unm_active_revfile_id (unm_active_revfile_id),
+        FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id)
+          ON DELETE RESTRICT ON UPDATE RESTRICT 
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;        
+
+  createTable_entities_pois:
+    h2: |
+      CREATE TABLE ${prefix}entities_pois (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        unm_locked_since TIMESTAMP NULL DEFAULT NULL,
+        unm_active_revfile_id BIGINT(20) NOT NULL,
+        unm_status TINYINT(4) NOT NULL DEFAULT 0,
+        uid BIGINT(20) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_entities_pois_unique_uid (uid)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+      CREATE INDEX unm_entities_pois_idx_unm_active_revfile_id
+        ON ${prefix}entities_pois (unm_active_revfile_id);
+      ALTER TABLE ${prefix}entities_pois
+        ADD CONSTRAINT unm_entities_pois_fk_revfiles
+        FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id);
+    mysql: |
+      CREATE TABLE ${prefix}entities_pois (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        unm_locked_since TIMESTAMP NULL DEFAULT NULL,
+        unm_active_revfile_id BIGINT(20) NOT NULL,
+        unm_status TINYINT(4) NOT NULL DEFAULT 0,
+        uid BIGINT(20) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_entities_pois_unique_uid (uid),
+        KEY unm_entities_pois_idx_unm_active_revfile_id (unm_active_revfile_id),
+        FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id)
+          ON DELETE RESTRICT ON UPDATE RESTRICT 
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+              
+  createTable_entities_comments:
+    h2: |
+      CREATE TABLE ${prefix}entities_comments (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        unm_locked_since TIMESTAMP NULL DEFAULT NULL,
+        unm_active_revfile_id BIGINT(20) NOT NULL,
+        unm_status TINYINT(4) NOT NULL DEFAULT 0,
+        uid BIGINT(20) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_entities_comments_unique_uid (uid)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+      CREATE INDEX unm_entities_comments_idx_unm_active_revfile_id
+        ON ${prefix}entities_comments (unm_active_revfile_id);
+      ALTER TABLE ${prefix}entities_comments
+        ADD CONSTRAINT unm_entities_comments_fk_revfiles
+        FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id);
+    mysql: |
+      CREATE TABLE ${prefix}entities_comments (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        unm_locked_since TIMESTAMP NULL DEFAULT NULL,
+        unm_active_revfile_id BIGINT(20) NOT NULL,
+        unm_status TINYINT(4) NOT NULL DEFAULT 0,
+        uid BIGINT(20) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_entities_comments_unique_uid (uid),
+        KEY unm_entities_comments_idx_unm_active_revfile_id (unm_active_revfile_id),
+        FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id)
+          ON DELETE RESTRICT ON UPDATE RESTRICT 
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+        
+  createCategory:
+    mysql.h2:
+      INSERT INTO ${prefix}categories
+        (id, absolute_path) VALUES (?, ?);
+
+  clearCategory_1_detachRevfiles:
+    mysql.h2:
+      UPDATE ${prefix}revfiles
+        SET entity_id = NULL 
+        WHERE category_id = ?;
+
+  clearCategory_2_deleteRevfiles:
+    mysql.h2:
+      DELETE FROM ${prefix}revfiles
+        WHERE category_id = ?;
+
+  getCategoryPath:
+    mysql.h2:
+      SELECT absolute_path FROM ${prefix}categories
+        WHERE id = ?;
+      
+  lockCategory:
+    mysql.h2:
+      UPDATE ${prefix}categories
+        SET locked_since = ?
+        WHERE id = ? AND locked_since IS NULL;
+        
+  unlockCategory:
+    mysql.h2:
+      UPDATE ${prefix}categories
+        SET locked_since = NULL 
+        WHERE id = ?;
+        
+  createRevfile:
+    mysql.h2:
+      INSERT INTO ${prefix}revfiles
+        (category_id, path, atom_id, locked_since, status)
+        VALUES (?, ?, ?, ?, ?);
+        
+  getRevfileIdByAtomId:
+    mysql.h2:
+      SELECT id FROM ${prefix}revfiles
+        WHERE category_id = ? AND atom_id = ?;
+      
+  setRevfileParentId:
+    mysql.h2:
+      UPDATE ${prefix}revfiles
+        SET parent_id = ?
+        WHERE category_id = ? AND path = ?; 
+        
+  unlockRevfiles:
+    mysql.h2:
+      UPDATE ${prefix}revfiles
+        SET locked_since = NULL
+        WHERE category_id = ?
+        
+  getRevfiles:
+    mysql.h2:
+      SELECT id, path FROM ${prefix}revfiles
+        WHERE category_id = ?;
+        
+  getChildren:
+    mysql.h2:
+      SELECT id FROM ${prefix}revfiles
+        WHERE parent_id = ?;
+        
+  createUser:
+    mysql.h2:
+      INSERT INTO ${prefix}entities_users
+        (unm_active_revfile_id, unm_status, uid, remoteUser)
+        VALUES (?, 1, ?, ?);
+        
+  createRegion:
+    mysql.h2:
+      INSERT INTO ${prefix}entities_regions
+        (unm_active_revfile_id, unm_status, uid)
+        VALUES (?, 1, ?);
+        
+  createPoi:
+    mysql.h2:
+      INSERT INTO ${prefix}entities_pois
+        (unm_active_revfile_id, unm_status, uid)
+        VALUES (?, 1, ?);
+        
+  createComment:
+    mysql.h2:
+      INSERT INTO ${prefix}entities_comments
+        (unm_active_revfile_id, unm_status, uid)
+        VALUES (?, 1, ?);
+        

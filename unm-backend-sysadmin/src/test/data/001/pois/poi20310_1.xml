@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi310_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi310_1.xml"/>
+<title>Génie Electrique et Informatique Industrielle</title>
+<updated>2014-08-17T21:32:58.028+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20310"
+	coordinates="45.154700156425,1.509236097335"
+	active="true"
+	markerType="point"
+	parentUid="20301"
+	name="Génie Electrique et Informatique Industrielle">
+	<poiType id="27" label="Département IUT" categoryId="8" categoryLabel="Administration"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

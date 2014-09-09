@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/003:poi119_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi119_1.xml"/>
+<title>LIttoral ENvironnement et Sociétés</title>
+<updated>2014-08-17T21:32:58.650+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="20119"
+	coordinates="46.142493988496,-1.157526746"
+	active="true"
+	markerType="point"
+	parentUid="20118"
+	name="LIttoral ENvironnement et Sociétés">
+	<poiType id="19" label="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+	<description>UMR 6250</description>
+	<address>
+		<url>http://lienss.univ-larochelle.fr/</url>
+	</address>
+</content>
+</entry>

@@ -11,14 +11,32 @@
 		<relativePath />
 	</parent>
 
-	<build>
-		<finalName>unm-backend-sysadmin</finalName>
-	</build>
 	<dependencies>
 		<dependency>
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-backend-core</artifactId>
-		</dependency>	
+		</dependency>
+		<dependency>
+			<groupId>com.beust</groupId>
+			<artifactId>jcommander</artifactId>
+			<version>1.30</version>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.32</version>
+		</dependency>
+		<dependency>
+			<groupId>net.avcompris.commons</groupId>
+			<artifactId>avc-binding-yaml</artifactId>
+			<version>0.1.1-SNAPSHOT</version>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.181</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<name>unm-backend-sysadmin</name>
@@ -29,6 +47,33 @@
 	<url>
         http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}/
     </url>
+	<build>
+		<finalName>unm-backend-sysadmin</finalName>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+					<archive>
+						<manifest>
+							<mainClass>fr.univmobile.backend.sysadmin.Main</mainClass>
+						</manifest>
+					</archive>
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+				</configuration>
+				<executions>
+					<execution>
+						<id>make-assembly</id> <!-- this is used for inheritance merges -->
+						<phase>package</phase> <!-- bind to the packaging phase -->
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
 
 	<scm>
 		<connection>
