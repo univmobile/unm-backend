@@ -85,14 +85,24 @@ class IndexationTool extends AbstractTool {
 
 		// 3. INSERT REVFILES
 
+		// final Map<String, Integer> counts = new HashMap<String, Integer>();
+
 		for (final String category : CATEGORIES) {
 
 			final File categoryDir = getCategoryDir(category);
 
+			int count = 0;
+
 			for (final File file : categoryDir.listFiles()) {
 
 				loadRevfile(category, file.getName());
+
+				++count;
 			}
+
+			// counts.put(category,count);
+
+			System.out.println("  " + category + ": " + count);
 		}
 
 		// 4. REVFILE PARENTS
