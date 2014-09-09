@@ -27,6 +27,9 @@ public interface Comment extends Entry<Comment> {
 	@XPath("atom:content/atom:context")
 	Context[] getContexts();
 	
+	@XPath("atom:content/atom:context[1]")
+	Context getMainContext();
+	
 	@XPath("atom:content/atom:message")
 	String getMessage();
 	

@@ -163,11 +163,19 @@ bundle:
         unm_active_revfile_id BIGINT(20) NOT NULL,
         unm_status TINYINT(4) NOT NULL DEFAULT 0,
         uid BIGINT(20) NOT NULL,
+        initial_posted_at TIMESTAMP NOT NULL,
+        active_posted_at TIMESTAMP NOT NULL,
+        poi_uid BIGINT(20) NULL,
         PRIMARY KEY (id),
         UNIQUE KEY unm_entities_comments_unique_uid (uid)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
       CREATE INDEX unm_entities_comments_idx_unm_active_revfile_id
         ON ${prefix}entities_comments (unm_active_revfile_id);
+      CREATE INDEX unm_entities_comments_idx_poi_uid
+        ON ${prefix}entities_comments (poi_uid);
+      ALTER TABLE ${prefix}entities_comments
+        ADD CONSTRAINT unm_entities_comments_fk_unm_entities_pois
+        FOREIGN KEY (poi_uid) REFERENCES ${prefix}entities_pois (uid);
       ALTER TABLE ${prefix}entities_comments
         ADD CONSTRAINT unm_entities_comments_fk_revfiles
         FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id);
@@ -178,9 +186,15 @@ bundle:
         unm_active_revfile_id BIGINT(20) NOT NULL,
         unm_status TINYINT(4) NOT NULL DEFAULT 0,
         uid BIGINT(20) NOT NULL,
+        initial_posted_at TIMESTAMP NOT NULL,
+        active_posted_at TIMESTAMP NOT NULL,
+        poi_uid BIGINT(20) NULL,
         PRIMARY KEY (id),
         UNIQUE KEY unm_entities_comments_unique_uid (uid),
         KEY unm_entities_comments_idx_unm_active_revfile_id (unm_active_revfile_id),
+        KEY unm_entities_comments_idx_poi_uid (poi_uid),
+        FOREIGN KEY (poi_uid) REFERENCES ${prefix}entities_pois (uid)
+          ON DELETE RESTRICT ON UPDATE RESTRICT 
         FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id)
           ON DELETE RESTRICT ON UPDATE RESTRICT 
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -272,8 +286,9 @@ bundle:
   createComment:
     mysql.h2:
       INSERT INTO ${prefix}entities_comments
-        (unm_active_revfile_id, unm_status, uid)
-        VALUES (?, 1, ?);
+        (unm_active_revfile_id, unm_status, uid,
+          initial_posted_at, active_posted_at, poi_uid)
+        VALUES (?, 1, ?, ?, ?, ?);
         
   getLockedCategories:
     mysql.h2:
@@ -295,4 +310,10 @@ bundle:
         ${prefix}revfiles,
         ${prefix}categories;  
   
+  getComments:
+    mysql.h2:
+      SELECT path FROM ${prefix}entities_comments, ${prefix}revfiles
+        WHERE unm_active_revfile_id = ${prefix}revfiles.id
+        ORDER BY active_posted_at DESC
+        LIMIT ?;
         

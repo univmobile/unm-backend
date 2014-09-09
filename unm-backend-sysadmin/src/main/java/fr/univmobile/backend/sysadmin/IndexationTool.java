@@ -3,28 +3,25 @@ package fr.univmobile.backend.sysadmin;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.sql.Timestamp;
-import java.util.HashMap;
-import java.util.Map;
 
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
-import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
 import fr.univmobile.backend.core.Comment;
+import fr.univmobile.backend.core.Comment.Context;
+import fr.univmobile.backend.core.Comment.ContextType;
 import fr.univmobile.backend.core.Poi;
 import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.User;
@@ -155,8 +152,23 @@ class IndexationTool extends AbstractTool {
 			public void loadEntity(final Comment comment,
 					final int activeRevfileId) throws SQLException {
 
+				final DateTime initialPostedAt = comment.getPostedAt();
+				final DateTime activePostedAt = comment.getPostedAt();
+				final Context mainContext = comment.getMainContext();
+				final ContextType contextType = mainContext.getType();
+				final int poiUid;
+
+				if (contextType == ContextType.LOCAL_POI) {
+					poiUid = mainContext.getUid();
+				} else {
+					throw new IllegalStateException("Unknown contextType: "
+							+ contextType);
+				}
+
 				executeUpdate("createComment", activeRevfileId,
-						comment.getUid());
+						comment.getUid(), //
+						initialPostedAt, activePostedAt, //
+						poiUid);
 			}
 		});
 
@@ -209,20 +221,8 @@ class IndexationTool extends AbstractTool {
 
 						final String path = rs1.getString(2);
 
-						final File file = new File(categoryDir, path);
-
-						final Document document;
-
-						final InputStream is = new FileInputStream(file);
-						try {
-
-							document = documentBuilder.parse(is);
-
-						} finally {
-							is.close();
-						}
-
-						final U entity = domBinder.bind(document, clazz);
+						final U entity = loadEntity(
+								new File(categoryDir, path), clazz);
 
 						loader.loadEntity(entity, revfileId);
 
@@ -261,26 +261,6 @@ class IndexationTool extends AbstractTool {
 		executeUpdate("clearCategory_2_deleteRevfiles", category);
 	}
 
-	private final Map<String, File> categoryDirs = new HashMap<String, File>();
-
-	private File getCategoryDir(final String category) throws SQLException {
-
-		File categoryDir = categoryDirs.get(category);
-
-		if (categoryDir != null) {
-			return categoryDir;
-		}
-
-		final String categoryPath = executeQueryGetString("getCategoryPath",
-				category);
-
-		categoryDir = new File(categoryPath);
-
-		categoryDirs.put(category, categoryDir);
-
-		return categoryDir;
-	}
-
 	private void loadRevfile(final String category, final String path)
 			throws SQLException, IOException, SAXException {
 
@@ -295,18 +275,7 @@ class IndexationTool extends AbstractTool {
 					+ file.getCanonicalPath());
 		}
 
-		final Document document;
-
-		final InputStream is = new FileInputStream(file);
-		try {
-
-			document = documentBuilder.parse(is);
-
-		} finally {
-			is.close();
-		}
-
-		final Entry<?> entry = domBinder.bind(document, Entry.class);
+		final Entry<?> entry = loadEntity(file);
 
 		final String atomId = entry.getId();
 
@@ -353,18 +322,7 @@ class IndexationTool extends AbstractTool {
 					+ file.getCanonicalPath());
 		}
 
-		final Document document;
-
-		final InputStream is = new FileInputStream(file);
-		try {
-
-			document = documentBuilder.parse(is);
-
-		} finally {
-			is.close();
-		}
-
-		final Entry<?> entry = domBinder.bind(document, Entry.class);
+		final Entry<?> entry = loadEntity(file);
 
 		if (entry.isNullParent()) {
 			return;
@@ -446,94 +404,6 @@ class IndexationTool extends AbstractTool {
 		}
 	}
 
-	private String executeQueryGetString(final String queryId,
-			final Object... params) throws SQLException {
-
-		final String sql = getSql(queryId);
-
-		final PreparedStatement pstmt = cxn.prepareStatement(sql);
-		try {
-
-			setSqlParams(pstmt, params);
-
-			final ResultSet rs;
-			try {
-
-				rs = pstmt.executeQuery();
-
-			} catch (final SQLException e) {
-
-				errorLogQuery(queryId, sql, params);
-
-				throw e;
-			}
-			try {
-
-				if (!rs.next()) {
-
-					log.fatal("Query did not return any result: " + queryId);
-
-					errorLogQuery(queryId, sql, params);
-
-					throw new RuntimeException("Cannot execute query: "
-							+ queryId);
-				}
-
-				return rs.getString(1);
-
-			} finally {
-				rs.close();
-			}
-
-		} finally {
-			pstmt.close();
-		}
-	}
-
-	private int executeQueryGetInt(final String queryId, final Object... params)
-			throws SQLException {
-
-		final String sql = getSql(queryId);
-
-		final PreparedStatement pstmt = cxn.prepareStatement(sql);
-		try {
-
-			setSqlParams(pstmt, params);
-
-			final ResultSet rs;
-			try {
-
-				rs = pstmt.executeQuery();
-
-			} catch (final SQLException e) {
-
-				errorLogQuery(queryId, sql, params);
-
-				throw e;
-			}
-			try {
-
-				if (!rs.next()) {
-
-					log.fatal("Query did not return any result: " + queryId);
-
-					errorLogQuery(queryId, sql, params);
-
-					throw new RuntimeException("Cannot execute query: "
-							+ queryId);
-				}
-
-				return rs.getInt(1);
-
-			} finally {
-				rs.close();
-			}
-
-		} finally {
-			pstmt.close();
-		}
-	}
-
 	private void createCategoryIfNeeded(final String category)
 			throws SQLException, IOException {
 
@@ -548,7 +418,7 @@ class IndexationTool extends AbstractTool {
 					+ " is not a directory: " + categoryDir.getCanonicalPath());
 		}
 
-		categoryDirs.put(category, categoryDir);
+		setCategoryDir(category, categoryDir);
 
 		executeUpdate("createCategory", category,
 				categoryDir.getCanonicalPath());

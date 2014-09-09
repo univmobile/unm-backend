@@ -7,11 +7,11 @@ import com.beust.jcommander.Parameter;
  */
 class CommandMain {
 
-	@Parameter(names = { "-h", "--help" }, help = true, arity = 0)
+	@Parameter(names = { "-h", "--help" }, help = true, description = "Display help information", arity = 0)
 	private boolean help;
-	
+
 	public boolean isHelp() {
-		
+
 		return help;
 	}
 }

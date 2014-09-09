@@ -4,12 +4,15 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.HashMap;
@@ -27,7 +30,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 import org.jvyaml.YAML;
+import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
+
+import fr.univmobile.commons.datasource.Entry;
 
 /**
  * Common code for the command-line tools.
@@ -70,12 +76,12 @@ abstract class AbstractTool {
 		documentBuilder = documentBuilderFactory.newDocumentBuilder();
 	}
 
-	protected final DomBinder domBinder = DefaultDomBinder.getInstance();
+	private final DomBinder domBinder = DefaultDomBinder.getInstance();
 	protected final ConnectionType dbType;
 	private final SqlBundle sqlBundle;
 	protected final Connection cxn;
 	protected static final String tablePrefix = "unm_";
-	protected final DocumentBuilder documentBuilder;
+	private final DocumentBuilder documentBuilder;
 
 	public static final String[] CATEGORIES = new String[] { "users",
 			"regions", "pois", "comments" };
@@ -185,5 +191,145 @@ abstract class AbstractTool {
 						+ " should be String, Integer or DateTime: " + param);
 			}
 		}
+	}
+
+	protected final File getCategoryDir(final String category)
+			throws SQLException {
+
+		File categoryDir = categoryDirs.get(category);
+
+		if (categoryDir != null) {
+			return categoryDir;
+		}
+
+		final String categoryPath = executeQueryGetString("getCategoryPath",
+				category);
+
+		categoryDir = new File(categoryPath);
+
+		categoryDirs.put(category, categoryDir);
+
+		return categoryDir;
+	}
+
+	protected final void setCategoryDir(final String category,
+			final File categoryDir) {
+
+		categoryDirs.put(category, categoryDir);
+	}
+
+	private final Map<String, File> categoryDirs = new HashMap<String, File>();
+
+	protected final String executeQueryGetString(final String queryId,
+			final Object... params) throws SQLException {
+
+		final String sql = getSql(queryId);
+
+		final PreparedStatement pstmt = cxn.prepareStatement(sql);
+		try {
+
+			setSqlParams(pstmt, params);
+
+			final ResultSet rs;
+			try {
+
+				rs = pstmt.executeQuery();
+
+			} catch (final SQLException e) {
+
+				errorLogQuery(queryId, sql, params);
+
+				throw e;
+			}
+			try {
+
+				if (!rs.next()) {
+
+					log.fatal("Query did not return any result: " + queryId);
+
+					errorLogQuery(queryId, sql, params);
+
+					throw new RuntimeException("Cannot execute query: "
+							+ queryId);
+				}
+
+				return rs.getString(1);
+
+			} finally {
+				rs.close();
+			}
+
+		} finally {
+			pstmt.close();
+		}
+	}
+
+	protected final int executeQueryGetInt(final String queryId,
+			final Object... params) throws SQLException {
+
+		final String sql = getSql(queryId);
+
+		final PreparedStatement pstmt = cxn.prepareStatement(sql);
+		try {
+
+			setSqlParams(pstmt, params);
+
+			final ResultSet rs;
+			try {
+
+				rs = pstmt.executeQuery();
+
+			} catch (final SQLException e) {
+
+				errorLogQuery(queryId, sql, params);
+
+				throw e;
+			}
+			try {
+
+				if (!rs.next()) {
+
+					log.fatal("Query did not return any result: " + queryId);
+
+					errorLogQuery(queryId, sql, params);
+
+					throw new RuntimeException("Cannot execute query: "
+							+ queryId);
+				}
+
+				return rs.getInt(1);
+
+			} finally {
+				rs.close();
+			}
+
+		} finally {
+			pstmt.close();
+		}
+	}
+
+	private final Document loadDocument(final File xmlFile) throws IOException,
+			SAXException {
+
+		final InputStream is = new FileInputStream(xmlFile);
+		try {
+
+			return documentBuilder.parse(is);
+
+		} finally {
+			is.close();
+		}
+	}
+
+	protected final <U extends Entry<U>> U loadEntity(final File xmlFile,
+			final Class<U> clazz) throws IOException, SAXException {
+
+		return domBinder.bind(loadDocument(xmlFile), clazz);
+	}
+
+	protected final Entry<?> loadEntity(final File xmlFile) throws IOException,
+			SAXException {
+
+		return domBinder.bind(loadDocument(xmlFile), Entry.class);
 	}
 }

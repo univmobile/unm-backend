@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -22,9 +23,9 @@ public class IndexationTest {
 
 		final File dbFile = new File("target/IndexationTest.h2.db");
 
-		if (dbFile.exists()) {
-			dbFile.delete();
-		}
+		FileUtils.deleteQuietly(dbFile);
+
+		assertFalse(dbFile.exists());
 
 		final String url = "jdbc:h2:./target/IndexationTest";
 
@@ -131,9 +132,9 @@ public class IndexationTest {
 
 		final AbstractTool indexation = new IndexationTool( //
 				new File("src/test/data/001"), H2, cxn);
-		
+
 		indexation.run();
-		
+
 		indexation.run();
 	}
 }
