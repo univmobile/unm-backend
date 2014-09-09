@@ -50,5 +50,8 @@ public interface Entry<T extends Entry<?>> extends Serializable {
 	@Override
 	String toString();
 	
+	@XPath("atom:link[@rel = 'local']/@href")
+	String getLocalRevfile();
+
 	Node node();
 }

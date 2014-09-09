@@ -9,12 +9,19 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
+
+import javax.annotation.Nullable;
+import javax.sql.DataSource;
 
 import net.avcompris.binding.yaml.impl.DomYamlBinder;
 
@@ -25,6 +32,9 @@ import org.jvyaml.YAML;
 
 public abstract class DbEnabled {
 
+	public static final String[] CATEGORIES = new String[] { "users",
+			"regions", "pois", "comments" };
+
 	/**
 	 * @param resourceName
 	 *            the name of the "xxx_sql.yaml" resource to load into memory,
@@ -34,7 +44,28 @@ public abstract class DbEnabled {
 			final String resourceName) throws IOException {
 
 		this.dbType = checkNotNull(dbType, "dbType");
-		this.cxn = checkNotNull(cxn, "cxn");
+
+		checkNotNull(cxn, "cxn");
+
+		this.alwaysOpenedConnection = newAlwaysOpenedConnection(cxn);
+		this.ds = null;
+
+		sqlBundle = loadSqlBundle(dbType, resourceName);
+	}
+
+	protected DbEnabled(final ConnectionType dbType, final DataSource ds,
+			final String resourceName) throws IOException {
+
+		this.dbType = checkNotNull(dbType, "dbType");
+
+		this.ds = checkNotNull(ds, "dataSource");
+		this.alwaysOpenedConnection = null;
+
+		sqlBundle = loadSqlBundle(dbType, resourceName);
+	}
+
+	private static SqlBundle loadSqlBundle(final ConnectionType dbType,
+			final String resourceName) throws IOException {
 
 		final Object yaml;
 
@@ -56,18 +87,40 @@ public abstract class DbEnabled {
 			is.close();
 		}
 
-		sqlBundle = new DomYamlBinder().bind(yaml, SqlBundle.class);
+		final SqlBundle sqlBundle = new DomYamlBinder().bind(yaml,
+				SqlBundle.class);
 
-		if (sqlBundle.isNullQueriesByDbType(this.dbType.toString())) {
+		if (sqlBundle.isNullQueriesByDbType(dbType.toString())) {
 			throw new RuntimeException("Cannot find SQL queries for dbType: "
 					+ dbType);
 		}
+
+		return sqlBundle;
 	}
 
 	private final SqlBundle sqlBundle;
 	protected final ConnectionType dbType;
-	protected final Connection cxn;
+
+	@Nullable
+	private final DataSource ds;
+
+	@Nullable
+	private final Connection alwaysOpenedConnection;
+
 	protected static final String tablePrefix = "unm_";
+
+	protected final Connection getConnection() throws SQLException {
+
+		if (alwaysOpenedConnection != null) {
+			return alwaysOpenedConnection;
+		}
+
+		if (ds != null) {
+			return ds.getConnection();
+		}
+
+		throw new IllegalStateException("cxn == null && ds == null");
+	}
 
 	private static final Log log = LogFactory.getLog(DbEnabled.class);
 
@@ -111,24 +164,168 @@ public abstract class DbEnabled {
 
 		final String sql = getSql(queryId);
 
-		final PreparedStatement pstmt = cxn.prepareStatement(sql);
+		final Connection cxn = getConnection();
 		try {
-
-			setSqlParams(pstmt, params);
-
+			final PreparedStatement pstmt = cxn.prepareStatement(sql);
 			try {
 
-				return pstmt.executeUpdate();
+				setSqlParams(pstmt, params);
 
-			} catch (final SQLException e) {
+				try {
 
-				errorLogQuery(queryId, sql, params);
+					return pstmt.executeUpdate();
 
-				throw e;
+				} catch (final SQLException e) {
+
+					errorLogQuery(queryId, sql, params);
+
+					throw e;
+				}
+
+			} finally {
+				pstmt.close();
 			}
-
 		} finally {
-			pstmt.close();
+			cxn.close();
+		}
+	}
+
+	protected final int executeUpdateGetAutoIncrement(final String queryId,
+			final Object... params) throws SQLException {
+
+		final String sql = getSql(queryId);
+
+		final Connection cxn = getConnection();
+		try {
+			final PreparedStatement pstmt = cxn.prepareStatement(sql);
+			try {
+
+				setSqlParams(pstmt, params);
+
+				try {
+
+					pstmt.executeUpdate();
+
+					final ResultSet rs = pstmt.getGeneratedKeys();
+					try {
+
+						rs.next();
+
+						return rs.getInt(1);
+
+					} finally {
+						rs.close();
+					}
+
+				} catch (final SQLException e) {
+
+					errorLogQuery(queryId, sql, params);
+
+					throw e;
+				}
+
+			} finally {
+				pstmt.close();
+			}
+		} finally {
+			cxn.close();
+		}
+	}
+
+	protected final String executeQueryGetString(final String queryId,
+			final Object... params) throws SQLException {
+
+		final String sql = getSql(queryId);
+
+		final Connection cxn = getConnection();
+		try {
+			final PreparedStatement pstmt = cxn.prepareStatement(sql);
+			try {
+
+				setSqlParams(pstmt, params);
+
+				final ResultSet rs;
+				try {
+
+					rs = pstmt.executeQuery();
+
+				} catch (final SQLException e) {
+
+					errorLogQuery(queryId, sql, params);
+
+					throw e;
+				}
+				try {
+
+					if (!rs.next()) {
+
+						log.fatal("Query did not return any result: " + queryId);
+
+						errorLogQuery(queryId, sql, params);
+
+						throw new RuntimeException("Cannot execute query: "
+								+ queryId);
+					}
+
+					return rs.getString(1);
+
+				} finally {
+					rs.close();
+				}
+			} finally {
+				pstmt.close();
+			}
+		} finally {
+			cxn.close();
+		}
+	}
+
+	protected final int executeQueryGetInt(final String queryId,
+			final Object... params) throws SQLException {
+
+		final String sql = getSql(queryId);
+
+		final Connection cxn = getConnection();
+		try {
+			final PreparedStatement pstmt = cxn.prepareStatement(sql);
+			try {
+
+				setSqlParams(pstmt, params);
+
+				final ResultSet rs;
+				try {
+
+					rs = pstmt.executeQuery();
+
+				} catch (final SQLException e) {
+
+					errorLogQuery(queryId, sql, params);
+
+					throw e;
+				}
+				try {
+
+					if (!rs.next()) {
+
+						log.fatal("Query did not return any result: " + queryId);
+
+						errorLogQuery(queryId, sql, params);
+
+						throw new RuntimeException("Cannot execute query: "
+								+ queryId);
+					}
+
+					return rs.getInt(1);
+
+				} finally {
+					rs.close();
+				}
+
+			} finally {
+				pstmt.close();
+			}
+		} finally {
+			cxn.close();
 		}
 	}
 
@@ -172,5 +369,28 @@ public abstract class DbEnabled {
 						+ " should be String, Integer or DateTime: " + param);
 			}
 		}
+	}
+
+	private static Connection newAlwaysOpenedConnection(final Connection cxn) {
+
+		final Object proxy = Proxy.newProxyInstance(
+				DbEnabled.class.getClassLoader(),
+				new Class<?>[] { Connection.class }, new InvocationHandler() {
+
+					@Override
+					public Object invoke(final Object proxy,
+							final Method method, final Object[] args)
+							throws Throwable {
+
+						if ("close".equals(method.getName())) {
+
+							return null; // do nothing
+						}
+
+						return method.invoke(cxn, args); // delegation
+					}
+				});
+
+		return (Connection) proxy;
 	}
 }

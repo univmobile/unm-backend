@@ -49,7 +49,6 @@ abstract class AbstractDbCommand {
 		// final ConnectionType dbType;
 
 		if ("mysql".equals(getDbType())) {
-			// dbType = MYSQL;
 			Class.forName("com.mysql.jdbc.Driver");
 		} else {
 			throw new IllegalArgumentException("Unknown dbType: " + getDbType()

@@ -1,5 +1,7 @@
 package fr.univmobile.backend;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+import static fr.univmobile.backend.core.impl.ConnectionType.MYSQL;
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 import static org.apache.commons.lang3.StringUtils.split;
@@ -11,14 +13,19 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Enumeration;
 
 import javax.annotation.Nullable;
+import javax.naming.InitialContext;
+import javax.naming.NamingException;
 import javax.servlet.ServletException;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.UnavailableException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.sql.DataSource;
 
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
@@ -38,7 +45,8 @@ import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.CommentDataSource;
-import fr.univmobile.backend.core.CommentThreadDataSource;
+import fr.univmobile.backend.core.CommentManager;
+//import fr.univmobile.backend.core.CommentThreadDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -46,6 +54,7 @@ import fr.univmobile.backend.core.UploadManager;
 import fr.univmobile.backend.core.UploadNotFoundException;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.UploadManagerImpl;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.backend.json.CommentsJSONController;
@@ -73,12 +82,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private PoiDataSource pois;
 	// private PoiTreeDataSource poiTrees;
 	private UploadManager uploadManager;
-	private CommentThreadDataSource commentThreads;
-
-	// private RegionClient regionClient;
-	// private RegionJSONClient regionJSONClient;
-	// private PoiJSONClient poiJSONClient;
-	// private CommentJSONClient commentJSONClient;
 
 	private AbstractJSONController[] jsonControllers;
 
@@ -145,18 +148,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final File poiTreesDir = new File(dataDir, "poitrees");
 		final File uploadsDir = new File(dataDir, "uploads");
 		final File commentsDir = new File(dataDir, "comments");
-		final File commentThreadsDir = new File(dataDir, "comment_threads");
 
 		// 2. DATASOURCES AND CLIENTS
 
-		// final UserDataSource users;
-		// final RegionDataSource regions;
-		// final UploadManager uploadManager;
-		// final RegionJSONClient regionJSONClient;
-		// final PoiDataSource pois;
 		final PoiTreeDataSource poiTrees;
 		final CommentDataSource comments;
-		// final CommentThreadDataSource commentThreads;
+		final CommentManager commentManager;
 
 		try {
 
@@ -179,9 +176,19 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			comments = BackendDataSourceFileSystem.newDataSource(
 					CommentDataSource.class, commentsDir);
 
-			commentThreads = BackendDataSourceFileSystem.newDataSource(
-					CommentThreadDataSource.class, commentThreadsDir);
+			final InitialContext context = new InitialContext();
 
+			final DataSource ds = (DataSource) context
+					.lookup("java:/comp/env/jdbc/univmobile");
+
+			checkDataSource(ds);
+
+			commentManager = new CommentManagerImpl(comments, MYSQL, ds);
+
+		} catch (final NamingException e) {
+			throw new ServletException(e);
+		} catch (final SQLException e) {
+			throw new ServletException(e);
 		} catch (final IOException e) {
 			throw new ServletException(e);
 		}
@@ -193,11 +200,11 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new UseraddController(tx, users, regions, pois, poiTrees), //
 				new AdminGeocampusController(tx, users, regions, pois, poiTrees), //
 				new PoisController(tx, users, regions, pois, poiTrees), //
-				new PoiController(tx, comments, commentThreads, users, regions,
+				new PoiController(tx, comments, commentManager, users, regions,
 						pois, poiTrees), //
-				new CommentsController(tx, comments, commentThreads, users,
+				new CommentsController(tx, comments, commentManager, users,
 						regions, pois, poiTrees), //
-				new CommentController(tx, comments, commentThreads, users,
+				new CommentController(tx, comments, commentManager, users,
 						regions, pois, poiTrees) //
 		);
 
@@ -217,7 +224,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final PoiJSONClient poiJSONClient = new PoiJSONClientImpl(poiClient);
 
 		final CommentClient commentClient = new CommentClientFromLocal(baseURL,
-				comments, commentThreads);
+				comments, commentManager);
 
 		final CommentJSONClient commentJSONClient = new CommentJSONClientImpl(
 				commentClient);
@@ -489,30 +496,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			}
 		}
 
-		// final String path = substringAfter(requestURI, "/json/");
-
-		// if (log.isDebugEnabled()) {
-		// log.debug("path: " + path);
-		// }
-
-		// http://univmobile.vswip.com/unm-backend-mock/regions
-
-		// https://univmobile-dev.univ-paris1.fr/json/regions
-		/*
-		 * if ("regions".equals(path) || "regions/".equals(path) ||
-		 * "regions.json".equals(path)) {
-		 * 
-		 * final String json = new RegionsJSONController(regionJSONClient)
-		 * .actionJSON(baseURL);
-		 * 
-		 * serveJSON(json, beautify, response);
-		 * 
-		 * return; }
-		 */
-		/*
-		 * if (path.startsWith("regions/")) { }
-		 */
-
 		UnivMobileHttpUtils.sendError404(request, response, uriPath);
 	}
 
@@ -588,5 +571,24 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		}
 
 		os.close();
+	}
+
+	private static void checkDataSource(final DataSource ds)
+			throws SQLException {
+
+		checkNotNull(ds, "dataSource");
+
+		log.info("checkDataSource()...");
+		
+		final Connection cxn = ds.getConnection();
+		try {
+
+			// do nothing
+			
+		} finally {
+			cxn.close();
+		}
+		
+		log.info("checkDataSource() OK.");
 	}
 }

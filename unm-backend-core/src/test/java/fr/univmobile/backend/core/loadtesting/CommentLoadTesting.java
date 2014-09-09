@@ -10,8 +10,6 @@ import com.avcompris.lang.NotImplementedException;
 import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
-import fr.univmobile.backend.core.CommentThreadDataSource;
-import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class CommentLoadTesting extends AbstractLoadTesting {
@@ -85,7 +83,7 @@ public class CommentLoadTesting extends AbstractLoadTesting {
 	}
 
 	private final CommentDataSource comments;
-	private final CommentThreadDataSource commentThreads;
+	//private final CommentThreadDataSource commentThreads;
 	private final CommentManager commentManager;
 
 	@SuppressWarnings("unused")

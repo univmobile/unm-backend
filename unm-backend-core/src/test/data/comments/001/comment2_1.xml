@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/comments/001:comment1_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/comments/001:comment1_1.xml"/>
+<id>fr.univmobile:unm-backend:test/comments/001:comment2_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/comments/001:comment2_1.xml"/>
 <title>Une belle application</title>
 <updated>2014-08-25T09:16:00Z</updated>
 <category term="comments"/>

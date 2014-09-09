@@ -3,6 +3,7 @@ package fr.univmobile.backend.client;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import javax.annotation.Nullable;
 import javax.inject.Inject;
@@ -31,7 +32,7 @@ public class CommentClientFromJSON implements CommentClient {
 	private static Log log = LogFactory.getLog(CommentClientFromJSON.class);
 
 	@Override
-	public Comment[] getCommentsByPoiId(final int poiId) throws IOException {
+	public Comment[] getCommentsByPoiId(final int poiId) throws IOException, SQLException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("getCommentsByPoiId():" + poiId + "...");

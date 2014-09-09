@@ -29,6 +29,12 @@
 			<version>${project.version}</version>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.32</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>
@@ -70,6 +76,16 @@
 							<cargo.servlet.port>8380</cargo.servlet.port>
 							<cargo.tomcat.ajp.port>8309</cargo.tomcat.ajp.port>
 						</properties>
+						<configfiles>
+							<configfile>
+								<file>${basedir}/src/test/conf/context.xml</file>
+								<todir>conf/</todir>
+								<!--  
+								<configfile>true</configfile>
+								-->
+								<overwrite>true</overwrite>
+							</configfile>
+						</configfiles>
 					</configuration>
 					<deployables>
 						<deployable>
@@ -182,6 +198,8 @@
 				<cargo.containerId>tomcat7x</cargo.containerId>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39/</cargo.home>
 				<tomcat.port>8380</tomcat.port>
+				<mysqlUrl>jdbc:mysql://localhost:3306/toto</mysqlUrl>
+				<mysqlUsername>root</mysqlUsername>
 			</properties>
 		</profile>
 		<profile>

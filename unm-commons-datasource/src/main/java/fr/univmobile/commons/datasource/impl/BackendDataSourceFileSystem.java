@@ -293,6 +293,8 @@ EB extends EntryBuilder<E>> //
 
 		dump(document, file);
 
+		builder.setLocalRevfile(file.getCanonicalPath());
+		
 		// cacheEngine.cache(data);
 	}
 

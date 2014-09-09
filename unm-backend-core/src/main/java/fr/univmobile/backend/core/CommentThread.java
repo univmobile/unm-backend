@@ -3,6 +3,16 @@ package fr.univmobile.backend.core;
 
 public interface CommentThread {
 
+	CommentRef[] getAllComments();
+	
+	int sizeOfAllComments();
+
+	interface CommentRef {
+
+		int getUid();
+	}
+
+	/*
 	CommentThread[] getRoots();
 
 	int getCommentUid();
@@ -13,20 +23,11 @@ public interface CommentThread {
 
 	CommentThread addToChildren();
 
-	CommentRef[] getAllComments();
-
-	int sizeOfAllComments();
-
 	interface Context {
 
 		String getId();
 
 		String getType();
-
-		int getUid();
-	}
-
-	interface CommentRef {
 
 		int getUid();
 	}
@@ -39,4 +40,5 @@ public interface CommentThread {
 	}
 
 	Content getContent();
+	*/
 }

@@ -1,5 +1,6 @@
 package fr.univmobile.backend.it;
 
+import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotEquals;
@@ -7,6 +8,8 @@ import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.DriverManager;
 
 import org.apache.commons.io.FileUtils;
 import org.junit.Test;
@@ -14,14 +17,24 @@ import org.junit.Test;
 public class TestBackendTest {
 
 	@Test
-	public void testSetUpData() throws IOException {
+	public void testSetUpData() throws Exception {
 
 		final File reportFile = new File("target/001",
 				"TestBackend.setUpData.log");
 
 		FileUtils.deleteQuietly(reportFile);
 
-		TestBackend.setUpData("001", new File("target", "001"));
+		FileUtils.deleteQuietly(new File("target","TestBackendTest.h2.db"));
+		
+		final Connection cxn = DriverManager
+				.getConnection("jdbc:h2:./target/TestBackendTest");
+		try {
+
+			TestBackend.setUpData("001", new File("target", "001"), H2, cxn);
+
+		} finally {
+			cxn.close();
+		}
 
 		assertTrue("reportFile should exist: " + reportFile.getCanonicalPath(),
 				reportFile.exists());

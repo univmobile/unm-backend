@@ -8,7 +8,15 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
+
+import javax.sql.DataSource;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.joda.time.DateTime;
 
 import com.avcompris.lang.NotImplementedException;
 import com.google.common.collect.Iterables;
@@ -17,6 +25,7 @@ import fr.univmobile.backend.core.Comment;
 import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
+import fr.univmobile.backend.core.CommentThread;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.SequenceTimeoutException;
 import fr.univmobile.commons.tx.TransactionException;
@@ -32,15 +41,25 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 		super(dbType, cxn);
 
 		this.comments = checkNotNull(comments, "comments");
-		// this.commentThreads = checkNotNull(commentThreads, "commentThreads");
 
 		tx = TransactionManager.getInstance();
 
 		this.maxCommentUid[0] = //
 		calcMaxUid(comments.getAllByInt("uid").keySet());
+	}
 
-		// this.maxCommentThreadUid[0] = //
-		// calcMaxUid(commentThreads.getAllByInt("uid").keySet());
+	public CommentManagerImpl(final CommentDataSource comments,
+			final ConnectionType dbType, final DataSource ds)
+			throws IOException {
+
+		super(dbType, ds);
+
+		this.comments = checkNotNull(comments, "comments");
+
+		tx = TransactionManager.getInstance();
+
+		this.maxCommentUid[0] = //
+		calcMaxUid(comments.getAllByInt("uid").keySet());
 	}
 
 	private static int calcMaxUid(final Iterable<Integer> uids) {
@@ -58,11 +77,10 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 	}
 
 	private final CommentDataSource comments;
-	// private final CommentThreadDataSource commentThreads;
 	private final TransactionManager tx;
 	private int[] maxCommentUid = new int[1];
 
-	// private int[] maxCommentThreadUid = new int[1];
+	private static final Log log = LogFactory.getLog(CommentManagerImpl.class);
 
 	private int newCommentUid() throws TransactionException {
 
@@ -90,34 +108,10 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 		throw new SequenceTimeoutException();
 	}
 
-	private int newCommentThreadUid() throws TransactionException {
-
-		/*
-		 * final long start = System.currentTimeMillis();
-		 * 
-		 * while (System.currentTimeMillis() < start + 5000) {
-		 * 
-		 * final Lock lock = tx.acquireLock(5000, "comment_threads.uid"); try {
-		 * 
-		 * final int newUid = maxCommentThreadUid[0] + 1;
-		 * 
-		 * maxCommentThreadUid[0] = newUid;
-		 * 
-		 * if (comments.isNullByUid(newUid)) {
-		 * 
-		 * return newUid; }
-		 * 
-		 * } finally { lock.release(); } }
-		 * 
-		 * throw new SequenceTimeoutException();
-		 */
-
-		throw new NotImplementedException();
-	}
-
 	@Override
 	public void addToCommentThreadByPoiId(final int poiId,
-			final CommentBuilder comment) throws TransactionException {
+			final CommentBuilder comment) throws TransactionException,
+			SQLException {
 
 		checkNotNull(comment, "comment");
 
@@ -134,38 +128,26 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 					"Comment.message should not be null");
 		}
 
-		/*
-		 * final Lock lock = tx.acquireLock(5000, "comments\\poi", poiId);
-		 * 
-		 * final CommentThreadBuilder commentThread;
-		 * 
-		 * if (commentThreads.isNullByPoiId(poiId)) {
-		 * 
-		 * //commentThread = commentThreads.create();
-		 * 
-		 * //commentThread.setUid(newCommentThreadUid());
-		 * 
-		 * commentThread .getContent() .addToContexts()
-		 * .setId("fr.univmobile:unm-backend:test/pois/001:poi" + poiId +
-		 * "_1").setType("local:poi").setUid(poiId);
-		 * 
-		 * } else {
-		 * 
-		 * commentThread = commentThreads.update(commentThreads
-		 * .getByPoiId(poiId)); }
-		 * 
-		 * final int uid = newCommentUid();
-		 * 
-		 * comment.setUid(uid);
-		 * 
-		 * commentThread.getContent().addToComments().setUid(uid);
-		 * 
-		 * lock.save(comment); lock.save(commentThread);
-		 * 
-		 * lock.commit();
-		 */
+		final Lock lock = tx.acquireLock(5000, "comments\\poi", poiId);
 
-		throw new NotImplementedException();
+		final int uid = newCommentUid();
+
+		comment.setUid(uid);
+
+		lock.save(comment);
+
+		final int STATUS_ACTIVE = 1;
+
+		final String path = comment.getLocalRevfile();
+
+		final int revfileId = executeUpdateGetAutoIncrement("createRevfile",
+				"comments", path, comment.getId(), new DateTime(),
+				STATUS_ACTIVE);
+
+		executeUpdate("createComment", revfileId, uid, comment.getPostedAt(),
+				comment.getPostedAt(), poiId);
+
+		lock.commit();
 	}
 
 	@Override
@@ -174,34 +156,160 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 
 		final List<Comment> comments = new ArrayList<Comment>();
 
-		final PreparedStatement pstmt = cxn
-				.prepareStatement(getSql("getMostRecentCommentUids"));
+		final Connection cxn = getConnection();
 		try {
-			pstmt.setInt(1, limit); // LIMIT
-
-			final ResultSet rs = pstmt.executeQuery();
+			final PreparedStatement pstmt = cxn
+					.prepareStatement(getSql("getMostRecentCommentUids"));
 			try {
+				pstmt.setInt(1, limit); // LIMIT
 
-				while (rs.next()) {
+				final ResultSet rs = pstmt.executeQuery();
+				try {
 
-					final int uid = rs.getInt(1);
+					while (rs.next()) {
 
-					final Comment comment = this.comments.getByUid(uid);
+						final int uid = rs.getInt(1);
 
-					// final int uid = comment.getUid();
-					// final int poiUid = comment.getMainContext().getUid();
+						final Comment comment = this.comments.getByUid(uid);
 
-					comments.add(comment);
+						comments.add(comment);
+					}
+
+				} finally {
+					rs.close();
 				}
-
 			} finally {
-				rs.close();
+				pstmt.close();
 			}
-
 		} finally {
-			pstmt.close();
+			cxn.close();
 		}
 
 		return Iterables.toArray(comments, Comment.class);
+	}
+
+	@Override
+	public <K> Map<K, CommentThread> getAllBy(final Class<K> keyClass,
+			final String attributeName) {
+
+		throw new NotImplementedException();
+	}
+
+	@Override
+	public Map<String, CommentThread> getAllByString(final String attributeName) {
+
+		throw new NotImplementedException();
+	}
+
+	@Override
+	public Map<Integer, CommentThread> getAllByInt(final String attributeName) {
+
+		throw new NotImplementedException();
+	}
+
+	@Override
+	public int sizeOfThreads() throws SQLException {
+
+		return executeQueryGetInt("sizeOfCommentThreads");
+	}
+
+	@Override
+	public int sizeOfCommentsByPoiId(int poiId) throws SQLException {
+
+		return executeQueryGetInt("sizeOfCommentsByPoiId", poiId);
+	}
+
+	@Override
+	public CommentThread getByPoiId(int poiId) throws SQLException, IOException {
+
+		if (log.isInfoEnabled()) {
+			log.info("getByPoiId():" + poiId + "...");
+		}
+
+		final String sql = getSql("getCommentsByPoiId");
+
+		final List<Integer> uids = new ArrayList<Integer>();
+
+		final Connection cxn = getConnection();
+		try {
+			final PreparedStatement pstmt = cxn.prepareStatement(sql);
+			try {
+
+				pstmt.setInt(1, poiId);
+
+				final ResultSet rs = pstmt.executeQuery();
+				try {
+
+					while (rs.next()) {
+
+						final int uid = rs.getInt(1);
+
+						uids.add(uid);
+					}
+
+				} finally {
+					rs.close();
+				}
+			} finally {
+				pstmt.close();
+			}
+		} finally {
+			cxn.close();
+		}
+
+		return new CommentThreadImpl(uids);
+	}
+
+	@Override
+	public boolean isNullByPoiId(int poiId) throws SQLException {
+
+		return sizeOfCommentsByPoiId(poiId) == 0;
+	}
+
+	private static class CommentThreadImpl implements CommentThread {
+
+		public CommentThreadImpl(final Collection<Integer> uids) {
+
+			commentRefs = new CommentRef[uids.size()];
+
+			int i = 0;
+
+			for (final int uid : uids) {
+
+				commentRefs[i] = new CommentRefImpl(uid);
+
+				++i;
+			}
+		}
+
+		private final CommentRef[] commentRefs;
+
+		@Override
+		public CommentRef[] getAllComments() {
+
+			return commentRefs;
+		}
+
+		@Override
+		public int sizeOfAllComments() {
+
+			return commentRefs.length;
+		}
+	}
+
+	private static class CommentRefImpl implements CommentThread.CommentRef {
+
+		public CommentRefImpl(final int uid) {
+
+			this.uid = uid;
+		}
+
+		private final int uid;
+
+		@Override
+		public int getUid() {
+
+			return uid;
+		}
 	}
 }

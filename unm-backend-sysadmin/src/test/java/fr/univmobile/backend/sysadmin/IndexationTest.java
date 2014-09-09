@@ -58,7 +58,9 @@ public class IndexationTest {
 		final AbstractTool indexation = new IndexationTool( //
 				new File("src/test/data/001"), H2, cxn);
 
-		indexation.run();
+		final Result result = indexation.run();
+		
+		assertEquals(286, result.getRowCount());
 
 		assertEquals(4, getRowCount("unm_categories"));
 		assertEquals(286, getRowCount("unm_revfiles"));

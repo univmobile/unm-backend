@@ -1,0 +1,6 @@
+<Context>
+<ResourceLink
+    global="jdbc/univmobile"
+    name="jdbc/univmobile"
+    type="javax.sql.DataSource"/>
+ </Context>
