@@ -222,18 +222,24 @@
 			<id>unm_ios7</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
+				<mysqlUrl>jdbc:mysql://localhost:3306/univmobile</mysqlUrl>
+				<mysqlUsername>root</mysqlUsername>
 			</properties>
 		</profile>
 		<profile>
 			<id>unm_ios6a</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
+				<mysqlUrl>jdbc:mysql://localhost:3306/univmobile</mysqlUrl>
+				<mysqlUsername>root</mysqlUsername>
 			</properties>
 		</profile>
 		<profile>
 			<id>ks3haxm</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
+				<mysqlUrl>jdbc:mysql://localhost:3306/univmobile</mysqlUrl>
+				<mysqlUsername>root</mysqlUsername>
 			</properties>
 		</profile>
 	</profiles>
