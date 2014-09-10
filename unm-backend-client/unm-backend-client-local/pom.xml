@@ -24,11 +24,6 @@
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-commons</artifactId>
 		</dependency>	
-		<dependency>
-			<groupId>fr.univmobile</groupId>
-			<artifactId>unm-testutil</artifactId>
-			<scope>test</scope>
-		</dependency>	
 	</dependencies>
 
 	<name>unm-backend-client-local</name>
