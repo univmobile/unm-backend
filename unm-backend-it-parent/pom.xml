@@ -214,6 +214,8 @@
 			<id>unm_ci</id>
 			<properties>
 				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
+				<mysqlUrl>jdbc:mysql://localhost:3306/univmobile</mysqlUrl>
+				<mysqlUsername>root</mysqlUsername>
 			</properties>
 		</profile>
 		<profile>
