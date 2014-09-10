@@ -31,9 +31,9 @@ public class Scenarios001 extends SeleniumEnabledTest {
 				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
 
 		final Connection cxn = DriverManager.getConnection(
-				PropertiesUtils.getTestProperty("mysqlUrl"),
-				PropertiesUtils.getTestProperty("mysqlUsername"),
-				PropertiesUtils.getTestProperty("mysqlPassword"));
+				PropertiesUtils.getTestProperty("mysql.url"),
+				PropertiesUtils.getTestProperty("mysql.username"),
+				PropertiesUtils.getSettingsTestRefProperty("mysql.password.ref"));
 		try {
 
 			TestBackend.setUpData("001", new File(dataDir), MYSQL, cxn);

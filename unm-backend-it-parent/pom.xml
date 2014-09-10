@@ -4,7 +4,7 @@
 
 	<artifactId>unm-backend-it-parent</artifactId>
 	<packaging>pom</packaging>
-	
+
 	<parent>
 		<groupId>fr.univmobile</groupId>
 		<artifactId>unm-it-parent</artifactId>
@@ -190,7 +190,7 @@
 			</snapshots>
 		</repository>
 	</repositories>
- 
+
 	<profiles>
 		<profile>
 			<id>dandriana</id>
@@ -198,8 +198,9 @@
 				<cargo.containerId>tomcat7x</cargo.containerId>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39/</cargo.home>
 				<tomcat.port>8380</tomcat.port>
-				<mysqlUrl>jdbc:mysql://localhost:3306/toto</mysqlUrl>
-				<mysqlUsername>root</mysqlUsername>
+				<mysql.url>jdbc:mysql://localhost:3306/toto</mysql.url>
+				<mysql.username>root</mysql.username>
+				<mysql.password.ref>/settings/*/server[id = 'mysql']/password</mysql.password.ref>
 			</properties>
 		</profile>
 		<profile>
@@ -214,32 +215,36 @@
 			<id>unm_ci</id>
 			<properties>
 				<cargo.home>/opt/apache-tomcat-7.0.39</cargo.home>
-				<mysqlUrl>jdbc:mysql://localhost:3306/univmobile</mysqlUrl>
-				<mysqlUsername>root</mysqlUsername>
+				<mysql.url>jdbc:mysql://localhost:3306/univmobile</mysql.url>
+				<mysql.username>root</mysql.username>
+				<mysql.password.ref>/settings/*/server[id = 'mysql']/password</mysql.password.ref>
 			</properties>
 		</profile>
 		<profile>
 			<id>unm_ios7</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
-				<mysqlUrl>jdbc:mysql://localhost:3306/univmobile</mysqlUrl>
-				<mysqlUsername>root</mysqlUsername>
+				<mysql.url>jdbc:mysql://localhost:3306/univmobile</mysql.url>
+				<mysql.username>root</mysql.username>
+				<mysql.password.ref>/settings/*/server[id = 'mysql']/password</mysql.password.ref>
 			</properties>
 		</profile>
 		<profile>
 			<id>unm_ios6a</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
-				<mysqlUrl>jdbc:mysql://localhost:3306/univmobile</mysqlUrl>
-				<mysqlUsername>root</mysqlUsername>
+				<mysql.url>jdbc:mysql://localhost:3306/univmobile</mysql.url>
+				<mysql.username>root</mysql.username>
+				<mysql.password.ref>/settings/*/server[id = 'mysql']/password</mysql.password.ref>
 			</properties>
 		</profile>
 		<profile>
 			<id>ks3haxm</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
-				<mysqlUrl>jdbc:mysql://localhost:3306/univmobile</mysqlUrl>
-				<mysqlUsername>root</mysqlUsername>
+				<mysql.url>jdbc:mysql://localhost:3306/univmobile</mysql.url>
+				<mysql.username>root</mysql.username>
+				<mysql.password.ref>/settings/*/server[id = 'mysql']/password</mysql.password.ref>
 			</properties>
 		</profile>
 	</profiles>
