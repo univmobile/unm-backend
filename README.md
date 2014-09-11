@@ -40,3 +40,11 @@ Sur le projet Maven spécifique unm-backend-client :
 
   * unm-backend-client, [README.md](unm-backend-client/README.md "README.md")
   * unm-backend-client-json, [JavaDocs, Classes de communication avec le backend J2EE UnivMobile.](http://univmobile.vswip.com/nexus/content/sites/pub/unm-backend-client-json/0.0.4/apidocs/)
+  
+### Autres repositories GitHub
+
+  * [unm-devel](https://github.com/univmobile/unm-devel "Repository GitHub unm-devel")
+  * [unm-ios](https://github.com/univmobile/unm-ios "Repository GitHub unm-ios")
+  * [unm-android](https://github.com/univmobile/unm-android "Repository GitHub unm-android")
+  * [unm-mobileweb](https://github.com/univmobile/unm-mobileweb "Repository GitHub unm-mobileweb")
+  * [unm-integration](https://github.com/univmobile/unm-integration "Repository GitHub unm-integration")
