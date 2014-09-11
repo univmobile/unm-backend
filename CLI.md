@@ -44,7 +44,7 @@ On peut s’affranchir des options en renseignant aux variables d’environnemen
   * UNM_DBUSERNAME
   * UNM_DBPASSWORD
   
-#### Commande : lock
+### Commande : lock
 
 Affiche les ressources verrouillées.
 
