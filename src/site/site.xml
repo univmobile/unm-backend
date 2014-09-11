@@ -1,0 +1,34 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.3.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/DECORATION/1.3.0 http://maven.apache.org/xsd/decoration-1.3.0.xsd">
+	<body>
+
+		<menu name="Workspace">
+			<item href="http://univmobile.vswip.com/job/unm-backend"
+				name="Job Jenkins" />
+		</menu>
+
+		<menu name="Documentation">
+			<item href="index.html" name="README"/>
+			<item href="Devel.html" name="Développement"/>
+			<item href="Arch.html" name="Architecture"/>
+			<item href="unm-backend-app.html" name="unm-backend-app"/>
+			<item href="XMLData.html" name="Données XML"/>
+			<item href="Indexation.html" name="Indexation"/>
+			<item href="J2EE.html" name="Déploiement J2EE"/>
+			<item href="JSON.html" name="Flux JSON"/>
+			<item href="Shibboleth.html" name="Shibboleth"/>
+			<item href="CLI.html" name="Command-Line Interface"/>
+			<item href="Tests.html" name="Données de tests"/>
+			<item href="Universities.html" name="Universités"/>
+		</menu>
+
+		<menu ref="parent" />
+
+		<menu ref="modules" />
+
+		<menu ref="reports" inherit="bottom" />
+
+	</body>
+	
+</project>

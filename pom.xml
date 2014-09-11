@@ -3,6 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>unm-backend</artifactId>
+	<packaging>pom</packaging>
 
 	<parent>
 		<groupId>fr.univmobile</groupId>
@@ -11,6 +12,20 @@
 		<relativePath/>
 	</parent>
 
+	<modules>
+		<module>unm-backend-parent</module>
+		<module>unm-commons-datasource</module>
+		<module>unm-backend-core</module>
+		<module>unm-backend-client</module>
+		<module>unm-backend-sysadmin</module>
+		<module>unm-backend-app</module>
+		<module>unm-backend-filter-noshib</module>
+		<module>unm-backend-app-noshib</module>
+		<module>unm-backend-it-parent</module>
+		<module>unm-backend-it-data</module>
+		<module>unm-backend-it</module>
+	</modules>
+	
 	<name>unm-backend</name>
 	<description>
 		Backend for UnivMobile applications.
