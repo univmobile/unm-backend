@@ -5,7 +5,9 @@
 
 		<menu name="Workspace">
 			<item href="http://univmobile.vswip.com/job/unm-backend-it"
-				name="Job Jenkins" />
+				name="Job Jenkins: Debian" />
+			<item href="http://univmobile.vswip.com/job/unm-backend-it_macos"
+				name="Job Jenkins: Mac OS X" />
 			<item href="../../unm-backend/0.0.5-SNAPSHOT/index.html"
 				name="unm-backend" />
 		</menu>
