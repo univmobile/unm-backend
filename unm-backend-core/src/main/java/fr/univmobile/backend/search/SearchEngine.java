@@ -1,6 +1,7 @@
 package fr.univmobile.backend.search;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import fr.univmobile.backend.core.EntryRef;
 
@@ -12,5 +13,7 @@ public interface SearchEngine {
 	 * objects, with identifiers mainly.
 	 */
 	EntryRef[] search(SearchContext context, SearchQuery query)
-			throws IOException;
+			throws IOException, SQLException;
+
+	SearchContext newSearchContext() throws IOException;
 }

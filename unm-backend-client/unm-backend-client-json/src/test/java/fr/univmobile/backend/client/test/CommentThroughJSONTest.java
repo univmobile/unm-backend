@@ -26,6 +26,7 @@ import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.Indexation;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class CommentThroughJSONTest {
@@ -43,12 +44,14 @@ public class CommentThroughJSONTest {
 
 		cxn = DriverManager.getConnection(url);
 
+		final SearchManagerImpl searchManager = new SearchManagerImpl(H2, cxn);
+
 		final Indexation indexation = new IndexationImpl(//
 				new File("src/test/data/users/001"), //
 				new File("src/test/data/regions/001"), //
 				new File("src/test/data/pois/001"), //
 				new File("src/test/data/comments/001"), //
-				H2, cxn);
+				searchManager, H2, cxn);
 
 		indexation.indexData(null);
 
@@ -61,7 +64,7 @@ public class CommentThroughJSONTest {
 										"target/CommentThroughJSONTest_comments")));
 
 		final CommentManager commentManager = new CommentManagerImpl(
-				commentDataSource, H2, cxn);
+				commentDataSource, searchManager, H2, cxn);
 
 		final CommentClientFromLocal commentClient = new CommentClientFromLocal(
 				"(dummy baseURL)", commentDataSource, commentManager);
@@ -87,7 +90,7 @@ public class CommentThroughJSONTest {
 	}
 
 	@Test
-	public void testThroughJSON_emptyComments_poi1() throws Exception{
+	public void testThroughJSON_emptyComments_poi1() throws Exception {
 
 		final Comment[] comments = client.getCommentsByPoiId(1);
 

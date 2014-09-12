@@ -41,6 +41,7 @@ import fr.univmobile.commons.datasource.Entry;
 public class IndexationImpl extends AbstractImpl implements Indexation {
 
 	public IndexationImpl(final File dataDir, //
+			final SearchManager searchManager, //
 			final ConnectionType dbType, final Connection cxn)
 			throws IOException, ParserConfigurationException {
 
@@ -49,12 +50,13 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 				new File(dataDir, "regions"), //
 				new File(dataDir, "pois"), //
 				new File(dataDir, "comments"), //
-				dbType, cxn);
+				searchManager, dbType, cxn);
 	}
 
 	public IndexationImpl(//
 			final File usersDir, final File regionsDir, //
 			final File poisDir, final File commentsDir, //
+			final SearchManager searchManager, //
 			final ConnectionType dbType, final Connection cxn)
 			throws IOException, ParserConfigurationException {
 
@@ -70,7 +72,9 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 		categoryDirs.put("pois", poisDir);
 		categoryDirs.put("comments", commentsDir);
 
-		searchManager = new SearchManagerImpl(dbType, cxn);
+		this.searchManager = checkNotNull(searchManager, "searchManager");
+
+		// searchManager = new SearchManagerImpl(dbType, cxn);
 	}
 
 	private final SearchManager searchManager;

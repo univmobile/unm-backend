@@ -43,6 +43,7 @@ import com.google.common.collect.Iterables;
 import fr.univmobile.backend.core.Indexation;
 import fr.univmobile.backend.core.impl.ConnectionType;
 import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.SearchManagerImpl;
 
 /**
  * Utilities to load data, extract packaging information, etc.
@@ -146,7 +147,8 @@ public abstract class TestBackend {
 
 		System.out.println("Indexation...");
 
-		final Indexation indexation = new IndexationImpl(destDir, dbType, cxn);
+		final Indexation indexation = new IndexationImpl(destDir,
+				new SearchManagerImpl(dbType, cxn), dbType, cxn);
 
 		indexation.indexData(null);
 	}

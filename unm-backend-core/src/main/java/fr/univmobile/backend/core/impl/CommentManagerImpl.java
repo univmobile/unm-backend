@@ -37,14 +37,15 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 		CommentManager {
 
 	public CommentManagerImpl(final CommentDataSource comments,
-			final ConnectionType dbType, final Connection cxn)
-			throws IOException {
+			final SearchManager searchManager, final ConnectionType dbType,
+			final Connection cxn) throws IOException {
 
 		super(dbType, cxn);
 
 		this.comments = checkNotNull(comments, "comments");
+		this.searchManager = checkNotNull(searchManager, "searchManager");
 
-		searchManager = new SearchManagerImpl(dbType, cxn);
+		// searchManager = new SearchManagerImpl(dbType, cxn);
 
 		tx = TransactionManager.getInstance();
 
@@ -53,14 +54,15 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 	}
 
 	public CommentManagerImpl(final CommentDataSource comments,
-			final ConnectionType dbType, final DataSource ds)
-			throws IOException {
+			final SearchManager searchManager, final ConnectionType dbType,
+			final DataSource ds) throws IOException {
 
 		super(dbType, ds);
 
 		this.comments = checkNotNull(comments, "comments");
+		this.searchManager = checkNotNull(searchManager, "searchManager");
 
-		searchManager = new SearchManagerImpl(dbType, ds);
+		// searchManager = new SearchManagerImpl(dbType, ds);
 
 		tx = TransactionManager.getInstance();
 
@@ -332,6 +334,12 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 		public String getEntryRefId() {
 
 			return Integer.toString(uid);
+		}
+
+		@Override
+		public final String getCategory() {
+
+			return "comments";
 		}
 	}
 }

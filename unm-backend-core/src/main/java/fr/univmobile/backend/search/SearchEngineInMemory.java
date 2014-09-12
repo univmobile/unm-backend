@@ -3,11 +3,11 @@ package fr.univmobile.backend.search;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.apache.commons.lang3.NotImplementedException;
-
+import com.avcompris.lang.NotImplementedException;
 import com.google.common.collect.Iterables;
 
 import fr.univmobile.backend.core.EntryRef;
@@ -23,7 +23,7 @@ public final class SearchEngineInMemory implements SearchEngine {
 
 	@Override
 	public EntryRef[] search(final SearchContext context,
-			final SearchQuery query) throws IOException {
+			final SearchQuery query) throws IOException, SQLException {
 
 		checkNotNull(query, "query");
 		checkNotNull(context, "context");
@@ -57,5 +57,11 @@ public final class SearchEngineInMemory implements SearchEngine {
 		}
 
 		return Iterables.toArray(entries, EntryRef.class);
+	}
+
+	@Override
+	public SearchContext newSearchContext() {
+
+		throw new NotImplementedException();
 	}
 }

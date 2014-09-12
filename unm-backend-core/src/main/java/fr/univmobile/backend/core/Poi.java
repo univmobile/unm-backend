@@ -27,7 +27,7 @@ public interface Poi extends Entry<Poi> {
 	@XPath("atom:content/atom:description")
 	@Nullable
 	String getDescription();
-	
+
 	/**
 	 * e.g. 1 (poiTypeLabel = "Université")
 	 */
@@ -47,7 +47,7 @@ public interface Poi extends Entry<Poi> {
 	int[] getPoiCategoryIds();
 
 	boolean isNullPoiCategoryIds();
-	
+
 	/**
 	 * e.g. "Plans"
 	 */
@@ -97,7 +97,7 @@ public interface Poi extends Entry<Poi> {
 	int sizeOfUniversities();
 
 	boolean isNullUniversities();
-	
+
 	@XPath("atom:content/atom:address/atom:url")
 	String[] getUrls();
 
@@ -155,7 +155,7 @@ public interface Poi extends Entry<Poi> {
 	int sizeOfChildren();
 
 	boolean isNullChildren();
-	
+
 	enum MarkerType {
 
 		POINT("point"), POLYGON("polygon"), OVERLAY("overlay");
@@ -173,27 +173,27 @@ public interface Poi extends Entry<Poi> {
 			return label;
 		}
 	}
-	
+
 	@XPath("atom:content/atom:attachment")
 	Attachment[] getAttachments();
-	
+
 	int sizeOfAttachments();
-	
+
 	interface Attachment {
-		
+
 		@XPath("@id")
 		int getId();
-		
+
 		@XPath("@title")
 		String getTitle();
-		
+
 		@XPath("@type")
-		AttachmentType getType();		
-		
+		AttachmentType getType();
+
 		@XPath("@url")
 		String getUrl();
 	}
-	
+
 	enum AttachmentType {
 
 		IMAGE("image");

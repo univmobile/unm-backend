@@ -33,9 +33,9 @@ public class SearchEntry {
 	}
 
 	private final Map<String, String> fields = new HashMap<String, String>();
-	
-	public Iterable<Entry<String,String>> fields() {
-		
+
+	public Iterable<Entry<String, String>> fields() {
+
 		return fields.entrySet();
 	}
 }

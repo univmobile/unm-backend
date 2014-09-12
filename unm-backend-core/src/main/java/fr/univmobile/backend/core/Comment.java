@@ -10,6 +10,12 @@ import fr.univmobile.commons.datasource.Entry;
 public interface Comment extends Entry<Comment>, EntryRef {
 
 	/**
+	 * @return "comments"
+	 */
+	@XPath("'comments'")
+	String getCategory();
+	
+	/**
 	 * e.g. 1
 	 */
 	@XPath("atom:content/@uid")

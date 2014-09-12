@@ -24,6 +24,7 @@ import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.Indexation;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class CommentClientFromLocalTest {
@@ -48,17 +49,19 @@ public class CommentClientFromLocalTest {
 
 		cxn = DriverManager.getConnection(url);
 
+		final SearchManagerImpl searchManager = new SearchManagerImpl(H2, cxn);
+
 		final Indexation indexation = new IndexationImpl(//
 				new File("src/test/data/users/001"), //
 				new File("src/test/data/regions/001"), //
 				new File("src/test/data/pois/001"), //
 				new File("target/CommentClientFromLocalTest_comments"), //
-				H2, cxn);
+				searchManager, H2, cxn);
 
 		indexation.indexData(null);
 
 		final CommentManager commentManager = new CommentManagerImpl(comments,
-				H2, cxn);
+				searchManager, H2, cxn);
 
 		client = new CommentClientFromLocal("http://dummy/", comments,
 				commentManager);

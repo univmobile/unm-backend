@@ -17,6 +17,7 @@ import fr.univmobile.backend.core.Indexation;
 import fr.univmobile.backend.core.IndexationObserver;
 import fr.univmobile.backend.core.impl.ConnectionType;
 import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.SearchManagerImpl;
 
 /**
  * Code for the "index" command-line tool.
@@ -35,7 +36,7 @@ class IndexationTool extends AbstractTool {
 				new File(dataDir, "regions"), //
 				new File(dataDir, "pois"), //
 				new File(dataDir, "comments"), //
-				dbType, cxn);
+				new SearchManagerImpl(dbType, cxn), dbType, cxn);
 	}
 
 	private final Indexation indexation;

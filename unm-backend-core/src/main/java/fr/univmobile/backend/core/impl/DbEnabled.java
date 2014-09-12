@@ -3,6 +3,7 @@ package fr.univmobile.backend.core.impl;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.apache.commons.lang3.StringUtils.isBlank;
+import static org.apache.commons.lang3.StringUtils.join;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -10,6 +11,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.Reader;
 import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.sql.Connection;
@@ -176,6 +178,40 @@ public abstract class DbEnabled {
 		}
 
 		return filteredSql;
+	}
+
+	/**
+	 * Set an int array in place of a "?" question mark within an existing SQL
+	 * query.
+	 * 
+	 * @return the new SQL query.
+	 */
+	static final String setIntArray(final String sql, final int index,
+			final int... array) {
+
+		int offset = 0;
+
+		for (int count = 0;; ++offset) {
+
+			offset = sql.indexOf('?', offset);
+
+			if (offset == -1) {
+				throw new ArrayIndexOutOfBoundsException("index: " + index
+						+ ", sql: " + sql);
+			}
+
+			++count;
+
+			if (count >= index) {
+				break;
+			}
+		}
+
+		final StringBuilder sb = new StringBuilder(sql.substring(0, offset));
+
+		sb.append(join(array, ','));
+
+		return sb.append(sql.substring(offset + 1)).toString();
 	}
 
 	protected final int executeUpdate(final String queryId,
@@ -408,7 +444,14 @@ public abstract class DbEnabled {
 							return null; // do nothing
 						}
 
-						return method.invoke(cxn, args); // delegation
+						try {
+
+							return method.invoke(cxn, args); // delegation
+
+						} catch (final InvocationTargetException e) {
+
+							throw e.getTargetException();
+						}
 					}
 				});
 

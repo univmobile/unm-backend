@@ -33,7 +33,7 @@ public abstract class Matchers {
 		}
 
 		set.remove(""); // ...
-		
+
 		return Iterables.toArray(set, String.class);
 	}
 

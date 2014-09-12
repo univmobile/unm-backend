@@ -13,6 +13,7 @@ import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.ConnectionType;
+import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 /**
@@ -32,7 +33,8 @@ class CommentTool extends AbstractTool {
 				.newDataSource(CommentDataSource.class,
 						getCategoryDir("comments"));
 
-		commentManager = new CommentManagerImpl(comments, dbType, cxn);
+		commentManager = new CommentManagerImpl(comments,
+				new SearchManagerImpl(dbType, cxn), dbType, cxn);
 	}
 
 	private final int limit;

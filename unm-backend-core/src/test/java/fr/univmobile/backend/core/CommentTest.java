@@ -20,8 +20,11 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.univmobile.backend.core.CommentThread.CommentRef;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.SearchManagerImpl;
+import fr.univmobile.backend.search.SearchHelper;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class CommentTest {
@@ -81,19 +84,26 @@ public class CommentTest {
 
 		cxn = DriverManager.getConnection(url);
 
+		final SearchManager searchManager = new SearchManagerImpl(H2, cxn);
+
 		final Indexation indexation = new IndexationImpl(dataDir_users,
-				dataDir_regions, dataDir_pois, dataDir_comments, H2, cxn);
+				dataDir_regions, dataDir_pois, dataDir_comments, searchManager,
+				H2, cxn);
 
 		indexation.indexData(null);
 
-		commentManager = new CommentManagerImpl(comments, H2, cxn);
+		commentManager = new CommentManagerImpl(comments, searchManager, H2,
+				cxn);
 
 		pois = BackendDataSourceFileSystem.newDataSource(PoiDataSource.class,
 				dataDir_pois);
+
+		searchHelper = new SearchHelper(new SearchManagerImpl(H2, cxn));
 	}
 
 	private CommentDataSource comments;
 	private CommentManager commentManager;
+	private SearchHelper searchHelper;
 	private File dataDir_comments;
 	private PoiDataSource pois;
 	private Connection cxn;
@@ -225,6 +235,8 @@ public class CommentTest {
 
 		final int POI_UID = 415;
 
+		assertEquals(0, searchHelper.search(CommentRef.class, "Hello").length);
+
 		assertEquals(3, getDbRowCount("unm_entities_comments"));
 		assertEquals(138, getDbRowCount("unm_searchtokens"));
 		assertEquals(178, getDbRowCount("unm_search"));
@@ -242,6 +254,8 @@ public class CommentTest {
 		comment.setPostedBy("Toto");
 
 		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
+
+		assertEquals(1, searchHelper.search(CommentRef.class, "Hello").length);
 
 		assertEquals(4, getDbRowCount("unm_entities_comments"));
 		assertEquals(141, getDbRowCount("unm_searchtokens"));
@@ -298,5 +312,27 @@ public class CommentTest {
 		final Comment comment = comments.getByUid(1);
 
 		assertEquals(new DateTime(2014, 8, 24, 9, 50, 0), comment.getPostedAt());
+
+		assertEquals("comments", comment.getCategory());
+	}
+
+	@Test
+	public void testSearchComment_1() throws Exception {
+
+		// 1: J’aime bien l’application, mais si on danse ?
+		// 2: Une bien belle application.
+
+		final CommentRef[] commentRefsA = searchHelper.search(CommentRef.class,
+				"application");
+
+		assertEquals(2, commentRefsA.length);
+		assertEquals(1, commentRefsA[0].getUid());
+		assertEquals(2, commentRefsA[1].getUid());
+
+		final CommentRef[] commentRefsB = searchHelper.search(CommentRef.class,
+				"aime danse");
+
+		assertEquals(1, commentRefsB.length);
+		assertEquals(1, commentRefsB[0].getUid());
 	}
 }

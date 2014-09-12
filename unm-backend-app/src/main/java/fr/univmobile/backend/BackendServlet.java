@@ -50,11 +50,13 @@ import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
+import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.backend.core.UploadManager;
 import fr.univmobile.backend.core.UploadNotFoundException;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
+import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.backend.core.impl.UploadManagerImpl;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.backend.json.CommentsJSONController;
@@ -183,7 +185,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			checkDataSource(ds);
 
-			commentManager = new CommentManagerImpl(comments, MYSQL, ds);
+			final SearchManager searchManager = new SearchManagerImpl(MYSQL, ds);
+
+			commentManager = new CommentManagerImpl(comments, searchManager,
+					MYSQL, ds);
 
 		} catch (final NamingException e) {
 			throw new ServletException(e);
@@ -579,16 +584,16 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		checkNotNull(ds, "dataSource");
 
 		log.info("checkDataSource()...");
-		
+
 		final Connection cxn = ds.getConnection();
 		try {
 
 			// do nothing
-			
+
 		} finally {
 			cxn.close();
 		}
-		
+
 		log.info("checkDataSource() OK.");
 	}
 }
