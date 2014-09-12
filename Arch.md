@@ -5,7 +5,7 @@ Documentation parente : [unm-backend](README.md)
 
 ### Architecture technique
 
-![](src/site/images/backend-arch.png?raw=true =900x "Architecture technique")
+![](src/site/resources/images/backend-arch.png?raw=true =900x "Architecture technique")
 
 Pour la confidentialité, les connexions distantes se font via HTTPS.
 

@@ -19,7 +19,7 @@ L’application web unm-backend est servie par une servlet J2EE. Les composants 
   * Fichiers XML : les données.
   * Base de données (non implémenté en itération 2) : pour la gestion des verrous techniques.
 
-![](src/site/images/backend.png?raw=true =600x "Backend")
+![](src/site/resources/images/backend.png?raw=true =600x "Backend")
 
 ### Projets Maven
 
@@ -200,7 +200,7 @@ Pour que l’application unm-backend-app accepte cet utilisateur, il faut que le
 
 Une fois authentifié par Shibboleth, si la mise en page et les couleurs s’affichent, cela signifie que la valeur de `baseURL` est correcte : les feuilles CSS sont référencées en prenant cette URL comme base.
 
--> ![](src/site/images/screenshot-home.png?raw=true =300x "Accueil UnivMobile Admin") <-
+-> ![](src/site/resources/images/screenshot-home.png?raw=true =300x "Accueil UnivMobile Admin") <-
 
 Vérification des flux JSON :
 
@@ -259,7 +259,7 @@ Exemple dans la classe Scenario001.java en itération 2 :
 
 Ces tests de scénarios donnent lieu, à travers Jenkins et le projet Maven unm-devel-it, à des pages HTML récapitulatives.
 
--> ![](src/site/images/screenshot-scenario.png?raw=true =300x "Scénario unm-backend") <-
+-> ![](src/site/resources/images/screenshot-scenario.png?raw=true =300x "Scénario unm-backend") <-
 
 ### Packaging en intégration (avec Shibboleth)
 
@@ -342,7 +342,7 @@ Pour que l’application unm-backend-app accepte l’utilisateur authentifié, i
 
 Une fois authentifié par Shibboleth, si la mise en page et les couleurs s’affichent, cela signifie que la valeur de `baseURL` est correcte : les feuilles CSS sont référencées en prenant cette URL comme base.
 
--> ![](src/site/images/screenshot-home.png?raw=true =300x "Accueil UnivMobile Admin") <-
+-> ![](src/site/resources/images/screenshot-home.png?raw=true =300x "Accueil UnivMobile Admin") <-
 
 Vérification des flux JSON :
 
