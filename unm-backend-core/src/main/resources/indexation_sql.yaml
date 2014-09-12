@@ -77,7 +77,7 @@ bundle:
       CREATE INDEX unm_entities_users_idx_unm_active_revfile_id
         ON ${prefix}entities_users (unm_active_revfile_id);
       ALTER TABLE ${prefix}entities_users
-        ADD CONSTRAINT unm_entities_users_fk_revfiles
+        ADD CONSTRAINT unm_entities_users_fk_unm_revfiles
         FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id);
     mysql: |
       CREATE TABLE ${prefix}entities_users (
@@ -109,7 +109,7 @@ bundle:
       CREATE INDEX unm_regions_idx_revfile
         ON ${prefix}entities_regions (unm_active_revfile_id);
       ALTER TABLE ${prefix}entities_regions
-        ADD CONSTRAINT unm_entities_regions_fk_revfiles
+        ADD CONSTRAINT unm_entities_regions_fk_unm_revfiles
         FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id);
     mysql: |
       CREATE TABLE ${prefix}entities_regions (
@@ -139,7 +139,7 @@ bundle:
       CREATE INDEX unm_entities_pois_idx_unm_active_revfile_id
         ON ${prefix}entities_pois (unm_active_revfile_id);
       ALTER TABLE ${prefix}entities_pois
-        ADD CONSTRAINT unm_entities_pois_fk_revfiles
+        ADD CONSTRAINT unm_entities_pois_fk_unm_revfiles
         FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id);
     mysql: |
       CREATE TABLE ${prefix}entities_pois (
@@ -177,7 +177,7 @@ bundle:
         ADD CONSTRAINT unm_entities_comments_fk_unm_entities_pois
         FOREIGN KEY (poi_uid) REFERENCES ${prefix}entities_pois (uid);
       ALTER TABLE ${prefix}entities_comments
-        ADD CONSTRAINT unm_entities_comments_fk_revfiles
+        ADD CONSTRAINT unm_entities_comments_fk_unm_revfiles
         FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id);
     mysql: |
       CREATE TABLE ${prefix}entities_comments (
@@ -198,6 +198,65 @@ bundle:
         FOREIGN KEY (unm_active_revfile_id) REFERENCES ${prefix}revfiles (id)
           ON DELETE RESTRICT ON UPDATE RESTRICT 
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  createTable_searchtokens:
+    h2: |
+      CREATE TABLE ${prefix}searchtokens (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        token VARCHAR(40) NOT NULL,
+        norm_token VARCHAR(40) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_searchtokens_token (token),
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+      CREATE INDEX unm_searchtokens_idx_norm_token
+        ON ${prefix}searchtokens (norm_token);
+    mysql: |
+      CREATE TABLE ${prefix}searchtokens (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        token VARCHAR(40) NOT NULL,
+        norm_token VARCHAR(40) NOT NULL,
+        PRIMARY KEY (id),
+        UNIQUE KEY unm_searchtokens_token (token),
+        KEY unm_searchtokens_idx_norm_token (norm_token)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  createTable_search:
+    h2: |
+      CREATE TABLE ${prefix}search (
+        token_id BIGINT(20) NULL,
+        category_id VARCHAR(20) NOT NULL,
+        entity_id BIGINT(20) NULL,
+        field_n TINYINT(4) NOT NULL DEFAULT 0
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+      CREATE INDEX unm_search_idx_token_uid
+        ON ${prefix}search (token_id);
+      CREATE INDEX unm_search_idx_category_id
+        ON ${prefix}search (category_id);
+      CREATE INDEX unm_search_idx_entity_id
+        ON ${prefix}search (entity_id);
+      CREATE INDEX unm_search_idx_field_n
+        ON ${prefix}search (field_n);
+      ALTER TABLE ${prefix}search
+        ADD CONSTRAINT unm_search_fk_unm_searchtokens
+        FOREIGN KEY (token_id) REFERENCES ${prefix}searchtokens (id);
+      ALTER TABLE ${prefix}search
+        ADD CONSTRAINT unm_search_fk_unm_categories
+        FOREIGN KEY (category_id) REFERENCES ${prefix}categories (id);
+    mysql: |
+      CREATE TABLE ${prefix}search (
+        token_id BIGINT(20) NULL,
+        category_id VARCHAR(20) NOT NULL,
+        entity_id BIGINT(20) NULL,
+        field_n TINYINT(4) NOT NULL DEFAULT 0,
+        KEY unm_search_idx_token_uid (token_id),
+        KEY unm_search_idx_category_id (category_id),
+        KEY unm_search_idx_entity_id (entity_id),
+        KEY unm_search_idx_field_n (field_n),
+        FOREIGN KEY (token_id) REFERENCES ${prefix}searchtokens (id)
+          ON DELETE RESTRICT ON UPDATE RESTRICT,
+        FOREIGN KEY (category_id) REFERENCES ${prefix}categories (id)
+          ON DELETE RESTRICT ON UPDATE RESTRICT
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
         
   createCategory:
     mysql.h2:
@@ -215,6 +274,14 @@ bundle:
       DELETE FROM ${prefix}revfiles
         WHERE category_id = ?;
 
+  clearSearchTokens:
+    mysql.h2:
+      DELETE FROM ${prefix}searchtokens;
+
+  clearSearch:
+    mysql.h2:
+      DELETE FROM ${prefix}search;
+  
   getCategoryPath:
     mysql.h2:
       SELECT absolute_path FROM ${prefix}categories
@@ -282,11 +349,3 @@ bundle:
       INSERT INTO ${prefix}entities_pois
         (unm_active_revfile_id, unm_status, uid)
         VALUES (?, 1, ?);
-        
-  createComment:
-    mysql.h2:
-      INSERT INTO ${prefix}entities_comments
-        (unm_active_revfile_id, unm_status, uid,
-          initial_posted_at, active_posted_at, poi_uid)
-        VALUES (?, 1, ?, ?, ?, ?);
-

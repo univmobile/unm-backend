@@ -26,6 +26,8 @@ import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.CommentThread;
+import fr.univmobile.backend.core.SearchEntry;
+import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.SequenceTimeoutException;
 import fr.univmobile.commons.tx.TransactionException;
@@ -42,6 +44,8 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 
 		this.comments = checkNotNull(comments, "comments");
 
+		searchManager = new SearchManagerImpl(dbType, cxn);
+
 		tx = TransactionManager.getInstance();
 
 		this.maxCommentUid[0] = //
@@ -56,11 +60,15 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 
 		this.comments = checkNotNull(comments, "comments");
 
+		searchManager = new SearchManagerImpl(dbType, ds);
+
 		tx = TransactionManager.getInstance();
 
 		this.maxCommentUid[0] = //
 		calcMaxUid(comments.getAllByInt("uid").keySet());
 	}
+
+	private final SearchManager searchManager;
 
 	private static int calcMaxUid(final Iterable<Integer> uids) {
 
@@ -111,7 +119,7 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 	@Override
 	public void addToCommentThreadByPoiId(final int poiId,
 			final CommentBuilder comment) throws TransactionException,
-			SQLException {
+			SQLException, IOException {
 
 		checkNotNull(comment, "comment");
 
@@ -144,8 +152,16 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 				"comments", path, comment.getId(), new DateTime(),
 				STATUS_ACTIVE);
 
-		executeUpdate("createComment", revfileId, uid, comment.getPostedAt(),
-				comment.getPostedAt(), poiId);
+		final int entityId = executeUpdateGetAutoIncrement("createpkComment",
+				revfileId, uid, comment.getPostedAt(), comment.getPostedAt(),
+				poiId);
+
+		final SearchEntry searchEntry = new SearchEntry("comments", entityId);
+
+		searchEntry.addField("postedBy", comment.getPostedBy());
+		searchEntry.addField("message", comment.getMessage());
+
+		searchManager.inject(searchEntry);
 
 		lock.commit();
 	}
@@ -311,10 +327,10 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 
 			return uid;
 		}
-		
+
 		@Override
 		public String getEntryRefId() {
-			
+
 			return Integer.toString(uid);
 		}
 	}

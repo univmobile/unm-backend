@@ -90,8 +90,8 @@ En itération 3, on utilise une base de données.
 La table **unm_categories** établit un lien vers les répertoires de fichiers XML, avec
 les colonnes suivantes :
 
-   * **id** : ENUM ou VARCHAR(20), NOT NULL, UNIQUE : la catégorie de l’entité métier. Exemples : "users", "pois"…
-   * **absolute_path** : VARCHAR(255), NOT NULL, UNIQUE : le chemin local du répertoire de la catégorie sur le système de fichiers. Exemple : "/var/univmobile/data/users/"
+   * **id** : ENUM ou VARCHAR(20) NOT NULL, UNIQUE : la catégorie de l’entité métier. Exemples : "users", "pois"…
+   * **absolute_path** : VARCHAR(255) NOT NULL, UNIQUE : le chemin local du répertoire de la catégorie sur le système de fichiers. Exemple : "/var/univmobile/data/users/"
    * **locked_since** : TIMESTAMP NULL : renseigné si un verrou logique est posé sur la catégorie, par exemple si elle est en cours d’indexation.
        * Note : deux indexations ne peuvent pas avoir lieu en même temps.
 
@@ -108,7 +108,7 @@ est référencé dans une table **unm_revfiles**, dont voici les champs :
     aucune obligation à ce qu’un fichier
     d’une version d’une entité métier donnée ait un identifiant numérique
     inférieur à celui du fichier d’une version ultérieure de la même entité.
-  * **category_id** ENUM ou VARCHAR(20), NOT NULL, FOREIGN KEY(unm_categories.id) : la catégorie de l’entité métier.
+  * **category_id** ENUM ou VARCHAR(20) NOT NULL, FOREIGN KEY(unm_categories.id) : la catégorie de l’entité métier.
     Exemples : "users", "pois"…
   * **path** VARCHAR(200) NOT NULL, INDEX : le chemin, unique pour la
       catégorie, du fichier XML local
@@ -208,5 +208,38 @@ TODO : comment_threads
 
 ### Indexation textuelle
 
-TODO : indexation textuelle
+En attendant Lucene,
+on indexe les contenus textuels de certaines entités : commentaires, POIs, et users. On stocke les tokens (des mots, qui peuvent être accentués) dans la table **unm_searchtokens** :
 
+  * **id** BIGINT, PRIMARY KEY : identifiant interne unique du token, 
+    a priori servi
+    par une séquence. Exemples : 9001, 9002, 9003…
+  * **token** VARCHAR(40) NOT NULL, UNIQUE : le token, en Unicode. Il peut contenir des minuscules et des majuscules, des lettres accentuées, etc. Exemples : "Le", "très", "Haut-Parleur", "Haut", "Parleur"…
+  * **norm_token** VARCHAR(40) NOT NULL, INDEX : le token, normalisé, c’est-à-dire en minuscules uniquement. Exemples : "le", "très", "haut-parleur", "haut", "parleur"…
+
+Et dans la table **unm_search** :
+
+  * **token_id** BIGINT NOT NULL, FOREIGN KEY(unm_searchtokens.id) : l’identifiant du token pour la recherche. Exemples : 9001, 9002, 9003…
+  * **category_id** BIGINT NOT NULL, FOREIGN KEY(unm_categories.id) : la catégorie de l’entité métier.
+    Exemples : "users", "pois"…
+  * **entity_id** BIGINT NOT NULL, INDEX : l’identifiant interne de l’entité métier correspondante, dans la table « unm_entities_xxx » où « xxx » est la catégorie de l’entité métier. Exemple : 1328
+  * **field_n** TINYINT NOT NULL, INDEX : le numéro interne du champ de l’entité métier correspondante. Exemples :
+    * commentaires :
+      * 0 — (other)
+      * 1 — comment.postedBy
+      * 2 — comment.message
+    * POIs :
+      * 0 — (other)
+      * 1 — poi.name
+      * 2 — poi.description
+      * 3 — poi.address
+      * 4 — poi.floor
+      * 5 — poi.openingHours
+      * 6 — poi.itinerary
+    * users :
+      * 0 — (other)
+      * 1 — user.uid
+      * 2 — user.displayName
+      * 3 — user.email
+      * 4 — user.displayName
+  

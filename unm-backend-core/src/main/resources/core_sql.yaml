@@ -29,10 +29,24 @@ bundle:
         (category_id, path, atom_id, locked_since, status)
         VALUES (?, ?, ?, ?, ?);
         
-  createComment:
+  createpkComment:
     mysql.h2:
       INSERT INTO ${prefix}entities_comments
         (unm_active_revfile_id, unm_status, uid,
           initial_posted_at, active_posted_at, poi_uid)
         VALUES (?, 1, ?, ?, ?, ?);
         
+  createpkSearchToken:
+    mysql.h2:
+      INSERT INTO ${prefix}searchtokens
+        (token, norm_token) VALUES (?, ?);
+        
+  getSearchTokenId:
+    mysql.h2:
+      SELECT id FROM ${prefix}searchtokens
+        WHERE token = ?;
+        
+  addSearchToken:
+    mysql.h2:
+      INSERT INTO ${prefix}search
+        (token_id, category_id, entity_id, field_n) VALUES (?, ?, ?, ?);

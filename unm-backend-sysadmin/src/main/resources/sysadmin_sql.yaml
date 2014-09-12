@@ -303,6 +303,8 @@ bundle:
   dropAllTables:
     mysql.h2:
       DROP TABLE IF EXISTS
+        ${prefix}search,
+        ${prefix}searchtokens,
         ${prefix}entities_comments,
         ${prefix}entities_pois,  
         ${prefix}entities_regions,

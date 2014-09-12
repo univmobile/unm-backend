@@ -40,6 +40,9 @@ interface SqlBundle {
 	
 	interface SqlQueries {
 
+		@XPath(value="parent::*", function="name()")
+		String[] getQueryIds();
+		
 		/**
 		 * For instance with dbType = \"mysql\"
 		 * and queryId = \"createTable_categories\",
@@ -51,4 +54,6 @@ interface SqlBundle {
 	
 	@XPath("*[name() = $arg0]/@*[contains(concat(name(), '.'), concat($arg1, '.'))]")
 	String getQuery(String queryId, String dbType);
+	
+	boolean isNullQuery(String queryId, String dbType);
 }

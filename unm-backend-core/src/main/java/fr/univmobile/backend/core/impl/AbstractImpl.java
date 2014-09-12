@@ -24,10 +24,10 @@ import fr.univmobile.commons.datasource.Entry;
 abstract class AbstractImpl extends DbEnabled {
 
 	protected AbstractImpl(final ConnectionType dbType, final Connection cxn,
-			final String resourceName) throws IOException,
+			final String... resourceNames) throws IOException,
 			ParserConfigurationException {
 
-		super(dbType, cxn, resourceName);
+		super(dbType, cxn, resourceNames);
 
 		final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
 				.newInstance();

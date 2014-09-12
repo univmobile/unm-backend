@@ -32,7 +32,8 @@ abstract class AbstractTool extends DbEnabled {
 	protected AbstractTool(final ConnectionType dbType, final Connection cxn)
 			throws IOException, ParserConfigurationException {
 
-		super(dbType, cxn, "sysadmin_sql.yaml");
+		super(dbType, cxn, //
+				"sysadmin_sql.yaml", "indexation_sql.yaml", "core_sql.yaml");
 
 		final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
 				.newInstance();

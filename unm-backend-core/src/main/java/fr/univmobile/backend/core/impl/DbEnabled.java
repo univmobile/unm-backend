@@ -16,6 +16,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.HashMap;
 import java.util.Map;
@@ -41,7 +42,7 @@ public abstract class DbEnabled {
 	 *            that holds all the SQL queries we’ll be using.
 	 */
 	protected DbEnabled(final ConnectionType dbType, final Connection cxn,
-			final String resourceName) throws IOException {
+			final String... resourceNames) throws IOException {
 
 		this.dbType = checkNotNull(dbType, "dbType");
 
@@ -50,18 +51,36 @@ public abstract class DbEnabled {
 		this.alwaysOpenedConnection = newAlwaysOpenedConnection(cxn);
 		this.ds = null;
 
-		sqlBundle = loadSqlBundle(dbType, resourceName);
+		sqlBundle = loadSqlBundle(dbType, resourceNames);
 	}
 
 	protected DbEnabled(final ConnectionType dbType, final DataSource ds,
-			final String resourceName) throws IOException {
+			final String... resourceNames) throws IOException {
 
 		this.dbType = checkNotNull(dbType, "dbType");
 
 		this.ds = checkNotNull(ds, "dataSource");
 		this.alwaysOpenedConnection = null;
 
-		sqlBundle = loadSqlBundle(dbType, resourceName);
+		sqlBundle = loadSqlBundle(dbType, resourceNames);
+	}
+
+	private static SqlBundle loadSqlBundle(final ConnectionType dbType,
+			final String... resourceNames) throws IOException {
+
+		if (resourceNames.length == 1) {
+
+			return loadSqlBundle(dbType, resourceNames[0]);
+		}
+
+		final SqlBundleComposite sqlBundle = new SqlBundleComposite();
+
+		for (final String resourceName : resourceNames) {
+
+			sqlBundle.add(loadSqlBundle(dbType, resourceName));
+		}
+
+		return sqlBundle;
 	}
 
 	private static SqlBundle loadSqlBundle(final ConnectionType dbType,
@@ -197,7 +216,9 @@ public abstract class DbEnabled {
 
 		final Connection cxn = getConnection();
 		try {
-			final PreparedStatement pstmt = cxn.prepareStatement(sql);
+			final PreparedStatement pstmt = queryId.startsWith("createpk") ? cxn
+					.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)
+					: cxn.prepareStatement(sql);
 			try {
 
 				setSqlParams(pstmt, params);

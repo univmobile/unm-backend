@@ -226,7 +226,8 @@ public class CommentTest {
 		final int POI_UID = 415;
 
 		assertEquals(3, getDbRowCount("unm_entities_comments"));
-		assertEquals(3, getDbRowCount("unm_search"));
+		assertEquals(138, getDbRowCount("unm_searchtokens"));
+		assertEquals(178, getDbRowCount("unm_search"));
 		assertEquals(3, comments.getAllBy(Integer.class, "uid").size());
 		assertEquals(2, commentManager.sizeOfThreads());
 		assertEquals(3, getFileCount(dataDir_comments));
@@ -243,6 +244,8 @@ public class CommentTest {
 		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
 
 		assertEquals(4, getDbRowCount("unm_entities_comments"));
+		assertEquals(141, getDbRowCount("unm_searchtokens"));
+		assertEquals(181, getDbRowCount("unm_search"));
 		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
 		assertEquals(2, commentManager.sizeOfThreads());
 		assertEquals(4, getFileCount(dataDir_comments));

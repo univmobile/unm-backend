@@ -1,6 +1,8 @@
 package fr.univmobile.backend.search;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static fr.univmobile.backend.search.Matchers.normalize;
+import static fr.univmobile.backend.search.Matchers.tokenize;
 
 import java.util.Locale;
 
@@ -26,13 +28,8 @@ class Matcher {
 
 		for (int i = 0; i < items.length; ++i) {
 
-			items[i] = normalize(items[i]);
+			items[i] = normalize(locale, items[i]);
 		}
-	}
-
-	private String normalize(final String text) {
-
-		return text.toLowerCase(locale);
 	}
 
 	private final String[] items;
@@ -63,8 +60,7 @@ class Matcher {
 
 		for (int i = 0; i < strings.length; ++i) {
 
-			tokens[i] = normalize(strings[i]) // .split("\\b");
-					.split("[^\\p{L}0-9_]+");
+			tokens[i] = tokenize(normalize(locale, strings[i]));
 		}
 
 		items: for (final String item : items) {

@@ -118,6 +118,12 @@ public interface Poi extends Entry<Poi> {
 		@XPath("atom:floor")
 		String getFloor();
 
+		@XPath("atom:openingHours")
+		String getOpeningHours();
+
+		@XPath("atom:itinerary")
+		String getItinerary();
+
 		@XPath("@zipCode")
 		String getZipCode();
 

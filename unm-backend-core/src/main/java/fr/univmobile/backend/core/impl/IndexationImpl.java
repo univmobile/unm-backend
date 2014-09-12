@@ -30,6 +30,8 @@ import fr.univmobile.backend.core.Indexation;
 import fr.univmobile.backend.core.IndexationObserver;
 import fr.univmobile.backend.core.Poi;
 import fr.univmobile.backend.core.Region;
+import fr.univmobile.backend.core.SearchEntry;
+import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.commons.datasource.Entry;
 
@@ -56,7 +58,7 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 			final ConnectionType dbType, final Connection cxn)
 			throws IOException, ParserConfigurationException {
 
-		super(dbType, cxn, "indexation_sql.yaml");
+		super(dbType, cxn, "indexation_sql.yaml", "core_sql.yaml");
 
 		checkNotNull(usersDir, "usersDir");
 		checkNotNull(regionsDir, "regionsDir");
@@ -67,7 +69,11 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 		categoryDirs.put("regions", regionsDir);
 		categoryDirs.put("pois", poisDir);
 		categoryDirs.put("comments", commentsDir);
+
+		searchManager = new SearchManagerImpl(dbType, cxn);
 	}
+
+	private final SearchManager searchManager;
 
 	private final Map<String, File> categoryDirs = new HashMap<String, File>();
 
@@ -106,6 +112,14 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 			createCategoryIfNeeded(category);
 		}
 
+		if (!doesTableExist(tablePrefix + "searchtokens")) {
+			executeUpdate("createTable_searchtokens");
+		}
+
+		if (!doesTableExist(tablePrefix + "search")) {
+			executeUpdate("createTable_search");
+		}
+
 		// 1. LOCK ALL
 
 		for (final String category : CATEGORIES) {
@@ -123,6 +137,9 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 
 			clearCategory(category);
 		}
+
+		executeUpdate("clearSearch");
+		executeUpdate("clearSearchTokens");
 
 		// 3. INSERT REVFILES
 
@@ -188,17 +205,38 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 		loadEntities("pois", Poi.class, new EntityLoader<Poi>() {
 			@Override
 			public void loadEntity(final Poi poi, final int activeRevfileId)
-					throws SQLException {
+					throws SQLException, IOException {
 
 				executeUpdate("createPoi", activeRevfileId, poi.getUid());
 
+				final int entityId = poi.getUid();
+
+				final SearchEntry searchEntry = new SearchEntry("pois",
+						entityId);
+
+				searchEntry.addField("name", poi.getName());
+				searchEntry.addField("description", poi.getDescription());
+
+				final Poi.Address[] addresses = poi.getAddresses();
+
+				if (addresses.length != 0) {
+					final Poi.Address address = addresses[0];
+
+					searchEntry.addField("address", address.getFullAddress());
+					searchEntry.addField("floor", address.getFloor());
+					searchEntry.addField("openingHours",
+							address.getOpeningHours());
+					searchEntry.addField("itinerary", address.getItinerary());
+				}
+
+				searchManager.inject(searchEntry);
 			}
 		});
 
 		loadEntities("comments", Comment.class, new EntityLoader<Comment>() {
 			@Override
 			public void loadEntity(final Comment comment,
-					final int activeRevfileId) throws SQLException {
+					final int activeRevfileId) throws SQLException, IOException {
 
 				final DateTime initialPostedAt = comment.getPostedAt();
 				final DateTime activePostedAt = comment.getPostedAt();
@@ -213,10 +251,18 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 							+ contextType);
 				}
 
-				executeUpdate("createComment", activeRevfileId,
-						comment.getUid(), //
+				final int entityId = executeUpdateGetAutoIncrement( //
+						"createpkComment", activeRevfileId, comment.getUid(), //
 						initialPostedAt, activePostedAt, //
 						poiUid);
+
+				final SearchEntry searchEntry = new SearchEntry("comments",
+						entityId);
+
+				searchEntry.addField("postedBy", comment.getPostedBy());
+				searchEntry.addField("message", comment.getMessage());
+
+				searchManager.inject(searchEntry);
 			}
 		});
 
@@ -524,6 +570,7 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 
 	private interface EntityLoader<U> {
 
-		void loadEntity(U entity, int activeRevfileId) throws SQLException;
+		void loadEntity(U entity, int activeRevfileId) throws SQLException,
+				IOException;
 	}
 }
