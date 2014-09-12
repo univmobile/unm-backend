@@ -18,11 +18,11 @@ public class CommentTest {
 	public void setUp() throws Exception {
 
 		final File dbFile = new File("target/CommentTest.h2.db");
-		
+
 		FileUtils.deleteQuietly(dbFile);
 
 		assertFalse(dbFile.exists());
-		
+
 		final String url = "jdbc:h2:./target/CommentTest";
 
 		cxn = DriverManager.getConnection(url);
@@ -50,9 +50,9 @@ public class CommentTest {
 	public void testGetComments() throws Exception {
 
 		final AbstractTool commentTool = new CommentTool(30, H2, cxn);
-		
+
 		final Result result = commentTool.run();
-		
-		assertEquals(3,result.getRowCount());
+
+		assertEquals(3, result.getRowCount());
 	}
 }
