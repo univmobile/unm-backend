@@ -311,5 +311,11 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 
 			return uid;
 		}
+		
+		@Override
+		public String getEntryRefId() {
+			
+			return Integer.toString(uid);
+		}
 	}
 }

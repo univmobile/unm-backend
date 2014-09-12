@@ -7,13 +7,20 @@ import org.joda.time.DateTime;
 
 import fr.univmobile.commons.datasource.Entry;
 
-public interface Comment extends Entry<Comment> {
+public interface Comment extends Entry<Comment>, EntryRef {
 
 	/**
 	 * e.g. 1
 	 */
 	@XPath("atom:content/@uid")
 	int getUid();
+
+	/**
+	 * equals: getUid()
+	 */
+	@XPath("atom:content/@uid")
+	@Override
+	String getEntryRefId();
 
 	/**
 	 * e.g. "Dominique"
@@ -23,25 +30,25 @@ public interface Comment extends Entry<Comment> {
 
 	@XPath("atom:content/@postedAt")
 	DateTime getPostedAt();
-	
+
 	@XPath("atom:content/atom:context")
 	Context[] getContexts();
-	
+
 	@XPath("atom:content/atom:context[1]")
 	Context getMainContext();
-	
+
 	@XPath("atom:content/atom:message")
 	String getMessage();
-	
+
 	interface Context {
-		
+
 		@XPath("@type")
 		ContextType getType();
-		
+
 		@XPath("@uid")
 		int getUid();
 	}
-	
+
 	enum ContextType {
 
 		LOCAL_POI("local:poi");
@@ -59,4 +66,8 @@ public interface Comment extends Entry<Comment> {
 			return name;
 		}
 	}
+
+	@Override
+	@XPath("concat('{comment:', atom:content/@uid, '}')")
+	String toString();
 }
