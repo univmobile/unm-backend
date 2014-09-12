@@ -8,4 +8,6 @@ import fr.univmobile.backend.search.SearchEngine;
 public interface SearchManager extends SearchEngine {
 
 	void inject(SearchEntry entry) throws IOException, SQLException;
+
+	void flushCache() throws IOException, SQLException;
 }

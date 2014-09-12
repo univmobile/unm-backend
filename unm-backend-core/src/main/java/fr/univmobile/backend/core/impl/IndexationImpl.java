@@ -133,6 +133,8 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 
 		// 2. CLEAR ALL
 
+		searchManager.flushCache();
+		
 		final String[] reverseCategories = ArrayUtils.clone(CATEGORIES);
 
 		ArrayUtils.reverse(reverseCategories);

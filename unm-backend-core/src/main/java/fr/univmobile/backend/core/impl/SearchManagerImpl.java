@@ -62,6 +62,14 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 	private final DataSource ds;
 
 	@Override
+	public void flushCache() throws IOException, SQLException {
+		
+		searchTokensExist.invalidateAll();
+		
+		searchTokenIds.invalidateAll();
+	}
+
+	@Override
 	public void inject(final SearchEntry entry) throws IOException,
 			SQLException {
 
