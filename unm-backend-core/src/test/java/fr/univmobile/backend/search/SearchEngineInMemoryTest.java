@@ -89,6 +89,32 @@ public class SearchEngineInMemoryTest {
 	}
 
 	@Test
+	public void testSearch_oneCommentMatches_Lowercase() throws Exception {
+
+		// Dominique
+		// Ceci est un troisième commentaire.
+		final SearchContext context = new SearchContextInMemory(
+				comments.getByUid(3));
+
+		assertEquals(1, engine.search(context, "ceci").length);
+		assertEquals(1, engine.search(context, "Ceci").length);
+		assertEquals(1, engine.search(context, "CECI").length);
+	}
+
+	@Test
+	public void testSearch_oneCommentMatches_not() throws Exception {
+
+		// Dominique
+		// Ceci est un troisième commentaire.
+		final SearchContext context = new SearchContextInMemory(
+				comments.getByUid(3));
+
+		final EntryRef[] result = engine.search(context, "orange");
+
+		assertEquals(0, result.length);
+	}
+
+	@Test
 	public void testSearch_matches() throws Exception {
 
 		assertTrue(engine.match( "application", comments.getByUid(1)));

@@ -2,6 +2,8 @@ package fr.univmobile.backend.search;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import java.util.Locale;
+
 import org.apache.commons.lang3.NotImplementedException;
 
 import fr.univmobile.backend.core.Comment;
@@ -19,6 +21,18 @@ class Matcher {
 		}
 
 		items = ((SearchQueryText) query).getTextItems();
+
+		locale = Locale.FRENCH;
+
+		for (int i = 0; i < items.length; ++i) {
+
+			items[i] = normalize(items[i]);
+		}
+	}
+
+	private String normalize(final String text) {
+
+		return text.toLowerCase(locale);
 	}
 
 	private final String[] items;
@@ -41,13 +55,15 @@ class Matcher {
 				comment.getMessage());
 	}
 
+	private final Locale locale;
+
 	private boolean match(final String... strings) {
 
 		final String[][] tokens = new String[strings.length][];
 
 		for (int i = 0; i < strings.length; ++i) {
 
-			tokens[i] = strings[i] // .split("\\b");
+			tokens[i] = normalize(strings[i]) // .split("\\b");
 					.split("[^\\p{L}0-9_]+");
 		}
 

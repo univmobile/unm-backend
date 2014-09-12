@@ -10,6 +10,9 @@ import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 
 import org.apache.commons.io.FileUtils;
 import org.joda.time.DateTime;
@@ -106,7 +109,7 @@ public class CommentTest {
 		}
 	}
 
-	//private final TransactionManager tx = TransactionManager.getInstance();
+	// private final TransactionManager tx = TransactionManager.getInstance();
 
 	private static int getFileCount(final File dir) throws IOException {
 
@@ -128,8 +131,7 @@ public class CommentTest {
 		final int POI_UID = 1; // 3792;
 
 		assertEquals(3, comments.getAllBy(Integer.class, "uid").size());
-		assertEquals(2,
-				commentManager.sizeOfThreads());
+		assertEquals(2, commentManager.sizeOfThreads());
 		assertEquals(3, getFileCount(dataDir_comments));
 
 		final CommentThread oldThread = commentManager.getByPoiId(POI_UID);
@@ -182,6 +184,65 @@ public class CommentTest {
 
 		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
 
+		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
+		assertEquals(2, commentManager.sizeOfThreads());
+		assertEquals(4, getFileCount(dataDir_comments));
+
+		comments.reload();
+
+		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
+		assertEquals(2, commentManager.sizeOfThreads());
+		assertEquals(3, commentManager.sizeOfCommentsByPoiId(POI_UID));
+	}
+
+	private int getDbRowCount(final String tablename) throws SQLException {
+
+		return executeDbQueryInt("SELECT COUNT(1) FROM " + tablename);
+	}
+
+	private int executeDbQueryInt(final String query) throws SQLException {
+
+		final Statement stmt = cxn.createStatement();
+		try {
+			final ResultSet rs = stmt.executeQuery(query);
+			try {
+
+				rs.next();
+
+				return rs.getInt(1);
+
+			} finally {
+				rs.close();
+			}
+		} finally {
+			stmt.close();
+		}
+	}
+
+	@Test
+	public void testCommentManager_createComment_existing_thread_415_db()
+			throws Exception {
+
+		final int POI_UID = 415;
+
+		assertEquals(3, getDbRowCount("unm_entities_comments"));
+		assertEquals(3, getDbRowCount("unm_search"));
+		assertEquals(3, comments.getAllBy(Integer.class, "uid").size());
+		assertEquals(2, commentManager.sizeOfThreads());
+		assertEquals(3, getFileCount(dataDir_comments));
+		assertEquals(2, commentManager.sizeOfCommentsByPoiId(POI_UID));
+
+		final CommentBuilder comment = comments.create();
+
+		final DateTime now = new DateTime();
+
+		comment.setMessage("Hello World!");
+		comment.setPostedAt(now);
+		comment.setPostedBy("Toto");
+
+		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
+
+		assertEquals(4, getDbRowCount("unm_entities_comments"));
 		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
 		assertEquals(2, commentManager.sizeOfThreads());
 		assertEquals(4, getFileCount(dataDir_comments));
