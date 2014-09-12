@@ -265,31 +265,6 @@ bundle:
       SELECT id FROM ${prefix}revfiles
         WHERE parent_id = ?;
         
-  createUser:
-    mysql.h2:
-      INSERT INTO ${prefix}entities_users
-        (unm_active_revfile_id, unm_status, uid, remoteUser)
-        VALUES (?, 1, ?, ?);
-        
-  createRegion:
-    mysql.h2:
-      INSERT INTO ${prefix}entities_regions
-        (unm_active_revfile_id, unm_status, uid)
-        VALUES (?, 1, ?);
-        
-  createPoi:
-    mysql.h2:
-      INSERT INTO ${prefix}entities_pois
-        (unm_active_revfile_id, unm_status, uid)
-        VALUES (?, 1, ?);
-        
-  createComment:
-    mysql.h2:
-      INSERT INTO ${prefix}entities_comments
-        (unm_active_revfile_id, unm_status, uid,
-          initial_posted_at, active_posted_at, poi_uid)
-        VALUES (?, 1, ?, ?, ?, ?);
-        
   getLockedCategories:
     mysql.h2:
       SELECT id, absolute_path, locked_since FROM ${prefix}categories
