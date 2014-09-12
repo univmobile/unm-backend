@@ -186,8 +186,14 @@ public abstract class DbEnabled {
 	 * 
 	 * @return the new SQL query.
 	 */
-	static final String setIntArray(final String sql, final int index,
+	protected final String setIntArray(final String sql, final int index,
 			final int... array) {
+
+		return setIntArray(dbType, sql, index, array);
+	}
+
+	static String setIntArray(final ConnectionType dbType, final String sql,
+			final int index, final int... array) {
 
 		int offset = 0;
 
@@ -209,7 +215,23 @@ public abstract class DbEnabled {
 
 		final StringBuilder sb = new StringBuilder(sql.substring(0, offset));
 
-		sb.append(join(array, ','));
+		if (array.length == 0) {
+
+			switch (dbType) {
+			case H2:
+				sb.append("SELECT TOP 0 0"); // Return an empty set
+				break;
+			case MYSQL:
+				sb.append("SELECT 1 FROM DUAL WHERE FALSE");
+				break;
+			default:
+				throw new IllegalStateException("Unknown dbType: " + dbType);
+			}
+			
+		} else {
+
+			sb.append(join(array, ','));
+		}
 
 		return sb.append(sql.substring(offset + 1)).toString();
 	}

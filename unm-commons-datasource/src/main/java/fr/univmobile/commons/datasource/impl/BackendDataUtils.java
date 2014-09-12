@@ -8,12 +8,12 @@ import java.lang.reflect.InvocationTargetException;
 
 import javax.annotation.Nullable;
 
-import org.apache.commons.lang3.NotImplementedException;
+import com.avcompris.lang.NotImplementedException;
 
-import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
 import fr.univmobile.commons.datasource.PrimaryKey;
+import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Support;
 
 abstract class BackendDataUtils {

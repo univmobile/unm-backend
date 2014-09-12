@@ -207,6 +207,12 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 	}
 
 	@Override
+	public Comment getByUid(final int uid) {
+
+		return comments.getByUid(uid);
+	}
+
+	@Override
 	public <K> Map<K, CommentThread> getAllBy(final Class<K> keyClass,
 			final String attributeName) {
 

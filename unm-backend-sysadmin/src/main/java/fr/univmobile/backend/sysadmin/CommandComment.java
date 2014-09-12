@@ -32,7 +32,7 @@ class CommandComment extends AbstractDbCommand {
 		try {
 
 			final AbstractTool commentTool = new CommentTool(getLimit(),
-					dbType, cxn);
+					getQuery(), dbType, cxn);
 
 			commentTool.run();
 
@@ -47,6 +47,14 @@ class CommandComment extends AbstractDbCommand {
 	public int getLimit() {
 
 		return limit;
+	}
+
+	@Parameter(names = { "-q", "-query", "-search" }, description = "Search among comments")
+	private String query;
+
+	public String getQuery() {
+
+		return query;
 	}
 
 	@Parameter(names = { "-a", "-add" }, description = "Add a new comment", arity = 0)

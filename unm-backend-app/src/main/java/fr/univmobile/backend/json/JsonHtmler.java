@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.apache.commons.lang3.NotImplementedException;
+import com.avcompris.lang.NotImplementedException;
 
 /**
  * A class that transform JSON streams into HTML fragments, with indentation and

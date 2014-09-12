@@ -335,4 +335,13 @@ public class CommentTest {
 		assertEquals(1, commentRefsB.length);
 		assertEquals(1, commentRefsB[0].getUid());
 	}
+
+	@Test
+	public void testSearchComment_0() throws Exception {
+
+		final CommentRef[] commentRefs = searchHelper.search(CommentRef.class,
+				"inexistent");
+
+		assertEquals(0, commentRefs.length);
+	}
 }

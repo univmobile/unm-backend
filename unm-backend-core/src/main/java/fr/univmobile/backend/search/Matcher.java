@@ -6,7 +6,7 @@ import static fr.univmobile.backend.search.Matchers.tokenize;
 
 import java.util.Locale;
 
-import org.apache.commons.lang3.NotImplementedException;
+import com.avcompris.lang.NotImplementedException;
 
 import fr.univmobile.backend.core.Comment;
 import fr.univmobile.commons.datasource.Entry;

@@ -49,7 +49,7 @@ public class CommentTest {
 	@Test
 	public void testGetComments() throws Exception {
 
-		final AbstractTool commentTool = new CommentTool(30, H2, cxn);
+		final AbstractTool commentTool = new CommentTool(30, null, H2, cxn);
 
 		final Result result = commentTool.run();
 

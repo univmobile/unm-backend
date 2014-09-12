@@ -19,7 +19,7 @@ public interface CommentManager extends DataSource<CommentThread> {
 
 	int sizeOfCommentsByPoiId(int poiId) throws SQLException;
 
-	// CommentThread getByUid(int uid);
+	Comment getByUid(int uid);
 
 	// boolean isNullByUid(int uid);
 
