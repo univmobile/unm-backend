@@ -8,9 +8,68 @@
 <meta http-equiv="Content-Language" content="en">
 <title>Administration d’UnivMobile</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
+<link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
+<script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
+<script type="text/javascript">
+
+	function initialize() {
+	
+		$('#ul-adminMenu-data').menu();
+		$('#ul-adminMenu-system').menu();
+		
+		$('#ul-adminMenu li.top').bind('mouseover', function() {
+			$(this).find('ul').css('visibility', 'visible');
+		}).bind('mouseout', function() {
+			$(this).find('ul').css('visibility', 'hidden');
+		});
+		
+		$('#ul-adminMenu-data-regions').bind('mouseout', function() {
+			$(this).css('visibility', 'hidden');
+		});
+	}
+	
+	$(document).ready(initialize);
+
+</script>
 </head>
 <body id="body-entered" class="entered">
 <div id="div-entered">
+<ul id="ul-adminMenu">
+	<li id="li-adminMenu-home" class="top">
+		<a id="link-adminMenu-home" class="top" href="${baseURL}/admin/">Accueil</a>
+	</li>
+	<li class="top">
+		<a id="link-adminMenu-data" class="top" href="${baseURL}/data/">Données<span
+			class="top ui-menu-icon ui-icon ui-icon-carat-1-s"></span></a>
+		<ul id="ul-adminMenu-data">
+		<li><a id="link-adminMenu-search" href="${baseURL}/data/search/">Recherche avancée</a><li>
+		<li><a id="link-adminMenu-pois" href="${baseURL}/data/pois/">Points of Interest (POIs)</a><li>
+		<li><a id="link-adminMenu-comments" href="${baseURL}/data/comments/">Commentaires</a><li>
+		<li><a id="link-adminMenu-regions" href="${baseURL}/data/regions/">Régions — universités</a>
+			<ul id="ul-adminMenu-data-regions">
+			<li><a id="link-adminMenu-regions-bretagne" href="${baseURL}/data/regions/bretagne/">Bretagne — universités</a></li>
+			<li><a id="link-adminMenu-regions-ile_de_france" href="${baseURL}/data/regions/ile_de_france/">Île de France — universités</a></li>
+			<li><a id="link-adminMenu-regions-unrpcl" href="${baseURL}/data/regions/unrpcl/">Limousin/Poitou-Charentes — universités</a></li>
+			</ul>
+		<li>
+		<li><a id="link-adminMenu-geocampus" href="${baseURL}/geocampus/">Géocampus</a><li>
+		<li><a id="link-adminMenu-news" href="${baseURL}/data/news/">Flux d’actualités des universités</a><li>
+		<li><a id="link-adminMenu-users" href="${baseURL}/data/users/">Utilisateurs</a><li>
+		</ul>
+	</li>
+	<li class="top">
+		<a id="link-adminMenu-system" class="top" href="${baseURL}/system/">Système<span
+			class="top ui-menu-icon ui-icon ui-icon-carat-1-s"></span></a>
+		<ul id="ul-adminMenu-system">
+		<li><a id="link-adminMenu-logqueue" href="${baseURL}/system/logqueue/">Historique des actions</a><li>
+		<li><a id="link-adminMenu-stats" href="${baseURL}/system/stats/">Statistiques</a><li>
+		<li><a id="link-adminMenu-monitoring" href="${baseURL}/system/monitoring/">Monitoring</a></li>
+		<li><a id="link-adminMenu-logs" href="${baseURL}/system/logs/">Logs techniques</a><li>
+		<li><a id="link-adminMenu-backups" href="${baseURL}/system/backups/">Sauvegardes (backups)</a><li>
+		</ul>
+	</li>
+</ul>
 <ul id="ul-adminUser">
 <li> Principal : ${user.uid}
 <c:if test="${user.uid != delegationUser.uid}">

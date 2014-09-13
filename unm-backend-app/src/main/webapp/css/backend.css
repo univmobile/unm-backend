@@ -53,12 +53,12 @@ body.entered div.body {
 	padding: 2px 0;
 	text-align: center;
 }
-#div-entered ul {
+#div-entered #ul-adminUser {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
-#div-entered li {
+#div-entered #ul-adminUser li {
 	display: inline-block;
 	margin: 0 2em 0 1em;
 }
@@ -521,4 +521,93 @@ div.body.results #button-export {
 #span-active-yes,
 #span-active-no {
 	padding: 0 0 0 8px;
+}
+
+#ul-adminMenu {
+	margin: 0; 
+	padding: 0; 
+	text-align: left;
+} 
+#ul-adminMenu li.top { 
+	list-style: none; 
+	float: left; 
+	xfont-family: Arial, Helvetica, sans-serif;
+	xfont-size: small;
+	font-size: 13px;
+	xmargin-top: -2px;
+	padding: 0;
+} 
+#div-entered #li-logout {
+	xpadding: 1px 8px;
+	xmargin-top: -2px;
+	xpadding: 0;
+	font-size: 13px;
+}
+#div-entered #li-logout a {
+	padding: 1px 8px; 
+	display: block;
+	font-size: 13px;
+}
+#ul-adminMenu a.top:link, 
+#ul-adminMenu a.top:visited {
+	display: block; 
+	xtext-decoration: underline; 
+	xbackground-color: #09F; 
+	padding: 1px 8px; 
+	margin: 0; 
+	xborder-right: 1px solid #fff; 
+	color: #fff;
+} 
+#ul-adminMenu a.top:hover,
+#ul-adminMenu ul li:hover,
+#div-entered #li-logout:hover { 
+	background-color: #0CF; 
+} 
+#div-entered #ul-adminMenu li ul {
+	color: #000;
+	visibility: hidden;
+	position: absolute;
+	border: 1px solid #9bc9e1;
+	margin: 2px 0 0 1px;
+} 
+#ul-adminMenu ul li:hover {
+	margin: 0;
+	border: none;
+}
+#ul-adminMenu .ui-state-hover,
+#ul-adminMenu .ui-widget-content .ui-state-hover,
+#ul-adminMenu .ui-widget-header .ui-state-hover,
+#ul-adminMenu .ui-state-focus,
+#ul-adminMenu .ui-widget-content .ui-state-focus,
+#ul-adminMenu .ui-widget-header .ui-state-focus {
+	background-image: none !important;
+}
+#ul-adminMenu .ui-menu-item {
+	xbackground-color: #9bc9e1;
+	background-color: #79b8d9;;
+}
+#ul-adminMenu .ui-menu-item a:link,
+#ul-adminMenu .ui-menu-item a:visited {
+	xbackground-color: #ff0;
+	xfont-size: small;
+	font-size: 12px;
+	color: #fff;
+	text-decoration: none;
+}
+#ul-adminMenu .ui-menu .ui-menu-divider {
+	border: 0;
+	margin: 0;
+}
+#ul-adminMenu ul ul li {
+	white-space: nowrap;
+}
+#ul-adminMenu #li-adminMenu-home {
+	margin-right: 10px;
+}
+#ul-adminMenu li.top a.top span.top {
+	display: inline-block;
+	position: relative;
+	top: 4px;
+	margin-top: -6px;
+	width: 16px;
 }

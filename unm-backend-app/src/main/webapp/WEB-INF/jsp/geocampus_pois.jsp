@@ -12,9 +12,9 @@
 <link type="text/css" rel="stylesheet" href="${baseURL}/js/jquery-ui-1.11.1.custom/jquery-ui.min.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/js/jquery-ui-1.11.1.custom/jquery-ui.structure.min.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/js/jquery-ui-1.11.1.custom/jquery-ui.theme.min.css">
-<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
+<link type="text/css" rel="stylesheet" href="http://code.jquery.com/ui/1.11.1/themes/smoothness/jquery-ui.css">
 -->
-<link rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
+<link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
 <style type="text/css">
 body {
 	xposition: relative;
@@ -655,7 +655,8 @@ body {
 		</c:if>
 	}
 	
-	google.maps.event.addDomListener(window, 'load', initialize);
+	//google.maps.event.addDomListener(window, 'load', initialize);
+	$(document).ready(initialize);
 	
 	$(window).resize(resizeHeights);
 	
