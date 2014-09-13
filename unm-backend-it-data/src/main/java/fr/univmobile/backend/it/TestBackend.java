@@ -17,6 +17,7 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -148,6 +149,22 @@ public abstract class TestBackend {
 		System.out.println("Indexation...");
 
 		final long start = System.currentTimeMillis();
+
+		final Statement stmt = cxn.createStatement();
+		try {
+			stmt.executeUpdate("DROP TABLE IF EXISTS" //
+					+ " unm_search," //
+					+ " unm_searchtokens," //
+					+ " unm_entities_comments," //
+					+ " unm_entities_pois," //
+					+ " unm_entities_regions," //
+					+ " unm_entities_users," //
+					+ " unm_revfiles," //
+					+ " unm_categories;" //
+			);
+		} finally {
+			stmt.close();
+		}
 
 		final Indexation indexation = new IndexationImpl(destDir,
 				new SearchManagerImpl(dbType, cxn), dbType, cxn);
