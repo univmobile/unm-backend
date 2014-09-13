@@ -203,7 +203,7 @@
 				<!--  
 				<defaultBrowser>*custom /usr/bin/chromium</defaultBrowser>
 				-->
-				<defaultBrowser>*firefox</defaultBrowser>
+				<defaultBrowser>*firefox3 /usr/lib/iceweasel/firefox-bin</defaultBrowser>
 			</properties>
 			<build>
 				<plugins>
