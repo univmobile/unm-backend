@@ -36,8 +36,6 @@ public class SimpleSeleniumTest {
 		final String contextRoot = "/"
 				+ substringAfter(substringAfter(baseURL, "://"), "/");
 
-		// "http://localhost:"
-		// + PropertiesUtils.getTestProperty("tomcat.port") + "/";
 		final String url = substringBefore(baseURL, contextRoot) + "/";
 
 		// "/tmp/unm-backend/dataDir"

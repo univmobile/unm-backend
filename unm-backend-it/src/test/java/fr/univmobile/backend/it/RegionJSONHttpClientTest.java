@@ -1,6 +1,8 @@
 package fr.univmobile.backend.it;
 
 import static fr.univmobile.backend.core.impl.ConnectionType.MYSQL;
+import static fr.univmobile.testutil.PropertiesUtils.getSettingsTestRefProperty;
+import static fr.univmobile.testutil.PropertiesUtils.getTestProperty;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 
@@ -18,7 +20,6 @@ import fr.univmobile.backend.client.RegionClientFromJSON;
 import fr.univmobile.backend.client.University;
 import fr.univmobile.backend.client.http.RegionJSONHttpClient;
 import fr.univmobile.backend.client.json.RegionJSONClient;
-import fr.univmobile.testutil.PropertiesUtils;
 
 public class RegionJSONHttpClientTest {
 
@@ -32,13 +33,13 @@ public class RegionJSONHttpClientTest {
 				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
 
 		final Connection cxn = DriverManager.getConnection(
-				PropertiesUtils.getTestProperty("mysql.url"),
-				PropertiesUtils.getTestProperty("mysql.username"),
-				PropertiesUtils.getSettingsTestRefProperty("mysql.password.ref"));
+				getTestProperty("mysql.url"), //
+				getTestProperty("mysql.username"), //
+				getSettingsTestRefProperty("mysql.password.ref"));
 		try {
 
-		TestBackend.setUpData("001", new File(dataDir), MYSQL, cxn);
-		
+			TestBackend.setUpData("001", new File(dataDir), MYSQL, cxn);
+
 		} finally {
 			cxn.close();
 		}
@@ -47,11 +48,7 @@ public class RegionJSONHttpClientTest {
 
 		// https://univmobile-dev.univ-paris1.fr/json/regions
 
-		final String url =
-		// "http://localhost:"
-		// + PropertiesUtils.getTestProperty("tomcat.port")
-		// + "/unm-backend
-		TestBackend.readBackendAppBaseURL(new File("target",
+		final String url = TestBackend.readBackendAppBaseURL(new File("target",
 				"unm-backend-app-noshib/WEB-INF/web.xml")) + "json/regions";
 
 		System.out.println("url: " + url);

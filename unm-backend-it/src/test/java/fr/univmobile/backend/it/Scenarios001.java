@@ -1,6 +1,8 @@
 package fr.univmobile.backend.it;
 
 import static fr.univmobile.backend.core.impl.ConnectionType.MYSQL;
+import static fr.univmobile.testutil.PropertiesUtils.getSettingsTestRefProperty;
+import static fr.univmobile.testutil.PropertiesUtils.getTestProperty;
 
 import java.io.File;
 import java.io.IOException;
@@ -15,7 +17,6 @@ import fr.univmobile.it.commons.DeviceNames;
 import fr.univmobile.it.commons.Scenario;
 import fr.univmobile.it.commons.Scenarios;
 import fr.univmobile.it.commons.SeleniumEnabledTest;
-import fr.univmobile.testutil.PropertiesUtils;
 
 @Scenarios("Scénarios simples")
 @DeviceNames("Firefox")
@@ -31,9 +32,9 @@ public class Scenarios001 extends SeleniumEnabledTest {
 				"target", "unm-backend-app-noshib/WEB-INF/web.xml"));
 
 		final Connection cxn = DriverManager.getConnection(
-				PropertiesUtils.getTestProperty("mysql.url"),
-				PropertiesUtils.getTestProperty("mysql.username"),
-				PropertiesUtils.getSettingsTestRefProperty("mysql.password.ref"));
+				getTestProperty("mysql.url"), //
+				getTestProperty("mysql.username"), //
+				getSettingsTestRefProperty("mysql.password.ref"));
 		try {
 
 			TestBackend.setUpData("001", new File(dataDir), MYSQL, cxn);
@@ -57,7 +58,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		try {
 
-			return PropertiesUtils.getTestProperty("defaultBrowser");
+			return getTestProperty("defaultBrowser");
 
 		} catch (final IOException e) {
 			throw new RuntimeException(e);
