@@ -198,7 +198,7 @@
 			</build>
 		</profile>
 		<profile>
-			<id>k3haxm</id>
+			<id>ks3haxm</id>
 			<properties>
 				<!--  
 				<defaultBrowser>*custom /usr/bin/chromium</defaultBrowser>
