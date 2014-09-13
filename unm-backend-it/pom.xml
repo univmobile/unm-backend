@@ -184,6 +184,10 @@
 								<goals>
 									<goal>xvfb</goal>
 								</goals>
+								<configuration>
+									<display>:20</display>
+									<background>true</background>
+								</configuration>
 							</execution>
 						</executions>
 					</plugin>
