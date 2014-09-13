@@ -183,7 +183,7 @@
 						<executions>
 							<execution>
 								<id>xvfb</id>
-								<phase>process-test-classes</phase>
+								<phase>process-test-resources</phase>
 								<goals>
 									<goal>xvfb</goal>
 								</goals>
@@ -213,7 +213,7 @@
 						<executions>
 							<execution>
 								<id>xvfb</id>
-								<phase>process-test-classes</phase>
+								<phase>process-test-resources</phase>
 								<goals>
 									<goal>xvfb</goal>
 								</goals>
