@@ -147,10 +147,16 @@ public abstract class TestBackend {
 
 		System.out.println("Indexation...");
 
+		final long start = System.currentTimeMillis();
+
 		final Indexation indexation = new IndexationImpl(destDir,
 				new SearchManagerImpl(dbType, cxn), dbType, cxn);
 
 		indexation.indexData(null);
+
+		final long elapsed = System.currentTimeMillis() - start;
+
+		System.out.println("Indexation: Done (" + elapsed + " ms).");
 	}
 
 	private static String[] loadResourcePaths() throws IOException {
