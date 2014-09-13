@@ -120,6 +120,11 @@
 								</goals>
 								<configuration>
 									<background>true</background>
+									<!-- 
+									<logFile>target/selenium/server.log</logFile>
+									-->
+									<debug>true</debug>
+									<logOutput>true</logOutput>
 								</configuration>
 							</execution>
 							<execution>
