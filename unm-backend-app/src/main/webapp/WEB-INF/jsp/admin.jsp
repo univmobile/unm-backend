@@ -33,42 +33,40 @@
 
 </script>
 </head>
-<body id="body-entered" class="entered">
+<body id="body-admin" class="entered">
 <div id="div-entered">
 <ul id="ul-adminMenu">
 	<li id="li-adminMenu-home" class="top">
 		<a id="link-adminMenu-home" class="top" href="${baseURL}/admin/">Accueil</a>
-	</li>
 	<li class="top">
 		<a id="link-adminMenu-data" class="top" href="${baseURL}/data/">Données<span
 			class="top ui-menu-icon ui-icon ui-icon-carat-1-s"></span></a>
 		<ul id="ul-adminMenu-data">
-		<li><a id="link-adminMenu-search" href="${baseURL}/data/search/">Recherche avancée</a><li>
-		<li><a id="link-adminMenu-pois" href="${baseURL}/data/pois/">Points of Interest (POIs)</a><li>
-		<li><a id="link-adminMenu-comments" href="${baseURL}/data/comments/">Commentaires</a><li>
-		<li><a id="link-adminMenu-regions" href="${baseURL}/data/regions/">Régions — universités</a>
+		<li><a id="link-adminMenu-search" href="${baseURL}/data/search/">Recherche avancée</a>
+		<li><a id="link-adminMenu-pois" href="${baseURL}/data/pois/">Points of Interest (POIs)</a>
+		<li><a id="link-adminMenu-comments" href="${baseURL}/data/comments/">Commentaires</a>
+		<li><a id="link-adminMenu-regions" href="${baseURL}/data/regions/">Régions, universités</a>
 			<ul id="ul-adminMenu-data-regions">
-			<li><a id="link-adminMenu-regions-bretagne" href="${baseURL}/data/regions/bretagne/">Bretagne — universités</a></li>
-			<li><a id="link-adminMenu-regions-ile_de_france" href="${baseURL}/data/regions/ile_de_france/">Île de France — universités</a></li>
-			<li><a id="link-adminMenu-regions-unrpcl" href="${baseURL}/data/regions/unrpcl/">Limousin/Poitou-Charentes — universités</a></li>
+			<li><a id="link-adminMenu-regions-bretagne" href="${baseURL}/data/regions/bretagne/">Bretagne — universités</a>
+			<li><a id="link-adminMenu-regions-ile_de_france" href="${baseURL}/data/regions/ile_de_france/">Île de France — universités</a>
+			<li><a id="link-adminMenu-regions-unrpcl" href="${baseURL}/data/regions/unrpcl/">Limousin/Poitou-Charentes — universités</a>
 			</ul>
-		<li>
-		<li><a id="link-adminMenu-geocampus" href="${baseURL}/geocampus/">Géocampus</a><li>
-		<li><a id="link-adminMenu-news" href="${baseURL}/data/news/">Flux d’actualités des universités</a><li>
-		<li><a id="link-adminMenu-users" href="${baseURL}/data/users/">Utilisateurs</a><li>
+		<li><a id="link-adminMenu-geocampus" href="${baseURL}/geocampus/">Géocampus</a>
+		<li><a id="link-adminMenu-news" href="${baseURL}/data/news/">Fils d’actualités des universités</a>
+		<li><a id="link-adminMenu-users" href="${baseURL}/data/users/">Utilisateurs</a>
 		</ul>
-	</li>
 	<li class="top">
 		<a id="link-adminMenu-system" class="top" href="${baseURL}/system/">Système<span
 			class="top ui-menu-icon ui-icon ui-icon-carat-1-s"></span></a>
 		<ul id="ul-adminMenu-system">
-		<li><a id="link-adminMenu-logqueue" href="${baseURL}/system/logqueue/">Historique des actions</a><li>
-		<li><a id="link-adminMenu-stats" href="${baseURL}/system/stats/">Statistiques</a><li>
-		<li><a id="link-adminMenu-monitoring" href="${baseURL}/system/monitoring/">Monitoring</a></li>
-		<li><a id="link-adminMenu-logs" href="${baseURL}/system/logs/">Logs techniques</a><li>
-		<li><a id="link-adminMenu-backups" href="${baseURL}/system/backups/">Sauvegardes (backups)</a><li>
+		<li><a id="link-adminMenu-logqueue" href="${baseURL}/system/logqueue/">Historique des actions</a>
+		<li><a id="link-adminMenu-stats" href="${baseURL}/system/stats/">Statistiques</a>
+		<li><a id="link-adminMenu-monitoring" href="${baseURL}/system/monitoring/">Monitoring</a>
+		<li><a id="link-adminMenu-logs" href="${baseURL}/system/logs/">Logs techniques</a>
+		<li><a id="link-adminMenu-backups" href="${baseURL}/system/backups/">Sauvegardes (backups)</a>
 		</ul>
-	</li>
+	<li id="li-adminMenu-help" class="top">
+		<a id="link-adminMenu-help" class="top" href="${baseURL}/help/">Aide</a>
 </ul>
 <ul id="ul-adminUser">
 <li> Principal : ${user.uid}
@@ -80,7 +78,7 @@
 </div>
 
 <div class="body">
-<form action="${baseURL}/" method="POST">
+<form method="GET" action="${baseURL}/admin/">
 
 <h1 title="Version ${buildInfo.appVersion}
 Build ${buildInfo.buildDisplayName}
@@ -89,152 +87,63 @@ ${buildInfo.gitCommitId}">
 Administration d’UnivMobile
 </h1>
 
-<h2>Utilisateurs : ${fn:length(users)}</h2>
+<h2 class="homeMenu"><a id="link-home-data" href="${baseURL}/data/">Données</a></h2>
 
-<table>
-<thead>
-<tr>
-<th class="none"></th>
-<th>uid</th>
-<th>mail</th>
-<th></th>
-<th class="none"></th>
-</tr>
-</thead>
-<tbody>
-<c:forEach var="u" items="${users}">
-<tr>
-<td class="none">
-<c:choose>
-<c:when test="${user.uid == u.uid}">
-	<div class="principal
-		<c:if test="${delegationUser.uid == u.uid}">delegation</c:if>
-		" title="Principal : ${user.uid}">1</div>
-</c:when>
-<c:when test="${delegationUser.uid == u.uid}">
-	<div class="delegation" title="Délégation : ${delegationUser.uid}">2</div>
-</c:when>
-</c:choose>
-</td>
-<td>
-${u.uid}
-</td>
-<td>
-${u.mail}
-</td>
-<td class="edit">
-<!--
-<a id="link-edit_xxx" href="${baseURL}?user=${u.uid}&amp;edit">Modifier…</a>
--->
-<div class="disabled">Modifier…</a>
-</td>
-<td class="none">
-</td>
-</tr>
-</c:forEach>
-</tbody>
-</table>
-
-<div class="table bottom">
-<a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
-</div>
-
-<div id="div-regions">
-
-<h2>Régions : ${fn:length(regions)}</h2>
-
-<table>
-<thead>
-<tr>
-<th class="none"></th>
-<th class="uid">id</th>
-<th class="label">label</th>
-<th class="universityCount">universités</th>
-<th class="none"></th>
-</tr>
-</thead>
-<tbody>
-<c:forEach var="r" items="${regions}">
-<tr>
-<td class="none">
-</td>
-<td class="uid">
-${r.uid}
-</td>
-<td class="label">
-<input type="text" id="text-region_${r.uid}" name="region_${r.uid}"
-	value="${r.label}"/>
-</td>
-<td class="universityCount">
-${r.universityCount}
-</td>
-<td class="none">
-</td>
-</tr>
-</c:forEach>
-</tbody>
-</table>
-
-<div class="table bottom">
-<button id="button-cancel"
- onclick="document.location.href = '${baseURL}'; return false;">
-	Annuler
-</button>
-<button id="button-submit" onclick="submit()">
-	Enregistrer
+<div id="div-search">
+<input id="text-query" name="q">
+<button id="button-search">
+	Rechercher
 </button>
 </div>
 
-<div class="table bottom">
-JSON :
-<a id="link-json" href="${baseURL}/json/regions">
-${baseURL}/json/regions
-</a>
-</div>
+<ul class="homeMenu" id="ul-home-data">
+	<li class="flaticon icon-search8">
+		<a id="link-home-search" href="${baseURL}/data/search/">Recherche avancée</a>
+	<li class="flaticon icon-location14">
+		<a id="link-home-pois" href="${baseURL}/data/pois/">Points of Interest (POIs)</a>
+	<li class="flaticon icon-chat2">
+		<a id="link-home-comments" href="${baseURL}/data/comments/">Commentaires</a>
+	<li class="flaticon icon-website1">
+		<a id="link-home-regions" href="${baseURL}/data/regions/">Régions, universités</a>
+	<li class="clear">
+	<li class="flaticon icon-compass6">
+		<a id="link-home-geocampus" href="${baseURL}/geocampus/">Géocampus</a>
+	<li class="flaticon icon-rss9">
+		<a id="link-home-news" href="${baseURL}/data/news/">Fils d’actualités des universités</a>
+	<li class="flaticon icon-address7">
+		<a id="link-home-users" href="${baseURL}/data/users/">Utilisateurs</a>
+</ul>
 
-</div> <!-- end of #div-regions -->
+<h2 class="homeMenu"><a id="link-home-system" href="${baseURL}/system/">Système</a></h2>
 
-<div id="div-pois">
+<ul class="homeMenu" id="ul-home-system">
+	<li class="flaticon icon-file6">
+		<a id="link-home-logqueue" href="${baseURL}/system/logqueue/">Historique<br>des actions</a>
+	<li class="flaticon icon-graph5">
+		<a id="link-home-stats" href="${baseURL}/system/stats/">Statistiques</a>
+	<li class="flaticon icon-check6">
+		<a id="link-home-monitoring" href="${baseURL}/system/monitoring/">Monitoring</a>
+	<li class="flaticon icon-black56">
+		<a id="link-home-logs" href="${baseURL}/system/logs/">Logs techniques</a>
+	<li class="flaticon icon-down9">
+		<a id="link-home-backups" href="${baseURL}/system/backups/">Sauvegardes (backups)</a>
+</ul>
 
-<h2>
-<a href="${baseURL}/geocampus" id="link-geocampus">Géocampus</a>
-</h2>
+<h2 class="homeMenu">Autres</h2>
 
-<hr>
-
-<h2>
-<a href="${baseURL}/pois" id="link-pois">POIs : ${poisInfo.count}</a>
-</h2>
-
-<table>
-<tbody>
-<c:forEach var="r" items="${poisInfo.regions}">
-<tr>
-<th class="region" colspan="2">
-	Région : ${r.label}
-</th>	
-<th class="poiCount">POIs</th>
-</tr>
-<c:forEach var="u" items="${r.universities}">
-<tr>
-<td class="id">
-${u.id}
-</td>
-<td class="title">
-${u.title}
-</td>
-<td class="poiCount">
-<a href="${baseURL}/pois/?univ=${u.id}">
-${u.poiCount}
-</a>
-</td>
-</tr>
-</c:forEach>
-</c:forEach>
-</tbody>
-</table>
-
-</div> <!-- end of #div-pois -->
+<ul class="homeMenu" id="ul-home-others">
+	<li class="flaticon icon-question5">
+		<a id="link-home-help" href="${baseURL}/help/">Aide</a>
+	<li class="flaticon icon-person9">
+		<a id="link-home-profile" href="${baseURL}/profile/">Mon profil&#160;:
+			${user.uid}
+			<c:if test="${user.uid != delegationUser.uid}">
+				(${delegationUser.uid})
+			</c:if>
+	</a>
+	<li class="flaticon icon-go3">
+		<a id="link-home-logout" href="${baseURL}/?logout">Déconnexion</a>
+</ul>
 
 </form>
 </div> <!-- end of div.body -->

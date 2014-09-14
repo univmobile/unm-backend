@@ -65,7 +65,7 @@ body.entered div.body {
 #div-entered a {
 	color: #fff;	
 }
-#div-entered a:active{
+#div-entered a:active {
 	color: #f00;
 }
 #body-entered table,
@@ -558,6 +558,9 @@ div.body.results #button-export {
 	xborder-right: 1px solid #fff; 
 	color: #fff;
 } 
+#ul-adminMenu a.top:active {
+	color: #f00;
+}
 #ul-adminMenu a.top:hover,
 #ul-adminMenu ul li:hover,
 #div-entered #li-logout:hover { 
@@ -594,6 +597,9 @@ div.body.results #button-export {
 	color: #fff;
 	text-decoration: none;
 }
+#ul-adminMenu .ui-menu-item a:active {
+	color: #f00;
+}
 #ul-adminMenu .ui-menu .ui-menu-divider {
 	border: 0;
 	margin: 0;
@@ -610,4 +616,94 @@ div.body.results #button-export {
 	top: 4px;
 	margin-top: -6px;
 	width: 16px;
+}
+#body-admin ul.homeMenu {
+	margin: auto;
+	padding: 0;
+	display: table;
+	list-style-type: none;
+}
+#body-admin ul.homeMenu li {
+	padding: 0;
+	float: left;
+	display: inline-block;
+	margin: 0 8px 16px;
+	border-top: 1px solid #fbfbff;
+	border-right: 1px solid #f0f0ff;
+	border-bottom: 1px solid #b0b0bb;
+	border-left: 1px solid #f0f0ff;
+	xbackground-color: #ff0;
+	text-align: center;
+	xwidth: 80px;
+	xheight: 80px;
+	vertical-align: top;
+	font-size: 13px;
+}
+#body-admin h2.homeMenu a:link,
+#body-admin h2.homeMenu a:visited {
+	padding: 4px 16px 2px;
+	text-decoration: underline;
+	color: #000;
+}
+#body-admin h2.homeMenu a:hover {
+	background-color: #0cf;
+	color: #fff;
+}
+#body-admin h2.homeMenu a:active {
+	color: #f00;
+}
+#body-admin ul.homeMenu a:link,
+#body-admin ul.homeMenu a:visited {
+	text-decoration: none;
+	color: #000;
+	display: table-cell;
+	width: 90px;
+	height: 64px;
+	background-color: #f8f8ff;
+	vertical-align: top;
+	padding: 8px;
+}
+#body-admin ul.homeMenu li:hover a:link,
+#body-admin ul.homeMenu li:hover a:visited {
+	background-color: #0cf;
+	color: #fff;
+}
+#body-admin ul.homeMenu li:active a:link,
+#body-admin ul.homeMenu li:active a:visited {
+	color: #f00;
+}
+#body-admin ul.homeMenu li.clear {
+	clear: both;
+	margin-left: -10px;
+	xfloat: left;
+	xfloat: none;
+}
+#body-admin li.flaticon a {
+	background-size: 38px;
+	background-position: center bottom;
+	background-repeat: no-repeat;
+}
+#body-admin li.flaticon.icon-address7 a { background-image: url('../img/flaticon.com/address7.png'); }
+#body-admin li.flaticon.icon-chat2 a { background-image: url('../img/flaticon.com/chat2.png'); }
+#body-admin li.flaticon.icon-compass6 a { background-image: url('../img/flaticon.com/compass6.png'); }
+#body-admin li.flaticon.icon-location14 a { background-image: url('../img/flaticon.com/location14.png'); }
+#body-admin li.flaticon.icon-graph5 a { background-image: url('../img/flaticon.com/graph5.png'); }
+#body-admin li.flaticon.icon-person9 a { background-image: url('../img/flaticon.com/person9.png'); }
+#body-admin li.flaticon.icon-question5 a { background-image: url('../img/flaticon.com/question5.png'); }
+#body-admin li.flaticon.icon-rss9 a { background-image: url('../img/flaticon.com/rss9.png'); }
+#body-admin li.flaticon.icon-search8 a { background-image: url('../img/flaticon.com/search8.png'); }
+#body-admin li.flaticon.icon-settings9 a { background-image: url('../img/flaticon.com/settings9.png'); }
+#body-admin li.flaticon.icon-check6 a { background-image: url('../img/flaticon.com/check6.png'); }
+#body-admin li.flaticon.icon-down9 a { background-image: url('../img/flaticon.com/down9.png'); }
+#body-admin li.flaticon.icon-go3 a { background-image: url('../img/flaticon.com/go3.png'); }
+#body-admin li.flaticon.icon-black56 a { background-image: url('../img/flaticon.com/black56.png'); }
+#body-admin li.flaticon.icon-file6 a { background-image: url('../img/flaticon.com/file6.png'); }
+#body-admin li.flaticon.icon-website1 a { background-image: url('../img/flaticon.com/website1.png'); }
+#body-admin li.flaticon.icon-globe6 a { background-image: url('../img/flaticon.com/globe6.png'); }
+#body-admin #div-search {
+	display: table;
+	margin: 1em auto;
+}
+#body-admin #text-query {
+	width: 380px;
 }
