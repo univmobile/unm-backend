@@ -754,10 +754,13 @@ body.entered #text-query {
 	xcolor: #521;
 	xfont-size: 120%;
 }
-
-
-
-
-
-
-
+#body-logs #div-logs {
+	width: 800px;
+	overflow: visible;
+	xpadding: 8px 0 0 8px;
+	xborder: 1px solid #999;
+	xbackground-color: #eee;
+}
+#body-logs #text-limit {
+	width: 4em;
+}

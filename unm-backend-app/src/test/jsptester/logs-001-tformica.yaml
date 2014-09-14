@@ -1,0 +1,236 @@
+baseURL: ${baseURL}
+
+user:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+    
+delegationUser:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+       
+buildInfo:
+  type: fr.univmobile.model.BuildInfo
+  value:
+    appVersion: 0.0.4-SNAPSHOT
+    buildDisplayName: "#34"
+    buildId: 2014/07/16 15:45
+    gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70
+
+logsInfo:
+  type: fr.univmobile.model.LogsInfo
+  value:
+    limit: 200
+    lineCount: 1200
+    total: 19281
+    logFile: /tmp/unm-backend.log
+    logFileLength: 123 MB
+    desc: true
+    
+logs: |
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:289]   request.queryString: null
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:290]   request.remoteAddr: 0:0:0:0:0:0:0:1
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:291]   request.remoteHost: 0:0:0:0:0:0:0:1
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:292]   request.remoteUser: crezvani@univ-paris1.fr
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:293]   request.requestURI: /unm-backend/help/
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:294]   request.scheme: http
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:295]   request.serverName: localhost
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:296]   request.serverPort: 8080
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:301]   request.header.host: localhost:8080
+    2014-09-14 20:42:24,989 DEBUG [BackendServlet.java:301]   request.header.user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:32.0) Gecko/20100101 Firefox/32.0
+    2014-09-14 20:42:24,990 DEBUG [BackendServlet.java:301]   request.header.accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    2014-09-14 20:42:24,990 DEBUG [BackendServlet.java:301]   request.header.accept-language: en-US,en;q=0.5
+    2014-09-14 20:42:24,990 DEBUG [BackendServlet.java:301]   request.header.accept-encoding: gzip, deflate
+    2014-09-14 20:42:24,990 DEBUG [BackendServlet.java:301]   request.header.referer: http://localhost:8080/unm-backend/
+    2014-09-14 20:42:24,990 DEBUG [BackendServlet.java:301]   request.header.cookie: JSESSIONID=90ED273E8C3CA4F311C8F259B3A8CBB5; 8812c36aa5ae336c2a77bf63211d899a=X9ierLs9roe3CA%2FGrnsBxqGcFo%2BRUFG2lR%2FuPK2fVZNzznvsWNq6MmuPgd8Xe8RvtrpTuSnqksfa6%2Bk2hWu7aOy97bIrF7DplyMS6KxOuoM%3D000075; SQLiteManager_currentLangue=2
+    2014-09-14 20:42:24,990 DEBUG [BackendServlet.java:301]   request.header.connection: keep-alive
+    2014-09-14 20:42:24,990 INFO  [BackendServlet.java:323] Shibboleth: uid=xx, remoteUser=crezvani@univ-paris1.fr, displayName=zz
+    2014-09-14 20:42:24,990 DEBUG [BackendDataSourceFileSystem.java:137] invoke: reload()...
+    2014-09-14 20:42:24,990 DEBUG [BackendDataSourceFileSystem.java:89] Listing files in: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions...
+    2014-09-14 20:42:24,991 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/bretagne_1.xml...
+    2014-09-14 20:42:24,992 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/ile_de_france_1.xml...
+    2014-09-14 20:42:24,992 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/unrpcl_1.xml...
+    2014-09-14 20:42:24,993 DEBUG [BackendDataSourceFileSystem.java:137] invoke: reload()...
+    2014-09-14 20:42:24,993 DEBUG [BackendDataSourceFileSystem.java:89] Listing files in: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users...
+    2014-09-14 20:42:24,994 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/crezvani_1.xml...
+    2014-09-14 20:42:24,995 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/dandriana_1.xml...
+    2014-09-14 20:42:24,995 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/dandriana_2.xml...
+    2014-09-14 20:42:24,996 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/tformica_1.xml...
+    2014-09-14 20:42:24,997 DEBUG [BackendDataSourceFileSystem.java:143] invoke: isNullByRemoteUser():crezvani@univ-paris1.fr...
+    2014-09-14 20:42:24,997 DEBUG [BackendDataSourceFileSystem.java:183] No-@SearchAttribute method: isNullByRemoteUser(). Forwarding invocation to "this."
+    2014-09-14 20:42:24,998 DEBUG [BackendDataSourceFileSystem.java:143] invoke: getByRemoteUser():crezvani@univ-paris1.fr...
+    2014-09-14 20:42:25,026 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/backend.css
+    2014-09-14 20:42:25,026 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: js/jquery-1.11.1.min.js
+    2014-09-14 20:42:25,026 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/jquery-ui-1.11.1-smoothness.css
+    2014-09-14 20:42:25,026 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: js/jquery-ui-1.11.1.min.js
+    2014-09-14 20:42:25,102 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/images/ui-bg_flat_75_ffffff_40x100.png
+    2014-09-14 20:42:25,115 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/images/ui-icons_222222_256x240.png
+    2014-09-14 20:42:28,642 DEBUG [NoShibbolethFilter.java:121] Entering service()...
+    2014-09-14 20:42:28,643 DEBUG [NoShibbolethFilter.java:136] Chaining request+response.
+    2014-09-14 20:42:28,643 INFO  [BackendServlet.java:273] remoteAddr: 0:0:0:0:0:0:0:1, requestURI: /unm-backend/, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:32.0) Gecko/20100101 Firefox/32.0", remoteUser: crezvani@univ-paris1.fr
+    2014-09-14 20:42:28,643 DEBUG [BackendServlet.java:280]   request.authType: null
+    2014-09-14 20:42:28,643 DEBUG [BackendServlet.java:281]   request.contentType: null
+    2014-09-14 20:42:28,643 DEBUG [BackendServlet.java:282]   request.contextPath: /unm-backend
+    2014-09-14 20:42:28,643 DEBUG [BackendServlet.java:283]   request.localAddr: 0:0:0:0:0:0:0:1
+    2014-09-14 20:42:28,643 DEBUG [BackendServlet.java:284]   request.localName: localhost
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:285]   request.localPort: 8080
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:286]   request.method: GET
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:287]   request.pathInfo: null
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:288]   request.protocol: HTTP/1.1
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:289]   request.queryString: null
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:290]   request.remoteAddr: 0:0:0:0:0:0:0:1
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:291]   request.remoteHost: 0:0:0:0:0:0:0:1
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:292]   request.remoteUser: crezvani@univ-paris1.fr
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:293]   request.requestURI: /unm-backend/
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:294]   request.scheme: http
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:295]   request.serverName: localhost
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:296]   request.serverPort: 8080
+    2014-09-14 20:42:28,644 DEBUG [BackendServlet.java:301]   request.header.host: localhost:8080
+    2014-09-14 20:42:28,645 DEBUG [BackendServlet.java:301]   request.header.user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:32.0) Gecko/20100101 Firefox/32.0
+    2014-09-14 20:42:28,645 DEBUG [BackendServlet.java:301]   request.header.accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    2014-09-14 20:42:28,645 DEBUG [BackendServlet.java:301]   request.header.accept-language: en-US,en;q=0.5
+    2014-09-14 20:42:28,645 DEBUG [BackendServlet.java:301]   request.header.accept-encoding: gzip, deflate
+    2014-09-14 20:42:28,645 DEBUG [BackendServlet.java:301]   request.header.referer: http://localhost:8080/unm-backend/help/
+    2014-09-14 20:42:28,645 DEBUG [BackendServlet.java:301]   request.header.cookie: JSESSIONID=90ED273E8C3CA4F311C8F259B3A8CBB5; 8812c36aa5ae336c2a77bf63211d899a=X9ierLs9roe3CA%2FGrnsBxqGcFo%2BRUFG2lR%2FuPK2fVZNzznvsWNq6MmuPgd8Xe8RvtrpTuSnqksfa6%2Bk2hWu7aOy97bIrF7DplyMS6KxOuoM%3D000075; SQLiteManager_currentLangue=2
+    2014-09-14 20:42:28,645 DEBUG [BackendServlet.java:301]   request.header.connection: keep-alive
+    2014-09-14 20:42:28,645 INFO  [BackendServlet.java:323] Shibboleth: uid=xx, remoteUser=crezvani@univ-paris1.fr, displayName=zz
+    2014-09-14 20:42:28,645 DEBUG [BackendDataSourceFileSystem.java:137] invoke: reload()...
+    2014-09-14 20:42:28,645 DEBUG [BackendDataSourceFileSystem.java:89] Listing files in: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions...
+    2014-09-14 20:42:28,646 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/bretagne_1.xml...
+    2014-09-14 20:42:28,647 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/ile_de_france_1.xml...
+    2014-09-14 20:42:28,648 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/unrpcl_1.xml...
+    2014-09-14 20:42:28,649 DEBUG [BackendDataSourceFileSystem.java:137] invoke: reload()...
+    2014-09-14 20:42:28,649 DEBUG [BackendDataSourceFileSystem.java:89] Listing files in: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users...
+    2014-09-14 20:42:28,649 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/crezvani_1.xml...
+    2014-09-14 20:42:28,650 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/dandriana_1.xml...
+    2014-09-14 20:42:28,650 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/dandriana_2.xml...
+    2014-09-14 20:42:28,651 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/tformica_1.xml...
+    2014-09-14 20:42:28,652 DEBUG [BackendDataSourceFileSystem.java:143] invoke: isNullByRemoteUser():crezvani@univ-paris1.fr...
+    2014-09-14 20:42:28,652 DEBUG [BackendDataSourceFileSystem.java:183] No-@SearchAttribute method: isNullByRemoteUser(). Forwarding invocation to "this."
+    2014-09-14 20:42:28,653 DEBUG [BackendDataSourceFileSystem.java:143] invoke: getByRemoteUser():crezvani@univ-paris1.fr...
+    2014-09-14 20:42:28,672 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/backend.css
+    2014-09-14 20:42:28,673 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/jquery-ui-1.11.1-smoothness.css
+    2014-09-14 20:42:28,674 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: js/jquery-1.11.1.min.js
+    2014-09-14 20:42:28,675 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: js/jquery-ui-1.11.1.min.js
+    2014-09-14 20:42:28,732 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/images/ui-icons_222222_256x240.png
+    2014-09-14 20:42:28,734 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/search8.png
+    2014-09-14 20:42:28,734 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/location14.png
+    2014-09-14 20:42:28,735 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/chat2.png
+    2014-09-14 20:42:28,736 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/website1.png
+    2014-09-14 20:42:28,736 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/compass6.png
+    2014-09-14 20:42:28,737 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/rss9.png
+    2014-09-14 20:42:28,741 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/question5.png
+    2014-09-14 20:42:28,741 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/person9.png
+    2014-09-14 20:42:28,742 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/go3.png
+    2014-09-14 20:42:28,756 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/images/ui-bg_flat_75_ffffff_40x100.png
+    2014-09-14 20:42:28,771 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/graph5.png
+    2014-09-14 20:42:28,771 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/black56.png
+    2014-09-14 20:42:28,771 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/check6.png
+    2014-09-14 20:42:28,771 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/file6.png
+    2014-09-14 20:42:28,771 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/address7.png
+    2014-09-14 20:42:28,772 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/down9.png
+    2014-09-14 20:43:30,516 DEBUG [NoShibbolethFilter.java:121] Entering service()...
+    2014-09-14 20:43:30,516 DEBUG [NoShibbolethFilter.java:136] Chaining request+response.
+    2014-09-14 20:43:30,516 INFO  [BackendServlet.java:273] remoteAddr: 0:0:0:0:0:0:0:1, requestURI: /unm-backend/data/, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:32.0) Gecko/20100101 Firefox/32.0", remoteUser: crezvani@univ-paris1.fr
+    2014-09-14 20:43:30,516 DEBUG [BackendServlet.java:280]   request.authType: null
+    2014-09-14 20:43:30,516 DEBUG [BackendServlet.java:281]   request.contentType: null
+    2014-09-14 20:43:30,517 DEBUG [BackendServlet.java:282]   request.contextPath: /unm-backend
+    2014-09-14 20:43:30,517 DEBUG [BackendServlet.java:283]   request.localAddr: 0:0:0:0:0:0:0:1
+    2014-09-14 20:43:30,517 DEBUG [BackendServlet.java:284]   request.localName: localhost
+    2014-09-14 20:43:30,517 DEBUG [BackendServlet.java:285]   request.localPort: 8080
+    2014-09-14 20:43:30,518 DEBUG [BackendServlet.java:286]   request.method: GET
+    2014-09-14 20:43:30,518 DEBUG [BackendServlet.java:287]   request.pathInfo: null
+    2014-09-14 20:43:30,518 DEBUG [BackendServlet.java:288]   request.protocol: HTTP/1.1
+    2014-09-14 20:43:30,518 DEBUG [BackendServlet.java:289]   request.queryString: null
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:290]   request.remoteAddr: 0:0:0:0:0:0:0:1
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:291]   request.remoteHost: 0:0:0:0:0:0:0:1
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:292]   request.remoteUser: crezvani@univ-paris1.fr
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:293]   request.requestURI: /unm-backend/data/
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:294]   request.scheme: http
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:295]   request.serverName: localhost
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:296]   request.serverPort: 8080
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:301]   request.header.host: localhost:8080
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:301]   request.header.user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:32.0) Gecko/20100101 Firefox/32.0
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:301]   request.header.accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:301]   request.header.accept-language: en-US,en;q=0.5
+    2014-09-14 20:43:30,519 DEBUG [BackendServlet.java:301]   request.header.accept-encoding: gzip, deflate
+    2014-09-14 20:43:30,520 DEBUG [BackendServlet.java:301]   request.header.referer: http://localhost:8080/unm-backend/
+    2014-09-14 20:43:30,520 DEBUG [BackendServlet.java:301]   request.header.cookie: JSESSIONID=90ED273E8C3CA4F311C8F259B3A8CBB5; 8812c36aa5ae336c2a77bf63211d899a=X9ierLs9roe3CA%2FGrnsBxqGcFo%2BRUFG2lR%2FuPK2fVZNzznvsWNq6MmuPgd8Xe8RvtrpTuSnqksfa6%2Bk2hWu7aOy97bIrF7DplyMS6KxOuoM%3D000075; SQLiteManager_currentLangue=2
+    2014-09-14 20:43:30,520 DEBUG [BackendServlet.java:301]   request.header.connection: keep-alive
+    2014-09-14 20:43:30,520 INFO  [BackendServlet.java:323] Shibboleth: uid=xx, remoteUser=crezvani@univ-paris1.fr, displayName=zz
+    2014-09-14 20:43:30,520 DEBUG [BackendDataSourceFileSystem.java:137] invoke: reload()...
+    2014-09-14 20:43:30,520 DEBUG [BackendDataSourceFileSystem.java:89] Listing files in: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions...
+    2014-09-14 20:43:30,520 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/bretagne_1.xml...
+    2014-09-14 20:43:30,521 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/ile_de_france_1.xml...
+    2014-09-14 20:43:30,522 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/unrpcl_1.xml...
+    2014-09-14 20:43:30,523 DEBUG [BackendDataSourceFileSystem.java:137] invoke: reload()...
+    2014-09-14 20:43:30,523 DEBUG [BackendDataSourceFileSystem.java:89] Listing files in: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users...
+    2014-09-14 20:43:30,523 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/crezvani_1.xml...
+    2014-09-14 20:43:30,524 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/dandriana_1.xml...
+    2014-09-14 20:43:30,525 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/dandriana_2.xml...
+    2014-09-14 20:43:30,526 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/tformica_1.xml...
+    2014-09-14 20:43:30,527 DEBUG [BackendDataSourceFileSystem.java:143] invoke: isNullByRemoteUser():crezvani@univ-paris1.fr...
+    2014-09-14 20:43:30,527 DEBUG [BackendDataSourceFileSystem.java:183] No-@SearchAttribute method: isNullByRemoteUser(). Forwarding invocation to "this."
+    2014-09-14 20:43:30,527 DEBUG [BackendDataSourceFileSystem.java:143] invoke: getByRemoteUser():crezvani@univ-paris1.fr...
+    2014-09-14 20:43:30,528 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: data/
+    2014-09-14 20:43:47,934 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/images/ui-icons_454545_256x240.png
+    2014-09-14 20:44:22,077 DEBUG [NoShibbolethFilter.java:121] Entering service()...
+    2014-09-14 20:44:22,077 DEBUG [NoShibbolethFilter.java:136] Chaining request+response.
+    2014-09-14 20:44:22,077 INFO  [BackendServlet.java:273] remoteAddr: 0:0:0:0:0:0:0:1, requestURI: /unm-backend/system/, userAgent: "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:32.0) Gecko/20100101 Firefox/32.0", remoteUser: crezvani@univ-paris1.fr
+    2014-09-14 20:44:22,077 DEBUG [BackendServlet.java:280]   request.authType: null
+    2014-09-14 20:44:22,077 DEBUG [BackendServlet.java:281]   request.contentType: null
+    2014-09-14 20:44:22,077 DEBUG [BackendServlet.java:282]   request.contextPath: /unm-backend
+    2014-09-14 20:44:22,078 DEBUG [BackendServlet.java:283]   request.localAddr: 0:0:0:0:0:0:0:1
+    2014-09-14 20:44:22,078 DEBUG [BackendServlet.java:284]   request.localName: localhost
+    2014-09-14 20:44:22,078 DEBUG [BackendServlet.java:285]   request.localPort: 8080
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:286]   request.method: GET
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:287]   request.pathInfo: null
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:288]   request.protocol: HTTP/1.1
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:289]   request.queryString: null
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:290]   request.remoteAddr: 0:0:0:0:0:0:0:1
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:291]   request.remoteHost: 0:0:0:0:0:0:0:1
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:292]   request.remoteUser: crezvani@univ-paris1.fr
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:293]   request.requestURI: /unm-backend/system/
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:294]   request.scheme: http
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:295]   request.serverName: localhost
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:296]   request.serverPort: 8080
+    2014-09-14 20:44:22,079 DEBUG [BackendServlet.java:301]   request.header.host: localhost:8080
+    2014-09-14 20:44:22,080 DEBUG [BackendServlet.java:301]   request.header.user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.8; rv:32.0) Gecko/20100101 Firefox/32.0
+    2014-09-14 20:44:22,080 DEBUG [BackendServlet.java:301]   request.header.accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+    2014-09-14 20:44:22,080 DEBUG [BackendServlet.java:301]   request.header.accept-language: en-US,en;q=0.5
+    2014-09-14 20:44:22,080 DEBUG [BackendServlet.java:301]   request.header.accept-encoding: gzip, deflate
+    2014-09-14 20:44:22,080 DEBUG [BackendServlet.java:301]   request.header.referer: http://localhost:8080/unm-backend/
+    2014-09-14 20:44:22,080 DEBUG [BackendServlet.java:301]   request.header.cookie: JSESSIONID=90ED273E8C3CA4F311C8F259B3A8CBB5; 8812c36aa5ae336c2a77bf63211d899a=X9ierLs9roe3CA%2FGrnsBxqGcFo%2BRUFG2lR%2FuPK2fVZNzznvsWNq6MmuPgd8Xe8RvtrpTuSnqksfa6%2Bk2hWu7aOy97bIrF7DplyMS6KxOuoM%3D000075; SQLiteManager_currentLangue=2
+    2014-09-14 20:44:22,080 DEBUG [BackendServlet.java:301]   request.header.connection: keep-alive
+    2014-09-14 20:44:22,080 INFO  [BackendServlet.java:323] Shibboleth: uid=xx, remoteUser=crezvani@univ-paris1.fr, displayName=zz
+    2014-09-14 20:44:22,080 DEBUG [BackendDataSourceFileSystem.java:137] invoke: reload()...
+    2014-09-14 20:44:22,080 DEBUG [BackendDataSourceFileSystem.java:89] Listing files in: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions...
+    2014-09-14 20:44:22,081 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/bretagne_1.xml...
+    2014-09-14 20:44:22,082 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/ile_de_france_1.xml...
+    2014-09-14 20:44:22,082 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/regions/unrpcl_1.xml...
+    2014-09-14 20:44:22,083 DEBUG [BackendDataSourceFileSystem.java:137] invoke: reload()...
+    2014-09-14 20:44:22,083 DEBUG [BackendDataSourceFileSystem.java:89] Listing files in: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users...
+    2014-09-14 20:44:22,084 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/crezvani_1.xml...
+    2014-09-14 20:44:22,084 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/dandriana_1.xml...
+    2014-09-14 20:44:22,085 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/dandriana_2.xml...
+    2014-09-14 20:44:22,086 DEBUG [BackendDataSourceFileSystem.java:106] Reading XML file: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/users/tformica_1.xml...
+    2014-09-14 20:44:22,087 DEBUG [BackendDataSourceFileSystem.java:143] invoke: isNullByRemoteUser():crezvani@univ-paris1.fr...
+    2014-09-14 20:44:22,087 DEBUG [BackendDataSourceFileSystem.java:183] No-@SearchAttribute method: isNullByRemoteUser(). Forwarding invocation to "this."
+    2014-09-14 20:44:22,087 DEBUG [BackendDataSourceFileSystem.java:143] invoke: getByRemoteUser():crezvani@univ-paris1.fr...
+    2014-09-14 20:44:22,360 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/backend.css
+    2014-09-14 20:44:22,361 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: js/jquery-1.11.1.min.js
+    2014-09-14 20:44:22,361 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/jquery-ui-1.11.1-smoothness.css
+    2014-09-14 20:44:22,361 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: js/jquery-ui-1.11.1.min.js
+    2014-09-14 20:44:22,445 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/file6.png
+    2014-09-14 20:44:22,447 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/graph5.png
+    2014-09-14 20:44:22,450 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/check6.png
+    2014-09-14 20:44:22,453 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/black56.png
+    2014-09-14 20:44:22,456 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: img/flaticon.com/down9.png
+    2014-09-14 20:44:22,474 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/images/ui-bg_flat_75_ffffff_40x100.png
+    2014-09-14 20:44:22,494 ERROR [UnivMobileHttpUtils.java:26] 404 NOT FOUND -- path: css/images/ui-icons_222222_256x240.png
+  

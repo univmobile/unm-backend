@@ -214,7 +214,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new CommentsController(comments, commentManager, regions, pois,
 						poiTrees), //
 				new CommentController(comments, commentManager), //
-				new HelpController() //
+				new HelpController(), //
+				new LogsController() //
 		);
 
 		// 3. JSON CONTROLLERS

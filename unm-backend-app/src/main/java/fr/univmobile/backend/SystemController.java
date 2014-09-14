@@ -8,6 +8,7 @@ import static org.apache.commons.lang3.StringUtils.split;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -18,12 +19,14 @@ import javax.annotation.Nullable;
 import javax.sql.DataSource;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
 
 import net.avcompris.binding.annotation.Namespaces;
 import net.avcompris.binding.annotation.XPath;
 import net.avcompris.binding.dom.helper.DomBinderUtils;
 
 import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 import fr.univmobile.backend.core.impl.DbEnabled;
 import fr.univmobile.web.commons.Paths;
@@ -43,7 +46,6 @@ public class SystemController extends AbstractBackendController {
 	public View action() throws Exception {
 
 		final WebXml webXml;
-		final Log4JXml log4jXml;
 
 		final InputStream is1 = getServletContext().getResourceAsStream(
 				"/WEB-INF/web.xml");
@@ -59,40 +61,7 @@ public class SystemController extends AbstractBackendController {
 			is1.close();
 		}
 
-		final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
-				.newInstance();
-		documentBuilderFactory.setNamespaceAware(true);
-		final String LOAD_EXTERNAL_DTD = "http://apache.org/xml/features/nonvalidating/load-external-dtd";
-		documentBuilderFactory.setFeature(LOAD_EXTERNAL_DTD, false);
-		final DocumentBuilder documentBuilder = documentBuilderFactory
-				.newDocumentBuilder();
-		final Document dom4;
-
-		final InputStream is4 = SystemController.class.getClassLoader()
-				.getResourceAsStream("log4j.xml");
-		if (is4 == null) {
-			throw new FileNotFoundException("Cannot find resource: log4j.xml");
-		}
-		try {
-
-			dom4 = documentBuilder.parse(is4);
-
-		} finally {
-			is4.close();
-		}
-
-		log4jXml = DomBinderUtils.xmlContentToJava(dom4, Log4JXml.class);
-
-		final String logFilePath;
-
-		final String appenderName = log4jXml.getRootAppenderRef();
-		if (appenderName == null) {
-			logFilePath = null;
-		} else if (log4jXml.isNullAppenderFile(appenderName)) {
-			logFilePath = null;
-		} else {
-			logFilePath = log4jXml.getAppenderFile(appenderName);
-		}
+		final String logFilePath = loadLogFilePath();
 
 		final Runtime runtime = Runtime.getRuntime();
 
@@ -236,6 +205,50 @@ public class SystemController extends AbstractBackendController {
 		String getAppenderFile(String appenderName);
 
 		boolean isNullAppenderFile(String appenderName);
+	}
+
+	@Nullable
+	static String loadLogFilePath() throws IOException,
+			ParserConfigurationException, SAXException {
+
+		final Log4JXml log4jXml;
+
+		final DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory
+				.newInstance();
+		documentBuilderFactory.setNamespaceAware(true);
+		final String LOAD_EXTERNAL_DTD = "http://apache.org/xml/features/nonvalidating/load-external-dtd";
+		documentBuilderFactory.setFeature(LOAD_EXTERNAL_DTD, false);
+		final DocumentBuilder documentBuilder = documentBuilderFactory
+				.newDocumentBuilder();
+		final Document dom4;
+
+		final InputStream is4 = SystemController.class.getClassLoader()
+				.getResourceAsStream("log4j.xml");
+		if (is4 == null) {
+			throw new FileNotFoundException("Cannot find resource: log4j.xml");
+		}
+		try {
+
+			dom4 = documentBuilder.parse(is4);
+
+		} finally {
+			is4.close();
+		}
+
+		log4jXml = DomBinderUtils.xmlContentToJava(dom4, Log4JXml.class);
+
+		final String logFilePath;
+
+		final String appenderName = log4jXml.getRootAppenderRef();
+		if (appenderName == null) {
+			logFilePath = null;
+		} else if (log4jXml.isNullAppenderFile(appenderName)) {
+			logFilePath = null;
+		} else {
+			logFilePath = log4jXml.getAppenderFile(appenderName);
+		}
+
+		return logFilePath;
 	}
 }
 
