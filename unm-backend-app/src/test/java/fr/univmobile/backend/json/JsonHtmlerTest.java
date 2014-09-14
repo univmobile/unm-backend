@@ -106,16 +106,14 @@ public class JsonHtmlerTest {
 	@Test
 	public void test007_comments_json() throws Exception {
 
-		assertJsonHtmler(
-				new File("src/test/JsonHtmler/007-comments.html"),
+		assertJsonHtmler(new File("src/test/JsonHtmler/007-comments.html"),
 				new File("src/test/JsonHtmler/007-comments.json"));
 	}
 
 	@Test
 	public void test007_comments_json2() throws Exception {
 
-		assertJsonHtmler(
-				new File("src/test/JsonHtmler/007-comments.html"),
+		assertJsonHtmler(new File("src/test/JsonHtmler/007-comments.html"),
 				new File("src/test/JsonHtmler/007-comments.json2"));
 	}
 
