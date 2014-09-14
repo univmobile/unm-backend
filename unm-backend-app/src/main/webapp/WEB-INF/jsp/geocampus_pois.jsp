@@ -661,6 +661,7 @@ body {
 	$(window).resize(resizeHeights);
 	
 </script>
+<jsp:include page="js-adminMenu.h.jsp"/>
 </head>
 <body id="body-geocampus" class="entered">
 

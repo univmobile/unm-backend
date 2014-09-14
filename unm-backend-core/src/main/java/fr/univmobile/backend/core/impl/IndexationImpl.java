@@ -40,6 +40,8 @@ import fr.univmobile.commons.datasource.Entry;
  */
 public class IndexationImpl extends AbstractImpl implements Indexation {
 
+	private final String tablePrefix= DbEnabled.TABLE_PREFIX;
+	
 	public IndexationImpl(final File dataDir, //
 			final SearchManager searchManager, //
 			final ConnectionType dbType, final Connection cxn)

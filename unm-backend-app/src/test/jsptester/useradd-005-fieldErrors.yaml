@@ -1,0 +1,43 @@
+baseURL: ${baseURL}
+
+user:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    mail: Toto.Formica@univ-paris1.fr
+    displayName: Toto Formica
+    supannCivilite: M.
+    remoteUser: tformica@univ-paris1.fr 
+    
+delegationUser:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    mail: Toto.Formica@univ-paris1.fr
+    displayName: Toto Formica
+    supannCivilite: M.
+    remoteUser: tformica@univ-paris1.fr 
+
+useradd:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: toto
+    mail: Toto.Formica@univ-paris1.fr
+    displayName: Toto Formica
+    supannCivilite: Mme
+    remoteUser: tformica@univ-paris1.fr 
+
+err_duplicateRemoteUser: true
+err_duplicateUid: true
+err_useradd_uid: true
+err_useradd_remoteUser: true
+err_useradd_displayName: true
+err_useradd_mail: true
+
+buildInfo:
+  type: fr.univmobile.model.BuildInfo
+  value:
+    appVersion: 0.0.4-SNAPSHOT
+    buildDisplayName: "#34"
+    buildId: 2014/07/16 15:45
+    gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70

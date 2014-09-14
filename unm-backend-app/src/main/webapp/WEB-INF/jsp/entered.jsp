@@ -8,9 +8,14 @@
 <meta http-equiv="Content-Language" content="en">
 <title>Administration d’UnivMobile</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
+<link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
+<script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
+<jsp:include page="js-adminMenu.h.jsp"/>
 </head>
 <body id="body-entered" class="entered">
 <div id="div-entered">
+<jsp:include page="ul-adminMenu.h.jsp"/>
 <ul id="ul-adminUser">
 <li> Principal : ${user.uid}
 <c:if test="${user.uid != delegationUser.uid}">

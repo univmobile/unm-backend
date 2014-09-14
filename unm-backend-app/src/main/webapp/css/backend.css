@@ -496,10 +496,12 @@ div.body.poi td ul {
 	padding: 0;
 	list-style-type: none;
 }
-div.body.results #div-query {
+div.body #div-query {
 	background-color: #f8f8f8;
 	padding: 1em;
 	xborder-bottom: 1px solid #f8f8f8;
+	display: table;
+	margin: 1em auto;
 }
 div.body.results #div-resultInfo {
 	margin-top: 1em;
@@ -537,6 +539,15 @@ div.body.results #button-export {
 	xmargin-top: -2px;
 	padding: 0;
 } 
+#ul-adminMenu li.top.disabled {
+	padding: 1px 32px 1px 0;
+	xcolor: #eee;
+	opacity: 0.5;
+}
+#ul-adminMenu #li-adminMenu-home.top.disabled {
+	padding-left: 8px;
+	padding-right: 16px;
+}
 #div-entered #li-logout {
 	xpadding: 1px 8px;
 	xmargin-top: -2px;
@@ -617,13 +628,13 @@ div.body.results #button-export {
 	margin-top: -6px;
 	width: 16px;
 }
-#body-admin ul.homeMenu {
+body.admin ul.homeMenu {
 	margin: auto;
 	padding: 0;
 	display: table;
 	list-style-type: none;
 }
-#body-admin ul.homeMenu li {
+body.admin ul.homeMenu li {
 	padding: 0;
 	float: left;
 	display: inline-block;
@@ -639,21 +650,21 @@ div.body.results #button-export {
 	vertical-align: top;
 	font-size: 13px;
 }
-#body-admin h2.homeMenu a:link,
-#body-admin h2.homeMenu a:visited {
+body.admin h2.homeMenu a:link,
+body.admin h2.homeMenu a:visited {
 	padding: 4px 16px 2px;
 	text-decoration: underline;
 	color: #000;
 }
-#body-admin h2.homeMenu a:hover {
+body.admin h2.homeMenu a:hover {
 	background-color: #0cf;
 	color: #fff;
 }
-#body-admin h2.homeMenu a:active {
+body.admin h2.homeMenu a:active {
 	color: #f00;
 }
-#body-admin ul.homeMenu a:link,
-#body-admin ul.homeMenu a:visited {
+body.admin ul.homeMenu a:link,
+body.admin ul.homeMenu a:visited {
 	text-decoration: none;
 	color: #000;
 	display: table-cell;
@@ -663,47 +674,80 @@ div.body.results #button-export {
 	vertical-align: top;
 	padding: 8px;
 }
-#body-admin ul.homeMenu li:hover a:link,
-#body-admin ul.homeMenu li:hover a:visited {
+body.admin ul.homeMenu li:hover a:link,
+body.admin ul.homeMenu li:hover a:visited {
 	background-color: #0cf;
 	color: #fff;
 }
-#body-admin ul.homeMenu li:active a:link,
-#body-admin ul.homeMenu li:active a:visited {
+body.admin ul.homeMenu li:active a:link,
+body.admin ul.homeMenu li:active a:visited {
 	color: #f00;
 }
-#body-admin ul.homeMenu li.clear {
+body.admin ul.homeMenu li.clear {
 	clear: both;
 	margin-left: -10px;
 	xfloat: left;
 	xfloat: none;
 }
-#body-admin li.flaticon a {
+body.admin li.flaticon a {
 	background-size: 38px;
 	background-position: center bottom;
 	background-repeat: no-repeat;
 }
-#body-admin li.flaticon.icon-address7 a { background-image: url('../img/flaticon.com/address7.png'); }
-#body-admin li.flaticon.icon-chat2 a { background-image: url('../img/flaticon.com/chat2.png'); }
-#body-admin li.flaticon.icon-compass6 a { background-image: url('../img/flaticon.com/compass6.png'); }
-#body-admin li.flaticon.icon-location14 a { background-image: url('../img/flaticon.com/location14.png'); }
-#body-admin li.flaticon.icon-graph5 a { background-image: url('../img/flaticon.com/graph5.png'); }
-#body-admin li.flaticon.icon-person9 a { background-image: url('../img/flaticon.com/person9.png'); }
-#body-admin li.flaticon.icon-question5 a { background-image: url('../img/flaticon.com/question5.png'); }
-#body-admin li.flaticon.icon-rss9 a { background-image: url('../img/flaticon.com/rss9.png'); }
-#body-admin li.flaticon.icon-search8 a { background-image: url('../img/flaticon.com/search8.png'); }
-#body-admin li.flaticon.icon-settings9 a { background-image: url('../img/flaticon.com/settings9.png'); }
-#body-admin li.flaticon.icon-check6 a { background-image: url('../img/flaticon.com/check6.png'); }
-#body-admin li.flaticon.icon-down9 a { background-image: url('../img/flaticon.com/down9.png'); }
-#body-admin li.flaticon.icon-go3 a { background-image: url('../img/flaticon.com/go3.png'); }
-#body-admin li.flaticon.icon-black56 a { background-image: url('../img/flaticon.com/black56.png'); }
-#body-admin li.flaticon.icon-file6 a { background-image: url('../img/flaticon.com/file6.png'); }
-#body-admin li.flaticon.icon-website1 a { background-image: url('../img/flaticon.com/website1.png'); }
-#body-admin li.flaticon.icon-globe6 a { background-image: url('../img/flaticon.com/globe6.png'); }
-#body-admin #div-search {
-	display: table;
-	margin: 1em auto;
-}
-#body-admin #text-query {
+body.admin li.flaticon.icon-address7 a { background-image: url('../img/flaticon.com/address7.png'); }
+body.admin li.flaticon.icon-chat2 a { background-image: url('../img/flaticon.com/chat2.png'); }
+body.admin li.flaticon.icon-compass6 a { background-image: url('../img/flaticon.com/compass6.png'); }
+body.admin li.flaticon.icon-location14 a { background-image: url('../img/flaticon.com/location14.png'); }
+body.admin li.flaticon.icon-graph5 a { background-image: url('../img/flaticon.com/graph5.png'); }
+body.admin li.flaticon.icon-person9 a { background-image: url('../img/flaticon.com/person9.png'); }
+body.admin li.flaticon.icon-question5 a { background-image: url('../img/flaticon.com/question5.png'); }
+body.admin li.flaticon.icon-rss9 a { background-image: url('../img/flaticon.com/rss9.png'); }
+body.admin li.flaticon.icon-search8 a { background-image: url('../img/flaticon.com/search8.png'); }
+body.admin li.flaticon.icon-settings9 a { background-image: url('../img/flaticon.com/settings9.png'); }
+body.admin li.flaticon.icon-check6 a { background-image: url('../img/flaticon.com/check6.png'); }
+body.admin li.flaticon.icon-down9 a { background-image: url('../img/flaticon.com/down9.png'); }
+body.admin li.flaticon.icon-go3 a { background-image: url('../img/flaticon.com/go3.png'); }
+body.admin li.flaticon.icon-black56 a { background-image: url('../img/flaticon.com/black56.png'); }
+body.admin li.flaticon.icon-file6 a { background-image: url('../img/flaticon.com/file6.png'); }
+body.admin li.flaticon.icon-website1 a { background-image: url('../img/flaticon.com/website1.png'); }
+body.admin li.flaticon.icon-globe6 a { background-image: url('../img/flaticon.com/globe6.png'); }
+body.entered #text-query {
 	width: 380px;
 }
+#table-systemInfo {
+	border-collapse: collapse;
+	font-size: 13px;
+	margin: 0 auto 3em;
+}
+#table-systemInfo tr {
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	background-color: #f0f0f8;
+}
+#table-systemInfo tr.odd {
+	background-color: #dddde8;
+}
+#table-systemInfo th,
+#table-systemInfo td {
+	padding-top: 4px;
+	padding-bottom: 3px;
+	vertical-align: top;
+}
+#table-systemInfo th {
+	text-align: left;
+	padding-right: 1em;
+	padding-left: 1em;
+}
+#table-systemInfo td {
+	padding-right: 1em;
+	padding-left: 0;
+}
+
+
+
+
+
+
+
+
+

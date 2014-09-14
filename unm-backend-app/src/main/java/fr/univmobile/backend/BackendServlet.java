@@ -156,7 +156,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final PoiTreeDataSource poiTrees;
 		final CommentDataSource comments;
 		final CommentManager commentManager;
-
+		final DataSource ds ;
+		
 		try {
 
 			users = BackendDataSourceFileSystem.newDataSource(
@@ -180,7 +181,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			final InitialContext context = new InitialContext();
 
-			final DataSource ds = (DataSource) context
+			 ds = (DataSource) context
 					.lookup("java:/comp/env/jdbc/univmobile");
 
 			checkDataSource(ds);
@@ -204,6 +205,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new HomeController(tx, users, regions, pois, poiTrees), //
 				new UseraddController(tx, users, regions, pois, poiTrees), //
 				new AdminGeocampusController(tx, users, regions, pois, poiTrees), //
+				new SystemController(tx, users, regions, pois, poiTrees, ds), //
 				new PoisController(tx, users, regions, pois, poiTrees), //
 				new PoiController(tx, comments, commentManager, users, regions,
 						pois, poiTrees), //

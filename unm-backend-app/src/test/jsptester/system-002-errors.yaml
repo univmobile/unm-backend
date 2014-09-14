@@ -1,0 +1,67 @@
+baseURL: ${baseURL}
+
+user:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+    
+delegationUser:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+       
+buildInfo:
+  type: fr.univmobile.model.BuildInfo
+  value:
+    appVersion: 0.0.4-SNAPSHOT
+    buildDisplayName: "#34"
+    buildId: 2014/07/16 15:45
+    gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70
+    
+systemInfo:
+  type: fr.univmobile.model.SystemInfo
+  value:
+    optionalJsonBaseURLs:
+      type: String[]
+      value:
+        - http://localhost:8380/unm-backend/json/
+        - http://10.0.2.2:8380/unm-backend/json/
+        - http://192.168.0.40:8080/unm-backend/json/
+    dataDir: /Users/dandriana/Documents/workspace/unm-backend/unm-backend-app-noshib/target/data/
+    dataDirError: Cannot access Directory
+    tablePrefix: unm_
+    dbType: H2
+    dbUrl: http://localhost:3306/toto
+    dbName: toto
+    freeMemory: 926 Mo
+    totalMemory: 48129 Mo
+    maxMemory: 53129 Mo
+    logFile: /tmp/unm-backend.log
+    logFileError: Log File doesn't exist 
+    dbTables:
+      type: fr.univmobile.model.DbTableInfo[]
+      value:
+        - name: unm_users
+          rowCount: 4
+          error: null
+        - name: unm_search
+          error: Table doesn't exist
+    monitoringGraphs:
+      type: fr.univmobile.model.MonitoringGraph[]
+      value:
+        - url: http://localhost:80/munin/memory/
+          error: null
+        - url: http://localhost:80/munin/apache/
+          error: null
+        - url: http://localhost:80/munin/tomcat/
+          error: null
+    
+      
+  
+
+      
+  

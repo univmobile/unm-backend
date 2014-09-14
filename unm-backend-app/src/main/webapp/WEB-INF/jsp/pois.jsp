@@ -28,6 +28,10 @@ td.id {
 	display: none;
 }
 </style>
+<link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
+<script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
+<jsp:include page="js-adminMenu.h.jsp"/>
 </head>
 <body id="body-pois" class="entered">
 
@@ -50,7 +54,7 @@ POIs : ${poisInfo.count}
 
 <div id="div-query">
 <form action="${baseURL}/pois" method="GET">
-<input id="text-query" name="query">
+<input id="text-query" name="q">
 <button id="button-search">
 	Rechercher
 </button>

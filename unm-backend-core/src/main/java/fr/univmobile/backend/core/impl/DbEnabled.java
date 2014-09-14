@@ -128,7 +128,7 @@ public abstract class DbEnabled {
 	@Nullable
 	private final Connection alwaysOpenedConnection;
 
-	protected static final String tablePrefix = "unm_";
+	public static final String TABLE_PREFIX = "unm_";
 
 	protected final Connection getConnection() throws SQLException {
 
@@ -171,7 +171,7 @@ public abstract class DbEnabled {
 					+ queryId + " (dbType: " + dbType + ")");
 		}
 
-		final String filteredSql = sql.replace("${prefix}", tablePrefix);
+		final String filteredSql = sql.replace("${prefix}", TABLE_PREFIX);
 
 		if (log.isDebugEnabled()) {
 			log.debug("SQL (new): " + filteredSql);

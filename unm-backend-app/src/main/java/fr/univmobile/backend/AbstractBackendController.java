@@ -68,6 +68,7 @@ abstract class AbstractBackendController extends AbstractJspController {
 
 		// 1. UPDATE?
 
+		/*
 		final UpdateRegions ur = getHttpInputs(UpdateRegions.class);
 
 		if (ur.isHttpValid()) {
@@ -150,7 +151,8 @@ abstract class AbstractBackendController extends AbstractJspController {
 				region2.addToUniversities(university2);
 			}
 		}
-
+*/
+		
 		/*
 		 * regions: type: fr.univmobile.backend.core.Region2[] value: - uid:
 		 * bretagne label: Bretagne universities: type:
@@ -165,7 +167,8 @@ abstract class AbstractBackendController extends AbstractJspController {
 
 		// 9 END
 
-		return new View("entered.jsp");
+		// return new View("entered.jsp");
+		return new View("admin.jsp");	
 	}
 
 	private void updateRegionLabel(final Region region, final String label)
