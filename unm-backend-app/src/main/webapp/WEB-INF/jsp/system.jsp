@@ -134,15 +134,15 @@ Administration d’UnivMobile
 
 <ul class="homeMenu" id="ul-home-system">
 	<li class="flaticon icon-file6">
-		<a id="link-home-logqueue" href="${baseURL}/system/logqueue/">Historique<br>des actions</a>
+		<a id="link-home-logqueue" href="${baseURL}/logqueue/">Historique<br>des actions</a>
 	<li class="flaticon icon-graph5">
-		<a id="link-home-stats" href="${baseURL}/system/stats/">Statistiques</a>
+		<a id="link-home-stats" href="${baseURL}/stats/">Statistiques</a>
 	<li class="flaticon icon-check6">
-		<a id="link-home-monitoring" href="${baseURL}/system/monitoring/">Monitoring</a>
+		<a id="link-home-monitoring" href="${baseURL}/monitoring/">Monitoring</a>
 	<li class="flaticon icon-black56">
-		<a id="link-home-logs" href="${baseURL}/system/logs/">Logs techniques</a>
+		<a id="link-home-logs" href="${baseURL}/logs/">Logs techniques</a>
 	<li class="flaticon icon-down9">
-		<a id="link-home-backups" href="${baseURL}/system/backups/">Sauvegardes (backups)</a>
+		<a id="link-home-backups" href="${baseURL}/backups/">Sauvegardes (backups)</a>
 </ul>
 
 </div> <!-- end of div.body -->
