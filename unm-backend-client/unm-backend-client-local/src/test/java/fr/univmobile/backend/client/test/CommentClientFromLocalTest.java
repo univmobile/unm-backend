@@ -98,6 +98,22 @@ public class CommentClientFromLocalTest {
 	}
 
 	@Test
+	public void test_getMostRecentComments() throws Exception {
+
+		final Comment[] comments = client.getMostRecentComments(100);
+
+		assertEquals(3, comments.length);
+
+		final Comment comment = comments[1];
+
+		assertEquals("2", comment.getId());
+		assertEquals("dandriana", comment.getAuthorUsername());
+		assertNull(comment.getAuthorLang());
+
+		assertEquals("Une bien belle application.", comment.getText());
+	}
+
+	@Test
 	public void test_getEmptyComments_poi1() throws Exception {
 
 		final Comment[] comments = client.getCommentsByPoiId(1);

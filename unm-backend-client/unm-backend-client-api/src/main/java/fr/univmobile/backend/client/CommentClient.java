@@ -5,5 +5,7 @@ import java.sql.SQLException;
 
 public interface CommentClient {
 
+	Comment[] getMostRecentComments(int limit) throws IOException, SQLException;
+
 	Comment[] getCommentsByPoiId(int poiId) throws IOException, SQLException;
 }

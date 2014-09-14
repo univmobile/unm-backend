@@ -40,6 +40,23 @@ public class CommentClientFromJSON implements CommentClient {
 
 		final String json = jsonClient.getCommentsJSONByPoiId(poiId);
 
+		return comments(json);
+	}
+
+	@Override
+	public Comment[] getMostRecentComments(final int limit) throws IOException, SQLException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getMostRecentComments():" + limit + "...");
+		}
+
+		final String json = jsonClient.getMostRecentCommentsJSON(limit);
+
+		return comments(json);
+	}
+	
+	private static Comment[] comments(final String json) {
+		
 		if (log.isDebugEnabled()) {
 			log.debug("json.length(): " + json.length());
 			log.debug("json: "
@@ -56,7 +73,7 @@ public class CommentClientFromJSON implements CommentClient {
 
 		return commentsJSON.getComments();
 	}
-
+	
 	@XPath("/*")
 	public interface CommentsJSON {
 

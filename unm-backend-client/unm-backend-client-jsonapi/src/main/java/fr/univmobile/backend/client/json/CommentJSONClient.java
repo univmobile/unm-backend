@@ -6,4 +6,6 @@ import java.sql.SQLException;
 public interface CommentJSONClient {
 
 	String getCommentsJSONByPoiId(int poiId) throws IOException, SQLException;
+
+	String getMostRecentCommentsJSON(int limit) throws IOException, SQLException;
 }

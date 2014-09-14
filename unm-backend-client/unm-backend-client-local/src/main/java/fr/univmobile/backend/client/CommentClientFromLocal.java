@@ -86,6 +86,44 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 		return comments;
 	}
 
+	@Override
+	public Comment[] getMostRecentComments(final int limit) throws IOException,
+			SQLException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getMostRecentComments():" + limit + "...");
+		}
+
+		final fr.univmobile.backend.core.Comment[] dsComments = commentManager
+				.getMostRecentComments(limit);
+
+		final Comment[] comments = new Comment[dsComments.length];
+
+		for (int i = 0; i < dsComments.length; ++i) {
+
+			final fr.univmobile.backend.core.Comment dsComment = dsComments[i];
+
+			final int uid = dsComment.getUid();
+
+			final DateTime postedAt = dsComment.getPostedAt();
+
+			final MutableComment comment = DataBeans //
+					.instantiate(MutableComment.class) //
+					.setId(Integer.toString(uid)) //
+					.setAuthorUsername(dsComment.getAuthorName()) //
+					.setAuthorDisplayName(dsComment.getPostedBy()) //
+					.setText(dsComment.getMessage()) //
+					.setPostedAt(postedAt) //
+					.setDisplayFullPostedAt(formatDateFull(postedAt)) //
+					.setDisplayPostedAt(formatDate(postedAt)) //
+					.setDisplayPostedAtTime(formatTime(postedAt)); //
+
+			comments[i] = comment;
+		}
+
+		return comments;
+	}
+
 	private interface MutableComment extends Comment {
 
 		MutableComment setId(String id);

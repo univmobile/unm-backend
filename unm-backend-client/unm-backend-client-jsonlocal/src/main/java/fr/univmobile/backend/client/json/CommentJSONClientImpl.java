@@ -40,6 +40,24 @@ public class CommentJSONClientImpl implements CommentJSONClient {
 
 		final Comment[] comments = commentClient.getCommentsByPoiId(poiId);
 
+		return jsonComments(comments);
+	}
+
+	@Override
+	public String getMostRecentCommentsJSON(final int limit) throws IOException,
+			SQLException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getMostRecentCommentsJSON():" + limit+ "...");
+		}
+
+		final Comment[] comments = commentClient.getMostRecentComments(limit);
+
+		return jsonComments(comments);
+	}
+	
+	private static String jsonComments(final Comment[] comments) {
+		
 		final JSONMap json = new JSONMap();
 
 		final JSONList list = new JSONList();
