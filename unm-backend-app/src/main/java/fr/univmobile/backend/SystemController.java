@@ -25,24 +25,14 @@ import net.avcompris.binding.dom.helper.DomBinderUtils;
 
 import org.w3c.dom.Document;
 
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTreeDataSource;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.impl.DbEnabled;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
 @Paths({ "system", "system/" })
 public class SystemController extends AbstractBackendController {
 
-	public SystemController(final TransactionManager tx,
-			final UserDataSource users, final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees,
-			final DataSource ds) {
-
-		super(tx, users, regions, pois, poiTrees);
+	public SystemController(final DataSource ds) {
 
 		this.ds = checkNotNull(ds, "ds");
 	}

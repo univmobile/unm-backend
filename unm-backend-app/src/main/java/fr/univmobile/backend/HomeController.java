@@ -1,14 +1,12 @@
 package fr.univmobile.backend;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 import java.io.IOException;
 
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTreeDataSource;
-import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -19,12 +17,12 @@ import fr.univmobile.web.commons.View;
 @Paths({ "" })
 public class HomeController extends AbstractBackendController {
 
-	public HomeController(final TransactionManager tx,
-			final UserDataSource users, final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
+	public HomeController(final UserDataSource users) {
 
-		super(tx, users, regions, pois, poiTrees);
+		this.users = checkNotNull(users, "users");
 	}
+
+	private final UserDataSource users;
 
 	@Override
 	public View action() throws IOException, TransactionException {

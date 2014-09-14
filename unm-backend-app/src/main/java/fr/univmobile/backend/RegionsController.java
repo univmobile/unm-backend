@@ -1,16 +1,15 @@
 package fr.univmobile.backend;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.TreeSet;
 
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.commons.tx.TransactionManager;
@@ -25,11 +24,14 @@ import fr.univmobile.web.commons.View;
 public class RegionsController extends AbstractBackendController {
 
 	public RegionsController(final TransactionManager tx,
-			final UserDataSource users, final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
+			final RegionDataSource regions) {
 
-		super(tx, users, regions, pois, poiTrees);
+		this.tx = checkNotNull(tx, "tx");
+		this.regions = checkNotNull(regions, "regions");
 	}
+
+	private final TransactionManager tx;
+	private final RegionDataSource regions;
 
 	@Override
 	public View action() throws IOException, TransactionException {

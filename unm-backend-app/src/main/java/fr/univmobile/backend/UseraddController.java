@@ -7,9 +7,6 @@ import java.io.IOException;
 
 import javax.annotation.Nullable;
 
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTreeDataSource;
-import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.UserBuilder;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.commons.tx.Lock;
@@ -27,15 +24,15 @@ import fr.univmobile.web.commons.View;
 public class UseraddController extends AbstractBackendController {
 
 	public UseraddController(final TransactionManager tx,
-			final UserDataSource users, final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees,
-			final UsersController usersController) {
+			final UserDataSource users, final UsersController usersController) {
 
-		super(tx, users, regions, pois, poiTrees);
-
+		this.users = checkNotNull(users, "users");
+		this.tx = checkNotNull(tx, "tx");
 		this.usersController = checkNotNull(usersController, "usersController");
 	}
 
+	private final TransactionManager tx;
+	private final UserDataSource users;
 	private final UsersController usersController;
 
 	@Override

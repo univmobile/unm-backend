@@ -14,12 +14,7 @@ import org.joda.time.DateTime;
 import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTreeDataSource;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -30,16 +25,9 @@ import fr.univmobile.web.commons.View;
 @Paths({ "comment" })
 public class CommentController extends AbstractBackendController {
 
-	public CommentController(final TransactionManager tx, //
-			final CommentDataSource comments, //
-			final CommentManager commentManager, //
-			final UserDataSource users, //
-			final RegionDataSource regions, //
-			final PoiDataSource pois, //
-			final PoiTreeDataSource poiTrees //
+	public CommentController(final CommentDataSource comments, //
+			final CommentManager commentManager //
 	) {
-		super(tx, users, regions, pois, poiTrees);
-
 		this.comments = checkNotNull(comments, "commentDataSource");
 		this.commentManager = checkNotNull(commentManager, "commentManager");
 	}

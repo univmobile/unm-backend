@@ -1,5 +1,6 @@
 package fr.univmobile.backend;
 
+import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.commons.DataBeans.instantiate;
 
 import java.io.IOException;
@@ -15,22 +16,25 @@ import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTree;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.model.Pois;
 import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
 @Paths({ "pois", "pois/" })
 public class PoisController extends AbstractBackendController {
 
-	public PoisController(final TransactionManager tx,
-			final UserDataSource users, final RegionDataSource regions,
+	public PoisController(final RegionDataSource regions,
 			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
 
-		super(tx, users, regions, pois, poiTrees);
+		this.pois = checkNotNull(pois, "pois");
+		this.poiTrees = checkNotNull(poiTrees, "poiTrees");
+		this.regions = checkNotNull(regions, "regions");
 	}
+
+	private final RegionDataSource regions;
+	private final PoiDataSource pois;
+	private final PoiTreeDataSource poiTrees;
 
 	private PoiClient getPoiClient() {
 
@@ -55,7 +59,7 @@ public class PoisController extends AbstractBackendController {
 
 		final PoisInfo poisInfo = instantiate(PoisInfo.class) //
 				.setCount(poiTree.sizeOfAllPois()) //
-				.setContext("POIS de plus haut niveau") // 
+				.setContext("POIS de plus haut niveau") //
 				.setResultCount(resultCount);
 
 		setAttribute("poisInfo", poisInfo);
@@ -91,14 +95,14 @@ interface PoisInfo {
 	 */
 	@Nullable
 	String getContext();
-	
+
 	PoisInfo setContext(String context);
 
 	/**
 	 * Count of POIs returned by the search.
 	 */
 	int getResultCount();
-	
+
 	PoisInfo setResultCount(int count);
 
 	Region[] getRegions();

@@ -1,5 +1,6 @@
 package fr.univmobile.backend;
 
+import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.commons.DataBeans.instantiate;
 
 import java.io.IOException;
@@ -10,31 +11,27 @@ import java.util.TreeSet;
 
 import javax.annotation.Nullable;
 
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTreeDataSource;
-import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
 @Paths({ "users", "users/" })
 public class UsersController extends AbstractBackendController {
 
-	public UsersController(final TransactionManager tx,
-			final UserDataSource users, final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
+	public UsersController(final UserDataSource users) {
 
-		super(tx, users, regions, pois, poiTrees);
+		this.users = checkNotNull(users, "users");
 	}
+
+	private final UserDataSource users;
 
 	@Override
 	public View action() throws IOException, TransactionException {
 
 		getDelegationUser();
-		
+
 		final Map<String, User> allUsers = users.getAllBy(String.class, "uid");
 
 		final Map<String, User> results = users.getAllBy(String.class, "uid");

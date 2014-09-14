@@ -199,24 +199,21 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		}
 
 		// 2. MAIN CONTROLLERS
-		final UsersController usersController = new UsersController(tx, users,
-				regions, pois, poiTrees);
 
-		super.init(
-				new HomeController(tx, users, regions, pois, poiTrees), //
-				usersController,
-				new UseraddController(tx, users, regions, pois, poiTrees,
+		final UsersController usersController = new UsersController(users);
+
+		super.init(new HomeController(users), //
+				usersController, new UseraddController(tx, users,
 						usersController), //
-				new RegionsController(tx, users, regions, pois, poiTrees), //
-				new AdminGeocampusController(tx, users, regions, pois, poiTrees), //
-				new SystemController(tx, users, regions, pois, poiTrees, ds), //
-				new PoisController(tx, users, regions, pois, poiTrees), //
-				new PoiController(tx, comments, commentManager, users, regions,
-						pois, poiTrees), //
-				new CommentsController(tx, comments, commentManager, users,
-						regions, pois, poiTrees), //
-				new CommentController(tx, comments, commentManager, users,
-						regions, pois, poiTrees) //
+				new RegionsController(tx, regions), //
+				new AdminGeocampusController(regions, pois, poiTrees), //
+				new SystemController(ds), //
+				new PoisController(regions, pois, poiTrees), //
+				new PoiController(comments, commentManager, regions, pois,
+						poiTrees), //
+				new CommentsController(comments, commentManager, regions, pois,
+						poiTrees), //
+				new CommentController(comments, commentManager) //
 		);
 
 		// 3. JSON CONTROLLERS

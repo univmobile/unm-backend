@@ -1,5 +1,7 @@
 package fr.univmobile.backend;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
@@ -10,22 +12,30 @@ import fr.univmobile.backend.client.PoiGroup;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.model.Pois;
 import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
 @Paths({ "geocampus", "geocampus/" })
 public class AdminGeocampusController extends AbstractBackendController {
 
-	public AdminGeocampusController(final TransactionManager tx,
-			final UserDataSource users, final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
+	public AdminGeocampusController(
+			// final TransactionManager tx,
+			// final UserDataSource users,
+			final RegionDataSource regions, final PoiDataSource pois,
+			final PoiTreeDataSource poiTrees) {
 
-		super(tx, users, regions, pois, poiTrees);
+		// super(tx, users, regions, pois, poiTrees);
+
+		this.pois = checkNotNull(pois, "pois");
+		this.poiTrees = checkNotNull(poiTrees, "poiTrees");
+		this.regions = checkNotNull(regions, "regions");
 	}
+
+	private final RegionDataSource regions;
+	private final PoiDataSource pois;
+	private final PoiTreeDataSource poiTrees;
 
 	private PoiClient getPoiClient() {
 

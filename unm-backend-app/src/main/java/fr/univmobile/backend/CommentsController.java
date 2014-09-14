@@ -22,10 +22,8 @@ import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.commons.DataBeans;
 import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.PageNotFoundException;
 import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
@@ -45,18 +43,21 @@ public class CommentsController extends AbstractBackendController {
 		return hasPathStringVariable("${context}");
 	}
 
-	public CommentsController(final TransactionManager tx,
-			final CommentDataSource comments,
-			final CommentManager commentManager, final UserDataSource users,
+	public CommentsController(final CommentDataSource comments,
+			final CommentManager commentManager,
 			final RegionDataSource regions, final PoiDataSource pois,
 			final PoiTreeDataSource poiTrees) {
 
-		super(tx, users, regions, pois, poiTrees);
-
 		this.comments = checkNotNull(comments, "comments");
 		this.commentManager = checkNotNull(commentManager, "commentManager");
+		this.pois = checkNotNull(pois, "pois");
+		this.poiTrees = checkNotNull(poiTrees, "poiTrees");
+		this.regions = checkNotNull(regions, "regions");
 	}
 
+	private final RegionDataSource regions;
+	private final PoiDataSource pois;
+	private final PoiTreeDataSource poiTrees;
 	private final CommentDataSource comments;
 	private final CommentManager commentManager;
 
