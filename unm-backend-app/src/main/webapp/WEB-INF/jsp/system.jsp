@@ -56,11 +56,26 @@ Administration d’UnivMobile
 	</td>
 </tr>
 <tr class="even memory">
-	<th>Memory</th> 
+	<th>JVM Memory</th> 
 	<td>
 		Free: ${systemInfo.freeMemory} —
 		Total: ${systemInfo.totalMemory} —
 		Max: ${systemInfo.maxMemory}
+	</td>
+</tr>
+<tr class="odd jvm">
+	<th>JVM</th> 
+	<td>
+		${systemInfo.javaVersion} —
+		${systemInfo.javaVmVendor}
+	</td>
+</tr>
+<tr class="even os">
+	<th>OS</th> 
+	<td>
+		${systemInfo.osName} —
+		${systemInfo.osVersion} —
+		${systemInfo.osArch}
 	</td>
 </tr>
 <tr class="odd dataDir">

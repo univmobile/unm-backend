@@ -40,6 +40,11 @@ systemInfo:
     freeMemory: 926 Mo
     totalMemory: 48129 Mo
     maxMemory: 53129 Mo
+    osArch: x86_64
+    osName: Mac OS X
+    osVersion: 10.8.5
+    javaVersion: 1.6.0_65
+    javaVmVendor: Apple Inc.    
     logFile: /tmp/unm-backend.log
     logFileLength: 1291 Mo
     logFileError: null
@@ -48,6 +53,7 @@ systemInfo:
       value:
         - name: unm_users
           rowCount: 4
+          error: null
         - name: unm_search
           rowCount: 1209
     monitoringGraphs:

@@ -87,7 +87,12 @@ public class SystemController extends AbstractBackendController {
 				.setTablePrefix(tablePrefix) //
 				.setFreeMemory(formatMemory(runtime.freeMemory())) //
 				.setTotalMemory(formatMemory(runtime.totalMemory())) //
-				.setMaxMemory(formatMemory(runtime.maxMemory()));
+				.setMaxMemory(formatMemory(runtime.maxMemory())) //
+				.setOsArch(System.getProperty("os.arch")) //
+				.setOsName(System.getProperty("os.name")) //
+				.setOsVersion(System.getProperty("os.version")) //
+				.setJavaVersion(System.getProperty("java.version")) //
+				.setJavaVmVendor(System.getProperty("java.vm.vendor")); //
 
 		setAttribute("systemInfo", systemInfo);
 
@@ -286,6 +291,26 @@ interface SystemInfo {
 	String getMaxMemory();
 
 	SystemInfo setMaxMemory(String maxMemory);
+
+	String getOsArch();
+
+	SystemInfo setOsArch(String osArch);
+
+	String getOsName();
+
+	SystemInfo setOsName(String osName);
+
+	String getOsVersion();
+
+	SystemInfo setOsVersion(String osVersion);
+
+	String getJavaVersion();
+
+	SystemInfo setJavaVersion(String javaVersion);
+
+	String getJavaVmVendor();
+
+	SystemInfo setJavaVmVendor(String javaVmVendor);
 
 	String getLogFile();
 
