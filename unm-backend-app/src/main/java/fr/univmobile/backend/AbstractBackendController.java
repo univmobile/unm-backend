@@ -1,21 +1,10 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static fr.univmobile.commons.DataBeans.instantiate;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.TreeSet;
-
-import javax.annotation.Nullable;
-
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTree;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.University;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.commons.tx.Lock;
@@ -56,12 +45,30 @@ abstract class AbstractBackendController extends AbstractJspController {
 
 	protected final User getUser() {
 
-		return getSessionAttribute("user", User.class);
+		final User user = getSessionAttribute("user", User.class);
+
+		if (user == null) {
+			throw new IllegalStateException("null user");
+		}
+
+		return user;
 	}
 
 	protected final User getDelegationUser() {
 
-		return getSessionAttribute(DELEGATION_USER, User.class);
+		final User delegationUser = getSessionAttribute(DELEGATION_USER,
+				User.class);
+
+		if (delegationUser != null) {
+
+			return delegationUser;
+		}
+
+		final User user = getUser();
+
+		setSessionAttribute(DELEGATION_USER, user);
+
+		return user;
 	}
 
 	protected final View entered() throws TransactionException {
@@ -69,90 +76,68 @@ abstract class AbstractBackendController extends AbstractJspController {
 		// 1. UPDATE?
 
 		/*
-		final UpdateRegions ur = getHttpInputs(UpdateRegions.class);
+		 * final UpdateRegions ur = getHttpInputs(UpdateRegions.class);
+		 * 
+		 * if (ur.isHttpValid()) {
+		 * 
+		 * final Region ile_de_france = regions.getByUid("ile_de_france"); final
+		 * Region bretagne = regions.getByUid("bretagne"); final Region unrpcl =
+		 * regions.getByUid("unrpcl");
+		 * 
+		 * if (!ile_de_france.getLabel().equals(ur.region_ile_de_france())) {
+		 * updateRegionLabel(ile_de_france, ur.region_ile_de_france()); }
+		 * 
+		 * if (!bretagne.getLabel().equals(ur.region_bretagne())) {
+		 * updateRegionLabel(bretagne, ur.region_bretagne()); }
+		 * 
+		 * if (!unrpcl.getLabel().equals(ur.region_unrpcl())) {
+		 * updateRegionLabel(unrpcl, ur.region_unrpcl()); } }
+		 * 
+		 * // 2. VIEW
+		 * 
+		 * // 2.2. REGIONS
+		 * 
+		 * final Map<String, Region> allRegions = regions.getAllBy(String.class,
+		 * "uid");
+		 * 
+		 * final List<Region> r = new ArrayList<Region>();
+		 * 
+		 * setAttribute("regions", r);
+		 * 
+		 * for (final String uid : new TreeSet<String>(allRegions.keySet())) {
+		 * 
+		 * r.add(allRegions.get(uid)); }
+		 * 
+		 * // 2.3. POIS
+		 * 
+		 * final PoiTree poiTree = poiTrees.getByUid("ile_de_france"); // TODO
+		 * 
+		 * final PoisInfo pois = instantiate(PoisInfo.class).setCount(
+		 * poiTree.sizeOfAllPois());
+		 * 
+		 * setAttribute("poisInfo", pois);
+		 * 
+		 * for (final String uid : new TreeSet<String>(allRegions.keySet())) {
+		 * 
+		 * final Region region = allRegions.get(uid);
+		 * 
+		 * final PoisInfo.Region region2 = instantiate(PoisInfo.Region.class)
+		 * .setUid(region.getUid()).setLabel(region.getLabel());
+		 * 
+		 * pois.addToRegions(region2);
+		 * 
+		 * for (final University university : region.getUniversities()) {
+		 * 
+		 * final String universityId = university.getId();
+		 * 
+		 * final PoisInfo.University university2 = instantiate(
+		 * PoisInfo.University.class) .setId(universityId)
+		 * .setTitle(university.getTitle()) .setPoiCount(
+		 * poiTree.sizeOfAllPoisByUniversityId(universityId));
+		 * 
+		 * region2.addToUniversities(university2); } }
+		 */
 
-		if (ur.isHttpValid()) {
-
-			final Region ile_de_france = regions.getByUid("ile_de_france");
-			final Region bretagne = regions.getByUid("bretagne");
-			final Region unrpcl = regions.getByUid("unrpcl");
-
-			if (!ile_de_france.getLabel().equals(ur.region_ile_de_france())) {
-				updateRegionLabel(ile_de_france, ur.region_ile_de_france());
-			}
-
-			if (!bretagne.getLabel().equals(ur.region_bretagne())) {
-				updateRegionLabel(bretagne, ur.region_bretagne());
-			}
-
-			if (!unrpcl.getLabel().equals(ur.region_unrpcl())) {
-				updateRegionLabel(unrpcl, ur.region_unrpcl());
-			}
-		}
-
-		// 2. VIEW
-
-		// 2.1. USERS
-
-		final Map<String, User> allUsers = users.getAllBy(String.class, "uid");
-
-		final List<User> u = new ArrayList<User>();
-
-		setAttribute("users", u);
-
-		for (final String uid : new TreeSet<String>(allUsers.keySet())) {
-
-			u.add(allUsers.get(uid));
-		}
-
-		// 2.2. REGIONS
-
-		final Map<String, Region> allRegions = regions.getAllBy(String.class,
-				"uid");
-
-		final List<Region> r = new ArrayList<Region>();
-
-		setAttribute("regions", r);
-
-		for (final String uid : new TreeSet<String>(allRegions.keySet())) {
-
-			r.add(allRegions.get(uid));
-		}
-
-		// 2.3. POIS
-
-		final PoiTree poiTree = poiTrees.getByUid("ile_de_france"); // TODO
-
-		final PoisInfo pois = instantiate(PoisInfo.class).setCount(
-				poiTree.sizeOfAllPois());
-
-		setAttribute("poisInfo", pois);
-
-		for (final String uid : new TreeSet<String>(allRegions.keySet())) {
-
-			final Region region = allRegions.get(uid);
-
-			final PoisInfo.Region region2 = instantiate(PoisInfo.Region.class)
-					.setUid(region.getUid()).setLabel(region.getLabel());
-
-			pois.addToRegions(region2);
-
-			for (final University university : region.getUniversities()) {
-
-				final String universityId = university.getId();
-
-				final PoisInfo.University university2 = instantiate(
-						PoisInfo.University.class)
-						.setId(universityId)
-						.setTitle(university.getTitle())
-						.setPoiCount(
-								poiTree.sizeOfAllPoisByUniversityId(universityId));
-
-				region2.addToUniversities(university2);
-			}
-		}
-*/
-		
 		/*
 		 * regions: type: fr.univmobile.backend.core.Region2[] value: - uid:
 		 * bretagne label: Bretagne universities: type:
@@ -168,38 +153,6 @@ abstract class AbstractBackendController extends AbstractJspController {
 		// 9 END
 
 		// return new View("entered.jsp");
-		return new View("admin.jsp");	
-	}
-
-	private void updateRegionLabel(final Region region, final String label)
-			throws TransactionException {
-
-		final Lock lock = tx.acquireLock(5000, "regions", region.getUid());
-		try {
-
-			lock.save(regions.update(region).setLabel(label));
-
-			lock.commit();
-
-		} finally {
-			lock.release();
-		}
-	}
-
-	@HttpMethods("POST")
-	interface UpdateRegions extends HttpInputs {
-
-		@HttpRequired
-		@HttpParameter(trim = true)
-		String region_ile_de_france();
-
-		@HttpRequired
-		@HttpParameter(trim = true)
-		String region_bretagne();
-
-		@HttpRequired
-		@HttpParameter(trim = true)
-		String region_unrpcl();
+		return new View("admin.jsp");
 	}
 }
-

@@ -1,0 +1,39 @@
+baseURL: ${baseURL}
+
+user:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+    
+delegationUser:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+
+regions:
+   type: fr.univmobile.backend.core.Region[]
+   value:
+     - uid: bretagne
+       label: Bretagne
+       url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_bretagne
+       universityCount: 4
+     - uid: ile_de_france
+       label: Île de France
+       url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_ile_de_france
+       universityCount: 18
+     - uid: unrpcl
+       label: Limousin/Poitou-Charentes
+       url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_unrpcl
+       universityCount: 5
+       
+buildInfo:
+  type: fr.univmobile.model.BuildInfo
+  value:
+    appVersion: 0.0.4-SNAPSHOT
+    buildDisplayName: "#34"
+    buildId: 2014/07/16 15:45
+    gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70

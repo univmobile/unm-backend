@@ -575,12 +575,13 @@ div.body.results #button-export {
 #div-entered #li-logout:hover { 
 	background-color: #0CF; 
 } 
-#div-entered #ul-adminMenu li ul {
+#div-entered #ul-adminMenu ul {
 	color: #000;
 	visibility: hidden;
 	position: absolute;
 	border: 1px solid #9bc9e1;
 	margin: 2px 0 0 1px;
+	z-index: 1;
 } 
 #ul-adminMenu ul li:hover {
 	margin: 0;

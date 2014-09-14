@@ -21,6 +21,7 @@ import org.junit.Test;
 import com.thoughtworks.selenium.DefaultSelenium;
 import com.thoughtworks.selenium.Selenium; // Must keep Selenium for our tests
 
+@SuppressWarnings("deprecation")
 public class SimpleSeleniumTest {
 
 	@Before
@@ -121,6 +122,10 @@ public class SimpleSeleniumTest {
 
 		selenium.waitForPageToLoad("10000");
 
+		selenium.getEval("window.document.getElementById('link-regions').click();");
+
+		selenium.waitForPageToLoad("10000");
+
 		final String KWARGS = "";
 
 		final File file = new File("target",
@@ -130,13 +135,13 @@ public class SimpleSeleniumTest {
 
 		final String pageSource = selenium.getHtmlSource();
 
-		FileUtils.write(new File("target", "entered.html"), pageSource);
+		FileUtils.write(new File("target", "regions.html"), pageSource);
 
-		// We test that the "entered" page doesn’t contain the hardcoded line:
+		// We test that the "regions" page doesn’t contain the hardcoded line:
 		// "JSON : https://univmobile-dev.univ-paris1.fr/json/regions"
 		// Because univmobile-dev is the integration platform, not the dev / ci
 		// one.
-		// The "entered" page should only contain a line like this one:
+		// The "regions" page should only contain a line like this one:
 		// "JSON : http://localhost:8380/unm-backend/json/regions"
 
 		final String JSON = "JSON";

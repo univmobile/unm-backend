@@ -33,6 +33,8 @@ public class UsersController extends AbstractBackendController {
 	@Override
 	public View action() throws IOException, TransactionException {
 
+		getDelegationUser();
+		
 		final Map<String, User> allUsers = users.getAllBy(String.class, "uid");
 
 		final Map<String, User> results = users.getAllBy(String.class, "uid");
