@@ -40,6 +40,11 @@ public class CommentsController extends AbstractBackendController {
 		return getPathStringVariable("${context}");
 	}
 
+	private boolean hasCommentsContext() {
+
+		return hasPathStringVariable("${context}");
+	}
+
 	public CommentsController(final TransactionManager tx,
 			final CommentDataSource comments,
 			final CommentManager commentManager, final UserDataSource users,
@@ -71,6 +76,11 @@ public class CommentsController extends AbstractBackendController {
 	@Override
 	public View action() throws IOException, SQLException,
 			TransactionException, ClientException, PageNotFoundException {
+
+		if (!hasCommentsContext()) {
+
+			return mostRecentComments();
+		}
 
 		final String context = getCommentsContext();
 
@@ -121,6 +131,27 @@ public class CommentsController extends AbstractBackendController {
 						.setContext(
 								"Commentaires pour le POI " + poiId + " : "
 										+ poi.getName())
+						.setResultCount(comments.length));
+
+		// 9. END
+
+		return new View("comments.jsp");
+	}
+
+	private View mostRecentComments() throws SQLException, IOException {
+
+		// 2. COMMENTS
+
+		final Comment[] comments = getCommentClient().getMostRecentComments(80);
+
+		setAttribute("comments", comments);
+
+		// 3. COMMENTS INFO
+
+		setAttribute(
+				"commentsInfo",
+				DataBeans.instantiate(CommentsInfo.class)
+						.setContext("Commentaires les plus récents")
 						.setResultCount(comments.length));
 
 		// 9. END

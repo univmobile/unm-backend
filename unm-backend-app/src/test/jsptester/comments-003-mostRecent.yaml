@@ -1,0 +1,55 @@
+baseURL: ${baseURL}
+API_KEY: ${API_KEY}
+sessionToken: 642643144f1e793acc71bf646c4a86f2eb88b960
+
+user:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+    
+delegationUser:
+  type: fr.univmobile.backend.core.User
+  value:
+    uid: tformica
+    displayName: Toto Formica
+    mail: toto.formica@univ-paris1.fr
+    profileImageUrl: http://unpidf.univ-paris1.fr/wp-content/themes/wp-creativix/images/logos/1338991426.png
+       
+buildInfo:
+  type: fr.univmobile.model.BuildInfo
+  value:
+    appVersion: 0.0.4-SNAPSHOT
+    buildDisplayName: "#34"
+    buildId: 2014/07/16 15:45
+    gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70
+
+commentsInfo:
+  type: fr.univmobile.model.CommentsInfo
+  value:
+    count: 7430
+    context: |
+      Commentaires récents 
+    resultCount: 34
+
+comments:
+    type: fr.univmobile.model.Comment[]
+    value:
+      - id: 1
+        text: J'aime bien l'application, mais ça va si on danse ?
+        authorDisplayName: Dominique
+        authorUsername: dandriana
+        authorProfileImageUrl: http://unpidf.univ-paris1.fr/wp-content/themes/wp-creativix/images/logos/1338991426.png
+        displayFullPostedAt: Mercredi 27 août 2014, 13 h 34
+        displayPostedAt: 27 août - 13 h 34
+        displayPostedAtTime: 13 h 34
+      - id: 2
+        text: |
+          Une bien belle application.
+        authorDisplayName: André
+        authorUsername: dandriana
+        displayFullPostedAt: Jeudi 28 août 2014, 9 h 12
+        displayPostedAt: 28 août - 9 h 12
+        displayPostedAtTime: 9 h 12
+        

@@ -102,7 +102,6 @@
 <jsp:include page="div-entered.h.jsp"/>
 
 <div class="body results poi">
-<input type="hidden" name="poiId" value="${poi.id}">
 
 <h1 title="Version ${buildInfo.appVersion}
 Build ${buildInfo.buildDisplayName}
@@ -115,6 +114,9 @@ Administration d’UnivMobile
 
 <h2>
 Commentaires
+<c:if test="${not empty poi}">
+	/ POI ${poi.id}
+</c:if>
 <!--
 POI ${poi.id} : <c:out value="${poi.name}"/>
 -->
@@ -154,6 +156,8 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 	Export…
 </button>
 </div>
+
+<c:if test="${not empty poi}">
 
 <div id="div-poi">
 <table id="table-poi"> 
@@ -207,6 +211,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 
 <div id="div-addComment">
 <form method="POST" action="${baseURL}/comments">
+<input type="hidden" name="poiId" value="${poi.id}">
 <div class="author">
 <span class="displayName">${delegationUser.displayName}</span>
 <span class="username">@${delegationUser.uid}</span>
@@ -217,6 +222,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 </button>
 </form>
 </div>
+</c:if>
 
 <c:choose>
 <c:when test="${fn:length(comments) == 0}">
@@ -251,10 +257,12 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 </c:choose>
 
 <div id="div-comments-buttons">
+<c:if test="${not empty poi}">
 <button id="button-back"
 		onclick="document.location.href = '${baseURL}/pois/${poi.id}'; return false">
 	Retour au POI ${poi.id} : ${poi.name}
 </button>
+</c:if>
 </div>
 
 </div> <!-- end of #div-comments -->

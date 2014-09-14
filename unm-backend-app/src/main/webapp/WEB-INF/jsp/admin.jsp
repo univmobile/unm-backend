@@ -78,7 +78,7 @@ Administration d’UnivMobile
 		<a id="link-backups" href="${baseURL}/backups/">Sauvegardes (backups)</a>
 </ul>
 
-<h2 class="homeMenu">Autres</h2>
+<h2 class="homeMenu">Général</h2>
 
 <ul class="homeMenu" id="ul-home-others">
 	<li class="flaticon icon-question5">
