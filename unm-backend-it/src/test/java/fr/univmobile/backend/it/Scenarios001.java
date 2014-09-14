@@ -169,7 +169,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 	@Scenario("Voir les commentaires d’un POI")
 	@Test
-	public void Comments_000() throws Exception {
+	public void Comments_poi_000() throws Exception {
 
 		takeScreenshot("home.png");
 
@@ -216,6 +216,25 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		pause(PAUSE);
 
 		takeScreenshot("ucp3.png");
+	}
+
+	@Scenario("Voir les commentaires les plus récents")
+	@Test
+	public void Comments_000() throws Exception {
+
+		takeScreenshot("home.png");
+
+		elementById("button-myself").click();
+		pause(PAUSE);
+		takeScreenshot("entered.png");
+
+		elementById("link-comments").click();
+		pause(PAUSE);
+		takeScreenshot("comments.png");
+
+		elementById("link-adminMenu-home").click();
+		pause(PAUSE);
+		takeScreenshot("home2.png");
 	}
 
 	@Scenario("Voir les commentaires d’un POI")
