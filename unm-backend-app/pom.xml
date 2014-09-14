@@ -29,6 +29,10 @@
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-backend-client-local</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>fr.univmobile</groupId>
+			<artifactId>unm-markdown-util</artifactId>
+		</dependency>
 	</dependencies>
 
 	<build>

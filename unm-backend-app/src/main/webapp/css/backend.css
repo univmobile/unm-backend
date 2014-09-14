@@ -741,8 +741,19 @@ body.entered #text-query {
 	padding-right: 1em;
 	padding-left: 0;
 }
-
-
+#body-help #div-help {
+	padding: 0 24px;
+}
+#body-help #div-help h2 {
+	text-align: left;
+	display: table;
+	padding: 5px 24px 1px;
+	margin-left: -1em;
+	xborder: 1px solid #521;
+	background-color: #cef;
+	xcolor: #521;
+	xfont-size: 120%;
+}
 
 
 
