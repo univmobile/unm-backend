@@ -47,35 +47,35 @@ Administration d’UnivMobile
 
 <ul class="homeMenu" id="ul-home-data">
 	<li class="flaticon icon-search8">
-		<a id="link-search" href="${baseURL}/data/search/">Recherche avancée</a>
+		<a id="link-search" href="${baseURL}/search/">Recherche avancée</a>
 	<li class="flaticon icon-location14">
-		<a id="link-pois" href="${baseURL}/data/pois/">Points of Interest (POIs)</a>
+		<a id="link-pois" href="${baseURL}/pois/">Points of Interest (POIs)</a>
 	<li class="flaticon icon-chat2">
-		<a id="link-comments" href="${baseURL}/data/comments/">Commentaires</a>
+		<a id="link-comments" href="${baseURL}/comments/">Commentaires</a>
 	<li class="flaticon icon-website1">
-		<a id="link-regions" href="${baseURL}/data/regions/">Régions, universités</a>
+		<a id="link-regions" href="${baseURL}/regions/">Régions, universités</a>
 	<li class="clear">
 	<li class="flaticon icon-compass6">
 		<a id="link-geocampus" href="${baseURL}/geocampus/">Géocampus</a>
 	<li class="flaticon icon-rss9">
-		<a id="link-news" href="${baseURL}/data/news/">Fils d’actualités des universités</a>
+		<a id="link-news" href="${baseURL}/news/">Fils d’actualités des universités</a>
 	<li class="flaticon icon-address7">
-		<a id="link-users" href="${baseURL}/data/users/">Utilisateurs</a>
+		<a id="link-users" href="${baseURL}/users/">Utilisateurs</a>
 </ul>
 
 <h2 class="homeMenu"><a id="link-system" href="${baseURL}/system/">Système</a></h2>
 
 <ul class="homeMenu" id="ul-home-system">
 	<li class="flaticon icon-file6">
-		<a id="link-logqueue" href="${baseURL}/system/logqueue/">Historique<br>des actions</a>
+		<a id="link-logqueue" href="${baseURL}/logqueue/">Historique<br>des actions</a>
 	<li class="flaticon icon-graph5">
-		<a id="link-stats" href="${baseURL}/system/stats/">Statistiques</a>
+		<a id="link-stats" href="${baseURL}/stats/">Statistiques</a>
 	<li class="flaticon icon-check6">
-		<a id="link-monitoring" href="${baseURL}/system/monitoring/">Monitoring</a>
+		<a id="link-monitoring" href="${baseURL}/monitoring/">Monitoring</a>
 	<li class="flaticon icon-black56">
-		<a id="link-logs" href="${baseURL}/system/logs/">Logs techniques</a>
+		<a id="link-logs" href="${baseURL}/logs/">Logs techniques</a>
 	<li class="flaticon icon-down9">
-		<a id="link-backups" href="${baseURL}/system/backups/">Sauvegardes (backups)</a>
+		<a id="link-backups" href="${baseURL}/backups/">Sauvegardes (backups)</a>
 </ul>
 
 <h2 class="homeMenu">Autres</h2>

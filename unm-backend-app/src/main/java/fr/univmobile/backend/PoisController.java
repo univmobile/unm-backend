@@ -6,6 +6,8 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.annotation.Nullable;
+
 import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.PoiGroup;
@@ -72,5 +74,64 @@ public class PoisController extends AbstractBackendController {
 		// 9. END
 
 		return new View("pois.jsp");
+	}
+}
+
+interface PoisInfo {
+
+	/**
+	 * Total count of POIs in the DataBase.
+	 */
+	int getCount();
+
+	PoisInfo setCount(int count);
+
+	/**
+	 * e.g. "POIs de plus haut niveau"
+	 */
+	@Nullable
+	String getContext();
+	
+	PoisInfo setContext(String context);
+
+	/**
+	 * Count of POIs returned by the search.
+	 */
+	int getResultCount();
+	
+	PoisInfo setResultCount(int count);
+
+	Region[] getRegions();
+
+	PoisInfo addToRegions(Region region);
+
+	interface Region {
+
+		String getUid();
+
+		Region setUid(String uid);
+
+		String getLabel();
+
+		Region setLabel(String label);
+
+		University[] getUniversities();
+
+		Region addToUniversities(University university);
+	}
+
+	interface University {
+
+		String getId();
+
+		University setId(String id);
+
+		String getTitle();
+
+		University setTitle(String title);
+
+		int getPoiCount();
+
+		University setPoiCount(int poiCount);
 	}
 }

@@ -88,6 +88,12 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		savePageSource("pageEntered.html");
 
+		elementById("link-users").click();
+
+		pause(PAUSE);
+
+		takeScreenshot("users.png");
+
 		elementById("link-useradd").click();
 
 		pause(PAUSE);

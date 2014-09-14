@@ -1,5 +1,6 @@
 package fr.univmobile.backend;
 
+import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.io.IOException;
@@ -27,10 +28,15 @@ public class UseraddController extends AbstractBackendController {
 
 	public UseraddController(final TransactionManager tx,
 			final UserDataSource users, final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
+			final PoiDataSource pois, final PoiTreeDataSource poiTrees,
+			final UsersController usersController) {
 
 		super(tx, users, regions, pois, poiTrees);
+
+		this.usersController = checkNotNull(usersController, "usersController");
 	}
+
+	private final UsersController usersController;
 
 	@Override
 	public View action() throws IOException, TransactionException {
@@ -109,7 +115,7 @@ public class UseraddController extends AbstractBackendController {
 
 		lock.commit();
 
-		return entered();
+		return usersController.action();
 	}
 
 	/**

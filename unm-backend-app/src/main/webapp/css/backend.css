@@ -68,21 +68,16 @@ body.entered div.body {
 #div-entered a:active {
 	color: #f00;
 }
-#body-entered table,
-#body-pois table {
+body.results table {
 	border-collapse: collapse;	
 }
-#body-entered th,
-#body-entered td,
-#body-pois th,
-#body-pois td {
+body.results th,
+body.results td {
 	border: 1px solid #000;	
 	vertical-align: top
 }
-#body-entered th,
-#body-entered td,
-#body-pois th,
-#body-pois td {
+body.results th,
+body.results td {
 	padding: 2px 30px;
 }
 #body-pois td.id {
@@ -91,8 +86,11 @@ body.entered div.body {
 #body-entered #div-regions td.label {
 	padding: 2px 2px;
 }
-#body-entered th,
-#body-pois th {
+body.results table {
+	width: 100%;
+	margin-top: 1em;
+}
+body.results th {
 	background-color: #9bc9e1;
 }
 h2 {
@@ -121,8 +119,8 @@ div.table.bottom {
 div.table.bottom a {
 	text-decoration: none;	
 }
-#body-entered th.none,
-#body-entered td.none {
+body.results th.none,
+body.results td.none {
 	border: none;
 	padding: 0 2px;
 	font-weight: bold;	
@@ -130,11 +128,11 @@ div.table.bottom a {
 	width: 30px;
 	text-align: right;
 }
-#body-entered td.none div.delegation,
-#body-entered td.none div.delegation.principal {
+body.results td.none div.delegation,
+body.results td.none div.delegation.principal {
 	color: #090;
 }
-#body-entered td.none div.principal {
+body.results td.none div.principal {
 	color: #900;
 }
 #body-useradd th {

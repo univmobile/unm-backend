@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<title>Administration d’UnivMobile — POIs</title>
+<title>Administration d’UnivMobile — Utilisateurs</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <style type="text/css">
 td.id,
@@ -18,11 +18,6 @@ td.name:active a,
 td a:active {
 	color: #f00;
 }
-td.universityIds ul {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
-}
 th.id,
 td.id {
 	display: none;
@@ -33,7 +28,7 @@ td.id {
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
 <jsp:include page="js-adminMenu.h.jsp"/>
 </head>
-<body id="body-pois" class="entered results">
+<body id="body-users" class="entered results">
 
 <jsp:include page="div-entered.h.jsp"/>
 
@@ -46,14 +41,14 @@ ${buildInfo.gitCommitId}">
 Administration d’UnivMobile
 </h1>
 
-<div id="div-pois">
+<div id="div-users">
 
 <h2>
-POIs : ${poisInfo.count}
+Utilisateurs : ${usersInfo.count}
 </h2>
 
 <div id="div-query">
-<form action="${baseURL}/pois" method="GET">
+<form action="${baseURL}/users" method="GET">
 <input id="text-query" name="q">
 <button id="button-search">
 	Rechercher
@@ -65,20 +60,20 @@ POIs : ${poisInfo.count}
 <span>
 	→
 	<c:choose>
-	<c:when test="${not empty poisInfo.context}">
-		<c:out value="${poisInfo.context}"/>
-		<c:if test="${not empty poisInfo.resultCount}">
-			(${poisInfo.resultCount})
+	<c:when test="${not empty usersInfo.context}">
+		<c:out value="${usersInfo.context}"/>
+		<c:if test="${not empty usersInfo.resultCount}">
+			(${usersInfo.resultCount})
 		</c:if>
 	</c:when>
-	<c:when test="${empty poisInfo.resultCount || poisInfo.resultCount == 0}">
+	<c:when test="${empty usersInfo.resultCount || usersInfo.resultCount == 0}">
 		Aucun résultat
 	</c:when>
-	<c:when test="${poisInfo.resultCount == 1}">
+	<c:when test="${usersInfo.resultCount == 1}">
 		Un résultat
 	</c:when>
 	<c:otherwise>
-		${poisInfo.resultCount} résultats
+		${usersInfo.resultCount} résultats
 	</c:otherwise>
 	</c:choose>
 </span>
@@ -87,68 +82,55 @@ POIs : ${poisInfo.count}
 </button>
 </div>
 
-<c:forEach var="poiGroup" items="${pois}">
-
-<h3>
-	${poiGroup.name}
-</h3>
-
-<c:choose>
-<c:when test="${fn:length(poiGroup.pois) == 0}">
-	<div class="emptyArray">
-	Aucun POI
-	</div>
-</c:when>
-<c:otherwise>
 <table>
 <thead>
 <tr>
-<th class="universityIds">
-	Universités
-</th>
-<th class="id">
-	id
-</th>
-<th class="name">
-	POI
-</th>
-<th class="address">
-	Adresse
-</th>
+<th class="none"></th>
+<th>uid</th>
+<th>mail</th>
+<th></th>
+<th class="none"></th>
 </tr>
 </thead>
 <tbody>
-<c:forEach var="poi" items="${poiGroup.pois}">
-<c:set var="href" value="${baseURL}/pois/${poi.id}"/>
+<c:forEach var="u" items="${users}">
 <tr>
-<td class="universityIds">
-	<ul>
-	<c:forEach var="universityId" items="${poi.universityIds}">
-	<li> ${universityId}
-	</c:forEach>
-	</ul>
+<td class="none">
+<c:choose>
+<c:when test="${user.uid == u.uid}">
+	<div class="principal
+		<c:if test="${delegationUser.uid == u.uid}">delegation</c:if>
+		" title="Principal : ${user.uid}">1</div>
+</c:when>
+<c:when test="${delegationUser.uid == u.uid}">
+	<div class="delegation" title="Délégation : ${delegationUser.uid}">2</div>
+</c:when>
+</c:choose>
 </td>
-<td class="id" onclick="document.location.href = '${href}'">
-	<a href="${href}" id="link-poi-${poi.id}-id">${poi.id}</a>
+<td>
+${u.uid}
 </td>
-<td class="name" onclick="document.location.href = '${href}'">
-	<a href="${href}" id="link-poi-${poi.id}-name">
-	<c:out value="${poi.name}"/>
-	</a>
+<td>
+${u.mail}
 </td>
-<td class="address">
-	<c:out value="${poi.address}"/>
+<td class="edit">
+<!--
+<a id="link-edit_xxx" href="${baseURL}?user=${u.uid}&amp;edit">Modifier…</a>
+-->
+<div class="disabled">Modifier…</a>
+</td>
+<td class="none">
 </td>
 </tr>
 </c:forEach>
 </tbody>
 </table>
-</c:otherwise>
-</c:choose>
 
-</c:forEach>
+<div class="table bottom">
+<a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
+</div>
 
-</div> <!-- end of #div-pois -->
+</div> <!-- end of #div-users -->
 	
 </div> <!-- end of div.body -->
 

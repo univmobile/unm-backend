@@ -108,6 +108,12 @@ Administration d’UnivMobile
 			<c:when test="${not empty table.error}">
 				<span class="error">${table.error}</span>
 			</c:when>
+			<c:when test="${table.rowCount == 0}">
+				0 row
+			</c:when>
+			<c:when test="${table.rowCount == 1}">
+				one row
+			</c:when>
 			<c:otherwise>
 				${table.rowCount} rows
 			</c:otherwise>

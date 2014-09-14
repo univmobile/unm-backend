@@ -99,7 +99,7 @@ Administration d’UnivMobile
 <a id="link-cancel" href="${baseURL}/">Annuler</a>
 -->
 <button id="button-cancel"
- onclick="document.location.href = '${baseURL}'; return false;">
+ onclick="document.location.href = '${baseURL}/users'; return false;">
 	Annuler
 </button>
 <button id="button-save" onclick="submit()">
