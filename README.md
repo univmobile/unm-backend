@@ -41,11 +41,11 @@ Sur le projet Maven spécifique unm-backend-client :
   * unm-backend-client, [README.md](unm-backend-client/README.md "README.md")
   * unm-backend-client-json, [JavaDocs, Classes de communication avec le backend J2EE UnivMobile.](http://univmobile.vswip.com/nexus/content/sites/pub/unm-backend-client-json/0.0.4/apidocs/)
   
-### Autres repositories GitHub
+### Tous les repositories GitHub
 
-  * [unm-devel](https://github.com/univmobile/unm-devel/README.md "Repository GitHub unm-devel")
-  * [unm-ios](https://github.com/univmobile/unm-ios/README.md "Repository GitHub unm-ios")
-  * [unm-android](https://github.com/univmobile/unm-android/README.md "Repository GitHub unm-android")
-  * [unm-mobileweb](https://github.com/univmobile/unm-mobileweb/README.md "Repository GitHub unm-mobileweb")
+  * [unm-devel](https://github.com/univmobile/unm-devel/blob/develop/README.md "Repository GitHub unm-devel")
+  * [unm-ios](https://github.com/univmobile/unm-ios/blob/develop/README.md "Repository GitHub unm-ios")
+  * [unm-android](https://github.com/univmobile/unm-android/blob/develop/README.md "Repository GitHub unm-android")
+  * [unm-mobileweb](https://github.com/univmobile/unm-mobileweb/blob/develop/README.md "Repository GitHub unm-mobileweb")
   * **unm-backend**
-  * [unm-integration](https://github.com/univmobile/unm-integration/README.md "Repository GitHub unm-integration")
+  * [unm-integration](https://github.com/univmobile/unm-integration/blob/develop/README.md "Repository GitHub unm-integration")
