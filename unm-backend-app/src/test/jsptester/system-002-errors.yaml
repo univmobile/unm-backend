@@ -37,9 +37,15 @@ systemInfo:
     dbType: H2
     dbUrl: http://localhost:3306/toto
     dbName: toto
+    serverTime: 2014-09-12 12:34:12
     freeMemory: 926 Mo
     totalMemory: 48129 Mo
     maxMemory: 53129 Mo
+    osArch: x86_64
+    osName: Mac OS X
+    osVersion: 10.8.5
+    javaVersion: 1.6.0_65
+    javaVmVendor: Apple Inc.    
     logFile: /tmp/unm-backend.log
     logFileError: Log File doesn't exist 
     dbTables:

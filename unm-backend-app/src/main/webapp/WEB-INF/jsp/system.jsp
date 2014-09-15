@@ -28,7 +28,9 @@ Administration d’UnivMobile
 
 <h2 class="homeMenu">Système</h2>
 
-<table id="table-systemInfo">
+<div id="div-systemInfo">
+
+<table>
 <tbody>
 <tr class="odd version">
 	<th>Version</th>
@@ -78,7 +80,13 @@ Administration d’UnivMobile
 		${systemInfo.osArch}
 	</td>
 </tr>
-<tr class="odd dataDir">
+<tr class="odd serverTime">
+	<th>Server Time</th> 
+	<td>
+		${systemInfo.serverTime}
+	</td>
+</tr>
+<tr class="even dataDir">
 	<th>XML Data Directory</th> 
 	<td>${systemInfo.dataDir}
 		<c:choose>
@@ -92,7 +100,7 @@ Administration d’UnivMobile
 		</c:choose>
 	</td>
 </tr>
-<tr class="even logFile">
+<tr class="odd logFile">
 	<th>Log File</th> 
 	<td>${systemInfo.logFile}
 		<c:choose>
@@ -106,15 +114,15 @@ Administration d’UnivMobile
 		</c:choose>
 	</td>
 </tr>
-<tr class="odd dbUrl">
+<tr class="even dbUrl">
 	<th>DataBase URL</th> 
 	<td>${systemInfo.dbUrl}</td>
 </tr>
-<tr class="even tablePrefix">
+<tr class="odd tablePrefix">
 	<th>TableName Prefix</th> 
 	<td>${systemInfo.tablePrefix}</td>
 </tr>
-<tr class="odd dbTables">
+<tr class="even dbTables">
 	<th>DataBase Tables</th> 
 	<td>
 		<c:forEach var="table" items="${systemInfo.dbTables}">
@@ -136,7 +144,7 @@ Administration d’UnivMobile
 			<br/>
 		</c:forEach>
 </tr>
-<tr class="even monitoringGraphs">
+<tr class="odd monitoringGraphs">
 	<th>Monitoring Graphs</th> 
 	<td>
 		<c:forEach var="monitoringGraph" items="${systemInfo.monitoringGraphs}">
@@ -147,9 +155,11 @@ Administration d’UnivMobile
 </tbody>
 </table>
 
+</div> <!-- end of #div-systemInfo --> 
+
 <ul class="homeMenu" id="ul-home-system">
 	<li class="flaticon icon-file6">
-		<a id="link-home-logqueue" href="${baseURL}/logqueue/">Historique<br>des actions</a>
+		<a id="link-home-history" href="${baseURL}/history/">Historique<br>des actions</a>
 	<li class="flaticon icon-graph5">
 		<a id="link-home-stats" href="${baseURL}/stats/">Statistiques</a>
 	<li class="flaticon icon-check6">

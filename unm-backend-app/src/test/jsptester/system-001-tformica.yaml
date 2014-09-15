@@ -37,6 +37,7 @@ systemInfo:
     dbType: H2
     dbName: toto
     dbUrl: http://localhost:3306/toto
+    serverTime: 2014-09-12 12:34:12
     freeMemory: 926 Mo
     totalMemory: 48129 Mo
     maxMemory: 53129 Mo

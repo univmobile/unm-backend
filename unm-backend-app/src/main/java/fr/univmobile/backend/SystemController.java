@@ -25,6 +25,7 @@ import net.avcompris.binding.annotation.Namespaces;
 import net.avcompris.binding.annotation.XPath;
 import net.avcompris.binding.dom.helper.DomBinderUtils;
 
+import org.joda.time.DateTime;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -85,6 +86,7 @@ public class SystemController extends AbstractBackendController {
 				.setLogFile(logFilePath) //
 				.setDbUrl(dbUrl) //
 				.setTablePrefix(tablePrefix) //
+				.setServerTime(new DateTime().toString()) //
 				.setFreeMemory(formatMemory(runtime.freeMemory())) //
 				.setTotalMemory(formatMemory(runtime.totalMemory())) //
 				.setMaxMemory(formatMemory(runtime.maxMemory())) //
@@ -312,6 +314,10 @@ interface SystemInfo {
 
 	SystemInfo setJavaVmVendor(String javaVmVendor);
 
+	String getServerTime();
+	
+	SystemInfo setServerTime(String serverTime);
+	
 	String getLogFile();
 
 	SystemInfo setLogFile(String logFile);
