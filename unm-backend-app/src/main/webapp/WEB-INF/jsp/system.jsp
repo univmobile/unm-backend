@@ -79,7 +79,7 @@ Administration d’UnivMobile
 	</td>
 </tr>
 <tr class="odd dataDir">
-	<th>Data Directory</th> 
+	<th>XML Data Directory</th> 
 	<td>${systemInfo.dataDir}
 		<c:choose>
 		<c:when test="${not empty systemInfo.dataDirError}">
