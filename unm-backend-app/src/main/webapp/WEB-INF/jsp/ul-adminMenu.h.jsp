@@ -24,7 +24,7 @@
 		<a id="link-adminMenu-system" class="top" href="${baseURL}/system/">Système<span
 			class="top ui-menu-icon ui-icon ui-icon-carat-1-s"></span></a>
 		<ul id="ul-adminMenu-system">
-		<li><a id="link-adminMenu-logqueue" href="${baseURL}/logqueue/">Historique des actions</a>
+		<li><a id="link-adminMenu-history" href="${baseURL}/history/">Historique des actions</a>
 		<li><a id="link-adminMenu-stats" href="${baseURL}/stats/">Statistiques</a>
 		<li><a id="link-adminMenu-monitoring" href="${baseURL}/monitoring/">Monitoring</a>
 		<li><a id="link-adminMenu-logs" href="${baseURL}/logs/">Logs techniques</a>

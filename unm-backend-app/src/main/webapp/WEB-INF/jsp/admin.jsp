@@ -67,7 +67,7 @@ Administration d’UnivMobile
 
 <ul class="homeMenu" id="ul-home-system">
 	<li class="flaticon icon-file6">
-		<a id="link-logqueue" href="${baseURL}/logqueue/">Historique<br>des actions</a>
+		<a id="link-history" href="${baseURL}/history/">Historique<br>des actions</a>
 	<li class="flaticon icon-graph5">
 		<a id="link-stats" href="${baseURL}/stats/">Statistiques</a>
 	<li class="flaticon icon-check6">
