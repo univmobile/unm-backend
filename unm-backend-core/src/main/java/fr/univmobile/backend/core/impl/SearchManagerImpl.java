@@ -63,9 +63,9 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 
 	@Override
 	public void flushCache() throws IOException, SQLException {
-		
+
 		searchTokensExist.invalidateAll();
-		
+
 		searchTokenIds.invalidateAll();
 	}
 
@@ -360,11 +360,19 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 	@Override
 	public SearchContext newSearchContext() throws IOException {
 
-		return new SearchContextImpl(dbType, cxn);
+		// TODO use a holder object rather than this switch
+		return cxn == null ? new SearchContextImpl(dbType, ds)
+				: new SearchContextImpl(dbType, cxn);
 	}
 
 	private static class SearchContextImpl extends AbstractDbManagerImpl
 			implements SearchContext {
+
+		public SearchContextImpl(final ConnectionType dbType,
+				final DataSource ds) throws IOException {
+
+			super(dbType, ds);
+		}
 
 		public SearchContextImpl(final ConnectionType dbType,
 				final Connection cxn) throws IOException {
