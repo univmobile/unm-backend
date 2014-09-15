@@ -72,4 +72,11 @@ bundle:
   insertNewLog:
     mysql.h2: |
       INSERT INTO ${prefix}history 
-      (sent_at, principal_uid, message) VALUES (?, ?, ?);
+      (logged_at, principal_uid, message) VALUES (?, ?, ?);
+
+  appendLog:
+    mysql.h2: |
+      INSERT INTO ${prefix}history 
+      (logged_at, elapsed_ms, parent_id, principal_uid, message) 
+        VALUES (?, ?, ?, ?, ?);
+      

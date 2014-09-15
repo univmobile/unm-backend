@@ -259,13 +259,21 @@ bundle:
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
   # Do not define parent_id as INDEX, for INSERT performance sake.
+  # 
+  # id: ID of log line
+  # parent_id: ID of parent log line, if any
+  # logged_at: Date+Time at which the line was emitted
+  # elapsed_ms: Elapsed time, in milliseconds, since the parent line occurred
+  # principal_uid: UID of principal user
+  # delegation_uid: UID of delegation user, if any
   #
   createTable_history:
     mysql.h2: |
       CREATE TABLE ${prefix}history (
         id BIGINT(20) NOT NULL AUTO_INCREMENT,
         parent_id BIGINT(20) NULL,
-        sent_at TIMESTAMP NOT NULL,
+        logged_at TIMESTAMP NOT NULL,
+        elapsed_ms BIGINT(20) NULL,
         principal_uid VARCHAR(40) NOT NULL,
         delegation_uid VARCHAR(40) NULL,
         message VARCHAR(255) NOT NULL,

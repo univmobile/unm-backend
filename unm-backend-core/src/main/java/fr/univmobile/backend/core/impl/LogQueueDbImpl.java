@@ -9,6 +9,8 @@ import java.sql.SQLException;
 import javax.annotation.Nullable;
 import javax.sql.DataSource;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 
 import fr.univmobile.backend.history.LogQueue;
@@ -55,11 +57,6 @@ public class LogQueueDbImpl extends AbstractDbManagerImpl implements LogQueue {
 	@Override
 	public Logged log(final Loggable loggable) {
 
-		return insert(loggable, null);
-	}
-
-	private Logged insert(final Loggable loggable, @Nullable final Logged logged) {
-
 		checkNotNull(loggable, "loggable");
 
 		String message = loggable.getMessage(MAX_LENGTH);
@@ -78,6 +75,8 @@ public class LogQueueDbImpl extends AbstractDbManagerImpl implements LogQueue {
 
 		} catch (final SQLException e) {
 
+			log.error(e);
+
 			return new LoggedDb(null);
 		}
 
@@ -87,10 +86,34 @@ public class LogQueueDbImpl extends AbstractDbManagerImpl implements LogQueue {
 	@Override
 	public void log(final Loggable loggable, final Logged logged) {
 
+		checkNotNull(loggable, "loggable");
 		checkNotNull(logged, "logged");
 
-		insert(loggable, logged);
+		String message = loggable.getMessage(MAX_LENGTH);
+
+		if (message.length() > MAX_LENGTH) {
+
+			message = message.substring(MAX_LENGTH - 1) + "…";
+		}
+
+		final Integer parentId = ((LoggedDb) logged).getParentId();
+
+		final long elapsed = System.currentTimeMillis() - logged.getTime();
+
+		try {
+
+			executeUpdate("appendLog", new DateTime(),
+					(int) elapsed, //
+					parentId == null ? -1 : parentId, checkedPrincipal(),
+					message);
+
+		} catch (final SQLException e) {
+
+			log.error(e);
+		}
 	}
+
+	private static final Log log = LogFactory.getLog(LogQueueDbImpl.class);
 
 	private static class LoggedDb extends Logged {
 
@@ -111,6 +134,12 @@ public class LogQueueDbImpl extends AbstractDbManagerImpl implements LogQueue {
 		public String toString() {
 
 			return "" + logId;
+		}
+
+		@Nullable
+		public Integer getParentId() {
+
+			return logId;
 		}
 	}
 }

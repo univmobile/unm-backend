@@ -209,11 +209,13 @@ public class CommentTest extends AbstractDbEnabledTest {
 		final Statement stmt = cxn.createStatement();
 		try {
 			final ResultSet rs = stmt
-					.executeQuery("SELECT id, principal_uid, message FROM unm_history ORDER BY id");
+					.executeQuery("SELECT id, elapsed_ms, principal_uid, message FROM unm_history ORDER BY id");
 			try {
 				while (rs.next()) {
-					System.out.println(rs.getInt(1) + " - " + rs.getString(2)
-							+ " - " + rs.getString(3));
+					System.out
+							.println(rs.getInt(1) + " - " + rs.getString(2)
+									+ " - " + rs.getString(3) + " - "
+									+ rs.getString(4));
 				}
 			} finally {
 				rs.close();
