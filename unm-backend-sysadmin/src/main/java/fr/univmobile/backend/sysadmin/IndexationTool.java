@@ -15,9 +15,12 @@ import org.xml.sax.SAXException;
 
 import fr.univmobile.backend.core.Indexation;
 import fr.univmobile.backend.core.IndexationObserver;
+import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.backend.core.impl.ConnectionType;
 import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
+import fr.univmobile.backend.history.LogQueue;
 
 /**
  * Code for the "index" command-line tool.
@@ -32,11 +35,16 @@ class IndexationTool extends AbstractTool {
 
 		checkNotNull(dataDir, "dataDir");
 
+		final LogQueue logQueue = new LogQueueDbImpl(dbType, cxn);
+
+		final SearchManager searchManager = new SearchManagerImpl(logQueue,
+				dbType, cxn);
+
 		indexation = new IndexationImpl(new File(dataDir, "users"), //
 				new File(dataDir, "regions"), //
 				new File(dataDir, "pois"), //
 				new File(dataDir, "comments"), //
-				new SearchManagerImpl(dbType, cxn), dbType, cxn);
+				searchManager, dbType, cxn);
 	}
 
 	private final Indexation indexation;

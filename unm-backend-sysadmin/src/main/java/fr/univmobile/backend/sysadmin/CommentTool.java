@@ -16,7 +16,9 @@ import fr.univmobile.backend.core.CommentThread.CommentRef;
 import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.ConnectionType;
+import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
+import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.search.SearchHelper;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
@@ -38,10 +40,12 @@ class CommentTool extends AbstractTool {
 				.newDataSource(CommentDataSource.class,
 						getCategoryDir("comments"));
 
-		searchManager = new SearchManagerImpl(dbType, cxn);
+		final LogQueue logQueue = new LogQueueDbImpl(dbType, cxn);
 
-		commentManager = new CommentManagerImpl(comments, searchManager,
-				dbType, cxn);
+		searchManager = new SearchManagerImpl(logQueue, dbType, cxn);
+
+		commentManager = new CommentManagerImpl(logQueue, comments,
+				searchManager, dbType, cxn);
 	}
 
 	@Nullable
@@ -97,7 +101,7 @@ class CommentTool extends AbstractTool {
 
 		int count = 0;
 
-		for (final CommentRef commentRef:commentRefs) {
+		for (final CommentRef commentRef : commentRefs) {
 
 			if (count >= limit) {
 				System.out.println("...");
@@ -107,9 +111,9 @@ class CommentTool extends AbstractTool {
 			++count;
 
 			final int uid = commentRef.getUid();
-			
+
 			final Comment comment = commentManager.getByUid(uid);
-			
+
 			final int poiUid = comment.getMainContext().getUid();
 
 			result.addComment(comment);
@@ -119,7 +123,7 @@ class CommentTool extends AbstractTool {
 					+ comment.getPostedBy() + " - " + comment.getMessage());
 
 		}
-		
+
 		return result;
 	}
 }

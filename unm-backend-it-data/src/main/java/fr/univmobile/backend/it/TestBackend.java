@@ -44,7 +44,9 @@ import com.google.common.collect.Iterables;
 import fr.univmobile.backend.core.Indexation;
 import fr.univmobile.backend.core.impl.ConnectionType;
 import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
+import fr.univmobile.backend.history.LogQueue;
 
 /**
  * Utilities to load data, extract packaging information, etc.
@@ -166,8 +168,13 @@ public abstract class TestBackend {
 			stmt.close();
 		}
 
+		final LogQueue logQueue = new LogQueueDbImpl(dbType, cxn);
+
+		final SearchManagerImpl searchManager = new SearchManagerImpl(logQueue,
+				dbType, cxn);
+
 		final Indexation indexation = new IndexationImpl(destDir,
-				new SearchManagerImpl(dbType, cxn), dbType, cxn);
+				searchManager, dbType, cxn);
 
 		indexation.indexData(null);
 
