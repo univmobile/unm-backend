@@ -56,8 +56,10 @@ import fr.univmobile.backend.core.UploadNotFoundException;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
+import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.backend.core.impl.UploadManagerImpl;
+import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.backend.json.CommentsJSONController;
 import fr.univmobile.backend.json.EndpointsJSONController;
@@ -186,10 +188,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			checkDataSource(ds);
 
-			searchManager = new SearchManagerImpl(MYSQL, ds);
+			final LogQueue logQueue = new LogQueueDbImpl(MYSQL, ds);
 
-			commentManager = new CommentManagerImpl(comments, searchManager,
-					MYSQL, ds);
+			searchManager = new SearchManagerImpl(logQueue, MYSQL, ds);
+
+			commentManager = new CommentManagerImpl(logQueue, comments,
+					searchManager, MYSQL, ds);
 
 		} catch (final NamingException e) {
 			throw new ServletException(e);
