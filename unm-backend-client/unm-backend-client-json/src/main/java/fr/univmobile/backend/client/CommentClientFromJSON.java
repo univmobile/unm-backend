@@ -32,7 +32,8 @@ public class CommentClientFromJSON implements CommentClient {
 	private static Log log = LogFactory.getLog(CommentClientFromJSON.class);
 
 	@Override
-	public Comment[] getCommentsByPoiId(final int poiId) throws IOException, SQLException {
+	public Comment[] getCommentsByPoiId(final int poiId) throws IOException,
+			SQLException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("getCommentsByPoiId():" + poiId + "...");
@@ -44,7 +45,8 @@ public class CommentClientFromJSON implements CommentClient {
 	}
 
 	@Override
-	public Comment[] getMostRecentComments(final int limit) throws IOException, SQLException {
+	public Comment[] getMostRecentComments(final int limit) throws IOException,
+			SQLException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("getMostRecentComments():" + limit + "...");
@@ -54,9 +56,23 @@ public class CommentClientFromJSON implements CommentClient {
 
 		return comments(json);
 	}
-	
+
+	@Override
+	public Comment[] searchComments(final String query, final int limit)
+			throws IOException, SQLException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("searchComments(String, int)():" + query + ", " + limit
+					+ "...");
+		}
+
+		final String json = jsonClient.searchCommentsJSON(query, limit);
+
+		return comments(json);
+	}
+
 	private static Comment[] comments(final String json) {
-		
+
 		if (log.isDebugEnabled()) {
 			log.debug("json.length(): " + json.length());
 			log.debug("json: "
@@ -73,7 +89,7 @@ public class CommentClientFromJSON implements CommentClient {
 
 		return commentsJSON.getComments();
 	}
-	
+
 	@XPath("/*")
 	public interface CommentsJSON {
 
@@ -136,7 +152,7 @@ public class CommentClientFromJSON implements CommentClient {
 			String getAuthorLang();
 
 			boolean isNullAuthorLang();
-			
+
 			@XPath("@text")
 			@Override
 			String getText();

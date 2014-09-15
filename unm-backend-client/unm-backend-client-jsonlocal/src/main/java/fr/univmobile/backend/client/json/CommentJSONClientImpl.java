@@ -44,20 +44,33 @@ public class CommentJSONClientImpl implements CommentJSONClient {
 	}
 
 	@Override
-	public String getMostRecentCommentsJSON(final int limit) throws IOException,
-			SQLException {
+	public String getMostRecentCommentsJSON(final int limit)
+			throws IOException, SQLException {
 
 		if (log.isDebugEnabled()) {
-			log.debug("getMostRecentCommentsJSON():" + limit+ "...");
+			log.debug("getMostRecentCommentsJSON():" + limit + "...");
 		}
 
 		final Comment[] comments = commentClient.getMostRecentComments(limit);
 
 		return jsonComments(comments);
 	}
-	
+
+	@Override
+	public String searchCommentsJSON(final String query, final int limit)
+			throws IOException, SQLException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("searchCommentsJSON():" + query + ", " + limit + "...");
+		}
+
+		final Comment[] comments = commentClient.searchComments(query, limit);
+
+		return jsonComments(comments);
+	}
+
 	private static String jsonComments(final Comment[] comments) {
-		
+
 		final JSONMap json = new JSONMap();
 
 		final JSONList list = new JSONList();

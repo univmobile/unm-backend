@@ -64,7 +64,7 @@ public class CommentClientFromLocalTest {
 				searchManager, H2, cxn);
 
 		client = new CommentClientFromLocal("http://dummy/", comments,
-				commentManager);
+				commentManager,searchManager);
 	}
 
 	private CommentClient client;
@@ -103,6 +103,22 @@ public class CommentClientFromLocalTest {
 		final Comment[] comments = client.getMostRecentComments(100);
 
 		assertEquals(3, comments.length);
+
+		final Comment comment = comments[1];
+
+		assertEquals("2", comment.getId());
+		assertEquals("dandriana", comment.getAuthorUsername());
+		assertNull(comment.getAuthorLang());
+
+		assertEquals("Une bien belle application.", comment.getText());
+	}
+
+	@Test
+	public void test_getSearchComments() throws Exception {
+
+		final Comment[] comments = client.searchComments("application", 100);
+
+		assertEquals(2, comments.length);
 
 		final Comment comment = comments[1];
 

@@ -67,7 +67,8 @@ public class CommentThroughJSONTest {
 				commentDataSource, searchManager, H2, cxn);
 
 		final CommentClientFromLocal commentClient = new CommentClientFromLocal(
-				"(dummy baseURL)", commentDataSource, commentManager);
+				"(dummy baseURL)", commentDataSource, commentManager,
+				searchManager);
 
 		commentJSONClient = new CommentJSONClientImpl(commentClient);
 
@@ -105,6 +106,23 @@ public class CommentThroughJSONTest {
 		assertEquals(3, comments.length);
 
 		final Comment comment = comments[1];
+
+		assertEquals("2", comment.getId());
+		assertEquals("dandriana", comment.getAuthorUsername());
+		assertTrue(comment.isNullAuthorLang());
+		assertNull(comment.getAuthorLang());
+
+		assertEquals("Une bien belle application.", comment.getText());
+	}
+
+	@Test
+	public void testThroughJSON_searchComments() throws Exception {
+
+		final Comment[] comments = client.searchComments("belle", 100);
+
+		assertEquals(1, comments.length);
+
+		final Comment comment = comments[0];
 
 		assertEquals("2", comment.getId());
 		assertEquals("dandriana", comment.getAuthorUsername());

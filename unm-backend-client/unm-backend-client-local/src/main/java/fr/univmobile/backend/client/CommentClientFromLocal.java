@@ -16,6 +16,8 @@ import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.CommentThread;
 import fr.univmobile.backend.core.CommentThread.CommentRef;
+import fr.univmobile.backend.core.SearchManager;
+import fr.univmobile.backend.search.SearchHelper;
 import fr.univmobile.commons.DataBeans;
 
 public class CommentClientFromLocal extends AbstractClientFromLocal implements
@@ -24,18 +26,21 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 	@Inject
 	public CommentClientFromLocal(final String baseURL,
 			final CommentDataSource commentDataSource,
-			final CommentManager commentManager) {
+			final CommentManager commentManager,
+			final SearchManager searchManager) {
 
 		super(baseURL);
 
 		this.commentDataSource = checkNotNull(commentDataSource,
 				"commentDataSource");
-
 		this.commentManager = checkNotNull(commentManager, "commentManager");
+		this.searchHelper = new SearchHelper(checkNotNull(searchManager,
+				"searchManager"));
 	}
 
 	private final CommentDataSource commentDataSource;
 	private final CommentManager commentManager;
+	private final SearchHelper searchHelper;
 
 	private static final Log log = LogFactory
 			.getLog(CommentClientFromLocal.class);
@@ -56,6 +61,11 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 
 		final CommentRef[] commentRefs = commentThread.getAllComments();
 
+		return getComments(commentRefs);
+	}
+
+	private Comment[] getComments(final CommentRef[] commentRefs) {
+
 		final Comment[] comments = new Comment[commentRefs.length];
 
 		for (int i = 0; i < commentRefs.length; ++i) {
@@ -64,23 +74,39 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 
 			final int uid = commentRef.getUid();
 
-			final fr.univmobile.backend.core.Comment dsComment = commentDataSource
-					.getByUid(uid);
+			comments[i] = getComment(commentDataSource.getByUid(uid));
+		}
 
-			final DateTime postedAt = dsComment.getPostedAt();
+		return comments;
+	}
 
-			final MutableComment comment = DataBeans //
-					.instantiate(MutableComment.class) //
-					.setId(Integer.toString(uid)) //
-					.setAuthorUsername(dsComment.getAuthorName()) //
-					.setAuthorDisplayName(dsComment.getPostedBy()) //
-					.setText(dsComment.getMessage()) //
-					.setPostedAt(postedAt) //
-					.setDisplayFullPostedAt(formatDateFull(postedAt)) //
-					.setDisplayPostedAt(formatDate(postedAt)) //
-					.setDisplayPostedAtTime(formatTime(postedAt)); //
+	private static Comment getComment(
+			final fr.univmobile.backend.core.Comment dsComment) {
 
-			comments[i] = comment;
+		final DateTime postedAt = dsComment.getPostedAt();
+
+		final MutableComment comment = DataBeans //
+				.instantiate(MutableComment.class) //
+				.setId(Integer.toString(dsComment.getUid())) //
+				.setAuthorUsername(dsComment.getAuthorName()) //
+				.setAuthorDisplayName(dsComment.getPostedBy()) //
+				.setText(dsComment.getMessage()) //
+				.setPostedAt(postedAt) //
+				.setDisplayFullPostedAt(formatDateFull(postedAt)) //
+				.setDisplayPostedAt(formatDate(postedAt)) //
+				.setDisplayPostedAtTime(formatTime(postedAt)); //
+
+		return comment;
+	}
+
+	private Comment[] getComments(
+			final fr.univmobile.backend.core.Comment[] dsComments) {
+
+		final Comment[] comments = new Comment[dsComments.length];
+
+		for (int i = 0; i < dsComments.length; ++i) {
+
+			comments[i] = getComment(dsComments[i]);
 		}
 
 		return comments;
@@ -97,28 +123,28 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 		final fr.univmobile.backend.core.Comment[] dsComments = commentManager
 				.getMostRecentComments(limit);
 
-		final Comment[] comments = new Comment[dsComments.length];
+		return getComments(dsComments);
+	}
 
-		for (int i = 0; i < dsComments.length; ++i) {
+	@Override
+	public Comment[] searchComments(final String query, final int limit)
+			throws IOException, SQLException {
 
-			final fr.univmobile.backend.core.Comment dsComment = dsComments[i];
+		if (log.isDebugEnabled()) {
+			log.debug("searchComments():" + query + "...");
+		}
 
-			final int uid = dsComment.getUid();
+		final CommentRef[] commentRefs = searchHelper.search(CommentRef.class,
+				query);
 
-			final DateTime postedAt = dsComment.getPostedAt();
+		final Comment[] comments = new Comment[Math.min(limit,
+				commentRefs.length)];
 
-			final MutableComment comment = DataBeans //
-					.instantiate(MutableComment.class) //
-					.setId(Integer.toString(uid)) //
-					.setAuthorUsername(dsComment.getAuthorName()) //
-					.setAuthorDisplayName(dsComment.getPostedBy()) //
-					.setText(dsComment.getMessage()) //
-					.setPostedAt(postedAt) //
-					.setDisplayFullPostedAt(formatDateFull(postedAt)) //
-					.setDisplayPostedAt(formatDate(postedAt)) //
-					.setDisplayPostedAtTime(formatTime(postedAt)); //
+		for (int i = 0; i < comments.length; ++i) {
 
-			comments[i] = comment;
+			final int uid = commentRefs[i].getUid();
+
+			comments[i] = getComment(commentDataSource.getByUid(uid));
 		}
 
 		return comments;
