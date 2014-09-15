@@ -713,31 +713,34 @@ body.admin li.flaticon.icon-globe6 a { background-image: url('../img/flaticon.co
 body.entered #text-query {
 	width: 380px;
 }
-#table-systemInfo {
+#div-systemInfo h3 {
+	font-style: italic;
+}
+#div-systemInfo table {
 	border-collapse: collapse;
 	font-size: 13px;
 	margin: 0 auto 3em;
 }
-#table-systemInfo tr {
+#div-systemInfo tr {
 	border-top: 1px solid #fff;
 	border-bottom: 1px solid #fff;
 	background-color: #f0f0f8;
 }
-#table-systemInfo tr.odd {
+#div-systemInfo tr.odd {
 	background-color: #dddde8;
 }
-#table-systemInfo th,
-#table-systemInfo td {
+#div-systemInfo th,
+#div-systemInfo td {
 	padding-top: 4px;
 	padding-bottom: 3px;
 	vertical-align: top;
 }
-#table-systemInfo th {
+#div-systemInfo th {
 	text-align: left;
 	padding-right: 1em;
 	padding-left: 1em;
 }
-#table-systemInfo td {
+#div-systemInfo td {
 	padding-right: 1em;
 	padding-left: 0;
 }
