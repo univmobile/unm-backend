@@ -238,26 +238,26 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		elementById("link-comments").click();
 		waitForElementById(10, "div-comments"); // pause(PAUSE);
-		takeScreenshot("comments1.png");
+		takeScreenshot("comments1-start.png");
 
 		elementById("text-query").sendKeys("application");
 		elementById("button-search").click();
 		waitForElementById(10, "div-comments"); // pause(PAUSE);
-		takeScreenshot("comments2.png");
+		takeScreenshot("comments2-3_results.png");
 		elementById("text-query").attrShouldEqualTo("value", "application");
 		elementById("span-resultCount").textShouldEqualTo("3");
 
 		elementById("text-query").sendKeys("une");
 		elementById("button-search").click();
 		waitForElementById(10, "div-comments"); // pause(PAUSE);
-		takeScreenshot("comments3.png");
+		takeScreenshot("comments3-1_result.png");
 		elementById("text-query").attrShouldEqualTo("value", "une");
 		elementById("span-resultCount").textShouldEqualTo("1");
 
 		elementById("text-query").sendKeys("toto");
 		elementById("button-search").click();
 		waitForElementById(10, "div-comments"); // pause(PAUSE);
-		takeScreenshot("comments4.png");
+		takeScreenshot("comments4-no_result.png");
 		elementById("text-query").attrShouldEqualTo("value", "toto");
 		//elementById("span-resultCount").s
 		elementById("div-noComments").textShouldContain("Aucun commentaire");
@@ -265,7 +265,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		elementById("text-query").sendKeys("");
 		elementById("button-search").click();
 		waitForElementById(10, "div-comments"); // pause(PAUSE);
-		takeScreenshot("comments5.png");
+		takeScreenshot("comments5-3_results.png");
 		//elementById("text-query").attrShouldEqualTo("value", "");
 		//elementById("span-resultCount").s
 		elementById("span-resultCount").textShouldEqualTo("3");
