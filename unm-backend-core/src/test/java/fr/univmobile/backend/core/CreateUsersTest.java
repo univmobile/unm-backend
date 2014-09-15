@@ -16,7 +16,7 @@ import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.TransactionManager;
 
-public class CreateUsersTest {
+public class CreateUsersTest extends AbstractDbEnabledTest {
 
 	@Before
 	public void setUp() throws Exception {
@@ -66,6 +66,8 @@ public class CreateUsersTest {
 	@Test
 	public void test_create() throws Exception {
 
+		assertEquals(0, getDbRowCount("unm_history"));
+
 		final UserBuilder user = users.create();
 
 		assertEquals("users", user.getCategory());
@@ -86,6 +88,8 @@ public class CreateUsersTest {
 		final User saved = lock.save(user);
 
 		lock.commit();
+
+		assertEquals(1, getDbRowCount("unm_history"));
 
 		assertFalse(user.isNullId());
 		assertFalse(user.isNullSelf());

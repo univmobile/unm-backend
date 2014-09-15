@@ -32,6 +32,9 @@ import fr.univmobile.backend.core.CommentThread.CommentRef;
 import fr.univmobile.backend.core.EntryRef;
 import fr.univmobile.backend.core.SearchEntry;
 import fr.univmobile.backend.core.SearchManager;
+import fr.univmobile.backend.history.LogQueue;
+import fr.univmobile.backend.history.Loggable;
+import fr.univmobile.backend.history.Logged;
 import fr.univmobile.backend.search.Matchers;
 import fr.univmobile.backend.search.SearchContext;
 import fr.univmobile.backend.search.SearchQuery;
@@ -40,23 +43,29 @@ import fr.univmobile.backend.search.SearchQueryText;
 public class SearchManagerImpl extends AbstractDbManagerImpl implements
 		SearchManager {
 
-	public SearchManagerImpl(final ConnectionType dbType, final Connection cxn)
+	public SearchManagerImpl(final LogQueue logQueue,
+			final ConnectionType dbType, final Connection cxn)
 			throws IOException {
 
 		super(dbType, cxn);
 
+		this.logQueue = checkNotNull(logQueue, "logQueue");
 		this.cxn = cxn;
 		this.ds = null;
 	}
 
-	public SearchManagerImpl(final ConnectionType dbType, final DataSource ds)
+	public SearchManagerImpl(final LogQueue logQueue,
+			final ConnectionType dbType, final DataSource ds)
 			throws IOException {
 
 		super(dbType, ds);
 
+		this.logQueue = checkNotNull(logQueue, "logQueue");
 		this.cxn = null;
 		this.ds = ds;
 	}
+
+	private final LogQueue logQueue;
 
 	@Nullable
 	private final Connection cxn;
@@ -247,6 +256,9 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 
 		checkNotNull(context, "context");
 
+		final Logged logged = logQueue.log(new LoggableSearchQuery(context,
+				query));
+
 		if (!SearchContextImpl.class.equals(context.getClass())) {
 			throw new NotImplementedException("context.class: "
 					+ context.getClass());
@@ -334,7 +346,12 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 			cxn.close();
 		}
 
-		return Iterables.toArray(commentRefs, CommentRef.class);
+		final CommentRef[] array = Iterables.toArray(commentRefs,
+				CommentRef.class);
+
+		logQueue.log(new LoggableSearchResult(logged, array), logged);
+
+		return array;
 	}
 
 	private int[] getTokenIds(final String[] tokens) throws IOException,
@@ -414,6 +431,82 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 		public void restrictTo(final Class<? extends EntryRef> clazz) {
 
 			this.clazz = checkNotNull(clazz, "clazz");
+		}
+	}
+
+	private static class LoggableSearchQuery extends Loggable {
+
+		/**
+		 * for serialization.
+		 */
+		private static final long serialVersionUID = -49710264714638653L;
+
+		public LoggableSearchQuery(final SearchContext context,
+				final SearchQuery query) {
+
+			this.context = checkNotNull(context, "context");
+			this.query = checkNotNull(query, "query");
+		}
+
+		private final SearchContext context;
+		private final SearchQuery query;
+
+		@Override
+		public String getMessage(final int maxLength) {
+
+			return "SEARCH:{context="
+					+ ((SearchContextImpl) context).clazz.getSimpleName()
+					+ ", query:\"" + ((SearchQueryText) query).toString()
+					+ "\"}";
+		}
+	}
+
+	private static class LoggableSearchResult extends Loggable {
+
+		/**
+		 * for serialization.
+		 */
+		private static final long serialVersionUID = -8029291496166703125L;
+
+		public LoggableSearchResult(@Nullable final Logged logged,
+				final EntryRef[] entryRefs) {
+
+			this.logged = logged;
+			this.entryRefs = checkNotNull(entryRefs, "entryRefs");
+		}
+
+		@Nullable
+		private final Logged logged;
+		private final EntryRef[] entryRefs;
+
+		@Override
+		public String getMessage(final int maxLength) {
+
+			final StringBuilder sb = new StringBuilder("SEARCH:")
+					.append(logged).append(":RESULT:{length=")
+					.append(entryRefs.length);
+
+			if (entryRefs.length != 0) {
+
+				sb.append(", uids:");
+
+				for (int i = 0; i < entryRefs.length; ++i) {
+
+					final String uid = entryRefs[i].getEntryRefId();
+
+					if (sb.length() + 1 + uid.length() >= maxLength) {
+						break;
+					}
+
+					if (i != 0) {
+						sb.append(",");
+					}
+
+					sb.append(uid);
+				}
+			}
+
+			return sb.append("}").toString();
 		}
 	}
 }

@@ -257,6 +257,20 @@ bundle:
         FOREIGN KEY (category_id) REFERENCES ${prefix}categories (id)
           ON DELETE RESTRICT ON UPDATE RESTRICT
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+  # Do not define parent_id as INDEX, for INSERT performance sake.
+  #
+  createTable_history:
+    mysql.h2: |
+      CREATE TABLE ${prefix}history (
+        id BIGINT(20) NOT NULL AUTO_INCREMENT,
+        parent_id BIGINT(20) NULL,
+        sent_at TIMESTAMP NOT NULL,
+        principal_uid VARCHAR(40) NOT NULL,
+        delegation_uid VARCHAR(40) NULL,
+        message VARCHAR(255) NOT NULL,
+        PRIMARY KEY (id)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
         
   createCategory:
     mysql.h2:
@@ -281,6 +295,10 @@ bundle:
   clearSearch:
     mysql.h2:
       DELETE FROM ${prefix}search;
+
+  clearHistory:
+    mysql.h2:
+      DELETE FROM ${prefix}history;
   
   getCategoryPath:
     mysql.h2:

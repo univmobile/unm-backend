@@ -28,6 +28,9 @@ import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.CommentThread;
 import fr.univmobile.backend.core.SearchEntry;
 import fr.univmobile.backend.core.SearchManager;
+import fr.univmobile.backend.history.LogQueue;
+import fr.univmobile.backend.history.LoggableString;
+import fr.univmobile.backend.history.Logged;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.SequenceTimeoutException;
 import fr.univmobile.commons.tx.TransactionException;
@@ -36,12 +39,14 @@ import fr.univmobile.commons.tx.TransactionManager;
 public class CommentManagerImpl extends AbstractDbManagerImpl implements
 		CommentManager {
 
-	public CommentManagerImpl(final CommentDataSource comments,
+	public CommentManagerImpl(final LogQueue logQueue,
+			final CommentDataSource comments,
 			final SearchManager searchManager, final ConnectionType dbType,
 			final Connection cxn) throws IOException {
 
 		super(dbType, cxn);
 
+		this.logQueue = checkNotNull(logQueue, "logQueue");
 		this.comments = checkNotNull(comments, "comments");
 		this.searchManager = checkNotNull(searchManager, "searchManager");
 
@@ -53,12 +58,14 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 		calcMaxUid(comments.getAllByInt("uid").keySet());
 	}
 
-	public CommentManagerImpl(final CommentDataSource comments,
+	public CommentManagerImpl(final LogQueue logQueue,
+			final CommentDataSource comments,
 			final SearchManager searchManager, final ConnectionType dbType,
 			final DataSource ds) throws IOException {
 
 		super(dbType, ds);
 
+		this.logQueue = checkNotNull(logQueue, "logQueue");
 		this.comments = checkNotNull(comments, "comments");
 		this.searchManager = checkNotNull(searchManager, "searchManager");
 
@@ -70,6 +77,7 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 		calcMaxUid(comments.getAllByInt("uid").keySet());
 	}
 
+	private final LogQueue logQueue;
 	private final SearchManager searchManager;
 
 	private static int calcMaxUid(final Iterable<Integer> uids) {
@@ -138,9 +146,12 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 					"Comment.message should not be null");
 		}
 
-		final Lock lock = tx.acquireLock(5000, "comments\\poi", poiId);
-
 		final int uid = newCommentUid();
+
+		final Logged logged = logQueue.log(new LoggableString(
+				"COMMENT:ADD:{uid=%d}", uid));
+
+		final Lock lock = tx.acquireLock(5000, "comments\\poi", poiId);
 
 		comment.setUid(uid);
 
@@ -166,6 +177,9 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 		searchManager.inject(searchEntry);
 
 		lock.commit();
+
+		logQueue.log(new LoggableString("COMMENT:ADD:%s:{uid=%d, entity_id:%d}",
+				logged, uid, entityId), logged);
 	}
 
 	@Override

@@ -126,6 +126,10 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 			executeUpdate("createTable_search");
 		}
 
+		if (!doesTableExist(tablePrefix + "history")) {
+			executeUpdate("createTable_history");
+		}
+
 		// 1. LOCK ALL
 
 		for (final String category : CATEGORIES) {
@@ -148,6 +152,8 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 
 		executeUpdate("clearSearch");
 		executeUpdate("clearSearchTokens");
+		
+		executeUpdate("clearHistory");
 
 		// 3. INSERT REVFILES
 

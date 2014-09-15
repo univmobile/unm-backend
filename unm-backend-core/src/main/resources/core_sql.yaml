@@ -68,3 +68,8 @@ bundle:
         WHERE ${prefix}entities_comments.id = ${prefix}search.entity_id
         AND category_id = 'comments'
         AND token_id IN (?);
+
+  insertNewLog:
+    mysql.h2: |
+      INSERT INTO ${prefix}history 
+      (sent_at, principal_uid, message) VALUES (?, ?, ?);

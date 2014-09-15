@@ -7,7 +7,6 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
-import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -23,11 +22,13 @@ import org.junit.Test;
 import fr.univmobile.backend.core.CommentThread.CommentRef;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
+import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.search.SearchHelper;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
-public class CommentTest {
+public class CommentTest extends AbstractDbEnabledTest {
 
 	@Before
 	public void setUp() throws Exception {
@@ -84,7 +85,10 @@ public class CommentTest {
 
 		cxn = DriverManager.getConnection(url);
 
-		final SearchManager searchManager = new SearchManagerImpl(H2, cxn);
+		final LogQueue logQueue = new LogQueueDbImpl(H2, cxn);
+
+		final SearchManager searchManager = new SearchManagerImpl(logQueue, H2,
+				cxn);
 
 		final Indexation indexation = new IndexationImpl(dataDir_users,
 				dataDir_regions, dataDir_pois, dataDir_comments, searchManager,
@@ -92,13 +96,15 @@ public class CommentTest {
 
 		indexation.indexData(null);
 
-		commentManager = new CommentManagerImpl(comments, searchManager, H2,
-				cxn);
+		commentManager = new CommentManagerImpl(logQueue, comments,
+				searchManager, H2, cxn);
 
 		pois = BackendDataSourceFileSystem.newDataSource(PoiDataSource.class,
 				dataDir_pois);
 
-		searchHelper = new SearchHelper(new SearchManagerImpl(H2, cxn));
+		searchHelper = new SearchHelper(searchManager);
+
+		LogQueueDbImpl.setPrincipal("toto");
 	}
 
 	private CommentDataSource comments;
@@ -117,13 +123,6 @@ public class CommentTest {
 
 			cxn = null;
 		}
-	}
-
-	// private final TransactionManager tx = TransactionManager.getInstance();
-
-	private static int getFileCount(final File dir) throws IOException {
-
-		return dir.listFiles().length;
 	}
 
 	@Test
@@ -205,22 +204,17 @@ public class CommentTest {
 		assertEquals(3, commentManager.sizeOfCommentsByPoiId(POI_UID));
 	}
 
-	private int getDbRowCount(final String tablename) throws SQLException {
-
-		return executeDbQueryInt("SELECT COUNT(1) FROM " + tablename);
-	}
-
-	private int executeDbQueryInt(final String query) throws SQLException {
+	private void dumpHistory() throws SQLException {
 
 		final Statement stmt = cxn.createStatement();
 		try {
-			final ResultSet rs = stmt.executeQuery(query);
+			final ResultSet rs = stmt
+					.executeQuery("SELECT id, principal_uid, message FROM unm_history ORDER BY id");
 			try {
-
-				rs.next();
-
-				return rs.getInt(1);
-
+				while (rs.next()) {
+					System.out.println(rs.getInt(1) + " - " + rs.getString(2)
+							+ " - " + rs.getString(3));
+				}
 			} finally {
 				rs.close();
 			}
@@ -235,7 +229,11 @@ public class CommentTest {
 
 		final int POI_UID = 415;
 
+		assertEquals(0, getDbRowCount("unm_history"));
+
 		assertEquals(0, searchHelper.search(CommentRef.class, "Hello").length);
+
+		assertEquals(2, getDbRowCount("unm_history"));
 
 		assertEquals(3, getDbRowCount("unm_entities_comments"));
 		assertEquals(138, getDbRowCount("unm_searchtokens"));
@@ -255,7 +253,11 @@ public class CommentTest {
 
 		commentManager.addToCommentThreadByPoiId(POI_UID, comment);
 
+		assertEquals(4, getDbRowCount("unm_history"));
+
 		assertEquals(1, searchHelper.search(CommentRef.class, "Hello").length);
+
+		assertEquals(6, getDbRowCount("unm_history"));
 
 		assertEquals(4, getDbRowCount("unm_entities_comments"));
 		assertEquals(141, getDbRowCount("unm_searchtokens"));
@@ -269,6 +271,10 @@ public class CommentTest {
 		assertEquals(4, comments.getAllBy(Integer.class, "uid").size());
 		assertEquals(2, commentManager.sizeOfThreads());
 		assertEquals(3, commentManager.sizeOfCommentsByPoiId(POI_UID));
+
+		assertEquals(6, getDbRowCount("unm_history"));
+
+		dumpHistory();
 	}
 
 	@Test(expected = IllegalArgumentException.class)
@@ -358,7 +364,7 @@ public class CommentTest {
 	public void testSearchComment_empty() throws Exception {
 
 		assertEquals(3, comments.getAllByInt("uid").size());
-		
+
 		final CommentRef[] commentRefs = searchHelper.search(CommentRef.class,
 				"");
 

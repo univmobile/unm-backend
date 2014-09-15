@@ -21,4 +21,9 @@ public class SearchQueryText extends SearchQuery {
 
 		return split(text);
 	}
+	
+	@Override
+	public String toString() {
+		return text;
+	}
 }
