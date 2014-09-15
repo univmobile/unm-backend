@@ -300,4 +300,19 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 		takeScreenshot("help.png");
 	}
+
+	@Scenario("Admin Page: Logs techniques")
+	@Test
+	public void logs() throws Exception {
+
+		takeScreenshot("home.png");
+		elementById("button-myself").click();
+		pause(PAUSE);
+
+		takeScreenshot("entered.png");
+		elementById("link-logs").click();
+		pause(PAUSE);
+
+		takeScreenshot("logs.png");
+	}
 }
