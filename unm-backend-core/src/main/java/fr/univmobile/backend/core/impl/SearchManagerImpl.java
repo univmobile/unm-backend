@@ -398,5 +398,4 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 			this.clazz = checkNotNull(clazz, "clazz");
 		}
 	}
-
 }
