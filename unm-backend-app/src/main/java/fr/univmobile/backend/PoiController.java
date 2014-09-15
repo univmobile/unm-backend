@@ -18,6 +18,7 @@ import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
+import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.web.commons.PageNotFoundException;
 import fr.univmobile.web.commons.PathVariable;
@@ -35,12 +36,12 @@ public class PoiController extends AbstractBackendController {
 
 	public PoiController(final CommentDataSource comments,
 			final CommentManager commentManager,
-			final RegionDataSource regions, final PoiDataSource pois,
-			final PoiTreeDataSource poiTrees) {
+			final SearchManager searchManager, final RegionDataSource regions,
+			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
 
 		this.comments = checkNotNull(comments, "commentDataSource");
 		this.commentManager = checkNotNull(commentManager, "commentManager");
-
+		this.searchManager = checkNotNull(searchManager, "searchManager");
 		this.pois = checkNotNull(pois, "pois");
 		this.poiTrees = checkNotNull(poiTrees, "poiTrees");
 		this.regions = checkNotNull(regions, "regions");
@@ -51,6 +52,7 @@ public class PoiController extends AbstractBackendController {
 	private final PoiTreeDataSource poiTrees;
 	private final CommentDataSource comments;
 	private final CommentManager commentManager;
+	private final SearchManager searchManager;
 
 	private PoiClient getPoiClient() {
 
@@ -60,7 +62,7 @@ public class PoiController extends AbstractBackendController {
 	private CommentClient getCommentClient() {
 
 		return new CommentClientFromLocal(getBaseURL(), comments,
-				commentManager);
+				commentManager, searchManager);
 	}
 
 	@Override

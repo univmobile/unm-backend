@@ -17,6 +17,9 @@ import java.util.concurrent.ExecutionException;
 import javax.annotation.Nullable;
 import javax.sql.DataSource;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
 import com.avcompris.lang.NotImplementedException;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
@@ -236,6 +239,8 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 		}
 	}
 
+	private static final Log log = LogFactory.getLog(SearchManagerImpl.class);
+
 	@Override
 	public EntryRef[] search(final SearchContext context,
 			final SearchQuery query) throws IOException, SQLException {
@@ -252,8 +257,6 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 		if (clazz == null) {
 			throw new NotImplementedException("clazz == null");
 		}
-
-		// final String queryId;
 
 		if (!SearchQueryText.class.isInstance(query)) {
 			throw new NotImplementedException("query.class: "
@@ -276,6 +279,10 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 		}
 
 		final List<CommentRef> commentRefs = new ArrayList<CommentRef>();
+
+		if (log.isDebugEnabled()) {
+			log.debug("SQL: " + sql);
+		}
 
 		final Connection cxn = getConnection();
 		try {

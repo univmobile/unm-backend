@@ -33,6 +33,8 @@ commentsInfo:
       Commentaires récents 
     resultCount: 34
 
+query: toto tralala
+
 comments:
     type: fr.univmobile.model.Comment[]
     value:

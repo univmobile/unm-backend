@@ -156,6 +156,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final PoiTreeDataSource poiTrees;
 		final CommentDataSource comments;
 		final CommentManager commentManager;
+		final SearchManager searchManager;
 		final DataSource ds;
 
 		try {
@@ -185,7 +186,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			checkDataSource(ds);
 
-			final SearchManager searchManager = new SearchManagerImpl(MYSQL, ds);
+			searchManager = new SearchManagerImpl(MYSQL, ds);
 
 			commentManager = new CommentManagerImpl(comments, searchManager,
 					MYSQL, ds);
@@ -209,10 +210,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new AdminGeocampusController(regions, pois, poiTrees), //
 				new SystemController(ds), //
 				new PoisController(regions, pois, poiTrees), //
-				new PoiController(comments, commentManager, regions, pois,
-						poiTrees), //
-				new CommentsController(comments, commentManager, regions, pois,
-						poiTrees), //
+				new PoiController(comments, commentManager, searchManager,
+						regions, pois, poiTrees), //
+				new CommentsController(comments, commentManager, searchManager,
+						regions, pois, poiTrees), //
 				new CommentController(comments, commentManager), //
 				new HelpController(), //
 				new LogsController() //
@@ -234,7 +235,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final PoiJSONClient poiJSONClient = new PoiJSONClientImpl(poiClient);
 
 		final CommentClient commentClient = new CommentClientFromLocal(baseURL,
-				comments, commentManager);
+				comments, commentManager, searchManager);
 
 		final CommentJSONClient commentJSONClient = new CommentJSONClientImpl(
 				commentClient);

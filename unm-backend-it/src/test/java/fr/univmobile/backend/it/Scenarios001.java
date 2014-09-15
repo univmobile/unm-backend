@@ -74,42 +74,31 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		takeScreenshot("home.png");
 
 		savePageSource("pageHome.html");
-
 		elementById("button-myself").shouldBeVisible();
-
 		elementById("div-myself").textShouldContain(
 				"Votre connexion est authentifiée");
 
 		elementById("button-myself").click();
-
-		pause(PAUSE);
-
+		waitForElementById(PAUSE, "div-entered");
 		takeScreenshot("entered.png");
-
 		savePageSource("pageEntered.html");
 
 		elementById("link-users").click();
-
-		pause(PAUSE);
-
+		waitForElementById(PAUSE, "body-users");
 		takeScreenshot("users.png");
 
 		elementById("link-useradd").click();
-
-		pause(PAUSE);
-
+		waitForElementById(PAUSE, "body-useradd");
 		takeScreenshot("useradd.png");
 
 		elementById("button-cancel").click();
-
-		pause(PAUSE);
-
-		takeScreenshot("home2.png");
+		waitForElementById(PAUSE, "body-users");
+		takeScreenshot("users2.png");
 	}
 
 	@Scenario("Voir les POIs de plus haut niveau")
 	@Test
-	public void Geocampus_000() throws Exception {
+	public void geocampus_000() throws Exception {
 
 		takeScreenshot("home.png");
 
@@ -134,7 +123,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 	@Scenario("Voir les POIs de plus haut niveau")
 	@Test
-	public void POIs_000() throws Exception {
+	public void pois_000() throws Exception {
 
 		takeScreenshot("home.png");
 
@@ -169,7 +158,7 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 	@Scenario("Voir les commentaires d’un POI")
 	@Test
-	public void Comments_poi_000() throws Exception {
+	public void comments_poi_000() throws Exception {
 
 		takeScreenshot("home.png");
 
@@ -220,54 +209,91 @@ public class Scenarios001 extends SeleniumEnabledTest {
 
 	@Scenario("Voir les commentaires les plus récents")
 	@Test
-	public void Comments_000() throws Exception {
+	public void comments_000() throws Exception {
 
 		takeScreenshot("home.png");
 
 		elementById("button-myself").click();
-		pause(PAUSE);
+		waitForElementById(10, "div-entered"); // pause(PAUSE);
 		takeScreenshot("entered.png");
 
 		elementById("link-comments").click();
-		pause(PAUSE);
+		waitForElementById(10, "div-comments"); // pause(PAUSE);
 		takeScreenshot("comments.png");
 
 		elementById("link-adminMenu-home").click();
-		pause(PAUSE);
+		waitForElementById(10, "ul-home-data"); // pause(PAUSE);
 		takeScreenshot("home2.png");
+	}
+
+	@Scenario("Recherche dans les commentaires")
+	@Test
+	public void comments_001_search_application() throws Exception {
+
+		takeScreenshot("home.png");
+
+		elementById("button-myself").click();
+		waitForElementById(10, "div-entered"); // pause(PAUSE);
+		takeScreenshot("entered.png");
+
+		elementById("link-comments").click();
+		waitForElementById(10, "div-comments"); // pause(PAUSE);
+		takeScreenshot("comments1.png");
+
+		elementById("text-query").sendKeys("application");
+		elementById("button-search").click();
+		waitForElementById(10, "div-comments"); // pause(PAUSE);
+		takeScreenshot("comments2.png");
+		elementById("text-query").attrShouldEqualTo("value", "application");
+		elementById("span-resultCount").textShouldEqualTo("3");
+
+		elementById("text-query").sendKeys("une");
+		elementById("button-search").click();
+		waitForElementById(10, "div-comments"); // pause(PAUSE);
+		takeScreenshot("comments3.png");
+		elementById("text-query").attrShouldEqualTo("value", "une");
+		elementById("span-resultCount").textShouldEqualTo("1");
+
+		elementById("text-query").sendKeys("toto");
+		elementById("button-search").click();
+		waitForElementById(10, "div-comments"); // pause(PAUSE);
+		takeScreenshot("comments4.png");
+		elementById("text-query").attrShouldEqualTo("value", "toto");
+		//elementById("span-resultCount").s
+		elementById("div-noComments").textShouldContain("Aucun commentaire");
+
+		elementById("text-query").sendKeys("");
+		elementById("button-search").click();
+		waitForElementById(10, "div-comments"); // pause(PAUSE);
+		takeScreenshot("comments5.png");
+		//elementById("text-query").attrShouldEqualTo("value", "");
+		//elementById("span-resultCount").s
+		elementById("span-resultCount").textShouldEqualTo("3");
 	}
 
 	@Scenario("Voir les commentaires d’un POI")
 	@Test
-	public void Geocampus_comments000() throws Exception {
+	public void geocampus_comments000() throws Exception {
 
 		takeScreenshot("home.png");
 
 		elementById("button-myself").click();
-
-		pause(PAUSE);
-
+		waitForElementById(10, "div-entered"); // pause(PAUSE);
 		takeScreenshot("entered.png");
 
 		elementById("link-geocampus").click();
-
 		pause(PAUSE);
-
 		takeScreenshot("pois.png");
 
 		elementById("link-poi-3792").click();
-
 		pause(PAUSE);
-
 		takeScreenshot("ucp.png");
 
 		final String labelledBy = elementById("li-left-bottom-tabs-comments")
 				.attr("aria-labelledby");
 
 		elementById(labelledBy).click();
-
 		pause(PAUSE);
-
 		takeScreenshot("ucp-details.png");
 	}
 
@@ -276,13 +302,13 @@ public class Scenarios001 extends SeleniumEnabledTest {
 	public void system() throws Exception {
 
 		takeScreenshot("home.png");
-		elementById("button-myself").click();
-		pause(PAUSE);
 
+		elementById("button-myself").click();
+		waitForElementById(10, "div-entered"); // pause(PAUSE);
 		takeScreenshot("entered.png");
+
 		elementById("link-system").click();
 		pause(PAUSE);
-
 		takeScreenshot("system.png");
 	}
 
@@ -291,13 +317,13 @@ public class Scenarios001 extends SeleniumEnabledTest {
 	public void help() throws Exception {
 
 		takeScreenshot("home.png");
-		elementById("button-myself").click();
-		pause(PAUSE);
 
+		elementById("button-myself").click();
+		waitForElementById(10, "div-entered"); // pause(PAUSE);
 		takeScreenshot("entered.png");
+
 		elementById("link-help").click();
 		pause(PAUSE);
-
 		takeScreenshot("help.png");
 	}
 
@@ -306,13 +332,13 @@ public class Scenarios001 extends SeleniumEnabledTest {
 	public void logs() throws Exception {
 
 		takeScreenshot("home.png");
-		elementById("button-myself").click();
-		pause(PAUSE);
 
+		elementById("button-myself").click();
+		waitForElementById(10, "div-entered"); // pause(PAUSE);
 		takeScreenshot("entered.png");
+
 		elementById("link-logs").click();
 		pause(PAUSE);
-
 		takeScreenshot("logs.png");
 	}
 }

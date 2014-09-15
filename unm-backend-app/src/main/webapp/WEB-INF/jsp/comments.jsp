@@ -124,7 +124,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 
 <div id="div-query">
 <form action="${baseURL}/comments" method="GET">
-<input id="text-query" name="query">
+<input id="text-query" name="q" value="${query}">
 <button id="button-search">
 	Rechercher
 </button>
@@ -138,7 +138,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 	<c:when test="${not empty commentsInfo.context}">
 		<c:out value="${commentsInfo.context}"/>
 		<c:if test="${not empty commentsInfo.resultCount}">
-			(${commentsInfo.resultCount})
+			(<span id="span-resultCount">${commentsInfo.resultCount}</span>)
 		</c:if>
 	</c:when>
 	<c:when test="${empty commentsInfo.resultCount || commentsInfo.resultCount == 0}">
