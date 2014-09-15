@@ -344,4 +344,13 @@ public class CommentTest {
 
 		assertEquals(0, commentRefs.length);
 	}
+
+	@Test
+	public void testSearchComment_s_0() throws Exception {
+
+		final CommentRef[] commentRefs = searchHelper.search(CommentRef.class,
+				"s");
+		
+		assertEquals(0, commentRefs.length);
+	}
 }

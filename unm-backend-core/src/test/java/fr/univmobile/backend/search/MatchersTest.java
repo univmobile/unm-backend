@@ -26,6 +26,14 @@ public class MatchersTest {
 	}
 
 	@Test
+	public void testTokenize_J_aime_bien_etc() {
+
+		assertSet("J", "aime", "bien", "l", "application", "mais", "si", "on",
+				"danse").eq(
+				tokenize("J’aime bien l’application, mais si on danse ?"));
+	}
+
+	@Test
 	public void testTokenize_Numbers() {
 
 		assertSet("Sami120", "va", "bien").eq(tokenize("Sami120 va bien"));

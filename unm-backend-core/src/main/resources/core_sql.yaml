@@ -60,4 +60,5 @@ bundle:
     mysql.h2:
       SELECT DISTINCT uid FROM ${prefix}entities_comments, ${prefix}search
         WHERE ${prefix}entities_comments.id = ${prefix}search.entity_id
+        AND category_id = 'comments'
         AND token_id IN (?);
