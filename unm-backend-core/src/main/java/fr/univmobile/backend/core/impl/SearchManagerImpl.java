@@ -253,13 +253,7 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 			throw new NotImplementedException("clazz == null");
 		}
 
-		final String queryId;
-
-		if (CommentRef.class.equals(clazz)) {
-			queryId = "searchCommentUidsByTokenIds";
-		} else {
-			throw new NotImplementedException("clazz: " + clazz);
-		}
+		// final String queryId;
 
 		if (!SearchQueryText.class.isInstance(query)) {
 			throw new NotImplementedException("query.class: "
@@ -270,7 +264,16 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 
 		final int[] tokenIds = getTokenIds(tokens);
 
-		final String sql = setIntArray(getSql(queryId), 1, tokenIds);
+		final String sql;
+
+		if (CommentRef.class.equals(clazz)) {
+			sql = tokens.length == 0 //
+			? getSql("searchCommentUids") //
+					: setIntArray(getSql("searchCommentUidsByTokenIds"), 1,
+							tokenIds);
+		} else {
+			throw new NotImplementedException("clazz: " + clazz);
+		}
 
 		final List<CommentRef> commentRefs = new ArrayList<CommentRef>();
 

@@ -350,7 +350,18 @@ public class CommentTest {
 
 		final CommentRef[] commentRefs = searchHelper.search(CommentRef.class,
 				"s");
-		
+
 		assertEquals(0, commentRefs.length);
+	}
+
+	@Test
+	public void testSearchComment_empty() throws Exception {
+
+		assertEquals(3, comments.getAllByInt("uid").size());
+		
+		final CommentRef[] commentRefs = searchHelper.search(CommentRef.class,
+				"");
+
+		assertEquals(3, commentRefs.length);
 	}
 }

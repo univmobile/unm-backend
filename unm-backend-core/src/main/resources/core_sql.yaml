@@ -56,6 +56,12 @@ bundle:
       SELECT COUNT(1) FROM ${prefix}entities_comments
         WHERE unm_status = 1;
         
+  searchCommentUids:
+    mysql.h2:
+      SELECT DISTINCT uid FROM ${prefix}entities_comments, ${prefix}search
+        WHERE ${prefix}entities_comments.id = ${prefix}search.entity_id
+        AND category_id = 'comments';
+        
   searchCommentUidsByTokenIds:
     mysql.h2:
       SELECT DISTINCT uid FROM ${prefix}entities_comments, ${prefix}search
