@@ -368,6 +368,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final User user = users.getByRemoteUser(remoteUser);
 
+		LogQueueDbImpl.setPrincipal(user.getUid()); // TODO user? delegation?
+
 		request.getSession().setAttribute("user", user);
 
 		// 8. BUILD INFO
