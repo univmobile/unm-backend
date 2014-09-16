@@ -160,7 +160,7 @@ public class CommentsController extends AbstractBackendController {
 		if (query.isHttpValid()) {
 
 			final String q = query.query();
-			
+
 			setAttribute("query", q);
 
 			context = "Query: " + q;
