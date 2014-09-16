@@ -26,7 +26,9 @@ import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.Indexation;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
+import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class CommentThroughJSONTest {
@@ -44,7 +46,10 @@ public class CommentThroughJSONTest {
 
 		cxn = DriverManager.getConnection(url);
 
-		final SearchManagerImpl searchManager = new SearchManagerImpl(H2, cxn);
+		final LogQueue logQueue = new LogQueueDbImpl(H2, cxn);
+
+		final SearchManagerImpl searchManager = new SearchManagerImpl(logQueue,
+				H2, cxn);
 
 		final Indexation indexation = new IndexationImpl(//
 				new File("src/test/data/users/001"), //
@@ -63,7 +68,7 @@ public class CommentThroughJSONTest {
 								new File(
 										"target/CommentThroughJSONTest_comments")));
 
-		final CommentManager commentManager = new CommentManagerImpl(
+		final CommentManager commentManager = new CommentManagerImpl(logQueue,
 				commentDataSource, searchManager, H2, cxn);
 
 		final CommentClientFromLocal commentClient = new CommentClientFromLocal(
@@ -73,6 +78,8 @@ public class CommentThroughJSONTest {
 		commentJSONClient = new CommentJSONClientImpl(commentClient);
 
 		client = new CommentClientFromJSON(commentJSONClient);
+		
+		LogQueueDbImpl.setPrincipal("crezvani");
 	}
 
 	private CommentJSONClientImpl commentJSONClient;
