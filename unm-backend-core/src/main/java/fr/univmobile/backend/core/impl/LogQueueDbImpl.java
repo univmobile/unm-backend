@@ -84,10 +84,10 @@ public class LogQueueDbImpl extends AbstractDbManagerImpl implements LogQueue {
 	}
 
 	@Override
-	public void log(final Loggable loggable, final Logged logged) {
+	public void log(final Logged logged, final Loggable loggable) {
 
-		checkNotNull(loggable, "loggable");
 		checkNotNull(logged, "logged");
+		checkNotNull(loggable, "loggable");
 
 		String message = loggable.getMessage(MAX_LENGTH);
 

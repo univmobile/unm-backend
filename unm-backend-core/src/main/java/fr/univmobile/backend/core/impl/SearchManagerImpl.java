@@ -349,7 +349,7 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 		final CommentRef[] array = Iterables.toArray(commentRefs,
 				CommentRef.class);
 
-		logQueue.log(new LoggableSearchResult(logged, array), logged);
+		logQueue.log(logged, new LoggableSearchResult(logged, array));
 
 		return array;
 	}

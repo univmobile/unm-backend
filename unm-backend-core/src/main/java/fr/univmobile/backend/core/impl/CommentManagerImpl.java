@@ -178,8 +178,8 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 
 		lock.commit();
 
-		logQueue.log(new LoggableString("COMMENT:ADD:%s:{uid=%d, entity_id:%d}",
-				logged, uid, entityId), logged);
+		logQueue.log(logged, new LoggableString(
+				"COMMENT:ADD:%s:{uid=%d, entity_id:%d}", logged, uid, entityId));
 	}
 
 	@Override

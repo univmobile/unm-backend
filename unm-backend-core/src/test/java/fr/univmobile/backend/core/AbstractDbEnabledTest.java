@@ -1,5 +1,9 @@
 package fr.univmobile.backend.core;
 
+import static com.google.common.base.Preconditions.checkNotNull;
+import static fr.univmobile.backend.core.impl.ConnectionType.H2;
+import static org.junit.Assert.assertFalse;
+
 import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
@@ -8,20 +12,40 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.After;
 import org.junit.Before;
 
+import fr.univmobile.backend.core.impl.IndexationImpl;
+import fr.univmobile.backend.core.impl.LogQueueDbImpl;
+import fr.univmobile.backend.core.impl.SearchManagerImpl;
+import fr.univmobile.backend.history.LogQueue;
+
 public abstract class AbstractDbEnabledTest {
 
-	@Before
-	public final void setUpDb() throws Exception {
+	protected AbstractDbEnabledTest(final File originalDataDir_users,
+			final File originalDataDir_regions,
+			final File originalDataDir_pois, //
+			final File originalDataDir_comments) {
 
-		final String url = "jdbc:h2:./target/" + getClass().getSimpleName();
-
-		cxn = DriverManager.getConnection(url);
+		this.originalDataDir_users = checkNotNull(originalDataDir_users);
+		this.originalDataDir_regions = checkNotNull(originalDataDir_regions);
+		this.originalDataDir_pois = checkNotNull(originalDataDir_pois);
+		this.originalDataDir_comments = checkNotNull(originalDataDir_comments);
 	}
 
+	private final File originalDataDir_users;
+	private final File originalDataDir_regions;
+	private final File originalDataDir_pois;
+	private final File originalDataDir_comments;
+
 	protected Connection cxn;
+
+	protected File dataDir_users;
+	protected File dataDir_comments;
+	protected File dataDir_pois;
+	protected LogQueue logQueue;
+	protected SearchManager searchManager;
 
 	@After
 	public final void tearDownDb() throws Exception {
@@ -32,6 +56,67 @@ public abstract class AbstractDbEnabledTest {
 
 			cxn = null;
 		}
+	}
+
+	@Before
+	public final void setUpDb() throws Exception {
+
+		final File dbFile = new File("target/" + getClass().getSimpleName()
+				+ ".h2.db");
+
+		FileUtils.deleteQuietly(dbFile);
+
+		assertFalse(dbFile.exists());
+
+		final String url = "jdbc:h2:./target/" + getClass().getSimpleName();
+
+		cxn = DriverManager.getConnection(url);
+
+		dataDir_comments = new File("target/" + getClass().getSimpleName()
+				+ "_comments");
+
+		if (dataDir_comments.isDirectory()) {
+			FileUtils.forceDelete(dataDir_comments);
+		}
+
+		FileUtils.copyDirectory(originalDataDir_comments, dataDir_comments);
+
+		dataDir_users = new File("target/" + getClass().getSimpleName()
+				+ "_users");
+
+		if (dataDir_users.isDirectory()) {
+			FileUtils.forceDelete(dataDir_users);
+		}
+
+		FileUtils.copyDirectory(originalDataDir_users, dataDir_users);
+
+		final File dataDir_regions = new File("target/"
+				+ getClass().getSimpleName() + "_regions");
+
+		if (dataDir_regions.isDirectory()) {
+			FileUtils.forceDelete(dataDir_regions);
+		}
+
+		FileUtils.copyDirectory(originalDataDir_regions, dataDir_regions);
+
+		dataDir_pois = new File("target/" + getClass().getSimpleName()
+				+ "_pois");
+
+		if (dataDir_pois.isDirectory()) {
+			FileUtils.forceDelete(dataDir_pois);
+		}
+
+		FileUtils.copyDirectory(originalDataDir_pois, dataDir_pois);
+
+		logQueue = new LogQueueDbImpl(H2, cxn);
+
+		searchManager = new SearchManagerImpl(logQueue, H2, cxn);
+
+		final Indexation indexation = new IndexationImpl(dataDir_users,
+				dataDir_regions, dataDir_pois, dataDir_comments, searchManager,
+				H2, cxn);
+
+		indexation.indexData(null);
 	}
 
 	// private final TransactionManager tx = TransactionManager.getInstance();

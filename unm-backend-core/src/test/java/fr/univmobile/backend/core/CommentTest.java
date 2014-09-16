@@ -7,84 +7,40 @@ import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
-import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-import org.apache.commons.io.FileUtils;
 import org.joda.time.DateTime;
-import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
 import fr.univmobile.backend.core.CommentThread.CommentRef;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
-import fr.univmobile.backend.core.impl.IndexationImpl;
 import fr.univmobile.backend.core.impl.LogQueueDbImpl;
-import fr.univmobile.backend.core.impl.SearchManagerImpl;
-import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.search.SearchHelper;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class CommentTest extends AbstractDbEnabledTest {
 
+	public CommentTest() {
+		
+		super(
+				new File("src/test/data/users/001"),
+				new File(
+						"src/test/data/regions/001"),
+						new File("src/test/data/pois/001"),
+						 new File(
+									"src/test/data/comments/001"));
+				
+	}
 	@Before
 	public void setUp() throws Exception {
-
-		final File originalDataDir_users = new File("src/test/data/users/001");
-		final File originalDataDir_regions = new File(
-				"src/test/data/regions/001");
-		final File originalDataDir_pois = new File("src/test/data/pois/001");
-		final File originalDataDir_comments = new File(
-				"src/test/data/comments/001");
-
-		dataDir_comments = new File("target/CommentTest_comments");
-
-		if (dataDir_comments.isDirectory()) {
-			FileUtils.forceDelete(dataDir_comments);
-		}
-
-		FileUtils.copyDirectory(originalDataDir_comments, dataDir_comments);
 
 		comments = BackendDataSourceFileSystem.newDataSource(
 				CommentDataSource.class, dataDir_comments);
 
-		final File dataDir_users = new File("target/CommentTest_users");
-
-		if (dataDir_users.isDirectory()) {
-			FileUtils.forceDelete(dataDir_users);
-		}
-
-		FileUtils.copyDirectory(originalDataDir_users, dataDir_users);
-
-		final File dataDir_regions = new File("target/CommentTest_regions");
-
-		if (dataDir_regions.isDirectory()) {
-			FileUtils.forceDelete(dataDir_regions);
-		}
-
-		FileUtils.copyDirectory(originalDataDir_regions, dataDir_regions);
-
-		final File dataDir_pois = new File("target/CommentTest_pois");
-
-		if (dataDir_pois.isDirectory()) {
-			FileUtils.forceDelete(dataDir_pois);
-		}
-
-		FileUtils.copyDirectory(originalDataDir_pois, dataDir_pois);
-
-		final File dbFile = new File("target/CommentTest.h2.db");
-
-		FileUtils.deleteQuietly(dbFile);
-
-		assertFalse(dbFile.exists());
-
-		final String url = "jdbc:h2:./target/CommentTest";
-
-		cxn = DriverManager.getConnection(url);
-
+		/*
 		final LogQueue logQueue = new LogQueueDbImpl(H2, cxn);
 
 		final SearchManager searchManager = new SearchManagerImpl(logQueue, H2,
@@ -95,7 +51,7 @@ public class CommentTest extends AbstractDbEnabledTest {
 				H2, cxn);
 
 		indexation.indexData(null);
-
+*/
 		commentManager = new CommentManagerImpl(logQueue, comments,
 				searchManager, H2, cxn);
 
@@ -110,10 +66,10 @@ public class CommentTest extends AbstractDbEnabledTest {
 	private CommentDataSource comments;
 	private CommentManager commentManager;
 	private SearchHelper searchHelper;
-	private File dataDir_comments;
 	private PoiDataSource pois;
-	private Connection cxn;
+//	private Connection cxn;
 
+	/*
 	@After
 	public void tearDown() throws Exception {
 
@@ -124,6 +80,7 @@ public class CommentTest extends AbstractDbEnabledTest {
 			cxn = null;
 		}
 	}
+	*/
 
 	@Test
 	public void test_count() throws Exception {
