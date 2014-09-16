@@ -259,15 +259,15 @@ public class Scenarios001 extends SeleniumEnabledTest {
 		waitForElementById(10, "div-comments"); // pause(PAUSE);
 		takeScreenshot("comments4-no_result.png");
 		elementById("text-query").attrShouldEqualTo("value", "toto");
-		//elementById("span-resultCount").s
+		// elementById("span-resultCount").s
 		elementById("div-noComments").textShouldContain("Aucun commentaire");
 
 		elementById("text-query").sendKeys("");
 		elementById("button-search").click();
 		waitForElementById(10, "div-comments"); // pause(PAUSE);
 		takeScreenshot("comments5-3_results.png");
-		//elementById("text-query").attrShouldEqualTo("value", "");
-		//elementById("span-resultCount").s
+		// elementById("text-query").attrShouldEqualTo("value", "");
+		// elementById("span-resultCount").s
 		elementById("span-resultCount").textShouldEqualTo("3");
 	}
 
