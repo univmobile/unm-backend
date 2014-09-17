@@ -3,17 +3,35 @@ Intégration avec Shibboleth
 
 Documentation parente : [unm-backend](README.md)
 
+### Version de Shibboleth utilisée
+
+Sur univmobile-dev.univ-paris1.fr (intégration) :
+
+    $ more /usr/share/doc/libapache2-mod-shib2/README.txt
+    Welcome to Internet2's Shibboleth
+
 ### Java et Shibboleth : configuration
 
 La configuration suivante est testée avec succès :
 
-Dans /etc/apache2/sites-enabled/unm-backend-ssl :
+Dans /etc/apache2/sites-enabled/univmobile-ssl :
 
     LoadModule proxy_module modules/mod_proxy.so
     LoadModule proxy_ajp_module modules/mod_proxy_ajp.so
     ProxyRequests Off
-    ProxyPass /unm-backend ajp://localhost:8009/unm-backend
-    ProxyPassReverse /unm-backend ajp://localhost:8009/unm-backend
+    
+    <Location /testSP>
+      AuthType shibboleth
+      ShibRequireSession On
+      require valid-user
+      ProxyPass ajp://localhost:8009/unm-backend
+      ProxyPassReverse ajp://localhost:8009/unm-backend
+    </Location>
+    
+Modifier les lignes suivantes si l’application J2EE est déployée sous le nom testSP.war :
+
+    ProxyPass ajp://localhost:8009/testSP
+    ProxyPassReverse ajp://localhost:8009/testSP
 
 Dans ${TOMCAT_HOME}/conf/server.xml :
 
@@ -59,3 +77,31 @@ Même s’ils sont le plus souvent identiques, pour une identification pérenne,
 | sn | Formica | getAttribute("sn") |
 | supannCivilite | M. | getAttribute("supannCivilite") |
 | uid | tformica | getAttribute("uid") |
+
+### Authentification Mobile web à travers Shibboleth
+
+L’application Mobile web n’est pas elle-même protégée par Shibboleth, c’est l’application web du backend d’UnivMobile qui l’est. Cela assure la cohérence avec les versions iOS et Android.
+  
+xxx diagramme numéroté
+
+  1. L’utilisateur de l’application Mobile web choisit « Connexion avec Shibboleth ». 
+  2. Côté serveur, l’application Mobile web sollicite le backend (par une requête flux HTTPS) pour une nouvelle session applicative, et le backend répond en donnant deux identifiants techniques créés aléatoirement, uniques et avec une TTL de 30’ :
+    * loginToken — exemple : abc18291
+    * key — exemple : fe0a1293
+  3. L’application Mobile web dirige l’utilisateur vers une URL UnivMobile (backend) protégée par Shibboleth,  dont l’adresse est fonction de l’université choisie au préalable par l’utilisateur. Par exemple, pour unm-backend.war en intégration, http://univmobile-dev.univ-paris1.fr/testSP/login/paris10?… avec deux paramètres GET :
+    * loginToken=xxx (voir plus haut, exemple : abc18291)
+    * service=xxx (optionnelle, URL, exemple : http://mobile.univmobile.com/)
+  4. Si l’utilisateur n’était par ailleurs pas authentifié auprès de l’IP Shibboleth, il s’authentifie ; sinon, s’il était déjà authentifié, cette étape est sautée.
+  5. L’IP Shibboleth redirige le navigateur vers l’URL UnivMobile (http://univmobile-dev.univ-paris1.fr/testSP/login/paris10 dans notre exemple), en ajoutant ses attributs SAML.
+  6. L’application backend UnivMobile ouvre une session applicative pour l’utilisateur, identifié par son attribut « remoteUser ». Elle stocke en interne un identifiant de session applicative :
+    * appToken — exemple : ab9902e4
+  7. La réponse HTTPS de l’application backend UnivMobile contient en cookie l’identifiant de la requête initiale :
+    * loginToken (abc18291 dans notre exemple)
+  8. S’il y avait un paramètre « service » dans l’URL initiale, l’application backend UnivMobile redirige vers cette URL, en passant l’identifiant de la requête initiale :
+    * loginToken (abc18291 dans notre exemple)
+    * Note : « appToken » n’est pas renvoyé lors de la redirection, car il peut s’agir d’une URL de redirection en protocole HTTP, non sécurisée.
+  9. Si une erreur de redirection a lieu, on arrive quand même d’une façon ou d’une autre (l’utilisateur recharge sa page initiale, ou revient sur une page quelconque de l’application Mobile web) à l’étape suivante.
+ 10. L’application Mobile web sollicite le backend UnivMobile en HTTPS pour récupérer l’identifiant de session applicative appToken, en passant :
+    * loginToken (abc18291 dans notre exemple)
+    * keyToken (fe0a1293 dans notre exemple)
+ 11. Une fois cet identifiant « appToken » connu par l’application Mobile web, chaque requête HTTPS+JSON effectuée auprès du backend par l’application Mobile web sera considérée comme authentifiée.
