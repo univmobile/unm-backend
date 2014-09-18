@@ -485,7 +485,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 							+ jsonController.getClass().getName());
 				}
 
-				setThreadLocal(jsonController, request);
+				setThreadLocal(jsonController, request, response);
 
 				final String json;
 
