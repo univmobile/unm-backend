@@ -114,7 +114,7 @@ dépasse la session Shibboleth :
   * Elle est maintenue un mois sans intervention de l’utilisateur.
   * Elle peut être invalidée par un administrateur, ce qui obligera l’utilisateur a retourner sur la page « Login » de l’application Mobile web, puis à cliquer sur « Shibboleth ». S’il est par ailleurs déjà authentifié auprès de Shibboleth, une nouvelle session applicative sera aussitôt créée.
   
-#### Exemple vu l’utilisateur
+#### Exemple vu de l’utilisateur
 
   1. Dans UnivMobile (Mobile web), il appuie sur « Se connecter… »
   2. Il appuie ensuite sur « Shibboleth… »
