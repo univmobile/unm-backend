@@ -7,9 +7,9 @@ Documentation parente : [unm-backend](README.md)
 
 Sur univmobile-dev.univ-paris1.fr (intégration) :
 
-    $ more /usr/share/doc/libapache2-mod-shib2/README.txt
+    $ head -1 /usr/share/doc/libapache2-mod-shib2/README.txt
     Welcome to Internet2's Shibboleth
-
+    
 ### Java et Shibboleth : configuration
 
 La configuration suivante est testée avec succès :
@@ -78,6 +78,11 @@ Même s’ils sont le plus souvent identiques, pour une identification pérenne,
 | supannCivilite | M. | getAttribute("supannCivilite") |
 | uid | tformica | getAttribute("uid") |
 
+### URL d’authentification sans WAYF
+
+DS = “Discovery Service”, même chose que
+WAYF = “Where Are You From?” En quelque sorte
+
 ### Authentification Mobile web à travers Shibboleth
 
 L’application Mobile web n’est pas elle-même protégée par Shibboleth, c’est l’application web du backend d’UnivMobile qui l’est. Cela assure la cohérence avec les versions iOS et Android.
@@ -105,7 +110,7 @@ TODO diagramme numéroté
   9. Si une erreur de redirection a lieu, on arrive quand même d’une façon ou d’une autre (l’utilisateur recharge sa page initiale, ou revient sur une page quelconque de l’application Mobile web) à l’étape suivante.
  10. L’application Mobile web sollicite le backend UnivMobile en HTTPS pour récupérer l’identifiant de session applicative appToken, en passant :
     * loginToken (abc18291 dans notre exemple)
-    * keyToken (fe0a1293 dans notre exemple)
+    * key (fe0a1293 dans notre exemple)
  11. Une fois cet identifiant « appToken » connu par l’application Mobile web, chaque requête HTTPS+JSON effectuée auprès du backend par l’application Mobile web sera considérée comme authentifiée.
  
 La session applicative ouverte par l’application Mobile web auprès du backend
@@ -139,3 +144,7 @@ De plus, adopter exactement le même comportement pour les trois types
 d’applications mobiles permet de consolider la solution technique.
 
 Enfin, la version Mobile web devrait être la moins utilisée, d’où la recherche d’une solution la plus économique possible.
+
+### Configuration de la web app backend
+
+L’application backend doit être capable de faire le lien entre les universités et l
