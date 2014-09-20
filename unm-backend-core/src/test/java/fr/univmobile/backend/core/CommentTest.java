@@ -24,16 +24,14 @@ import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 public class CommentTest extends AbstractDbEnabledTest {
 
 	public CommentTest() {
-		
-		super(
-				new File("src/test/data/users/001"),
-				new File(
-						"src/test/data/regions/001"),
-						new File("src/test/data/pois/001"),
-						 new File(
-									"src/test/data/comments/001"));
-				
+
+		super(new File("src/test/data/users/001"), //
+				new File("src/test/data/regions/001"), //
+				new File("src/test/data/pois/001"), //
+				new File("src/test/data/comments/001"));
+
 	}
+
 	@Before
 	public void setUp() throws Exception {
 
@@ -41,17 +39,17 @@ public class CommentTest extends AbstractDbEnabledTest {
 				CommentDataSource.class, dataDir_comments);
 
 		/*
-		final LogQueue logQueue = new LogQueueDbImpl(H2, cxn);
-
-		final SearchManager searchManager = new SearchManagerImpl(logQueue, H2,
-				cxn);
-
-		final Indexation indexation = new IndexationImpl(dataDir_users,
-				dataDir_regions, dataDir_pois, dataDir_comments, searchManager,
-				H2, cxn);
-
-		indexation.indexData(null);
-*/
+		 * final LogQueue logQueue = new LogQueueDbImpl(H2, cxn);
+		 * 
+		 * final SearchManager searchManager = new SearchManagerImpl(logQueue,
+		 * H2, cxn);
+		 * 
+		 * final Indexation indexation = new IndexationImpl(dataDir_users,
+		 * dataDir_regions, dataDir_pois, dataDir_comments, searchManager, H2,
+		 * cxn);
+		 * 
+		 * indexation.indexData(null);
+		 */
 		commentManager = new CommentManagerImpl(logQueue, comments,
 				searchManager, H2, cxn);
 
@@ -67,20 +65,18 @@ public class CommentTest extends AbstractDbEnabledTest {
 	private CommentManager commentManager;
 	private SearchHelper searchHelper;
 	private PoiDataSource pois;
-//	private Connection cxn;
+
+	// private Connection cxn;
 
 	/*
-	@After
-	public void tearDown() throws Exception {
-
-		if (cxn != null) {
-
-			cxn.close();
-
-			cxn = null;
-		}
-	}
-	*/
+	 * @After public void tearDown() throws Exception {
+	 * 
+	 * if (cxn != null) {
+	 * 
+	 * cxn.close();
+	 * 
+	 * cxn = null; } }
+	 */
 
 	@Test
 	public void test_count() throws Exception {

@@ -21,9 +21,9 @@
 	<login_classic active="true">
 		<!-- password: Hello+World! -->
 		<password
-			saltPrefix="18A912"
-			encryptionAlgorithm="SHA-256"
-			encrypted="1b43e4d996b6ccdb0e1d0bb379ae58447d10fdce2ade44f52f791c8f09bf96a5"/>
+			saltedPrefixBeforeEncryption="18A912"
+			encryptionAlgorithm="SHA-1"
+			encrypted="f620dbedc1c0a115fa85b788c80890096d76e0ef"/>
 	</login_classic>
 </content>
 </entry>

@@ -79,4 +79,9 @@ bundle:
       INSERT INTO ${prefix}history 
       (logged_at, elapsed_ms, parent_id, principal_uid, message) 
         VALUES (?, ?, ?, ?, ?);
+        
+  insertAppToken:
+    mysql.h2: |
+      INSERT INTO ${prefix}sessions 
+      (token, user_uid, started_at) VALUES (?, ?, ?);
       

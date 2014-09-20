@@ -258,6 +258,24 @@ bundle:
           ON DELETE RESTRICT ON UPDATE RESTRICT
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+  createTable_sessions:
+    h2: |
+      CREATE TABLE ${prefix}sessions (
+        token CHAR(64) NOT NULL,
+        user_uid VARCHAR(40) NOT NULL,
+        started_at TIMESTAMP NOT NULL,
+        ended_at TIMESTAMP NULL,
+        PRIMARY KEY(token)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    mysql: |
+      CREATE TABLE ${prefix}search (
+        token CHAR(64) NOT NULL,
+        user_uid VARCHAR(40) NOT NULL,
+        started_at TIMESTAMP NOT NULL,
+        ended_at TIMESTAMP NULL,
+        PRIMARY KEY(token)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
   # Do not define parent_id as INDEX, for INSERT performance sake.
   # 
   # id: ID of log line

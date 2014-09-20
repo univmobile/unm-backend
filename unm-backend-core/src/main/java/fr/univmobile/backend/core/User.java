@@ -19,8 +19,6 @@ public interface User extends Entry<User> {
 	@XPath("atom:content/atom:displayName")
 	String getDisplayName();
 
-	void setDisplayName(String displayName);
-
 	/**
 	 * e.g. "M."
 	 */
@@ -28,29 +26,44 @@ public interface User extends Entry<User> {
 	@Nullable
 	String getSupannCivilite();
 
-	void setSupannCivilite(String supannCivilite);
-
 	/**
 	 * e.g. "dandriana@univ-paris1.fr"
 	 */
 	@XPath("atom:content/atom:remoteUser")
 	String getRemoteUser();
-
-	void setRemoteUser(String remoteUser);
-
+	
 	/**
 	 * e.g. "David.Andriana@univ-paris1.fr"
 	 */
 	@XPath("atom:content/atom:mail")
 	String getMail();
 
-	void setMail(String mail);
-
 	@XPath("concat(atom:category/@term, ':', atom:content/atom:uid)")
 	@Override
 	String toString();
 	
-	@XPath("@profileImageUrl")
+	@XPath("atom:content/@profileImageUrl")
 	@Nullable
 	String getProfileImageUrl();
+	
+	@XPath("atom:content/atom:description")
+	@Nullable
+	String getDescription();
+	
+	@XPath("atom:content/atom:login_classic[@active = 'true']/atom:password")
+	Password getPassword();
+	
+	boolean isNullPassword();
+	
+	interface Password {
+		
+		@XPath("@saltPrefix")
+		String getSaltPrefix();
+		
+		@XPath("@encryptionAlgorithm")
+		String getEncryptionAlgorithm();
+		
+		@XPath("@encrypted")
+		String getEncrypted();
+	}
 }

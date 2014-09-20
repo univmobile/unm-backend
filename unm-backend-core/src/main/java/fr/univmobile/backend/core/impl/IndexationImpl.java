@@ -130,6 +130,10 @@ public class IndexationImpl extends AbstractImpl implements Indexation {
 			executeUpdate("createTable_history");
 		}
 
+		if (!doesTableExist(tablePrefix + "sessions")) {
+			executeUpdate("createTable_sessions");
+		}
+
 		// 1. LOCK ALL
 
 		for (final String category : CATEGORIES) {
