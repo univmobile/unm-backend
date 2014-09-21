@@ -5,6 +5,8 @@ import java.sql.SQLException;
 
 import javax.annotation.Nullable;
 
+import fr.univmobile.commons.tx.TransactionException;
+
 public interface SessionManager {
 
 	/**
@@ -16,7 +18,10 @@ public interface SessionManager {
 
 	void logout(AppSession appSession) throws IOException, SQLException;
 
-	//User getCurrentUser(AppSession appSession) throws IOException, SQLException;
+	// User getCurrentUser(AppSession appSession) throws IOException,
+	// SQLException;
 
-	void save(UserBuilder user) throws IOException, SQLException;
+	void save(AppSession session, UserBuilder user)
+			throws TransactionException, IOException, SQLException,
+			InvalidSessionException;
 }

@@ -5,6 +5,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.List;
 import java.util.UUID;
 
 import javax.annotation.Nullable;
@@ -12,9 +13,14 @@ import javax.sql.DataSource;
 
 import org.apache.commons.lang3.NotImplementedException;
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
 
+import com.google.common.collect.Lists;
+
 import fr.univmobile.backend.core.AppSession;
+import fr.univmobile.backend.core.InvalidSessionException;
 import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.User.Password;
@@ -23,9 +29,14 @@ import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.history.LoggableString;
 import fr.univmobile.backend.history.Logged;
+import fr.univmobile.commons.tx.Lock;
+import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.commons.tx.TransactionManager;
 
 public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		SessionManager {
+
+	private static final Log log = LogFactory.getLog(SessionManagerImpl.class);
 
 	public SessionManagerImpl(final LogQueue logQueue,
 			final UserDataSource users, final ConnectionType dbType,
@@ -69,6 +80,10 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		if (user == null) {
 
+			if (log.isInfoEnabled()) {
+				log.info("Invalid log-in for: " + login);
+			}
+
 			logQueue.log(logged, new LoggableString(
 					"LOGIN:INVALID:%s:{login=\"%s\"}", logged, login));
 
@@ -91,6 +106,9 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 			final String inputPassword) throws IOException, SQLException {
 
 		if (users.isNullByUid(login) && users.isNullByRemoteUser(login)) {
+			if (log.isInfoEnabled()) {
+				log.info("No user with login: " + login);
+			}
 			return null; // Bad login
 		}
 
@@ -99,6 +117,9 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 				: users.getByUid(login);
 
 		if (user.isNullPassword()) {
+			if (log.isInfoEnabled()) {
+				log.info("No stored password for user with login: " + login);
+			}
 			return null; // No active password
 		}
 
@@ -122,31 +143,92 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		final String encryptedInputPassword = encrypt.encrypt(saltPrefix,
 				inputPassword);
 
+		if (log.isDebugEnabled()) {
+			// log.debug("saltPrefix: " + saltPrefix);
+			// log.debug("inputPassword: " + inputPassword);
+			// log.debug("encryptedInputPassword: " + encryptedInputPassword);
+		}
+
 		if (!encryptedInputPassword.equals(encryptedStoredPassword)) {
+			if (log.isInfoEnabled()) {
+				log.info("Password do not match for login: " + login);
+			}
 			return null;
 		}
 
-		return user;
+		if (user.isNullPrimaryUser()) {
+
+			return user;
+		}
+
+		return recursiveGetPrimaryUser(Lists.newArrayList(user));
+	}
+
+	private User recursiveGetPrimaryUser(final List<User> users)
+			throws IOException {
+
+		final User user = users.get(users.size() - 1);
+
+		if (user.isNullPrimaryUser()) {
+			return user;
+		}
+
+		final String primaryUserUid = user.getPrimaryUser().getUid();
+
+		for (final User u : users) {
+			if (primaryUserUid.equals(u.getUid())) {
+				throw new StackOverflowError("primaryUserUid: "
+						+ primaryUserUid + " for user.uid: " + user.getUid());
+			}
+		}
+
+		final User primaryUser = this.users.getByUid(primaryUserUid);
+
+		users.add(primaryUser);
+
+		return recursiveGetPrimaryUser(users);
 	}
 
 	@Override
 	public void logout(final AppSession appSession) throws IOException,
 			SQLException {
 
-		throw new NotImplementedException("xx");
+		final String userUid = appSession.getUser().getUid();
+		final String sessionId = appSession.getId();
+
+		if (!isValid(appSession)) {
+
+			logQueue.log(new LoggableString(
+					"LOGOUT:INVALID:{uid=\"\", token=%s}", userUid, sessionId));
+			
+			return;
+		}
+
+		executeUpdate("endSession", new DateTime(), sessionId);
+
+		logQueue.log(new LoggableString("LOGOUT:INVALID:{uid=\"\", token=%s}",
+				userUid, sessionId));
 	}
 
-	/*
-	 * @Override public User getCurrentUser(final AppSession appSession) throws
-	 * IOException, SQLException {
-	 * 
-	 * throw new NotImplementedException(); }
-	 */
-
 	@Override
-	public void save(final UserBuilder user) throws IOException, SQLException {
+	public void save(final AppSession appSession, final UserBuilder user)
+			throws TransactionException, IOException, SQLException,
+			InvalidSessionException {
 
-		throw new NotImplementedException("xx");
+		appSession.check();
+
+		final TransactionManager tx = TransactionManager.getInstance();
+
+		final Lock lock = tx.acquireLock(5000, "users", "toto");
+
+		lock.save(user);
+
+		lock.commit();
+
+		logQueue.log(new LoggableString("USER:UPDATE:{uid=\"%s\"}", //
+				user.getUid()));
+
+		users.reload();
 	}
 
 	/**
@@ -157,12 +239,66 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		final int LENGTH = 64;
 
-		final String uuid = UUID.randomUUID() + "-"
-				+ RandomStringUtils.randomAlphanumeric(LENGTH);
+		String uuid = UUID.randomUUID().toString();
 
-		executeUpdate("insertAppToken", uuid.substring(0, LENGTH),
-				user.getUid(), new DateTime());
+		uuid += "-" + RandomStringUtils.randomAlphanumeric(LENGTH);
+
+		uuid = uuid.substring(0, LENGTH);
+
+		executeUpdate("insertAppToken", uuid, user.getUid(), new DateTime());
 
 		return uuid;
+	}
+
+	private boolean isValid(final AppSession session) throws SQLException {
+
+		final String sessionId = session.getId();
+
+		final int result = executeQueryGetInt("checkSession", sessionId);
+
+		return result == 1;
+	}
+
+	private final class AppSessionImpl implements AppSession {
+
+		public AppSessionImpl(final String id, final User user) {
+
+			this.id = checkNotNull(id, "id");
+			this.user = checkNotNull(user, "user");
+		}
+
+		private final String id;
+		private final User user;
+
+		@Override
+		public String getId() {
+
+			return id;
+		}
+
+		@Override
+		public User getUser() {
+
+			return user;
+		}
+
+		@Override
+		public void check() throws InvalidSessionException {
+
+			final boolean valid;
+
+			try {
+
+				valid = SessionManagerImpl.this.isValid(this);
+
+			} catch (final SQLException e) {
+				throw new RuntimeException(e);
+			}
+
+			if (!valid) {
+
+				throw new InvalidSessionException("appSession.id: " + id);
+			}
+		}
 	}
 }

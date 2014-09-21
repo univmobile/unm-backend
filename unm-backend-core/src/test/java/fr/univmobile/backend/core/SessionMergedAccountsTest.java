@@ -2,7 +2,7 @@ package fr.univmobile.backend.core;
 
 import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 import java.io.File;
 
@@ -40,24 +40,74 @@ public class SessionMergedAccountsTest extends AbstractDbEnabledTest {
 	private static final String API_KEY = "abcdefgh";
 
 	@Test
-	public void testSessionManager_uid1() throws Exception {
+	public void testSessionManager_merged_uid1() throws Exception {
 
 		assertEquals(0, getDbRowCount("unm_history"));
 
 		final AppSession appSession = sessionManager.login_classic(API_KEY,
-				"dandriana", "Hello+World!");
+				"dandriana", "dummy");
 
 		assertNotNull(appSession);
+
+		final User user = appSession.getUser();
+
+		assertEquals("dandriana", user.getUid());
+
+		assertTrue(user.isNullPrimaryUser());
+
+		assertEquals(1, user.sizeOfSecondaryUsers());
+		assertEquals("dandrianavalontsalama",
+				user.getSecondaryUsers()[0].getUid());
 	}
 
 	@Test
-	public void testSessionManager_uid2() throws Exception {
+	public void testSessionManager_merged_uid2() throws Exception {
 
 		assertEquals(0, getDbRowCount("unm_history"));
 
 		final AppSession appSession = sessionManager.login_classic(API_KEY,
-				"dandriana", "Hello+World!");
+				"dandrianavalontsalama", "dummy2");
 
 		assertNotNull(appSession);
+
+		final User user = appSession.getUser();
+
+		assertNotEquals("dandrianavalontsalama", user.getUid());
+
+		assertEquals("dandriana", user.getUid());
+
+		assertTrue(user.isNullPrimaryUser());
+
+		assertEquals(1, user.sizeOfSecondaryUsers());
+		assertEquals("dandrianavalontsalama",
+				user.getSecondaryUsers()[0].getUid());
+	}
+
+	@Test
+	public void testGetUser_no_login_uid1() throws Exception {
+
+		assertEquals(0, getDbRowCount("unm_history"));
+
+		final User user = users.getByUid("dandriana");
+
+		assertEquals("dandriana", user.getUid());
+
+		assertNotEquals("dandrianavalontsalama", user.getUid());
+
+		assertTrue(user.isNullPrimaryUser());
+	}
+
+	@Test
+	public void testGetUser_no_login_uid2() throws Exception {
+
+		assertEquals(0, getDbRowCount("unm_history"));
+
+		final User user = users.getByUid("dandrianavalontsalama");
+
+		assertEquals("dandrianavalontsalama", user.getUid());
+
+		assertNotEquals("dandriana", user.getUid());
+
+		assertFalse(user.isNullPrimaryUser());
 	}
 }

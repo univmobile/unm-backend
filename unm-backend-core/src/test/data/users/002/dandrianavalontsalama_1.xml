@@ -18,16 +18,16 @@
 	<mail>David.Andrianavalontsalama@tolbiac.fr</mail>
 	<supannCivilite>M.</supannCivilite>
 	<displayName>David Andrianavalontsalama</displayName>
-	<secondaryUser>
+	<primaryUser>
 		<uid>dandriana</uid>
 		<remoteUser>dandriana@univ-paris1.fr</remoteUser>	
-	</secondaryUser>
+	</primaryUser>
 	<login_classic active="true">
-		<!-- password: dummy -->
+		<!-- password: dummy2 -->
 		<password
-			saltedPrefixBeforeEncryptiona="abc"
+			saltPrefix="abc"
 			encryptionAlgorithm="SHA-1"
-			encrypted=""/>
+			encrypted="401a01ef1b9d708b0a3dd69bea02f813cf44df98"/>
 	</login_classic>
 </content>
 </entry>

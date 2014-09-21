@@ -68,6 +68,8 @@ public class SessionTest extends AbstractDbEnabledTest {
 		assertEquals(2, getDbRowCount("unm_history"));
 
 		assertEquals("crezvani", appSession.getUser().getUid());
+
+		assertEquals(64, appSession.getId().length());
 	}
 
 	@Test
@@ -113,7 +115,7 @@ public class SessionTest extends AbstractDbEnabledTest {
 
 		builder.setDescription("Du nouveau pour moi, je passe en troisième année.");
 
-		sessionManager.save(builder);
+		sessionManager.save(appSession, builder);
 
 		/*
 		 * final TransactionManager tx = TransactionManager.getInstance();
@@ -132,6 +134,52 @@ public class SessionTest extends AbstractDbEnabledTest {
 
 	@Test
 	public void testSessionManager_login_OK_logout() throws Exception {
+
+		assertEquals(0, getDbRowCount("unm_history"));
+
+		final AppSession appSession = sessionManager.login_classic(API_KEY,
+				"crezvani", "Hello+World!");
+
+		assertEquals(2, getDbRowCount("unm_history"));
+
+		sessionManager.logout(appSession);
+
+		assertEquals(3, getDbRowCount("unm_history"));
+	}
+
+	@Test
+	public void testSessionManager_login_OK_logout_twice() throws Exception {
+
+		assertEquals(0, getDbRowCount("unm_history"));
+
+		final AppSession appSession = sessionManager.login_classic(API_KEY,
+				"crezvani", "Hello+World!");
+
+		assertEquals(2, getDbRowCount("unm_history"));
+
+		sessionManager.logout(appSession);
+
+		assertEquals(3, getDbRowCount("unm_history"));
+
+		sessionManager.logout(appSession);
+
+		assertEquals(4, getDbRowCount("unm_history"));
+	}
+
+	@Test(expected = InvalidSessionException.class)
+	public void testSessionManager_login_OK_logout_check() throws Exception {
+
+		final AppSession appSession = sessionManager.login_classic(API_KEY,
+				"crezvani", "Hello+World!");
+
+		sessionManager.logout(appSession);
+
+		appSession.check();
+	}
+
+	@Test
+	public void testSessionManager_logout_manager_updateDescription_crash()
+			throws Exception {
 
 		assertEquals(0, getDbRowCount("unm_history"));
 

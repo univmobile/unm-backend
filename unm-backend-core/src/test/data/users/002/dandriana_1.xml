@@ -17,17 +17,17 @@
 	<remoteUser>dandriana@univ-paris1.fr</remoteUser>
 	<mail>David.Andriana@univ-paris1.fr</mail>
 	<supannCivilite>M.</supannCivilite>
-	<mainUser>
+	<secondaryUser>
 		<uid>dandrianavalontsalama</uid>
 		<remoteUser>d.andrianavalontsalama@tolbiac.fr</remoteUser>
-	</mainUser>
+	</secondaryUser>
 	<displayName>David Andriana</displayName>
 	<login_classic active="true">
 		<!-- password: dummy -->
 		<password
-			saltedPrefixBeforeEncryption="xyz"
+			saltPrefix="xyz"
 			encryptionAlgorithm="SHA-1"
-			encrypted=""/>
+			encrypted="96b3a18d872dae15ab6e6711b6a882404326dce0"/>
 	</login_classic>
 </content>
 </entry>

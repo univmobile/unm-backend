@@ -66,4 +66,23 @@ public interface User extends Entry<User> {
 		@XPath("@encrypted")
 		String getEncrypted();
 	}
+	
+	@XPath("atom:content/atom:primaryUser")
+	RefUser getPrimaryUser();
+	
+	boolean isNullPrimaryUser();
+	
+	@XPath("atom:content/atom:secondaryUser")
+	RefUser[] getSecondaryUsers();
+	
+	int sizeOfSecondaryUsers();
+	
+	interface RefUser {
+		
+		@XPath("atom:uid")
+		String getUid();
+		
+		@XPath("atom:remoteUser")
+		String getRemoteUser();
+	}
 }

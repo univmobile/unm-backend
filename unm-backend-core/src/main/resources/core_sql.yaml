@@ -85,3 +85,13 @@ bundle:
       INSERT INTO ${prefix}sessions 
       (token, user_uid, started_at) VALUES (?, ?, ?);
       
+  checkSession:
+    mysql.h2: |
+      SELECT COUNT(1) FROM ${prefix}sessions
+        WHERE token = ? AND ended_at IS NULL;
+      
+  endSession:
+    mysql.h2: |
+      UPDATE ${prefix}sessions
+        SET ended_at = ?
+          WHERE token = ? AND ended_at IS NULL;
