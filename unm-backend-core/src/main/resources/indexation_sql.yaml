@@ -268,7 +268,7 @@ bundle:
         PRIMARY KEY(token)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
     mysql: |
-      CREATE TABLE ${prefix}search (
+      CREATE TABLE ${prefix}sessions (
         token CHAR(64) NOT NULL,
         user_uid VARCHAR(40) NOT NULL,
         started_at TIMESTAMP NOT NULL,
