@@ -200,7 +200,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 			logQueue.log(new LoggableString(
 					"LOGOUT:INVALID:{uid=\"\", token=%s}", userUid, sessionId));
-			
+
 			return;
 		}
 
@@ -237,7 +237,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	private String newAppToken(final User user) throws IOException,
 			SQLException {
 
-		final int LENGTH = 64;
+		final int LENGTH = 40;
 
 		String uuid = UUID.randomUUID().toString();
 
@@ -300,5 +300,33 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 				throw new InvalidSessionException("appSession.id: " + id);
 			}
 		}
+	}
+
+	@Override
+	public AppSession getAppSession(final String sessionId) throws IOException,
+			SQLException, InvalidSessionException {
+
+		checkNotNull(sessionId, "sessionId");
+
+		final String userUid;
+
+		try {
+
+			userUid = executeQueryGetStringNullable("getActiveSession_userUid",
+					sessionId);
+
+		} catch (final SQLException e) {
+
+			throw new InvalidSessionException("sessionId: " + sessionId);
+		}
+
+		if (userUid == null) {
+
+			throw new InvalidSessionException("sessionId: " + sessionId);
+		}
+
+		final User user = users.getByUid(userUid);
+
+		return new AppSessionImpl(sessionId, user);
 	}
 }

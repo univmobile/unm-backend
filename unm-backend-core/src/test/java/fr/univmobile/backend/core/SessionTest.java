@@ -69,7 +69,7 @@ public class SessionTest extends AbstractDbEnabledTest {
 
 		assertEquals("crezvani", appSession.getUser().getUid());
 
-		assertEquals(64, appSession.getId().length());
+		assertEquals(40, appSession.getId().length());
 	}
 
 	@Test

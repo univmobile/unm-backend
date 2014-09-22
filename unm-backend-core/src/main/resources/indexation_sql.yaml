@@ -261,7 +261,7 @@ bundle:
   createTable_sessions:
     h2: |
       CREATE TABLE ${prefix}sessions (
-        token CHAR(64) NOT NULL,
+        token CHAR(40) NOT NULL,
         user_uid VARCHAR(40) NOT NULL,
         started_at TIMESTAMP NOT NULL,
         ended_at TIMESTAMP NULL,

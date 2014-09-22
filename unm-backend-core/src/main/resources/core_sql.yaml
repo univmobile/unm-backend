@@ -95,3 +95,9 @@ bundle:
       UPDATE ${prefix}sessions
         SET ended_at = ?
           WHERE token = ? AND ended_at IS NULL;
+          
+  getActiveSession_userUid:
+    mysql.h2: |
+      SELECT user_uid FROM ${prefix}sessions
+        WHERE token = ? AND ended_at IS NULL;
+  

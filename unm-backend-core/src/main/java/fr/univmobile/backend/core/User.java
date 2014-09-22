@@ -38,6 +38,8 @@ public interface User extends Entry<User> {
 	@XPath("atom:content/atom:mail")
 	String getMail();
 
+	boolean isNullMail();
+	
 	@XPath("concat(atom:category/@term, ':', atom:content/atom:uid)")
 	@Override
 	String toString();

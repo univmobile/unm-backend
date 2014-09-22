@@ -227,7 +227,7 @@ public abstract class DbEnabled {
 			default:
 				throw new IllegalStateException("Unknown dbType: " + dbType);
 			}
-			
+
 		} else {
 
 			sb.append(join(array, ','));
@@ -303,6 +303,56 @@ public abstract class DbEnabled {
 					throw e;
 				}
 
+			} finally {
+				pstmt.close();
+			}
+		} finally {
+			cxn.close();
+		}
+	}
+
+	@Nullable
+	protected final String executeQueryGetStringNullable(final String queryId,
+			final Object... params) throws SQLException {
+
+		final String sql = getSql(queryId);
+
+		final Connection cxn = getConnection();
+		try {
+			final PreparedStatement pstmt = cxn.prepareStatement(sql);
+			try {
+
+				setSqlParams(pstmt, params);
+
+				final ResultSet rs;
+				try {
+
+					rs = pstmt.executeQuery();
+
+				} catch (final SQLException e) {
+
+					errorLogQuery(queryId, sql, params);
+
+					throw e;
+				}
+				try {
+
+					if (!rs.next()) {
+
+						if (log.isDebugEnabled()) {
+
+							log.debug("Query did not return any result: "
+									+ queryId + ", returning: null");
+						}
+
+						return null;
+					}
+
+					return rs.getString(1);
+
+				} finally {
+					rs.close();
+				}
 			} finally {
 				pstmt.close();
 			}
