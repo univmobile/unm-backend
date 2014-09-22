@@ -38,12 +38,16 @@ import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
+import fr.univmobile.backend.client.SessionClient;
+import fr.univmobile.backend.client.SessionClientFromLocal;
 import fr.univmobile.backend.client.json.CommentJSONClient;
 import fr.univmobile.backend.client.json.CommentJSONClientImpl;
 import fr.univmobile.backend.client.json.PoiJSONClient;
 import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
+import fr.univmobile.backend.client.json.SessionJSONClient;
+import fr.univmobile.backend.client.json.SessionJSONClientImpl;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
 //import fr.univmobile.backend.core.CommentThreadDataSource;
@@ -51,6 +55,7 @@ import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.SearchManager;
+import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.core.UploadManager;
 import fr.univmobile.backend.core.UploadNotFoundException;
 import fr.univmobile.backend.core.User;
@@ -58,6 +63,7 @@ import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
+import fr.univmobile.backend.core.impl.SessionManagerImpl;
 import fr.univmobile.backend.core.impl.UploadManagerImpl;
 import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.json.AbstractJSONController;
@@ -66,6 +72,7 @@ import fr.univmobile.backend.json.EndpointsJSONController;
 import fr.univmobile.backend.json.JsonHtmler;
 import fr.univmobile.backend.json.PoisJSONController;
 import fr.univmobile.backend.json.RegionsJSONController;
+import fr.univmobile.backend.json.SessionJSONController;
 import fr.univmobile.backend.json.UniversitiesJSONController;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.commons.tx.TransactionManager;
@@ -159,6 +166,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final CommentDataSource comments;
 		final CommentManager commentManager;
 		final SearchManager searchManager;
+		final SessionManager sessionManager;
 		final DataSource ds;
 
 		try {
@@ -194,6 +202,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			commentManager = new CommentManagerImpl(logQueue, comments,
 					searchManager, MYSQL, ds);
+
+			sessionManager = new SessionManagerImpl(logQueue, users, MYSQL, ds);
 
 		} catch (final NamingException e) {
 			throw new ServletException(e);
@@ -244,12 +254,19 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final CommentJSONClient commentJSONClient = new CommentJSONClientImpl(
 				commentClient);
 
+		final SessionClient sessionClient = new SessionClientFromLocal(baseURL,
+				sessionManager);
+
+		final SessionJSONClient sessionJSONClient = new SessionJSONClientImpl(
+				sessionClient);
+
 		this.jsonControllers = new AbstractJSONController[] {
 				new EndpointsJSONController(), //
 				new RegionsJSONController(regionJSONClient), //
 				new UniversitiesJSONController(regions, regionJSONClient), //
 				new PoisJSONController(poiJSONClient), //
-				new CommentsJSONController(pois, commentJSONClient) //
+				new CommentsJSONController(pois, commentJSONClient), //
+				new SessionJSONController(sessionJSONClient) //
 		};
 
 		for (final AbstractJSONController jsonController : jsonControllers) {
@@ -306,6 +323,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				final String headerValue = request.getHeader(headerName);
 				log.debug("  request.header." + headerName + ": " + headerValue);
 			}
+			// Note: We should not log any password here
 		}
 
 		if (requestURI.contains("/json/") || requestURI.endsWith("/json")) {
