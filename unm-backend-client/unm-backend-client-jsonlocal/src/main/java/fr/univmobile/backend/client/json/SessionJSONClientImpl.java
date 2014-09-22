@@ -31,7 +31,7 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 			.getLog(SessionJSONClientImpl.class);
 
 	@Override
-	public String login(final String apiKey, final String login,
+	public String loginJSON(final String apiKey, final String login,
 			final String password) throws IOException {
 
 		if (log.isDebugEnabled()) {
@@ -70,7 +70,7 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 	}
 
 	@Override
-	public String logout(final String apiKey, final String appTokenId)
+	public String logoutJSON(final String apiKey, final String appTokenId)
 			throws IOException {
 
 		if (log.isDebugEnabled()) {

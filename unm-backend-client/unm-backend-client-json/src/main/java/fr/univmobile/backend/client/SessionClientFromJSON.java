@@ -50,7 +50,7 @@ public class SessionClientFromJSON extends
 			log.debug("login():" + login + "...");
 		}
 
-		final String json = jsonClient.login(apiKey, login, password);
+		final String json = jsonClient.loginJSON(apiKey, login, password);
 
 		if (isBlank(json)) {
 			return null;
@@ -67,7 +67,7 @@ public class SessionClientFromJSON extends
 			log.debug("logout():" + appTokenId + "...");
 		}
 
-		jsonClient.logout(apiKey, appTokenId);
+		jsonClient.logoutJSON(apiKey, appTokenId);
 	}
 
 	@XPath("/*")
@@ -81,6 +81,10 @@ public class SessionClientFromJSON extends
 		@Override
 		UserJSON getUser();
 
+		@XPath("id")
+		@Override
+		String toString();
+		
 		interface UserJSON extends User {
 
 			@XPath("@uid")
