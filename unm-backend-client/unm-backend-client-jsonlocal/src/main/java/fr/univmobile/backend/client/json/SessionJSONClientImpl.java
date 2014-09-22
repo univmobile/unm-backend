@@ -55,16 +55,17 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 			return ""; // empty String
 		}
 
-		final JSONMap json = new JSONMap();
-
-		json.put("id", token.getId());
-
-		final JSONMap jsonUser = json.put("user", new JSONMap());
+		final JSONMap json = new JSONMap() //
+				.put("id", token.getId());
 
 		final User user = token.getUser();
 
-		jsonUser.put("uid", user.getUid()) //
-				.put("mail", user.getMail());
+		final JSONMap jsonUser = new JSONMap() //
+				.put("uid", user.getUid()) //
+				.put("mail", user.getMail()) //
+				.put("displayName", user.getDisplayName());
+
+		json.put("user", jsonUser);
 
 		return json.toJSONString();
 	}
@@ -87,7 +88,7 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 
 			throw new RuntimeException(e);
 		}
-		
+
 		return ""; // empty String
 	}
 }

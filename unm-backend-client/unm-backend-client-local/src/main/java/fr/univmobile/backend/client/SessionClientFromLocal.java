@@ -119,7 +119,8 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 	private static User getUser(final fr.univmobile.backend.core.User dsUser) {
 
 		final MutableUser user = DataBeans.instantiate(MutableUser.class) //
-				.setUid(dsUser.getUid());
+				.setUid(dsUser.getUid()) //
+				.setDisplayName(dsUser.getDisplayName());
 
 		if (!dsUser.isNullMail()) {
 			user.setMail(dsUser.getMail());
@@ -140,5 +141,7 @@ interface MutableUser extends User {
 
 	MutableUser setUid(String uid);
 
-	MutableUser setMail(String mail);
+	MutableUser setMail(@Nullable String mail);
+
+	MutableUser setDisplayName(String displayName);
 }

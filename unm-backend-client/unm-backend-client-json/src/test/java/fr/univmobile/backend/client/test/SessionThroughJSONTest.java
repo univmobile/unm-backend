@@ -2,6 +2,8 @@ package fr.univmobile.backend.client.test;
 
 import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
+import static org.apache.commons.lang3.StringUtils.isBlank;
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
@@ -19,6 +21,7 @@ import fr.univmobile.backend.client.AppToken;
 import fr.univmobile.backend.client.SessionClient;
 import fr.univmobile.backend.client.SessionClientFromJSON;
 import fr.univmobile.backend.client.SessionClientFromLocal;
+import fr.univmobile.backend.client.User;
 import fr.univmobile.backend.client.json.SessionJSONClient;
 import fr.univmobile.backend.client.json.SessionJSONClientImpl;
 import fr.univmobile.backend.core.Indexation;
@@ -104,6 +107,14 @@ public class SessionThroughJSONTest {
 				"Hello+World!");
 
 		assertNotNull(appToken);
+
+		final User user = appToken.getUser();
+
+		assertEquals("crezvani", user.getUid());
+		assertEquals("Cyrus.Rezvani@univ-paris1.fr", user.getMail());
+		assertEquals("Cyrus Rezvani", user.getDisplayName());
+		
+		assertFalse("appToken.id should not be blank",isBlank(appToken.getId()));
 	}
 
 	@Test
