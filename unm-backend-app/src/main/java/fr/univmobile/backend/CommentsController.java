@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.client.ClientException;
 import fr.univmobile.backend.client.Comment;
 import fr.univmobile.backend.client.CommentClient;
 import fr.univmobile.backend.client.CommentClientFromLocal;
@@ -149,7 +150,8 @@ public class CommentsController extends AbstractBackendController {
 		return new View("comments.jsp");
 	}
 
-	private View mostRecentComments() throws SQLException, IOException {
+	private View mostRecentComments() throws SQLException, IOException,
+			ClientException {
 
 		final Comment[] comments;
 
