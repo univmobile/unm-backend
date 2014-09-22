@@ -12,14 +12,14 @@ public interface SessionClient {
 	 * valid 30’, that you can use to retrieve the Shibboleth-validated AppToken
 	 * after the whole authentication process takes place.
 	 * <p>
-	 * After the Shibboleth authentication has succeeded,
-	 * call {@link #retrieve(String, String, String)}
+	 * After the Shibboleth authentication has succeeded, call
+	 * {@link #retrieve(String, String, String)}
 	 */
-	LoginConversation prepare(String apiToken) throws IOException,
+	LoginConversation prepare(String apiKey) throws IOException,
 			ClientException;
 
 	/**
-	 * A pair of information to authenticate the client to the backend. 
+	 * A pair of information to authenticate the client to the backend.
 	 */
 	interface LoginConversation {
 
@@ -37,23 +37,30 @@ public interface SessionClient {
 		 */
 		String getKey();
 	}
-	
+
 	/**
-	 * in a Shibboleth-login process, call this method when the
-	 * actual Shibboleth authentication succeeded.
+	 * in a Shibboleth-login process, call this method when the actual
+	 * Shibboleth authentication succeeded.
 	 * <p>
 	 * You must call {@link #prepare(String)} prior to this.
 	 * 
 	 * @return <code>null</code> if the authentication failed or did not
-	 * actually take place.
+	 *         actually take place.
 	 */
 	@Nullable
-	AppToken retrieve(String apiToken, String loginToken, String key) throws IOException, ClientException;
+	AppToken retrieve(String apiKey, String loginToken, String key)
+			throws IOException, ClientException;
 
 	/**
 	 * @return <code>null</code> if the credentials are incorrect.
 	 */
 	@Nullable
-	AppToken login(String apiToken, String login, String password)
+	AppToken login(String apiKey, String login, String password)
 			throws IOException, ClientException;
+
+	/**
+	 * logout.
+	 */
+	void logout(String apiKey, String appTokenId) throws IOException,
+			ClientException;
 }

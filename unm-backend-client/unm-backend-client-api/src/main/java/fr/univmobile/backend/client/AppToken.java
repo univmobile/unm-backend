@@ -9,7 +9,7 @@ import java.io.Serializable;
  */
 public interface AppToken extends Serializable {
 
-	int getId();
+	String getId();
 
 	User getUser();
 }

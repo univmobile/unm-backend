@@ -1,7 +1,5 @@
 package fr.univmobile.backend.client;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-
 import java.io.IOException;
 import java.sql.SQLException;
 
@@ -9,85 +7,100 @@ import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import net.avcompris.binding.annotation.XPath;
-import net.avcompris.binding.json.JsonBinder;
-import net.avcompris.binding.json.impl.DomJsonBinder;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
-import org.json.simple.JSONValue;
 
 import fr.univmobile.backend.client.json.CommentJSONClient;
 
-public class CommentClientFromJSON implements CommentClient {
+public class CommentClientFromJSON extends
+		AbstractClientFromJSON<CommentJSONClient> implements CommentClient {
 
 	@Inject
 	public CommentClientFromJSON(final CommentJSONClient jsonClient) {
 
-		this.jsonClient = checkNotNull(jsonClient, "jsonClient");
+		super(jsonClient);
 	}
-
-	private final CommentJSONClient jsonClient;
 
 	private static Log log = LogFactory.getLog(CommentClientFromJSON.class);
 
 	@Override
 	public Comment[] getCommentsByPoiId(final int poiId) throws IOException,
-			SQLException {
+			ClientException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("getCommentsByPoiId():" + poiId + "...");
 		}
 
-		final String json = jsonClient.getCommentsJSONByPoiId(poiId);
+		final String json;
+
+		try {
+
+			json = jsonClient.getCommentsJSONByPoiId(poiId);
+
+		} catch (final SQLException e) {
+
+			log.fatal(e);
+
+			throw new ClientException(e);
+		}
 
 		return comments(json);
 	}
 
 	@Override
 	public Comment[] getMostRecentComments(final int limit) throws IOException,
-			SQLException {
+			ClientException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("getMostRecentComments():" + limit + "...");
 		}
 
-		final String json = jsonClient.getMostRecentCommentsJSON(limit);
+		final String json;
+
+		try {
+
+			json = jsonClient.getMostRecentCommentsJSON(limit);
+
+		} catch (final SQLException e) {
+
+			log.fatal(e);
+
+			throw new ClientException(e);
+		}
 
 		return comments(json);
 	}
 
 	@Override
 	public Comment[] searchComments(final String query, final int limit)
-			throws IOException, SQLException {
+			throws IOException, ClientException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("searchComments(String, int)():" + query + ", " + limit
 					+ "...");
 		}
 
-		final String json = jsonClient.searchCommentsJSON(query, limit);
+		final String json;
+
+		try {
+
+			json = jsonClient.searchCommentsJSON(query, limit);
+
+		} catch (final SQLException e) {
+
+			log.fatal(e);
+
+			throw new ClientException(e);
+		}
 
 		return comments(json);
 	}
 
-	private static Comment[] comments(final String json) {
+	private Comment[] comments(final String json) {
 
-		if (log.isDebugEnabled()) {
-			log.debug("json.length(): " + json.length());
-			log.debug("json: "
-					+ (json.length() <= 80 ? json
-							: (json.substring(0, 80) + "...")));
-		}
-
-		final Object jsonObject = JSONValue.parse(json);
-
-		final JsonBinder binder = new DomJsonBinder();
-
-		final CommentsJSON commentsJSON = binder.bind(jsonObject,
-				CommentsJSON.class);
-
-		return commentsJSON.getComments();
+		return unmarshall(json, CommentsJSON.class).getComments();
 	}
 
 	@XPath("/*")

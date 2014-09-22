@@ -11,6 +11,7 @@ import javax.inject.Named;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.client.ClientException;
 import fr.univmobile.backend.client.Comment;
 import fr.univmobile.backend.client.CommentClient;
 import fr.univmobile.backend.json.JSONList;
@@ -38,7 +39,18 @@ public class CommentJSONClientImpl implements CommentJSONClient {
 			log.debug("getCommentsJSONByPoiId():" + poiId + "...");
 		}
 
-		final Comment[] comments = commentClient.getCommentsByPoiId(poiId);
+		final Comment[] comments;
+
+		try {
+
+			comments = commentClient.getCommentsByPoiId(poiId);
+
+		} catch (final ClientException e) {
+
+			log.fatal(e);
+
+			throw new RuntimeException(e);
+		}
 
 		return jsonComments(comments);
 	}
@@ -51,7 +63,18 @@ public class CommentJSONClientImpl implements CommentJSONClient {
 			log.debug("getMostRecentCommentsJSON():" + limit + "...");
 		}
 
-		final Comment[] comments = commentClient.getMostRecentComments(limit);
+		final Comment[] comments;
+
+		try {
+
+			comments = commentClient.getMostRecentComments(limit);
+
+		} catch (final ClientException e) {
+
+			log.fatal(e);
+
+			throw new RuntimeException(e);
+		}
 
 		return jsonComments(comments);
 	}
@@ -64,7 +87,18 @@ public class CommentJSONClientImpl implements CommentJSONClient {
 			log.debug("searchCommentsJSON():" + query + ", " + limit + "...");
 		}
 
-		final Comment[] comments = commentClient.searchComments(query, limit);
+		final Comment[] comments;
+
+		try {
+
+			comments = commentClient.searchComments(query, limit);
+
+		} catch (final ClientException e) {
+
+			log.fatal(e);
+
+			throw new RuntimeException(e);
+		}
 
 		return jsonComments(comments);
 	}

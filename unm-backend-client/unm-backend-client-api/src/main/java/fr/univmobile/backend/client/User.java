@@ -8,11 +8,11 @@ public interface User extends Serializable {
 
 	String getUid();
 	
-	String[] getShibbolethRemoteUsers();
+	// String[] getShibbolethRemoteUsers();
 
 	String getDisplayName();
 
-	String getEmail();
+	String getMail();
 
 	@Nullable
 	String getImgUrl();

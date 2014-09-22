@@ -20,6 +20,7 @@ import fr.univmobile.backend.client.Comment;
 import fr.univmobile.backend.client.CommentClient;
 import fr.univmobile.backend.client.CommentClientFromJSON;
 import fr.univmobile.backend.client.CommentClientFromLocal;
+import fr.univmobile.backend.client.json.CommentJSONClient;
 import fr.univmobile.backend.client.json.CommentJSONClientImpl;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
@@ -71,7 +72,7 @@ public class CommentThroughJSONTest {
 		final CommentManager commentManager = new CommentManagerImpl(logQueue,
 				commentDataSource, searchManager, H2, cxn);
 
-		final CommentClientFromLocal commentClient = new CommentClientFromLocal(
+		final CommentClient commentClient = new CommentClientFromLocal(
 				"(dummy baseURL)", commentDataSource, commentManager,
 				searchManager);
 
@@ -82,7 +83,7 @@ public class CommentThroughJSONTest {
 		LogQueueDbImpl.setPrincipal("crezvani");
 	}
 
-	private CommentJSONClientImpl commentJSONClient;
+	private CommentJSONClient commentJSONClient;
 	private CommentClient client;
 	private Connection cxn;
 

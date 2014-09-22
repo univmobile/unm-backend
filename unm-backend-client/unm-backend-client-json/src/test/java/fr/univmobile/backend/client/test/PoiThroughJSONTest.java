@@ -18,6 +18,7 @@ import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromJSON;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.PoiGroup;
+import fr.univmobile.backend.client.json.PoiJSONClient;
 import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
@@ -47,15 +48,16 @@ public class PoiThroughJSONTest {
 						copyDirectory(new File("src/test/data/poitrees/001"),
 								new File("target/PoiThroughJSONTest_poitrees")));
 
-		final PoiClientFromLocal poiClient = new PoiClientFromLocal("(dummy baseURL)",
-				poiDataSource, poitreeDataSource, regionDataSource);
+		final PoiClient poiClient = new PoiClientFromLocal(
+				"(dummy baseURL)", poiDataSource, poitreeDataSource,
+				regionDataSource);
 
-		poiJSONClient = new PoiJSONClientImpl( poiClient);
+		poiJSONClient = new PoiJSONClientImpl(poiClient);
 
 		client = new PoiClientFromJSON(poiJSONClient);
 	}
 
-	private PoiJSONClientImpl poiJSONClient;
+	private PoiJSONClient poiJSONClient;
 	private PoiClient client;
 
 	@Test
@@ -164,7 +166,7 @@ public class PoiThroughJSONTest {
 			for (final Poi poi : group.getPois()) {
 
 				final String commentsUrl = poi.getCommentsUrl();
-				
+
 				assertFalse(isBlank(commentsUrl));
 			}
 		}

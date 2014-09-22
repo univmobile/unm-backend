@@ -17,4 +17,9 @@ public class ClientException extends Exception {
 
 		super(message);
 	}
+	
+	public ClientException(@Nullable final Throwable cause) {
+		
+		super(cause);
+	}
 }

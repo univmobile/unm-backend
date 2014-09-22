@@ -1,33 +1,27 @@
 package fr.univmobile.backend.client;
 
-import static com.google.common.base.Preconditions.checkNotNull;
-
 import java.io.IOException;
 
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import net.avcompris.binding.annotation.XPath;
-import net.avcompris.binding.json.JsonBinder;
-import net.avcompris.binding.json.impl.DomJsonBinder;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.json.simple.JSONValue;
 
 import com.avcompris.lang.NotImplementedException;
 
 import fr.univmobile.backend.client.json.PoiJSONClient;
 
-public class PoiClientFromJSON implements PoiClient {
+public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
+		implements PoiClient {
 
 	@Inject
 	public PoiClientFromJSON(final PoiJSONClient jsonClient) {
 
-		this.jsonClient = checkNotNull(jsonClient, "jsonClient");
+		super(jsonClient);
 	}
-
-	private final PoiJSONClient jsonClient;
 
 	private static Log log = LogFactory.getLog(PoiClientFromJSON.class);
 
@@ -38,22 +32,7 @@ public class PoiClientFromJSON implements PoiClient {
 			log.debug("getPois()...");
 		}
 
-		final String json = jsonClient.getPoisJSON();
-
-		if (log.isDebugEnabled()) {
-			log.debug("json.length(): " + json.length());
-			log.debug("json: "
-					+ (json.length() <= 80 ? json
-							: (json.substring(0, 80) + "...")));
-		}
-
-		final Object jsonObject = JSONValue.parse(json);
-
-		final JsonBinder binder = new DomJsonBinder();
-
-		final PoisJSON poisJSON = binder.bind(jsonObject, PoisJSON.class);
-
-		return poisJSON.getPois();
+		return unmarshall(jsonClient.getPoisJSON(), PoisJSON.class).getPois();
 	}
 
 	@Override

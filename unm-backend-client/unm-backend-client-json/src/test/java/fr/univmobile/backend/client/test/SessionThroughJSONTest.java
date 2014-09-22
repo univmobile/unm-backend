@@ -2,9 +2,9 @@ package fr.univmobile.backend.client.test;
 
 import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
-import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.io.File;
 import java.sql.Connection;
@@ -17,8 +17,10 @@ import org.junit.Test;
 
 import fr.univmobile.backend.client.AppToken;
 import fr.univmobile.backend.client.SessionClient;
+import fr.univmobile.backend.client.SessionClientFromJSON;
 import fr.univmobile.backend.client.SessionClientFromLocal;
-import fr.univmobile.backend.client.User;
+import fr.univmobile.backend.client.json.SessionJSONClient;
+import fr.univmobile.backend.client.json.SessionJSONClientImpl;
 import fr.univmobile.backend.core.Indexation;
 import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.core.UserDataSource;
@@ -29,7 +31,7 @@ import fr.univmobile.backend.core.impl.SessionManagerImpl;
 import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
-public class SessionClientFromLocalTest {
+public class SessionThroughJSONTest {
 
 	@Before
 	public void setUp() throws Exception {
@@ -41,13 +43,13 @@ public class SessionClientFromLocalTest {
 		final UserDataSource users = BackendDataSourceFileSystem.newDataSource(
 				UserDataSource.class, tmpDataDir_comments);
 
-		final File dbFile = new File("target/SessionClientFromLocalTest.h2.db");
+		final File dbFile = new File("target/SessionThroughJSONTest.h2.db");
 
 		FileUtils.deleteQuietly(dbFile);
 
 		assertFalse(dbFile.exists());
 
-		final String url = "jdbc:h2:./target/SessionClientFromLocalTest";
+		final String url = "jdbc:h2:./target/SessionThroughJSONTest";
 
 		cxn = DriverManager.getConnection(url);
 
@@ -60,7 +62,7 @@ public class SessionClientFromLocalTest {
 				new File("src/test/data/users/001"), //
 				new File("src/test/data/regions/001"), //
 				new File("src/test/data/pois/001"), //
-				new File("target/CommentClientFromLocalTest_comments"), //
+				new File("src/test/data/comments/001"), //
 				searchManager, H2, cxn);
 
 		indexation.indexData(null);
@@ -68,15 +70,19 @@ public class SessionClientFromLocalTest {
 		final SessionManager sessionManager = new SessionManagerImpl(logQueue,
 				users, H2, cxn);
 
-		client = new SessionClientFromLocal("http://dummy/", sessionManager);
+		final SessionClient sessionClient = new SessionClientFromLocal(
+				"http://dummy/", sessionManager);
+
+		sessionJSONClient = new SessionJSONClientImpl(sessionClient);
+
+		client = new SessionClientFromJSON(sessionJSONClient);
 
 		LogQueueDbImpl.setAnonymous();// Principal(null); // "crezvani");
 	}
 
+	private SessionJSONClient sessionJSONClient;
 	private SessionClient client;
 	private Connection cxn;
-
-	private static final String API_TOKEN = "abcdefgh";
 
 	@After
 	public void tearDown() throws Exception {
@@ -89,31 +95,33 @@ public class SessionClientFromLocalTest {
 		}
 	}
 
-	@Test
-	public void test_login_OK() throws Exception {
+	private static final String API_KEY = "123456";
 
-		final AppToken appToken = client.login(API_TOKEN, "crezvani",
+	@Test
+	public void testThroughJSON_login_OK() throws Exception {
+
+		final AppToken appToken = client.login(API_KEY, "crezvani",
 				"Hello+World!");
 
 		assertNotNull(appToken);
-
-		final User user = appToken.getUser();
-
-		assertEquals("crezvani", user.getUid());
-
-		assertEquals("Cyrus.Rezvani@univ-paris1.fr", user.getMail());
 	}
 
 	@Test
-	public void test_login_logout() throws Exception {
+	public void testThroughJSON_login_invalid() throws Exception {
 
-		final AppToken appToken = client.login(API_TOKEN, "crezvani",
+		final AppToken appToken = client.login(API_KEY, "crezvani", "toto");
+
+		assertNull(appToken);
+	}
+
+	@Test
+	public void testThroughJSON_login_logout() throws Exception {
+
+		final AppToken appToken = client.login(API_KEY, "crezvani",
 				"Hello+World!");
 
 		assertNotNull(appToken);
 
-		// System.out.println("appToken.id: "+appToken.getId());
-
-		client.logout(API_TOKEN, appToken.getId());
+		client.logout(API_KEY, appToken.getId());
 	}
 }

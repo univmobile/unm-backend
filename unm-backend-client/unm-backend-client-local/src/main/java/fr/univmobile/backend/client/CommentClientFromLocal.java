@@ -47,21 +47,31 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 
 	@Override
 	public Comment[] getCommentsByPoiId(final int poiId) throws IOException,
-			SQLException {
+			ClientException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("getCommentsByPoiId():" + poiId + "...");
 		}
 
-		if (commentManager.isNullByPoiId(poiId)) {
-			return new Comment[0];
+		try {
+
+			if (commentManager.isNullByPoiId(poiId)) {
+				return new Comment[0];
+			}
+
+			final CommentThread commentThread = commentManager
+					.getByPoiId(poiId);
+
+			final CommentRef[] commentRefs = commentThread.getAllComments();
+
+			return getComments(commentRefs);
+
+		} catch (final SQLException e) {
+
+			log.fatal(e);
+
+			throw new ClientException(e);
 		}
-
-		final CommentThread commentThread = commentManager.getByPoiId(poiId);
-
-		final CommentRef[] commentRefs = commentThread.getAllComments();
-
-		return getComments(commentRefs);
 	}
 
 	private Comment[] getComments(final CommentRef[] commentRefs) {
@@ -114,28 +124,48 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 
 	@Override
 	public Comment[] getMostRecentComments(final int limit) throws IOException,
-			SQLException {
+			ClientException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("getMostRecentComments():" + limit + "...");
 		}
 
-		final fr.univmobile.backend.core.Comment[] dsComments = commentManager
-				.getMostRecentComments(limit);
+		final fr.univmobile.backend.core.Comment[] dsComments;
+
+		try {
+
+			dsComments = commentManager.getMostRecentComments(limit);
+
+		} catch (final SQLException e) {
+
+			log.fatal(e);
+
+			throw new ClientException(e);
+		}
 
 		return getComments(dsComments);
 	}
 
 	@Override
 	public Comment[] searchComments(final String query, final int limit)
-			throws IOException, SQLException {
+			throws IOException, ClientException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("searchComments():" + query + "...");
 		}
 
-		final CommentRef[] commentRefs = searchHelper.search(CommentRef.class,
-				query);
+		final CommentRef[] commentRefs;
+
+		try {
+
+			commentRefs = searchHelper.search(CommentRef.class, query);
+
+		} catch (final SQLException e) {
+
+			log.fatal(e);
+
+			throw new ClientException(e);
+		}
 
 		final Comment[] comments = new Comment[Math.min(limit,
 				commentRefs.length)];
@@ -146,7 +176,6 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 
 			comments[i] = getComment(commentDataSource.getByUid(uid));
 		}
-
 		return comments;
 	}
 

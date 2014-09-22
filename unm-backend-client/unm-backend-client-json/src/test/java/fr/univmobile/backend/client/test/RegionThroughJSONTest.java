@@ -15,6 +15,7 @@ import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromJSON;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.University;
+import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -37,7 +38,7 @@ public class RegionThroughJSONTest {
 						copyDirectory(new File("src/test/data/poitrees/001"),
 								new File("target/PoiThroughJSONTest_poitrees")));
 
-		final RegionClientFromLocal regionClient = new RegionClientFromLocal(
+		final RegionClient regionClient = new RegionClientFromLocal(
 				"(dummy baseURL)", regions, poitrees);
 
 		regionJSONClient = new RegionJSONClientImpl(regionClient);
@@ -45,7 +46,7 @@ public class RegionThroughJSONTest {
 		client = new RegionClientFromJSON(regionJSONClient);
 	}
 
-	private RegionJSONClientImpl regionJSONClient;
+	private RegionJSONClient regionJSONClient;
 	private RegionClient client;
 
 	@Test
