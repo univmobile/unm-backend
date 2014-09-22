@@ -18,6 +18,13 @@
 	<mail>Cyrus.Rezvani@univ-paris1.fr</mail>
 	<supannCivilite>M.</supannCivilite>
 	<displayName>Cyrus Rezvani</displayName>
+	<login_classic active="true">
+		<!-- password: Hello+World! -->
+		<password
+			saltPrefix="18A912"
+			encryptionAlgorithm="SHA-256"
+			encrypted="1b43e4d996b6ccdb0e1d0bb379ae58447d10fdce2ade44f52f791c8f09bf96a5"/>
+	</login_classic>
 </content>
 </entry>
 
