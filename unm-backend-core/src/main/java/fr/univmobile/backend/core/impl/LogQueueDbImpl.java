@@ -34,14 +34,14 @@ public class LogQueueDbImpl extends AbstractDbManagerImpl implements LogQueue {
 	private static final int MAX_LENGTH = 255;
 
 	public static void setAnonymous() {
-	
+
 		setPrincipal("(anonymous)");
 	}
-	
+
 	public static void setPrincipal(final String userUid) {
 
 		checkNotNull(userUid, "userUid");
-		
+
 		/*
 		 * if (userUid == null) {
 		 * 
@@ -49,9 +49,9 @@ public class LogQueueDbImpl extends AbstractDbManagerImpl implements LogQueue {
 		 * 
 		 * } else {
 		 */
-		
+
 		threadLocalPincipal.set(userUid);
-		
+
 		// }
 	}
 
@@ -60,8 +60,13 @@ public class LogQueueDbImpl extends AbstractDbManagerImpl implements LogQueue {
 		final String userUid = threadLocalPincipal.get();
 
 		if (userUid == null) {
-			throw new IllegalStateException(
+
+			final RuntimeException e = new IllegalStateException(
 					"LogQueue: Principal has not been set");
+
+			log.fatal(e);
+
+			throw e;
 		}
 
 		return userUid.length() <= 40 ? userUid : userUid.substring(0, 40);
