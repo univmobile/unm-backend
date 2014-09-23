@@ -1,15 +1,13 @@
 package fr.univmobile.backend.core;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertSame;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
 
 import java.io.File;
 import java.util.Iterator;
 import java.util.Map;
 import java.util.NoSuchElementException;
+
+import net.avcompris.binding.helper.BinderUtils;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -72,6 +70,26 @@ public class UsersTest {
 		assertEquals("crezvani", crezvani.getUid());
 
 		users.getParent(crezvani);
+	}
+
+	@Test
+	public void test_nullPassword_detach() throws Exception {
+
+		final User crezvani = users.getByUid("crezvani");
+
+		assertFalse(crezvani.isNullPassword());
+		
+		assertNotNull(crezvani.getPassword());
+
+		BinderUtils.detach(crezvani);
+
+		final User dandriana = users.getByUid("dandriana");
+	
+		assertTrue(dandriana.isNullPassword());
+		
+		//assertNull(dandriana.getPassword());
+		
+		BinderUtils.detach(dandriana);
 	}
 
 	@Test
