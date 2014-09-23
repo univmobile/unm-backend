@@ -266,7 +266,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new UniversitiesJSONController(regions, regionJSONClient), //
 				new PoisJSONController(poiJSONClient), //
 				new CommentsJSONController(pois, commentJSONClient), //
-				new SessionJSONController(sessionJSONClient) //
+				new SessionJSONController(sessionManager, sessionJSONClient) //
 		};
 
 		for (final AbstractJSONController jsonController : jsonControllers) {

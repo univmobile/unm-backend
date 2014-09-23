@@ -3,11 +3,15 @@ package fr.univmobile.backend.json;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import fr.univmobile.backend.client.json.SessionJSONClient;
+import fr.univmobile.backend.core.AppSession;
+import fr.univmobile.backend.core.InvalidSessionException;
+import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.web.commons.HttpInputs;
@@ -19,12 +23,15 @@ import fr.univmobile.web.commons.Paths;
 @Paths({ "json/session", "json/session/", "json/session.json" })
 public class SessionJSONController extends AbstractJSONController {
 
-	public SessionJSONController(final SessionJSONClient sessionJSONClient) {
+	public SessionJSONController(final SessionManager sessionManager,
+			final SessionJSONClient sessionJSONClient) {
 
+		this.sessionManager = checkNotNull(sessionManager, "sessionManager");
 		this.sessionJSONClient = checkNotNull(sessionJSONClient,
 				"sessionJSONClient");
 	}
 
+	private final SessionManager sessionManager;
 	private final SessionJSONClient sessionJSONClient;
 
 	private static final Log log = LogFactory
@@ -40,8 +47,31 @@ public class SessionJSONController extends AbstractJSONController {
 
 		if (logout.isHttpValid()) {
 
+			final String appTokenId = logout.appTokenId();
+
+			final AppSession appSession;
+
+			try {
+
+				appSession = sessionManager.getAppSession(appTokenId);
+
+			} catch (final InvalidSessionException e) {
+
+				log.error(e);
+
+				return ""; // empty string
+
+			} catch (final SQLException e) {
+
+				log.error(e);
+
+				return ""; // empty string
+			}
+
+			LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
+
 			final String json = sessionJSONClient.logoutJSON(logout.apiKey(),
-					logout.appTokenId());
+					appTokenId);
 
 			return json;
 		}
