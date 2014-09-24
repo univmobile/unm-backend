@@ -17,6 +17,8 @@ import fr.univmobile.backend.client.Poi;
 import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.PoiGroup;
+import fr.univmobile.backend.client.Pois;
+import fr.univmobile.backend.client.Pois.MapInfo;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -58,7 +60,7 @@ public class PoiClientFromLocalTest {
 	@Test
 	public void test_poiGroups() throws IOException {
 
-		final PoiGroup[] groups = client.getPois();
+		final PoiGroup[] groups = client.getPois().getGroups();
 
 		assertEquals(3, groups.length);
 
@@ -75,7 +77,7 @@ public class PoiClientFromLocalTest {
 	@Test
 	public void test_poi2() throws IOException {
 
-		final PoiGroup[] groups = client.getPois();
+		final PoiGroup[] groups = client.getPois().getGroups();
 
 		final Poi[] pois = groups[1].getPois();
 
@@ -112,7 +114,7 @@ public class PoiClientFromLocalTest {
 	@Test
 	public void test_poi20036() throws IOException {
 
-		final PoiGroup[] groups = client.getPois();
+		final PoiGroup[] groups = client.getPois().getGroups();
 
 		final Poi[] pois = groups[2].getPois();
 
@@ -129,7 +131,7 @@ public class PoiClientFromLocalTest {
 	@Test
 	public void test_poi4() throws IOException {
 
-		final PoiGroup[] groups = client.getPois();
+		final PoiGroup[] groups = client.getPois().getGroups();
 
 		final Poi[] pois = groups[1].getPois();
 
@@ -142,7 +144,7 @@ public class PoiClientFromLocalTest {
 	@Test
 	public void test_noBlankCoordinates() throws IOException {
 
-		for (final PoiGroup group : client.getPois()) {
+		for (final PoiGroup group : client.getPois().getGroups()) {
 
 			for (final Poi poi : group.getPois()) {
 
@@ -154,7 +156,7 @@ public class PoiClientFromLocalTest {
 	@Test
 	public void test_noBlankCommentsUrl() throws IOException {
 
-		for (final PoiGroup group : client.getPois()) {
+		for (final PoiGroup group : client.getPois().getGroups()) {
 
 			for (final Poi poi : group.getPois()) {
 
@@ -166,7 +168,7 @@ public class PoiClientFromLocalTest {
 	@Test
 	public void test_unfilteredCommentsUrl() throws IOException {
 
-		for (final PoiGroup group : client.getPois()) {
+		for (final PoiGroup group : client.getPois().getGroups()) {
 
 			for (final Poi poi : group.getPois()) {
 
@@ -193,8 +195,8 @@ public class PoiClientFromLocalTest {
 
 	@Test
 	public void test_getUniversityIds_fromPoiGroups() throws Exception {
-		
-		final Poi poi = client.getPois()[1].getPois()[10];
+
+		final Poi poi = client.getPois().getGroups()[1].getPois()[10];
 
 		assertEquals(1164, poi.getId());
 
@@ -204,4 +206,48 @@ public class PoiClientFromLocalTest {
 
 		assertEquals("paris8", universityIds[0]);
 	}
+
+	@Test
+	public void test_getPois_geoloc() throws Exception {
+
+		// 1. WITHOUT GEOLOC
+		
+		final Pois pois0 = client.getPois();
+		
+		assertEquals(3, pois0.getGroups().length);
+		
+		assertNull(pois0.getMapInfo());
+		
+		assertEquals("Région : Bretagne", pois0.getGroups()[0].getGroupLabel());
+		assertEquals("Région : Île de France", pois0.getGroups()[1].getGroupLabel());
+		assertEquals("Région : Limousin/Poitou-Charentes", pois0.getGroups()[2].getGroupLabel());
+		
+		assertEquals(0, pois0.getGroups()[0].getPois().length);
+		assertEquals(16, pois0.getGroups()[1].getPois().length);
+		assertEquals(4, pois0.getGroups()[2].getPois().length);
+
+		assertEquals(3792, pois0.getGroups()[1].getPois()[0].getId());
+		
+		// 2. WITH GEOLOC
+		
+		final Pois pois = client.getPois(48.96, 2.34);
+
+		assertEquals(3, pois.getGroups().length);
+		
+		final MapInfo mapInfo = pois.getMapInfo();
+		
+		assertEquals(10, mapInfo.getPreferredZoom());
+		assertEquals(48.96, mapInfo.getLat(), 0.0);
+		assertEquals(2.34, mapInfo.getLng(), 0.0);
+		
+		assertEquals("Région : Île de France", pois.getGroups()[0].getGroupLabel());
+		assertEquals("Région : Limousin/Poitou-Charentes", pois.getGroups()[1].getGroupLabel());
+		assertEquals("Région : Bretagne", pois.getGroups()[2].getGroupLabel());
+		
+		assertEquals(16, pois.getGroups()[0].getPois().length);
+		assertEquals(4, pois.getGroups()[1].getPois().length);
+		assertEquals(0, pois.getGroups()[2].getPois().length);
+
+		assertEquals(2, pois.getGroups()[0].getPois()[0].getId());
+}
 }

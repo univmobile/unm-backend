@@ -51,7 +51,7 @@ public class AdminGeocampusController extends AbstractBackendController {
 
 		setAttribute("pois", list);
 
-		for (final PoiGroup poiGroup : getPoiClient().getPois()) {
+		for (final PoiGroup poiGroup : getPoiClient().getPois().getGroups()) {
 
 			list.add(new Pois(poiGroup));
 		}

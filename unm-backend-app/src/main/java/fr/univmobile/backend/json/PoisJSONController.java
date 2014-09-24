@@ -10,6 +10,10 @@ import org.apache.commons.logging.LogFactory;
 
 import fr.univmobile.backend.client.json.PoiJSONClient;
 import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.web.commons.HttpInputs;
+import fr.univmobile.web.commons.HttpMethods;
+import fr.univmobile.web.commons.HttpParameter;
+import fr.univmobile.web.commons.HttpRequired;
 import fr.univmobile.web.commons.Paths;
 
 @Paths({ "json/pois", "json/pois/", "json/pois.json" })
@@ -30,7 +34,18 @@ public class PoisJSONController extends AbstractJSONController {
 
 		log.debug("actionJSON()...");
 
-		final String poisJSON = poiJSONClient.getPoisJSON();
+		final String poisJSON;
+
+		final Coordinates coords = getHttpInputs(Coordinates.class);
+
+		if (coords.isHttpValid()) {
+
+			poisJSON = poiJSONClient.getPoisJSON(coords.lat(), coords.lng());
+
+		} else {
+
+			poisJSON = poiJSONClient.getPoisJSON();
+		}
 
 		if (log.isDebugEnabled()) {
 			log.debug("serveJSON(poisJSON.length: " + poisJSON.length() + ")");
@@ -41,5 +56,17 @@ public class PoisJSONController extends AbstractJSONController {
 				+ substringAfter(poisJSON, "{");
 
 		return json;
+	}
+
+	@HttpMethods("GET")
+	private interface Coordinates extends HttpInputs {
+
+		@HttpRequired
+		@HttpParameter
+		double lat();
+
+		@HttpRequired
+		@HttpParameter
+		double lng();
 	}
 }

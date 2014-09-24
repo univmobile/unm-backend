@@ -13,6 +13,8 @@ import org.apache.commons.logging.LogFactory;
 import fr.univmobile.backend.client.Poi;
 import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiGroup;
+import fr.univmobile.backend.client.Pois;
+import fr.univmobile.backend.client.Pois.MapInfo;
 import fr.univmobile.backend.json.JSONList;
 import fr.univmobile.backend.json.JSONMap;
 
@@ -34,15 +36,43 @@ public class PoiJSONClientImpl implements PoiJSONClient {
 
 		log.debug("getPoisJSON()...");
 
-		final PoiGroup[] poiGroups = poiClient.getPois();
+		final Pois p = poiClient.getPois();
+
+		return poisJSON(p);
+	}
+
+	@Override
+	public String getPoisJSON(final double lat, final double lng)
+			throws IOException {
+
+		log.debug("getPoisJSON():" + lat + "," + lng + "...");
+
+		final Pois p = poiClient.getPois(lat, lng);
+
+		return poisJSON(p);
+	}
+
+	private static String poisJSON(final Pois p) {
 
 		final JSONMap json = new JSONMap();
+
+		final MapInfo mapInfo = p.getMapInfo();
+
+		if (mapInfo != null) {
+
+			final JSONMap m = new JSONMap() // ;
+					.put("zoom", mapInfo.getPreferredZoom()) //
+					.put("lat", mapInfo.getLat()) //
+					.put("lng", mapInfo.getLng());
+
+			json.put("mapInfo", m);
+		}
 
 		final JSONList list = new JSONList();
 
 		json.put("groups", list);
 
-		for (final PoiGroup group : poiGroups) {
+		for (final PoiGroup group : p.getGroups()) {
 
 			final JSONList pois = new JSONList();
 

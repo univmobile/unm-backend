@@ -44,7 +44,7 @@ public class PoisController extends AbstractBackendController {
 	@Override
 	public View action() throws IOException, TransactionException {
 
-		final PoiGroup[] poiGroups = getPoiClient().getPois();
+		final PoiGroup[] poiGroups = getPoiClient().getPois().getGroups();
 
 		// 1. POIS INFO
 

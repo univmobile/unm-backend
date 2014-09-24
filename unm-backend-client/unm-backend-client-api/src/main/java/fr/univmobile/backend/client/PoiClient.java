@@ -4,7 +4,9 @@ import java.io.IOException;
 
 public interface PoiClient {
 
-	PoiGroup[] getPois() throws IOException;
-	
+	Pois getPois() throws IOException;
+
+	Pois getPois(double lat, double lng) throws IOException;
+
 	Poi getPoi(int id) throws IOException, ClientException;
 }

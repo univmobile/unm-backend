@@ -18,6 +18,7 @@ import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromJSON;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.PoiGroup;
+import fr.univmobile.backend.client.Pois;
 import fr.univmobile.backend.client.json.PoiJSONClient;
 import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.core.PoiDataSource;
@@ -48,9 +49,8 @@ public class PoiThroughJSONTest {
 						copyDirectory(new File("src/test/data/poitrees/001"),
 								new File("target/PoiThroughJSONTest_poitrees")));
 
-		final PoiClient poiClient = new PoiClientFromLocal(
-				"(dummy baseURL)", poiDataSource, poitreeDataSource,
-				regionDataSource);
+		final PoiClient poiClient = new PoiClientFromLocal("(dummy baseURL)",
+				poiDataSource, poitreeDataSource, regionDataSource);
 
 		poiJSONClient = new PoiJSONClientImpl(poiClient);
 
@@ -63,7 +63,7 @@ public class PoiThroughJSONTest {
 	@Test
 	public void testThroughJSON_poiGroups() throws IOException {
 
-		final PoiGroup[] groups = client.getPois();
+		final PoiGroup[] groups = client.getPois().getGroups();
 
 		assertEquals(3, groups.length);
 
@@ -78,9 +78,29 @@ public class PoiThroughJSONTest {
 	}
 
 	@Test
+	public void testThroughJSON_mapInfo() throws IOException {
+
+		final Pois.MapInfo mapInfo = client.getPois().getMapInfo();
+
+		assertNull(mapInfo);
+	}
+
+	@Test
+	public void testThroughJSON_geoloc() throws IOException {
+
+		final Pois pois = client.getPois(48.94, 2.36);
+
+		final Pois.MapInfo mapInfo = pois.getMapInfo();
+
+		assertEquals(10, mapInfo.getPreferredZoom());
+		assertEquals(48.94, mapInfo.getLat(), 0.0);
+		assertEquals(2.36, mapInfo.getLng(), 0.0);
+	}
+
+	@Test
 	public void testThroughJSON_poi2() throws IOException {
 
-		final PoiGroup[] groups = client.getPois();
+		final PoiGroup[] groups = client.getPois().getGroups();
 
 		final Poi[] pois = groups[1].getPois();
 
@@ -117,7 +137,7 @@ public class PoiThroughJSONTest {
 	@Test
 	public void testThroughJSON_poi20036() throws IOException {
 
-		final PoiGroup[] groups = client.getPois();
+		final PoiGroup[] groups = client.getPois().getGroups();
 
 		final Poi[] pois = groups[2].getPois();
 
@@ -149,7 +169,7 @@ public class PoiThroughJSONTest {
 	@Test
 	public void testThroughJSON_noBlankCoordinates() throws IOException {
 
-		for (final PoiGroup group : client.getPois()) {
+		for (final PoiGroup group : client.getPois().getGroups()) {
 
 			for (final Poi poi : group.getPois()) {
 
@@ -161,7 +181,7 @@ public class PoiThroughJSONTest {
 	@Test
 	public void testThroughJSON_commentsUrls() throws Exception {
 
-		for (final PoiGroup group : client.getPois()) {
+		for (final PoiGroup group : client.getPois().getGroups()) {
 
 			for (final Poi poi : group.getPois()) {
 

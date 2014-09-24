@@ -33,7 +33,7 @@ abstract class AbstractClientFromJSON<E> {
 					+ (json.length() <= 80 ? json
 							: (json.substring(0, 80) + "...")));
 		}
-
+		
 		final Object jsonObject = JSONValue.parse(json);
 
 		final U value = binder.bind(jsonObject, clazz);

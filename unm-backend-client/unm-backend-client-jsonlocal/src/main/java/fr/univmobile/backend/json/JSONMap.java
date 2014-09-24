@@ -22,12 +22,37 @@ public class JSONMap implements JSONAware {
 	@SuppressWarnings("unchecked")
 	private final Map<String, Object> map = (Map<String, Object>) jsonObject;
 
-	public JSONMap put(final String key, @Nullable final Object value) {
+	private JSONMap putAny(final String key, @Nullable final Object value) {
 
 		checkNotNull("key", key);
 
 		map.put(key, value); // Even when value == null
 
 		return this;
+	}
+
+	public JSONMap put(final String key, @Nullable final JSONMap value) {
+
+		return putAny(key, value);
+	}
+
+	public JSONMap put(final String key, @Nullable final JSONList value) {
+
+		return putAny(key, value);
+	}
+
+	public JSONMap put(final String key, @Nullable final String value) {
+
+		return putAny(key, value);
+	}
+
+	public JSONMap put(final String key, final int value) {
+
+		return putAny(key, value);
+	}
+
+	public JSONMap put(final String key, @Nullable final double value) {
+
+		return putAny(key, Double.toString(value));
 	}
 }

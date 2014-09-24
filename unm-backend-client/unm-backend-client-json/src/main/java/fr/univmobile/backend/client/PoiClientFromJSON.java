@@ -26,13 +26,23 @@ public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
 	private static Log log = LogFactory.getLog(PoiClientFromJSON.class);
 
 	@Override
-	public PoiGroup[] getPois() throws IOException {
+	public Pois getPois() throws IOException {
 
 		if (log.isDebugEnabled()) {
 			log.debug("getPois()...");
 		}
 
-		return unmarshall(jsonClient.getPoisJSON(), PoisJSON.class).getPois();
+		return unmarshall(jsonClient.getPoisJSON(), PoisJSON.class);
+	}
+
+	@Override
+	public Pois getPois(final double lat, final double lng) throws IOException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getPois():" + lat + "," + lng + "...");
+		}
+
+		return unmarshall(jsonClient.getPoisJSON(lat, lng), PoisJSON.class);
 	}
 
 	@Override
@@ -42,10 +52,31 @@ public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
 	}
 
 	@XPath("/*")
-	public interface PoisJSON {
+	public interface PoisJSON extends Pois {
+
+		@XPath("mapInfo")
+		@Nullable
+		@Override
+		MapInfoJSON getMapInfo();
+
+		interface MapInfoJSON extends MapInfo {
+
+			@XPath("@zoom")
+			@Override
+			int getPreferredZoom();
+
+			@XPath("@lat")
+			@Override
+			double getLat();
+
+			@XPath("@lng")
+			@Override
+			double getLng();
+		}
 
 		@XPath("groups")
-		PoiGroupJSON[] getPois();
+		@Override
+		PoiGroupJSON[] getGroups();
 
 		interface PoiGroupJSON extends PoiGroup {
 

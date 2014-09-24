@@ -5,4 +5,6 @@ import java.io.IOException;
 public interface PoiJSONClient {
 
 	String getPoisJSON() throws IOException;
+
+	String getPoisJSON(double lat, double lng) throws IOException;
 }

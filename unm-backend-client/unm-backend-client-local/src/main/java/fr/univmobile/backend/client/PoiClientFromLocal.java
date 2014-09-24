@@ -9,7 +9,9 @@ import java.io.IOException;
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -24,6 +26,7 @@ import org.apache.commons.logging.LogFactory;
 import com.avcompris.lang.NotImplementedException;
 import com.google.common.collect.Iterables;
 
+import fr.univmobile.backend.client.Pois.MapInfo;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.PoiTree;
 import fr.univmobile.backend.core.PoiTreeDataSource;
@@ -74,8 +77,114 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		return poi;
 	}
 
+	private static double getDistance(final double lat1, final double lng1,
+			final double lat2, final double lng2) {
+
+		// TODO more accurate
+		return Math.abs(lat1 - lat2) + Math.abs(lng1 - lng2);
+	}
+
 	@Override
-	public PoiGroup[] getPois() throws IOException {
+	public Pois getPois(final double lat, final double lng) throws IOException {
+
+		final MutablePois p = getPois();
+
+		final PoiGroup[] poiGroups = p.getGroups();
+
+		final Map<String, Poi[]> poiArrays = new HashMap<String, Poi[]>();
+
+		for (final PoiGroup poiGroup : poiGroups) {
+
+			final Poi[] pois = poiGroup.getPois();
+			
+			poiArrays.put(poiGroup.getGroupLabel(), pois);
+
+			Arrays.sort(pois, new Comparator<Poi>() {
+
+				@Override
+				public int compare(final Poi p1, final Poi p2) {
+
+					final double d1 = getDistance(
+							Double.parseDouble(p1.getLatitude()),
+							Double.parseDouble(p1.getLongitude()), lat, lng);
+
+					final double d2 = getDistance(
+							Double.parseDouble(p2.getLatitude()),
+							Double.parseDouble(p2.getLongitude()), lat, lng);
+
+					if (d1 < d2) {
+						return -1;
+					} else if (d1 > d2) {
+						return 1;
+					} else {
+						return 0;
+					}
+				}
+			});
+		}
+
+		Arrays.sort(poiGroups, new Comparator<PoiGroup>() {
+
+			@Override
+			public int compare(final PoiGroup g1, final PoiGroup g2) {
+
+				final Poi[] pois1 = g1.getPois();
+				final Poi[] pois2 = g2.getPois();
+
+				if (pois1.length == 0 && pois2.length == 0) {
+					return 0;
+				} else if (pois1.length == 0) {
+					return 1;
+				} else if (pois2.length == 0) {
+					return -1;
+				}
+
+				final double d1 = getDistance(
+						Double.parseDouble(pois1[0].getLatitude()),
+						Double.parseDouble(pois1[0].getLongitude()), lat, lng);
+
+				final double d2 = getDistance(
+						Double.parseDouble(pois2[0].getLatitude()),
+						Double.parseDouble(pois2[0].getLongitude()), lat, lng);
+
+				if (d1 < d2) {
+					return -1;
+				} else if (d1 > d2) {
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+		});
+
+		final MutableMapInfo mapInfo = DataBeans
+				.instantiate(MutableMapInfo.class) //
+				.setPreferredZoom(10) //
+				.setLat(lat) //
+				.setLng(lng);
+
+		final MutablePois pois = DataBeans.instantiate(MutablePois.class) //
+				.setMapInfo(mapInfo);
+
+		for (final PoiGroup poiGroup : poiGroups) {
+
+			final String groupLabel = poiGroup.getGroupLabel();
+
+			final MutablePoiGroup poiGroup2 = DataBeans.instantiate(
+					MutablePoiGroup.class).setGroupLabel(groupLabel); //
+
+			pois.addToGroups(poiGroup2);
+
+			for (final Poi poi : poiArrays.get(groupLabel)) {
+				poiGroup2.addToPois(poi);
+			}
+		}
+
+		return pois;
+	}
+
+	@Override
+	public MutablePois getPois() throws IOException {
 
 		log.debug("getPois()...");
 
@@ -157,7 +266,14 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 			}
 		}
 
-		return poiGroups;
+		final MutablePois pois = DataBeans.instantiate(MutablePois.class);
+
+		for (final PoiGroup poiGroup : poiGroups) {
+
+			pois.addToGroups(poiGroup);
+		}
+
+		return pois;
 	}
 
 	@Nullable
@@ -208,7 +324,7 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		poi.setCommentsUrl(composeURL("/json/comments/poi" + poiUid));
 
 		// UNIVERSITIES
-		
+
 		final String[] dsUniversities = dsPoi.getUniversities();
 
 		final List<String> universityIds = new ArrayList<String>();
@@ -219,10 +335,26 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		}
 
 		poi.setUniversityIds(Iterables.toArray(universityIds, String.class));
-		
+
 		// END
-		
+
 		return poi;
+	}
+
+	private interface MutablePois extends Pois {
+
+		MutablePois setMapInfo(MapInfo mapInfo);
+
+		MutablePois addToGroups(PoiGroup poiGroup);
+	}
+
+	private interface MutableMapInfo extends MapInfo {
+
+		MutableMapInfo setPreferredZoom(int zoom);
+
+		MutableMapInfo setLat(double lat);
+
+		MutableMapInfo setLng(double lat);
 	}
 
 	private interface MutablePoiGroup extends PoiGroup {
