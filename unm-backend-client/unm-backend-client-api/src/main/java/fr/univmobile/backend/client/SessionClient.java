@@ -59,6 +59,13 @@ public interface SessionClient {
 			throws IOException, ClientException;
 
 	/**
+	 * refresh the given session.
+	 */
+	@Nullable
+	AppToken getAppToken(String apiKey, String appTokenId) throws IOException,
+			ClientException;
+
+	/**
 	 * logout.
 	 */
 	void logout(String apiKey, String appTokenId) throws IOException,

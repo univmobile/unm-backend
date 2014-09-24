@@ -52,7 +52,24 @@ public class SessionClientFromJSON extends
 
 		final String json = jsonClient.loginJSON(apiKey, login, password);
 
-		System.out.println("json: "+json);
+		if (isBlank(json)) {
+			return null;
+		}
+
+		return unmarshall(json, AppTokenJSON.class);
+	}
+
+	@Override
+	@Nullable
+	public AppToken getAppToken(final String apiKey, final String appTokenId)
+			throws IOException, ClientException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getAppToken():" + appTokenId + "...");
+		}
+
+		final String json = jsonClient.getAppTokenJSON(apiKey, appTokenId);
+
 		if (isBlank(json)) {
 			return null;
 		}
@@ -85,7 +102,7 @@ public class SessionClientFromJSON extends
 		@XPath("@id")
 		@Override
 		String toString();
-		
+
 		interface UserJSON extends User {
 
 			@XPath("@uid")
@@ -95,7 +112,7 @@ public class SessionClientFromJSON extends
 			@XPath("@mail")
 			@Override
 			String getMail();
-			
+
 			@XPath("@displayName")
 			@Override
 			String getDisplayName();

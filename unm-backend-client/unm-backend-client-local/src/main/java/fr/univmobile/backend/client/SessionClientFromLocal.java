@@ -80,6 +80,44 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 	}
 
 	@Override
+	@Nullable
+	public AppToken getAppToken(final String apiKey, final String appTokenId)
+			throws IOException, ClientException {
+
+		final AppSession session;
+
+		try {
+
+			session = sessionManager.getAppSession(appTokenId);
+
+		} catch (final InvalidSessionException e) {
+
+			log.error(e);
+
+			return null;
+
+		} catch (final SQLException e) {
+
+			log.fatal(e);
+
+			throw new ClientException(e);
+		}
+
+		if (session == null) {
+
+			return null;
+		}
+
+		final fr.univmobile.backend.core.User dsUser = session.getUser();
+
+		final String sessionId = session.getId();
+
+		return DataBeans.instantiate(MutableAppToken.class) //
+				.setId(sessionId) //
+				.setUser(getUser(dsUser));
+	}
+
+	@Override
 	public void logout(final String apiKey, final String appTokenId)
 			throws IOException, ClientException {
 

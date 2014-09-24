@@ -88,6 +88,39 @@ public class SessionJSONController extends AbstractJSONController {
 			return json;
 		}
 
+		final Refresh refresh= getHttpInputs(Refresh.class);
+
+		if (refresh.isHttpValid()) {
+
+			final String appTokenId = refresh.appTokenId();
+
+			final AppSession appSession;
+
+			try {
+
+				appSession = sessionManager.getAppSession(appTokenId);
+
+			} catch (final InvalidSessionException e) {
+
+				log.error(e);
+
+				return ""; // empty string
+
+			} catch (final SQLException e) {
+
+				log.error(e);
+
+				return ""; // empty string
+			}
+
+			LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
+
+			final String json = sessionJSONClient.getAppTokenJSON(logout.apiKey(),
+					appTokenId);
+
+			return json;
+		}
+
 		sendError400();
 
 		return null;
@@ -130,5 +163,17 @@ public class SessionJSONController extends AbstractJSONController {
 		@HttpRequired
 		@HttpParameter
 		String logout();
+	}
+
+	@HttpMethods("POST")
+	private interface Refresh extends HttpInputs {
+
+		@HttpRequired
+		@HttpParameter
+		String apiKey();
+
+		@HttpRequired
+		@HttpParameter
+		String appTokenId();
 	}
 }

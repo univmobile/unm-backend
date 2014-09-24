@@ -4,6 +4,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
 
+import javax.annotation.Nullable;
 import javax.inject.Inject;
 import javax.inject.Named;
 
@@ -35,7 +36,7 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 			final String password) throws IOException {
 
 		if (log.isDebugEnabled()) {
-			log.debug("login():" + login + "...");
+			log.debug("loginJSON():" + login + "...");
 		}
 
 		final AppToken token;
@@ -50,6 +51,11 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 
 			throw new RuntimeException(e);
 		}
+
+		return tokenJSON(token);
+	}
+
+	private static String tokenJSON(@Nullable final AppToken token) {
 
 		if (token == null) {
 			return ""; // empty String
@@ -71,11 +77,35 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 	}
 
 	@Override
+	public String getAppTokenJSON(final String apiKey, final String appTokenId)
+			throws IOException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("getAppTokenJSON():" + appTokenId + "...");
+		}
+
+		final AppToken token;
+
+		try {
+
+			token = sessionClient.getAppToken(apiKey, appTokenId);
+
+		} catch (final ClientException e) {
+
+			log.fatal(e);
+
+			throw new RuntimeException(e);
+		}
+
+		return tokenJSON(token);
+	}
+
+	@Override
 	public String logoutJSON(final String apiKey, final String appTokenId)
 			throws IOException {
 
 		if (log.isDebugEnabled()) {
-			log.debug("logout():" + appTokenId + "...");
+			log.debug("logoutJSON():" + appTokenId + "...");
 		}
 
 		try {

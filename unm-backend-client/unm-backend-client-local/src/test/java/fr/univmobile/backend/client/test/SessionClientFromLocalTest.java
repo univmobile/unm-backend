@@ -4,7 +4,7 @@ import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.*;
 
 import java.io.File;
 import java.sql.Connection;
@@ -76,7 +76,7 @@ public class SessionClientFromLocalTest {
 	private SessionClient client;
 	private Connection cxn;
 
-	private static final String API_TOKEN = "abcdefgh";
+	private static final String API_KEY = "abcdefgh";
 
 	@After
 	public void tearDown() throws Exception {
@@ -92,7 +92,7 @@ public class SessionClientFromLocalTest {
 	@Test
 	public void test_login_OK() throws Exception {
 
-		final AppToken appToken = client.login(API_TOKEN, "crezvani",
+		final AppToken appToken = client.login(API_KEY, "crezvani",
 				"Hello+World!");
 
 		assertNotNull(appToken);
@@ -107,13 +107,37 @@ public class SessionClientFromLocalTest {
 	@Test
 	public void test_login_logout() throws Exception {
 
-		final AppToken appToken = client.login(API_TOKEN, "crezvani",
+		final AppToken appToken = client.login(API_KEY, "crezvani",
 				"Hello+World!");
 
 		assertNotNull(appToken);
 
 		// System.out.println("appToken.id: "+appToken.getId());
 
-		client.logout(API_TOKEN, appToken.getId());
+		client.logout(API_KEY, appToken.getId());
+	}
+
+	@Test
+	public void test_login_invalod() throws Exception {
+
+		final AppToken appToken = client.login(API_KEY, "crezvani",
+				"xxx");
+
+		assertNull(appToken);
+	}
+
+	@Test
+	public void test_login_refresh() throws Exception {
+
+		final AppToken appToken = client.login(API_KEY, "crezvani",
+				"Hello+World!");
+
+		assertNotNull(appToken);
+
+		final User user = client.getAppToken(API_KEY, appToken.getId()).getUser();
+
+		assertEquals("crezvani", user.getUid());
+
+		assertEquals("Cyrus.Rezvani@univ-paris1.fr", user.getMail());
 	}
 }
