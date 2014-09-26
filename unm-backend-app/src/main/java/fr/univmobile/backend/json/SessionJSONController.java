@@ -115,7 +115,7 @@ public class SessionJSONController extends AbstractJSONController {
 
 			LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
 
-			final String json = sessionJSONClient.getAppTokenJSON(logout.apiKey(),
+			final String json = sessionJSONClient.getAppTokenJSON(refresh.apiKey(),
 					appTokenId);
 
 			return json;
