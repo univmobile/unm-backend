@@ -40,7 +40,14 @@ public class PoisJSONController extends AbstractJSONController {
 
 		if (coords.isHttpValid()) {
 
-			poisJSON = poiJSONClient.getPoisJSON(coords.lat(), coords.lng());
+			final double lat = coords.lat();
+			final double lng = coords.lng();
+
+			if (log.isInfoEnabled()) {
+				log.info("lat=" + lat + ", lng=" + lng);
+			}
+
+			poisJSON = poiJSONClient.getPoisJSON(lat, lng);
 
 		} else {
 
