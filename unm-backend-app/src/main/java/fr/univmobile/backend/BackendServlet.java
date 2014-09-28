@@ -343,13 +343,13 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final Object displayName = request.getAttribute("displayName");
 		final Object uid = request.getAttribute("uid");
 		final Object eppn = request.getAttribute("eppn");
-		final Object persistent_id = request.getAttribute("persistent_id");
+		final Object persistentId = request.getAttribute("persistentId");
 
 		if (log.isInfoEnabled()) {
 			log.info("Shibboleth: uid=" + uid //
 					+ ", remoteUser=" + remoteUserAttribute //
 					+ ", eppn=" + eppn //
-					+ ", persistent_id=" + persistent_id //
+					+ ", persistentId=" + persistentId //
 					+ ", displayName=" + displayName);
 		}
 
@@ -368,9 +368,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			remoteUser = eppn.toString();
 
-		} else if (persistent_id != null) {
+		} else if (persistentId != null) {
 
-			remoteUser = persistent_id.toString();
+			remoteUser = persistentId.toString();
 
 		} else {
 
