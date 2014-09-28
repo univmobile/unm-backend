@@ -476,6 +476,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				final String protocol = substringBefore(optional_jsonBaseURL,
 						"://");
 
+				if (log.isDebugEnabled()) {
+					log.debug("protocol: " + protocol + ", host: " + host //
+							+ ", method: " + request.getMethod() //
+							+ ", requestURI: " + requestURI);
+				}
+
 				final String requestProtocolUpperCase = //
 				request.getProtocol().toUpperCase();
 
