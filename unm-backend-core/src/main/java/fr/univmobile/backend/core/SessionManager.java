@@ -29,4 +29,7 @@ public interface SessionManager {
 			SQLException, InvalidSessionException;
 
 	LoginConversation prepare(String apiKey) throws IOException, SQLException;
+
+	void updateLoginConversation(final String loginToken, final User user)
+			throws IOException, SQLException;
 }

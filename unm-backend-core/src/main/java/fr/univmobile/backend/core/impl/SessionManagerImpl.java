@@ -377,4 +377,24 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 			return key;
 		}
 	}
+
+	@Override
+	public void updateLoginConversation(final String loginToken, final User user)
+			throws IOException, SQLException {
+
+		checkNotNull(loginToken, "loginToken");
+		checkNotNull(user, "user");
+
+		final String uid = user.getUid();
+
+		final int result = executeUpdate("updateLoginConversation", uid,
+				loginToken);
+
+		if (result != 1) {
+
+			throw new IllegalStateException("Illegal result: " + result
+					+ ", should be: " + 0 + " for loginToken: " + loginToken
+					+ ", user: " + uid);
+		}
+	}
 }

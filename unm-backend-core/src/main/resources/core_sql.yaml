@@ -105,6 +105,12 @@ bundle:
   insertLoginConversation:
     mysql.h2: |
       INSERT INTO ${prefix}loginconversations 
-      (token, key, started_at) VALUES (?, ?, ?);
+      (token, token_key, started_at) VALUES (?, ?, ?);
+      
+  updateLoginConversation:
+    mysql.h2: |
+      UPDATE ${prefix}loginconversations
+      SET user_uid = ?
+      WHERE token = ? AND user_uid IS NULL; 
   
     

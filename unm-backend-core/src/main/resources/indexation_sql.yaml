@@ -302,7 +302,7 @@ bundle:
     h2: |
       CREATE TABLE ${prefix}loginconversations (
         token CHAR(40) NOT NULL,
-        key VARCHAR(40) NOT NULL,
+        token_key CHAR(40) NOT NULL,
         started_at TIMESTAMP NOT NULL,
         user_uid VARCHAR(40) NULL,
         PRIMARY KEY(token)
@@ -310,7 +310,7 @@ bundle:
     mysql: |
       CREATE TABLE ${prefix}loginconversations (
         token CHAR(40) NOT NULL,
-        key VARCHAR(40) NOT NULL,
+        token_key CHAR(40) NOT NULL,
         started_at TIMESTAMP NOT NULL,
         user_uid VARCHAR(40) NULL,
         PRIMARY KEY(token)

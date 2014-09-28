@@ -47,78 +47,28 @@ public class SessionJSONController extends AbstractJSONController {
 
 		if (logout.isHttpValid()) {
 
-			final String appTokenId = logout.appTokenId();
-
-			final AppSession appSession;
-
-			try {
-
-				appSession = sessionManager.getAppSession(appTokenId);
-
-			} catch (final InvalidSessionException e) {
-
-				log.error(e);
-
-				return ""; // empty string
-
-			} catch (final SQLException e) {
-
-				log.error(e);
-
-				return ""; // empty string
-			}
-
-			LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
-
-			final String json = sessionJSONClient.logoutJSON(logout.apiKey(),
-					appTokenId);
-
-			return json;
+			return logout(logout);
 		}
 
 		final Login login = getHttpInputs(Login.class);
 
 		if (login.isHttpValid()) {
 
-			LogQueueDbImpl.setAnonymous();
-
-			final String json = sessionJSONClient.loginJSON(login.apiKey(),
-					login.login(), login.password());
-
-			return json;
+			return login(login);
 		}
 
-		final Refresh refresh= getHttpInputs(Refresh.class);
+		final Prepare prepare = getHttpInputs(Prepare.class);
+
+		if (prepare.isHttpValid()) {
+
+			return prepare(prepare);
+		}
+
+		final Refresh refresh = getHttpInputs(Refresh.class);
 
 		if (refresh.isHttpValid()) {
 
-			final String appTokenId = refresh.appTokenId();
-
-			final AppSession appSession;
-
-			try {
-
-				appSession = sessionManager.getAppSession(appTokenId);
-
-			} catch (final InvalidSessionException e) {
-
-				log.error(e);
-
-				return ""; // empty string
-
-			} catch (final SQLException e) {
-
-				log.error(e);
-
-				return ""; // empty string
-			}
-
-			LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
-
-			final String json = sessionJSONClient.getAppTokenJSON(refresh.apiKey(),
-					appTokenId);
-
-			return json;
+			return refresh(refresh);
 		}
 
 		sendError400();
@@ -131,6 +81,87 @@ public class SessionJSONController extends AbstractJSONController {
 		 * 
 		 * return json;
 		 */
+	}
+
+	private String refresh(final Refresh refresh) throws IOException {
+
+		final String appTokenId = refresh.appTokenId();
+
+		final AppSession appSession;
+
+		try {
+
+			appSession = sessionManager.getAppSession(appTokenId);
+
+		} catch (final InvalidSessionException e) {
+
+			log.error(e);
+
+			return ""; // empty string
+
+		} catch (final SQLException e) {
+
+			log.error(e);
+
+			return ""; // empty string
+		}
+
+		LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
+
+		final String json = sessionJSONClient.getAppTokenJSON(refresh.apiKey(),
+				appTokenId);
+
+		return json;
+	}
+
+	private String login(final Login login) throws IOException {
+
+		LogQueueDbImpl.setAnonymous();
+
+		final String json = sessionJSONClient.loginJSON(login.apiKey(),
+				login.login(), login.password());
+
+		return json;
+	}
+
+	private String logout(final Logout logout) throws IOException {
+
+		final String appTokenId = logout.appTokenId();
+
+		final AppSession appSession;
+
+		try {
+
+			appSession = sessionManager.getAppSession(appTokenId);
+
+		} catch (final InvalidSessionException e) {
+
+			log.error(e);
+
+			return ""; // empty string
+
+		} catch (final SQLException e) {
+
+			log.error(e);
+
+			return ""; // empty string
+		}
+
+		LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
+
+		final String json = sessionJSONClient.logoutJSON(logout.apiKey(),
+				appTokenId);
+
+		return json;
+	}
+
+	private String prepare(final Prepare prepare) throws IOException {
+
+		LogQueueDbImpl.setAnonymous();
+
+		final String json = sessionJSONClient.prepareJSON(prepare.apiKey());
+
+		return json;
 	}
 
 	@HttpMethods("POST")
@@ -175,5 +206,17 @@ public class SessionJSONController extends AbstractJSONController {
 		@HttpRequired
 		@HttpParameter
 		String appTokenId();
+	}
+
+	@HttpMethods("POST")
+	private interface Prepare extends HttpInputs {
+
+		@HttpRequired
+		@HttpParameter
+		String apiKey();
+
+		@HttpRequired
+		@HttpParameter
+		String prepare();
 	}
 }

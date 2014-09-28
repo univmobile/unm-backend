@@ -217,7 +217,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final UsersController usersController = new UsersController(users);
 
-		super.init(new HomeController(users), //
+		super.init(new HomeController(users, sessionManager), //
 				usersController, new UseraddController(tx, users,
 						usersController), //
 				new RegionsController(tx, regions), //

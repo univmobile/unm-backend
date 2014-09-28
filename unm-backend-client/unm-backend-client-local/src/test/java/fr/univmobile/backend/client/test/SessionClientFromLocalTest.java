@@ -4,7 +4,8 @@ import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 
 import java.io.File;
 import java.sql.Connection;
@@ -120,8 +121,7 @@ public class SessionClientFromLocalTest {
 	@Test
 	public void test_login_invalod() throws Exception {
 
-		final AppToken appToken = client.login(API_KEY, "crezvani",
-				"xxx");
+		final AppToken appToken = client.login(API_KEY, "crezvani", "xxx");
 
 		assertNull(appToken);
 	}
@@ -134,7 +134,8 @@ public class SessionClientFromLocalTest {
 
 		assertNotNull(appToken);
 
-		final User user = client.getAppToken(API_KEY, appToken.getId()).getUser();
+		final User user = client.getAppToken(API_KEY, appToken.getId())
+				.getUser();
 
 		assertEquals("crezvani", user.getUid());
 

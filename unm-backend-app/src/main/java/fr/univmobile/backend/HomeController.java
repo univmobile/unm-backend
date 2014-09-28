@@ -3,7 +3,9 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
+import java.sql.SQLException;
 
+import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.commons.tx.TransactionException;
@@ -17,15 +19,34 @@ import fr.univmobile.web.commons.View;
 @Paths({ "" })
 public class HomeController extends AbstractBackendController {
 
-	public HomeController(final UserDataSource users) {
+	public HomeController(final UserDataSource users,
+			final SessionManager sessionManager) {
 
 		this.users = checkNotNull(users, "users");
+		this.sessionManager = checkNotNull(sessionManager, "sessionManager");
 	}
 
 	private final UserDataSource users;
+	private final SessionManager sessionManager;
+
+	// private static final Log log = LogFactory.getLog(HomeController.class);
 
 	@Override
-	public View action() throws IOException, TransactionException {
+	public View action() throws IOException, SQLException, TransactionException {
+
+		final ShibbolethCallback callback = getHttpInputs(ShibbolethCallback.class);
+
+		if (callback.isHttpValid()) {
+
+			final String loginToken = callback.loginToken();
+
+			final User user = getUser();
+
+			sessionManager.updateLoginConversation(loginToken, user);
+
+			return sendRedirect(callback.callback() //
+					+ "?loginToken=" + loginToken);
+		}
 
 		if (getHttpInputs(Logout.class).isHttpValid()) {
 
@@ -93,8 +114,26 @@ public class HomeController extends AbstractBackendController {
 	@HttpMethods({ "GET", "POST" })
 	interface Logout extends HttpInputs {
 
-		@HttpRequired
 		@HttpParameter("logout")
 		String _(); // ignored
+	}
+
+	@HttpMethods("GET")
+	interface ShibbolethCallback extends HttpInputs {
+
+		/**
+		 * e.g. loginToken=79894e4d-a391-4381-b752-5ab88309c003-vnQ
+		 */
+		@HttpRequired
+		@HttpParameter
+		String loginToken();
+
+		/**
+		 * e.g.
+		 * callback=http://univmobile.vswip.com/unm-mobileweb/login/shibboleth/
+		 */
+		@HttpRequired
+		@HttpParameter
+		String callback();
 	}
 }
