@@ -1,0 +1,209 @@
+{
+    "id":    "ile_de_france",
+    "label": "Île de France",
+    "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france",
+    "universities":[
+        {
+            "id":    "crousVersailles",
+            "title": "CROUS Versailles",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/crousVersailles"
+            },
+            "pois":{
+                "count": 166,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/crousVersailles/pois"
+            }
+        },
+        {
+            "id":    "ucp",
+            "title": "Cergy-Pontoise",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/ucp"
+            },
+            "pois":{
+                "count": 277,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/ucp/pois"
+            }
+        },
+        {
+            "id":    "enscachan",
+            "title": "ENS Cachan",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/enscachan"
+            },
+            "pois":{
+                "count": 89,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/enscachan/pois"
+            }
+        },
+        {
+            "id":    "ensiie",
+            "title": "ENSIIE",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/ensiie"
+            },
+            "pois":{
+                "count": 27,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/ensiie/pois"
+            },
+            "shibboleth":{
+            	"identityProvider":"https://shibbolethtest.ensiie.fr/idp/shibboleth"
+            }
+        },
+        {
+            "id":    "evry",
+            "title": "Evry-Val d'Essonne",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/evry"
+            },
+            "pois":{
+                "count": 135,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/evry/pois"
+            }
+        },
+        {
+            "id":    "enc",
+            "title": "École nationale des chartes",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/enc"
+            },
+            "pois":{
+                "count": 33,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/enc/pois"
+            }
+        },
+        {
+            "id":    "museum",
+            "title": "Muséum national d'Histoire naturelle",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/museum"
+            },
+            "pois":{
+                "count": 62,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/museum/pois"
+            }
+        },
+        {
+            "id":    "paris1",
+            "title": "Paris 1 Panthéon-Sorbonne",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris1"
+            },
+            "pois":{
+                "count": 375,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris1/pois"
+            }
+        },
+        {
+            "id":    "paris3",
+            "title": "Paris 3 Sorbonne Nouvelle",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris3"
+            },
+            "pois":{
+                "count": 111,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris3/pois"
+            }
+        },
+        {
+            "id":    "paris8",
+            "title": "Paris 8",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris8"
+            },
+            "pois":{
+                "count": 217,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris8/pois"
+            }
+        },
+        {
+            "id":    "paris7",
+            "title": "Paris Diderot",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris7"
+            },
+            "pois":{
+                "count": 274,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris7/pois"
+            }
+        },
+        {
+            "id":    "paris13",
+            "title": "Paris Nord",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris13"
+            },
+            "pois":{
+                "count": 246,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris13/pois"
+            }
+        },
+        {
+            "id":    "paris10",
+            "title": "Paris Ouest Nanterre la Défense",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris10"
+            },
+            "pois":{
+                "count": 365,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris10/pois"
+            }
+        },
+        {
+            "id":    "paris11",
+            "title": "Paris-Sud",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris11"
+            },
+            "pois":{
+                "count": 400,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris11/pois"
+            }
+        },
+        {
+            "id":    "unpidf",
+            "title": "UNPIdF",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/unpidf"
+            },
+            "pois":{
+                "count": 0,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/unpidf/pois"
+            }
+        },
+        {
+            "id":    "upec",
+            "title": "UPEC",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/upec"
+            },
+            "pois":{
+                "count": 344,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/upec/pois"
+            }
+        },
+        {
+            "id":    "paris6",
+            "title": "UPMC",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris6"
+            },
+            "pois":{
+                "count": 404,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/paris6/pois"
+            }
+        },
+        {
+            "id":    "uvsq",
+            "title": "UVSQ",
+            "config":{
+                "url":"http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/uvsq"
+            },
+            "pois":{
+                "count": 254,
+                "url":   "http://univmobile.vswip.com/unm-backend/json/regions/ile_de_france/uvsq/pois"
+            }
+        }
+    ]
+}
+

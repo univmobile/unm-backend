@@ -1,12 +1,16 @@
 package fr.univmobile.backend.client.test;
 
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
+import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
 
 import java.io.File;
 import java.io.IOException;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -14,6 +18,7 @@ import fr.univmobile.backend.client.Region;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromJSON;
 import fr.univmobile.backend.client.RegionClientFromLocal;
+import fr.univmobile.backend.client.RegionsUtils;
 import fr.univmobile.backend.client.University;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
@@ -95,7 +100,7 @@ public class RegionThroughJSONTest {
 
 		final String configUrl = university.getConfigUrl();
 		assertTrue(configUrl, configUrl.endsWith("ile_de_france/ensiie"));
-		
+
 		assertEquals("https://shibbolethtest.ensiie.fr/idp/shibboleth",
 				university.getShibbolethIdentityProvider());
 	}
@@ -110,5 +115,33 @@ public class RegionThroughJSONTest {
 		// assertTrue(json.contains("\"label\":\"Île de France\""));
 		assertTrue(json.startsWith("{\"id\":\"ile_de_france\","
 				+ "\"label\":\"Île de France\""));
+	}
+
+	@Test
+	public void test_unmarshall_ShibbolethIdentityProvider() throws Exception {
+
+		final String jsonRegions = FileUtils.readFileToString(new File(
+				"src/test/json/regions-001.json"), UTF_8);
+
+		final String jsonUniversities = FileUtils.readFileToString(new File(
+				"src/test/json/ile_de_france-001.json"), UTF_8);
+
+		final RegionJSONClient regionJSONClient = mock(RegionJSONClient.class);
+
+		when(regionJSONClient.getRegionsJSON()).thenReturn(jsonRegions);
+		when(regionJSONClient.getUniversitiesJSONByRegion("ile_de_france"))
+				.thenReturn(jsonUniversities);
+
+		final RegionClient client = new RegionClientFromJSON(regionJSONClient);
+
+		final University paris1=RegionsUtils.getUniversityById(client, "paris1");
+		
+		assertEquals("Paris 1 Panthéon-Sorbonne",paris1.getTitle());
+		assertNull(paris1.getShibbolethIdentityProvider());
+
+		final University ensiie=RegionsUtils.getUniversityById(client, "ensiie");
+		
+		assertEquals("ENSIIE",ensiie.getTitle());
+		assertEquals("https://shibbolethtest.ensiie.fr/idp/shibboleth",ensiie.getShibbolethIdentityProvider());
 	}
 }

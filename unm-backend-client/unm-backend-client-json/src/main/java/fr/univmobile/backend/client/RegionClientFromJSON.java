@@ -1,5 +1,7 @@
 package fr.univmobile.backend.client;
 
+import static org.apache.commons.lang3.StringUtils.isBlank;
+
 import java.io.IOException;
 
 import javax.annotation.Nullable;
@@ -42,8 +44,13 @@ public class RegionClientFromJSON extends
 			log.debug("getUniversitiesByRegion():" + regionId + "...");
 		}
 
-		return unmarshall(jsonClient.getUniversitiesJSONByRegion(regionId),
-				UniversitiesJSON.class).getUniversities();
+		final String json = jsonClient.getUniversitiesJSONByRegion(regionId);
+
+		if (isBlank(json)) {
+			return new University[0];
+		}
+
+		return unmarshall(json, UniversitiesJSON.class).getUniversities();
 	}
 
 	@XPath("/*")
@@ -103,7 +110,7 @@ public class RegionClientFromJSON extends
 			@XPath("pois/@url")
 			@Override
 			String getPoisUrl();
-			
+
 			@XPath("shibboleth/@identityProvider")
 			@Override
 			@Nullable
