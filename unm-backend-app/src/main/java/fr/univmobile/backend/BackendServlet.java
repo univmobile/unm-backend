@@ -496,7 +496,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						continue;
 					}
 				} else if (requestProtocolUpperCase.startsWith("HTTP/")) {
-					if (!protocol.equals("http")) {
+					if (!protocol.equals("http") && !protocol.equals("https")) {
 						continue;
 					}
 				} else {
