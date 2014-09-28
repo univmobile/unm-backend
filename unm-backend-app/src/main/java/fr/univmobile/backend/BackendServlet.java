@@ -289,14 +289,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		// final String host = request.getHeader("Host");
 		final String remoteAddr = request.getRemoteAddr();
 		final String userAgent = request.getHeader("User-Agent");
-		final String remoteUser = request.getRemoteUser();
+		final String remoteUserAttribute = request.getRemoteUser();
 		final String requestURI = request.getRequestURI();
 
 		if (log.isInfoEnabled()) {
 			log.info("remoteAddr: " + remoteAddr//
 					+ ", requestURI: " + requestURI //
 					+ ", userAgent: \"" + userAgent + "\"" //
-					+ ", remoteUser: " + remoteUser);
+					+ ", remoteUser: " + remoteUserAttribute);
 		}
 
 		if (log.isDebugEnabled()) {
@@ -342,14 +342,40 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final Object displayName = request.getAttribute("displayName");
 		final Object uid = request.getAttribute("uid");
+		final Object eppn = request.getAttribute("eppn");
+		final Object persistent_id = request.getAttribute("persistent_id");
 
 		if (log.isInfoEnabled()) {
 			log.info("Shibboleth: uid=" + uid //
-					+ ", remoteUser=" + remoteUser //
+					+ ", remoteUser=" + remoteUserAttribute //
+					+ ", eppn=" + eppn //
+					+ ", persistent_id=" + persistent_id //
 					+ ", displayName=" + displayName);
 		}
 
 		// 2. VALIDATE: SHIBBOLETH MUST BE HERE
+
+		final String remoteUser;
+
+		if (remoteUserAttribute != null) {
+
+			remoteUser = remoteUserAttribute;
+
+		} else if (eppn != null) {
+
+			// We are implementing the same rule as in:
+			// /etc/shibboleth/shibboleth2.xml
+
+			remoteUser = eppn.toString();
+
+		} else if (persistent_id != null) {
+
+			remoteUser = persistent_id.toString();
+
+		} else {
+
+			remoteUser = null;
+		}
 
 		if (remoteUser == null) {
 
