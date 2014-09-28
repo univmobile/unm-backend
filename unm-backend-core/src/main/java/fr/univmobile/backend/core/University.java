@@ -1,5 +1,7 @@
 package fr.univmobile.backend.core;
 
+import javax.annotation.Nullable;
+
 import net.avcompris.binding.annotation.Namespaces;
 import net.avcompris.binding.annotation.XPath;
 
@@ -17,4 +19,8 @@ public interface University {
 	 */
 	@XPath("self::atom:university/atom:title")
 	String getTitle();
+
+	@XPath("self::atom:university/atom:shibboleth/@identityProvider")
+	@Nullable
+	String getShibbolethIdentityProvider();
 }

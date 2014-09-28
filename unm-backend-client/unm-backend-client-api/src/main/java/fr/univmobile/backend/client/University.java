@@ -1,5 +1,7 @@
 package fr.univmobile.backend.client;
 
+import javax.annotation.Nullable;
+
 public interface University {
 
 	String getId();
@@ -11,4 +13,7 @@ public interface University {
 	int getPoiCount();
 	
 	String getPoisUrl();
+	
+	@Nullable
+	String getShibbolethIdentityProvider();
 }

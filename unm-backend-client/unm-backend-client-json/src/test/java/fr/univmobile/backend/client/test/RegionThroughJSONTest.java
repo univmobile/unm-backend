@@ -95,6 +95,9 @@ public class RegionThroughJSONTest {
 
 		final String configUrl = university.getConfigUrl();
 		assertTrue(configUrl, configUrl.endsWith("ile_de_france/ensiie"));
+		
+		assertEquals("https://shibbolethtest.ensiie.fr/idp/shibboleth",
+				university.getShibbolethIdentityProvider());
 	}
 
 	@Test

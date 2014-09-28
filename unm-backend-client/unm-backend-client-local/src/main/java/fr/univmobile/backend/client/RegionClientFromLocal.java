@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
 
+import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import org.apache.commons.logging.Log;
@@ -167,7 +168,9 @@ public class RegionClientFromLocal extends AbstractClientFromLocal implements
 					.setTitle(dsUniversity.getTitle()) //
 					.setConfigUrl(url + "/" + universityId) //
 					.setPoiCount(poiCount) //
-					.setPoisUrl(url + "/" + universityId + "/pois");
+					.setPoisUrl(url + "/" + universityId + "/pois") //
+					.setShibbolethIdentityProvider(
+							dsUniversity.getShibbolethIdentityProvider());
 
 			++i;
 		}
@@ -199,5 +202,8 @@ public class RegionClientFromLocal extends AbstractClientFromLocal implements
 		MutableUniversity setPoiCount(int poiCount);
 
 		MutableUniversity setPoisUrl(String poisUrl);
+
+		MutableUniversity setShibbolethIdentityProvider(
+				@Nullable String shibbolethIdentityProvider);
 	}
 }

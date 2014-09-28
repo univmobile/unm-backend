@@ -93,5 +93,8 @@ public class RegionClientFromLocalTest {
 
 		assertFalse(poisUrl.contains("${baseURL}"));
 		assertFalse(configUrl.contains("${baseURL}"));
+
+		assertEquals("https://shibbolethtest.ensiie.fr/idp/shibboleth",
+				university.getShibbolethIdentityProvider());
 	}
 }

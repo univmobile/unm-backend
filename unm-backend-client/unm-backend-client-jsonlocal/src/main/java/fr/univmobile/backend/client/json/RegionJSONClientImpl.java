@@ -86,7 +86,13 @@ public class RegionJSONClientImpl implements RegionJSONClient {
 							.put("url", university.getConfigUrl())) //
 					.put("pois", new JSONMap() //
 							.put("count", university.getPoiCount()) //
-							.put("url", university.getPoisUrl())));
+							.put("url", university.getPoisUrl()))
+					//
+					.put("shibboleth",
+							new JSONMap() //
+									.put("identityProvider", university
+											.getShibbolethIdentityProvider())) //
+			);
 		}
 
 		final String s = json.toJSONString();

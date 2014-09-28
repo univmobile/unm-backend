@@ -77,6 +77,8 @@
 		<university>
 			<id>ensiie</id>
 			<title>ENSIIE</title>
+			<shibboleth
+				identityProvider="https://shibbolethtest.ensiie.fr/idp/shibboleth"/>
 		</university>
 		<university>
 			<id>unpidf</id>

@@ -2,6 +2,7 @@ package fr.univmobile.backend.client;
 
 import java.io.IOException;
 
+import javax.annotation.Nullable;
 import javax.inject.Inject;
 
 import net.avcompris.binding.annotation.XPath;
@@ -102,6 +103,11 @@ public class RegionClientFromJSON extends
 			@XPath("pois/@url")
 			@Override
 			String getPoisUrl();
+			
+			@XPath("shibboleth/@identityProvider")
+			@Override
+			@Nullable
+			String getShibbolethIdentityProvider();
 		}
 	}
 }
