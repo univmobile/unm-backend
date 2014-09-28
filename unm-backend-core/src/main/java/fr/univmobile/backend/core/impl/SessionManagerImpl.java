@@ -390,10 +390,12 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		final int result = executeUpdate("updateLoginConversation", uid,
 				loginToken);
 
-		if (result != 1) {
+		final int REF = 1;
+		
+		if (result != REF) {
 
 			throw new IllegalStateException("Illegal result: " + result
-					+ ", should be: " + 0 + " for loginToken: " + loginToken
+					+ ", should be: " + REF + " for loginToken: " + loginToken
 					+ ", user: " + uid);
 		}
 	}
