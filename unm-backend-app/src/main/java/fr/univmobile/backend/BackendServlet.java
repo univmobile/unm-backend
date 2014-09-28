@@ -458,17 +458,32 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			baseURL = getBaseURL(); // From configuration
 
+			if (log.isDebugEnabled()) {
+				log.debug("Using baseURL from configuration: " + baseURL);
+			}
+
 		} else {
 
 			String jsonBaseURL = null;
 
 			for (final String optional_jsonBaseURL : optional_jsonBaseURLs) {
 
+				if (log.isDebugEnabled()) {
+					log.debug("Checking optional_jsonBaseURL: "
+							+ optional_jsonBaseURL);
+				}
+
 				final String protocol = substringBefore(optional_jsonBaseURL,
 						"://");
 
 				final String requestProtocolUpperCase = //
 				request.getProtocol().toUpperCase();
+
+				if (log.isDebugEnabled()) {
+					log.debug("requestProtocolUpperCase: "
+							+ requestProtocolUpperCase + ", protocol: "
+							+ protocol);
+				}
 
 				if (requestProtocolUpperCase.startsWith("HTTPS/")) {
 					if (!protocol.equals("https")) {
@@ -484,11 +499,20 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 				final String part2 = substringAfter(optional_jsonBaseURL, "//");
 
+				if (log.isDebugEnabled()) {
+					log.debug("part2: " + part2 + ", host: " + host);
+				}
+
 				if (!part2.startsWith(host)) {
 					continue;
 				}
 
 				final String baseURI = "/" + substringAfter(part2, "/");
+
+				if (log.isDebugEnabled()) {
+					log.debug("baseURI: " + baseURI + ", requestURI: "
+							+ requestURI);
+				}
 
 				if (!requestURI.startsWith(baseURI)) {
 					continue;
@@ -496,7 +520,16 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 				jsonBaseURL = optional_jsonBaseURL;
 
+				if (log.isDebugEnabled()) {
+					log.debug("Using optional_jsonBaseURL: "
+							+ optional_jsonBaseURL);
+				}
+
 				break;
+			}
+
+			if (log.isDebugEnabled()) {
+				log.debug("jsonBaseURL: " + jsonBaseURL);
 			}
 
 			if (jsonBaseURL != null) {
