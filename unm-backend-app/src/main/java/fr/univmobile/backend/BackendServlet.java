@@ -377,6 +377,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			remoteUser = null;
 		}
 
+		if (log.isInfoEnabled()) {
+			log.info("Using remoteUser: " + remoteUser);
+		}
+
 		if (remoteUser == null) {
 
 			log.fatal("remoteAddr: "
