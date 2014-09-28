@@ -31,7 +31,13 @@ public class SessionClientFromJSON extends
 	public LoginConversation prepare(final String apiKey) throws IOException,
 			ClientException {
 
-		throw new NotImplementedException();
+		if (log.isDebugEnabled()) {
+			log.debug("prepare():" + apiKey + "...");
+		}
+
+		final String json = jsonClient.prepareJSON(apiKey);
+		
+		return unmarshall(json, LoginConversationJSON.class);
 	}
 
 	@Override
@@ -117,5 +123,17 @@ public class SessionClientFromJSON extends
 			@Override
 			String getDisplayName();
 		}
+	}
+
+	@XPath("/*")
+	public interface LoginConversationJSON extends LoginConversation {
+
+		@XPath("@loginToken")
+		@Override
+		String getLoginToken();
+
+		@XPath("@key")
+		@Override
+		String getKey();
 	}
 }

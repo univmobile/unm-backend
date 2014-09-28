@@ -12,6 +12,7 @@ import org.apache.commons.logging.LogFactory;
 
 import com.avcompris.lang.NotImplementedException;
 
+import fr.univmobile.backend.client.SessionClient.LoginConversation;
 import fr.univmobile.backend.core.AppSession;
 import fr.univmobile.backend.core.InvalidSessionException;
 import fr.univmobile.backend.core.SessionManager;
@@ -34,7 +35,22 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 	public LoginConversation prepare(final String apiKey) throws IOException,
 			ClientException {
 
-		throw new NotImplementedException();
+		final fr.univmobile.backend.core.LoginConversation dsConversation;
+
+		try {
+
+			dsConversation = sessionManager.prepare(apiKey);
+
+		} catch (final SQLException e) {
+
+			log.fatal(e);
+
+			throw new ClientException(e);
+		}
+
+		return DataBeans.instantiate(MutableLoginConversation.class) //
+				.setLoginToken(dsConversation.getLoginToken()) //
+				.setKey(dsConversation.getKey());
 	}
 
 	@Override
@@ -182,4 +198,11 @@ interface MutableUser extends User {
 	MutableUser setMail(@Nullable String mail);
 
 	MutableUser setDisplayName(String displayName);
+}
+
+interface MutableLoginConversation extends LoginConversation {
+
+	MutableLoginConversation setLoginToken(String loginToken);
+
+	MutableLoginConversation setKey(String key);
 }

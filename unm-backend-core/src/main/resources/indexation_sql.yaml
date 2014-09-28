@@ -297,7 +297,25 @@ bundle:
         message VARCHAR(255) NOT NULL,
         PRIMARY KEY (id)
       ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-        
+
+  createTable_loginconversations:
+    h2: |
+      CREATE TABLE ${prefix}loginconversations (
+        token CHAR(40) NOT NULL,
+        key VARCHAR(40) NOT NULL,
+        started_at TIMESTAMP NOT NULL,
+        user_uid VARCHAR(40) NULL,
+        PRIMARY KEY(token)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+    mysql: |
+      CREATE TABLE ${prefix}loginconversations (
+        token CHAR(40) NOT NULL,
+        key VARCHAR(40) NOT NULL,
+        started_at TIMESTAMP NOT NULL,
+        user_uid VARCHAR(40) NULL,
+        PRIMARY KEY(token)
+      ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
   createCategory:
     mysql.h2:
       INSERT INTO ${prefix}categories

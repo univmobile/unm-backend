@@ -19,6 +19,7 @@ import org.junit.Test;
 
 import fr.univmobile.backend.client.AppToken;
 import fr.univmobile.backend.client.SessionClient;
+import fr.univmobile.backend.client.SessionClient.LoginConversation;
 import fr.univmobile.backend.client.SessionClientFromJSON;
 import fr.univmobile.backend.client.SessionClientFromLocal;
 import fr.univmobile.backend.client.User;
@@ -113,8 +114,9 @@ public class SessionThroughJSONTest {
 		assertEquals("crezvani", user.getUid());
 		assertEquals("Cyrus.Rezvani@univ-paris1.fr", user.getMail());
 		assertEquals("Cyrus Rezvani", user.getDisplayName());
-		
-		assertFalse("appToken.id should not be blank",isBlank(appToken.getId()));
+
+		assertFalse("appToken.id should not be blank",
+				isBlank(appToken.getId()));
 	}
 
 	@Test
@@ -134,5 +136,22 @@ public class SessionThroughJSONTest {
 		assertNotNull(appToken);
 
 		client.logout(API_KEY, appToken.getId());
+	}
+
+	@Test
+	public void testThroughJSON_prepare() throws Exception {
+
+		final LoginConversation conversation = client.prepare(API_KEY);
+
+		assertNotNull(conversation);
+		
+		final String loginToken = conversation.getLoginToken();
+		final String key = conversation.getKey();
+		
+		System.out.println("loginToken: "+loginToken);
+		System.out.println("       key: "+key);
+		
+		assertFalse(isBlank(loginToken));
+		assertFalse(isBlank(key));
 	}
 }

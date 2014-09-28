@@ -101,3 +101,10 @@ bundle:
       SELECT user_uid FROM ${prefix}sessions
         WHERE token = ? AND ended_at IS NULL;
   
+  
+  insertLoginConversation:
+    mysql.h2: |
+      INSERT INTO ${prefix}loginconversations 
+      (token, key, started_at) VALUES (?, ?, ?);
+  
+    

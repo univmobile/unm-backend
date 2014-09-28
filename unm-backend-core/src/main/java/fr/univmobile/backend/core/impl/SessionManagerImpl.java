@@ -3,6 +3,7 @@ package fr.univmobile.backend.core.impl;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
+import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
@@ -21,6 +22,7 @@ import com.google.common.collect.Lists;
 
 import fr.univmobile.backend.core.AppSession;
 import fr.univmobile.backend.core.InvalidSessionException;
+import fr.univmobile.backend.core.LoginConversation;
 import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.User.Password;
@@ -237,17 +239,20 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	private String newAppToken(final User user) throws IOException,
 			SQLException {
 
-		final int LENGTH = 40;
-
-		String uuid = UUID.randomUUID().toString();
-
-		uuid += "-" + RandomStringUtils.randomAlphanumeric(LENGTH);
-
-		uuid = uuid.substring(0, LENGTH);
+		final String uuid = newUUID(40);
 
 		executeUpdate("insertAppToken", uuid, user.getUid(), new DateTime());
 
 		return uuid;
+	}
+
+	private static String newUUID(final int length) {
+
+		String uuid = UUID.randomUUID().toString();
+
+		uuid += "-" + RandomStringUtils.randomAlphanumeric(length);
+
+		return uuid.substring(0, length);
 	}
 
 	private boolean isValid(final AppSession session) throws SQLException {
@@ -328,5 +333,48 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		final User user = users.getByUid(userUid);
 
 		return new AppSessionImpl(sessionId, user);
+	}
+
+	@Override
+	public LoginConversation prepare(final String apiKey) throws IOException,
+			SQLException {
+
+		final String loginToken = newUUID(40);
+		final String key = newUUID(40);
+
+		executeUpdate("insertLoginConversation", loginToken, key,
+				new DateTime());
+
+		return new LoginConversationImpl(loginToken, key);
+	}
+
+	private static final class LoginConversationImpl implements
+			LoginConversation, Serializable {
+
+		/**
+		 * for serialization.
+		 */
+		private static final long serialVersionUID = 8164762659083068376L;
+
+		public LoginConversationImpl(final String loginToken, final String key) {
+
+			this.loginToken = checkNotNull(loginToken, "loginToken");
+			this.key = checkNotNull(key, "key");
+		}
+
+		private final String loginToken;
+		private final String key;
+
+		@Override
+		public String getLoginToken() {
+
+			return loginToken;
+		}
+
+		@Override
+		public String getKey() {
+
+			return key;
+		}
 	}
 }

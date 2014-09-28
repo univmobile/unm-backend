@@ -27,4 +27,6 @@ public interface SessionManager {
 
 	AppSession getAppSession(String sessionId) throws IOException,
 			SQLException, InvalidSessionException;
+
+	LoginConversation prepare(String apiKey) throws IOException, SQLException;
 }

@@ -278,6 +278,7 @@ bundle:
   dropAllTables:
     mysql.h2:
       DROP TABLE IF EXISTS
+        ${prefix}loginconversations,
         ${prefix}sessions,
         ${prefix}history,
         ${prefix}search,

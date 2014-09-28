@@ -14,6 +14,7 @@ import org.apache.commons.logging.LogFactory;
 import fr.univmobile.backend.client.AppToken;
 import fr.univmobile.backend.client.ClientException;
 import fr.univmobile.backend.client.SessionClient;
+import fr.univmobile.backend.client.SessionClient.LoginConversation;
 import fr.univmobile.backend.client.User;
 import fr.univmobile.backend.json.JSONMap;
 
@@ -120,5 +121,31 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 		}
 
 		return ""; // empty String
+	}
+
+	@Override
+	public String prepareJSON(final String apiKey) throws IOException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("prepareJSON():" + apiKey + "...");
+		}
+
+		final LoginConversation conversation;
+
+		try {
+
+			conversation = sessionClient.prepare(apiKey);
+
+		} catch (final ClientException e) {
+
+			log.fatal(e);
+
+			throw new RuntimeException(e);
+		}
+
+		return new JSONMap() //
+				.put("loginToken", conversation.getLoginToken()) //
+				.put("key", conversation.getKey()) //
+				.toJSONString();
 	}
 }

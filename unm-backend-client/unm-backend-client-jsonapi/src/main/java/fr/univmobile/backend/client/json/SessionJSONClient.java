@@ -8,6 +8,8 @@ public interface SessionJSONClient {
 			throws IOException;
 
 	String getAppTokenJSON(String apiKey, String appTokenId) throws IOException;
-	
+
 	String logoutJSON(String apiKey, String appTokenId) throws IOException;
+
+	String prepareJSON(String apiKey) throws IOException;
 }
