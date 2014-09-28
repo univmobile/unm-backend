@@ -454,7 +454,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// final boolean rewriteHost;
 
-		if (host == null || optional_jsonBaseURLs == null) {
+		if (host == null || optional_jsonBaseURLs == null
+				|| optional_jsonBaseURLs.length == 0) {
 
 			baseURL = getBaseURL(); // From configuration
 
@@ -496,7 +497,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						continue;
 					}
 				} else if (requestProtocolUpperCase.startsWith("HTTP/")) {
-					if (!protocol.equals("http") && !protocol.equals("https")) {
+					if (!protocol.equals("http")) {
 						continue;
 					}
 				} else {
@@ -546,7 +547,11 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			} else {
 
-				baseURL = getBaseURL(); // From configuration
+				// baseURL = getBaseURL(); // From configuration
+
+				baseURL = optional_jsonBaseURLs[0]; // FORCE!
+
+				AbstractClientFromLocal.setThreadLocalBaseURL(baseURL);
 			}
 		}
 
