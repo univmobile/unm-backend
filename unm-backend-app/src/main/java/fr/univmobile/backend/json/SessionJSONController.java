@@ -71,16 +71,16 @@ public class SessionJSONController extends AbstractJSONController {
 			return refresh(refresh);
 		}
 
+		final Retrieve retrieve = getHttpInputs(Retrieve.class);
+
+		if (retrieve.isHttpValid()) {
+
+			return retrieve(retrieve);
+		}
+
 		sendError400();
 
 		return null;
-
-		/*
-		 * final String json = "{\"url\":\"" + composeJSONendPoint(baseURL,
-		 * "/session") + "\"," + substringAfter(sessionJSON, "{");
-		 * 
-		 * return json;
-		 */
 	}
 
 	private String refresh(final Refresh refresh) throws IOException {
@@ -164,6 +164,40 @@ public class SessionJSONController extends AbstractJSONController {
 		return json;
 	}
 
+	private String retrieve(final Retrieve retrieve) throws IOException {
+
+		final String apiKey = retrieve.apiKey();
+		final String loginToken = retrieve.loginToken();
+		final String key = retrieve.key();
+
+		final AppSession appSession;
+
+		try {
+
+			appSession = sessionManager.retrieve(apiKey, loginToken, key);
+
+		} catch (final SQLException e) {
+
+			log.error(e);
+
+			return ""; // empty string
+		}
+
+		if (appSession == null) {
+
+			log.error("Retrieve: Unknown appSession for loginToken: " + loginToken);
+
+			return ""; // empty string
+		}
+
+		LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
+
+		final String json = sessionJSONClient.getAppTokenJSON(apiKey,
+				appSession.getId());
+
+		return json;
+	}
+
 	@HttpMethods("POST")
 	private interface Login extends HttpInputs {
 
@@ -218,5 +252,21 @@ public class SessionJSONController extends AbstractJSONController {
 		@HttpRequired
 		@HttpParameter
 		String prepare();
+	}
+
+	@HttpMethods("POST")
+	private interface Retrieve extends HttpInputs {
+
+		@HttpRequired
+		@HttpParameter
+		String apiKey();
+
+		@HttpRequired
+		@HttpParameter
+		String loginToken();
+
+		@HttpRequired
+		@HttpParameter
+		String key();
 	}
 }
