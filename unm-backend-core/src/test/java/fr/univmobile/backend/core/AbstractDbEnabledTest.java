@@ -3,6 +3,7 @@ package fr.univmobile.backend.core;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.backend.core.impl.ConnectionType.H2;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.fail;
 
 import java.io.File;
 import java.io.IOException;
@@ -61,19 +62,41 @@ public abstract class AbstractDbEnabledTest {
 	@Before
 	public final void setUpDb() throws Exception {
 
-		final File dbFile = new File("target/" + getClass().getSimpleName()
-				+ ".h2.db");
+		final String classSimpleName = getClass().getSimpleName();
 
-		FileUtils.deleteQuietly(dbFile);
+		// 1. ENSURE ALL LOCAL DB FILES ARE DELETED
 
-		assertFalse(dbFile.exists());
+		for (final String extension : new String[] { ".h2.db", ".mv.db" }) {
 
-		final String url = "jdbc:h2:./target/" + getClass().getSimpleName();
+			final File dbFile = new File("target", classSimpleName + extension);
+
+			FileUtils.deleteQuietly(dbFile);
+
+			assertFalse(dbFile.exists());
+		}
+
+		// 2. ENSURE ALL LOCAL DB FILES ARE DELETED
+
+		for (final File file : new File("target").listFiles()) {
+
+			final String filename = file.getName();
+
+			if (filename.startsWith(classSimpleName)
+					&& filename.endsWith(".db")) {
+
+				fail("Found a filename ending with .db: " + filename);
+			}
+		}
+
+		// 3. CREATE NEW LOCAL DATABASE
+
+		final String url = "jdbc:h2:./target/" + classSimpleName;
 
 		cxn = DriverManager.getConnection(url);
 
-		dataDir_comments = new File("target/" + getClass().getSimpleName()
-				+ "_comments");
+		// 4. CREATE NEW LOCAL DATA DIRECTORIES
+
+		dataDir_comments = new File("target", classSimpleName + "_comments");
 
 		if (dataDir_comments.isDirectory()) {
 			FileUtils.forceDelete(dataDir_comments);
@@ -81,8 +104,7 @@ public abstract class AbstractDbEnabledTest {
 
 		FileUtils.copyDirectory(originalDataDir_comments, dataDir_comments);
 
-		dataDir_users = new File("target/" + getClass().getSimpleName()
-				+ "_users");
+		dataDir_users = new File("target", classSimpleName + "_users");
 
 		if (dataDir_users.isDirectory()) {
 			FileUtils.forceDelete(dataDir_users);
@@ -90,8 +112,8 @@ public abstract class AbstractDbEnabledTest {
 
 		FileUtils.copyDirectory(originalDataDir_users, dataDir_users);
 
-		final File dataDir_regions = new File("target/"
-				+ getClass().getSimpleName() + "_regions");
+		final File dataDir_regions = new File("target", classSimpleName
+				+ "_regions");
 
 		if (dataDir_regions.isDirectory()) {
 			FileUtils.forceDelete(dataDir_regions);
@@ -99,8 +121,7 @@ public abstract class AbstractDbEnabledTest {
 
 		FileUtils.copyDirectory(originalDataDir_regions, dataDir_regions);
 
-		dataDir_pois = new File("target/" + getClass().getSimpleName()
-				+ "_pois");
+		dataDir_pois = new File("target", classSimpleName + "_pois");
 
 		if (dataDir_pois.isDirectory()) {
 			FileUtils.forceDelete(dataDir_pois);
@@ -108,9 +129,13 @@ public abstract class AbstractDbEnabledTest {
 
 		FileUtils.copyDirectory(originalDataDir_pois, dataDir_pois);
 
+		// 5. LOGQUEUE AND SEARCHMANAGER
+
 		logQueue = new LogQueueDbImpl(H2, cxn);
 
 		searchManager = new SearchManagerImpl(logQueue, H2, cxn);
+
+		// 6. DB INIT: DATA INDEXATION
 
 		final Indexation indexation = new IndexationImpl(dataDir_users,
 				dataDir_regions, dataDir_pois, dataDir_comments, searchManager,
