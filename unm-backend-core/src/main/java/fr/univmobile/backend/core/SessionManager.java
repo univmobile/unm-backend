@@ -32,4 +32,8 @@ public interface SessionManager {
 
 	void updateLoginConversation(final String loginToken, final User user)
 			throws IOException, SQLException;
+	
+	@Nullable
+	AppSession retrieve(String apiKey, String loginToken, String key)
+			throws IOException, SQLException;
 }

@@ -113,4 +113,8 @@ bundle:
       SET user_uid = ?
       WHERE token = ? AND user_uid IS NULL; 
   
-    
+  getPreparedUserUid:
+    mysql.h2: |
+      SELECT user_uid FROM ${prefix}loginconversations
+      WHERE token = ? AND token_key = ? AND user_uid IS NOT NULL;
+  

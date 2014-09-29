@@ -12,8 +12,6 @@ import net.avcompris.binding.annotation.XPath;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.avcompris.lang.NotImplementedException;
-
 import fr.univmobile.backend.client.json.SessionJSONClient;
 
 public class SessionClientFromJSON extends
@@ -36,15 +34,26 @@ public class SessionClientFromJSON extends
 		}
 
 		final String json = jsonClient.prepareJSON(apiKey);
-		
+
 		return unmarshall(json, LoginConversationJSON.class);
 	}
 
 	@Override
+	@Nullable
 	public AppToken retrieve(final String apiKey, final String loginToken,
 			final String key) throws IOException, ClientException {
 
-		throw new NotImplementedException();
+		if (log.isDebugEnabled()) {
+			log.debug("retrieve():" + loginToken + "...");
+		}
+
+		final String json = jsonClient.retrieveJSON(apiKey, loginToken, key);
+
+		if (isBlank(json))  {
+			return null;
+		}
+		
+		return unmarshall(json, AppTokenJSON.class);
 	}
 
 	@Override

@@ -7,7 +7,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-
+import static org.mockito.Mockito.*;
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -71,8 +71,7 @@ public class SessionThroughJSONTest {
 
 		indexation.indexData(null);
 
-		final SessionManager sessionManager = new SessionManagerImpl(logQueue,
-				users, H2, cxn);
+		sessionManager = new SessionManagerImpl(logQueue, users, H2, cxn);
 
 		final SessionClient sessionClient = new SessionClientFromLocal(
 				"http://dummy/", sessionManager);
@@ -84,6 +83,7 @@ public class SessionThroughJSONTest {
 		LogQueueDbImpl.setAnonymous();// Principal(null); // "crezvani");
 	}
 
+	private SessionManager sessionManager;
 	private SessionJSONClient sessionJSONClient;
 	private SessionClient client;
 	private Connection cxn;
@@ -144,14 +144,53 @@ public class SessionThroughJSONTest {
 		final LoginConversation conversation = client.prepare(API_KEY);
 
 		assertNotNull(conversation);
-		
+
 		final String loginToken = conversation.getLoginToken();
 		final String key = conversation.getKey();
-		
-		System.out.println("loginToken: "+loginToken);
-		System.out.println("       key: "+key);
-		
+
 		assertFalse(isBlank(loginToken));
 		assertFalse(isBlank(key));
+	}
+
+	@Test
+	public void testThroughJSON_prepare_update_retrieve_illegal() throws Exception {
+
+		final LoginConversation conversation = client.prepare(API_KEY);
+
+		assertNotNull(conversation);
+
+		final String loginToken = conversation.getLoginToken();
+		final String key = conversation.getKey();
+
+		final fr.univmobile.backend.core.User user = mock(fr.univmobile.backend.core.User.class);
+
+		when(user.getUid()).thenReturn("tformica");
+
+		sessionManager.updateLoginConversation(loginToken, user);
+		
+		final AppToken appToken=client.retrieve(API_KEY, loginToken, key);
+		
+		assertNull(appToken);
+	}
+
+	@Test
+	public void testThroughJSON_prepare_update_retrieve_OK() throws Exception {
+
+		final LoginConversation conversation = client.prepare(API_KEY);
+
+		assertNotNull(conversation);
+
+		final String loginToken = conversation.getLoginToken();
+		final String key = conversation.getKey();
+
+		final fr.univmobile.backend.core.User user = mock(fr.univmobile.backend.core.User.class);
+
+		when(user.getUid()).thenReturn("crezvani");
+
+		sessionManager.updateLoginConversation(loginToken, user);
+		
+		final AppToken appToken=client.retrieve(API_KEY, loginToken, key);
+		
+		assertEquals("crezvani",appToken.getUser().getUid());
 	}
 }

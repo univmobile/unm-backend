@@ -10,8 +10,6 @@ import javax.annotation.Nullable;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import com.avcompris.lang.NotImplementedException;
-
 import fr.univmobile.backend.client.SessionClient.LoginConversation;
 import fr.univmobile.backend.core.AppSession;
 import fr.univmobile.backend.core.InvalidSessionException;
@@ -57,7 +55,31 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 	public AppToken retrieve(final String apiKey, final String loginToken,
 			final String key) throws IOException, ClientException {
 
-		throw new NotImplementedException();
+		final AppSession session;
+
+		try {
+
+			session = sessionManager.retrieve(apiKey, loginToken, key);
+
+		} catch (final SQLException e) {
+
+			log.fatal(e);
+
+			throw new ClientException(e);
+		}
+
+		if (session == null) {
+
+			return null;
+		}
+
+		final fr.univmobile.backend.core.User dsUser = session.getUser();
+
+		final String sessionId = session.getId();
+
+		return DataBeans.instantiate(MutableAppToken.class) //
+				.setId(sessionId) //
+				.setUser(getUser(dsUser));
 	}
 
 	private static final Log log = LogFactory

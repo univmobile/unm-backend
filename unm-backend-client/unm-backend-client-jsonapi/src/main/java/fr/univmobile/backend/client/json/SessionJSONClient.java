@@ -12,4 +12,7 @@ public interface SessionJSONClient {
 	String logoutJSON(String apiKey, String appTokenId) throws IOException;
 
 	String prepareJSON(String apiKey) throws IOException;
+
+	String retrieveJSON(String apiKey, String loginToken, String key)
+			throws IOException;
 }

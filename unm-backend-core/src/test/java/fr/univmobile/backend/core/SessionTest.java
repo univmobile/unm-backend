@@ -210,4 +210,24 @@ public class SessionTest extends AbstractDbEnabledTest {
 
 		assertEquals(1, getDbRowCount("unm_loginconversations"));
 	}
+
+	@Test
+	public void test_prepare_retrieve() throws Exception {
+
+		assertEquals(0, getDbRowCount("unm_loginconversations"));
+
+		final LoginConversation conversation = sessionManager.prepare(API_KEY);
+
+		assertEquals(1, getDbRowCount("unm_loginconversations"));
+
+		final String loginToken = conversation.getLoginToken();
+
+		final User user = users.getByRemoteUser("crezvani@univ-paris1.fr");
+
+		sessionManager.updateLoginConversation(loginToken, user);
+
+		assertEquals(1, getDbRowCount("unm_loginconversations"));
+		
+		xxx
+	}
 }

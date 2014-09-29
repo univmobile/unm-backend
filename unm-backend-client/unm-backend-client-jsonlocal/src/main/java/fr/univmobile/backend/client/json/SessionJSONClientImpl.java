@@ -148,4 +148,28 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 				.put("key", conversation.getKey()) //
 				.toJSONString();
 	}
+
+	@Override
+	public String retrieveJSON(final String apiKey, final String loginToken,
+			final String key) throws IOException {
+
+		if (log.isDebugEnabled()) {
+			log.debug("retrieveJSON():" + loginToken + "...");
+		}
+
+		final AppToken token;
+
+		try {
+
+			token = sessionClient.retrieve(apiKey, loginToken, key);
+
+		} catch (final ClientException e) {
+
+			log.fatal(e);
+
+			throw new RuntimeException(e);
+		}
+
+		return tokenJSON(token);
+	}
 }

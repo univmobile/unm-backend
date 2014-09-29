@@ -391,12 +391,78 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 				loginToken);
 
 		final int REF = 1;
-		
+
 		if (result != REF) {
 
 			throw new IllegalStateException("Illegal result: " + result
 					+ ", should be: " + REF + " for loginToken: " + loginToken
 					+ ", user: " + uid);
 		}
+	}
+
+	@Override
+	public AppSession retrieve(String apiKey, String loginToken, String key)
+			throws IOException, SQLException {
+
+		checkNotNull(apiKey, "apiKey");
+		checkNotNull(loginToken, "loginToken");
+		checkNotNull(key, "key");
+
+		final Logged logged = logQueue.log(new LoggableString(
+				"RETRIEVE:{apiKey=%s, loginToken=\"%s\"}", apiKey, loginToken));
+
+		final User user = retrieve_validate(loginToken, key);
+
+		if (user == null) {
+
+			if (log.isInfoEnabled()) {
+				log.info("Invalid login token: " + loginToken);
+			}
+
+			logQueue.log(logged, new LoggableString(
+					"RETRIEVE:INVALID:%s:{loginToken=\"%s\"}", logged,
+					loginToken));
+
+			return null;
+		}
+
+		final String appToken = newAppToken(user);
+
+		final AppSession appSession = new AppSessionImpl(appToken, user);
+
+		logQueue.log(logged, new LoggableString(
+				"RETRIEVE:%s:{loginToken=\"%s\", appToken:%s}", logged,
+				loginToken, appToken));
+
+		return appSession;
+	}
+
+	@Nullable
+	private User retrieve_validate(final String loginToken, final String key)
+			throws IOException, SQLException {
+
+		final String userUid = executeQueryGetStringNullable(
+				"getPreparedUserUid", loginToken, key);
+
+		if (userUid == null) {
+			return null; // Bad loginToken+key
+		}
+
+		if (users.isNullByUid(userUid)) {
+			if (log.isInfoEnabled()) {
+				log.info("No user: " + userUid + " for loginToken: "
+						+ loginToken);
+			}
+			return null; // Bad login
+		}
+
+		final User user =  users.getByUid(userUid);
+
+		if (user.isNullPrimaryUser()) {
+
+			return user;
+		}
+
+		return recursiveGetPrimaryUser(Lists.newArrayList(user));
 	}
 }
