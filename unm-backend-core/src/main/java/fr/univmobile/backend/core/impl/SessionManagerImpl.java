@@ -408,6 +408,8 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		checkNotNull(loginToken, "loginToken");
 		checkNotNull(key, "key");
 
+		LogQueueDbImpl.setAnonymous();
+		
 		final Logged logged = logQueue.log(new LoggableString(
 				"RETRIEVE:{apiKey=%s, loginToken=\"%s\"}", apiKey, loginToken));
 
