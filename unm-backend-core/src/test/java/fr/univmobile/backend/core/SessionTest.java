@@ -227,7 +227,12 @@ public class SessionTest extends AbstractDbEnabledTest {
 		sessionManager.updateLoginConversation(loginToken, user);
 
 		assertEquals(1, getDbRowCount("unm_loginconversations"));
+
+		final String key = conversation.getKey();
+
+		final AppSession token = sessionManager.retrieve(API_KEY, loginToken,
+				key);
 		
-		xxx
+		assertEquals("crezvani", token.getUser().getUid());
 	}
 }
