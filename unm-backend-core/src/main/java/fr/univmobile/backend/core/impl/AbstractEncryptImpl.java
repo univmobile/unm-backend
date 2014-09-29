@@ -34,7 +34,7 @@ abstract class AbstractEncryptImpl implements Encrypt {
 
 		} catch (final NoSuchAlgorithmException e) {
 
-			log.fatal(e);
+			log.fatal(e, e);
 
 			throw new RuntimeException(e);
 		}

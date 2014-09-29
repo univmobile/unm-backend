@@ -64,7 +64,7 @@ public class LogQueueDbImpl extends AbstractDbManagerImpl implements LogQueue {
 			final RuntimeException e = new IllegalStateException(
 					"LogQueue: Principal has not been set");
 
-			log.fatal(e);
+			log.fatal(e, e);
 
 			throw e;
 		}

@@ -85,6 +85,8 @@ public class SessionJSONController extends AbstractJSONController {
 
 	private String refresh(final Refresh refresh) throws IOException {
 
+		log.debug("refresh()...");
+
 		final String appTokenId = refresh.appTokenId();
 
 		final AppSession appSession;
@@ -116,6 +118,8 @@ public class SessionJSONController extends AbstractJSONController {
 
 	private String login(final Login login) throws IOException {
 
+		log.debug("login()...");
+
 		LogQueueDbImpl.setAnonymous();
 
 		final String json = sessionJSONClient.loginJSON(login.apiKey(),
@@ -125,6 +129,8 @@ public class SessionJSONController extends AbstractJSONController {
 	}
 
 	private String logout(final Logout logout) throws IOException {
+
+		log.debug("logout()...");
 
 		final String appTokenId = logout.appTokenId();
 
@@ -157,6 +163,8 @@ public class SessionJSONController extends AbstractJSONController {
 
 	private String prepare(final Prepare prepare) throws IOException {
 
+		log.debug("prepare()...");
+
 		LogQueueDbImpl.setAnonymous();
 
 		final String json = sessionJSONClient.prepareJSON(prepare.apiKey());
@@ -165,6 +173,8 @@ public class SessionJSONController extends AbstractJSONController {
 	}
 
 	private String retrieve(final Retrieve retrieve) throws IOException {
+
+		log.debug("retrieve()...");
 
 		final String apiKey = retrieve.apiKey();
 		final String loginToken = retrieve.loginToken();
