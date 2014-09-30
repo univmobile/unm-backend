@@ -119,7 +119,7 @@ public class SessionClientFromLocalTest {
 	}
 
 	@Test
-	public void test_login_invalod() throws Exception {
+	public void test_login_invalid() throws Exception {
 
 		final AppToken appToken = client.login(API_KEY, "crezvani", "xxx");
 
