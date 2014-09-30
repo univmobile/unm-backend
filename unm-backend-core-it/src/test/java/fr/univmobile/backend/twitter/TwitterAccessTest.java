@@ -7,13 +7,17 @@ import static org.junit.Assert.assertNotNull;
 import org.junit.Before;
 import org.junit.Test;
 
+import fr.univmobile.testutil.PropertiesUtils;
+
 public class TwitterAccessTest {
 
 	@Before
 	public void setUp() throws Exception {
 
-		final String consumerKey = "XbrDpao6HzxcJWF4kyHdu5g0i";
-		final String consumerSecret = "oM6UlQ4j0yLu4VOrx73q0nU1IxEDxjj8JCD5isc1X2wTWu4XBF";
+		final String consumerKey = PropertiesUtils
+				.getSettingsTestRefProperty("twitter.consumerKey.ref");
+		final String consumerSecret = PropertiesUtils
+				.getSettingsTestRefProperty("twitter.consumerSecret.ref");
 
 		twitter = new ApplicationOnly(consumerKey, consumerSecret);
 	}
@@ -45,7 +49,8 @@ public class TwitterAccessTest {
 
 			assertNotNull(user.getScreenName());
 
-			// System.out.println(user.getName() + " / " + user.getScreenName());
+			// System.out.println(user.getName() + " / " +
+			// user.getScreenName());
 		}
 	}
 }

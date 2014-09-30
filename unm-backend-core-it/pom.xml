@@ -26,15 +26,15 @@
 	<url>
         http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}/
     </url>
-    
-    <build>
-    	<testResources>
-    		<testResource>
-    			<directory>src/test/resources</directory>
-    			<filtering>true</filtering>
-    		</testResource>
-    	</testResources>
-    </build>
+
+	<build>
+		<testResources>
+			<testResource>
+				<directory>src/test/resources</directory>
+				<filtering>true</filtering>
+			</testResource>
+		</testResources>
+	</build>
 
 	<scm>
 		<connection>
@@ -89,5 +89,15 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
+	<profiles>
+		<profile>
+			<id>dandriana</id>
+			<properties>
+				<twitter.consumerKey.ref>/settings/*/server[id = 'twitter']/username</twitter.consumerKey.ref>
+				<twitter.consumerSecret.ref>/settings/*/server[id = 'twitter']/password</twitter.consumerSecret.ref>
+			</properties>
+		</profile>
+	</profiles>
 
 </project>
