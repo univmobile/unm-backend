@@ -53,9 +53,17 @@
 			<artifactId>unm-commons-datasource</artifactId>
 		</dependency>	
 		<dependency>
+			<groupId>fr.univmobile</groupId>
+			<artifactId>unm-http</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>net.avcompris.commons</groupId>
 			<artifactId>avc-binding-yaml</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>net.avcompris.commons</groupId>
+			<artifactId>avc-binding-json</artifactId>
+		</dependency>	
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
