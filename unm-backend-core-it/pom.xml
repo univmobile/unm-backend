@@ -98,6 +98,13 @@
 				<twitter.consumerSecret.ref>/settings/*/server[id = 'twitter']/password</twitter.consumerSecret.ref>
 			</properties>
 		</profile>
+		<profile>
+			<id>jenkins</id>
+			<properties>
+				<twitter.consumerKey.ref>/settings/*/server[id = 'twitter']/username</twitter.consumerKey.ref>
+				<twitter.consumerSecret.ref>/settings/*/server[id = 'twitter']/password</twitter.consumerSecret.ref>
+			</properties>
+		</profile>
 	</profiles>
 
 </project>
