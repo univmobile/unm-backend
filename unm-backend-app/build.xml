@@ -3,6 +3,8 @@
 	<property name="warFile" location="target/unm-backend.war"/>
 	<property name="dataDir" value="/tmp/unm-backend/data"/>
 	<property name="baseURL" value="http://localhost:8080/unm-backend/"/>
+	<property name="twitter.consumerKey" value=""/>
+	<property name="twitter.consumerSecret" value=""/>
 	
 	<target name="repackage_war">
 	
@@ -15,6 +17,8 @@
 				out="target/unm-backend/WEB-INF/web.xml-repackaged">
 			<param name="dataDir" expression="${dataDir}"/>
 			<param name="baseURL" expression="${baseURL}"/>
+			<param name="twitter.consumerKey" expression="${twitter.consumerKey}"/>
+			<param name="twitter.consumerSecret" expression="${twitter.consumerSecret}"/>
 		</xslt>
 		
 		<move overwrite="true" tofile="target/unm-backend/WEB-INF/web.xml"

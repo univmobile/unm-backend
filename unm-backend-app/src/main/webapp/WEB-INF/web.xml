@@ -22,6 +22,14 @@
 			<param-name>dataDir</param-name>
 			<param-value>/tmp/unm-backend/dataDir</param-value>
 		</init-param>
+		<init-param>
+			<param-name>twitter.consumerKey</param-name>
+			<param-value></param-value>
+		</init-param>
+		<init-param>
+			<param-name>twitter.consumerSecret</param-name>
+			<param-value></param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>BackendServlet</servlet-name>

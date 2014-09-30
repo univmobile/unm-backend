@@ -74,6 +74,8 @@ import fr.univmobile.backend.json.PoisJSONController;
 import fr.univmobile.backend.json.RegionsJSONController;
 import fr.univmobile.backend.json.SessionJSONController;
 import fr.univmobile.backend.json.UniversitiesJSONController;
+import fr.univmobile.backend.twitter.ApplicationOnly;
+import fr.univmobile.backend.twitter.TwitterAccess;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
@@ -254,8 +256,13 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final CommentJSONClient commentJSONClient = new CommentJSONClientImpl(
 				commentClient);
 
+		final String consumerKey = getInitParameter("twitter.consumerKey");
+		final String consumerSecret = getInitParameter("twitter.consumerSecret");
+		
+		final TwitterAccess twitter = new ApplicationOnly(consumerKey, consumerSecret);
+		
 		final SessionClient sessionClient = new SessionClientFromLocal(baseURL,
-				sessionManager);
+				sessionManager, twitter);
 
 		final SessionJSONClient sessionJSONClient = new SessionJSONClientImpl(
 				sessionClient);

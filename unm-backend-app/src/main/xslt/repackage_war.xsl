@@ -4,6 +4,8 @@
 
 <xsl:param name="dataDir" select="'/tmp/unm-backend/data'"/>
 <xsl:param name="baseURL" select="'http://localhost:8080/unm-backend/'"/>
+<xsl:param name="twitter.consumerKey"/>
+<xsl:param name="twitter.consumerSecret"/>
 
 <!-- TODO code is duplicated in: unm-backend-app, unm-mobileweb-app -->
 
@@ -39,6 +41,32 @@
 	<xsl:copy-of select="@*"/>
 	
 		<xsl:value-of select="$baseURL"/>
+	
+	</xsl:copy>
+	
+</xsl:template>
+
+<xsl:template match="j2ee:servlet
+		[j2ee:servlet-name = 'BackendServlet']/j2ee:init-param
+		[j2ee:param-name = 'twitter.consumerKey']/j2ee:param-value">
+
+	<xsl:copy>
+	<xsl:copy-of select="@*"/>
+
+		<xsl:value-of select="$twitter.consumerKey"/>
+	
+	</xsl:copy>
+	
+</xsl:template>
+
+<xsl:template match="j2ee:servlet
+		[j2ee:servlet-name = 'BackendServlet']/j2ee:init-param
+		[j2ee:param-name = 'twitter.consumerSecret']/j2ee:param-value">
+
+	<xsl:copy>
+	<xsl:copy-of select="@*"/>
+
+		<xsl:value-of select="$twitter.consumerSecret"/>
 	
 	</xsl:copy>
 	

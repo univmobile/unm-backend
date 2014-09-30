@@ -41,7 +41,8 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	private static final Log log = LogFactory.getLog(SessionManagerImpl.class);
 
 	public SessionManagerImpl(final LogQueue logQueue,
-			final UserDataSource users, final ConnectionType dbType,
+			final UserDataSource users,  
+			final ConnectionType dbType,
 			final Connection cxn) throws IOException {
 
 		super(dbType, cxn);
@@ -51,7 +52,8 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	}
 
 	public SessionManagerImpl(final LogQueue logQueue,
-			final UserDataSource users, final ConnectionType dbType,
+			final UserDataSource users,
+			final ConnectionType dbType,
 			final DataSource ds) throws IOException {
 
 		super(dbType, ds);

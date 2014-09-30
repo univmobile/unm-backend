@@ -7,7 +7,7 @@ import javax.annotation.Nullable;
 public interface User extends Serializable {
 
 	String getUid();
-	
+
 	// String[] getShibbolethRemoteUsers();
 
 	String getDisplayName();
@@ -59,5 +59,14 @@ public interface User extends Serializable {
 	enum BookmarkType {
 
 		POI, COMMENT, NEWS;
+	}
+
+	TwitterFollower[] getTwitterFollowers();
+
+	interface TwitterFollower extends Serializable {
+
+		String getScreenName();
+
+		String getName();
 	}
 }

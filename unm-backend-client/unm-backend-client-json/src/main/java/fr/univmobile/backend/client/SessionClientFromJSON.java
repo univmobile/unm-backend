@@ -131,6 +131,21 @@ public class SessionClientFromJSON extends
 			@XPath("@displayName")
 			@Override
 			String getDisplayName();
+
+			@XPath("twitterFollowers")
+			@Override
+			TwitterFollowerJSON[] getTwitterFollowers();
+			
+			interface TwitterFollowerJSON extends TwitterFollower {
+				
+				@XPath("@screenName")
+				@Override
+				String getScreenName();
+				
+				@XPath("@name")
+				@Override
+				String getName();
+			}
 		}
 	}
 

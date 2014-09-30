@@ -88,4 +88,9 @@ public interface User extends Entry<User> {
 		@XPath("atom:remoteUser")
 		String getRemoteUser();
 	}
+	
+	@XPath("atom:content/atom:twitter/@screenName")
+	String getTwitterScreenName();
+	
+	boolean isNullTwitterScreenName();
 }

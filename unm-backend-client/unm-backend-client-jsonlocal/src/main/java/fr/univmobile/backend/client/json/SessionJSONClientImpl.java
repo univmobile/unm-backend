@@ -16,6 +16,7 @@ import fr.univmobile.backend.client.ClientException;
 import fr.univmobile.backend.client.SessionClient;
 import fr.univmobile.backend.client.SessionClient.LoginConversation;
 import fr.univmobile.backend.client.User;
+import fr.univmobile.backend.json.JSONList;
 import fr.univmobile.backend.json.JSONMap;
 
 public class SessionJSONClientImpl implements SessionJSONClient {
@@ -73,6 +74,18 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 				.put("displayName", user.getDisplayName());
 
 		json.put("user", jsonUser);
+
+		final JSONList twitterFollowers = new JSONList();
+
+		jsonUser.put("twitterFollowers", twitterFollowers);
+
+		for (final User.TwitterFollower twitterFollower : user
+				.getTwitterFollowers()) {
+
+			twitterFollowers.add(new JSONMap() //
+					.put("screenName", twitterFollower.getScreenName()) //
+					.put("name", twitterFollower.getName()));
+		}
 
 		return json.toJSONString();
 	}

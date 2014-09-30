@@ -232,7 +232,7 @@ public class SessionTest extends AbstractDbEnabledTest {
 
 		final AppSession token = sessionManager.retrieve(API_KEY, loginToken,
 				key);
-		
+
 		assertEquals("crezvani", token.getUser().getUid());
 	}
 }
