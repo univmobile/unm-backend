@@ -6,7 +6,7 @@ package fr.univmobile.backend.core.impl;
  * <p>
  * Hex Strings are 64-char long.
  */
-final class EncryptSHA256 extends AbstractEncryptImpl {
+public final class EncryptSHA256 extends AbstractEncryptImpl {
 
 	public EncryptSHA256() {
 

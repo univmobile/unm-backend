@@ -51,7 +51,10 @@ public interface User extends Entry<User> {
 	@XPath("atom:content/atom:description")
 	@Nullable
 	String getDescription();
-	
+
+	@XPath("atom:content/atom:login_classic/@active")
+	boolean getPasswordEnabled();
+
 	@XPath("atom:content/atom:login_classic[@active = 'true']/atom:password")
 	// @Nullable // Because it will be stored as detached in the J2EE session
 	Password getPassword();

@@ -7,8 +7,12 @@ import java.io.IOException;
 
 import javax.annotation.Nullable;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 import fr.univmobile.backend.core.UserBuilder;
 import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.backend.core.impl.Encrypt;
+import fr.univmobile.backend.core.impl.EncryptSHA256;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.commons.tx.TransactionManager;
@@ -34,6 +38,8 @@ public class UseraddController extends AbstractBackendController {
 	private final TransactionManager tx;
 	private final UserDataSource users;
 	private final UsersController usersController;
+
+	private final Encrypt encrypt = new EncryptSHA256();
 
 	@Override
 	public View action() throws IOException, TransactionException {
@@ -79,6 +85,22 @@ public class UseraddController extends AbstractBackendController {
 		user.setMail(form.mail());
 		if (form.supannCivilite() != null) {
 			user.setSupannCivilite(form.supannCivilite());
+		}
+
+		if (form.passwordEnabled() != null) {
+			user.setPasswordEnabled(true);
+			user.setPasswordEncryptionAlgorithm("SHA-256");
+			final String saltPrefix = RandomStringUtils.randomAlphanumeric(8);
+			user.setPasswordSaltPrefix(saltPrefix);
+			final String encrypted = encrypt.encrypt(saltPrefix,
+					form.password());
+			user.setPasswordEncrypted(encrypted);
+		}
+
+		final String twitterScreenName = form.twitter_screen_name().trim();
+
+		if (!isBlank(twitterScreenName)) {
+			user.setTwitterScreenName(twitterScreenName);
 		}
 
 		boolean hasErrors = false;
@@ -154,5 +176,17 @@ public class UseraddController extends AbstractBackendController {
 		@HttpParameter(trim = true)
 		@Regexp("[a-zA-Z0-9_-]+[a-zA-Z0-9_-].@[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+")
 		String mail();
+
+		@HttpRequired
+		@HttpParameter
+		@Regexp(".*")
+		String password();
+
+		@HttpParameter
+		String passwordEnabled();
+
+		@HttpRequired
+		@HttpParameter
+		String twitter_screen_name();
 	}
 }

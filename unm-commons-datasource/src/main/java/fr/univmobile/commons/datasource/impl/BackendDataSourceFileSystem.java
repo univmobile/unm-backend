@@ -12,7 +12,9 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 import java.util.Map;
 
+import net.avcompris.binding.annotation.XPath;
 import net.avcompris.binding.dom.helper.DomBinderUtils;
+import net.avcompris.binding.helper.BinderUtils;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.commons.lang3.RandomUtils;
@@ -22,9 +24,9 @@ import org.w3c.dom.Document;
 
 import com.avcompris.lang.NotImplementedException;
 
-import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
+import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.SearchAttribute;
 
 public final class BackendDataSourceFileSystem<S extends RevDataSource<E, EB>, //
@@ -294,8 +296,8 @@ EB extends EntryBuilder<E>> //
 		dump(document, file);
 
 		builder.setLocalRevfile(file.getCanonicalPath());
-		
-		// cacheEngine.cache(data);
+
+		cache(data);
 	}
 
 	@Override
@@ -307,8 +309,12 @@ EB extends EntryBuilder<E>> //
 	@Override
 	public E reload(final E data) throws IOException {
 
+		cache(data);
+
 		final String primaryKey = BackendDataUtils.getPrimaryKeyValue(data,
 				dataSourceClass);
+
+		// cacheEngine.store(data);
 
 		final E cached = cacheEngine.getByPrimaryKey(primaryKey);
 

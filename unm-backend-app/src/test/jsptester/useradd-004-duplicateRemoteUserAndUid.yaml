@@ -17,6 +17,7 @@ delegationUser:
     displayName: Toto Formica
     supannCivilite: M.
     remoteUser: tformica@univ-paris1.fr 
+    twitterScreenName: 
 
 useradd:
   type: fr.univmobile.backend.core.User

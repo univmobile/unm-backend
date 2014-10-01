@@ -1,5 +1,6 @@
 package fr.univmobile.backend.core;
 
+import net.avcompris.binding.annotation.XPath;
 import fr.univmobile.commons.datasource.EntryBuilder;
 
 /**
@@ -13,11 +14,24 @@ public interface UserBuilder extends EntryBuilder<User>, User {
 
 	UserBuilder setDescription(String description);
 
-	void setDisplayName(String displayName);
+	UserBuilder setDisplayName(String displayName);
 
-	void setSupannCivilite(String supannCivilite);
+	UserBuilder setSupannCivilite(String supannCivilite);
 
-	void setRemoteUser(String remoteUser);
+	UserBuilder setRemoteUser(String remoteUser);
 
-	void setMail(String mail);
+	UserBuilder setMail(String mail);
+	
+	UserBuilder setPasswordEnabled(boolean passwordEnabeld);
+
+	@XPath("atom:content/atom:login_classic/atom:password/@saltPrefix")
+	UserBuilder setPasswordSaltPrefix(String saltPrefix);
+	
+	@XPath("atom:content/atom:login_classic/atom:password/@encryptionAlgorithm")
+	UserBuilder setPasswordEncryptionAlgorithm(String encryptionAlgorithm);
+	
+	@XPath("atom:content/atom:login_classic/atom:password/@encrypted")
+	UserBuilder setPasswordEncrypted(String encrypted);
+	
+	UserBuilder setTwitterScreenName(String twitterScreenName);
 }

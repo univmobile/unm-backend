@@ -8,6 +8,8 @@ import static org.junit.Assert.assertTrue;
 import java.io.File;
 import java.io.IOException;
 
+import net.avcompris.binding.helper.BinderUtils;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -74,7 +76,7 @@ public class CreateUsersTest extends AbstractDbEnabledTest {
 	public void test_create() throws Exception {
 
 		LogQueueDbImpl.setPrincipal("crezvani");
-		
+
 		assertEquals(0, getDbRowCount("unm_history"));
 
 		final UserBuilder user = users.create();
@@ -90,23 +92,128 @@ public class CreateUsersTest extends AbstractDbEnabledTest {
 		assertTrue(user.isNullId());
 		assertTrue(user.isNullSelf());
 
-		final UserManager userManager = new UserManagerImpl(
-				logQueue, users, searchManager,H2, cxn);
-		
+		final UserManager userManager = new UserManagerImpl(logQueue, users,
+				searchManager, H2, cxn);
+
 		final User saved = userManager.addUser(user);
 
 		assertEquals(2, getDbRowCount("unm_history"));
 
-		assertFalse(user.isNullId());
-		assertFalse(user.isNullSelf());
-		assertFalse(isBlank(user.getSelf()));
+		final UserBuilder user2 = BinderUtils.rebind(
+				userManager.getByUid("toto"), UserBuilder.class);
 
-		assertEquals(saved.getId(), user.getSelf());
+		assertFalse(user2.isNullId());
+		assertFalse(user2.isNullSelf());
+		assertFalse(isBlank(user2.getSelf()));
+
+		assertEquals(saved.getId(), user2.getSelf());
 
 		assertEquals("dandriana", saved.getAuthorName());
 		assertEquals("dandriana", saved.getTitle());
 
 		assertEquals(3, users.getAllBy(String.class, "uid").size());
 		assertEquals(4, countFiles());
+	}
+
+	@Test
+	public void test_create_reload() throws Exception {
+
+		LogQueueDbImpl.setPrincipal("crezvani");
+
+		final UserBuilder user = users.create();
+
+		assertEquals("users", user.getCategory());
+
+		user.setUid("toto");
+
+		user.setAuthorName("dandriana").setTitle("dandriana");
+
+		assertTrue(user.isNullId());
+		assertTrue(user.isNullSelf());
+
+		final UserManager userManager = new UserManagerImpl(logQueue, users,
+				searchManager, H2, cxn);
+
+		final User saved = userManager.addUser(user);
+
+		users.reload();
+		
+		final UserBuilder user2 = BinderUtils.rebind(
+				userManager.getByUid("toto"), UserBuilder.class);
+
+		assertFalse(user2.isNullId());
+		assertFalse(user2.isNullSelf());
+		assertFalse(isBlank(user2.getSelf()));
+
+		assertEquals(saved.getId(), user2.getSelf());
+
+		assertEquals("dandriana", saved.getAuthorName());
+		assertEquals("dandriana", saved.getTitle());
+	}
+
+	@Test
+	public void test_create_passwordAndTwitter() throws Exception {
+
+		LogQueueDbImpl.setPrincipal("crezvani");
+
+		final UserBuilder user = users.create();
+
+		user.setUid("toto");
+		user.setDisplayName("Toto Formica");
+		user.setMail("t.formica@univ-paris1.fr");
+		user.setRemoteUser("Toto.Formica:shibboleth");
+
+		user.setPasswordEnabled(true);
+		user.setPasswordEncryptionAlgorithm("PLAINTEXT");
+		user.setPasswordSaltPrefix("(dummy)");
+		user.setPasswordEncrypted("password123");
+
+		user.setTwitterScreenName("xyzed");
+
+		user.setAuthorName("dandriana").setTitle("t.formica");
+
+		final UserManager userManager = new UserManagerImpl(logQueue, users,
+				searchManager, H2, cxn);
+
+		userManager.addUser(user);
+
+		final User user2 = userManager.getByUid("toto");
+
+		assertTrue(user2.getPasswordEnabled());
+		assertEquals("password123", user2.getPassword().getEncrypted());
+		assertEquals("(dummy)", user2.getPassword().getSaltPrefix());
+		assertEquals("PLAINTEXT", user2.getPassword().getEncryptionAlgorithm());
+
+		assertEquals("xyzed", user2.getTwitterScreenName());
+	}
+
+	@Test
+	public void test_create_password_disabled() throws Exception {
+
+		LogQueueDbImpl.setPrincipal("crezvani");
+
+		final UserBuilder user = users.create();
+
+		user.setUid("toto");
+		user.setDisplayName("Toto Formica");
+		user.setMail("t.formica@univ-paris1.fr");
+		user.setRemoteUser("Toto.Formica:shibboleth");
+
+		// user.setPasswordEnabled(true);
+		user.setPasswordEncryptionAlgorithm("PLAINTEXT");
+		user.setPasswordSaltPrefix("(dummy)");
+		user.setPasswordEncrypted("password123");
+
+		user.setAuthorName("dandriana").setTitle("t.formica");
+
+		final UserManager userManager = new UserManagerImpl(logQueue, users,
+				searchManager, H2, cxn);
+
+		userManager.addUser(user);
+
+		final User user2 = userManager.getByUid("toto");
+
+		assertFalse(user2.getPasswordEnabled());
+		assertTrue(user2.isNullPassword());
 	}
 }
