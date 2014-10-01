@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>fr.univmobile</groupId>
 		<artifactId>unm-parent</artifactId>
-		<version>0.0.5-SNAPSHOT</version>
+		<version>0.0.5</version>
 		<relativePath/>
 	</parent>
 
@@ -16,6 +16,7 @@
 		<module>unm-backend-parent</module>
 		<module>unm-commons-datasource</module>
 		<module>unm-backend-core</module>
+		<module>unm-backend-core-it</module>
 		<module>unm-backend-client</module>
 		<module>unm-backend-sysadmin</module>
 		<module>unm-backend-app</module>
