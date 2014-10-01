@@ -21,6 +21,7 @@
 			<item href="CLI.html" name="Command-Line Interface"/>
 			<item href="Tests.html" name="Données de tests"/>
 			<item href="Universities.html" name="Universités"/>
+			<item href="Auth.html" name="Authentification"/>
 		</menu>
 
 		<menu ref="parent" />
