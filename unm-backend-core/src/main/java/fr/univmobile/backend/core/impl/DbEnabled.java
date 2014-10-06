@@ -274,9 +274,9 @@ public abstract class DbEnabled {
 
 		final Connection cxn = getConnection();
 		try {
-			final PreparedStatement pstmt = queryId.startsWith("createpk") ? cxn
-					.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)
-					: cxn.prepareStatement(sql);
+			final PreparedStatement pstmt = // queryId.startsWith("createpk") ?
+			cxn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
+			// : cxn.prepareStatement(sql);
 			try {
 
 				setSqlParams(pstmt, params);

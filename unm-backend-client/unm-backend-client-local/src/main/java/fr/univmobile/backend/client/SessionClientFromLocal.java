@@ -11,23 +11,28 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import fr.univmobile.backend.client.SessionClient.LoginConversation;
+import fr.univmobile.backend.client.User.TwitterFollower;
 import fr.univmobile.backend.core.AppSession;
 import fr.univmobile.backend.core.InvalidSessionException;
 import fr.univmobile.backend.core.SessionManager;
+import fr.univmobile.backend.twitter.TwitterAccess;
+import fr.univmobile.backend.twitter.TwitterUser;
 import fr.univmobile.commons.DataBeans;
 
 public class SessionClientFromLocal extends AbstractClientFromLocal implements
 		SessionClient {
 
 	public SessionClientFromLocal(final String baseURL,
-			final SessionManager sessionManager) {
+			final SessionManager sessionManager, final TwitterAccess twitter) {
 
 		super(baseURL);
 
 		this.sessionManager = checkNotNull(sessionManager, "sessionManager");
+		this.twitter = checkNotNull(twitter, "twitter");
 	}
 
 	private final SessionManager sessionManager;
+	private final TwitterAccess twitter;
 
 	@Override
 	public LoginConversation prepare(final String apiKey) throws IOException,
@@ -89,6 +94,10 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 	@Nullable
 	public AppToken login(final String apiKey, final String login,
 			final String password) throws IOException, ClientException {
+
+		if (log.isInfoEnabled()) {
+			log.info("login():" + login + "...");
+		}
 
 		final AppSession session;
 
@@ -192,7 +201,8 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 		}
 	}
 
-	private static User getUser(final fr.univmobile.backend.core.User dsUser) {
+	private User getUser(final fr.univmobile.backend.core.User dsUser)
+			throws IOException {
 
 		final MutableUser user = DataBeans.instantiate(MutableUser.class) //
 				.setUid(dsUser.getUid()) //
@@ -200,6 +210,38 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 
 		if (!dsUser.isNullMail()) {
 			user.setMail(dsUser.getMail());
+		}
+
+		if (log.isDebugEnabled()) {
+			log.debug("getUser(" + dsUser.getUid()
+					+ ").isNullTwitterScreenName?: "
+					+ dsUser.isNullTwitterScreenName());
+		}
+
+		if (!dsUser.isNullTwitterScreenName()) {
+
+			final String twitterScreenName = dsUser.getTwitterScreenName();
+
+			final int[] followerIds = twitter
+					.getFollowersIds_byScreenName(twitterScreenName);
+
+			for (final int followerId : followerIds) {
+
+				final TwitterUser twitterUser = twitter
+						.getUsersShow_byUserId(followerId);
+
+				if (twitterUser == null) {
+					continue;
+				}
+
+				final MutableTwitterFollower twitterFollower = DataBeans
+						.instantiate(MutableTwitterFollower.class) //
+						.setId(twitterUser.getId()) //
+						.setScreenName(twitterUser.getScreenName()) //
+						.setName(twitterUser.getName());
+
+				user.addToTwitterFollowers(twitterFollower);
+			}
 		}
 
 		return user;
@@ -220,6 +262,17 @@ interface MutableUser extends User {
 	MutableUser setMail(@Nullable String mail);
 
 	MutableUser setDisplayName(String displayName);
+
+	MutableUser addToTwitterFollowers(TwitterFollower twitterFollower);
+}
+
+interface MutableTwitterFollower extends TwitterFollower {
+
+	MutableTwitterFollower setId(int id);
+
+	MutableTwitterFollower setScreenName(String screenName);
+
+	MutableTwitterFollower setName(String name);
 }
 
 interface MutableLoginConversation extends LoginConversation {

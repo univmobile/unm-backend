@@ -96,7 +96,7 @@ final class BackendDataCacheEngine<E extends Entry<E>, EB extends EntryBuilder<E
 
 		// delegate.store(data);
 
-		throw new NotImplementedException();
+		//throw new NotImplementedException();
 	}
 
 	public synchronized void cache(final E data) {

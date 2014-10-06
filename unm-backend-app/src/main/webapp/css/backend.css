@@ -153,8 +153,11 @@ body.results td.none div.principal {
 #body-useradd div.table.bottom a {
 	font-size: small;
 }
-#body-useradd input {
+#body-useradd input.text {
 	width: 20em;
+}
+#body-useradd label {
+	font-size: small;
 }
 #div-regions input {
 	width: 20em;

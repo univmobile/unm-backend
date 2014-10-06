@@ -7,7 +7,9 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertNull;
-import static org.mockito.Mockito.*;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.when;
+
 import java.io.File;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -33,9 +35,32 @@ import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.backend.core.impl.SessionManagerImpl;
 import fr.univmobile.backend.history.LogQueue;
+import fr.univmobile.backend.twitter.TwitterAccess;
+import fr.univmobile.backend.twitter.TwitterUser;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class SessionThroughJSONTest {
+
+	private static TwitterUser twitterUser(final int id, final String screenName, final String name) {
+		
+		return new TwitterUser() {
+			
+			@Override
+			public String getScreenName() {
+				return screenName;
+			}
+			
+			@Override
+			public String getName() {
+				return name;
+			}
+			
+			@Override
+			public int getId() {
+				return id;
+			}
+		};
+	}
 
 	@Before
 	public void setUp() throws Exception {
@@ -71,10 +96,19 @@ public class SessionThroughJSONTest {
 
 		indexation.indexData(null);
 
-		sessionManager = new SessionManagerImpl(logQueue, users, H2, cxn);
+		final TwitterAccess twitter = mock(TwitterAccess.class);
+		
+		when(twitter.getFollowersIds_byScreenName("crezvani")).thenReturn(new int[]{1,2,3});
+
+		when(twitter.getUsersShow_byUserId(1)).thenReturn(twitterUser(1, "riri", "Riri"));
+		when(twitter.getUsersShow_byUserId(2)).thenReturn(twitterUser(2, "fifi", "Fifi"));
+		when(twitter.getUsersShow_byUserId(3)).thenReturn(twitterUser(3, "loulou", "Loulou"));
+
+		sessionManager = new SessionManagerImpl(logQueue, users, H2,
+				cxn);
 
 		final SessionClient sessionClient = new SessionClientFromLocal(
-				"http://dummy/", sessionManager);
+				"http://dummy/", sessionManager, twitter);
 
 		sessionJSONClient = new SessionJSONClientImpl(sessionClient);
 
@@ -153,7 +187,8 @@ public class SessionThroughJSONTest {
 	}
 
 	@Test
-	public void testThroughJSON_prepare_update_retrieve_illegal() throws Exception {
+	public void testThroughJSON_prepare_update_retrieve_illegal()
+			throws Exception {
 
 		final LoginConversation conversation = client.prepare(API_KEY);
 
@@ -167,9 +202,9 @@ public class SessionThroughJSONTest {
 		when(user.getUid()).thenReturn("tformica");
 
 		sessionManager.updateLoginConversation(loginToken, user);
-		
-		final AppToken appToken=client.retrieve(API_KEY, loginToken, key);
-		
+
+		final AppToken appToken = client.retrieve(API_KEY, loginToken, key);
+
 		assertNull(appToken);
 	}
 
@@ -188,9 +223,24 @@ public class SessionThroughJSONTest {
 		when(user.getUid()).thenReturn("crezvani");
 
 		sessionManager.updateLoginConversation(loginToken, user);
-		
-		final AppToken appToken=client.retrieve(API_KEY, loginToken, key);
-		
-		assertEquals("crezvani",appToken.getUser().getUid());
+
+		final AppToken appToken = client.retrieve(API_KEY, loginToken, key);
+
+		assertEquals("crezvani", appToken.getUser().getUid());
+	}
+
+	@Test
+	public void testThroughJSON_login_twitterFollowers() throws Exception {
+
+		final AppToken appToken = client.login(API_KEY, "crezvani",
+				"Hello+World!");
+
+		assertNotNull(appToken);
+
+		final User user = appToken.getUser();
+
+		assertEquals(3, user.getTwitterFollowers().length);
+
+		assertEquals("riri", user.getTwitterFollowers()[0].getScreenName());
 	}
 }

@@ -90,6 +90,8 @@ public class UserManagerImpl extends AbstractDbManagerImpl implements
 				new LoggableString("USER:ADD:%s:{uid=%s}", logged, user
 						.getUid()));
 
+		users.reload(saved);
+		
 		return saved;
 	}
 }

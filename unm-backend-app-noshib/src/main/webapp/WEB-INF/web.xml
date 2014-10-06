@@ -19,11 +19,21 @@
 				http://localhost:8380/unm-backend/json/
 				http://10.0.2.2:8380/unm-backend/json/
 				http://192.168.0.40:8080/unm-backend/json/
+				http://192.168.0.10:8080/unm-backend/json/
+				http://localhost:8080/unm-backend/json/
 			</param-value>
 		</init-param>
 		<init-param>
 			<param-name>dataDir</param-name>
 			<param-value>/tmp/unm-backend/dataDir</param-value>
+		</init-param>
+		<init-param>
+			<param-name>twitter.consumerKey</param-name>
+			<param-value></param-value>
+		</init-param>
+		<init-param>
+			<param-name>twitter.consumerSecret</param-name>
+			<param-value></param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>

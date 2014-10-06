@@ -46,18 +46,22 @@ Administration d’UnivMobile
 <table>
 <tbody>
 <tr>
-	<th>uid</th>
+	<th title="L’identifiant interne à UnivMobile pour le compte utilisateur">
+		uid
+	</th>
 	<td>
-	<input type="text" id="text-uid" name="uid" value="${useradd.uid}">
+	<input class="text" type="text" id="text-uid" name="uid" value="${useradd.uid}">
 	<c:if test="${err_useradd_uid}">
 		<span class="error" title="Le champ est mal formé">Incorrect</span>
 	</c:if>
 	</td>
 </tr>
 <tr>
-	<th>REMOTE_USER</th>
+	<th title="La valeur de l’attribut REMOTE_USER de Shibboleth pour cet utilisateur">
+		REMOTE_USER
+	</th>
 	<td>
-	<input type="text" id="text-remoteUser" name="remoteUser" value="${useradd.remoteUser}">
+	<input class="text" type="text" id="text-remoteUser" name="remoteUser" value="${useradd.remoteUser}">
 	<c:if test="${err_useradd_remoteUser}">
 		<span class="error" title="Le champ est mal formé">Incorrect</span>
 	</c:if>
@@ -76,7 +80,7 @@ Administration d’UnivMobile
 <tr>
 	<th>Nom complet</th>
 	<td>
-	<input type="text" id="text-displayName" name="displayName" value="${useradd.displayName}">
+	<input class="text" type="text" id="text-displayName" name="displayName" value="${useradd.displayName}">
 	<c:if test="${err_useradd_displayName}">
 		<span class="error" title="Le champ est mal formé">Incorrect</span>
 	</c:if>
@@ -85,10 +89,28 @@ Administration d’UnivMobile
 <tr>
 	<th>E-mail</th>
 	<td>
-	<input type="text" id="text-mail" name="mail" value="${useradd.mail}">
+	<input class="text" type="text" id="text-mail" name="mail" value="${useradd.mail}">
 	<c:if test="${err_useradd_mail}">
 		<span class="error" title="Le champ est mal formé">Incorrect</span>
 	</c:if>
+	</td>
+</tr>
+<tr>
+	<th title="Le mot de passe à utiliser lorsque Shibboleth n’est pas disponible">
+		Mot de passe
+	</th>
+	<td>
+	<input class="text" type="text" id="text-password" name="password" value="${useradd_moreInfo.password}">
+	<input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes">
+	<label for="checkbox-passwordEnabled"> Activé</label>
+	</td>
+</tr>
+<tr>
+	<th title="(Optionnel) L’identifiant Twitter de l’utilisateur">
+		Twitter screen_name
+	</th>
+	<td>
+	<input class="text" type="text" id="text-twitter_screen_name" name="twitter_screen_name" value="${useradd.twitterScreenName}">
 	</td>
 </tr>
 </tbody>

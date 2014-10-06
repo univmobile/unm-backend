@@ -12,7 +12,7 @@ import org.json.simple.JSONValue;
 import fr.univmobile.commons.http.Authorization;
 import fr.univmobile.commons.http.BasicAuthentication;
 
-public class ApplicationOnly extends TwitterAccess {
+public class ApplicationOnly extends TwitterAccessImpl {
 
 	public static final String OAUTH2_URL = "https://api.twitter.com/oauth2/token";
 
@@ -26,13 +26,13 @@ public class ApplicationOnly extends TwitterAccess {
 	private final String consumerSecret;
 
 	@Override
-	public Authorization getAuthorization () throws IOException {
-		
+	protected Authorization getAuthorization() throws IOException {
+
 		final String accessToken = getAccessToken();
-		
+
 		return new BearerAuthentication(accessToken);
 	}
-	
+
 	private String getAccessToken() throws IOException {
 
 		if (accessToken == null) {

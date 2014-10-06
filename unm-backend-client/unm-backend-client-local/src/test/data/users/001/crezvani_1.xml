@@ -25,6 +25,7 @@
 			encryptionAlgorithm="SHA-1"
 			encrypted="f620dbedc1c0a115fa85b788c80890096d76e0ef"/>
 	</login_classic>
+	<twitter screenName="crezvani"/>
 </content>
 </entry>
 

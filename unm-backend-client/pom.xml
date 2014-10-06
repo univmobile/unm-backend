@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>fr.univmobile</groupId>
 		<artifactId>unm-parent</artifactId>
-		<version>0.0.5-SNAPSHOT</version>
+		<version>0.1.1-SNAPSHOT</version>
 		<relativePath />
 	</parent>
 
@@ -72,7 +72,7 @@
 							<docletArtifact>
 								<groupId>fr.univmobile</groupId>
 								<artifactId>unm-devel-xmldoclet</artifactId>
-								<version>0.0.5-SNAPSHOT</version>
+								<version>${unm-version}</version>
 							</docletArtifact>
 							<useStandardDocletOptions>false</useStandardDocletOptions>
 							<!--
@@ -126,7 +126,7 @@
             scm:git:https://github.com/univmobile/unm-backend.git
         </developerConnection>
 		<url>
-			https://github.com/univmobile/unm-backend/tree/develop/unm-backend-client
+			https://github.com/univmobile/unm-backend/tree/master/unm-backend-client
         </url>
 	</scm>
 	<ciManagement>

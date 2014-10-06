@@ -17,6 +17,8 @@ delegationUser:
     displayName: Toto Formica
     supannCivilite: M.
     remoteUser: tformica@univ-paris1.fr 
+    passwordEnabled: true
+    twitterScreenName: 
 
 useradd:
   type: fr.univmobile.backend.core.User
@@ -25,7 +27,14 @@ useradd:
     mail: Toto.Formica@univ-paris1.fr
     displayName: Toto Formica
     supannCivilite: Mme
-    remoteUser: tformica@univ-paris1.fr 
+    remoteUser: tformica@univ-paris1.fr
+    passwordEnabled: true
+    twitterScreenName: dandriana
+    
+useradd_moreInfo:
+  type: fr.univmobile.backend.core.MoreInfo
+  value:
+    password: tralala 
 
 err_useradd_displayName: true
 
