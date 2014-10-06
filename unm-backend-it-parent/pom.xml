@@ -239,6 +239,16 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>unm_ios7b_minnie</id>
+			<properties>
+				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
+				<mysql.url>jdbc:mysql://localhost:3306/univmobile_minnie</mysql.url>
+				<mysql.username>root</mysql.username>
+				<mysql.password.ref>/settings/*/server[id = 'mysql']/password</mysql.password.ref>
+				<tomcat.port>8382</tomcat.port>
+			</properties>
+		</profile>
+		<profile>
 			<id>ks3haxm</id>
 			<properties>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39</cargo.home>
