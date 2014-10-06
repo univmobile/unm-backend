@@ -73,8 +73,9 @@
 						<type>standalone</type>
 						<home>${project.build.directory}/${cargo.containerId}</home>
 						<properties>
-							<cargo.servlet.port>8380</cargo.servlet.port>
-							<cargo.tomcat.ajp.port>8309</cargo.tomcat.ajp.port>
+							<cargo.rmi.port>${tomcat.rmi.port}</cargo.rmi.port>
+							<cargo.servlet.port>${tomcat.servlet.port}</cargo.servlet.port>
+							<cargo.tomcat.ajp.port>${tomcat.ajp.port}</cargo.tomcat.ajp.port>
 						</properties>
 						<configfiles>
 							<configfile>
@@ -191,13 +192,19 @@
 		</repository>
 	</repositories>
 
+	<properties>
+		<tomcat.rmi.port>8205</tomcat.rmi.port>
+		<tomcat.servlet.port>8380</tomcat.servlet.port>
+		<tomcat.ajp.port>8309</tomcat.ajp.port>
+	</properties>
+	
 	<profiles>
 		<profile>
 			<id>dandriana</id>
 			<properties>
 				<cargo.containerId>tomcat7x</cargo.containerId>
 				<cargo.home>/usr/local/apache-tomcat-7.0.39/</cargo.home>
-				<tomcat.port>8380</tomcat.port>
+				<tomcat.servlet.port>8380</tomcat.servlet.port>
 				<mysql.url>jdbc:mysql://localhost:3306/toto</mysql.url>
 				<mysql.username>root</mysql.username>
 				<mysql.password.ref>/settings/*/server[id = 'mysql']/password</mysql.password.ref>
@@ -208,7 +215,6 @@
 			<properties>
 				<cargo.containerId>tomcat7x</cargo.containerId>
 				<!-- <cargo.home>/opt/apache-tomcat-7.0.39</cargo.home> -->
-				<tomcat.port>8380</tomcat.port>
 			</properties>
 		</profile>
 		<profile>
@@ -245,7 +251,10 @@
 				<mysql.url>jdbc:mysql://localhost:3306/univmobile_minnie</mysql.url>
 				<mysql.username>root</mysql.username>
 				<mysql.password.ref>/settings/*/server[id = 'mysql']/password</mysql.password.ref>
-				<tomcat.port>8382</tomcat.port>
+				<tomcat.rmi.port>8207</tomcat.rmi.port>
+				<tomcat.servlet.port>8382</tomcat.servlet.port>
+				<tomcat.ajp.port>8311</tomcat.ajp.port>
+				<jsonBaseURL>http://localhost:8382/unm-backend/json/</jsonBaseURL>
 			</properties>
 		</profile>
 		<profile>
