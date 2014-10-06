@@ -255,6 +255,7 @@
 				<tomcat.servlet.port>8382</tomcat.servlet.port>
 				<tomcat.ajp.port>8311</tomcat.ajp.port>
 				<jsonBaseURL>http://localhost:8382/unm-backend/json/</jsonBaseURL>
+				<appium.port>4724</appium.port>
 			</properties>
 		</profile>
 		<profile>
