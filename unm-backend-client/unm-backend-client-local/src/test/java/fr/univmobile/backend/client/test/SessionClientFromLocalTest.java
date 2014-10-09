@@ -36,27 +36,28 @@ import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class SessionClientFromLocalTest {
 
-	private static TwitterUser twitterUser(final int id, final String screenName, final String name) {
-		
+	private static TwitterUser twitterUser(final int id,
+			final String screenName, final String name) {
+
 		return new TwitterUser() {
-			
+
 			@Override
 			public String getScreenName() {
 				return screenName;
 			}
-			
+
 			@Override
 			public String getName() {
 				return name;
 			}
-			
+
 			@Override
 			public int getId() {
 				return id;
 			}
 		};
 	}
-	
+
 	@Before
 	public void setUp() throws Exception {
 
@@ -92,17 +93,23 @@ public class SessionClientFromLocalTest {
 		indexation.indexData(null);
 
 		final TwitterAccess twitter = mock(TwitterAccess.class);
-		
-		when(twitter.getFollowersIds_byScreenName("crezvani")).thenReturn(new int[]{1,2,3});
 
-		when(twitter.getUsersShow_byUserId(1)).thenReturn(twitterUser(1, "riri", "Riri"));
-		when(twitter.getUsersShow_byUserId(2)).thenReturn(twitterUser(2, "fifi", "Fifi"));
-		when(twitter.getUsersShow_byUserId(3)).thenReturn(twitterUser(3, "loulou", "Loulou"));
+		when(twitter.getFollowersIds_byScreenName("crezvani")).thenReturn(
+				new int[] { 1, 2, 3 });
+
+		when(twitter.getUsersShow_byUserId(1)).thenReturn(
+				twitterUser(1, "riri", "Riri"));
+		when(twitter.getUsersShow_byUserId(2)).thenReturn(
+				twitterUser(2, "fifi", "Fifi"));
+		when(twitter.getUsersShow_byUserId(3)).thenReturn(
+				twitterUser(3, "loulou", "Loulou"));
 
 		final SessionManager sessionManager = new SessionManagerImpl(logQueue,
 				users, H2, cxn);
 
-		client = new SessionClientFromLocal("http://dummy/", sessionManager, twitter);
+		client = new SessionClientFromLocal( //
+				"http://dummy/", "http://dummy/", "http://dummy/", //
+				"http://dummy/", sessionManager, twitter);
 
 		LogQueueDbImpl.setAnonymous();// Principal(null); // "crezvani");
 	}

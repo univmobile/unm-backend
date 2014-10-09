@@ -13,6 +13,7 @@ import org.apache.commons.logging.LogFactory;
 
 import fr.univmobile.backend.client.AppToken;
 import fr.univmobile.backend.client.ClientException;
+import fr.univmobile.backend.client.SSOConfiguration;
 import fr.univmobile.backend.client.SessionClient;
 import fr.univmobile.backend.client.SessionClient.LoginConversation;
 import fr.univmobile.backend.client.User;
@@ -186,13 +187,36 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 		return tokenJSON(token);
 	}
 
-	/**
-	 * Throw an {@link IllegalStateException}: This method is of no use in a
-	 * local environment.
-	 */
 	@Override
 	public String getSSOConfigurationJSON() throws IOException {
 
-		throw new IllegalStateException("Illegal in a local environment.");
+		if (log.isDebugEnabled()) {
+			log.debug("getSSOConfigurationJSON()...");
+		}
+
+		final SSOConfiguration ssoConfiguration;
+
+		try {
+
+			ssoConfiguration = sessionClient.getSSOConfiguration();
+
+		} catch (final ClientException e) {
+
+			log.fatal(e);
+
+			throw new RuntimeException(e);
+		}
+
+		final JSONMap sso = new JSONMap();
+
+		sso.put("url", ssoConfiguration.getURL());
+
+		sso.put("target",
+				new JSONMap().put("url", ssoConfiguration.getTargetURL()));
+
+		sso.put("callback",
+				new JSONMap().put("url", ssoConfiguration.getCallbackURL()));
+
+		return new JSONMap().put("sso", sso).toJSONString();
 	}
 }

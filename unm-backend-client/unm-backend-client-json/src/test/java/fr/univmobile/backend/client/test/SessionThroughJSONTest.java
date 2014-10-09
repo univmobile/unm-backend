@@ -41,20 +41,21 @@ import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class SessionThroughJSONTest {
 
-	private static TwitterUser twitterUser(final int id, final String screenName, final String name) {
-		
+	private static TwitterUser twitterUser(final int id,
+			final String screenName, final String name) {
+
 		return new TwitterUser() {
-			
+
 			@Override
 			public String getScreenName() {
 				return screenName;
 			}
-			
+
 			@Override
 			public String getName() {
 				return name;
 			}
-			
+
 			@Override
 			public int getId() {
 				return id;
@@ -97,17 +98,21 @@ public class SessionThroughJSONTest {
 		indexation.indexData(null);
 
 		final TwitterAccess twitter = mock(TwitterAccess.class);
-		
-		when(twitter.getFollowersIds_byScreenName("crezvani")).thenReturn(new int[]{1,2,3});
 
-		when(twitter.getUsersShow_byUserId(1)).thenReturn(twitterUser(1, "riri", "Riri"));
-		when(twitter.getUsersShow_byUserId(2)).thenReturn(twitterUser(2, "fifi", "Fifi"));
-		when(twitter.getUsersShow_byUserId(3)).thenReturn(twitterUser(3, "loulou", "Loulou"));
+		when(twitter.getFollowersIds_byScreenName("crezvani")).thenReturn(
+				new int[] { 1, 2, 3 });
 
-		sessionManager = new SessionManagerImpl(logQueue, users, H2,
-				cxn);
+		when(twitter.getUsersShow_byUserId(1)).thenReturn(
+				twitterUser(1, "riri", "Riri"));
+		when(twitter.getUsersShow_byUserId(2)).thenReturn(
+				twitterUser(2, "fifi", "Fifi"));
+		when(twitter.getUsersShow_byUserId(3)).thenReturn(
+				twitterUser(3, "loulou", "Loulou"));
+
+		sessionManager = new SessionManagerImpl(logQueue, users, H2, cxn);
 
 		final SessionClient sessionClient = new SessionClientFromLocal(
+				"http://dummy/", "http://dummy/", "http://dummy/", //
 				"http://dummy/", sessionManager, twitter);
 
 		sessionJSONClient = new SessionJSONClientImpl(sessionClient);

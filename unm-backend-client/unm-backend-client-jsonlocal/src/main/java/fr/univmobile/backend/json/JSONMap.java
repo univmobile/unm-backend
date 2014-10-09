@@ -31,14 +31,23 @@ public class JSONMap implements JSONAware {
 		return this;
 	}
 
-	public JSONMap put(final String key, @Nullable final JSONMap value) {
+	public JSONMap put(final String key, @Nullable final JSONAware value) {
 
 		return putAny(key, value);
 	}
 
-	public JSONMap put(final String key, @Nullable final JSONList value) {
+	public JSONMap put(final JSONObject json) {
 
-		return putAny(key, value);
+		checkNotNull(json, "json");
+
+		for (final Object key : json.keySet()) {
+
+			final JSONObject value = (JSONObject) json.get(key);
+
+			put(key.toString(), value);
+		}
+
+		return this;
 	}
 
 	public JSONMap put(final String key, @Nullable final String value) {

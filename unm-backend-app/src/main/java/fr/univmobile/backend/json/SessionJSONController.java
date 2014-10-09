@@ -7,6 +7,8 @@ import java.sql.SQLException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
 
 import fr.univmobile.backend.client.json.SessionJSONClient;
 import fr.univmobile.backend.core.AppSession;
@@ -23,25 +25,14 @@ import fr.univmobile.web.commons.Paths;
 @Paths({ "json/session", "json/session/", "json/session.json" })
 public class SessionJSONController extends AbstractJSONController {
 
-	public SessionJSONController(final String ssoBaseURL,
-			final String shibbolethTargetBaseURL,
-			final String shibbolethCallbackURL,
-			final SessionManager sessionManager,
+	public SessionJSONController(final SessionManager sessionManager,
 			final SessionJSONClient sessionJSONClient) {
 
-		this.ssoBaseURL = checkNotNull(ssoBaseURL, "ssoBaseURL");
-		this.shibbolethTargetBaseURL = checkNotNull(shibbolethTargetBaseURL,
-				"shibbolethTargetBaseURL");
-		this.shibbolethCallbackURL = checkNotNull(shibbolethCallbackURL,
-				"shibbolethCallbackURL");
 		this.sessionManager = checkNotNull(sessionManager, "sessionManager");
 		this.sessionJSONClient = checkNotNull(sessionJSONClient,
 				"sessionJSONClient");
 	}
 
-	private final String ssoBaseURL;
-	private final String shibbolethTargetBaseURL;
-	private final String shibbolethCallbackURL;
 	private final SessionManager sessionManager;
 	private final SessionJSONClient sessionJSONClient;
 
@@ -140,19 +131,10 @@ public class SessionJSONController extends AbstractJSONController {
 								new JSONMap().put("loginToken", "xxx").put(
 										"key", "xxx")));
 
-		final JSONMap sso = new JSONMap();
+		final JSONObject ssoConfiguration = (JSONObject) JSONValue
+				.parse(sessionJSONClient.getSSOConfigurationJSON());
 
-		json.put("sso", sso);
-
-		sso.put("url", composeEndPoint(ssoBaseURL, //
-				"?target=${target.url}&entityID=${shibboleth.entityProvider}"));
-
-		sso.put("target", new JSONMap().put("url",
-				composeEndPoint(shibbolethTargetBaseURL, //
-						"?loginToken=${loginToken}&callback=${callback.url}")));
-
-		sso.put("callback", new JSONMap().put("url",
-				composeEndPoint(shibbolethCallbackURL)));
+		json.put(ssoConfiguration);
 
 		json.put(
 				"retrieve",

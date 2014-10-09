@@ -262,15 +262,16 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final TwitterAccess twitter = new ApplicationOnly(consumerKey,
 				consumerSecret);
 
+		final String ssoBaseURL = checkedInitParameter("shibboleth.ssoBaseURL");
+		final String shibbolethTargetBaseURL = checkedInitParameter("shibboleth.targetBaseURL");
+		final String shibbolethCallbackURL = checkedInitParameter("shibboleth.callbackURL");
+
 		final SessionClient sessionClient = new SessionClientFromLocal(baseURL,
+				ssoBaseURL, shibbolethTargetBaseURL, shibbolethCallbackURL, //
 				sessionManager, twitter);
 
 		final SessionJSONClient sessionJSONClient = new SessionJSONClientImpl(
 				sessionClient);
-
-		final String ssoBaseURL = checkedInitParameter("shibboleth.ssoBaseURL");
-		final String shibbolethTargetBaseURL = checkedInitParameter("shibboleth.targetBaseURL");
-		final String shibbolethCallbackURL = checkedInitParameter("shibboleth.callbackURL");
 
 		this.jsonControllers = new AbstractJSONController[] {
 				new EndpointsJSONController(), //
@@ -279,7 +280,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new PoisJSONController(poiJSONClient), //
 				new CommentsJSONController(pois, commentJSONClient), //
 				new SessionJSONController( //
-						ssoBaseURL, shibbolethTargetBaseURL, shibbolethCallbackURL, //
 						sessionManager, sessionJSONClient) //
 		};
 

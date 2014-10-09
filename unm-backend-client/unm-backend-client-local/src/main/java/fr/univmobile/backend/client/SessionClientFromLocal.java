@@ -22,15 +22,26 @@ import fr.univmobile.commons.DataBeans;
 public class SessionClientFromLocal extends AbstractClientFromLocal implements
 		SessionClient {
 
-	public SessionClientFromLocal(final String baseURL,
+	public SessionClientFromLocal(
+			final String baseURL, //
+			final String ssoBaseURL, final String shibbolethTargetBaseURL,
+			final String shibbolethCallbackURL, //
 			final SessionManager sessionManager, final TwitterAccess twitter) {
 
 		super(baseURL);
 
+		this.ssoBaseURL = checkNotNull(ssoBaseURL, "ssoBaseURL");
+		this.shibbolethTargetBaseURL = checkNotNull(shibbolethTargetBaseURL,
+				"shibbolethTargetBaseURL");
+		this.shibbolethCallbackURL = checkNotNull(shibbolethCallbackURL,
+				"shibbolethCallbackURL");
 		this.sessionManager = checkNotNull(sessionManager, "sessionManager");
 		this.twitter = checkNotNull(twitter, "twitter");
 	}
 
+	private final String ssoBaseURL;
+	private final String shibbolethTargetBaseURL;
+	private final String shibbolethCallbackURL;
 	private final SessionManager sessionManager;
 	private final TwitterAccess twitter;
 
@@ -247,15 +258,21 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 		return user;
 	}
 
-	/**
-	 * Throw an {@link IllegalStateException}: This method is of no use
-	 * in a local environment.
-	 */
 	@Override
 	public SSOConfiguration getSSOConfiguration() throws IOException,
 			ClientException {
-		
-		throw new IllegalStateException("Illegal in a local environment.");
+
+		return DataBeans
+				.instantiate(MutableSSOConfiguration.class)
+
+				.setURL(ssoBaseURL
+						+ "?target=${target.url}&entityID=${shibboleth.entityProvider}") //
+
+				.setTargetURL(
+						shibbolethTargetBaseURL
+								+ "?loginToken=${loginToken}&callback=${callback.url}") //
+
+				.setCallbackURL(shibbolethCallbackURL);
 	}
 }
 
@@ -291,4 +308,13 @@ interface MutableLoginConversation extends LoginConversation {
 	MutableLoginConversation setLoginToken(String loginToken);
 
 	MutableLoginConversation setKey(String key);
+}
+
+interface MutableSSOConfiguration extends SSOConfiguration {
+
+	MutableSSOConfiguration setURL(String url);
+
+	MutableSSOConfiguration setTargetURL(String targetURL);
+
+	MutableSSOConfiguration setCallbackURL(String callbackURL);
 }
