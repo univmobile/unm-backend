@@ -23,14 +23,25 @@ import fr.univmobile.web.commons.Paths;
 @Paths({ "json/session", "json/session/", "json/session.json" })
 public class SessionJSONController extends AbstractJSONController {
 
-	public SessionJSONController(final SessionManager sessionManager,
+	public SessionJSONController(final String ssoBaseURL,
+			final String shibbolethTargetBaseURL,
+			final String shibbolethCallbackURL,
+			final SessionManager sessionManager,
 			final SessionJSONClient sessionJSONClient) {
 
+		this.ssoBaseURL = checkNotNull(ssoBaseURL, "ssoBaseURL");
+		this.shibbolethTargetBaseURL = checkNotNull(shibbolethTargetBaseURL,
+				"shibbolethTargetBaseURL");
+		this.shibbolethCallbackURL = checkNotNull(shibbolethCallbackURL,
+				"shibbolethCallbackURL");
 		this.sessionManager = checkNotNull(sessionManager, "sessionManager");
 		this.sessionJSONClient = checkNotNull(sessionJSONClient,
 				"sessionJSONClient");
 	}
 
+	private final String ssoBaseURL;
+	private final String shibbolethTargetBaseURL;
+	private final String shibbolethCallbackURL;
 	private final SessionManager sessionManager;
 	private final SessionJSONClient sessionJSONClient;
 
@@ -78,9 +89,82 @@ public class SessionJSONController extends AbstractJSONController {
 			return retrieve(retrieve);
 		}
 
-		sendError400();
+		return urls(baseURL);
+	}
 
-		return null;
+	private String urls(final String baseURL) throws IOException,
+			TransactionException {
+
+		log.debug("urls()...");
+
+		final JSONMap json = new JSONMap();
+
+		final String myURL = composeJSONendPoint(baseURL, "/session");
+
+		json.put("url", myURL);
+
+		json.put(
+				"login",
+				new JSONMap()
+						.put("url", myURL)
+						.put("POST_params",
+								new JSONMap().put("apiKey", "xxx")
+										.put("login", "xxx")
+										.put("password", "xxx"))
+						.put("returnType", "AppToken"));
+
+		json.put(
+				"refresh",
+				new JSONMap()
+						.put("url", myURL)
+						.put("POST_params",
+								new JSONMap().put("apiKey", "xxx").put(
+										"appTokenId", "xxx"))
+						.put("returnType", "AppToken"));
+
+		json.put(
+				"logout",
+				new JSONMap().put("url", myURL).put(
+						"POST_params",
+						new JSONMap().put("logout", "").put("apiKey", "xxx")
+								.put("appTokenId", "xxx")));
+
+		json.put(
+				"prepare",
+				new JSONMap()
+						.put("url", myURL)
+						.put("POST_params",
+								new JSONMap().put("prepare", "").put("apiKey",
+										"xxx"))
+						.put("return",
+								new JSONMap().put("loginToken", "xxx").put(
+										"key", "xxx")));
+
+		final JSONMap sso = new JSONMap();
+
+		json.put("sso", sso);
+
+		sso.put("url", composeEndPoint(ssoBaseURL, //
+				"?target=${target.url}&entityID=${shibboleth.entityProvider}"));
+
+		sso.put("target", new JSONMap().put("url",
+				composeEndPoint(shibbolethTargetBaseURL, //
+						"?loginToken=${loginToken}&callback=${callback.url}")));
+
+		sso.put("callback", new JSONMap().put("url",
+				composeEndPoint(shibbolethCallbackURL)));
+
+		json.put(
+				"retrieve",
+				new JSONMap()
+						.put("url", myURL)
+						.put("POST_params",
+								new JSONMap().put("apiKey", "xxx")
+										.put("loginToken", "xxx")
+										.put("key", "xxx"))
+						.put("returnType", "AppToken"));
+
+		return json.toJSONString();
 	}
 
 	private String refresh(final Refresh refresh) throws IOException {
@@ -195,7 +279,8 @@ public class SessionJSONController extends AbstractJSONController {
 
 		if (appSession == null) {
 
-			log.error("Retrieve: Unknown appSession for loginToken: " + loginToken);
+			log.error("Retrieve: Unknown appSession for loginToken: "
+					+ loginToken);
 
 			return ""; // empty string
 		}

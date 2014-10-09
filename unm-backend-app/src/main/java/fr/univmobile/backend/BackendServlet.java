@@ -256,16 +256,21 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final CommentJSONClient commentJSONClient = new CommentJSONClientImpl(
 				commentClient);
 
-		final String consumerKey = getInitParameter("twitter.consumerKey");
-		final String consumerSecret = getInitParameter("twitter.consumerSecret");
-		
-		final TwitterAccess twitter = new ApplicationOnly(consumerKey, consumerSecret);
-		
+		final String consumerKey = checkedInitParameter("twitter.consumerKey");
+		final String consumerSecret = checkedInitParameter("twitter.consumerSecret");
+
+		final TwitterAccess twitter = new ApplicationOnly(consumerKey,
+				consumerSecret);
+
 		final SessionClient sessionClient = new SessionClientFromLocal(baseURL,
 				sessionManager, twitter);
 
 		final SessionJSONClient sessionJSONClient = new SessionJSONClientImpl(
 				sessionClient);
+
+		final String ssoBaseURL = checkedInitParameter("shibboleth.ssoBaseURL");
+		final String shibbolethTargetBaseURL = checkedInitParameter("shibboleth.targetBaseURL");
+		final String shibbolethCallbackURL = checkedInitParameter("shibboleth.callbackURL");
 
 		this.jsonControllers = new AbstractJSONController[] {
 				new EndpointsJSONController(), //
@@ -273,7 +278,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new UniversitiesJSONController(regions, regionJSONClient), //
 				new PoisJSONController(poiJSONClient), //
 				new CommentsJSONController(pois, commentJSONClient), //
-				new SessionJSONController(sessionManager, sessionJSONClient) //
+				new SessionJSONController( //
+						ssoBaseURL, shibbolethTargetBaseURL, shibbolethCallbackURL, //
+						sessionManager, sessionJSONClient) //
 		};
 
 		for (final AbstractJSONController jsonController : jsonControllers) {

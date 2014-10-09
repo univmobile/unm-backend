@@ -20,6 +20,20 @@ public abstract class AbstractJSONController extends AbstractController {
 				+ (path.startsWith("/") || "".equals(path) ? "" : "/") + path;
 	}
 
+	protected static String composeEndPoint(final String baseURL,
+			final String path) {
+
+		final boolean questionMark = path.startsWith("?");
+
+		return baseURL + (questionMark || baseURL.endsWith("/") ? "" : "/") //
+				+ (path.startsWith("/") ? path.substring(1) : path);
+	}
+
+	protected static String composeEndPoint(final String baseURL) {
+
+		return baseURL;
+	}
+
 	@Override
 	public final View action() {
 

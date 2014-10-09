@@ -30,6 +30,18 @@
 			<param-name>twitter.consumerSecret</param-name>
 			<param-value></param-value>
 		</init-param>
+		<init-param>
+			<param-name>shibboleth.ssoBaseURL</param-name>
+			<param-value>https://univmobile-dev.univ-paris1.fr/Shibboleth.sso/Login</param-value>
+		</init-param>
+		<init-param>
+			<param-name>shibboleth.targetBaseURL</param-name>
+			<param-value>https://univmobile-dev.univ-paris1.fr/testSP/</param-value>
+		</init-param>
+		<init-param>
+			<param-name>shibboleth.callbackURL</param-name>
+			<param-value>https://univmobile-dev.univ-paris1.fr/testSP/success</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>BackendServlet</servlet-name>

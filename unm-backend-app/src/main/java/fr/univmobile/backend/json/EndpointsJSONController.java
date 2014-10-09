@@ -32,6 +32,10 @@ public class EndpointsJSONController extends AbstractJSONController {
 				"url", composeJSONendPoint(baseURL, "/pois" // + ".json"
 				)));
 
+		json.put("session", new JSONMap().put( //
+				"url", composeJSONendPoint(baseURL, "/session" // + ".json"
+				)));
+
 		return json.toJSONString();
 	}
 }
