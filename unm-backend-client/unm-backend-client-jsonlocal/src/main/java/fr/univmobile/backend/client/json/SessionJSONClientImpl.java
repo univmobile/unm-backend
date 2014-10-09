@@ -185,4 +185,14 @@ public class SessionJSONClientImpl implements SessionJSONClient {
 
 		return tokenJSON(token);
 	}
+
+	/**
+	 * Throw an {@link IllegalStateException}: This method is of no use in a
+	 * local environment.
+	 */
+	@Override
+	public String getSSOConfigurationJSON() throws IOException {
+
+		throw new IllegalStateException("Illegal in a local environment.");
+	}
 }

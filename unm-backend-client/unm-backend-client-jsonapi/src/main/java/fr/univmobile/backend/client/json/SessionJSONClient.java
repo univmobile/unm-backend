@@ -15,4 +15,6 @@ public interface SessionJSONClient {
 
 	String retrieveJSON(String apiKey, String loginToken, String key)
 			throws IOException;
+
+	String getSSOConfigurationJSON() throws IOException;
 }

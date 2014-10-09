@@ -246,6 +246,17 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 
 		return user;
 	}
+
+	/**
+	 * Throw an {@link IllegalStateException}: This method is of no use
+	 * in a local environment.
+	 */
+	@Override
+	public SSOConfiguration getSSOConfiguration() throws IOException,
+			ClientException {
+		
+		throw new IllegalStateException("Illegal in a local environment.");
+	}
 }
 
 interface MutableAppToken extends AppToken {

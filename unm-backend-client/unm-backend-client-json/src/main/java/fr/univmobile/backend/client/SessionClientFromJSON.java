@@ -103,6 +103,19 @@ public class SessionClientFromJSON extends
 		jsonClient.logoutJSON(apiKey, appTokenId);
 	}
 
+	@Override
+	public SSOConfiguration getSSOConfiguration() throws IOException,
+			ClientException {
+		
+		if (log.isDebugEnabled()) {
+			log.debug("getSSOConfiguration()...");
+		}
+
+		final String json = jsonClient.getSSOConfigurationJSON();
+		
+		return unmarshall(json, SSOConfigurationJSON.class);
+	}
+
 	@XPath("/*")
 	public interface AppTokenJSON extends AppToken {
 
@@ -159,5 +172,21 @@ public class SessionClientFromJSON extends
 		@XPath("@key")
 		@Override
 		String getKey();
+	}
+
+	@XPath("/*")
+	public interface SSOConfigurationJSON extends SSOConfiguration {
+
+		@XPath("sso/@url")
+		@Override
+		String getURL();
+
+		@XPath("sso/callback/@url")
+		@Override
+		String getCallbackURL();
+
+		@XPath("sso/target/@url")
+		@Override
+		String getTargetURL();
 	}
 }

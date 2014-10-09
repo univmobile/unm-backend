@@ -70,4 +70,9 @@ public interface SessionClient {
 	 */
 	void logout(String apiKey, String appTokenId) throws IOException,
 			ClientException;
+
+	/**
+	 * SSO Configuration.
+	 */
+	SSOConfiguration getSSOConfiguration() throws IOException, ClientException;
 }
