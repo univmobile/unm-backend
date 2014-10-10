@@ -85,10 +85,10 @@ public interface User extends Entry<User> {
 	
 	interface RefUser {
 		
-		@XPath("atom:uid")
+		@XPath("uid")
 		String getUid();
 		
-		@XPath("atom:remoteUser")
+		@XPath("remoteUser")
 		String getRemoteUser();
 	}
 	
