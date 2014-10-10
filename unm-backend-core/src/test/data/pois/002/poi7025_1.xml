@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7025_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7025_1.xml"/>
-<title>Résidence du colombier</title>
-<updated>2014-08-15T01:47:42.454+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7025"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7025_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7025_1.xml"/>
+<atom:title>Résidence du colombier</atom:title>
+<atom:updated>2014-08-15T01:47:42.454+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7025"
 	coordinates="48.633007970706,2.5528219342232|48.633078875347,2.5530365109444|48.632632174445,2.553508579731|48.632525816505,2.5532296299934|48.632617993399,2.5532081723213|48.633007970706,2.5528219342232"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="Gérald MORIN"
 	name="Résidence du colombier">
 	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

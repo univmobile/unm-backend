@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi544_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi544_1.xml"/>
-<title>Polygone 2</title>
-<updated>2014-08-15T01:46:40.674+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="544"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi544_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi544_1.xml"/>
+<atom:title>Polygone 2</atom:title>
+<atom:updated>2014-08-15T01:46:40.674+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="544"
 	coordinates="48.652752185143,1.8532133102417|48.652580308272,1.8533232808113|48.652504115245,1.8530604243279|48.652445641448,1.8530657887459|48.652390711456,1.8530255556107|48.652365904343,1.8529745936394|48.652293254871,1.8530067801476|48.652215289467,1.8527412414551|48.652372992091,1.8526393175125|48.652401343072,1.8527171015739|48.652458044986,1.8526956439018|48.652530694221,1.852725148201|48.652580308272,1.8527787923813|48.652598027564,1.8528404831886|48.652647641549,1.8528029322624|48.652752185143,1.8532133102"
 	active="true"
 	markerType="polygon"
@@ -24,5 +24,5 @@
 		<fullAddress>19 allée des Vignes
 78120 Rambouillet</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

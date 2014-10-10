@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1242_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1242_1.xml"/>
-<title>La terrasse</title>
-<updated>2014-08-15T01:46:45.979+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1242"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1242_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1242_1.xml"/>
+<atom:title>La terrasse</atom:title>
+<atom:updated>2014-08-15T01:46:45.979+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1242"
 	coordinates="48.904034342853,2.211761623621|48.904087235089,2.211756259203|48.904126022694,2.2118099033833|48.904104865822,2.2119547426701|48.904185967115,2.2121049463749|48.90426354214,2.2121049463749|48.904327012527,2.2121907770634|48.904309381872,2.2122819721699|48.904252963735,2.21230879426|48.904193019395,2.2123248875141|48.904020238247,2.2120083868504|48.90402729055,2.2119332849979|48.904002607484,2.2118528187275|48.904034342853,2.211761623"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="Marine Gianfermi Paris X"
 	name="La terrasse">
 	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

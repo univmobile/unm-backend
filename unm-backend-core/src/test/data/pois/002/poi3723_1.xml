@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3723_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3723_1.xml"/>
-<title>Chœur de Saint-Denis</title>
-<updated>2014-08-15T01:47:09.781+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3723"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3723_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3723_1.xml"/>
+<atom:title>Chœur de Saint-Denis</atom:title>
+<atom:updated>2014-08-15T01:47:09.781+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3723"
 	coordinates="48.943864082819,2.3629966378212"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Contact ACA (bâtiment G). Répétitions au bâtiment A.</description>
 		<phone>01 49 40 65 28</phone>
 		<email>aca@univ-paris8.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

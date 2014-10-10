@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi5086_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5086_1.xml"/>
-<title>polygone</title>
-<updated>2014-08-15T01:47:23.287+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="5086"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi5086_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5086_1.xml"/>
+<atom:title>polygone</atom:title>
+<atom:updated>2014-08-15T01:47:23.287+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="5086"
 	coordinates="48.789915525121,2.3300946503878|48.789940264487,2.3304621130228|48.789843074051,2.3304782062769|48.789834238548,2.330309227109|48.78963808997,2.3303333669901|48.789625720214,2.3302582651377|48.789590378038,2.3302448540926|48.78958154249,2.330129519105|48.789836005649,2.3301053792238|48.789846608252,2.3301080614328|48.789851909553,2.3301831632853|48.789917292219,2.3301831632853|48.789915525121,2.3300946503878"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="Basile Michel"
 	name="polygone">
 	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

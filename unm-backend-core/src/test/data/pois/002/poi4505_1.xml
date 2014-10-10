@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4505_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4505_1.xml"/>
-<title>Site de Sénart</title>
-<updated>2014-08-15T01:47:18.022+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4505"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4505_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4505_1.xml"/>
+<atom:title>Site de Sénart</atom:title>
+<atom:updated>2014-08-15T01:47:18.022+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4505"
 	coordinates="48.626994776492,2.5629043579102"
 	active="true"
 	markerType="point"
@@ -38,5 +38,5 @@
 	<child uid="5479" active="true"/>
 	<child uid="5482" active="true"/>
 	<child uid="7023" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

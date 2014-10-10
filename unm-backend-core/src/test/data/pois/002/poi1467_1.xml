@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1467_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1467_1.xml"/>
-<title>UFR Sc. Humaines Cliniques (SHC)</title>
-<updated>2014-08-15T01:46:47.881+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1467"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1467_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1467_1.xml"/>
+<atom:title>UFR Sc. Humaines Cliniques (SHC)</atom:title>
+<atom:updated>2014-08-15T01:46:47.881+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1467"
 	coordinates="48.875151290845,2.3526349291"
 	active="true"
 	markerType="point"
@@ -31,5 +31,5 @@ RER E,B,D Gare du Nord</itinerary>
 		<email>liliane.deltell@univ-paris-diderot.fr</email>
 	</address>
 	<attachment id="82" title="stlazare.gif" type="image" url="/uploads/poi/f83a9754a7d37457b97d20564c921b6187a7aa6c.gif"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

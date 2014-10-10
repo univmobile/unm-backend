@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6445_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6445_1.xml"/>
-<title>Métiers de la formation aux techno de l'industrie M1-2</title>
-<updated>2014-08-15T01:47:37.270+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6445"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6445_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6445_1.xml"/>
+<atom:title>Métiers de la formation aux techno de l'industrie M1-2</atom:title>
+<atom:updated>2014-08-15T01:47:37.270+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6445"
 	coordinates="48.9389323379,2.3539254069328"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@
 		<phone>01 49 71 87 11 </phone>
 		<email>francois.costa@u-pec.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

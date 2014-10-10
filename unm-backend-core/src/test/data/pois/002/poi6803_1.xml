@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6803_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6803_1.xml"/>
-<title>Cafétéria l'AnK</title>
-<updated>2014-08-15T01:47:40.369+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6803"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6803_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6803_1.xml"/>
+<atom:title>Cafétéria l'AnK</atom:title>
+<atom:updated>2014-08-15T01:47:40.369+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6803"
 	coordinates="48.902383548032,2.2124750912189"
 	active="true"
 	markerType="point"
@@ -24,5 +24,5 @@
 		<openingHours>de 8h à 15h</openingHours>
 	</address>
 	<attachment id="232" title="ank.jpg" type="image" url="/uploads/poi/8c657f62e46cd41ac2bac30504239e3e18cf6d22.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6463_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6463_1.xml"/>
-<title>Métrologie, qualité et sûreté industrielle (L3 Pro MQSI)</title>
-<updated>2014-08-15T01:47:37.502+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6463"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6463_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6463_1.xml"/>
+<atom:title>Métrologie, qualité et sûreté industrielle (L3 Pro MQSI)</atom:title>
+<atom:updated>2014-08-15T01:47:37.502+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6463"
 	coordinates="48.827378173923,2.381789535284"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 		<phone>01 57 27 79 90 </phone>
 		<email>iut.dir@univ-paris-diderot.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

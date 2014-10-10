@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1472_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1472_1.xml"/>
-<title>UFR Odontologie</title>
-<updated>2014-08-15T01:46:47.912+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1472"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1472_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1472_1.xml"/>
+<atom:title>UFR Odontologie</atom:title>
+<atom:updated>2014-08-15T01:46:47.912+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1472"
 	coordinates="48.850807956028,2.33594236895"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Métro 10 Mabillon
 		<email>gregory.aupiais@univ-paris-diderot.fr</email>
 	</address>
 	<attachment id="85" title="garanciere.gif" type="image" url="/uploads/poi/7b0daa6fb5661f7c1a629ff68adffc573722b9a5.gif"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

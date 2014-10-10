@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2848_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2848_1.xml"/>
-<title>Polygone 1</title>
-<updated>2014-08-15T01:47:00.599+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2848"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2848_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2848_1.xml"/>
+<atom:title>Polygone 1</atom:title>
+<atom:updated>2014-08-15T01:47:00.599+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2848"
 	coordinates="48.843471584754,2.3331044241786|48.843286237245,2.3332881554961|48.843130897853,2.3329501971602|48.843109715171,2.3329569026828|48.843083236807,2.3329059407115|48.843100889051,2.3328777775168|48.843049697525,2.3327637836337|48.84304263662,2.3327517136931|48.84293584032,2.3325183615088|48.842884648625,2.3324043676257|48.842527187913,2.3327825590968|48.842739016791,2.3332506045699|48.842716068706,2.3332774266601|48.842765495338,2.3333739861846|48.842813156687,2.3333257064223|48.842814921921,2.3333029076457|48.842866996304,2.3332559689879|48.842874939849,2.3332626745105|48.842905831402,2.3332251235843|48.842919070633,2.3332076892257|48.842947314314,2.3331647738814|48.842963201378,2.3331875726581|48.8431044195,2.3334893211722|48.843110597783,2.3335094377398|48.843126484795,2.3335496708751|48.843235045908,2.3337266966701|48.843247402443,2.333721332252|48.843430102276,2.333533577621|48.843584558136,2.333364598453|48.843471584754,2.333104424178"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="yasmine"
 	name="Polygone 1">
 	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

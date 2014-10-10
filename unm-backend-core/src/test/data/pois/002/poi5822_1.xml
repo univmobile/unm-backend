@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi5822_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5822_1.xml"/>
-<title>PIISTE - M1-2</title>
-<updated>2014-08-15T01:47:30.509+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="5822"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi5822_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5822_1.xml"/>
+<atom:title>PIISTE - M1-2</atom:title>
+<atom:updated>2014-08-15T01:47:30.509+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="5822"
 	coordinates="48.854705731313,2.7751033008099"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@
 		<fax>01 60 95 78 32</fax>
 		<email>sophie.jasmin@univ-mlv.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

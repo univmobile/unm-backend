@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7428_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7428_1.xml"/>
-<title>Ecole de botanique</title>
-<updated>2014-08-15T01:47:46.191+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7428"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7428_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7428_1.xml"/>
+<atom:title>Ecole de botanique</atom:title>
+<atom:updated>2014-08-15T01:47:46.191+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7428"
 	coordinates="48.843596752773,2.3594373464584"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@ Ouvert tous les jours de 08 h 00 à 17 h 30 en période d’hiver.</openingHours
 		<url>http://www.jardindesplantes.net</url>
 		<phone>01 40 79 56 01</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

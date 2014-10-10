@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2291_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2291_1.xml"/>
-<title>Site d’enseignement de Riquet</title>
-<updated>2014-08-15T01:46:55.589+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2291"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2291_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2291_1.xml"/>
+<atom:title>Site d’enseignement de Riquet</atom:title>
+<atom:updated>2014-08-15T01:46:55.589+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2291"
 	coordinates="48.888907584583,2.376091517508|48.889001055777,2.3761894181371|48.889181825044,2.3763570562005|48.889030155264,2.3766520991921|48.888957847417,2.3765541985631|48.888988710535,2.3765018954873|48.88899576496,2.3765032365918|48.889016928227,2.3764683678746|48.889029273462,2.3764415457845|48.889020455437,2.3764267936349|48.8890442641,2.3763811960816|48.888964901846,2.3762752488256|48.888946383968,2.3762698844075|48.888859967115,2.3764160647988|48.888755032165,2.3762819543481|48.888837921976,2.3761223629117|48.888882012245,2.3761451616883|48.888907584583,2.3760915"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="Marine Gianfermi Paris X"
 	name="Site d’enseignement de Riquet">
 	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6606_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6606_1.xml"/>
-<title>Campus de Gif sur Yvette, Bâtiment 12</title>
-<updated>2014-08-15T01:47:38.714+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6606"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6606_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6606_1.xml"/>
+<atom:title>Campus de Gif sur Yvette, Bâtiment 12</atom:title>
+<atom:updated>2014-08-15T01:47:38.714+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6606"
 	coordinates="48.70519794507,2.1344891935587|48.705148382817,2.1343497186899|48.705210335626,2.1342907100916|48.705173163949,2.134180739522|48.705288219049,2.1340868622065|48.705320080415,2.1341968327761|48.705399733741,2.1341297775507|48.705451065818,2.1342638880014|48.705367872426,2.1343389898539|48.70533601109,2.1342853456736|48.705242197041,2.134365811944|48.70526520805,2.1344355493784|48.70519794507,2.1344891935587"
 	active="true"
 	markerType="polygon"
@@ -27,5 +27,5 @@ Bâtiment 12
 Avenue de la Terrasse 
 91198 Gif-sur-Yvette cedex </fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

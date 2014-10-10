@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3854_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3854_1.xml"/>
-<title>Institutions et dynamiques historiques de l’économie (IDHE)</title>
-<updated>2014-08-15T01:47:11.003+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3854"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3854_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3854_1.xml"/>
+<atom:title>Institutions et dynamiques historiques de l’économie (IDHE)</atom:title>
+<atom:updated>2014-08-15T01:47:11.003+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3854"
 	coordinates="48.946946939285,2.3614483326674"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Paris 1 est le site principal.</description>
 		<fax>01 45 65 92 86</fax>
 		<email>philippe.minard@ens.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

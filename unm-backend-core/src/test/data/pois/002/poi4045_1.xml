@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4045_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4045_1.xml"/>
-<title>Grec L3, M1-2</title>
-<updated>2014-08-15T01:47:13.048+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4045"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4045_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4045_1.xml"/>
+<atom:title>Grec L3, M1-2</atom:title>
+<atom:updated>2014-08-15T01:47:13.048+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4045"
 	coordinates="48.848085472198,2.342965900898"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ Fermé le vendredi après midi.</openingHours>
 		<phone> 01 40 46 27 46</phone>
 		<email>sorbonne.grec@paris-sorbonne.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

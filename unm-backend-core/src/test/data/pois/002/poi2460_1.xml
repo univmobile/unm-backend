@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2460_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2460_1.xml"/>
-<title>St. Cloud Pôle des métiers du livres</title>
-<updated>2014-08-15T01:46:56.994+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2460"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2460_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2460_1.xml"/>
+<atom:title>St. Cloud Pôle des métiers du livres</atom:title>
+<atom:updated>2014-08-15T01:46:56.994+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2460"
 	coordinates="48.84354972471,2.21532560884"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 92210 Saint-Cloud</fullAddress>
 	</address>
 	<child uid="2000" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

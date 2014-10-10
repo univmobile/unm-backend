@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2517_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2517_1.xml"/>
-<title>AGORA</title>
-<updated>2014-08-15T01:46:57.515+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2517"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2517_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2517_1.xml"/>
+<atom:title>AGORA</atom:title>
+<atom:updated>2014-08-15T01:46:57.515+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2517"
 	coordinates="48.779740986662,2.04435154795"
 	active="true"
 	markerType="point"
@@ -23,5 +23,5 @@
 	<address>
 		<email>agora.uvsq@gmail.com</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

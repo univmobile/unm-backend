@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4398_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4398_1.xml"/>
-<title>Université Paris-Sud </title>
-<updated>2014-08-15T01:47:16.865+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4398"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4398_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4398_1.xml"/>
+<atom:title>Université Paris-Sud </atom:title>
+<atom:updated>2014-08-15T01:47:16.865+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4398"
 	coordinates=""
 	active="true"
 	markerType="point"
@@ -38,5 +38,5 @@
 	<child uid="6575" active="true"/>
 	<child uid="6592" active="true"/>
 	<attachment id="115" title="logoweb_ups.gif" type="image" url="/uploads/poi/70267e17fe0e8db4a5ddc569810449b21b6fb938.gif"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

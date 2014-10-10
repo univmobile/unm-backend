@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3784_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3784_1.xml"/>
-<title>Spécialité Electronique et Informatique - Polytech</title>
-<updated>2014-08-15T01:47:10.366+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3784"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3784_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3784_1.xml"/>
+<atom:title>Spécialité Electronique et Informatique - Polytech</atom:title>
+<atom:updated>2014-08-15T01:47:10.366+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3784"
 	coordinates="48.845121066453,2.3570875637233"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<phone>01 44 27 40 39</phone>
 		<email>eli-polytech@upmc.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1987_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1987_1.xml"/>
-<title>test</title>
-<updated>2014-08-15T01:46:53.159+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1987"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1987_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1987_1.xml"/>
+<atom:title>test</atom:title>
+<atom:updated>2014-08-15T01:46:53.159+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1987"
 	coordinates="48.780441895609,2.032535076141"
 	active="true"
 	markerType="point"
@@ -20,5 +20,5 @@
 	updatedBy="Amélie Lagrene P7"
 	name="test">
 	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

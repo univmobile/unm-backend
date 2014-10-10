@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2675_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2675_1.xml"/>
-<title>Gestion des entreprises et des administrations</title>
-<updated>2014-08-15T01:46:58.979+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2675"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2675_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2675_1.xml"/>
+<atom:title>Gestion des entreprises et des administrations</atom:title>
+<atom:updated>2014-08-15T01:46:58.979+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2675"
 	coordinates="48.84192986977,2.2680216282"
 	active="true"
 	markerType="point"
@@ -23,5 +23,5 @@
 	<address>
 		<phone>01 42 86 49 02</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

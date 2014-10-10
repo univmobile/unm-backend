@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7256_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7256_1.xml"/>
-<title>Département de biologie</title>
-<updated>2014-08-15T01:47:44.903+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7256"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7256_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7256_1.xml"/>
+<atom:title>Département de biologie</atom:title>
+<atom:updated>2014-08-15T01:47:44.903+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7256"
 	coordinates="48.789043366325,2.3274117708206"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ Les disciplines de prédilection sont la biochimie, la microbiologie et la biolo
 		<fax>01 47 40 76 27</fax>
 		<email>catherine.bonnemaison@ens-cachan.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

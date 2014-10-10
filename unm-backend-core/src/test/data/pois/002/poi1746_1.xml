@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1746_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1746_1.xml"/>
-<title>Mangement des organisations sanitaires et sociales M1-2</title>
-<updated>2014-08-15T01:46:50.490+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1746"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1746_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1746_1.xml"/>
+<atom:title>Mangement des organisations sanitaires et sociales M1-2</atom:title>
+<atom:updated>2014-08-15T01:46:50.490+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1746"
 	coordinates="48.913318834876,2.42033556103"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<fax>01 48 38 89 20</fax>
 		<email>aurelie.hiolin@univ-paris13.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

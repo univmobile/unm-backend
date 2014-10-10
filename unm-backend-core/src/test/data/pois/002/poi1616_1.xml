@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1616_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1616_1.xml"/>
-<title>Service Culture de l'université Paris Diderot</title>
-<updated>2014-08-15T01:46:49.247+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1616"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1616_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1616_1.xml"/>
+<atom:title>Service Culture de l'université Paris Diderot</atom:title>
+<atom:updated>2014-08-15T01:46:49.247+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1616"
 	coordinates="48.829813387828,2.38138787448"
 	active="true"
 	markerType="point"
@@ -24,5 +24,5 @@
 		<floor>Batiment D des Grands moulins, RDC</floor>
 		<openingHours>Tous les jours : 11h à 17h30</openingHours>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

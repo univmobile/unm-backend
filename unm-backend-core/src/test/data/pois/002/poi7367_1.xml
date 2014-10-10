@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7367_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7367_1.xml"/>
-<title>Ilôt Poliveau</title>
-<updated>2014-08-15T01:47:45.667+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7367"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7367_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7367_1.xml"/>
+<atom:title>Ilôt Poliveau</atom:title>
+<atom:updated>2014-08-15T01:47:45.667+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7367"
 	coordinates="48.840295825148,2.3565164208412|48.841107867158,2.3601964116096|48.842054056023,2.3595634102821|48.84140443574,2.3571386933327|48.840747745804,2.3574605584145|48.840295825148,2.3565164208412"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="carole.francq"
 	name="Ilôt Poliveau">
 	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

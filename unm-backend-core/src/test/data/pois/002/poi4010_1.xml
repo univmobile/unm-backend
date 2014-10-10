@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4010_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4010_1.xml"/>
-<title>ED 393</title>
-<updated>2014-08-15T01:47:12.654+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4010"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4010_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4010_1.xml"/>
+<atom:title>ED 393</atom:title>
+<atom:updated>2014-08-15T01:47:12.654+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4010"
 	coordinates="48.850383836147,2.3416724056005"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<phone>01 56 24 29 93</phone>
 		<email>guilloux@u707.jussieu.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

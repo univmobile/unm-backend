@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi778_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi778_1.xml"/>
-<title>Centre Malher</title>
-<updated>2014-08-15T01:46:41.854+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="778"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi778_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi778_1.xml"/>
+<atom:title>Centre Malher</atom:title>
+<atom:updated>2014-08-15T01:46:41.854+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="778"
 	coordinates="48.855978264478,2.3610"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ Bus 76 et 96</itinerary>
 	</address>
 	<child uid="1001" active="true"/>
 	<attachment id="18" title="Mahler.jpg" type="image" url="/uploads/poi/7f08cd6adca94b01d9e497035596ca051a4d8049.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

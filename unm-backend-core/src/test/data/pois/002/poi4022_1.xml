@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4022_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4022_1.xml"/>
-<title>Campus des Cordeliers bâtiment A</title>
-<updated>2014-08-15T01:47:12.781+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4022"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4022_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4022_1.xml"/>
+<atom:title>Campus des Cordeliers bâtiment A</atom:title>
+<atom:updated>2014-08-15T01:47:12.781+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4022"
 	coordinates="48.850720782007,2.3414903506637"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ Bus : Lignes 58 , 63, 70, 86, 87, 96 </itinerary>
 	</address>
 	<child uid="4025" active="true"/>
 	<child uid="4026" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

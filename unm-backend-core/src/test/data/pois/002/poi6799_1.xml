@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6799_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6799_1.xml"/>
-<title>Brasserie La Terrasse</title>
-<updated>2014-08-15T01:47:40.326+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6799"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6799_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6799_1.xml"/>
+<atom:title>Brasserie La Terrasse</atom:title>
+<atom:updated>2014-08-15T01:47:40.326+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6799"
 	coordinates="48.904103220313,2.2120982408524"
 	active="true"
 	markerType="point"
@@ -24,5 +24,5 @@
 		<openingHours>de 8h à 14h30</openingHours>
 	</address>
 	<attachment id="248" title="Brasserie la terrasse.jpg" type="image" url="/uploads/poi/059445665717e8098c81fb9b9df05775e87b8498.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

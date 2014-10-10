@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi512_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi512_1.xml"/>
-<title>ISTY Mécatronique Mantes la Ville </title>
-<updated>2014-08-15T01:46:40.480+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="512"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi512_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi512_1.xml"/>
+<atom:title>ISTY Mécatronique Mantes la Ville </atom:title>
+<atom:updated>2014-08-15T01:46:40.480+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="512"
 	coordinates="48.985218343942,1.7002737522"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 	</address>
 	<child uid="2503" active="true"/>
 	<child uid="2505" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

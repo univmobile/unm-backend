@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6361_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6361_1.xml"/>
-<title>DU Formateur d'adultes (DUFA)</title>
-<updated>2014-08-15T01:47:36.421+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6361"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6361_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6361_1.xml"/>
+<atom:title>DU Formateur d'adultes (DUFA)</atom:title>
+<atom:updated>2014-08-15T01:47:36.421+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6361"
 	coordinates="48.795981281859,2.4486945569515"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 		<phone>01 45 17 44 12</phone>
 		<email>catherine.olivier@u-pec.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

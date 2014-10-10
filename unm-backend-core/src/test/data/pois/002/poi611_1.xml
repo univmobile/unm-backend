@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi611_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi611_1.xml"/>
-<title>Site Sorbonne</title>
-<updated>2014-08-15T01:46:40.855+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="611"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi611_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi611_1.xml"/>
+<atom:title>Site Sorbonne</atom:title>
+<atom:updated>2014-08-15T01:46:40.855+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="611"
 	coordinates="48.850318855889,2.3329300583282|48.850364745081,2.3337347210327|48.849824661922,2.3338151873031|48.849782302212,2.3331714571395|48.849694052702,2.3331929148117|48.849690522718,2.3330266178527|48.850318855889,2.332930058328"
 	active="true"
 	markerType="polygon"
@@ -23,5 +23,5 @@
 	<address
 		countryCode="FR">
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

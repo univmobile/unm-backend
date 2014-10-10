@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3056_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3056_1.xml"/>
-<title>Laboratoire de neurophysique et physiologie</title>
-<updated>2014-08-15T01:47:02.525+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3056"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3056_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3056_1.xml"/>
+<atom:title>Laboratoire de neurophysique et physiologie</atom:title>
+<atom:updated>2014-08-15T01:47:02.525+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3056"
 	coordinates="48.855198112304,2.3315691947937"
 	active="true"
 	markerType="point"
@@ -24,5 +24,5 @@
 		<phone>01 42 86 21 38 </phone>
 		<fax>01 49 27 90 62</fax>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

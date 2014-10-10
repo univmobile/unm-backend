@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4115_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4115_1.xml"/>
-<title>Polygone</title>
-<updated>2014-08-15T01:47:13.837+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4115"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4115_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4115_1.xml"/>
+<atom:title>Polygone</atom:title>
+<atom:updated>2014-08-15T01:47:13.837+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4115"
 	coordinates="48.816002666462,2.4010756239295|48.816104221656,2.401253990829|48.816145726763,2.4012030288577|48.816218139846,2.401351891458|48.816563425182,2.4009294435382|48.816620825327,2.4010152742267|48.816604929909,2.4010380730033|48.816609345303,2.4010528251529|48.816626123799,2.401076965034|48.815615871752,2.4023617431521|48.815633533676,2.4023872241378|48.815586729564,2.4024489149451|48.815635299868,2.4025266990066|48.815648546307,2.402511946857|48.815750985312,2.402699701488|48.815778361217,2.4026567861438|48.815986770848,2.4030054733157|48.81608567681,2.4028955027461|48.816257878689,2.4032079800963|48.816515738858,2.4032227322459|48.817646069154,2.4018172547221|48.816876034407,2.4007443711162|48.816780662308,2.4008878692985|48.816659680773,2.4006947502494|48.81675063772,2.4005780741572|48.816574905216,2.4003460630774|48.816002666462,2.4010756239295"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	parentUid="4112"
 	name="Polygone">
 	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

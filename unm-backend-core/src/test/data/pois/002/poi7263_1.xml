@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7263_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7263_1.xml"/>
-<title>Département de mathématiques</title>
-<updated>2014-08-15T01:47:44.979+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7263"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7263_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7263_1.xml"/>
+<atom:title>Département de mathématiques</atom:title>
+<atom:updated>2014-08-15T01:47:44.979+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7263"
 	coordinates="48.790236487989,2.3273058235645"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<fax>01 47 40 59 01</fax>
 		<email>secretariat.math@ens-cachan.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

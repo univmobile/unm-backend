@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7368_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7368_1.xml"/>
-<title>Galerie de botanique</title>
-<updated>2014-08-15T01:47:45.668+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7368"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7368_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7368_1.xml"/>
+<atom:title>Galerie de botanique</atom:title>
+<atom:updated>2014-08-15T01:47:45.668+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7368"
 	coordinates="48.842255530797,2.3594346642494|48.842375567922,2.3593059182167|48.842749799466,2.3608401417732|48.842587397441,2.3609259724617|48.842255530797,2.3594346642494"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="carole.francq"
 	name="Galerie de botanique">
 	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

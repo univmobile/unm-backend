@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7226_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7226_1.xml"/>
-<title>Salle Condorcet</title>
-<updated>2014-08-15T01:47:44.521+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7226"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7226_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7226_1.xml"/>
+<atom:title>Salle Condorcet</atom:title>
+<atom:updated>2014-08-15T01:47:44.521+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7226"
 	coordinates="48.788442538969,2.3270791769028"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 		<floor>Aile P, Niveau 2</floor>
 	</address>
 	<attachment id="258" title="IMG_3902.JPG" type="image" url="/uploads/poi/1b3b15d8097716876a77e03c8b02fd15ea27728d.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

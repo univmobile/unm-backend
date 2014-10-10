@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi580_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi580_1.xml"/>
-<title>Polygone</title>
-<updated>2014-08-15T01:46:40.819+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="580"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi580_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi580_1.xml"/>
+<atom:title>Polygone</atom:title>
+<atom:updated>2014-08-15T01:46:40.819+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="580"
 	coordinates="48.618651155828,2.3068553209305|48.618640517097,2.3073971271515|48.618399371931,2.3073542118073|48.618452565816,2.3070001602173|48.618530583414,2.3069250583649|48.618566045918,2.3068875074387|48.618651155828,2.3068553"
 	active="true"
 	markerType="polygon"
@@ -25,5 +25,5 @@
 		<floor>IUT de Brétigny/Orge</floor>
 		<itinerary>RER C</itinerary>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

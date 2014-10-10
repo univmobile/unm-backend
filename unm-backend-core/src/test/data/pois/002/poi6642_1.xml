@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6642_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6642_1.xml"/>
-<title>Restaurant et Cafétéria Universitaire Supelec</title>
-<updated>2014-08-15T01:47:38.933+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6642"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6642_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6642_1.xml"/>
+<atom:title>Restaurant et Cafétéria Universitaire Supelec</atom:title>
+<atom:updated>2014-08-15T01:47:38.933+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6642"
 	coordinates="48.708029992755,2.1637574583292"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ Cafétéria
 de 8h à 16h45</openingHours>
 	</address>
 	<attachment id="158" title="supelec.jpg" type="image" url="/uploads/poi/2fab06e97ef9aa3d322346714e417241108c7f9b.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

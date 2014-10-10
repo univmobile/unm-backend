@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3559_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3559_1.xml"/>
-<title>UFR Mathématiques et Informatique</title>
-<updated>2014-08-15T01:47:08.019+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3559"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3559_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3559_1.xml"/>
+<atom:title>UFR Mathématiques et Informatique</atom:title>
+<atom:updated>2014-08-15T01:47:08.019+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3559"
 	coordinates="48.855485685265,2.3315256088972"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@
 		<phone>01 44 55 35 20</phone>
 		<email>scolarite@mi.parisdescartes.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

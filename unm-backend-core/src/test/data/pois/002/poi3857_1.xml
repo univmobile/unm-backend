@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3857_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3857_1.xml"/>
-<title>BU Institut de papyrologie</title>
-<updated>2014-08-15T01:47:11.051+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3857"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3857_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3857_1.xml"/>
+<atom:title>BU Institut de papyrologie</atom:title>
+<atom:updated>2014-08-15T01:47:11.051+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3857"
 	coordinates="48.846168298706,2.2652958333492"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Vendredi :
 		<phone>01 40 50 25 88</phone>
 		<email>institut-papyrologie@paris-sorbonne.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3887_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3887_1.xml"/>
-<title>Laboratoire d’études romanes</title>
-<updated>2014-08-15T01:47:11.356+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3887"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3887_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3887_1.xml"/>
+<atom:title>Laboratoire d’études romanes</atom:title>
+<atom:updated>2014-08-15T01:47:11.356+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3887"
 	coordinates="48.947156153603,2.3616441339254"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<fax>01 49 40 68 94</fax>
 		<email>fdecroisette@wanadoo.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

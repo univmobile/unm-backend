@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2733_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2733_1.xml"/>
-<title>Hôpital Tenon</title>
-<updated>2014-08-15T01:46:59.624+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2733"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2733_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2733_1.xml"/>
+<atom:title>Hôpital Tenon</atom:title>
+<atom:updated>2014-08-15T01:46:59.624+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2733"
 	coordinates="48.865762664938,2.40092977881"
 	active="true"
 	markerType="point"
@@ -21,5 +21,5 @@
 	name="Hôpital Tenon">
 	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
 	<child uid="4413" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

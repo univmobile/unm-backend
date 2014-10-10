@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi450_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi450_1.xml"/>
-<title>Evry bâtiment 1 ers Cycles</title>
-<updated>2014-08-15T01:46:40.007+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="450"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi450_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi450_1.xml"/>
+<atom:title>Evry bâtiment 1 ers Cycles</atom:title>
+<atom:updated>2014-08-15T01:46:40.007+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="450"
 	coordinates="48.623569555554,2.4242663383484"
 	active="true"
 	markerType="point"
@@ -45,5 +45,5 @@ Ligne C - station Evry Couronnes (changement Juvisy) </itinerary>
 	<child uid="5168" active="true"/>
 	<child uid="5183" active="true"/>
 	<child uid="5190" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

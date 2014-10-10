@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2268_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2268_1.xml"/>
-<title>Polygone 1</title>
-<updated>2014-08-15T01:46:55.412+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2268"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2268_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2268_1.xml"/>
+<atom:title>Polygone 1</atom:title>
+<atom:updated>2014-08-15T01:46:55.412+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2268"
 	coordinates="48.909564202321,2.3038659989834|48.909750185856,2.3037225008011|48.909964374568,2.3043622076511|48.909777510393,2.3045070469379|48.909688485234,2.3042415082455|48.909611800069,2.3043005168438|48.909683196606,2.304520457983|48.909408187163,2.3047256469727|48.909228372478,2.3041811585426|48.909498975704,2.3039652407169|48.909584475442,2.3041945695877|48.909651464825,2.3041422665119|48.909564202321,2.30386599898"
 	active="true"
 	markerType="polygon"
@@ -30,5 +30,5 @@ Autobus :
 		<fullAddress>104 quai de Clichy 
 92110 Clichy </fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

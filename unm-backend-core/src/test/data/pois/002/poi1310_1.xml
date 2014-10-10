@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1310_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1310_1.xml"/>
-<title>Polygone</title>
-<updated>2014-08-15T01:46:46.085+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1310"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1310_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1310_1.xml"/>
+<atom:title>Polygone</atom:title>
+<atom:updated>2014-08-15T01:46:46.085+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1310"
 	coordinates="48.850923472037,2.3358251899481|48.850962300888,2.3362650722265|48.850626959823,2.3363079875708|48.850602250393,2.3360585421324|48.850584600792,2.3358681052923|48.850923472037,2.3358"
 	active="true"
 	markerType="polygon"
@@ -27,5 +27,5 @@ Métro 10 Mabillon
 		<fullAddress>5 rue Garancière
 75006 Paris</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

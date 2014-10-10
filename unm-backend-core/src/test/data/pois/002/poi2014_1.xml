@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2014_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2014_1.xml"/>
-<title>Institut de linguisitque française</title>
-<updated>2014-08-15T01:46:53.370+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2014"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2014_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2014_1.xml"/>
+<atom:title>Institut de linguisitque française</atom:title>
+<atom:updated>2014-08-15T01:46:53.370+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2014"
 	coordinates="48.823299575166,2.3412774"
 	active="true"
 	markerType="point"
@@ -24,5 +24,5 @@
 		<floor>44 rue de l'amiral mouchez 75014</floor>
 		<phone>01 43 13 56 45</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

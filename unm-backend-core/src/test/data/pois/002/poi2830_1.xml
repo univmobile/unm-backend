@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2830_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2830_1.xml"/>
-<title>Campus Jussieu maison de la pédagogie</title>
-<updated>2014-08-15T01:47:00.396+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2830"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2830_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2830_1.xml"/>
+<atom:title>Campus Jussieu maison de la pédagogie</atom:title>
+<atom:updated>2014-08-15T01:47:00.396+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2830"
 	coordinates="48.847729666589,2.358404025435"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 	<child uid="3478" active="true"/>
 	<child uid="3635" active="true"/>
 	<child uid="5935" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

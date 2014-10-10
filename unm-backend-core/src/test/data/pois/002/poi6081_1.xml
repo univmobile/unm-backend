@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6081_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6081_1.xml"/>
-<title>Service universitaire des activités physiques et sportives</title>
-<updated>2014-08-15T01:47:33.502+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6081"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6081_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6081_1.xml"/>
+<atom:title>Service universitaire des activités physiques et sportives</atom:title>
+<atom:updated>2014-08-15T01:47:33.502+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6081"
 	coordinates="48.781836556898,2.2864638268948"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<phone>01 40 91 17 91 </phone>
 		<email>didier.michel@u-psud.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

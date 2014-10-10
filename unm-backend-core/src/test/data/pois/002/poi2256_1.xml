@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2256_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2256_1.xml"/>
-<title>Laboratoire SUDS</title>
-<updated>2014-08-15T01:46:55.380+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2256"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2256_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2256_1.xml"/>
+<atom:title>Laboratoire SUDS</atom:title>
+<atom:updated>2014-08-15T01:46:55.380+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2256"
 	coordinates="48.779871778257,2.044576853513"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 		<phone>0139255692</phone>
 		<email>suds@sudam.uvsq.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

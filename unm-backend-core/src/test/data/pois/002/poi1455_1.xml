@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1455_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1455_1.xml"/>
-<title>Amphithéâtre S 1</title>
-<updated>2014-08-15T01:46:47.756+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1455"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1455_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1455_1.xml"/>
+<atom:title>Amphithéâtre S 1</atom:title>
+<atom:updated>2014-08-15T01:46:47.756+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1455"
 	coordinates="48.905027679117,2.2129649296403|48.905287726906,2.213445045054|48.905167840636,2.2135912254453|48.90512288321,2.2135214880109|48.904995944379,2.2136757150292|48.904868123702,2.213458456099|48.904751762526,2.2136167064309|48.904628348861,2.2133927419782|48.904866360656,2.2130950167775|48.904887517205,2.2131352499127|48.905027679117,2.212964929"
 	active="true"
 	markerType="polygon"
@@ -23,5 +23,5 @@
 	<address>
 		<floor>RDC</floor>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

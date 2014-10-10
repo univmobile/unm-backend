@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3766_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3766_1.xml"/>
-<title>Polygone</title>
-<updated>2014-08-15T01:47:10.194+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3766"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3766_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3766_1.xml"/>
+<atom:title>Polygone</atom:title>
+<atom:updated>2014-08-15T01:47:10.194+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3766"
 	coordinates="48.844469956136,2.3430783860385|48.844497757649,2.3429301939905|48.844606315789,2.3429778032005|48.844601020275,2.3430086486042|48.844667214155,2.3430381529033|48.844677363875,2.3430616222322|48.844673392246,2.3430938087404|48.844654416678,2.3431038670242|48.844643384368,2.3431581817567|48.844657505725,2.3431682400405|48.844648238585,2.3432098142803|48.844631910763,2.3432024382055|48.844593077004,2.3434196971357|48.844544976056,2.3436771892011|48.844549830282,2.343706022948|48.844535267602,2.3437321744859|48.844522028798,2.3437315039337|48.844508348697,2.3437999002635|48.844544976056,2.3438166640699|48.844523793972,2.3439212702215|48.844395818693,2.3438475094736|48.844326976683,2.3438133113086|48.844360956405,2.343661095947|48.844425385424,2.3436906002462|48.8444726039,2.3434612713754|48.844449656609,2.3434458486736|48.844488049186,2.3432587645948|48.84448054719,2.3432473652065|48.844495109886,2.3431601934135|48.844481429778,2.3431528173387|48.844494227299,2.3430978320539|48.844469956136,2.3430783860385"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="Martin Gobert"
 	name="Polygone">
 	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

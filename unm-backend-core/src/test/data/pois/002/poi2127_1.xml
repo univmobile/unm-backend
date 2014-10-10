@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2127_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2127_1.xml"/>
-<title>Résidence Universitaire de Châtenay Malabry</title>
-<updated>2014-08-15T01:46:54.395+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2127"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2127_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2127_1.xml"/>
+<atom:title>Résidence Universitaire de Châtenay Malabry</atom:title>
+<atom:updated>2014-08-15T01:46:54.395+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2127"
 	coordinates="48.763542140657,2.2835019975"
 	active="true"
 	markerType="point"
@@ -19,5 +19,5 @@
 	updatedBy="d.rasse"
 	name="Résidence Universitaire de Châtenay Malabry">
 	<poiType id="31" label="Résidence universitaire "/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3544_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3544_1.xml"/>
-<title>UFR 925</title>
-<updated>2014-08-15T01:47:07.850+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3544"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3544_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3544_1.xml"/>
+<atom:title>UFR 925</atom:title>
+<atom:updated>2014-08-15T01:47:07.850+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3544"
 	coordinates="48.847659189114,2.35720558092"
 	active="true"
 	markerType="point"
@@ -53,5 +53,5 @@ L'adresse postale, nos téléphones et adresses électroniques restent inchangé
 		<phone>01 44 27 40 37</phone>
 		<email>francoise.marchand@upmc.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7365_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7365_1.xml"/>
-<title>CTHS</title>
-<updated>2014-08-15T01:47:45.636+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7365"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7365_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7365_1.xml"/>
+<atom:title>CTHS</atom:title>
+<atom:updated>2014-08-15T01:47:45.636+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7365"
 	coordinates="48.825669636584,2.2809049487114"
 	active="true"
 	markerType="point"
@@ -39,5 +39,5 @@ En savoir plus : http://cths.fr/hi/index.php</description>
 		<email>secretariat.general@cths.fr</email>
 	</address>
 	<attachment id="285" title="cths-logo.jpg" type="image" url="/uploads/poi/ab3bb9ebcb3670658e525c3bda1609d5c063a787.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

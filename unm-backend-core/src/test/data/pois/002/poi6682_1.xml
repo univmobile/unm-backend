@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6682_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6682_1.xml"/>
-<title>Résidence Universitaire La Croix St Sylvère</title>
-<updated>2014-08-15T01:47:39.248+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6682"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6682_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6682_1.xml"/>
+<atom:title>Résidence Universitaire La Croix St Sylvère</atom:title>
+<atom:updated>2014-08-15T01:47:39.248+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6682"
 	coordinates="49.030632369124,2.0714358240366"
 	active="true"
 	markerType="point"
@@ -31,5 +31,5 @@ Juillet et août, du lundi au vendredi, de 9h00 à 12h30 14h00 à 17h00.</openin
 		<phone>01 30 30 38 53</phone>
 	</address>
 	<attachment id="244" title="la croix.jpg" type="image" url="/uploads/poi/3a32a968a970b9bed361a47ac820b27bdc93f3c3.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

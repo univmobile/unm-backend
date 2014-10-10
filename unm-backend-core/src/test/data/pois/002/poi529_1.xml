@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi529_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi529_1.xml"/>
-<title>Site IUT de Brétigny </title>
-<updated>2014-08-15T01:46:40.612+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="529"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi529_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi529_1.xml"/>
+<atom:title>Site IUT de Brétigny </atom:title>
+<atom:updated>2014-08-15T01:46:40.612+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="529"
 	coordinates="48.619101526708,2.30748295784|48.61906606458,2.3070752620697|48.619136988812,2.3063349723816|48.619612178594,2.3062705993652|48.619761117754,2.3052406311035|48.618803644056,2.3051977157593|48.617789411368,2.3051762580872|48.617172350742,2.3067426681519|48.617605003236,2.3074615001678|48.618268160106,2.3078209161758|48.618966770488,2.3080140352249|48.619034148643,2.3080462217331|48.619101526708,2.3080837726593|48.619094434285,2.3079442977905|48.619108619131,2.3078638315201|48.619119257763,2.3078370094299|48.619126350183,2.3077887296677|48.619119257763,2.3077887296677|48.619129896393,2.3077404499054|48.619101526708,2.3074829578"
 	active="true"
 	markerType="polygon"
@@ -23,5 +23,5 @@
 	<address
 		countryCode="FR">
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

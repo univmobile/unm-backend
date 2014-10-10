@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi5910_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5910_1.xml"/>
-<title>Restaurant U</title>
-<updated>2014-08-15T01:47:31.533+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="5910"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi5910_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5910_1.xml"/>
+<atom:title>Restaurant U</atom:title>
+<atom:updated>2014-08-15T01:47:31.533+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="5910"
 	coordinates="48.810974176097,2.3528364300728"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<email>restaurant.kremlin@crous-creteil.fr</email>
 	</address>
 	<attachment id="128" title="Kremlin-bicetre.jpg" type="image" url="/uploads/poi/4221d016d9fd46b0d115e266934258bfe18a69fb.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

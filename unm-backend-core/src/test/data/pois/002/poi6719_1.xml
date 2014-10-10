@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6719_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6719_1.xml"/>
-<title>Cafétéria Pharmacie</title>
-<updated>2014-08-15T01:47:39.579+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6719"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6719_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6719_1.xml"/>
+<atom:title>Cafétéria Pharmacie</atom:title>
+<atom:updated>2014-08-15T01:47:39.579+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6719"
 	coordinates="48.843653592418,2.3362281918526"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 		<url>http://www.crous-paris.fr</url>
 	</address>
 	<attachment id="177" title="pharmacie_1.jpg" type="image" url="/uploads/poi/d2b91ae3e2a6ba971264801991669f9bba01c601.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

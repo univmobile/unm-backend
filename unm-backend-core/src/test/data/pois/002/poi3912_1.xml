@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3912_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3912_1.xml"/>
-<title>Bureau des étudiants étrangers</title>
-<updated>2014-08-15T01:47:11.614+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3912"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3912_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3912_1.xml"/>
+<atom:title>Bureau des étudiants étrangers</atom:title>
+<atom:updated>2014-08-15T01:47:11.614+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3912"
 	coordinates="48.848124009093,2.3430208861828"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Fermé le Mercredi</openingHours>
 		<phone>01.40.46.34.08</phone>
 		<email>validations.etrangers@paris-sorbonne.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

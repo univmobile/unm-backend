@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi5120_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5120_1.xml"/>
-<title>Bâtiment Bibliothèque CMC</title>
-<updated>2014-08-15T01:47:23.421+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="5120"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi5120_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5120_1.xml"/>
+<atom:title>Bâtiment Bibliothèque CMC</atom:title>
+<atom:updated>2014-08-15T01:47:23.421+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="5120"
 	coordinates="48.787442322179,2.4437391757965|48.787760414486,2.4437606334686|48.787799292296,2.4436694383621|48.787862910467,2.4436640739441|48.787894719521,2.4435836076736|48.787961871904,2.4435728788376|48.787944200233,2.4434816837311|48.788053764493,2.4431759119034|48.787986612233,2.4429666996002|48.787679124421,2.4429613351822|48.787566024982,2.4432563781738|48.787523612627,2.4432349205017|48.78748826897,2.4432671070099|48.787406978465,2.4432510137558|48.787375169101,2.4433475732803|48.787332756584,2.443476319313|48.787442322179,2.4437391757965"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="Sihé NEYA"
 	name="Bâtiment Bibliothèque CMC">
 	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

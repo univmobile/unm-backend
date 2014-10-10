@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi807_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi807_1.xml"/>
-<title>CROUS Service des bourses </title>
-<updated>2014-08-15T01:46:42.080+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="807"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi807_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi807_1.xml"/>
+<atom:title>CROUS Service des bourses </atom:title>
+<atom:updated>2014-08-15T01:46:42.080+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="807"
 	coordinates="48.827394007053,2.36457981"
 	active="true"
 	markerType="point"
@@ -37,5 +37,5 @@ Arrêt Tolbiac-Baudricourt
 		<phone>01 44 07 88 33 </phone>
 		<email>bourses@univ-paris1.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

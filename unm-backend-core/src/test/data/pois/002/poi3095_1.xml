@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3095_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3095_1.xml"/>
-<title>DEVELOPPEMENT DU SYSTEME IMMUNITAIRE</title>
-<updated>2014-08-15T01:47:02.956+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3095"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3095_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3095_1.xml"/>
+<atom:title>DEVELOPPEMENT DU SYSTEME IMMUNITAIRE</atom:title>
+<atom:updated>2014-08-15T01:47:02.956+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3095"
 	coordinates="48.845262991898,2.3146813362"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 		<fax>01 40 61 55 90</fax>
 		<email>claude-agnes.reynaud@inserm.fr </email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

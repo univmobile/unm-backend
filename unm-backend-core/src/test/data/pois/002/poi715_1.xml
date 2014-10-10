@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi715_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi715_1.xml"/>
-<title>Association les Yeux dans le monde</title>
-<updated>2014-08-15T01:46:41.303+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="715"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi715_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi715_1.xml"/>
+<atom:title>Association les Yeux dans le monde</atom:title>
+<atom:updated>2014-08-15T01:46:41.303+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="715"
 	coordinates="48.860169300692,2.4582552"
 	markerType="point"
 	createdAt="2011-02-11T15:51:05.000+01:00"
@@ -23,5 +23,5 @@
 		<phone>06 08 72 72 11</phone>
 		<email>contact@lesyeuxdanslemonde.org</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

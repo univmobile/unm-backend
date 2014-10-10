@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1916_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1916_1.xml"/>
-<title>Polygone 1</title>
-<updated>2014-08-15T01:46:52.422+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1916"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1916_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1916_1.xml"/>
+<atom:title>Polygone 1</atom:title>
+<atom:updated>2014-08-15T01:46:52.422+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1916"
 	coordinates="48.904475183264,2.2118501365185|48.904677934745,2.2122645378113|48.904649725893,2.2123020887375|48.904674408639,2.2123557329178|48.904576559107,2.212485820055|48.904586255916,2.2124992311001|48.90443639593,2.2127084434032|48.904457552662,2.2127406299114|48.90449369539,2.2127191722393|48.904517496684,2.2127205133438|48.904550113255,2.2127419710159|48.904574796051,2.2127741575241|48.90458449286,2.2128130495548|48.904586255916,2.2128666937351|48.904576559107,2.2129109501839|48.904556283955,2.2129444777966|48.90452278586,2.2129726409912|48.904473420204,2.2129672765732|48.904438158992,2.2129283845425|48.904419646845,2.2128921747208|48.904413476128,2.2128264605999|48.904439922053,2.2127661108971|48.904416120721,2.2127312421799|48.904326204477,2.2128385305405|48.904195737483,2.2126105427742|48.904448737358,2.2122578322887|48.904336782867,2.212028503418|48.904475183264,2.21185013"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="yasmine"
 	name="Polygone 1">
 	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1831_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1831_1.xml"/>
-<title>Service des Affaires Culturelles</title>
-<updated>2014-08-15T01:46:51.354+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1831"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1831_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1831_1.xml"/>
+<atom:title>Service des Affaires Culturelles</atom:title>
+<atom:updated>2014-08-15T01:46:51.354+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1831"
 	coordinates="48.903855463854,2.217268198728"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 Mercredi et vendredi :
 10h / 12h</openingHours>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

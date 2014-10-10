@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3429_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3429_1.xml"/>
-<title>Maison de la Santé</title>
-<updated>2014-08-15T01:47:06.501+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3429"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3429_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3429_1.xml"/>
+<atom:title>Maison de la Santé</atom:title>
+<atom:updated>2014-08-15T01:47:06.501+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3429"
 	coordinates="48.845882959515,2.356956135481"
 	active="true"
 	markerType="point"
@@ -31,5 +31,5 @@ Infirmerie: Lundi - Vendredi 8h30 - 17h30</openingHours>
 		<phone>01 44 27 60 10</phone>
 		<fax>01 44 27 73 37</fax>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

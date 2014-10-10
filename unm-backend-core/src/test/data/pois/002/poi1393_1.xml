@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1393_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1393_1.xml"/>
-<title>UFR Informatique</title>
-<updated>2014-08-15T01:46:47.171+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1393"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1393_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1393_1.xml"/>
+<atom:title>UFR Informatique</atom:title>
+<atom:updated>2014-08-15T01:46:47.171+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1393"
 	coordinates="48.828049694875,2.383307665586"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
 		<email>marie-claude.thill@informatique.univ-paris-diderot.fr</email>
 	</address>
 	<attachment id="69" title="watt.jpg" type="image" url="/uploads/poi/44dd8785cc69b6d2fb56dd4e5e9f06c12f0d11f6.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

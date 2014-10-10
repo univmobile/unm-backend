@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1187_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1187_1.xml"/>
-<title>Centre de Recherche sur les Espaces, les Sociétés et Culture</title>
-<updated>2014-08-15T01:46:45.601+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1187"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1187_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1187_1.xml"/>
+<atom:title>Centre de Recherche sur les Espaces, les Sociétés et Culture</atom:title>
+<atom:updated>2014-08-15T01:46:45.601+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1187"
 	coordinates="48.95544747954,2.3397633433"
 	active="true"
 	markerType="point"
@@ -31,5 +31,5 @@ Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
 		<phone>01 49 40 32 36 </phone>
 		<fax>01 49 40 37 06</fax>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

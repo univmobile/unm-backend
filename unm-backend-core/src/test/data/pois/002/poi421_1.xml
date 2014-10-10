@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi421_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi421_1.xml"/>
-<title>Centre Saint Charles</title>
-<updated>2014-08-15T01:46:39.925+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="421"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi421_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi421_1.xml"/>
+<atom:title>Centre Saint Charles</atom:title>
+<atom:updated>2014-08-15T01:46:39.925+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="421"
 	coordinates="48.841794444319,2.2806742787361"
 	active="true"
 	markerType="point"
@@ -22,5 +22,5 @@
 	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
 	<child uid="1025" active="true"/>
 	<attachment id="36" title="st-charles.jpg" type="image" url="/uploads/poi/f69541dba36f744af421c8e8d402bed26642cf94.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

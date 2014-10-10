@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4737_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4737_1.xml"/>
-<title>INSTITUT D'HISTOIRE DU DROIT (IHD)</title>
-<updated>2014-08-15T01:47:20.041+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4737"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4737_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4737_1.xml"/>
+<atom:title>INSTITUT D'HISTOIRE DU DROIT (IHD)</atom:title>
+<atom:updated>2014-08-15T01:47:20.041+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4737"
 	coordinates="48.824217507749,2.3026093840599"
 	active="true"
 	markerType="point"
@@ -20,5 +20,5 @@
 	updatedBy="yasmine"
 	name="INSTITUT D'HISTOIRE DU DROIT (IHD)">
 	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

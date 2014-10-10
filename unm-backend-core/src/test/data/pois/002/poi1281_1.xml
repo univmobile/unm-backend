@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1281_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1281_1.xml"/>
-<title>Polygone</title>
-<updated>2014-08-15T01:46:46.061+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1281"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1281_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1281_1.xml"/>
+<atom:title>Polygone</atom:title>
+<atom:updated>2014-08-15T01:46:46.061+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1281"
 	coordinates="48.853129608968,2.3625319451094|48.853318449772,2.3627465218306|48.853168436107,2.3630522936583|48.85296900548,2.3628457635641|48.853129608968,2.36253"
 	active="true"
 	markerType="polygon"
@@ -27,5 +27,5 @@ Métro 1 Saint Paul
 		<fullAddress>8-10 rue Charles V
 75004 Paris</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

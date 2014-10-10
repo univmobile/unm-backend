@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi130_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi130_1.xml"/>
-<title>old premier cycle</title>
-<updated>2014-08-15T01:46:38.505+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="130"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi130_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi130_1.xml"/>
+<atom:title>old premier cycle</atom:title>
+<atom:updated>2014-08-15T01:46:38.505+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="130"
 	coordinates="48.623782308967,2.4223780632019|48.623690115932,2.4222010374069|48.623601468623,2.4221527576447|48.623445448982,2.4221312999725|48.623214964539,2.422206401825|48.62332488802,2.4226087331772|48.623519912962,2.4226462841034|48.623608560414,2.4225658178329|48.623668840592,2.4224799871445|48.623782308967,2.422378063201"
 	active="true"
 	markerType="polygon"
@@ -28,5 +28,5 @@
 RER C : avec un changement à Juvisy</itinerary>
 		<fullAddress>Rue Pierre Bérégovoy 91025 Evry Cedex</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

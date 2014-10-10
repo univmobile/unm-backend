@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi30_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi30_1.xml"/>
-<title>Institut d'études culturelles</title>
-<updated>2014-08-15T01:46:38.280+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="30"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi30_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi30_1.xml"/>
+<atom:title>Institut d'études culturelles</atom:title>
+<atom:updated>2014-08-15T01:46:38.280+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="30"
 	coordinates="48.780069084388,2.04414367675"
 	active="true"
 	markerType="point"
@@ -35,5 +35,5 @@ L’IEC s’appuie, pour la formation comme pour la recherche, sur un réseau de
 		<email>christian.delporte@uvsq.fr  </email>
 		<fullAddress>47 boulevard Vauban 78280 GUYANCOURT</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

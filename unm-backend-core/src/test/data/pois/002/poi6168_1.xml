@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6168_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6168_1.xml"/>
-<title>Accès au RU pour PMR</title>
-<updated>2014-08-15T01:47:34.569+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6168"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6168_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6168_1.xml"/>
+<atom:title>Accès au RU pour PMR</atom:title>
+<atom:updated>2014-08-15T01:47:34.569+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6168"
 	coordinates="48.84701742997,2.3604284226894"
 	active="true"
 	markerType="point"
@@ -21,5 +21,5 @@
 	name="Accès au RU pour PMR">
 	<poiType id="14" label="Entrée PMR" categoryId="7" categoryLabel="Relais handicap"/>
 	<description>L'accès au RU pour les personnes à mobilités réduites se fait derrière le CROUS - suivre le chemin balisé blanc et bleu</description>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

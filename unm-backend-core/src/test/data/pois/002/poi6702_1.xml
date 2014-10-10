@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6702_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6702_1.xml"/>
-<title>Restaurant Châtelet</title>
-<updated>2014-08-15T01:47:39.428+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6702"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6702_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6702_1.xml"/>
+<atom:title>Restaurant Châtelet</atom:title>
+<atom:updated>2014-08-15T01:47:39.428+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6702"
 	coordinates="48.841882884289,2.3485864698887"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 Cafétéria : du lundi au vendredi de 11h30 à 14h00</openingHours>
 	</address>
 	<attachment id="171" title="chatelet_1.jpg" type="image" url="/uploads/poi/5361e19c8f5dd619200a4763a400992a4fab9b68.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

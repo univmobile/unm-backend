@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1217_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1217_1.xml"/>
-<title>Maison de l'Archéologie et de L'Ethnologie</title>
-<updated>2014-08-15T01:46:45.895+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1217"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1217_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1217_1.xml"/>
+<atom:title>Maison de l'Archéologie et de L'Ethnologie</atom:title>
+<atom:updated>2014-08-15T01:46:45.895+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1217"
 	coordinates="48.904539990377,2.2100678086281|48.904455363538,2.2101321816444|48.904293161696,2.2098532319069|48.904152116189,2.2100034356117|48.904328423011,2.2103038430214|48.904250848086,2.210421860218|48.904000726897,2.2099752724171|48.904293396768,2.209599763155|48.904539990377,2.21006780862"
 	active="true"
 	markerType="polygon"
@@ -24,5 +24,5 @@
 		<fullAddress>21, allée de l'université
 92023 Nanterre CEDEX</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

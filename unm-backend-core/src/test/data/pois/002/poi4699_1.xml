@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4699_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4699_1.xml"/>
-<title>Résidence de l'Hermitage</title>
-<updated>2014-08-15T01:47:19.703+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4699"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4699_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4699_1.xml"/>
+<atom:title>Résidence de l'Hermitage</atom:title>
+<atom:updated>2014-08-15T01:47:19.703+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4699"
 	coordinates="48.939753937684,2.3542553186417"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ Tramway : Place du Marché</itinerary>
 		<email>residence.saint-denis@crous-creteil.fr</email>
 		<fullAddress>Place du 8 mai 1945 - 93200 Saint-Denis</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

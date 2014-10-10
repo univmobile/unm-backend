@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6757_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6757_1.xml"/>
-<title>Cafétéria Cochin</title>
-<updated>2014-08-15T01:47:39.963+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6757"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6757_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6757_1.xml"/>
+<atom:title>Cafétéria Cochin</atom:title>
+<atom:updated>2014-08-15T01:47:39.963+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6757"
 	coordinates="48.837864681021,2.3394763469696"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@ Bus 83 et 91 </itinerary>
 75014 Paris </fullAddress>
 	</address>
 	<child uid="6750" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

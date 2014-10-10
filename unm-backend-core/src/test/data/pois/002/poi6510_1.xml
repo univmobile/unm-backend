@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6510_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6510_1.xml"/>
-<title>Nanterre bâtiment R - Maison de l'étudiant</title>
-<updated>2014-08-15T01:47:37.897+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6510"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6510_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6510_1.xml"/>
+<atom:title>Nanterre bâtiment R - Maison de l'étudiant</atom:title>
+<atom:updated>2014-08-15T01:47:37.897+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6510"
 	coordinates="48.902437264825,2.2133709490299|48.902539526366,2.2135747969151|48.902638261449,2.2134406864643|48.902564210155,2.2133173048496|48.902585367679,2.2132636606693|48.9025606839,2.2132153809071|48.902437264825,2.2133709490299"
 	active="true"
 	markerType="polygon"
@@ -26,5 +26,5 @@
 		<fullAddress>200, Avenue de la République
 92001 NANTERRE CEDEX</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4100_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4100_1.xml"/>
-<title>UMR 7588</title>
-<updated>2014-08-15T01:47:13.679+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4100"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4100_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4100_1.xml"/>
+<atom:title>UMR 7588</atom:title>
+<atom:updated>2014-08-15T01:47:13.679+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4100"
 	coordinates="48.841588973803,2.2846746258438"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<phone>01 44 27 43 40</phone>
 		<email>gerard.vuye@insp.jussieu.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

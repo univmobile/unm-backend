@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi711_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi711_1.xml"/>
-<title>Centre rue du Four</title>
-<updated>2014-08-15T01:46:41.287+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="711"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi711_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi711_1.xml"/>
+<atom:title>Centre rue du Four</atom:title>
+<atom:updated>2014-08-15T01:46:41.287+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="711"
 	coordinates="48.852948062273,2.3353330045938|48.852907470084,2.3353705555201|48.852944532519,2.3354912549257|48.852988654429,2.3354590684175|48.852948062273,2.3353330045"
 	active="true"
 	markerType="polygon"
@@ -30,5 +30,5 @@ Bus 63, 70, 86, 87 er 96</itinerary>
 75006 Paris
 </fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

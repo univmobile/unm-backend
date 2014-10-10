@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi409_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi409_1.xml"/>
-<title>St. Denis Halle Montjoie</title>
-<updated>2014-08-15T01:46:39.834+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="409"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi409_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi409_1.xml"/>
+<atom:title>St. Denis Halle Montjoie</atom:title>
+<atom:updated>2014-08-15T01:46:39.834+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="409"
 	coordinates="48.912014443134,2.3613685369"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 	<child uid="1407" active="true"/>
 	<child uid="1405" active="true"/>
 	<child uid="411" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

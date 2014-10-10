@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4867_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4867_1.xml"/>
-<title>Résidence Eugène Pottier</title>
-<updated>2014-08-15T01:47:21.331+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4867"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4867_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4867_1.xml"/>
+<atom:title>Résidence Eugène Pottier</atom:title>
+<atom:updated>2014-08-15T01:47:21.331+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4867"
 	coordinates="48.949837547934,2.3552960157394"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 		<email>residence.saint-denis@crous-creteil.fr</email>
 		<fullAddress>12 rue Eugène Pottier - 93200 Saint-Denis</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

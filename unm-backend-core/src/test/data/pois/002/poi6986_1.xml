@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6986_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6986_1.xml"/>
-<title>BDE Miage Nanterre - HotSpot</title>
-<updated>2014-08-15T01:47:41.955+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6986"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6986_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6986_1.xml"/>
+<atom:title>BDE Miage Nanterre - HotSpot</atom:title>
+<atom:updated>2014-08-15T01:47:41.955+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6986"
 	coordinates="48.903104547011,2.2155421972275"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 		<url>http://bde.miagenanterre.fr/</url>
 		<email>secretaire@bde.miagenanterre.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

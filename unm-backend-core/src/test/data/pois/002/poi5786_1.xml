@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi5786_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5786_1.xml"/>
-<title>Institut d'Etudes Judiciaires</title>
-<updated>2014-08-15T01:47:30.060+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="5786"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi5786_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5786_1.xml"/>
+<atom:title>Institut d'Etudes Judiciaires</atom:title>
+<atom:updated>2014-08-15T01:47:30.060+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="5786"
 	coordinates="48.793287829937,2.4454665184021"
 	active="true"
 	markerType="point"
@@ -32,5 +32,5 @@ Vendredi : 9h 00 à 12h / Fermé
 		<phone>01 56 72 60 27</phone>
 		<email>iej-droit@u-pec.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

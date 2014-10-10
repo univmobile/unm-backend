@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6656_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6656_1.xml"/>
-<title>Restaurant Universitaire Neuville I</title>
-<updated>2014-08-15T01:47:39.041+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6656"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6656_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6656_1.xml"/>
+<atom:title>Restaurant Universitaire Neuville I</atom:title>
+<atom:updated>2014-08-15T01:47:39.041+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6656"
 	coordinates="49.017554866258,2.0737874507904"
 	active="true"
 	markerType="point"
@@ -24,5 +24,5 @@
 		<openingHours>De 11h30 à 13h30</openingHours>
 	</address>
 	<attachment id="246" title="ru neuville.jpg" type="image" url="/uploads/poi/4e3cb74cc562b3a8c95af2de2f960d7a77c90c19.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

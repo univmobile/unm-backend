@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7299_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7299_1.xml"/>
-<title>KFET (BDE)</title>
-<updated>2014-08-15T01:47:45.389+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7299"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7299_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7299_1.xml"/>
+<atom:title>KFET (BDE)</atom:title>
+<atom:updated>2014-08-15T01:47:45.389+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7299"
 	coordinates="48.789355852628,2.3303326964378"
 	active="true"
 	markerType="point"
@@ -24,5 +24,5 @@
 	<address>
 		<openingHours>La Kfet est ouverte tous les midis de 12h à 14h et tous les soirs de 18h à minuit (sauf le week-end de 11h à 14h)</openingHours>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

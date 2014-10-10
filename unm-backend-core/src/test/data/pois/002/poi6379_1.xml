@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6379_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6379_1.xml"/>
-<title>Sociologie (M2 Genre et développement)</title>
-<updated>2014-08-15T01:47:36.616+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6379"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6379_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6379_1.xml"/>
+<atom:title>Sociologie (M2 Genre et développement)</atom:title>
+<atom:updated>2014-08-15T01:47:36.616+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6379"
 	coordinates="48.825600165493,2.3664590343833"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ Spécialité Recherche : Genre et développement</description>
 		<phone>01 57 27 66 82 </phone>
 		<email>cedref@univ‐paris‐diderot.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

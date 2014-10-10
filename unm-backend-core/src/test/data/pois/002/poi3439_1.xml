@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3439_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3439_1.xml"/>
-<title>Bibliothèque de droit public</title>
-<updated>2014-08-15T01:47:06.623+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3439"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3439_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3439_1.xml"/>
+<atom:title>Bibliothèque de droit public</atom:title>
+<atom:updated>2014-08-15T01:47:06.623+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3439"
 	coordinates="48.847174860706,2.344110868871"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ Samedi :
 10h00 / 18h00</openingHours>
 		<phone>01 44 07 78 53</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

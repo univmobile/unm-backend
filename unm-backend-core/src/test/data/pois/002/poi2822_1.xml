@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2822_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2822_1.xml"/>
-<title>Grand amphithéâtre Lacharriere</title>
-<updated>2014-08-15T01:47:00.295+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2822"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2822_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2822_1.xml"/>
+<atom:title>Grand amphithéâtre Lacharriere</atom:title>
+<atom:updated>2014-08-15T01:47:00.295+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2822"
 	coordinates="48.824314859643,2.3026132397"
 	active="true"
 	markerType="point"
@@ -23,5 +23,5 @@
 	<address>
 		<floor>RDC HAUT</floor>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

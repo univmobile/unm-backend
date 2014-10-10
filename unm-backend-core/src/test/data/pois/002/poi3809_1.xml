@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3809_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3809_1.xml"/>
-<title>BU Léon-Robin</title>
-<updated>2014-08-15T01:47:10.628+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3809"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3809_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3809_1.xml"/>
+<atom:title>BU Léon-Robin</atom:title>
+<atom:updated>2014-08-15T01:47:10.628+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3809"
 	coordinates="48.848383514461,2.3431238159537"
 	active="true"
 	markerType="point"
@@ -23,5 +23,5 @@
 	<address>
 		<floor>Escalier E, 2e étage, salle F 371</floor>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

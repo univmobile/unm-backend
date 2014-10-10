@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3782_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3782_1.xml"/>
-<title>BU Serpente</title>
-<updated>2014-08-15T01:47:10.339+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3782"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3782_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3782_1.xml"/>
+<atom:title>BU Serpente</atom:title>
+<atom:updated>2014-08-15T01:47:10.339+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3782"
 	coordinates="48.852536005909,2.3415775224566"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ Samedi :
 12h00 / 18h00</openingHours>
 		<phone>01 53 10 57 53</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7383_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7383_1.xml"/>
-<title>Ménagerie</title>
-<updated>2014-08-15T01:47:45.780+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7383"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7383_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7383_1.xml"/>
+<atom:title>Ménagerie</atom:title>
+<atom:updated>2014-08-15T01:47:45.780+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7383"
 	coordinates="48.845159171728,2.3632434010506|48.845010898773,2.3630931973457|48.844022401186,2.3592415452003|48.844368377561,2.3583510518074|48.844947353086,2.3582330346107|48.845448655756,2.358823120594|48.845858166889,2.3599818348885|48.846260614222,2.3604646325111|48.846655997926,2.3607435822487|48.846747782982,2.3609045147896|48.845159171728,2.3632434010506"
 	active="true"
 	markerType="polygon"
@@ -35,5 +35,5 @@ Gare d'Austerlitz et Gare de Lyon</itinerary>
 		<fullAddress>57, Rue Cuvier
 75005 paris</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

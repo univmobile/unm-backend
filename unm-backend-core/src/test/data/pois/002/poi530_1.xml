@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi530_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi530_1.xml"/>
-<title>Polygone</title>
-<updated>2014-08-15T01:46:40.613+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="530"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi530_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi530_1.xml"/>
+<atom:title>Polygone</atom:title>
+<atom:updated>2014-08-15T01:46:40.613+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="530"
 	coordinates="48.619253658934,2.3055249452591|48.619211104506,2.3060023784637|48.618941592291,2.3059970140457|48.618962869623,2.3054820299149|48.619253658934,2.305524"
 	active="true"
 	markerType="polygon"
@@ -24,5 +24,5 @@
 		<fullAddress>Chemin de la Tuilerie
 91220  Brétigny sur Orge </fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

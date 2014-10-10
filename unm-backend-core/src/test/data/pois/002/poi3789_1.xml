@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3789_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3789_1.xml"/>
-<title>EII - Polytech</title>
-<updated>2014-08-15T01:47:10.428+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3789"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3789_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3789_1.xml"/>
+<atom:title>EII - Polytech</atom:title>
+<atom:updated>2014-08-15T01:47:10.428+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3789"
 	coordinates="48.845099002036,2.3569568060338"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 		<url>01 44 27 72 76</url>
 		<email>e2i-polytech@upmc.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

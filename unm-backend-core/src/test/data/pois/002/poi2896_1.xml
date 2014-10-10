@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2896_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2896_1.xml"/>
-<title>Centre Desgoffe</title>
-<updated>2014-08-15T01:47:00.957+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2896"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2896_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2896_1.xml"/>
+<atom:title>Centre Desgoffe</atom:title>
+<atom:updated>2014-08-15T01:47:00.957+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2896"
 	coordinates="48.845944790374,2.3241820558"
 	active="true"
 	markerType="point"
@@ -21,5 +21,5 @@
 	name="Centre Desgoffe">
 	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
 	<child uid="2899" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

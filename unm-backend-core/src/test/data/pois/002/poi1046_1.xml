@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1046_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1046_1.xml"/>
-<title>Laboratoire de Physique des Lasers - LPL</title>
-<updated>2014-08-15T01:46:44.364+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1046"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1046_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1046_1.xml"/>
+<atom:title>Laboratoire de Physique des Lasers - LPL</atom:title>
+<atom:updated>2014-08-15T01:46:44.364+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1046"
 	coordinates="48.958404549064,2.33996450"
 	active="true"
 	markerType="point"
@@ -37,5 +37,5 @@ Avenue J.B. Clément
 93430
 VILLETANEUSE</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

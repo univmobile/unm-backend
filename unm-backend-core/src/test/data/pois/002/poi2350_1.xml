@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2350_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2350_1.xml"/>
-<title>Site faculté pharmacie</title>
-<updated>2014-08-15T01:46:56.150+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2350"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2350_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2350_1.xml"/>
+<atom:title>Site faculté pharmacie</atom:title>
+<atom:updated>2014-08-15T01:46:56.150+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2350"
 	coordinates="48.842651240311,2.3362670838833|48.842654770791,2.3354570567608|48.842781867901,2.3354677855968|48.842785398372,2.3352639377117|48.842831294468,2.3351995646954|48.842795989783,2.3351942002773|48.842803050722,2.3350118100643|48.843283192248,2.3350439965725|48.843293783553,2.3352371156216|48.84327260094,2.3354677855968|48.843410287763,2.335494607687|48.843406757337,2.3355375230312|48.843593869606,2.3355375230312|48.843600930432,2.3356179893017|48.843417348616,2.3356233537197|48.84340322691,2.3358754813671|48.843586808778,2.3358701169491|48.843590339192,2.3360149562359|48.843399696483,2.3360095918179|48.843392635628,2.336218804121|48.843579747949,2.336224168539|48.843583278364,2.3363475501537|48.842651240311,2.336267083"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="yasmine"
 	name="Site faculté pharmacie">
 	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

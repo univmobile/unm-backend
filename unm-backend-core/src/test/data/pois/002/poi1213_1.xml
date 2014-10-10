@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1213_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1213_1.xml"/>
-<title>Site du SITEC</title>
-<updated>2014-08-15T01:46:45.869+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1213"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1213_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1213_1.xml"/>
+<atom:title>Site du SITEC</atom:title>
+<atom:updated>2014-08-15T01:46:45.869+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1213"
 	coordinates="48.825784298206,2.1983666718006|48.825674816352,2.1983559429646|48.825660689643,2.198624163866|48.825770171528,2.1986348927021|48.825784298206,2.198366"
 	active="true"
 	markerType="polygon"
@@ -26,5 +26,5 @@
 		<fullAddress>50 rue de sèvres
 92410 VILLE D'AVRAY</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

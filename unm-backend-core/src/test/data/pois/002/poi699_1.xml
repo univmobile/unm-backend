@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi699_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi699_1.xml"/>
-<title>Centre René Cassin</title>
-<updated>2014-08-15T01:46:41.192+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="699"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi699_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi699_1.xml"/>
+<atom:title>Centre René Cassin</atom:title>
+<atom:updated>2014-08-15T01:46:41.192+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="699"
 	coordinates="48.836382774986,2.3460692167282|48.836234476047,2.3460209369659|48.836139140784,2.3466163873672|48.83633687298,2.3466593027115|48.836382774986,2.34606921672"
 	active="true"
 	markerType="polygon"
@@ -26,5 +26,5 @@
 75013 Paris
 </fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

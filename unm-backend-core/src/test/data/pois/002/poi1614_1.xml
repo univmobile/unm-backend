@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1614_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1614_1.xml"/>
-<title>Licence Histoire - Langue et civilisation étrangère</title>
-<updated>2014-08-15T01:46:49.246+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1614"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1614_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1614_1.xml"/>
+<atom:title>Licence Histoire - Langue et civilisation étrangère</atom:title>
+<atom:updated>2014-08-15T01:46:49.246+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1614"
 	coordinates="48.902435648611,2.21176497638"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ Vendredi :
 9h15 / 12h45</openingHours>
 		<phone>01 40 97 75 73</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

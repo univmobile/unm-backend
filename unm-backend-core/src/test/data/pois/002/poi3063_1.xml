@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3063_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3063_1.xml"/>
-<title>ESIT</title>
-<updated>2014-08-15T01:47:02.602+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3063"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3063_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3063_1.xml"/>
+<atom:title>ESIT</atom:title>
+<atom:updated>2014-08-15T01:47:02.602+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3063"
 	coordinates="48.870139953747,2.27343767881"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ RER C : Avenue Foch</itinerary>
 	<child uid="3160" active="true"/>
 	<child uid="3321" active="true"/>
 	<child uid="3325" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

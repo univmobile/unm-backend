@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2129_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2129_1.xml"/>
-<title>Restaurant Universitaire Les Cèdres</title>
-<updated>2014-08-15T01:46:54.419+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2129"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2129_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2129_1.xml"/>
+<atom:title>Restaurant Universitaire Les Cèdres</atom:title>
+<atom:updated>2014-08-15T01:46:54.419+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2129"
 	coordinates="48.702640115038,2.179314270615"
 	active="true"
 	markerType="point"
@@ -19,5 +19,5 @@
 	updatedBy="d.rasse"
 	name="Restaurant Universitaire Les Cèdres">
 	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

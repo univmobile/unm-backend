@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4844_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4844_1.xml"/>
-<title>Finance d'entreprise et ingénierie financière M2</title>
-<updated>2014-08-15T01:47:21.150+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4844"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4844_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4844_1.xml"/>
+<atom:title>Finance d'entreprise et ingénierie financière M2</atom:title>
+<atom:updated>2014-08-15T01:47:21.150+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4844"
 	coordinates="48.896132054634,2.2364412993193"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@
 		<phone>01 41 16 75 38</phone>
 		<email>corinne.malborough@dauphine.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

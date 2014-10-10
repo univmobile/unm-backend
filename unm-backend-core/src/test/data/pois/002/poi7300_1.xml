@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7300_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7300_1.xml"/>
-<title>Salles informatiques Bretécher / Uderzo</title>
-<updated>2014-08-15T01:47:45.403+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7300"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7300_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7300_1.xml"/>
+<atom:title>Salles informatiques Bretécher / Uderzo</atom:title>
+<atom:updated>2014-08-15T01:47:45.403+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7300"
 	coordinates="48.788995653827,2.3268699645996"
 	active="true"
 	markerType="point"
@@ -32,5 +32,5 @@ Equipements :
 En dehors de ces heures d'ouverture et les week-ends, l'accès est possible pour les utilisateurs NON ACCOMPAGNES, après enregistrement de leur passage à la porterie de l'école. En effet, en dehors des heures habituelles d'ouverture, seuls les utilisateurs régulièrement enregistrés ont accès aux salles.
 Un escalier métallique extérieur permet d'y entrer en dehors des heures habituelles d'ouverture du bâtiment</openingHours>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi325_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi325_1.xml"/>
-<title>Club la Chaufferie</title>
-<updated>2014-08-15T01:46:39.179+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="325"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi325_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi325_1.xml"/>
+<atom:title>Club la Chaufferie</atom:title>
+<atom:updated>2014-08-15T01:46:39.179+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="325"
 	coordinates="48.954052541347,2.342029809"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ VILLETANEUSE</fullAddress>
 	</address>
 	<child uid="1110" active="true"/>
 	<child uid="327" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

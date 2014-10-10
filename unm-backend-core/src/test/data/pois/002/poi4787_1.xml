@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4787_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4787_1.xml"/>
-<title>MODO M2</title>
-<updated>2014-08-15T01:47:20.541+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4787"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4787_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4787_1.xml"/>
+<atom:title>MODO M2</atom:title>
+<atom:updated>2014-08-15T01:47:20.541+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4787"
 	coordinates="48.870269627547,2.2736535966396"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Fermé de mercredi après-midi.
 		<phone>01 44 05 45 70</phone>
 		<email>master-modo@dauphine.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

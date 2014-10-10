@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6785_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6785_1.xml"/>
-<title>Residence Universitaire de Nanterre</title>
-<updated>2014-08-15T01:47:40.195+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6785"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6785_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6785_1.xml"/>
+<atom:title>Residence Universitaire de Nanterre</atom:title>
+<atom:updated>2014-08-15T01:47:40.195+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6785"
 	coordinates="48.905807436383,2.2142185270786"
 	active="true"
 	markerType="point"
@@ -37,5 +37,5 @@ de 9h00 à 12h00 et de 13h00 à 16h00
 		<phone>01 41 20 32 00</phone>
 	</address>
 	<attachment id="222" title="nanterre.jpg" type="image" url="/uploads/poi/f8e65c571f2399063750e3ca41455e5d2ffd80ae.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

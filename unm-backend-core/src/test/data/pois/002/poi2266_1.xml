@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2266_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2266_1.xml"/>
-<title>Bâtiment 1</title>
-<updated>2014-08-15T01:46:55.410+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2266"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2266_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2266_1.xml"/>
+<atom:title>Bâtiment 1</atom:title>
+<atom:updated>2014-08-15T01:46:55.410+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2266"
 	coordinates="48.832256825873,2.4665097892284|48.832416612992,2.466706931591|48.832336278095,2.4668678641319|48.832268302313,2.4667739868164|48.83211469436,2.467069029808|48.831833078558,2.4667216837406|48.831910765834,2.4665795266628|48.832095272632,2.4667900800705|48.832256825873,2.4665097892"
 	active="true"
 	markerType="polygon"
@@ -29,5 +29,5 @@ Autobus :
 		<fullAddress>49bis avenue de la Belle Gabrielle
 75012 Paris</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

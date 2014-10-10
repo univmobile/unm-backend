@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7277_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7277_1.xml"/>
-<title>SATIE</title>
-<updated>2014-08-15T01:47:45.124+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7277"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7277_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7277_1.xml"/>
+<atom:title>SATIE</atom:title>
+<atom:updated>2014-08-15T01:47:45.124+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7277"
 	coordinates="48.788029024197,2.3271918296814"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@
 		<email>satie@satie.ens-cachan.fr</email>
 	</address>
 	<attachment id="277" title="LogoSATIE.jpg" type="image" url="/uploads/poi/fa791fad306dd204beb22321ebc29f69c1a15a84.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

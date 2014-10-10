@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6149_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6149_1.xml"/>
-<title>Ecogestion</title>
-<updated>2014-08-15T01:47:34.338+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6149"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6149_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6149_1.xml"/>
+<atom:title>Ecogestion</atom:title>
+<atom:updated>2014-08-15T01:47:34.338+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6149"
 	coordinates="48.837161690317,2.5931462645531"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 		<phone>01 60 95 70 51</phone>
 		<email>Veronique.Lehdili@univ-mlv.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1628_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1628_1.xml"/>
-<title>Licence Ethnologie</title>
-<updated>2014-08-15T01:46:49.379+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1628"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1628_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1628_1.xml"/>
+<atom:title>Licence Ethnologie</atom:title>
+<atom:updated>2014-08-15T01:46:49.379+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1628"
 	coordinates="48.902333063614,2.21163690090"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<phone>01 40 97 77 62</phone>
 		<email>sabrina.zitout@u-paris10.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

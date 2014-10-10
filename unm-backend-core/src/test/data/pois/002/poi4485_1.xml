@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4485_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4485_1.xml"/>
-<title>DIESE</title>
-<updated>2014-08-15T01:47:17.802+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4485"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4485_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4485_1.xml"/>
+<atom:title>DIESE</atom:title>
+<atom:updated>2014-08-15T01:47:17.802+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4485"
 	coordinates="48.62637001308,2.430919893086"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@ existence cultiver un goût pour le dynamisme et le professionnalisme. </descrip
 		<phone>01 60 78 15 89</phone>
 		<email>info@diese.org</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4098_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4098_1.xml"/>
-<title>Information et communication M1-2</title>
-<updated>2014-08-15T01:47:13.658+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4098"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4098_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4098_1.xml"/>
+<atom:title>Information et communication M1-2</atom:title>
+<atom:updated>2014-08-15T01:47:13.658+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4098"
 	coordinates="48.852669416828,2.3415946215391"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@ Mercredi, vendredi : toute la journée
 Jeudi : après midi</openingHours>
 		<phone>01 53 10 58 31</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

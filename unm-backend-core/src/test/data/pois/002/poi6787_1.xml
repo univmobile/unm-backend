@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6787_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6787_1.xml"/>
-<title>Restaurant Dauphine</title>
-<updated>2014-08-15T01:47:40.225+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6787"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6787_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6787_1.xml"/>
+<atom:title>Restaurant Dauphine</atom:title>
+<atom:updated>2014-08-15T01:47:40.225+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6787"
 	coordinates="48.870490336793,2.2734135389328"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@ Cafétéria/Sandwicherie : du lundi au vendredi de 8h00 à 17h30 </openingHours>
 		<url>http://www.crous-paris.fr/</url>
 	</address>
 	<attachment id="195" title="dauphine_2.jpg" type="image" url="/uploads/poi/0f94a99bd2f1448ee93f6df7aef8adb6e238942a.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

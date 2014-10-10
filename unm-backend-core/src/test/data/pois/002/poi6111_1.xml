@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6111_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6111_1.xml"/>
-<title>Ecole Doctorale GC2iD </title>
-<updated>2014-08-15T01:47:33.865+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6111"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6111_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6111_1.xml"/>
+<atom:title>Ecole Doctorale GC2iD </atom:title>
+<atom:updated>2014-08-15T01:47:33.865+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6111"
 	coordinates="48.850460141522,2.340497598052"
 	active="true"
 	markerType="point"
@@ -32,5 +32,5 @@ Secrétariat : Michèle PITTE
 		<fax>01 53 10 46 60</fax>
 		<email> http://gc2id.parisdescartes.fr/</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

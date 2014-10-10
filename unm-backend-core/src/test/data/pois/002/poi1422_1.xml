@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1422_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1422_1.xml"/>
-<title>Amphithéâtre V</title>
-<updated>2014-08-15T01:46:47.468+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1422"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1422_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1422_1.xml"/>
+<atom:title>Amphithéâtre V</atom:title>
+<atom:updated>2014-08-15T01:46:47.468+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1422"
 	coordinates="48.904467646179,2.2118581831455|48.904680976008,2.2122578322887|48.904651004104,2.212298065424|48.904670397691,2.2123409807682|48.90442885884,2.2126869857311|48.904467646179,2.2127513587475|48.904502907371,2.2127245366573|48.90453640548,2.2127191722393|48.904571666623,2.2127379477024|48.904592823297,2.2127862274647|48.904603401631,2.2128318250179|48.90459987552,2.2128988802433|48.904578718849,2.2129444777966|48.90455050994,2.2129578888416|48.904513485724,2.2129766643047|48.90447822454,2.2129659354687|48.904451778635,2.2129230201244|48.904432384963,2.212847918272|48.904437674147,2.2128050029278|48.904416517408,2.2127299010754|48.904345994878,2.2128103673458|48.904226106348,2.2125850617886|48.904467646179,2.2122766077518|48.904344231813,2.2120352089405|48.904467646179,2.21185818314"
 	active="true"
 	markerType="polygon"
@@ -23,5 +23,5 @@
 	<address>
 		<floor> -1</floor>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

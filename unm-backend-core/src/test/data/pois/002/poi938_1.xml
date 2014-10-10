@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi938_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi938_1.xml"/>
-<title>Laboratoire médiévistique occidentale de Paris LAMOP</title>
-<updated>2014-08-15T01:46:43.577+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="938"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi938_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi938_1.xml"/>
+<atom:title>Laboratoire médiévistique occidentale de Paris LAMOP</atom:title>
+<atom:updated>2014-08-15T01:46:43.577+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="938"
 	coordinates="48.849214266817,2.344"
 	active="true"
 	markerType="point"
@@ -31,5 +31,5 @@ Bus 21, 27, 38, 82 et 85
 		<url>http://lamop.univ-paris1.fr/</url>
 		<phone>01 40 46 33 21</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

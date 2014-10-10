@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2415_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2415_1.xml"/>
-<title>Centre de Recherche Pluridisciplinaire d'Ivry</title>
-<updated>2014-08-15T01:46:56.608+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2415"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2415_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2415_1.xml"/>
+<atom:title>Centre de Recherche Pluridisciplinaire d'Ivry</atom:title>
+<atom:updated>2014-08-15T01:46:56.608+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2415"
 	coordinates="48.817831202472,2.3707468807697|48.817626332754,2.3709158599377|48.817560986202,2.3707146942616|48.81745501864,2.3708085715771|48.817530962082,2.3710070550442|48.81737377669,2.3711384832859|48.817453252512,2.3713208734989|48.817908911457,2.3709239065647|48.817831202472,2.370746880769"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="Marine Gianfermi Paris X"
 	name="Centre de Recherche Pluridisciplinaire d'Ivry">
 	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

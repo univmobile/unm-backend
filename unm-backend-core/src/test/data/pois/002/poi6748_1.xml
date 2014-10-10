@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6748_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6748_1.xml"/>
-<title>Restaurant la Halle aux Farines</title>
-<updated>2014-08-15T01:47:39.927+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6748"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6748_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6748_1.xml"/>
+<atom:title>Restaurant la Halle aux Farines</atom:title>
+<atom:updated>2014-08-15T01:47:39.927+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6748"
 	coordinates="48.82963749512,2.3822106420994"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@ Cafétéria : du lundi au vendredi de 8h00 à 16h40</openingHours>
 		<url>http://www.crous-paris.fr</url>
 	</address>
 	<attachment id="189" title="Sans-titre-1.gif" type="image" url="/uploads/poi/4cc31e947eceeb9a5304e02964b8c49611d3efae.gif"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

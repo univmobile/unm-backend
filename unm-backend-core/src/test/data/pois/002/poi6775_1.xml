@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6775_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6775_1.xml"/>
-<title>Polygone</title>
-<updated>2014-08-15T01:47:40.145+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6775"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6775_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6775_1.xml"/>
+<atom:title>Polygone</atom:title>
+<atom:updated>2014-08-15T01:47:40.145+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6775"
 	coordinates="48.635313324941,2.4305279552937|48.635331050301,2.4300880730152|48.635426767135,2.4298144876957|48.635579204682,2.4298574030399|48.635614655208,2.4300988018513|48.635614655208,2.430227547884|48.635791907465,2.4302490055561|48.635798997542,2.4300344288349|48.635653650758,2.4300183355808|48.635653650758,2.4297930300236|48.635696191323,2.4297769367695|48.636178315227,2.4298842251301|48.636174770216,2.4299861490726|48.636291755476,2.4300183355808|48.636259850432,2.4306298792362|48.636142865097,2.4306245148182|48.636181860239,2.430055886507|48.635923073735,2.4299968779087|48.635905348583,2.4302972853184|48.635841537986,2.4304260313511|48.635827357842,2.4305333197117|48.635586294789,2.4305708706379|48.635593384895,2.4305118620396|48.635586294789,2.4305708706379|48.635894713489,2.430409938097|48.635586294789,2.4305708706379|48.635641893069,2.4305427074432|48.635489455712,2.4305748939514|48.635313324941,2.4305279552937"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="d.rasse"
 	name="Polygone">
 	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

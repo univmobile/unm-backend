@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1235_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1235_1.xml"/>
-<title>Site Saint-Louis</title>
-<updated>2014-08-15T01:46:45.945+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1235"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1235_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1235_1.xml"/>
+<atom:title>Site Saint-Louis</atom:title>
+<atom:updated>2014-08-15T01:46:45.945+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1235"
 	coordinates="48.873941813171,2.36925691366"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@ Métro 2 Colonel Fabien</itinerary>
 75010 Paris</fullAddress>
 	</address>
 	<child uid="1783" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

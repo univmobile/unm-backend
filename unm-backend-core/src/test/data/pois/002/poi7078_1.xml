@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7078_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7078_1.xml"/>
-<title>Chez Karim</title>
-<updated>2014-08-15T01:47:43.018+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7078"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7078_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7078_1.xml"/>
+<atom:title>Chez Karim</atom:title>
+<atom:updated>2014-08-15T01:47:43.018+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7078"
 	coordinates="48.946099591859,2.3621758818626"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 Le vendredi de 8h30 à 15h30
 Le samedi de 8h30 à 15h30</openingHours>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

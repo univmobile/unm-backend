@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2888_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2888_1.xml"/>
-<title>Polygone 1</title>
-<updated>2014-08-15T01:47:00.906+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2888"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2888_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2888_1.xml"/>
+<atom:title>Polygone 1</atom:title>
+<atom:updated>2014-08-15T01:47:00.906+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2888"
 	coordinates="48.835094074925,2.2922637686133|48.835118792008,2.2922771796584|48.835127619535,2.2923107072711|48.83511614375,2.2923455759883|48.835105550715,2.2923630103469|48.835085247393,2.292376421392|48.835073771598,2.2923603281379|48.835064061308,2.2923509404063|48.835042875215,2.2923710569739|48.834936944613,2.2925279662013|48.834874268902,2.2926164790988|48.834886627499,2.2926272079349|48.834868972359,2.292651347816|48.834861910302,2.2926473245025|48.834853965486,2.2926674410701|48.834873386145,2.2926956042647|48.834786875878,2.2928297147155|48.834755979318,2.2927921637893|48.834701248221,2.2928645834327|48.834680061974,2.2928672656417|48.834583840991,2.2927143797278|48.83489457231,2.2922423109412|48.834898986093,2.2922288998961|48.83492193776,2.2921913489699|48.834939592881,2.2921765968204|48.834963427285,2.2921551391482|48.834984613412,2.2921283170581|48.835018158095,2.292117588222|48.835022571867,2.2921269759536|48.835015509831,2.2921350225806|48.835094074925,2.292263768613"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="yasmine"
 	name="Polygone 1">
 	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

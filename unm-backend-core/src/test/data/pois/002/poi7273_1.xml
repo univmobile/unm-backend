@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7273_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7273_1.xml"/>
-<title>PPSM</title>
-<updated>2014-08-15T01:47:45.090+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7273"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7273_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7273_1.xml"/>
+<atom:title>PPSM</atom:title>
+<atom:updated>2014-08-15T01:47:45.090+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7273"
 	coordinates="48.788106779372,2.3268458247185"
 	active="true"
 	markerType="point"
@@ -31,5 +31,5 @@ Le PPSM participe également à l'initiative d'excellence (IdEx) campus Paris-Sa
 		<email>secretariat@ppsm.ens-cachan.fr</email>
 	</address>
 	<attachment id="274" title="Logo_PPSM.jpg" type="image" url="/uploads/poi/d8a6d58e7459e2c60e57efda17ae6f53223fec29.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

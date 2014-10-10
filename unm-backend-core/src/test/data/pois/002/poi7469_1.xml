@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7469_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7469_1.xml"/>
-<title>Site d'Argenteuil</title>
-<updated>2014-08-15T01:47:46.705+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7469"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7469_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7469_1.xml"/>
+<atom:title>Site d'Argenteuil</atom:title>
+<atom:updated>2014-08-15T01:47:46.705+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7469"
 	coordinates="48.949390135334,2.2330945730209"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@
 		<phone> 01 39 98 34 07</phone>
 		<email>bu-argenteuil @ ml.u-cergy.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6228_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6228_1.xml"/>
-<title>Gestion des Sites culturels et naturels et Valorisation Tour</title>
-<updated>2014-08-15T01:47:35.174+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6228"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6228_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6228_1.xml"/>
+<atom:title>Gestion des Sites culturels et naturels et Valorisation Tour</atom:title>
+<atom:updated>2014-08-15T01:47:35.174+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6228"
 	coordinates="48.841747414564,2.3487685248256"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@ excepté mercredi : 10h-12h</openingHours>
 		<phone>01 55 43 46 58</phone>
 		<email>irest@univ-paris1.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

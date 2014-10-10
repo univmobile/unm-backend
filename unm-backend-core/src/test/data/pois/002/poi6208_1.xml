@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6208_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6208_1.xml"/>
-<title>MASS L1-3 et MAEF M1</title>
-<updated>2014-08-15T01:47:34.900+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6208"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6208_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6208_1.xml"/>
+<atom:title>MASS L1-3 et MAEF M1</atom:title>
+<atom:updated>2014-08-15T01:47:34.900+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6208"
 	coordinates="48.827169178894,2.3648027703166"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 		<phone>01 44 07 88 74 </phone>
 		<email>corinne.jobert-aboulker@univ-paris1.fr </email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3062_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3062_1.xml"/>
-<title>École Supérieure d’Interprètes et de Traducteurs </title>
-<updated>2014-08-15T01:47:02.588+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3062"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3062_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3062_1.xml"/>
+<atom:title>École Supérieure d’Interprètes et de Traducteurs </atom:title>
+<atom:updated>2014-08-15T01:47:02.588+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3062"
 	coordinates="48.870513977788,2.2736307978"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 		<email>esit@univ-paris3.fr</email>
 	</address>
 	<child uid="3063" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

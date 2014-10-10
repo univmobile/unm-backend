@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1212_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1212_1.xml"/>
-<title>Site de Saint Cloud</title>
-<updated>2014-08-15T01:46:45.868+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1212"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1212_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1212_1.xml"/>
+<atom:title>Site de Saint Cloud</atom:title>
+<atom:updated>2014-08-15T01:46:45.868+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1212"
 	coordinates="48.84342323265,2.2151438891888|48.843523849679,2.2158063948154|48.843590927585,2.2157876193523|48.843585631964,2.215720564127|48.843638588149,2.2156937420368|48.843569745098,2.2152243554592|48.843516788841,2.2152431309223|48.843495606323,2.2151224315166|48.84342323265,2.215143889"
 	active="true"
 	markerType="polygon"
@@ -31,5 +31,5 @@ T.2 station Parc de Saint Cloud</itinerary>
 		<fullAddress>11 avenue Pozzo di Borgo
 92210 Saint Cloud</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

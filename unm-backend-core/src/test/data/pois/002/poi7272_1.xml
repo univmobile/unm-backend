@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7272_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7272_1.xml"/>
-<title>LPQM</title>
-<updated>2014-08-15T01:47:45.079+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7272"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7272_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7272_1.xml"/>
+<atom:title>LPQM</atom:title>
+<atom:updated>2014-08-15T01:47:45.079+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7272"
 	coordinates="48.788088224171,2.3269718885422"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ Le laboratoire appartient à la fédération de recherche Institut d'Alembert (I
 		<email>ginette.puyhaubert@lpqm.ens-cachan.fr</email>
 	</address>
 	<attachment id="273" title="LPQM.png" type="image" url="/uploads/poi/2591b00ae8b77b82313f208e63549e2d303f5a42.png"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

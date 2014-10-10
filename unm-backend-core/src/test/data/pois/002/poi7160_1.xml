@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7160_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7160_1.xml"/>
-<title>Résidence Combs la Ville</title>
-<updated>2014-08-15T01:47:43.900+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7160"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7160_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7160_1.xml"/>
+<atom:title>Résidence Combs la Ville</atom:title>
+<atom:updated>2014-08-15T01:47:43.900+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7160"
 	coordinates="48.665271809682,2.5583150982857"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 Jeudi de 14h30 à 18h00</openingHours>
 		<phone>01 64 13 01 88</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

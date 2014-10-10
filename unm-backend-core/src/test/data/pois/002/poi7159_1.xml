@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7159_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7159_1.xml"/>
-<title>Résidence Universitaire de Combs la Ville</title>
-<updated>2014-08-15T01:47:43.888+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7159"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7159_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7159_1.xml"/>
+<atom:title>Résidence Universitaire de Combs la Ville</atom:title>
+<atom:updated>2014-08-15T01:47:43.888+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7159"
 	coordinates="48.665372665961,2.5579932332039|48.665301806714,2.5586262345314|48.665096314336,2.5585404038429|48.665195517658,2.5579074025154|48.665372665961,2.5579932332039"
 	active="true"
 	markerType="polygon"
@@ -25,5 +25,5 @@
 77380 Combs La Ville</fullAddress>
 	</address>
 	<child uid="7160" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

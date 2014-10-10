@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6085_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6085_1.xml"/>
-<title>BU de Tourisme Management</title>
-<updated>2014-08-15T01:47:33.554+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6085"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6085_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6085_1.xml"/>
+<atom:title>BU de Tourisme Management</atom:title>
+<atom:updated>2014-08-15T01:47:33.554+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6085"
 	coordinates="48.854746645595,2.7751763910055"
 	active="true"
 	markerType="point"
@@ -33,5 +33,5 @@ Vendredi: 9h00-17h00</openingHours>
 		<phone>01 60 95 76 38</phone>
 		<email>bibval@univ-mlv.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

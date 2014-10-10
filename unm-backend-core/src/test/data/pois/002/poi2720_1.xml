@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2720_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2720_1.xml"/>
-<title>Bureau de la mobilité</title>
-<updated>2014-08-15T01:46:59.477+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2720"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2720_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2720_1.xml"/>
+<atom:title>Bureau de la mobilité</atom:title>
+<atom:updated>2014-08-15T01:46:59.477+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2720"
 	coordinates="48.846957005198,2.355588376"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ Sous réserve de remplir les conditions pédagogiques requises, l’UPMC vous of
 mercredi, vendredi : de 9h00 à 12h00</openingHours>
 		<url>http://www.upmc.fr/fr/international/mobilite_etudiante.html</url>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

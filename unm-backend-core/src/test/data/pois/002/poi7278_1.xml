@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7278_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7278_1.xml"/>
-<title>LURPA</title>
-<updated>2014-08-15T01:47:45.136+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7278"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7278_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7278_1.xml"/>
+<atom:title>LURPA</atom:title>
+<atom:updated>2014-08-15T01:47:45.136+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7278"
 	coordinates="48.78714254779,2.3248770833015"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Après une période initiale où les travaux du laboratoire ont essentiellement 
 		<email>secretariat@lurpa.ens-cachan.fr</email>
 	</address>
 	<attachment id="279" title="logo_0400x0184x24bpp_fond_transp lurpa.png" type="image" url="/uploads/poi/0267862fe9d200b9198a38afd0a8e53de1b2aad0.png"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

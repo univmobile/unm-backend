@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7334_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7334_1.xml"/>
-<title>Ecole de Botanique</title>
-<updated>2014-08-15T01:47:45.485+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7334"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7334_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7334_1.xml"/>
+<atom:title>Ecole de Botanique</atom:title>
+<atom:updated>2014-08-15T01:47:45.485+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7334"
 	coordinates="48.843628526483,2.3593354225159"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ Ouvert tous les jours de 08 h 00 à 17 h 30 en période d’hiver.</itinerary>
 		<url>http://www.mnhn.fr/museum/foffice/tous/tous/guidePratique/lieuxVisiter/LieuxAVisiter/FLieuAVisiter.xsp?AE_ID=224&amp;ID=214&amp;INFO_ID=21&amp;LIEU_ID=158&amp;MAN_ID=273&amp;SITE_ID=10&amp;idx=6&amp;nav=liste</url>
 		<email>valhubert@mnhn.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

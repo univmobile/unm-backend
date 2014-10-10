@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi5535_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5535_1.xml"/>
-<title>LMDE Sénart</title>
-<updated>2014-08-15T01:47:27.206+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="5535"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi5535_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5535_1.xml"/>
+<atom:title>LMDE Sénart</atom:title>
+<atom:updated>2014-08-15T01:47:27.206+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="5535"
 	coordinates="48.626611844078,2.5625610351562"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@
 </openingHours>
 		<url>www.lmde.com</url>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

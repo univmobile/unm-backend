@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi5537_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5537_1.xml"/>
-<title>Contrôle moteur – Pratiques physiques... (M1 CM4P)</title>
-<updated>2014-08-15T01:47:27.228+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="5537"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi5537_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5537_1.xml"/>
+<atom:title>Contrôle moteur – Pratiques physiques... (M1 CM4P)</atom:title>
+<atom:updated>2014-08-15T01:47:27.228+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="5537"
 	coordinates="48.701985974139,2.1629071980715"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<phone>01 69 15 62 36</phone>
 		<email>fabienne.soudee@u-psud.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

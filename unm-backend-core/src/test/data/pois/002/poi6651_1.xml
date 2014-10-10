@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6651_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6651_1.xml"/>
-<title>Résidence Universitaire Fleming V2</title>
-<updated>2014-08-15T01:47:39.006+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6651"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6651_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6651_1.xml"/>
+<atom:title>Résidence Universitaire Fleming V2</atom:title>
+<atom:updated>2014-08-15T01:47:39.006+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6651"
 	coordinates="48.69526408936,2.1891723945737"
 	active="true"
 	markerType="point"
@@ -38,5 +38,5 @@ du 14 au 20 juillet inclus : aucun encaissement ou décaissement en espèces.
 		<phone>01 69 18 97 97</phone>
 	</address>
 	<attachment id="142" title="Fleming.jpg" type="image" url="/uploads/poi/134e3d10350df3048e9be6b085c9b26cfcf5f2a6.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6776_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6776_1.xml"/>
-<title>Résidence Universitaire Flora Tristan</title>
-<updated>2014-08-15T01:47:40.146+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6776"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6776_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6776_1.xml"/>
+<atom:title>Résidence Universitaire Flora Tristan</atom:title>
+<atom:updated>2014-08-15T01:47:40.146+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6776"
 	coordinates="48.635495334575,2.4302939325571"
 	active="true"
 	markerType="point"
@@ -41,5 +41,5 @@ Mardi et jeudi : 13h30 à 16h00
 		<phone>01 60 78 14 92</phone>
 	</address>
 	<attachment id="220" title="flora tristan.jpg" type="image" url="/uploads/poi/99f33a38402f7cbfe4ad3b9bcf229168528c20ee.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

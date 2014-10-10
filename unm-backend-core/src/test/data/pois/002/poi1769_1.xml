@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1769_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1769_1.xml"/>
-<title>BU du SUFOM</title>
-<updated>2014-08-15T01:46:50.648+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1769"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1769_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1769_1.xml"/>
+<atom:title>BU du SUFOM</atom:title>
+<atom:updated>2014-08-15T01:46:50.648+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1769"
 	coordinates="48.905289916006,2.21454944461"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 Du mardi au jeudi : 9h / 17h30
 Vendredi : 13h30 / 17h30</openingHours>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

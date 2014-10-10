@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7494_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7494_1.xml"/>
-<title>Espace André Tunc (IRJS)</title>
-<updated>2014-08-15T01:47:46.903+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7494"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7494_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7494_1.xml"/>
+<atom:title>Espace André Tunc (IRJS)</atom:title>
+<atom:updated>2014-08-15T01:47:46.903+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7494"
 	coordinates="48.847206470346,2.3465117812157"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Ce lieu est ouvert à tous les membres de l'IRJS, aux étudiants des masters 2 D
 		<phone>01 44 07 76 54</phone>
 		<email>centrededocumentation.IRJS@univ-paris1.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

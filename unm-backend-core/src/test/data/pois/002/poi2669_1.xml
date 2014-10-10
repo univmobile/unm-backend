@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2669_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2669_1.xml"/>
-<title>Service social</title>
-<updated>2014-08-15T01:46:58.925+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2669"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2669_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2669_1.xml"/>
+<atom:title>Service social</atom:title>
+<atom:updated>2014-08-15T01:46:58.925+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2669"
 	coordinates="48.77978661647,2.044092044234"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 		<openingHours>Accueil sur rendez-vous uniquement de 9h30 à 12h30, Lundi, Mardi, Jeudi après-midi</openingHours>
 		<phone>0169157064</phone>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

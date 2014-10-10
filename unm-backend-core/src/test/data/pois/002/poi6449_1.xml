@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6449_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6449_1.xml"/>
-<title>Mathématiques (M2 Recherche)</title>
-<updated>2014-08-15T01:47:37.328+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6449"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6449_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6449_1.xml"/>
+<atom:title>Mathématiques (M2 Recherche)</atom:title>
+<atom:updated>2014-08-15T01:47:37.328+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6449"
 	coordinates="48.832913700689,2.3682926595211"
 	active="true"
 	markerType="point"
@@ -32,5 +32,5 @@
 		<fax>01 57 27 91 40</fax>
 		<email>catherine.prudlo@univ-paris-diderot.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

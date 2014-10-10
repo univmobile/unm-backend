@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3338_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3338_1.xml"/>
-<title>BDE </title>
-<updated>2014-08-15T01:47:05.596+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3338"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3338_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3338_1.xml"/>
+<atom:title>BDE </atom:title>
+<atom:updated>2014-08-15T01:47:05.596+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3338"
 	coordinates="48.90159358442,2.393274419009"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ um/portal.php
 		<phone>01 55 20 58 28</phone>
 		<email>http://bde.boulogne.free.fr/forum/portal.php</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3072_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3072_1.xml"/>
-<title>Pharmacologie chimique et génétique d'imagerie</title>
-<updated>2014-08-15T01:47:02.685+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3072"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3072_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3072_1.xml"/>
+<atom:title>Pharmacologie chimique et génétique d'imagerie</atom:title>
+<atom:updated>2014-08-15T01:47:02.685+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3072"
 	coordinates="48.843025683088,2.33571102842"
 	active="true"
 	markerType="point"
@@ -24,5 +24,5 @@
 		<phone>01 43 25 50 45 </phone>
 		<fax>01 43 26 69 18</fax>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6425_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6425_1.xml"/>
-<title>Droit fiscal M1</title>
-<updated>2014-08-15T01:47:37.104+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6425"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6425_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6425_1.xml"/>
+<atom:title>Droit fiscal M1</atom:title>
+<atom:updated>2014-08-15T01:47:37.104+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6425"
 	coordinates="48.847003485798,2.3449869453907"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 		<fax>01 44 07 75 09</fax>
 		<email>ufr01mai@univ-paris1.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1263_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1263_1.xml"/>
-<title>Polygone</title>
-<updated>2014-08-15T01:46:46.044+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1263"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1263_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1263_1.xml"/>
+<atom:title>Polygone</atom:title>
+<atom:updated>2014-08-15T01:46:46.044+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1263"
 	coordinates="48.827731858039,2.3800782859325|48.827548218059,2.3802284896374|48.827583533492,2.3803035914898|48.827449334715,2.3804323375225|48.827647101209,2.3809258639812|48.827760110284,2.3808132112026|48.827738921102,2.3807595670223|48.827834272351,2.3806576430798|48.827869587582,2.380700558424|48.82795081252,2.3806308209896|48.827731858039,2.38007"
 	active="true"
 	markerType="polygon"
@@ -27,5 +27,5 @@ Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
 		<fullAddress>35 rue Hélène Brion
 75013 Paris</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi281_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi281_1.xml"/>
-<title>Centre Pierre Mendès France</title>
-<updated>2014-08-15T01:46:38.951+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="281"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi281_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi281_1.xml"/>
+<atom:title>Centre Pierre Mendès France</atom:title>
+<atom:updated>2014-08-15T01:46:38.951+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="281"
 	coordinates="48.827185585978,2.36462071"
 	active="true"
 	markerType="point"
@@ -31,5 +31,5 @@ Arrêt Tolbiac-Baudricourt</itinerary>
 	</address>
 	<child uid="1023" active="true"/>
 	<attachment id="32" title="pmf_01.jpg" type="image" url="/uploads/poi/6fe6180c4cf7c056c0b34c411c8a6efebb04a454.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

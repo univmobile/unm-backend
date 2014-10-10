@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi563_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi563_1.xml"/>
-<title>Guyancourt Vauban</title>
-<updated>2014-08-15T01:46:40.728+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="563"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi563_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi563_1.xml"/>
+<atom:title>Guyancourt Vauban</atom:title>
+<atom:updated>2014-08-15T01:46:40.728+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="563"
 	coordinates="48.780532152771,2.0443703234196|48.780443781272,2.0448517799377|48.78006996811,2.0448812842369|48.779902060583,2.0448665320873|48.779557111971,2.044181227684|48.780013115291,2.0436662435532|48.780179255006,2.0437145233154|48.780360711921,2.0440551638603|48.780532152771,2.0443703234"
 	active="true"
 	markerType="polygon"
@@ -24,5 +24,5 @@
 		<fullAddress>47 boulevard Vauban
 78280 Guyancourt</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1465_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1465_1.xml"/>
-<title>UFR Linguistique (UFRL)</title>
-<updated>2014-08-15T01:46:47.852+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1465"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1465_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1465_1.xml"/>
+<atom:title>UFR Linguistique (UFRL)</atom:title>
+<atom:updated>2014-08-15T01:46:47.852+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1465"
 	coordinates="48.833043176627,2.368553839623"
 	active="true"
 	markerType="point"
@@ -31,5 +31,5 @@ Bus 27 Clisson</itinerary>
 		<email>jeanine.mary@linguist.jussieu.fr</email>
 	</address>
 	<attachment id="81" title="chevaleret.gif" type="image" url="/uploads/poi/ce6c6b52a2c2a36d7591f42bf694b7e99d22d31e.gif"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

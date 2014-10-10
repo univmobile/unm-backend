@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi78_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi78_1.xml"/>
-<title>Vie étudiante et Vie culturelle Centre Pierre-Mendès-France</title>
-<updated>2014-08-15T01:46:38.406+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="78"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi78_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi78_1.xml"/>
+<atom:title>Vie étudiante et Vie culturelle Centre Pierre-Mendès-France</atom:title>
+<atom:updated>2014-08-15T01:46:38.406+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="78"
 	coordinates="48.827283116085,2.36510"
 	active="true"
 	markerType="point"
@@ -42,5 +42,5 @@ Bus 62,83</itinerary>
 
   75634 Paris</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

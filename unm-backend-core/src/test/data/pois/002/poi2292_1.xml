@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2292_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2292_1.xml"/>
-<title>Polygone 1 </title>
-<updated>2014-08-15T01:46:55.590+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2292"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2292_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2292_1.xml"/>
+<atom:title>Polygone 1 </atom:title>
+<atom:updated>2014-08-15T01:46:55.590+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2292"
 	coordinates="48.888856645652,2.3764174059033|48.888754356116,2.3762832954526|48.888841654957,2.3761169984937|48.888882218003,2.3761465027928|48.88890955395,2.376091517508|48.889000379732,2.3761921003461|48.8891837944,2.3763543739915|48.889027715615,2.3766534402966|48.888957171371,2.3765555396676|48.88898803449,2.3765005543828|48.88899685252,2.3765005543828|48.889013606774,2.3764710500836|48.889017133984,2.3764549568295|48.889027715615,2.37644020468|48.889019779392,2.3764254525304|48.889043588056,2.3763811960816|48.888968634817,2.3762765899301|48.888944826118,2.3762698844075|48.888856645652,2.376"
 	active="true"
 	markerType="polygon"
@@ -28,5 +28,5 @@ Autobus :
 		<fullAddress>10 rue Riquet
 75019 Paris </fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

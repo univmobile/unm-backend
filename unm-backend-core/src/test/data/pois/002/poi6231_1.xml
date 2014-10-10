@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6231_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6231_1.xml"/>
-<title>Économie du Développement Touristique International M1-2</title>
-<updated>2014-08-15T01:47:35.186+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6231"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6231_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6231_1.xml"/>
+<atom:title>Économie du Développement Touristique International M1-2</atom:title>
+<atom:updated>2014-08-15T01:47:35.186+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6231"
 	coordinates="48.841730644478,2.3488261923194"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@ excepté mercredi : 10h-12h</openingHours>
 		<phone>01 55 43 46 58</phone>
 		<email>irest@univ-paris1.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

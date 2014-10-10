@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6734_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6734_1.xml"/>
-<title>Cafétéria Pitié</title>
-<updated>2014-08-15T01:47:39.753+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6734"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6734_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6734_1.xml"/>
+<atom:title>Cafétéria Pitié</atom:title>
+<atom:updated>2014-08-15T01:47:39.753+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6734"
 	coordinates="48.838813520384,2.3608213663101"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 		<url>http://www.crous-paris.fr</url>
 	</address>
 	<attachment id="182" title="pitie_1.jpg" type="image" url="/uploads/poi/5d30d5a17e08bd13018855b60a2f86c8b1c01a4c.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

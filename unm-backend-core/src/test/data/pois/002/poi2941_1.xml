@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2941_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2941_1.xml"/>
-<title>Laboratoire Structure - Activité des Biomolécules </title>
-<updated>2014-08-15T01:47:01.328+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2941"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2941_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2941_1.xml"/>
+<atom:title>Laboratoire Structure - Activité des Biomolécules </atom:title>
+<atom:updated>2014-08-15T01:47:01.328+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2941"
 	coordinates="48.623543729621,2.42674335837"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<phone>01 69 47 03 23</phone>
 		<email>llebouil@univ-evry.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

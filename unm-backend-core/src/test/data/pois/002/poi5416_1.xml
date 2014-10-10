@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi5416_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5416_1.xml"/>
-<title>Restaurant et Cafétéria Universitaire Monseigneur Roméro</title>
-<updated>2014-08-15T01:47:25.977+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="5416"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi5416_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5416_1.xml"/>
+<atom:title>Restaurant et Cafétéria Universitaire Monseigneur Roméro</atom:title>
+<atom:updated>2014-08-15T01:47:25.977+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="5416"
 	coordinates="48.623330384199,2.4239458143711"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ de 8h30 à 15h </openingHours>
 		<phone>01 60 78 81 19</phone>
 	</address>
 	<attachment id="247" title="ru roméro.jpg" type="image" url="/uploads/poi/4e693a1c96fd4811f78218435412b23553504cd6.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

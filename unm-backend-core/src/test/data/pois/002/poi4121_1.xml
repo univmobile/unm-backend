@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4121_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4121_1.xml"/>
-<title>UFR Études germaniques</title>
-<updated>2014-08-15T01:47:13.903+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4121"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4121_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4121_1.xml"/>
+<atom:title>UFR Études germaniques</atom:title>
+<atom:updated>2014-08-15T01:47:13.903+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4121"
 	coordinates="48.883903460853,2.3110979050398"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@ Mardi, mercredi et jeudi : 9h30 / 12h30 - 14h00 / 16h30
 		<phone>01 43 18 41 44</phone>
 		<email>etudes-germaniques@paris-sorbonne.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

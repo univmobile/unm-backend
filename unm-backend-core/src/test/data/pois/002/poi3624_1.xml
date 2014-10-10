@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3624_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3624_1.xml"/>
-<title>ROBOSIX</title>
-<updated>2014-08-15T01:47:08.729+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3624"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3624_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3624_1.xml"/>
+<atom:title>ROBOSIX</atom:title>
+<atom:updated>2014-08-15T01:47:08.729+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3624"
 	coordinates="48.845086888668,2.357068285346"
 	active="true"
 	markerType="point"
@@ -27,5 +27,5 @@
 		<phone>01 44 27 74 40</phone>
 		<email>contact@robosix.org</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

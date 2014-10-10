@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4520_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4520_1.xml"/>
-<title>Site de Saint-Denis/IUFM</title>
-<updated>2014-08-15T01:47:18.168+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4520"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4520_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4520_1.xml"/>
+<atom:title>Site de Saint-Denis/IUFM</atom:title>
+<atom:updated>2014-08-15T01:47:18.168+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4520"
 	coordinates="48.939563661302,2.3524850606918"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 	<child uid="5252" active="true"/>
 	<child uid="6620" active="true"/>
 	<child uid="6621" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

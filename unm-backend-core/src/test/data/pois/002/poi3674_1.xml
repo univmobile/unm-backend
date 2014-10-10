@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3674_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3674_1.xml"/>
-<title>ASP6</title>
-<updated>2014-08-15T01:47:09.190+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3674"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3674_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3674_1.xml"/>
+<atom:title>ASP6</atom:title>
+<atom:updated>2014-08-15T01:47:09.190+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3674"
 	coordinates="48.847992292265,2.3585679754615"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ L’AS Paris 6 a pour but de développer et favoriser la pratique des activités
 		<phone>01 44 27 36 69</phone>
 		<email>asp6@cicrp.jussieu.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

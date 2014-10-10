@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2398_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2398_1.xml"/>
-<title>Centre National de la Recherche Scientifique</title>
-<updated>2014-08-15T01:46:56.580+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2398"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2398_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2398_1.xml"/>
+<atom:title>Centre National de la Recherche Scientifique</atom:title>
+<atom:updated>2014-08-15T01:46:56.580+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2398"
 	coordinates="48.796939998867,2.358416095376|48.797003605448,2.3586762696505|48.796970035318,2.3586963862181|48.79700625572,2.3588532954454|48.796915262953,2.3589082807302|48.79687020822,2.3587473481894|48.796900244713,2.3587299138308|48.796897594435,2.3587205260992|48.79688257619,2.3587299138308|48.796871091647,2.358682975173|48.796886993322,2.358674928546|48.796884343043,2.3586601763964|48.796866674514,2.3586655408144|48.79682427002,2.3584938794374|48.796827803729,2.3584844917059|48.796939998867,2.358416095"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="Marine Gianfermi Paris X"
 	name="Centre National de la Recherche Scientifique">
 	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

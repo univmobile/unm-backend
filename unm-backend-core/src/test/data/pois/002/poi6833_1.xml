@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6833_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6833_1.xml"/>
-<title>Cafétéria du LAL</title>
-<updated>2014-08-15T01:47:40.629+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6833"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6833_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6833_1.xml"/>
+<atom:title>Cafétéria du LAL</atom:title>
+<atom:updated>2014-08-15T01:47:40.629+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6833"
 	coordinates="48.69925233904,2.1707774698734"
 	active="true"
 	markerType="point"
@@ -24,5 +24,5 @@
 		<openingHours>de 8h30 à 16h</openingHours>
 	</address>
 	<attachment id="236" title="labo acc lineaire.jpg" type="image" url="/uploads/poi/47589cef81ca8842d8992bdf5e0faafe88c7407f.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

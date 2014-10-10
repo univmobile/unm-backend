@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi5364_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5364_1.xml"/>
-<title>Campus d'Orsay - Bâtiment 470</title>
-<updated>2014-08-15T01:47:25.593+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="5364"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi5364_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5364_1.xml"/>
+<atom:title>Campus d'Orsay - Bâtiment 470</atom:title>
+<atom:updated>2014-08-15T01:47:25.593+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="5364"
 	coordinates="48.702739687005,2.1827052533627"
 	active="true"
 	markerType="point"
@@ -33,5 +33,5 @@ Bâtiment 470, Rue du château
 	<child uid="5462" active="true"/>
 	<child uid="5522" active="true"/>
 	<child uid="5534" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

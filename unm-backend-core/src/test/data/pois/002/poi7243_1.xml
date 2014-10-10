@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi7243_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7243_1.xml"/>
-<title>Restaurant universitaire</title>
-<updated>2014-08-15T01:47:44.742+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="7243"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi7243_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7243_1.xml"/>
+<atom:title>Restaurant universitaire</atom:title>
+<atom:updated>2014-08-15T01:47:44.742+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="7243"
 	coordinates="48.791100261974,2.3289889097214"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ OU station Bagneux puis 10’ à pied en suivant « ENS Cachan »</itinerary>
 	<child uid="7293" active="true"/>
 	<child uid="7294" active="true"/>
 	<child uid="7295" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

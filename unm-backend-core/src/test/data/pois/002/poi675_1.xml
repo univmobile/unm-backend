@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi675_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi675_1.xml"/>
-<title>ISST </title>
-<updated>2014-08-15T01:46:41.072+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="675"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi675_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi675_1.xml"/>
+<atom:title>ISST </atom:title>
+<atom:updated>2014-08-15T01:46:41.072+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="675"
 	coordinates="48.778283933468,2.3181045"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 		<email>raisst@univ-paris1.fr</email>
 	</address>
 	<attachment id="129" title="RTEmagicC_IMG_7257.JPG.jpg" type="image" url="/uploads/poi/a2a18eff5e9159d991fad85a398495cc48d98329.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi550_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi550_1.xml"/>
-<title>IUT  Jean Rostand</title>
-<updated>2014-08-15T01:46:40.682+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="550"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi550_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi550_1.xml"/>
+<atom:title>IUT  Jean Rostand</atom:title>
+<atom:updated>2014-08-15T01:46:40.682+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="550"
 	coordinates="48.626679034733,2.4306929111481|48.626462747837,2.4320447444916|48.626466293531,2.4322110414505|48.626356376892,2.4321788549423|48.626324465565,2.4322164058685|48.62620391148,2.4322324991226|48.6261826372,2.4321305751801|48.626079811386,2.4321305751801|48.626093994269,2.4319750070572|48.626051445608,2.4319159984589|48.626193274341,2.4317336082458|48.626140088613,2.431578040123|48.626150725763,2.4311757087708|48.626115268587,2.4310898780823|48.625991168275,2.4310845136642|48.625934436602,2.4309772253036|48.625952165257,2.4308431148529|48.625987622547,2.4308484792709|48.62600889691,2.4307948350906|48.625973439634,2.4307680130005|48.625984076819,2.4305748939514|48.626679034733,2.4306929111"
 	active="true"
 	markerType="polygon"
@@ -23,5 +23,5 @@
 	<address
 		countryCode="FR">
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

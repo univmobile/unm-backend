@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2033_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2033_1.xml"/>
-<title>Hall</title>
-<updated>2014-08-15T01:46:53.522+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2033"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2033_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2033_1.xml"/>
+<atom:title>Hall</atom:title>
+<atom:updated>2014-08-15T01:46:53.522+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2033"
 	coordinates="48.945990373098,2.3631682991982|48.945895804697,2.3627089709044|48.945453083778,2.3629188537598|48.945430182793,2.3627901077271|48.945093713265,2.3628625273705|48.945119256843,2.363059669733|48.944980969042,2.3631253838539|48.944977445781,2.3630958795547|48.944915788672,2.3631133139133|48.944832991862,2.3632876574993|48.944899933974,2.3633721470833|48.944973041704,2.3633587360382|48.944985373118,2.3634512722492|48.945142157971,2.3636014759541|48.945179152078,2.3635169863701|48.945159774216,2.3633654415607|48.945120137656,2.3633225262165|48.945186198571,2.3631750047207|48.945468938299,2.3630449175835|48.945528833114,2.3633587360382|48.945990373098,2.36316829919"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="j.richer"
 	name="Hall">
 	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1227_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1227_1.xml"/>
-<title>Bâtiment F</title>
-<updated>2014-08-15T01:46:45.925+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1227"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1227_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1227_1.xml"/>
+<atom:title>Bâtiment F</atom:title>
+<atom:updated>2014-08-15T01:46:45.925+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1227"
 	coordinates="48.902821332197,2.2148998081684|48.902204236989,2.2136820852757|48.90190097598,2.2140522301197|48.902020870087,2.2143097221851|48.902049080423,2.2142668068409|48.901978554553,2.2140790522099|48.902059659295,2.2139824926853|48.902144290191,2.2141380608082|48.901851607735,2.2145403921604|48.901929186384,2.2147013247013|48.902080817033,2.2145564854145|48.90247928608,2.2152753174305|48.902821332197,2.21489980816"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="Marine Gianfermi Paris X"
 	name="Bâtiment F">
 	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

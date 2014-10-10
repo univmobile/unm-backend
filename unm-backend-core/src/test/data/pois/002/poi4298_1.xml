@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi4298_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4298_1.xml"/>
-<title>Service des Inscriptions, Validations et Transfert</title>
-<updated>2014-08-15T01:47:15.836+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="4298"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi4298_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4298_1.xml"/>
+<atom:title>Service des Inscriptions, Validations et Transfert</atom:title>
+<atom:updated>2014-08-15T01:47:15.836+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="4298"
 	coordinates="48.848162104669,2.3435982316732"
 	active="true"
 	markerType="point"
@@ -32,5 +32,5 @@ Guichets, Validations, Transferts :
 		<phone>01 40 46 25 42</phone>
 		<email>scolarite@paris-sorbonne.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3435_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3435_1.xml"/>
-<title>Bibliothèque de l'Institut français de presse IFP</title>
-<updated>2014-08-15T01:47:06.561+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3435"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3435_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3435_1.xml"/>
+<atom:title>Bibliothèque de l'Institut français de presse IFP</atom:title>
+<atom:updated>2014-08-15T01:47:06.561+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3435"
 	coordinates="48.845910164511,2.324183396995"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 14h00 / 16h00
 </openingHours>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

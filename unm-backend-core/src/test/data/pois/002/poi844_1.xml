@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi844_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi844_1.xml"/>
-<title>UFR 26 Etudes juridiques générales</title>
-<updated>2014-08-15T01:46:42.430+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="844"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi844_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi844_1.xml"/>
+<atom:title>UFR 26 Etudes juridiques générales</atom:title>
+<atom:updated>2014-08-15T01:46:42.430+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="844"
 	coordinates="48.846848157936,2.3446476459"
 	active="true"
 	markerType="point"
@@ -33,5 +33,5 @@ Bus 21, 27, 38, 82, 84, 85 et 89 </itinerary>
 		<email>ufr26@univ-paris1.fr</email>
 	</address>
 	<attachment id="87" title="wa_zoom-1.jpg" type="image" url="/uploads/poi/9d0e71e6e45b341c2658eaf0fc7e677e28f3905b.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

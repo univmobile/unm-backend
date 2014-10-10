@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2503_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2503_1.xml"/>
-<title>ESSAIM</title>
-<updated>2014-08-15T01:46:57.405+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2503"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2503_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2503_1.xml"/>
+<atom:title>ESSAIM</atom:title>
+<atom:updated>2014-08-15T01:46:57.405+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2503"
 	coordinates="48.98504625377,1.6995428"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 		<url>http://www.mecatronautes.fr/</url>
 		<email>essaim@gmail.com</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

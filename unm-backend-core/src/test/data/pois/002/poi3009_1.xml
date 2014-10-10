@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3009_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3009_1.xml"/>
-<title>Centre universitaire Censier</title>
-<updated>2014-08-15T01:47:02.050+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3009"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3009_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3009_1.xml"/>
+<atom:title>Centre universitaire Censier</atom:title>
+<atom:updated>2014-08-15T01:47:02.050+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3009"
 	coordinates="48.839497775122,2.354142665863"
 	active="true"
 	markerType="point"
@@ -73,5 +73,5 @@ Bus 47</itinerary>
 	<child uid="6908" active="true"/>
 	<child uid="6909" active="true"/>
 	<attachment id="211" title="Centre-universitaire-Censier.jpg" type="image" url="/uploads/poi/c066330db0b136e381cb97db6ff9b4960b7d4fef.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

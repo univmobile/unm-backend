@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi540_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi540_1.xml"/>
-<title>Polygone 1</title>
-<updated>2014-08-15T01:46:40.655+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="540"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi540_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi540_1.xml"/>
+<atom:title>Polygone 1</atom:title>
+<atom:updated>2014-08-15T01:46:40.655+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="540"
 	coordinates="48.818808148703,2.1362212300301|48.818783423573,2.1365216374397|48.81869511944,2.1365042030811|48.818697768567,2.1364505589008|48.818673043383,2.1364451944828|48.818677458595,2.1363660693169|48.818642872751,2.1363566815853|48.818638604714,2.1363995969296|48.818533522474,2.136382162571|48.818558247727,2.136115282774|48.818658914701,2.1361353993416|48.818651850358,2.136215865612|48.818713663321,2.1362292766571|48.81871807853,2.1361970901489|48.818808148703,2.136221"
 	active="true"
 	markerType="polygon"
@@ -24,5 +24,5 @@
 		<fullAddress>45 avenue des Etats-Unis 
 78035 Versailles cedex  </fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

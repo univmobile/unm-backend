@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi264_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi264_1.xml"/>
-<title>Evry bâtiment Maupertuis</title>
-<updated>2014-08-15T01:46:38.843+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="264"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi264_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi264_1.xml"/>
+<atom:title>Evry bâtiment Maupertuis</atom:title>
+<atom:updated>2014-08-15T01:46:38.843+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="264"
 	coordinates="48.623335525764,2.4270129203796"
 	active="true"
 	markerType="point"
@@ -44,5 +44,5 @@ RER C, changement à Juvisy</itinerary>
 	<child uid="5144" active="true"/>
 	<child uid="5145" active="true"/>
 	<child uid="5185" active="true"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

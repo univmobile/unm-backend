@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1391_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1391_1.xml"/>
-<title>UFR Chimie</title>
-<updated>2014-08-15T01:46:47.150+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1391"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1391_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1391_1.xml"/>
+<atom:title>UFR Chimie</atom:title>
+<atom:updated>2014-08-15T01:46:47.150+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1391"
 	coordinates="48.827000825666,2.383313030004"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
 		<email>annie-fontaine@univ-paris-diderot.fr</email>
 	</address>
 	<attachment id="67" title="lavoisier.jpg" type="image" url="/uploads/poi/09a4b5ac35ef0d4f67207b2f300dc69df3751760.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

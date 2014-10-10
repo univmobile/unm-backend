@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6326_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6326_1.xml"/>
-<title>Lettres (L3-M2)</title>
-<updated>2014-08-15T01:47:36.045+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6326"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6326_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6326_1.xml"/>
+<atom:title>Lettres (L3-M2)</atom:title>
+<atom:updated>2014-08-15T01:47:36.045+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6326"
 	coordinates="48.829703134916,2.3811266943812"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ M1 et M2 Lettres, Arts et Pensée Contemporaine (LAPC)</description>
 		<phone>01 57 27 63 53</phone>
 		<email>amoulin@univ-paris-diderot.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

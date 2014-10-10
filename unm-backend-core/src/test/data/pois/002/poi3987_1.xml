@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi3987_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3987_1.xml"/>
-<title>Forces du droit (FDPCE)</title>
-<updated>2014-08-15T01:47:12.438+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="3987"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3987_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3987_1.xml"/>
+<atom:title>Forces du droit (FDPCE)</atom:title>
+<atom:updated>2014-08-15T01:47:12.438+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3987"
 	coordinates="48.944595170476,2.3629684746265"
 	active="true"
 	markerType="point"
@@ -28,5 +28,5 @@ Directrice : Laurence Dubin</description>
 		<phone>01 49 40 71 39</phone>
 		<email>laurence.dubin@wanadoo.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

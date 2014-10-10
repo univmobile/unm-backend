@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2231_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2231_1.xml"/>
-<title>Économie et gestion (M1-M2 COMC)</title>
-<updated>2014-08-15T01:46:55.283+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2231"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2231_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2231_1.xml"/>
+<atom:title>Économie et gestion (M1-M2 COMC)</atom:title>
+<atom:updated>2014-08-15T01:46:55.283+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2231"
 	coordinates="48.946747853134,2.36109495162"
 	active="true"
 	markerType="point"
@@ -33,5 +33,5 @@ Mercredi et jeudi
 		<fax>01 49 40 72 58</fax>
 		<email>magali.strazel@univ-paris8.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

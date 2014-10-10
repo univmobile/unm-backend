@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1456_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1456_1.xml"/>
-<title>UFR Langues et Civilisation de l'Asie orientale (LCAO)</title>
-<updated>2014-08-15T01:46:47.757+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1456"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1456_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1456_1.xml"/>
+<atom:title>UFR Langues et Civilisation de l'Asie orientale (LCAO)</atom:title>
+<atom:updated>2014-08-15T01:46:47.757+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1456"
 	coordinates="48.829940076088,2.3807216"
 	active="true"
 	markerType="point"
@@ -30,5 +30,5 @@ Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
 		<email>patricia.cohen@univ-paris-diderot.fr</email>
 	</address>
 	<attachment id="59" title="moulin.jpg" type="image" url="/uploads/poi/d61820c69d991ff346178c8bd4cd25951ea57d8a.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

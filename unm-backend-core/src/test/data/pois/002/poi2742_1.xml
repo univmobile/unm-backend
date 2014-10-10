@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi2742_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2742_1.xml"/>
-<title>Bâtiment Test</title>
-<updated>2014-08-15T01:46:59.703+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="2742"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2742_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2742_1.xml"/>
+<atom:title>Bâtiment Test</atom:title>
+<atom:updated>2014-08-15T01:46:59.703+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2742"
 	coordinates="48.84601485102,2.3388902842999|48.845916004121,2.3393355309963|48.845517084297,2.3391638696194|48.845658295217,2.338745445013|48.84601485102,2.338890284299"
 	active="true"
 	markerType="polygon"
@@ -20,5 +20,5 @@
 	updatedBy="yasmine"
 	name="Bâtiment Test">
 	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

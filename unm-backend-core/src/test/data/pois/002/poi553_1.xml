@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi553_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi553_1.xml"/>
-<title>Bibliothèque</title>
-<updated>2014-08-15T01:46:40.686+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="553"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi553_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi553_1.xml"/>
+<atom:title>Bibliothèque</atom:title>
+<atom:updated>2014-08-15T01:46:40.686+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="553"
 	coordinates="48.618686440924,2.3061043024063|48.618668709718,2.3066407442093|48.6183424544,2.3066139221191|48.618363731985,2.3060238361359|48.618686440924,2.306104302"
 	active="true"
 	markerType="polygon"
@@ -30,5 +30,5 @@ de 9h à 12h et 13h à 17h</openingHours>
 		<fullAddress>Chemin de la Tuilerie
 91220 Brétigny sur Orge</fullAddress>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

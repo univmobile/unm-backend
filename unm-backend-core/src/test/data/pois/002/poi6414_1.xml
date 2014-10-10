@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi6414_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6414_1.xml"/>
-<title>Management systèmes d'info et de connaissance M2 FA</title>
-<updated>2014-08-15T01:47:37.017+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="6414"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi6414_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6414_1.xml"/>
+<atom:title>Management systèmes d'info et de connaissance M2 FA</atom:title>
+<atom:updated>2014-08-15T01:47:37.017+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="6414"
 	coordinates="48.838367937641,2.3487259447575"
 	active="true"
 	markerType="point"
@@ -25,5 +25,5 @@
 		<phone> 01 53 55 27 45</phone>
 		<email> morti.iae@univ-paris1.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/002:poi1371_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1371_1.xml"/>
-<title>Bibliothèque Centrale</title>
-<updated>2014-08-15T01:46:46.841+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1371"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi1371_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1371_1.xml"/>
+<atom:title>Bibliothèque Centrale</atom:title>
+<atom:updated>2014-08-15T01:46:46.841+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1371"
 	coordinates="48.830215522643,2.38158367574"
 	active="true"
 	markerType="point"
@@ -29,5 +29,5 @@ Samedi: 13h-18h</openingHours>
 		<phone>0157276612</phone>
 	</address>
 	<attachment id="56" title="sciences-2-8e64f.jpg" type="image" url="/uploads/poi/bcc0f7d205617a9980d0e350c3be88b19584ec99.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>
