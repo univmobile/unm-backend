@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/users/001:dandrianavalontsalama_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/users/001:dandrianavalontsalama_1"/>
-<updated>2014-09-20T07:48:22Z</updated>
-<title>dandrianavalontsalama</title>
-<category term="users"/>
-<author>
-	<name>dandrianavalontsalama</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandrianavalontsalama</uri>
-</author>
-<content>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/users/001:dandrianavalontsalama_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/users/001:dandrianavalontsalama_1"/>
+<atom:updated>2014-09-20T07:48:22Z</atom:updated>
+<atom:title>dandrianavalontsalama</atom:title>
+<atom:category term="users"/>
+<atom:author>
+	<atom:name>dandrianavalontsalama</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandrianavalontsalama</atom:uri>
+</atom:author>
+<atom:content>
 	<uid>dandrianavalontsalama</uid>
 	<cn>Andrianavalontsalama David</cn>
 	<sn>Andrianavalontsalama</sn>
@@ -22,6 +22,7 @@
 		<uid>dandriana</uid>
 		<remoteUser>dandriana@univ-paris1.fr</remoteUser>	
 	</primaryUser>
+	<roles>superadmin,admin</roles>
 	<login_classic active="true">
 		<!-- password: dummy2 -->
 		<password
@@ -29,6 +30,6 @@
 			encryptionAlgorithm="SHA-1"
 			encrypted="401a01ef1b9d708b0a3dd69bea02f813cf44df98"/>
 	</login_classic>
-</content>
-</entry>
+</atom:content>
+</atom:entry>
 

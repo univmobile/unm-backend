@@ -37,13 +37,13 @@ public interface Comment extends Entry<Comment>, EntryRef {
 	@XPath("atom:content/@postedAt")
 	DateTime getPostedAt();
 
-	@XPath("atom:content/atom:context")
+	@XPath("atom:content/context")
 	Context[] getContexts();
 
-	@XPath("atom:content/atom:context[1]")
+	@XPath("atom:content/context[1]")
 	Context getMainContext();
 
-	@XPath("atom:content/atom:message")
+	@XPath("atom:content/message")
 	String getMessage();
 
 	interface Context {

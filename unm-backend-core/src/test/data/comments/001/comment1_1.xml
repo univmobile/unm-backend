@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/comments/001:comment1_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/comments/001:comment1_1.xml"/>
-<title>Oui, mais si on danse ?</title>
-<updated>2014-08-24T09:49:00Z</updated>
-<category term="comments"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="1"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/comments/001:comment1_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/comments/001:comment1_1.xml"/>
+<atom:title>Oui, mais si on danse ?</atom:title>
+<atom:updated>2014-08-24T09:49:00Z</atom:updated>
+<atom:category term="comments"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="1"
 	active="true"
 	postedAt="2014-08-24 09:50:00"
 	postedBy="Dominique"
@@ -35,5 +35,5 @@
 <message>
 J’aime bien l’application, mais si on danse ?
 </message>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

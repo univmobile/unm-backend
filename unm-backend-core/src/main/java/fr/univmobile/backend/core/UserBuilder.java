@@ -24,13 +24,13 @@ public interface UserBuilder extends EntryBuilder<User>, User {
 	
 	UserBuilder setPasswordEnabled(boolean passwordEnabeld);
 
-	@XPath("atom:content/atom:login_classic/atom:password/@saltPrefix")
+	@XPath("atom:content/login_classic/password/@saltPrefix")
 	UserBuilder setPasswordSaltPrefix(String saltPrefix);
 	
-	@XPath("atom:content/atom:login_classic/atom:password/@encryptionAlgorithm")
+	@XPath("atom:content/login_classic/password/@encryptionAlgorithm")
 	UserBuilder setPasswordEncryptionAlgorithm(String encryptionAlgorithm);
 	
-	@XPath("atom:content/atom:login_classic/atom:password/@encrypted")
+	@XPath("atom:content/login_classic/password/@encrypted")
 	UserBuilder setPasswordEncrypted(String encrypted);
 	
 	UserBuilder setTwitterScreenName(String twitterScreenName);

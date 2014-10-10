@@ -10,37 +10,37 @@ public interface User extends Entry<User> {
 	/**
 	 * e.g. "dandriana"
 	 */
-	@XPath("atom:content/atom:uid")
+	@XPath("atom:content/uid")
 	String getUid();
 
 	/**
 	 * e.g. "David Andriana"
 	 */
-	@XPath("atom:content/atom:displayName")
+	@XPath("atom:content/displayName")
 	String getDisplayName();
 
 	/**
 	 * e.g. "M."
 	 */
-	@XPath("atom:content/atom:supannCivilite")
+	@XPath("atom:content/supannCivilite")
 	@Nullable
 	String getSupannCivilite();
 
 	/**
 	 * e.g. "dandriana@univ-paris1.fr"
 	 */
-	@XPath("atom:content/atom:remoteUser")
+	@XPath("atom:content/remoteUser")
 	String getRemoteUser();
 	
 	/**
 	 * e.g. "David.Andriana@univ-paris1.fr"
 	 */
-	@XPath("atom:content/atom:mail")
+	@XPath("atom:content/mail")
 	String getMail();
 
 	boolean isNullMail();
 	
-	@XPath("concat(atom:category/@term, ':', atom:content/atom:uid)")
+	@XPath("concat(atom:category/@term, ':', atom:content/uid)")
 	@Override
 	String toString();
 	
@@ -48,14 +48,14 @@ public interface User extends Entry<User> {
 	@Nullable
 	String getProfileImageUrl();
 	
-	@XPath("atom:content/atom:description")
+	@XPath("atom:content/description")
 	@Nullable
 	String getDescription();
 
-	@XPath("atom:content/atom:login_classic/@active")
+	@XPath("atom:content/login_classic/@active")
 	boolean getPasswordEnabled();
 
-	@XPath("atom:content/atom:login_classic[@active = 'true']/atom:password")
+	@XPath("atom:content/login_classic[@active = 'true']/password")
 	// @Nullable // Because it will be stored as detached in the J2EE session
 	Password getPassword();
 	
@@ -73,12 +73,12 @@ public interface User extends Entry<User> {
 		String getEncrypted();
 	}
 	
-	@XPath("atom:content/atom:primaryUser")
+	@XPath("atom:content/primaryUser")
 	RefUser getPrimaryUser();
 	
 	boolean isNullPrimaryUser();
 	
-	@XPath("atom:content/atom:secondaryUser")
+	@XPath("atom:content/secondaryUser")
 	RefUser[] getSecondaryUsers();
 	
 	int sizeOfSecondaryUsers();
@@ -92,7 +92,7 @@ public interface User extends Entry<User> {
 		String getRemoteUser();
 	}
 	
-	@XPath("atom:content/atom:twitter/@screenName")
+	@XPath("atom:content/twitter/@screenName")
 	String getTwitterScreenName();
 	
 	boolean isNullTwitterScreenName();

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/001:poi415_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/001:poi415_1.xml"/>
-<title>Centre Broca</title>
-<updated>2014-08-14T21:55:00Z</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="415"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/001:poi415_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/001:poi415_1.xml"/>
+<atom:title>Centre Broca</atom:title>
+<atom:updated>2014-08-14T21:55:00Z</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="415"
 	coordinates="48.838311445098,2.348552942276"
 	active="true"
 	markerType="point"
@@ -26,5 +26,5 @@
 	-->
 	<child uid="1024" active="true"/>
 	<attachment id="34" title="broca.jpg" type="image" url="/uploads/poi/790fdfceb8df212cd1d91bbe539b5ae3c4fed660.jpg"/>
-</content>
-</entry>
+</atom:content>
+</atom:entry>

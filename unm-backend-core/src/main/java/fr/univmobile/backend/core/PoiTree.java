@@ -5,7 +5,7 @@ import fr.univmobile.commons.datasource.Entry;
 
 public interface PoiTree extends Entry<PoiTree> {
 
-	@XPath("atom:content/atom:poi")
+	@XPath("atom:content/poi")
 	PoiTree[] getRoots();
 
 	@XPath("@uid | atom:content/@uid")
@@ -31,9 +31,9 @@ public interface PoiTree extends Entry<PoiTree> {
 	@XPath("atom:poi")
 	PoiTree[] getChildren();
 	
-	@XPath("descendant-or-self::atom:poi")
+	@XPath("descendant-or-self::poi")
 	int sizeOfAllPois();
 	
-	@XPath("atom:content/atom:poi[@universityId = $arg0]/descendant-or-self::atom:poi")
+	@XPath("atom:content/poi[@universityId = $arg0]/descendant-or-self::poi")
 	int sizeOfAllPoisByUniversityId(String universityId);
 }

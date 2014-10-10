@@ -11,16 +11,16 @@ public interface University {
 	/**
 	 * e.g. "paris13"
 	 */
-	@XPath("self::atom:university/atom:id")
+	@XPath("self::university/id")
 	String getId();
 
 	/**
 	 * e.g. "Paris Nord"
 	 */
-	@XPath("self::atom:university/atom:title")
+	@XPath("self::university/title")
 	String getTitle();
 
-	@XPath("self::atom:university/atom:shibboleth/@identityProvider")
+	@XPath("self::university/shibboleth/@identityProvider")
 	@Nullable
 	String getShibbolethIdentityProvider();
 }

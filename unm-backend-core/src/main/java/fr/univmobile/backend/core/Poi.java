@@ -24,26 +24,26 @@ public interface Poi extends Entry<Poi> {
 	@XPath("atom:content/@name")
 	String getName();
 
-	@XPath("atom:content/atom:description")
+	@XPath("atom:content/description")
 	@Nullable
 	String getDescription();
 
 	/**
 	 * e.g. 1 (poiTypeLabel = "Université")
 	 */
-	@XPath("atom:content/atom:poiType/@id")
+	@XPath("atom:content/poiType/@id")
 	int[] getPoiTypeIds();
 
 	/**
 	 * e.g. "Université"
 	 */
-	@XPath("atom:content/atom:poiType/@label")
+	@XPath("atom:content/poiType/@label")
 	String[] getPoiTypeLabels();
 
 	/**
 	 * e.g. 1 (poiCategoryLabel = "Plans")
 	 */
-	@XPath("atom:content/atom:poiType/@categoryId")
+	@XPath("atom:content/poiType/@categoryId")
 	int[] getPoiCategoryIds();
 
 	boolean isNullPoiCategoryIds();
@@ -51,7 +51,7 @@ public interface Poi extends Entry<Poi> {
 	/**
 	 * e.g. "Plans"
 	 */
-	@XPath("atom:content/atom:poiType/@categoryLabel")
+	@XPath("atom:content/poiType/@categoryLabel")
 	String[] getPoiCategoryLabels();
 
 	/**
@@ -91,37 +91,37 @@ public interface Poi extends Entry<Poi> {
 	@XPath("not(not(atom:content/@deletedAt))")
 	boolean isDeleted();
 
-	@XPath("atom:content/atom:university/@id")
+	@XPath("atom:content/university/@id")
 	String[] getUniversities();
 
 	int sizeOfUniversities();
 
 	boolean isNullUniversities();
 
-	@XPath("atom:content/atom:address/atom:url")
+	@XPath("atom:content/address/url")
 	String[] getUrls();
 
-	@XPath("atom:content/atom:address/atom:phone")
+	@XPath("atom:content/address/phone")
 	String[] getPhones();
 
-	@XPath("atom:content/atom:address/atom:fax")
+	@XPath("atom:content/address/fax")
 	String[] getFaxes();
 
-	@XPath("atom:content/atom:address/atom:email")
+	@XPath("atom:content/address/email")
 	String[] getEmails();
 
-	@XPath("atom:content/atom:address")
+	@XPath("atom:content/address")
 	Address[] getAddresses();
 
 	interface Address {
 
-		@XPath("atom:floor")
+		@XPath("floor")
 		String getFloor();
 
-		@XPath("atom:openingHours")
+		@XPath("openingHours")
 		String getOpeningHours();
 
-		@XPath("atom:itinerary")
+		@XPath("itinerary")
 		String getItinerary();
 
 		@XPath("@zipCode")
@@ -139,7 +139,7 @@ public interface Poi extends Entry<Poi> {
 		@XPath("@longitude")
 		String getLongitude();
 
-		@XPath("atom:fullAddress")
+		@XPath("fullAddress")
 		@Nullable
 		String getFullAddress();
 	}
@@ -149,7 +149,7 @@ public interface Poi extends Entry<Poi> {
 
 	boolean isNullParentUid();
 
-	@XPath("atom:content/atom:child[@active = 'true']/@uid")
+	@XPath("atom:content/child[@active = 'true']/@uid")
 	int[] getChildren();
 
 	int sizeOfChildren();
@@ -174,7 +174,7 @@ public interface Poi extends Entry<Poi> {
 		}
 	}
 
-	@XPath("atom:content/atom:attachment")
+	@XPath("atom:content/attachment")
 	Attachment[] getAttachments();
 
 	int sizeOfAttachments();
