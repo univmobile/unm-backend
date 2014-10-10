@@ -14,11 +14,9 @@ import java.util.NoSuchElementException;
 
 import javax.annotation.Nullable;
 
-import com.avcompris.lang.NotImplementedException;
-
-import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Entry;
 import fr.univmobile.commons.datasource.EntryBuilder;
+import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.SearchAttribute;
 
 final class BackendDataCacheEngine<E extends Entry<E>, EB extends EntryBuilder<E>>
