@@ -8,7 +8,7 @@ public interface MyPoi extends Entry<MyPoi> {
 	/**
 	 * e.g. { "paris1" }
 	 */
-	@XPath("atom:content/atom:universityId")
+	@XPath("atom:content/universityId")
 	String[] getUniversityIds();
 
 	/**

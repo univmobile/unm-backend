@@ -10,13 +10,13 @@ public interface MyUser extends Entry<MyUser> {
 	/**
 	 * e.g. "dandriana"
 	 */
-	@XPath("atom:content/atom:uid")
+	@XPath("atom:content/uid")
 	String getUid();
 
 	/**
 	 * e.g. "David Andriana"
 	 */
-	@XPath("atom:content/atom:displayName")
+	@XPath("atom:content/displayName")
 	String getDisplayName();
 
 	void setDisplayName(String displayName);
@@ -24,7 +24,7 @@ public interface MyUser extends Entry<MyUser> {
 	/**
 	 * e.g. "M."
 	 */
-	@XPath("atom:content/atom:supannCivilite")
+	@XPath("atom:content/supannCivilite")
 	@Nullable
 	String getSupannCivilite();
 
@@ -33,7 +33,7 @@ public interface MyUser extends Entry<MyUser> {
 	/**
 	 * e.g. "dandriana@univ-paris1.fr"
 	 */
-	@XPath("atom:content/atom:remoteUser")
+	@XPath("atom:content/remoteUser")
 	String getRemoteUser();
 
 	void setRemoteUser(String remoteUser);
@@ -41,12 +41,12 @@ public interface MyUser extends Entry<MyUser> {
 	/**
 	 * e.g. "David.Andriana@univ-paris1.fr"
 	 */
-	@XPath("atom:content/atom:mail")
+	@XPath("atom:content/mail")
 	String getMail();
 
 	void setMail(String mail);
 
-	@XPath("concat(atom:category/@term, ':', atom:content/atom:uid)")
+	@XPath("concat(atom:category/@term, ':', atom:content/uid)")
 	@Override
 	String toString();
 }
