@@ -6,6 +6,10 @@ user:
     uid: tformica
     displayName: Toto Formica
     mail: toto.formica@univ-paris1.fr
+    admin: true
+    superadmin: false
+    student: true
+    editable: false
     
 delegationUser:
   type: fr.univmobile.backend.core.User
@@ -13,6 +17,10 @@ delegationUser:
     uid: tformica
     displayName: Toto Formica
     mail: toto.formica@univ-paris1.fr
+    admin: true
+    superadmin: false
+    student: true
+    editable: false
     
 usersInfo:
   type: fr.univmobile.model.UsersInfo
@@ -26,10 +34,18 @@ users:
    value:
      - uid: tformica
        mail: toto.formica@univ-paris1.fr
+       admin: true
+       superadmin: false
+       student: true
+       editable: true
      - uid: crezvani
        mail: cyrus.rezvani@univ-paris1.fr
+       superadmin: true
+       student: true
      - uid: dandriana
        mail: david.andriana@univ-paris1.fr
+       student: true
+       editable: true
        
 buildInfo:
   type: fr.univmobile.model.BuildInfo

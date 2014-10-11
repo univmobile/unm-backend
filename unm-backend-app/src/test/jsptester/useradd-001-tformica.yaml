@@ -7,8 +7,12 @@ user:
     mail: Toto.Formica@univ-paris1.fr
     displayName: Toto Formica
     supannCivilite: M.
-    remoteUser: tformica@univ-paris1.fr 
-    
+    remoteUser: tformica@univ-paris1.fr
+    primaryUniversityId: paris1
+    secondaryUniversities:
+      - toto
+      - tata
+
 delegationUser:
   type: fr.univmobile.backend.core.User
   value:
@@ -16,9 +20,13 @@ delegationUser:
     mail: Toto.Formica@univ-paris1.fr
     displayName: Toto Formica
     supannCivilite: M.
-    remoteUser: tformica@univ-paris1.fr 
+    remoteUser: tformica@univ-paris1.fr
     passwordEnabled: true
-    twitterScreenName: 
+    twitterScreenName:
+    primaryUniversityId: paris1
+    secondaryUniversities:
+      - toto
+      - tata
 
 useradd:
   type: fr.univmobile.backend.core.User
@@ -30,11 +38,12 @@ useradd:
     remoteUser: tformica@univ-paris1.fr
     passwordEnabled: true
     twitterScreenName: dandriana
-    
+    primaryUniversityId: paris10
+
 useradd_moreInfo:
   type: fr.univmobile.backend.core.MoreInfo
   value:
-    password: tralala 
+    password: tralala
 
 err_useradd_displayName: true
 
@@ -45,3 +54,82 @@ buildInfo:
     buildDisplayName: "#34"
     buildId: 2014/07/16 15:45
     gitCommitId: 6fa7922938635ec7dab6f894e7eaea4d1689ee70
+
+regions:
+   type: fr.univmobile.backend.core.Region[]
+   value:
+     - uid: bretagne
+       label: Bretagne
+       url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_bretagne
+       universityCount: 4
+       universities:
+         type: fr.univmobile.backend.core.University[]
+         value:
+           - id: ubo
+             title: Université de Bretagne Occidentale
+           - id: rennes1
+             title: Université de Rennes 1
+           - id: rennes2
+             title: Université Rennes 2
+           - id: enscr
+             title: École Nationale Supérieure de Chimie de Rennes
+     - uid: ile_de_france
+       label: Île de France
+       url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_ile_de_france
+       universityCount: 18
+       universities:
+         type: fr.univmobile.backend.core.University[]
+         value:
+           - id: paris1
+             title: Paris 1 Panthéon-Sorbonne
+           - id: paris3
+             title: Paris 3 Sorbonne Nouvelle
+           - id: paris13
+             title: Paris Nord
+           - id: uvsq
+             title: UVSQ
+           - id: museum
+             title: Muséum national d'Histoire naturelle
+           - id: evry
+             title: Evry-Val d'Essonne
+           - id: paris6
+             title: UPMC
+           - id: paris7
+             title: Paris Diderot
+           - id: paris8
+             title: Paris 8
+           - id: paris10
+             title: Paris Ouest Nanterre la Défense
+           - id: paris11
+             title: Paris-Sud
+           - id: upec
+             title: UPEC
+           - id: ucp
+             title: Cergy-Pontoise
+           - id: crousVersailles
+             title: CROUS Versailles
+           - id: enscachan
+             title: ENS Cachan
+           - id: ensiie
+             title: ENSIIE
+           - id: unpidf
+             title: UNPIdF
+           - id: enc
+             title: École nationale des chartes
+     - uid: unrpcl
+       label: Limousin/Poitou-Charentes
+       url: http://univmobile.vswip.com/unm-backend-mock/listUniversities_unrpcl
+       universityCount: 5
+       universities:
+         type: fr.univmobile.backend.core.University[]
+         value:
+           - id: ulr
+             title: Université de La Rochelle
+           - id: ul
+             title: Université de Limoges
+           - id: up
+             title: Université de Poitiers
+           - id: ensma
+             title: ISAE-ENSMA
+           - id: crousp
+             title: CROUS PCL

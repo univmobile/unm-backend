@@ -22,6 +22,31 @@ th.id,
 td.id {
 	display: none;
 }
+body.results td.roles {
+	text-align: center;
+	font-weight: bold;
+	color: #ffc;
+	width: 1em;
+	padding-left: 0;
+	padding-right: 0;
+	background-color: #cc0;
+	padding-top: 3px;
+	padding-bottom: 1px;
+}
+body.results th.roles {
+	padding-left: 0;
+	padding-right: 0;
+}
+body.results td.roles.student {
+	background-color: #090;
+}
+body.results td.roles.admin {
+	background-color: #f60;
+}
+body.results td.roles.superadmin {
+	background-color: #f00;
+	xcolor: #f00;
+}
 </style>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
@@ -86,9 +111,10 @@ Utilisateurs : ${usersInfo.count}
 <thead>
 <tr>
 <th class="none"></th>
-<th>uid</th>
-<th>mail</th>
-<th></th>
+<th class="uid">uid</th>
+<th class="roles"></th>
+<th class="mail">mail</th>
+<th class="edit"></th>
 <th class="none"></th>
 </tr>
 </thead>
@@ -107,17 +133,39 @@ Utilisateurs : ${usersInfo.count}
 </c:when>
 </c:choose>
 </td>
-<td>
+<td class="uid">
+<a href="${baseURL}/users/${u.uid}">
 ${u.uid}
+</a>
 </td>
-<td>
+<c:choose>
+<c:when test="${u.superadmin}">
+	<td class="roles superadmin" title="${u.uid} : Super Administrateur">S</td>
+</c:when>
+<c:when test="${u.admin}">
+	<td class="roles admin" title="${u.uid} : Administrateur">A</td>
+</c:when>
+<c:when test="${u.student}">
+	<td class="roles student" title="${u.uid} : Étudiant">É</td>
+</c:when>
+<c:otherwise>
+	<td class="roles unknown" title="(${u.uid} : Type inconnu)">-</td>
+</c:otherwise>
+</c:choose>
+<td class="mail">
 ${u.mail}
 </td>
 <td class="edit">
-<!--
-<a id="link-edit_xxx" href="${baseURL}?user=${u.uid}&amp;edit">Modifier…</a>
--->
-<div class="disabled">Modifier…</a>
+<c:choose>
+<c:when test="${u.editable}">
+	<a id="link-edit_${u.uid}" href="${baseURL}/users/${u.uid}?edit">Modifier…</a>
+</c:when>
+<c:otherwise>
+	<!--
+	<div class="disabled">Modifier…</a>
+	-->
+</c:otherwise>
+</c:choose>
 </td>
 <td class="none">
 </td>

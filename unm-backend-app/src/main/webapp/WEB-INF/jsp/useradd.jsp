@@ -9,9 +9,76 @@
 <title>Administration d’UnivMobile — Ajouter un utilisateur</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
+<style type="text/css">
+td span.error {
+	margin-left: 0.5em;
+}
+#div-secondaryUnivs {
+	height: 8em;
+	overflow-y: scroll;
+	border: 2px inset #ccc;
+}
+#body-useradd #div-secondaryUnivs label {
+	xfont-family: 'Lucida Grande';
+	font-size: x-small;
+}
+#tr-secondaryUnivs th {
+	vertical-align: top;
+}
+label.checkbox-secondaryUniv-region {
+	font-weight: bold;
+}
+</style>
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
 <jsp:include page="js-adminMenu.h.jsp"/>
+<script type="text/javascript">
+
+$(function () {
+
+	<c:forEach var="region" items="${regions}">
+
+    $('#checkbox-secondaryUniv-region_${region.uid}').change(function () {
+    	var checked = $(this).prop('checked');
+        $('.checkbox.secondaryUniv.region_${region.uid}').prop('checked', checked);
+    });
+
+    $('.checkbox.secondaryUniv.region_${region.uid}').change(function () {
+        if ($('.checkbox.secondaryUniv.region_${region.uid}:checked').length === 0) {
+            $('#checkbox-secondaryUniv-region_${region.uid}').
+                prop('indeterminate', false).
+                prop('checked', false);
+        } else if ($('.checkbox.secondaryUniv.region_${region.uid}:not(:checked)').length === 0) {
+            $('#checkbox-secondaryUniv-region_${region.uid}').
+                prop('indeterminate', false).
+                prop('checked', true);
+        } else {
+            $('#checkbox-secondaryUniv-region_${region.uid}').
+                prop('indeterminate', true);
+        }
+    });     
+
+	</c:forEach>
+
+/*    
+    $('.select_one').change (function () {
+        if ($('.select_one:checked').length === 0) {
+            $('#select_all').
+                prop("indeterminate", false).
+                attr('checked', false);
+        } else if ($('.select_one:not(:checked)').length === 0) {
+            $('#select_all').
+                prop("indeterminate", false).
+                attr('checked', true);
+        } else {
+            $('#select_all').
+                prop("indeterminate", true);
+        }
+    });     
+    */
+});
+
+</script>
 </head>
 <body id="body-useradd" class="entered">
 
@@ -40,6 +107,11 @@ Administration d’UnivMobile
 	existe déjà en base
 </div>
 </c:if>
+<c:if test="${err_incorrectFields}">
+<div class="error">
+	ERREUR — des champs sont incorrects
+</div>
+</c:if>
 
 <h2>Ajout d’un utilisateur</h2>
 
@@ -53,6 +125,28 @@ Administration d’UnivMobile
 	<input class="text" type="text" id="text-uid" name="uid" value="${useradd.uid}">
 	<c:if test="${err_useradd_uid}">
 		<span class="error" title="Le champ est mal formé">Incorrect</span>
+	</c:if>
+	</td>
+</tr>
+<tr class="type">
+	<th title="Le profil de ce compte utilisateur">
+		Type
+	</th>
+	<td>
+	<input type="radio" id="radio-type-superadmin" name="type"
+		value="superadmin"><label
+		id="label-type-superadmin"
+		for="radio-type-superadmin">Super Administrateur</label>
+	<input type="radio" id="radio-type-admin" name="type"
+		value="admin"><label
+		id="label-type-admin" 
+		for="radio-type-admin">Administrateur</label>
+	<input type="radio" id="radio-type-student" name="type"
+		value="student"><label
+		id="label-type-student" 
+		for="radio-type-student">Étudiant</label>
+	<c:if test="${err_useradd_type_none}">
+		<span class="error" title="Le type du compte utilisateur n’est pas renseigné">Incorrect</span>
 	</c:if>
 	</td>
 </tr>
@@ -103,6 +197,49 @@ Administration d’UnivMobile
 	<input class="text" type="text" id="text-password" name="password" value="${useradd_moreInfo.password}">
 	<input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes">
 	<label for="checkbox-passwordEnabled"> Activé</label>
+	</td>
+</tr>
+<tr>
+	<th title="L’université de rattachment de cet utilisateur">
+		Université de rattachement
+	</th>
+	<td>
+		<select id="select-primaryUniv" name="primaryUniv">
+		<option value="unknown"></option>
+		<c:forEach var="region" items="${regions}">
+			<option disabled value="region_${region.uid}">——— Région : ${region.label}</option>
+			<c:forEach var="university" items="${region.universities}">
+				<option value="${university.id}" title="id=${university.id}">
+					&nbsp;&nbsp;&nbsp;${university.title}
+				</option>
+			</c:forEach>
+		</c:forEach>
+		</select>
+	</td>
+</tr>
+<tr id="tr-secondaryUnivs">
+	<th title="De quelles autres universités l’utilisateur ira-t-il consulter les informations">
+		Autres universités d’intérêt
+	</th>
+	<td>
+		<div id="div-secondaryUnivs">
+		<c:forEach var="region" items="${regions}">
+			<input type="checkbox" id="checkbox-secondaryUniv-region_${region.uid}"><label
+				class="checkbox-secondaryUniv-region"
+				for="checkbox-secondaryUniv-region_${region.uid}"> Région: ${region.label}</label>
+			<br/>
+			<c:forEach var="university" items="${region.universities}">
+				&nbsp;&nbsp;&nbsp;
+				<input type="checkbox" 
+					title="id=${university.id}"
+					class="checkbox secondaryUniv region_${region.uid}"
+					id="checkbox-secondaryUniv-${university.id}"><label
+					title="id=${university.id}"
+					for="checkbox-secondaryUniv-${university.id}"> ${university.title}</label>
+				<br/>
+			</c:forEach>
+		</c:forEach>
+		</div>
 	</td>
 </tr>
 <tr>

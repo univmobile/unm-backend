@@ -55,7 +55,9 @@ Administration d’UnivMobile
 <td class="none">
 </td>
 <td class="uid">
-${r.uid}
+<a href="${baseURL}/regions/${r.uid}">
+	${r.uid}
+</a>
 </td>
 <td class="label">
 <input type="text" id="text-region_${r.uid}" name="region_${r.uid}"
