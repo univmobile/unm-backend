@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/regions/001:bretagne_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/regions/001:regions_1.xml"/>
-<title>Bretagne</title>
-<updated>2014-07-27T20:06:02Z</updated>
-<category term="regions"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/regions/001:bretagne_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/regions/001:regions_1.xml"/>
+<atom:title>Bretagne</atom:title>
+<atom:updated>2014-07-27T20:06:02Z</atom:updated>
+<atom:category term="regions"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content>
 	<uid>bretagne</uid>
 	<label>Bretagne</label>
 	<url>${baseURL}/json/regions/bretagne</url>
@@ -31,5 +31,5 @@
 			<title>École Nationale Supérieure de Chimie de Rennes</title>
 		</university>
 	</universities>
-</content>
-</entry>
+</atom:content>
+</atom:entry>
