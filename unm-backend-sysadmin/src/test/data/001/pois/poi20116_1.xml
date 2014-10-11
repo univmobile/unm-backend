@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<entry xmlns="http://www.w3.org/2005/Atom">
-<id>fr.univmobile:unm-backend:test/pois/003:poi116_1</id>
-<link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi116_1.xml"/>
-<title>Fondation Université de La Rochelle</title>
-<updated>2014-08-17T21:32:58.638+02:00</updated>
-<category term="pois"/>
-<author>
-	<name>dandriana</name>
-	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
-</author>
-<content uid="20116"
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/003:poi116_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi116_1.xml"/>
+<atom:title>Fondation Université de La Rochelle</atom:title>
+<atom:updated>2014-08-17T21:32:58.638+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="20116"
 	coordinates="46.146965679283,-1.154937744140"
 	active="true"
 	markerType="point"
@@ -21,5 +21,5 @@
 		<phone>05 16 49 67 01</phone>
 		<email>fondation@univ-lr.fr</email>
 	</address>
-</content>
-</entry>
+</atom:content>
+</atom:entry>
