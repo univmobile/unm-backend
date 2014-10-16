@@ -18,23 +18,18 @@
 	<mail>Cyrus.Rezvani@univ-paris1.fr</mail>
 	<supannCivilite>M.</supannCivilite>
 	<displayName>Cyrus Rezvani</displayName>
-	<primaryUniversity>
-		<id>ubo</id>
-		<title>Université de Bretagne Occidentale</title>
-	</primaryUniversity>
-	<secondaryUniversity>
-		<id>rennes1</id>
-		<title>Université de Rennes 1</title>
-	</secondaryUniversity>
 	<roles>admin</roles>
+	<primaryUniversity>
+		<id>paris1</id>
+		<title>Paris 1 Panthéon-Sorbonne</title>
+	</primaryUniversity>	
 	<login_classic active="true">
 		<!-- password: Hello+World! -->
 		<password
 			saltPrefix="18A912"
-			encryptionAlgorithm="SHA-1"
-			encrypted="f620dbedc1c0a115fa85b788c80890096d76e0ef"/>
+			encryptionAlgorithm="SHA-256"
+			encrypted="1b43e4d996b6ccdb0e1d0bb379ae58447d10fdce2ade44f52f791c8f09bf96a5"/>
 	</login_classic>
-	<twitter screenName="dandriana"/>
 </atom:content>
 </atom:entry>
 

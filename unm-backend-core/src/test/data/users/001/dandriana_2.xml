@@ -20,6 +20,10 @@
 	<supannCivilite>M.</supannCivilite>
 	<displayName>David Andrianavalontsalama</displayName>
 	<roles>admin</roles>
+	<primaryUniversity>
+		<id>paris1</id>
+		<title>Paris 1 Panthéon-Sorbonne</title>
+	</primaryUniversity>	
 </atom:content>
 </atom:entry>
 

@@ -96,4 +96,19 @@ public interface User extends Entry<User> {
 	String getTwitterScreenName();
 	
 	boolean isNullTwitterScreenName();
+	
+	@XPath("atom:content/roles = 'superadmin'")
+	boolean isSuperadmin();
+	
+	@XPath("atom:content/roles = 'admin'")
+	boolean isAdmin();
+	
+	@XPath("atom:content/roles = 'student'")
+	boolean isStudent();
+
+	@XPath("atom:content/primaryUniversity")
+	University getPrimaryUniversity();
+
+	@XPath("atom:content/secondaryUniversity")
+	University[] getSecondaryUniversities();
 }

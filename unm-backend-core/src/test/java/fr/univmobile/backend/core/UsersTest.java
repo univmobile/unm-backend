@@ -60,7 +60,19 @@ public class UsersTest {
 		assertFalse(users.hasParent(crezvani));
 
 		assertTrue(crezvani.isNullParent());
-	}
+		
+		assertTrue(crezvani.isAdmin());
+		assertFalse(crezvani.isSuperadmin());
+		assertFalse(crezvani.isStudent());
+		
+		assertEquals("ubo", crezvani.getPrimaryUniversity().getId());
+		assertEquals("Université de Bretagne Occidentale", crezvani.getPrimaryUniversity().getTitle());
+		
+		assertEquals(1, crezvani.getSecondaryUniversities().length);
+
+		assertEquals("rennes1", crezvani.getSecondaryUniversities()[0].getId());
+		assertEquals("Université de Rennes 1", crezvani.getSecondaryUniversities()[0].getTitle());
+}
 
 	@Test(expected = NoSuchElementException.class)
 	public void test_crezvani_getParent() throws Exception {

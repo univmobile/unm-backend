@@ -50,6 +50,10 @@
 	<dependencies>
 		<dependency>
 			<groupId>fr.univmobile</groupId>
+			<artifactId>unm-commons</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-commons-datasource</artifactId>
 		</dependency>	
 		<dependency>

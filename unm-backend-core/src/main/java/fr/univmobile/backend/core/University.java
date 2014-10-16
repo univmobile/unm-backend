@@ -6,21 +6,22 @@ import net.avcompris.binding.annotation.Namespaces;
 import net.avcompris.binding.annotation.XPath;
 
 @Namespaces("xmlns:atom=http://www.w3.org/2005/Atom")
+@XPath("self::university")
 public interface University {
 
 	/**
 	 * e.g. "paris13"
 	 */
-	@XPath("self::university/id")
+	@XPath("id")
 	String getId();
 
 	/**
 	 * e.g. "Paris Nord"
 	 */
-	@XPath("self::university/title")
+	@XPath("title")
 	String getTitle();
 
-	@XPath("self::university/shibboleth/@identityProvider")
+	@XPath("shibboleth/@identityProvider")
 	@Nullable
 	String getShibbolethIdentityProvider();
 }

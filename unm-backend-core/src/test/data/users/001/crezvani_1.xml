@@ -26,6 +26,14 @@
 			encryptionAlgorithm="SHA-256"
 			encrypted="1b43e4d996b6ccdb0e1d0bb379ae58447d10fdce2ade44f52f791c8f09bf96a5"/>
 	</login_classic>
+	<primaryUniversity>
+		<id>ubo</id>
+		<title>Université de Bretagne Occidentale</title>
+	</primaryUniversity>
+	<secondaryUniversity>
+		<id>rennes1</id>
+		<title>Université de Rennes 1</title>
+	</secondaryUniversity>
 </atom:content>
 </atom:entry>
 

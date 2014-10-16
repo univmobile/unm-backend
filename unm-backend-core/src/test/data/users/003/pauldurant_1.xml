@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?> 
 <atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
-<atom:id>fr.univmobile:unm-backend:test/users/001:crezvani_1</atom:id>
-<atom:link rel="self" href="fr.univmobile:unm-backend:test/users/001:crezvani_1"/>
-<atom:updated>2014-07-26T18:40:02Z</atom:updated>
-<atom:title>crezvani</atom:title>
+<atom:id>fr.univmobile:unm-backend:test/users/003:pauldurant_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/users/003:pauldurant_1"/>
+<atom:updated>2014-10-10T07:44:02Z</atom:updated>
+<atom:title>pauldurant</atom:title>
 <atom:category term="users"/>
 <atom:author>
 	<atom:name>dandriana</atom:name>
@@ -18,23 +18,20 @@
 	<mail>Cyrus.Rezvani@univ-paris1.fr</mail>
 	<supannCivilite>M.</supannCivilite>
 	<displayName>Cyrus Rezvani</displayName>
+	<!--  
+	<roles>generic</roles>
+	-->
 	<primaryUniversity>
-		<id>ubo</id>
-		<title>Université de Bretagne Occidentale</title>
-	</primaryUniversity>
-	<secondaryUniversity>
-		<id>rennes1</id>
-		<title>Université de Rennes 1</title>
-	</secondaryUniversity>
-	<roles>admin</roles>
+		<id>paris1</id>
+		<title>Paris 1 Panthéon-Sorbonne</title>
+	</primaryUniversity>	
 	<login_classic active="true">
 		<!-- password: Hello+World! -->
 		<password
 			saltPrefix="18A912"
-			encryptionAlgorithm="SHA-1"
-			encrypted="f620dbedc1c0a115fa85b788c80890096d76e0ef"/>
+			encryptionAlgorithm="SHA-256"
+			encrypted="1b43e4d996b6ccdb0e1d0bb379ae58447d10fdce2ade44f52f791c8f09bf96a5"/>
 	</login_classic>
-	<twitter screenName="dandriana"/>
 </atom:content>
 </atom:entry>
 
