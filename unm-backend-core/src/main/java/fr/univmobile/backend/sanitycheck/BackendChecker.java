@@ -24,6 +24,20 @@ import fr.univmobile.commons.datasource.Entry;
 public class BackendChecker {
 
 	/**
+	 * Check a set of data sub-directories.
+	 */
+	public CheckReport checkDirectories(final File dir) throws IOException {
+
+		checkNotNull(dir, "dir");
+
+		final ReportBuilder reportBuilder = new DefaultReportBuilder();
+
+		checkUsersDirectory(reportBuilder, new File(dir, "users"));
+
+		return reportBuilder.build();
+	}
+
+	/**
 	 * Check a data directory, whether it is a "<code>users</code>" directory, a
 	 * "<code>poi</code>" directory, etc. This method dispatches the calls to
 	 * specialized methods such as {@link #checkUsersDirectory(File)}.
@@ -49,12 +63,21 @@ public class BackendChecker {
 
 		final ReportBuilder reportBuilder = new DefaultReportBuilder();
 
+		checkUsersDirectory(reportBuilder, dir);
+
+		return reportBuilder.build();
+	}
+
+	private void checkUsersDirectory(final ReportBuilder reportBuilder,
+			final File dir) throws IOException {
+
+		checkNotNull(dir, "dir");
+		checkNotNull(reportBuilder, "reportBuilder ");
+
 		for (final File file : dir.listFiles()) {
 
 			checkAllNonNullableFields(file, User.class, reportBuilder);
 		}
-
-		return reportBuilder.build();
 	}
 
 	private static void checkAllNonNullableFields(final File file,
@@ -94,10 +117,10 @@ public class BackendChecker {
 				}
 
 				final boolean isNull;
-				
+
 				try {
 
-					isNull = (Boolean ) isNullMethod.invoke(instance);
+					isNull = (Boolean) isNullMethod.invoke(instance);
 
 				} catch (final IllegalAccessException e) {
 
@@ -107,7 +130,7 @@ public class BackendChecker {
 
 					throw new RuntimeException(e.getTargetException());
 				}
-				
+
 				if (isNull) {
 					continue;
 				}
