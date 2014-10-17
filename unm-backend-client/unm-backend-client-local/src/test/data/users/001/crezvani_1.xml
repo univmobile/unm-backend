@@ -18,6 +18,10 @@
 	<mail>Cyrus.Rezvani@univ-paris1.fr</mail>
 	<supannCivilite>M.</supannCivilite>
 	<displayName>Cyrus Rezvani</displayName>
+	<primaryUniversity>
+		<id>paris1</id>
+		<title>Paris 1 Panthéon-Sorbonne</title>
+	</primaryUniversity>	
 	<login_classic active="true">
 		<!-- password: Hello+World! -->
 		<password
