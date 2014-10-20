@@ -76,6 +76,7 @@
 							<cargo.rmi.port>${tomcat.rmi.port}</cargo.rmi.port>
 							<cargo.servlet.port>${tomcat.servlet.port}</cargo.servlet.port>
 							<cargo.tomcat.ajp.port>${tomcat.ajp.port}</cargo.tomcat.ajp.port>
+							<cargo.jvmargs>-Xmx1024m</cargo.jvmargs>
 						</properties>
 						<configfiles>
 							<configfile>
