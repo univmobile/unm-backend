@@ -79,20 +79,22 @@ public class Scenarios001 extends SeleniumEnabledTest {
 				"Votre connexion est authentifiée");
 
 		elementById("button-myself").click();
-		waitForElementById(PAUSE, "div-entered");
+		waitForElementById(10, "div-entered");
 		takeScreenshot("entered.png");
 		savePageSource("pageEntered.html");
 
 		elementById("link-users").click();
-		waitForElementById(PAUSE, "body-users");
+		pause(PAUSE);
+		takeScreenshot("before-users.png");
+		waitForElementById(10, "body-users");
 		takeScreenshot("users.png");
 
 		elementById("link-useradd").click();
-		waitForElementById(PAUSE, "body-useradd");
+		waitForElementById(10, "body-useradd");
 		takeScreenshot("useradd.png");
 
 		elementById("button-cancel").click();
-		waitForElementById(PAUSE, "body-users");
+		waitForElementById(10, "body-users");
 		takeScreenshot("users2.png");
 	}
 
