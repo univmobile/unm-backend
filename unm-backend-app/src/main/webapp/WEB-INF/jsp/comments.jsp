@@ -186,7 +186,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 	<input type="radio" name="active" value="yes" checked
 		id="radio-active-yes" disabled>
 	</span>
-	<span id="span-active-no"
+	<span id="span-active-no">
 	<label for="radio-active-no">Inactif</label>
 	<input type="radio" name="active" value="no"
 		id="radio-active-no" disabled>
