@@ -8,7 +8,6 @@
 	<servlet>
 		<servlet-name>BackendServlet</servlet-name>
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
-		<load-on-startup>1</load-on-startup>
 		<init-param>
 			<param-name>baseURL</param-name>
 			<param-value>http://localhost:8380/unm-backend/</param-value>
@@ -51,6 +50,7 @@
 			<param-name>shibboleth.callbackURL</param-name>
 			<param-value>https://univmobile-dev.univ-paris1.fr/testSP/success</param-value>
 		</init-param>
+		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>BackendServlet</servlet-name>
