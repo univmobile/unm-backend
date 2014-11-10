@@ -5,6 +5,10 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 import org.junit.Test;
 
@@ -87,6 +91,34 @@ public class Pois003Test extends AbstractPoisTest {
 		assertEquals(AttachmentType.IMAGE, attachment.getType());
 		assertEquals("/uploads/poi/c99abda0f5d42a24d0cf1ef0d0476b8b6ed4311a.png",
 				attachment.getUrl());
+	}
+	
+	/**
+	 * Test une methode de recherche d'elements renvoyant une liste, via la recuperation de tous
+	 * les enfants directs de l'universite de la Rochelle 
+	 * @throws Exception
+	 */
+	@Test
+	public void test_001_laRochelleChildren() throws Exception {
+		final List<Poi> ul = pois.getByParentUid(20001);
+		Map<Integer, String> ids = new HashMap<Integer, String>();
+		ids.put(20015, "UFR Sciences Fondamentales et Sciences pour l’Ingénieur");
+		ids.put(20024, "Pôle Communication, Multimédia et Réseaux");
+		ids.put(20025, "Bibliothèque Universitaire");
+		ids.put(20089, "Gymnase Universitaire de Bongraine");
+		ids.put(20095, "Technoforum");
+		ids.put(20096, "UFR des Lettres, Langues, Arts et Sciences Humaines");
+		ids.put(20098, "Maison de l'étudiant");
+		ids.put(20117, "Institut du Littoral et de l’Environnement (ILE)");
+		ids.put(20135, "UFR Droit, Science Politique et Gestion");
+		ids.put(20154, "Institut Universitaire de Technologie (IUT)");
+		
+		assertEquals(10, ul.size());
+		for (Poi poi : ul) {
+			assertTrue(ids.containsKey(poi.getUid()));
+			assertEquals(ids.get(poi.getUid()), poi.getName());
+			ids.remove(poi.getUid());
+		}
 	}
 }
 

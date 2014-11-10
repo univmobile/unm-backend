@@ -207,6 +207,32 @@ final class BackendDataCacheEngine<E extends Entry<E>, EB extends EntryBuilder<E
 		return data.iterator().next(); // HEAD is first element.
 	}
 
+	/**
+	 * Permet de recuperer une list d'element a partir d'une valeur d'attribut en cache
+	 * @param attributeName
+	 * @param attributeValue
+	 * @return
+	 */
+	public List<E> getAllByAttribute(final String attributeName,
+			final Object attributeValue) {
+
+		if (attributeValue == null) {
+			throw new IllegalArgumentException("getBy: " + attributeName + "="
+					+ attributeValue);
+		}
+
+		final Map<Object, List<E>> index = indexes.get(attributeName);
+
+		final List<E> data = index.get(attributeValue);
+
+		ArrayList<E> clonedData = new ArrayList<E>();
+		if (data != null) {
+			clonedData.addAll(data);
+			return clonedData;
+		}
+		return data;
+	}
+
 	public boolean isNullByAttribute(final String attributeName,
 			final Object attributeValue) {
 

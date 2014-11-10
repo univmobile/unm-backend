@@ -1,5 +1,7 @@
 package fr.univmobile.backend.core;
 
+import java.util.List;
+
 import fr.univmobile.commons.datasource.RevDataSource;
 import fr.univmobile.commons.datasource.Category;
 import fr.univmobile.commons.datasource.PrimaryKey;
@@ -14,6 +16,9 @@ public interface PoiDataSource extends
 
 	@SearchAttribute("uid")
 	Poi getByUid(int uid);
+	
+	@SearchAttribute("parentUid")
+	List<Poi> getByParentUid(int parentUid);
 
 	boolean isNullByUid(int uid);
 }

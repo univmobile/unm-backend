@@ -11,6 +11,8 @@ import fr.univmobile.commons.datasource.EntryBuilder;
 public interface PoiBuilder extends EntryBuilder<Poi>, Poi {
 
 	PoiBuilder setUid(int uid);
+	
+	PoiBuilder setParentUid(int parentUid);
 
 	PoiBuilder setName(String name);
 }

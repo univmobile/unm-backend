@@ -10,6 +10,7 @@ import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
+import java.util.Collection;
 import java.util.Map;
 
 import net.avcompris.binding.dom.helper.DomBinderUtils;
@@ -175,8 +176,12 @@ EB extends EntryBuilder<E>> //
 				throw new NotImplementedException("Method " + methodName
 						+ "(): args.length should be 1.");
 			}
-
-			return cacheEngine.getByAttribute(attributeName, args[0]);
+			
+			if (Collection.class.isAssignableFrom(method.getReturnType())) {
+				return cacheEngine.getAllByAttribute(attributeName, args[0]);
+			} else {
+				return cacheEngine.getByAttribute(attributeName, args[0]);
+			}
 		}
 
 		if (log.isDebugEnabled()) {
