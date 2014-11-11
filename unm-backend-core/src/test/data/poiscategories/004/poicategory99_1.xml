@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/poiscategories/004:poicategory99_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/poiscategories/004:poicategory99_1.xml"/>
+<atom:title>Catégories universitaires</atom:title>
+<atom:updated>2014-11-11T21:32:58.440+02:00</atom:updated>
+<category term="poiscategories"/>
+<atom:author>
+	<atom:name>crezvani</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users/004:crezvani_1</atom:uri>
+</atom:author>
+<atom:content uid="99"
+	active="true"
+	name="Catégories universitaires">
+	<description>Catégorie racine de toutes les catégories de POIs des universités. Catégorie jamais visible.</description>
+	<cursorUrl>http://admin.univmobile.fr/uploads/images/poitype_icon_batiment_1304005503.png</cursorUrl>
+	<child uid="1" active="true"/>
+	<child uid="3" active="true"/>
+	<child uid="4" active="true"/>
+	<child uid="7" active="true"/>
+	<child uid="8" active="true"/>
+	<child uid="9" active="true"/>
+	<child uid="10" active="false"/>
+	<child uid="11" active="true"/>
+	<child uid="12" active="true"/>
+	<child uid="13" active="true"/>
+	<child uid="14" active="true"/>
+	<child uid="15" active="true"/>
+	<child uid="16" active="true"/>
+	<child uid="17" active="true"/>
+	<child uid="20" active="false"/>
+	<child uid="21" active="true"/>
+	<child uid="22" active="true"/>
+	<child uid="23" active="true"/>
+	<child uid="24" active="true"/>
+</atom:content>
+</atom:entry>
+

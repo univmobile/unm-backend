@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/users/004:crezvani_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/users/004:crezvani_1"/>
+<atom:updated>2014-07-26T18:40:02Z</atom:updated>
+<atom:title>crezvani</atom:title>
+<atom:category term="users"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content>
+	<uid>crezvani</uid>
+	<cn>Rezvani Cyrus</cn>
+	<sn>Rezvani</sn>
+	<givenName>Cyrus</givenName>
+	<remoteUser>crezvani@univ-paris1.fr</remoteUser>
+	<mail>Cyrus.Rezvani@univ-paris1.fr</mail>
+	<supannCivilite>M.</supannCivilite>
+	<displayName>Cyrus Rezvani</displayName>
+	<roles>admin</roles>
+	<primaryUniversity>
+		<id>paris1</id>
+		<title>Paris 1 Panthéon-Sorbonne</title>
+	</primaryUniversity>	
+	<login_classic active="true">
+		<!-- password: Hello+World! -->
+		<password
+			saltPrefix="18A912"
+			encryptionAlgorithm="SHA-256"
+			encrypted="1b43e4d996b6ccdb0e1d0bb379ae58447d10fdce2ade44f52f791c8f09bf96a5"/>
+	</login_classic>
+</atom:content>
+</atom:entry>
+
