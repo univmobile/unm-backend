@@ -18,7 +18,7 @@ public class PoiCategoryClientFromLocal extends AbstractClientFromLocal implemen
 		PoiCategoryClient {
 
 	@Inject
-	protected PoiCategoryClientFromLocal(String baseURL,
+	public PoiCategoryClientFromLocal(String baseURL,
 			final PoiCategoryDataSource poiCategoryDataSource,
 			final RegionDataSource regionDataSource) {
 		super(baseURL);
@@ -43,6 +43,7 @@ public class PoiCategoryClientFromLocal extends AbstractClientFromLocal implemen
 		}
 
 		final fr.univmobile.backend.core.PoiCategory dsPoiCategory = poiCategoryDataSource.getByUid(id);
+		
 
 		final MutablePoiCategory poiCategory = createPoiCategoryFromData(dsPoiCategory);
 
@@ -70,6 +71,18 @@ public class PoiCategoryClientFromLocal extends AbstractClientFromLocal implemen
 		if (dsPoiCategory.getCursorUrl() != null && !dsPoiCategory.getCursorUrl().trim().isEmpty()) {
 			poiCategory.setCursorUrl(dsPoiCategory.getCursorUrl());
 		}
+		
+		/**
+		 * Construit la liste des categories filles actives
+		 */
+		PoiCategory[]  childCategories = new PoiCategory[dsPoiCategory.getChildren().length];
+		int index = 0;
+		for (int categoryUid : dsPoiCategory.getChildren()) {
+			fr.univmobile.backend.core.PoiCategory childDsPoiCategory = poiCategoryDataSource.getByUid(categoryUid);
+			childCategories[index] = createPoiCategoryFromData(childDsPoiCategory);
+			index++;
+		}
+		poiCategory.setChildCategories(childCategories);
 
 		return poiCategory;
 	}
@@ -84,6 +97,8 @@ public class PoiCategoryClientFromLocal extends AbstractClientFromLocal implemen
 		MutablePoiCategory setDescription(@Nullable String description);
 		
 		MutablePoiCategory setCursorUrl(@Nullable String cursorUrl);
+		
+		MutablePoiCategory setChildCategories(PoiCategory[] childCategories);
 		
 	}
 

@@ -29,5 +29,11 @@ public interface PoiCategory {
 	 */
 	@Nullable
 	String getCursorUrl();
+	
+	/**
+	 * Recupere la liste des categories enfants
+	 * @return
+	 */
+	PoiCategory[] getChildCategories();
 
 }

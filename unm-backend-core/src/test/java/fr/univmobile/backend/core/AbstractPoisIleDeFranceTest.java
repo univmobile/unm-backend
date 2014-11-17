@@ -71,4 +71,5 @@ public abstract class AbstractPoisIleDeFranceTest extends AbstractPoisTest {
 		assertEquals(1, centreBroca.sizeOfChildren());
 		assertEquals(1, centreBroca.sizeOfAttachments());
 	}
+	
 }
