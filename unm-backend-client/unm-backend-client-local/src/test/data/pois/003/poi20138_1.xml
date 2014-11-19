@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/003:poi138_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi138_1.xml"/>
+<atom:title>Bâtiment Schoelcher</atom:title>
+<atom:updated>2014-08-17T21:32:58.686+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="20138"
+	coordinates="46.139013408357,-1.1534638"
+	active="true"
+	markerType="point"
+	parentUid="20135"
+	name="Bâtiment Schoelcher">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>45, rue François de Vaux de Foletier
+17000 La Rochelle</fullAddress>
+	</address>
+	<child uid="20142" active="true"/>
+	<child uid="20173" active="true"/>
+</atom:content>
+</atom:entry>

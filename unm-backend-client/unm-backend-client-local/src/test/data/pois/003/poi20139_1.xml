@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/003:poi139_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi139_1.xml"/>
+<atom:title>Bâtiment Tocqueville</atom:title>
+<atom:updated>2014-08-17T21:32:58.691+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="20139"
+	coordinates="46.139009691292,-1.152911335"
+	active="true"
+	markerType="point"
+	parentUid="20135"
+	name="Bâtiment Tocqueville">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>45, rue François de Vaux de Foletier
+17000 La Rochelle</fullAddress>
+	</address>
+	<child uid="20140" active="true"/>
+	<child uid="20141" active="true"/>
+	<child uid="20148" active="true"/>
+	<child uid="20149" active="true"/>
+	<child uid="20152" active="true"/>
+	<child uid="20174" active="true"/>
+	<child uid="20214" active="true"/>
+</atom:content>
+</atom:entry>

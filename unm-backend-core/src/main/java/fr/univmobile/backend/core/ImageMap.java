@@ -40,7 +40,7 @@ public interface ImageMap extends Entry<ImageMap> {
 	@XPath("atom:content/poi[@active = 'true']")
 	PoiInfo[] getPoiInfos();
 
-	interface PoiInfo {
+	public interface PoiInfo {
 
 		@XPath("@uid")
 		int getId();

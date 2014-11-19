@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/003:poi156_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi156_1.xml"/>
+<atom:title>Génie Civil (GC)</atom:title>
+<atom:updated>2014-08-17T21:32:58.745+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="20156"
+	coordinates="46.141515028834,-1.15040548145"
+	active="true"
+	markerType="point"
+	parentUid="20030"
+	name="Génie Civil (GC)">
+	<poiType id="27" label="Département IUT" categoryId="8" categoryLabel="Administration"/>
+</atom:content>
+</atom:entry>

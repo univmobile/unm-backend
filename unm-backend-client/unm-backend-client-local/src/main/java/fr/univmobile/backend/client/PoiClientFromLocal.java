@@ -256,6 +256,9 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 					continue; // Skip empty POIs
 				}
 
+				/**
+				 * TODO Check with the MarketType is hardcoded to green
+				 */
 				poi.setMarkerType("green");
 				poi.setMarkerIndex(Character
 						.toString((char) ('A' + markerIndex)));
