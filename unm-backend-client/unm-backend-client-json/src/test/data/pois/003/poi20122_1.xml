@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/003:poi122_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi122_1.xml"/>
+<atom:title>Laboratoire Informatique, Image et Interaction (L3i)</atom:title>
+<atom:updated>2014-08-17T21:32:58.666+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="20122"
+	coordinates="46.146517835888,-1.157308816"
+	active="true"
+	markerType="point"
+	parentUid="20106"
+	name="Laboratoire Informatique, Image et Interaction (L3i)">
+	<poiType id="19" label="Laboratoire" categoryId="15" categoryLabel="Laboratoires"/>
+	<address>
+		<url>http://l3i.univ-larochelle.fr/</url>
+		<phone>05 46 45 82 62</phone>
+		<fax>05 46 45 82 89</fax>
+		<email>l3i-secretariat@univ-lr.fr</email>
+	</address>
+</atom:content>
+</atom:entry>

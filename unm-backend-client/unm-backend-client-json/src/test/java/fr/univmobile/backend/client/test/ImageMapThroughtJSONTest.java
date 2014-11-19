@@ -2,8 +2,8 @@ package fr.univmobile.backend.client.test;
 
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.io.File;
 import java.io.IOException;
@@ -16,15 +16,16 @@ import org.junit.Test;
 import fr.univmobile.backend.client.ClientException;
 import fr.univmobile.backend.client.ImageMap;
 import fr.univmobile.backend.client.ImageMapClient;
+import fr.univmobile.backend.client.ImageMapClientFromJSON;
 import fr.univmobile.backend.client.ImageMapClientFromLocal;
 import fr.univmobile.backend.client.ImageMapPoi;
-import fr.univmobile.backend.client.PoiCategory;
+import fr.univmobile.backend.client.json.ImageMapJSONClient;
+import fr.univmobile.backend.client.json.ImageMapJSONClientImpl;
 import fr.univmobile.backend.core.ImageMapDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.ImageMap.PoiInfo;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
-public class ImageMapClientFromLocalTest {
+public class ImageMapThroughtJSONTest {
 
 	@Before
 	public void setUp() throws Exception {
@@ -44,8 +45,13 @@ public class ImageMapClientFromLocalTest {
 										"target/ImageMapClientFromLocalTest_pois")));
 
 		client = new ImageMapClientFromLocal("http://toto/", imageMapDataSource, poiDataSource);
+		
+		imageMapJSONClient = new ImageMapJSONClientImpl(client);
+		
+		client = new ImageMapClientFromJSON(imageMapJSONClient);
 	}
 
+	private ImageMapJSONClient imageMapJSONClient;
 	private ImageMapClient client;
 	
 	/**
@@ -93,4 +99,5 @@ public class ImageMapClientFromLocalTest {
 			ids.remove(poi.getId());
 		}
 	}
+
 }

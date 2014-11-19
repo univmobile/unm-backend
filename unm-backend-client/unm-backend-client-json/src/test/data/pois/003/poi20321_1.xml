@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/003:poi321_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi321_1.xml"/>
+<atom:title>Faculté des Lettres et Sciences Humaines</atom:title>
+<atom:updated>2014-08-17T21:32:58.074+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="20321"
+	coordinates="45.817591745195,1.23072624206"
+	active="true"
+	markerType="point"
+	parentUid="20065"
+	name="Faculté des Lettres et Sciences Humaines">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fax>test</fax>
+	</address>
+	<child uid="20326" active="true"/>
+</atom:content>
+</atom:entry>

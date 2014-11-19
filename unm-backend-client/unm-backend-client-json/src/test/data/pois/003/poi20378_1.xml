@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/003:poi378_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi378_1.xml"/>
+<atom:title>Division de la Gestion des Etudiants et des Enseignements</atom:title>
+<atom:updated>2014-08-17T21:32:58.303+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="20378"
+	coordinates="45.824257455553,1.263379454612"
+	active="true"
+	markerType="point"
+	parentUid="20075"
+	name="Division de la Gestion des Etudiants et des Enseignements">
+	<poiType id="26" label="Service Administratif" categoryId="8" categoryLabel="Administration"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</atom:content>
+</atom:entry>

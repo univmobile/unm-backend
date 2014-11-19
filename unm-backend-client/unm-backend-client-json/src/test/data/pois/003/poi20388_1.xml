@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/003:poi388_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi388_1.xml"/>
+<atom:title>Terrain tennis (gazon)</atom:title>
+<atom:updated>2014-08-17T21:32:58.343+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="20388"
+	coordinates="45.837189711478,1.2350311875"
+	active="true"
+	markerType="point"
+	parentUid="20394"
+	name="Terrain tennis (gazon)">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Sport, culture &amp; associations"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</atom:content>
+</atom:entry>

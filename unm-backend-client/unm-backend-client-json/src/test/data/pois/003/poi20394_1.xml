@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/003:poi394_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/003:poi394_1.xml"/>
+<atom:title>Complexe sportif (La Borrie)</atom:title>
+<atom:updated>2014-08-17T21:32:58.369+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="20394"
+	coordinates="45.83768876124,1.233437955379"
+	active="true"
+	markerType="point"
+	parentUid="20036"
+	name="Complexe sportif (La Borrie)">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fax>test</fax>
+	</address>
+	<child uid="20294" active="true"/>
+	<child uid="20387" active="true"/>
+	<child uid="20388" active="true"/>
+	<child uid="20389" active="true"/>
+</atom:content>
+</atom:entry>
