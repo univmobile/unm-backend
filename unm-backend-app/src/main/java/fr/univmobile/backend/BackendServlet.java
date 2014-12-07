@@ -34,6 +34,8 @@ import org.apache.commons.logging.LogFactory;
 import fr.univmobile.backend.client.AbstractClientFromLocal;
 import fr.univmobile.backend.client.CommentClient;
 import fr.univmobile.backend.client.CommentClientFromLocal;
+import fr.univmobile.backend.client.ImageMapClient;
+import fr.univmobile.backend.client.ImageMapClientFromLocal;
 import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.RegionClient;
@@ -42,6 +44,8 @@ import fr.univmobile.backend.client.SessionClient;
 import fr.univmobile.backend.client.SessionClientFromLocal;
 import fr.univmobile.backend.client.json.CommentJSONClient;
 import fr.univmobile.backend.client.json.CommentJSONClientImpl;
+import fr.univmobile.backend.client.json.ImageMapJSONClient;
+import fr.univmobile.backend.client.json.ImageMapJSONClientImpl;
 import fr.univmobile.backend.client.json.PoiJSONClient;
 import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.client.json.RegionJSONClient;
@@ -51,6 +55,7 @@ import fr.univmobile.backend.client.json.SessionJSONClientImpl;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.PoiCategoryDataSource;
+import fr.univmobile.backend.core.ImageMapDataSource;
 //import fr.univmobile.backend.core.CommentThreadDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -69,6 +74,7 @@ import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.backend.json.CommentsJSONController;
 import fr.univmobile.backend.json.EndpointsJSONController;
+import fr.univmobile.backend.json.ImageMapJSONController;
 import fr.univmobile.backend.json.JsonHtmler;
 import fr.univmobile.backend.json.PoisJSONController;
 import fr.univmobile.backend.json.RegionsJSONController;
@@ -163,12 +169,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final File poisDir = new File(dataDir, "pois");
 		final File uploadsDir = new File(dataDir, "uploads");
 		final File commentsDir = new File(dataDir, "comments");
+		final File imageMapsDir = new File(dataDir, "imagemaps");
 
 		// Categories
 		final File poiCategoriesDir = new File(dataDir, "poiscategories");
 
 		// 2. DATASOURCES AND CLIENTS
 
+		final ImageMapDataSource imageMaps;
 		final CommentDataSource comments;
 		final CommentManager commentManager;
 		final SearchManager searchManager;
@@ -194,6 +202,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			comments = BackendDataSourceFileSystem.newDataSource(
 					CommentDataSource.class, commentsDir);
+			
+			imageMaps = BackendDataSourceFileSystem.newDataSource(ImageMapDataSource.class, imageMapsDir);
 
 			final InitialContext context = new InitialContext();
 
@@ -265,8 +275,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final PoiClient poiClient = new PoiClientFromLocal(baseURL, pois,
 				regions);
+		
+		final ImageMapClient imageMapClient = new ImageMapClientFromLocal(baseURL, imageMaps, pois);
 
 		final PoiJSONClient poiJSONClient = new PoiJSONClientImpl(poiClient);
+		
+		final ImageMapJSONClient imageMapJSONClient = new ImageMapJSONClientImpl(imageMapClient);
 
 		final CommentClient commentClient = new CommentClientFromLocal(baseURL,
 				comments, commentManager, searchManager);
@@ -295,6 +309,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new EndpointsJSONController(), //
 				new RegionsJSONController(regionJSONClient), //
 				new UniversitiesJSONController(regions, regionJSONClient), //
+				new ImageMapJSONController(imageMaps, imageMapJSONClient), //
 				new PoisJSONController(poiJSONClient), //
 				new CommentsJSONController(pois, commentJSONClient), //
 				new SessionJSONController( //
