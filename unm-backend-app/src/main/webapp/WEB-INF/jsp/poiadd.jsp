@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<title>Administration d’UnivMobile — Nouveau POI</title>
+<title>Administration d’UnivMobile — Ajouter à poi</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <style type="text/css">
 
@@ -62,7 +62,7 @@ td span.error {
 </c:if>
 
 <h2>
-   Nouveau POI
+   Ajouter à poi
 </h2>
 
 <table id="table-poiadd">

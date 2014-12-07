@@ -89,7 +89,7 @@ public class Pois002ConsistencyTest extends AbstractPoisIleDeFranceTest {
 				return;
 			}
 
-			if (!poi.isActive() || poi.isDeleted()) {
+			if (!(poi.getActive() == "true") || poi.isDeleted()) {
 				return;
 			}
 

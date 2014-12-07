@@ -82,7 +82,7 @@ public class UserModifyController extends AbstractBackendController {
 		final Usermodify form = getHttpInputs(Usermodify.class);
 
 		if (!form.isHttpValid()) {
-			System.out.println(user.getRole());
+
 			return new View("usermodify.jsp");
 		}
 
@@ -150,8 +150,7 @@ public class UserModifyController extends AbstractBackendController {
 
 		lock.commit();
 		
-		System.out.println("-> " + users.getByUid(getUserUid()).getRole());
-
+		
 		return usersController.action();
 	}
 

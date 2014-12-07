@@ -20,7 +20,6 @@ import fr.univmobile.backend.client.PoiGroup;
 import fr.univmobile.backend.client.Pois;
 import fr.univmobile.backend.client.Pois.MapInfo;
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
@@ -28,14 +27,6 @@ public class PoiClientFromLocalTest {
 
 	@Before
 	public void setUp() throws Exception {
-
-		final PoiTreeDataSource poitreeDataSource = BackendDataSourceFileSystem
-				.newDataSource(
-						PoiTreeDataSource.class,
-						copyDirectory(
-								new File("src/test/data/poitrees/001"),
-								new File(
-										"target/PoiClientFromLocalTest_poitrees")));
 
 		final PoiDataSource poiDataSource = BackendDataSourceFileSystem
 				.newDataSource(
@@ -52,7 +43,7 @@ public class PoiClientFromLocalTest {
 										"target/PoiClientFromLocalTest_regions")));
 
 		client = new PoiClientFromLocal("http://toto/", poiDataSource,
-				poitreeDataSource, regionDataSource);
+				regionDataSource);
 	}
 
 	private PoiClient client;

@@ -17,7 +17,7 @@ public interface PoiBuilder extends EntryBuilder<Poi>, Poi {
 
 	// Author: Mauricio (begin)
 
-	PoiBuilder setUniversities(String universities);
+	PoiBuilder setUniversityIds(String universities);
 
 	PoiBuilder setFloors(String floor);
 

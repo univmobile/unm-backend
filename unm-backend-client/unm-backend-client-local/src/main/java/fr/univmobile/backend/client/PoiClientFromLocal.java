@@ -242,9 +242,9 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 				if (universities.length > 0) {
 					boolean belongs = false;
 					for (int j = 0; j < universities.length; j++)
-						if (dsPoi.getUniversities().length > 0)
+						if (dsPoi.getUniversityIds().length > 0)
 							if (universities[j].getId().equals(
-									dsPoi.getUniversities()[0]))
+									dsPoi.getUniversityIds()[0]))
 								belongs = true;
 
 					if (belongs == true) {
@@ -348,7 +348,7 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 
 		// UNIVERSITIES
 
-		final String[] dsUniversities = dsPoi.getUniversities();
+		final String[] dsUniversities = dsPoi.getUniversityIds();
 
 		final List<String> universityIds = new ArrayList<String>();
 

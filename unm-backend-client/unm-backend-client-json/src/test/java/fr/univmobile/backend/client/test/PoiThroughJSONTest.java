@@ -22,7 +22,6 @@ import fr.univmobile.backend.client.Pois;
 import fr.univmobile.backend.client.json.PoiJSONClient;
 import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
@@ -43,14 +42,8 @@ public class PoiThroughJSONTest {
 						copyDirectory(new File("src/test/data/pois/001"),
 								new File("target/PoiThroughJSONTest_pois")));
 
-		final PoiTreeDataSource poitreeDataSource = BackendDataSourceFileSystem
-				.newDataSource(
-						PoiTreeDataSource.class,
-						copyDirectory(new File("src/test/data/poitrees/001"),
-								new File("target/PoiThroughJSONTest_poitrees")));
-
 		final PoiClient poiClient = new PoiClientFromLocal("(dummy baseURL)",
-				poiDataSource, poitreeDataSource, regionDataSource);
+				poiDataSource, regionDataSource);
 
 		poiJSONClient = new PoiJSONClientImpl(poiClient);
 

@@ -44,7 +44,7 @@ public class PoiTreeUtils {
 
 		for (final Poi poi : pois.getAllByInt("uid").values()) {
 
-			if (!poi.isActive()) {
+			if (!(poi.getActive() == "true")) {
 				continue;
 			}
 

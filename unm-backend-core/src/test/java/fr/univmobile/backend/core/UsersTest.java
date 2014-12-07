@@ -61,9 +61,9 @@ public class UsersTest {
 
 		assertTrue(crezvani.isNullParent());
 		
-		assertTrue(crezvani.isAdmin());
-		assertFalse(crezvani.isSuperadmin());
-		assertFalse(crezvani.isStudent());
+		assertTrue(crezvani.getRole() == "admin");
+		assertFalse(crezvani.getRole() == "superadmin");
+		assertFalse(crezvani.getRole() == "student");
 		
 		assertEquals("ubo", crezvani.getPrimaryUniversity().getId());
 		assertEquals("Université de Bretagne Occidentale", crezvani.getPrimaryUniversity().getTitle());

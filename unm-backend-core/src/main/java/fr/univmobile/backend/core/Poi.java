@@ -93,7 +93,7 @@ public interface Poi extends Entry<Poi> {
 	boolean isDeleted();
 
 	@XPath("atom:content/university/@id")
-	String[] getUniversities();
+	String[] getUniversityIds();
 
 	int sizeOfUniversities();
 

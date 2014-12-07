@@ -3,7 +3,8 @@ package fr.univmobile.backend.client.test;
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
 import static org.apache.commons.lang3.CharEncoding.UTF_8;
 import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
@@ -22,7 +23,7 @@ import fr.univmobile.backend.client.RegionsUtils;
 import fr.univmobile.backend.client.University;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
-import fr.univmobile.backend.core.PoiTreeDataSource;
+import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
@@ -37,14 +38,14 @@ public class RegionThroughJSONTest {
 						copyDirectory(new File("src/test/data/regions/001"),
 								new File("target/RegionThroughJSONTest")));
 
-		final PoiTreeDataSource poitrees = BackendDataSourceFileSystem
+		final PoiDataSource poiDataSource = BackendDataSourceFileSystem
 				.newDataSource(
-						PoiTreeDataSource.class,
-						copyDirectory(new File("src/test/data/poitrees/001"),
-								new File("target/PoiThroughJSONTest_poitrees")));
+						PoiDataSource.class,
+						copyDirectory(new File("src/test/data/pois/001"),
+								new File("target/PoiThroughJSONTest_pois")));
 
 		final RegionClient regionClient = new RegionClientFromLocal(
-				"(dummy baseURL)", regions, poitrees);
+				"(dummy baseURL)", regions, poiDataSource);
 
 		regionJSONClient = new RegionJSONClientImpl(regionClient);
 

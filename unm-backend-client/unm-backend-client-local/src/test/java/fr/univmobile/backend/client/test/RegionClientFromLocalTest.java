@@ -15,7 +15,7 @@ import fr.univmobile.backend.client.Region;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.University;
-import fr.univmobile.backend.core.PoiTreeDataSource;
+import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
@@ -31,15 +31,13 @@ public class RegionClientFromLocalTest {
 		final RegionDataSource regions = BackendDataSourceFileSystem
 				.newDataSource(RegionDataSource.class, tmpDataDir);
 
-		final PoiTreeDataSource poitrees = BackendDataSourceFileSystem
+		final PoiDataSource poiDataSource = BackendDataSourceFileSystem
 				.newDataSource(
-						PoiTreeDataSource.class,
-						copyDirectory(
-								new File("src/test/data/poitrees/001"),
-								new File(
-										"target/RegionClientFromLocalTest_poitrees")));
+						PoiDataSource.class,
+						copyDirectory(new File("src/test/data/pois/001"),
+								new File("target/PoiThroughJSONTest_pois")));
 
-		client = new RegionClientFromLocal("http://toto", regions, poitrees);
+		client = new RegionClientFromLocal("http://toto", regions, poiDataSource);
 	}
 
 	private RegionClient client;

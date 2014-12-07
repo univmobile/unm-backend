@@ -110,9 +110,9 @@ public class RegionClientFromLocal extends AbstractClientFromLocal implements
 
 					if (universities.length > 0) {
 						for (int j = 0; j < universities.length; j++)
-							if (dsPoi.getUniversities().length > 0)
+							if (dsPoi.getUniversityIds().length > 0)
 								if (universities[j].getId().equals(
-										dsPoi.getUniversities()[0]))
+										dsPoi.getUniversityIds()[0]))
 									poiCount++;
 					}
 

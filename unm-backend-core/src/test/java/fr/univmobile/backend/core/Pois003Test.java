@@ -5,7 +5,6 @@ import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 import java.io.File;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -48,7 +47,7 @@ public class Pois003Test extends AbstractPoisTest {
 		assertEquals("contact@ensma.fr", ensma.getEmails()[0]);
 		assertEquals("http://www.ensma.fr", ensma.getUrls()[0]);
 		assertTrue(ensma.isNullParentUid());
-		assertTrue(ensma.isActive());
+		assertTrue(ensma.getActive() == "true");
 		// opening hours
 		// itinerary
 		assertEquals(0, ensma.sizeOfAttachments());

@@ -3,7 +3,6 @@ package fr.univmobile.backend.client.test;
 import static fr.univmobile.testutil.TestUtils.copyDirectory;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.assertNull;
 
 import java.io.File;
 import java.io.IOException;
@@ -18,7 +17,6 @@ import fr.univmobile.backend.client.PoiCategory;
 import fr.univmobile.backend.client.PoiCategoryClient;
 import fr.univmobile.backend.client.PoiCategoryClientFromJSON;
 import fr.univmobile.backend.client.PoiCategoryClientFromLocal;
-import fr.univmobile.backend.client.PoiClientFromJSON;
 import fr.univmobile.backend.client.json.PoiCategoryJSONClient;
 import fr.univmobile.backend.client.json.PoiCategoryJSONClientImpl;
 import fr.univmobile.backend.core.PoiCategoryDataSource;

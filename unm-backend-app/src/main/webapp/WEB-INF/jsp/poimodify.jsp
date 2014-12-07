@@ -105,7 +105,7 @@
                <optgroup label="${r.label}">
                   <c:forEach var="u" items="${r.universities}">
                      <c:choose>
-                        <c:when test="${poimodify.universities eq u.id}">
+                        <c:when test="${poimodify.universityIds eq u.id}">
                            <option value="${u.id}" selected>${u.title}</option>
                         </c:when>
                         <c:otherwise>

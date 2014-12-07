@@ -30,7 +30,7 @@ public abstract class AbstractPoisIleDeFranceTest extends AbstractPoisTest {
 		assertEquals("0144078000", paris1.getPhones()[0]);
 		assertSame(Poi.MarkerType.POINT, paris1.getMarkerType());
 		assertEquals("48.84650925911,2.3459243774", paris1.getCoordinates());
-		assertTrue(paris1.isActive());
+		assertTrue(paris1.getActive() == "true");
 		assertEquals("12 place du Panthéon 75231 PARIS",
 				paris1.getAddresses()[0].getFullAddress().trim());
 		assertEquals("75231", paris1.getAddresses()[0].getZipCode());

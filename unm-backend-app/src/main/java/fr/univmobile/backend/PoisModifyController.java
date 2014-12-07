@@ -126,7 +126,7 @@ public class PoisModifyController extends AbstractBackendController {
 			setAttribute("err_coord_not_valid", true);
 		}
 
-		poi.setUniversities(form.university());
+		poi.setUniversityIds(form.university());
 		poi.setFloors(form.floor());
 		poi.setOpeningHours(form.openingHours());
 		poi.setPhones(form.phone());
