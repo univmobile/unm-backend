@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<title>Administration d’UnivMobile — Ajouter un utilisateur</title>
+<title>Administration d’UnivMobile — Modifier un utilisateur</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
 <style type="text/css">
@@ -15,67 +15,24 @@ td span.error {
 	margin-left: 0.5em;
 }
 
-#div-secondaryUnivs {
-	height: 8em;
-	overflow-y: scroll;
-	border: 2px inset #ccc;
-}
-
-#body-useradd #div-secondaryUnivs label {
+#body-usermodify label {
 	xfont-family: 'Lucida Grande';
 	font-size: x-small;
-}
-
-#tr-secondaryUnivs th {
-	vertical-align: top;
-}
-
-label.checkbox-secondaryUniv-region {
-	font-weight: bold;
 }
 
 </style>
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
+
 <jsp:include page="js-adminMenu.h.jsp"/>
-<script type="text/javascript">
 
-$(function () {
-
-	<c:forEach var="region" items="${regions}">
-
-    $('#checkbox-secondaryUniv-region_${region.uid}').change(function () {
-    	var checked = $(this).prop('checked');
-        $('.checkbox.secondaryUniv.region_${region.uid}').prop('checked', checked);
-    });
-
-    $('.checkbox.secondaryUniv.region_${region.uid}').change(function () {
-        if ($('.checkbox.secondaryUniv.region_${region.uid}:checked').length === 0) {
-            $('#checkbox-secondaryUniv-region_${region.uid}').
-                prop('indeterminate', false).
-                prop('checked', false);
-        } else if ($('.checkbox.secondaryUniv.region_${region.uid}:not(:checked)').length === 0) {
-            $('#checkbox-secondaryUniv-region_${region.uid}').
-                prop('indeterminate', false).
-                prop('checked', true);
-        } else {
-            $('#checkbox-secondaryUniv-region_${region.uid}').
-                prop('indeterminate', true);
-        }
-    });     
-
-	</c:forEach>
-
-});
-
-</script>
 </head>
-<body id="body-useradd" class="entered">
+<body id="body-usermodify" class="entered">
 
 <jsp:include page="div-entered_modal.h.jsp"/>
 
 <div class="body">
-<form action="${baseURL}/useradd" method="POST">
+<form action="${baseURL}/usermodify/${usermodify.uid}" method="POST">
 
 <h1   title="Version ${buildInfo.appVersion}
       Build ${buildInfo.buildDisplayName}
@@ -84,7 +41,7 @@ $(function () {
       Administration d’UnivMobile
 </h1>
 
-<div class="div-useradd">
+<div class="div-usermodify">
 
 <c:if test="${err_incorrectFields}">
 <div class="error">
@@ -92,7 +49,7 @@ $(function () {
 </div>
 </c:if>
 
-<h2>Ajout d’un utilisateur</h2>
+<h2>Modifier un utilisateur</h2>
 
 <table>
 <tbody>
@@ -101,8 +58,8 @@ $(function () {
       uid
    </th>
    <td>
-      <input class="text" type="text" id="text-uid" name="uid" value="${useradd.uid}">
-      <c:if test="${err_useradd_uid}">
+      <input readonly class="text" type="text" id="text-uid" name="uid" value="${usermodify.uid}">
+      <c:if test="${err_usermodify_uid}">
 	     <span class="error" title="Le champ est mal formé">Incorrect</span>
 	  </c:if>
    </td>
@@ -112,20 +69,80 @@ $(function () {
    <th title="Le profil de ce compte utilisateur">
       Type
    </th>
+   
+   <c:choose>
+   <c:when test="${usermodify.role eq 'superadmin'}">
+   <td>
+      SuperAdmin
+      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin" checked>
+      <label id="label-type-superadmin" for="radio-type-superadmin">
+         Super Administrateur
+      </label>
+	    <input type="radio" id="radio-type-admin" name="type" value="admin">
+      <label id="label-type-admin" for="radio-type-admin">
+         Administrateur
+      </label>
+	    <input type="radio" id="radio-type-student" name="type" value="student">
+      <label id="label-type-student" for="radio-type-student">
+         Étudiant
+      </label>
+   </td>
+   </c:when>
+   
+   <c:when test="${usermodify.role eq 'admin'}">
+   <td>
+      Admin
+      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+      <label id="label-type-superadmin" for="radio-type-superadmin">
+         Super Administrateur
+      </label>
+      <input type="radio" id="radio-type-admin" name="type" value="admin" checked>
+      <label id="label-type-admin" for="radio-type-admin">
+         Administrateur
+      </label>
+       <input type="radio" id="radio-type-student" name="type" value="student">
+      <label id="label-type-student" for="radio-type-student">
+         Étudiant
+      </label>
+   </td>
+   </c:when>
+   
+   <c:when test="${usermodify.role eq 'student'}">
+   <td>
+      Student
+      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+      <label id="label-type-superadmin" for="radio-type-superadmin">
+         Super Administrateur
+      </label>
+       <input type="radio" id="radio-type-admin" name="type" value="admin">
+      <label id="label-type-admin" for="radio-type-admin">
+         Administrateur
+      </label>
+      <input type="radio" id="radio-type-student" name="type" value="student" checked>
+      <label id="label-type-student" for="radio-type-student">
+         Étudiant
+      </label>
+   </td>
+   </c:when>
+   
+   <c:otherwise>
    <td>
       <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
       <label id="label-type-superadmin" for="radio-type-superadmin">
          Super Administrateur
       </label>
-	  <input type="radio" id="radio-type-admin" name="type" value="admin">
+       <input type="radio" id="radio-type-admin" name="type" value="admin">
       <label id="label-type-admin" for="radio-type-admin">
          Administrateur
       </label>
-	  <input type="radio" id="radio-type-student" name="type" value="student" class="selected" checked>
+      <input type="radio" id="radio-type-student" name="type" value="student">
       <label id="label-type-student" for="radio-type-student">
          Étudiant
       </label>
    </td>
+   </c:otherwise> 
+   </c:choose>
+   
 </tr>
 
 <tr>
@@ -133,10 +150,7 @@ $(function () {
       REMOTE_USER
    </th>
    <td>
-      <input class="text" type="text" id="text-remoteUser" name="remoteUser" value="${useradd.remoteUser}">
-	  <c:if test="${err_useradd_remoteUser}">
-	     <span class="error" title="Le champ est mal formé">Incorrect</span>
-	  </c:if>
+      <input readonly class="text" type="text" id="text-remoteUser" name="remoteUser" value="${usermodify.remoteUser}">
    </td>
 </tr>
 
@@ -154,8 +168,8 @@ $(function () {
 <tr>
    <th>Nom complet</th>
    <td>
-      <input class="text" type="text" id="text-displayName" name="displayName" value="${useradd.displayName}">
-	  <c:if test="${err_useradd_displayName}">
+      <input class="text" type="text" id="text-displayName" name="displayName" value="${usermodify.displayName}">
+	  <c:if test="${err_usermodify_displayName}">
          <span class="error" title="Le champ est mal formé">Incorrect</span>
 	  </c:if>
    </td>
@@ -164,8 +178,8 @@ $(function () {
 <tr>
    <th>E-mail</th>
    <td>
-      <input class="text" type="text" id="text-mail" name="mail" value="${useradd.mail}">
-	  <c:if test="${err_useradd_mail}">
+      <input class="text" type="text" id="text-mail" name="mail" value="${usermodify.mail}">
+	  <c:if test="${err_usermodify_mail}">
 	     <span class="error" title="Le champ est mal formé">Incorrect</span>
 	  </c:if>
    </td>
@@ -176,7 +190,7 @@ $(function () {
       Mot de passe
    </th>
    <td>
-      <input class="text" type="text" id="text-password" name="password" value="${useradd_moreInfo.password}">
+      <input class="text" type="text" id="text-password" name="password" value="${usermodify_moreInfo.password}">
 	  <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes">
 	  <label for="checkbox-passwordEnabled">
          Activé
@@ -223,7 +237,7 @@ $(function () {
       Twitter screen_name
    </th>
    <td>
-      <input class="text" type="text" id="text-twitter_screen_name" name="twitter_screen_name" value="${useradd.twitterScreenName}">
+      <input class="text" type="text" id="text-twitter_screen_name" name="twitter_screen_name" value="${usermodify.twitterScreenName}">
    </td>
 </tr>
 

@@ -42,7 +42,7 @@ public class HomeController extends AbstractBackendController {
 		if (callback.isHttpValid()) {
 
 			log.debug("callback.isHttpValid()");
-			
+
 			final String loginToken = callback.loginToken();
 
 			final User user = getUser();
@@ -102,7 +102,7 @@ public class HomeController extends AbstractBackendController {
 		}
 
 		log.debug("Default: home.jsp");
-		
+
 		return new View("home.jsp");
 	}
 

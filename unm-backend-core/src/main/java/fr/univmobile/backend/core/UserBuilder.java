@@ -34,4 +34,12 @@ public interface UserBuilder extends EntryBuilder<User>, User {
 	UserBuilder setPasswordEncrypted(String encrypted);
 	
 	UserBuilder setTwitterScreenName(String twitterScreenName);
+	
+	// Author: Mauricio
+	UserBuilder setRole(String role);
+	
+	UserBuilder setPrimaryUniversity(String primaryUniversity);
+
+	UserBuilder setSecondaryUniversities(String secondaryUniversities);
+	
 }

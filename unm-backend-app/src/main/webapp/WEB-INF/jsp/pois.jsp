@@ -9,29 +9,35 @@
 <title>Administration d’UnivMobile — POIs</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <style type="text/css">
+
 td.id,
 td.name {
 	cursor: pointer;
 }
+
 td.id:active a,
 td.name:active a,
 td a:active {
 	color: #f00;
 }
+
 td.universityIds ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
 }
+
 th.id,
 td.id {
 	display: none;
 }
+
 </style>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
 <jsp:include page="js-adminMenu.h.jsp"/>
+
 </head>
 <body id="body-pois" class="entered results">
 
@@ -39,17 +45,17 @@ td.id {
 
 <div class="body results">
 
-<h1 title="Version ${buildInfo.appVersion}
-Build ${buildInfo.buildDisplayName}
-${buildInfo.buildId}
-${buildInfo.gitCommitId}">
-Administration d’UnivMobile
+<h1   title="Version ${buildInfo.appVersion}
+      Build ${buildInfo.buildDisplayName}
+      ${buildInfo.buildId}
+      ${buildInfo.gitCommitId}">
+      Administration d’UnivMobile
 </h1>
 
 <div id="div-pois">
 
 <h2>
-POIs : ${poisInfo.count}
+   POIs : ${poisInfo.count}
 </h2>
 
 <div id="div-query">
@@ -81,10 +87,15 @@ POIs : ${poisInfo.count}
 		${poisInfo.resultCount} résultats
 	</c:otherwise>
 	</c:choose>
+   
 </span>
 <button id="button-export" disabled>
 	Export…
 </button>
+</div>
+
+<div class="table bottom">
+   <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter à poi…</a>
 </div>
 
 <c:forEach var="poiGroup" items="${pois}">
@@ -95,50 +106,66 @@ POIs : ${poisInfo.count}
 
 <c:choose>
 <c:when test="${fn:length(poiGroup.pois) == 0}">
-	<div class="emptyArray">
-	Aucun POI
-	</div>
+   <div class="emptyArray">
+	  Aucun POI
+   </div>
 </c:when>
 <c:otherwise>
 <table>
 <thead>
 <tr>
-<th class="universityIds">
-	Universités
-</th>
-<th class="id">
-	id
-</th>
-<th class="name">
-	POI
-</th>
-<th class="address">
-	Adresse
-</th>
+   <th class="universityIds">
+      Universités
+   </th>
+   <th class="id">
+      id
+   </th>
+   <th class="name">
+      POI
+   </th>
+   <th class="address">
+      Adresse
+   </th>
+   <th class="edit">
+      Action
+   </th>
 </tr>
 </thead>
 <tbody>
+
+<!-- I have to reference to poi.id because inside a poiGroup there are MutablePoi and not Poi -->
 <c:forEach var="poi" items="${poiGroup.pois}">
 <c:set var="href" value="${baseURL}/pois/${poi.id}"/>
+
 <tr>
-<td class="universityIds">
-	<ul>
-	<c:forEach var="universityId" items="${poi.universityIds}">
-	<li> ${universityId}
-	</c:forEach>
-	</ul>
-</td>
-<td class="id" onclick="document.location.href = '${href}'">
-	<a href="${href}" id="link-poi-${poi.id}-id">${poi.id}</a>
-</td>
-<td class="name" onclick="document.location.href = '${href}'">
-	<a href="${href}" id="link-poi-${poi.id}-name">
-	<c:out value="${poi.name}"/>
-	</a>
-</td>
-<td class="address">
-	<c:out value="${poi.address}"/>
-</td>
+   <td class="universityIds">
+      <ul>
+      <c:forEach var="universityId" items="${poi.universityIds}">
+         <li> 
+            ${universityId}
+         </li>
+      </c:forEach>
+      </ul>
+   </td>
+   
+   <td class="id" onclick="document.location.href = '${href}'">
+      <a href="${href}" id="link-poi-${poi.id}-id">${poi.id}</a>
+   </td>
+   
+   <td class="name" onclick="document.location.href = '${href}'">
+      <a href="${href}" id="link-poi-${poi.id}-name">
+         <c:out value="${poi.name}"/>
+	  </a>
+   </td>
+   
+   <td class="address">
+      <c:out value="${poi.address}"/>
+   </td>
+   
+   <td class="edit">
+      <a id="link-edit_${poi.id}" href="${baseURL}/poismodify/${poi.id}">Modifier…</a>
+   </td>
+   
 </tr>
 </c:forEach>
 </tbody>
@@ -147,6 +174,10 @@ POIs : ${poisInfo.count}
 </c:choose>
 
 </c:forEach>
+
+<div class="table bottom">
+   <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter à poi…</a>
+</div>
 
 </div> <!-- end of #div-pois -->
 	

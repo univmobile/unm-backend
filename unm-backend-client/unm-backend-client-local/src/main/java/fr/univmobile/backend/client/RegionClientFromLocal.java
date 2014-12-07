@@ -5,8 +5,10 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import java.io.IOException;
 import java.text.Normalizer;
 import java.text.Normalizer.Form;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeSet;
@@ -17,7 +19,7 @@ import javax.inject.Inject;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import fr.univmobile.backend.core.PoiTreeDataSource;
+import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.DataBeans;
 
@@ -26,16 +28,16 @@ public class RegionClientFromLocal extends AbstractClientFromLocal implements
 
 	@Inject
 	public RegionClientFromLocal(final String baseURL,
-			final RegionDataSource regions, final PoiTreeDataSource poitrees) {
+			final RegionDataSource regions, final PoiDataSource pois) {
 
 		super(baseURL);
 
 		this.regions = checkNotNull(regions, "regions");
-		this.poitrees = checkNotNull(poitrees, "poitrees");
+		this.pois = checkNotNull(pois, "pois");
 	}
 
+	private final PoiDataSource pois;
 	private final RegionDataSource regions;
-	private final PoiTreeDataSource poitrees;
 
 	private static final Log log = LogFactory
 			.getLog(RegionClientFromLocal.class);
@@ -48,7 +50,7 @@ public class RegionClientFromLocal extends AbstractClientFromLocal implements
 		final Map<String, fr.univmobile.backend.core.Region> dsRegions //
 		= regions.getAllBy(String.class, "uid");
 
-		final Region[] regions = new Region[dsRegions.size()];
+		final Region[] regionsArray = new Region[dsRegions.size()];
 
 		int i = 0;
 
@@ -73,25 +75,55 @@ public class RegionClientFromLocal extends AbstractClientFromLocal implements
 
 		sortedSet.addAll(dsRegions.values());
 
+		// Author: Mauricio (begin)
+
+		final Map<Integer, fr.univmobile.backend.core.Poi> allPois = pois
+				.getAllBy(Integer.class, "uid");
+		final List<fr.univmobile.backend.core.Poi> myPois = new ArrayList<fr.univmobile.backend.core.Poi>();
+		for (final Integer uid : new TreeSet<Integer>(allPois.keySet())) {
+			myPois.add(allPois.get(uid));
+		}
+
+		// Author: Mauricio (end)
+
 		for (final fr.univmobile.backend.core.Region dsRegion : sortedSet) {
 
 			final String regionId = dsRegion.getUid(); // REGION.ID ==
 														// DS_REGION.UID!
 
-			final int poiCount;
+			int poiCount = 0;
 
-			if (poitrees.isNullByUid(regionId)) {
+			// Author: Mauricio (begin)
 
-				poiCount = 0; // e.g. bretagne
+			fr.univmobile.backend.core.University[] universities = dsRegion
+					.getUniversities();
+
+			if (regions.isNullByUid(regionId)) {
+
+				poiCount = 0;
 
 			} else {
 
-				poiCount = poitrees.getByUid(regionId).sizeOfAllPois();
+				for (fr.univmobile.backend.core.Poi p : myPois) {
+					final fr.univmobile.backend.core.Poi dsPoi = pois
+							.getByUid(p.getUid());
+
+					if (universities.length > 0) {
+						for (int j = 0; j < universities.length; j++)
+							if (dsPoi.getUniversities().length > 0)
+								if (universities[j].getId().equals(
+										dsPoi.getUniversities()[0]))
+									poiCount++;
+					}
+
+				}
 			}
+
+			// Author: Mauricio (end)
 
 			final String url = filterURL(dsRegion.getUrl());
 
-			regions[i] = DataBeans //
+			regionsArray[i] = DataBeans //
 					.instantiate(MutableRegion.class) //
 					.setId(regionId) //
 					.setLabel(dsRegion.getLabel()) //
@@ -102,7 +134,7 @@ public class RegionClientFromLocal extends AbstractClientFromLocal implements
 			++i;
 		}
 
-		return regions;
+		return regionsArray;
 	}
 
 	@Override
@@ -152,14 +184,10 @@ public class RegionClientFromLocal extends AbstractClientFromLocal implements
 
 			final int poiCount;
 
-			if (poitrees.isNullByUid(regionId)) {
-
-				poiCount = 0; // e.g. bretagne
-
+			if (regions.isNullByUid(regionId)) {
+				poiCount = 0;
 			} else {
-
-				poiCount = poitrees.getByUid(regionId)
-						.sizeOfAllPoisByUniversityId(universityId);
+				poiCount = regions.getByUid(regionId).getUniversities().length;
 			}
 
 			universities[i] = DataBeans //

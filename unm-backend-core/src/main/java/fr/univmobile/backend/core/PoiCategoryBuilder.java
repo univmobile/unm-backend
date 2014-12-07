@@ -14,4 +14,10 @@ public interface PoiCategoryBuilder extends EntryBuilder<PoiCategory>, PoiCatego
 	PoiCategoryBuilder setParentUid(int parentUid);
 
 	PoiCategoryBuilder setName(String name);
+
+	// Author: Mauricio
+	PoiCategoryBuilder setDescription(String description);
+	PoiCategoryBuilder setExternalUid(int externalUid);
+	PoiCategoryBuilder setActive(boolean active);
+	
 }

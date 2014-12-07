@@ -50,9 +50,9 @@ import fr.univmobile.backend.client.json.SessionJSONClient;
 import fr.univmobile.backend.client.json.SessionJSONClientImpl;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
+import fr.univmobile.backend.core.PoiCategoryDataSource;
 //import fr.univmobile.backend.core.CommentThreadDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.backend.core.SessionManager;
@@ -93,7 +93,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private UserDataSource users;
 	private RegionDataSource regions;
 	private PoiDataSource pois;
-	// private PoiTreeDataSource poiTrees;
+
+	// Categories
+	private PoiCategoryDataSource poiCategories;
+
 	private UploadManager uploadManager;
 
 	private AbstractJSONController[] jsonControllers;
@@ -158,13 +161,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final File usersDir = new File(dataDir, "users");
 		final File regionsDir = new File(dataDir, "regions");
 		final File poisDir = new File(dataDir, "pois");
-		final File poiTreesDir = new File(dataDir, "poitrees");
 		final File uploadsDir = new File(dataDir, "uploads");
 		final File commentsDir = new File(dataDir, "comments");
 
+		// Categories
+		final File poiCategoriesDir = new File(dataDir, "poiscategories");
+
 		// 2. DATASOURCES AND CLIENTS
 
-		final PoiTreeDataSource poiTrees;
 		final CommentDataSource comments;
 		final CommentManager commentManager;
 		final SearchManager searchManager;
@@ -179,13 +183,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			regions = BackendDataSourceFileSystem.newDataSource(
 					RegionDataSource.class, regionsDir);
 
-			poiTrees = BackendDataSourceFileSystem.newDataSource(
-					PoiTreeDataSource.class, poiTreesDir);
-
-			poiTrees.getByUid("ile_de_france"); // check for "poitree"
-
 			pois = BackendDataSourceFileSystem.newDataSource(
 					PoiDataSource.class, poisDir);
+
+			// Added by Mauricio
+			poiCategories = BackendDataSourceFileSystem.newDataSource(
+					PoiCategoryDataSource.class, poiCategoriesDir);
 
 			uploadManager = new UploadManagerImpl(uploadsDir);
 
@@ -219,34 +222,49 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final UsersController usersController = new UsersController(users);
 
+		// Added by Mauricio
+		final PoiCategoriesController poisCategoriesController = new PoiCategoriesController(
+				poiCategories);
+		final PoisController poisController = new PoisController(regions, pois);
+
 		super.init(new HomeController(users, sessionManager), //
 				usersController, new UseraddController(tx, users,
-						usersController), //
+						usersController, regions), //
 				new RegionsController(tx, regions), //
-				new AdminGeocampusController(regions, pois, poiTrees), //
+				new AdminGeocampusController(regions, pois), //
 				new SystemController(ds), //
-				new PoisController(regions, pois, poiTrees), //
+				poisController, //
 				new PoiController(comments, commentManager, searchManager,
-						regions, pois, poiTrees), //
+						regions, pois), //
 				new CommentsController(comments, commentManager, searchManager,
-						regions, pois, poiTrees), //
+						regions, pois), //
 				new CommentController(comments, commentManager), //
 				new HelpController(), //
-				new LogsController() //
-		);
+				new LogsController(), //
+				poisCategoriesController, //
+
+				// Added by Mauricio
+
+				new PoiCategoriesAddController(tx, poiCategories,
+						poisCategoriesController), //
+				new PoiCategoriesModifyController(tx, poiCategories,
+						poisCategoriesController), //
+				new PoisAddController(tx, pois, poisController, regions), //
+				new PoisModifyController(tx, pois, poisController, regions), //
+				new UserModifyController(tx, users, usersController, regions));
 
 		// 3. JSON CONTROLLERS
 
 		final String baseURL = getBaseURL();
 
 		final RegionClient regionClient = new RegionClientFromLocal(baseURL,
-				regions, poiTrees);
+				regions, pois);
 
 		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
 				regionClient);
 
 		final PoiClient poiClient = new PoiClientFromLocal(baseURL, pois,
-				poiTrees, regions);
+				regions);
 
 		final PoiJSONClient poiJSONClient = new PoiJSONClientImpl(poiClient);
 

@@ -13,8 +13,6 @@ import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.PoiGroup;
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTree;
-import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.model.Pois;
 import fr.univmobile.commons.tx.TransactionException;
@@ -25,20 +23,18 @@ import fr.univmobile.web.commons.View;
 public class PoisController extends AbstractBackendController {
 
 	public PoisController(final RegionDataSource regions,
-			final PoiDataSource pois, final PoiTreeDataSource poiTrees) {
+			final PoiDataSource pois) {
 
 		this.pois = checkNotNull(pois, "pois");
-		this.poiTrees = checkNotNull(poiTrees, "poiTrees");
 		this.regions = checkNotNull(regions, "regions");
 	}
 
 	private final RegionDataSource regions;
 	private final PoiDataSource pois;
-	private final PoiTreeDataSource poiTrees;
 
 	private PoiClient getPoiClient() {
 
-		return new PoiClientFromLocal(getBaseURL(), pois, poiTrees, regions);
+		return new PoiClientFromLocal(getBaseURL(), pois, regions);
 	}
 
 	@Override
@@ -48,7 +44,7 @@ public class PoisController extends AbstractBackendController {
 
 		// 1. POIS INFO
 
-		final PoiTree poiTree = poiTrees.getByUid("ile_de_france"); // TODO
+		// final PoiTree poiTree = poiTrees.getByUid("ile_de_france"); // TODO
 
 		int resultCount = 0;
 
@@ -58,8 +54,8 @@ public class PoisController extends AbstractBackendController {
 		}
 
 		final PoisInfo poisInfo = instantiate(PoisInfo.class) //
-				.setCount(poiTree.sizeOfAllPois()) //
-				.setContext("POIS de plus haut niveau") //
+				// .setCount(poiTree.sizeOfAllPois()) //
+				.setCount(resultCount).setContext("POIS de plus haut niveau") //
 				.setResultCount(resultCount);
 
 		setAttribute("poisInfo", poisInfo);

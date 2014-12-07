@@ -61,6 +61,8 @@ Administration d’UnivMobile
 		<a id="link-news" href="${baseURL}/news/">Fils d’actualités des universités</a>
 	<li class="flaticon icon-address7">
 		<a id="link-users" href="${baseURL}/users/">Utilisateurs</a>
+	<li class="flaticon icon-address7">
+		<a id="link-categories" href="${baseURL}/poicategories/">Categories</a>
 </ul>
 
 <h2 class="homeMenu"><a id="link-system" href="${baseURL}/system/">Système</a></h2>

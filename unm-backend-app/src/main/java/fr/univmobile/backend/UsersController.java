@@ -53,7 +53,7 @@ public class UsersController extends AbstractBackendController {
 
 		for (final String uid : new TreeSet<String>(allUsers.keySet())) {
 
-			u.add(allUsers.get(uid));
+			u.add(users.getLatest(allUsers.get(uid)));
 		}
 
 		// 9. END

@@ -66,9 +66,10 @@ public interface Poi extends Entry<Poi> {
 	@XPath("atom:content/@coordinates")
 	String getCoordinates();
 
-	@XPath("atom:content/@active = 'true'")
-	boolean isActive();
-
+	// Author: Mauricio
+	@XPath("atom:content/@active")
+	String getActive();
+	
 	@XPath("atom:content/@markerType")
 	MarkerType getMarkerType();
 
@@ -98,8 +99,39 @@ public interface Poi extends Entry<Poi> {
 
 	boolean isNullUniversities();
 
+	// Autor: Mauricio (begin)
+
 	@XPath("atom:content/address/url")
 	String[] getUrls();
+
+	@XPath("atom:content/address/floor")
+	String[] getFloors();
+
+	@XPath("atom:content/address/@latitude")
+	String[] getLatitudes();
+
+	@XPath("atom:content/address/@longitude")
+	String[] getLongitudes();
+
+	@XPath("atom:content/address/openingHours")
+	String[] getOpeningHours();
+
+	@XPath("atom:content/address/itinerary")
+	String[] getItineraries();
+
+	@XPath("atom:content/address/zipCode")
+	String[] getZipCodes();
+
+	@XPath("atom:content/address/city")
+	String[] getCities();
+
+	@XPath("atom:content/address/countryCode")
+	String[] getCountryCodes();
+
+	@XPath("atom:content/address/fullAddress")
+	String[] getFullAddresses();
+
+	// Author: Mauricio (end)
 
 	@XPath("atom:content/address/phone")
 	String[] getPhones();
@@ -138,6 +170,10 @@ public interface Poi extends Entry<Poi> {
 
 		@XPath("@longitude")
 		String getLongitude();
+
+		// Author: Mauricio
+		@XPath("@phone")
+		String getPhone();
 
 		@XPath("fullAddress")
 		@Nullable

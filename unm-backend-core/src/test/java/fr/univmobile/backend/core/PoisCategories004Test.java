@@ -38,7 +38,7 @@ public class PoisCategories004Test extends AbstractPoisCategoriesTest {
 		assertEquals(99, amphi.getParentUid());
 		int[] expectedChildren = {};
 		assertArrayEquals(expectedChildren, amphi.getChildren());
-		assertTrue(amphi.isActive());
+		assertTrue(amphi.getActive() == true);
 		assertEquals(0, amphi.getExternalUid());
 		
 		
@@ -56,7 +56,7 @@ public class PoisCategories004Test extends AbstractPoisCategoriesTest {
 		assertEquals(0, amphi.getParentUid());
 		int[] expectedChildren = { 1, 3, 4, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24};
 		assertArrayEquals(expectedChildren, amphi.getChildren());
-		assertTrue(amphi.isActive());
+		assertTrue(amphi.getActive() == true);
 		assertEquals(0, amphi.getExternalUid());
 		
 	}
@@ -73,7 +73,7 @@ public class PoisCategories004Test extends AbstractPoisCategoriesTest {
 		assertEquals(99, amphi.getParentUid());
 		int[] expectedChildren = {};
 		assertArrayEquals(expectedChildren, amphi.getChildren());
-		assertFalse(amphi.isActive());
+		assertFalse(amphi.getActive() == true);
 		assertEquals(0, amphi.getExternalUid());
 		
 	}

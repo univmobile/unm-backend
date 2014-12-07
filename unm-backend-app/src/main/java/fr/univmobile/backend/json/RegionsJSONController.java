@@ -17,9 +17,10 @@ public class RegionsJSONController extends AbstractJSONController {
 
 	public RegionsJSONController(final RegionJSONClient regionJSONClient) {
 
-		this.regionJSONClient = checkNotNull(regionJSONClient,"regionJSONClient");
+		this.regionJSONClient = checkNotNull(regionJSONClient,
+				"regionJSONClient");
 	}
-	
+
 	private final RegionJSONClient regionJSONClient;
 
 	private static final Log log = LogFactory
@@ -34,14 +35,14 @@ public class RegionsJSONController extends AbstractJSONController {
 		final String regionsJSON = regionJSONClient.getRegionsJSON();
 
 		if (log.isDebugEnabled()) {
-			log.debug("serveJSON(regionJSON.length: "
-					+ regionsJSON.length() + ")");
+			log.debug("serveJSON(regionJSON.length: " + regionsJSON.length()
+					+ ")");
 		}
 
 		final String json = "{\"url\":\""
 				+ composeJSONendPoint(baseURL, "/regions") + "\","
 				+ substringAfter(regionsJSON, "{");
-		
+
 		return json;
 	}
 }

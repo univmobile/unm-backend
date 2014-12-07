@@ -63,7 +63,7 @@ POI : <c:out value="${poi.name}"/>
 </th>
 <td>
 	<input class="text" id="text-name" name="name" disabled
-		value="<c:out value="${poi.name}"/>">
+		value='<c:out value="${poi.name}"/>'>
 </td>
 </tr>
 <tr class="id">
@@ -94,8 +94,10 @@ POI : <c:out value="${poi.name}"/>
 <td>
 	<ul>
 	<c:forEach var="universityId" items="${poi.universityIds}">
-	<li> ${universityId}
-	</c:forEach>
+	  <li> 
+         ${universityId}
+	  </li>
+    </c:forEach>
 	</ul>
 </td>
 </tr>
@@ -104,8 +106,9 @@ POI : <c:out value="${poi.name}"/>
 	Emplacement
 </th>
 <td>
-	<textarea id="text-floor" name="floor" disabled><c:out
-		value="${poi.floor}"/></textarea>
+   <textarea id="text-floor" name="floor" disabled>
+      <c:out value="${poi.floor}"/>
+   </textarea>
 </td>
 </tr>
 <tr class="textarea openingHours">
@@ -113,8 +116,9 @@ POI : <c:out value="${poi.name}"/>
 	Horaires
 </th>
 <td>
-	<textarea id="text-floor" name="floor" disabled><c:out
-		value="${poi.floor}"/></textarea>
+   <textarea id="text-schedule" name="schedule" disabled>
+      <c:out value="${poi.openingHours}"/>
+   </textarea>
 </td>
 </tr>
 <tr class="phone">
@@ -123,7 +127,7 @@ POI : <c:out value="${poi.name}"/>
 </th>
 <td>
 	<input class="text" id="text-phone" name="phone" disabled
-		value="<c:out value="${poi.phone}"/>">
+		value='<c:out value="${poi.phone}"/>'>
 </td>
 </tr>
 <tr class="textarea address">
@@ -131,8 +135,9 @@ POI : <c:out value="${poi.name}"/>
 	Adresse
 </th>
 <td>
-	<textarea id="text-address" name="address" disabled><c:out
-		value="${poi.address}"/></textarea>
+   <textarea id="text-address" name="address" disabled>
+      <c:out value="${poi.address}"/>
+   </textarea>
 </td>
 </tr>
 <tr class="email">
@@ -141,7 +146,7 @@ POI : <c:out value="${poi.name}"/>
 </th>
 <td>
 	<input class="text" id="text-email" name="email" disabled
-		value="<c:out value="${poi.email}"/>">
+		value='<c:out value="${poi.email}"/>'>
 </td>
 </tr>
 <tr class="textarea itinerary">
@@ -149,8 +154,9 @@ POI : <c:out value="${poi.name}"/>
 	Accès
 </th>
 <td>
-	<textarea id="text-itinerary" name="itinerary" disabled><c:out
-		value="${poi.itinerary}"/></textarea>
+   <textarea id="text-itinerary" name="itinerary" disabled>
+      <c:out value="${poi.itinerary}"/>
+   </textarea>
 </td>
 </tr>
 <tr class="url">
@@ -159,7 +165,7 @@ POI : <c:out value="${poi.name}"/>
 </th>
 <td>
 	<input class="text" id="text-url" name="url" disabled
-		value="<c:out value="${poi.url}"/>">
+		value='<c:out value="${poi.url}"/>'>
 </td>
 </tr>
 <tr class="coordinates">
@@ -168,7 +174,7 @@ POI : <c:out value="${poi.name}"/>
 </th>
 <td>
 	<input class="text" id="text-coordinates" name="coordinates" disabled
-		value="<c:out value="${poi.coordinates}"/>">
+		value='<c:out value="${poi.coordinates}"/>'>
 </td>
 </tr>
 <tr class="comments">
@@ -206,7 +212,7 @@ POI : <c:out value="${poi.name}"/>
 
 </div> <!-- end of #div-poi -->
 	
-</div> <!-- end of div.body -->
+</form></div> <!-- end of div.body -->
 
 </body>
 </html>

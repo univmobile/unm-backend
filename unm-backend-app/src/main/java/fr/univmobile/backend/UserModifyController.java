@@ -14,6 +14,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.RegionDataSource;
+import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserBuilder;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.impl.Encrypt;
@@ -25,14 +26,21 @@ import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
+import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.Regexp;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "useradd" })
-public class UseraddController extends AbstractBackendController {
+@Paths({ "usermodify/${uid}" })
+public class UserModifyController extends AbstractBackendController {
 
-	public UseraddController(final TransactionManager tx,
+	@PathVariable("${uid}")
+	private String getUserUid() {
+
+		return getPathStringVariable("${uid}");
+	}
+
+	public UserModifyController(final TransactionManager tx,
 			final UserDataSource users, final UsersController usersController,
 			final RegionDataSource regions) {
 
@@ -61,13 +69,21 @@ public class UseraddController extends AbstractBackendController {
 			regionsData.add(r);
 		setAttribute("regionsData", regionsData);
 
-		// 1. HTTP
+		// 1.1 USER
 
-		final Useradd form = getHttpInputs(Useradd.class);
+		final User user;
+
+		user = users.getLatest(users.getByUid(getUserUid()));
+
+		setAttribute("usermodify", user);
+
+		// 1.2 HTTP
+
+		final Usermodify form = getHttpInputs(Usermodify.class);
 
 		if (!form.isHttpValid()) {
-
-			return new View("useradd.jsp");
+			System.out.println(user.getRole());
+			return new View("usermodify.jsp");
 		}
 
 		// 2. APPLICATION VALIDATION
@@ -77,29 +93,29 @@ public class UseraddController extends AbstractBackendController {
 		final Lock lock = tx.acquireLock(5000, "users", uid);
 		try {
 
-			return useradd(lock, form);
+			return usermodify(lock, form);
 
 		} finally {
 			lock.release();
 		}
 	}
 
-	private View useradd(final Lock lock, final Useradd form)
+	private View usermodify(final Lock lock, final Usermodify form)
 			throws IOException, TransactionException {
 
 		final String uid = form.uid();
 
-		final UserBuilder user = users.create();
-
-		user.setAuthorName(getDelegationUser().getUid());
-
-		final String remoteUser = form.remoteUser();
-
+		// final UserBuilder user = users.create();
+		final UserBuilder user = users.update(users.getByUid(getUserUid()));
+				
+		user.setUid(uid);
+		user.setRemoteUser(form.remoteUser());
+		
 		if (form.type() != null) // gets the role
 			user.setRole(form.type());
 
-		user.setUid(uid);
-		user.setRemoteUser(remoteUser);
+		user.setAuthorName(getDelegationUser().getUid());
+		
 		user.setTitle(uid);
 		user.setDisplayName(form.displayName());
 		user.setMail(form.mail());
@@ -126,29 +142,6 @@ public class UseraddController extends AbstractBackendController {
 			user.setTwitterScreenName(twitterScreenName);
 		}
 
-		boolean hasErrors = false;
-
-		if (!isBlank(uid)) {
-			if (!users.isNullByUid(uid)) {
-				hasErrors = true;
-				setAttribute("err_duplicateUid", true);
-			}
-		}
-
-		if (!isBlank(remoteUser)) {
-			if (!users.isNullByRemoteUser(remoteUser)) {
-				hasErrors = true;
-				setAttribute("err_duplicateRemoteUser", true);
-			}
-		}
-
-		if ( !validate(form, "err_useradd") ||  hasErrors) {
-
-			setAttribute("useradd", user); // Show the data in the view
-
-			return new View("useradd.jsp");
-		}
-
 		// 3. SAVE DATA
 
 		// Otherwise, we’re clear: Save the data.
@@ -156,6 +149,8 @@ public class UseraddController extends AbstractBackendController {
 		lock.save(user);
 
 		lock.commit();
+		
+		System.out.println("-> " + users.getByUid(getUserUid()).getRole());
 
 		return usersController.action();
 	}
@@ -173,7 +168,7 @@ public class UseraddController extends AbstractBackendController {
 	 * </ol>
 	 */
 	@HttpMethods("POST")
-	interface Useradd extends HttpInputs {
+	interface Usermodify extends HttpInputs {
 
 		@HttpRequired
 		@HttpParameter(trim = true)

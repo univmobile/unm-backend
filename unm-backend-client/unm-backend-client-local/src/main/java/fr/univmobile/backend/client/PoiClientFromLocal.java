@@ -28,8 +28,6 @@ import com.google.common.collect.Iterables;
 
 import fr.univmobile.backend.client.Pois.MapInfo;
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.PoiTree;
-import fr.univmobile.backend.core.PoiTreeDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.DataBeans;
 
@@ -39,22 +37,17 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 	@Inject
 	public PoiClientFromLocal(final String baseURL,
 			final PoiDataSource poiDataSource,
-			final PoiTreeDataSource poitreeDataSource,
 			final RegionDataSource regionDataSource) {
 
 		super(baseURL);
 
 		this.poiDataSource = checkNotNull(poiDataSource, "poiDataSource");
 
-		this.poitreeDataSource = checkNotNull(poitreeDataSource,
-				"poitreeDataSource");
-
 		this.regionDataSource = checkNotNull(regionDataSource,
 				"regionDataSource");
 	}
 
 	private final PoiDataSource poiDataSource;
-	private final PoiTreeDataSource poitreeDataSource;
 	private final RegionDataSource regionDataSource;
 
 	private static final Log log = LogFactory.getLog(PoiClientFromLocal.class);
@@ -96,7 +89,7 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		for (final PoiGroup poiGroup : poiGroups) {
 
 			final Poi[] pois = poiGroup.getPois();
-			
+
 			poiArrays.put(poiGroup.getGroupLabel(), pois);
 
 			Arrays.sort(pois, new Comparator<Poi>() {
@@ -221,6 +214,13 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 
 		int markerIndex = 0;
 
+		final Map<Integer, fr.univmobile.backend.core.Poi> allPois = poiDataSource
+				.getAllBy(Integer.class, "uid");
+		final List<fr.univmobile.backend.core.Poi> myPois = new ArrayList<fr.univmobile.backend.core.Poi>();
+		for (final Integer uid : new TreeSet<Integer>(allPois.keySet())) {
+			myPois.add(allPois.get(uid));
+		}
+
 		for (final fr.univmobile.backend.core.Region dsRegion : sortedSet) {
 
 			final MutablePoiGroup poiGroup = DataBeans //
@@ -231,41 +231,43 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 
 			++i;
 
-			final String regionId = dsRegion.getUid();
+			fr.univmobile.backend.core.University[] universities = dsRegion
+					.getUniversities();
 
-			if (poitreeDataSource.isNullByUid(regionId)) { // TODO
-
-				System.err.println("Cannot load PoiTree for region: "
-						+ regionId);
-
-				continue;
-			}
-
-			final PoiTree poiTree = poitreeDataSource.getByUid(regionId);
-
-			for (final PoiTree root : poiTree.getRoots()) {
-
-				final int poiUid = Integer.parseInt(root.getUid());
+			for (fr.univmobile.backend.core.Poi p : myPois) {
 
 				final fr.univmobile.backend.core.Poi dsPoi = poiDataSource
-						.getByUid(poiUid);
+						.getByUid(p.getUid());
 
-				final MutablePoi poi = createPoiFromData(dsPoi);
+				if (universities.length > 0) {
+					boolean belongs = false;
+					for (int j = 0; j < universities.length; j++)
+						if (dsPoi.getUniversities().length > 0)
+							if (universities[j].getId().equals(
+									dsPoi.getUniversities()[0]))
+								belongs = true;
 
-				if (poi == null) {
-					continue; // Skip empty POIs
+					if (belongs == true) {
+
+						final MutablePoi poi = createPoiFromData(dsPoi);
+
+						if (poi == null) {
+							continue; // Skip empty POIs
+						} else
+							poi.setRegion(dsRegion.getUid());
+
+						/**
+						 * TODO Check with the MarketType is hardcoded to green
+						 */
+						poi.setMarkerType("green");
+						poi.setMarkerIndex(Character
+								.toString((char) ('A' + markerIndex)));
+
+						markerIndex = (markerIndex + 1) % 26;
+
+						poiGroup.addToPois(poi);
+					}
 				}
-
-				/**
-				 * TODO Check with the MarketType is hardcoded to green
-				 */
-				poi.setMarkerType("green");
-				poi.setMarkerIndex(Character
-						.toString((char) ('A' + markerIndex)));
-
-				markerIndex = (markerIndex + 1) % 26;
-
-				poiGroup.addToPois(poi);
 			}
 		}
 
@@ -290,7 +292,7 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		final String longitude = substringAfter(coordinates, ",");
 
 		if (isBlank(coordinates) || isBlank(latitude) || isBlank(longitude)) {
-			return null;
+			// return null;
 		}
 
 		final MutablePoi poi = DataBeans //
@@ -313,6 +315,24 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		if (dsPoi.getFaxes().length != 0) {
 			poi.setFax(dsPoi.getFaxes()[0]);
 		}
+
+		// Author: Mauricio (begin)
+
+		if (dsPoi.getFloors().length != 0) {
+			poi.setFloor(dsPoi.getFloors()[0]);
+		}
+		if (dsPoi.getOpeningHours().length != 0) {
+			poi.setOpeningHours(dsPoi.getOpeningHours()[0]);
+		}
+		if (dsPoi.getEmails().length != 0) {
+			poi.setEmail(dsPoi.getEmails()[0]);
+		}
+		if (dsPoi.getItineraries().length != 0) {
+			poi.setItinerary(dsPoi.getEmails()[0]);
+		}
+
+		// Author: Mauricio (end)
+
 		if (dsPoi.getAttachments().length != 0) {
 			final String image = dsPoi.getAttachments()[0].getUrl();
 			if (!image.startsWith("/upload")) {
@@ -372,6 +392,8 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		MutablePoi setId(int id);
 
 		MutablePoi setName(String name);
+
+		MutablePoi setRegion(String region);
 
 		MutablePoi setAddress(@Nullable String address);
 

@@ -38,7 +38,7 @@ public abstract class AbstractPoisIleDeFranceTest extends AbstractPoisTest {
 		assertEquals("FR", paris1.getAddresses()[0].getCountryCode());
 		assertEquals("48.85", paris1.getAddresses()[0].getLatitude());
 		assertEquals("2.35", paris1.getAddresses()[0].getLongitude());
-		assertEquals("paris1", paris1.getUniversities()[0]);
+		assertEquals("paris1", paris1.getUniversityIds()[0]);
 
 		assertTrue(paris1.isNullParentUid());
 

@@ -142,7 +142,7 @@ public class ImageMapClientFromLocal extends AbstractClientFromLocal implements
 
 		// UNIVERSITIES
 
-		final String[] dsUniversities = dsPoi.getUniversities();
+		final String[] dsUniversities = dsPoi.getUniversityIds();
 
 		final List<String> universityIds = new ArrayList<String>();
 

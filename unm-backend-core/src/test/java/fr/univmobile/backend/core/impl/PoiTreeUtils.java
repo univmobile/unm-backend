@@ -105,7 +105,7 @@ public class PoiTreeUtils {
 
 		if (!node.poi.isNullUniversities()) {
 			startTag.append(" universityId=\"")
-					.append(node.poi.getUniversities()[0]).append("\"");
+					.append(node.poi.getUniversityIds()[0]).append("\"");
 		}
 
 		startTag.append(" typeId=\"").append(node.poi.getPoiTypeIds()[0])
@@ -165,7 +165,7 @@ public class PoiTreeUtils {
 
 		if (poi.isNullParentUid()) {
 
-			if (poi.getUniversities().length != 0) {
+			if (poi.getUniversityIds().length != 0) {
 
 				// System.out.println("  adding root: " + uid);
 

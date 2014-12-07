@@ -33,7 +33,7 @@ public class Pois003Test extends AbstractPoisTest {
 		final Poi ensma = pois.getByUid(20181);
 
 		assertEquals(20181, ensma.getUid());
-		assertEquals("ensma", ensma.getUniversities()[0]);
+		assertEquals("ensma", ensma.getUniversityIds()[0]);
 		assertEquals(1, ensma.getPoiTypeIds()[0]);
 		assertEquals("Université", ensma.getPoiTypeLabels()[0]);
 		assertEquals(1, ensma.getPoiCategoryIds()[0]);

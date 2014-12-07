@@ -315,9 +315,9 @@ interface SystemInfo {
 	SystemInfo setJavaVmVendor(String javaVmVendor);
 
 	String getServerTime();
-	
+
 	SystemInfo setServerTime(String serverTime);
-	
+
 	String getLogFile();
 
 	SystemInfo setLogFile(String logFile);

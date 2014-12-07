@@ -16,15 +16,18 @@ public abstract class AbstractPoisCategoriesTest {
 		this.originalDataDir = originalDataDir;
 	}
 
-	private final File originalDataDir;
-
+	// private final File originalDataDir;
+	protected File originalDataDir;
+	
 	/**
-	 * Prepare le test afin de ne loader qu'une seule fois pour tous les tests les donnees
-	 * dans les fichiers XML
+	 * Prepare le test afin de ne loader qu'une seule fois pour tous les tests
+	 * les donnees dans les fichiers XML
+	 * 
 	 * @throws Exception
 	 */
 	@Before
-	public final void setUp() throws Exception {
+	//public final void setUp() throws Exception {
+	public void setUp() throws Exception {
 
 		poisCategories = poisCategoriesByClass.get(this.getClass());
 
@@ -51,8 +54,8 @@ public abstract class AbstractPoisCategoriesTest {
 
 		System.out.println("Loading data...");
 
-		poisCategories = BackendDataSourceFileSystem.newDataSource(PoiCategoryDataSource.class,
-				tmpDataDir);
+		poisCategories = BackendDataSourceFileSystem.newDataSource(
+				PoiCategoryDataSource.class, tmpDataDir);
 
 		final long elapsedLoad = System.currentTimeMillis() - start
 				- elapsedCopy;

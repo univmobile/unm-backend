@@ -9,7 +9,8 @@
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
 		<init-param>
 			<param-name>baseURL</param-name>
-			<param-value>https://univmobile-dev.univ-paris1.fr/testSP/</param-value>
+			<!-- <param-value>https://univmobile-dev.univ-paris1.fr/testSP/</param-value> -->
+			<param-value>http://localhost:8080/unm-backend/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>optional-jsonBaseURLs</param-name>
@@ -19,15 +20,16 @@
 		</init-param>
 		<init-param>
 			<param-name>dataDir</param-name>
-			<param-value>/tmp/unm-backend/dataDir</param-value>
+			<!-- <param-value>/tmp/unm-backend/dataDir</param-value> -->
+			<param-value>/home/mauricio/var/univmobile/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>twitter.consumerKey</param-name>
-			<param-value></param-value>
+			<param-value>dd</param-value>
 		</init-param>
 		<init-param>
 			<param-name>twitter.consumerSecret</param-name>
-			<param-value></param-value>
+			<param-value>dd</param-value>
 		</init-param>
 		<init-param>
 			<param-name>shibboleth.ssoBaseURL</param-name>
@@ -47,6 +49,44 @@
 		<servlet-name>BackendServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
+	
+		<!-- Use NoShibbolethFilter only when Shibboleth is not available (-it.) -->
+	<!-- It will crash on a production environment, with Shibboleth/HTTPS. -->
+	 
+	<filter>
+		<filter-name>NoShibbolethFilter</filter-name>
+		<filter-class>fr.univmobile.backend.noshib.NoShibbolethFilter</filter-class>
+		<init-param>
+			<param-name>hosts.allow</param-name>
+			<param-value>
+				mauricio-MOV
+				Davids-MacBook-Pro.local
+				mbpro.local
+				unm-ci
+				unm-ios7
+				unm-ios6a.local
+				unm-ios6b.local
+				unm-ios6a
+				unm-ios6b
+				unm-ios7a.local
+				unm-ios7b.local
+				unm-ios7a
+				unm-ios7b
+				ks3haxm
+			</param-value>
+		</init-param>
+		<init-param>
+			<param-name>hosts.deny</param-name>
+			<param-value>
+				univmobile-dev
+			</param-value>
+		</init-param>
+	</filter>
+	
+	<filter-mapping>
+		<filter-name>NoShibbolethFilter</filter-name>
+		<servlet-name>BackendServlet</servlet-name>
+	</filter-mapping>
 
 	<servlet>
 		<servlet-name>PlainContentServlet</servlet-name>
