@@ -44,6 +44,17 @@ public class ImageMapClientFromLocal extends AbstractClientFromLocal implements
 
 	@Override
 	public ImageMap getImageMap(int id, int poiId) throws IOException,
+		ClientException {
+		return getImageMapWithOrWithoutSelectedPoi(id, poiId);
+	}
+
+	@Override
+	public ImageMap getImageMap(int id) throws IOException,
+		ClientException {
+		return getImageMapWithOrWithoutSelectedPoi(id, null);
+	}
+	
+	private ImageMap getImageMapWithOrWithoutSelectedPoi(int id, Integer poiId) throws IOException,
 			ClientException {
 		if (log.isDebugEnabled()) {
 			log.debug("getImageMap(): " + id + " ; poi : " + poiId + " ...");
@@ -63,7 +74,7 @@ public class ImageMapClientFromLocal extends AbstractClientFromLocal implements
 	
 	@Nullable
 	private MutableImageMap createImageMapFromData(final PoiDataSource poiDataSource,
-			final fr.univmobile.backend.core.ImageMap dsImageMap, int selectedPoiId) {
+			final fr.univmobile.backend.core.ImageMap dsImageMap, Integer selectedPoiId) {
 		
 		final MutableImageMap imageMap = DataBeans //
 				.instantiate(MutableImageMap.class) //
@@ -81,7 +92,7 @@ public class ImageMapClientFromLocal extends AbstractClientFromLocal implements
 			for (PoiInfo poiInfo: dsImageMap.getPoiInfos()) {
 				final fr.univmobile.backend.core.Poi poi = poiDataSource.getByUid(poiInfo.getId());
 				pois[index] = createPoiFromData(poi, poiInfo);
-				if (poiInfo.getId() == selectedPoiId) {
+				if (selectedPoiId != null && poiInfo.getId() == selectedPoiId) {
 					imageMap.setSelectedPoi(pois[index]);
 				}
 				index++;

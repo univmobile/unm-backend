@@ -32,9 +32,18 @@ public class ImageMapJSONClientImpl implements ImageMapJSONClient {
 
 	@Override
 	public String getImageMapJSON(int id, int poiId) throws IOException {
+		return getImageMapJSONWithOrWithoutSelectedPoi(id, poiId);
+	}
+
+	@Override
+	public String getImageMapJSON(int id) throws IOException {
+		return getImageMapJSONWithOrWithoutSelectedPoi(id, null);
+	}
+
+	private String getImageMapJSONWithOrWithoutSelectedPoi(int id, Integer poiId) throws IOException {
 		log.debug("getImageMap()...");
 		try {
-			final ImageMap p = imageMapClient.getImageMap(id, poiId);
+			final ImageMap p = poiId == null ? imageMapClient.getImageMap(id) : imageMapClient.getImageMap(id, poiId);
 			return imageMapJSON(p).toJSONString();
 		} catch (final ClientException e) {
 
@@ -43,7 +52,7 @@ public class ImageMapJSONClientImpl implements ImageMapJSONClient {
 			throw new RuntimeException(e);
 		}
 	}
-
+	
 	private static JSONMap imageMapJSON(final ImageMap imageMap) {
 		final JSONMap json = new JSONMap() //
 			.put("id", imageMap.getId()) //

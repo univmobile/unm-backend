@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3792_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3792_1.xml"/>
+<atom:title>Université de Cergy Pontoise</atom:title>
+<atom:updated>2014-08-15T01:47:10.455+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3792"
+	coordinates="49.03312721008,2.0720601081848"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T17:04:28.000+02:00"
+	updatedAt="2013-06-26T11:10:16.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Fatma ARAS"
+	name="Université de Cergy Pontoise">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="ucp"/>
+	<address
+		zipCode="95011 Cergy-Pontoise cedex"
+		countryCode="FR"
+		latitude="49.03"
+		longitude="2.07">
+		<phone>01 34 25 60 00</phone>
+		<fullAddress>33, boulevard du Port  </fullAddress>
+	</address>
+	<child uid="4033" active="true"/>
+	<child uid="3815" active="true"/>
+	<child uid="3811" active="true"/>
+	<child uid="3804" active="true"/>
+	<child uid="3806" active="true"/>
+	<child uid="3808" active="true"/>
+	<child uid="3844" active="true"/>
+	<child uid="4089" active="true"/>
+	<child uid="4108" active="true"/>
+	<child uid="4131" active="true"/>
+	<child uid="4143" active="true"/>
+	<child uid="4165" active="true"/>
+</atom:content>
+</atom:entry>

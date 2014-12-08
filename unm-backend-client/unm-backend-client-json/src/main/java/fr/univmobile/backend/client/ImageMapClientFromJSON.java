@@ -31,6 +31,17 @@ public class ImageMapClientFromJSON extends AbstractClientFromJSON<ImageMapJSONC
 
 		return unmarshall(jsonClient.getImageMapJSON(id, poiId), ImageMapJSON.class);
 	}
+
+	@Override
+	public ImageMap getImageMap(int id) throws IOException,
+			ClientException {
+		if (log.isDebugEnabled()) {
+			log.debug("getImageMap():" + id);
+		}
+
+		return unmarshall(jsonClient.getImageMapJSON(id), ImageMapJSON.class);
+	}
+	
 	
 	@XPath("/*")
 	public interface ImageMapJSON extends ImageMap {

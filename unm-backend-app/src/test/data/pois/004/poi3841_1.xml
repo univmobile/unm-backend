@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3841_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3841_1.xml"/>
+<atom:title>Université Paris-Est Créteil</atom:title>
+<atom:updated>2014-08-15T01:47:10.862+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3841"
+	coordinates="48.788218110434,2.4444660544395"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T13:38:07.000+02:00"
+	updatedAt="2012-06-06T09:44:11.000+02:00"
+	createdBy="super admin"
+	updatedBy="Gérald MORIN"
+	name="Université Paris-Est Créteil">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="upec"/>
+	<address
+		countryCode="FR"
+		latitude="48.79"
+		longitude="2.45">
+	</address>
+	<child uid="4332" active="true"/>
+	<child uid="4367" active="true"/>
+	<child uid="4372" active="true"/>
+	<child uid="4378" active="true"/>
+	<child uid="4427" active="true"/>
+	<child uid="4430" active="true"/>
+	<child uid="4433" active="true"/>
+	<child uid="4434" active="true"/>
+	<child uid="4455" active="true"/>
+	<child uid="4462" active="true"/>
+	<child uid="4480" active="true"/>
+	<child uid="4490" active="true"/>
+	<child uid="4505" active="true"/>
+	<child uid="4516" active="true"/>
+	<child uid="4520" active="true"/>
+	<child uid="5196" active="true"/>
+	<child uid="5268" active="true"/>
+	<child uid="7152" active="true"/>
+	<child uid="7154" active="true"/>
+	<child uid="7165" active="true"/>
+	<child uid="7178" active="true"/>
+</atom:content>
+</atom:entry>

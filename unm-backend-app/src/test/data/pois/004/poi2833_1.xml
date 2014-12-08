@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2833_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2833_1.xml"/>
+<atom:title>Université Panthéon-Assas</atom:title>
+<atom:updated>2014-08-15T01:47:00.429+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2833"
+	coordinates="48.846671648417,2.34495878219"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T14:48:46.000+02:00"
+	updatedAt="2011-09-09T15:55:43.000+02:00"
+	createdBy="super admin"
+	updatedBy="super admin"
+	name="Université Panthéon-Assas">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="paris2"/>
+	<address
+		countryCode="FR"
+		latitude="48.85"
+		longitude="2.34">
+	</address>
+	<child uid="3521" active="true"/>
+	<child uid="2947" active="true"/>
+	<child uid="2944" active="true"/>
+	<child uid="2935" active="true"/>
+	<child uid="2927" active="true"/>
+	<child uid="2921" active="true"/>
+	<child uid="2915" active="true"/>
+	<child uid="2909" active="true"/>
+	<child uid="2905" active="true"/>
+	<child uid="2896" active="true"/>
+	<child uid="2890" active="true"/>
+	<child uid="2885" active="true"/>
+	<child uid="2862" active="true"/>
+	<child uid="2853" active="true"/>
+	<child uid="2845" active="true"/>
+	<child uid="2840" active="true"/>
+	<child uid="3394" active="true"/>
+</atom:content>
+</atom:entry>

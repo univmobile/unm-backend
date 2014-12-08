@@ -24,6 +24,7 @@ public interface ImageMap {
 	 * The Poi linked to the flashed QR Code 
 	 * @return
 	 */
+	@Nullable
 	ImageMapPoi getSelectedPoi();
 	
 	/**
