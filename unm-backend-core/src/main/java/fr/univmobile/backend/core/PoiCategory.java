@@ -11,6 +11,9 @@ import fr.univmobile.commons.datasource.Entry;
  *
  */
 public interface PoiCategory extends Entry<PoiCategory> {
+	public static final int ROOT_UNIVERSITIES_CATEGORY_UID = 99;
+	public static final int ROOT_BON_PLANS_CATEGORY_UID = 89;
+	public static final int ROOT_IMAGE_MAP_CATEGORY_UID = 79;
 
 	/**
 	 * L'identifiant unique de la categorie de POI e.g. 1

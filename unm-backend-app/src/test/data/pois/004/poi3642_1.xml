@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi3642_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3642_1.xml"/>
+<atom:title>CROUS de Versailles</atom:title>
+<atom:updated>2014-08-15T01:47:08.939+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="3642"
+	coordinates=""
+	active="true"
+	markerType="point"
+	createdAt="2011-05-12T11:26:06.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="yasmine"
+	updatedBy="super admin"
+	name="CROUS de Versailles">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="crousVersailles"/>
+	<address
+		zipCode="BP 563 78005 "
+		city="VERSAILLES Cedex "
+		countryCode="FR"
+		latitude="48.81"
+		longitude="2.15">
+		<openingHours>lundi au jeudi de 8h30 à 16h30 
+vendredi de 8h30 à 13h00.</openingHours>
+		<itinerary>Si vous venez de Paris ou de la Défense, prenez la ligne SNCF jusqu' à Versailles Rive Droite. </itinerary>
+		<url>http://www.crous-versailles.fr/</url>
+		<fullAddress>145 bis, Boulevard de la Reine 
+</fullAddress>
+	</address>
+	<child uid="6654" active="true"/>
+	<child uid="5413" active="true"/>
+	<child uid="4679" active="true"/>
+	<child uid="5437" active="true"/>
+	<child uid="5450" active="true"/>
+</atom:content>
+</atom:entry>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/imagemaps/004:imagemap1_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/poiscategories/004:imagemap1_1.xml"/>
+<atom:title>Plan Campus XXX</atom:title>
+<atom:updated>2014-11-11T21:32:58.440+02:00</atom:updated>
+<category term="imagemaps"/>
+<atom:author>
+	<atom:name>crezvani</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users/004:crezvani_1</atom:uri>
+</atom:author>
+<atom:content uid="1"
+	active="true"
+	name="Plan Campus XXX"
+	url="http://univmobile-dev.univ-paris1.fr/image/plan/imagemap1.png">
+	<description>Description Plan Campus XXX</description>
+	<poi uid="20104" active="true" coordinates="12, 25"></poi>
+	<poi uid="20105" active="true" coordinates="16, 26"></poi>
+</atom:content>
+</atom:entry>
+

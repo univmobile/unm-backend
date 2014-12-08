@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/regions/001:bretagne_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/regions/001:regions_1.xml"/>
+<atom:title>Bretagne</atom:title>
+<atom:updated>2014-07-27T20:06:02Z</atom:updated>
+<atom:category term="regions"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content>
+	<uid>bretagne</uid>
+	<label>Bretagne</label>
+	<url>http://univmobile.vswip.com/unm-backend-mock/listUniversities_bretagne</url>
+	<universities>
+		<university>
+			<id>ubo</id>
+			<title>Université de Bretagne Occidentale</title>
+		</university>
+		<university>
+			<id>rennes1</id>
+			<title>Université de Rennes 1</title>
+		</university>
+		<university>
+			<id>rennes2</id>
+			<title>Université Rennes 2</title>
+		</university>
+		<university>
+			<id>enscr</id>
+			<title>École Nationale Supérieure de Chimie de Rennes</title>
+		</university>
+	</universities>
+</atom:content>
+</atom:entry>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/pois/002:poi2714_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2714_1.xml"/>
+<atom:title>Université Pierre et Marie Curie</atom:title>
+<atom:updated>2014-08-15T01:46:59.430+02:00</atom:updated>
+<atom:category term="pois"/>
+<atom:author>
+	<atom:name>dandriana</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users:dandriana</atom:uri>
+</atom:author>
+<atom:content uid="2714"
+	coordinates="48.845273671048,2.356741726398"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:36:02.000+02:00"
+	updatedAt="2011-09-05T16:46:43.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="super admin"
+	name="Université Pierre et Marie Curie">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="paris6"/>
+	<address
+		countryCode="FR"
+		latitude="48.85"
+		longitude="2.36">
+	</address>
+	<child uid="2727" active="true"/>
+	<child uid="2752" active="true"/>
+	<child uid="2715" active="true"/>
+	<child uid="2723" active="true"/>
+	<child uid="2724" active="true"/>
+	<child uid="2725" active="true"/>
+	<child uid="2726" active="true"/>
+	<child uid="2728" active="true"/>
+	<child uid="2729" active="true"/>
+	<child uid="2732" active="true"/>
+	<child uid="2733" active="true"/>
+	<child uid="2735" active="true"/>
+	<child uid="2737" active="true"/>
+	<child uid="2744" active="true"/>
+	<child uid="2759" active="true"/>
+	<child uid="2865" active="true"/>
+	<child uid="3795" active="true"/>
+	<child uid="3950" active="true"/>
+</atom:content>
+</atom:entry>

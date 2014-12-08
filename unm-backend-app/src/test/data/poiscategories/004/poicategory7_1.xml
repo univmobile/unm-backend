@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<atom:entry xmlns:atom="http://www.w3.org/2005/Atom">
+<atom:id>fr.univmobile:unm-backend:test/poiscategories/004:poicategory7_1</atom:id>
+<atom:link rel="self" href="fr.univmobile:unm-backend:test/poiscategories/004:poicategory7_1.xml"/>
+<atom:title>Relais handicap</atom:title>
+<atom:updated>2014-11-11T21:32:58.440+02:00</atom:updated>
+<category term="poiscategories"/>
+<atom:author>
+	<atom:name>crezvani</atom:name>
+	<atom:uri>fr.univmobile:unm-backend:test/users/004:crezvani_1</atom:uri>
+</atom:author>
+<atom:content uid="7"
+	active="true"
+	name="Relais handicap"
+	parentUid="99">
+	<description>Lieux aménagés ou disposant de matériels pour les personnes à mobilité réduite</description>
+	<cursorUrl>http://admin.univmobile.fr/uploads/images/poitype_icon_entree-pmr_1278177815.png</cursorUrl>
+</atom:content>
+</atom:entry>
+
