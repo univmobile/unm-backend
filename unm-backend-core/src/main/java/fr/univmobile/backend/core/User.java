@@ -102,8 +102,8 @@ public interface User extends Entry<User> {
 	String getRole();
 
 	@XPath("atom:content/primaryUniversity")
-	University getPrimaryUniversity();
+	String getPrimaryUniversity();
 
 	@XPath("atom:content/secondaryUniversity")
-	University[] getSecondaryUniversities();
+	String[] getSecondaryUniversities();
 }

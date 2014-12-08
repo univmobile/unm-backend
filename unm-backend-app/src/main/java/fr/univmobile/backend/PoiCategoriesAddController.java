@@ -104,9 +104,10 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 				hasErrors = true;
 			}
 
-		if (!isBlank(form.parentUid()))
-			if (!form.parentUid().equals("(aucune)"))
-				poicategory.setParentUid(Integer.parseInt(form.parentUid()));
+		if (!form.parentUid().equals("(aucune)"))
+			poicategory.setParentUid(Integer.parseInt(form.parentUid()));
+		else
+			poicategory.setParentUid(99);
 
 		if (!isBlank(form.externalUid()))
 			if (StringUtils.isNumeric(form.externalUid().trim()))

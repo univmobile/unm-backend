@@ -100,14 +100,8 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 		if (!isBlank(form.parentUid()))
 			poicategory.setParentUid(Integer.parseInt(form.parentUid()));
 
-		if (!isBlank(form.externalUid()))
-			if (StringUtils.isNumeric(form.externalUid().trim()))
-				poicategory.setExternalUid(Integer.parseInt(form.externalUid()
-						.trim()));
-			else {
-				setAttribute("err_poicategorymodify_externalUid", true);
-				hasErrors = true;
-			}
+		if (!form.parentUid().equals("(aucune)"))
+			poicategory.setParentUid(Integer.parseInt(form.parentUid()));
 
 		poicategory.setName(form.name());
 		poicategory.setDescription(form.description());

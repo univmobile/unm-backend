@@ -104,7 +104,7 @@ label.checkbox-parentUid {
          <th>ParentUid</th>
          <td>
          <select id="select-parentUid" name="parentUid">
-            <option value="(aucune)">
+            <option value="(aucune)">(aucune)</option>
             <c:forEach var="pc" items="${poicategories}">
                <option value="${pc.uid}">
                   ${pc.uid}

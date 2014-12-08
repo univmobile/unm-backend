@@ -259,8 +259,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						poisCategoriesController), //
 				new PoiCategoriesModifyController(tx, poiCategories,
 						poisCategoriesController), //
-				new PoisAddController(tx, pois, poisController, regions), //
-				new PoisModifyController(tx, pois, poisController, regions), //
+				new PoisAddController(tx, pois, poisController, regions, poiCategories), //
+				new PoisModifyController(tx, pois, poisController, regions, poiCategories), //
 				new UserModifyController(tx, users, usersController, regions));
 
 		// 3. JSON CONTROLLERS

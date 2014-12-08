@@ -94,6 +94,20 @@ td span.error {
       </td>
    </tr>
    
+   <tr class="category">
+      <th>
+         Catégories
+      </th>
+      <td>
+         <select id="select-poiCategory" name="poiCategory">
+         <option value="(aucune)">(aucune)</option>
+         <c:forEach var="pc" items="${poiCategoriesData}">
+            <option value="${pc.uid}">${pc.name}</option>
+         </c:forEach>
+         </select>
+      </td>
+   </tr>
+   
    <tr class="university">
       <th>
    	     Universités
