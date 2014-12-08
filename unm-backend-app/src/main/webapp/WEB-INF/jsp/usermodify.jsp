@@ -190,9 +190,16 @@ td span.error {
       Mot de passe
    </th>
    <td>
-      <input class="text" type="text" id="text-password" name="password" value="${usermodify_moreInfo.password}">
-	  <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes">
-	  <label for="checkbox-passwordEnabled">
+      <input class="text" type="password" id="text-password" name="password" value="${usermodify_moreInfo.password}">
+	  <c:choose>
+         <c:when test="${usermodify.passwordEnabled eq 'true'}">
+            <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes" checked>
+         </c:when>
+         <c:otherwise>
+            <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled">
+         </c:otherwise>
+      </c:choose>
+      <label for="checkbox-passwordEnabled">
          Activé
       </label>
    </td>

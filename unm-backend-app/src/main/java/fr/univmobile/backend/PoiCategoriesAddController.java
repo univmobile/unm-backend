@@ -13,6 +13,8 @@ import java.util.TreeSet;
 
 import javax.annotation.Nullable;
 
+import org.apache.commons.lang3.StringUtils;
+
 import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.core.PoiCategoryBuilder;
 import fr.univmobile.backend.core.PoiCategoryDataSource;
@@ -90,26 +92,43 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 
 		final PoiCategoryBuilder poicategory = poiCategories.create();
 
+		boolean hasErrors = false;
+
 		poicategory.setAuthorName(getDelegationUser().getAuthorName());
 
 		if (!isBlank(uid))
-			poicategory.setUid(Integer.parseInt(uid));
+			if (StringUtils.isNumeric(uid.trim()))
+				poicategory.setUid(Integer.parseInt(uid.trim()));
+			else {
+				setAttribute("err_poicategoryadd_uid", true);
+				hasErrors = true;
+			}
 
 		if (!isBlank(form.parentUid()))
-			poicategory.setParentUid(Integer.parseInt(form.parentUid()));
+			if (!form.parentUid().equals("(aucune)"))
+				poicategory.setParentUid(Integer.parseInt(form.parentUid()));
 
 		if (!isBlank(form.externalUid()))
-			poicategory.setExternalUid(Integer.parseInt(form.externalUid()));
+			if (StringUtils.isNumeric(form.externalUid().trim()))
+				poicategory.setExternalUid(Integer.parseInt(form.externalUid()
+						.trim()));
+			else {
+				setAttribute("err_poicategoryadd_externalUid", true);
+				hasErrors = true;
+			}
 
-		poicategory.setName(form.name());
+		if (!isBlank(form.name()))
+			poicategory.setName(form.name());
+		else {
+			setAttribute("err_poicategoryadd_name", true);
+			hasErrors = true;
+		}
 
 		if (form.active() != null)
 			poicategory.setActive(true);
 
 		if (form.description() != null)
 			poicategory.setDescription(form.description());
-
-		boolean hasErrors = false;
 
 		if (!isBlank(uid)) {
 			if (!poiCategories.isNullByUid(Integer.parseInt(uid))) {
@@ -118,7 +137,7 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 			}
 		}
 
-		if (!validate(form, "err_poicategoryadd") || hasErrors) {
+		if (hasErrors) {
 
 			setAttribute("poicategoryadd", poicategory);
 			// Show the data in the view

@@ -176,7 +176,7 @@ $(function () {
       Mot de passe
    </th>
    <td>
-      <input class="text" type="text" id="text-password" name="password" value="${useradd_moreInfo.password}">
+      <input class="text" type="password" id="text-password" name="password" value="${useradd_moreInfo.password}">
 	  <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes">
 	  <label for="checkbox-passwordEnabled">
          Activé
