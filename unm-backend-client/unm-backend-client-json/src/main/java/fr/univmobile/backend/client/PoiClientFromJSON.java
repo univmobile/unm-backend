@@ -36,6 +36,16 @@ public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
 	}
 
 	@Override
+	public Pois getPoisByRegion(String regionId) throws IOException {
+		
+		if (log.isDebugEnabled()) {
+			log.debug("getPoisByRegion()...");
+		}
+		
+		return unmarshall(jsonClient.getPoisByRegionJSON(regionId), PoisJSON.class);
+	}
+	
+	@Override
 	public Pois getPois(final double lat, final double lng) throws IOException {
 
 		if (log.isDebugEnabled()) {

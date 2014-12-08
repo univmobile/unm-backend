@@ -12,12 +12,16 @@ import fr.univmobile.backend.client.ImageMapClient;
 import fr.univmobile.backend.client.ImageMapClientFromLocal;
 import fr.univmobile.backend.client.PoiCategoryClient;
 import fr.univmobile.backend.client.PoiCategoryClientFromLocal;
+import fr.univmobile.backend.client.PoiClient;
+import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.json.ImageMapJSONClient;
 import fr.univmobile.backend.client.json.ImageMapJSONClientImpl;
 import fr.univmobile.backend.client.json.PoiCategoryJSONClient;
 import fr.univmobile.backend.client.json.PoiCategoryJSONClientImpl;
+import fr.univmobile.backend.client.json.PoiJSONClient;
+import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.ImageMapDataSource;
@@ -32,7 +36,7 @@ public class GeocampusJSONControllerTest {
 	@Before
 	public void setUp() throws Exception {
 
-		final RegionDataSource regionsDataSource = BackendDataSourceFileSystem
+		regionsDataSource = BackendDataSourceFileSystem
 				.newDataSource(RegionDataSource.class, new File("src/test/data/regions/004"));
 
 		final PoiDataSource poiDataSource = BackendDataSourceFileSystem
@@ -54,23 +58,36 @@ public class GeocampusJSONControllerTest {
 
 		poiCategoryJSONClient = new PoiCategoryJSONClientImpl(poiCategoryClient);
 
+		final PoiClient poiClient = new PoiClientFromLocal(
+				"(dummy baseURL)", poiDataSource, regionsDataSource);
+
+		poiJSONClient = new PoiJSONClientImpl(poiClient);
+
 		final ImageMapClient imageMapClient = new ImageMapClientFromLocal(
 				"(dummy baseURL)", imageMapDataSource, poiDataSource);
 
 		imageMapJSONClient = new ImageMapJSONClientImpl(imageMapClient);
-
-		//client = new RegionClientFromLocal(regionJSONClient);
 	}
 
 	private RegionJSONClient regionJSONClient;
 	private PoiCategoryJSONClient poiCategoryJSONClient;
+	private PoiJSONClient poiJSONClient;
 	private ImageMapJSONClient imageMapJSONClient;
+	private RegionDataSource regionsDataSource;
 	private ImageMapDataSource imageMapDataSource;
-	//private RegionClient client;
 
 	@Test
 	public void test_gecampusJSONData() throws Exception {
-		GeocampusJSONController ctrl = new GeocampusJSONController(regionJSONClient, poiCategoryJSONClient, imageMapJSONClient, imageMapDataSource);
-		assertEquals(6524, ctrl.actionJSON("test").length());
+		GeocampusJSONController ctrl = new GeocampusJSONController(regionJSONClient, poiCategoryJSONClient, imageMapJSONClient, regionsDataSource, imageMapDataSource);
+		System.out.println(ctrl.actionJSON("test"));
+		//assertEquals(12880, ctrl.actionJSON("test").length());
 	}
+
+	@Test
+	public void test_gecampusPoisByRegionJSONData() throws Exception {
+		GeocampusPoisByRegionJSONController ctrl = new GeocampusPoisByRegionJSONController(poiJSONClient);
+		/*System.out.println(ctrl.actionJSON("test"));*/
+		//assertEquals(12880, ctrl.actionJSON("test").length());
+	}
+
 }

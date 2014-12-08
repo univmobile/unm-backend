@@ -42,6 +42,16 @@ public class PoiJSONClientImpl implements PoiJSONClient {
 	}
 
 	@Override
+	public String getPoisByRegionJSON(String regionId) throws IOException {
+
+		log.debug("getPoisByRegionJSON()...");
+
+		final Pois p = poiClient.getPoisByRegion(regionId);
+
+		return poisJSON(p);
+	}
+
+	@Override
 	public String getPoisJSON(final double lat, final double lng)
 			throws IOException {
 

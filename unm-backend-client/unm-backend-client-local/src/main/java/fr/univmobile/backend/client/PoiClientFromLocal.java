@@ -177,12 +177,30 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 	}
 
 	@Override
+	public MutablePois getPoisByRegion(String regionUid) throws IOException {
+		return getPoisPerRegion(regionUid);
+	}
+
+	@Override
 	public MutablePois getPois() throws IOException {
+		return getPoisPerRegion(null);
+	}
+
+	private MutablePois getPoisPerRegion(String filterRegionUid) throws IOException {
 
 		log.debug("getPois()...");
 
-		final Map<String, fr.univmobile.backend.core.Region> dsRegions //
-		= regionDataSource.getAllBy(String.class, "uid");
+		final Map<String, fr.univmobile.backend.core.Region> dsRegions;
+		
+		if (filterRegionUid == null) {
+			dsRegions = regionDataSource.getAllBy(String.class, "uid");
+		} else {
+			dsRegions = new HashMap<String, fr.univmobile.backend.core.Region>();
+			fr.univmobile.backend.core.Region filterRegion = regionDataSource.getByUid(filterRegionUid);
+			if (filterRegion != null) {
+				dsRegions.put(filterRegionUid, filterRegion);
+			}
+		}
 
 		// final Map<String, PoiTree> dsPoitree //
 		// = poitreeDataSource.getAllBy(String.class, "uid");
@@ -328,7 +346,7 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 			poi.setEmail(dsPoi.getEmails()[0]);
 		}
 		if (dsPoi.getItineraries().length != 0) {
-			poi.setItinerary(dsPoi.getEmails()[0]);
+			poi.setItinerary(dsPoi.getItineraries()[0]);
 		}
 
 		// Author: Mauricio (end)
