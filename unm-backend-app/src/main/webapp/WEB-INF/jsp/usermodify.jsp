@@ -158,9 +158,23 @@ td span.error {
    <th>Civilité</th>
    <td>
       <select id="select-supannCivilite" name="supannCivilite">
-      <option value="aucune">(aucune)</option>
-      <option value="Mme" selected>Mᵐᵉ</option>
-      <option value="M.">M.</option>
+         <c:choose>
+            <c:when test="${usermodify.supannCivilite eq 'aucune'}">
+               <option value="aucune" selected>(aucune)</option>
+               <option value="Mme">Mᵐᵉ</option>
+               <option value="M.">M.</option>
+            </c:when>
+            <c:when test="${usermodify.supannCivilite eq 'Mme'}">
+               <option value="aucune">(aucune)</option>
+               <option value="Mme" selected>Mᵐᵉ</option>
+               <option value="M.">M.</option>
+            </c:when>
+            <c:otherwise>
+               <option value="aucune">(aucune)</option>
+               <option value="Mme">Mᵐᵉ</option>
+               <option value="M." selected>M.</option>
+            </c:otherwise>
+         </c:choose>
       </select>
    </td>
 </tr>
@@ -190,9 +204,16 @@ td span.error {
       Mot de passe
    </th>
    <td>
-      <input class="text" type="text" id="text-password" name="password" value="${usermodify_moreInfo.password}">
-	  <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes">
-	  <label for="checkbox-passwordEnabled">
+      <input class="text" type="password" id="text-password" name="password" value="${usermodify_moreInfo.password}">
+	  <c:choose>
+         <c:when test="${usermodify.passwordEnabled eq 'true'}">
+            <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes" checked>
+         </c:when>
+         <c:otherwise>
+            <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled">
+         </c:otherwise>
+      </c:choose>
+      <label for="checkbox-passwordEnabled">
          Activé
       </label>
    </td>
@@ -207,7 +228,14 @@ td span.error {
          <c:forEach var="r" items="${regionsData}">
             <optgroup label="${r.label}">
                <c:forEach var="u" items="${r.universities}">
-                  <option value="${u.id}">${u.title}</option>
+                  <c:choose>
+                     <c:when test="${u.id eq usermodify.primaryUniversity}">
+                        <option value="${u.id}" selected>${u.title}</option>
+                     </c:when>
+                     <c:otherwise>
+                        <option value="${u.id}">${u.title}</option>
+                     </c:otherwise>
+                  </c:choose> 
                </c:forEach>
             </optgroup>
          </c:forEach>
@@ -224,7 +252,14 @@ td span.error {
             <c:forEach var="r" items="${regionsData}">
                <optgroup label="${r.label}">
                   <c:forEach var="u" items="${r.universities}">
-                     <option value="${u.id}">${u.title}</option>
+                     <c:choose>
+                        <c:when test="${u.id eq usermodify.secondaryUniversities[0]}">
+                           <option value="${u.id}" selected>${u.title}</option>
+                        </c:when>
+                        <c:otherwise>
+                           <option value="${u.id}">${u.title}</option>
+                        </c:otherwise>
+                     </c:choose> 
                   </c:forEach>
                </optgroup>
             </c:forEach>

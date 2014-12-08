@@ -65,13 +65,13 @@ public class UsersTest {
 		assertFalse(crezvani.getRole() == "superadmin");
 		assertFalse(crezvani.getRole() == "student");
 		
-		assertEquals("ubo", crezvani.getPrimaryUniversity().getId());
-		assertEquals("Université de Bretagne Occidentale", crezvani.getPrimaryUniversity().getTitle());
+		assertEquals("ubo", crezvani.getPrimaryUniversity());
+		assertEquals("Université de Bretagne Occidentale", crezvani.getPrimaryUniversity());
 		
 		assertEquals(1, crezvani.getSecondaryUniversities().length);
 
-		assertEquals("rennes1", crezvani.getSecondaryUniversities()[0].getId());
-		assertEquals("Université de Rennes 1", crezvani.getSecondaryUniversities()[0].getTitle());
+		assertEquals("rennes1", crezvani.getSecondaryUniversities()[0]);
+		assertEquals("Université de Rennes 1", crezvani.getSecondaryUniversities()[0]);
 }
 
 	@Test(expected = NoSuchElementException.class)

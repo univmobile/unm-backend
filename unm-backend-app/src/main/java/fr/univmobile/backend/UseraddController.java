@@ -111,14 +111,16 @@ public class UseraddController extends AbstractBackendController {
 		user.setSecondaryUniversities(form.secondaryUniversities());
 
 		if (form.passwordEnabled() != null) {
-			user.setPasswordEnabled(true);
+			user.setPasswordEnabled("true");
 			user.setPasswordEncryptionAlgorithm("SHA-256");
 			final String saltPrefix = RandomStringUtils.randomAlphanumeric(8);
 			user.setPasswordSaltPrefix(saltPrefix);
-			final String encrypted = encrypt.encrypt(saltPrefix,
-					form.password());
-			user.setPasswordEncrypted(encrypted);
-		}
+			if (!isBlank(form.password())) {
+				final String encrypted = encrypt.encrypt(saltPrefix,
+						form.password());
+				user.setPasswordEncrypted(encrypted);
+			}
+		} else user.setPasswordEnabled("false");
 
 		final String twitterScreenName = form.twitter_screen_name().trim();
 
@@ -142,7 +144,7 @@ public class UseraddController extends AbstractBackendController {
 			}
 		}
 
-		if ( !validate(form, "err_useradd") ||  hasErrors) {
+		if (hasErrors) {
 
 			setAttribute("useradd", user); // Show the data in the view
 

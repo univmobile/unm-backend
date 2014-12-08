@@ -90,9 +90,6 @@ label.checkbox-parentUid {
          <td>
            <input class="text" type="text" id="text-description" name="description" value="${poicategoryadd.description}">
          </td>
-         <c:if test="${err_poicategoryadd_description}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
       </tr>
       
       <tr>
@@ -107,6 +104,7 @@ label.checkbox-parentUid {
          <th>ParentUid</th>
          <td>
          <select id="select-parentUid" name="parentUid">
+            <option value="(aucune)">(aucune)</option>
             <c:forEach var="pc" items="${poicategories}">
                <option value="${pc.uid}">
                   ${pc.uid}

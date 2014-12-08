@@ -163,7 +163,7 @@ public class CreateUsersTest extends AbstractDbEnabledTest {
 		user.setMail("t.formica@univ-paris1.fr");
 		user.setRemoteUser("Toto.Formica:shibboleth");
 
-		user.setPasswordEnabled(true);
+		user.setPasswordEnabled("true");
 		user.setPasswordEncryptionAlgorithm("PLAINTEXT");
 		user.setPasswordSaltPrefix("(dummy)");
 		user.setPasswordEncrypted("password123");
@@ -179,7 +179,7 @@ public class CreateUsersTest extends AbstractDbEnabledTest {
 
 		final User user2 = userManager.getByUid("toto");
 
-		assertTrue(user2.getPasswordEnabled());
+		assertTrue(user2.getPasswordEnabled().equals("true"));
 		assertEquals("password123", user2.getPassword().getEncrypted());
 		assertEquals("(dummy)", user2.getPassword().getSaltPrefix());
 		assertEquals("PLAINTEXT", user2.getPassword().getEncryptionAlgorithm());
@@ -213,7 +213,7 @@ public class CreateUsersTest extends AbstractDbEnabledTest {
 
 		final User user2 = userManager.getByUid("toto");
 
-		assertFalse(user2.getPasswordEnabled());
+		assertFalse(user2.getPasswordEnabled().equals("true"));
 		assertTrue(user2.isNullPassword());
 	}
 }

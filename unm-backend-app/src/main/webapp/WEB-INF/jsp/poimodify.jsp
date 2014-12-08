@@ -12,6 +12,10 @@
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <style type="text/css">
 
+td span.error {
+   margin-left: 0.5em;
+}
+
 #div-poimodify-buttons {
 	margin-top: 2em;
 	text-align: center;
@@ -95,6 +99,27 @@
       </td>
    </tr>
    
+    <tr class="category">
+      <th>
+         Catégories
+      </th>
+      <td>
+         <select id="select-poiCategory" name="poiCategory">
+         <option value="(aucune)">(aucune)</option>
+         <c:forEach var="pc" items="${poiCategoriesData}">
+            <c:choose>
+               <c:when test="${pc.uid eq poimodify.categoryId}">
+                  <option value="${pc.uid}" selected>${pc.name}</option>
+               </c:when>
+               <c:otherwise>
+                  <option value="${pc.uid}">${pc.name}</option>
+               </c:otherwise>
+            </c:choose>   
+         </c:forEach>
+         </select>
+      </td>
+   </tr>
+   
    <tr class="university">
       <th>
    	     Universités
@@ -105,7 +130,7 @@
                <optgroup label="${r.label}">
                   <c:forEach var="u" items="${r.universities}">
                      <c:choose>
-                        <c:when test="${poimodify.universityIds eq u.id}">
+                        <c:when test="${poimodify.universityIds[0] eq u.id}">
                            <option value="${u.id}" selected>${u.title}</option>
                         </c:when>
                         <c:otherwise>

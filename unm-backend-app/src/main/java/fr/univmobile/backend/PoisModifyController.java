@@ -15,6 +15,8 @@ import javax.annotation.Nullable;
 import fr.univmobile.backend.client.ClientException;
 import fr.univmobile.backend.core.Poi;
 import fr.univmobile.backend.core.PoiBuilder;
+import fr.univmobile.backend.core.PoiCategory;
+import fr.univmobile.backend.core.PoiCategoryDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -41,22 +43,41 @@ public class PoisModifyController extends AbstractBackendController {
 
 	public PoisModifyController(final TransactionManager tx,
 			final PoiDataSource pois, final PoisController poisController,
-			final RegionDataSource regions) {
+			final RegionDataSource regions,
+			final PoiCategoryDataSource poicategories) {
 
 		this.pois = checkNotNull(pois, "pois");
 		this.tx = checkNotNull(tx, "tx");
 		this.poisController = checkNotNull(poisController, "poisController");
 		this.regions = checkNotNull(regions, "regions");
+		this.poicategories = checkNotNull(poicategories, "poicategories");
 	}
 
 	private final TransactionManager tx;
 	private final PoiDataSource pois;
 	private final PoisController poisController;
 	private final RegionDataSource regions;
+	private final PoiCategoryDataSource poicategories;
 
 	@Override
 	public View action() throws IOException, TransactionException,
 			ClientException {
+
+		// CATEGORIES
+
+		final Map<Integer, PoiCategory> dsPoiCategories = poicategories
+				.getAllBy(Integer.class, "uid");
+
+		final List<PoiCategory> poiCategoriesData = new ArrayList<PoiCategory>();
+
+		for (final PoiCategory p : dsPoiCategories.values())
+			if (String.valueOf(p.getUid()).startsWith(
+					String.valueOf(PoiCategory.ROOT_UNIVERSITIES_CATEGORY_UID))
+					&& p.getActive())
+				poiCategoriesData.add(p);
+		setAttribute("poiCategoriesData", poiCategoriesData);
+
+		// REGIONS
 
 		final Map<String, Region> dsRegions = regions.getAllBy(String.class,
 				"uid");
@@ -112,6 +133,9 @@ public class PoisModifyController extends AbstractBackendController {
 
 		NumberFormat nf = NumberFormat.getInstance();
 		nf.setMaximumFractionDigits(2);
+
+		if (!form.poiCategory().equals("(aucune)"))
+			poi.setCategoryId(Integer.parseInt(form.poiCategory()));
 
 		boolean hasErrors = false;
 
@@ -219,5 +243,8 @@ public class PoisModifyController extends AbstractBackendController {
 
 		@HttpParameter
 		String active();
+
+		@HttpParameter
+		String poiCategory();
 	}
 }

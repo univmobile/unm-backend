@@ -24,6 +24,10 @@ public interface Poi extends Entry<Poi> {
 	@XPath("atom:content/@name")
 	String getName();
 
+	// Author: Mauricio
+	@XPath("atom:content/poiCategory/id")
+	int getCategoryId();
+
 	@XPath("atom:content/description")
 	@Nullable
 	String getDescription();
@@ -69,7 +73,7 @@ public interface Poi extends Entry<Poi> {
 	// Author: Mauricio
 	@XPath("atom:content/@active")
 	String getActive();
-	
+
 	@XPath("atom:content/@markerType")
 	MarkerType getMarkerType();
 

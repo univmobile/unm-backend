@@ -9,6 +9,8 @@ import java.io.IOException;
 
 import javax.annotation.Nullable;
 
+import org.apache.commons.lang3.StringUtils;
+
 import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.core.PoiCategoryBuilder;
 import fr.univmobile.backend.core.PoiCategoryDataSource;
@@ -88,6 +90,8 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		final PoiCategoryBuilder poicategory = poiCategories.create();
 
+		boolean hasErrors = false;
+
 		poicategory.setAuthorName(getDelegationUser().getAuthorName());
 
 		if (!isBlank(form.uid()))
@@ -96,14 +100,22 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 		if (!isBlank(form.parentUid()))
 			poicategory.setParentUid(Integer.parseInt(form.parentUid()));
 
-		if (!isBlank(form.externalUid()))
-			poicategory.setExternalUid(Integer.parseInt(form.externalUid()));
+		if (!form.parentUid().equals("(aucune)"))
+			poicategory.setParentUid(Integer.parseInt(form.parentUid()));
 
 		poicategory.setName(form.name());
 		poicategory.setDescription(form.description());
 
 		if (form.active() != null)
 			poicategory.setActive(true);
+
+		if (hasErrors) {
+
+			setAttribute("poicategorymodify", poicategory);
+			// Show the data in the view
+
+			return new View("poicategorymodify.jsp");
+		}
 
 		lock.save(poicategory);
 

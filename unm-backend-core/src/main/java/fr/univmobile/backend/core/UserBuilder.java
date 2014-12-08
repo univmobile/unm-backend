@@ -22,7 +22,7 @@ public interface UserBuilder extends EntryBuilder<User>, User {
 
 	UserBuilder setMail(String mail);
 	
-	UserBuilder setPasswordEnabled(boolean passwordEnabeld);
+	UserBuilder setPasswordEnabled(String passwordEnabeld);
 
 	@XPath("atom:content/login_classic/password/@saltPrefix")
 	UserBuilder setPasswordSaltPrefix(String saltPrefix);

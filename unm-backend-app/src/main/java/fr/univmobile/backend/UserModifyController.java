@@ -82,7 +82,7 @@ public class UserModifyController extends AbstractBackendController {
 		final Usermodify form = getHttpInputs(Usermodify.class);
 
 		if (!form.isHttpValid()) {
-
+			
 			return new View("usermodify.jsp");
 		}
 
@@ -107,15 +107,15 @@ public class UserModifyController extends AbstractBackendController {
 
 		// final UserBuilder user = users.create();
 		final UserBuilder user = users.update(users.getByUid(getUserUid()));
-				
+
 		user.setUid(uid);
 		user.setRemoteUser(form.remoteUser());
-		
+
 		if (form.type() != null) // gets the role
 			user.setRole(form.type());
 
 		user.setAuthorName(getDelegationUser().getUid());
-		
+
 		user.setTitle(uid);
 		user.setDisplayName(form.displayName());
 		user.setMail(form.mail());
@@ -127,14 +127,17 @@ public class UserModifyController extends AbstractBackendController {
 		user.setSecondaryUniversities(form.secondaryUniversities());
 
 		if (form.passwordEnabled() != null) {
-			user.setPasswordEnabled(true);
+			user.setPasswordEnabled("true");
 			user.setPasswordEncryptionAlgorithm("SHA-256");
 			final String saltPrefix = RandomStringUtils.randomAlphanumeric(8);
 			user.setPasswordSaltPrefix(saltPrefix);
-			final String encrypted = encrypt.encrypt(saltPrefix,
-					form.password());
-			user.setPasswordEncrypted(encrypted);
-		}
+			if (!isBlank(form.password())) {
+				final String encrypted = encrypt.encrypt(saltPrefix,
+						form.password());
+				user.setPasswordEncrypted(encrypted);
+			}
+		} else
+			user.setPasswordEnabled("false");
 
 		final String twitterScreenName = form.twitter_screen_name().trim();
 
@@ -149,8 +152,7 @@ public class UserModifyController extends AbstractBackendController {
 		lock.save(user);
 
 		lock.commit();
-		
-		
+
 		return usersController.action();
 	}
 

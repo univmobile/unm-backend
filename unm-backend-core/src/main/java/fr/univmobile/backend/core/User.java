@@ -53,7 +53,7 @@ public interface User extends Entry<User> {
 	String getDescription();
 
 	@XPath("atom:content/login_classic/@active")
-	boolean getPasswordEnabled();
+	String getPasswordEnabled();
 
 	@XPath("atom:content/login_classic[@active = 'true']/password")
 	// @Nullable // Because it will be stored as detached in the J2EE session
@@ -102,8 +102,8 @@ public interface User extends Entry<User> {
 	String getRole();
 
 	@XPath("atom:content/primaryUniversity")
-	University getPrimaryUniversity();
+	String getPrimaryUniversity();
 
 	@XPath("atom:content/secondaryUniversity")
-	University[] getSecondaryUniversities();
+	String[] getSecondaryUniversities();
 }

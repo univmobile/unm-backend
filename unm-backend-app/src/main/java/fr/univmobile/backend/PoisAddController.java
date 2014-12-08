@@ -14,6 +14,8 @@ import javax.annotation.Nullable;
 
 import fr.univmobile.backend.client.ClientException;
 import fr.univmobile.backend.core.PoiBuilder;
+import fr.univmobile.backend.core.PoiCategory;
+import fr.univmobile.backend.core.PoiCategoryDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -34,14 +36,17 @@ public class PoisAddController extends AbstractBackendController {
 
 	public PoisAddController(final TransactionManager tx,
 			final PoiDataSource pois, final PoisController poisController,
-			final RegionDataSource regions) {
+			final RegionDataSource regions,
+			final PoiCategoryDataSource poicategories) {
 
 		this.tx = checkNotNull(tx, "tx");
 		this.pois = checkNotNull(pois, "pois");
 		this.poisController = checkNotNull(poisController, "poisController");
 		this.regions = checkNotNull(regions, "regions");
+		this.poicategories = checkNotNull(poicategories, "poicategories");
 	}
 
+	private final PoiCategoryDataSource poicategories;
 	private final TransactionManager tx;
 	private final PoiDataSource pois;
 	private final PoisController poisController;
@@ -50,6 +55,21 @@ public class PoisAddController extends AbstractBackendController {
 	@Override
 	public View action() throws IOException, SQLException,
 			TransactionException, ClientException, PageNotFoundException {
+
+		// CATEGORIES
+
+		final Map<Integer, PoiCategory> dsPoiCategories = poicategories
+				.getAllBy(Integer.class, "uid");
+
+		final List<PoiCategory> poiCategoriesData = new ArrayList<PoiCategory>();
+
+		for (final PoiCategory p : dsPoiCategories.values())
+			if (String.valueOf(p.getUid()).startsWith(
+					String.valueOf(PoiCategory.ROOT_UNIVERSITIES_CATEGORY_UID)) && p.getActive())
+				poiCategoriesData.add(p);
+		setAttribute("poiCategoriesData", poiCategoriesData);
+
+		// REGIONS
 
 		final Map<String, Region> dsRegions = regions.getAllBy(String.class,
 				"uid");
@@ -91,6 +111,9 @@ public class PoisAddController extends AbstractBackendController {
 
 		poi.setUid(form.uid());
 		poi.setName(form.name());
+		
+		if (!form.poiCategory().equals("(aucune)"))
+			poi.setCategoryId(Integer.parseInt(form.poiCategory()));
 
 		NumberFormat nf = NumberFormat.getInstance();
 		nf.setMaximumFractionDigits(2);
@@ -209,5 +232,8 @@ public class PoisAddController extends AbstractBackendController {
 
 		@HttpParameter
 		String active();
+		
+		@HttpParameter
+		String poiCategory();
 	}
 }
