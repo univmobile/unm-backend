@@ -9,8 +9,7 @@
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
 		<init-param>
 			<param-name>baseURL</param-name>
-			<!-- <param-value>https://univmobile-dev.univ-paris1.fr/testSP/</param-value> -->
-			<param-value>http://localhost:8080/unm-backend/</param-value>
+			<param-value>https://univmobile-dev.univ-paris1.fr/testSP/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>optional-jsonBaseURLs</param-name>
@@ -20,8 +19,7 @@
 		</init-param>
 		<init-param>
 			<param-name>dataDir</param-name>
-			<!-- <param-value>/tmp/unm-backend/dataDir</param-value> -->
-			<param-value>/home/mauricio/var/univmobile/</param-value>
+			<param-value>/tmp/unm-backend/dataDir</param-value>
 		</init-param>
 		<init-param>
 			<param-name>twitter.consumerKey</param-name>
@@ -30,6 +28,10 @@
 		<init-param>
 			<param-name>twitter.consumerSecret</param-name>
 			<param-value>dd</param-value>
+		</init-param>
+		<init-param>
+			<param-name>pois.nearestMaxDistanceInMeters</param-name>
+			<param-value>1000</param-value>
 		</init-param>
 		<init-param>
 			<param-name>shibboleth.ssoBaseURL</param-name>
@@ -60,6 +62,8 @@
 			<param-name>hosts.allow</param-name>
 			<param-value>
 				mauricio-MOV
+				tomcat
+				cyborg.etherea
 				Davids-MacBook-Pro.local
 				mbpro.local
 				unm-ci

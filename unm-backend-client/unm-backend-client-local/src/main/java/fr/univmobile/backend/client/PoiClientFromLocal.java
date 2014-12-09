@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -71,13 +72,75 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		return poi;
 	}
 
-	private static double getDistance(final double lat1, final double lng1,
-			final double lat2, final double lng2) {
+    private static boolean isPoiNear(double lat, double lon, Poi poi, double metersAway) {
 
-		// TODO more accurate
-		return Math.abs(lat1 - lat2) + Math.abs(lng1 - lng2);
-	}
+    	if (poi.getCoordinates() == null || !poi.getCoordinates().contains(",")) {
+    		return false;
+    	}
+    		
+    	String[] coordsSplited = poi.getCoordinates().split(",");
+    	double poiLat = Double.parseDouble(coordsSplited[0]);
+    	double poiLng = Double.parseDouble(coordsSplited[1]);
 
+        if (getDistance(poiLat, poiLng, lat, lon) * 1000 <= metersAway) {
+            return true ;
+        } else {
+            return false;
+        }
+
+    }
+
+    private static double getDistance(final double lat1, final double lon1,
+            final double lat2, final double lon2) {
+
+        // Previous implementation
+        // private static double getDistance(final double lat1, final double lng1,    final double lat2, final double lng2)
+        // TODO more accurate
+        // return Math.abs(lat1 - lat2) + Math.abs(lng1 - lng2);
+        double r = 6371; // Radius of the earth in km
+        double dLat = deg2rad(lat2-lat1);  // deg2rad below
+        double dLon = deg2rad(lon2-lon1);
+        double a =
+                (double) (Math.sin(dLat/2) * Math.sin(dLat/2) +
+                Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *
+                Math.sin(dLon/2) * Math.sin(dLon/2))
+                ;
+        double c = (double) (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)));
+        double d = r * c; // Distance in km
+        return d;
+    }
+
+    private static double deg2rad(double deg) {
+      return (double) (deg * (Math.PI/180));
+    }
+
+    @Override
+    public Pois getNearestPois(double lat, double lon, double metersAway) throws IOException {
+		final MutablePoiGroup nearestsPoiGroup = DataBeans.instantiate(MutablePoiGroup.class).setGroupLabel("pois");        
+        final MutablePois p = getPois();
+        Poi[] poisInGroup;
+
+        final PoiGroup[] poiGroups = p.getGroups();
+
+
+        for (final PoiGroup poiGroup : poiGroups) {
+
+            poisInGroup = poiGroup.getPois();
+
+            for (final Poi poiInGroup : poisInGroup) {
+                if ((poiInGroup.getCategory() == null || poiInGroup.getCategory() != PoiCategory.ROOT_IMAGE_MAP_CATEGORY_UID) && isPoiNear(lat, lon, poiInGroup, metersAway)) {
+                	nearestsPoiGroup.addToPois(poiInGroup);
+                }
+            }
+
+        }
+
+        final MutablePois pois = DataBeans.instantiate(MutablePois.class);
+		pois.addToGroups(nearestsPoiGroup);
+
+		return pois;
+    }     
+    
 	@Override
 	public Pois getPois(final double lat, final double lng) throws IOException {
 

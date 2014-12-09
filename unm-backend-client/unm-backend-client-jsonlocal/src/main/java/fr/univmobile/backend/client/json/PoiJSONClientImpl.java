@@ -70,6 +70,17 @@ public class PoiJSONClientImpl implements PoiJSONClient {
 	}
 
 	@Override
+	public String getNearestPoisJSON(double lat, double lon, double metersAway)
+			throws IOException {
+		log.debug("getNearestPoisJSON()...");
+
+		final Pois p = poiClient.getNearestPois(lat, lon, metersAway);
+
+		return poisJSON(p);
+	}
+
+	
+	@Override
 	public String getPoisJSON(final double lat, final double lng)
 			throws IOException {
 

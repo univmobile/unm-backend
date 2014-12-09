@@ -104,12 +104,14 @@ public class GeocampusJSONControllerTest {
 		//GeocampusPoisByRegionAndCategoryJSONController ctrl = new GeocampusPoisByRegionAndCategoryJSONController(poiJSONClient);
 		//String n = null;
 		//final Pois p = poiClient.getPoisByRegionAndCategory("bretagne", null);
+		/*
 		PoiCategory pc1 = poiCategoryDataSource.getByUid(1);
 		PoiCategory pc2 = poiCategoryDataSource.getLatest(pc1);
 		System.out.println(pc1.getName());
 		System.out.println(pc1.getDescription());
 		System.out.println(pc2.getName());
 		System.out.println(pc2.getDescription());
+		*/
 		/*
 		System.out.println(p.getGroups()[1].getPois()[0].getId());
 		System.out.println(p.getGroups()[1].getPois()[0].getName());
@@ -118,6 +120,7 @@ public class GeocampusJSONControllerTest {
 		*/
 		/*System.out.println(ctrl.actionJSON("test"));*/
 		//assertEquals(12880, ctrl.actionJSON("test").length());
+		System.out.println(poiJSONClient.getNearestPoisJSON(48.848627339149, 2.3430007696152, 100));		
 	}
 
 	//@Test

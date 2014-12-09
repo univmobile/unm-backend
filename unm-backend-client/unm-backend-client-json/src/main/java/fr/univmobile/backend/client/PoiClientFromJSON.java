@@ -81,6 +81,15 @@ public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
 		throw new NotImplementedException();
 	}
 
+	@Override
+	public Pois getNearestPois(double lat, double lon, double metersAway) throws IOException {
+		if (log.isDebugEnabled()) {
+			log.debug("getNearestPois():" + lat + "," + lon + "..." + metersAway);
+		}
+
+		return unmarshall(jsonClient.getNearestPoisJSON(lat, lon, metersAway), PoisJSON.class);
+	}
+
 	@XPath("/*")
 	public interface PoisJSON extends Pois {
 

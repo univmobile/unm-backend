@@ -131,7 +131,8 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 		if (form.description() != null)
 			poicategory.setDescription(form.description());
 
-		if (!isBlank(uid)) {
+		
+		if (!isBlank(uid) && StringUtils.isNumeric(uid.trim())) {
 			if (!poiCategories.isNullByUid(Integer.parseInt(uid))) {
 				hasErrors = true;
 				setAttribute("err_duplicateUid", true);

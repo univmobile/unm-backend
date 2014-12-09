@@ -75,9 +75,11 @@ import fr.univmobile.backend.core.impl.UploadManagerImpl;
 import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.backend.json.CommentsJSONController;
+import fr.univmobile.backend.json.CommentsPostJSONController;
 import fr.univmobile.backend.json.EndpointsJSONController;
 import fr.univmobile.backend.json.ImageMapJSONController;
 import fr.univmobile.backend.json.JsonHtmler;
+import fr.univmobile.backend.json.NearestPoisJSONController;
 import fr.univmobile.backend.json.PoisJSONController;
 import fr.univmobile.backend.json.RegionsJSONController;
 import fr.univmobile.backend.json.SessionJSONController;
@@ -302,6 +304,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final String shibbolethTargetBaseURL = checkedInitParameter("shibboleth.targetBaseURL");
 		final String shibbolethCallbackURL = checkedInitParameter("shibboleth.callbackURL");
 
+		Double nearestPoisMaxMetersAway;
+		try {
+			nearestPoisMaxMetersAway = Double.parseDouble(checkedInitParameter("pois.nearestMaxDistanceInMeters"));
+		} catch (Exception e) {
+			log.warn("Config parameter 'pois.nearestMaxDistanceInMeters' has a wrong value at web.xml. Please review. Using 0 meters. Current value is: " + checkedInitParameter("pois.nearestMaxDistanceInMeters"));
+			nearestPoisMaxMetersAway = 0.0;
+		}
+		
 		final SessionClient sessionClient = new SessionClientFromLocal(baseURL,
 				ssoBaseURL, shibbolethTargetBaseURL, shibbolethCallbackURL, //
 				sessionManager, twitter);
@@ -319,7 +329,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new SessionJSONController( //
 						sessionManager, sessionJSONClient), //
 				new GeocampusPoisByRegionAndCategoryJSONController(poiJSONClient),
-				new GeocampusPoiManageJSONController(tx, pois)
+				new GeocampusPoiManageJSONController(tx, pois),
+				new NearestPoisJSONController(poiJSONClient, nearestPoisMaxMetersAway),
+				new CommentsPostJSONController(comments, commentManager) 				
 		};
 
 		for (final AbstractJSONController jsonController : jsonControllers) {

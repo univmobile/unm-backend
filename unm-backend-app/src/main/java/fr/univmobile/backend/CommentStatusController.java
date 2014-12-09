@@ -80,7 +80,7 @@ public class CommentStatusController extends AbstractBackendController {
 		
 		setAttribute("status", true);
 
-		return commentsController.action();
+		return new View("comments_redirect.jsp");
 	}
 
 }

@@ -48,6 +48,14 @@ public abstract class AbstractJSONController extends AbstractJspController {
 		return user;
 	}
 
+	protected final boolean hasUser() {
+		return hasSessionAttribute("user");
+	}
+
+	protected final boolean hasDelegationUser() {
+		return hasSessionAttribute(DELEGATION_USER);
+	}
+
 	protected final User getDelegationUser() {
 
 		final User delegationUser = getSessionAttribute(DELEGATION_USER,
