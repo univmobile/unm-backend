@@ -115,4 +115,7 @@ public interface Comment {
 		
 		String getText();
 	}
+	
+	// Author: Mauricio
+	String getActive();
 }

@@ -162,6 +162,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 <div id="div-poi">
 <table id="table-poi"> 
 <tbody>
+
 <tr class="name">
 <th>
 	Nom
@@ -172,6 +173,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 	</a>
 </td>
 </tr>
+
 <tr class="id">
 <th>
 	<!--
@@ -193,6 +195,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 	</span>
 </td>
 </tr>
+
 <tr class="universityIds">
 <th>
 	Universités
@@ -205,6 +208,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 	</ul>
 </td>
 </tr>
+
 </tbody>
 </table>
 </div>
@@ -248,6 +252,11 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 </td>
 <td class="text">
 	${comment.text}
+</td>
+<td class="action">
+   <input class="checkbox" type="checkbox" id="checkbox-active" 
+          name="active" value="${comment.active}" onclick='window.location.assign("${baseURL}/commentStatus/${comment.id}")'>
+   <label for="checkbox-active">Actif</label>
 </td>
 </tr>
 </c:forEach>

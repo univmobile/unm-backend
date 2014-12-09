@@ -197,13 +197,13 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 
 				final ResultSet rs = pstmt.executeQuery();
 				try {
-
+					
 					while (rs.next()) {
 
 						final int uid = rs.getInt(1);
-
+						
 						final Comment comment = this.comments.getByUid(uid);
-
+						
 						comments.add(comment);
 					}
 
