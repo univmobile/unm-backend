@@ -113,7 +113,6 @@ Catégories de pois : ${poiCategoriesInfo.count}
       </td>
 
       <td class="uid">
-         <a href="${baseURL}/poicategories/${pc.uid}">
          ${pc.uid}
       </a>
       </td>

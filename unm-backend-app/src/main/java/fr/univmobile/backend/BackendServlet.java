@@ -238,6 +238,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final PoiCategoriesController poisCategoriesController = new PoiCategoriesController(
 				poiCategories);
 		final PoisController poisController = new PoisController(regions, pois);
+		final CommentsController commentsController = new CommentsController(comments, commentManager, searchManager,
+				regions, pois);
 
 		super.init(new HomeController(users, sessionManager), //
 				usersController, new UseraddController(tx, users,
@@ -248,8 +250,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				poisController, //
 				new PoiController(comments, commentManager, searchManager,
 						regions, pois), //
-				new CommentsController(comments, commentManager, searchManager,
-						regions, pois), //
+				commentsController, //
 				new CommentController(comments, commentManager), //
 				new HelpController(), //
 				new LogsController(), //
@@ -263,7 +264,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						poisCategoriesController), //
 				new PoisAddController(tx, pois, poisController, regions, poiCategories), //
 				new PoisModifyController(tx, pois, poisController, regions, poiCategories), //
-				new UserModifyController(tx, users, usersController, regions));
+				new UserModifyController(tx, users, usersController, regions),
+				new CommentStatusController(tx, comments, commentsController));
 
 		// 3. JSON CONTROLLERS
 

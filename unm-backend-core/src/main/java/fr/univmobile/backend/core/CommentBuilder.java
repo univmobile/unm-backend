@@ -22,6 +22,9 @@ public interface CommentBuilder extends EntryBuilder<Comment>, Comment{
 
 	CommentBuilder setPostedAt(DateTime date);
 	
+	// Author: Mauricio
+	CommentBuilder setActive(String active);
+	
 	boolean isNullPostedBy();
 
 	boolean isNullMessage();

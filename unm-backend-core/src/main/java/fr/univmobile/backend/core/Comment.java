@@ -76,4 +76,8 @@ public interface Comment extends Entry<Comment>, EntryRef {
 	@Override
 	@XPath("concat('{comment:', atom:content/@uid, '}')")
 	String toString();
+	
+	// Author: Mauricio
+	@XPath("atom:content/@active")
+	String getActive();
 }

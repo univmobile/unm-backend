@@ -9,8 +9,6 @@ import java.io.IOException;
 
 import javax.annotation.Nullable;
 
-import org.apache.commons.lang3.StringUtils;
-
 import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.core.PoiCategoryBuilder;
 import fr.univmobile.backend.core.PoiCategoryDataSource;
@@ -56,7 +54,8 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		final PoiCategory poicategory;
 
-		poicategory = poiCategories.getByUid(getPoiCategoryUid());
+		poicategory = poiCategories.getLatest(poiCategories
+				.getByUid(getPoiCategoryUid()));
 
 		setAttribute("poicategorymodify", poicategory);
 
@@ -88,7 +87,9 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		final String uid = form.uid();
 
-		final PoiCategoryBuilder poicategory = poiCategories.create();
+		// final PoiCategoryBuilder poicategory = poiCategories.create();
+		PoiCategoryBuilder poicategory = poiCategories.update(poiCategories
+				.getByUid(getPoiCategoryUid()));
 
 		boolean hasErrors = false;
 
@@ -107,7 +108,9 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 		poicategory.setDescription(form.description());
 
 		if (form.active() != null)
-			poicategory.setActive(true);
+			poicategory.setActive("true");
+		else
+			poicategory.setActive("false");
 
 		if (hasErrors) {
 

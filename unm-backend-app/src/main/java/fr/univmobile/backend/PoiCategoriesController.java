@@ -9,7 +9,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.TreeSet;
 
 import javax.annotation.Nullable;
 
@@ -56,9 +55,10 @@ public class PoiCategoriesController extends AbstractBackendController {
 
 		setAttribute("poicategories", pc);
 
-		for (final Integer uid : new TreeSet<Integer>(allCategories.keySet())) {
+		for (final PoiCategory p : allCategories.values()) {
 
-			pc.add(allCategories.get(uid));
+			pc.add(poiCategories.getLatest(p));
+
 		}
 
 		// 9. END

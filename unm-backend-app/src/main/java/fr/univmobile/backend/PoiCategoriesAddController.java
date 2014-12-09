@@ -126,7 +126,7 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 		}
 
 		if (form.active() != null)
-			poicategory.setActive(true);
+			poicategory.setActive("true");
 
 		if (form.description() != null)
 			poicategory.setDescription(form.description());

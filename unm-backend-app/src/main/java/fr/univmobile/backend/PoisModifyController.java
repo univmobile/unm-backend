@@ -73,7 +73,7 @@ public class PoisModifyController extends AbstractBackendController {
 		for (final PoiCategory p : dsPoiCategories.values())
 			if (String.valueOf(p.getUid()).startsWith(
 					String.valueOf(PoiCategory.ROOT_UNIVERSITIES_CATEGORY_UID))
-					&& p.getActive())
+					&& p.getActive() == "true")
 				poiCategoriesData.add(p);
 		setAttribute("poiCategoriesData", poiCategoriesData);
 
@@ -124,7 +124,8 @@ public class PoisModifyController extends AbstractBackendController {
 
 		final Integer uid = form.uid();
 
-		final PoiBuilder poi = pois.create();
+		// final PoiBuilder poi = pois.create();
+		final PoiBuilder poi = pois.update(pois.getByUid(uid));
 
 		poi.setAuthorName(getDelegationUser().getAuthorName());
 

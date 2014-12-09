@@ -41,6 +41,12 @@ public class CommentsController extends AbstractBackendController {
 		return getPathStringVariable("${context}");
 	}
 
+	@PathVariable("${active}")
+	private String getCommentStatus() {
+
+		return getPathStringVariable("${active}");
+	}
+
 	private boolean hasCommentsContext() {
 
 		return hasPathStringVariable("${context}");
@@ -79,6 +85,15 @@ public class CommentsController extends AbstractBackendController {
 
 	@Override
 	public View action() throws Exception {
+
+		try {
+			
+			if (getAttribute("status", boolean.class) == true)
+				return mostRecentComments();
+			
+		} catch (Exception e) {
+
+		}
 
 		if (!hasCommentsContext()) {
 
@@ -122,6 +137,8 @@ public class CommentsController extends AbstractBackendController {
 		} catch (final PoiNotFoundException e) {
 			throw new PageNotFoundException();
 		}
+
+		System.out.println(poi.getName());
 
 		setAttribute("poi", poi);
 

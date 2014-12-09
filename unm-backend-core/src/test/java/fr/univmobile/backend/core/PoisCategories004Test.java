@@ -25,47 +25,53 @@ public class PoisCategories004Test extends AbstractPoisCategoriesTest {
 
 		assertEquals(20, poisCategories.getAllByInt("uid").size());
 	}
-	
+
 	@Test
 	public final void test_3_Amphiteatre() throws Exception {
 
 		final PoiCategory amphi = poisCategories.getByUid(3);
-		
+
 		assertEquals(3, amphi.getUid());
 		assertEquals("Amphithéâtre", amphi.getName());
 		assertEquals("", amphi.getDescription());
-		assertEquals("http://admin.univmobile.fr/uploads/images/poitype_icon_amphitheatre_1322666797.png", amphi.getCursorUrl());
+		assertEquals(
+				"http://admin.univmobile.fr/uploads/images/poitype_icon_amphitheatre_1322666797.png",
+				amphi.getCursorUrl());
 		assertEquals(99, amphi.getParentUid());
 		int[] expectedChildren = {};
 		assertArrayEquals(expectedChildren, amphi.getChildren());
-		assertTrue(amphi.getActive() == true);
+		assertTrue(amphi.getActive() == "true");
 		assertEquals(0, amphi.getExternalUid());
-		
-		
+
 	}
 
 	@Test
 	public final void test_99_RootUniversite() throws Exception {
 
 		final PoiCategory amphi = poisCategories.getByUid(99);
-		
+
 		assertEquals(99, amphi.getUid());
 		assertEquals("Catégories universitaires", amphi.getName());
-		assertEquals("Catégorie racine de toutes les catégories de POIs des universités. Catégorie jamais visible.", amphi.getDescription());
-		assertEquals("http://admin.univmobile.fr/uploads/images/poitype_icon_batiment_1304005503.png", amphi.getCursorUrl());
+		assertEquals(
+				"Catégorie racine de toutes les catégories de POIs des universités. Catégorie jamais visible.",
+				amphi.getDescription());
+		assertEquals(
+				"http://admin.univmobile.fr/uploads/images/poitype_icon_batiment_1304005503.png",
+				amphi.getCursorUrl());
 		assertEquals(0, amphi.getParentUid());
-		int[] expectedChildren = { 1, 3, 4, 7, 8, 9, 11, 12, 13, 14, 15, 16, 17, 21, 22, 23, 24};
+		int[] expectedChildren = { 1, 3, 4, 7, 8, 9, 11, 12, 13, 14, 15, 16,
+				17, 21, 22, 23, 24 };
 		assertArrayEquals(expectedChildren, amphi.getChildren());
-		assertTrue(amphi.getActive() == true);
+		assertTrue(amphi.getActive() == "true");
 		assertEquals(0, amphi.getExternalUid());
-		
+
 	}
 
 	@Test
 	public final void test_20_Polygone() throws Exception {
 
 		final PoiCategory amphi = poisCategories.getByUid(20);
-		
+
 		assertEquals(20, amphi.getUid());
 		assertEquals("Polygone", amphi.getName());
 		assertNull(amphi.getDescription());
@@ -73,14 +79,15 @@ public class PoisCategories004Test extends AbstractPoisCategoriesTest {
 		assertEquals(99, amphi.getParentUid());
 		int[] expectedChildren = {};
 		assertArrayEquals(expectedChildren, amphi.getChildren());
-		assertFalse(amphi.getActive() == true);
+		assertFalse(amphi.getActive() == "true");
 		assertEquals(0, amphi.getExternalUid());
-		
+
 	}
 
 	/**
-	 * Test une methode de recherche d'elements renvoyant une liste, via la recuperation de tous
-	 * les enfants directs de l'universite de la Rochelle 
+	 * Test une methode de recherche d'elements renvoyant une liste, via la
+	 * recuperation de tous les enfants directs de l'universite de la Rochelle
+	 * 
 	 * @throws Exception
 	 */
 	@Test
@@ -107,7 +114,7 @@ public class PoisCategories004Test extends AbstractPoisCategoriesTest {
 		ids.put(22, "Institut et École");
 		ids.put(23, "Résidence Universitaire");
 		ids.put(24, "Salle");
-		
+
 		assertEquals(19, ul.size());
 		for (PoiCategory poiCategory : ul) {
 			assertTrue(ids.containsKey(poiCategory.getUid()));
