@@ -105,9 +105,6 @@ public class CommentsPostJSONController extends AbstractJSONController {
 
 		@HttpParameter
 		String title();
-
-		@HttpParameter
-		String author();
 	}
 	
 }
