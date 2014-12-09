@@ -2,10 +2,13 @@ package fr.univmobile.backend.json;
 
 import com.avcompris.lang.NotImplementedException;
 
+import fr.univmobile.backend.core.User;
 import fr.univmobile.web.commons.AbstractController;
+import fr.univmobile.web.commons.AbstractJspController;
 import fr.univmobile.web.commons.View;
 
-public abstract class AbstractJSONController extends AbstractController {
+public abstract class AbstractJSONController extends AbstractJspController {
+	protected static final String DELEGATION_USER = "delegationUser";
 
 	/**
 	 * Return the JSON string.
@@ -32,6 +35,34 @@ public abstract class AbstractJSONController extends AbstractController {
 	protected static String composeEndPoint(final String baseURL) {
 
 		return baseURL;
+	}
+
+	protected final User getUser() {
+
+		final User user = getSessionAttribute("user", User.class);
+
+		if (user == null) {
+			throw new IllegalStateException("null user");
+		}
+
+		return user;
+	}
+
+	protected final User getDelegationUser() {
+
+		final User delegationUser = getSessionAttribute(DELEGATION_USER,
+				User.class);
+
+		if (delegationUser != null) {
+
+			return delegationUser;
+		}
+
+		final User user = getUser();
+
+		setSessionAttribute(DELEGATION_USER, user);
+
+		return user;
 	}
 
 	@Override

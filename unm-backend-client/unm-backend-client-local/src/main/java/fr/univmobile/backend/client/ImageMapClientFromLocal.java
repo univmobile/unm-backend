@@ -207,6 +207,10 @@ public class ImageMapClientFromLocal extends AbstractClientFromLocal implements
 
 		MutableImageMapPoi setName(String name);
 
+		MutableImageMapPoi setParentUid(Integer parentUid);
+
+		MutableImageMapPoi setCategory(Integer categoryId);
+
 		MutableImageMapPoi setAddress(@Nullable String address);
 
 		MutableImageMapPoi setPhone(@Nullable String phone);

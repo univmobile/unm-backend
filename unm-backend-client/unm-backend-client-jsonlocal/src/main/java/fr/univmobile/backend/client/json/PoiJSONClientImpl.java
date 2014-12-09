@@ -52,6 +52,24 @@ public class PoiJSONClientImpl implements PoiJSONClient {
 	}
 
 	@Override
+	public String getPoisByCategoryJSON(int categoryId) throws IOException {
+		log.debug("getPoisByCategoryJSON()...");
+
+		final Pois p = poiClient.getPoisByCategory(categoryId);
+
+		return poisJSON(p);
+	}
+
+	@Override
+	public String getPoisByRegionAndCategoryJSON(String regionId, Integer categoryId) throws IOException {
+		log.debug("getPoisByCategoryJSON()...");
+
+		final Pois p = poiClient.getPoisByRegionAndCategory(regionId, categoryId);
+
+		return poisJSON(p);
+	}
+
+	@Override
 	public String getPoisJSON(final double lat, final double lng)
 			throws IOException {
 
@@ -95,6 +113,7 @@ public class PoiJSONClientImpl implements PoiJSONClient {
 				final JSONMap map = new JSONMap() //
 						.put("id", poi.getId()) //
 						.put("name", poi.getName()) //
+						.put("name", poi.getName()) //
 						.put("coordinates", poi.getCoordinates()) //
 						.put("lat", poi.getLatitude()) //
 						.put("lng", poi.getLongitude()) //
@@ -108,6 +127,12 @@ public class PoiJSONClientImpl implements PoiJSONClient {
 						.put("url", poi.getUrl()) //
 						.put("markerType", poi.getMarkerType()) //
 						.put("markerIndex", poi.getMarkerIndex());
+
+				if (poi.getParentUid() != null)
+					map.put("parentUid", poi.getParentUid());
+
+				if (poi.getCategory() != null)
+					map.put("categoryId", poi.getCategory());
 
 				// TODO: Do not add the fields if null
 
@@ -127,4 +152,5 @@ public class PoiJSONClientImpl implements PoiJSONClient {
 
 		return json.toJSONString();
 	}
+
 }

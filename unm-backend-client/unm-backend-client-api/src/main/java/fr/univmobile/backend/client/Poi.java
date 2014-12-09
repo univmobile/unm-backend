@@ -23,13 +23,19 @@ public interface Poi {
 	
 	@Nullable
 	String getFax();
-	
+
 	@Nullable
 	String getOpeningHours();
 	
 	@Nullable
 	String getItinerary();
-	
+
+	@Nullable
+	Integer getCategory();
+
+	@Nullable
+	Integer getParentUid();
+
 	String getCoordinates();
 	
 	String getLatitude();

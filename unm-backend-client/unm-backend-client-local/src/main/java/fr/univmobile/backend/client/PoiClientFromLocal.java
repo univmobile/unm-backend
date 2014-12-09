@@ -27,6 +27,7 @@ import com.avcompris.lang.NotImplementedException;
 import com.google.common.collect.Iterables;
 
 import fr.univmobile.backend.client.Pois.MapInfo;
+import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.commons.DataBeans;
@@ -178,15 +179,25 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 
 	@Override
 	public MutablePois getPoisByRegion(String regionUid) throws IOException {
-		return getPoisPerRegion(regionUid);
+		return getPoisPerRegionAndCategory(regionUid, null);
+	}
+
+	@Override
+	public MutablePois getPoisByCategory(int categoryId) throws IOException {
+		return getPoisPerRegionAndCategory(null, categoryId);
+	}
+
+	@Override
+	public MutablePois getPoisByRegionAndCategory(String regionUid, Integer categoryId) throws IOException {
+		return getPoisPerRegionAndCategory(regionUid, categoryId);
 	}
 
 	@Override
 	public MutablePois getPois() throws IOException {
-		return getPoisPerRegion(null);
+		return getPoisPerRegionAndCategory(null, null);
 	}
 
-	private MutablePois getPoisPerRegion(String filterRegionUid) throws IOException {
+	private MutablePois getPoisPerRegionAndCategory(String filterRegionUid, Integer filterCategoryId) throws IOException {
 
 		log.debug("getPois()...");
 
@@ -236,7 +247,14 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 				.getAllBy(Integer.class, "uid");
 		final List<fr.univmobile.backend.core.Poi> myPois = new ArrayList<fr.univmobile.backend.core.Poi>();
 		for (final Integer uid : new TreeSet<Integer>(allPois.keySet())) {
-			myPois.add(allPois.get(uid));
+			fr.univmobile.backend.core.Poi tmpPoi = allPois.get(uid);
+			if (filterCategoryId == null) {
+				myPois.add(tmpPoi);
+			} else {
+				if (tmpPoi.getCategoryId() == filterCategoryId) {				
+					myPois.add(tmpPoi);
+				}
+			}
 		}
 
 		for (final fr.univmobile.backend.core.Region dsRegion : sortedSet) {
@@ -349,8 +367,15 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 			poi.setItinerary(dsPoi.getItineraries()[0]);
 		}
 
+		if (dsPoi.getCategoryId() > 0) {
+			poi.setCategory(dsPoi.getCategoryId());
+		}
 		// Author: Mauricio (end)
 
+		if (dsPoi.getParentUid() > 0) {
+			poi.setParentUid(dsPoi.getParentUid());
+		}
+		
 		if (dsPoi.getAttachments().length != 0) {
 			final String image = dsPoi.getAttachments()[0].getUrl();
 			if (!image.startsWith("/upload")) {
@@ -426,6 +451,10 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 		MutablePoi setOpeningHours(@Nullable String openingHours);
 
 		MutablePoi setItinerary(@Nullable String itinerary);
+		
+		MutablePoi setCategory(@Nullable Integer categoryId);
+
+		MutablePoi setParentUid(@Nullable Integer parentUid);
 
 		MutablePoi setCoordinates(String coordinates);
 

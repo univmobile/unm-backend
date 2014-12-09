@@ -31,6 +31,8 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.admin.GeocampusPoiManageJSONController;
+import fr.univmobile.backend.admin.GeocampusPoisByRegionAndCategoryJSONController;
 import fr.univmobile.backend.client.AbstractClientFromLocal;
 import fr.univmobile.backend.client.CommentClient;
 import fr.univmobile.backend.client.CommentClientFromLocal;
@@ -309,15 +311,19 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new EndpointsJSONController(), //
 				new RegionsJSONController(regionJSONClient), //
 				new UniversitiesJSONController(regions, regionJSONClient), //
-				new ImageMapJSONController(imageMaps, imageMapJSONClient), //
+				/*new ImageMapJSONController(imageMaps, imageMapJSONClient), //*/
 				new PoisJSONController(poiJSONClient), //
 				new CommentsJSONController(pois, commentJSONClient), //
 				new SessionJSONController( //
-						sessionManager, sessionJSONClient) //
+						sessionManager, sessionJSONClient), //
+				new GeocampusPoisByRegionAndCategoryJSONController(poiJSONClient),
+				new GeocampusPoiManageJSONController(tx, pois)
 		};
 
 		for (final AbstractJSONController jsonController : jsonControllers) {
-
+			if (log.isDebugEnabled()) {
+				log.debug(String.format("Loading JSON controller: %s", jsonController.getClass().getName()));
+			}
 			jsonController.init(this);
 		}
 	}

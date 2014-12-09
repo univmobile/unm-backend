@@ -11,4 +11,8 @@ public interface PoiClient {
 	Pois getPoisByRegion(String regionId) throws IOException;
 
 	Poi getPoi(int id) throws IOException, ClientException;
+
+	Pois getPoisByCategory(int categoryId) throws IOException;
+	
+	Pois getPoisByRegionAndCategory(String regionId, Integer categoryId) throws IOException;
 }

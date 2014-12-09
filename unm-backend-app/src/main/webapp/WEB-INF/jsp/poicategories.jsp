@@ -127,7 +127,14 @@ Catégories de pois : ${poiCategoriesInfo.count}
       </td>
       
       <td class="active">
-         ${pc.active}
+         <c:choose>
+         <c:when test="${pc.active}">
+         	Actif
+         </c:when>
+         <c:otherwise>
+         	Inactif
+         </c:otherwise>
+         </c:choose>
       </td>
       
       <td class="edit">

@@ -123,6 +123,16 @@ public class ImageMapClientFromJSON extends AbstractClientFromJSON<ImageMapJSONC
 		@Override
 		String getItinerary();
 
+		@XPath("poiCategory/id")
+		@Nullable
+		@Override
+		Integer getCategory();
+
+		@XPath("@parentUid")
+		@Nullable
+		@Override
+		Integer getParentUid();
+
 		@XPath("@coordinates")
 		@Override
 		String getCoordinates();

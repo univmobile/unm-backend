@@ -44,7 +44,27 @@ public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
 		
 		return unmarshall(jsonClient.getPoisByRegionJSON(regionId), PoisJSON.class);
 	}
-	
+
+	@Override
+	public Pois getPoisByRegionAndCategory(String regionId, Integer categoryId) throws IOException {
+		
+		if (log.isDebugEnabled()) {
+			log.debug("getPoisByRegionAndCategory()...");
+		}
+		
+		return unmarshall(jsonClient.getPoisByRegionAndCategoryJSON(regionId, categoryId), PoisJSON.class);
+	}
+
+	@Override
+	public Pois getPoisByCategory(int categoryId) throws IOException {
+		
+		if (log.isDebugEnabled()) {
+			log.debug("getPoisByCategory()...");
+		}
+		
+		return unmarshall(jsonClient.getPoisByCategoryJSON(categoryId), PoisJSON.class);
+	}
+
 	@Override
 	public Pois getPois(final double lat, final double lng) throws IOException {
 
@@ -114,6 +134,11 @@ public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
 			@Override
 			String getAddress();
 
+			@XPath("@parentUid")
+			@Nullable
+			@Override
+			Integer getParentUid();
+
 			@XPath("@phone")
 			@Nullable
 			@Override
@@ -143,6 +168,11 @@ public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
 			@Nullable
 			@Override
 			String getItinerary();
+
+			@XPath("poiCategory/id")
+			@Nullable
+			@Override
+			Integer getCategory();
 
 			@XPath("@coordinates")
 			@Override
@@ -193,4 +223,5 @@ public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
 			String getMarkerIndex();
 		}
 	}
+
 }

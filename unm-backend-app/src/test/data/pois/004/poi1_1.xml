@@ -17,7 +17,9 @@
 	createdAt="2010-05-11T10:52:30.000+02:00"
 	updatedAt="2014-03-31T12:14:33.000+02:00"
 	updatedBy="super admin"
-	name="Université Panthéon-Sorbonne - Paris I">
+	parentUid="100"
+	name="Université Panthéon-Sorbonne - Paris ILL">
+	<poiCategory><id>99</id></poiCategory>
 	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
 	<university id="paris1"/>
 	<description>Université Panthéon-Sorbonne - Paris I comprend 297 formations. Il s'agit d'une université dans la région Ile de France.
