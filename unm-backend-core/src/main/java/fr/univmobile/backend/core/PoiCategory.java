@@ -84,7 +84,7 @@ public interface PoiCategory extends Entry<PoiCategory> {
 	 * @return
 	 */
 	@XPath("atom:content/@active")
-	boolean getActive();
+	String getActive();
 
 	/**
 	 * Permet de récupérer si le cagetory est actif ou non. Par exemple,

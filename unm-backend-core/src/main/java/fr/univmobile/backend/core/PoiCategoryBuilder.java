@@ -18,6 +18,6 @@ public interface PoiCategoryBuilder extends EntryBuilder<PoiCategory>, PoiCatego
 	// Author: Mauricio
 	PoiCategoryBuilder setDescription(String description);
 	PoiCategoryBuilder setExternalUid(int externalUid);
-	PoiCategoryBuilder setActive(boolean active);
+	PoiCategoryBuilder setActive(String active);
 	
 }

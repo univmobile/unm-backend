@@ -64,8 +64,7 @@ public class PoisAddController extends AbstractBackendController {
 		final List<PoiCategory> poiCategoriesData = new ArrayList<PoiCategory>();
 
 		for (final PoiCategory p : dsPoiCategories.values())
-			if (String.valueOf(p.getUid()).startsWith(
-					String.valueOf(PoiCategory.ROOT_UNIVERSITIES_CATEGORY_UID)) && p.getActive())
+			if (String.valueOf(p.getUid()).startsWith(String.valueOf(PoiCategory.ROOT_UNIVERSITIES_CATEGORY_UID)) && p.getActive() == "true")
 				poiCategoriesData.add(p);
 		setAttribute("poiCategoriesData", poiCategoriesData);
 

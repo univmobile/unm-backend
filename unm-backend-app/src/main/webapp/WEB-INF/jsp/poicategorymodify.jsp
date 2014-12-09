@@ -94,7 +94,7 @@ label.checkbox-parentUid {
          <th>Est-il actif?</th>
          <td>
             <c:choose>
-               <c:when test="${poicategorymodify.active == true}">
+               <c:when test="${poicategorymodify.active eq 'true'}">
                   <input class="checkbox" type="checkbox" id="checkbox-active" name="active" value="${poicategorymodify.active}" checked>
                </c:when>
                <c:otherwise>
