@@ -30,5 +30,5 @@ CP="${CP}:${M2_REPO}/net/avcompris/commons/avc-binding-common/0.1.4/avc-binding-
 CP="${CP}:${M2_REPO}/net/avcompris/commons/avc-binding-dom/0.1.6/avc-binding-dom-0.1.6.jar"
 
 java -cp "${CP}" fr.univmobile.backend.sysadmin.Main index \
-	-data /tmp/unm-backend/dataDir -dburl jdbc:mysql://taurus:3306/univmobile \
+	-data /tmp/unm-backend/dataDir -dburl jdbc:mysql://localhost:3306/univmobile \
 	-dbusername root -dbpassword $@

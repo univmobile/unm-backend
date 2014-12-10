@@ -7,7 +7,11 @@ import java.io.IOException;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+//murraco@bitbucket.org/blitzitsa/univmobile.git
+import fr.univmobile.backend.core.ImageMapBuilder;
+import fr.univmobile.backend.core.ImageMapDataSource;
 import fr.univmobile.backend.core.PoiBuilder;
+import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.commons.tx.Lock;
@@ -54,14 +58,16 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 	private final PoiDataSource poiDs;
 	*/
 
-	public GeocampusPoiManageJSONController(final TransactionManager tx, final PoiDataSource poiDs) {
+	public GeocampusPoiManageJSONController(final TransactionManager tx, final PoiDataSource poiDs, final ImageMapDataSource imageMapDs) {
 		this.tx = checkNotNull(tx, "tx");
 		this.poiDs = checkNotNull(poiDs, "poiDs");
+		this.imageMapDs = checkNotNull(imageMapDs, "imageMapDs");
 	}
 
 	private final TransactionManager tx;
 	
 	private final PoiDataSource poiDs;
+	private final ImageMapDataSource imageMapDs;
 	
 	private static final Log log = LogFactory.getLog(GeocampusPoiManageJSONController.class);
 	
@@ -111,13 +117,18 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		poi.setAuthorName(getDelegationUser().getAuthorName());
 		poi.setUid(data.id());
 		poi.setName(data.name());
-		if (data.categoryId() != null && data.categoryId().length() > 0) {
-			poi.setCategoryId(Integer.parseInt(data.categoryId()));
+		
+		if (data.imageMapId() != null) {
+			poi.setCategoryId(PoiCategory.ROOT_IMAGE_MAP_CATEGORY_UID);
+		} else {
+			if (data.categoryId() != null && data.categoryId().length() > 0) {
+				poi.setCategoryId(Integer.parseInt(data.categoryId()));
+			}
+			if (data.parentUid() != null && data.parentUid().length() > 0) {
+				poi.setParentUid(Integer.parseInt(data.parentUid()));
+			}
 		}
-		if (data.parentUid() != null && data.parentUid().length() > 0) {
-			poi.setParentUid(Integer.parseInt(data.parentUid()));
-		}
-
+		
 		poi.setUniversityIds(data.university());
 		poi.setFloors(coalesce(data.floor()));
 		poi.setOpeningHours(coalesce(data.openingHours()));
@@ -144,6 +155,12 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 
 		lock.save(poi);
 
+		// 4. IMAGE MAP
+		if (data.imageMapId() != null) {
+			final ImageMapBuilder imageMap = imageMapDs.update(imageMapDs.getByUid(data.imageMapId()));
+			//imageMap
+		}
+		
 		lock.commit();
 
 		return true;
@@ -204,6 +221,9 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 
 		@HttpParameter
 		String isNew();
+		
+		@HttpParameter
+		Integer imageMapId();
 	}
 	
 }

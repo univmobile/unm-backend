@@ -89,7 +89,7 @@ Catégories de pois : ${poiCategoriesInfo.count}
       <th class="uid">uid</th>
       <th class="nom">nom</th>
       <th class="description">description</th>
-      <th class="active">active</th>
+      <th class="active">actif</th>
       <th class="edit">action</th>
       <th class="none"></th>
    </tr>

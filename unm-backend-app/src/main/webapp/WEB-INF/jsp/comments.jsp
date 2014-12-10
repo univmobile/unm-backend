@@ -255,7 +255,7 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 </td>
 <td class="action">
    <input class="checkbox" type="checkbox" id="checkbox-active" 
-          name="active" value="${comment.active}" onclick='window.location.assign("${baseURL}/commentStatus/${comment.id}")'>
+          name="active" <c:if test="${comment.active}">checked </c:if>onclick='window.location.assign("${baseURL}/commentStatus/${comment.id}")'>
    <label for="checkbox-active">Actif</label>
 </td>
 </tr>
