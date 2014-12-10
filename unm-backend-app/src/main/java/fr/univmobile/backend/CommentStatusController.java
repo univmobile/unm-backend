@@ -1,6 +1,11 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+
+import fr.univmobile.backend.admin.GeocampusPoiManageJSONController;
 import fr.univmobile.backend.core.Comment;
 import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
@@ -29,6 +34,8 @@ public class CommentStatusController extends AbstractBackendController {
 		this.tx = checkNotNull(tx, "tx");
 	}
 
+	private static final Log log = LogFactory.getLog(CommentStatusController.class);
+	
 	private final CommentDataSource comments;
 	private final CommentsController commentsController;
 	private final TransactionManager tx;
@@ -42,7 +49,7 @@ public class CommentStatusController extends AbstractBackendController {
 
 		final Integer uid = comment.getUid();
 
-		final Lock lock = tx.acquireLock(5000, "poiscategories", uid);
+		final Lock lock = tx.acquireLock(5000, "comments", uid);
 		try {
 
 			return commentUpdate(lock, comment);
@@ -69,7 +76,7 @@ public class CommentStatusController extends AbstractBackendController {
 		commentBuilder.setPostedBy(comment.getPostedBy());
 		commentBuilder.setTitle(comment.getTitle());
 		commentBuilder.setUid(comment.getUid());
-		if (comment.getActive() == "false")
+		if (comment.getActive().equals("false"))
 			commentBuilder.setActive("true");
 		else
 			commentBuilder.setActive("false");

@@ -101,7 +101,7 @@ label.checkbox-parentUid {
                   <input class="checkbox" type="checkbox" id="checkbox-active" name="active" value="${poicategorymodify.active}">
                </c:otherwise>
             </c:choose>
-            <label for="checkbox-active">Is Activeé</label>
+            <label for="checkbox-active"></label>
          </td>   
       </tr>
       

@@ -76,7 +76,7 @@ label.checkbox-parentUid {
       </tr>
       
       <tr>
-         <th>Name</th>
+         <th>Nom</th>
          <td>
             <input class="text" type="text" id="text-name" name="name" value="${poicategoryadd.name}">
          <c:if test="${err_poicategoryadd_name}">
@@ -96,7 +96,7 @@ label.checkbox-parentUid {
          <th>Est-il actif?</th>
          <td>
             <input class="checkbox" type="checkbox" id="checkbox-active" name="active" value="yes">
-            <label for="checkbox-active">Is Activeé</label>
+            <label for="checkbox-active"></label>
          </td>   
       </tr>
       

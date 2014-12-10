@@ -7,6 +7,7 @@ import static org.apache.commons.lang3.StringUtils.isBlank;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,10 +22,10 @@ import fr.univmobile.commons.datasource.SearchAttribute;
 
 final class BackendDataCacheEngine<E extends Entry<E>, EB extends EntryBuilder<E>>
 		implements BackendDataEngine<E, EB> {
-
+	
 	public BackendDataCacheEngine(
 			final Class<? extends RevDataSource<E, EB>> dataSourceClass) {
-
+		
 		this.dataSourceClass = checkNotNull(dataSourceClass, "dataSourceClass");
 
 		this.dataClass = BackendDataUtils.getDataClass(dataSourceClass);
@@ -146,11 +147,19 @@ final class BackendDataCacheEngine<E extends Entry<E>, EB extends EntryBuilder<E
 
 			List<E> cached = index.get(key);
 
+			// START New implementation - Put as HEAD the greatest Id by lexical ordering
+			boolean isHead;
 			if (cached == null) {
 				cached = new ArrayList<E>();
 				index.put(key, cached);
+				isHead = true;
+			} else {
+				isHead = data.getId().compareTo(cached.get(0).getId()) > 0;
 			}
+			// END New implementation - Put as HEAD the greatest Id by lexical ordering
 
+			// START OLD implementation - Think it's a buggy one
+			/*
 			boolean isParent = false;
 
 			final String id = data.getId();
@@ -167,6 +176,17 @@ final class BackendDataCacheEngine<E extends Entry<E>, EB extends EntryBuilder<E
 			} else {
 				cached.add(0, data); // First element is HEAD
 			}
+			*/
+			// END OLD implementation - Think it's a buggy one
+			
+			// START New implementation - Put as HEAD the greatest Id by lexical ordering
+			if (isHead) {
+				//indexHelper.put(currentPk, currentId);
+				cached.add(0, data);
+			} else {
+				cached.add(data);
+			}
+			// END New implementation - Put as HEAD the greatest Id by lexical ordering
 		}
 	}
 
