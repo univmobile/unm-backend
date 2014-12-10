@@ -71,78 +71,55 @@ td span.error {
    </th>
    
    <c:choose>
-   <c:when test="${usermodify.role eq 'superadmin'}">
-   <td>
-      SuperAdmin
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin" checked>
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-	    <input type="radio" id="radio-type-admin" name="type" value="admin">
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-	    <input type="radio" id="radio-type-student" name="type" value="student">
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
-   </td>
-   </c:when>
-   
-   <c:when test="${usermodify.role eq 'admin'}">
-   <td>
-      Admin
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-      <input type="radio" id="radio-type-admin" name="type" value="admin" checked>
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-       <input type="radio" id="radio-type-student" name="type" value="student">
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
-   </td>
-   </c:when>
-   
-   <c:when test="${usermodify.role eq 'student'}">
-   <td>
-      Student
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-       <input type="radio" id="radio-type-admin" name="type" value="admin">
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-      <input type="radio" id="radio-type-student" name="type" value="student" checked>
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
-   </td>
-   </c:when>
-   
-   <c:otherwise>
-   <td>
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-       <input type="radio" id="radio-type-admin" name="type" value="admin">
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-      <input type="radio" id="radio-type-student" name="type" value="student">
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
-   </td>
-   </c:otherwise> 
+      <c:when test="${role eq 'superadmin'}">
+         <c:choose>
+         <c:when test="${usermodify.role eq 'superadmin'}">
+            <td>
+               <input type="radio" id="radio-type-superadmin" name="type" value="superadmin" checked>
+               <label for="radio-type-superadmin">Super Administrateur</label>
+               <input type="radio" id="radio-type-admin" name="type" value="admin">
+               <label for="radio-type-admin">Administrateur</label>
+              <input type="radio" id="radio-type-student" name="type" value="student">
+               <label for="radio-type-student">Étudiant</label>
+            </td>
+         </c:when>
+         
+         <c:when test="${usermodify.role eq 'admin'}">
+            <td>
+               <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+               <label for="radio-type-superadmin">Super Administrateur</label>
+               <input type="radio" id="radio-type-admin" name="type" value="admin" checked>
+               <label for="radio-type-admin">Administrateur</label>
+               <input type="radio" id="radio-type-student" name="type" value="student">
+               <label for="radio-type-student">Étudiant</label>
+            </td>
+         </c:when>
+         
+         <c:when test="${usermodify.role eq 'student'}">
+            <td>
+               <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+               <label for="radio-type-superadmin">Super Administrateur</label>
+               <input type="radio" id="radio-type-admin" name="type" value="admin">
+               <label for="radio-type-admin">Administrateur</label>
+               <input type="radio" id="radio-type-student" name="type" value="student" checked>
+               <label for="radio-type-student">Étudiant</label>
+            </td>
+         </c:when>
+         </c:choose>
+      </c:when>
+      
+      <c:otherwise>
+         <td>
+            <input disabled type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input disabled type="radio" id="radio-type-admin" name="type" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="type" value="student" checked>
+            <label for="radio-type-student">Étudiant</label>
+         </td>
+      </c:otherwise>
+      
    </c:choose>
-   
 </tr>
 
 <tr>
@@ -233,7 +210,16 @@ td span.error {
                         <option value="${u.id}" selected>${u.title}</option>
                      </c:when>
                      <c:otherwise>
-                        <option value="${u.id}">${u.title}</option>
+                        <c:choose>
+                           <c:when test="${role eq 'admin'}">
+                              <c:if test="${userUnivId eq u.id}">
+                                 <option value="${u.id}">${u.title}</option>
+                              </c:if>
+                           </c:when>
+                           <c:otherwise>
+                              <option value="${u.id}">${u.title}</option>   
+                           </c:otherwise>
+                        </c:choose>
                      </c:otherwise>
                   </c:choose> 
                </c:forEach>
@@ -257,7 +243,16 @@ td span.error {
                            <option value="${u.id}" selected>${u.title}</option>
                         </c:when>
                         <c:otherwise>
-                           <option value="${u.id}">${u.title}</option>
+                           <c:choose>
+                              <c:when test="${role eq 'admin'}">
+                                 <c:if test="${userUnivId eq u.id}">
+                                    <option value="${u.id}">${u.title}</option>
+                                 </c:if>
+                              </c:when>
+                              <c:otherwise>
+                                 <option value="${u.id}">${u.title}</option>   
+                              </c:otherwise>
+                           </c:choose>
                         </c:otherwise>
                      </c:choose> 
                   </c:forEach>

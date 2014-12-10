@@ -170,7 +170,14 @@ body.results td.roles.superadmin {
    </td>
    
    <td class="edit">
-      <a id="link-edit_${u.uid}" href="${baseURL}/usermodify/${u.uid}">Modifier…</a>
+      <c:choose>
+         <c:when test="${role eq 'student'}">
+            <a>Modifier…</a>
+         </c:when>
+         <c:otherwise>
+            <a id="link-edit_${u.uid}" href="${baseURL}/usermodify/${u.uid}">Modifier…</a>
+         </c:otherwise>
+      </c:choose>
    </td>
    
    <td class="none">
@@ -182,7 +189,14 @@ body.results td.roles.superadmin {
 </table>
 
 <div class="table bottom">
-   <a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
+   <c:choose>
+      <c:when test="${role eq 'student'}">
+         <a>Ajouter un utilisateur…</a>
+      </c:when>
+      <c:otherwise>
+         <a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
+      </c:otherwise>
+   </c:choose>
 </div>
 
 </div> <!-- end of #div-users -->

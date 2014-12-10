@@ -4,19 +4,15 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.backend.json.AbstractJSONController.*;
 */
 import java.io.File;
-
-
 import org.junit.Before;
 import org.junit.Test;
 
 import fr.univmobile.backend.client.ImageMapClient;
 import fr.univmobile.backend.client.ImageMapClientFromLocal;
-import fr.univmobile.backend.client.Poi;
 import fr.univmobile.backend.client.PoiCategoryClient;
 import fr.univmobile.backend.client.PoiCategoryClientFromLocal;
 import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
-import fr.univmobile.backend.client.Pois;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.json.ImageMapJSONClient;
@@ -28,14 +24,10 @@ import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.ImageMapDataSource;
-import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.core.PoiCategoryDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.json.AbstractJSONController;
-import fr.univmobile.backend.json.RegionsJSONController;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
-import fr.univmobile.web.commons.AbstractController;
 
 public class GeocampusJSONControllerTest {
 

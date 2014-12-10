@@ -30,7 +30,7 @@ public class UsersController extends AbstractBackendController {
 	@Override
 	public View action() throws IOException, TransactionException {
 
-		getDelegationUser();
+		// getDelegationUser();
 
 		final Map<String, User> allUsers = users.getAllBy(String.class, "uid");
 
@@ -45,6 +45,10 @@ public class UsersController extends AbstractBackendController {
 
 		setAttribute("usersInfo", usersInfo);
 
+		// CURRENT USER ROLE
+
+		setAttribute("role", getDelegationUser().getRole());
+
 		// 2. USERS DATA
 
 		final List<User> u = new ArrayList<User>();
@@ -52,8 +56,14 @@ public class UsersController extends AbstractBackendController {
 		setAttribute("users", u);
 
 		for (final String uid : new TreeSet<String>(allUsers.keySet())) {
-
-			u.add(users.getLatest(allUsers.get(uid)));
+			User user = users.getLatest(allUsers.get(uid));
+			if (getDelegationUser().getRole().equals("admin")) {
+				if (user.getRole().equals("student")
+						&& user.getPrimaryUniversity().equals(
+								getDelegationUser().getPrimaryUniversity()))
+					u.add(user);
+			} else
+				u.add(user);
 		}
 
 		// 9. END
