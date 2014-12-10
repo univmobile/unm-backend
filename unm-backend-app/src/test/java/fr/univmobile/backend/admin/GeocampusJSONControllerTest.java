@@ -1,7 +1,9 @@
 package fr.univmobile.backend.admin;
-
+/*
+import static com.google.common.base.Preconditions.checkNotNull;
+import static fr.univmobile.backend.json.AbstractJSONController.*;
+*/
 import java.io.File;
-
 import org.junit.Before;
 import org.junit.Test;
 
@@ -31,15 +33,16 @@ public class GeocampusJSONControllerTest {
 
 	@Before
 	public void setUp() throws Exception {
-
+		/*
 		regionsDataSource = BackendDataSourceFileSystem
 				.newDataSource(RegionDataSource.class, new File("src/test/data/regions/004"));
 
-		poiDataSource = BackendDataSourceFileSystem
-				.newDataSource(PoiDataSource.class,new File("src/test/data/pois/004"));
-
 		poiCategoryDataSource = BackendDataSourceFileSystem
 				.newDataSource(PoiCategoryDataSource.class,new File("src/test/data/poiscategories/004"));
+
+
+		poiDataSource = BackendDataSourceFileSystem
+				.newDataSource(PoiDataSource.class,new File("src/test/data/pois/004"));
 
 		imageMapDataSource = BackendDataSourceFileSystem
 				.newDataSource(ImageMapDataSource.class, new File("src/test/data/imagemaps/004"));
@@ -63,6 +66,8 @@ public class GeocampusJSONControllerTest {
 				"(dummy baseURL)", imageMapDataSource, poiDataSource);
 
 		imageMapJSONClient = new ImageMapJSONClientImpl(imageMapClient);
+		*/
+
 	}
 	
 	private PoiCategoryDataSource poiCategoryDataSource;  
@@ -87,6 +92,7 @@ public class GeocampusJSONControllerTest {
 		//GeocampusPoisByRegionAndCategoryJSONController ctrl = new GeocampusPoisByRegionAndCategoryJSONController(poiJSONClient);
 		//String n = null;
 		//final Pois p = poiClient.getPoisByRegionAndCategory("bretagne", null);
+		
 		/*
 		PoiCategory pc1 = poiCategoryDataSource.getByUid(1);
 		PoiCategory pc2 = poiCategoryDataSource.getLatest(pc1);
@@ -95,6 +101,7 @@ public class GeocampusJSONControllerTest {
 		System.out.println(pc2.getName());
 		System.out.println(pc2.getDescription());
 		*/
+		
 		/*
 		System.out.println(p.getGroups()[1].getPois()[0].getId());
 		System.out.println(p.getGroups()[1].getPois()[0].getName());
@@ -103,7 +110,7 @@ public class GeocampusJSONControllerTest {
 		*/
 		/*System.out.println(ctrl.actionJSON("test"));*/
 		//assertEquals(12880, ctrl.actionJSON("test").length());
-		System.out.println(poiJSONClient.getNearestPoisJSON(48.848627339149, 2.3430007696152, 100));		
+		//System.out.println(poiJSONClient.getNearestPoisJSON(48.848627339149, 2.3430007696152, 100));		
 	}
 
 	//@Test

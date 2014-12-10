@@ -13,6 +13,8 @@ import fr.univmobile.backend.core.ImageMapDataSource;
 import fr.univmobile.backend.core.PoiBuilder;
 import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.core.PoiDataSource;
+import fr.univmobile.backend.core.Region;
+import fr.univmobile.backend.core.RegionDataSource;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.TransactionException;

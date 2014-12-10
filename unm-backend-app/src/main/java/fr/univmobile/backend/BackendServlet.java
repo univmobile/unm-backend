@@ -31,6 +31,7 @@ import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
+import fr.univmobile.backend.admin.GeocampusJSONController;
 import fr.univmobile.backend.admin.GeocampusPoiManageJSONController;
 import fr.univmobile.backend.admin.GeocampusPoisByRegionAndCategoryJSONController;
 import fr.univmobile.backend.client.AbstractClientFromLocal;
@@ -38,6 +39,8 @@ import fr.univmobile.backend.client.CommentClient;
 import fr.univmobile.backend.client.CommentClientFromLocal;
 import fr.univmobile.backend.client.ImageMapClient;
 import fr.univmobile.backend.client.ImageMapClientFromLocal;
+import fr.univmobile.backend.client.PoiCategoryClient;
+import fr.univmobile.backend.client.PoiCategoryClientFromLocal;
 import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
 import fr.univmobile.backend.client.RegionClient;
@@ -48,6 +51,8 @@ import fr.univmobile.backend.client.json.CommentJSONClient;
 import fr.univmobile.backend.client.json.CommentJSONClientImpl;
 import fr.univmobile.backend.client.json.ImageMapJSONClient;
 import fr.univmobile.backend.client.json.ImageMapJSONClientImpl;
+import fr.univmobile.backend.client.json.PoiCategoryJSONClient;
+import fr.univmobile.backend.client.json.PoiCategoryJSONClientImpl;
 import fr.univmobile.backend.client.json.PoiJSONClient;
 import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.client.json.RegionJSONClient;
@@ -266,7 +271,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new PoisAddController(tx, pois, poisController, regions, poiCategories), //
 				new PoisModifyController(tx, pois, poisController, regions, poiCategories), //
 				new UserModifyController(tx, users, usersController, regions),
-				new CommentStatusController(tx, comments, commentsController));
+				new CommentStatusController(tx, comments, commentsController),
+				new GeocampusAdminController());
 
 		// 3. JSON CONTROLLERS
 
@@ -280,11 +286,16 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final PoiClient poiClient = new PoiClientFromLocal(baseURL, pois,
 				regions);
-		
+
+		final PoiCategoryClient poiCategoryClient = new PoiCategoryClientFromLocal(baseURL, poiCategories, regions);
+
 		final ImageMapClient imageMapClient = new ImageMapClientFromLocal(baseURL, imageMaps, pois);
 
 		final PoiJSONClient poiJSONClient = new PoiJSONClientImpl(poiClient);
+
+		final PoiCategoryJSONClient poiCategoryJSONClient = new PoiCategoryJSONClientImpl(poiCategoryClient);
 		
+
 		final ImageMapJSONClient imageMapJSONClient = new ImageMapJSONClientImpl(imageMapClient);
 
 		final CommentClient commentClient = new CommentClientFromLocal(baseURL,
@@ -330,7 +341,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new GeocampusPoisByRegionAndCategoryJSONController(poiJSONClient),
 				new GeocampusPoiManageJSONController(tx, pois, imageMaps),
 				new NearestPoisJSONController(poiJSONClient, nearestPoisMaxMetersAway),
-				new CommentsPostJSONController(comments, commentManager) 				
+				new CommentsPostJSONController(comments, commentManager), 				
+				new GeocampusJSONController(regionJSONClient, poiCategoryJSONClient, imageMapJSONClient, regions, imageMaps)				
 		};
 
 		for (final AbstractJSONController jsonController : jsonControllers) {
@@ -481,12 +493,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		}
 
 		final User user = users.getByRemoteUser(remoteUser);
-		
+
+		/* Fine grained need to allow somethings to users/anons
 		// Added by Mauricio
 		/*final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
 		if (user.getRole() == null || user.getRole().equals("student"))
 			UnivMobileHttpUtils
 			.sendError404(request, response, uriPath);*/
+		*/
 
 		LogQueueDbImpl.setPrincipal(user.getUid()); // TODO user? delegation?
 
