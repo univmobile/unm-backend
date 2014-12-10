@@ -9,21 +9,14 @@
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
 		<init-param>
 			<param-name>baseURL</param-name>
-<<<<<<< HEAD
-			<param-value>http://localhost:81/unm-backend/</param-value>
-=======
 			<param-value>http://localhost:8080/unm-backend/</param-value>
->>>>>>> origin/develop
 		</init-param>
 		<init-param>
 			<param-name>optional-jsonBaseURLs</param-name>
 			<param-value>
-<<<<<<< HEAD
 				http://localhost:81/unm-backend/json/
 				http://localhost:8080/unm-backend/json/
-=======
 				http://127.0.0.1:8080/unm-backend/json/
->>>>>>> origin/develop
 			</param-value>
 		</init-param>
 		<init-param>
@@ -69,6 +62,7 @@
 		<init-param>
 			<param-name>hosts.allow</param-name>
 			<param-value>
+				mauricioMOV
 				tomcat
 				cyborg.etherea
 				localhost
