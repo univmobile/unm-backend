@@ -5,7 +5,6 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import fr.univmobile.backend.admin.GeocampusPoiManageJSONController;
 import fr.univmobile.backend.core.Comment;
 import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
@@ -84,8 +83,6 @@ public class CommentStatusController extends AbstractBackendController {
 		lock.save(commentBuilder);
 
 		lock.commit();
-		
-		setAttribute("status", true);
 
 		return new View("comments_redirect.jsp");
 	}

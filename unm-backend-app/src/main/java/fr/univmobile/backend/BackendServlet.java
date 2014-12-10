@@ -483,10 +483,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final User user = users.getByRemoteUser(remoteUser);
 		
 		// Added by Mauricio
-		final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
+		/*final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
 		if (user.getRole() == null || user.getRole().equals("student"))
 			UnivMobileHttpUtils
-			.sendError404(request, response, uriPath);
+			.sendError404(request, response, uriPath);*/
 
 		LogQueueDbImpl.setPrincipal(user.getUid()); // TODO user? delegation?
 

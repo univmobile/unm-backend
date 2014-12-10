@@ -1,11 +1,8 @@
 package fr.univmobile.backend.json;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static org.apache.commons.lang3.CharEncoding.UTF_8;
-import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.io.IOException;
-import java.sql.SQLException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -15,7 +12,6 @@ import fr.univmobile.backend.core.CommentBuilder;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
 import fr.univmobile.backend.core.impl.LogQueueDbImpl;
-import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;

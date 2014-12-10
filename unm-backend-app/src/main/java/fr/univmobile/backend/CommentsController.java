@@ -5,6 +5,8 @@ import static org.apache.commons.lang3.StringUtils.substringAfter;
 
 import java.io.IOException;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -39,12 +41,6 @@ public class CommentsController extends AbstractBackendController {
 	private String getCommentsContext() {
 
 		return getPathStringVariable("${context}");
-	}
-
-	@PathVariable("${active}")
-	private String getCommentStatus() {
-
-		return getPathStringVariable("${active}");
 	}
 
 	private boolean hasCommentsContext() {
@@ -85,15 +81,6 @@ public class CommentsController extends AbstractBackendController {
 
 	@Override
 	public View action() throws Exception {
-
-		try {
-			
-			if (getAttribute("status", boolean.class) == true)
-				return mostRecentComments();
-			
-		} catch (Exception e) {
-
-		}
 
 		if (!hasCommentsContext()) {
 
@@ -138,8 +125,6 @@ public class CommentsController extends AbstractBackendController {
 			throw new PageNotFoundException();
 		}
 
-		System.out.println(poi.getName());
-
 		setAttribute("poi", poi);
 
 		// 2. COMMENTS
@@ -167,7 +152,7 @@ public class CommentsController extends AbstractBackendController {
 	private View mostRecentComments() throws SQLException, IOException,
 			ClientException {
 
-		final Comment[] comments;
+		final Comment[] clientComments;
 
 		final String context;
 
@@ -181,24 +166,36 @@ public class CommentsController extends AbstractBackendController {
 
 			context = "Query: " + q;
 
-			comments = getCommentClient().searchComments(q, 100);
+			clientComments = getCommentClient().searchComments(q, 100);
 
 		} else {
 
 			context = "Commentaires les plus récents";
 
-			comments = getCommentClient().getMostRecentComments(80);
+			clientComments = getCommentClient().getMostRecentComments(80);
 		}
 
-		// final Comment[] comments =
-		// getCommentClient().getMostRecentComments(80);
+		if (getDelegationUser().getRole().equals("admin")) {
 
-		setAttribute("comments", comments);
+			List<Comment> auxComments = new ArrayList<Comment>();
+
+			for (Comment c : clientComments) {
+				fr.univmobile.backend.core.Poi p = pois.getByUid(c
+						.getContextUid());
+				if (p.getUniversityIds().length > 0)
+					if (p.getUniversityIds()[0].equals(getDelegationUser()
+							.getPrimaryUniversity()))
+						auxComments.add(c);
+			}
+
+			setAttribute("comments", auxComments.toArray());
+		} else
+			setAttribute("comments", clientComments);
 
 		// 3. COMMENTS INFO
 
 		setAttribute("commentsInfo", DataBeans.instantiate(CommentsInfo.class)
-				.setContext(context).setResultCount(comments.length));
+				.setContext(context).setResultCount(clientComments.length));
 
 		// 9. END
 

@@ -2,8 +2,8 @@ package fr.univmobile.backend.core;
 
 import javax.annotation.Nullable;
 
-import fr.univmobile.commons.datasource.Entry;
 import net.avcompris.binding.annotation.XPath;
+import fr.univmobile.commons.datasource.Entry;
 
 public interface ImageMap extends Entry<ImageMap> {
 
@@ -37,7 +37,7 @@ public interface ImageMap extends Entry<ImageMap> {
 	 * Get all the pois of the map
 	 * @return
 	 */
-	@XPath("atom:content/poi[@active = 'true']")
+	@XPath("atom:content/poi")
 	PoiInfo[] getPoiInfos();
 
 	public interface PoiInfo {
@@ -50,10 +50,14 @@ public interface ImageMap extends Entry<ImageMap> {
 
 	}
 
-	/**
-	 * Flag if the image map is active globally 
-	 */
-	@XPath("atom:content/@active = 'true'")
-	boolean isActive();
-
+	// Author: Mauricio
+	@XPath("atom:content/@active")
+	String getActive();
+	
+	@XPath("atom:content/poi/@uid")
+	int getPoiInfoId();
+	
+	@XPath("atom:content/poi/@coordinates")
+	String getPoiInfoCoordinates();
+	
 }
