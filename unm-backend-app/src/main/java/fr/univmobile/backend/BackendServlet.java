@@ -56,8 +56,8 @@ import fr.univmobile.backend.client.json.SessionJSONClient;
 import fr.univmobile.backend.client.json.SessionJSONClientImpl;
 import fr.univmobile.backend.core.CommentDataSource;
 import fr.univmobile.backend.core.CommentManager;
-import fr.univmobile.backend.core.PoiCategoryDataSource;
 import fr.univmobile.backend.core.ImageMapDataSource;
+import fr.univmobile.backend.core.PoiCategoryDataSource;
 //import fr.univmobile.backend.core.CommentThreadDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
@@ -77,7 +77,6 @@ import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.backend.json.CommentsJSONController;
 import fr.univmobile.backend.json.CommentsPostJSONController;
 import fr.univmobile.backend.json.EndpointsJSONController;
-import fr.univmobile.backend.json.ImageMapJSONController;
 import fr.univmobile.backend.json.JsonHtmler;
 import fr.univmobile.backend.json.NearestPoisJSONController;
 import fr.univmobile.backend.json.PoisJSONController;
@@ -482,6 +481,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		}
 
 		final User user = users.getByRemoteUser(remoteUser);
+		
+		// Added by Mauricio
+		final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
+		if (user.getRole() == null || user.getRole().equals("student"))
+			UnivMobileHttpUtils
+			.sendError404(request, response, uriPath);
 
 		LogQueueDbImpl.setPrincipal(user.getUid()); // TODO user? delegation?
 

@@ -1,29 +1,16 @@
 package fr.univmobile.backend.admin;
 
-import static org.apache.commons.lang3.StringUtils.isBlank;
-import static org.apache.commons.lang3.StringUtils.substringAfter;
-import static org.apache.commons.lang3.StringUtils.substringBefore;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static com.google.common.base.Preconditions.checkNotNull;
-import static fr.univmobile.backend.json.AbstractJSONController.*;
-
 import java.io.File;
-import java.util.Map;
 
-import org.apache.commons.lang3.NotImplementedException;
-import org.eclipse.jdt.internal.compiler.ast.AssertStatement;
 import org.junit.Before;
 import org.junit.Test;
 
 import fr.univmobile.backend.client.ImageMapClient;
 import fr.univmobile.backend.client.ImageMapClientFromLocal;
-import fr.univmobile.backend.client.Poi;
 import fr.univmobile.backend.client.PoiCategoryClient;
 import fr.univmobile.backend.client.PoiCategoryClientFromLocal;
 import fr.univmobile.backend.client.PoiClient;
 import fr.univmobile.backend.client.PoiClientFromLocal;
-import fr.univmobile.backend.client.Pois;
 import fr.univmobile.backend.client.RegionClient;
 import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.json.ImageMapJSONClient;
@@ -35,14 +22,10 @@ import fr.univmobile.backend.client.json.PoiJSONClientImpl;
 import fr.univmobile.backend.client.json.RegionJSONClient;
 import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.core.ImageMapDataSource;
-import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.core.PoiCategoryDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.json.AbstractJSONController;
-import fr.univmobile.backend.json.RegionsJSONController;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
-import fr.univmobile.web.commons.AbstractController;
 
 public class GeocampusJSONControllerTest {
 

@@ -1,36 +1,15 @@
 package fr.univmobile.backend.admin;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-import static org.apache.commons.lang3.StringUtils.isBlank;
-import static org.apache.commons.lang3.StringUtils.substringAfter;
 
 import java.io.IOException;
-import java.text.NumberFormat;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.mockito.internal.matchers.And;
 
-import fr.univmobile.backend.client.json.ImageMapJSONClient;
-import fr.univmobile.backend.client.json.ImageMapJSONClientImpl;
-import fr.univmobile.backend.client.json.PoiCategoryJSONClient;
-import fr.univmobile.backend.client.json.RegionJSONClient;
-import fr.univmobile.backend.core.ImageMap;
-import fr.univmobile.backend.core.ImageMapDataSource;
 import fr.univmobile.backend.core.PoiBuilder;
-import fr.univmobile.backend.core.PoiCategory;
-import fr.univmobile.backend.core.PoiCategoryDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.Region;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.json.AbstractJSONBackendController;
 import fr.univmobile.backend.json.AbstractJSONController;
-import fr.univmobile.backend.json.CommentsJSONController;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.commons.tx.TransactionManager;
@@ -40,7 +19,6 @@ import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.Regexp;
-import fr.univmobile.web.commons.View;
 
 @Paths({ "json/admin/geocampus/poi/manage", "json/admin/geocampus/poi/manage/", "json/admin/poi/manage.json" })
 public class GeocampusPoiManageJSONController extends AbstractJSONController {

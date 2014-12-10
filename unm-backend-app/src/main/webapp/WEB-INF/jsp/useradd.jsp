@@ -113,18 +113,27 @@ $(function () {
       Type
    </th>
    <td>
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-	  <input type="radio" id="radio-type-admin" name="type" value="admin">
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-	  <input type="radio" id="radio-type-student" name="type" value="student" class="selected" checked>
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
+   
+      <c:choose>
+         <c:when test="${role eq 'admin'}">
+            <input disabled type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input disabled type="radio" id="radio-type-admin" name="type" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="type" value="student" class="selected" checked>
+            <label for="radio-type-student">Étudiant</label>
+         </c:when>
+         
+         <c:otherwise>
+            <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input type="radio" id="radio-type-admin" name="type" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="type" value="student" class="selected" checked>
+            <label for="radio-type-student">Étudiant</label>
+         </c:otherwise>
+      </c:choose>
+      
    </td>
 </tr>
 
@@ -193,7 +202,16 @@ $(function () {
          <c:forEach var="r" items="${regionsData}">
             <optgroup label="${r.label}">
                <c:forEach var="u" items="${r.universities}">
-                  <option value="${u.id}">${u.title}</option>
+                  <c:choose>
+                     <c:when test="${role eq 'admin'}">
+                        <c:if test="${userUnivId eq u.id}">
+                           <option value="${u.id}">${u.title}</option>
+                        </c:if>
+                     </c:when>
+                     <c:otherwise>
+                        <option value="${u.id}">${u.title}</option>   
+                     </c:otherwise>
+                  </c:choose>
                </c:forEach>
             </optgroup>
          </c:forEach>
@@ -210,7 +228,16 @@ $(function () {
             <c:forEach var="r" items="${regionsData}">
                <optgroup label="${r.label}">
                   <c:forEach var="u" items="${r.universities}">
-                     <option value="${u.id}">${u.title}</option>
+                     <c:choose>
+                        <c:when test="${role eq 'admin'}">
+                           <c:if test="${userUnivId eq u.id}">
+                              <option value="${u.id}">${u.title}</option>
+                           </c:if>
+                        </c:when>
+                        <c:otherwise>
+                           <option value="${u.id}">${u.title}</option>   
+                        </c:otherwise>
+                     </c:choose>
                   </c:forEach>
                </optgroup>
             </c:forEach>

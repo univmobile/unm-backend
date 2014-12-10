@@ -95,6 +95,14 @@ public class HomeController extends AbstractBackendController {
 			}
 
 			final User delegationUser = users.getByUid(delegationUid);
+			
+			if (delegationUser.getRole().equals("student")) {
+				
+				setAttribute("err_studentDelegationUid", true);
+				setAttribute("delegationUid", delegationUid);
+
+				return new View("home.jsp");
+			}
 
 			setSessionAttribute(DELEGATION_USER, delegationUser);
 
