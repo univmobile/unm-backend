@@ -556,7 +556,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		 */
 
 		LogQueueDbImpl.setPrincipal(user.getUsername()); // TODO user?
-															// delegation?
 
 		request.getSession().setAttribute("user", user);
 
