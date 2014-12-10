@@ -90,14 +90,22 @@ public class GeocampusJSONControllerTest {
 		//String n = null;
 		//final Pois p = poiClient.getPoisByRegionAndCategory("bretagne", null);
 		
+<<<<<<< HEAD
 		/*
+=======
+
+>>>>>>> Removed unused conflicting import
 		PoiCategory pc1 = poiCategoryDataSource.getByUid(1);
 		PoiCategory pc2 = poiCategoryDataSource.getLatest(pc1);
 		System.out.println(pc1.getName());
 		System.out.println(pc1.getDescription());
 		System.out.println(pc2.getName());
 		System.out.println(pc2.getDescription());
+<<<<<<< HEAD
 		*/
+=======
+
+>>>>>>> Removed unused conflicting import
 		
 		/*
 		System.out.println(p.getGroups()[1].getPois()[0].getId());
