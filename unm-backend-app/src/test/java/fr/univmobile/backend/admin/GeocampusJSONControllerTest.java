@@ -1,17 +1,11 @@
 package fr.univmobile.backend.admin;
-
-import static org.apache.commons.lang3.StringUtils.isBlank;
-import static org.apache.commons.lang3.StringUtils.substringAfter;
-import static org.apache.commons.lang3.StringUtils.substringBefore;
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
+/*
 import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.backend.json.AbstractJSONController.*;
-
+*/
 import java.io.File;
-import java.util.Map;
 
-import org.apache.commons.lang3.NotImplementedException;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -47,7 +41,7 @@ public class GeocampusJSONControllerTest {
 
 	@Before
 	public void setUp() throws Exception {
-
+		/*
 		regionsDataSource = BackendDataSourceFileSystem
 				.newDataSource(RegionDataSource.class, new File("src/test/data/regions/004"));
 
@@ -80,6 +74,7 @@ public class GeocampusJSONControllerTest {
 				"(dummy baseURL)", imageMapDataSource, poiDataSource);
 
 		imageMapJSONClient = new ImageMapJSONClientImpl(imageMapClient);
+		*/
 
 	}
 	
@@ -106,14 +101,14 @@ public class GeocampusJSONControllerTest {
 		//String n = null;
 		//final Pois p = poiClient.getPoisByRegionAndCategory("bretagne", null);
 		
-
+		/*
 		PoiCategory pc1 = poiCategoryDataSource.getByUid(1);
 		PoiCategory pc2 = poiCategoryDataSource.getLatest(pc1);
 		System.out.println(pc1.getName());
 		System.out.println(pc1.getDescription());
 		System.out.println(pc2.getName());
 		System.out.println(pc2.getDescription());
-
+		*/
 		
 		/*
 		System.out.println(p.getGroups()[1].getPois()[0].getId());

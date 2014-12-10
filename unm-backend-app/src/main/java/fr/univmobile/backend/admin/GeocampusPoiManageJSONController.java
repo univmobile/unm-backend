@@ -29,7 +29,6 @@ import fr.univmobile.backend.core.PoiCategoryDataSource;
 import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.core.Region;
 import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.json.AbstractJSONBackendController;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.backend.json.CommentsJSONController;
 import fr.univmobile.commons.tx.Lock;

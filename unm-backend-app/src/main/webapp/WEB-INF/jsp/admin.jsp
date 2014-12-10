@@ -56,7 +56,7 @@ Administration d’UnivMobile
 		<a id="link-regions" href="${baseURL}/regions/">Régions, universités</a>
 	<li class="clear">
 	<li class="flaticon icon-compass6">
-		<a id="link-geocampus" href="${baseURL}/geocampus/">Géocampus</a>
+		<a id="link-geocampus" href="${baseURL}/geocampus/admin/">Géocampus</a>
 	<li class="flaticon icon-rss9">
 		<a id="link-news" href="${baseURL}/news/">Fils d’actualités des universités</a>
 	<li class="flaticon icon-address7">
