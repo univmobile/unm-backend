@@ -9,12 +9,13 @@
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
 		<init-param>
 			<param-name>baseURL</param-name>
-			<param-value>https://univmobile-dev.univ-paris1.fr/testSP/</param-value>
+			<param-value>http://localhost:81/unm-backend/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>optional-jsonBaseURLs</param-name>
 			<param-value>
-				https://univmobile-dev.univ-paris1.fr/json/
+				http://localhost:81/unm-backend/json/
+				http://localhost:8080/unm-backend/json/
 			</param-value>
 		</init-param>
 		<init-param>
@@ -31,7 +32,7 @@
 		</init-param>
 		<init-param>
 			<param-name>pois.nearestMaxDistanceInMeters</param-name>
-			<param-value>1000</param-value>
+			<param-value>6000</param-value>
 		</init-param>
 		<init-param>
 			<param-name>shibboleth.ssoBaseURL</param-name>
@@ -54,16 +55,15 @@
 	
 		<!-- Use NoShibbolethFilter only when Shibboleth is not available (-it.) -->
 	<!-- It will crash on a production environment, with Shibboleth/HTTPS. -->
-	 
 	<filter>
 		<filter-name>NoShibbolethFilter</filter-name>
 		<filter-class>fr.univmobile.backend.noshib.NoShibbolethFilter</filter-class>
 		<init-param>
 			<param-name>hosts.allow</param-name>
 			<param-value>
-				mauricio-MOV
 				tomcat
 				cyborg.etherea
+				localhost
 				Davids-MacBook-Pro.local
 				mbpro.local
 				unm-ci
@@ -120,6 +120,14 @@
 	<servlet-mapping>
 		<servlet-name>PlainContentServlet</servlet-name>
 		<url-pattern>/img/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/fonts</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/fonts/*</url-pattern>
 	</servlet-mapping>
 
 	<resource-ref>
