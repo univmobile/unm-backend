@@ -61,6 +61,9 @@ public class UseraddController extends AbstractBackendController {
 		// 1. HTTP
 
 		final Useradd form = getHttpInputs(Useradd.class);
+		
+		setAttribute("role", getDelegationUser().getRole());
+		setAttribute("userUnivId", getDelegationUser().getPrimaryUniversity());
 
 		setAttribute("role", getDelegationUser().getRole());
 		setAttribute("userUnivId", getDelegationUser().getUniversity().getId());

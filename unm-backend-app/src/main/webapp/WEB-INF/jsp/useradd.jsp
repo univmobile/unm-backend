@@ -121,20 +121,36 @@ $(function () {
    
       <c:choose>
          <c:when test="${role eq 'admin'}">
+<<<<<<< HEAD
             <input disabled type="radio" id="radio-type-superadmin" name="role" value="superadmin">
             <label for="radio-type-superadmin">Super Administrateur</label>
             <input disabled type="radio" id="radio-type-admin" name="role" value="admin">
             <label for="radio-type-admin">Administrateur</label>
             <input type="radio" id="radio-type-student" name="role" value="student" class="selected" checked>
+=======
+            <input disabled type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input disabled type="radio" id="radio-type-admin" name="type" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="type" value="student" class="selected" checked>
+>>>>>>> Adjustments in screens of creation and modification of users
             <label for="radio-type-student">Étudiant</label>
          </c:when>
          
          <c:otherwise>
+<<<<<<< HEAD
             <input type="radio" id="radio-type-superadmin" name="role" value="superadmin">
             <label for="radio-type-superadmin">Super Administrateur</label>
             <input type="radio" id="radio-type-admin" name="role" value="admin">
             <label for="radio-type-admin">Administrateur</label>
             <input type="radio" id="radio-type-student" name="role" value="student" class="selected" checked>
+=======
+            <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input type="radio" id="radio-type-admin" name="type" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="type" value="student" class="selected" checked>
+>>>>>>> Adjustments in screens of creation and modification of users
             <label for="radio-type-student">Étudiant</label>
          </c:otherwise>
       </c:choose>

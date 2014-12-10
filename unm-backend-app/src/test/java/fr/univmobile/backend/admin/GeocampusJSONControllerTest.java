@@ -1,8 +1,5 @@
 package fr.univmobile.backend.admin;
-/*
-import static com.google.common.base.Preconditions.checkNotNull;
-import static fr.univmobile.backend.json.AbstractJSONController.*;
-*/
+
 import java.io.File;
 import org.junit.Before;
 import org.junit.Test;
