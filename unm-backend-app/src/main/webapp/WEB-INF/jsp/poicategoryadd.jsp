@@ -93,7 +93,7 @@ label.checkbox-parentUid {
       </tr>
       
       <tr>
-         <th>Est-il actif?</th>
+         <th>Catégorie active ?</th>
          <td>
             <input class="checkbox" type="checkbox" id="checkbox-active" name="active" value="yes">
             <label for="checkbox-active"></label>
@@ -101,13 +101,13 @@ label.checkbox-parentUid {
       </tr>
       
       <tr>
-         <th>ParentUid</th>
+         <th>Parent Uid</th>
          <td>
          <select id="select-parentUid" name="parentUid">
             <option value="(aucune)">(aucune)</option>
             <c:forEach var="pc" items="${poicategories}">
                <option value="${pc.uid}">
-                  ${pc.uid}
+                  ${pc.name} (uid : ${pc.uid})
                </option>
             </c:forEach>
          </select>   
