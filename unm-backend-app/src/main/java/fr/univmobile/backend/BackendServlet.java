@@ -496,10 +496,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		/* Fine grained need to allow somethings to users/anons
 		// Added by Mauricio
-		final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
+		/*final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
 		if (user.getRole() == null || user.getRole().equals("student"))
 			UnivMobileHttpUtils
-			.sendError404(request, response, uriPath);
+			.sendError404(request, response, uriPath);*/
 		*/
 
 		LogQueueDbImpl.setPrincipal(user.getUid()); // TODO user? delegation?
