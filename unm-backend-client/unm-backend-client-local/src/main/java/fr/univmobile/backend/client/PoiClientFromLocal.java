@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
@@ -21,6 +23,7 @@ import java.util.TreeSet;
 import javax.annotation.Nullable;
 import javax.inject.Inject;
 
+import org.apache.commons.lang3.ArrayUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -242,25 +245,30 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 
 	@Override
 	public MutablePois getPoisByRegion(String regionUid) throws IOException {
-		return getPoisPerRegionAndCategory(regionUid, null);
+		return getPoisPerRegionAndCategory(regionUid, null, null, null, false);
 	}
 
 	@Override
 	public MutablePois getPoisByCategory(int categoryId) throws IOException {
-		return getPoisPerRegionAndCategory(null, categoryId);
+		return getPoisPerRegionAndCategory(null, categoryId, null, null, false);
 	}
 
 	@Override
 	public MutablePois getPoisByRegionAndCategory(String regionUid, Integer categoryId) throws IOException {
-		return getPoisPerRegionAndCategory(regionUid, categoryId);
+		return getPoisPerRegionAndCategory(regionUid, categoryId, null, null, false);
+	}
+
+	@Override
+	public MutablePois getPoisByRegionAndCategory(String regionUid, Integer categoryId, int[] excludeCategories, String filterByUniversity, boolean completeWholeTree) throws IOException {
+		return getPoisPerRegionAndCategory(regionUid, categoryId, excludeCategories, filterByUniversity, completeWholeTree);
 	}
 
 	@Override
 	public MutablePois getPois() throws IOException {
-		return getPoisPerRegionAndCategory(null, null);
+		return getPoisPerRegionAndCategory(null, null, null, null, false);
 	}
 
-	private MutablePois getPoisPerRegionAndCategory(String filterRegionUid, Integer filterCategoryId) throws IOException {
+	private MutablePois getPoisPerRegionAndCategory(String filterRegionUid, Integer filterCategoryId, int[] excludeCategories, String filterByUniversity, boolean completeWholeTree) throws IOException {
 
 		log.debug("getPois()...");
 
@@ -308,18 +316,25 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 
 		final Map<Integer, fr.univmobile.backend.core.Poi> allPois = poiDataSource
 				.getAllBy(Integer.class, "uid");
+		
 		final List<fr.univmobile.backend.core.Poi> myPois = new ArrayList<fr.univmobile.backend.core.Poi>();
 		for (final Integer uid : new TreeSet<Integer>(allPois.keySet())) {
 			fr.univmobile.backend.core.Poi tmpPoi = allPois.get(uid);
-			if (filterCategoryId == null) {
-				myPois.add(tmpPoi);
-			} else {
-				if (tmpPoi.getCategoryId() == filterCategoryId) {				
+			
+			if (complyWithUniversity(tmpPoi, filterByUniversity) && !isInCategories(tmpPoi, excludeCategories)) {
+				if (filterCategoryId == null) {
 					myPois.add(tmpPoi);
+				} else {
+					if (tmpPoi.getCategoryId() == filterCategoryId) {				
+						myPois.add(tmpPoi);
+					}
 				}
 			}
 		}
 
+		Map<Integer, fr.univmobile.backend.core.Poi> alreadySelectedPois = new HashMap<Integer, fr.univmobile.backend.core.Poi>();
+		Set<Integer> startingPoiIds = new HashSet<Integer>();
+		
 		for (final fr.univmobile.backend.core.Region dsRegion : sortedSet) {
 
 			final MutablePoiGroup poiGroup = DataBeans //
@@ -365,6 +380,12 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 						markerIndex = (markerIndex + 1) % 26;
 
 						poiGroup.addToPois(poi);
+						if (completeWholeTree) {
+							alreadySelectedPois.put(p.getUid(), p);
+							if (p.getParentUid() != 0 && p.getParentUid() != p.getUid()) {
+								startingPoiIds.add(p.getParentUid());
+							}
+						}
 					}
 				}
 			}
@@ -376,10 +397,65 @@ public class PoiClientFromLocal extends AbstractClientFromLocal implements
 
 			pois.addToGroups(poiGroup);
 		}
+		
+		if (completeWholeTree) {
+			pois.addToGroups(fillWholeTree(startingPoiIds, allPois, alreadySelectedPois));
+		}
 
 		return pois;
 	}
 
+	private boolean complyWithUniversity(fr.univmobile.backend.core.Poi poi, String universityId) {
+		return universityId == null || Arrays.asList(poi.getUniversityIds()).contains(universityId);
+	}
+	
+	private boolean isInCategories(fr.univmobile.backend.core.Poi poi, int[] categories) {
+		if (categories != null) {
+			for (int i = 0; i < categories.length; i++) {
+				if (poi.getCategoryId() == categories[i]) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+	
+	private MutablePoiGroup fillWholeTree(Set<Integer> startingPoiIds, 
+			Map<Integer, fr.univmobile.backend.core.Poi> allPois, 
+			Map<Integer, fr.univmobile.backend.core.Poi> alreadySelectedPois) {
+		
+		Map<Integer, fr.univmobile.backend.core.Poi> filled = new HashMap<Integer, fr.univmobile.backend.core.Poi>();
+		int currentId;
+		fr.univmobile.backend.core.Poi currentPoi;
+		
+		for (Integer uid : startingPoiIds) {
+			currentId = uid;
+			while (currentId != 0) {
+				currentPoi = allPois.get(currentId);
+				if (!alreadySelectedPois.containsKey(currentId)) {
+					filled.put(currentId, currentPoi);
+				}
+				currentId = currentPoi.getParentUid();
+			}
+		}
+		
+		
+		MutablePoi poi;
+		fr.univmobile.backend.core.Poi dsPoi;
+		MutablePoiGroup poiGroup = DataBeans.instantiate(MutablePoiGroup.class).setGroupLabel("filledTree");
+		
+		Iterator<fr.univmobile.backend.core.Poi> filledIter = filled.values().iterator();
+		while (filledIter.hasNext()) {
+			dsPoi = poiDataSource.getByUid(filledIter.next().getUid());
+			poi = createPoiFromData(dsPoi);
+			//poi.setRegion(dsRegion.getUid());
+			poi.setMarkerType("green");
+			poi.setMarkerIndex("A");
+			poiGroup.addToPois(poi);
+		}
+		return poiGroup;
+	}
+	
 	@Nullable
 	private MutablePoi createPoiFromData(
 			final fr.univmobile.backend.core.Poi dsPoi) {

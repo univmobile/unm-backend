@@ -70,6 +70,15 @@ public class PoiJSONClientImpl implements PoiJSONClient {
 	}
 
 	@Override
+	public String getPoisByRegionAndCategoryJSON(String regionId, Integer categoryId, int[] excludeCategories, String filterByUniversity, boolean completeWholeTree) throws IOException {
+		log.debug("getPoisByCategoryJSON()...");
+
+		final Pois p = poiClient.getPoisByRegionAndCategory(regionId, categoryId, excludeCategories, filterByUniversity, completeWholeTree);
+
+		return poisJSON(p);
+	}
+	
+	@Override
 	public String getNearestPoisJSON(double lat, double lon, double metersAway)
 			throws IOException {
 		log.debug("getNearestPoisJSON()...");

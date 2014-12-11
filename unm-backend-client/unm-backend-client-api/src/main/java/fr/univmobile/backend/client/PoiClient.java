@@ -15,6 +15,8 @@ public interface PoiClient {
 	Pois getPoisByCategory(int categoryId) throws IOException;
 	
 	Pois getPoisByRegionAndCategory(String regionId, Integer categoryId) throws IOException;
+	
+	Pois getPoisByRegionAndCategory(String regionUid, Integer categoryId, int[] excludeCategories, String filterByUniversity, boolean completeWholeTree) throws IOException;
 
 	Pois getNearestPois(double lat, double lon, double metersAway) throws IOException;
 }

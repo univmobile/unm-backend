@@ -13,6 +13,8 @@ public interface PoiJSONClient {
 	String getPoisByCategoryJSON(int categoryId) throws IOException;
 
 	String getPoisByRegionAndCategoryJSON(String regionId, Integer categoryId) throws IOException;
+
+	String getPoisByRegionAndCategoryJSON(String regionId, Integer categoryId, int[] excludeCategories, String filterByUniversity, boolean completeWholeTree) throws IOException;
 	
 	String getNearestPoisJSON(double lat, double lon, double metersAway) throws IOException;
 }
