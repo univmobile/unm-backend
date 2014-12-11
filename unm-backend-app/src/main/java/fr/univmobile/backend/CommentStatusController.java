@@ -75,6 +75,8 @@ public class CommentStatusController extends AbstractBackendController {
 		commentBuilder.setPostedBy(comment.getPostedBy());
 		commentBuilder.setTitle(comment.getTitle());
 		commentBuilder.setUid(comment.getUid());
+		commentBuilder.setContextUid(comment.getContextUid());
+		
 		if (comment.getActive().equals("false"))
 			commentBuilder.setActive("true");
 		else
