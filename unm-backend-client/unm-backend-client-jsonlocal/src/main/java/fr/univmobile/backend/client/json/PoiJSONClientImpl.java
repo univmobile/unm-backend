@@ -146,7 +146,8 @@ public class PoiJSONClientImpl implements PoiJSONClient {
 						.put("email", poi.getEmail()) //
 						.put("url", poi.getUrl()) //
 						.put("markerType", poi.getMarkerType()) //
-						.put("markerIndex", poi.getMarkerIndex());
+						.put("markerIndex", poi.getMarkerIndex())
+						.put("university", (poi.getUniversityIds() != null && poi.getUniversityIds().length > 0) ? poi.getUniversityIds()[0] : null);
 
 				if (poi.getParentUid() != null)
 					map.put("parentUid", poi.getParentUid());

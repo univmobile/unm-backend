@@ -211,6 +211,10 @@ var DataSource = function(baseUrl) {
                     addNode(myViewModel.activePoi().id(), myViewModel.activePoi().name(), myViewModel.activePoi());
                 }
                 selectNode(myViewModel.activePoi(), true);
+                // force KO pois refresh if there where no nodes (KO bug?)
+                if (myViewModel.pois().length == 1) {
+                    myViewModel.pois.valueHasMutated();
+                }
             })
             .fail(function( data ) {
                 alert( "Data error: " + data );
