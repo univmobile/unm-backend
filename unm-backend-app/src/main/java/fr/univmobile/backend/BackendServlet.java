@@ -500,7 +500,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		if (user.getRole() == null || user.getRole().equals("student"))
 			UnivMobileHttpUtils
 			.sendError404(request, response, uriPath);*/
-		*/
 
 		LogQueueDbImpl.setPrincipal(user.getUid()); // TODO user? delegation?
 

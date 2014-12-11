@@ -14,10 +14,6 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>fr.univmobile</groupId>			
-			<artifactId>unm-backend-filter-noshib</artifactId>
-		</dependency>	
-		<dependency>
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-backend-core</artifactId>
 		</dependency>
