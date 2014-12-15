@@ -53,11 +53,5 @@ public interface ImageMap extends Entry<ImageMap> {
 	// Author: Mauricio
 	@XPath("atom:content/@active")
 	String getActive();
-	
-	@XPath("atom:content/poi/@uid")
-	int getPoiInfoId();
-	
-	@XPath("atom:content/poi/@coordinates")
-	String getPoiInfoCoordinates();
-	
+
 }

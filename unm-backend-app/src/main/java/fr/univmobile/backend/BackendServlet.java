@@ -271,7 +271,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new PoisAddController(tx, pois, poisController, regions, poiCategories), //
 				new PoisModifyController(tx, pois, poisController, regions, poiCategories), //
 				new UserModifyController(tx, users, usersController, regions),
-				new CommentStatusController(tx, comments, commentsController),
+				new CommentStatusController(tx, comments),
 				new GeocampusAdminController());
 
 		// 3. JSON CONTROLLERS
@@ -500,7 +500,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		if (user.getRole() == null || user.getRole().equals("student"))
 			UnivMobileHttpUtils
 			.sendError404(request, response, uriPath);*/
-		*/
 
 		LogQueueDbImpl.setPrincipal(user.getUid()); // TODO user? delegation?
 

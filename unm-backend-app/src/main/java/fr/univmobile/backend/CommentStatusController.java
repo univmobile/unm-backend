@@ -24,19 +24,16 @@ public class CommentStatusController extends AbstractBackendController {
 	}
 
 	public CommentStatusController(final TransactionManager tx,
-			final CommentDataSource comments,
-			final CommentsController commentsController) {
+			final CommentDataSource comments) {
 
 		this.comments = checkNotNull(comments, "comments");
-		this.commentsController = checkNotNull(commentsController,
-				"commentsController");
 		this.tx = checkNotNull(tx, "tx");
 	}
 
-	private static final Log log = LogFactory.getLog(CommentStatusController.class);
-	
+	private static final Log log = LogFactory
+			.getLog(CommentStatusController.class);
+
 	private final CommentDataSource comments;
-	private final CommentsController commentsController;
 	private final TransactionManager tx;
 
 	@Override
@@ -45,7 +42,7 @@ public class CommentStatusController extends AbstractBackendController {
 		// COMMENT
 
 		final Comment comment = comments.getByUid(getCommentUid());
-
+		
 		final Integer uid = comment.getUid();
 
 		final Lock lock = tx.acquireLock(5000, "comments", uid);
@@ -64,8 +61,10 @@ public class CommentStatusController extends AbstractBackendController {
 
 		// COMMENT BUILDER
 
-		final CommentBuilder commentBuilder = comments.create();
+		final CommentBuilder commentBuilder = comments.update(comments
+				.getByUid(getCommentUid()));
 
+		commentBuilder.setUid(comment.getUid());
 		commentBuilder.setAuthorName(comment.getAuthorName());
 		commentBuilder.setId(comment.getId());
 		commentBuilder.setLocalRevfile(comment.getLocalRevfile());
@@ -74,12 +73,11 @@ public class CommentStatusController extends AbstractBackendController {
 		commentBuilder.setPostedAt(comment.getPostedAt());
 		commentBuilder.setPostedBy(comment.getPostedBy());
 		commentBuilder.setTitle(comment.getTitle());
-		commentBuilder.setUid(comment.getUid());
 		if (comment.getActive().equals("false"))
 			commentBuilder.setActive("true");
 		else
 			commentBuilder.setActive("false");
-
+		
 		lock.save(commentBuilder);
 
 		lock.commit();

@@ -62,7 +62,7 @@
 		<init-param>
 			<param-name>hosts.allow</param-name>
 			<param-value>
-				mauricioMOV
+				mauricio-MOV
 				tomcat
 				cyborg.etherea
 				localhost

@@ -203,9 +203,13 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 		MutableComment setAuthorDisplayName(@Nullable String phone);
 
 		MutableComment setFloor(@Nullable String floor);
+
+		// Author: Mauricio (begin)
 		
-		// Author: Mauricio
 		MutableComment setActive(String active);
+
 		MutableComment setContextUid(int contextUid);
+		
+		// Author: Mauricio (end)
 	}
 }
