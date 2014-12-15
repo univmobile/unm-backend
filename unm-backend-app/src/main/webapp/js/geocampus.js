@@ -148,18 +148,23 @@ var DataSource = function(baseUrl) {
             var regionId = filters.region && filters.region.id ? filters.region.id : 'all';
             var categoryId = filters.category && filters.category.id ? filters.category.id : 0;
             if (regionId != 'all' || categoryId != 0) {
-                var serviceUrl = this.getFullPath('json/admin/geocampus/filter/' + type);
-                $.getJSON( serviceUrl, { reg: regionId, cat: categoryId } )
+                var serviceUrl = this.getFullPath('json/admin/geocampus/filter');
+                $.getJSON( serviceUrl, { type: type, reg: regionId, cat: categoryId } )
                     .done(function( json ) {
                         var localPois = [];
-                        var jsonPois = json.groups && json.groups.length > 0 && json.groups[0].pois ? json.groups[0].pois : [];
-                        for (var i in jsonPois) {
-                            var sanitizePoi = jsonPois[i];
-                            var coords = jsonPois[i].coordinates && jsonPois[i].coordinates.length > 0 ? jsonPois[i].coordinates.split(',') : null;
-                            sanitizePoi.lat = coords ? coords[0] : null;
-                            sanitizePoi.lng = coords ? coords[1] : null;
-                            localPois.push(new Poi(sanitizePoi));
-                        }                    
+                        if (json.groups && json.groups.length > 0) {
+                            for (var gr = 0; gr < json.groups.length; gr++) {
+                                var jsonPois = json.groups[gr].pois ? json.groups[gr].pois : [];
+                                for (var i in jsonPois) {
+                                    var sanitizePoi = jsonPois[i];
+                                    var coords = jsonPois[i].coordinates && jsonPois[i].coordinates.length > 0 ? jsonPois[i].coordinates.split(',') : null;
+                                    sanitizePoi.lat = coords ? coords[0] : null;
+                                    sanitizePoi.lng = coords ? coords[1] : null;
+                                    localPois.push(new Poi(sanitizePoi));
+                                }
+                            }
+                        }
+                        
                         myViewModel.pois(localPois); // FIXME: Dependency
                     })
                     .fail(function( jqxhr, textStatus, error ) {
@@ -200,12 +205,16 @@ var DataSource = function(baseUrl) {
             .done(function( data ) {
                 var isNew = myViewModel.activePoi().isNew();
                 myViewModel.activePoi().commit();
+                closePoiModal();
                 if (isNew) {
                     myViewModel.pois().push(myViewModel.activePoi());
                     addNode(myViewModel.activePoi().id(), myViewModel.activePoi().name(), myViewModel.activePoi());
                 }
                 selectNode(myViewModel.activePoi(), true);
-                closePoiModal();
+                // force KO pois refresh if there where no nodes (KO bug?)
+                if (myViewModel.pois().length == 1) {
+                    myViewModel.pois.valueHasMutated();
+                }
             })
             .fail(function( data ) {
                 alert( "Data error: " + data );

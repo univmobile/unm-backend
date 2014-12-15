@@ -180,6 +180,9 @@ public class CommentsController extends AbstractBackendController {
 			List<Comment> auxComments = new ArrayList<Comment>();
 
 			for (Comment c : clientComments) {
+				if (log.isDebugEnabled()) {
+					log.debug(String.format("Comment: %s - CtxUid: %s - Other: %s", c.getId(), c.getContextUid(), c.getAuthorUsername()));
+				}
 				fr.univmobile.backend.core.Poi p = pois.getByUid(c
 						.getContextUid());
 				if (p.getUniversityIds().length > 0)

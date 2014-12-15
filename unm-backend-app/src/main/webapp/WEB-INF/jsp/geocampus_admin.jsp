@@ -107,10 +107,7 @@
               <li role="presentation" data-bind="css: { active: activeTab() == 'images' }"><a href="#" data-bind="click: function(data, event) { switchTab('images') }">Images</a></li>-->
             </ul>
             <p></p>
-            <p data-bind="visible: pois().length == 0">
-                S&eacute;lectionnez une r&eacute;gion et une cat&eacute;gorie pour voir POI connexes
-            </p>
-            <div class="panel panel-default" data-bind="visible: pois().length > 0">
+            <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="btn-toolbar" role="toolbar">
                         <div class="btn-group  btn-group-xs pull-right" role="group">
@@ -121,7 +118,10 @@
                     </div>
                 </div>
                 <div class="panel-body">
-                    <div id="jstree1">
+                    <p data-bind="visible: pois().length == 0">
+                        S&eacute;lectionnez une r&eacute;gion et une cat&eacute;gorie pour voir POI connexes
+                    </p>
+                    <div id="jstree1" data-bind="visible: pois().length > 0">
                         <ul data-bind="template: { name: 'treenode-template', foreach: pois }"></ul>
                     </div>
                 </div>
@@ -137,7 +137,7 @@
                 <li><a href="#" data-bind="text: name, click: $parent.changeCategoryUniversities"></a></li>
               </ul>
             </div>
-            <div class="btn-group pull-right" data-bind="visible: activeTab() == 'bonplans'">
+            <div class="btn-group pull-right" data-bind="visible: activeTab() == 'bonplansDisabled'">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 Cat&eacute;gorie <span class="caret"></span>
               </button>
@@ -154,8 +154,8 @@
               </ul>
             </div>
             
-          <h1 class="page-header">POIs <small data-bind="text: activeRegion().label"></small><small data-bind="visible: activeRegion().label">&nbsp;</small><small data-bind="visible: activeTab() == 'pois', text: activeCategoryUniversities().name"></small><small data-bind="visible: activeTab() == 'bonplans', text: activeCategoryBonplans().name"></small></h1>
-
+          <h1 class="page-header text-left">POIs <small data-bind="text: activeRegion().label"></small><small data-bind="visible: activeRegion().label">&nbsp;</small><small data-bind="visible: activeTab() == 'pois', text: activeCategoryUniversities().name"></small><small data-bind="visible: activeTab() == 'bonplans', text: activeCategoryBonplans().name"></small></h1>
+            
           <div class="row placeholders">
               <div id="map_canvas"></div>
           </div>
