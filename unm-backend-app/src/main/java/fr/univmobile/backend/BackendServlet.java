@@ -30,14 +30,9 @@ import javax.sql.DataSource;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-<<<<<<< Upstream, based on origin/develop
-import org.springframework.beans.factory.annotation.Autowired;
-
-=======
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
->>>>>>> 47ac2d8 Merging with initial JPA entities implementation. Web App, Servlets adjustments to work with JPA. Session user related changes to support JPA. Temporary broken commit
 import fr.univmobile.backend.admin.GeocampusJSONController;
 import fr.univmobile.backend.admin.GeocampusPoiManageJSONController;
 import fr.univmobile.backend.admin.GeocampusPoisByRegionAndCategoryJSONController;
