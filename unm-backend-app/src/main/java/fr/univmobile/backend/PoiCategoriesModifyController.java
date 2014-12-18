@@ -3,7 +3,10 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+<<<<<<< HEAD
 import static org.apache.commons.lang3.StringUtils.isBlank;
+=======
+>>>>>>> Beginning of the implementation of the persistence in a relational
 
 import javax.annotation.Nullable;
 

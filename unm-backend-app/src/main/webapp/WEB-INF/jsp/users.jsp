@@ -206,12 +206,15 @@ body.results td.roles.superadmin {
 
 <div class="table bottom">
    <c:choose>
+      
       <c:when test="${role eq 'student'}">
          <a>Ajouter un utilisateur…</a>
       </c:when>
+      
       <c:otherwise>
          <a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
       </c:otherwise>
+   
    </c:choose>
 </div>
 

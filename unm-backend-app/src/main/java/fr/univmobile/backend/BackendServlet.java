@@ -107,6 +107,21 @@ import fr.univmobile.web.commons.UnivMobileHttpUtils;
 
 public final class BackendServlet extends AbstractUnivMobileServlet {
 
+	@Autowired
+	CategoryRepository categoryRepository;
+	@Autowired
+	CommentRepository commentRepository;
+	@Autowired
+	ImageMapRepository imageMapRepository;
+	@Autowired
+	PoiRepository poiRepository;
+	@Autowired
+	RegionRepository regionRepository;
+	@Autowired
+	UniversityRepository universityRepository;
+	@Autowired
+	UserRepository userRepository;
+
 	/**
 	 * for serialization.
 	 */
