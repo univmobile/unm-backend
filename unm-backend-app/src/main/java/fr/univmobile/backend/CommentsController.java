@@ -187,7 +187,7 @@ public class CommentsController extends AbstractBackendController {
 						.getContextUid());
 				if (p.getUniversityIds().length > 0)
 					if (p.getUniversityIds()[0].equals(getDelegationUser()
-							.getPrimaryUniversity()))
+							.getUniversity()))
 						auxComments.add(c);
 			}
 

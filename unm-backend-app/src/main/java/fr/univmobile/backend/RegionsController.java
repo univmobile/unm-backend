@@ -37,9 +37,9 @@ public class RegionsController extends AbstractBackendController {
 			final Region bretagne;
 			final Region unrpcl;
 
-			ile_de_france = regionRepository.findOne("ile_de_france");
-			bretagne = regionRepository.findOne("bretagne");
-			unrpcl = regionRepository.findOne("unrpcl");
+			ile_de_france = regionRepository.findByLabel("ile_de_france");
+			bretagne = regionRepository.findByLabel("bretagne");
+			unrpcl = regionRepository.findByLabel("unrpcl");
 
 			if (!ile_de_france.getLabel().equals(ur.region_ile_de_france())) {
 				ile_de_france.setLabel(ur.region_ile_de_france());

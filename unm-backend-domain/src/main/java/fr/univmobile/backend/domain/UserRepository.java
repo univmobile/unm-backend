@@ -1,11 +1,10 @@
 package fr.univmobile.backend.domain;
 
-import java.util.List;
-
 import org.springframework.data.repository.CrudRepository;
 
-public interface UserRepository extends CrudRepository<User, String> {
+public interface UserRepository extends CrudRepository<User, Long> {
 	
-	List<User> findByRemoteUser(String remoteUser);
+	User findByRemoteUser(String remoteUser);
+	User findByUsername(String username);
 
 }

@@ -109,6 +109,7 @@ public class SessionThroughJSONTest {
 		when(twitter.getUsersShow_byUserId(3)).thenReturn(
 				twitterUser(3, "loulou", "Loulou"));
 
+		/*
 		sessionManager = new SessionManagerImpl(logQueue, users, H2, cxn);
 
 		final SessionClient sessionClient = new SessionClientFromLocal(
@@ -120,6 +121,7 @@ public class SessionThroughJSONTest {
 		client = new SessionClientFromJSON(sessionJSONClient);
 
 		LogQueueDbImpl.setAnonymous();// Principal(null); // "crezvani");
+		*/
 	}
 
 	private SessionManager sessionManager;
@@ -206,7 +208,7 @@ public class SessionThroughJSONTest {
 
 		when(user.getUid()).thenReturn("tformica");
 
-		sessionManager.updateLoginConversation(loginToken, user);
+		//sessionManager.updateLoginConversation(loginToken, user);
 
 		final AppToken appToken = client.retrieve(API_KEY, loginToken, key);
 
@@ -227,7 +229,7 @@ public class SessionThroughJSONTest {
 
 		when(user.getUid()).thenReturn("crezvani");
 
-		sessionManager.updateLoginConversation(loginToken, user);
+		//sessionManager.updateLoginConversation(loginToken, user);
 
 		final AppToken appToken = client.retrieve(API_KEY, loginToken, key);
 

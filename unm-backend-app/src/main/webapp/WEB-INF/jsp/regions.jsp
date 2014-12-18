@@ -22,9 +22,9 @@
 <jsp:include page="ul-adminMenu.h.jsp"/>
 
 <ul id="ul-adminUser">
-   <li> Principal : ${user.id}
-      <c:if test="${user.id != delegationUser.uid}">
-         <li> Délégation : ${delegationUser.uid}
+   <li> Principal : ${user.username}
+      <c:if test="${user.id != delegationUser.id}">
+         <li> Délégation : ${delegationUser.username}
       </c:if>
    <li id="li-logout"> <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
 </ul>

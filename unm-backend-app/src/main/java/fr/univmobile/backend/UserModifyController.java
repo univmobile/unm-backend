@@ -27,9 +27,9 @@ import fr.univmobile.web.commons.View;
 public class UserModifyController extends AbstractBackendController {
 
 	@PathVariable("${id}")
-	private String getUserId() {
+	private long getUserId() {
 
-		return getPathStringVariable("${id}");
+		return getPathIntVariable("${id}");
 	}
 
 	public UserModifyController(final UserRepository userRepository,
@@ -76,7 +76,7 @@ public class UserModifyController extends AbstractBackendController {
 		final Usermodify form = getHttpInputs(Usermodify.class);
 
 		setAttribute("role", getDelegationUser().getRole());
-		setAttribute("userUnivId", getDelegationUser().getPrimaryUniversity());
+		setAttribute("userUnivId", getDelegationUser().getUniversity());
 
 		if (!form.isHttpValid()) {
 
@@ -210,10 +210,10 @@ public class UserModifyController extends AbstractBackendController {
 		String username();
 
 		@HttpParameter
-		String primaryUniversity();
+		Long primaryUniversity();
 
 		@HttpParameter
-		String secondaryUniversity();
+		Long secondaryUniversity();
 
 		@HttpParameter
 		String description();

@@ -41,7 +41,7 @@ public class RegionRepositoryTest {
 		*/
 		repository.save(r);
 
-		Region dbregion = repository.findOne("ile_de_france");
+		Region dbregion = repository.findByLabel("ile_de_france");
 		assertNotNull(dbregion);
 		/*
 		for (University u: dbregion.getUniversities())

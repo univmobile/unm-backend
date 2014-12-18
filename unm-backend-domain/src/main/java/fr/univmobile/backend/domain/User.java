@@ -38,6 +38,7 @@ public class User extends AuditableEntity {
 	@Column(name = "twitterscreenname")
 	private String twitterScreenName;
 	@ManyToOne
+	@JoinColumn(nullable = false)
 	private University university;
 	@ManyToOne
 	@JoinColumn(name = "secondaryuniversity_id")

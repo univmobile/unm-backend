@@ -23,7 +23,7 @@ td a:active {
 
 th.id,
 td.id {
-	display: none;
+	/*display: none;*/
 }
 
 body.results td.roles {
@@ -144,23 +144,23 @@ body.results td.roles.superadmin {
    <td class="none">
       <c:choose>
       
-      <c:when test="${user.uid == u.id}">
+      <c:when test="${user.id == u.id}">
          <div class='principal 
-         <c:if test="${delegationUser.uid == u.id}">
+         <c:if test="${delegationUser.id == u.id}">
             delegation
          </c:if>'
-         title="Principal : ${user.uid}">1</div>
+         title="Principal : ${user.username}">1</div>
       </c:when>
       
-      <c:when test="${delegationUser.uid == u.id}">
-         <div class="delegation" title="Délégation : ${delegationUser.uid}">2</div>
+      <c:when test="${delegationUser.id == u.id}">
+         <div class="delegation" title="Délégation : ${delegationUser.username}">2</div>
       </c:when>
       
       </c:choose>
    </td>
    
    <td class="id">
-      ${u.id}
+      ${u.username}
    </td>
    
    <c:choose>

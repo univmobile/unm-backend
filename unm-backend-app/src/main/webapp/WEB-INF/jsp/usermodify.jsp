@@ -145,13 +145,13 @@ td span.error {
       <select id="select-titleCivilite" name="titleCivilite">
          <c:choose>
          
-            <c:when test="${usermodify.titleCivilite eq 'aucune'}">
+            <c:when test="${usermodify.title eq 'aucune'}">
                <option value="aucune" selected>(aucune)</option>
                <option value="Mme">Mᵐᵉ</option>
                <option value="M.">M.</option>
             </c:when>
             
-            <c:when test="${usermodify.titleCivilite eq 'Mme'}">
+            <c:when test="${usermodify.title eq 'Mme'}">
                <option value="aucune">(aucune)</option>
                <option value="Mme" selected>Mᵐᵉ</option>
                <option value="M.">M.</option>

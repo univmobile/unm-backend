@@ -23,7 +23,7 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 	@PathVariable("${id}")
 	private long getPoiCategoryId() {
 
-		return getPathLongVariable("${id}");
+		return getPathIntVariable("${id}");
 	}
 
 	public PoiCategoriesModifyController(

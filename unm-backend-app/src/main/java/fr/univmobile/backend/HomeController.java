@@ -84,8 +84,8 @@ public class HomeController extends AbstractBackendController {
 
 			log.debug("Delegation.isHttpValid()");
 
-			final Long delegationUid = form.uid();
-			final User delegationUser = users.findOne(delegationUid);
+			final String delegationUid = form.username();
+			final User delegationUser = users.findByUsername(delegationUid);
 
 			if (delegationUser == null) {
 
@@ -127,7 +127,7 @@ public class HomeController extends AbstractBackendController {
 
 		@HttpRequired
 		@HttpParameter("delegationUid")
-		Long uid();
+		String username();
 
 		@HttpRequired
 		@HttpParameter("delegationPassword")

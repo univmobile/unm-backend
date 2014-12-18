@@ -108,21 +108,6 @@ import fr.univmobile.web.commons.UnivMobileHttpUtils;
 
 public final class BackendServlet extends AbstractUnivMobileServlet {
 
-	@Autowired
-	CategoryRepository categoryRepository;
-	@Autowired
-	CommentRepository commentRepository;
-	@Autowired
-	ImageMapRepository imageMapRepository;
-	@Autowired
-	PoiRepository poiRepository;
-	@Autowired
-	RegionRepository regionRepository;
-	@Autowired
-	UniversityRepository universityRepository;
-	@Autowired
-	UserRepository userRepository;
-
 	/**
 	 * for serialization.
 	 */
@@ -154,6 +139,15 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 	@Override
 	public void init() throws ServletException {
+
+		WebApplicationContext ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(this.getServletContext());
+		this.categoryRepository = (CategoryRepository) ctx.getBean("categoryRepository");
+		this.commentRepository = (CommentRepository) ctx.getBean("commentRepository");
+		this.imageMapRepository = (ImageMapRepository) ctx.getBean("imageMapRepository");
+		this.poiRepository = (PoiRepository) ctx.getBean("poiRepository");
+		this.regionRepository = (RegionRepository) ctx.getBean("regionRepository");
+		this.universityRepository = (UniversityRepository) ctx.getBean("universityRepository");
+		this.userRepository = (UserRepository) ctx.getBean("userRepository");
 
 		if (log.isInfoEnabled()) {
 			log.info(this + ": init()...");
@@ -261,7 +255,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			commentManager = new CommentManagerImpl(logQueue, comments,
 					searchManager, MYSQL, ds);
 
-			sessionManager = new SessionManagerImpl(logQueue, users, MYSQL, ds);
+			sessionManager = new SessionManagerImpl(logQueue, userRepository, MYSQL, ds);
 
 		} catch (final NamingException e) {
 			throw new ServletException(e);
@@ -284,7 +278,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				comments, commentManager, searchManager, regions, pois);
 
 		super.init(
-				new HomeController(users, sessionManager), //
+				new HomeController(userRepository, sessionManager), //
 				usersController,
 				new UseraddController(userRepository, regionRepository,
 						universityRepository, usersController), //
@@ -529,18 +523,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		users.reload();
 
 		// 4. USER
-		//log.debug("Users count at DB: " + userRepository.count());
 
-		//ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"dispatcher-servlet.xml"});
-		WebApplicationContext ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(this.getServletContext());
-		
-		//log.debug("Autowiring test: " + testString);
-		//String ts = (String) ctx.getBean("testString");
-		for (String str : ctx.getBeanDefinitionNames()) {
-			//log.debug("Is There4: " + str);	
-		}
-		
-		UserRepository userRepository = (UserRepository) ctx.getBean("userRepository");
 		final fr.univmobile.backend.domain.User user = userRepository.findByRemoteUser(remoteUser);
 		
 		if (user == null) {

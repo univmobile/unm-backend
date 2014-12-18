@@ -63,7 +63,7 @@ public class UseraddController extends AbstractBackendController {
 		final Useradd form = getHttpInputs(Useradd.class);
 
 		setAttribute("role", getDelegationUser().getRole());
-		setAttribute("userUnivId", getDelegationUser().getPrimaryUniversity());
+		setAttribute("userUnivId", getDelegationUser().getUniversity().getId());
 
 		if (!form.isHttpValid()) {
 
@@ -212,10 +212,10 @@ public class UseraddController extends AbstractBackendController {
 		String username();
 
 		@HttpParameter
-		String primaryUniversity();
+		Long primaryUniversity();
 
 		@HttpParameter
-		String secondaryUniversity();
+		Long secondaryUniversity();
 
 		@HttpParameter
 		String description();

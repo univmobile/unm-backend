@@ -31,7 +31,7 @@ public class UniversityRepositoryTest {
 		repository.save(u1);
 		repository.save(u2);
 
-		University dbuniversity = repository.findOne("paris1");
+		University dbuniversity = repository.findOne(u1.getId());
 		assertNotNull(dbuniversity);
 		System.out.println(dbuniversity);
 	}

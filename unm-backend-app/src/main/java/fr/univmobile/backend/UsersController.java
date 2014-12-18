@@ -25,7 +25,7 @@ public class UsersController extends AbstractBackendController {
 	@Override
 	public View action() {
 
-		fr.univmobile.backend.core.User dUser = getDelegationUser();
+		User dUser = getDelegationUser();
 
 		// 1. USERS DATA
 
@@ -38,7 +38,7 @@ public class UsersController extends AbstractBackendController {
 			if (dUser.getRole().equals("admin")) {
 				if (u.getRole().equals("student")
 						&& u.getUniversity().getId()
-								.equals(dUser.getPrimaryUniversity()))
+								.equals(dUser.getUniversity().getId()))
 					users.add(u);
 				size++;
 			}

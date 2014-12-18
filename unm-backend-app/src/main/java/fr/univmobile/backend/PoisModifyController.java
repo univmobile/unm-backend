@@ -127,7 +127,7 @@ public class PoisModifyController extends AbstractBackendController {
 		// final PoiBuilder poi = pois.create();
 		final PoiBuilder poi = pois.update(pois.getByUid(uid));
 
-		poi.setAuthorName(getDelegationUser().getAuthorName());
+		poi.setAuthorName(getDelegationUser().getUsername());
 
 		poi.setUid(uid);
 		poi.setName(form.name());

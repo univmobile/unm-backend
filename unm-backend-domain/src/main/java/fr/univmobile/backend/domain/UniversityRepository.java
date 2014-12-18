@@ -4,7 +4,7 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
-public interface UniversityRepository extends CrudRepository<University, String> {
+public interface UniversityRepository extends CrudRepository<University, Long> {
 
 	List<University> findByTitle(String title);
 

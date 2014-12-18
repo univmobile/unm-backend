@@ -2,6 +2,7 @@ package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import java.util.Collection;
 import java.util.List;
 
 import fr.univmobile.backend.domain.Comment;
@@ -18,7 +19,7 @@ public class PoiController extends AbstractBackendController {
 	@PathVariable("${id}")
 	private long getPoiId() {
 
-		return getPathLongVariable("${id}");
+		return getPathIntVariable("${id}");
 	}
 
 	public PoiController(final PoiRepository poiRepository,
@@ -47,7 +48,7 @@ public class PoiController extends AbstractBackendController {
 		// "poi", since it would mean that each time you fetch some POI info
 		// (say, for a list of POIs), you want to fetch its comment count.
 
-		final List<Comment> comments = commentRepository.findByPoi(poi);
+		final Collection<Comment> comments = commentRepository.findByPoi(poi);
 
 		setAttribute("commentCount", comments.size());
 

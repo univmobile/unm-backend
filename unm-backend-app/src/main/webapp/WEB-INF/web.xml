@@ -21,7 +21,7 @@
 		</init-param>
 		<init-param>
 			<param-name>dataDir</param-name>
-			<param-value>/home/mauricio/var/univmobile/</param-value>
+			<param-value>/tmp/unm-backend/dataDir</param-value>
 		</init-param>
 		<init-param>
 			<param-name>twitter.consumerKey</param-name>
@@ -60,7 +60,7 @@
  <servlet-class>
  org.springframework.web.servlet.DispatcherServlet
  </servlet-class>
- <load-on-startup>1</load-on-startup>
+ <load-on-startup>0</load-on-startup>
  </servlet>
  
  <servlet-mapping>
