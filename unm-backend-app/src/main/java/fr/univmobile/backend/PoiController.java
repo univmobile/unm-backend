@@ -2,24 +2,12 @@ package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
-import java.io.IOException;
-import java.sql.SQLException;
+import java.util.List;
 
-import fr.univmobile.backend.client.ClientException;
-import fr.univmobile.backend.client.Comment;
-import fr.univmobile.backend.client.CommentClient;
-import fr.univmobile.backend.client.CommentClientFromLocal;
-import fr.univmobile.backend.client.Poi;
-import fr.univmobile.backend.client.PoiClient;
-import fr.univmobile.backend.client.PoiClientFromLocal;
-import fr.univmobile.backend.client.PoiNotFoundException;
-import fr.univmobile.backend.core.CommentDataSource;
-import fr.univmobile.backend.core.CommentManager;
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.SearchManager;
-import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.web.commons.PageNotFoundException;
+import fr.univmobile.backend.domain.Comment;
+import fr.univmobile.backend.domain.CommentRepository;
+import fr.univmobile.backend.domain.Poi;
+import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
@@ -28,56 +16,29 @@ import fr.univmobile.web.commons.View;
 public class PoiController extends AbstractBackendController {
 
 	@PathVariable("${id}")
-	private int getPoiId() {
+	private long getPoiId() {
 
-		return getPathIntVariable("${id}");
+		return getPathLongVariable("${id}");
 	}
 
-	public PoiController(final CommentDataSource comments,
-			final CommentManager commentManager,
-			final SearchManager searchManager, final RegionDataSource regions,
-			final PoiDataSource pois) {
-
-		this.comments = checkNotNull(comments, "commentDataSource");
-		this.commentManager = checkNotNull(commentManager, "commentManager");
-		this.searchManager = checkNotNull(searchManager, "searchManager");
-		this.pois = checkNotNull(pois, "pois");
-		this.regions = checkNotNull(regions, "regions");
+	public PoiController(final PoiRepository poiRepository,
+			final CommentRepository commentRepository) {
+		this.poiRepository = checkNotNull(poiRepository, "poiRepository");
+		this.commentRepository = checkNotNull(commentRepository,
+				"commentRepository");
 	}
 
-	private final RegionDataSource regions;
-	private final PoiDataSource pois;
-	private final CommentDataSource comments;
-	private final CommentManager commentManager;
-	private final SearchManager searchManager;
-
-	private PoiClient getPoiClient() {
-
-		return new PoiClientFromLocal(getBaseURL(), pois, regions);
-	}
-
-	private CommentClient getCommentClient() {
-
-		return new CommentClientFromLocal(getBaseURL(), comments,
-				commentManager, searchManager);
-	}
+	private final PoiRepository poiRepository;
+	private final CommentRepository commentRepository;
 
 	@Override
-	public View action() throws IOException, SQLException,
-			TransactionException, ClientException, PageNotFoundException {
+	public View action() {
 
-		final int id = getPoiId();
+		final Long poiId = getPoiId();
 
 		// 1. POI
 
-		final Poi poi;
-		try {
-
-			poi = getPoiClient().getPoi(id);
-
-		} catch (final PoiNotFoundException e) {
-			throw new PageNotFoundException();
-		}
+		final Poi poi = poiRepository.findOne(poiId);
 		setAttribute("poi", poi);
 
 		// 2. COMMENTS
@@ -86,9 +47,9 @@ public class PoiController extends AbstractBackendController {
 		// "poi", since it would mean that each time you fetch some POI info
 		// (say, for a list of POIs), you want to fetch its comment count.
 
-		final Comment[] comments = getCommentClient().getCommentsByPoiId(id);
+		final List<Comment> comments = commentRepository.findByPoi(poi);
 
-		setAttribute("commentCount", comments.length);
+		setAttribute("commentCount", comments.size());
 
 		// 9. END
 

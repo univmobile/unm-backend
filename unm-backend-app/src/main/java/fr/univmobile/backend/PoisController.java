@@ -31,6 +31,16 @@ public class PoisController extends AbstractBackendController {
 
 	private final RegionDataSource regions;
 	private final PoiDataSource pois;
+	
+	/*public PoisController(final PoiRepository poiRepository,
+			final CommentRepository commentRepository) {
+		this.poiRepository = checkNotNull(poiRepository, "poiRepository");
+		this.commentRepository = checkNotNull(commentRepository,
+				"commentRepository");
+	}
+
+	private final PoiRepository poiRepository;
+	private final CommentRepository commentRepository;*/
 
 	private PoiClient getPoiClient() {
 
@@ -44,7 +54,7 @@ public class PoisController extends AbstractBackendController {
 
 		// 1. POIS INFO
 
-		// final PoiTree poiTree = poiTrees.getByUid("ile_de_france"); // TODO
+		// final PoiTree poiTree = poiTrees.getByUid("ile_de_france");
 
 		int resultCount = 0;
 

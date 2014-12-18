@@ -3,25 +3,17 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Nullable;
 
-import org.apache.commons.lang3.RandomStringUtils;
-
-import fr.univmobile.backend.core.Region;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.User;
-import fr.univmobile.backend.core.UserBuilder;
-import fr.univmobile.backend.core.UserDataSource;
-import fr.univmobile.backend.core.impl.Encrypt;
-import fr.univmobile.backend.core.impl.EncryptSHA256;
-import fr.univmobile.commons.tx.Lock;
-import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
+import fr.univmobile.backend.domain.Region;
+import fr.univmobile.backend.domain.RegionRepository;
+import fr.univmobile.backend.domain.University;
+import fr.univmobile.backend.domain.UniversityRepository;
+import fr.univmobile.backend.domain.User;
+import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -31,130 +23,134 @@ import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.Regexp;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "usermodify/${uid}" })
+@Paths({ "usermodify/${id}" })
 public class UserModifyController extends AbstractBackendController {
 
-	@PathVariable("${uid}")
-	private String getUserUid() {
+	@PathVariable("${id}")
+	private String getUserId() {
 
-		return getPathStringVariable("${uid}");
+		return getPathStringVariable("${id}");
 	}
 
-	public UserModifyController(final TransactionManager tx,
-			final UserDataSource users, final UsersController usersController,
-			final RegionDataSource regions) {
-
-		this.users = checkNotNull(users, "users");
-		this.tx = checkNotNull(tx, "tx");
+	public UserModifyController(final UserRepository userRepository,
+			final RegionRepository regionRepository,
+			final UniversityRepository universityRepository,
+			final UsersController usersController) {
+		this.userRepository = checkNotNull(userRepository, "userRepository");
+		this.regionRepository = checkNotNull(regionRepository,
+				"regionRepository");
+		this.universityRepository = checkNotNull(universityRepository,
+				"universityRepository");
 		this.usersController = checkNotNull(usersController, "usersController");
-		this.regions = checkNotNull(regions, "regions");
 	}
 
-	private final TransactionManager tx;
-	private final UserDataSource users;
-	private final UsersController usersController;
-	private final RegionDataSource regions;
+	private UserRepository userRepository;
+	private RegionRepository regionRepository;
+	private UniversityRepository universityRepository;
+	private UsersController usersController;
 
-	private final Encrypt encrypt = new EncryptSHA256();
+	// private final Encrypt encrypt = new EncryptSHA256();
 
 	@Override
-	public View action() throws IOException, TransactionException {
+	public View action() {
 
-		final Map<String, Region> dsRegions = regions.getAllBy(String.class,
-				"uid");
+		// REGIONS DATA
 
-		final List<Region> regionsData = new ArrayList<Region>();
+		Iterable<Region> allRegions = regionRepository.findAll();
 
-		for (final Region r : dsRegions.values())
+		List<Region> regionsData = new ArrayList<Region>();
+
+		for (Region r : allRegions)
 			regionsData.add(r);
+
 		setAttribute("regionsData", regionsData);
 
 		// 1.1 USER
 
-		final User user;
-
-		user = users.getLatest(users.getByUid(getUserUid()));
+		User user = userRepository.findOne(getUserId());
 
 		setAttribute("usermodify", user);
 
 		// 1.2 HTTP
 
 		final Usermodify form = getHttpInputs(Usermodify.class);
-		
+
 		setAttribute("role", getDelegationUser().getRole());
 		setAttribute("userUnivId", getDelegationUser().getPrimaryUniversity());
 
 		if (!form.isHttpValid()) {
-			
+
 			return new View("usermodify.jsp");
 		}
 
 		// 2. APPLICATION VALIDATION
 
-		final String uid = form.uid();
-
-		final Lock lock = tx.acquireLock(5000, "users", uid);
-		try {
-
-			return usermodify(lock, form);
-
-		} finally {
-			lock.release();
-		}
+		return usermodify(form);
 	}
 
-	private View usermodify(final Lock lock, final Usermodify form)
-			throws IOException, TransactionException {
+	private View usermodify(final Usermodify form) {
 
-		final String uid = form.uid();
+		User user = userRepository.findOne(getUserId());
 
-		// final UserBuilder user = users.create();
-		final UserBuilder user = users.update(users.getByUid(getUserUid()));
+		boolean hasErrors = false;
 
-		user.setUid(uid);
-		user.setRemoteUser(form.remoteUser());
+		final String username = form.username();
 
-		if (form.type() != null) // gets the role
-			user.setRole(form.type());
-
-		user.setAuthorName(getDelegationUser().getUid());
-
-		user.setTitle(uid);
-		user.setDisplayName(form.displayName());
-		user.setMail(form.mail());
-		if (form.supannCivilite() != null) {
-			user.setSupannCivilite(form.supannCivilite());
+		if (!isBlank(username))
+			user.setUsername(username);
+		else {
+			hasErrors = true;
+			setAttribute("err_usermodfy_username", true);
 		}
 
-		user.setPrimaryUniversity(form.primaryUniversity());
-		user.setSecondaryUniversities(form.secondaryUniversities());
+		if (form.passwordEnabled() != null)
+			user.setPassword(form.password());
 
-		if (form.passwordEnabled() != null) {
-			user.setPasswordEnabled("true");
-			user.setPasswordEncryptionAlgorithm("SHA-256");
-			final String saltPrefix = RandomStringUtils.randomAlphanumeric(8);
-			user.setPasswordSaltPrefix(saltPrefix);
-			if (!isBlank(form.password())) {
-				final String encrypted = encrypt.encrypt(saltPrefix,
-						form.password());
-				user.setPasswordEncrypted(encrypted);
-			}
-		} else
-			user.setPasswordEnabled("false");
+		if (!isBlank(form.displayName()))
+			user.setDisplayName(form.displayName());
+		else {
+			hasErrors = true;
+			setAttribute("err_usermodify_displayName", true);
+		}
+
+		user.setEmail(form.email());
+		user.setRole(form.role());
+
+		if (form.titleCivilite() != null)
+			user.setTitleCivilite(form.titleCivilite());
+
+		University pU = universityRepository.findOne(form.primaryUniversity());
+		user.setUniversity(pU);
+
+		University sU = universityRepository
+				.findOne(form.secondaryUniversity());
+		user.setSecondaryUniversity(sU);
+		user.setDescription(form.description());
 
 		final String twitterScreenName = form.twitter_screen_name().trim();
-
 		if (!isBlank(twitterScreenName)) {
 			user.setTwitterScreenName(twitterScreenName);
+		}
+
+		if (!isBlank(username)) {
+			if (userRepository.findByUsername(username) != null) {
+				hasErrors = true;
+				setAttribute("err_duplicateUsername", true);
+			}
+		}
+
+		if (hasErrors) {
+
+			setAttribute("usermodify", user); // Show the data in the view
+
+			return new View("usermodify.jsp");
 		}
 
 		// 3. SAVE DATA
 
 		// Otherwise, we’re clear: Save the data.
 
-		lock.save(user);
-
-		lock.commit();
+		userRepository.save(user);
 
 		return usersController.action();
 	}
@@ -176,18 +172,13 @@ public class UserModifyController extends AbstractBackendController {
 
 		@HttpRequired
 		@HttpParameter(trim = true)
-		@Regexp("[a-zA-Z0-9_-]+")
-		String uid();
-
-		@HttpRequired
-		@HttpParameter(trim = true)
 		@Regexp("[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+")
 		String remoteUser();
 
 		@HttpParameter
 		@Nullable
 		@Regexp("aucune|Mme|M\\.")
-		String supannCivilite();
+		String titleCivilite();
 
 		@HttpRequired
 		@HttpParameter
@@ -197,7 +188,7 @@ public class UserModifyController extends AbstractBackendController {
 		@HttpRequired
 		@HttpParameter(trim = true)
 		@Regexp("[a-zA-Z0-9_-]+[a-zA-Z0-9_-].@[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+")
-		String mail();
+		String email();
 
 		@HttpRequired
 		@HttpParameter
@@ -207,19 +198,24 @@ public class UserModifyController extends AbstractBackendController {
 		@HttpParameter
 		String passwordEnabled();
 
-		@HttpRequired
 		@HttpParameter
 		String twitter_screen_name();
 
 		// Added by Mauricio
 
 		@HttpParameter
-		String type();
+		String role();
+
+		@HttpParameter
+		String username();
 
 		@HttpParameter
 		String primaryUniversity();
 
 		@HttpParameter
-		String secondaryUniversities();
+		String secondaryUniversity();
+
+		@HttpParameter
+		String description();
 	}
 }

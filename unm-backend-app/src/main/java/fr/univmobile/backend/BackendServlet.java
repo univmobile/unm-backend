@@ -277,12 +277,11 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				usersController,
 				new UseraddController(userRepository, regionRepository,
 						universityRepository, usersController), //
-				new RegionsController(tx, regions), //
+				new RegionsController(regionRepository), //
 				new AdminGeocampusController(regions, pois), //
 				new SystemController(ds), //
 				poisController, //
-				new PoiController(comments, commentManager, searchManager,
-						regions, pois), //
+				new PoiController(poiRepository, commentRepository), //
 				commentsController, //
 				new CommentController(comments, commentManager), //
 				new HelpController(), //
@@ -299,7 +298,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						poiCategories), //
 				new PoisModifyController(tx, pois, poisController, regions,
 						poiCategories), //
-				new UserModifyController(tx, users, usersController, regions),
+				new UserModifyController(userRepository, regionRepository,
+						universityRepository, usersController),
 				new CommentStatusController(tx, comments),
 				new GeocampusAdminController());
 

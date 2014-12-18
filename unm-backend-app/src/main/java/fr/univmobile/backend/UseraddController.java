@@ -79,33 +79,65 @@ public class UseraddController extends AbstractBackendController {
 
 		User user = new User();
 
-		final String remoteUser = form.remoteUser();
+		boolean hasErrors = false;
 
-		// user.setUsername(form.username());
+		final String remoteUser = form.remoteUser();
+		final String username = form.username();
+
+		if (!isBlank(username))
+			user.setUsername(username);
+		else {
+			hasErrors = true;
+			setAttribute("err_useradd_username", true);
+		}
+
 		if (form.passwordEnabled() != null)
 			user.setPassword(form.password());
 
-		user.setDisplayName(form.displayName());
-		user.setRemoteUser(remoteUser);
+		if (!isBlank(form.displayName()))
+			user.setDisplayName(form.displayName());
+		else {
+			hasErrors = true;
+			setAttribute("err_useradd_displayName", true);
+		}
+
+		if (!isBlank(remoteUser))
+			user.setRemoteUser(remoteUser);
+		else {
+			hasErrors = true;
+			setAttribute("err_useradd_remoteUser", true);
+		}
+
 		user.setEmail(form.email());
-		user.setRole(form.type());
-		if (form.supannCivilite() != null)
-			user.setTitleCivilite(form.supannCivilite());
-		University u = universityRepository.findOne(form.primaryUniversity());
-		user.setUniversity(u);
-		// user.setSecondaryUniversity(form.secondaryUniversities());
-		// user.setDescription(form.description());
+		user.setRole(form.role());
+
+		if (form.titleCivilite() != null)
+			user.setTitleCivilite(form.titleCivilite());
+
+		University pU = universityRepository.findOne(form.primaryUniversity());
+		user.setUniversity(pU);
+
+		University sU = universityRepository
+				.findOne(form.secondaryUniversity());
+		user.setSecondaryUniversity(sU);
+		user.setDescription(form.description());
+
 		final String twitterScreenName = form.twitter_screen_name().trim();
 		if (!isBlank(twitterScreenName)) {
 			user.setTwitterScreenName(twitterScreenName);
 		}
 
-		boolean hasErrors = false;
-
 		if (!isBlank(remoteUser)) {
-			if (userRepository.findByRemoteUser(remoteUser) == null) {
+			if (userRepository.findByRemoteUser(remoteUser) != null) {
 				hasErrors = true;
 				setAttribute("err_duplicateRemoteUser", true);
+			}
+		}
+
+		if (!isBlank(username)) {
+			if (userRepository.findByUsername(username) != null) {
+				hasErrors = true;
+				setAttribute("err_duplicateUsername", true);
 			}
 		}
 
@@ -142,18 +174,13 @@ public class UseraddController extends AbstractBackendController {
 
 		@HttpRequired
 		@HttpParameter(trim = true)
-		@Regexp("[a-zA-Z0-9_-]+")
-		String id();
-
-		@HttpRequired
-		@HttpParameter(trim = true)
 		@Regexp("[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+")
 		String remoteUser();
 
 		@HttpParameter
 		@Nullable
 		@Regexp("aucune|Mme|M\\.")
-		String supannCivilite();
+		String titleCivilite();
 
 		@HttpRequired
 		@HttpParameter
@@ -179,12 +206,18 @@ public class UseraddController extends AbstractBackendController {
 		// Added by Mauricio
 
 		@HttpParameter
-		String type();
+		String role();
+
+		@HttpParameter
+		String username();
 
 		@HttpParameter
 		String primaryUniversity();
 
 		@HttpParameter
-		String secondaryUniversities();
+		String secondaryUniversity();
+
+		@HttpParameter
+		String description();
 	}
 }
