@@ -1,6 +1,6 @@
 package fr.univmobile.backend;
 
-import fr.univmobile.backend.core.User;
+import fr.univmobile.backend.domain.User;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.web.commons.AbstractJspController;
 import fr.univmobile.web.commons.View;

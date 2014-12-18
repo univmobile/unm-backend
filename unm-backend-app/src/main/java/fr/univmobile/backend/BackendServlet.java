@@ -30,8 +30,14 @@ import javax.sql.DataSource;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+<<<<<<< Upstream, based on origin/develop
 import org.springframework.beans.factory.annotation.Autowired;
 
+=======
+import org.springframework.context.ApplicationContext;
+import org.springframework.web.context.WebApplicationContext;
+import org.springframework.web.context.support.WebApplicationContextUtils;
+>>>>>>> 47ac2d8 Merging with initial JPA entities implementation. Web App, Servlets adjustments to work with JPA. Session user related changes to support JPA. Temporary broken commit
 import fr.univmobile.backend.admin.GeocampusJSONController;
 import fr.univmobile.backend.admin.GeocampusPoiManageJSONController;
 import fr.univmobile.backend.admin.GeocampusPoisByRegionAndCategoryJSONController;
@@ -127,6 +133,16 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	 */
 	private static final long serialVersionUID = -4796360020211862333L;
 
+	
+	// JPA Repositories
+	private CategoryRepository categoryRepository;
+	private CommentRepository commentRepository;
+	private ImageMapRepository imageMapRepository;
+	private PoiRepository poiRepository;
+	private RegionRepository regionRepository;
+	private UniversityRepository universityRepository;
+	private UserRepository userRepository;
+	
 	private UserDataSource users;
 	private RegionDataSource regions;
 	private PoiDataSource pois;
@@ -518,8 +534,21 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		users.reload();
 
 		// 4. USER
+		//log.debug("Users count at DB: " + userRepository.count());
 
-		if (users.isNullByRemoteUser(remoteUser)) {
+		//ApplicationContext context = new ClassPathXmlApplicationContext(new String[] {"dispatcher-servlet.xml"});
+		WebApplicationContext ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(this.getServletContext());
+		
+		//log.debug("Autowiring test: " + testString);
+		//String ts = (String) ctx.getBean("testString");
+		for (String str : ctx.getBeanDefinitionNames()) {
+			//log.debug("Is There4: " + str);	
+		}
+		
+		UserRepository userRepository = (UserRepository) ctx.getBean("userRepository");
+		final fr.univmobile.backend.domain.User user = userRepository.findByRemoteUser(remoteUser);
+		
+		if (user == null) {
 
 			log.fatal("remoteAddr: " + remoteAddr
 					+ ", 403 Unknown REMOTE_USER in the Database: "
@@ -531,7 +560,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			return;
 		}
 
-		final User user = users.getByRemoteUser(remoteUser);
+		//final User user = users.getByRemoteUser(remoteUser);
 
 		/*
 		 * Fine grained need to allow somethings to users/anons // Added by
@@ -541,7 +570,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		 * .sendError404(request, response, uriPath);
 		 */
 
-		LogQueueDbImpl.setPrincipal(user.getUid()); // TODO user? delegation?
+		LogQueueDbImpl.setPrincipal(user.getUsername()); // TODO user? delegation?
 
 		request.getSession().setAttribute("user", user);
 
