@@ -163,7 +163,7 @@ body.results td.roles.superadmin {
    </td>
    
    <td class="id">
-      ${u.id}
+      ${u.username}
    </td>
    
    <td class="username">
