@@ -8,8 +8,8 @@
 <meta http-equiv="Content-Language" content="en">
 <title>Administration d’UnivMobile — Utilisateurs</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
-<style type="text/css">
 
+<style type="text/css">
 td.id,
 td.name {
 	cursor: pointer;
@@ -55,8 +55,8 @@ body.results td.roles.superadmin {
 	background-color: #f00;
 	xcolor: #f00;
 }
-
 </style>
+
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
@@ -93,28 +93,35 @@ body.results td.roles.superadmin {
 
 <div id="div-resultInfo">
 <span>
-	→
-	<c:choose>
-	<c:when test="${not empty usersInfo.context}">
-		<c:out value="${usersInfo.context}"/>
-		<c:if test="${not empty usersInfo.resultCount}">
-			(${usersInfo.resultCount})
-		</c:if>
-	</c:when>
-	<c:when test="${empty usersInfo.resultCount || usersInfo.resultCount == 0}">
-		Aucun résultat
-	</c:when>
-	<c:when test="${usersInfo.resultCount == 1}">
-		Un résultat
-	</c:when>
-	<c:otherwise>
-		${usersInfo.resultCount} résultats
-	</c:otherwise>
-	</c:choose>
+   →
+   <c:choose>
+	
+   <c:when test="${not empty usersInfo.context}">
+      <c:out value="${usersInfo.context}"/>
+	  <c:if test="${not empty usersInfo.resultCount}">
+	     (${usersInfo.resultCount})
+	  </c:if>
+   </c:when>
+   
+   <c:when test="${empty usersInfo.resultCount || usersInfo.resultCount == 0}">
+      Aucun résultat
+   </c:when>
+	
+   <c:when test="${usersInfo.resultCount == 1}">
+	  Un résultat
+   </c:when>
+   
+   <c:otherwise>
+	  ${usersInfo.resultCount} résultats
+   </c:otherwise>
+	
+   </c:choose>
 </span>
+
 <button id="button-export" disabled>
 	Export…
 </button>
+
 </div>
 
 <table>
@@ -122,9 +129,9 @@ body.results td.roles.superadmin {
 <thead>
    <tr>
       <th class="none"></th>
-      <th class="uid">uid</th>
-      <th class="roles"></th>
-      <th class="mail">mail</th>
+      <th class="id">id</th>
+      <th class="roles">roles</th>
+      <th class="email">email</th>
       <th class="edit"></th>
       <th class="none"></th>
    </tr>
@@ -136,47 +143,59 @@ body.results td.roles.superadmin {
 
    <td class="none">
       <c:choose>
-      <c:when test="${user.uid == u.uid}">
-      	<div class='principal <c:if test="${delegationUser.uid == u.uid}"> delegation </c:if>'
+      
+      <c:when test="${user.uid == u.id}">
+         <div class='principal 
+         <c:if test="${delegationUser.uid == u.id}">
+            delegation
+         </c:if>'
          title="Principal : ${user.uid}">1</div>
       </c:when>
-      <c:when test="${delegationUser.uid == u.uid}">
+      
+      <c:when test="${delegationUser.uid == u.id}">
          <div class="delegation" title="Délégation : ${delegationUser.uid}">2</div>
       </c:when>
+      
       </c:choose>
    </td>
    
-   <td class="uid">
-      ${u.uid}
+   <td class="id">
+      ${u.id}
    </td>
    
    <c:choose>
-   <c:when test="${u.role eq 'superadmin'}">
-      <td class="roles superadmin" title="${u.uid} : Super Administrateur">S</td>
-   </c:when>
-   <c:when test="${u.role eq 'admin'}">
-      <td class="roles admin" title="${u.uid} : Administrateur">A</td>
-   </c:when>
-   <c:when test="${u.role eq 'student'}">
-      <td class="roles student" title="${u.uid} : Étudiant">É</td>
-   </c:when>
-   <c:otherwise>
-      <td class="roles unknown" title="(${u.uid} : Type inconnu)">-</td>
-   </c:otherwise>
+      <c:when test="${u.role eq 'superadmin'}">
+         <td class="roles superadmin" title="${u.id} : Super Administrateur">S</td>
+      </c:when>
+      
+      <c:when test="${u.role eq 'admin'}">
+         <td class="roles admin" title="${u.id} : Administrateur">A</td>
+      </c:when>
+      
+      <c:when test="${u.role eq 'student'}">
+         <td class="roles student" title="${u.id} : Étudiant">É</td>
+      </c:when>
+      
+      <c:otherwise>
+         <td class="roles unknown" title="(${u.id} : Type inconnu)">-</td>
+      </c:otherwise>
    </c:choose>
    
-   <td class="mail">
-      ${u.mail}
+   <td class="email">
+      ${u.email}
    </td>
    
    <td class="edit">
       <c:choose>
+      
          <c:when test="${role eq 'student'}">
             <a>Modifier…</a>
          </c:when>
+         
          <c:otherwise>
-            <a id="link-edit_${u.uid}" href="${baseURL}/usermodify/${u.uid}">Modifier…</a>
+            <a id="link-edit_${u.id}" href="${baseURL}/usermodify/${u.id}">Modifier…</a>
          </c:otherwise>
+      
       </c:choose>
    </td>
    
@@ -190,12 +209,15 @@ body.results td.roles.superadmin {
 
 <div class="table bottom">
    <c:choose>
+      
       <c:when test="${role eq 'student'}">
          <a>Ajouter un utilisateur…</a>
       </c:when>
+      
       <c:otherwise>
          <a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
       </c:otherwise>
+   
    </c:choose>
 </div>
 

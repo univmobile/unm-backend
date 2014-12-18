@@ -21,7 +21,7 @@ td span.error {
 	font-size: x-small;
 }
 
-label.checkbox-parentUid {
+label.checkbox-parentId {
 	font-weight: bold;
 }
 </style>
@@ -37,7 +37,7 @@ label.checkbox-parentUid {
 <jsp:include page="div-entered_modal.h.jsp"/>
 
 <div class="body">
-<form action="${baseURL}/poicategoriesmodify/${poicategorymodify.uid}" method="POST">
+<form action="${baseURL}/poicategoriesmodify/${poicategorymodify.id}" method="POST">
 
 <h1   title="Version ${buildInfo.appVersion}
       Build ${buildInfo.buildDisplayName}
@@ -61,10 +61,10 @@ label.checkbox-parentUid {
    
    <tbody>
       <tr>
-         <th>Uid</th>
+         <th>Id</th>
          <td>
-            <input readonly class="text" type="text" id="text-uid" name="uid" value="${poicategorymodify.uid}">
-         <c:if test="${err_poicategorymodify_uid}">
+            <input readonly class="text" type="text" id="text-id" name="id" value="${poicategorymodify.id}">
+         <c:if test="${err_poicategorymodify_id}">
             <span class="error" title="Le champ est mal formé">Incorrect</span>
          </c:if>
          </td>
@@ -106,21 +106,12 @@ label.checkbox-parentUid {
       </tr>
       
       <tr>
-         <th>ParentUid</th>
+         <th>ParentId</th>
          <td>
-            <input readonly class="text" type="text" id="text-parentUid" name="parentUid" value="${poicategorymodify.parentUid}">
+            <input readonly class="text" type="text" id="text-parentId" name="parentId" value="${poicategorymodify.parentId}">
          </td>
       </tr>
-      
-      <tr>
-         <th>ExternalUid</th>
-         <td>
-           <input class="text" type="text" id="text-externalUid" name="externalUid" value="${poicategorymodify.externalUid}">
-         <c:if test="${err_poicategorymodify_externalUid}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
-         </td> 
-      </tr>
+
    </tbody>
    
    </table>

@@ -30,6 +30,7 @@ import javax.sql.DataSource;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import fr.univmobile.backend.admin.GeocampusJSONController;
 import fr.univmobile.backend.admin.GeocampusPoiManageJSONController;
@@ -77,6 +78,13 @@ import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.backend.core.impl.SessionManagerImpl;
 import fr.univmobile.backend.core.impl.UploadManagerImpl;
+import fr.univmobile.backend.domain.CategoryRepository;
+import fr.univmobile.backend.domain.CommentRepository;
+import fr.univmobile.backend.domain.ImageMapRepository;
+import fr.univmobile.backend.domain.PoiRepository;
+import fr.univmobile.backend.domain.RegionRepository;
+import fr.univmobile.backend.domain.UniversityRepository;
+import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.backend.json.CommentsJSONController;
@@ -98,6 +106,21 @@ import fr.univmobile.web.commons.PageNotFoundException;
 import fr.univmobile.web.commons.UnivMobileHttpUtils;
 
 public final class BackendServlet extends AbstractUnivMobileServlet {
+
+	@Autowired
+	CategoryRepository categoryRepository;
+	@Autowired
+	CommentRepository commentRepository;
+	@Autowired
+	ImageMapRepository imageMapRepository;
+	@Autowired
+	PoiRepository poiRepository;
+	@Autowired
+	RegionRepository regionRepository;
+	@Autowired
+	UniversityRepository universityRepository;
+	@Autowired
+	UserRepository userRepository;
 
 	/**
 	 * for serialization.
@@ -210,8 +233,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			comments = BackendDataSourceFileSystem.newDataSource(
 					CommentDataSource.class, commentsDir);
-			
-			imageMaps = BackendDataSourceFileSystem.newDataSource(ImageMapDataSource.class, imageMapsDir);
+
+			imageMaps = BackendDataSourceFileSystem.newDataSource(
+					ImageMapDataSource.class, imageMapsDir);
 
 			final InitialContext context = new InitialContext();
 
@@ -238,18 +262,21 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 2. MAIN CONTROLLERS
 
-		final UsersController usersController = new UsersController(users);
+		final UsersController usersController = new UsersController(
+				userRepository);
 
 		// Added by Mauricio
 		final PoiCategoriesController poisCategoriesController = new PoiCategoriesController(
-				poiCategories);
+				categoryRepository);// poiCategories);
 		final PoisController poisController = new PoisController(regions, pois);
-		final CommentsController commentsController = new CommentsController(comments, commentManager, searchManager,
-				regions, pois);
+		final CommentsController commentsController = new CommentsController(
+				comments, commentManager, searchManager, regions, pois);
 
-		super.init(new HomeController(users, sessionManager), //
-				usersController, new UseraddController(tx, users,
-						usersController, regions), //
+		super.init(
+				new HomeController(users, sessionManager), //
+				usersController,
+				new UseraddController(userRepository, regionRepository,
+						universityRepository, usersController), //
 				new RegionsController(tx, regions), //
 				new AdminGeocampusController(regions, pois), //
 				new SystemController(ds), //
@@ -264,12 +291,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 				// Added by Mauricio
 
-				new PoiCategoriesAddController(tx, poiCategories,
+				new PoiCategoriesAddController(categoryRepository,
 						poisCategoriesController), //
-				new PoiCategoriesModifyController(tx, poiCategories,
+				new PoiCategoriesModifyController(categoryRepository,
 						poisCategoriesController), //
-				new PoisAddController(tx, pois, poisController, regions, poiCategories), //
-				new PoisModifyController(tx, pois, poisController, regions, poiCategories), //
+				new PoisAddController(tx, pois, poisController, regions,
+						poiCategories), //
+				new PoisModifyController(tx, pois, poisController, regions,
+						poiCategories), //
 				new UserModifyController(tx, users, usersController, regions),
 				new CommentStatusController(tx, comments),
 				new GeocampusAdminController());
@@ -287,16 +316,19 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final PoiClient poiClient = new PoiClientFromLocal(baseURL, pois,
 				regions);
 
-		final PoiCategoryClient poiCategoryClient = new PoiCategoryClientFromLocal(baseURL, poiCategories, regions);
+		final PoiCategoryClient poiCategoryClient = new PoiCategoryClientFromLocal(
+				baseURL, poiCategories, regions);
 
-		final ImageMapClient imageMapClient = new ImageMapClientFromLocal(baseURL, imageMaps, pois);
+		final ImageMapClient imageMapClient = new ImageMapClientFromLocal(
+				baseURL, imageMaps, pois);
 
 		final PoiJSONClient poiJSONClient = new PoiJSONClientImpl(poiClient);
 
-		final PoiCategoryJSONClient poiCategoryJSONClient = new PoiCategoryJSONClientImpl(poiCategoryClient);
-		
+		final PoiCategoryJSONClient poiCategoryJSONClient = new PoiCategoryJSONClientImpl(
+				poiCategoryClient);
 
-		final ImageMapJSONClient imageMapJSONClient = new ImageMapJSONClientImpl(imageMapClient);
+		final ImageMapJSONClient imageMapJSONClient = new ImageMapJSONClientImpl(
+				imageMapClient);
 
 		final CommentClient commentClient = new CommentClientFromLocal(baseURL,
 				comments, commentManager, searchManager);
@@ -316,12 +348,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		Double nearestPoisMaxMetersAway;
 		try {
-			nearestPoisMaxMetersAway = Double.parseDouble(checkedInitParameter("pois.nearestMaxDistanceInMeters"));
+			nearestPoisMaxMetersAway = Double
+					.parseDouble(checkedInitParameter("pois.nearestMaxDistanceInMeters"));
 		} catch (Exception e) {
-			log.warn("Config parameter 'pois.nearestMaxDistanceInMeters' has a wrong value at web.xml. Please review. Using 0 meters. Current value is: " + checkedInitParameter("pois.nearestMaxDistanceInMeters"));
+			log.warn("Config parameter 'pois.nearestMaxDistanceInMeters' has a wrong value at web.xml. Please review. Using 0 meters. Current value is: "
+					+ checkedInitParameter("pois.nearestMaxDistanceInMeters"));
 			nearestPoisMaxMetersAway = 0.0;
 		}
-		
+
 		final SessionClient sessionClient = new SessionClientFromLocal(baseURL,
 				ssoBaseURL, shibbolethTargetBaseURL, shibbolethCallbackURL, //
 				sessionManager, twitter);
@@ -333,22 +367,26 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new EndpointsJSONController(), //
 				new RegionsJSONController(regionJSONClient), //
 				new UniversitiesJSONController(regions, regionJSONClient), //
-				/*new ImageMapJSONController(imageMaps, imageMapJSONClient), //*/
+				/* new ImageMapJSONController(imageMaps, imageMapJSONClient), // */
 				new PoisJSONController(poiJSONClient), //
 				new CommentsJSONController(pois, commentJSONClient), //
 				new SessionJSONController( //
 						sessionManager, sessionJSONClient), //
-				new GeocampusPoisByRegionAndCategoryJSONController(poiJSONClient),
+				new GeocampusPoisByRegionAndCategoryJSONController(
+						poiJSONClient),
 				new GeocampusPoiManageJSONController(tx, pois, imageMaps),
-				new NearestPoisJSONController(poiJSONClient, nearestPoisMaxMetersAway),
-				//new CommentsPostJSONController(tx, comments, commentManager), 				
-				new CommentsPostJSONController(comments, commentManager), 				
-				new GeocampusJSONController(regionJSONClient, poiCategoryJSONClient, imageMapJSONClient, regions, imageMaps)				
-		};
+				new NearestPoisJSONController(poiJSONClient,
+						nearestPoisMaxMetersAway),
+				// new CommentsPostJSONController(tx, comments, commentManager),
+				new CommentsPostJSONController(comments, commentManager),
+				new GeocampusJSONController(regionJSONClient,
+						poiCategoryJSONClient, imageMapJSONClient, regions,
+						imageMaps) };
 
 		for (final AbstractJSONController jsonController : jsonControllers) {
 			if (log.isDebugEnabled()) {
-				log.debug(String.format("Loading JSON controller: %s", jsonController.getClass().getName()));
+				log.debug(String.format("Loading JSON controller: %s",
+						jsonController.getClass().getName()));
 			}
 			jsonController.init(this);
 		}
@@ -495,12 +533,13 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final User user = users.getByRemoteUser(remoteUser);
 
-		/* Fine grained need to allow somethings to users/anons
-		// Added by Mauricio
-		/*final String uriPath = UnivMobileHttpUtils.extractUriPath(request);
-		if (user.getRole() == null || user.getRole().equals("student"))
-			UnivMobileHttpUtils
-			.sendError404(request, response, uriPath);*/
+		/*
+		 * Fine grained need to allow somethings to users/anons // Added by
+		 * Mauricio /*final String uriPath =
+		 * UnivMobileHttpUtils.extractUriPath(request); if (user.getRole() ==
+		 * null || user.getRole().equals("student")) UnivMobileHttpUtils
+		 * .sendError404(request, response, uriPath);
+		 */
 
 		LogQueueDbImpl.setPrincipal(user.getUid()); // TODO user? delegation?
 

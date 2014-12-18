@@ -3,70 +3,63 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.commons.DataBeans.instantiate;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.TreeSet;
 
 import javax.annotation.Nullable;
 
-import fr.univmobile.backend.core.User;
-import fr.univmobile.backend.core.UserDataSource;
-import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.backend.domain.User;
+import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
 @Paths({ "users", "users/" })
 public class UsersController extends AbstractBackendController {
 
-	public UsersController(final UserDataSource users) {
-
-		this.users = checkNotNull(users, "users");
+	public UsersController(final UserRepository userRepository) {
+		this.userRepository = checkNotNull(userRepository, "userRepository");
 	}
 
-	private final UserDataSource users;
+	private UserRepository userRepository;
 
 	@Override
-	public View action() throws IOException, TransactionException {
+	public View action() {
 
-		// getDelegationUser();
+		fr.univmobile.backend.core.User dUser = getDelegationUser();
 
-		final Map<String, User> allUsers = users.getAllBy(String.class, "uid");
+		// 1. USERS DATA
 
-		final Map<String, User> results = users.getAllBy(String.class, "uid");
+		Iterable<User> allUsers = userRepository.findAll();
 
-		// 1. USERS INFO
+		List<User> users = new ArrayList<User>();
 
-		final UsersInfo usersInfo = instantiate(UsersInfo.class) //
-				.setCount(allUsers.size()) //
-				.setContext("Tous les utilisateurs") //
-				.setResultCount(results.size());
+		int size = 0;
+		for (User u : allUsers) {
+			if (dUser.getRole().equals("admin")) {
+				if (u.getRole().equals("student")
+						&& u.getUniversity().getId()
+								.equals(dUser.getPrimaryUniversity()))
+					users.add(u);
+				size++;
+			}
+		}
 
-		setAttribute("usersInfo", usersInfo);
+		setAttribute("users", users);
 
 		// CURRENT USER ROLE
 
-		setAttribute("role", getDelegationUser().getRole());
+		setAttribute("role", dUser.getRole());
 
-		// 2. USERS DATA
+		// 2. USERS INFO
 
-		final List<User> u = new ArrayList<User>();
+		final UsersInfo usersInfo = instantiate(UsersInfo.class) //
+				.setCount(size) //
+				.setContext("Tous les utilisateurs") //
+				.setResultCount(size);
 
-		setAttribute("users", u);
+		setAttribute("usersInfo", usersInfo);
 
-		for (final String uid : new TreeSet<String>(allUsers.keySet())) {
-			User user = users.getLatest(allUsers.get(uid));
-			if (getDelegationUser().getRole().equals("admin")) {
-				if (user.getRole().equals("student")
-						&& user.getPrimaryUniversity().equals(
-								getDelegationUser().getPrimaryUniversity()))
-					u.add(user);
-			} else
-				u.add(user);
-		}
-
-		// 9. END
+		// 3. END
 
 		return new View("users.jsp");
 	}
