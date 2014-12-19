@@ -101,7 +101,7 @@ $(function () {
    </div>
 </c:if>
 
-<c:if test="${err_duplicateusername}">
+<c:if test="${err_duplicateUsername}">
    <div class="error">
       ERREUR — un utilisateur avec ce USERNAME = ${useradd.username}
       existe déjà en base
@@ -198,8 +198,8 @@ $(function () {
    </th>
    <td>
       <input class="text" type="password" id="text-password" name="password" value="${useradd_moreInfo.password}">
-	  <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes">
-	  <label for="checkbox-passwordEnabled">
+	  <input class="checkbox" type="checkbox" id="checkbox-classicLoginAllowed" name="classicLoginAllowed" value="yes">
+	  <label for="checkbox-classicLoginAllowed">
          Activé
       </label>
    </td>

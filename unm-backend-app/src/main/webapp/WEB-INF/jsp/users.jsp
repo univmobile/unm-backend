@@ -85,9 +85,11 @@ body.results td.roles.superadmin {
 <div id="div-query">
    <form action="${baseURL}/users" method="GET">
    <input id="text-query" name="q">
-   <button id="button-search">
-      Rechercher
-   </button>
+   
+      <button id="button-search">
+         Rechercher
+      </button>
+      
    </form>
 </div>
 
@@ -129,10 +131,11 @@ body.results td.roles.superadmin {
 <thead>
    <tr>
       <th class="none"></th>
-      <th class="id">id</th>
-      <th class="roles">roles</th>
-      <th class="email">email</th>
-      <th class="edit"></th>
+      <th class="id">Id</th>
+      <th class="username">Username</th>
+      <th class="roles">Role</th>
+      <th class="email">E-mail</th>
+      <th class="edit">Action</th>
       <th class="none"></th>
    </tr>
 </thead>
@@ -160,6 +163,10 @@ body.results td.roles.superadmin {
    </td>
    
    <td class="id">
+      ${u.id}
+   </td>
+   
+   <td class="username">
       ${u.username}
    </td>
    
@@ -186,17 +193,7 @@ body.results td.roles.superadmin {
    </td>
    
    <td class="edit">
-      <c:choose>
-      
-         <c:when test="${role eq 'student'}">
-            <a>Modifier…</a>
-         </c:when>
-         
-         <c:otherwise>
-            <a id="link-edit_${u.id}" href="${baseURL}/usermodify/${u.id}">Modifier…</a>
-         </c:otherwise>
-      
-      </c:choose>
+      <a id="link-edit_${u.id}" href="${baseURL}/usermodify/${u.id}">Modifier…</a>
    </td>
    
    <td class="none">
@@ -208,17 +205,7 @@ body.results td.roles.superadmin {
 </table>
 
 <div class="table bottom">
-   <c:choose>
-      
-      <c:when test="${role eq 'student'}">
-         <a>Ajouter un utilisateur…</a>
-      </c:when>
-      
-      <c:otherwise>
-         <a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
-      </c:otherwise>
-   
-   </c:choose>
+   <a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
 </div>
 
 </div> <!-- end of #div-users -->

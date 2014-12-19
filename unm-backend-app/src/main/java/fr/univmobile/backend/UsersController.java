@@ -29,20 +29,21 @@ public class UsersController extends AbstractBackendController {
 
 		// 1. USERS DATA
 
-		Iterable<User> allUsers = userRepository.findAll();
+		Iterable<User> allUsers;
+		if (dUser.getRole().equals(User.ADMIN))
+			allUsers = userRepository.findByUniversityAndRole(
+					dUser.getUniversity(), User.STUDENT);
+		else
+			allUsers = userRepository.findAll();
 
 		List<User> users = new ArrayList<User>();
 
-		int size = 0;
-		for (User u : allUsers) {
-			if (dUser.getRole().equals("admin")) {
-				if (u.getRole().equals("student")
-						&& u.getUniversity().getId()
-								.equals(dUser.getUniversity().getId()))
-					users.add(u);
-				size++;
-			}
-		}
+		for (User u : allUsers)
+			users.add(u);
+
+		// ADD THE ADMIN
+		if (dUser.getRole().equals(User.ADMIN))
+			users.add(dUser);
 
 		setAttribute("users", users);
 
@@ -53,9 +54,9 @@ public class UsersController extends AbstractBackendController {
 		// 2. USERS INFO
 
 		final UsersInfo usersInfo = instantiate(UsersInfo.class) //
-				.setCount(size) //
+				.setCount(users.size()) //
 				.setContext("Tous les utilisateurs") //
-				.setResultCount(size);
+				.setResultCount(users.size());
 
 		setAttribute("usersInfo", usersInfo);
 

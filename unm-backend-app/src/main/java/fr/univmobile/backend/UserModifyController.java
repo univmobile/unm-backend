@@ -103,8 +103,13 @@ public class UserModifyController extends AbstractBackendController {
 			setAttribute("err_usermodfy_username", true);
 		}
 
-		if (form.passwordEnabled() != null)
+		if (form.classicLoginAllowed() != null) {
+			user.setClassicLoginAllowed(true);
 			user.setPassword(form.password());
+		} else {
+			user.setClassicLoginAllowed(false);
+			user.setPassword("");
+		}
 
 		if (!isBlank(form.displayName()))
 			user.setDisplayName(form.displayName());
@@ -119,12 +124,13 @@ public class UserModifyController extends AbstractBackendController {
 		if (form.titleCivilite() != null)
 			user.setTitleCivilite(form.titleCivilite());
 
-		University pU = universityRepository.findOne(form.primaryUniversity());
+		University pU = universityRepository.findOne(form.university());
 		user.setUniversity(pU);
 
 		University sU = universityRepository
 				.findOne(form.secondaryUniversity());
 		user.setSecondaryUniversity(sU);
+
 		user.setDescription(form.description());
 
 		final String twitterScreenName = form.twitter_screen_name().trim();
@@ -132,12 +138,12 @@ public class UserModifyController extends AbstractBackendController {
 			user.setTwitterScreenName(twitterScreenName);
 		}
 
-		if (!isBlank(username)) {
+		/*if (!isBlank(username)) {
 			if (userRepository.findByUsername(username) != null) {
 				hasErrors = true;
 				setAttribute("err_duplicateUsername", true);
 			}
-		}
+		}*/
 
 		if (hasErrors) {
 
@@ -196,7 +202,7 @@ public class UserModifyController extends AbstractBackendController {
 		String password();
 
 		@HttpParameter
-		String passwordEnabled();
+		String classicLoginAllowed();
 
 		@HttpParameter
 		String twitter_screen_name();
@@ -210,7 +216,7 @@ public class UserModifyController extends AbstractBackendController {
 		String username();
 
 		@HttpParameter
-		Long primaryUniversity();
+		Long university();
 
 		@HttpParameter
 		Long secondaryUniversity();

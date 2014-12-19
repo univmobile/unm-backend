@@ -1,87 +1,47 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
-import fr.univmobile.backend.core.Comment;
-import fr.univmobile.backend.core.CommentBuilder;
-import fr.univmobile.backend.core.CommentDataSource;
-import fr.univmobile.commons.tx.Lock;
-import fr.univmobile.commons.tx.TransactionManager;
+import fr.univmobile.backend.domain.Comment;
+import fr.univmobile.backend.domain.CommentRepository;
 import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "commentStatus/${uid}" })
+@Paths({ "commentStatus/${id}" })
 public class CommentStatusController extends AbstractBackendController {
 
-	@PathVariable("${uid}")
-	private int getCommentUid() {
+	@PathVariable("${id}")
+	private long getCommentUid() {
 
-		return getPathIntVariable("${uid}");
+		return getPathLongVariable("${id}");
 	}
 
-	public CommentStatusController(final TransactionManager tx,
-			final CommentDataSource comments) {
-
-		this.comments = checkNotNull(comments, "comments");
-		this.tx = checkNotNull(tx, "tx");
+	public CommentStatusController(final CommentRepository commentRepository) {
+		this.commentRepository = checkNotNull(commentRepository,
+				"commentRepository");
 	}
 
-	private static final Log log = LogFactory
-			.getLog(CommentStatusController.class);
-
-	private final CommentDataSource comments;
-	private final TransactionManager tx;
+	private CommentRepository commentRepository;
 
 	@Override
 	public View action() throws Exception {
 
 		// COMMENT
 
-		final Comment comment = comments.getByUid(getCommentUid());
-		
-		final Integer uid = comment.getUid();
+		Comment comment = commentRepository.findOne(getCommentUid());
 
-		final Lock lock = tx.acquireLock(5000, "comments", uid);
-		try {
-
-			return commentUpdate(lock, comment);
-
-		} finally {
-			lock.release();
-		}
-
+		return commentUpdate(comment);
 	}
 
-	private View commentUpdate(final Lock lock, final Comment comment)
-			throws Exception {
+	private View commentUpdate(final Comment comment) {
 
-		// COMMENT BUILDER
-
-		final CommentBuilder commentBuilder = comments.update(comments
-				.getByUid(getCommentUid()));
-
-		commentBuilder.setUid(comment.getUid());
-		commentBuilder.setAuthorName(comment.getAuthorName());
-		commentBuilder.setId(comment.getId());
-		commentBuilder.setLocalRevfile(comment.getLocalRevfile());
-		commentBuilder.setMessage(comment.getMessage());
-		commentBuilder.setParentId(comment.getParentId());
-		commentBuilder.setPostedAt(comment.getPostedAt());
-		commentBuilder.setPostedBy(comment.getPostedBy());
-		commentBuilder.setTitle(comment.getTitle());
-		if (comment.getActive().equals("false"))
-			commentBuilder.setActive("true");
+		if (comment.isActive())
+			comment.setActive(false);
 		else
-			commentBuilder.setActive("false");
+			comment.setActive(true);
+
+		commentRepository.save(comment);
 		
-		lock.save(commentBuilder);
-
-		lock.commit();
-
 		return new View("comments_redirect.jsp");
 	}
 

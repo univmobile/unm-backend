@@ -3,6 +3,7 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import javax.annotation.Nullable;
 
@@ -44,8 +45,7 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		// 1. POI CATEGORY
 
-		Category poicategory = categoryRepository
-				.findOne(getPoiCategoryId());
+		Category poicategory = categoryRepository.findOne(getPoiCategoryId());
 
 		setAttribute("poicategorymodify", poicategory);
 
@@ -65,18 +65,30 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 	private View poicategorymodify(final PoiCategorymodify form) {
 
-		Category poicategory = categoryRepository
-				.findOne(getPoiCategoryId());
+		Category poicategory = categoryRepository.findOne(getPoiCategoryId());
 
 		boolean hasErrors = false;
 
-		poicategory.setName(form.name());
-		poicategory.setDescription(form.description());
+		if (!isBlank(form.name())) {
+			if (categoryRepository.findByName(form.name()) != null) {
+				if (!poicategory.getName().equals(form.name())) {
+					setAttribute("err_duplicateName", true);
+					hasErrors = true;
+				}
+			}
+			poicategory.setName(form.name());
+		} else {
+			setAttribute("err_poicategoryadd_name", true);
+			hasErrors = true;
+		}
 
 		if (form.active() != null)
 			poicategory.setActive(true);
 		else
 			poicategory.setActive(false);
+
+		if (form.description() != null)
+			poicategory.setDescription(form.description());
 
 		if (hasErrors) {
 

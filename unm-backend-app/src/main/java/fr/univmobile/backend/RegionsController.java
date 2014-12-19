@@ -27,19 +27,19 @@ public class RegionsController extends AbstractBackendController {
 	@Override
 	public View action() {
 
+		Region ile_de_france;
+		Region bretagne;
+		Region unrpcl;
+
+		ile_de_france = regionRepository.findByLabel("ile_de_france");
+		bretagne = regionRepository.findByLabel("bretagne");
+		unrpcl = regionRepository.findByLabel("unrpcl");
+		
 		// 1. UPDATE?
 
 		final UpdateRegions ur = getHttpInputs(UpdateRegions.class);
 
 		if (ur.isHttpValid()) {
-
-			final Region ile_de_france;
-			final Region bretagne;
-			final Region unrpcl;
-
-			ile_de_france = regionRepository.findByLabel("ile_de_france");
-			bretagne = regionRepository.findByLabel("bretagne");
-			unrpcl = regionRepository.findByLabel("unrpcl");
 
 			if (!ile_de_france.getLabel().equals(ur.region_ile_de_france())) {
 				ile_de_france.setLabel(ur.region_ile_de_france());
@@ -68,7 +68,7 @@ public class RegionsController extends AbstractBackendController {
 
 		setAttribute("regions", regions);
 
-		// 9. END
+		// 3. END
 
 		return new View("regions.jsp");
 	}

@@ -26,7 +26,8 @@
       <c:if test="${user.id != delegationUser.id}">
          <li> Délégation : ${delegationUser.username}
       </c:if>
-   <li id="li-logout"> <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
+   <li id="li-logout">
+      <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
 </ul>
 
 </div>
@@ -50,9 +51,9 @@
 
 <tr>
    <th class="none"></th>
-   <th class="uid">id</th>
-   <th class="label">label</th>
-   <th class="universityCount">universités</th>
+   <th class="id">Id</th>
+   <th class="label">Label</th>
+   <th class="universityCount">Universités</th>
    <th class="none"></th>
 </tr>
 
@@ -73,7 +74,7 @@
    </td>
    
    <td class="label">
-      <input type="text" id="text-region_${r.id}" name="region_${r.id}" value="${r.label}"/>
+      <input type="text" id="text-region_${r.id}" name="region_ile_de_france" value="${r.label}"/>
    </td>
    
    <td class="universityCount">
@@ -91,7 +92,7 @@
 
 <div class="table bottom">
 
-   <button id="button-cancel" onclick="document.location.href = '${baseURL}/regions/'; return false;">
+   <button id="button-cancel" onclick="document.location.href = '${baseURL}/'; return false;">
       Annuler
    </button>
    

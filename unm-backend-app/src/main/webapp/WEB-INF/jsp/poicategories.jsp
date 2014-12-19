@@ -96,11 +96,11 @@ td.id {
 <thead>
    <tr>
       <th class="none"></th>
-      <th class="id">id</th>
-      <th class="nom">nom</th>
-      <th class="description">description</th>
-      <th class="active">actif</th>
-      <th class="edit">action</th>
+      <th class="cId">Id</th>
+      <th class="nom">Nom</th>
+      <th class="description">Description</th>
+      <th class="active">Actif</th>
+      <th class="edit">Action</th>
       <th class="none"></th>
    </tr>
 </thead>
@@ -113,22 +113,22 @@ td.id {
       <td class="none">
          <c:choose>
          
-         <c:when test="${user.id == u.id}">
-            <div class="principal
-               <c:if test="${delegationUser.id == u.id}">
-                  delegation
-               </c:if>
-               " title="Principal : ${user.id}">1</div>
-         </c:when>
-         
-         <c:when test="${delegationUser.id == u.id}">
-            <div class="delegation" title="Délégation : ${delegationUser.id}">2</div>
-         </c:when>
+            <c:when test="${user.id == u.id}">
+               <div class="principal
+                  <c:if test="${delegationUser.id == u.id}">
+                     delegation
+                  </c:if>
+                  " title="Principal : ${user.id}">1</div>
+            </c:when>
+            
+            <c:when test="${delegationUser.id == u.id}">
+               <div class="delegation" title="Délégation : ${delegationUser.id}">2</div>
+            </c:when>
          
          </c:choose>
       </td>
 
-      <td class="id">
+      <td class="cId">
          ${pc.id}
       </td>
       
@@ -143,13 +143,13 @@ td.id {
       <td class="active">
          <c:choose>
          
-         <c:when test="${pc.active}">
-         	Actif
-         </c:when>
-         
-         <c:otherwise>
-         	Inactif    
-         </c:otherwise>
+            <c:when test="${pc.active}">
+            	Actif
+            </c:when>
+            
+            <c:otherwise>
+            	Inactif    
+            </c:otherwise>
          
          </c:choose>
       </td>

@@ -55,6 +55,12 @@ label.checkbox-parentId {
       </div>
    </c:if>
    
+   <c:if test="${err_duplicateName}">
+      <div class="error">
+         ERREUR - une catégorie avec ce NOM = ${poicategoryadd.name}
+         existe déjà en base
+      </div>
+   </c:if> 
    
    <h2>L'ajout d'une catégorie</h2>
    

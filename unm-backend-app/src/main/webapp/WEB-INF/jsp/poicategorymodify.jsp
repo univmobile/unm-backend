@@ -49,24 +49,28 @@ label.checkbox-parentId {
 <div class="div-poicategorymodify">
 
    <c:if test="${err_incorrectFields}">
-   <div class="error">
-   	ERREUR — des champs sont incorrects
-   </div>
+      <div class="error">
+         ERREUR — des champs sont incorrects
+      </div>
    </c:if>
    
+   <c:if test="${err_duplicateName}">
+      <div class="error">
+         ERREUR - une catégorie avec ce NOM = ${poicategorymodify.name}
+         existe déjà en base
+      </div>
+   </c:if>    
    
    <h2>Modifier d'une catégorie</h2>
    
    <table>
    
    <tbody>
+   
       <tr>
          <th>Id</th>
          <td>
             <input readonly class="text" type="text" id="text-id" name="id" value="${poicategorymodify.id}">
-         <c:if test="${err_poicategorymodify_id}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
          </td>
       </tr>
       
@@ -84,9 +88,6 @@ label.checkbox-parentId {
          <th>Description</th>
          <td>
            <input class="text" type="text" id="text-description" name="description" value="${poicategorymodify.description}">
-         <c:if test="${err_poicategorymodify_description}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
          </td>
       </tr>
       
@@ -108,7 +109,7 @@ label.checkbox-parentId {
       <tr>
          <th>ParentId</th>
          <td>
-            <input readonly class="text" type="text" id="text-parentId" name="parentId" value="${poicategorymodify.parentId}">
+            <input readonly class="text" type="text" id="text-parentId" name="parentId" value="${poicategorymodify.parent.id}">
          </td>
       </tr>
 

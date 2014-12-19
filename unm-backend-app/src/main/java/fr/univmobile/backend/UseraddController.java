@@ -91,7 +91,7 @@ public class UseraddController extends AbstractBackendController {
 			setAttribute("err_useradd_username", true);
 		}
 
-		if (form.passwordEnabled() != null)
+		if (form.classicLoginAllowed() != null)
 			user.setPassword(form.password());
 
 		if (!isBlank(form.displayName()))
@@ -118,8 +118,9 @@ public class UseraddController extends AbstractBackendController {
 		user.setUniversity(pU);
 
 		University sU = universityRepository
-				.findOne(form.secondaryUniversity());
+				.findOne(form.secondaryUniversity());	
 		user.setSecondaryUniversity(sU);
+		
 		user.setDescription(form.description());
 
 		final String twitterScreenName = form.twitter_screen_name().trim();
@@ -198,7 +199,7 @@ public class UseraddController extends AbstractBackendController {
 		String password();
 
 		@HttpParameter
-		String passwordEnabled();
+		String classicLoginAllowed();
 
 		@HttpParameter
 		String twitter_screen_name();

@@ -30,9 +30,9 @@ import javax.sql.DataSource;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.context.ApplicationContext;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
+
 import fr.univmobile.backend.admin.GeocampusJSONController;
 import fr.univmobile.backend.admin.GeocampusPoiManageJSONController;
 import fr.univmobile.backend.admin.GeocampusPoisByRegionAndCategoryJSONController;
@@ -72,7 +72,6 @@ import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.core.UploadManager;
 import fr.univmobile.backend.core.UploadNotFoundException;
-import fr.univmobile.backend.core.User;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.LogQueueDbImpl;
@@ -113,7 +112,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	 */
 	private static final long serialVersionUID = -4796360020211862333L;
 
-	
 	// JPA Repositories
 	private CategoryRepository categoryRepository;
 	private CommentRepository commentRepository;
@@ -122,7 +120,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private RegionRepository regionRepository;
 	private UniversityRepository universityRepository;
 	private UserRepository userRepository;
-	
+
 	private UserDataSource users;
 	private RegionDataSource regions;
 	private PoiDataSource pois;
@@ -140,13 +138,19 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	@Override
 	public void init() throws ServletException {
 
-		WebApplicationContext ctx = WebApplicationContextUtils.getRequiredWebApplicationContext(this.getServletContext());
-		this.categoryRepository = (CategoryRepository) ctx.getBean("categoryRepository");
-		this.commentRepository = (CommentRepository) ctx.getBean("commentRepository");
-		this.imageMapRepository = (ImageMapRepository) ctx.getBean("imageMapRepository");
+		WebApplicationContext ctx = WebApplicationContextUtils
+				.getRequiredWebApplicationContext(this.getServletContext());
+		this.categoryRepository = (CategoryRepository) ctx
+				.getBean("categoryRepository");
+		this.commentRepository = (CommentRepository) ctx
+				.getBean("commentRepository");
+		this.imageMapRepository = (ImageMapRepository) ctx
+				.getBean("imageMapRepository");
 		this.poiRepository = (PoiRepository) ctx.getBean("poiRepository");
-		this.regionRepository = (RegionRepository) ctx.getBean("regionRepository");
-		this.universityRepository = (UniversityRepository) ctx.getBean("universityRepository");
+		this.regionRepository = (RegionRepository) ctx
+				.getBean("regionRepository");
+		this.universityRepository = (UniversityRepository) ctx
+				.getBean("universityRepository");
 		this.userRepository = (UserRepository) ctx.getBean("userRepository");
 
 		if (log.isInfoEnabled()) {
@@ -255,7 +259,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			commentManager = new CommentManagerImpl(logQueue, comments,
 					searchManager, MYSQL, ds);
 
-			sessionManager = new SessionManagerImpl(logQueue, userRepository, MYSQL, ds);
+			sessionManager = new SessionManagerImpl(logQueue, userRepository,
+					MYSQL, ds);
 
 		} catch (final NamingException e) {
 			throw new ServletException(e);
@@ -273,9 +278,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		// Added by Mauricio
 		final PoiCategoriesController poisCategoriesController = new PoiCategoriesController(
 				categoryRepository);// poiCategories);
-		final PoisController poisController = new PoisController(regions, pois);
+		final PoisController poisController = new PoisController(poiRepository,
+				regionRepository);
 		final CommentsController commentsController = new CommentsController(
-				comments, commentManager, searchManager, regions, pois);
+				commentRepository, poiRepository);
 
 		super.init(
 				new HomeController(userRepository, sessionManager), //
@@ -299,13 +305,13 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						poisCategoriesController), //
 				new PoiCategoriesModifyController(categoryRepository,
 						poisCategoriesController), //
-				new PoisAddController(tx, pois, poisController, regions,
-						poiCategories), //
-				new PoisModifyController(tx, pois, poisController, regions,
-						poiCategories), //
+				new PoisAddController(poiRepository, categoryRepository,
+						regionRepository, universityRepository, poisController), //
+				new PoisModifyController(poiRepository, categoryRepository,
+				regionRepository, universityRepository, poisController), //
 				new UserModifyController(userRepository, regionRepository,
 						universityRepository, usersController),
-				new CommentStatusController(tx, comments),
+				new CommentStatusController(commentRepository),
 				new GeocampusAdminController());
 
 		// 3. JSON CONTROLLERS
@@ -524,8 +530,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 4. USER
 
-		final fr.univmobile.backend.domain.User user = userRepository.findByRemoteUser(remoteUser);
-		
+		final fr.univmobile.backend.domain.User user = userRepository
+				.findByRemoteUser(remoteUser);
+
 		if (user == null) {
 
 			log.fatal("remoteAddr: " + remoteAddr
@@ -538,7 +545,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			return;
 		}
 
-		//final User user = users.getByRemoteUser(remoteUser);
+		// final User user = users.getByRemoteUser(remoteUser);
 
 		/*
 		 * Fine grained need to allow somethings to users/anons // Added by
@@ -548,7 +555,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		 * .sendError404(request, response, uriPath);
 		 */
 
-		LogQueueDbImpl.setPrincipal(user.getUsername()); // TODO user? delegation?
+		LogQueueDbImpl.setPrincipal(user.getUsername()); // TODO user?
+															// delegation?
 
 		request.getSession().setAttribute("user", user);
 

@@ -49,7 +49,7 @@ td span.error {
    </div>
 </c:if>
 
-<c:if test="${err_duplicateusername}">
+<c:if test="${err_duplicateUsername}">
    <div class="error">
       ERREUR — un utilisateur avec ce USERNAME = ${usermodify.username}
       existe déjà en base
@@ -64,17 +64,23 @@ td span.error {
 
 <tr>
    <th title="L’identifiant interne à UnivMobile pour le compte utilisateur">
-      id
+      Id
    </th>
    <td>
       <input readonly class="text" type="text" id="text-id" name="id" value="${usermodify.id}">
    </td>
 </tr>
 
+<tr>
+   <th>Username</th>
+   <td>
+      <input readonly class="text" type="text" id="text-username" name="username" value="${usermodify.username}">
+   </td>
+</tr>
+
+
 <tr class="role">
-   <th title="Le profil de ce compte utilisateur">
-      Role
-   </th>
+   <th>Role</th>
    
    <c:choose>
    
@@ -131,9 +137,7 @@ td span.error {
 </tr>
 
 <tr>
-   <th title="La valeur de l’attribut REMOTE_USER de Shibboleth pour cet utilisateur">
-      REMOTE_USER
-   </th>
+   <th>REMOTE_USER</th>
    <td>
       <input readonly class="text" type="text" id="text-remoteUser" name="remoteUser" value="${usermodify.remoteUser}">
    </td>
@@ -186,23 +190,22 @@ td span.error {
 </tr>
 
 <tr>
-   <th title="Le mot de passe à utiliser lorsque Shibboleth n’est pas disponible">
-      Mot de passe
-   </th>
+   <th>Mot de passe</th>
    <td>
       <input class="text" type="password" id="text-password" name="password" value="${usermodify_moreInfo.password}">
 	  <c:choose>
      
-         <c:when test="${usermodify.passwordEnabled eq 'true'}">
-            <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes" checked>
+         <c:when test="${usermodify.classicLoginAllowed eq 'true'}">
+            <input class="checkbox" type="checkbox" id="checkbox-classicLoginAllowed" name="classicLoginAllowed" value="yes" checked>
          </c:when>
          
          <c:otherwise>
-            <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled">
+            <input class="checkbox" type="checkbox" id="checkbox-classicLoginAllowed" name="classicLoginAllowed">
          </c:otherwise>
       
       </c:choose>
-      <label for="checkbox-passwordEnabled">
+      
+      <label for="checkbox-classicLoginAllowed">
          Activé
       </label>
    </td>
@@ -213,27 +216,27 @@ td span.error {
       Université de rattachement
    </th>
    <td>
-      <select id="select-primaryUniversity" name="primaryUniversity">
+      <select id="select-university" name="university">
          <c:forEach var="r" items="${regionsData}">
             <optgroup label="${r.label}">
-               <c:forEach var="u" items="${r.universities}">
+               <c:forEach var="ru" items="${r.universities}">
                   <c:choose>
                   
-                     <c:when test="${u.id eq usermodify.primaryUniversity}">
-                        <option value="${u.id}" selected>${u.title}</option>
+                     <c:when test="${ru.id eq usermodify.university.id}">
+                        <option value="${ru.id}" selected>${ru.title}</option>
                      </c:when>
                     
                      <c:otherwise>
                         <c:choose>
                            
                            <c:when test="${role eq 'admin'}">
-                              <c:if test="${userUnivId eq u.id}">
-                                 <option value="${u.id}">${u.title}</option>
+                              <c:if test="${userUnivId eq ru.id}">
+                                 <option value="${ru.id}">${ru.title}</option>
                               </c:if>
                            </c:when>
                            
                            <c:otherwise>
-                              <option value="${u.id}">${u.title}</option>   
+                              <option value="${ru.id}">${ru.title}</option>   
                            </c:otherwise>
                         
                         </c:choose>
@@ -255,24 +258,24 @@ td span.error {
    	  <select id="select-secondaryUniversity" name="secondaryUniversity">
             <c:forEach var="r" items="${regionsData}">
                <optgroup label="${r.label}">
-                  <c:forEach var="u" items="${r.universities}">
+                  <c:forEach var="ru" items="${r.universities}">
                      <c:choose>
                         
-                        <c:when test="${u.id eq usermodify.secondaryUniversity}">
-                           <option value="${u.id}" selected>${u.title}</option>
+                        <c:when test="${ru.id eq usermodify.secondaryUniversity.id}">
+                           <option value="${ru.id}" selected>${ru.title}</option>
                         </c:when>
                         
                         <c:otherwise>
                            <c:choose>
                            
                               <c:when test="${role eq 'admin'}">
-                                 <c:if test="${userUnivId eq u.id}">
-                                    <option value="${u.id}">${u.title}</option>
+                                 <c:if test="${userUnivId eq ru.id}">
+                                    <option value="${ru.id}">${ru.title}</option>
                                  </c:if>
                               </c:when>
                               
                               <c:otherwise>
-                                 <option value="${u.id}">${u.title}</option>   
+                                 <option value="${ru.id}">${ru.title}</option>   
                               </c:otherwise>
                            
                            </c:choose>

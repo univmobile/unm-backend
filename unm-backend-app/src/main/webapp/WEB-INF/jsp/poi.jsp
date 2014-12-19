@@ -68,9 +68,7 @@ textarea {
 <tbody>
 
 <tr class="name">
-   <th>
-      Nom
-   </th>
+   <th>Nom</th>
    <td>
       <input readonly class="text" id="text-name" name="name" value="${poi.name}" >
    </td>
@@ -97,9 +95,7 @@ textarea {
 </tr>
 
 <tr class="textarea floor">
-   <th>
-   	Emplacement
-   </th>
+   <th>Emplacement</th>
    <td>
       <textarea readonly id="text-floor" name="floor">
          ${poi.floor}
@@ -108,9 +104,7 @@ textarea {
 </tr>
 
 <tr class="textarea openingHours">
-   <th>
-      Horaires
-   </th>
+   <th>Horaires</th>
    <td>
       <textarea readonly id="text-schedule" name="schedule">
          ${poi.openingHours}
@@ -119,18 +113,14 @@ textarea {
 </tr>
 
 <tr class="phone">
-   <th>
-      Téléphone
-   </th>
+   <th>Téléphone</th>
    <td>
       <input readonly class="text" id="text-phone" name="phone" value="${poi.phones}">
    </td>
 </tr>
 
 <tr class="textarea address">
-   <th>
-      Adresse
-   </th>
+   <th>Adresse</th>
    <td>
       <textarea readonly id="text-address" name="address">
          ${poi.address}
@@ -139,49 +129,39 @@ textarea {
 </tr>
 
 <tr class="email">
-   <th>
-      E-mail
-   </th>
+   <th>E-mail</th>
    <td>
       <input readonly class="text" id="text-email" name="email" value="${poi.email}">
    </td>
 </tr>
 
 <tr class="textarea itinerary">
-   <th>
-      Accès
-   </th>
+   <th>Accès</th>
    <td>
       <textarea readonly id="text-itinerary" name="itinerary">
-         ${poi.itinerary}"
+         ${poi.itinerary}
       </textarea>
    </td>
 </tr>
 
 <tr class="url">
-   <th>
-      Site web
-   </th>
+   <th>Site web</th>
    <td>
       <input readonly class="text" id="text-url" name="url" value="${poi.url}">
    </td>
 </tr>
 
 <tr class="coordinates">
-   <th>
-      Coordonnées Lat/Lng
-   </th>
+   <th>Coordonnées Lat/Lng</th>
    <td>
       <input readonly class="text" id="text-coordinates" name="coordinates" value="${poi.lat}/${poi.lng}">
    </td>
 </tr>
 
 <tr class="comments">
-   <th>
-      Commentaires
-   </th>
+   <th>Commentaires</th>
    <td>
-      <a href="${baseURL}/comments/${poi.id}" id="link-comments">
+      <a href="${baseURL}/comments/poi${poi.id}" id="link-comments">
    	     <c:choose>
       		 
              <c:when test="${empty commentCount or commentCount == 0}">

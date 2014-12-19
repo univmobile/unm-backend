@@ -3,7 +3,6 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.util.Collection;
-import java.util.List;
 
 import fr.univmobile.backend.domain.Comment;
 import fr.univmobile.backend.domain.CommentRepository;
