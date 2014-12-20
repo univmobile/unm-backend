@@ -14,9 +14,9 @@
 	<bean id="datasource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/test_univmobile" />
+		<property name="url" value="jdbc:mysql://taurus:3306/test_univmobile" />
 		<property name="username" value="root" />
-		<property name="password" value="rosenrot123" />
+		<property name="password" value="root" />
 	</bean>
 
 	<!-- Entity Manager -->

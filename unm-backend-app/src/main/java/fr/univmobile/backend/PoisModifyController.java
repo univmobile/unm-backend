@@ -31,7 +31,7 @@ public class PoisModifyController extends AbstractBackendController {
 	@PathVariable("${id}")
 	private long getPoiId() {
 
-		return getPathLongVariable("${id}");
+		return getPathIntVariable("${id}");
 	}
 
 	public PoisModifyController(final PoiRepository poiRepository,

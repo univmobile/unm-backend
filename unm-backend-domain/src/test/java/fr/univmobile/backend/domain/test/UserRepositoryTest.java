@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.UniversityRepository;
 import fr.univmobile.backend.domain.User;
 import fr.univmobile.backend.domain.UserRepository;
@@ -17,34 +18,37 @@ import fr.univmobile.backend.domain.UserRepository;
 public class UserRepositoryTest {
 
 	@Autowired
-	UserRepository repository;
+	UserRepository userRepository;
 
 	@Autowired
 	UniversityRepository universityRepository;
 
+	@Autowired
+	RegionRepository regionRepository;
+
 	@Test
 	public void test() {
+
+		// userRepository.deleteAll();
+		// universityRepository.deleteAll();
+		// regionRepository.deleteAll();
+		
 		User u = new User();
-		/*
-		u.setTitle("user title");
-		u.setAuthorName("mauricio");
-		u.setUid("pedro");
-		u.setDisplayName("Pedro Gonzales");
-		u.setRemoteUser("remote_user_pedro_gonzales");
-		u.setMail("pedrogonzales@gmail.com");
+
+		u.setUsername("dandriana");
+		u.setDisplayName("Nicolas");
+		u.setRemoteUser("dandriana@univ-paris1.fr");
 		u.setRole("superadmin");
-		u.setScreenName("Pedro");
-		u.setLogin_classic(false);
-		u.setSupannCivilite("M.");
-		u.setPrimaryUniversity(universityRepository.findOne("paris1"));
-		u.setSecondaryUniversity(universityRepository.findOne("rennes1"));
+		u.setTitleCivilite("M.");
+		u.setEmail("dandriana@univ-paris1.fr");
+		u.setClassicLoginAllowed(true);
+		u.setUniversity(universityRepository.findByTitle("Université Panthéon-Sorbonne - Paris I"));
 
-		repository.save(u);
+		userRepository.save(u);
 
-		User dbuser = repository.findOne("pedro");
+		User dbuser = userRepository.findByUsername("dandriana");
 		assertNotNull(dbuser);
 		System.out.println(dbuser);
-		*/
 	}
 
 }

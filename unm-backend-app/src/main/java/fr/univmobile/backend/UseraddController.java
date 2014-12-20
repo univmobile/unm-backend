@@ -65,9 +65,6 @@ public class UseraddController extends AbstractBackendController {
 		setAttribute("role", getDelegationUser().getRole());
 		setAttribute("userUnivId", getDelegationUser().getUniversity().getId());
 
-		setAttribute("role", getDelegationUser().getRole());
-		setAttribute("userUnivId", getDelegationUser().getUniversity().getId());
-
 		if (!form.isHttpValid()) {
 
 			return new View("useradd.jsp");

@@ -1,6 +1,6 @@
 package fr.univmobile.backend.domain.test;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertNotNull;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -20,23 +20,23 @@ public class CategoryRepositoryTest {
 
 	@Test
 	public void test() {
+
+		// DELETE ALL
+		repository.deleteAll();
+
+		// CREATE
 		Category category = new Category();
 
-		/*
-		category.setTitle("category title");
-		category.setAuthorName("mauricio");
-		category.setUid(1);
 		category.setActive(true);
-		category.setName("category");
-		category.setDescription("description");
-		category.setParentUid(0);
+		category.setName("Important");
+		category.setDescription("Critical events");
+		category.setParent(null);
 
 		repository.save(category);
 
-		Category dbcategory = repository.findOne(category.getUid());
+		Category dbcategory = repository.findOne(category.getId());
 		assertNotNull(dbcategory);
 		System.out.println(dbcategory);
-		*/
 	}
 
 }

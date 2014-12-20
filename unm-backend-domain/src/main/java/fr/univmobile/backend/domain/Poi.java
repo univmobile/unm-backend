@@ -6,6 +6,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -57,17 +58,20 @@ public class Poi extends AuditableEntityWithLegacy {
 	@JsonIgnore
 	private String legacy;
 	@ManyToOne
-	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property="id")
-	@JsonIdentityReference(alwaysAsId=true)
+	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+	@JsonIdentityReference(alwaysAsId = true)
 	private Poi parent;
-	@OneToMany(mappedBy="parent")
+	@OneToMany(mappedBy = "parent")
 	@JsonIgnore
     private Collection<Poi> children;
 	@ManyToOne
-	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property="id")
-	@JsonIdentityReference(alwaysAsId=true)
+	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+	@JsonIdentityReference(alwaysAsId = true)
 	private Category category;
 	
+	@ManyToOne
+	@JoinColumn(nullable = false)
+	private University university;
 	// Attachments
 
 	@Override
@@ -277,5 +281,13 @@ public class Poi extends AuditableEntityWithLegacy {
 
 	public void setCategory(Category category) {
 		this.category = category;
+	}
+	
+	public University getUniversity() {
+		return university;
+	}
+
+	public void setUniversity(University university) {
+		this.university = university;
 	}
 }

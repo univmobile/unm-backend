@@ -13,7 +13,7 @@ public class CommentStatusController extends AbstractBackendController {
 	@PathVariable("${id}")
 	private long getCommentUid() {
 
-		return getPathLongVariable("${id}");
+		return getPathIntVariable("${id}");
 	}
 
 	public CommentStatusController(final CommentRepository commentRepository) {

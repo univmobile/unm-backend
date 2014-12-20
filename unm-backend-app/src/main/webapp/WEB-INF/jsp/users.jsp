@@ -163,7 +163,7 @@ body.results td.roles.superadmin {
    </td>
    
    <td class="id">
-      ${u.username}
+      ${u.id}
    </td>
    
    <td class="username">
@@ -205,17 +205,7 @@ body.results td.roles.superadmin {
 </table>
 
 <div class="table bottom">
-   <c:choose>
-      
-      <c:when test="${role eq 'student'}">
-         <a>Ajouter un utilisateur…</a>
-      </c:when>
-      
-      <c:otherwise>
-         <a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
-      </c:otherwise>
-   
-   </c:choose>
+   <a id="link-useradd" href="${baseURL}/useradd">Ajouter un utilisateur…</a>
 </div>
 
 </div> <!-- end of #div-users -->

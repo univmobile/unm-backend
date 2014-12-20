@@ -24,9 +24,9 @@ public class Region extends AuditableEntity {
 	private String label;
 	@Column(unique = true, nullable = false)
 	private String url;
-	@OneToMany(fetch = FetchType.EAGER, mappedBy="region")
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "region")
 	private Collection<University> universities = new ArrayList<University>();
-	
+
 	@Override
 	public String toString() {
 		return String.format("Region[id='%s', name='%s']", id, name);

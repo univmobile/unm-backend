@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.University;
 import fr.univmobile.backend.domain.UniversityRepository;
 
@@ -16,22 +17,25 @@ import fr.univmobile.backend.domain.UniversityRepository;
 public class UniversityRepositoryTest {
 
 	@Autowired
-	UniversityRepository repository;
+	UniversityRepository universityRepository;
+	
+	@Autowired
+	RegionRepository regionRepository;
 
 	@Test
 	public void test() {
 		University u1 = new University();
-		//u1.setId("paris1");
 		u1.setTitle("Université Panthéon-Sorbonne - Paris I");
+		u1.setRegion(regionRepository.findByLabel("bretagne"));
 
 		University u2 = new University();
-		//u2.setId("rennes1");
 		u2.setTitle("Université de Rennes 1");
+		u2.setRegion(regionRepository.findByLabel("ile_de_france"));
 
-		repository.save(u1);
-		repository.save(u2);
+		universityRepository.save(u1);
+		universityRepository.save(u2);
 
-		University dbuniversity = repository.findOne(u1.getId());
+		University dbuniversity = universityRepository.findOne(u1.getId());
 		assertNotNull(dbuniversity);
 		System.out.println(dbuniversity);
 	}

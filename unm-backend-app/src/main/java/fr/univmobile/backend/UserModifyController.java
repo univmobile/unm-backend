@@ -76,10 +76,7 @@ public class UserModifyController extends AbstractBackendController {
 		final Usermodify form = getHttpInputs(Usermodify.class);
 		
 		setAttribute("role", getDelegationUser().getRole());
-		setAttribute("userUnivId", getDelegationUser().getUniversity());
-
-		setAttribute("role", getDelegationUser().getRole());
-		setAttribute("userUnivId", getDelegationUser().getUniversity());
+		setAttribute("userUnivId", getDelegationUser().getUniversity().getId());
 
 		if (!form.isHttpValid()) {
 

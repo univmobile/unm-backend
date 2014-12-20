@@ -1,21 +1,21 @@
 package fr.univmobile.backend.domain;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.PrePersist;
-import javax.persistence.PreUpdate;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "user")
 public class User extends AuditableEntity {
 	
+	public final static String STUDENT = "student";
+	public final static String ADMIN = "admin";
+	public final static String SUPERADMIN = "superadmin";
+
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -46,7 +46,9 @@ public class User extends AuditableEntity {
 
 	@Override
 	public String toString() {
-		return String.format("User[id='%s', displayName='%s', role='%s', university='%s']", id, displayName, role, university.getId());
+		return String.format(
+				"User[id='%s', displayName='%s', role='%s', university='%s']",
+				id, displayName, role, university.getId());
 	}
 
 	public Long getId() {
@@ -162,18 +164,14 @@ public class User extends AuditableEntity {
 	}
 	
 	public boolean isSuperAdmin() {
-		// TODO: Reeplace with constants
-		return this.role.equals("superadmin");
+		return this.role.equals(SUPERADMIN);
 	}
 
 	public boolean isAdmin() {
-		// TODO: Reeplace with constants
-		return this.role.equals("admin");
+		return this.role.equals(ADMIN);
 	}
 
 	public boolean isStudent() {
-		// TODO: Reeplace with constants
-		return this.role.equals("student");
+		return this.role.equals(STUDENT);
 	}
-
 }
