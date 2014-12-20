@@ -6,6 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface CategoryRepository extends CrudRepository<Category, Long> {
 	
-	List<Category> findByName(String name);
+	Category findByName(String name);
+	List<Category> findByLegacyStartingWithOrderByLegacyAsc(String legacy);
 
 }

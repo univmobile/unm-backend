@@ -6,6 +6,7 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface RegionRepository extends CrudRepository<Region, Long> {
 	
-	public Region findByLabel(String label);
+	Region findByLabel(String label);
+	List<Region> findAllByOrderByNameAsc();
 	
 }

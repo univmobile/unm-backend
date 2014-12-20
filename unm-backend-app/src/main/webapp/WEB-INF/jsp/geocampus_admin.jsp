@@ -150,11 +150,11 @@
                 R&eacute;gion <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu" data-bind="foreach: regions">
-                <li><a href="#" data-bind="text: label, click: $parent.changeRegion"></a></li>
+                <li><a href="#" data-bind="text: name, click: $parent.changeRegion"></a></li>
               </ul>
             </div>
             
-          <h1 class="page-header text-left">POIs <small data-bind="text: activeRegion().label"></small><small data-bind="visible: activeRegion().label">&nbsp;</small><small data-bind="visible: activeTab() == 'pois', text: activeCategoryUniversities().name"></small><small data-bind="visible: activeTab() == 'bonplans', text: activeCategoryBonplans().name"></small></h1>
+          <h1 class="page-header text-left">POIs <small data-bind="text: activeRegion().name"></small><small data-bind="visible: activeRegion().label">&nbsp;</small><small data-bind="visible: activeTab() == 'pois', text: activeCategoryUniversities().name"></small><small data-bind="visible: activeTab() == 'bonplans', text: activeCategoryBonplans().name"></small></h1>
             
           <div class="row placeholders">
               <div id="map_canvas"></div>
@@ -224,7 +224,7 @@
               <div class="form-group">
                 <label for="inputPassword3" class="col-sm-2 control-label">Cat&eacute;gorie</label>
                 <div class="col-sm-10">
-                  <select class="form-control" required="required" data-bind="options: $parent.getAvailableCategories(), optionsValue: 'id', optionsText: 'name', value: categoryId"></select>
+                  <select class="form-control" required="required" data-bind="options: $parent.getAvailableCategories(), optionsValue: 'id', optionsText: 'name', value: category"></select>
                 </div>
               </div>
               <div class="form-group">

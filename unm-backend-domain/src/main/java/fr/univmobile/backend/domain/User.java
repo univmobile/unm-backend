@@ -160,4 +160,20 @@ public class User extends AuditableEntity {
 	public void setSecondaryUniversity(University secondaryUniversity) {
 		this.secondaryUniversity = secondaryUniversity;
 	}
+	
+	public boolean isSuperAdmin() {
+		// TODO: Reeplace with constants
+		return this.role.equals("superadmin");
+	}
+
+	public boolean isAdmin() {
+		// TODO: Reeplace with constants
+		return this.role.equals("admin");
+	}
+
+	public boolean isStudent() {
+		// TODO: Reeplace with constants
+		return this.role.equals("student");
+	}
+
 }

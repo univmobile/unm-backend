@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "university")
 public class University extends AuditableEntity {
@@ -19,6 +21,7 @@ public class University extends AuditableEntity {
 	private String title;
 	@ManyToOne
 	@JoinColumn(nullable = false)
+	@JsonIgnore
 	private Region region;
 
 	@Override

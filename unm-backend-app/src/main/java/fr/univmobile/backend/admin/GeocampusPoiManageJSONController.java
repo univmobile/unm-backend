@@ -13,8 +13,8 @@ import fr.univmobile.backend.core.ImageMapDataSource;
 import fr.univmobile.backend.core.PoiBuilder;
 import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.Region;
-import fr.univmobile.backend.core.RegionDataSource;
+import fr.univmobile.backend.domain.Poi;
+import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.TransactionException;
@@ -29,47 +29,11 @@ import fr.univmobile.web.commons.Regexp;
 @Paths({ "json/admin/geocampus/poi/manage", "json/admin/geocampus/poi/manage/", "json/admin/poi/manage.json" })
 public class GeocampusPoiManageJSONController extends AbstractJSONController {
 
-	/*
-	public GeocampusPoiManageJSONController(
-			final TransactionManager tx,
-			final RegionJSONClient regionJSONClient, 
-			final PoiCategoryJSONClient poiCategoryJSONClient, 
-			final ImageMapJSONClient imageMapJSONClient, 
-			final RegionDataSource regionDs,
-			final ImageMapDataSource imageMapDs,
-			final PoiCategoryDataSource poiCategoryDs,
-			final PoiDataSource poiDs) {
-		this.tx = checkNotNull(tx, "tx");
-		this.regionJSONClient = checkNotNull(regionJSONClient, "regionJSONClient");
-		this.poiCategoryJSONClient = checkNotNull(poiCategoryJSONClient, "poiCategoryJSONClient");
-		this.imageMapJSONClient = checkNotNull(imageMapJSONClient, "imageMapJSONClient");
-		this.regionDs = checkNotNull(regionDs, "regionDs");
-		this.imageMapDs = checkNotNull(imageMapDs, "imageMapDs");
-		this.poiCategoryDs = checkNotNull(poiCategoryDs, "poiCategoryDs");
-		this.poiDs = checkNotNull(poiDs, "poiDs");
+	public GeocampusPoiManageJSONController(PoiRepository poiRepository, final ImageMapDataSource imageMapDs) {
+		this.poiRepository = checkNotNull(poiRepository, "poiRepository");
 	}
 
-	private final TransactionManager tx;
-	
-	private final RegionJSONClient regionJSONClient;
-	private final PoiCategoryJSONClient poiCategoryJSONClient;
-	private final ImageMapJSONClient imageMapJSONClient;
-	private final RegionDataSource regionDs;
-	private final ImageMapDataSource imageMapDs;
-	private final PoiCategoryDataSource poiCategoryDs;
-	private final PoiDataSource poiDs;
-	*/
-
-	public GeocampusPoiManageJSONController(final TransactionManager tx, final PoiDataSource poiDs, final ImageMapDataSource imageMapDs) {
-		this.tx = checkNotNull(tx, "tx");
-		this.poiDs = checkNotNull(poiDs, "poiDs");
-		this.imageMapDs = checkNotNull(imageMapDs, "imageMapDs");
-	}
-
-	private final TransactionManager tx;
-	
-	private final PoiDataSource poiDs;
-	private final ImageMapDataSource imageMapDs;
+	private PoiRepository poiRepository;
 	
 	private static final Log log = LogFactory.getLog(GeocampusPoiManageJSONController.class);
 	
@@ -86,40 +50,40 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 
 		// 2. APPLICATION VALIDATION
 
-		final String name = data.name();
-
-		final Lock lock = tx.acquireLock(5000, "pois", name);
-
-		try {
-			return String.format("{ \"result\": \"%s\" }", poiSave(lock, data) ? "ok" : "error");
-		} finally {
-			lock.release();
-		}
+		return String.format("{ \"result\": \"%s\" }", poiSave(data) ? "ok" : "error");
 	}
 	
 	private String coalesce(String value) {
 		return value == null ? "" : value;
 	}
 	
-	private boolean poiSave(Lock lock, PoiInfo data) throws IOException,
-		TransactionException {
+	private boolean poiSave(PoiInfo data) throws IOException {
 
 		boolean hasErrors = false;
 
 		boolean createPoi = data.isNew() != null && data.isNew().equals("true");
 		
-		if (createPoi && !poiDs.isNullByUid(data.id())) {
-			hasErrors = true;
-			setAttribute("err_duplicateUid", true);
-			return false;
+		Poi poi = poiRepository.findOne(data.id());
+		
+		if (createPoi) {
+			if (poi != null) {
+				hasErrors = true;
+				setAttribute("err_duplicateId", true);
+				return false;
+			} else {
+				poi = new Poi();
+			}
+		} else {
+			if (poi == null) {
+				hasErrors = true;
+				setAttribute("err_notexistsId", true);
+				return false;
+			}
 		}
 
-		final PoiBuilder poi = poiDs.create();
-
-		poi.setAuthorName(getDelegationUser().getAuthorName());
-		poi.setUid(data.id());
 		poi.setName(data.name());
 		
+		/*
 		if (data.imageMapId() != null) {
 			poi.setCategoryId(PoiCategory.ROOT_IMAGE_MAP_CATEGORY_UID);
 		} else {
@@ -130,24 +94,23 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 				poi.setParentUid(Integer.parseInt(data.parentUid()));
 			}
 		}
+		*/
 		
-		poi.setUniversityIds(data.university());
-		poi.setFloors(coalesce(data.floor()));
+		// FIXME: poi.setUniversityIds(data.university());
+		poi.setFloor(coalesce(data.floor()));
 		poi.setOpeningHours(coalesce(data.openingHours()));
 		poi.setPhones(coalesce(data.phone()));
-		poi.setFullAddresses(coalesce(data.address()));
-		poi.setEmails(coalesce(data.email()));
-		poi.setItineraries(coalesce(data.itinerary()));
-		poi.setUrls(coalesce(data.url()));
+		poi.setAddress(coalesce(data.address()));
+		poi.setEmail(coalesce(data.email()));
+		poi.setItinerary(coalesce(data.itinerary()));
+		poi.setUrl(coalesce(data.url()));
 		
 		if (data.lat() != null && data.lat().length() > 0 && data.lat() != null && data.lat().length() > 0 ) {
-			String coordinates = String.format("%s,%s", data.lat(), data.lng());
-			poi.setCoordinates(coordinates);
-			poi.setLatitudes(String.valueOf(data.lat()));
-			poi.setLongitudes(String.valueOf(data.lng()));
+			poi.setLat(Double.valueOf(data.lat()));
+			poi.setLng(Double.valueOf(data.lng()));
 		}
 
-		poi.setActive(coalesce(data.active()).equals("true") ? "true" : "false");
+		poi.setActive(coalesce(data.active()).equals("true"));
 
 		if (hasErrors) {
 			return false;
@@ -155,15 +118,15 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 
 		// 3. SAVE DATA
 
-		lock.save(poi);
+		poiRepository.save(poi);
 
+		/*
 		// 4. IMAGE MAP
 		if (data.imageMapId() != null) {
 			final ImageMapBuilder imageMap = imageMapDs.update(imageMapDs.getByUid(data.imageMapId()));
 			//imageMap
 		}
-		
-		lock.commit();
+		*/
 
 		return true;
 	}
@@ -175,7 +138,7 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		@HttpRequired
 		@HttpParameter(trim = true)
 		@Regexp("[0-9]+")
-		int id();
+		Long id();
 
 		@HttpRequired
 		@HttpParameter
@@ -198,7 +161,7 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		String address();
 
 		@HttpParameter
-		String parentUid();
+		String parent();
 
 		@HttpParameter
 		String email();
@@ -219,7 +182,7 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		String active();
 		
 		@HttpParameter
-		String categoryId();
+		String category();
 
 		@HttpParameter
 		String isNew();

@@ -7,8 +7,8 @@ var Poi = function(data) {
     this.id = ko.observable();
     this.name = ko.observable();
     this.university = ko.observable();
-    this.parentUid = ko.observable();
-    this.categoryId = ko.observable();
+    this.parent = ko.observable();
+    this.category = ko.observable();
     this.floor = ko.observable();
     this.openingHours = ko.observable();
     this.phone = ko.observable();
@@ -34,8 +34,8 @@ ko.utils.extend(Poi.prototype, {
         this.id(data ? data.id : '');
         this.name(data ? data.name : '');
         this.university(data ? data.university : null);
-        this.parentUid(data ? data.parentUid : null);
-        this.categoryId(data ? data.categoryId : null);
+        this.parent(data ? data.parent : null);
+        this.category(data ? data.category : null);
         this.floor(data ? data.floor : '');
         this.openingHours(data ? data.openingHours : '');
         this.phone(data ? data.phone : '');
@@ -125,7 +125,7 @@ var DataSource = function(baseUrl) {
     
     this.initGeocampus = function() {
         var self = this;
-        $.getJSON( this.getFullPath("json/admin/geocampus/"), { } )
+        $.getJSON( this.getFullPath("/api/admin/geocampus"), { } )
             .done(function( json ) {
                 self.cache = json;
                 myViewModel.reload(); // FIXME: Dependency
@@ -148,10 +148,22 @@ var DataSource = function(baseUrl) {
             var regionId = filters.region && filters.region.id ? filters.region.id : 'all';
             var categoryId = filters.category && filters.category.id ? filters.category.id : 0;
             if (regionId != 'all' || categoryId != 0) {
-                var serviceUrl = this.getFullPath('json/admin/geocampus/filter');
+                var serviceUrl = this.getFullPath('api/admin/geocampus/filter');
                 $.getJSON( serviceUrl, { type: type, reg: regionId, cat: categoryId } )
                     .done(function( json ) {
                         var localPois = [];
+                        if (json && json.length > 0) {
+                            for (var i in json) {
+                                var sanitizePoi = json[i];
+                                /*
+                                var coords = jsonPois[i].coordinates && jsonPois[i].coordinates.length > 0 ? jsonPois[i].coordinates.split(',') : null;
+                                sanitizePoi.lat = coords ? coords[0] : null;
+                                sanitizePoi.lng = coords ? coords[1] : null;
+                                */
+                                localPois.push(new Poi(sanitizePoi));
+                            }
+                        }
+                        /*
                         if (json.groups && json.groups.length > 0) {
                             for (var gr = 0; gr < json.groups.length; gr++) {
                                 var jsonPois = json.groups[gr].pois ? json.groups[gr].pois : [];
@@ -164,7 +176,7 @@ var DataSource = function(baseUrl) {
                                 }
                             }
                         }
-                        
+                        */
                         myViewModel.pois(localPois); // FIXME: Dependency
                     })
                     .fail(function( jqxhr, textStatus, error ) {
@@ -184,12 +196,15 @@ var DataSource = function(baseUrl) {
             return [];
         }
         var categories = (type == 'bonplans') ? 
-            this.adaptCategories(this.cache['root-bonplans-category']) : 
-            this.adaptCategories(this.cache['root-universities-category']);
+        		/*
+            this.adaptCategories(this.cache['bonPlansCategories']) : 
+            this.adaptCategories(this.cache['plansCategories']);*/
+            this.cache['bonPlansCategories'] : 
+           	this.cache['plansCategories'];
         return categories;
     };
     this.getImages = function () {
-        return this.cache && this.cache['image-maps'] ? this.cache['image-maps'] : [];
+        return this.cache && this.cache['imageMaps'] ? this.cache['imageMaps'] : [];
     };
     this.adaptCategories = function(rootCategory) {
         var adaptedCategories = [];
@@ -291,7 +306,7 @@ var MyViewModel = function(ds) {
     self.resetActivePoi = function() {
         var emptyPoi = new Poi();
         emptyPoi.name('');
-        emptyPoi.parentUid('');
+        emptyPoi.parent('');
         self.activePoi(emptyPoi);
     };
 
@@ -416,7 +431,7 @@ function createRootPoi() {
 function createPoi(asChild) {
     $tree.jstree(true).deselect_all(true);
     var pos = asChild ? myViewModel.activePoi().id() : null;
-    myViewModel.setActivePoi(new Poi({ parentUid: pos}));
+    myViewModel.setActivePoi(new Poi({ parent: pos}));
     openPoiModal('create');
 }
         
@@ -481,7 +496,7 @@ function buildTree(pois) {
     var treeData =  [];
     for (var i in pois) {
         var poi = pois[i];
-        treeData.push(buildNode(poi.id(), poi.name(), poi.parentUid() ? poi.parentUid() : '#', poi));
+        treeData.push(buildNode(poi.id(), poi.name(), poi.parent() ? poi.parent() : '#', poi));
         poi.createMarker();
     }
     return treeData;
@@ -514,7 +529,7 @@ function updateNode(nodeId, nodeText) {
 }
 
 function addNode(nodeId, nodeText, nodeData) {
-    var parentId = nodeData.parentUid() ? nodeData.parentUid() : '#';
+    var parentId = nodeData.parent() ? nodeData.parent() : '#';
     var newNode = buildNode(nodeId, nodeText, parentId, nodeData);
     $tree.jstree(true).create_node(parentId, newNode);
 }
@@ -522,11 +537,11 @@ function addNode(nodeId, nodeText, nodeData) {
 function handleNewPoiMarker(e) {
     var poi = myViewModel.activePoi();
     if (poi && poi.id() && !poi.lat()) {
-        // TODO: Save coords on server
         poi.lat(e.latLng.lat());
         poi.lng(e.latLng.lng());
         poi.createMarker();
         poi.setActive();
+        updatePoi();
     }
 }
 

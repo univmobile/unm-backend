@@ -11,9 +11,19 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "category")
-public class Category extends AuditableEntity {
+public class Category extends AuditableEntityWithLegacy {
+	
+	public enum Type {
+		PLANS(1), BON_PLANS(2), IMAGE_MAPS(3);
+		public final int type;
+		private Type(int type) {
+			this.type = type;
+		}
+	}
 	
 	@Id
 	@GeneratedValue
@@ -25,11 +35,14 @@ public class Category extends AuditableEntity {
 	private boolean active = true;
 	private String legacy;
 	@ManyToOne
+	@JsonIgnore
 	private Category parent;
 	@OneToMany(mappedBy="parent")
+	@JsonIgnore
     private Collection<Category> children = new ArrayList<Category>();
 
 	@OneToMany(mappedBy="category")
+	@JsonIgnore
     private Collection<Poi> pois = new ArrayList<Poi>();
 
 	@Override
@@ -87,5 +100,17 @@ public class Category extends AuditableEntity {
 
 	public Collection<Poi> getPois() {
 		return pois;
+	}
+	
+	public static String getPlansLegacy() {
+		return buildRootLegacy((long) Type.PLANS.type);
+	}
+
+	public static String getBonPlansLegacy() {
+		return buildRootLegacy((long) Type.BON_PLANS.type);
+	}
+
+	public static String getImageMapsLegacy() {
+		return buildRootLegacy((long) Type.IMAGE_MAPS.type);
 	}
 }

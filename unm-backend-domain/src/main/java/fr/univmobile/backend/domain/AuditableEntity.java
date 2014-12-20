@@ -13,22 +13,28 @@ import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedBy;
 import org.springframework.data.annotation.LastModifiedDate;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @MappedSuperclass
 public abstract class AuditableEntity {
 	
 	@CreatedBy
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "createdby")
+	@JsonIgnore
 	private User createdBy;
 	@LastModifiedBy
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "updatedby")
+	@JsonIgnore
 	private User updatedBy;
 	@CreatedDate
 	@Column(name = "createdon", nullable = false)
+	@JsonIgnore
 	private Date createdOn;
 	@LastModifiedDate
 	@Column(name = "updatedon", nullable = false)
+	@JsonIgnore
 	private Date updatedOn;
 
 	public User getCreatedBy() {

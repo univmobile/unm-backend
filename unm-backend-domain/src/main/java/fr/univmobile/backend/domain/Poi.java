@@ -10,9 +10,15 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.JsonIdentityReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonValue;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+
 @Entity
 @Table(name = "poi")
-public class Poi extends AuditableEntity {
+public class Poi extends AuditableEntityWithLegacy {
 	
 	@Id
 	@GeneratedValue
@@ -48,12 +54,18 @@ public class Poi extends AuditableEntity {
 	@Column(name = "attachmenturl")
 	private String attachmentUrl;
 	
+	@JsonIgnore
 	private String legacy;
 	@ManyToOne
+	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property="id")
+	@JsonIdentityReference(alwaysAsId=true)
 	private Poi parent;
 	@OneToMany(mappedBy="parent")
+	@JsonIgnore
     private Collection<Poi> children;
 	@ManyToOne
+	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property="id")
+	@JsonIdentityReference(alwaysAsId=true)
 	private Category category;
 	
 	// Attachments
