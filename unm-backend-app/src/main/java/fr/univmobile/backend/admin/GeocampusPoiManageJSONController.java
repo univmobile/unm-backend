@@ -6,19 +6,9 @@ import java.io.IOException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
-//murraco@bitbucket.org/blitzitsa/univmobile.git
-import fr.univmobile.backend.core.ImageMapBuilder;
-import fr.univmobile.backend.core.ImageMapDataSource;
-import fr.univmobile.backend.core.PoiBuilder;
-import fr.univmobile.backend.core.PoiCategory;
-import fr.univmobile.backend.core.PoiDataSource;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.json.AbstractJSONController;
-import fr.univmobile.commons.tx.Lock;
-import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -29,7 +19,7 @@ import fr.univmobile.web.commons.Regexp;
 @Paths({ "json/admin/geocampus/poi/manage", "json/admin/geocampus/poi/manage/", "json/admin/poi/manage.json" })
 public class GeocampusPoiManageJSONController extends AbstractJSONController {
 
-	public GeocampusPoiManageJSONController(PoiRepository poiRepository, final ImageMapDataSource imageMapDs) {
+	public GeocampusPoiManageJSONController(PoiRepository poiRepository) {
 		this.poiRepository = checkNotNull(poiRepository, "poiRepository");
 	}
 
