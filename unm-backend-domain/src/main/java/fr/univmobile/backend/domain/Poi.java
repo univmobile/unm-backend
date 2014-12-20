@@ -65,6 +65,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	@JsonIgnore
     private Collection<Poi> children;
 	@ManyToOne
+	@JoinColumn(nullable = false)	
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	@JsonIdentityReference(alwaysAsId = true)
 	private Category category;
@@ -72,7 +73,12 @@ public class Poi extends AuditableEntityWithLegacy {
 	@ManyToOne
 	@JoinColumn(nullable = false)
 	private University university;
-	// Attachments
+
+	@ManyToOne
+	@JoinColumn(name = "imagemap_id")
+	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+	@JsonIdentityReference(alwaysAsId = true)
+	private ImageMap imageMap;
 
 	@Override
 	public String toString() {
@@ -289,5 +295,13 @@ public class Poi extends AuditableEntityWithLegacy {
 
 	public void setUniversity(University university) {
 		this.university = university;
+	}
+
+	public ImageMap getImageMap() {
+		return imageMap;
+	}
+
+	public void setImageMap(ImageMap imageMap) {
+		this.imageMap = imageMap;
 	}
 }
