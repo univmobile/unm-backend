@@ -11,7 +11,7 @@ var Poi = function(data) {
     this.category = ko.observable();
     this.floor = ko.observable();
     this.openingHours = ko.observable();
-    this.phone = ko.observable();
+    this.phones = ko.observable();
     this.address = ko.observable();
     this.email = ko.observable();
     this.itinerary = ko.observable();
@@ -38,7 +38,7 @@ ko.utils.extend(Poi.prototype, {
         this.category(data ? data.category : null);
         this.floor(data ? data.floor : '');
         this.openingHours(data ? data.openingHours : '');
-        this.phone(data ? data.phone : '');
+        this.phones(data ? data.phones : '');
         this.address(data ? data.address : '');
         this.email(data ? data.email : '');
         this.itinerary(data ? data.itinerary : '');
@@ -125,7 +125,7 @@ var DataSource = function(baseUrl) {
     
     this.initGeocampus = function() {
         var self = this;
-        $.getJSON( this.getFullPath("/api/admin/geocampus"), { } )
+        $.getJSON( this.getFullPath("api/admin/geocampus"), { } )
             .done(function( json ) {
                 self.cache = json;
                 myViewModel.reload(); // FIXME: Dependency
@@ -219,9 +219,10 @@ var DataSource = function(baseUrl) {
         $.post( this.getFullPath("json/admin/geocampus/poi/manage/"), poi)
             .done(function( data ) {
                 var isNew = myViewModel.activePoi().isNew();
-                myViewModel.activePoi().commit();
                 closePoiModal();
                 if (isNew) {
+                	myViewModel.activePoi().id(data.data);
+                    myViewModel.activePoi().commit();
                     myViewModel.pois().push(myViewModel.activePoi());
                     addNode(myViewModel.activePoi().id(), myViewModel.activePoi().name(), myViewModel.activePoi());
                 }
@@ -402,13 +403,13 @@ function loadTree(pois) {
         }
     })
     .on('select_node.jstree', function (e, data) {
-        if (myViewModel.activePoi().id() != data.node.data.id) {
+        if (myViewModel.activePoi() == null || (myViewModel.activePoi().id() != data.node.data.id)) {
             var poi = getPoiByUid(data.node.data.id, myViewModel.pois())
             selectNode(poi);
         }
     })
     .on('deselect_node.jstree', function (e, data) {
-        if (myViewModel.activePoi().id() != null) {
+        if (myViewModel.activePoi() != null && myViewModel.activePoi().id() != null) {
             myViewModel.resetActivePoi();
         }
     });

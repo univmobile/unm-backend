@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import fr.univmobile.backend.core.PoiCategory;
@@ -50,8 +51,6 @@ public class GeocampusController {
 		User currentUser = getCurrentUser(request);
 		GeocampusData data = new GeocampusData();
 
-		/* FIXME: remove */currentUser = userRepository.findOne(2L);
-		
 		if (currentUser == null || currentUser.isStudent()) {
 			response.sendError(HttpServletResponse.SC_FORBIDDEN);
 			return null;
@@ -74,7 +73,7 @@ public class GeocampusController {
 
 	@RequestMapping(value = "/filter", method = RequestMethod.GET)
 	@ResponseBody
-	public List<Poi> getFilteredPois(HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public List<Poi> getFilteredPois(@RequestParam("type") String poiType, @RequestParam("reg") Long regionId, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		User currentUser = getCurrentUser(request);
 
 		if (currentUser == null || currentUser.isStudent()) {
@@ -82,41 +81,26 @@ public class GeocampusController {
 			return null;
 		}
 
-		if (currentUser.isSuperAdmin()) {
-			return poiRepository.findAllByOrderByNameAsc();
+		String rootCategoryLegacy;
+		if (poiType.equals("bonplans")) {
+			rootCategoryLegacy = Category.getBonPlansLegacy();
+		} else if (poiType.equals("bonplans")) {
+			rootCategoryLegacy = Category.getImageMapsLegacy();
 		} else {
-			return poiRepository.findAllByOrderByNameAsc();
+			rootCategoryLegacy = Category.getPlansLegacy();
+		}
+		
+		if (currentUser.isSuperAdmin()) {
+			return regionId == null 
+					? poiRepository.findByCategory_LegacyStartingWithOrderByNameAsc(rootCategoryLegacy) 
+					: poiRepository.findByCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(rootCategoryLegacy, regionRepository.findOne(regionId));
+		} else {
+			return regionId == null 
+					? poiRepository.findByCategory_LegacyStartingWithOrderByNameAsc(rootCategoryLegacy) 
+					: poiRepository.findByCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(rootCategoryLegacy, regionRepository.findOne(regionId));
 		}
 	}
 
-	/*
-	public GeocampusData get(HttpServletRequest request) {
-		User currentUser = getCurrentUser(request);
-		
-		
-		
-		GeocampusData data = new GeocampusData();
-		data.setRegions(regionRepository.findAll());
-		data.setPlansCategories(categoryRepository.findByUniversityAndLegacyStartingWithOrderByLegacyAsc(currentUser.getUniversity(),Category.getPlansLegacy()));
-		data.setBonPlansCategories(categoryRepository.findByUniversityAndLegacyStartingWithOrderByLegacyAsc(currentUser.getUniversity(),Category.getBonPlansLegacy()));
-		
-
-		 //* 		final String regionsWithUniversitiesJSON = getRegionsWithUniversitiesJSON();
-		//final String rootUniversitiesCategoryJSON = poiCategoryJSONClient.getPoiCategoryJSON(PoiCategory.ROOT_UNIVERSITIES_CATEGORY_UID);
-		//final String rootBonPlansCategoryJSON = poiCategoryJSONClient.getPoiCategoryJSON(PoiCategory.ROOT_BON_PLANS_CATEGORY_UID);
-		//final String imageMapsJSON = getImageMapsJSON();
-
-		
-		final String json = "{\"url\":\""
-				+ composeJSONendPoint(baseURL, "/admin/geocampus") + "\","
-				+ "\"regions\":" + regionsWithUniversitiesJSON + ","
-				+ "\"root-universities-category\":" + rootUniversitiesCategoryJSON + ","
-				+ "\"root-bonplans-category\":" + rootBonPlansCategoryJSON  + ","
-				+ "\"image-maps\":" + imageMapsJSON  + "}";
-
-		return data;
-	}
-	*/
 	public class GeocampusData {
 		private	Iterable<Region> regions;
 		private	List<Category> plansCategories;

@@ -19,8 +19,8 @@ public class Category extends AuditableEntityWithLegacy {
 	
 	public enum Type {
 		PLANS(1), BON_PLANS(2), IMAGE_MAPS(3);
-		public final int type;
-		private Type(int type) {
+		public final long type;
+		private Type(long type) {
 			this.type = type;
 		}
 	}
@@ -103,14 +103,14 @@ public class Category extends AuditableEntityWithLegacy {
 	}
 	
 	public static String getPlansLegacy() {
-		return buildRootLegacy((long) Type.PLANS.type);
+		return buildRootLegacy(Type.PLANS.type);
 	}
 
 	public static String getBonPlansLegacy() {
-		return buildRootLegacy((long) Type.BON_PLANS.type);
+		return buildRootLegacy(Type.BON_PLANS.type);
 	}
 
 	public static String getImageMapsLegacy() {
-		return buildRootLegacy((long) Type.IMAGE_MAPS.type);
+		return buildRootLegacy(Type.IMAGE_MAPS.type);
 	}
 }

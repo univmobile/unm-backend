@@ -189,7 +189,6 @@
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <!--<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>-->
             <h4 class="modal-title"><span data-bind="text: activePoi().name()">POI nom</span><span data-bind="if: !activePoi().name()">POI nom</span></h4>
           </div>
           <div class="modal-body">
@@ -202,12 +201,6 @@
               <p></p>
               
             <form class="form-horizontal" role="form" data-bind="with: activePoi(), visible: activePoiTab() == 'details'">
-              <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Id</label>
-                <div class="col-sm-10">
-                  <input type="number" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: id, disable: cache.latestData && cache.latestData.id">
-                </div>
-              </div>
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
                 <div class="col-sm-10">
@@ -240,9 +233,9 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">T&eacute;l&eacute;phone</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">T&eacute;l&eacute;phones</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: phone">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: phones">
                 </div>
               </div>
               <div class="form-group">
