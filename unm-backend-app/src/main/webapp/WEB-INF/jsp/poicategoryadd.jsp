@@ -96,7 +96,7 @@ label.checkbox-parentCategory {
       </tr>
       
       <tr>
-         <th>Parent Catégorie</th>
+         <th>Catègorie pére</th>
          <td>
          <select id="select-parentCategory" name="parentCategory">
             <option value="(aucune)">(aucune)</option>
