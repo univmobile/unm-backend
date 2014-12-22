@@ -9,8 +9,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 import fr.univmobile.backend.core.SessionManager;
-import fr.univmobile.backend.core.User;
-import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.backend.domain.User;
+import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
@@ -22,14 +22,14 @@ import fr.univmobile.web.commons.View;
 @Paths({ "" })
 public class HomeController extends AbstractBackendController {
 
-	public HomeController(final UserDataSource users,
+	public HomeController(final UserRepository users,
 			final SessionManager sessionManager) {
 
 		this.users = checkNotNull(users, "users");
 		this.sessionManager = checkNotNull(sessionManager, "sessionManager");
 	}
 
-	private final UserDataSource users;
+	private final UserRepository users;
 	private final SessionManager sessionManager;
 
 	private static final Log log = LogFactory.getLog(HomeController.class);
@@ -84,9 +84,10 @@ public class HomeController extends AbstractBackendController {
 
 			log.debug("Delegation.isHttpValid()");
 
-			final String delegationUid = form.uid();
+			final String delegationUid = form.username();
+			final User delegationUser = users.findByUsername(delegationUid);
 
-			if (users.isNullByUid(delegationUid)) {
+			if (delegationUser == null) {
 
 				setAttribute("err_unknownDelegationUid", true);
 				setAttribute("delegationUid", delegationUid);
@@ -94,7 +95,14 @@ public class HomeController extends AbstractBackendController {
 				return new View("home.jsp");
 			}
 
-			final User delegationUser = users.getByUid(delegationUid);
+			
+			if (delegationUser.getRole().equals("student")) {
+				
+				setAttribute("err_studentDelegationUid", true);
+				setAttribute("delegationUid", delegationUid);
+
+				return new View("home.jsp");
+			}
 
 			setSessionAttribute(DELEGATION_USER, delegationUser);
 
@@ -119,7 +127,7 @@ public class HomeController extends AbstractBackendController {
 
 		@HttpRequired
 		@HttpParameter("delegationUid")
-		String uid();
+		String username();
 
 		@HttpRequired
 		@HttpParameter("delegationPassword")

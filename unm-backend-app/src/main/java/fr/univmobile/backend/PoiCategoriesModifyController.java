@@ -5,16 +5,10 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
-import java.io.IOException;
-
 import javax.annotation.Nullable;
 
-import fr.univmobile.backend.core.PoiCategory;
-import fr.univmobile.backend.core.PoiCategoryBuilder;
-import fr.univmobile.backend.core.PoiCategoryDataSource;
-import fr.univmobile.commons.tx.Lock;
-import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
+import fr.univmobile.backend.domain.Category;
+import fr.univmobile.backend.domain.CategoryRepository;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -24,42 +18,38 @@ import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.Regexp;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "poicategoriesmodify/${uid}" })
+@Paths({ "poicategoriesmodify/${id}" })
 public class PoiCategoriesModifyController extends AbstractBackendController {
 
-	@PathVariable("${uid}")
-	private int getPoiCategoryUid() {
+	@PathVariable("${id}")
+	private long getPoiCategoryId() {
 
-		return getPathIntVariable("${uid}");
+		return getPathIntVariable("${id}");
 	}
 
-	public PoiCategoriesModifyController(final TransactionManager tx,
-			final PoiCategoryDataSource poiCategories,
+	public PoiCategoriesModifyController(
+			final CategoryRepository categoryRepository,
 			final PoiCategoriesController poiCategoriesController) {
 
-		this.poiCategories = checkNotNull(poiCategories, "poicategories");
-		this.tx = checkNotNull(tx, "tx");
+		this.categoryRepository = checkNotNull(categoryRepository,
+				"categoryRepository");
 		this.poiCategoriesController = checkNotNull(poiCategoriesController,
 				"poiCategoriesController");
 	}
 
-	private final TransactionManager tx;
-	private final PoiCategoryDataSource poiCategories;
+	private final CategoryRepository categoryRepository;
 	private final PoiCategoriesController poiCategoriesController;
 
 	@Override
-	public View action() throws IOException, TransactionException {
+	public View action() {
 
-		// 1.1 POI CATEGORY
+		// 1. POI CATEGORY
 
-		final PoiCategory poicategory;
-
-		poicategory = poiCategories.getLatest(poiCategories
-				.getByUid(getPoiCategoryUid()));
+		Category poicategory = categoryRepository.findOne(getPoiCategoryId());
 
 		setAttribute("poicategorymodify", poicategory);
 
-		// 1.2 HTTP
+		// 2. HTTP
 
 		final PoiCategorymodify form = getHttpInputs(PoiCategorymodify.class);
 
@@ -68,49 +58,37 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 			return new View("poicategorymodify.jsp");
 		}
 
-		// 2. APPLICATION VALIDATION
+		// 3. APPLICATION VALIDATION
 
-		final String uid = form.uid();
-
-		final Lock lock = tx.acquireLock(5000, "poiscategories", uid);
-		try {
-
-			return poicategorymodify(lock, form);
-
-		} finally {
-			lock.release();
-		}
+		return poicategorymodify(form);
 	}
 
-	private View poicategorymodify(final Lock lock, final PoiCategorymodify form)
-			throws IOException, TransactionException {
+	private View poicategorymodify(final PoiCategorymodify form) {
 
-		final String uid = form.uid();
-
-		// final PoiCategoryBuilder poicategory = poiCategories.create();
-		PoiCategoryBuilder poicategory = poiCategories.update(poiCategories
-				.getByUid(getPoiCategoryUid()));
+		Category poicategory = categoryRepository.findOne(getPoiCategoryId());
 
 		boolean hasErrors = false;
 
-		poicategory.setAuthorName(getDelegationUser().getAuthorName());
-
-		if (!isBlank(form.uid()))
-			poicategory.setUid(Integer.parseInt(uid));
-
-		if (!isBlank(form.parentUid()))
-			poicategory.setParentUid(Integer.parseInt(form.parentUid()));
-
-		if (!form.parentUid().equals("(aucune)"))
-			poicategory.setParentUid(Integer.parseInt(form.parentUid()));
-
-		poicategory.setName(form.name());
-		poicategory.setDescription(form.description());
+		if (!isBlank(form.name())) {
+			if (categoryRepository.findByName(form.name()) != null) {
+				if (!poicategory.getName().equals(form.name())) {
+					setAttribute("err_duplicateName", true);
+					hasErrors = true;
+				}
+			}
+			poicategory.setName(form.name());
+		} else {
+			setAttribute("err_poicategoryadd_name", true);
+			hasErrors = true;
+		}
 
 		if (form.active() != null)
-			poicategory.setActive("true");
+			poicategory.setActive(true);
 		else
-			poicategory.setActive("false");
+			poicategory.setActive(false);
+
+		if (form.description() != null)
+			poicategory.setDescription(form.description());
 
 		if (hasErrors) {
 
@@ -120,9 +98,7 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 			return new View("poicategorymodify.jsp");
 		}
 
-		lock.save(poicategory);
-
-		lock.commit();
+		categoryRepository.save(poicategory);
 
 		return poiCategoriesController.action();
 	}
@@ -145,29 +121,20 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 		@HttpRequired
 		@HttpParameter(trim = true)
 		@Regexp("[0-9]+")
-		String uid();
+		String id();
 
 		@HttpRequired
 		@HttpParameter(trim = true)
 		@Regexp("[0-9]+")
-		String parentUid();
+		String parentId();
 
-		@HttpRequired
-		@HttpParameter(trim = true)
-		@Regexp("[0-9]+")
-		String externalUid();
-
-		@HttpRequired
 		@HttpParameter
-		@Regexp(".*")
 		String name();
 
 		@HttpParameter
 		String active();
 
-		@HttpRequired
 		@HttpParameter
-		@Regexp(".*")
 		String description();
 	}
 }

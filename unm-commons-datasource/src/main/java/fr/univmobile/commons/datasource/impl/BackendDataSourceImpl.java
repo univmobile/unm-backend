@@ -88,6 +88,55 @@ EB extends EntryBuilder<E>> //
 	}
 
 	@Override
+	public final Document getDocument() {
+
+		Document document;
+
+		try {
+
+			document = createDocument();
+
+		} catch (final ParserConfigurationException e) {
+			throw new RuntimeException(e);
+		}
+
+		final Element rootElement = document.getDocumentElement();
+
+		final String category = BackendDataUtils.getInheritedAnnotation(
+				dataSourceClass, Category.class).value();
+
+		final Element categoryElement = document.createElementNS(NSURI,
+				"atom:category");
+
+		rootElement.appendChild(categoryElement);
+
+		categoryElement.setAttribute("term", category);
+
+		return document;
+	}
+
+	@Override
+	public final EB createBuilder(Document document) {
+
+		final EB entryBuilder = DomBinderUtils.xmlContentToJava(document,
+				builderClass);
+
+		final EntryBuilderWrapper<E, EB> wrapper = new EntryBuilderWrapper<E, EB>(
+				document, entryBuilder);
+
+		final Object proxy = Proxy.newProxyInstance(
+				dataSourceClass.getClassLoader(), new Class[] { //
+				builderClass, EntryBuilderImpl.class //
+				}, wrapper);
+
+		final EB builder = builderClass.cast(proxy);
+
+		wrapper.setBuilder(builder);
+
+		return builder;
+	}
+
+	@Override
 	public final EB create() {
 
 		final Document document;
@@ -186,8 +235,8 @@ EB extends EntryBuilder<E>> //
 
 			@SuppressWarnings("unchecked")
 			final E entry = (E) delegate;
-			
-			this.entry=entry;
+
+			this.entry = entry;
 
 			wrapper = delegate;
 		}

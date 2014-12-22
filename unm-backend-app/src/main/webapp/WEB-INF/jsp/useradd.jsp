@@ -9,57 +9,58 @@
 <title>Administration d’UnivMobile — Ajouter un utilisateur</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
-<style type="text/css">
 
+<style type="text/css">
 td span.error {
 	margin-left: 0.5em;
 }
 
-#div-secondaryUnivs {
+#div-secondaryUniversity {
 	height: 8em;
 	overflow-y: scroll;
 	border: 2px inset #ccc;
 }
 
-#body-useradd #div-secondaryUnivs label {
+#body-useradd #div-secondaryUniversity label {
 	xfont-family: 'Lucida Grande';
 	font-size: x-small;
 }
 
-#tr-secondaryUnivs th {
+#tr-secondaryUniversity th {
 	vertical-align: top;
 }
 
-label.checkbox-secondaryUniv-region {
+label.checkbox-secondaryUniversity-region {
 	font-weight: bold;
 }
-
 </style>
+
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
 <jsp:include page="js-adminMenu.h.jsp"/>
+
 <script type="text/javascript">
 
 $(function () {
 
 	<c:forEach var="region" items="${regions}">
 
-    $('#checkbox-secondaryUniv-region_${region.uid}').change(function () {
+    $('#checkbox-secondaryUniversity-region_${region.id}').change(function () {
     	var checked = $(this).prop('checked');
-        $('.checkbox.secondaryUniv.region_${region.uid}').prop('checked', checked);
+        $('.checkbox.secondaryUniversity.region_${region.id}').prop('checked', checked);
     });
 
-    $('.checkbox.secondaryUniv.region_${region.uid}').change(function () {
-        if ($('.checkbox.secondaryUniv.region_${region.uid}:checked').length === 0) {
-            $('#checkbox-secondaryUniv-region_${region.uid}').
+    $('.checkbox.secondaryUniversity.region_${region.id}').change(function () {
+        if ($('.checkbox.secondaryUniversity.region_${region.id}:checked').length === 0) {
+            $('#checkbox-secondaryUniversity-region_${region.id}').
                 prop('indeterminate', false).
                 prop('checked', false);
-        } else if ($('.checkbox.secondaryUniv.region_${region.uid}:not(:checked)').length === 0) {
-            $('#checkbox-secondaryUniv-region_${region.uid}').
+        } else if ($('.checkbox.secondaryUniversity.region_${region.id}:not(:checked)').length === 0) {
+            $('#checkbox-secondaryUniversity-region_${region.id}').
                 prop('indeterminate', false).
                 prop('checked', true);
         } else {
-            $('#checkbox-secondaryUniv-region_${region.uid}').
+            $('#checkbox-secondaryUniversity-region_${region.id}').
                 prop('indeterminate', true);
         }
     });     
@@ -69,6 +70,7 @@ $(function () {
 });
 
 </script>
+
 </head>
 <body id="body-useradd" class="entered">
 
@@ -87,44 +89,72 @@ $(function () {
 <div class="div-useradd">
 
 <c:if test="${err_incorrectFields}">
-<div class="error">
-   ERREUR — des champs sont incorrects
-</div>
+   <div class="error">
+      ERREUR — des champs sont incorrects
+   </div>
+</c:if>
+
+<c:if test="${err_duplicateRemoteUser}">
+   <div class="error">
+      ERREUR — un utilisateur avec ce REMOTE_USER = ${useradd.remoteUser}
+      existe déjà en base
+   </div>
+</c:if>
+
+<c:if test="${err_duplicateUsername}">
+   <div class="error">
+      ERREUR — un utilisateur avec ce USERNAME = ${useradd.username}
+      existe déjà en base
+   </div>
 </c:if>
 
 <h2>Ajout d’un utilisateur</h2>
 
 <table>
 <tbody>
-<tr>
-   <th title="L’identifiant interne à UnivMobile pour le compte utilisateur">
-      uid
-   </th>
-   <td>
-      <input class="text" type="text" id="text-uid" name="uid" value="${useradd.uid}">
-      <c:if test="${err_useradd_uid}">
-	     <span class="error" title="Le champ est mal formé">Incorrect</span>
-	  </c:if>
-   </td>
-</tr>
 
-<tr class="type">
+<tr class="role">
    <th title="Le profil de ce compte utilisateur">
-      Type
+      Role
    </th>
    <td>
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-	  <input type="radio" id="radio-type-admin" name="type" value="admin">
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-	  <input type="radio" id="radio-type-student" name="type" value="student" class="selected" checked>
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
+   
+      <c:choose>
+         <c:when test="${role eq 'admin'}">
+<<<<<<< HEAD
+            <input disabled type="radio" id="radio-type-superadmin" name="role" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input disabled type="radio" id="radio-type-admin" name="role" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="role" value="student" class="selected" checked>
+=======
+            <input disabled type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input disabled type="radio" id="radio-type-admin" name="type" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="type" value="student" class="selected" checked>
+>>>>>>> Adjustments in screens of creation and modification of users
+            <label for="radio-type-student">Étudiant</label>
+         </c:when>
+         
+         <c:otherwise>
+<<<<<<< HEAD
+            <input type="radio" id="radio-type-superadmin" name="role" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input type="radio" id="radio-type-admin" name="role" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="role" value="student" class="selected" checked>
+=======
+            <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input type="radio" id="radio-type-admin" name="type" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="type" value="student" class="selected" checked>
+>>>>>>> Adjustments in screens of creation and modification of users
+            <label for="radio-type-student">Étudiant</label>
+         </c:otherwise>
+      </c:choose>
+      
    </td>
 </tr>
 
@@ -143,7 +173,7 @@ $(function () {
 <tr>
    <th>Civilité</th>
    <td>
-      <select id="select-supannCivilite" name="supannCivilite">
+      <select id="select-titleCivilite" name="titleCivilite">
       <option value="aucune">(aucune)</option>
       <option value="Mme" selected>Mᵐᵉ</option>
       <option value="M.">M.</option>
@@ -164,10 +194,17 @@ $(function () {
 <tr>
    <th>E-mail</th>
    <td>
-      <input class="text" type="text" id="text-mail" name="mail" value="${useradd.mail}">
-	  <c:if test="${err_useradd_mail}">
-	     <span class="error" title="Le champ est mal formé">Incorrect</span>
-	  </c:if>
+      <input class="text" type="text" id="text-email" name="email" value="${useradd.email}">
+   </td>
+</tr>
+
+<tr>
+   <th>Nom d'utilisateur</th>
+   <td>
+      <input class="text" type="text" id="text-username" name="username" value="${useradd.username}">
+     <c:if test="${err_useradd_username}">
+         <span class="error" title="Le champ est mal formé">Incorrect</span>
+     </c:if>
    </td>
 </tr>
 
@@ -177,8 +214,8 @@ $(function () {
    </th>
    <td>
       <input class="text" type="password" id="text-password" name="password" value="${useradd_moreInfo.password}">
-	  <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes">
-	  <label for="checkbox-passwordEnabled">
+	  <input class="checkbox" type="checkbox" id="checkbox-classicLoginAllowed" name="classicLoginAllowed" value="yes">
+	  <label for="checkbox-classicLoginAllowed">
          Activé
       </label>
    </td>
@@ -193,7 +230,16 @@ $(function () {
          <c:forEach var="r" items="${regionsData}">
             <optgroup label="${r.label}">
                <c:forEach var="u" items="${r.universities}">
-                  <option value="${u.id}">${u.title}</option>
+                  <c:choose>
+                     <c:when test="${role eq 'admin'}">
+                        <c:if test="${userUnivId eq u.id}">
+                           <option value="${u.id}">${u.title}</option>
+                        </c:if>
+                     </c:when>
+                     <c:otherwise>
+                        <option value="${u.id}">${u.title}</option>   
+                     </c:otherwise>
+                  </c:choose>
                </c:forEach>
             </optgroup>
          </c:forEach>
@@ -201,16 +247,25 @@ $(function () {
    </td>
 </tr>
 
-<tr id="tr-secondaryUnivs">
+<tr>
    <th title="De quelles autres universités l’utilisateur ira-t-il consulter les informations">
       Autres universités d’intérêt
    </th>
    <td>
-   	  <select id="select-secondaryUniversities" name="secondaryUniversities">
+   	  <select id="select-secondaryUniversity" name="secondaryUniversity">
             <c:forEach var="r" items="${regionsData}">
                <optgroup label="${r.label}">
                   <c:forEach var="u" items="${r.universities}">
-                     <option value="${u.id}">${u.title}</option>
+                     <c:choose>
+                        <c:when test="${role eq 'admin'}">
+                           <c:if test="${userUnivId eq u.id}">
+                              <option value="${u.id}">${u.title}</option>
+                           </c:if>
+                        </c:when>
+                        <c:otherwise>
+                           <option value="${u.id}">${u.title}</option>   
+                        </c:otherwise>
+                     </c:choose>
                   </c:forEach>
                </optgroup>
             </c:forEach>
@@ -224,6 +279,13 @@ $(function () {
    </th>
    <td>
       <input class="text" type="text" id="text-twitter_screen_name" name="twitter_screen_name" value="${useradd.twitterScreenName}">
+   </td>
+</tr>
+
+<tr>
+   <th>Description</th>
+   <td>
+      <input class="text" type="text" id="text-description" name="description" value="${useradd.description}">
    </td>
 </tr>
 

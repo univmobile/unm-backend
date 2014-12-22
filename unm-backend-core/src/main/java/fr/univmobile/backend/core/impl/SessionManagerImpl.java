@@ -24,10 +24,9 @@ import fr.univmobile.backend.core.AppSession;
 import fr.univmobile.backend.core.InvalidSessionException;
 import fr.univmobile.backend.core.LoginConversation;
 import fr.univmobile.backend.core.SessionManager;
-import fr.univmobile.backend.core.User;
-import fr.univmobile.backend.core.User.Password;
 import fr.univmobile.backend.core.UserBuilder;
-import fr.univmobile.backend.core.UserDataSource;
+import fr.univmobile.backend.domain.User;
+import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.history.LoggableString;
 import fr.univmobile.backend.history.Logged;
@@ -41,7 +40,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	private static final Log log = LogFactory.getLog(SessionManagerImpl.class);
 
 	public SessionManagerImpl(final LogQueue logQueue,
-			final UserDataSource users,  
+			final UserRepository users,  
 			final ConnectionType dbType,
 			final Connection cxn) throws IOException {
 
@@ -52,7 +51,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	}
 
 	public SessionManagerImpl(final LogQueue logQueue,
-			final UserDataSource users,
+			final UserRepository users,
 			final ConnectionType dbType,
 			final DataSource ds) throws IOException {
 
@@ -63,7 +62,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	}
 
 	private final LogQueue logQueue;
-	private final UserDataSource users;
+	private final UserRepository users;
 
 	private final Encrypt encryptSHA1 = new EncryptSHA1();
 	private final Encrypt encryptSHA256 = new EncryptSHA256();
@@ -109,26 +108,28 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	private User login_classic_validate(final String login,
 			final String inputPassword) throws IOException, SQLException {
 
-		if (users.isNullByUid(login) && users.isNullByRemoteUser(login)) {
+		User user = users.findByUsername(login);
+		if (user == null) {
+			user = users.findByRemoteUser(login);
+		}
+
+		if (users == null) {
 			if (log.isInfoEnabled()) {
 				log.info("No user with login: " + login);
 			}
 			return null; // Bad login
 		}
-
-		final User user = users.isNullByUid(login) //
-		? users.getByRemoteUser(login) //
-				: users.getByUid(login);
-
-		if (user.isNullPassword()) {
+		
+		if (user.getPassword() == null) {
 			if (log.isInfoEnabled()) {
 				log.info("No stored password for user with login: " + login);
 			}
 			return null; // No active password
 		}
 
-		final Password p = user.getPassword();
+		final String p = user.getPassword();
 
+		/*
 		final String encryptionAlgorithm = p.getEncryptionAlgorithm();
 		final String encryptedStoredPassword = p.getEncrypted();
 		final String saltPrefix = p.getSaltPrefix();
@@ -146,31 +147,37 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		final String encryptedInputPassword = encrypt.encrypt(saltPrefix,
 				inputPassword);
-
+		*/
+		
 		if (log.isDebugEnabled()) {
 			// log.debug("saltPrefix: " + saltPrefix);
 			// log.debug("inputPassword: " + inputPassword);
 			// log.debug("encryptedInputPassword: " + encryptedInputPassword);
 		}
 
-		if (!encryptedInputPassword.equals(encryptedStoredPassword)) {
+		//if (!encryptedInputPassword.equals(encryptedStoredPassword)) {
+		if (!inputPassword.equals(p)) {
 			if (log.isInfoEnabled()) {
 				log.info("Password do not match for login: " + login);
 			}
 			return null;
 		}
 
+		/*
 		if (user.isNullPrimaryUser()) {
 
 			return user;
 		}
 
 		return recursiveGetPrimaryUser(Lists.newArrayList(user));
+		*/
+		return user;
 	}
 
+	/*
 	private User recursiveGetPrimaryUser(final List<User> users)
 			throws IOException {
-
+	
 		final User user = users.get(users.size() - 1);
 
 		if (user.isNullPrimaryUser()) {
@@ -192,12 +199,13 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		return recursiveGetPrimaryUser(users);
 	}
-
+	*/
+	
 	@Override
 	public void logout(final AppSession appSession) throws IOException,
 			SQLException {
 
-		final String userUid = appSession.getUser().getUid();
+		final String userUid = appSession.getUser().getUsername();
 		final String sessionId = appSession.getId();
 
 		if (!isValid(appSession)) {
@@ -218,7 +226,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	public void save(final AppSession appSession, final UserBuilder user)
 			throws TransactionException, IOException, SQLException,
 			InvalidSessionException {
-
+		
 		appSession.check();
 
 		final TransactionManager tx = TransactionManager.getInstance();
@@ -232,7 +240,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		logQueue.log(new LoggableString("USER:UPDATE:{uid=\"%s\"}", //
 				user.getUid()));
 
-		users.reload();
+		//users.reload();
 	}
 
 	/**
@@ -243,7 +251,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		final String uuid = newUUID(40);
 
-		executeUpdate("insertAppToken", uuid, user.getUid(), new DateTime());
+		executeUpdate("insertAppToken", uuid, user.getUsername(), new DateTime());
 
 		return uuid;
 	}
@@ -332,7 +340,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 			throw new InvalidSessionException("sessionId: " + sessionId);
 		}
 
-		final User user = users.getByUid(userUid);
+		final User user = users.findByUsername(userUid);
 
 		return new AppSessionImpl(sessionId, user);
 	}
@@ -387,7 +395,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		checkNotNull(loginToken, "loginToken");
 		checkNotNull(user, "user");
 
-		final String uid = user.getUid();
+		final String uid = user.getUsername();
 
 		final int result = executeUpdate("updateLoginConversation", uid,
 				loginToken);
@@ -452,7 +460,9 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 			return null; // Bad loginToken+key
 		}
 
-		if (users.isNullByUid(userUid)) {
+		final User user =  users.findByUsername(userUid);
+
+		if (user == null) {
 			if (log.isInfoEnabled()) {
 				log.info("No user: " + userUid + " for loginToken: "
 						+ loginToken);
@@ -460,13 +470,14 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 			return null; // Bad login
 		}
 
-		final User user =  users.getByUid(userUid);
-
+		/*
 		if (user.isNullPrimaryUser()) {
 
 			return user;
 		}
 
 		return recursiveGetPrimaryUser(Lists.newArrayList(user));
+		*/
+		return user;
 	}
 }

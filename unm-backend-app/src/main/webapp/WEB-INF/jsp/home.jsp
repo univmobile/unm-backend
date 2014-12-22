@@ -51,6 +51,14 @@ ${displayName}
 	</span>
 </div>
 </c:if>
+<c:if test="${err_studentDelegationUid}">
+<div class="error">
+   ERREUR — 
+   <span class="message">
+   Les élèves ne sont pas autorisés à entrer
+   </span>
+</div>
+</c:if>
 <div class="layout">
 
 <form action="${baseURL}/" method="POST">

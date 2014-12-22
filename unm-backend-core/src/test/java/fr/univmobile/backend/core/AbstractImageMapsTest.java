@@ -16,7 +16,7 @@ public abstract class AbstractImageMapsTest {
 		this.originalDataDir = originalDataDir;
 	}
 
-	private final File originalDataDir;
+	protected final File originalDataDir;
 
 	/**
 	 * Prepare le test afin de ne loader qu'une seule fois pour tous les tests les donnees
@@ -24,7 +24,7 @@ public abstract class AbstractImageMapsTest {
 	 * @throws Exception
 	 */
 	@Before
-	public final void setUp() throws Exception {
+	public void setUp() throws Exception {
 
 		imageMaps = imageMapsByClass.get(this.getClass());
 

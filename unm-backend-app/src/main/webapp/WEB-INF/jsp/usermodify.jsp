@@ -9,8 +9,8 @@
 <title>Administration d’UnivMobile — Modifier un utilisateur</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
-<style type="text/css">
 
+<style type="text/css">
 td span.error {
 	margin-left: 0.5em;
 }
@@ -19,8 +19,8 @@ td span.error {
 	xfont-family: 'Lucida Grande';
 	font-size: x-small;
 }
-
 </style>
+
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
 
@@ -32,7 +32,7 @@ td span.error {
 <jsp:include page="div-entered_modal.h.jsp"/>
 
 <div class="body">
-<form action="${baseURL}/usermodify/${usermodify.uid}" method="POST">
+<form action="${baseURL}/usermodify/${usermodify.id}" method="POST">
 
 <h1   title="Version ${buildInfo.appVersion}
       Build ${buildInfo.buildDisplayName}
@@ -44,111 +44,100 @@ td span.error {
 <div class="div-usermodify">
 
 <c:if test="${err_incorrectFields}">
-<div class="error">
-   ERREUR — des champs sont incorrects
-</div>
+   <div class="error">
+      ERREUR — des champs sont incorrects
+   </div>
 </c:if>
+
+<c:if test="${err_duplicateUsername}">
+   <div class="error">
+      ERREUR — un utilisateur avec ce USERNAME = ${usermodify.username}
+      existe déjà en base
+   </div>
+</c:if>
+
 
 <h2>Modifier un utilisateur</h2>
 
 <table>
 <tbody>
+
 <tr>
    <th title="L’identifiant interne à UnivMobile pour le compte utilisateur">
-      uid
+      Id
    </th>
    <td>
-      <input readonly class="text" type="text" id="text-uid" name="uid" value="${usermodify.uid}">
-      <c:if test="${err_usermodify_uid}">
-	     <span class="error" title="Le champ est mal formé">Incorrect</span>
-	  </c:if>
+      <input readonly class="text" type="text" id="text-id" name="id" value="${usermodify.id}">
    </td>
-</tr>
-
-<tr class="type">
-   <th title="Le profil de ce compte utilisateur">
-      Type
-   </th>
-   
-   <c:choose>
-   <c:when test="${usermodify.role eq 'superadmin'}">
-   <td>
-      SuperAdmin
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin" checked>
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-	    <input type="radio" id="radio-type-admin" name="type" value="admin">
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-	    <input type="radio" id="radio-type-student" name="type" value="student">
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
-   </td>
-   </c:when>
-   
-   <c:when test="${usermodify.role eq 'admin'}">
-   <td>
-      Admin
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-      <input type="radio" id="radio-type-admin" name="type" value="admin" checked>
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-       <input type="radio" id="radio-type-student" name="type" value="student">
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
-   </td>
-   </c:when>
-   
-   <c:when test="${usermodify.role eq 'student'}">
-   <td>
-      Student
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-       <input type="radio" id="radio-type-admin" name="type" value="admin">
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-      <input type="radio" id="radio-type-student" name="type" value="student" checked>
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
-   </td>
-   </c:when>
-   
-   <c:otherwise>
-   <td>
-      <input type="radio" id="radio-type-superadmin" name="type" value="superadmin">
-      <label id="label-type-superadmin" for="radio-type-superadmin">
-         Super Administrateur
-      </label>
-       <input type="radio" id="radio-type-admin" name="type" value="admin">
-      <label id="label-type-admin" for="radio-type-admin">
-         Administrateur
-      </label>
-      <input type="radio" id="radio-type-student" name="type" value="student">
-      <label id="label-type-student" for="radio-type-student">
-         Étudiant
-      </label>
-   </td>
-   </c:otherwise> 
-   </c:choose>
-   
 </tr>
 
 <tr>
-   <th title="La valeur de l’attribut REMOTE_USER de Shibboleth pour cet utilisateur">
-      REMOTE_USER
-   </th>
+   <th>Username</th>
+   <td>
+      <input readonly class="text" type="text" id="text-username" name="username" value="${usermodify.username}">
+   </td>
+</tr>
+
+
+<tr class="role">
+   <th>Role</th>
+   
+   <c:choose>
+   
+      <c:when test="${role eq 'superadmin'}">
+         <c:choose>
+         
+         <c:when test="${usermodify.role eq 'superadmin'}">
+            <td>
+               <input type="radio" id="radio-type-superadmin" name="role" value="superadmin" checked>
+               <label for="radio-type-superadmin">Super Administrateur</label>
+               <input type="radio" id="radio-type-admin" name="role" value="admin">
+               <label for="radio-type-admin">Administrateur</label>
+              <input type="radio" id="radio-type-student" name="role" value="student">
+               <label for="radio-type-student">Étudiant</label>
+            </td>
+         </c:when>
+         
+         <c:when test="${usermodify.role eq 'admin'}">
+            <td>
+               <input type="radio" id="radio-type-superadmin" name="role" value="superadmin">
+               <label for="radio-type-superadmin">Super Administrateur</label>
+               <input type="radio" id="radio-type-admin" name="role" value="admin" checked>
+               <label for="radio-type-admin">Administrateur</label>
+               <input type="radio" id="radio-type-student" name="role" value="student">
+               <label for="radio-type-student">Étudiant</label>
+            </td>
+         </c:when>
+         
+         <c:when test="${usermodify.role eq 'student'}">
+            <td>
+               <input type="radio" id="radio-type-superadmin" name="role" value="superadmin">
+               <label for="radio-type-superadmin">Super Administrateur</label>
+               <input type="radio" id="radio-type-admin" name="role" value="admin">
+               <label for="radio-type-admin">Administrateur</label>
+               <input type="radio" id="radio-type-student" name="role" value="student" checked>
+               <label for="radio-type-student">Étudiant</label>
+            </td>
+         </c:when>
+         </c:choose>
+      </c:when>
+      
+      <c:otherwise>
+         <td>
+            <input disabled type="radio" id="radio-type-superadmin" name="role" value="superadmin">
+            <label for="radio-type-superadmin">Super Administrateur</label>
+            <input disabled type="radio" id="radio-type-admin" name="role" value="admin">
+            <label for="radio-type-admin">Administrateur</label>
+            <input type="radio" id="radio-type-student" name="role" value="student" checked>
+            <label for="radio-type-student">Étudiant</label>
+         </td>
+      </c:otherwise>
+      
+   </c:choose>
+</tr>
+
+<tr>
+   <th>REMOTE_USER</th>
    <td>
       <input readonly class="text" type="text" id="text-remoteUser" name="remoteUser" value="${usermodify.remoteUser}">
    </td>
@@ -157,23 +146,27 @@ td span.error {
 <tr>
    <th>Civilité</th>
    <td>
-      <select id="select-supannCivilite" name="supannCivilite">
+      <select id="select-titleCivilite" name="titleCivilite">
          <c:choose>
-            <c:when test="${usermodify.supannCivilite eq 'aucune'}">
+         
+            <c:when test="${usermodify.title eq 'aucune'}">
                <option value="aucune" selected>(aucune)</option>
                <option value="Mme">Mᵐᵉ</option>
                <option value="M.">M.</option>
             </c:when>
-            <c:when test="${usermodify.supannCivilite eq 'Mme'}">
+            
+            <c:when test="${usermodify.title eq 'Mme'}">
                <option value="aucune">(aucune)</option>
                <option value="Mme" selected>Mᵐᵉ</option>
                <option value="M.">M.</option>
             </c:when>
+            
             <c:otherwise>
                <option value="aucune">(aucune)</option>
                <option value="Mme">Mᵐᵉ</option>
                <option value="M." selected>M.</option>
             </c:otherwise>
+         
          </c:choose>
       </select>
    </td>
@@ -192,28 +185,27 @@ td span.error {
 <tr>
    <th>E-mail</th>
    <td>
-      <input class="text" type="text" id="text-mail" name="mail" value="${usermodify.mail}">
-	  <c:if test="${err_usermodify_mail}">
-	     <span class="error" title="Le champ est mal formé">Incorrect</span>
-	  </c:if>
-   </td>
+      <input class="text" type="text" id="text-email" name="email" value="${usermodify.email}">
+	</td>
 </tr>
 
 <tr>
-   <th title="Le mot de passe à utiliser lorsque Shibboleth n’est pas disponible">
-      Mot de passe
-   </th>
+   <th>Mot de passe</th>
    <td>
       <input class="text" type="password" id="text-password" name="password" value="${usermodify_moreInfo.password}">
 	  <c:choose>
-         <c:when test="${usermodify.passwordEnabled eq 'true'}">
-            <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled" value="yes" checked>
+     
+         <c:when test="${usermodify.classicLoginAllowed eq 'true'}">
+            <input class="checkbox" type="checkbox" id="checkbox-classicLoginAllowed" name="classicLoginAllowed" value="yes" checked>
          </c:when>
+         
          <c:otherwise>
-            <input class="checkbox" type="checkbox" id="checkbox-passwordEnabled" name="passwordEnabled">
+            <input class="checkbox" type="checkbox" id="checkbox-classicLoginAllowed" name="classicLoginAllowed">
          </c:otherwise>
+      
       </c:choose>
-      <label for="checkbox-passwordEnabled">
+      
+      <label for="checkbox-classicLoginAllowed">
          Activé
       </label>
    </td>
@@ -224,17 +216,32 @@ td span.error {
       Université de rattachement
    </th>
    <td>
-      <select id="select-primaryUniversity" name="primaryUniversity">
+      <select id="select-university" name="university">
          <c:forEach var="r" items="${regionsData}">
             <optgroup label="${r.label}">
-               <c:forEach var="u" items="${r.universities}">
+               <c:forEach var="ru" items="${r.universities}">
                   <c:choose>
-                     <c:when test="${u.id eq usermodify.primaryUniversity}">
-                        <option value="${u.id}" selected>${u.title}</option>
+                  
+                     <c:when test="${ru.id eq usermodify.university.id}">
+                        <option value="${ru.id}" selected>${ru.title}</option>
                      </c:when>
+                    
                      <c:otherwise>
-                        <option value="${u.id}">${u.title}</option>
+                        <c:choose>
+                           
+                           <c:when test="${role eq 'admin'}">
+                              <c:if test="${userUnivId eq ru.id}">
+                                 <option value="${ru.id}">${ru.title}</option>
+                              </c:if>
+                           </c:when>
+                           
+                           <c:otherwise>
+                              <option value="${ru.id}">${ru.title}</option>   
+                           </c:otherwise>
+                        
+                        </c:choose>
                      </c:otherwise>
+                  
                   </c:choose> 
                </c:forEach>
             </optgroup>
@@ -243,21 +250,35 @@ td span.error {
    </td>
 </tr>
 
-<tr id="tr-secondaryUnivs">
+<tr id="tr-secondaryUniversity">
    <th title="De quelles autres universités l’utilisateur ira-t-il consulter les informations">
       Autres universités d’intérêt
    </th>
    <td>
-   	  <select id="select-secondaryUniversities" name="secondaryUniversities">
+   	  <select id="select-secondaryUniversity" name="secondaryUniversity">
             <c:forEach var="r" items="${regionsData}">
                <optgroup label="${r.label}">
-                  <c:forEach var="u" items="${r.universities}">
+                  <c:forEach var="ru" items="${r.universities}">
                      <c:choose>
-                        <c:when test="${u.id eq usermodify.secondaryUniversities[0]}">
-                           <option value="${u.id}" selected>${u.title}</option>
+                        
+                        <c:when test="${ru.id eq usermodify.secondaryUniversity.id}">
+                           <option value="${ru.id}" selected>${ru.title}</option>
                         </c:when>
+                        
                         <c:otherwise>
-                           <option value="${u.id}">${u.title}</option>
+                           <c:choose>
+                           
+                              <c:when test="${role eq 'admin'}">
+                                 <c:if test="${userUnivId eq ru.id}">
+                                    <option value="${ru.id}">${ru.title}</option>
+                                 </c:if>
+                              </c:when>
+                              
+                              <c:otherwise>
+                                 <option value="${ru.id}">${ru.title}</option>   
+                              </c:otherwise>
+                           
+                           </c:choose>
                         </c:otherwise>
                      </c:choose> 
                   </c:forEach>
@@ -280,12 +301,15 @@ td span.error {
 </table>
 
 <div class="table bottom">
+   
    <button id="button-cancel" onclick="document.location.href = '${baseURL}/users'; return false;">
       Annuler
    </button>
+   
    <button id="button-save" onclick="submit()">
       Enregistrer
    </button>
+
 </div>
 
 </div>

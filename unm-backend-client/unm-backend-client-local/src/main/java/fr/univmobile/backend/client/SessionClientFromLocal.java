@@ -89,7 +89,7 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 			return null;
 		}
 
-		final fr.univmobile.backend.core.User dsUser = session.getUser();
+		final fr.univmobile.backend.domain.User dsUser = session.getUser();
 
 		final String sessionId = session.getId();
 

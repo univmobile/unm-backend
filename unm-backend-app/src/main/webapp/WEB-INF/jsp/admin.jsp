@@ -17,9 +17,9 @@
 <div id="div-entered">
 <jsp:include page="ul-adminMenu.h.jsp"/>
 <ul id="ul-adminUser">
-<li> Principal : ${user.uid}
-<c:if test="${user.uid != delegationUser.uid}">
-<li> Délégation : ${delegationUser.uid}
+<li> Principal : ${user.username}
+<c:if test="${user.id != delegationUser.id}">
+<li> Délégation : ${delegationUser.username}
 </c:if>
 <li id="li-logout"> <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
 </ul>
@@ -56,7 +56,7 @@ Administration d’UnivMobile
 		<a id="link-regions" href="${baseURL}/regions/">Régions, universités</a>
 	<li class="clear">
 	<li class="flaticon icon-compass6">
-		<a id="link-geocampus" href="${baseURL}/geocampus/">Géocampus</a>
+		<a id="link-geocampus" href="${baseURL}/geocampus/admin/">Géocampus</a>
 	<li class="flaticon icon-rss9">
 		<a id="link-news" href="${baseURL}/news/">Fils d’actualités des universités</a>
 	<li class="flaticon icon-address7">
@@ -87,9 +87,9 @@ Administration d’UnivMobile
 		<a id="link-help" href="${baseURL}/help/">Aide</a>
 	<li class="flaticon icon-person9">
 		<a id="link-profile" href="${baseURL}/profile/">Mon profil&#160;:
-			${user.uid}
-			<c:if test="${user.uid != delegationUser.uid}">
-				(${delegationUser.uid})
+			${user.id}
+			<c:if test="${user.id != delegationUser.id}">
+				(${delegationUser.id})
 			</c:if>
 	</a>
 	<li class="flaticon icon-go3">

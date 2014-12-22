@@ -21,7 +21,7 @@ td span.error {
 	font-size: x-small;
 }
 
-label.checkbox-parentUid {
+label.checkbox-parentId {
 	font-weight: bold;
 }
 </style>
@@ -37,7 +37,7 @@ label.checkbox-parentUid {
 <jsp:include page="div-entered_modal.h.jsp"/>
 
 <div class="body">
-<form action="${baseURL}/poicategoriesmodify/${poicategorymodify.uid}" method="POST">
+<form action="${baseURL}/poicategoriesmodify/${poicategorymodify.id}" method="POST">
 
 <h1   title="Version ${buildInfo.appVersion}
       Build ${buildInfo.buildDisplayName}
@@ -49,24 +49,28 @@ label.checkbox-parentUid {
 <div class="div-poicategorymodify">
 
    <c:if test="${err_incorrectFields}">
-   <div class="error">
-   	ERREUR — des champs sont incorrects
-   </div>
+      <div class="error">
+         ERREUR — des champs sont incorrects
+      </div>
    </c:if>
    
+   <c:if test="${err_duplicateName}">
+      <div class="error">
+         ERREUR - une catégorie avec ce NOM = ${poicategorymodify.name}
+         existe déjà en base
+      </div>
+   </c:if>    
    
    <h2>Modifier d'une catégorie</h2>
    
    <table>
    
    <tbody>
+   
       <tr>
-         <th>Uid</th>
+         <th>Id</th>
          <td>
-            <input readonly class="text" type="text" id="text-uid" name="uid" value="${poicategorymodify.uid}">
-         <c:if test="${err_poicategorymodify_uid}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
+            <input readonly class="text" type="text" id="text-id" name="id" value="${poicategorymodify.id}">
          </td>
       </tr>
       
@@ -84,9 +88,6 @@ label.checkbox-parentUid {
          <th>Description</th>
          <td>
            <input class="text" type="text" id="text-description" name="description" value="${poicategorymodify.description}">
-         <c:if test="${err_poicategorymodify_description}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
          </td>
       </tr>
       
@@ -106,21 +107,12 @@ label.checkbox-parentUid {
       </tr>
       
       <tr>
-         <th>ParentUid</th>
+         <th>ParentId</th>
          <td>
-            <input readonly class="text" type="text" id="text-parentUid" name="parentUid" value="${poicategorymodify.parentUid}">
+            <input readonly class="text" type="text" id="text-parentId" name="parentId" value="${poicategorymodify.parent.id}">
          </td>
       </tr>
-      
-      <tr>
-         <th>ExternalUid</th>
-         <td>
-           <input class="text" type="text" id="text-externalUid" name="externalUid" value="${poicategorymodify.externalUid}">
-         <c:if test="${err_poicategorymodify_externalUid}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
-         </td> 
-      </tr>
+
    </tbody>
    
    </table>

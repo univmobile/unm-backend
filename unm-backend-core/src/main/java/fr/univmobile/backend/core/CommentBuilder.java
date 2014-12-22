@@ -30,4 +30,6 @@ public interface CommentBuilder extends EntryBuilder<Comment>, Comment{
 	boolean isNullMessage();
 	
 	boolean isNullPostedAt();
+	
+	CommentBuilder setContextUid(int contextUid);
 }

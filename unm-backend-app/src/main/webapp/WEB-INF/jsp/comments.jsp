@@ -8,7 +8,9 @@
 <meta http-equiv="Content-Language" content="en">
 <title>Administration d’UnivMobile — Commentaires</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
+
 <style type="text/css">
+
 #div-poi {
 	border: 1px solid #ccc;
 	xbackground-color: #ff0;
@@ -16,73 +18,91 @@
 	xdisplay: table;
 	margin: 1em 0 0;
 }
+
 #div-poi table {
 	width: 100%;
 }
+
 #div-poi tr {
 	display: inline;
 }
+
 #div-poi th,
 #div-poi tr.id span#text-id {
 	display: none;
 }
+
 #div-poi td {
 	padding-right: 2em;
 }
+
 #div-poi tr.universityIds li {
 	display: inline;
 }
+
 #table-comments {
 	width: 100%;
 	border-collapse: collapse;
 }
+
 #table-comments tr,
 #div-noComments {
 	border-top: 1px solid #ccc;
 	border-bottom: 1px solid #ccc;
 }
+
 #div-noComments {
 	padding: 8px;
 	text-align: center;
 }
+
 #table-comments td {
 	vertical-align: baseline;
 }
+
 #table-comments td.date {
 	font-size: 12px;
 	white-space: nowrap;
 	padding-right: 1em;
 	xtext-align: right;
 }
+
 #table-comments td.author {
 	font-size: 12px;
 	white-space: nowrap;
 }
+
 #table-comments td.author .displayName {
 	display: block;
 	font-weight: bold;
 }
+
 #table-comments td.text {
 	font-size: 12px;
 }
+
 #div-comments-buttons {
 	margin-top: 2em;
 	text-align: center;
 }
+
 #div-addComment div.author span.displayName {
 	display: block;
 	font-weight: bold;
 }
+
 #div-addComment div.author {
 	font-size: 12px;
 	float: left;
 	color: #ccc;
 }
+
 #div-addComment {
 	xborder-top: 1px solid #ccc;
 	padding: 0.5em 2em;
 	margin-bottom: 1em;
 }
+
 #div-addComment textarea {
 	margin-left: 2em;
 	margin-right: 1em;
@@ -92,6 +112,7 @@
 	height: 4em;
 }
 </style>
+
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
@@ -103,58 +124,68 @@
 
 <div class="body results poi">
 
-<h1 title="Version ${buildInfo.appVersion}
-Build ${buildInfo.buildDisplayName}
-${buildInfo.buildId}
-${buildInfo.gitCommitId}">
-Administration d’UnivMobile
+<h1   title="Version ${buildInfo.appVersion}
+      Build ${buildInfo.buildDisplayName}
+      ${buildInfo.buildId}
+      ${buildInfo.gitCommitId}">
+      Administration d’UnivMobile
 </h1>
 
 <div id="div-comments">
 
 <h2>
-Commentaires
-<c:if test="${not empty poi}">
-	/ POI ${poi.id}
-</c:if>
-<!--
-POI ${poi.id} : <c:out value="${poi.name}"/>
--->
+   Commentaires
+   <c:if test="${not empty poi}">
+   	  / POI ${poi.id}
+   </c:if>
+   <!--
+      POI ${poi.id} : <c:out value="${poi.name}"/>
+   -->
 </h2>
 
 <div id="div-query">
 <form action="${baseURL}/comments" method="GET">
-<input id="text-query" name="q" value="${query}">
-<button id="button-search">
+   
+   <input id="text-query" name="q" value="${query}">
+   
+   <button id="button-search">
 	Rechercher
-</button>
+   </button>
+
 </form>
 </div>
 
 <div id="div-resultInfo">
 <span>
-	→
-	<c:choose>
-	<c:when test="${not empty commentsInfo.context}">
-		<c:out value="${commentsInfo.context}"/>
-		<c:if test="${not empty commentsInfo.resultCount}">
-			(<span id="span-resultCount">${commentsInfo.resultCount}</span>)
-		</c:if>
-	</c:when>
-	<c:when test="${empty commentsInfo.resultCount || commentsInfo.resultCount == 0}">
-		Aucun résultat
-	</c:when>
-	<c:when test="${commentsInfo.resultCount == 1}">
-		Un résultat
-	</c:when>
-	<c:otherwise>
-		${commentsInfo.resultCount} résultats
-	</c:otherwise>
-	</c:choose>
+   →
+   <c:choose>
+	
+   <c:when test="${not empty commentsInfo.context}">
+	  <c:out value="${commentsInfo.context}"/>
+	  <c:if test="${not empty commentsInfo.resultCount}">
+		 (<span id="span-resultCount">${commentsInfo.resultCount}</span>)
+	  </c:if>
+   </c:when>
+	
+   <c:when test="${empty commentsInfo.resultCount || commentsInfo.resultCount == 0}">
+	  Aucun résultat
+   </c:when>
+	
+   <c:when test="${commentsInfo.resultCount == 1}">
+	  Un résultat
+   </c:when>
+	
+   <c:otherwise>
+	  ${commentsInfo.resultCount} résultats
+   </c:otherwise>
+	
+   </c:choose>
 </span>
-<button id="button-export" disabled>
-	Export…
-</button>
+
+   <button id="button-export" disabled>
+      Export…
+   </button>
+
 </div>
 
 <c:if test="${not empty poi}">
@@ -164,49 +195,32 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 <tbody>
 
 <tr class="name">
-<th>
-	Nom
-</th>
-<td>
-	<a id="link-poi" href="${baseURL}/pois/${poi.id}">
-	<c:out value="${poi.name}"/>
-	</a>
-</td>
+   <th>Nom</th>
+   <td>
+      <a id="link-poi" href="${baseURL}/pois/${poi.id}">
+         ${poi.name}
+   	  </a>
+   </td>
 </tr>
 
 <tr class="id">
-<th>
-	<!--
-	ID
-	-->
-</th>
-<td>
-	<span id="text-id">POI ${poi.id}</span>
-	<input type="hidden" name="id" value="${poi.id}">
-	<span id="span-active-yes" class="selected">
-	<label for="radio-active-yes">Actif</label>
-	<input type="radio" name="active" value="yes" checked
-		id="radio-active-yes" disabled>
-	</span>
-	<span id="span-active-no">
-	<label for="radio-active-no">Inactif</label>
-	<input type="radio" name="active" value="no"
-		id="radio-active-no" disabled>
-	</span>
-</td>
-</tr>
-
-<tr class="universityIds">
-<th>
-	Universités
-</th>
-<td>
-	<ul>
-	<c:forEach var="universityId" items="${poi.universityIds}">
-	<li> ${universityId}
-	</c:forEach>
-	</ul>
-</td>
+   <th> <!-- ID --> </th>
+   <td>
+	  <span id="text-id">
+         POI ${poi.id}
+      </span>
+	  <input type="hidden" name="id" value="${poi.id}">
+	  
+      <span id="span-active-yes" class="selected">
+      	  <label for="radio-active-yes">Actif</label>
+      	  <input readonly type="radio" name="active" value="yes" checked id="radio-active-yes">
+      </span>
+	  
+      <span id="span-active-no">
+      	  <label for="radio-active-no">Inactif</label>
+      	  <input readonly type="radio" name="active" value="no" id="radio-active-no">
+      </span>
+   </td>
 </tr>
 
 </tbody>
@@ -214,63 +228,74 @@ POI ${poi.id} : <c:out value="${poi.name}"/>
 </div>
 
 <div id="div-addComment">
-<form method="POST" action="${baseURL}/comments">
-<input type="hidden" name="poiId" value="${poi.id}">
-<div class="author">
-<span class="displayName">${delegationUser.displayName}</span>
-<span class="username">@${delegationUser.uid}</span>
+   <form method="POST" action="${baseURL}/comments">
+   <input type="hidden" name="poiId" value="${poi.id}">
+   
+   <div class="author">
+      <span class="displayName">${delegationUser.displayName}</span>
+      <span class="username">@${delegationUser.username}</span>
+   </div>
+
+   <textarea id="text-message" name="message"></textarea>
+   <button id="button-send" disabled>
+	  Envoyer le commentaire
+   </button>
+   </form>
 </div>
-<textarea id="text-message" name="message"></textarea>
-<button id="button-send" disabled>
-	Envoyer le commentaire
-</button>
-</form>
-</div>
+
 </c:if>
 
 <c:choose>
-<c:when test="${fn:length(comments) == 0}">
-<div id="div-noComments" class="emptyArray">
-	Aucun commentaire
-</div>
-</c:when>
-<c:otherwise>
-<table id="table-comments">
-<tbody>
-<c:forEach var="comment" items="${comments}">
-<tr>
-<td class="date">
-	${comment.displayFullPostedAt}
-</td>
-<td class="author">
-	<span class="displayName">
-		${comment.authorDisplayName}
-	</span>
-	<span class="username">
-		@${comment.authorUsername}
-	</span>
-</td>
-<td class="text">
-	${comment.text}
-</td>
-<td class="action">
-   <input class="checkbox" type="checkbox" id="checkbox-active" 
-          name="active" <c:if test="${comment.active}">checked </c:if>onclick='window.location.assign("${baseURL}/commentStatus/${comment.id}")'>
-   <label for="checkbox-active">Actif</label>
-</td>
-</tr>
-</c:forEach>
-</tbody>
-</table> <!-- end of #table-comments -->
-</c:otherwise>
+   
+   <c:when test="${fn:length(comments) == 0}">
+      <div id="div-noComments" class="emptyArray">
+	     Aucun commentaire
+      </div>
+   </c:when>
+   
+   <c:otherwise>
+      <table id="table-comments">
+      <tbody>
+      <c:forEach var="comment" items="${comments}">
+         <tr>
+         
+         <td class="date">
+	        ${comment.createdOn}
+         </td>
+         
+         <td class="author">
+	        <span class="displayName">
+		       ${comment.createdBy.displayName}
+	        </span>
+	        <span class="username">
+		       @${comment.createdBy.username}
+	        </span>
+         </td>
+         
+         <td class="text">
+	        ${comment.message}
+         </td>
+         
+         <td class="action">
+            <input class="checkbox" type="checkbox" id="checkbox-active" 
+            name="active" value="${comment.active}" <c:if test="${comment.active eq 'true'}">checked</c:if> onclick='window.location.assign("${baseURL}/commentStatus/${comment.id}")'>
+            <label for="checkbox-active">Actif</label>
+         </td>
+         </tr>
+      </c:forEach>
+      </tbody>
+      </table> <!-- end of #table-comments -->
+   </c:otherwise>
+
 </c:choose>
 
 <div id="div-comments-buttons">
 <c:if test="${not empty poi}">
-<button id="button-back"
-		onclick="document.location.href = '${baseURL}/pois/${poi.id}'; return false">
+
+<button id="button-back" onclick="document.location.href = '${baseURL}/pois/poi${poi.id}'; return false">
 	Retour au POI ${poi.id} : ${poi.name}
 </button>
+
 </c:if>
 </div>
 

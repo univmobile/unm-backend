@@ -8,19 +8,12 @@ import static org.apache.commons.lang3.StringUtils.isBlank;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.TreeSet;
 
 import javax.annotation.Nullable;
 
-import org.apache.commons.lang3.StringUtils;
-
-import fr.univmobile.backend.core.PoiCategory;
-import fr.univmobile.backend.core.PoiCategoryBuilder;
-import fr.univmobile.backend.core.PoiCategoryDataSource;
-import fr.univmobile.commons.tx.Lock;
+import fr.univmobile.backend.domain.Category;
+import fr.univmobile.backend.domain.CategoryRepository;
 import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -31,38 +24,33 @@ import fr.univmobile.web.commons.View;
 
 @Paths({ "poicategoriesadd" })
 public class PoiCategoriesAddController extends AbstractBackendController {
-
-	public PoiCategoriesAddController(final TransactionManager tx,
-			final PoiCategoryDataSource poiCategories,
+	public PoiCategoriesAddController(
+			final CategoryRepository categoryRepository,
 			final PoiCategoriesController poiCategoriesController) {
-
-		this.poiCategories = checkNotNull(poiCategories, "poicategories");
-		this.tx = checkNotNull(tx, "tx");
+		this.categoryRepository = checkNotNull(categoryRepository,
+				"categoryRepository");
 		this.poiCategoriesController = checkNotNull(poiCategoriesController,
 				"poiCategoriesController");
 	}
 
-	private final TransactionManager tx;
-	private final PoiCategoryDataSource poiCategories;
-	private final PoiCategoriesController poiCategoriesController;
+	private CategoryRepository categoryRepository;
+	private PoiCategoriesController poiCategoriesController;
 
 	@Override
 	public View action() throws IOException, TransactionException {
 
-		// 1.1 POI CATEGORIES INFO
+		// 1. CATEGORIES
 
-		final Map<Integer, PoiCategory> allCategories = poiCategories.getAllBy(
-				Integer.class, "uid");
+		Iterable<Category> allCategories = categoryRepository.findAll();
 
-		final List<PoiCategory> pc = new ArrayList<PoiCategory>();
+		final List<Category> poicategories = new ArrayList<Category>();
 
-		setAttribute("poicategories", pc);
+		for (Category c : allCategories)
+			poicategories.add(c);
 
-		for (final Integer uid : new TreeSet<Integer>(allCategories.keySet())) {
-			pc.add(allCategories.get(uid));
-		}
+		setAttribute("poicategories", poicategories);
 
-		// 1.2 HTTP
+		// 2. HTTP
 
 		final PoiCategoryadd form = getHttpInputs(PoiCategoryadd.class);
 
@@ -71,73 +59,39 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 			return new View("poicategoryadd.jsp");
 		}
 
-		// 2. APPLICATION VALIDATION
+		// 3. APPLICATION VALIDATION
 
-		final String uid = form.uid();
+		return poicategoryadd(form);
 
-		final Lock lock = tx.acquireLock(5000, "poiscategories", uid);
-		try {
-
-			return poicategoryadd(lock, form);
-
-		} finally {
-			lock.release();
-		}
 	}
 
-	private View poicategoryadd(final Lock lock, final PoiCategoryadd form)
-			throws IOException, TransactionException {
-
-		final String uid = form.uid();
-
-		final PoiCategoryBuilder poicategory = poiCategories.create();
+	private View poicategoryadd(final PoiCategoryadd form) {
 
 		boolean hasErrors = false;
 
-		poicategory.setAuthorName(getDelegationUser().getAuthorName());
+		Category poicategory = new Category();
 
-		if (!isBlank(uid))
-			if (StringUtils.isNumeric(uid.trim()))
-				poicategory.setUid(Integer.parseInt(uid.trim()));
-			else {
-				setAttribute("err_poicategoryadd_uid", true);
+		if (!form.parentId().equals("(aucune)")) {
+			Long parentId = Long.parseLong(form.parentId());
+			poicategory.setParent(categoryRepository.findOne(parentId));
+		}
+
+		if (!isBlank(form.name())) {
+			if (categoryRepository.findByName(form.name()) != null) {
+				setAttribute("err_duplicateName", true);
 				hasErrors = true;
 			}
-
-		if (!form.parentUid().equals("(aucune)"))
-			poicategory.setParentUid(Integer.parseInt(form.parentUid()));
-		else
-			poicategory.setParentUid(99);
-
-		if (!isBlank(form.externalUid()))
-			if (StringUtils.isNumeric(form.externalUid().trim()))
-				poicategory.setExternalUid(Integer.parseInt(form.externalUid()
-						.trim()));
-			else {
-				setAttribute("err_poicategoryadd_externalUid", true);
-				hasErrors = true;
-			}
-
-		if (!isBlank(form.name()))
 			poicategory.setName(form.name());
-		else {
+		} else {
 			setAttribute("err_poicategoryadd_name", true);
 			hasErrors = true;
 		}
 
 		if (form.active() != null)
-			poicategory.setActive("true");
+			poicategory.setActive(true);
 
 		if (form.description() != null)
 			poicategory.setDescription(form.description());
-
-		
-		if (!isBlank(uid) && StringUtils.isNumeric(uid.trim())) {
-			if (!poiCategories.isNullByUid(Integer.parseInt(uid))) {
-				hasErrors = true;
-				setAttribute("err_duplicateUid", true);
-			}
-		}
 
 		if (hasErrors) {
 
@@ -151,9 +105,7 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 
 		// Otherwise, we’re clear: Save the data.
 
-		lock.save(poicategory);
-
-		lock.commit();
+		categoryRepository.save(poicategory);
 
 		return poiCategoriesController.action();
 	}
@@ -176,29 +128,15 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 		@HttpRequired
 		@HttpParameter(trim = true)
 		@Regexp("[0-9]+")
-		String uid();
+		String parentId();
 
-		@HttpRequired
-		@HttpParameter(trim = true)
-		@Regexp("[0-9]+")
-		String parentUid();
-
-		@HttpRequired
-		@HttpParameter(trim = true)
-		@Regexp("[0-9]+")
-		String externalUid();
-
-		@HttpRequired
 		@HttpParameter
-		@Regexp(".*")
 		String name();
 
 		@HttpParameter
 		String active();
 
-		@HttpRequired
 		@HttpParameter
-		@Regexp(".*")
 		String description();
 	}
 }

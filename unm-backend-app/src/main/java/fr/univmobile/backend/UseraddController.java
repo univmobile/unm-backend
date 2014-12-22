@@ -3,24 +3,17 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Nullable;
 
-import org.apache.commons.lang3.RandomStringUtils;
-
-import fr.univmobile.backend.core.Region;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.UserBuilder;
-import fr.univmobile.backend.core.UserDataSource;
-import fr.univmobile.backend.core.impl.Encrypt;
-import fr.univmobile.backend.core.impl.EncryptSHA256;
-import fr.univmobile.commons.tx.Lock;
-import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
+import fr.univmobile.backend.domain.Region;
+import fr.univmobile.backend.domain.RegionRepository;
+import fr.univmobile.backend.domain.University;
+import fr.univmobile.backend.domain.UniversityRepository;
+import fr.univmobile.backend.domain.User;
+import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -32,38 +25,45 @@ import fr.univmobile.web.commons.View;
 @Paths({ "useradd" })
 public class UseraddController extends AbstractBackendController {
 
-	public UseraddController(final TransactionManager tx,
-			final UserDataSource users, final UsersController usersController,
-			final RegionDataSource regions) {
-
-		this.users = checkNotNull(users, "users");
-		this.tx = checkNotNull(tx, "tx");
+	public UseraddController(final UserRepository userRepository,
+			final RegionRepository regionRepository,
+			final UniversityRepository universityRepository,
+			final UsersController usersController) {
+		this.userRepository = checkNotNull(userRepository, "userRepository");
+		this.regionRepository = checkNotNull(regionRepository,
+				"regionRepository");
+		this.universityRepository = checkNotNull(universityRepository,
+				"universityRepository");
 		this.usersController = checkNotNull(usersController, "usersController");
-		this.regions = checkNotNull(regions, "regions");
 	}
 
-	private final TransactionManager tx;
-	private final UserDataSource users;
-	private final UsersController usersController;
-	private final RegionDataSource regions;
+	private UserRepository userRepository;
+	private RegionRepository regionRepository;
+	private UniversityRepository universityRepository;
+	private UsersController usersController;
 
-	private final Encrypt encrypt = new EncryptSHA256();
+	// private final Encrypt encrypt = new EncryptSHA256();
 
 	@Override
-	public View action() throws IOException, TransactionException {
+	public View action() {
 
-		final Map<String, Region> dsRegions = regions.getAllBy(String.class,
-				"uid");
+		// REGIONS DATA
 
-		final List<Region> regionsData = new ArrayList<Region>();
+		Iterable<Region> allRegions = regionRepository.findAll();
 
-		for (final Region r : dsRegions.values())
+		List<Region> regionsData = new ArrayList<Region>();
+
+		for (Region r : allRegions)
 			regionsData.add(r);
+
 		setAttribute("regionsData", regionsData);
 
 		// 1. HTTP
 
 		final Useradd form = getHttpInputs(Useradd.class);
+
+		setAttribute("role", getDelegationUser().getRole());
+		setAttribute("userUnivId", getDelegationUser().getUniversity().getId());
 
 		if (!form.isHttpValid()) {
 
@@ -72,75 +72,73 @@ public class UseraddController extends AbstractBackendController {
 
 		// 2. APPLICATION VALIDATION
 
-		final String uid = form.uid();
-
-		final Lock lock = tx.acquireLock(5000, "users", uid);
-		try {
-
-			return useradd(lock, form);
-
-		} finally {
-			lock.release();
-		}
+		return useradd(form);
 	}
 
-	private View useradd(final Lock lock, final Useradd form)
-			throws IOException, TransactionException {
+	private View useradd(final Useradd form) {
 
-		final String uid = form.uid();
+		User user = new User();
 
-		final UserBuilder user = users.create();
-
-		user.setAuthorName(getDelegationUser().getUid());
+		boolean hasErrors = false;
 
 		final String remoteUser = form.remoteUser();
+		final String username = form.username();
 
-		if (form.type() != null) // gets the role
-			user.setRole(form.type());
-
-		user.setUid(uid);
-		user.setRemoteUser(remoteUser);
-		user.setTitle(uid);
-		user.setDisplayName(form.displayName());
-		user.setMail(form.mail());
-		if (form.supannCivilite() != null) {
-			user.setSupannCivilite(form.supannCivilite());
+		if (!isBlank(username))
+			user.setUsername(username);
+		else {
+			hasErrors = true;
+			setAttribute("err_useradd_username", true);
 		}
 
-		user.setPrimaryUniversity(form.primaryUniversity());
-		user.setSecondaryUniversities(form.secondaryUniversities());
+		if (form.classicLoginAllowed() != null)
+			user.setPassword(form.password());
 
-		if (form.passwordEnabled() != null) {
-			user.setPasswordEnabled("true");
-			user.setPasswordEncryptionAlgorithm("SHA-256");
-			final String saltPrefix = RandomStringUtils.randomAlphanumeric(8);
-			user.setPasswordSaltPrefix(saltPrefix);
-			if (!isBlank(form.password())) {
-				final String encrypted = encrypt.encrypt(saltPrefix,
-						form.password());
-				user.setPasswordEncrypted(encrypted);
-			}
-		} else user.setPasswordEnabled("false");
+		if (!isBlank(form.displayName()))
+			user.setDisplayName(form.displayName());
+		else {
+			hasErrors = true;
+			setAttribute("err_useradd_displayName", true);
+		}
+
+		if (!isBlank(remoteUser))
+			user.setRemoteUser(remoteUser);
+		else {
+			hasErrors = true;
+			setAttribute("err_useradd_remoteUser", true);
+		}
+
+		user.setEmail(form.email());
+		user.setRole(form.role());
+
+		if (form.titleCivilite() != null)
+			user.setTitleCivilite(form.titleCivilite());
+
+		University pU = universityRepository.findOne(form.primaryUniversity());
+		user.setUniversity(pU);
+
+		University sU = universityRepository
+				.findOne(form.secondaryUniversity());	
+		user.setSecondaryUniversity(sU);
+		
+		user.setDescription(form.description());
 
 		final String twitterScreenName = form.twitter_screen_name().trim();
-
 		if (!isBlank(twitterScreenName)) {
 			user.setTwitterScreenName(twitterScreenName);
 		}
 
-		boolean hasErrors = false;
-
-		if (!isBlank(uid)) {
-			if (!users.isNullByUid(uid)) {
+		if (!isBlank(remoteUser)) {
+			if (userRepository.findByRemoteUser(remoteUser) != null) {
 				hasErrors = true;
-				setAttribute("err_duplicateUid", true);
+				setAttribute("err_duplicateRemoteUser", true);
 			}
 		}
 
-		if (!isBlank(remoteUser)) {
-			if (!users.isNullByRemoteUser(remoteUser)) {
+		if (!isBlank(username)) {
+			if (userRepository.findByUsername(username) != null) {
 				hasErrors = true;
-				setAttribute("err_duplicateRemoteUser", true);
+				setAttribute("err_duplicateUsername", true);
 			}
 		}
 
@@ -155,9 +153,7 @@ public class UseraddController extends AbstractBackendController {
 
 		// Otherwise, we’re clear: Save the data.
 
-		lock.save(user);
-
-		lock.commit();
+		userRepository.save(user);
 
 		return usersController.action();
 	}
@@ -179,18 +175,13 @@ public class UseraddController extends AbstractBackendController {
 
 		@HttpRequired
 		@HttpParameter(trim = true)
-		@Regexp("[a-zA-Z0-9_-]+")
-		String uid();
-
-		@HttpRequired
-		@HttpParameter(trim = true)
 		@Regexp("[a-zA-Z0-9_-]+@[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+")
 		String remoteUser();
 
 		@HttpParameter
 		@Nullable
 		@Regexp("aucune|Mme|M\\.")
-		String supannCivilite();
+		String titleCivilite();
 
 		@HttpRequired
 		@HttpParameter
@@ -200,7 +191,7 @@ public class UseraddController extends AbstractBackendController {
 		@HttpRequired
 		@HttpParameter(trim = true)
 		@Regexp("[a-zA-Z0-9_-]+[a-zA-Z0-9_-].@[a-zA-Z0-9_-]+\\.[a-zA-Z0-9_-]+")
-		String mail();
+		String email();
 
 		@HttpRequired
 		@HttpParameter
@@ -208,21 +199,26 @@ public class UseraddController extends AbstractBackendController {
 		String password();
 
 		@HttpParameter
-		String passwordEnabled();
+		String classicLoginAllowed();
 
-		@HttpRequired
 		@HttpParameter
 		String twitter_screen_name();
 
 		// Added by Mauricio
 
 		@HttpParameter
-		String type();
+		String role();
 
 		@HttpParameter
-		String primaryUniversity();
+		String username();
 
 		@HttpParameter
-		String secondaryUniversities();
+		Long primaryUniversity();
+
+		@HttpParameter
+		Long secondaryUniversity();
+
+		@HttpParameter
+		String description();
 	}
 }

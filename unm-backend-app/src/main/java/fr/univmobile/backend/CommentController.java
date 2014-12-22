@@ -73,7 +73,7 @@ public class CommentController extends AbstractBackendController {
 
 		final CommentBuilder comment = comments.create();
 
-		comment.setAuthorName(getDelegationUser().getUid());
+		comment.setAuthorName(getDelegationUser().getUsername());
 
 		comment.setMessage(message);
 		comment.setPostedBy(getDelegationUser().getDisplayName());

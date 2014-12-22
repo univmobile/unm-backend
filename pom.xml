@@ -15,6 +15,7 @@
 	<modules>
 		<module>unm-backend-parent</module>
 		<module>unm-commons-datasource</module>
+		<module>unm-backend-domain</module>
 		<module>unm-backend-core</module>
 		<module>unm-backend-core-it</module>
 		<module>unm-backend-client</module>

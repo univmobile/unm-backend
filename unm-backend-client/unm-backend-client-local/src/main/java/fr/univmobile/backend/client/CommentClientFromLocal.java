@@ -106,7 +106,8 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 				.setDisplayPostedAt(formatDate(postedAt)) //
 				.setDisplayPostedAtTime(formatTime(postedAt)) //
 				// Author: Mauricio
-				.setActive(dsComment.getActive());
+				.setActive(dsComment.getActive()) //
+				.setContextUid(dsComment.getContextUid());
 
 		return comment;
 	}
@@ -202,8 +203,13 @@ public class CommentClientFromLocal extends AbstractClientFromLocal implements
 		MutableComment setAuthorDisplayName(@Nullable String phone);
 
 		MutableComment setFloor(@Nullable String floor);
+
+		// Author: Mauricio (begin)
 		
-		// Author: Mauricio
 		MutableComment setActive(String active);
+
+		MutableComment setContextUid(int contextUid);
+		
+		// Author: Mauricio (end)
 	}
 }

@@ -1,5 +1,7 @@
 package fr.univmobile.backend.core;
 
+import fr.univmobile.backend.domain.User;
+
 import java.io.IOException;
 import java.sql.SQLException;
 

@@ -45,6 +45,10 @@ public interface Comment extends Entry<Comment>, EntryRef {
 
 	@XPath("atom:content/message")
 	String getMessage();
+	
+	// Author: Mauricio
+	@XPath("atom:content/context/@uid")
+	int getContextUid();
 
 	interface Context {
 

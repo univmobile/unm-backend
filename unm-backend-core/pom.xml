@@ -73,6 +73,10 @@
 			<artifactId>h2</artifactId>
 			<scope>test</scope>
 		</dependency>
+		<dependency>
+			<groupId>fr.univmobile</groupId>
+			<artifactId>unm-backend-domain</artifactId>
+		</dependency>
 	</dependencies>
 
 	<name>unm-backend-core</name>
@@ -151,4 +155,13 @@
 		</profile>
 	</profiles>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>fr.univmobile</groupId>
+				<artifactId>unm-backend-domain</artifactId>
+				<version>0.1.1-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 </project>

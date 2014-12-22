@@ -14,6 +14,7 @@ import org.junit.Test;
 
 import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SessionManagerImpl;
+import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 
 public class SessionMergedAccountsTest extends AbstractDbEnabledTest {
@@ -29,15 +30,15 @@ public class SessionMergedAccountsTest extends AbstractDbEnabledTest {
 	@Before
 	public void setUp() throws Exception {
 
-		users = BackendDataSourceFileSystem.newDataSource(UserDataSource.class,
-				dataDir_users);
-
+		/*users = BackendDataSourceFileSystem.newDataSource(UserDataSource.class,
+				dataDir_users);*/
+		
 		sessionManager = new SessionManagerImpl(logQueue, users, H2, cxn);
 
 		LogQueueDbImpl.setAnonymous();
 	}
 
-	private UserDataSource users;
+	private UserRepository users;
 	private SessionManager sessionManager;
 
 	private static final String API_KEY = "abcdefgh";
@@ -52,15 +53,15 @@ public class SessionMergedAccountsTest extends AbstractDbEnabledTest {
 
 		assertNotNull(appSession);
 
-		final User user = appSession.getUser();
+		final fr.univmobile.backend.domain.User user = appSession.getUser();
 
-		assertEquals("dandriana", user.getUid());
+		assertEquals("dandriana", user.getUsername());
 
-		assertTrue(user.isNullPrimaryUser());
+		//assertTrue(user.isNullPrimaryUser());
 
-		assertEquals(1, user.sizeOfSecondaryUsers());
-		assertEquals("dandrianavalontsalama",
-				user.getSecondaryUsers()[0].getUid());
+		//assertEquals(1, user.sizeOfSecondaryUsers());
+		/*assertEquals("dandrianavalontsalama",
+				user.getSecondaryUsers()[0].getUid());*/
 	}
 
 	@Test
@@ -73,17 +74,17 @@ public class SessionMergedAccountsTest extends AbstractDbEnabledTest {
 
 		assertNotNull(appSession);
 
-		final User user = appSession.getUser();
+		final fr.univmobile.backend.domain.User user = appSession.getUser();
 
-		assertNotEquals("dandrianavalontsalama", user.getUid());
+		assertNotEquals("dandrianavalontsalama", user.getUsername());
 
-		assertEquals("dandriana", user.getUid());
+		assertEquals("dandriana", user.getUsername());
 
-		assertTrue(user.isNullPrimaryUser());
+		//assertTrue(user.isNullPrimaryUser());
 
-		assertEquals(1, user.sizeOfSecondaryUsers());
-		assertEquals("dandrianavalontsalama",
-				user.getSecondaryUsers()[0].getUid());
+		//assertEquals(1, user.sizeOfSecondaryUsers());
+		//assertEquals("dandrianavalontsalama",
+		//		user.getSecondaryUsers()[0].getUid());
 	}
 
 	@Test
@@ -91,13 +92,13 @@ public class SessionMergedAccountsTest extends AbstractDbEnabledTest {
 
 		assertEquals(0, getDbRowCount("unm_history"));
 
-		final User user = users.getByUid("dandriana");
+		final fr.univmobile.backend.domain.User user = users.findByUsername("dandriana");
 
-		assertEquals("dandriana", user.getUid());
+		assertEquals("dandriana", user.getUsername());
 
-		assertNotEquals("dandrianavalontsalama", user.getUid());
+		assertNotEquals("dandrianavalontsalama", user.getUsername());
 
-		assertTrue(user.isNullPrimaryUser());
+		//assertTrue(user.isNullPrimaryUser());
 	}
 
 	@Test
@@ -105,12 +106,12 @@ public class SessionMergedAccountsTest extends AbstractDbEnabledTest {
 
 		assertEquals(0, getDbRowCount("unm_history"));
 
-		final User user = users.getByUid("dandrianavalontsalama");
+		final fr.univmobile.backend.domain.User user = users.findByUsername("dandrianavalontsalama");
 
-		assertEquals("dandrianavalontsalama", user.getUid());
+		assertEquals("dandrianavalontsalama", user.getUsername());
 
-		assertNotEquals("dandriana", user.getUid());
+		assertNotEquals("dandriana", user.getUsername());
 
-		assertFalse(user.isNullPrimaryUser());
+		//assertFalse(user.isNullPrimaryUser());
 	}
 }
