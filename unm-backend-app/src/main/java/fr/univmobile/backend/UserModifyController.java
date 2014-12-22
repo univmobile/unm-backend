@@ -74,7 +74,7 @@ public class UserModifyController extends AbstractBackendController {
 		// 1.2 HTTP
 
 		final Usermodify form = getHttpInputs(Usermodify.class);
-		
+
 		setAttribute("role", getDelegationUser().getRole());
 		setAttribute("userUnivId", getDelegationUser().getUniversity().getId());
 
@@ -94,13 +94,18 @@ public class UserModifyController extends AbstractBackendController {
 
 		boolean hasErrors = false;
 
-		final String username = form.username();
-
-		if (!isBlank(username))
-			user.setUsername(username);
-		else {
+		user.setUsername(form.username());
+		if (isBlank(form.username())) {
 			hasErrors = true;
-			setAttribute("err_usermodfy_username", true);
+			setAttribute("err_usermodify_username", true);
+			setAttribute("err_incorrectFields", true);
+		}
+		
+		user.setDisplayName(form.displayName());
+		if (isBlank(form.displayName())) {
+			hasErrors = true;
+			setAttribute("err_usermodify_displayName", true);
+			setAttribute("err_incorrectFields", true);
 		}
 
 		if (form.classicLoginAllowed() != null) {
@@ -109,13 +114,6 @@ public class UserModifyController extends AbstractBackendController {
 		} else {
 			user.setClassicLoginAllowed(false);
 			user.setPassword("");
-		}
-
-		if (!isBlank(form.displayName()))
-			user.setDisplayName(form.displayName());
-		else {
-			hasErrors = true;
-			setAttribute("err_usermodify_displayName", true);
 		}
 
 		user.setEmail(form.email());
@@ -137,13 +135,6 @@ public class UserModifyController extends AbstractBackendController {
 		if (!isBlank(twitterScreenName)) {
 			user.setTwitterScreenName(twitterScreenName);
 		}
-
-		/*if (!isBlank(username)) {
-			if (userRepository.findByUsername(username) != null) {
-				hasErrors = true;
-				setAttribute("err_duplicateUsername", true);
-			}
-		}*/
 
 		if (hasErrors) {
 

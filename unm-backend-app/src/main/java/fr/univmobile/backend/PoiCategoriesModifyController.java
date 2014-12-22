@@ -69,17 +69,16 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		boolean hasErrors = false;
 
+		poicategory.setName(form.name());
 		if (!isBlank(form.name())) {
 			if (categoryRepository.findByName(form.name()) != null) {
-				if (!poicategory.getName().equals(form.name())) {
-					setAttribute("err_duplicateName", true);
-					hasErrors = true;
-				}
+				hasErrors = true;
+				setAttribute("err_duplicateName", true);
 			}
-			poicategory.setName(form.name());
 		} else {
-			setAttribute("err_poicategoryadd_name", true);
 			hasErrors = true;
+			setAttribute("err_poicategorymodify_name", true);
+			setAttribute("err_incorrectFields", true);
 		}
 
 		if (form.active() != null)
@@ -126,7 +125,7 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 		@HttpRequired
 		@HttpParameter(trim = true)
 		@Regexp("[0-9]+")
-		String parentId();
+		String parentCategory();
 
 		@HttpParameter
 		String name();

@@ -71,20 +71,21 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 
 		Category poicategory = new Category();
 
-		if (!form.parentId().equals("(aucune)")) {
-			Long parentId = Long.parseLong(form.parentId());
+		if (!form.parentCategory().equals("(aucune)")) {
+			Long parentId = Long.parseLong(form.parentCategory());
 			poicategory.setParent(categoryRepository.findOne(parentId));
 		}
 
+		poicategory.setName(form.name());
 		if (!isBlank(form.name())) {
 			if (categoryRepository.findByName(form.name()) != null) {
-				setAttribute("err_duplicateName", true);
 				hasErrors = true;
+				setAttribute("err_duplicateName", true);
 			}
-			poicategory.setName(form.name());
 		} else {
-			setAttribute("err_poicategoryadd_name", true);
 			hasErrors = true;
+			setAttribute("err_poicategoryadd_name", true);
+			setAttribute("err_incorrectFields", true);
 		}
 
 		if (form.active() != null)
@@ -128,7 +129,7 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 		@HttpRequired
 		@HttpParameter(trim = true)
 		@Regexp("[0-9]+")
-		String parentId();
+		String parentCategory();
 
 		@HttpParameter
 		String name();

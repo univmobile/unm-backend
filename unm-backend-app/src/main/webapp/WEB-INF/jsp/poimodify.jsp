@@ -53,6 +53,20 @@ td span.error {
 
 <div id="div-poimodify">
 
+<c:if test="${err_incorrectFields}">
+   <div class="error">
+      ERREUR — des champs sont incorrects
+   </div>
+</c:if>
+
+<c:if test="${err_duplicateName}">
+   <div class="error">
+      ERREUR - un poi avec ce NOM = ${poimodify.name}
+      existe déjà dans la base
+   </div>
+</c:if>
+
+
 <h2>
    Modification d'un "poi"
 </h2>
@@ -100,6 +114,9 @@ td span.error {
       <th>Nom</th>
       <td>
          <input readonly class="text" id="text-name" name="name" value="${poimodify.name}">
+         <c:if test="${err_poimodify_name}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    
@@ -107,7 +124,6 @@ td span.error {
       <th>Catégories</th>
       <td>
          <select id="select-category" name="category">
-         <option value="(aucune)">(aucune)</option>
          <c:forEach var="pc" items="${poiCategoriesData}">
             <c:choose>
                
@@ -122,6 +138,9 @@ td span.error {
             </c:choose>   
          </c:forEach>
          </select>
+         <c:if test="${err_poimodify_category}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    
@@ -224,6 +243,9 @@ td span.error {
       <th>Lat</th>
       <td>
    	     <input id="text-lat" name="lat" value="${poimodify.lat}">
+         <c:if test="${err_poimodify_lat}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    
@@ -231,6 +253,9 @@ td span.error {
       <th>Lng</th>
       <td>
          <input id="text-lng" name="lng" value="${poimodify.lng}">
+         <c:if test="${err_poimodify_lng}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    

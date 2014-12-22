@@ -3,6 +3,7 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -107,9 +108,18 @@ public class PoisModifyController extends AbstractBackendController {
 		boolean hasErrors = false;
 
 		poi.setName(form.name());
+		if (isBlank(form.name())) {
+			hasErrors = true;
+			setAttribute("err_poimodify_name", true);
+			setAttribute("err_incorrectFields", true);
+		}
 
-		if (!form.category().equals("(aucune)"))
-			poi.setCategory(categoryRepository.findByName(form.category()));
+		poi.setCategory(categoryRepository.findByName(form.category()));
+		if (isBlank(form.category())) {
+			hasErrors = true;
+			setAttribute("err_poimodify_category", true);
+			setAttribute("err_incorrectFields", true);
+		}
 
 		poi.setAddress(form.address());
 		poi.setCity(form.city());
@@ -117,8 +127,21 @@ public class PoisModifyController extends AbstractBackendController {
 		poi.setEmail(form.email());
 		poi.setFloor(form.floor());
 		poi.setItinerary(form.itinerary());
+
 		poi.setLat(form.lat());
+		if (form.lat() == null) {
+			hasErrors = true;
+			setAttribute("err_poimodify_lat", true);
+			setAttribute("err_incorrectFields", true);
+		}
+
 		poi.setLng(form.lng());
+		if (form.lng() == null) {
+			hasErrors = true;
+			setAttribute("err_poimodify_lng", true);
+			setAttribute("err_incorrectFields", true);
+		}
+
 		poi.setOpeningHours(form.openingHours());
 		poi.setPhones(form.phones());
 		poi.setUniversity(universityRepository.findByTitle(form.university()));
@@ -198,10 +221,10 @@ public class PoisModifyController extends AbstractBackendController {
 		String category();
 
 		@HttpParameter
-		double lat();
+		Double lat();
 
 		@HttpParameter
-		double lng();
+		Double lng();
 
 		@HttpParameter
 		String city();

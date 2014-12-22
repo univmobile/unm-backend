@@ -59,6 +59,13 @@ td span.error {
    </div>
 </c:if>
 
+<c:if test="${err_duplicateName}">
+   <div class="error">
+      ERREUR - un poi avec ce NOM = ${poiadd.name}
+      existe déjà dans la base
+   </div>
+</c:if>
+
 <h2>
    Ajouter à poi
 </h2>
@@ -83,7 +90,10 @@ td span.error {
    <tr class="name">
       <th>Nom</th>
       <td>
-         <input id="text-name" name="name">
+         <input id="text-name" name="name" value="${poiadd.name}">
+         <c:if test="${err_poiadd_name}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    
@@ -91,11 +101,13 @@ td span.error {
       <th>Catégories</th>
       <td>
          <select id="select-category" name="category">
-            <option value="(aucune)">(aucune)</option>
             <c:forEach var="pc" items="${poiCategoriesData}">
                <option value="${pc.name}">${pc.name}</option>
             </c:forEach>
          </select>
+         <c:if test="${err_poiadd_category}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    
@@ -187,14 +199,20 @@ td span.error {
    <tr class="lat">
       <th>Lat</th>
       <td>
-   	     <input id="text-lat" name="lat">
+   	     <input id="text-lat" name="lat" value="${poiadd.lat}">
+         <c:if test="${err_poiadd_lat}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    
    <tr class="lng">
       <th>Lng</th>
       <td>
-         <input id="text-lng" name="lng">
+         <input id="text-lng" name="lng" value="${poiadd.lng}">
+         <c:if test="${err_poiadd_lng}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    
