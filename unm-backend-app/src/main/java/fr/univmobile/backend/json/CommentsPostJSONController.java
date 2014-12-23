@@ -6,25 +6,21 @@ import java.io.IOException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.joda.time.DateTime;
 
-import fr.univmobile.backend.core.CommentBuilder;
-import fr.univmobile.backend.core.CommentDataSource;
-import fr.univmobile.backend.core.CommentManager;
-import fr.univmobile.backend.core.impl.LogQueueDbImpl;
+import fr.univmobile.backend.domain.Comment;
+import fr.univmobile.backend.domain.CommentRepository;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
-import fr.univmobile.web.commons.PageNotFoundException;
 import fr.univmobile.web.commons.Paths;
 
 
 @Paths({ "json/comment/post", "json/comment/post/", "json/comment/post.json" })
 public class CommentsPostJSONController extends AbstractJSONController {
 
-	public CommentsPostJSONController(final CommentDataSource commentsDs, //
+	/*public CommentsPostJSONController(final CommentDataSource commentsDs, //
 			final CommentManager commentManager //
 	) {
 		this.commentsDs = checkNotNull(commentsDs, "commentDataSource");
@@ -32,17 +28,26 @@ public class CommentsPostJSONController extends AbstractJSONController {
 	}
 
 	private final CommentDataSource commentsDs;
-	private final CommentManager commentManager;
+	private final CommentManager commentManager;*/
+	
+	public CommentsPostJSONController(final CommentRepository commentRepository) {
+		this.commentRepository = checkNotNull(commentRepository, "commentRepository");
+	}
+	
+	private CommentRepository commentRepository;
 	
 	private static final Log log = LogFactory.getLog(CommentsPostJSONController.class);
 	
 	@Override
 	public String actionJSON(String baseURL) throws Exception {
-
+		
 		if (!hasDelegationUser()) {
 			// Not authenticated - Forbid
-			throw new PageNotFoundException("Authorization required"); // TODO: 403
+			// throw new PageNotFoundException("Authorization required"); 
+			// TODO: 403
+			return "Autorisation requise";
 		}
+		
 		// 1 HTTP
 
 		final CommentInfo data = getHttpInputs(CommentInfo.class);
@@ -56,27 +61,33 @@ public class CommentsPostJSONController extends AbstractJSONController {
 		return String.format("{ \"result\": \"%s\" }", (commentSave(data) ? "ok" : "error"));
 	}
 	
-	private boolean commentSave(CommentInfo postedComment) throws IOException,
+	private boolean commentSave(CommentInfo form) throws IOException,
 		TransactionException {
 
-		boolean hasErrors;
+		boolean hasErrors = false;
 		
 		log.info("action()...");
 
-		final DateTime now = new DateTime();
+		// final DateTime now = new DateTime();
 
-		final int poiId = postedComment.poiId();
-
-		final CommentBuilder comment = commentsDs.create();
+		// final int poiId = postedComment.poiId();
+		
+		Comment comment = new Comment();
+		comment.setMessage(form.message());
+		comment.setTitle(form.title());
+		comment.setActive(true);
+		// comment.setPoi(poi);
+		
+		/*final CommentBuilder comment = commentsDs.create();
 		comment.setMessage(postedComment.message());
 		comment.setTitle(comment.getTitle());
 		comment.setPostedAt(now);
 		comment.setActive("true");
 		comment.setPostedBy(getDelegationUser().getDisplayName());
 		comment.setAuthorName(getDelegationUser().getUid());
-		comment.setContextUid(poiId);
+		comment.setContextUid(poiId);*/
 		
-		try {
+		/*try {
 			LogQueueDbImpl.setPrincipal(getDelegationUser().getUid()); // TODO user? delegation?
 			commentManager.addToCommentThreadByPoiId(1, comment); // 1 here is a temporal assignment. Remember poiTree and commentsThreads went again already.
 			hasErrors = false;
@@ -84,7 +95,9 @@ public class CommentsPostJSONController extends AbstractJSONController {
 			log.warn("Error posting a comment");
 			log.warn(e);
 			hasErrors = true;
-		}
+		}*/
+		
+		commentRepository.save(comment);
 
 		return !hasErrors;
 	}
@@ -92,6 +105,7 @@ public class CommentsPostJSONController extends AbstractJSONController {
 
 	@HttpMethods({"POST", "GET"})
 	interface CommentInfo extends HttpInputs {
+		
 		@HttpRequired
 		@HttpParameter(trim = true)
 		int poiId();

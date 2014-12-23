@@ -25,16 +25,35 @@ public class CategoryRepositoryTest {
 		repository.deleteAll();
 
 		// CREATE
-		Category category = new Category();
+		Category c1 = new Category();
 
-		category.setActive(true);
-		category.setName("Important");
-		category.setDescription("Critical events");
-		category.setParent(null);
+		c1.setActive(true);
+		c1.setName("Important");
+		c1.setDescription("Critical events");
+		c1.setParent(null);
+		c1.setLegacy("/1/");
+		
+		Category c2 = new Category();
 
-		repository.save(category);
+		c2.setActive(true);
+		c2.setName("Important 1");
+		c2.setDescription("Critical events");
+		c2.setParent(null);
+		c2.setLegacy("/1/2");
+		
+		Category c3 = new Category();
 
-		Category dbcategory = repository.findOne(category.getId());
+		c3.setActive(true);
+		c3.setName("Important 2");
+		c3.setDescription("Critical events");
+		c3.setParent(null);
+		c3.setLegacy("/2/4");
+
+		repository.save(c1);
+		repository.save(c2);
+		repository.save(c3);
+
+		Category dbcategory = repository.findOne(c3.getId());
 		assertNotNull(dbcategory);
 		System.out.println(dbcategory);
 	}

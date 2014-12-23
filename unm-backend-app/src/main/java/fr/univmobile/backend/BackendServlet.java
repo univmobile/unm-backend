@@ -99,7 +99,6 @@ import fr.univmobile.backend.json.UniversitiesJSONController;
 import fr.univmobile.backend.twitter.ApplicationOnly;
 import fr.univmobile.backend.twitter.TwitterAccess;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.BuildInfoUtils;
 import fr.univmobile.web.commons.PageNotFoundException;
@@ -308,7 +307,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new PoisAddController(poiRepository, categoryRepository,
 						regionRepository, universityRepository, poisController), //
 				new PoisModifyController(poiRepository, categoryRepository,
-				regionRepository, universityRepository, poisController), //
+						regionRepository, universityRepository, poisController), //
 				new UserModifyController(userRepository, regionRepository,
 						universityRepository, usersController),
 				new CommentStatusController(commentRepository),
@@ -378,21 +377,27 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new EndpointsJSONController(), //
 				new RegionsJSONController(regionJSONClient), //
 				new UniversitiesJSONController(regions, regionJSONClient), //
-				/* new ImageMapJSONController(imageMaps, imageMapJSONClient), // */
+				// new ImageMapJSONController(imageMaps, imageMapJSONClient),
 				new PoisJSONController(poiJSONClient), //
-				new CommentsJSONController(pois, commentJSONClient), //
-				new SessionJSONController( //
-						sessionManager, sessionJSONClient), //
+				new CommentsJSONController(pois, //
+						commentJSONClient),
+				new SessionJSONController(sessionManager, //
+						sessionJSONClient),
 				new GeocampusPoisByRegionAndCategoryJSONController(
 						poiJSONClient),
-				new GeocampusPoiManageJSONController(poiRepository, imageMapRepository, categoryRepository, universityRepository),
-				new NearestPoisJSONController(poiJSONClient,
+				new GeocampusPoiManageJSONController(poiRepository, //
+						imageMapRepository, //
+						categoryRepository, //
+						universityRepository),
+				new NearestPoisJSONController(poiJSONClient, //
 						nearestPoisMaxMetersAway),
-				// new CommentsPostJSONController(tx, comments, commentManager),
-				new CommentsPostJSONController(comments, commentManager),
-				new GeocampusJSONController(regionJSONClient,
-						poiCategoryJSONClient, imageMapJSONClient, regions,
-						imageMaps) };
+				new CommentsPostJSONController(commentRepository),
+				new GeocampusJSONController(regionJSONClient, //
+						poiCategoryJSONClient, //
+						imageMapJSONClient, //
+						regions, //
+						imageMaps) //
+		};
 
 		for (final AbstractJSONController jsonController : jsonControllers) {
 			if (log.isDebugEnabled()) {

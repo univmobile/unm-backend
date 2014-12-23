@@ -85,6 +85,12 @@ public class Category extends AuditableEntityWithLegacy {
 	public String getLegacy() {
 		return legacy;
 	}
+	
+	// This method is only for testing purposes
+	
+	public void setLegacy(String legacy) {
+		this.legacy = legacy;
+	}
 
 	public Category getParent() {
 		return parent;
