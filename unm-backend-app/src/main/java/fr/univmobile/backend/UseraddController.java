@@ -84,29 +84,29 @@ public class UseraddController extends AbstractBackendController {
 		final String remoteUser = form.remoteUser();
 		final String username = form.username();
 
-		if (!isBlank(username))
-			user.setUsername(username);
-		else {
+		user.setUsername(username);
+		if (isBlank(username)) {
 			hasErrors = true;
 			setAttribute("err_useradd_username", true);
+			setAttribute("err_incorrectFields", true);
+		}
+
+		user.setDisplayName(form.displayName());
+		if (isBlank(form.displayName())) {
+			hasErrors = true;
+			setAttribute("err_useradd_displayName", true);
+			setAttribute("err_incorrectFields", true);
+		}
+
+		user.setRemoteUser(remoteUser);
+		if (isBlank(remoteUser)) {
+			hasErrors = true;
+			setAttribute("err_useradd_remoteUser", true);
+			setAttribute("err_incorrectFields", true);
 		}
 
 		if (form.classicLoginAllowed() != null)
 			user.setPassword(form.password());
-
-		if (!isBlank(form.displayName()))
-			user.setDisplayName(form.displayName());
-		else {
-			hasErrors = true;
-			setAttribute("err_useradd_displayName", true);
-		}
-
-		if (!isBlank(remoteUser))
-			user.setRemoteUser(remoteUser);
-		else {
-			hasErrors = true;
-			setAttribute("err_useradd_remoteUser", true);
-		}
 
 		user.setEmail(form.email());
 		user.setRole(form.role());
@@ -118,15 +118,14 @@ public class UseraddController extends AbstractBackendController {
 		user.setUniversity(pU);
 
 		University sU = universityRepository
-				.findOne(form.secondaryUniversity());	
+				.findOne(form.secondaryUniversity());
 		user.setSecondaryUniversity(sU);
-		
+
 		user.setDescription(form.description());
 
 		final String twitterScreenName = form.twitter_screen_name().trim();
-		if (!isBlank(twitterScreenName)) {
+		if (!isBlank(twitterScreenName))
 			user.setTwitterScreenName(twitterScreenName);
-		}
 
 		if (!isBlank(remoteUser)) {
 			if (userRepository.findByRemoteUser(remoteUser) != null) {

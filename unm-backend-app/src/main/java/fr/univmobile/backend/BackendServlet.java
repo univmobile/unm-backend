@@ -202,7 +202,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 1. TTRANSACTION MANAGER + DATA
 
-		final TransactionManager tx = TransactionManager.getInstance();
+		// final TransactionManager tx = TransactionManager.getInstance();
 
 		final File usersDir = new File(dataDir, "users");
 		final File regionsDir = new File(dataDir, "regions");

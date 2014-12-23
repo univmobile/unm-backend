@@ -1,6 +1,7 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -88,34 +89,63 @@ public class PoisAddController extends AbstractBackendController {
 	}
 
 	private View poiadd(final Poiadd form) {
-		
+
 		boolean hasErrors = false;
 
 		Poi poi = new Poi();
 
 		poi.setName(form.name());
+		if (isBlank(form.name())) {
+			hasErrors = true;
+			setAttribute("err_poiadd_name", true);
+			setAttribute("err_incorrectFields", true);
+		}
 
-		if (!form.category().equals("(aucune)"))
-			poi.setCategory(categoryRepository.findByName(form.category()));
+		poi.setCategory(categoryRepository.findByName(form.category()));
+		if (isBlank(form.category())) {
+			hasErrors = true;
+			setAttribute("err_poiadd_category", true);
+			setAttribute("err_incorrectFields", true);
+		}
 
 		poi.setAddress(form.address());
 		poi.setCity(form.city());
 		poi.setCountry(form.country());
-		poi.setEmail(form.email());	
+		poi.setEmail(form.email());
 		poi.setFloor(form.floor());
 		poi.setItinerary(form.itinerary());
+
 		poi.setLat(form.lat());
+		if (form.lat() == null) {
+			hasErrors = true;
+			setAttribute("err_poiadd_lat", true);
+			setAttribute("err_incorrectFields", true);
+		}
+
 		poi.setLng(form.lng());
+		if (form.lng() == null) {
+			hasErrors = true;
+			setAttribute("err_poiadd_lng", true);
+			setAttribute("err_incorrectFields", true);
+		}
+
 		poi.setOpeningHours(form.openingHours());
 		poi.setPhones(form.phones());
 		poi.setUniversity(universityRepository.findByTitle(form.university()));
 		poi.setUrl(form.url());
 		poi.setZipcode(form.zipcode());
-		
+
 		if (form.active().equals("yes"))
 			poi.setActive(true);
 		else
 			poi.setActive(false);
+
+		if (!isBlank(form.name())) {
+			if (poiRepository.findByName(form.name()).size() > 0) {
+				hasErrors = true;
+				setAttribute("err_duplicateName", true);
+			}
+		}
 
 		if (hasErrors) {
 
@@ -185,10 +215,10 @@ public class PoisAddController extends AbstractBackendController {
 		String category();
 
 		@HttpParameter
-		double lat();
+		Double lat();
 
 		@HttpParameter
-		double lng();
+		Double lng();
 
 		@HttpParameter
 		String city();

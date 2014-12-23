@@ -11,7 +11,9 @@
 <title>Administration d’UnivMobile — Modifier une catégorie</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
+
 <style type="text/css">
+
 td span.error {
 	margin-left: 0.5em;
 }
@@ -21,9 +23,10 @@ td span.error {
 	font-size: x-small;
 }
 
-label.checkbox-parentId {
+label.checkbox-parentCategory {
 	font-weight: bold;
 }
+
 </style>
 
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
@@ -107,9 +110,9 @@ label.checkbox-parentId {
       </tr>
       
       <tr>
-         <th>ParentId</th>
+         <th>Catègorie pére</th>
          <td>
-            <input readonly class="text" type="text" id="text-parentId" name="parentId" value="${poicategorymodify.parent.id}">
+            <input readonly class="text" type="text" id="text-parentCategory" name="parentCategory" value="${poicategorymodify.parent.name}">
          </td>
       </tr>
 

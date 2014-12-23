@@ -2,6 +2,7 @@ package fr.univmobile.backend.api;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -24,6 +25,7 @@ import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.domain.Region;
 import fr.univmobile.backend.domain.RegionRepository;
+import fr.univmobile.backend.domain.University;
 import fr.univmobile.backend.domain.UniversityRepository;
 import fr.univmobile.backend.domain.User;
 import fr.univmobile.backend.domain.UserRepository;
@@ -59,9 +61,11 @@ public class GeocampusController {
 		if (currentUser.isSuperAdmin()) {
 			data.setRegions(regionRepository.findAllByOrderByNameAsc());
 		} else {
-			List<Region> oneRegion = new ArrayList<Region>(1);
-			oneRegion.add(currentUser.getUniversity().getRegion());
-			data.setRegions(oneRegion);
+			List<Region> regions = new ArrayList<Region>(1);
+			Region oneRegion = currentUser.getUniversity().getRegion();
+			oneRegion.getUniversities().retainAll(new ArrayList<University>(Arrays.asList(new University[]{currentUser.getUniversity()})));
+			regions.add(oneRegion);
+			data.setRegions(regions);
 		}
 
 		data.setPlansCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getPlansLegacy()));
