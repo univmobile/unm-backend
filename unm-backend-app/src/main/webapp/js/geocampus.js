@@ -112,6 +112,9 @@ ko.utils.extend(Poi.prototype, {
         if (this.marker) {
             this.marker.setIcon('http://maps.google.com/mapfiles/ms/icons/red-dot.png');
         }
+    },
+    allowsUniversityFilling: function() {
+    	return this.isNew() && (this.parent() == undefined || this.parent() == '');
     }
 });
 

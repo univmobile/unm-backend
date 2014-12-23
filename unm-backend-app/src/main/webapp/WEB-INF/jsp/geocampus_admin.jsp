@@ -207,7 +207,7 @@
                   <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: name">
                 </div>
               </div>
-              <div class="form-group">
+              <div class="form-group" data-bind="visible: $parent.universities().length > 1 && allowsUniversityFilling()">
                 <label for="inputPassword3" class="col-sm-2 control-label">Universit&eacute;</label>
                 <div class="col-sm-10">
                   <select class="form-control" required="required" data-bind="options: $parent.universities, optionsValue: 'id', optionsText: 'name', value: university">
