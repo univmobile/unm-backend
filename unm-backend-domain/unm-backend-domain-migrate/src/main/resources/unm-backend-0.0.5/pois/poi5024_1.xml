@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5024_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5024_1.xml"/>
+<title>BDE IUT Neuville</title>
+<updated>2014-08-15T01:47:22.906+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5024"
+	coordinates="49.017428125304,2.0745545625687"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T17:05:10.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3935"
+	name="BDE IUT Neuville">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Responsables Président : Dodo KONE</description>
+</content>
+</entry>

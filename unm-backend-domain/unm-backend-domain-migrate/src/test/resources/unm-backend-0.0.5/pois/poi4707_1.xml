@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4707_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4707_1.xml"/>
+<title>Restaurant</title>
+<updated>2014-08-15T01:47:19.720+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4707"
+	coordinates="48.956096911057,2.3424589633942"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T12:04:19.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	deletedAt="2011-05-30T09:33:09.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Basile Michel"
+	name="Restaurant">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+</content>
+</entry>

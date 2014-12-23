@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5686_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5686_1.xml"/>
+<title>Association sportive des étudiants en sciences... (ASESCO)</title>
+<updated>2014-08-15T01:47:28.870+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5686"
+	coordinates="48.699306273768,2.1654640138149"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:40:07.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5685"
+	name="Association sportive des étudiants en sciences... (ASESCO)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association sportive des étudiants en sciences du centre d’Orsay (ASESCO)</description>
+	<address>
+		<floor>Bâtiment 225, 1er étage</floor>
+		<openingHours>Lundi
+12h30-13h30
+18h00-20h00
+Mardi
+17h30-20h30
+Mercredi
+12h30-13h30
+17h30-20h00
+Jeudi
+17h30-18h30
+19h30-20h30</openingHours>
+		<url>http://www.asesco.u-psud.fr/</url>
+		<phone>01 69 15 34 70 </phone>
+		<email>bureau-asesco.asso@u-psud.fr</email>
+	</address>
+</content>
+</entry>

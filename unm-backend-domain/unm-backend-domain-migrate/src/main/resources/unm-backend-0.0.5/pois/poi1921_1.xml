@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1921_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1921_1.xml"/>
+<title>Archéologie et sciences de l'Antiquité</title>
+<updated>2014-08-15T01:46:52.477+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1921"
+	coordinates="48.90424250289,2.20981568"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-06T14:57:32.000+02:00"
+	updatedAt="2011-11-15T16:24:37.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2507"
+	name="Archéologie et sciences de l'Antiquité">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Bureau 301 A et 301 B, 3ème étage</floor>
+		<url>http://www.mae.u-paris10.fr/arscan/</url>
+		<phone>01 46 69 24 18</phone>
+		<email>arscan@mae.u-paris10.fr</email>
+	</address>
+	<attachment id="109" title="maisonLayer1.jpg" type="image" url="/uploads/poi/2687233fa7a3ab4220a202ca8aa2915ff44a2ebe.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3885_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3885_1.xml"/>
+<title>BU CELSA</title>
+<updated>2014-08-15T01:47:11.328+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3885"
+	coordinates="48.894481527804,2.2748344391584"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:39:30.000+02:00"
+	updatedAt="2011-09-26T16:55:21.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3719"
+	name="BU CELSA">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Étudiants, enseignants et membres du personnel non enseignant du CELSA. Sur rendez-vous pour les autres usagers.
+Disciplines : sciences de l’information et de la communication : communication des entreprises et des organisations, marketing, publicité, ressources humaines et relations sociales, sociologie des organisations, sociologie du travail, multimédia, journalisme.</description>
+	<address>
+		<openingHours>Du lundi au jeudi : 
+10h00 / 19h00
+Vendredi : 
+10h00 / 18h00</openingHours>
+		<phone>01 46 43 75 03</phone>
+		<email>bibliotheque@celsa.paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

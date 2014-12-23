@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6445_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6445_1.xml"/>
+<title>Métiers de la formation aux techno de l'industrie M1-2</title>
+<updated>2014-08-15T01:47:37.270+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6445"
+	coordinates="48.9389323379,2.3539254069328"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T15:29:15.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5252"
+	name="Métiers de la formation aux techno de l'industrie M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>responsable de la mention
+
+
+</description>
+	<address>
+		<url>http://www.creteil.iufm.fr/se-former-a-liufm/le-master-mftigs/</url>
+		<phone>01 49 71 87 11 </phone>
+		<email>francois.costa@u-pec.fr</email>
+	</address>
+</content>
+</entry>

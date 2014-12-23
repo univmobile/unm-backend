@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6772_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6772_1.xml"/>
+<title>Restaurant Necker</title>
+<updated>2014-08-15T01:47:40.112+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6772"
+	coordinates="48.843595311189,2.3140081018209"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T10:43:45.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6759"
+	name="Restaurant Necker">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : Pasteur</itinerary>
+		<fullAddress>156 rue de Vaugirard
+75015 Paris</fullAddress>
+	</address>
+	<child uid="6774" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5161_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5161_1.xml"/>
+<title>Créasac</title>
+<updated>2014-08-15T01:47:23.753+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5161"
+	coordinates="48.624205434412,2.4268697574735"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T15:51:05.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="256"
+	name="Créasac">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Soutenir, promouvoir, organiser et réaliser des manifestations culturelles et festives.</description>
+	<address>
+		<url>www.creasac.fr</url>
+		<phone>06 32 95 27 62</phone>
+		<email>creasac@hotmail.com</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2276_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2276_1.xml"/>
+<title>Département études slaves </title>
+<updated>2014-08-15T01:46:55.472+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2276"
+	coordinates="48.946105757428,2.36280620098"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T13:58:09.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	deletedAt="2011-05-04T14:45:45.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	name="Département études slaves ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3ème étage Bâtiment B1, bureau 321</floor>
+		<openingHours>Lundi
+9h30-12h30
+Mardi et jeudi
+14h-17h
+Mercredi
+10h-12h30</openingHours>
+		<url>http://www.univ-paris8.fr/slave/</url>
+		<phone>01 49 40 68 38</phone>
+		<email>eslaves@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3661_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3661_1.xml"/>
+<title>AGBP</title>
+<updated>2014-08-15T01:47:09.061+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3661"
+	coordinates="48.845877980392,2.3564195260406"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T14:11:24.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3267"
+	name="AGBP">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association des géologues du Bassin de Paris
+Cette association regroupe étudiants, amateurs, professionnels, géologues.</description>
+	<address>
+		<floor>5è étage</floor>
+		<url>http://agbp.zumablog.com</url>
+		<email>association.agbp@gmail.com</email>
+	</address>
+</content>
+</entry>

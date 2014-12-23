@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2304_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2304_1.xml"/>
+<title>Grand Amphi</title>
+<updated>2014-08-15T01:46:55.710+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2304"
+	coordinates="48.624048072168,2.427483648061"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:18:04.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="256"
+	name="Grand Amphi">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>RDJ Parvis sud</floor>
+	</address>
+</content>
+</entry>

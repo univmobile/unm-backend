@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2306_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2306_1.xml"/>
+<title>Département Arts et technologies de l’image (ATI)</title>
+<updated>2014-08-15T01:46:55.742+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2306"
+	coordinates="48.943996207887,2.364302873611"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:19:15.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	deletedAt="2011-05-04T13:59:46.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	name="Département Arts et technologies de l’image (ATI)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment A, bureau 079</floor>
+		<openingHours>Lundi
+14h-16h
+Mardi et jeudi
+10h-12h
+14h-16h
+Mercredi et vendredi
+10h-12h</openingHours>
+		<url>http://www-artweb.univ-paris8.fr/</url>
+		<phone>01 49 40 66 04</phone>
+		<fax>01 49 40 66 96</fax>
+		<email>secretariat.ati@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

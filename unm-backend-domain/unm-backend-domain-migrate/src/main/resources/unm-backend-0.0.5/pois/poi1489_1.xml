@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1489_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1489_1.xml"/>
+<title>Mission handicap Crous de Paris Mme Seradin</title>
+<updated>2014-08-15T01:46:48.130+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1489"
+	coordinates="48.845902059643,2.356508374214"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:56:44.000+02:00"
+	updatedAt="2011-05-13T14:05:46.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Mission handicap Crous de Paris Mme Seradin">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Direction de la Vie étudiante 1er étage</floor>
+		<openingHours>Sur RDV sauf le mercredi</openingHours>
+		<itinerary>Métro 7 Jussieu</itinerary>
+		<phone>0144273505</phone>
+	</address>
+</content>
+</entry>

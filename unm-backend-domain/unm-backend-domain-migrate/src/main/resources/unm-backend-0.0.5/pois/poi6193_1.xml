@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6193_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6193_1.xml"/>
+<title>Correspondants Relations internationales s.c et technologie</title>
+<updated>2014-08-15T01:47:34.767+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6193"
+	coordinates="48.788199319657,2.4422572553158"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T17:28:00.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4525"
+	name="Correspondants Relations internationales s.c et technologie">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>
+Centre multidisciplinaire de Créteil
+ - </description>
+	<address>
+		<floor>Bâtiment P2, Bureau 080, niveau dalle</floor>
+		<phone>01 45 17 13 12 </phone>
+		<email>cornu@u-pec.fr</email>
+	</address>
+</content>
+</entry>

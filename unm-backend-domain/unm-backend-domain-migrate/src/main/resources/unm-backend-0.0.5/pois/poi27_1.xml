@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi27_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi27_1.xml"/>
+<title>Vie Etudiante </title>
+<updated>2014-08-15T01:46:38.273+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="27"
+	coordinates="48.780228154161,2.0439398288"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T11:04:12.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-05T13:57:36.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Vie Etudiante ">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>La Direction de la Vie Etudiante (DVE) est une direction de l'UVSQ dont la mission est de vous faciliter la vie et d'animer celle de l'Université.
+Plus précisément, elle est votre interlocuteur privilégié pour la recherche d'un job étudiant, d'un logement, d'une association qui vous ressemble, d'activités de loisirs et culturelles, dans et en dehors de la fac !
+</description>
+	<address
+		zipCode="78280"
+		city="GUYANCOURT"
+		countryCode="FR">
+		<openingHours>Horaires d'ouverture :
+Du Lundi au Jeudi : 9h00 - 11h45 / 12h45 - 17h30
+Fermé le vendredi aprés-midi
+</openingHours>
+		<phone>01 39 25 50 49 </phone>
+		<fax>01 39 25 56 94</fax>
+		<email>magali.sourd@uvsq.fr</email>
+		<fullAddress>47 boulevard Vauban 78280 GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

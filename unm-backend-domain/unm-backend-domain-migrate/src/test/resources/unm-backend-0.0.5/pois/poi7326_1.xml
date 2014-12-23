@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7326_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7326_1.xml"/>
+<title>Galerie d'entomologie</title>
+<updated>2014-08-15T01:47:45.465+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7326"
+	coordinates="48.841672640527,2.3588418960571"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-09T13:39:08.000+02:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Galerie d'entomologie">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Interdit au public</description>
+	<address>
+		<floor>43, Rue Buffon 75005 Paris</floor>
+		<itinerary>Galerie fermée au public</itinerary>
+	</address>
+</content>
+</entry>

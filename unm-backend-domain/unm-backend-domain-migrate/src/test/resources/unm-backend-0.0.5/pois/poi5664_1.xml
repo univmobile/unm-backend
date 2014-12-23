@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5664_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5664_1.xml"/>
+<title>Management du Sport - L1-3</title>
+<updated>2014-08-15T01:47:28.624+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5664"
+	coordinates="48.839427484676,2.5871589034796"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:15:24.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="Management du Sport - L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2B083</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-licences-generales/domaine-sciences-et-techniques-des-activites-physiques-et-sportives/mention-staps/licence-management-du-sport/</url>
+		<phone>01 60 95 75 77</phone>
+		<fax>01 60 95 75 74</fax>
+		<email>Denise.Castard@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

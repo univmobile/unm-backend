@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1527_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1527_1.xml"/>
+<title>Centre de dépistage Figuier</title>
+<updated>2014-08-15T01:46:48.555+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1527"
+	coordinates="48.853583061018,2.359334081411"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:41:42.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Centre de dépistage Figuier">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<openingHours>Lundi-vendredi: 13h30-18h30</openingHours>
+		<itinerary>Métro 7 Pont Marie</itinerary>
+		<phone>0142725553</phone>
+		<fullAddress>2 rue du Figuier
+75004 Paris</fullAddress>
+	</address>
+</content>
+</entry>

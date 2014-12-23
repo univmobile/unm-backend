@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4621_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4621_1.xml"/>
+<title>PC L2</title>
+<updated>2014-08-15T01:47:19.085+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4621"
+	coordinates="49.017452275894,2.0744157582521"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:57:06.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3935"
+	name="PC L2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>01.34.25.70.87</phone>
+	</address>
+</content>
+</entry>

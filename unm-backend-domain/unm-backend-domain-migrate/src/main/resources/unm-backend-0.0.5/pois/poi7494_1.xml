@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7494_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7494_1.xml"/>
+<title>Espace André Tunc (IRJS)</title>
+<updated>2014-08-15T01:47:46.903+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7494"
+	coordinates="48.847206470346,2.3465117812157"
+	active="true"
+	markerType="point"
+	createdAt="2013-09-26T18:21:26.000+02:00"
+	updatedAt="2013-09-26T18:25:19.000+02:00"
+	createdBy="Pascale.randriantiana "
+	updatedBy="Pascale.randriantiana "
+	parentUid="957"
+	name="Espace André Tunc (IRJS)">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>L' espace André-Tunc est une salle de documentation et de recherche commune à tous les départements de l'IRJS.
+Ce lieu est ouvert à tous les membres de l'IRJS, aux étudiants des masters 2 Droit (recherche et professionnel) des UFR 01, 05, 07, 12, aux étudiants de l'Institut des Assurances de Paris, aux professeurs de l'Université Paris 1 Panthéon-Sorbonne et chercheurs invités ainsi qu'à tout enseignant-chercheur ou praticien qui en fait la demande. </description>
+	<address>
+		<floor>sous le porche : entrée à gauche, 1er étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h00 - 19h00</openingHours>
+		<url>http://irjs.univ-paris1.fr/le-centre-de-documentation/</url>
+		<phone>01 44 07 76 54</phone>
+		<email>centrededocumentation.IRJS@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

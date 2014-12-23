@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2720_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2720_1.xml"/>
+<title>Bureau de la mobilité</title>
+<updated>2014-08-15T01:46:59.477+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2720"
+	coordinates="48.846957005198,2.355588376"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:49:10.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Martin Gobert"
+	parentUid="2717"
+	name="Bureau de la mobilité">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Vous souhaitez étudier à l’étranger et obtenir des crédits et/ou un diplôme de l’UPMC ? C’est possible.
+
+Sous réserve de remplir les conditions pédagogiques requises, l’UPMC vous offre la possibilité d’effectuer une mobilité internationale d’un semestre ou d’une année universitaire en Europe, aux Etats-Unis, au Canada, en Asie et dans tous les pays francophones en développement.</description>
+	<address>
+		<floor>2éme étage,  Bureau 205</floor>
+		<openingHours>lundi, mardi, jeudi : de 9h00 à 12h00 et de 13h30 à 17h30
+mercredi, vendredi : de 9h00 à 12h00</openingHours>
+		<url>http://www.upmc.fr/fr/international/mobilite_etudiante.html</url>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5282_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5282_1.xml"/>
+<title>Réseaux et télécommunication </title>
+<updated>2014-08-15T01:47:24.866+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5282"
+	coordinates="48.775254334043,2.3706436157227"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T08:36:23.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4950"
+	name="Réseaux et télécommunication ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://iut.u-pec.fr/departements/reseaux-et-telecommunications/</url>
+		<phone>01 41 80 73 75</phone>
+		<email>rt-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1223_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1223_1.xml"/>
+<title>Site Olympiades</title>
+<updated>2014-08-15T01:46:45.900+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1223"
+	coordinates="48.825680231614,2.36636817455"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T14:51:26.000+01:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	parentUid="1162"
+	name="Site Olympiades">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 14 Olympiades
+Métro 7 Tolbiac
+Bus 62, 64, 83 Tolbiac Baudricourt</itinerary>
+		<fullAddress>Dalles les Olympiades
+105 rue de Tolbiac
+75013 Paris</fullAddress>
+	</address>
+	<child uid="1772" active="true"/>
+</content>
+</entry>

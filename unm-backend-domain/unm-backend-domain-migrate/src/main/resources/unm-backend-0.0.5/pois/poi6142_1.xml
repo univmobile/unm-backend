@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6142_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6142_1.xml"/>
+<title>Génie mécanique et productique (Licence pro)</title>
+<updated>2014-08-15T01:47:34.236+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6142"
+	coordinates="48.787771017528,2.3292624950409"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:50:11.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-06-15T15:04:05.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	name="Génie mécanique et productique (Licence pro)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

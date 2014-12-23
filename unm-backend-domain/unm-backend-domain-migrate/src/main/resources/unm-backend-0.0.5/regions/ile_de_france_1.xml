@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/regions/001:ile_de_france_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/regions/001:ile_de_france_1"/>
+<title>Île de France</title>
+<updated>2014-07-27T20:06:02Z</updated>
+<category term="regions"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content>
+	<uid>ile_de_france</uid>
+	<label>Île de France</label>
+	<url>${baseURL}/json/regions/ile_de_france</url>
+	<universities>
+		<university>
+			<id>paris1</id>
+			<title>Paris 1 Panthéon-Sorbonne</title>
+			<shibboleth
+				identityProvider="https://idp-test.univ-paris1.fr"/>
+		</university>
+		<university>
+			<id>paris3</id>
+			<title>Paris 3 Sorbonne Nouvelle</title>
+		</university>
+		<university>
+			<id>paris13</id>
+			<title>Paris Nord</title>
+		</university>
+		<university>
+			<id>uvsq</id>
+			<title>UVSQ</title>
+		</university>
+		<university>
+			<id>museum</id>
+			<title>Muséum national d'Histoire naturelle</title>
+		</university>
+		<university>
+			<id>evry</id>
+			<title>Evry-Val d'Essonne</title>
+		</university>
+		<university>
+			<id>paris6</id>
+			<title>UPMC</title>
+		</university>
+		<university>
+			<id>paris7</id>
+			<title>Paris Diderot</title>
+		</university>
+		<university>
+			<id>paris8</id>
+			<title>Paris 8</title>
+		</university>
+		<university>
+			<id>paris10</id>
+			<title>Paris Ouest Nanterre la Défense</title>
+		</university>
+		<university>
+			<id>paris11</id>
+			<title>Paris-Sud</title>
+		</university>
+		<university>
+			<id>upec</id>
+			<title>UPEC</title>
+		</university>
+		<university>
+			<id>ucp</id>
+			<title>Cergy-Pontoise</title>
+			<shibboleth identityProvider="https://idp-test.crous-montpellier.fr/idp/shibboleth"/>
+		</university>
+		<university>
+			<id>crousVersailles</id>
+			<title>CROUS Versailles</title>
+		</university>
+		<university>
+			<id>enscachan</id>
+			<title>ENS Cachan</title>
+		</university>
+		<university>
+			<id>ensiie</id>
+			<title>ENSIIE</title>
+			<shibboleth
+				identityProvider="https://shibbolethtest.ensiie.fr/idp/shibboleth"/>
+		</university>
+		<university>
+			<id>unpidf</id>
+			<title>UNPIdF</title>
+		</university>
+		<university>
+			<id>enc</id>
+			<title>École nationale des chartes</title>
+		</university>
+	</universities>
+</content>
+</entry>

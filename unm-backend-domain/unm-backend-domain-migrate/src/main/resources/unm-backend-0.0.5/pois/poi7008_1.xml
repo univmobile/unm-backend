@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7008_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7008_1.xml"/>
+<title>Licences Pro GRH, MGA,  EEHRL,  MIMHR,  REVCO</title>
+<updated>2014-08-15T01:47:42.232+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7008"
+	coordinates="48.902332299614,2.2119708359241"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-17T16:27:20.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="6956"
+	name="Licences Pro GRH, MGA,  EEHRL,  MIMHR,  REVCO">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Célia POULARD</description>
+	<address>
+		<floor>D.212A</floor>
+		<phone>01 40 97 47 13</phone>
+		<email>cpoulard@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

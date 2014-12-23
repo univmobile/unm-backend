@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5947_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5947_1.xml"/>
+<title>Cafétéria du Bois de l' Etang</title>
+<updated>2014-08-15T01:47:31.966+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5947"
+	coordinates="48.83790540307,2.5934466719627"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:41:29.000+02:00"
+	updatedAt="2011-07-26T16:36:44.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4861"
+	name="Cafétéria du Bois de l' Etang">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>11h30 -14h00</openingHours>
+		<phone>01-60-95-75-68</phone>
+		<email>restaurant.champs-sur-marne@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4337_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4337_1.xml"/>
+<title>UMR 3244</title>
+<updated>2014-08-15T01:47:16.282+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4337"
+	coordinates="48.843187384961,2.3444287106395"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:25:24.000+02:00"
+	updatedAt="2011-06-03T17:07:44.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4183"
+	name="UMR 3244">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Dynamique de l'information génétique : bases fondamentales et cancer - UMR 3244</description>
+	<address>
+		<floor>Bâtiment Trouiller-Rossignol</floor>
+		<url>http://umr3244.curie.fr/</url>
+		<phone>01 56 24 55 24</phone>
+		<email>marie-france.lavigne@curie.fr</email>
+	</address>
+</content>
+</entry>

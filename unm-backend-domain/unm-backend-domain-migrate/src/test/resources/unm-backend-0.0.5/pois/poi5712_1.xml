@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5712_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5712_1.xml"/>
+<title>Psychologie - Pieron</title>
+<updated>2014-08-15T01:47:29.165+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5712"
+	coordinates="48.834521164837,2.2479724511504"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T14:13:51.000+02:00"
+	updatedAt="2011-06-14T17:05:08.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5550"
+	name="Psychologie - Pieron">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Dans la Galerie des Amphis/ sous-sol</floor>
+		<openingHours>Lundi-vendredi
+9H00-19H30
+samedi 10h00-17h00
+horaires réduits
+10h00-18h00</openingHours>
+		<phone>01-55-20-58-42</phone>
+		<email>docpsycho@bu.univparis5.fr</email>
+	</address>
+</content>
+</entry>

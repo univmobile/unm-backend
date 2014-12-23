@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7253_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7253_1.xml"/>
+<title>CRANS (Cachan Réseaux Normale Sup)</title>
+<updated>2014-08-15T01:47:44.856+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7253"
+	coordinates="48.789340243068,2.3303166031837"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-12T15:43:00.000+01:00"
+	updatedAt="2013-01-14T09:38:20.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7222"
+	name="CRANS (Cachan Réseaux Normale Sup)">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le CRANS est l'association qui gère le réseau informatique des élèves de l'École normale supérieure de Cachan.</description>
+	<address>
+		<openingHours>Permanences du lundi au vendredi, de 12h30 à 13h30 et de 18h30 à 21h, à l'exception du mardi soir.</openingHours>
+		<url>http://www.crans.org</url>
+		<phone>09 51 70 31 28</phone>
+	</address>
+	<attachment id="263" title="VieCrans.png" type="image" url="/uploads/poi/df9019e0d1a0c72cf495705cd094db752e32e5d7.png"/>
+</content>
+</entry>

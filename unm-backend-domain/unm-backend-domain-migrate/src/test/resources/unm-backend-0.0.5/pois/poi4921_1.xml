@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4921_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4921_1.xml"/>
+<title>Vie culturelle</title>
+<updated>2014-08-15T01:47:21.841+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4921"
+	coordinates="48.869637369292,2.2728663682938"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:45:55.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Vie culturelle">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<email>mariette.puyponchetping@dauphinepong.fr</email>
+	</address>
+</content>
+</entry>

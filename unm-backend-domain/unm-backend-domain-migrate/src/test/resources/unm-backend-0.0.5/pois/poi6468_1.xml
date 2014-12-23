@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6468_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6468_1.xml"/>
+<title>Institut Confucius</title>
+<updated>2014-08-15T01:47:37.546+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6468"
+	coordinates="48.829850202513,2.3814515769482"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T17:14:21.000+02:00"
+	updatedAt="2011-06-24T17:15:13.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1774"
+	name="Institut Confucius">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>Grands Moulins, bâtiment C, 1er étage</floor>
+		<url>http://www.confucius.univ-paris7.fr/</url>
+		<phone>01 57 27 55 92</phone>
+		<fax>01 57 27 55 93</fax>
+		<email>confucius@paris7.jussieu.fr</email>
+	</address>
+</content>
+</entry>

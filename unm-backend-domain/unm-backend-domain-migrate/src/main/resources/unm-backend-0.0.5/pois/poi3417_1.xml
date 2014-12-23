@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3417_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3417_1.xml"/>
+<title>Bibliothèque de Melun</title>
+<updated>2014-08-15T01:47:06.374+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3417"
+	coordinates="48.536575160035,2.65589486807"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:59:36.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2854"
+	name="Bibliothèque de Melun">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi (d'octobre à mai : période de travaux dirigés) : 8h30 / 19h00 
+Du lundi au vendredi (juin, juillet, septembre et janvier) : 
+9h00 / 17h00 </openingHours>
+		<phone>01 64 37 98 45</phone>
+		<email>henon@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

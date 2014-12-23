@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1858_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1858_1.xml"/>
+<title>Mathématiques</title>
+<updated>2014-08-15T01:46:51.625+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1858"
+	coordinates="48.623625285244,2.4275641143"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:27:57.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="264"
+	name="Mathématiques">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 03S10</floor>
+		<phone>  01 69 47 02 05</phone>
+		<email>valerie.picot@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

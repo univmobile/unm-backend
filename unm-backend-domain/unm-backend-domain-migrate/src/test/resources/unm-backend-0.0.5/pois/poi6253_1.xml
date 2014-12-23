@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6253_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6253_1.xml"/>
+<title>Philosophie M2</title>
+<updated>2014-08-15T01:47:35.348+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6253"
+	coordinates="48.84958191678,2.3439355194569"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-17T14:19:19.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1002"
+	name="Philosophie M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Escalier C - 1er étage- couloir gauche</floor>
+		<url>http://www.univ-paris1.fr/ufr/ufr10/</url>
+		<phone>01.40.46.27.95</phone>
+		<email> philom2@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

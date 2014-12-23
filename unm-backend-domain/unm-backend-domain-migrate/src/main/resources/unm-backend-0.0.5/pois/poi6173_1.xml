@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6173_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6173_1.xml"/>
+<title>ERUDITE EA 437</title>
+<updated>2014-08-15T01:47:34.632+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6173"
+	coordinates="48.83748732346,2.5930731743574"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:43:04.000+02:00"
+	updatedAt="2011-06-15T16:45:31.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="4598"
+	name="ERUDITE EA 437">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>« Research Team on the use of panel data in economics» (ERUDITE) EA 437</description>
+	<address>
+		<floor>Bâtiment Bois de l'Etang - Bureau C231 </floor>
+		<phone>01 60 95 71 55 </phone>
+		<fax>01 60 95 70 60</fax>
+		<email>sandra.toulouse@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

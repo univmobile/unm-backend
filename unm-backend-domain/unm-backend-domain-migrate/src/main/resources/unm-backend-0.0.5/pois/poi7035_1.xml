@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7035_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7035_1.xml"/>
+<title>Association Master Concurrence et régulation des marchés</title>
+<updated>2014-08-15T01:47:42.554+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7035"
+	coordinates="48.902291864994,2.2145082056522"
+	active="true"
+	markerType="point"
+	createdAt="2011-12-09T12:26:13.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="1161"
+	name="Association Master Concurrence et régulation des marchés">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Bâtiment F</floor>
+	</address>
+</content>
+</entry>

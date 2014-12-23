@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5546_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5546_1.xml"/>
+<title>Vieillissement et handicap (M1 VHMA)</title>
+<updated>2014-08-15T01:47:27.309+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5546"
+	coordinates="48.702032441646,2.1632646024227"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:18:17.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="yasmine"
+	parentUid="4411"
+	name="Vieillissement et handicap (M1 VHMA)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master à finalité professionnelle Sciences de la Motricité, spécialité « Vieillissement et handicap : Mouvement et adaptation (M1 VHMA)</description>
+	<address>
+		<floor>Bâtiment 335, bureau 106</floor>
+		<url>http://www.staps.u-psud.fr/fr/formations/masters/master1_vhma.html</url>
+		<phone>01 69 15 43 02</phone>
+		<email>caroline.bois@u-psud.fr</email>
+	</address>
+</content>
+</entry>

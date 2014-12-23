@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6886_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6886_1.xml"/>
+<title>Scolarité L3-M2 Management et nouvelles technologies </title>
+<updated>2014-08-15T01:47:41.011+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6886"
+	coordinates="48.830236210517,2.3696961253881"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-09T11:59:31.000+02:00"
+	updatedAt="2011-09-09T11:59:31.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="2948"
+	name="Scolarité L3-M2 Management et nouvelles technologies ">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3924_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3924_1.xml"/>
+<title>Esthétique, sciences et technologies du cinéma (ESTCA)</title>
+<updated>2014-08-15T01:47:11.732+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3924"
+	coordinates="48.944673372738,2.3630526289344"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:25:31.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Esthétique, sciences et technologies du cinéma (ESTCA)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 2302 - Esthétique, sciences et technologies du cinéma et de l’audiovisuel appartenant à l'École doctorale (ED) 159 : Esthétique, sciences et technologies des arts.
+Contact au département Cinéma.</description>
+	<address>
+		<floor>1er étage Bâtiment A, bureau 115</floor>
+		<url>http://www.estca.univ-paris8.fr/</url>
+		<phone>01 49 40 66 10</phone>
+		<fax>01 49 40 66 08</fax>
+		<email>cinema@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

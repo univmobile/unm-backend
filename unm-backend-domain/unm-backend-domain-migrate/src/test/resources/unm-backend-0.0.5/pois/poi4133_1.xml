@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4133_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4133_1.xml"/>
+<title>ESPE  Cergy </title>
+<updated>2014-08-15T01:47:14.065+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4133"
+	coordinates="49.033406315201,2.079346999526"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:47:22.000+02:00"
+	updatedAt="2013-06-27T14:20:26.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Fatma ARAS"
+	parentUid="4131"
+	name="ESPE  Cergy ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>DEPUIS PARIS PORTE MAILLOT, DIRECTION LA DÉFENSE : (A)
+Prendre la direction de LA DÉFENSE. Après le Pont de Neuilly continuer tout droit (tunnel) en direction de A14/CERGY-PONTOISE. Dans le tunnel,
+passer la sortie 3, puis serrer à gauche afin de prendre la sortie A86/ POISSY PAR SAINT-GERMAIN/CERGY-PONTOISE. Vous sortez du tunnel et vous arrivez sur la N186. Continuer tout droit et prendre l’A86 direction
+CERGY-PONTOISE. Après environ 7 km, suivre A15 CERGY-PONTOISE. Serrer à droite après la bretelle de sortie, emprunter une longue boucle serrée, puis un viaduc sur le Port de Gennevilliers. Après environ 17 km :
+
+ Emprunter la sortie 9, en bas de la rampe à gauche sous l'autoroute,
+Boulevard du Port (puis voir loupe).
+
+DEPUIS VERSAILLES/ST-QUENTIN-EN-YVELINES : (B)
+Emprunter la N186 direction POISSY/ST-GERMAIN-EN-LAYE. A ST-GERMAINEN-
+LAYE, suivre N184/CERGY-PONTOISE. A la sortie de CONFLANS-STEHONORINE,
+serrer à gauche et suivre CERGY-PRÉFECTURE. Vous arrivez sur
+le Boulevard de l’Hautil (puis voir loupe).
+
+TRANSPORTS EN COMMUN : Depuis PARIS
+Prendre le RER A direction Cergy-le-Haut. 
+Arrêt Cergy-Préfecture.</itinerary>
+		<fullAddress>Avenue Bernard Hirsch BP 70308 
+95027 CERGY cedex</fullAddress>
+	</address>
+	<child uid="6035" active="true"/>
+	<child uid="7472" active="true"/>
+</content>
+</entry>

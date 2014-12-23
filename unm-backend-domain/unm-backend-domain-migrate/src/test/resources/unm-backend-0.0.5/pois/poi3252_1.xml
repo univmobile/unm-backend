@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3252_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3252_1.xml"/>
+<title>Relisons</title>
+<updated>2014-08-15T01:47:04.584+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3252"
+	coordinates="48.848260858877,2.343235462"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:28:44.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3020"
+	name="Relisons">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Recherches Littéraires Sorbonne nouvelles, est une association de jeunes chercheurs, du master 1 au doctorat.</description>
+	<address>
+		<floor>2e étage - Escalier C</floor>
+		<url>http://www.relisons.fr/</url>
+		<email>relisons@yahoo.fr</email>
+	</address>
+</content>
+</entry>

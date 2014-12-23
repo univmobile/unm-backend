@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2071_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2071_1.xml"/>
+<title>Bureau des bourses</title>
+<updated>2014-08-15T01:46:53.866+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2071"
+	coordinates="48.945692662681,2.3611459136009"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T17:13:04.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="Marion MAINFRAY"
+	parentUid="2600"
+	name="Bureau des bourses">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Conseil aux étudiants boursiers, en collaboration avec le service social du CROUS.</description>
+	<address>
+		<floor>Maison de l'étudiant</floor>
+		<openingHours>Lundi, mercredi et vendredi :
+9h30-12h
+Mardi :
+14h-16h</openingHours>
+		<phone>01 49 40 70 26</phone>
+		<fax>01 49 40 64 44</fax>
+		<email>bourse@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

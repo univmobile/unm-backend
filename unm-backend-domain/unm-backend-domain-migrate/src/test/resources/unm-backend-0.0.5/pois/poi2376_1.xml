@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2376_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2376_1.xml"/>
+<title>Centre de Recherches Linguistiques sur l’Asie Orientale</title>
+<updated>2014-08-15T01:46:56.443+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2376"
+	coordinates="48.832707855339,2.46515158563"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T17:04:04.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2566"
+	name="Centre de Recherches Linguistiques sur l’Asie Orientale">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 80 51 95 00</phone>
+		<email>djamouri@ehess.fr</email>
+	</address>
+</content>
+</entry>

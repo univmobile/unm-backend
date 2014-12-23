@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4038_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4038_1.xml"/>
+<title>Formation initiale et continue pour l’enseignement (SUFICE)</title>
+<updated>2014-08-15T01:47:12.960+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4038"
+	coordinates="48.946060866195,2.3609682172537"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:43:48.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Formation initiale et continue pour l’enseignement (SUFICE)">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Le SUFICE (Service universitaire de formation initiale et continue pour l’enseignement) a pour mission d’assurer l’organisation et la coordination des actions de formation aux métiers de l’enseignement : professeur des écoles, professeur du second degré, conseiller principal d’éducation...</description>
+	<address>
+		<floor>Bâtiment C, bureau CE 5</floor>
+		<openingHours>Lundi, mardi, jeudi et vendredi 
+10h-13h
+Mercredi
+10h-16h</openingHours>
+		<url>http://www.univ-paris8.fr/sufice</url>
+		<phone>01 49 40 68 72</phone>
+		<fax>01 49 40 71 41</fax>
+		<email>Rachida.kadri@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

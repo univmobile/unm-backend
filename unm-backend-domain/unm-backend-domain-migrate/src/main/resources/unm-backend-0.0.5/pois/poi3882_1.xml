@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3882_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3882_1.xml"/>
+<title>BU centre de recherche sur la littérature franç</title>
+<updated>2014-08-15T01:47:11.283+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3882"
+	coordinates="48.849072771746,2.3438952863216"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:35:47.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3679"
+	name="BU centre de recherche sur la littérature franç">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Étudiants à partir du master et chercheurs.</description>
+	<address>
+		<floor>Escalier I, 2e étage, salle G 633</floor>
+		<openingHours>Du mardi au vendredi : 
+10h00 / 12h00 - 13h30 / 18h30</openingHours>
+	</address>
+</content>
+</entry>

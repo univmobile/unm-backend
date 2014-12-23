@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1882_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1882_1.xml"/>
+<title>Master International Professional </title>
+<updated>2014-08-15T01:46:51.993+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1882"
+	coordinates="48.779335913504,2.045127376"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:42:38.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="2594"
+	name="Master International Professional ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment D'Alembert - Bureau A321</floor>
+		<url>http://econoving.universud-paris.fr</url>
+		<phone>0139255009</phone>
+		<email>mary-jane.bauluck@uvsq.fr</email>
+	</address>
+</content>
+</entry>

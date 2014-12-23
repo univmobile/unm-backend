@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3388_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3388_1.xml"/>
+<title>Laboratoire de phonétique et phonologie</title>
+<updated>2014-08-15T01:47:06.043+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3388"
+	coordinates="48.849806526673,2.350663505494"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:46:52.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-17T17:02:04.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	name="Laboratoire de phonétique et phonologie">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<url>http://lpp.univ-paris3.fr/</url>
+		<phone>0144320576</phone>
+		<email>jacqueline.vaissiere@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

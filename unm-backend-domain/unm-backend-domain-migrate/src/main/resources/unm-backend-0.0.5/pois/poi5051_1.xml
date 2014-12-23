@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5051_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5051_1.xml"/>
+<title>Droit L1-3</title>
+<updated>2014-08-15T01:47:23.188+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5051"
+	coordinates="48.793259587704,2.445318326354"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T17:21:56.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4642"
+	name="Droit L1-3">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+</content>
+</entry>

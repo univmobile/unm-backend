@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6490_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6490_1.xml"/>
+<title>Institut de Physique Nucleaire ( IPN )</title>
+<updated>2014-08-15T01:47:37.702+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6490"
+	coordinates="48.697326995194,2.1772348880768"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-29T21:35:15.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="6485"
+	name="Institut de Physique Nucleaire ( IPN )">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>rue de la chauffière 91405 Orsay</floor>
+		<url>http://ipnweb.in2p3.fr</url>
+		<phone>01 69 15 73 49</phone>
+		<fax>01 69 28 58 97</fax>
+	</address>
+</content>
+</entry>

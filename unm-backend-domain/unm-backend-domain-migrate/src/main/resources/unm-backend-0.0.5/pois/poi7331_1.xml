@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7331_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7331_1.xml"/>
+<title>Grande Galerie de l'Evolution</title>
+<updated>2014-08-15T01:47:45.482+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7331"
+	coordinates="48.841962144708,2.356288433075"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-11T12:53:20.000+02:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Grande Galerie de l'Evolution">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>36, rue Geoffroy Saint Hilaire 75005 Paris</floor>
+		<openingHours>Ouverture : tous les jours de 10:00 à 18:00
+Fermeture : tous les mardis et le 1er mai </openingHours>
+		<itinerary>Ouvert tous les jours de 10 h à 18h
+Fermée le mardi et le 1er mai
+
+Bus :
+Lignes 24, 57, 61, 63, 67, 89 et 91
+
+Metro, RER :
+M5 : Austerlitz - M7 : Censier Daubenton - M 10 : Jussieu ou Austerlitz - RER C
+
+Gare SNCF :
+Austerlitz - Gare de Lyon</itinerary>
+		<url>http://www.mnhn.fr/museum/foffice/tous/tous/guidePratique/infPratiques/infopratique/fiche_info.xsp?LIEU_ID=164&amp;SITE_ID=10&amp;idx=4&amp;nav=liste</url>
+		<email>valhuber@mnhn.fr </email>
+	</address>
+</content>
+</entry>

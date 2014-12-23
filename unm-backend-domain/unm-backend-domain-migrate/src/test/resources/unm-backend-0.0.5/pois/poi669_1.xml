@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi669_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi669_1.xml"/>
+<title>Bibliothèque de Recherches Africaines</title>
+<updated>2014-08-15T01:46:41.029+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="669"
+	coordinates="48.855951675268,2.361194193363"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T15:12:11.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T15:48:24.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Bibliothèque de Recherches Africaines">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Etudiants au moins niveau M1 ; Enseignants et chercheurs de Paris 1.
+</description>
+	<address
+		countryCode="FR">
+		<floor>RDC gauche</floor>
+		<openingHours>Lundi au vendredi 
+9h30-18h</openingHours>
+		<itinerary>Métro 1 
+Station St Paul
+
+Bus 76 et 96</itinerary>
+		<phone>01 44 78 33 35</phone>
+		<email>daronian@univ-paris1.fr</email>
+		<fullAddress>9, rue Malher
+75004 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

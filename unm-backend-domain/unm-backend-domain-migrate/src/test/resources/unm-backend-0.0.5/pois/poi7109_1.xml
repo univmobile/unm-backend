@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7109_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7109_1.xml"/>
+<title>Rambouillet Bergerie</title>
+<updated>2014-08-15T01:47:43.347+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7109"
+	coordinates="48.645499712342,1.8015003204346"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-04T11:35:46.000+01:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	deletedAt="2012-02-06T08:15:01.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	name="Rambouillet Bergerie">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>De la gare de Rambouillet, place Prud'Homme prendre la ligne R direction la bergerie nationale</itinerary>
+		<fullAddress>Bâtiment Aile Sud - 15 Bergerie Nationale,
+Parc du Château
+78120 Rambouillet</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2953_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2953_1.xml"/>
+<title>Service social des étudiants (assistante sociale)</title>
+<updated>2014-08-15T01:47:01.438+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2953"
+	coordinates="48.842796813573,2.33294114"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:18:17.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2846"
+	name="Service social des étudiants (assistante sociale)">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Prise de rendez-vous lundi, mercredi et jeudi après-midi par téléphone au 01 44 41 57 78</description>
+	<address>
+		<floor>Bureau 510, 5e étage</floor>
+		<openingHours>Lundi, mercredi et jeudi (le matin sans RDV) : 
+9h30 / 12h00
+Lundi, mercredi et jeudi (après-midi sur RDV) : 
+14h00 / 17h00</openingHours>
+		<phone>01 44 41 57 78</phone>
+		<email>caroline.barbereau@crous-paris.fr</email>
+	</address>
+</content>
+</entry>

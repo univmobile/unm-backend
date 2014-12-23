@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4449_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4449_1.xml"/>
+<title>Scolarité 3ème année</title>
+<updated>2014-08-15T01:47:17.430+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4449"
+	coordinates="48.626460029485,2.4307961761951"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:41:28.000+02:00"
+	updatedAt="2012-05-15T10:59:19.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Stéphanie ROCHE"
+	parentUid="4440"
+	name="Scolarité 3ème année">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2e étage / bureau scolarité</floor>
+		<openingHours>Lundi, mardi, mercredi, jeudi, vendredi de 9h à 17h</openingHours>
+		<url>www.ensiie.fr</url>
+		<phone>01 69 36 73 15</phone>
+		<fax>01 69 36 73 09</fax>
+		<email>scolarite@ensiie.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1280_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1280_1.xml"/>
+<title>Polygone 1</title>
+<updated>2014-08-15T01:46:46.060+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1280"
+	coordinates="48.903503242944,2.2173915803432|48.903674791723,2.2177147865295|48.90359492376,2.2178207337856|48.903630185567,2.217885106802|48.903564951204,2.2179655730724|48.903506769133,2.2179280221462|48.903349853512,2.2180996835232|48.903296960495,2.2179870307446|48.903092440302,2.2182364761829|48.902960206973,2.2179870307446|48.903309831139,2.2175323963165|48.90341861435,2.2177295386791|48.903452113186,2.2176839411259|48.903383352393,2.2175417840481|48.903503242944,2.2173915"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T16:02:57.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	deletedAt="2011-06-03T14:57:16.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	name="Polygone 1">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

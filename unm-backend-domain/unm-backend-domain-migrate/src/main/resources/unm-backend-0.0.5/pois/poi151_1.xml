@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi151_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi151_1.xml"/>
+<title>Aile C</title>
+<updated>2014-08-15T01:46:38.550+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="151"
+	coordinates="48.623523458863,2.422302961349"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-01T10:32:58.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-07-19T12:01:35.000+02:00"
+	createdBy="yasmine"
+	updatedBy="plopes"
+	name="Aile C">
+	<poiType id="6" label="Entrée principale" categoryId="1" categoryLabel="Plans"/>
+	<address
+		zipCode="91025"
+		city="Evry Cedex"
+		countryCode="FR">
+		<floor>Aile C</floor>
+		<itinerary>RER D : arrêt Évry-Courcouronnes
+RER C : avec un changement à Juvisy</itinerary>
+		<fullAddress>Rue Pierre Bérégovoy 91025 Evry Cedex</fullAddress>
+	</address>
+</content>
+</entry>

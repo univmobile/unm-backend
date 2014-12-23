@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7037_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7037_1.xml"/>
+<title>ACFA</title>
+<updated>2014-08-15T01:47:42.579+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7037"
+	coordinates="48.902431035106,2.2148032486439"
+	active="true"
+	markerType="point"
+	createdAt="2011-12-09T12:31:43.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2494"
+	name="ACFA">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>ACFA est l'association des diplômes du Cursus Franco-Allemand</description>
+	<address>
+		<floor>Bâtiment F</floor>
+	</address>
+</content>
+</entry>

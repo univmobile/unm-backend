@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3591_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3591_1.xml"/>
+<title>Institut d'études judiciaires</title>
+<updated>2014-08-15T01:47:08.370+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3591"
+	coordinates="48.902215095018,2.2141927108169"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:42:06.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2491"
+	name="Institut d'études judiciaires">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>Bureau 129 / 130, 1èr étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h30 / 12h30 - 13h30 / 17h00.
+Ils sont fermés au public le mercredi et le vendredi après-midi.</openingHours>
+		<url>http://www.u-paris10.fr/80540375/0/fiche___pagelibre/&amp;RH=COMP</url>
+		<phone>01 40 97 59 70</phone>
+		<email>iej@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

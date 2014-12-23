@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi787_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi787_1.xml"/>
+<title>Centre René Cassin</title>
+<updated>2014-08-15T01:46:41.904+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="787"
+	coordinates="48.836009555164,2.3462261259"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-16T15:06:32.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre René Cassin">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 6 et 7
+Station Glacière ou Saint-Jacques, Les Gobelins
+
+Bus 27, 38, 83, 91</itinerary>
+		<fullAddress>17 rue Saint-Hippolyte
+75013 Paris</fullAddress>
+	</address>
+	<child uid="959" active="true"/>
+	<attachment id="12" title="cassin.jpg" type="image" url="/uploads/poi/7befd4c10d99ce83f8d8e8aa1a2cd63e6a9d945a.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3622_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3622_1.xml"/>
+<title>LEC-UPMC</title>
+<updated>2014-08-15T01:47:08.706+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3622"
+	coordinates="48.846258937316,2.3590665310621"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:02:48.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2824"
+	name="LEC-UPMC">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Les étudiants chimistes est la passerelle facilitant le dialogue aussi bien entre les étudiants en chimie de tous niveaux qu’avec l’administration.</description>
+	<address>
+		<email>etudiants.chimistes@gmail.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5647_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5647_1.xml"/>
+<title>Albert Camus</title>
+<updated>2014-08-15T01:47:28.414+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5647"
+	coordinates="48.842297867433,2.5777336210012"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T12:16:51.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4531"
+	name="Albert Camus">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER : A Noisy Champs</itinerary>
+		<fax>test</fax>
+		<fullAddress>2 allée Jean Renoir 
+93160 Noisy le Grand</fullAddress>
+	</address>
+	<child uid="5649" active="true"/>
+	<child uid="5654" active="true"/>
+	<child uid="5807" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5650_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5650_1.xml"/>
+<title>Bibliothèque universitaire : Médecine</title>
+<updated>2014-08-15T01:47:28.447+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5650"
+	coordinates="48.811953493281,2.353325933218"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T12:19:03.000+02:00"
+	updatedAt="2013-06-20T10:16:46.000+02:00"
+	createdBy="j.richer"
+	updatedBy="anaelle.royer"
+	parentUid="4848"
+	name="Bibliothèque universitaire : Médecine">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bâtiment KB, bureau 362</floor>
+		<openingHours>- Octobre à juin :
+Du lundi au jeudi
+9h00-22h00
+Vendredi
+9h00-21h00
+
+- Juillet, août, septembre
+Du lundi au vendredi
+9h00-18h00</openingHours>
+		<url>http://www.u-psud.fr/fr/biblio/bu/bibliotheque_universitaire_medecine.html</url>
+		<phone>01 49 59 67 80  </phone>
+		<fax>01 49 59 67 78</fax>
+		<email>bu-medecine.scd@u-psud.fr</email>
+	</address>
+</content>
+</entry>

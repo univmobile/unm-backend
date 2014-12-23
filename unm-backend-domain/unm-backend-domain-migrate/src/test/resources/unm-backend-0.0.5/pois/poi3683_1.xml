@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3683_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3683_1.xml"/>
+<title>Contact PMR SHS</title>
+<updated>2014-08-15T01:47:09.301+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3683"
+	coordinates="48.855513289483,2.3315018042922"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T15:07:52.000+02:00"
+	updatedAt="2011-06-15T13:59:50.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2333"
+	name="Contact PMR SHS">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<description>Linguistique Sciences sociales
+Madame MAISTRE , responsable scolarité</description>
+	<address>
+		<phone>01 53 10 47 15</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6427_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6427_1.xml"/>
+<title>Design, médias, technologie M1</title>
+<updated>2014-08-15T01:47:37.128+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6427"
+	coordinates="48.84188976882,2.2809183597565"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-23T11:49:04.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1025"
+	name="Design, médias, technologie M1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 459</floor>
+		<openingHours>Lundi-vendredi : 9h30-12 et 14h-16h</openingHours>
+		<url> http://ufr04-arts.univ-paris1.fr/</url>
+		<phone>01 44 07 84 85</phone>
+	</address>
+</content>
+</entry>

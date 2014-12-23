@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3511_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3511_1.xml"/>
+<title>Droit de la santé (M1-M2)</title>
+<updated>2014-08-15T01:47:07.476+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3511"
+	coordinates="48.947098403955,2.3615884780884"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:31:11.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Droit de la santé (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3ème étage Bâtiment A, bureau 319</floor>
+		<openingHours>Du lundi au vendredi
+9h30-13h00</openingHours>
+		<url>http://www2.univ-paris8.fr/ufrtes/spip.php?rubrique9</url>
+		<phone>01 49 40 73 27</phone>
+		<email>secretariat.droit-sante@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

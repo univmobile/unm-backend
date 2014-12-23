@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7492_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7492_1.xml"/>
+<title>Bibliothèque Jean Maitron (CHS)</title>
+<updated>2014-08-15T01:47:46.877+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7492"
+	coordinates="48.856005066919,2.3611695505679"
+	active="true"
+	markerType="point"
+	createdAt="2013-09-26T17:50:32.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="Pascale.randriantiana "
+	updatedBy="Pascale.randriantiana "
+	parentUid="1001"
+	name="Bibliothèque Jean Maitron (CHS)">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Bibliothèque spécialisée en histoire sociale du 20ème siècle.
+Elle est ouverte à tous et propose la consultation sur place des documents.</description>
+	<address>
+		<floor>6ème étage - Bureau 603</floor>
+		<openingHours>Lundi : 10h00 - 19h00
+Mardi, jeudi, vendredi : 
+14h00 - 17h00</openingHours>
+		<url>http://chs.univ-paris1.fr/spip.php?article82</url>
+		<phone>01 44 78 33 87</phone>
+		<fax>01 44 78 33 98</fax>
+		<email>vaccaro@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1206_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1206_1.xml"/>
+<title>DUT Génie mécanique et productique</title>
+<updated>2014-08-15T01:46:45.817+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1206"
+	coordinates="48.939098538204,2.35376179218"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-24T21:14:00.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	parentUid="390"
+	name="DUT Génie mécanique et productique">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Former, en s’appuyant sur un cycle universitaire court de 2 années, des responsables techniques ou collaborateurs d’ingénieurs participant, entre autres, aux travaux de Conception, d’Organisation et de Gestion de la Production, de contrôle qualité. </description>
+	<address>
+		<floor>RDC - Aile D - Bureau D 003.</floor>
+		<url>www.iutsd.univ-paris13.fr/gmp</url>
+		<phone>01 49 40 61 34</phone>
+		<fax>01 49 40 61 76</fax>
+	</address>
+</content>
+</entry>

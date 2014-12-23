@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4440_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4440_1.xml"/>
+<title>ENSIIE</title>
+<updated>2014-08-15T01:47:17.306+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4440"
+	coordinates="48.626441650961,2.4319267272949"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:33:36.000+02:00"
+	updatedAt="2011-10-24T13:06:08.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Stéphanie ROCHE"
+	parentUid="4438"
+	name="ENSIIE">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER : 
+- Ligne D : Gare Evry-Courcouronnes</itinerary>
+		<fullAddress>1 square de la résistance,
+91025 Evry Cedex</fullAddress>
+	</address>
+	<child uid="4492" active="true"/>
+	<child uid="4487" active="true"/>
+	<child uid="4485" active="true"/>
+	<child uid="4482" active="true"/>
+	<child uid="4481" active="true"/>
+	<child uid="4456" active="true"/>
+	<child uid="4443" active="true"/>
+	<child uid="4445" active="true"/>
+	<child uid="4446" active="true"/>
+	<child uid="4448" active="true"/>
+	<child uid="4449" active="true"/>
+	<child uid="4450" active="true"/>
+	<child uid="4452" active="true"/>
+	<child uid="4454" active="true"/>
+	<child uid="4489" active="true"/>
+	<child uid="4495" active="true"/>
+	<child uid="4497" active="true"/>
+	<child uid="4513" active="true"/>
+	<child uid="6953" active="true"/>
+</content>
+</entry>

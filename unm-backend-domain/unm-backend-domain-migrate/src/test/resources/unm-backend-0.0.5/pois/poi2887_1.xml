@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2887_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2887_1.xml"/>
+<title>Centre Vaugirard I</title>
+<updated>2014-08-15T01:47:00.894+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2887"
+	coordinates="48.83487759395,2.292422018945"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T15:40:01.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2885"
+	name="Centre Vaugirard I">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro
+- Ligne 12 : station Convention
+Bus
+- Lignes 39 ou 80 : arrêt Hôpital de Vaugirard
+- Ligne 62 : arrêt Convention-Vaugirard </itinerary>
+		<fullAddress>391, rue de Vaugirard
+75015 Paris</fullAddress>
+	</address>
+	<child uid="3418" active="true"/>
+	<child uid="2965" active="true"/>
+	<child uid="3473" active="true"/>
+</content>
+</entry>

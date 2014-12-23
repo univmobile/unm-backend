@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi951_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi951_1.xml"/>
+<title>Sup Galilée</title>
+<updated>2014-08-15T01:46:43.720+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="951"
+	coordinates="48.957969893751,2.3392832279205|48.957427449852,2.3392832279205|48.957427449852,2.3401629924774|48.957864223324,2.3401737213135|48.957864223324,2.3398733139038|48.957693036737,2.3398813605309|48.957575389683,2.3398733139038|48.957575389683,2.339551448822|48.957871268027,2.3395621776581|48.957864223324,2.3402488231659|48.957983983125,2.3402488231659|48.957969893751,2.3"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-04T11:06:07.000+01:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	deletedAt="2011-04-29T14:42:07.000+02:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	name="Sup Galilée">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<description>Sup' Galilée.</description>
+	<address>
+		<url>http://www.sup-galilee.univ-paris13.fr/</url>
+	</address>
+</content>
+</entry>

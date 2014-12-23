@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2965_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2965_1.xml"/>
+<title>Scolarité Vaugirard L1</title>
+<updated>2014-08-15T01:47:01.565+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2965"
+	coordinates="48.834729040461,2.292669117"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:00:16.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2887"
+	name="Scolarité Vaugirard L1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Ce bureau est ouvert pour les licences premières années de : licence double cursus en Droit et Histoire, licence double cursus en Droit et Sciences, licence double cursus en Histoire de l'art et Droit, licence en Droit mention Droit, licence double cursus Sciences et Economie, licence Economie-Gestion mention Sciences économiques, parcours Analyse économique, licence Economie-Gestion mention Sciences économiques, parcours Analyse économique, licence Economie-Gestion mention Sciences économiques, parcours Economie internationale, licence Economie-Gestion mention Sciences économiques, parcours Economie managériale et industrielle, licence Economie-Gestion mention Sciences économiques, parcours Monnaie et finance, licence en Sciences politiques et sociales mention Science politique.
+</description>
+	<address>
+		<floor>Bureau 17, 1er entresol</floor>
+		<phone>01 55 76 16 17</phone>
+		<email>francoise.lejuste@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

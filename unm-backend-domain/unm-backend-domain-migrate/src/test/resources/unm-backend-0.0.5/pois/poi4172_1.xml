@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4172_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4172_1.xml"/>
+<title>Batiment Galilée</title>
+<updated>2014-08-15T01:47:14.583+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4172"
+	coordinates="48.959158553139,2.3425930738449"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-19T14:25:20.000+02:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	deletedAt="2011-05-24T11:33:24.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Batiment Galilée">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Ligne 14 metro olympiades</itinerary>
+		<fullAddress>2 rue de la Paix</fullAddress>
+	</address>
+</content>
+</entry>

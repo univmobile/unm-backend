@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4164_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4164_1.xml"/>
+<title>UMR 8551</title>
+<updated>2014-08-15T01:47:14.499+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4164"
+	coordinates="48.842909722265,2.3468180559576"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T17:21:53.000+02:00"
+	updatedAt="2011-06-03T17:03:43.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4137"
+	name="UMR 8551">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire Pierre Aigrain (LPA) - UMR 8551</description>
+	<address>
+		<url>http://www.lpa.ens.fr/</url>
+		<phone>01 44 32 35 08</phone>
+		<email>anne.matignon@lpa.ens.fr</email>
+	</address>
+</content>
+</entry>

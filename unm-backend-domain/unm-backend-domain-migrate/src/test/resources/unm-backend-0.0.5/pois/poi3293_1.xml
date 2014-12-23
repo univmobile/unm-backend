@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3293_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3293_1.xml"/>
+<title>Service des Relations Internationales</title>
+<updated>2014-08-15T01:47:05.071+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3293"
+	coordinates="48.840155217009,2.354557737708"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:51:59.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3009"
+	name="Service des Relations Internationales">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Ce service favorise la mobilité des étudiants dans le cadre d'échanges Erasmus mais aussi, hors système européen selon des conventions passées entre universités dans le monde entier. Il  favorise la mobilité enseignante en soutenant des missions d'enseignement, de formation ou de recherche et des colloques. Il met en place un ambitieux programme de création de diplômes internationaux (masters, doctorats); Il accueille de nombreux chercheurs et enseignants venant du monde entier.</description>
+	<address>
+		<floor>Bureaux 315, 317, 319, 319B, 321</floor>
+		<openingHours>Tous les jours de 13h 30 à 17h 30 </openingHours>
+		<phone>0145877915</phone>
+		<email>rel.int@univ-paris3.fr    ou   erasmus@univ-paris3.fr</email>
+	</address>
+	<attachment id="212" title="Echanges étudiants.jpg" type="image" url="/uploads/poi/8d2aa2077d883ad444dc76bbb187610af73ca98d.jpg"/>
+</content>
+</entry>

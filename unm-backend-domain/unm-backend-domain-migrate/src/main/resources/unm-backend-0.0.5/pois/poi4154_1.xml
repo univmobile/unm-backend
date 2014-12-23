@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4154_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4154_1.xml"/>
+<title>Études et édition de textes médiévaux</title>
+<updated>2014-08-15T01:47:14.347+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4154"
+	coordinates="48.852633795513,2.341530919075"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T17:06:41.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3695"
+	name="Études et édition de textes médiévaux">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 53 10 57 00</phone>
+	</address>
+</content>
+</entry>

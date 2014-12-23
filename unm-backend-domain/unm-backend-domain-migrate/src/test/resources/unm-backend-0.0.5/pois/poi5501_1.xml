@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5501_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5501_1.xml"/>
+<title>Mathématiques fondamentales et appliquées (M1-M2 MFA)</title>
+<updated>2014-08-15T01:47:26.900+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5501"
+	coordinates="48.702907542703,2.175726480782"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T15:58:51.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5216"
+	name="Mathématiques fondamentales et appliquées (M1-M2 MFA)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 430, bureau 109</floor>
+		<url>http://webens-ng.math.u-psud.fr/M1/MFA/</url>
+		<phone>01 69 15 71 53</phone>
+		<fax>01 69 15 72 37</fax>
+		<email>valerie.lavigne@math.u-psud.fr</email>
+	</address>
+</content>
+</entry>

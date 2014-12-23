@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7180_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7180_1.xml"/>
+<title>Bibliothèque du centre de Sénart</title>
+<updated>2014-08-15T01:47:44.111+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7180"
+	coordinates="48.62660475271,2.5609195232391"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-14T15:54:53.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="5473"
+	name="Bibliothèque du centre de Sénart">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Du lundi au jeudi : de 8h30 à 17h30 
+Vendredi : de 8h30 à 16h</openingHours>
+		<url>http://bibliotheque.u-pec.fr/bibliotheques/centre-de-senart/</url>
+		<phone>01 64 13 43 57</phone>
+		<email>bibsenart@u-pec.fr</email>
+	</address>
+</content>
+</entry>

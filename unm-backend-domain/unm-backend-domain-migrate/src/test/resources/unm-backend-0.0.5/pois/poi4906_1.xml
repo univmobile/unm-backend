@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4906_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4906_1.xml"/>
+<title>JAPAD</title>
+<updated>2014-08-15T01:47:21.688+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4906"
+	coordinates="48.869850847764,2.2730031609535"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:23:38.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="JAPAD">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>a JAPAD (Jeune Association pour la Promotion des Activités à Dauphine) t’en as forcément déjà entendu parlé, ou alors ça va pas tarder. Pour ton info, c’est l’association la plus dynamique de Dauphine qui organise tout au long de l’année de nombreux événements pour tous les étudiants.</description>
+	<address>
+		<floor>Local B 005</floor>
+		<url>http://www.japad.fr/</url>
+		<email>sponsors.japad@gmail.com  </email>
+	</address>
+</content>
+</entry>

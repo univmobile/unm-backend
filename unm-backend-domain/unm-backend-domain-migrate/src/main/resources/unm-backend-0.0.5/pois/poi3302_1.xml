@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3302_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3302_1.xml"/>
+<title>AMPC Amicale de médecine Paris Cordeliers</title>
+<updated>2014-08-15T01:47:05.170+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3302"
+	coordinates="48.850760743533,2.3400959"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:56:28.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2463"
+	name="AMPC Amicale de médecine Paris Cordeliers">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Site des Cordeliers : RDC à droiteà droite ,Site Necker ,Site Cochin : RDC</floor>
+		<phone>01 53 10 50 80</phone>
+		<email>www.ampcf usion.com</email>
+	</address>
+</content>
+</entry>

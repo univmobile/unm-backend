@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi790_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi790_1.xml"/>
+<title>Entrée principale</title>
+<updated>2014-08-15T01:46:41.919+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="790"
+	coordinates="48.846932882284,2.3458197712"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-16T15:13:41.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	parentUid="1021"
+	name="Entrée principale">
+	<poiType id="6" label="Entrée principale" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

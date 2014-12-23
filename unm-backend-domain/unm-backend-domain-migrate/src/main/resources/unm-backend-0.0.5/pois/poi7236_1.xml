@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7236_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7236_1.xml"/>
+<title>Salle des Commissions</title>
+<updated>2014-08-15T01:47:44.643+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7236"
+	coordinates="48.788643110077,2.3268297314644"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-10T16:14:32.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Salle des Commissions">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>Capacité d'accueil : 15 places
+Equipements : vidéo-projecteur, visio-conférence, micro </description>
+	<address>
+		<floor>Présidence, Niveau 1</floor>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2936_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2936_1.xml"/>
+<title>Centre Vaugirard II</title>
+<updated>2014-08-15T01:47:01.281+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2936"
+	coordinates="48.845626611057,2.32119642"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:04:47.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2935"
+	name="Centre Vaugirard II">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro
+- Ligne 4 : station Saint Placide
+- Lignes 10 ou 13 : station Duroc
+- Ligne 12 : station Falguière
+Bus
+- Lignes 28, 82, 89 ou 92 : arrêt Maine-Vaugirard </itinerary>
+		<fullAddress>122, rue de Vaugirard
+75006 Paris</fullAddress>
+	</address>
+	<child uid="3259" active="true"/>
+	<child uid="3155" active="true"/>
+	<child uid="3152" active="true"/>
+	<child uid="2990" active="true"/>
+	<child uid="3232" active="true"/>
+	<child uid="3305" active="true"/>
+</content>
+</entry>

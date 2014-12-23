@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6638_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6638_1.xml"/>
+<title>PUIO</title>
+<updated>2014-08-15T01:47:38.919+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6638"
+	coordinates="48.710433007722,2.1732115745544"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T11:02:47.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5450"
+	name="PUIO">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>Plateau du Moulon 91400 ORSAY</fullAddress>
+	</address>
+	<child uid="6835" active="true"/>
+</content>
+</entry>

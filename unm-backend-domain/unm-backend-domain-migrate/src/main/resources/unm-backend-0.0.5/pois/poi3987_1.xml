@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3987_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3987_1.xml"/>
+<title>Forces du droit (FDPCE)</title>
+<updated>2014-08-15T01:47:12.438+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3987"
+	coordinates="48.944595170476,2.3629684746265"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T17:21:37.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Forces du droit (FDPCE)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 4387 - Forces du droit : paradoxes, comparaisons et expérimentations (FDPCE) appartenant à l'École doctorale (ED) 401 : Sciences sociales.
+Directrice : Laurence Dubin</description>
+	<address>
+		<floor>2ème étage Bâtiment A, bureau 226</floor>
+		<url>http://forcesdudroit.wordpress.com/</url>
+		<phone>01 49 40 71 39</phone>
+		<email>laurence.dubin@wanadoo.fr</email>
+	</address>
+</content>
+</entry>

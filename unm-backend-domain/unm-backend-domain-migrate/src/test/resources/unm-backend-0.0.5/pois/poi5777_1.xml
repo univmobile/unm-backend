@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5777_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5777_1.xml"/>
+<title>SAN - LP</title>
+<updated>2014-08-15T01:47:29.951+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5777"
+	coordinates="48.838657784579,2.5907745212317"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:51:09.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5614"
+	name="SAN - LP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence Professionnelle Systèmes audiovisuels numériques</description>
+	<address>
+		<floor>Bureau 120</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-licences-professionnelles/domaine-sciences-technologies-sante/mention-reseaux-et-telecommunications/licence-professionnelle-systemes-audiovisuels-numeriques/</url>
+		<phone>01 60 95 73 70</phone>
+		<fax>01 60 95 73 50</fax>
+		<email>Agnieszka.Pluta@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

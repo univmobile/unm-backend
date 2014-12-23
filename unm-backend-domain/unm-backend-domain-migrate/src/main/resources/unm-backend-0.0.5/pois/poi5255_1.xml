@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5255_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5255_1.xml"/>
+<title>Allemand</title>
+<updated>2014-08-15T01:47:24.569+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5255"
+	coordinates="48.787884116505,2.4446645379066"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T23:35:48.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4334"
+	name="Allemand">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2ème étage </floor>
+		<openingHours>Lundi - vendredi : 8h30-12h30 et 13h30-15h45
+</openingHours>
+		<url>http://lettres-sh.u-pec.fr/departements/allemand/</url>
+		<phone>01 45 17 66 85</phone>
+		<email>sec.allemand-llsh@u-pec.fr</email>
+	</address>
+</content>
+</entry>

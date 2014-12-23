@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2624_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2624_1.xml"/>
+<title></title>
+<updated>2014-08-15T01:46:58.547+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2624"
+	coordinates=""
+	active="true"
+	createdAt="2011-05-03T14:39:20.000+02:00"
+	updatedAt="2011-05-03T14:39:20.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	name="">
+</content>
+</entry>

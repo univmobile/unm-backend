@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3300_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3300_1.xml"/>
+<title>LIP6 - UMR 7606</title>
+<updated>2014-08-15T01:47:05.145+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3300"
+	coordinates="48.846962322494,2.35439797863"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:55:28.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3295"
+	name="LIP6 - UMR 7606">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le LIP6 est un laboratoire de recherche sous tutelle de l'UPMC et du CNRS. Avec 128 chercheurs permanents et 231 doctorants, il est l’un des principaux laboratoires de recherche en informatique en France, et le plus gros laboratoire d’informatique de la région parisienne.</description>
+	<address>
+		<url>http://www.lip6.fr</url>
+	</address>
+</content>
+</entry>

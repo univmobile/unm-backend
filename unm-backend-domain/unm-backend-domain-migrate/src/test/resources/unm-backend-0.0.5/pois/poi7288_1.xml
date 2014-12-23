@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7288_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7288_1.xml"/>
+<title>Laverie</title>
+<updated>2014-08-15T01:47:45.249+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7288"
+	coordinates="48.790617853295,2.3283250629902"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T12:26:57.000+01:00"
+	updatedAt="2012-12-17T14:47:38.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7247"
+	name="Laverie">
+	<poiType id="39" label="Laverie"/>
+	<description>Lavage + lessive: 3 euros - Séchage : 1 euro (TARIFS juin 2010)
+Attention ! Le paiement des machines à laver s’effectue uniquement par carte moneo (pour se procurer la carte R moneo du CROUS de Créteil, voir notre site Internet).</description>
+	<address>
+		<url>www.crous-creteil.fr</url>
+	</address>
+</content>
+</entry>

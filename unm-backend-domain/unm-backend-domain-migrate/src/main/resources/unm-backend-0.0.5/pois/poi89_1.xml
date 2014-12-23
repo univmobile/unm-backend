@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi89_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi89_1.xml"/>
+<title>Service Général d'Enseignement des Langues</title>
+<updated>2014-08-15T01:46:38.426+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="89"
+	coordinates="48.828154109718,2.3665521"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T18:23:12.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-09-05T10:19:51.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Service Général d'Enseignement des Langues">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Service Général d'Enseignement des 
+Langues
+
+Aile A, 7e étage
+bureau A 706</description>
+	<address
+		zipCode="75634"
+		city="Paris"
+		countryCode="FR">
+		<floor>Aile A, 7e étage</floor>
+		<openingHours>10h-12h et 14h-16h
+Le Service Général d'Enseignement des Langues propose ses enseignements essentiellement en travaux dirigés pour dix langues vivantes (2) et trois langues anciennes (3).
+</openingHours>
+		<itinerary>M° ligne 14 Olympiades
+Bus 62,83
+</itinerary>
+		<url>http://www.univ-paris1.fr/ufr/language-service/carte-des-langues/langues-proposees-et-volume-horaire/</url>
+		<phone>01 44 07 86 16</phone>
+		<fax>01 44 07 88 19</fax>
+		<email>sgel@univ-paris1.fr</email>
+		<fullAddress>Service des langues
+Centre Pierre-Mendès-France
+bureau A 706
+90 rue de Tolbiac
+
+
+
+
+
+ 75634 Paris</fullAddress>
+	</address>
+</content>
+</entry>

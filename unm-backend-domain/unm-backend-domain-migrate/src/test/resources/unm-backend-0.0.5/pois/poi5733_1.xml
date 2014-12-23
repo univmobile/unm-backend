@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5733_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5733_1.xml"/>
+<title>Laboratoire de Psychopathologie et Processus de Santé </title>
+<updated>2014-08-15T01:47:29.439+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5733"
+	coordinates="48.834391317548,2.2478076629341"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:09:21.000+02:00"
+	updatedAt="2011-06-14T17:05:08.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5550"
+	name="Laboratoire de Psychopathologie et Processus de Santé ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>ADRIEN JEAN-LOUIS</description>
+	<address>
+		<phone>01 55 20 59 71 </phone>
+	</address>
+</content>
+</entry>

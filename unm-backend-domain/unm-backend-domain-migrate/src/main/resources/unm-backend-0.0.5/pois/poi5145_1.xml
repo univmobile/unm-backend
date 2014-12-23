@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5145_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5145_1.xml"/>
+<title>Service accueil handicap</title>
+<updated>2014-08-15T01:47:23.591+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5145"
+	coordinates="48.624117423316,2.427576854825"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T15:05:14.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="264"
+	name="Service accueil handicap">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<description>Lors des premières rencontres, une analyse des besoins est effectuée pour définir la forme d’accompagnement la plus adaptée.</description>
+	<address>
+		<floor>Bureau 6, rdc</floor>
+		<openingHours>Lundi, mercredi : 
+9h00 / 12h00 - 14h00 / 17h00
+Mardi, vendredi : 9h00 / 12h00
+Jeudi : 14h00 / 17h00
+
+</openingHours>
+		<phone>01 69 47 71 84</phone>
+		<email>danielle.lacroix@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

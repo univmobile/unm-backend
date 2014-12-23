@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi504_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi504_1.xml"/>
+<title>Vélizy-Villacoublay</title>
+<updated>2014-08-15T01:46:40.377+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="504"
+	coordinates="48.781914262769,2.21714615821"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T16:29:00.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="haromoys"
+	updatedBy="haromoys"
+	parentUid="4"
+	name="Vélizy-Villacoublay">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+	<child uid="506" active="true"/>
+	<child uid="505" active="true"/>
+	<child uid="507" active="true"/>
+</content>
+</entry>

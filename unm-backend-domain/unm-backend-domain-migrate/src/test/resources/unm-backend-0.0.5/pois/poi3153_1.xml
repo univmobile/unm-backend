@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3153_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3153_1.xml"/>
+<title>Département : Etudes Italiennes et Roumaines (EIR)</title>
+<updated>2014-08-15T01:47:03.560+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3153"
+	coordinates="48.840115644215,2.3539683222771"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T17:13:39.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="3012"
+	name="Département : Etudes Italiennes et Roumaines (EIR)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>1-5 rue Censier, 75005 Paris
+Structure(s) de rattachement :
+    UFR Langues, Littératures, Cultures et Sociétés Etrangères (LLCSE)</description>
+	<address>
+		<floor>5ème étage</floor>
+		<openingHours>Horaires d'ouverture du Secrétariat: 
+    lundi et mercredi 14h-16h
+    mardi et jeudi 10h-12h
+    fermé le vendredi</openingHours>
+		<url>http://www.univ-paris3.fr/dept-eir</url>
+		<phone>01 45 87 42 70</phone>
+		<fax>01 45 87 48 41</fax>
+		<email>dept-eir@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

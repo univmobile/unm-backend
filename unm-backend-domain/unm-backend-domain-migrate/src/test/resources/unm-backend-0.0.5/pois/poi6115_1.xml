@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6115_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6115_1.xml"/>
+<title>ED 436  EDM</title>
+<updated>2014-08-15T01:47:33.908+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6115"
+	coordinates="48.842818614203,2.3358627408743"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T17:17:23.000+02:00"
+	updatedAt="2011-06-14T17:19:54.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2450"
+	name="ED 436  EDM">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>ED 436 Médicament, Toxicologie, Chimie environnement « EDM ». 
+Directrice : Christiane GARBAY
+Directeur Adjoint : Marie-Christine LALLEMAND
+Secrétariat : Elisabeth HOMBRADOS
+
+http://ecole-doctorale-medicament.univ-paris5.fr/
+
+</description>
+	<address>
+		<url>http://ecole-doctorale-medicament.univ-paris5.fr/</url>
+		<phone>01 53 73 97 12</phone>
+		<fax>01 53 73 99 09</fax>
+		<email>direction.edm@pharmacie.parisdescartes.fr</email>
+	</address>
+</content>
+</entry>

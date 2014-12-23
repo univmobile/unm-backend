@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3589_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3589_1.xml"/>
+<title>IUP</title>
+<updated>2014-08-15T01:47:08.351+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3589"
+	coordinates="48.82484093646,2.1993131563067"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:40:03.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2451"
+	name="IUP">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Institut Universitaire Professionnalisé </description>
+	<address>
+		<floor>Bureau D11</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h30 - 13h30 / 17h
+Mercredi ouverture à 8h30
+
+
+</openingHours>
+		<phone>01 40 97 48 23</phone>
+		<email>nadine.granomort@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

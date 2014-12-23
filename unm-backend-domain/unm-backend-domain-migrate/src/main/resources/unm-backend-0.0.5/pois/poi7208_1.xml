@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7208_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7208_1.xml"/>
+<title>205</title>
+<updated>2014-08-15T01:47:44.361+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7208"
+	coordinates="49.040022345172,2.0740261673927"
+	active="true"
+	markerType="point"
+	createdAt="2012-03-27T16:20:19.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="7203"
+	name="205">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+</content>
+</entry>

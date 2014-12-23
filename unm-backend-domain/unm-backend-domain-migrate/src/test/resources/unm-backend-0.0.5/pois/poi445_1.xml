@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi445_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi445_1.xml"/>
+<title>Cafétéria de la poste</title>
+<updated>2014-08-15T01:46:39.981+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="445"
+	coordinates="48.631949411673,2.4317979812"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-06T10:52:38.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="pdeljurie"
+	parentUid="273"
+	name="Cafétéria de la poste">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address
+		countryCode="FR">
+		<floor>RDC hall d'entrée</floor>
+		<openingHours>8h30 à 15h30 </openingHours>
+		<itinerary>RER D
+Bus 408
+Bus 401</itinerary>
+		<fullAddress>rue du Facteur Cheval
+91025 Evr</fullAddress>
+	</address>
+</content>
+</entry>

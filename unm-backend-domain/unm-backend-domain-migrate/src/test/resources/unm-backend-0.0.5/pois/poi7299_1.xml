@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7299_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7299_1.xml"/>
+<title>KFET (BDE)</title>
+<updated>2014-08-15T01:47:45.389+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7299"
+	coordinates="48.789355852628,2.3303326964378"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T15:22:25.000+01:00"
+	updatedAt="2013-01-14T09:38:20.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7222"
+	name="KFET (BDE)">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Le BDE, qui gère la Maison de l'étudiant couramment appelée Kfet, vend des sandwichs le midi, et des petits-déjeuners le week-end. </description>
+	<address>
+		<openingHours>La Kfet est ouverte tous les midis de 12h à 14h et tous les soirs de 18h à minuit (sauf le week-end de 11h à 14h)</openingHours>
+	</address>
+</content>
+</entry>

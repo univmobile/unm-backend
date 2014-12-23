@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4608_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4608_1.xml"/>
+<title>Physique</title>
+<updated>2014-08-15T01:47:18.996+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4608"
+	coordinates="48.701475743039,2.1671544760466"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:49:05.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	deletedAt="2011-06-01T16:26:52.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	name="Physique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 333, bureau 33</floor>
+		<url>http://www.phys.u-psud.fr/</url>
+		<phone>01 69 15 71 79</phone>
+		<fax>01 69 15 54 41</fax>
+		<email>francoise.pallais@u-psud.fr</email>
+	</address>
+</content>
+</entry>

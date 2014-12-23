@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6582_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6582_1.xml"/>
+<title>Amphithéâtre Pierre Lehman</title>
+<updated>2014-08-15T01:47:38.551+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6582"
+	coordinates="48.699153969875,2.1694028377533"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-04T15:38:45.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="5778"
+	name="Amphithéâtre Pierre Lehman">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5533_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5533_1.xml"/>
+<title>LMDE</title>
+<updated>2014-08-15T01:47:27.183+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5533"
+	coordinates="48.788281728074,2.4438545107841"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T17:00:29.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5528"
+	name="LMDE">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>La mutuelle des étudiants (LMDE)
+</description>
+	<address>
+		<floor>à coté de la maion de l'étudiant, niveau dalle</floor>
+		<openingHours>Du lundi au jeudi de 9h30 à 13h et de 14h à 17h30, vendredi de 9h30 à 13h
+</openingHours>
+		<url>www.lmde.com</url>
+		<phone>01.40.92.54.85</phone>
+	</address>
+</content>
+</entry>

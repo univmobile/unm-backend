@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1197_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1197_1.xml"/>
+<title>Institut de Recherche Interdisciplinaire sur les enjeux Soc.</title>
+<updated>2014-08-15T01:46:45.708+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1197"
+	coordinates="48.913291512276,2.4201357364"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-24T18:53:33.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="348"
+	name="Institut de Recherche Interdisciplinaire sur les enjeux Soc.">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut de Recherche Interdisciplinaire sur les enjeux Sociaux - IRIS - UMR 8156-997 CNRS -Inserm-EHESS UP13</description>
+	<address>
+		<floor>2ème étage.</floor>
+		<url>iris.ehess.fr</url>
+		<phone>01 48 38 77 75</phone>
+		<fax>01 48 38 88 62</fax>
+	</address>
+</content>
+</entry>

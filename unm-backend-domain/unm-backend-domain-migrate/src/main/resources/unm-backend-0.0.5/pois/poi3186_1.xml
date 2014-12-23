@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3186_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3186_1.xml"/>
+<title>Bibliothèque d'allemand</title>
+<updated>2014-08-15T01:47:03.776+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3186"
+	coordinates="48.915174415769,2.30312369763"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T13:52:41.000+02:00"
+	updatedAt="2012-01-17T17:06:31.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3069"
+	name="Bibliothèque d'allemand">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi et Vendredi : 
+9h - 17h30
+Mardi, Mercredi et Jeudi :
+9h - 18h30</openingHours>
+		<phone>0146134880 </phone>
+	</address>
+</content>
+</entry>

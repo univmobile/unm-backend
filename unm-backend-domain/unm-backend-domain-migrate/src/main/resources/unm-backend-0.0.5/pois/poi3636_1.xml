@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3636_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3636_1.xml"/>
+<title>Toutes Latitudes (Association des étudiants et enseignants g</title>
+<updated>2014-08-15T01:47:08.871+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3636"
+	coordinates="48.946251088455,2.3607382178307"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:14:52.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Toutes Latitudes (Association des étudiants et enseignants g">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’association a pour but d’apporter son concours à la vie et au développement du département de géographie, de soutenir l’enseignement et la recherche qui y sont menés, ainsi que de favoriser et valoriser la réalisation de projets pédagogiques, productions scientifiques, ou toute autre opération de nature à promouvoir la géographie et l’action des géographes (stages de terrains, partenariats extérieurs, contacts avec les anciens étudiants du département insérés professionnellement...).</description>
+	<address>
+		<url>http://univ-paris8.fr/geographie</url>
+		<phone>01 49 40 72 83</phone>
+		<email>Philippe.gajewski@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

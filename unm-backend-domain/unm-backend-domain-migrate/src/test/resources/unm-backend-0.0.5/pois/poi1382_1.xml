@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1382_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1382_1.xml"/>
+<title>École d'ingénieur Denis Diderot</title>
+<updated>2014-08-15T01:46:47.006+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1382"
+	coordinates="48.828639453441,2.38292142748"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:47:26.000+01:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1775"
+	name="École d'ingénieur Denis Diderot">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>École d'ingénieur Denis Diderot</description>
+	<address>
+		<openingHours>Du lundi  au vendredi : 9h-12h30 et 14h-17h</openingHours>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<phone>0157277091</phone>
+		<email>eidd@univ-paris-diderot.fr</email>
+	</address>
+	<attachment id="62" title="condorcet.jpg" type="image" url="/uploads/poi/a6530199d65b7c6033e08d17d4e4b41f7cb48041.jpg"/>
+</content>
+</entry>

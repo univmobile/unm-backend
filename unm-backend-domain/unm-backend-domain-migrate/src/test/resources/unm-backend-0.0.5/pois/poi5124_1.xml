@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5124_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5124_1.xml"/>
+<title>AX 12</title>
+<updated>2014-08-15T01:47:23.440+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5124"
+	coordinates="48.613751960415,2.4289883673191"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T14:10:46.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="476"
+	name="AX 12">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>RDC + Bat A, patio</floor>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2010_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2010_1.xml"/>
+<title>Handidoc</title>
+<updated>2014-08-15T01:46:53.329+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2010"
+	coordinates="48.956838562787,2.341985553"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T15:54:23.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="316"
+	name="Handidoc">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>- 1 scanner.
+- 2 ordinateurs dont 1 équipé d'un clavier braille et vocal avec imprimante braille.
+- 2 ordinateurs portables.
+- 1 machine à lire.
+- 1 télé agrandisseur.
+- 1 loupe électronique.
+- 1 euroscope ( ordinateur portable avec clavier braille et synthèse vocale ).
+- 2 table adaptées pour fauteuil roulant.</description>
+</content>
+</entry>

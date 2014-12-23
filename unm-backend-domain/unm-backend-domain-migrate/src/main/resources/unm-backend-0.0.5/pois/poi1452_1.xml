@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1452_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1452_1.xml"/>
+<title>UFR M2 professionel</title>
+<updated>2014-08-15T01:46:47.740+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1452"
+	coordinates="48.82572255285,2.366197519004"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:05:43.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	deletedAt="2011-06-15T15:16:37.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	name="UFR M2 professionel">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Spécialités : 
+- ingénierie de l'aménagement et du développement local
+- Projets informatiques et stratégies de l'entreprise
+-Consultants et chargés d'études socio-économique</description>
+	<address>
+		<floor>Bureau 114</floor>
+		<openingHours>Tous les jours : 10h-12h et 14h-16h sauf le vendredi après-midi</openingHours>
+		<itinerary>Métro 14 Olympiades
+Métro 7 Tolbiac
+Bus 62, 64, 83 Tolbiac Baudricourt</itinerary>
+		<phone>0157275894</phone>
+	</address>
+</content>
+</entry>

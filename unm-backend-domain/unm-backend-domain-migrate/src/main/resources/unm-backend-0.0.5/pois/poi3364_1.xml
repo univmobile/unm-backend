@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3364_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3364_1.xml"/>
+<title>Centre de Recherches sur les Poétiques du XIXe siècle</title>
+<updated>2014-08-15T01:47:05.844+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3364"
+	coordinates="48.840472886767,2.354516834020"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:34:42.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-17T17:02:16.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	name="Centre de Recherches sur les Poétiques du XIXe siècle">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<url>http://www.crp19.org</url>
+		<phone>0145874137</phone>
+		<email>crp19@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

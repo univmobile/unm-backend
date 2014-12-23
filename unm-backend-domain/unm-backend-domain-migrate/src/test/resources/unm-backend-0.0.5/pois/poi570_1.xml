@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi570_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi570_1.xml"/>
+<title>Bibliothèque de l'IUT</title>
+<updated>2014-08-15T01:46:40.768+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="570"
+	coordinates="48.618399371931,2.30644226074"
+	active="true"
+	markerType="point"
+	createdAt="2010-11-18T10:59:04.000+01:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="pdeljurie"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2651"
+	name="Bibliothèque de l'IUT">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bâtiment de Communs</floor>
+		<openingHours>Du lundi au vendredi
+9h00 / 12h00 - 13h00 / 17h00</openingHours>
+		<itinerary>RER C</itinerary>
+		<phone>01 69 47 79 04</phone>
+	</address>
+</content>
+</entry>

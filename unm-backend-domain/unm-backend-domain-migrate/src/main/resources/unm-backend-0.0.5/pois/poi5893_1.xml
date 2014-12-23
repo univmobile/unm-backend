@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5893_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5893_1.xml"/>
+<title>Grande Cafétéria </title>
+<updated>2014-08-15T01:47:31.350+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5893"
+	coordinates="48.788166862833,2.4449998140335"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T10:36:26.000+02:00"
+	updatedAt="2011-06-10T15:09:45.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4859"
+	name="Grande Cafétéria ">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>8h30 - 17h00 (lundi à jeudi)
+8h30 - 16h00 (vendredi)
+</openingHours>
+		<phone>01-48-99-29-40</phone>
+		<email>restaurant.creteil@crous-creteil.fr</email>
+	</address>
+	<attachment id="122" title="Grande_Cafet_Creteil_15_.jpg" type="image" url="/uploads/poi/236709e6535dabbfef23ae497b3c08371e9a822f.jpg"/>
+</content>
+</entry>

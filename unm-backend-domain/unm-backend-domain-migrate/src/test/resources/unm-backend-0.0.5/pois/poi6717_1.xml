@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6717_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6717_1.xml"/>
+<title>Restaurant Assas</title>
+<updated>2014-08-15T01:47:39.556+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6717"
+	coordinates="48.843510434103,2.3334909975529"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-16T18:32:15.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6716"
+	name="Restaurant Assas">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Restaurant universitaire au 7ème étage
+Cafétéria dans le hall de l'Université</description>
+	<address>
+		<openingHours>Semaine de 11h00 à 14h30</openingHours>
+		<url>http://www.crous-paris.fr</url>
+	</address>
+	<attachment id="176" title="assas_1.jpg" type="image" url="/uploads/poi/8c1d7af15f0efb8fb923e210dd70ff1f0520d4e4.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4110_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4110_1.xml"/>
+<title>Cartothèque</title>
+<updated>2014-08-15T01:47:13.776+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4110"
+	coordinates="48.947156535261,2.361706495285"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:24:30.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Cartothèque">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>La cartothèque met à disposition des lecteurs plus de 50 000 documents dont plus de 40 000 cartes topographiques, géologiques, murales, en relief, thématiques... ainsi que des atlas, dictionnaires, cédéroms, DVD, photographies, manuels scolaires pour la préparation du CAPES, mémoires de master (plus de 600), fonds de cartes, signets etc.</description>
+	<address>
+		<floor>1er étage Bâtiment D, bureau 139</floor>
+		<openingHours>Du lundi au vendredi
+9h30-17h</openingHours>
+		<url>http://geographie.ipt.univ-paris8.fr/</url>
+		<phone>01 49 40 72 84</phone>
+		<fax>01 49 40 72 74</fax>
+		<email>Nathalie.Rigaud@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

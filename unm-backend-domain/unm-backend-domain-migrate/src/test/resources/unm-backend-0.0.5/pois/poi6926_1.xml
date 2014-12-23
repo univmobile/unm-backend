@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6926_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6926_1.xml"/>
+<title>EHESS</title>
+<updated>2014-08-15T01:47:41.340+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6926"
+	coordinates="48.851120233992,2.3392557352781"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-26T16:34:15.000+02:00"
+	updatedAt="2011-09-26T17:08:44.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="4276"
+	name="EHESS">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://www.ehess.fr/fr/</url>
+		<phone>01 49 54 25 25</phone>
+	</address>
+</content>
+</entry>

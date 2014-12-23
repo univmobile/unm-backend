@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi54_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi54_1.xml"/>
+<title>Sécurité</title>
+<updated>2014-08-15T01:46:38.335+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="54"
+	coordinates="48.956195187914,2.34371790298"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T11:54:57.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-06-24T12:51:06.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Sécurité">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		zipCode="93430 "
+		city="VILLETANEUSE"
+		countryCode="FR">
+		<fullAddress>99 avenue Jean-Baptiste Clément
+ 93430  VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6171_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6171_1.xml"/>
+<title>UTES</title>
+<updated>2014-08-15T01:47:34.603+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6171"
+	coordinates="48.84637366952,2.35814653337"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:35:20.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2813"
+	name="UTES">
+	<poiType id="30" label="Accessibilité PMR ordinateur" categoryId="7" categoryLabel="Relais handicap"/>
+	<description>L'UTES est la salle informatique de Paris 6, et il y a 3 ordinateurs réservés aux PMR</description>
+</content>
+</entry>

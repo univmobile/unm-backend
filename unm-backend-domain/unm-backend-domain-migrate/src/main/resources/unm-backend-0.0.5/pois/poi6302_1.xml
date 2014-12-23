@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6302_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6302_1.xml"/>
+<title>Études anglophones (M1-M2)</title>
+<updated>2014-08-15T01:47:35.840+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6302"
+	coordinates="48.853193953174,2.3628742620349"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T15:29:36.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1771"
+	name="Études anglophones (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Centre Charles V - Bâtiment C, 1er étage, bureau C12</floor>
+		<openingHours>Lundi, mardi et jeudi
+14h-17h30
+Mercredi
+10h-12h</openingHours>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=888</url>
+		<phone>01 57 27 58 54</phone>
+		<fax>01 57 27 58 41</fax>
+		<email>annie.laffille@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

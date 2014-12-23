@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6899_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6899_1.xml"/>
+<title>Bibliothèque Universitaire des Langues et Civilisations</title>
+<updated>2014-08-15T01:47:41.123+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6899"
+	coordinates="48.858041473693,2.3322772979736"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-13T11:26:52.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Martine HATTON"
+	updatedBy="Jean-François Maynier"
+	parentUid="2994"
+	name="Bibliothèque Universitaire des Langues et Civilisations">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="6898" active="true"/>
+</content>
+</entry>

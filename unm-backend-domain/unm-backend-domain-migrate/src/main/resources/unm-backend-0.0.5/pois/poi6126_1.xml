@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6126_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6126_1.xml"/>
+<title>Analyse des mutations économiques... (AMETIS)</title>
+<updated>2014-08-15T01:47:34.051+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6126"
+	coordinates="48.711190635245,2.1710202097893"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:09:43.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4458"
+	name="Analyse des mutations économiques... (AMETIS)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Analyse des mutations économiques, des technologies de l'information et des sociétés (AMETIS).</description>
+	<address>
+		<floor>Bâtiment 604</floor>
+		<url>http://www.iut-orsay.u-psud.fr/fr/laboratoires/ametis.html</url>
+		<phone>01 69 33 61 24</phone>
+		<email>ametis.iut-orsay@u-psud.fr</email>
+	</address>
+</content>
+</entry>

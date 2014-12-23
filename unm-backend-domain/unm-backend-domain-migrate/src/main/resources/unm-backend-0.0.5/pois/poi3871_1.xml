@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3871_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3871_1.xml"/>
+<title>BU CEROC</title>
+<updated>2014-08-15T01:47:11.169+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3871"
+	coordinates="48.847949563282,2.3434352874756"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:26:03.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3679"
+	name="BU CEROC">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>CEROC :  Centre d’Enseignement et de Recherche d’OC.
+Enseignants, chercheurs et étudiants de l’Université Paris-Sorbonne.
+Discipline : langue, littérature et civilisation des pays d’oc, anciennes et modernes, ancien français, italien, espagnol et catalan, dialectologie gallo-romane (atlas linguistiques).</description>
+	<address>
+		<openingHours>Du lundi au jeudi : 
+9h00 / 16h30
+</openingHours>
+		<phone>01 40 46 27 44</phone>
+	</address>
+</content>
+</entry>

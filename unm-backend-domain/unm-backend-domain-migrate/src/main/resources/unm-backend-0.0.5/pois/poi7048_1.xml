@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7048_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7048_1.xml"/>
+<title>Scolarité C2i</title>
+<updated>2014-08-15T01:47:42.708+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7048"
+	coordinates="48.901840764383,2.2124221175909"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-06T12:43:57.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="2499"
+	name="Scolarité C2i">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Responsable : Magali FAVARD</description>
+	<address>
+		<floor>E. 403</floor>
+		<phone>0140977112</phone>
+		<email>mfavard@u-paris10.fr</email>
+	</address>
+	<child uid="7049" active="true"/>
+	<child uid="7050" active="true"/>
+</content>
+</entry>

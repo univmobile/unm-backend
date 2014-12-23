@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7456_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7456_1.xml"/>
+<title>Élèves fonctionnaires stagiaires</title>
+<updated>2014-08-15T01:47:46.557+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7456"
+	coordinates="48.848646313208,2.3429907113314"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-06T18:41:49.000+02:00"
+	updatedAt="2013-07-04T17:38:18.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7349"
+	name="Élèves fonctionnaires stagiaires">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Diplôme national, le diplôme d’archiviste paléographe donne à de futurs fonctionnaires une formation de haut niveau qui les prépare aux carrières de conservateur dans le domaine du patrimoine écrit, graphique et monumental, comme au métier d’enseignant-chercheur. 
+
+Accessible par un concours d’entrée préparé dans des CPGE littéraires, ce cursus, de 3 ans et 9 mois, mêle enseignements à vocation historique et littéraire et stages dans des institutions de conservation, en France et à l’étranger. Une thèse d’établissement permet d’obtenir en 4e année le diplôme d’archiviste paléographe. 
+
+Cette formation constitue un préalable scientifique indispensable aux enseignements délivrés par l’INP (notamment pour la spécialité Archives, mais aussi pour les spécialités Musées ou Monuments historiques et inventaire) ou par l’ENSSIB.
+
+Les élèves français ou européens perçoivent un salaire mensuel de 1200 €, en tant que fonctionnaires stagiaires.
+</description>
+	<address>
+		<floor>Sorbonne, 19, rue de la Sorbonne et 1 rue Victor Cousin, 75005 Paris</floor>
+		<url>http://www.enc.sorbonne.fr/le-diplome-d-archiviste-paleographe</url>
+		<phone>01.55.42.75.18</phone>
+		<email>etudes@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

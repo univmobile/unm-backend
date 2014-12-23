@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3118_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3118_1.xml"/>
+<title>Unité de Recherche en Génomique Végétale</title>
+<updated>2014-08-15T01:47:03.158+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3118"
+	coordinates="48.624210354326,2.4389366805"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:35:54.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3067"
+	name="Unité de Recherche en Génomique Végétale">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 60 87 45 06</phone>
+		<email>genet@evry@evry-inra.fr</email>
+	</address>
+</content>
+</entry>

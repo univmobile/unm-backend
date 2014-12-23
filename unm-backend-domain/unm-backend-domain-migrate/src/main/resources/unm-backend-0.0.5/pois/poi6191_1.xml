@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6191_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6191_1.xml"/>
+<title>Correspondants Relations internationales  s.c économie</title>
+<updated>2014-08-15T01:47:34.745+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6191"
+	coordinates="48.788380453123,2.4498304724693"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T17:22:06.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4606"
+	name="Correspondants Relations internationales  s.c économie">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Bureau 009</floor>
+		<phone>01 41 78 46 11</phone>
+		<email>degouve@u-pec.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5959_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5959_1.xml"/>
+<title>Service insertion professionnelle (SIP)</title>
+<updated>2014-08-15T01:47:32.101+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5959"
+	coordinates="48.703500852659,2.1695463359356"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:54:09.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5741"
+	name="Service insertion professionnelle (SIP)">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Le Service d'insertion professionnelle organise des ateliers et des modules d’aide à la recherche d’emploi ou de stages, et de préparation à l’intégration dans son futur emploi, de la 1ère année de licence jusqu’au doctorat.
+&gt; Espace Stages et Emploi
+&gt; Espace Formations à l’Insertion Professionnelle
+&gt; Espace Emploi des Docteurs
+&gt; Espace Entreprises et Métiers
+&gt; Espace Observatoire de l’Insertion Professionnelle</description>
+	<address>
+		<floor>Bâtiment 330</floor>
+		<openingHours>Du lundi au vendredi
+9h30-17h00</openingHours>
+		<url>http://www.sip.u-psud.fr</url>
+		<phone>01 69 15 62 71</phone>
+		<fax>01 69 15 55 92</fax>
+		<email>insertion.professionnelle@u-psud.fr</email>
+	</address>
+</content>
+</entry>

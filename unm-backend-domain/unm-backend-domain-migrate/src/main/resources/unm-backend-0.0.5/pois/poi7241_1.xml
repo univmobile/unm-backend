@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7241_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7241_1.xml"/>
+<title>Bureau des arts (BDA)</title>
+<updated>2014-08-15T01:47:44.709+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7241"
+	coordinates="48.789358797806,2.3303474485874"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-12T14:49:09.000+01:00"
+	updatedAt="2013-01-14T09:38:20.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7222"
+	name="Bureau des arts (BDA)">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le BDA fait partie intégrante du BDE et s’occupe de promouvoir sur le campus, et pour vous, les arts et la culture sous toutes leurs formes.
+Ainsi le BDA regroupe divers clubs sur le campus, chacun d’eux ayant ses spécificités : salsa, jonglage, musique, ciné club, club DétENSte...
+Mais le BDA, c’est encore : 
+- les concerts du dimanche soir 
+- les concerts à vocation humanitaire le vendredi soir, récoltant des fonds pour des associations
+- les sorties culturelles et les voyages
+Le BDA a aussi organisé l’an dernier les premières sENS de l’art, ainsi que les Inter-ENS culturelles, rencontres entre Lyon, Ulm, Ker Lann et K-chan autour du théatre, de l’impro, de la musique, de la photographie, jonglage et de la culture en général.</description>
+	<address>
+		<url>http://clubs.ens-cachan.fr/bda</url>
+	</address>
+	<attachment id="260" title="VieBda.png" type="image" url="/uploads/poi/79c92499ca8b627cc1a8c20b360490c353dfda23.png"/>
+</content>
+</entry>

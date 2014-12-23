@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7059_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7059_1.xml"/>
+<title>ESIT</title>
+<updated>2014-08-15T01:47:42.835+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7059"
+	coordinates="48.870445524562,2.2735074162483"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-16T10:52:48.000+01:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Jean-François Maynier"
+	updatedBy="Jean-François Maynier"
+	parentUid="3063"
+	name="ESIT">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<openingHours>Du lundi au vendredi de 10h00 à 12h00
+Mardi et jeudi de 14h00 à 17h00 </openingHours>
+		<url>http://www.univ-paris3.fr/esit/</url>
+		<phone>01 44 05 42 05</phone>
+		<fax>01 44 05 41 43 </fax>
+		<email>esit@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

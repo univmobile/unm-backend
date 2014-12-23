@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1089_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1089_1.xml"/>
+<title>Études et recherches en droit</title>
+<updated>2014-08-15T01:46:44.692+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1089"
+	coordinates="48.846943413982,2.34483372"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-15T17:18:24.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1027"
+	name="Études et recherches en droit">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Aile Cujas, esc. A, 3e étage</floor>
+		<itinerary>RER B 
+Station Luxembourg
+Bus 21, 27, 38, 82, 84, 85 et 89 </itinerary>
+	</address>
+</content>
+</entry>

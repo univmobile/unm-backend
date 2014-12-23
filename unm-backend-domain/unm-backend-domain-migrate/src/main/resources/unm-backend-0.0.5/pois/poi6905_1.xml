@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6905_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6905_1.xml"/>
+<title>Bibliothèque interuniversitaire Sainte-Barbe</title>
+<updated>2014-08-15T01:47:41.185+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6905"
+	coordinates="48.847066646453,2.3463803529739"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-13T11:54:07.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Martine HATTON"
+	updatedBy="Jean-François Maynier"
+	parentUid="6897"
+	name="Bibliothèque interuniversitaire Sainte-Barbe">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Du lundi au samedi : 10h -20h</openingHours>
+		<url>www.bsb.univ-paris3.fr/</url>
+		<phone>01 56 81 76 14 </phone>
+		<email>bsb@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

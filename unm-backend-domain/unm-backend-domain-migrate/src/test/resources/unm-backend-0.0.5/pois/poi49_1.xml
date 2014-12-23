@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi49_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi49_1.xml"/>
+<title>Centre de Formation Continue</title>
+<updated>2014-08-15T01:46:38.321+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="49"
+	coordinates="48.956082351387,2.34308490165"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T11:43:45.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-06-24T12:51:06.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Centre de Formation Continue">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Le Centre de Formation Continue c'est :
+
+    * Plus de 30 ans d’expérience au service de la formation des adultes.
+    * Plus de 4 800 diplômes délivrés (DUT, Licences Professionnelles et Diplômes d’Université délivrés)
+    * Plus de 200 stagiaires par an.
+    * Plus de 200 000 heures-stagiaires/an.
+    * Un taux de réussite de 90%.
+Diplômes nationaux (DUT) Bac+2 :
+
+    * DUT Carrières Juridiques | Voir le calendrier
+    * DUT Gestion des Entreprises et des Administrations
+      - option Finance Comptabilité | Voir le calendrier
+      - option Petites &amp; Moyennes Organisations | Voir le calendrier
+      - option Ressources Humaines | Voir le calendrier
+
+    * DUT Génie Electrique &amp; Informatique Industrielle | Voir le calendrier
+    * DUT Informatique | Voir le calendrier | Prérequis test &amp; entretien
+    * DUT Réseaux &amp; Télécommunications | Voir le calendrier | Prérequis test &amp; entretien
+
+
+Licences professionnelles Bac+3 :
+
+    * Licence Professionnelle Banque | Voir le calendrier - Mention chargé de clientèle particuliers
+    * Licence Professionnelle Métiers du Notariat | Voir le calendrier
+    * Licence Professionnelle Gestion des Ressources Humaines | Voir le calendrier - Administration du Personnel et Pilotage Social
+    * Licence Professionnelle Réseaux &amp; Télécommunications | Voir le calendrier - option Administration et Sécurité en Réseaux
+    * Licence Professionnelle Systèmes Informatiques et Logiciels | Voir le calendrier - option Génie Logiciel
+    * Licence Professionnelle Electricité &amp; Electronique | Voir le calendrier (salariés uniquement)
+
+Diplôme D'Université Bac+4 :
+
+    * Diplôme Inter-Universitaire Compétences Cadre
+</description>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

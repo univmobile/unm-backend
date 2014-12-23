@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1465_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1465_1.xml"/>
+<title>UFR Linguistique (UFRL)</title>
+<updated>2014-08-15T01:46:47.852+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1465"
+	coordinates="48.833043176627,2.368553839623"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:20:49.000+02:00"
+	updatedAt="2011-06-22T15:01:00.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1770"
+	name="UFR Linguistique (UFRL)">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>4e étage, bureau 4D16</floor>
+		<openingHours>Tous les jours : 9h30-12h30 et 14h-16h30</openingHours>
+		<itinerary>Métro 6 Chevaleret
+Métro 14 Bibliothèque François Mitterrand 
+RER C Bibliothèque François Mitterrand
+Bus 27 Clisson</itinerary>
+		<phone>0157275780</phone>
+		<email>jeanine.mary@linguist.jussieu.fr</email>
+	</address>
+	<attachment id="81" title="chevaleret.gif" type="image" url="/uploads/poi/ce6c6b52a2c2a36d7591f42bf694b7e99d22d31e.gif"/>
+</content>
+</entry>

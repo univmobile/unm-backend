@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6341_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6341_1.xml"/>
+<title>Économie quantitative parcours MoSEF M1</title>
+<updated>2014-08-15T01:47:36.197+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6341"
+	coordinates="48.827184136567,2.3642651550472"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T17:25:22.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1023"
+	name="Économie quantitative parcours MoSEF M1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://mosef.univ-paris1.fr/</url>
+		<phone>01 44 07 87 63</phone>
+		<email>ufr02mag@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

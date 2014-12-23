@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi805_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi805_1.xml"/>
+<title>LMDE La Mutuelle Des Etudiants</title>
+<updated>2014-08-15T01:46:42.057+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="805"
+	coordinates="48.827181171515,2.3643350"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-16T17:29:27.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1023"
+	name="LMDE La Mutuelle Des Etudiants">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Aile C, 9e étage, 9.05</floor>
+		<openingHours>Lundi au vendredi
+09h30 -13h00
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64, 83
+Arrêt Tolbiac-Baudricourt
+</itinerary>
+		<url>http://www.lmde.com/</url>
+	</address>
+</content>
+</entry>

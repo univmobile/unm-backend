@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7082_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7082_1.xml"/>
+<title>Borne carte d'étudiant multiservices - Hall bâtiment A</title>
+<updated>2014-08-15T01:47:43.051+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7082"
+	coordinates="48.944619833487,2.3634660243988"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-24T15:17:56.000+01:00"
+	updatedAt="2012-02-01T16:19:06.000+01:00"
+	createdBy="Marion MAINFRAY"
+	updatedBy="Marion MAINFRAY"
+	parentUid="3450"
+	name="Borne carte d'étudiant multiservices - Hall bâtiment A">
+	<poiType id="9" label="Borne CMS" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>Rez-de-chaussée - Hall du bâtiment A</floor>
+	</address>
+</content>
+</entry>

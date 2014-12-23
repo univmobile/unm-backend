@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4816_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4816_1.xml"/>
+<title>Civilisations et identitées culturelles comparées des sociét</title>
+<updated>2014-08-15T01:47:20.876+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4816"
+	coordinates="49.039762486507,2.0751258730888"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:53:04.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3850"
+	name="Civilisations et identitées culturelles comparées des sociét">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>René Lasserre
+directeur
+</description>
+	<address>
+		<phone>01 34 25 67 70</phone>
+		<fax>01 34 25 60 35</fax>
+		<email>rene.lasserre@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

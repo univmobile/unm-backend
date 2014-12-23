@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7172_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7172_1.xml"/>
+<title>Infirmerie</title>
+<updated>2014-08-15T01:47:44.041+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7172"
+	coordinates="48.398237489746,2.6869042217731"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-14T14:22:17.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="6960"
+	name="Infirmerie">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>Vendredi 8h30 - 16h00</openingHours>
+		<phone>01 60 74 68 33 </phone>
+		<email>fatima.martiniano@u-pec.fr</email>
+	</address>
+</content>
+</entry>

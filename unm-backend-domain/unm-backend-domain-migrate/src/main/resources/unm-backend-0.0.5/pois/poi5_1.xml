@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5_1.xml"/>
+<title>Bâtiment Vauban</title>
+<updated>2014-08-15T01:46:38.221+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5"
+	coordinates="48.780528617914,2.0443797111511|48.780122107702,2.0448356866837|48.779984246969,2.0449805259705|48.779556522799,2.044175863266|48.780129177473,2.0435589551926|48.780528617914,2.044"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-06-22T14:12:59.000+02:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	deletedAt="2010-06-23T10:56:17.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Bâtiment Vauban">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		zipCode="78280 "
+		city="Guyancourt"
+		countryCode="FR">
+		<fullAddress>Site Vauban
+47 boulevard Vauban
+  78280  Guyancourt</fullAddress>
+	</address>
+</content>
+</entry>

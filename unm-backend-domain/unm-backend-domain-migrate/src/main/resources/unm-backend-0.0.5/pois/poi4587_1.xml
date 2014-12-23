@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4587_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4587_1.xml"/>
+<title>Etudes Cinématographiques et Audiovisuelles - L1-3</title>
+<updated>2014-08-15T01:47:18.835+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4587"
+	coordinates="48.841915732951,2.5744147226214"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:36:14.000+02:00"
+	updatedAt="2011-06-08T14:19:39.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="Etudes Cinématographiques et Audiovisuelles - L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Ce parcours prépare les étudiants aux métiers de la réalisation, de la programmation ou de la production cinématographique et audiovisuelle. Il combine des apprentissages créatifs assurés par des auteurs et des praticiens, avec de solides initiations aux approches théoriques, esthétiques et historiques, du cinéma, de l'audiovisuel et des médias. Le suivi des dernières technologies numériques est conçu pour éveiller la curiosité des étudiants et les rendre opératoires dans des métiers à responsabilités (production, scénario, montage, réalisation) et dont l'évolution technique et professionnelle est rapide.
+
+La singularité de la formation en cinéma et audiovisuel offerte dans notre université consiste dans l'articulation indissoluble des enseignements théoriques et pratiques.
+
+Les candidats à la licence « Etudes cinématographiques et audiovisuelles » sont nombreux. Nombre de diplômés trouvent un emploi à l'issue d'un stage. Pour ceux qui choisissent de poursuivre en Master il est clair que la pluridisciplinarité de la formation, les contacts professionnels et scientifiques qu'elle propose sont un atout, appréciés et des industries culturelles, des universités, et des étudiants, de la région parisienne, de province, et de l'étranger. La licence ouvre l'accès au master de l'université Paris-Est Marne-la-Vallée arts et sciences de l'enregistrement.</description>
+	<address>
+		<floor>A270</floor>
+		<phone>01 49 32 90 16</phone>
+		<fax>01 49 32 91 20</fax>
+		<email>leilani.pot@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

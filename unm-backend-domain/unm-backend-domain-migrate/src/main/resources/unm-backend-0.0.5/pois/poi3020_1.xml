@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3020_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3020_1.xml"/>
+<title>Sorbonne</title>
+<updated>2014-08-15T01:47:02.169+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3020"
+	coordinates="48.848592038546,2.3433065414429"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:14:34.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3003"
+	name="Sorbonne">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro ligne 4 : Saint-Michel
+RER B : Saint-Michel Notre-Dame
+Bus 27 </itinerary>
+		<fullAddress>17, rue de la Sorbonne
+75005 Paris</fullAddress>
+	</address>
+	<child uid="3682" active="true"/>
+	<child uid="3680" active="true"/>
+	<child uid="3677" active="true"/>
+	<child uid="3681" active="true"/>
+	<child uid="3206" active="true"/>
+	<child uid="3204" active="true"/>
+	<child uid="3252" active="true"/>
+	<child uid="3353" active="true"/>
+	<child uid="3684" active="true"/>
+	<child uid="3685" active="true"/>
+	<child uid="3687" active="true"/>
+	<child uid="7072" active="true"/>
+</content>
+</entry>

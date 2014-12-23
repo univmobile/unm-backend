@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7027_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7027_1.xml"/>
+<title>Association du Master Banque Finance Assurance : Fibass</title>
+<updated>2014-08-15T01:47:42.470+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7027"
+	coordinates="48.90303942942,2.2155958414078"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-28T15:05:12.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2488"
+	name="Association du Master Banque Finance Assurance : Fibass">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Créée il y a plus de dix ans, Fibass est avant tout l’association représentative des anciens diplômés du DESS devenu Master Banque Finance Assurance de l'Université Paris Ouest. Elle compte à ce jour plus de 800 diplômés.
+L'Association s'est fixée trois objectifs : promouvoir le Master BFA en direction des futurs étudiants et des recruteurs, animer le réseau des anciens et développer un annuaire accessible et utilisable par toutes les promotions.</description>
+	<address>
+		<floor>Bâtiment G - Bureau 313A - 3ème étage</floor>
+		<url>http://www.fibass.com/</url>
+		<email>aefibass@gmail.com</email>
+	</address>
+</content>
+</entry>

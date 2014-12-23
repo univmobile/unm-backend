@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3048_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3048_1.xml"/>
+<title>Bases moléculaires de la réponse aux xenobiotiques</title>
+<updated>2014-08-15T01:47:02.449+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3048"
+	coordinates="48.855113401941,2.3315075039864"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:30:38.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2331"
+	name="Bases moléculaires de la réponse aux xenobiotiques">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 42 86 20 81</phone>
+		<fax>01 42 86 20 72</fax>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi140_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi140_1.xml"/>
+<title>Caféteria Roméro</title>
+<updated>2014-08-15T01:46:38.526+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="140"
+	coordinates="48.623709529666,2.4240064"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-30T14:09:39.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-07-19T12:01:35.000+02:00"
+	createdBy="yasmine"
+	updatedBy="plopes"
+	name="Caféteria Roméro">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address
+		countryCode="FR">
+		<floor>RDC</floor>
+	</address>
+</content>
+</entry>

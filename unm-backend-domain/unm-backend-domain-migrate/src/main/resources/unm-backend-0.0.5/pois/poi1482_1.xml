@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1482_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1482_1.xml"/>
+<title>UFR Médecine - site Villemin</title>
+<updated>2014-08-15T01:46:48.047+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1482"
+	coordinates="48.875934542551,2.36170616"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:44:58.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1784"
+	name="UFR Médecine - site Villemin">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<openingHours>Du Lundi au Vendredi : 14h-16h30</openingHours>
+		<itinerary>Métro 4,5,7 Gare de l'est
+</itinerary>
+		<phone>0157278503</phone>
+		<email>lsl@univ-paris-diderot.fr</email>
+	</address>
+	<attachment id="83" title="villemin.gif" type="image" url="/uploads/poi/5a64c3b01ac9836352aba110b86641d6c049ac89.gif"/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3496_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3496_1.xml"/>
+<title>MIME - L1</title>
+<updated>2014-08-15T01:47:07.273+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3496"
+	coordinates="48.846206028033,2.3579617962241"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:02:31.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2813"
+	name="MIME - L1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Mathématiques Informatique Mécanique et Electronique
+Ce parcours ouvre préférentiellement sur les licences mentions Mathématiques, Informatique, Mécanique, Electronique  et Physique.</description>
+	<address>
+		<floor>Bureau J+02</floor>
+		<openingHours>Lundi au Vendredi : 9h00-11h30/13h30-17h</openingHours>
+		<url>http://www.licence.premiereannee.upmc.fr/fr/02_MIME/</url>
+		<phone>01 44 27 29 87</phone>
+		<email>mime@upmc.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6932_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6932_1.xml"/>
+<title>Institut d’études augustiniennes</title>
+<updated>2014-08-15T01:47:41.404+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6932"
+	coordinates="48.853959525165,2.3353918455541"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-26T16:45:32.000+02:00"
+	updatedAt="2011-09-26T17:08:44.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3893"
+	name="Institut d’études augustiniennes">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+</content>
+</entry>

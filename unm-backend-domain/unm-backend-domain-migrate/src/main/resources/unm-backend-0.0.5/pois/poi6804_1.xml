@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6804_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6804_1.xml"/>
+<title>Cafétéria Malherbes</title>
+<updated>2014-08-15T01:47:40.381+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6804"
+	coordinates="48.883635805649,2.3097963631153"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T12:02:38.000+02:00"
+	updatedAt="2011-09-02T12:04:20.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6797"
+	name="Cafétéria Malherbes">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi de 8h00 à 18h00</openingHours>
+		<url>http://www.crous-paris.fr/</url>
+	</address>
+	<attachment id="197" title="malesherbes_2-1.jpg" type="image" url="/uploads/poi/398e663f0f9255b557c64c9a342bd57bd8144998.jpg"/>
+</content>
+</entry>

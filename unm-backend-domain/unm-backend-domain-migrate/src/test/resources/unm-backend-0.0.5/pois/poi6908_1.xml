@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6908_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6908_1.xml"/>
+<title>Scolarité UFR LLD</title>
+<updated>2014-08-15T01:47:41.217+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6908"
+	coordinates="48.840238422729,2.353957593441"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-13T12:11:19.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Martine HATTON"
+	updatedBy="Martine HATTON"
+	parentUid="3009"
+	name="Scolarité UFR LLD">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>4 ème étage, bureau 417</floor>
+	</address>
+</content>
+</entry>

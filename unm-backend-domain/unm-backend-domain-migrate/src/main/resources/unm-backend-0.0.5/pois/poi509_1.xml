@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi509_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi509_1.xml"/>
+<title>Rambouillet IUT de Vélizy </title>
+<updated>2014-08-15T01:46:40.446+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="509"
+	coordinates="48.652417822078,1.8534064292"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T16:46:54.000+02:00"
+	updatedAt="2012-02-06T07:53:44.000+01:00"
+	createdBy="haromoys"
+	updatedBy="rrivoire"
+	parentUid="508"
+	name="Rambouillet IUT de Vélizy ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>De la gare SNCF de Rambouillet, prendre la ligne B direction Clairbois, arrêt Z.I. du Pâtis</itinerary>
+		<fullAddress>19 allée des Vignes
+78120 Rambouillet</fullAddress>
+	</address>
+	<child uid="2706" active="true"/>
+	<child uid="2668" active="true"/>
+	<child uid="2471" active="true"/>
+	<child uid="2170" active="true"/>
+	<child uid="2169" active="true"/>
+	<child uid="2168" active="true"/>
+	<child uid="1825" active="true"/>
+	<child uid="1826" active="true"/>
+	<child uid="1824" active="true"/>
+	<child uid="1821" active="true"/>
+	<child uid="1822" active="true"/>
+	<child uid="7129" active="true"/>
+	<child uid="7143" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4699_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4699_1.xml"/>
+<title>Résidence de l'Hermitage</title>
+<updated>2014-08-15T01:47:19.703+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4699"
+	coordinates="48.939753937684,2.3542553186417"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T11:32:12.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	deletedAt="2011-06-01T10:22:43.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Résidence de l'Hermitage">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<floor>RDC</floor>
+		<itinerary>Métro : ligne 13 Saint-Denis Basilique
+Tramway : Place du Marché</itinerary>
+		<phone>01-48-22-15-21</phone>
+		<email>residence.saint-denis@crous-creteil.fr</email>
+		<fullAddress>Place du 8 mai 1945 - 93200 Saint-Denis</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1244_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1244_1.xml"/>
+<title>Bâtiment SUAPS</title>
+<updated>2014-08-15T01:46:45.994+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1244"
+	coordinates="48.903815721014,2.2126413881779|48.904252963735,2.2134996950626|48.903667621806,2.2142292559147|48.903565362573,2.2140683233738|48.903470155512,2.2141380608082|48.903223321548,2.2136713564396|48.903434893592,2.2133977711201|48.903716988257,2.2138161957264|48.903903875096,2.2135908901691|48.903755776149,2.2133602201939|48.903568888757,2.2135372459888|48.903371422073,2.2131885588169|48.903815721014,2.21264138817"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T15:09:55.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-29T14:51:31.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bâtiment SUAPS">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

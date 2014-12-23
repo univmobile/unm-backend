@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7000_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7000_1.xml"/>
+<title>Lock's Corner</title>
+<updated>2014-08-15T01:47:42.131+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7000"
+	coordinates="48.903915570243,2.2170388698578"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:59:57.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2461"
+	name="Lock's Corner">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Création et promotion d’oeuvres artistiques ; animer, gérer, administrer, représenter et/ou fournir une aide à des événements artistiques. </description>
+	<address>
+		<floor>Bâtiment L</floor>
+		<openingHours>Affaires Culturelles, toute la semaine (prochainement dans la Maison des Etudiants)</openingHours>
+		<url>https://www.facebook.com/pages/Locks-Corner/372693065443</url>
+		<phone>06 71 87 81 17</phone>
+		<email>audricg@me.com</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7108_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7108_1.xml"/>
+<title>Rambouillet Bergerie nationale</title>
+<updated>2014-08-15T01:47:43.347+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7108"
+	coordinates="48.646730770691,1.8012750148773"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-04T11:33:56.000+01:00"
+	updatedAt="2012-02-06T07:53:44.000+01:00"
+	deletedAt="2012-02-04T11:34:32.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	name="Rambouillet Bergerie nationale">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

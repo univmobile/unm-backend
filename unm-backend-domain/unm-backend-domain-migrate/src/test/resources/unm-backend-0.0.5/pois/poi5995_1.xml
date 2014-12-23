@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5995_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5995_1.xml"/>
+<title>SI - Sciences et Ingénierie </title>
+<updated>2014-08-15T01:47:32.509+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5995"
+	coordinates="49.03894611672,2.0738261751831"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T11:41:36.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3851"
+	name="SI - Sciences et Ingénierie ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>IED - Institut des études Doctorales
+
+l'Ecole Doctorale Sciences et Ingénierie - ED n°417 
+Directeur : Professeur Dominique Laurent
+
+Secrétaire SI: Valérie Frangeul</description>
+	<address>
+		<openingHours>Lundi: 8h30 -12H45 et 13H45 -17H15
+Mardi: 8h30 -12H45 et 13h45 - 17H30
+Mercredi: 8h30 - 12h45 et 13h45 - 17h
+Jeudi: 8h30 - 12h45 et 13h45 - 17H30
+Vendredi:8h30 - 12h45 et 13h45 - 17h30 </openingHours>
+		<phone>01 34 25 67 44</phone>
+		<email>mailto:Valerie.frangeul@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

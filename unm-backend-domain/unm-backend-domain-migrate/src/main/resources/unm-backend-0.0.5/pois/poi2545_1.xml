@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2545_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2545_1.xml"/>
+<title>Site faculté de Chirurgie Dentaire</title>
+<updated>2014-08-15T01:46:57.866+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2545"
+	coordinates="48.821678594439,2.314796671271"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:32:15.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="1163"
+	name="Site faculté de Chirurgie Dentaire">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="2546" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6288_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6288_1.xml"/>
+<title>Sociétés en développement : recompositions politiques, mobil</title>
+<updated>2014-08-15T01:47:35.714+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6288"
+	coordinates="48.832761389487,2.4674700200558"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-20T17:19:46.000+02:00"
+	updatedAt="2011-06-20T17:20:30.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="954"
+	name="Sociétés en développement : recompositions politiques, mobil">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://recherche-iedes.univ-paris1.fr</url>
+		<phone>01 43 94 72 15</phone>
+		<email> scolarite-iedes@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

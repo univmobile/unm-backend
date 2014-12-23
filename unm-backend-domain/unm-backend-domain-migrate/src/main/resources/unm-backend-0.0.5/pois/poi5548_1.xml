@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5548_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5548_1.xml"/>
+<title>UFR Droit</title>
+<updated>2014-08-15T01:47:27.346+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5548"
+	coordinates="48.824380469625,2.3026087135077"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:19:43.000+02:00"
+	updatedAt="2011-06-14T17:10:50.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2447"
+	name="UFR Droit">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<phone>01.41.17.30.00</phone>
+		<fax>01.46.56.05.29</fax>
+	</address>
+</content>
+</entry>

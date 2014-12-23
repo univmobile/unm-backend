@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3265_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3265_1.xml"/>
+<title>Service de l'Action internationale</title>
+<updated>2014-08-15T01:47:04.759+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3265"
+	coordinates="48.846920438399,2.343836948275"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:34:46.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="Service de l'Action internationale">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Consultez la page internet pour plus d'informations.</description>
+	<address>
+		<floor>Ailes Soufflot, salle 5, escalier M, 2e étage</floor>
+		<url>http://www.u-paris2.fr/14503749/0/fiche___defaultstructureksup/&amp;RH=PROG_ECHANGE</url>
+		<phone>01 44 41 56 86</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3432_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3432_1.xml"/>
+<title> Bibliothèque de l'Institut de droit comparé IDC</title>
+<updated>2014-08-15T01:47:06.527+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3432"
+	coordinates="48.854351163998,2.328330092132"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:14:43.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2863"
+	name=" Bibliothèque de l'Institut de droit comparé IDC">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Public concerné : étudiants et enseignants de toutes universités (carte gratuite) ; professionnels (cotisation annuelle ou forfait journalier).</description>
+	<address>
+		<openingHours>Du lundi au vendredi :
+10h00 / 18h00</openingHours>
+	</address>
+</content>
+</entry>

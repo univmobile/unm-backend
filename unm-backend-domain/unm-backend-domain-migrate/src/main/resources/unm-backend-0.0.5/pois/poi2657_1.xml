@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2657_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2657_1.xml"/>
+<title>Consultations étudiantes </title>
+<updated>2014-08-15T01:46:58.809+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2657"
+	coordinates="48.810836488392,2.14954309165"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T15:16:17.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="364"
+	name="Consultations étudiantes ">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Accueil des étudiants inscrits à l'UFR des Sciences, à l'IUT de Mantes-en-Yvelines et à l'ISTY</description>
+	<address>
+		<floor>Bâtiment Buffon - RDC</floor>
+		<openingHours>Consultations sur rendez-vous
+Infirmerie ouverte de 9h à 17h15</openingHours>
+		<phone>0139254096</phone>
+	</address>
+</content>
+</entry>

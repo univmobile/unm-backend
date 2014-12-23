@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi503_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi503_1.xml"/>
+<title>UFR des Sciences</title>
+<updated>2014-08-15T01:46:40.365+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="503"
+	coordinates="48.810488190214,2.14841"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T16:08:06.000+02:00"
+	updatedAt="2012-02-05T19:35:45.000+01:00"
+	createdBy="haromoys"
+	updatedBy="rrivoire"
+	parentUid="367"
+	name="UFR des Sciences">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>2e étage</floor>
+		<openingHours>Du Lundi au Vendredi :
+9h00 à 11h45
+et de 13h00 à 16h30 </openingHours>
+		<url>http://www.sciences.uvsq.fr</url>
+		<phone>01 39 25 30 24</phone>
+	</address>
+</content>
+</entry>

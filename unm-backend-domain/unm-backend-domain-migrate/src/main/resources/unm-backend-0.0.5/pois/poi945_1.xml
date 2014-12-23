@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi945_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi945_1.xml"/>
+<title>CNRS Meudon Bellevue</title>
+<updated>2014-08-15T01:46:43.646+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="945"
+	coordinates="48.820424821905,2.2289183735"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-02T14:10:33.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="CNRS Meudon Bellevue">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER C
+Station Meudon-Val Fleury
+Métro 9
+Station Pont de Sèvres
+Bus 169</itinerary>
+		<fullAddress>1 place Aristide Briand
+92190 Meudon</fullAddress>
+	</address>
+	<child uid="1033" active="true"/>
+</content>
+</entry>

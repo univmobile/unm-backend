@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7062_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7062_1.xml"/>
+<title>Département : Etudes Ibériques et Latino-Américaines (EILA)</title>
+<updated>2014-08-15T01:47:42.873+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7062"
+	coordinates="48.840214502563,2.3538261651993"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-17T13:40:59.000+01:00"
+	updatedAt="2012-01-17T13:44:46.000+01:00"
+	createdBy="Jean-François Maynier"
+	updatedBy="Jean-François Maynier"
+	name="Département : Etudes Ibériques et Latino-Américaines (EILA)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 353</floor>
+		<openingHours>ouverture de 10h à 12h et de 14h à 16h, du lundi au vendredi</openingHours>
+		<url>http://www.univ-paris3.fr/dept-eila</url>
+		<phone>01 45 87 42 80</phone>
+		<fax>01 45 87 48 50</fax>
+		<email>dept-eila@univ-paris3.fr</email>
+	</address>
+	<child uid="7063" active="true"/>
+</content>
+</entry>

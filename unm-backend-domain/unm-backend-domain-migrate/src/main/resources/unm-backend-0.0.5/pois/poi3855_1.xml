@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3855_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3855_1.xml"/>
+<title>BU centre d’études slaves</title>
+<updated>2014-08-15T01:47:11.018+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3855"
+	coordinates="48.842454393596,2.3353080265224"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:08:07.000+02:00"
+	updatedAt="2011-09-26T16:46:05.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3752"
+	name="BU centre d’études slaves">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Étudiants, chercheurs, enseignants, public non universitaire intéressé par le domaine.
+Disciplines : russe, ukrainien, biélorusse, tchèque, slovaque, polonais, serbe, croate, slovène, macédonien, bulgare, sorabe, polabe, également à la marge, domaines albanais, balte, hongrois, roumain, codicologie, manuscrits slaves : dépôt du fonds slave de l’Institut de recherche et d’histoire des textes (IRHT).</description>
+	<address>
+		<openingHours>Du lundi au vendredi : 
+11h00 / 17h00</openingHours>
+		<email>Bibliotheque.etudes-slaves@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

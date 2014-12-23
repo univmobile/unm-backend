@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7318_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7318_1.xml"/>
+<title>Galerie de Paléontologie et Anatomie Comparée</title>
+<updated>2014-08-15T01:47:45.458+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7318"
+	coordinates="48.843183692706,2.3628866672516"
+	active="true"
+	markerType="point"
+	createdAt="2013-03-18T16:22:40.000+01:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Galerie de Paléontologie et Anatomie Comparée">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>Jardin des Plantes 2, rue Buffon, 75005 Paris</floor>
+		<openingHours>Ouvert tous les jours de 10h à 17h
+Fermée le mardi et le 1er mai</openingHours>
+		<itinerary>Ouvert tous les jours de 10h à 17h
+Fermée le mardi et le 1er mai
+
+Bus :
+Lignes 24, 57, 61,63, 89 et 91
+
+Metro, RER :
+M5 : Austerlitz - M7 : Censier Daubenton - M 10 : Jussieu ou Austerlitz - RER C
+
+Gare SNCF :
+Gare d'Austerlitz - Gare de Lyon</itinerary>
+		<url>http://www.mnhn.fr/museum/foffice/tous/tous/guidePratique/infPratiques/infopratique/fiche_info.xsp?LIEU_ID=161&amp;SITE_ID=10&amp;idx=3&amp;nav=liste</url>
+		<email>valhuber@mnhn.fr </email>
+	</address>
+</content>
+</entry>

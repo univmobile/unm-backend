@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4430_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4430_1.xml"/>
+<title>Site de la Pyramide</title>
+<updated>2014-08-15T01:47:17.188+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4430"
+	coordinates="48.796093714471,2.4483177065849"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:26:36.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="3841"
+	name="Site de la Pyramide">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>80 avenue du Général de Gaulle 94000 Créteil
+</description>
+	<child uid="4902" active="true"/>
+	<child uid="7188" active="true"/>
+	<child uid="7189" active="true"/>
+</content>
+</entry>

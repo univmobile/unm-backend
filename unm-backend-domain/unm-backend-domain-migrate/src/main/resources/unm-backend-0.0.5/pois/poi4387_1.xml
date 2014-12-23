@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4387_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4387_1.xml"/>
+<title>I3</title>
+<updated>2014-08-15T01:47:16.777+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4387"
+	coordinates="48.837676061429,2.3608988150954"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T17:23:59.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3686"
+	name="I3">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Immunologie, immunopathologie, immunothérapie</description>
+	<address>
+		<url>http://www.i3-immuno.fr/</url>
+		<phone>01 44 17 74 61</phone>
+		<email>sophie.miller@psl.ap-hop-paris.fr</email>
+	</address>
+</content>
+</entry>

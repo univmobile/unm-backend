@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2905_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2905_1.xml"/>
+<title>Centre Fossés Saint-Jacques</title>
+<updated>2014-08-15T01:47:01.008+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2905"
+	coordinates="48.844884307407,2.34472744166"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T16:41:58.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2833"
+	name="Centre Fossés Saint-Jacques">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="2906" active="true"/>
+</content>
+</entry>

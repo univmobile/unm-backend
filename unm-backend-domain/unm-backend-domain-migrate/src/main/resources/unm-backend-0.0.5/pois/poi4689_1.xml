@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4689_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4689_1.xml"/>
+<title>Caféteria Vauban</title>
+<updated>2014-08-15T01:47:19.616+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4689"
+	coordinates="48.77980108014,2.0442120730877"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T10:38:21.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	createdBy="yasmine"
+	updatedBy="d.rasse"
+	parentUid="4686"
+	name="Caféteria Vauban">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>1, boulevard d'Alembert - 78280 GUYANCOURT</description>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>De 8h30 à 15h30</openingHours>
+	</address>
+	<attachment id="150" title="Vauban.jpg" type="image" url="/uploads/poi/55915ee20685911d23a943f3628bcd2dbcbb98c9.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi858_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi858_1.xml"/>
+<title>Amphithéâtre</title>
+<updated>2014-08-15T01:46:42.551+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="858"
+	coordinates="48.841903067174,2.280530"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T15:22:07.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1025"
+	name="Amphithéâtre">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Capacité 100 places.</description>
+	<address>
+		<floor>Rez-de-chaussée</floor>
+		<itinerary>RER C
+Station Javel
+Métro 8 et 10
+Station Boucicaut ou Lourmel, Charles Michels ou Javel André Citroën)
+
+Bus 42, 62 et  88
+</itinerary>
+	</address>
+</content>
+</entry>

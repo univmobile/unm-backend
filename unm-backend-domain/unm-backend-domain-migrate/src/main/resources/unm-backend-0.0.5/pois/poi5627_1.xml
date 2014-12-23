@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5627_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5627_1.xml"/>
+<title>Techniques de commercialisation (TC 2)</title>
+<updated>2014-08-15T01:47:28.177+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5627"
+	coordinates="48.776124964903,2.2877760976553"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:46:21.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5601"
+	name="Techniques de commercialisation (TC 2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 427</floor>
+		<url>http://www.iut-sceaux.u-psud.fr/fr/les_departements/techniques_de_commercialisation/t_c_2.html</url>
+		<phone>01 40 91 24 80</phone>
+		<fax>01 46 61 09 84</fax>
+		<email>tc2@iut-sceaux.fr </email>
+	</address>
+</content>
+</entry>

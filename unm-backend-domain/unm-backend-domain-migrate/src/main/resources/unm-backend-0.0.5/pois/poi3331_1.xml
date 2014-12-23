@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3331_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3331_1.xml"/>
+<title>LADIR - UMR 7075</title>
+<updated>2014-08-15T01:47:05.515+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3331"
+	coordinates="48.845752347366,2.358291372656"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:09:42.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2824"
+	name="LADIR - UMR 7075">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le LADIR, Laboratoire de Dynamique, Interactions et Réactivité est une unité mixte de recherche placée sous la double tutelle de l’Université Pierre et Marie Curie et du CNRS (UMR 7075).</description>
+	<address>
+		<floor>3è étage</floor>
+		<url>http://www.ladir.cnrs.fr</url>
+	</address>
+</content>
+</entry>

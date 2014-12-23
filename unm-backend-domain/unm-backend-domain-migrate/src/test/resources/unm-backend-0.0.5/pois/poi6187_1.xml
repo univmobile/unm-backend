@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6187_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6187_1.xml"/>
+<title>Correspondants Relations internationales LSH</title>
+<updated>2014-08-15T01:47:34.694+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6187"
+	coordinates="48.78786897778,2.4446122348309"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T17:16:58.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4334"
+	name="Correspondants Relations internationales LSH">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Bureau 110B, 1er étage</floor>
+		<phone>01 45 17 66 86 </phone>
+		<email>assita.sidibe@u-pec.fr </email>
+	</address>
+</content>
+</entry>

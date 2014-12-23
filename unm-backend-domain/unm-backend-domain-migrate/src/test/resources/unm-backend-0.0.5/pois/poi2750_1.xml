@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2750_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2750_1.xml"/>
+<title>Service des Affaires Européennes et des. Relat. Internationa</title>
+<updated>2014-08-15T01:46:59.747+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2750"
+	coordinates="48.85147786133,2.3409084"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T17:26:56.000+02:00"
+	updatedAt="2011-06-15T13:48:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2479"
+	name="Service des Affaires Européennes et des. Relat. Internationa">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Service des Affaires Européennes et des. Relations Internationales </description>
+	<address>
+		<floor>RDC, Aile B couloir Saint-Germain</floor>
+		<openingHours>Lundi,mardi et mercredi
+9h30 - 12h30
+Jeudis et vendredi
+13h30 - 16h30</openingHours>
+		<phone>01 40 46 16 18</phone>
+		<email>sri@parisdescartes.fr</email>
+	</address>
+</content>
+</entry>

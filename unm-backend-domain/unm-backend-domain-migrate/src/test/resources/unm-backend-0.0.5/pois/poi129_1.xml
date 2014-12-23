@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi129_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi129_1.xml"/>
+<title>Premiers Cycles</title>
+<updated>2014-08-15T01:46:38.502+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="129"
+	coordinates="48.623801811318,2.4237335623184|48.623780536026,2.4237067402282|48.623720255981,2.42367455372|48.6235748744,2.4236852825561|48.623259288552,2.4238193930069|48.62300752764,2.424017876474|48.623291201818,2.4244953096786|48.623433038308,2.4245006740966|48.623450767841,2.425101488916|48.623826632482,2.4250961244979|48.623801811318,2.423733562318"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-06-29T15:20:08.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-06-29T15:22:55.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Premiers Cycles">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

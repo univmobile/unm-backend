@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7028_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7028_1.xml"/>
+<title>Universite Test pour Android</title>
+<updated>2014-08-15T01:47:42.481+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7028"
+	coordinates=""
+	markerType="point"
+	createdAt="2011-11-30T16:56:24.000+01:00"
+	updatedAt="2011-11-30T16:56:24.000+01:00"
+	createdBy="super admin"
+	updatedBy="super admin"
+	name="Universite Test pour Android">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="noPoi"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

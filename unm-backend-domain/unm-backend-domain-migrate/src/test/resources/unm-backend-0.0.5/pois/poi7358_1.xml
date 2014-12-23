@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7358_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7358_1.xml"/>
+<title>Scolarité</title>
+<updated>2014-08-15T01:47:45.579+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7358"
+	coordinates="48.848629545432,2.3430483788252"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-18T13:41:03.000+02:00"
+	updatedAt="2013-07-12T17:05:33.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7349"
+	name="Scolarité">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>- Direction
+- Éditions
+- Patrimoine et logistique
+- Ressources humaines
+- Relations internationales et stages
+- Recherche</description>
+	<address>
+		<floor>19, rue de la Sorbonne 75005 PARIS</floor>
+		<openingHours>Du lundi au vendredi, de 9h30 à 17h.
+01-55-42-75-02</openingHours>
+		<url>http://www.enc.sorbonne.fr</url>
+		<phone>01 55 42 75 18   </phone>
+		<email>etudes@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

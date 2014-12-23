@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6059_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6059_1.xml"/>
+<title>Informatique - DUT</title>
+<updated>2014-08-15T01:47:33.237+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6059"
+	coordinates="48.837018233919,2.58405726403"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T14:54:38.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5668"
+	name="Informatique - DUT">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 163</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-diplomes-universitaires-de-technologie-dut/dut-informatique/</url>
+		<phone>01 60 95 85 11</phone>
+		<fax>01 60 95 85 55</fax>
+		<email>veronique.billy@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

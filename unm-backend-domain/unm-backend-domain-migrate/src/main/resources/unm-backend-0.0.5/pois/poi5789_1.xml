@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5789_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5789_1.xml"/>
+<title>Laboratoire de physique des solides (LPS)</title>
+<updated>2014-08-15T01:47:30.093+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5789"
+	coordinates="48.70673491117,2.179352492094"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:57:43.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5788"
+	name="Laboratoire de physique des solides (LPS)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Unité mixte de recherche (UMR) 8502</description>
+	<address>
+		<floor>Bâtiment 510, bureau 366</floor>
+		<url>http://www.lps.u-psud.fr/</url>
+		<phone>01 69 15 80 28</phone>
+		<fax>01 69 15 69 36</fax>
+		<email>lps@lps.u-psud.fr</email>
+	</address>
+</content>
+</entry>

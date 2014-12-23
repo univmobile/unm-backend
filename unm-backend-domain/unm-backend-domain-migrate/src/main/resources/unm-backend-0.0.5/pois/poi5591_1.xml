@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5591_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5591_1.xml"/>
+<title>Scolarité (STAPS)</title>
+<updated>2014-08-15T01:47:27.760+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5591"
+	coordinates="48.70202099445,2.1631251275539"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:12:53.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4411"
+	name="Scolarité (STAPS)">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Inscriptions administratives et pédagogiques</description>
+	<address>
+		<floor>Bâtiment 335</floor>
+		<url>http://www.staps.u-psud.fr/</url>
+		<phone>01 69 15 65 41</phone>
+		<email>franciane.gournet@u-psud.fr</email>
+	</address>
+</content>
+</entry>

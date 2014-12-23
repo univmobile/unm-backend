@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6969_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6969_1.xml"/>
+<title>Radio A-Z</title>
+<updated>2014-08-15T01:47:41.689+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6969"
+	coordinates="48.902860796642,2.2135546803474"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T10:57:10.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Radio A-Z">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Composée d'étudiants et d'enseignants-chercheurs, l'association Radio A-Z (loi 1901) s'est constituée au cours de l'année 2010 afin de doter l'université de Nanterre d'une radio, dont les trois objectifs seraient de :
+- Favoriser la communication au sein de l'université et entre les différents UFR et bâtiments, d'où son nom ;
+- Encourager la création radiophonique par la mise à disposition de moyens matériels et intellectuels (moyens d'enregistrement et de diffusion)
+- Développer l'intégration et les liens entre la ville de Nanterre et son université. </description>
+	<address>
+		<floor>Bâtiment R - Salle R 105 - 1er étage</floor>
+		<url>http://audioblog.arteradio.com//radioaz/frontUser.do?method=getHomePage</url>
+		<phone>06 30 81 53 37</phone>
+		<email>radioazede@gmail.com</email>
+	</address>
+</content>
+</entry>

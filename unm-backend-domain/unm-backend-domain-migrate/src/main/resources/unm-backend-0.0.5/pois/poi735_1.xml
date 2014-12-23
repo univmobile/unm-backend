@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi735_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi735_1.xml"/>
+<title>Association Droit du commerce électronique et de l'économie </title>
+<updated>2014-08-15T01:46:41.500+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="735"
+	coordinates="48.846918761569,2.3444893956"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T16:48:41.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	parentUid="1027"
+	name="Association Droit du commerce électronique et de l'économie ">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone>06 79 28 72 20</phone>
+		<email>m2dcen@googlegroups.com</email>
+		<fullAddress>12 place du Panthéon
+75005 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3039_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3039_1.xml"/>
+<title>I-STEM</title>
+<updated>2014-08-15T01:47:02.342+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3039"
+	coordinates="48.618455107329,2.4503950774"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:23:47.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3024"
+	name="I-STEM">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut des Cellules Souches pour le Traitement et l'Étude des Maladies Mono géniques</description>
+	<address>
+		<phone>01 69 90 85 17</phone>
+		<email>lgrannec@istem.genethon.fr</email>
+	</address>
+</content>
+</entry>

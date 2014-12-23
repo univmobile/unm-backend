@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6395_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6395_1.xml"/>
+<title>Métrologie, qualité Licence pro</title>
+<updated>2014-08-15T01:47:36.800+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6395"
+	coordinates="48.788866653143,2.4449354410172"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T16:38:02.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4528"
+	name="Métrologie, qualité Licence pro">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Département mesures physiques</description>
+	<address>
+		<floor>L2</floor>
+		<url>http://iut.u-pec.fr/formations/licences-professionnelles/</url>
+		<phone>01 45 17 17 49</phone>
+		<email>mp-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

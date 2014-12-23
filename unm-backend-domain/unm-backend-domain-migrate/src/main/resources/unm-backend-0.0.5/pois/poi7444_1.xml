@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7444_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7444_1.xml"/>
+<title>Salle SEP</title>
+<updated>2014-08-15T01:47:46.409+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7444"
+	coordinates="48.841732659824,2.3584234714508"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-30T16:58:01.000+02:00"
+	updatedAt="2013-05-03T12:34:53.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7407"
+	name="Salle SEP">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>Salle de cours</description>
+</content>
+</entry>

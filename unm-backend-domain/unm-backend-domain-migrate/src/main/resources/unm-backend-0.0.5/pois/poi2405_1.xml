@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2405_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2405_1.xml"/>
+<title>Polygone 1</title>
+<updated>2014-08-15T01:46:56.584+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2405"
+	coordinates="48.796828481033,2.3584818094969|48.79682318047,2.3584965616465|48.796864701538,2.3586655408144|48.796883253494,2.3586601763964|48.796886787199,2.3586789518595|48.796870002097,2.3586843162775|48.796881486641,2.3587299138308|48.796898271738,2.3587178438902|48.796902688868,2.3587312549353|48.796872652377,2.3587486892939|48.796914173404,2.3589069396257|48.797006049598,2.3588532954454|48.796968062346,2.3587004095316|48.797001632477,2.358677610755|48.796939792745,2.3584174364805|48.796828481033,2.3584"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-27T17:15:51.000+02:00"
+	updatedAt="2011-06-03T15:21:09.000+02:00"
+	deletedAt="2011-06-03T15:21:09.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	name="Polygone 1">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro :
+- ligne 7 : station Paul Vaillant Couturier
+Bus:
+- ligne 185 : arrêt Paul Vaillant Couturier
+- ligne 162 : arrêt Hôpital Paul Brousse</itinerary>
+		<fullAddress>7 rue Guy Môquet
+94801 Villejuif Cedex </fullAddress>
+	</address>
+</content>
+</entry>

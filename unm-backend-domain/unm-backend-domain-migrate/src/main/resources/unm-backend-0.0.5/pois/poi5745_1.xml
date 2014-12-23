@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5745_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5745_1.xml"/>
+<title>OMSA - LP</title>
+<updated>2014-08-15T01:47:29.575+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5745"
+	coordinates="48.84167721553,2.5741652771831"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:19:44.000+02:00"
+	updatedAt="2011-06-08T15:20:21.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="OMSA - LP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence Professionnelle Organisation et management des services automobiles</description>
+	<address>
+		<floor>Bureau 105</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-licences-professionnelles/domaine-sciences-technologies-sante/mention-maintenance-des-systemes-pluritechniques/licence-professionnelle-organisation-et-management-des-services-automobiles/</url>
+		<phone>01 49 32 90 70</phone>
+		<fax>01 49 32 91 37</fax>
+		<email>Claudine.Badoureaux@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

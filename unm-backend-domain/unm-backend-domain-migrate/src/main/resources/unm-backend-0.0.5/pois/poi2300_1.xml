@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2300_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2300_1.xml"/>
+<title>Masters de l'UFR Langues (LLCE-LEA)</title>
+<updated>2014-08-15T01:46:55.671+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2300"
+	coordinates="48.946129538897,2.3623569309"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:06:16.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2604"
+	name="Masters de l'UFR Langues (LLCE-LEA)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2ème étage Bâtiment B1, bureau 212</floor>
+		<openingHours>Lundi, mercredi et vendredi
+10h00-12h30
+Mardi et jeudi
+14h15-16h30</openingHours>
+		<url>http://www.univ-paris8.fr/masterslangues/</url>
+		<phone>01 49 40 70 92</phone>
+		<fax>01 49 40 71 26</fax>
+		<email>master.ufr5@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

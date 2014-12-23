@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3184_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3184_1.xml"/>
+<title>UFR de Littérature, Langages et Philosophie</title>
+<updated>2014-08-15T01:47:03.754+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3184"
+	coordinates="48.903866468412,2.2169979661"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T13:51:13.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2461"
+	name="UFR de Littérature, Langages et Philosophie">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Bureau 103</floor>
+		<url>http://www.u-paris10.fr/54722364/0/fiche___pagelibre/&amp;RH=univ-orgun</url>
+		<phone>01 40 97 56 13</phone>
+		<email>ufr-llphi@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

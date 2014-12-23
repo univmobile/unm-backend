@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1807_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1807_1.xml"/>
+<title>Infirmerie et Service universitaire de médecine préventive</title>
+<updated>2014-08-15T01:46:51.093+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1807"
+	coordinates="48.901902768536,2.21293"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T16:33:58.000+02:00"
+	updatedAt="2011-11-15T16:24:37.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2499"
+	name="Infirmerie et Service universitaire de médecine préventive">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Médecine générale, aide à la contraception, sevrage tabagique, psychologie clinique.</description>
+	<address>
+		<floor>Salle 05, Rdc</floor>
+		<openingHours>Du lundi au vendredi :
+8h30 / 17h30</openingHours>
+		<phone>01 40 97 75 33</phone>
+		<email>medecine-preventive@u-paris10.fr</email>
+	</address>
+	<attachment id="111" title="Bâtiment E.JPG" type="image" url="/uploads/poi/03c1cfa1c244477922b515e37733a19fc4e71a7e.jpg"/>
+</content>
+</entry>

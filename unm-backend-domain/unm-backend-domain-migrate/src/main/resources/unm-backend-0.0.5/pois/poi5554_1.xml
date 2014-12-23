@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5554_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5554_1.xml"/>
+<title>Cap Solidarité</title>
+<updated>2014-08-15T01:47:27.408+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5554"
+	coordinates="48.78789825386,2.4443399906158"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:23:46.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	deletedAt="2011-06-08T10:27:57.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Cap Solidarité">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Téléphone portable: 06.25.37.80.54
+
+</description>
+	<address>
+		<floor>i3, 1er étage, bureau 10</floor>
+		<phone>01 45 17 19 86</phone>
+		<fax>test</fax>
+		<email>sow-fatime@yahoo.fr</email>
+	</address>
+</content>
+</entry>

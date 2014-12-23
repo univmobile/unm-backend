@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1898_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1898_1.xml"/>
+<title>Cafétéria du Pont de Pierre</title>
+<updated>2014-08-15T01:46:52.179+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1898"
+	coordinates="48.913131131242,2.41992451250"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T21:11:49.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="348"
+	name="Cafétéria du Pont de Pierre">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Cafétéria du Pont de Pierre.</description>
+	<address>
+		<floor>1er étage.</floor>
+		<openingHours>8h - 20h</openingHours>
+	</address>
+</content>
+</entry>

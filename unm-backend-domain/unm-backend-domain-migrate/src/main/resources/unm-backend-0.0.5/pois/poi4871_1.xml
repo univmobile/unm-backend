@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4871_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4871_1.xml"/>
+<title>Bibliothèque d'étude P. Tabatoni</title>
+<updated>2014-08-15T01:47:21.344+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4871"
+	coordinates="48.870469518559,2.2738453745842"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T13:37:01.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Bibliothèque d'étude P. Tabatoni">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+</content>
+</entry>

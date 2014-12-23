@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7488_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7488_1.xml"/>
+<title>Bibliothèque d'études doctorales juridiques de la Sorbonne (</title>
+<updated>2014-08-15T01:47:46.865+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7488"
+	coordinates="48.855992507646,2.3610850609839"
+	active="true"
+	markerType="point"
+	createdAt="2013-09-24T10:58:03.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2013-09-24T11:03:00.000+02:00"
+	createdBy="Pascale.randriantiana "
+	updatedBy="Pascale.randriantiana "
+	name="Bibliothèque d'études doctorales juridiques de la Sorbonne (">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+</content>
+</entry>

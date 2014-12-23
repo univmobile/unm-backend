@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4336_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4336_1.xml"/>
+<title>PUPS</title>
+<updated>2014-08-15T01:47:16.271+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4336"
+	coordinates="48.852551169267,2.341575846076"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:22:54.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3695"
+	name="PUPS">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<description>Les Presses de l’université Paris-Sorbonne ont pour mission de publier les travaux personnels et collectifs de la communauté scientifique et d’établir une politique générale de l’édition cohérente avec la politique de la recherche de l’université.</description>
+	<address>
+		<phone>01 53 10 57 60</phone>
+		<email>pups@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

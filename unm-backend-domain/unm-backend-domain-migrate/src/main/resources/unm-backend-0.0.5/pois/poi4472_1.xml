@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4472_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4472_1.xml"/>
+<title>UMR 7102</title>
+<updated>2014-08-15T01:47:17.672+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4472"
+	coordinates="48.848004905027,2.3584668897092"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:56:36.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2806"
+	name="UMR 7102">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Neurobiologie des Processus Adaptatifs</description>
+	<address>
+		<floor>4è étage bureau 412</floor>
+		<url>http://npa.snv.jussieu.fr/</url>
+		<phone>01 44 27 27 81</phone>
+		<email>francoise.tchang@upmc.fr</email>
+	</address>
+</content>
+</entry>

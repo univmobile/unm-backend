@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5520_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5520_1.xml"/>
+<title>SUMPPS </title>
+<updated>2014-08-15T01:47:27.046+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5520"
+	coordinates="48.787779853395,2.4453753232956"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T16:18:24.000+02:00"
+	updatedAt="2011-11-09T15:59:39.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="5510"
+	name="SUMPPS ">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Service universitaire de médecine préventive et de promotion de la santé (SUMPPS)</description>
+	<address>
+		<floor>Escalier principal niveau parking </floor>
+		<phone>01.45.17.12.04</phone>
+	</address>
+</content>
+</entry>

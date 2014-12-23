@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5524_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5524_1.xml"/>
+<title>Campus du Kremlin-Bicêtre - Centre IRM de recherche (CIERM)</title>
+<updated>2014-08-15T01:47:27.073+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5524"
+	coordinates="48.810347439498,2.3533547669649"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T16:35:51.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4534"
+	name="Campus du Kremlin-Bicêtre - Centre IRM de recherche (CIERM)">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="5527" active="true"/>
+	<child uid="5525" active="true"/>
+</content>
+</entry>

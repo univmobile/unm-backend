@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5943_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5943_1.xml"/>
+<title>SCREP</title>
+<updated>2014-08-15T01:47:31.922+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5943"
+	coordinates="49.038745676181,2.0750661939383"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:37:16.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3849"
+	name="SCREP">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Service relations entreprises, professionnalisation - formation continue</description>
+	<address>
+		<phone>01 34 25 63 06</phone>
+		<email>formation.continue@ml.u-cergy.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2736_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2736_1.xml"/>
+<title>Amphi GMP</title>
+<updated>2014-08-15T01:46:59.658+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2736"
+	coordinates="48.622377115201,2.42662936"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T17:15:44.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="269"
+	name="Amphi GMP">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>2ème étage, Bâtiment GMP, aile sud</floor>
+	</address>
+</content>
+</entry>

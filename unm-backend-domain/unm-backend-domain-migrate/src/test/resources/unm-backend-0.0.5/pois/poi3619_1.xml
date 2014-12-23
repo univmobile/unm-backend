@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3619_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3619_1.xml"/>
+<title>Oxygène</title>
+<updated>2014-08-15T01:47:08.661+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3619"
+	coordinates="48.946149885262,2.3610486835241"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:00:42.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Oxygène">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association socio-éducative et socio-culturelle ayant pour but de défendre les intérêts moraux et matériels des étudiants de Paris 8. Orienter, aider et soutenir les étudiants rencontrant des difficultés. Animer la vie du campus en organisant de multiples activités culturelles, campagne de sensibilisation et actions (collectes, expos...), de solidarité…</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment C, bureau 012</floor>
+		<phone>01 48 27 17 36</phone>
+		<email>oxygenep893@yahoo.fr</email>
+	</address>
+</content>
+</entry>

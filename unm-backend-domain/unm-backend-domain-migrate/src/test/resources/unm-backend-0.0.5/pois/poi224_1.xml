@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi224_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi224_1.xml"/>
+<title>test evry</title>
+<updated>2014-08-15T01:46:38.669+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="224"
+	coordinates="48.826658496369,2.3723173141479|48.82851612178,2.375734448432"
+	active="true"
+	markerType="overlay"
+	createdAt="2010-07-05T16:03:28.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-07-05T16:22:48.000+02:00"
+	createdBy="raphael"
+	updatedBy="raphael"
+	name="test evry">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

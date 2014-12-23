@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2363_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2363_1.xml"/>
+<title>Faculté de chirurgie dentaire </title>
+<updated>2014-08-15T01:46:56.320+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2363"
+	coordinates="48.821186295923,2.3144238442183|48.821304617545,2.3143943399191|48.821083868025,2.314203903079|48.820997333948,2.3146303743124|48.82104678201,2.3146625608206|48.82106267602,2.3145874589682|48.82110682602,2.3146169632673|48.821136847999,2.3146276921034|48.821136847999,2.3146464675665|48.82188771537,2.3150293529034|48.821954822251,2.3148201406002|48.821186295923,2.3144238442"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-27T16:45:00.000+02:00"
+	updatedAt="2011-06-14T17:10:50.000+02:00"
+	deletedAt="2011-04-29T16:30:34.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	name="Faculté de chirurgie dentaire ">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

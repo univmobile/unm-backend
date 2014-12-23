@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5296_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5296_1.xml"/>
+<title>Bibliothèque du centre de Vitry </title>
+<updated>2014-08-15T01:47:24.944+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5296"
+	coordinates="48.775636137271,2.3706758022308"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T09:57:55.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4950"
+	name="Bibliothèque du centre de Vitry ">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi, Mardi, Jeudi, Vendredi de 10h à 13h et de 14h à 17h
+</openingHours>
+		<url>http://bibliotheque.u-pec.fr/bibliotheques/centre-de-vitry/</url>
+		<phone>01 41 80 73 51</phone>
+	</address>
+</content>
+</entry>

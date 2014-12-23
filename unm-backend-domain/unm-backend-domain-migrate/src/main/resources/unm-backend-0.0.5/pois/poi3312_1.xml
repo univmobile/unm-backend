@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3312_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3312_1.xml"/>
+<title>APS Amicale Paris Science</title>
+<updated>2014-08-15T01:47:05.290+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3312"
+	coordinates="48.851586735269,2.340525090694"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:01:21.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	deletedAt="2011-05-10T15:04:54.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	name="APS Amicale Paris Science">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone>0142864102</phone>
+		<email>http://www.ap s-paris5.fr</email>
+	</address>
+</content>
+</entry>

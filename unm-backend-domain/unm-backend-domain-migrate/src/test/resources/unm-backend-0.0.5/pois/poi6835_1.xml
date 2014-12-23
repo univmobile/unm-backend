@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6835_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6835_1.xml"/>
+<title>Cafétéria du PUIO</title>
+<updated>2014-08-15T01:47:40.641+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6835"
+	coordinates="48.71046763869,2.1730251610279"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T15:20:00.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6638"
+	name="Cafétéria du PUIO">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>de 7h30 à 15h30</openingHours>
+	</address>
+</content>
+</entry>

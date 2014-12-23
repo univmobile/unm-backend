@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4830_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4830_1.xml"/>
+<title>Sc. politiques et sociales, affaire publiques M2</title>
+<updated>2014-08-15T01:47:21.005+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4830"
+	coordinates="48.869726230555,2.2729454934597"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:57:29.000+02:00"
+	updatedAt="2011-05-27T15:51:42.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Sc. politiques et sociales, affaire publiques M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Études et recherches politiques et sociales
+Courriel Affaire publique : pca@ dauphine.fr
+</description>
+	<address>
+		<floor>Bureau P 410</floor>
+		<phone>01 44 05 43 17</phone>
+		<email>sciencepo@ dauphine.fr</email>
+	</address>
+</content>
+</entry>

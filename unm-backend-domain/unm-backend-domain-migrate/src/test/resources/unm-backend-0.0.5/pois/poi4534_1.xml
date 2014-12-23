@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4534_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4534_1.xml"/>
+<title>Faculté de médecine</title>
+<updated>2014-08-15T01:47:18.296+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4534"
+	coordinates="48.811739650116,2.3533084988594"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:00:25.000+02:00"
+	updatedAt="2013-11-29T12:19:41.000+01:00"
+	createdBy="j.richer"
+	updatedBy="MJRAMAGE"
+	parentUid="4398"
+	name="Faculté de médecine">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4848" active="true"/>
+	<child uid="5205" active="true"/>
+	<child uid="5524" active="true"/>
+</content>
+</entry>

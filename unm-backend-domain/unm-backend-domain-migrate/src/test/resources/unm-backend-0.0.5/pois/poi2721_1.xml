@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2721_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2721_1.xml"/>
+<title>Bureau de la mobilité</title>
+<updated>2014-08-15T01:46:59.489+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2721"
+	coordinates="48.846957005198,2.355588376522"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:49:14.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	deletedAt="2011-05-03T16:50:57.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Bureau de la mobilité">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+</content>
+</entry>

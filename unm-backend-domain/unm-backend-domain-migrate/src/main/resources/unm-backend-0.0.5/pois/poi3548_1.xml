@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3548_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3548_1.xml"/>
+<title>BU Chimie-Physique Recherche</title>
+<updated>2014-08-15T01:47:07.895+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3548"
+	coordinates="48.846741112344,2.3588289879262"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T15:27:47.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2767"
+	name="BU Chimie-Physique Recherche">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Rez de Chaussée</floor>
+		<openingHours>Lundi au Vendredi : 09h00-18h00</openingHours>
+		<url>http://www.jubil.upmc.fr/fr/bibliotheques_sciences/bib_crpr.html</url>
+		<phone>01 44 27 55 76</phone>
+		<email>bibcr-pr@upmc.fr</email>
+	</address>
+</content>
+</entry>

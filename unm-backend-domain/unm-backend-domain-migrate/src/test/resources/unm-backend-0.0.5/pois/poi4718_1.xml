@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4718_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4718_1.xml"/>
+<title>Droit section B L1</title>
+<updated>2014-08-15T01:47:19.817+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4718"
+	coordinates="49.038749625072,2.0751225203276"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T14:04:14.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3849"
+	name="Droit section B L1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>M. David TOUBIANA</description>
+	<address>
+		<floor>Bureau A 307b</floor>
+		<phone>01 34 25 60 95</phone>
+		<email>licence1b.droit@ml.u-cergy.fr</email>
+	</address>
+</content>
+</entry>

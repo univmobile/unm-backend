@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3782_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3782_1.xml"/>
+<title>BU Serpente</title>
+<updated>2014-08-15T01:47:10.339+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3782"
+	coordinates="48.852536005909,2.3415775224566"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:51:12.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3695"
+	name="BU Serpente">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Accessible aux étudiants inscrits en master et en doctorat à l’université Paris-Sorbonne et à l’université Panthéon-Sorbonne (Paris-I) pour les diplômes en co-tutelle, ainsi qu'à tous les enseignants-chercheurs et doctorants d'Île-de-France.
+Disciplines : histoire ancienne, histoire du XIXe siècle, mondes contemporains (histoire économique, sociale, relations internationales, histoire de la colonisation), sciences humaines appliquées, fonds de littérature médiévale et de littérature de voyages.</description>
+	<address>
+		<openingHours>Du lundi au vendredi :  
+9h00 / 20h00
+Samedi : 
+12h00 / 18h00</openingHours>
+		<phone>01 53 10 57 53</phone>
+	</address>
+</content>
+</entry>

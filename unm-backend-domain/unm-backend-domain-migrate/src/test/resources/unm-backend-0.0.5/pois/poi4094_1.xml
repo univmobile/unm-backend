@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4094_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4094_1.xml"/>
+<title>IMPMC - UMR 7590</title>
+<updated>2014-08-15T01:47:13.618+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4094"
+	coordinates="48.841716934187,2.2828586027026"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:06:20.000+02:00"
+	updatedAt="2011-09-05T14:18:32.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3975"
+	name="IMPMC - UMR 7590">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut de minéralogie et de physique des milieux condensés (IMPMC) - UMR 7590</description>
+	<address>
+		<floor>Bât 7 2ème étage, bureau 7.2.2 </floor>
+		<url>http://www.impmc.upmc.fr/</url>
+		<phone>01 44 27 52 17</phone>
+		<email>gaelle.dufour@impmc.jussieu.fr</email>
+	</address>
+</content>
+</entry>

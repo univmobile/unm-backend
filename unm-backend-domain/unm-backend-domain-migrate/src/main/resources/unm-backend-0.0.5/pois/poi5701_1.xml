@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5701_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5701_1.xml"/>
+<title>CSADD - LP</title>
+<updated>2014-08-15T01:47:29.031+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5701"
+	coordinates="48.954288879265,2.8781758993864"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:58:09.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5672"
+	name="CSADD - LP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Commercialisation de solutions associées au développement durable - Licence Pro</description>
+	<address>
+		<floor>Bureau A119</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-licences-professionnelles/domaine-sciences-humaines-et-sociales/mention-commerce/licence-professionnelle-commercialisation-de-solutions-associees-au-developpement-durable/</url>
+		<phone>01 64 36 44 01</phone>
+		<fax>01 64 36 44 55</fax>
+		<email>Chantal.Joly@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

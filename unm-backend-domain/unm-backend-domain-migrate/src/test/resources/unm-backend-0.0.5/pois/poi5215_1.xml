@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5215_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5215_1.xml"/>
+<title>École doctorale 504 : MIPEGE</title>
+<updated>2014-08-15T01:47:24.370+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5215"
+	coordinates="48.706424211794,2.1792559325695"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T18:03:32.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4593"
+	name="École doctorale 504 : MIPEGE">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>École doctorale (ED) 534 : Modélisation et instrumentation en physique, énergies, géosciences et environnement (MIPEGE).</description>
+	<address>
+		<floor>Bâtiment 504, bureau 226</floor>
+		<url>http://www.ed-mipege.u-psud.fr/</url>
+		<phone>01 69 15 49 31</phone>
+		<fax>01 69 15 49 11</fax>
+		<email>thi-kim-ngan.ho@u-psud.fr</email>
+	</address>
+</content>
+</entry>

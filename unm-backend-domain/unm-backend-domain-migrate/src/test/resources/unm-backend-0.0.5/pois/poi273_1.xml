@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi273_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi273_1.xml"/>
+<title>Evry bâtiment Facteur Cheval </title>
+<updated>2014-08-15T01:46:38.919+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="273"
+	coordinates="48.631788277136,2.432141304016"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-16T14:02:57.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="raphael"
+	updatedBy="Basile Michel"
+	parentUid="268"
+	name="Evry bâtiment Facteur Cheval ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<itinerary>RER D, arrêt Évry-Courcouronnes
+RER C, changement Juvisy
+</itinerary>
+		<fullAddress>2, rue du Facteur Cheval 
+
+Évry 91025 Cedex</fullAddress>
+	</address>
+	<child uid="473" active="true"/>
+	<child uid="1714" active="true"/>
+	<child uid="472" active="true"/>
+	<child uid="471" active="true"/>
+	<child uid="470" active="true"/>
+	<child uid="2383" active="true"/>
+	<child uid="2379" active="true"/>
+	<child uid="2377" active="true"/>
+	<child uid="453" active="true"/>
+	<child uid="448" active="true"/>
+	<child uid="445" active="true"/>
+	<child uid="275" active="true"/>
+	<child uid="5180" active="true"/>
+</content>
+</entry>

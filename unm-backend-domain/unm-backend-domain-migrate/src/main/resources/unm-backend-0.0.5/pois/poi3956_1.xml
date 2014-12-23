@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3956_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3956_1.xml"/>
+<title>Chœur et Orchestre de l’Université de Paris-Sorbonne </title>
+<updated>2014-08-15T01:47:12.062+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3956"
+	coordinates="48.899889621319,2.3469670861959"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:22:29.000+02:00"
+	updatedAt="2011-09-26T17:02:52.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3710"
+	name="Chœur et Orchestre de l’Université de Paris-Sorbonne ">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<url>http://www.musiqueensorbonne.fr/index.php</url>
+		<phone>01 42 62 71 71</phone>
+		<email>choeur-orchestre@musique-en-sorbonne.org</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1463_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1463_1.xml"/>
+<title>Centre de documentation du CEDREF</title>
+<updated>2014-08-15T01:46:47.832+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1463"
+	coordinates="48.825723435755,2.36626826226"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:20:26.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1772"
+	name="Centre de documentation du CEDREF">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>1er étage bureau 115</floor>
+		<openingHours>Lundi-vendredi: 14h-17h30</openingHours>
+		<phone>0157276682</phone>
+		<email>cedref@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

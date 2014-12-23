@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4438_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4438_1.xml"/>
+<title>Site ENSIIE</title>
+<updated>2014-08-15T01:47:17.282+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4438"
+	coordinates="48.626740965921,2.4317403137684"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:33:19.000+02:00"
+	updatedAt="2011-10-13T11:41:30.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="4431"
+	name="Site ENSIIE">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4470" active="true"/>
+	<child uid="4440" active="true"/>
+</content>
+</entry>

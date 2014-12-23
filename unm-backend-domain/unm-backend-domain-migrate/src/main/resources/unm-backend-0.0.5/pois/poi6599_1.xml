@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6599_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6599_1.xml"/>
+<title>Château</title>
+<updated>2014-08-15T01:47:38.708+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6599"
+	coordinates="48.703413466703,2.1349230408669|48.703399305562,2.1347299218178|48.703257693933,2.1347406506538|48.703257693933,2.1349230408669|48.703413466703,2.1349230408669"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-07-05T10:49:09.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-07-05T10:52:24.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	name="Château">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

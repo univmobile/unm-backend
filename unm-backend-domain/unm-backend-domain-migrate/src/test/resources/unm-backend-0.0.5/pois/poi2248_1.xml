@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2248_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2248_1.xml"/>
+<title>Siège de l'INALCO</title>
+<updated>2014-08-15T01:46:55.370+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2248"
+	coordinates="48.857827547757,2.3325227200985|48.85795813576,2.3326206207275|48.857894606504,2.3327949643135|48.857772841871,2.332701086998|48.857666076985,2.3327077925205|48.857942253453,2.3329330980778|48.858063135326,2.3325978219509|48.857778135991,2.3323483765125|48.857666076985,2.3327077925205|48.857772841871,2.332701086998|48.857827547757,2.332522720098"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-26T17:34:46.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	deletedAt="2011-04-29T16:45:09.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Siège de l'INALCO">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro :
+- ligne 1 - station Palais-Royal - Musée du Louvre
+- ligne 4 - station Saint-Germain-des-Prés
+- ligne 7 - station Palais-Royal - Musée du Louvre
+- ligne 12 - station Rue du Bac
+Autobus : lignes 24, 27, 39, 68, 69, 95 - arrêt Pont du Carrousel
+R.E.R. C - station Musée d’Orsay</itinerary>
+		<fullAddress>2 rue de Lille
+75343 Paris cedex 07</fullAddress>
+	</address>
+</content>
+</entry>

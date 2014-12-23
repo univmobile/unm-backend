@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7140_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7140_1.xml"/>
+<title>IUT de Vélizy</title>
+<updated>2014-08-15T01:47:43.699+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7140"
+	coordinates="48.781901419815,2.2170361876488"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-05T19:36:58.000+01:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	parentUid="505"
+	name="IUT de Vélizy">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<url>http://www.iut-velizy.uvsq.fr</url>
+		<phone>01 39 25 48 33</phone>
+		<fax>01 39 25 48 13</fax>
+	</address>
+</content>
+</entry>

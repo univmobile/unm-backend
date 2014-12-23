@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1816_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1816_1.xml"/>
+<title>Services des bourses</title>
+<updated>2014-08-15T01:46:51.198+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1816"
+	coordinates="48.901908307774,2.21261724829"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T16:49:11.000+02:00"
+	updatedAt="2011-11-15T16:24:37.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2499"
+	name="Services des bourses">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Salle 01, Rdc</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h30 - 13h30 / 16h30
+Mardi : 
+9h / 12h30</openingHours>
+		<phone>01 40 97 72 00</phone>
+	</address>
+	<attachment id="112" title="Bâtiment E.JPG" type="image" url="/uploads/poi/2167a45ab0b7a5dfae5523bed6c1bd609e6c7fcc.jpg"/>
+</content>
+</entry>

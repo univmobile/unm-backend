@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2842_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2842_1.xml"/>
+<title>Centre Panthéon</title>
+<updated>2014-08-15T01:47:00.542+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2842"
+	coordinates="48.846924056838,2.344653010368"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T14:55:06.000+02:00"
+	updatedAt="2011-09-09T15:55:43.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2840"
+	name="Centre Panthéon">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro
+- Ligne 4: stations Odéon ou Saint Michel
+- Ligne 10: stations Odéon, Cluny la Sorbonne ou Maubert Mutualité
+RER
+- Ligne B : station Luxembourg
+- Ligne C : station Saint Michel
+Bus
+- Lignes 21, 27 ou 82 : arrêt Luxembourg
+- Ligne 84 : arrêt Place du Panthéon
+- Lignes 86 ou 87 : arrêt Cluny
+- Ligne 89 : arrêt Mairie du Vème - Panthéon </itinerary>
+		<fullAddress>12, place du Panthéon
+75231 Paris cedex 05</fullAddress>
+	</address>
+	<child uid="3386" active="true"/>
+	<child uid="3382" active="true"/>
+	<child uid="3332" active="true"/>
+	<child uid="3314" active="true"/>
+	<child uid="3318" active="true"/>
+	<child uid="3311" active="true"/>
+	<child uid="3303" active="true"/>
+	<child uid="3299" active="true"/>
+	<child uid="3297" active="true"/>
+	<child uid="3288" active="true"/>
+	<child uid="3149" active="true"/>
+	<child uid="3145" active="true"/>
+	<child uid="3144" active="true"/>
+	<child uid="3141" active="true"/>
+	<child uid="3139" active="true"/>
+	<child uid="3138" active="true"/>
+	<child uid="3135" active="true"/>
+	<child uid="3133" active="true"/>
+	<child uid="3129" active="true"/>
+	<child uid="3125" active="true"/>
+	<child uid="3123" active="true"/>
+	<child uid="3120" active="true"/>
+	<child uid="3117" active="true"/>
+	<child uid="3115" active="true"/>
+	<child uid="3110" active="true"/>
+	<child uid="3218" active="true"/>
+	<child uid="3221" active="true"/>
+	<child uid="3240" active="true"/>
+	<child uid="3265" active="true"/>
+	<child uid="3280" active="true"/>
+	<child uid="3284" active="true"/>
+	<child uid="3308" active="true"/>
+	<child uid="3334" active="true"/>
+	<child uid="3406" active="true"/>
+	<child uid="3426" active="true"/>
+	<child uid="3428" active="true"/>
+	<child uid="3431" active="true"/>
+	<child uid="3434" active="true"/>
+	<child uid="3438" active="true"/>
+	<child uid="3439" active="true"/>
+	<child uid="3471" active="true"/>
+	<child uid="3476" active="true"/>
+	<child uid="3515" active="true"/>
+	<child uid="6890" active="true"/>
+	<child uid="6891" active="true"/>
+</content>
+</entry>

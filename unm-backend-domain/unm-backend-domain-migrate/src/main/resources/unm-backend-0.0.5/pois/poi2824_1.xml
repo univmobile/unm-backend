@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2824_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2824_1.xml"/>
+<title>Campus Jussieu bâtiment F</title>
+<updated>2014-08-15T01:47:00.328+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2824"
+	coordinates="48.846076306653,2.358760759"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T14:40:35.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2715"
+	name="Campus Jussieu bâtiment F">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : 7/10
+Bus 24/63/89/67/86/87</itinerary>
+		<fullAddress>12 rue cuvier
+75005 Paris</fullAddress>
+	</address>
+	<child uid="3203" active="true"/>
+	<child uid="3202" active="true"/>
+	<child uid="2949" active="true"/>
+	<child uid="3200" active="true"/>
+	<child uid="3331" active="true"/>
+	<child uid="3360" active="true"/>
+	<child uid="3371" active="true"/>
+	<child uid="3469" active="true"/>
+	<child uid="3503" active="true"/>
+	<child uid="3527" active="true"/>
+	<child uid="3616" active="true"/>
+	<child uid="3621" active="true"/>
+	<child uid="3622" active="true"/>
+	<child uid="3964" active="true"/>
+	<child uid="4204" active="true"/>
+</content>
+</entry>

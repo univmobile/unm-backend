@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4311_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4311_1.xml"/>
+<title>Campus d'Orsay bâtiment 26</title>
+<updated>2014-08-15T01:47:16.001+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4311"
+	coordinates="48.706034389189,2.1315595507622"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:00:37.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2752"
+	name="Campus d'Orsay bâtiment 26">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER b (Gif sur Yvette)</itinerary>
+		<fullAddress>avenue de la terrasse
+91190 Gif sur Yvette</fullAddress>
+	</address>
+	<child uid="4314" active="true"/>
+</content>
+</entry>

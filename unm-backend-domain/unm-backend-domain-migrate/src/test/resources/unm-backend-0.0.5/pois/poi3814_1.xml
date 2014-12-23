@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3814_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3814_1.xml"/>
+<title>BU anglais</title>
+<updated>2014-08-15T01:47:10.663+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3814"
+	coordinates="48.848288202307,2.3436575755477"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T17:28:00.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3679"
+	name="BU anglais">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Étudiants de l’UFR d'anglais à partir de la 3e année de licence.
+Disciplines : études anglaises et nord-américaines.</description>
+	<address>
+		<floor>Escalier G, 2e étage, salle G358</floor>
+		<openingHours>Lundi : 14h00 / 17h00
+Mardi, mercredi, jeudi : 9h30 / 17h00
+Vendredi : 9h30 / 12h30</openingHours>
+	</address>
+</content>
+</entry>

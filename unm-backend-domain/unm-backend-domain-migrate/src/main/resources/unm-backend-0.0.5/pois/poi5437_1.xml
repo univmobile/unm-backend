@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5437_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5437_1.xml"/>
+<title>Pôle Universitaire Paris Ouest Nanterre</title>
+<updated>2014-08-15T01:47:26.167+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5437"
+	coordinates="48.903943250554,2.2137477993965"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T12:40:34.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="3642"
+	name="Pôle Universitaire Paris Ouest Nanterre">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="7098" active="true"/>
+	<child uid="6815" active="true"/>
+	<child uid="6805" active="true"/>
+	<child uid="5444" active="true"/>
+	<child uid="5441" active="true"/>
+	<child uid="5438" active="true"/>
+	<child uid="6692" active="true"/>
+	<child uid="6780" active="true"/>
+	<child uid="6792" active="true"/>
+	<child uid="6796" active="true"/>
+	<child uid="6801" active="true"/>
+	<child uid="6809" active="true"/>
+	<child uid="6812" active="true"/>
+	<child uid="7094" active="true"/>
+	<child uid="7095" active="true"/>
+	<child uid="7096" active="true"/>
+	<child uid="7097" active="true"/>
+	<child uid="7107" active="true"/>
+</content>
+</entry>

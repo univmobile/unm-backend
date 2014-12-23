@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6405_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6405_1.xml"/>
+<title>Mathématiques appliquées et sciences cociales (L3 MASS)</title>
+<updated>2014-08-15T01:47:36.934+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6405"
+	coordinates="48.828408377205,2.3834404349327"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T16:51:19.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1781"
+	name="Mathématiques appliquées et sciences cociales (L3 MASS)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Biopark-Watt, 3ème étage, bureau 307</floor>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=931</url>
+		<phone>01 57 27 65 42</phone>
+		<email>nathalie.naveau@math.jussieu.fr</email>
+	</address>
+</content>
+</entry>

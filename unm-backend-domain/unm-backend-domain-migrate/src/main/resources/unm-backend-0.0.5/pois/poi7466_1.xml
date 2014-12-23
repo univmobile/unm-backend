@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7466_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7466_1.xml"/>
+<title>Site des Chênes</title>
+<updated>2014-08-15T01:47:46.672+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7466"
+	coordinates="49.039464500743,2.0748549699783"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-20T10:05:28.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="3850"
+	name="Site des Chênes">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Droit Economie Gestion:
+Etudiants (LMD), Enseignants, Chercheurs</description>
+	<address>
+		<floor>Bât. Chênes 1, 1er étage</floor>
+		<openingHours>du lundi au vendredi 8h30-19h - Fermeture mi-juillet / aout
+</openingHours>
+		<url>http://www.u-cergy.fr/fr/bibliotheque.html</url>
+		<phone>01 34 25 61 34</phone>
+	</address>
+</content>
+</entry>

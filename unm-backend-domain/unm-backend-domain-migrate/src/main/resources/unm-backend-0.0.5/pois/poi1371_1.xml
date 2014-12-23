@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1371_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1371_1.xml"/>
+<title>Bibliothèque Centrale</title>
+<updated>2014-08-15T01:46:46.841+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1371"
+	coordinates="48.830215522643,2.38158367574"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:33:06.000+01:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="Bibliothèque Centrale">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>Lundi: 11h-20h
+Du mardi au jeudi: 9h30-20h
+Vendredi: 9h30-19h
+Samedi: 13h-18h</openingHours>
+		<phone>0157276612</phone>
+	</address>
+	<attachment id="56" title="sciences-2-8e64f.jpg" type="image" url="/uploads/poi/bcc0f7d205617a9980d0e350c3be88b19584ec99.jpg"/>
+</content>
+</entry>

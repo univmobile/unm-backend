@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2120_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2120_1.xml"/>
+<title>Brasserie de l'IUT</title>
+<updated>2014-08-15T01:46:54.325+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2120"
+	coordinates="48.843960619332,2.215316891670"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-12T15:11:29.000+02:00"
+	updatedAt="2011-04-13T14:46:05.000+02:00"
+	deletedAt="2011-04-12T15:20:30.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Brasserie de l'IUT">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+</content>
+</entry>

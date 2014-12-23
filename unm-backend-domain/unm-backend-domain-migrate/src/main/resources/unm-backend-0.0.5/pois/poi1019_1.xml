@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1019_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1019_1.xml"/>
+<title>Centre institut de géographie</title>
+<updated>2014-08-15T01:46:44.164+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1019"
+	coordinates="48.844677018193,2.342547308"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-11T15:13:51.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Sihé NEYA"
+	parentUid="770"
+	name="Centre institut de géographie">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B 
+Station Luxembourg
+Bus 21, 27, 38, 82 et 85 </itinerary>
+		<fullAddress>191 rue Saint-Jacques
+75005 Paris </fullAddress>
+	</address>
+	<child uid="726" active="true"/>
+	<child uid="725" active="true"/>
+	<child uid="727" active="true"/>
+	<child uid="637" active="true"/>
+	<child uid="884" active="true"/>
+	<child uid="885" active="true"/>
+	<child uid="886" active="true"/>
+	<child uid="914" active="true"/>
+	<child uid="937" active="true"/>
+	<child uid="1020" active="true"/>
+	<child uid="771" active="true"/>
+	<child uid="6259" active="true"/>
+	<child uid="6260" active="true"/>
+	<child uid="6261" active="true"/>
+	<child uid="6262" active="true"/>
+	<child uid="6263" active="true"/>
+	<child uid="6264" active="true"/>
+	<child uid="6265" active="true"/>
+	<child uid="6266" active="true"/>
+	<child uid="6267" active="true"/>
+	<child uid="6268" active="true"/>
+	<child uid="6269" active="true"/>
+	<child uid="6270" active="true"/>
+	<child uid="6271" active="true"/>
+	<attachment id="27" title="geographie_01.jpg" type="image" url="/uploads/poi/c0fda83441653046c895523b22a91a073898e102.jpg"/>
+</content>
+</entry>

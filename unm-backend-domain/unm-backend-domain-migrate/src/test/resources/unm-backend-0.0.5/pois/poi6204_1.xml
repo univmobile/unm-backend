@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6204_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6204_1.xml"/>
+<title>Design, médias, technologies M2</title>
+<updated>2014-08-15T01:47:34.862+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6204"
+	coordinates="48.841979797348,2.2806823253632"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-16T13:20:36.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1025"
+	name="Design, médias, technologies M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 460</floor>
+		<url>http://ufr04-arts.univ-paris1.fr/</url>
+		<phone>01 44 07 84 89</phone>
+		<email>francine.suzon@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

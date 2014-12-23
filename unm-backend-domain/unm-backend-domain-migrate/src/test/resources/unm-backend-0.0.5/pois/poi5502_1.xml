@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5502_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5502_1.xml"/>
+<title>Résidence Universitaire La Pacaterie</title>
+<updated>2014-08-15T01:47:26.911+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5502"
+	coordinates="48.701143768451,2.1826777607203"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T15:59:36.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5450"
+	name="Résidence Universitaire La Pacaterie">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B : Station Le Guichet ou Orsay-Ville à 10 mn à pied du campus. </itinerary>
+		<fullAddress>Rue de la Pacaterie, Bâtiment 499- 91400 Orsay.</fullAddress>
+	</address>
+	<child uid="5505" active="true"/>
+</content>
+</entry>

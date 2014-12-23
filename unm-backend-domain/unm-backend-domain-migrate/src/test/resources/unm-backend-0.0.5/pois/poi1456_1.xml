@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1456_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1456_1.xml"/>
+<title>UFR Langues et Civilisation de l'Asie orientale (LCAO)</title>
+<updated>2014-08-15T01:46:47.757+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1456"
+	coordinates="48.829940076088,2.3807216"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:10:26.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1774"
+	name="UFR Langues et Civilisation de l'Asie orientale (LCAO)">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Batiment C, 4e étage, Bureau 493</floor>
+		<openingHours>Tous les jours : 8h15-12h et 12h45-17h sauf le vendredi après-midi</openingHours>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<phone>0157276400</phone>
+		<email>patricia.cohen@univ-paris-diderot.fr</email>
+	</address>
+	<attachment id="59" title="moulin.jpg" type="image" url="/uploads/poi/d61820c69d991ff346178c8bd4cd25951ea57d8a.jpg"/>
+</content>
+</entry>

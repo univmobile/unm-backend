@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1696_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1696_1.xml"/>
+<title>Association EBISOL Etudiants Bichat solidarité </title>
+<updated>2014-08-15T01:46:49.999+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1696"
+	coordinates="48.899335966637,2.332271263003"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T16:09:47.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1785"
+	name="Association EBISOL Etudiants Bichat solidarité ">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>UFR de médecine de Paris 7, Faculté Xavier Bichat</floor>
+		<url>http://ebisol.parisè.free.fr</url>
+		<phone>0676609472</phone>
+		<email>vannier.chloe@gmail.com</email>
+	</address>
+</content>
+</entry>

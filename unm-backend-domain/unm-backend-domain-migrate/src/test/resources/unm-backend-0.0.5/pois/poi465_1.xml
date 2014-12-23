@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi465_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi465_1.xml"/>
+<title>UFR médicale PIFO</title>
+<updated>2014-08-15T01:46:40.107+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="465"
+	coordinates="48.778047086892,2.046954631805"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-06T16:18:08.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-29T11:24:56.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="UFR médicale PIFO">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

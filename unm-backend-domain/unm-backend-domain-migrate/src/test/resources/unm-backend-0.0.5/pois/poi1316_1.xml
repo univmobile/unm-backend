@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1316_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1316_1.xml"/>
+<title>Laboratoire LEM</title>
+<updated>2014-08-15T01:46:46.136+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1316"
+	coordinates="48.826997529518,2.3831427097321"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T16:43:09.000+01:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1780"
+	name="Laboratoire LEM">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>7e étage </floor>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+	</address>
+</content>
+</entry>

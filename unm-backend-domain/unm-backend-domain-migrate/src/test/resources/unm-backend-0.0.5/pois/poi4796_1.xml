@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4796_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4796_1.xml"/>
+<title>Analyse, géométrie et modélisation </title>
+<updated>2014-08-15T01:47:20.629+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4796"
+	coordinates="49.043035377152,2.0844331383705"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:37:17.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3920"
+	name="Analyse, géométrie et modélisation ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Directeur
+Vladimir Georgescou</description>
+	<address>
+		<phone>01 34 25 65 46</phone>
+		<fax>01 34 25 66 45</fax>
+		<email>vladimir.georgescu@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

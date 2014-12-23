@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6881_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6881_1.xml"/>
+<title>Accueil Inscriptions administratives</title>
+<updated>2014-08-15T01:47:40.945+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6881"
+	coordinates="48.90351787663,2.2106176614761"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-08T15:02:35.000+02:00"
+	updatedAt="2011-11-15T12:32:55.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2516"
+	name="Accueil Inscriptions administratives">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Lorsque vous avez rendez-vous pour effectuer votre inscription administrative, présentez-vous à l'accueil du bâtiment A</description>
+	<address>
+		<url>http://www.u-paris10.fr/79836520/0/fiche___pagelibre/&amp;RH=etu&amp;RF=FOR_INS</url>
+	</address>
+</content>
+</entry>

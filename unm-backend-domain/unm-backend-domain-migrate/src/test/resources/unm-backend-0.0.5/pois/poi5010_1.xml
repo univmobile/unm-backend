@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5010_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5010_1.xml"/>
+<title>Kaméléon</title>
+<updated>2014-08-15T01:47:22.753+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5010"
+	coordinates="49.038841599666,2.0749890804291"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T16:53:38.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3849"
+	name="Kaméléon">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Local 211, 2e étage</floor>
+		<email>culture.kameleon@gmail.com</email>
+	</address>
+</content>
+</entry>

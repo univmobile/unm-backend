@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6576_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6576_1.xml"/>
+<title></title>
+<updated>2014-08-15T01:47:38.491+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6576"
+	coordinates="48.706884478214,2.1742656826973"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-04T11:54:28.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="6567"
+	name="">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+</content>
+</entry>

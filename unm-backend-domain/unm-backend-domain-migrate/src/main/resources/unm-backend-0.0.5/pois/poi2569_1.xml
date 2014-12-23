@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2569_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2569_1.xml"/>
+<title>Gard'le nord</title>
+<updated>2014-08-15T01:46:58.103+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2569"
+	coordinates="48.810889891354,2.14969329535"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:56:28.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="364"
+	name="Gard'le nord">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association de réflexion inter étudiante sur &quot;L'homme est il en progrès?&quot; </description>
+	<address>
+		<url>http://www.gardlenord.fr</url>
+		<phone>0622055060</phone>
+		<email>gardlenord@orange.fr</email>
+	</address>
+</content>
+</entry>

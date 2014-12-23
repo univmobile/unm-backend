@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi165_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi165_1.xml"/>
+<title>Wifi hall</title>
+<updated>2014-08-15T01:46:38.581+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="165"
+	coordinates="48.62378839604,2.42494824529"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-01T13:30:17.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-07-19T12:01:35.000+02:00"
+	createdBy="yasmine"
+	updatedBy="plopes"
+	name="Wifi hall">
+	<poiType id="7" label="Zones WiFi" categoryId="5" categoryLabel="Bornes CMS &amp; Zones WiFi"/>
+	<address
+		countryCode="FR">
+		<floor>RDC</floor>
+	</address>
+</content>
+</entry>

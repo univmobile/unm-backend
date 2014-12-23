@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7161_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7161_1.xml"/>
+<title>Association étudiants - Anim'Assoc</title>
+<updated>2014-08-15T01:47:43.911+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7161"
+	coordinates="48.627165085902,2.5634756684303"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-14T13:46:12.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="5479"
+	name="Association étudiants - Anim'Assoc">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<openingHours>En fonction des heures de cours</openingHours>
+		<phone>06 65 26 50 44</phone>
+		<email>antoine_devaux@hotmail.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2987_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2987_1.xml"/>
+<title>Amphithéâtres A, B, C, D, E</title>
+<updated>2014-08-15T01:47:01.790+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2987"
+	coordinates="48.812935823477,2.14769504964"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:27:40.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="rrivoire"
+	parentUid="373"
+	name="Amphithéâtres A, B, C, D, E">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Amphi A : 180 places
+Amphi B : 150 places
+Amphi C : 150 places
+Amphi D : 200 places
+Amphi E : 200 places</description>
+</content>
+</entry>

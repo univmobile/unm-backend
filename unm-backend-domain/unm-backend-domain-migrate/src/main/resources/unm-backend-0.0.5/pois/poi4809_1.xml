@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4809_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4809_1.xml"/>
+<title>Recherche en comptabilité M2</title>
+<updated>2014-08-15T01:47:20.793+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4809"
+	coordinates="48.869786216227,2.2730152308941"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:46:27.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Recherche en comptabilité M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Recherche en Comptabilité, Audit et Contrôle-Gestion</description>
+	<address>
+		<floor>Bureau P 608</floor>
+		<phone>01 44 05 47 84</phone>
+		<email>pelatan@crefige.dauphine.fr</email>
+	</address>
+</content>
+</entry>

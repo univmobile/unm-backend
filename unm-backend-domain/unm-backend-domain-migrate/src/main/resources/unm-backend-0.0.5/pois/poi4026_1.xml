@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4026_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4026_1.xml"/>
+<title>ED 394</title>
+<updated>2014-08-15T01:47:12.833+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4026"
+	coordinates="48.850735806191,2.3414382152259"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:30:27.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4022"
+	name="ED 394">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Physiologie et physiopathologie (ED 394)</description>
+	<address>
+		<floor>Bâtiment A Rez de Chaussée</floor>
+		<url>http://www.ed394.upmc.fr/</url>
+		<phone>01 42 34 69 81</phone>
+		<email>ed.physio@bhdc.jussieu.fr</email>
+	</address>
+</content>
+</entry>

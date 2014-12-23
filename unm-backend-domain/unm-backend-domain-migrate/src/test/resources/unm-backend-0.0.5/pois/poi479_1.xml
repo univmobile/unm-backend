@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi479_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi479_1.xml"/>
+<title>Département Génie Éléctrique</title>
+<updated>2014-08-15T01:46:40.222+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="479"
+	coordinates="48.613873430833,2.4287188053"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T14:12:33.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2011-05-31T16:28:05.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Département Génie Éléctrique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>UFR Sciences et Technologies</floor>
+		<openingHours>Du Lundi au Vendredi : 9 h 00 à 12 h 00 et 13 h 30 à 17 h 00</openingHours>
+		<phone>0169477527</phone>
+		<email>ufrst@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

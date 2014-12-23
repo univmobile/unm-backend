@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5853_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5853_1.xml"/>
+<title>Récepteurs stéroïdiens</title>
+<updated>2014-08-15T01:47:30.865+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5853"
+	coordinates="48.811777685044,2.3530094325542"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T17:08:41.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4848"
+	name="Récepteurs stéroïdiens">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Récepteurs stéroïdiens : Physiopathologie endocrinienne et métabolique.
+Unité de recherche Inserm 693</description>
+	<address>
+		<floor>Bâtiment KB, 4ème étage</floor>
+		<url>http://www.idf.inserm.fr/site/u693/</url>
+		<phone>01 49 59 67 02</phone>
+		<fax>01 49 59 67 55</fax>
+		<email>u693.inserm@u-psud.fr</email>
+	</address>
+</content>
+</entry>

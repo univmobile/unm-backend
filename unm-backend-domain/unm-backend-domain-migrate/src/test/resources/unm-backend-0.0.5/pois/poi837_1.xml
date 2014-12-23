@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi837_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi837_1.xml"/>
+<title>UFR 08 Géographie</title>
+<updated>2014-08-15T01:46:42.358+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="837"
+	coordinates="48.827368344398,2.36451476"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T17:11:03.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1023"
+	name="UFR 08 Géographie">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>L1 et L2 (Licence)</description>
+	<address>
+		<floor>Aile B, 7e étage, 7.02</floor>
+		<openingHours>Lundi au vendredi
+09h30-12h30
+14h00-16h30
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64 et 83
+Arrêt Tolbiac-Baudricourt</itinerary>
+		<phone>01 44 07 88 47</phone>
+		<email>geo1@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

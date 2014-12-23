@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6692_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6692_1.xml"/>
+<title>Résidence Universitaire de Saint Cloud</title>
+<updated>2014-08-15T01:47:39.340+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6692"
+	coordinates="48.845661237143,2.2151197493076"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-21T12:03:22.000+02:00"
+	updatedAt="2012-02-03T12:30:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5437"
+	name="Résidence Universitaire de Saint Cloud">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accès : De la Défense : ligne SNCF Versailles-Rive Droite/Saint Nom la Bretèche - Noisy le roi ou ligne SNCF La Verrière : à 5 mn à pied de la station Saint-Cloud </itinerary>
+		<fullAddress>2 avenue Pozzo di Borgo - 92210 Saint-Cloud</fullAddress>
+	</address>
+	<child uid="6694" active="true"/>
+</content>
+</entry>

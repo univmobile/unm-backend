@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6861_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6861_1.xml"/>
+<title>Boulogne </title>
+<updated>2014-08-15T01:47:40.819+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6861"
+	coordinates="48.834578676867,2.2474524378777"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-05T11:26:48.000+02:00"
+	updatedAt="2011-09-05T11:30:44.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3583"
+	name="Boulogne ">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 9 : Marcel Sembat</itinerary>
+		<fullAddress>71 avenue Edouard Vaillant
+92100 Boulogne</fullAddress>
+	</address>
+	<child uid="6862" active="true"/>
+</content>
+</entry>

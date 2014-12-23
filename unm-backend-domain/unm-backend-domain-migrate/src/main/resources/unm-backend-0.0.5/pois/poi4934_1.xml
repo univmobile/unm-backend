@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4934_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4934_1.xml"/>
+<title>Économie-Gestion (M2)</title>
+<updated>2014-08-15T01:47:22.005+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4934"
+	coordinates="48.782222669588,2.2842925786972"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T15:01:34.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4664"
+	name="Économie-Gestion (M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Inscriptions pédagogiques, gestion des résultats, relevés de notes, etc.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment B, bureau 012</floor>
+		<url>http://www.jm.u-psud.fr/fr/les_formations/economie_gestion/masters_economie_gestion2/m2_economie_gestion.html</url>
+		<phone>01 40 91 17 62</phone>
+		<email>master2-economie-gestion.droit-eco-gestion@u-psud.fr</email>
+	</address>
+</content>
+</entry>

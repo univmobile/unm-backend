@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5622_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5622_1.xml"/>
+<title>Psychologie L3</title>
+<updated>2014-08-15T01:47:28.121+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5622"
+	coordinates="48.834451117531,2.2474973648787"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:44:50.000+02:00"
+	updatedAt="2011-06-14T17:05:08.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5550"
+	name="Psychologie L3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Roselyne Vignon</description>
+	<address>
+		<floor>Bureau 1053 1er étage </floor>
+		<phone>01 55 20 59 01</phone>
+	</address>
+</content>
+</entry>

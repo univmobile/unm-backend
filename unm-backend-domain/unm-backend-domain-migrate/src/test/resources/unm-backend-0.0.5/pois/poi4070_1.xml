@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4070_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4070_1.xml"/>
+<title>EA 3124</title>
+<updated>2014-08-15T01:47:13.316+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4070"
+	coordinates="48.83306240671,2.36856456846"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:21:00.000+02:00"
+	updatedAt="2011-09-05T14:18:32.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3928"
+	name="EA 3124">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de statistique théorique et appliquée (LSTA) - EA 3124</description>
+	<address>
+		<floor>Bât. A/8e étage</floor>
+		<url>http://www.lsta.upmc.fr/</url>
+		<phone>01 44 27 33 51</phone>
+		<email>paul.deheuvels@upmc.fr</email>
+	</address>
+</content>
+</entry>

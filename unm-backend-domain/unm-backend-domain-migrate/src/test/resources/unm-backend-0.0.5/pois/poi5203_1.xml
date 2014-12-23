@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5203_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5203_1.xml"/>
+<title>Polygone</title>
+<updated>2014-08-15T01:47:24.261+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5203"
+	coordinates="48.821880003956,2.332352399826|48.821941812938,2.3323738574982|48.821966536509,2.3323148488998|48.822060132776,2.3322746157646|48.822130771352,2.332347035408|48.822150196943,2.3324221372604|48.822151962906,2.3324838280678|48.822192580025,2.3324999213219|48.822106047862,2.3328995704651|48.821791705278,2.3327466845512|48.821880003956,2.332352399826"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-31T17:10:47.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	deletedAt="2011-06-08T14:32:10.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	name="Polygone">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<url>http://montsouris.u-pec.fr</url>
+		<phone>01 56 61 68 60</phone>
+		<email>esm@ecolemontsouris.fr</email>
+	</address>
+</content>
+</entry>

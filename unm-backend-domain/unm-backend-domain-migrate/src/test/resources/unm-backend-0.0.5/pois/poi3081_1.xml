@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3081_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3081_1.xml"/>
+<title>Site Paradis</title>
+<updated>2014-08-15T01:47:02.785+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3081"
+	coordinates="48.87518877782,2.35249243676"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:55:51.000+02:00"
+	updatedAt="2012-01-17T17:06:31.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="2994"
+	name="Site Paradis">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3083" active="true"/>
+</content>
+</entry>

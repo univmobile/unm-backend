@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7402_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7402_1.xml"/>
+<title>Laboratoire de biophysique</title>
+<updated>2014-08-15T01:47:45.863+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7402"
+	coordinates="48.844952413158,2.3575115203857"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-25T10:00:22.000+02:00"
+	updatedAt="2013-05-03T12:34:53.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7372"
+	name="Laboratoire de biophysique">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accès controlé, interdit au public.</itinerary>
+		<fullAddress>47, Rue Cuvier
+75005 Paris</fullAddress>
+	</address>
+	<child uid="7439" active="true"/>
+</content>
+</entry>

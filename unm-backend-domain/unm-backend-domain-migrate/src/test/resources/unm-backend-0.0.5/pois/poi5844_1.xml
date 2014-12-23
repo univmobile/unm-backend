@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5844_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5844_1.xml"/>
+<title>Cinéma et Audiovisuel - M1-2</title>
+<updated>2014-08-15T01:47:30.767+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5844"
+	coordinates="48.841843371689,2.5744666904211"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:53:29.000+02:00"
+	updatedAt="2011-06-08T16:54:14.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="Cinéma et Audiovisuel - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 368</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-arts-lettres-langues/mention-lettres-et-arts/master-cinema-et-audiovisuel/</url>
+		<phone>01 49 32 90 20</phone>
+		<fax>01 49 32 91 20</fax>
+		<email>Dominique.Peronnet@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

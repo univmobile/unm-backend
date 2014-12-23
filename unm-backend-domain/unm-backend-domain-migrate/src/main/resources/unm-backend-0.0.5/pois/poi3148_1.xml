@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3148_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3148_1.xml"/>
+<title>Département : Cinéma et Audio-Visuel (CAV)</title>
+<updated>2014-08-15T01:47:03.453+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3148"
+	coordinates="48.84033454458,2.3537108302116"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T17:03:56.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="3009"
+	name="Département : Cinéma et Audio-Visuel (CAV)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licences
+
+Masters
+
+Consulter sur le site de l'université l'offre complète de formation</description>
+	<address>
+		<floor>2ème étage -  Porte 213 et 215</floor>
+		<openingHours>Licence L1  et L2 : du mardi au vendredi de 12h à 16h30
+L3 et masters 1 et 2 : du lundi au vendredi de 14 h à 16h30 et le  mercredi de 10h30 à 12h (12h30 pour les masters). 
+
+Licence 1 et 2 -  tél : 01 45 87 79 38 (porte 215 ) 
+Licence 3            tél : 01 45 87 41 88 (porte 213)
+
+Master 1 et 2  -   tél : 01 45 87 79 88 (porte 213)</openingHours>
+		<url>http://www.univ-paris3.fr/dept-cav</url>
+		<phone>0145877938</phone>
+		<email>dept-cav@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

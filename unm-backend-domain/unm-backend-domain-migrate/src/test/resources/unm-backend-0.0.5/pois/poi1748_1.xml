@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1748_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1748_1.xml"/>
+<title>Restaurant Universitaire Les Etats-Unis</title>
+<updated>2014-08-15T01:46:50.504+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1748"
+	coordinates="48.81269646157,2.150007784366"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T11:27:42.000+02:00"
+	updatedAt="2011-04-13T14:46:05.000+02:00"
+	deletedAt="2011-04-05T12:29:40.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Restaurant Universitaire Les Etats-Unis">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<url>www.crous-versailles.fr</url>
+	</address>
+</content>
+</entry>

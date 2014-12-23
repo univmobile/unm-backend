@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3450_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3450_1.xml"/>
+<title>Saint-Denis Bâtiment A</title>
+<updated>2014-08-15T01:47:06.764+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3450"
+	coordinates="48.944503564898,2.363506257534"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:40:58.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="Marion MAINFRAY"
+	parentUid="1990"
+	name="Saint-Denis Bâtiment A">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro Ligne 13 arrêt St-Denis Université</itinerary>
+		<fullAddress>Université Paris 8 - 2 rue de la Liberté - 93526 Saint-Denis cedex</fullAddress>
+	</address>
+	<child uid="7082" active="true"/>
+	<child uid="2079" active="true"/>
+	<child uid="2021" active="true"/>
+	<child uid="2659" active="true"/>
+	<child uid="2654" active="true"/>
+	<child uid="2656" active="true"/>
+	<child uid="3954" active="true"/>
+	<child uid="3722" active="true"/>
+	<child uid="3671" active="true"/>
+	<child uid="3557" active="true"/>
+	<child uid="3556" active="true"/>
+	<child uid="3419" active="true"/>
+	<child uid="3415" active="true"/>
+	<child uid="3414" active="true"/>
+	<child uid="3413" active="true"/>
+	<child uid="2375" active="true"/>
+	<child uid="2380" active="true"/>
+	<child uid="2381" active="true"/>
+	<child uid="2359" active="true"/>
+	<child uid="2357" active="true"/>
+	<child uid="2741" active="true"/>
+	<child uid="3290" active="true"/>
+	<child uid="3306" active="true"/>
+	<child uid="3320" active="true"/>
+	<child uid="3327" active="true"/>
+	<child uid="3340" active="true"/>
+	<child uid="2311" active="true"/>
+	<child uid="2310" active="true"/>
+	<child uid="2312" active="true"/>
+	<child uid="2326" active="true"/>
+	<child uid="2322" active="true"/>
+	<child uid="2303" active="true"/>
+	<child uid="2302" active="true"/>
+	<child uid="2327" active="true"/>
+	<child uid="2319" active="true"/>
+	<child uid="2320" active="true"/>
+	<child uid="2316" active="true"/>
+	<child uid="2317" active="true"/>
+	<child uid="3482" active="true"/>
+	<child uid="3485" active="true"/>
+	<child uid="3480" active="true"/>
+	<child uid="3481" active="true"/>
+	<child uid="3486" active="true"/>
+	<child uid="3487" active="true"/>
+	<child uid="3464" active="true"/>
+	<child uid="2608" active="true"/>
+	<child uid="3274" active="true"/>
+	<child uid="2356" active="true"/>
+	<child uid="2374" active="true"/>
+	<child uid="3410" active="true"/>
+	<child uid="3546" active="true"/>
+	<child uid="3580" active="true"/>
+	<child uid="3602" active="true"/>
+	<child uid="3603" active="true"/>
+	<child uid="3611" active="true"/>
+	<child uid="3617" active="true"/>
+	<child uid="3632" active="true"/>
+	<child uid="3637" active="true"/>
+	<child uid="3639" active="true"/>
+	<child uid="3723" active="true"/>
+	<child uid="3758" active="true"/>
+	<child uid="3883" active="true"/>
+	<child uid="3906" active="true"/>
+	<child uid="3919" active="true"/>
+	<child uid="3924" active="true"/>
+	<child uid="3938" active="true"/>
+	<child uid="3960" active="true"/>
+	<child uid="3967" active="true"/>
+	<child uid="3968" active="true"/>
+	<child uid="3977" active="true"/>
+	<child uid="3983" active="true"/>
+	<child uid="3987" active="true"/>
+	<child uid="4007" active="true"/>
+	<child uid="4028" active="true"/>
+	<child uid="4030" active="true"/>
+	<child uid="4047" active="true"/>
+	<child uid="4053" active="true"/>
+	<child uid="4061" active="true"/>
+	<child uid="4123" active="true"/>
+	<child uid="4127" active="true"/>
+	<child uid="4130" active="true"/>
+	<child uid="7079" active="true"/>
+</content>
+</entry>

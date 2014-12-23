@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1990_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1990_1.xml"/>
+<title>Campus de Saint-Denis</title>
+<updated>2014-08-15T01:46:53.179+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1990"
+	coordinates="48.945907578072,2.3631951212883"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T15:08:54.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="Marion MAINFRAY"
+	parentUid="1164"
+	name="Campus de Saint-Denis">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="2604" active="true"/>
+	<child uid="3450" active="true"/>
+	<child uid="7076" active="true"/>
+	<child uid="3449" active="true"/>
+	<child uid="2603" active="true"/>
+	<child uid="2609" active="true"/>
+	<child uid="2610" active="true"/>
+	<child uid="2606" active="true"/>
+	<child uid="2605" active="true"/>
+	<child uid="2602" active="true"/>
+	<child uid="2600" active="true"/>
+	<child uid="2599" active="true"/>
+	<child uid="1999" active="true"/>
+</content>
+</entry>

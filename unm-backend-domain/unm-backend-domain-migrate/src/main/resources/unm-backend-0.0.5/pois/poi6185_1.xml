@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6185_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6185_1.xml"/>
+<title> Correspondants Relations internationales droit</title>
+<updated>2014-08-15T01:47:34.671+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6185"
+	coordinates="48.79307708778,2.4445304274559"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T17:13:59.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4646"
+	name=" Correspondants Relations internationales droit">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Bureau 030 </floor>
+		<phone>01 56 72 60 07</phone>
+		<email>jessica.evuort@u-pec.fr </email>
+	</address>
+</content>
+</entry>

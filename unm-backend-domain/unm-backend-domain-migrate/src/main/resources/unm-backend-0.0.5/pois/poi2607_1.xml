@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2607_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2607_1.xml"/>
+<title>Miage M1-2</title>
+<updated>2014-08-15T01:46:58.412+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2607"
+	coordinates="48.855361208772,2.331485375"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T14:10:18.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2331"
+	name="Miage M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>7éme étage Bureau H704</floor>
+		<openingHours>Lundi-Vendredi
+8h00-12h30
+13h30-16h00</openingHours>
+	</address>
+</content>
+</entry>

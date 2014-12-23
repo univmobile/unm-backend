@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3460_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3460_1.xml"/>
+<title>Ingénierie Mécanique - L2-3</title>
+<updated>2014-08-15T01:47:06.883+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3460"
+	coordinates="48.84582792432,2.3570716381073"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:58:10.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3425"
+	name="Ingénierie Mécanique - L2-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La Licence Sciences et Technologie mention Ingénierie Mécanique s’adresse à des étudiants attirés par les Sciences de l’Ingénieur dans les différents domaines d'applications de la Mécanique.</description>
+	<address>
+		<floor>2è étage bureau 216</floor>
+		<openingHours>Lundi au Vendredi : 9h00-11h30/13h30-17h</openingHours>
+		<url>http://www.licence.meca.upmc.fr</url>
+		<phone>01 44 27 70 55</phone>
+		<email>licence.meca@upmc.fr</email>
+	</address>
+</content>
+</entry>

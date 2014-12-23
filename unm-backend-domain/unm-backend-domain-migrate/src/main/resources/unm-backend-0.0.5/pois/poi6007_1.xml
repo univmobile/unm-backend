@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6007_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6007_1.xml"/>
+<title>Physique des Matériaux - M1-2</title>
+<updated>2014-08-15T01:47:32.648+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6007"
+	coordinates="48.838331188073,2.5923355668783"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T13:03:55.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5589"
+	name="Physique des Matériaux - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau D11</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-sciences-technologies-sante/mention-sciences-de-la-matiere/master-physique-des-materiaux/</url>
+		<phone>01 60 95 77 68</phone>
+		<fax>01 60 95 77 99</fax>
+		<email>Cecile.Amphiarus@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

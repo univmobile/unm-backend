@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7300_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7300_1.xml"/>
+<title>Salles informatiques Bretécher / Uderzo</title>
+<updated>2014-08-15T01:47:45.403+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7300"
+	coordinates="48.788995653827,2.3268699645996"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-18T10:59:03.000+01:00"
+	updatedAt="2012-12-18T11:03:50.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Salles informatiques Bretécher / Uderzo">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>La Direction des systèmes d'information (DSI) met à la disposition des élèves et des enseignants de l'école 2 salles informatiques : Bretécher et Uderzo.
+Ces salles sont prioritairement utilisées par des enseignants pour y réaliser des travaux pratiques d'informatique. En dehors de ces créneaux réservés, assez rares et toujours en pleine journée, elles sont accessibles en libre service pour tout élève ou enseignant disposant d'un compte informatique en cours de validité.
+
+Equipements : 
+- Salle Bretécher : 14 ordinateurs et 1 vidéo-projecteur
+- Salle Uderzo : 12 ordinateurs</description>
+	<address>
+		<floor>Premier étage, extrémité de l'aile C</floor>
+		<openingHours>En semaine de 7h à 19h, et en dehors des utilisations pédagogiques, TP et TD, encadrées par un enseignant, l'accès est libre pour les utilisateurs, éventuellement accompagnés de visiteurs non-inscrits.
+En dehors de ces heures d'ouverture et les week-ends, l'accès est possible pour les utilisateurs NON ACCOMPAGNES, après enregistrement de leur passage à la porterie de l'école. En effet, en dehors des heures habituelles d'ouverture, seuls les utilisateurs régulièrement enregistrés ont accès aux salles.
+Un escalier métallique extérieur permet d'y entrer en dehors des heures habituelles d'ouverture du bâtiment</openingHours>
+	</address>
+</content>
+</entry>

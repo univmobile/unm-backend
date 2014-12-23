@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6_1.xml"/>
+<title>Bibliothèque universitaire de Saint-Quentin-en-Yvelines </title>
+<updated>2014-08-15T01:46:38.223+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6"
+	coordinates="48.780288247056,2.04436"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-22T14:24:29.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-10-13T13:54:23.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Bibliothèque universitaire de Saint-Quentin-en-Yvelines ">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address
+		countryCode="FR">
+		<floor>RDC</floor>
+		<openingHours>Du lundi au vendredi 9h – 20h
+Le samedi 10h – 18h</openingHours>
+		<url>http://www.info-bib.uvsq.fr</url>
+		<phone>01 39 25 54 50</phone>
+		<fax> 01 39 25 54 61</fax>
+	</address>
+</content>
+</entry>

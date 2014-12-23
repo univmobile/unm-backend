@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3920_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3920_1.xml"/>
+<title>Centre Saint Martin </title>
+<updated>2014-08-15T01:47:11.688+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3920"
+	coordinates="49.042659216015,2.0847201347351"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:22:27.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3808"
+	name="Centre Saint Martin ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accès en voiture
+• Depuis Paris : porte Maillot direction La Défense.
+A86 suivre Cergy-Pontoise. A15 direction Cergy-
+Pontoise, sortie 9 (serrer à droite).
+• Depuis Versailles : N184 direction Beauvais jusqu’à
+Cergy-Pontoise.
+Accès en RER
+• RER A direction Cergy-le-haut, arrêt Cergy-Préfecture.
+• RER C, arrêt Pontoise (prendre ensuite le bus)
+Accès en train
+Depuis la gare Saint-Lazare ou Nanterre-Université,
+arrêt Cergy-Préfecture.
+Accès en bus
+• Depuis Cergy-Préfecture, lignes 30, 36,
+arrêt Plateau Saint-Martin.
+• Depuis Pontoise, station Canrobert, lignes 30, 36
+arrêt Plateau Saint-Martin.</itinerary>
+		<fullAddress>2, avenue Adolphe-Chauvin, Pontoise
+95302 Cergy-Pontoise cedex</fullAddress>
+	</address>
+	<child uid="7467" active="true"/>
+	<child uid="4907" active="true"/>
+	<child uid="4576" active="true"/>
+	<child uid="4215" active="true"/>
+	<child uid="4216" active="true"/>
+	<child uid="4217" active="true"/>
+	<child uid="4219" active="true"/>
+	<child uid="4221" active="true"/>
+	<child uid="4222" active="true"/>
+	<child uid="4223" active="true"/>
+	<child uid="4224" active="true"/>
+	<child uid="4226" active="true"/>
+	<child uid="4227" active="true"/>
+	<child uid="4228" active="true"/>
+	<child uid="4229" active="true"/>
+	<child uid="4230" active="true"/>
+	<child uid="4278" active="true"/>
+	<child uid="4299" active="true"/>
+	<child uid="4370" active="true"/>
+	<child uid="4379" active="true"/>
+	<child uid="4432" active="true"/>
+	<child uid="4544" active="true"/>
+	<child uid="4546" active="true"/>
+	<child uid="4550" active="true"/>
+	<child uid="4552" active="true"/>
+	<child uid="4553" active="true"/>
+	<child uid="4554" active="true"/>
+	<child uid="4556" active="true"/>
+	<child uid="4557" active="true"/>
+	<child uid="4560" active="true"/>
+	<child uid="4561" active="true"/>
+	<child uid="4564" active="true"/>
+	<child uid="4567" active="true"/>
+	<child uid="4568" active="true"/>
+	<child uid="4572" active="true"/>
+	<child uid="4653" active="true"/>
+	<child uid="4655" active="true"/>
+	<child uid="4658" active="true"/>
+	<child uid="4662" active="true"/>
+	<child uid="4710" active="true"/>
+	<child uid="4711" active="true"/>
+	<child uid="4712" active="true"/>
+	<child uid="4713" active="true"/>
+	<child uid="4762" active="true"/>
+	<child uid="4778" active="true"/>
+	<child uid="4795" active="true"/>
+	<child uid="4796" active="true"/>
+	<child uid="4797" active="true"/>
+	<child uid="4799" active="true"/>
+	<child uid="4901" active="true"/>
+	<child uid="4911" active="true"/>
+	<child uid="4917" active="true"/>
+	<child uid="4970" active="true"/>
+	<child uid="5022" active="true"/>
+	<child uid="5041" active="true"/>
+	<child uid="5881" active="true"/>
+	<child uid="5916" active="true"/>
+</content>
+</entry>

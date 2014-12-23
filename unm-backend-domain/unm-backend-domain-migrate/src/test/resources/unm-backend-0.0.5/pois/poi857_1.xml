@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi857_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi857_1.xml"/>
+<title>Amphithéâtre</title>
+<updated>2014-08-15T01:46:42.535+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="857"
+	coordinates="48.842177094589,2.335935"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T15:19:28.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="960"
+	name="Amphithéâtre">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Capacité 400 places.
+Partagé avec l'université Paris-Sorbonne IV.</description>
+	<address>
+		<floor>sous-sol</floor>
+		<itinerary>RER B
+Station Port-Royal 
+Métro 4 et 12
+Station Vavin, Notre-Dame-des-Champs 
+Bus 58, 82, 83 et 91</itinerary>
+	</address>
+</content>
+</entry>

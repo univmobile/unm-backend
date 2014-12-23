@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3692_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3692_1.xml"/>
+<title>Contact PMR IUT</title>
+<updated>2014-08-15T01:47:09.397+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3692"
+	coordinates="48.841810655383,2.2680618613958"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T15:11:59.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2511"
+	name="Contact PMR IUT">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<description>Madame LACROIX  Responsable scolarité
+Madame MESATFA FESSY  Enseignante
+
+</description>
+	<address>
+		<phone>01 42 86 47 21</phone>
+	</address>
+</content>
+</entry>

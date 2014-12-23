@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi773_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi773_1.xml"/>
+<title>Centre Sorbonne</title>
+<updated>2014-08-15T01:46:41.824+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="773"
+	coordinates="48.846671648417,2.3505592346191"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-15T17:06:53.000+01:00"
+	updatedAt="2013-09-30T11:26:07.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Pascale.randriantiana "
+	parentUid="1"
+	name="Centre Sorbonne">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B
+Station Luxembourg ou Saint Michel
+Métro 10 
+Station Cluny-La Sorbonne
+
+Bus 21, 27, 38, 82 et 85 </itinerary>
+		<fullAddress>17 rue Sorbonne
+75005 Paris
+</fullAddress>
+	</address>
+	<child uid="1002" active="true"/>
+	<attachment id="22" title="sorbonne_02.jpg" type="image" url="/uploads/poi/6f2325ae896e9624d5df2b089681d28abe8dee25.jpg"/>
+</content>
+</entry>

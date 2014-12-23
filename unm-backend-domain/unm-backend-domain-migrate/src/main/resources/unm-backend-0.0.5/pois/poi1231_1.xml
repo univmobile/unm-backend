@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1231_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1231_1.xml"/>
+<title>Site Paradis</title>
+<updated>2014-08-15T01:46:45.928+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1231"
+	coordinates="48.875153936987,2.35268454998"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T15:00:09.000+01:00"
+	updatedAt="2011-06-22T15:01:00.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	parentUid="1162"
+	name="Site Paradis">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 4, 5, 7 Gare de l'est
+Métro 4, 5 Gare du Nord
+RER E, D, B Gare du Nord
+</itinerary>
+		<fullAddress>26 rue de Paradis
+75010 Paris</fullAddress>
+	</address>
+	<child uid="1767" active="true"/>
+</content>
+</entry>

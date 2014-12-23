@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5491_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5491_1.xml"/>
+<title>Ingénierie de l’information... (M2 IICI)</title>
+<updated>2014-08-15T01:47:26.798+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5491"
+	coordinates="48.710458685945,2.1733943000436"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T15:27:33.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5359"
+	name="Ingénierie de l’information... (M2 IICI)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master pro</description>
+	<address>
+		<floor>Bâtiment 640</floor>
+		<url>http://www.dep-informatique.u-psud.fr/formation/lmd/M2Pro_IICI</url>
+		<phone>01 69 15 66 30</phone>
+		<email>master-pro@lri.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3960_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3960_1.xml"/>
+<title>Laboratoire de psychopathologie et de neuropsychologie</title>
+<updated>2014-08-15T01:47:12.108+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3960"
+	coordinates="48.944030575025,2.3628192767501"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:27:51.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Laboratoire de psychopathologie et de neuropsychologie">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 2027 : Laboratoire de psychopathologie et de neuropsychologie appartenant à l'École doctorale (ED) 224 : Cognition, langage, interaction.
+Directeur : Alain Blanchet
+Contact à l'UFR de Psychologie</description>
+	<address>
+		<floor>3ème étage Bâtiment A, bureau 365</floor>
+		<url>http://lpn.paris8.free.fr/</url>
+		<phone>01 49 40 64 69</phone>
+		<fax>01 49 40 64 73</fax>
+		<email>alain.blanchet@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

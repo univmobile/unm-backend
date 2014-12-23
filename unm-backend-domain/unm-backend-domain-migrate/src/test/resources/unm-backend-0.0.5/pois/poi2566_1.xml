@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2566_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2566_1.xml"/>
+<title>Site d'enseignement de la Belle Gabrielle</title>
+<updated>2014-08-15T01:46:58.069+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2566"
+	coordinates="48.832585448262,2.46537253260"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:52:39.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2287"
+	name="Site d'enseignement de la Belle Gabrielle">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>R.E.R. A : station Nogent-sur-Marne
+Autobus :
+- ligne 112 (au château de Vincennes) - arrêt Mortemart
+- lignes 114, 210 (au château de Vincennes) - arrêt RER-Nogent</itinerary>
+		<fullAddress>49 bis avenue de la Belle Gabrielle
+75012 Paris</fullAddress>
+	</address>
+	<child uid="2590" active="true"/>
+	<child uid="2588" active="true"/>
+	<child uid="2384" active="true"/>
+	<child uid="2382" active="true"/>
+	<child uid="2378" active="true"/>
+	<child uid="2376" active="true"/>
+	<child uid="2371" active="true"/>
+	<child uid="2369" active="true"/>
+	<child uid="2367" active="true"/>
+	<child uid="2366" active="true"/>
+	<child uid="2365" active="true"/>
+</content>
+</entry>

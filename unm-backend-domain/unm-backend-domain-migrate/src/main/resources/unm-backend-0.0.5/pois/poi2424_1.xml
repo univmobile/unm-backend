@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2424_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2424_1.xml"/>
+<title>SITEC bâtiment E</title>
+<updated>2014-08-15T01:46:56.676+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2424"
+	coordinates="48.825726776149,2.199067398"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:02:22.000+02:00"
+	updatedAt="2011-07-13T11:06:37.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Sihé NEYA"
+	parentUid="2446"
+	name="SITEC bâtiment E">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Gare SNCF : station Sèvres Ville d'Avray</itinerary>
+		<fullAddress>50 rue de Sèvres
+92410 VILLE D'AVRAY</fullAddress>
+	</address>
+	<child uid="6128" active="true"/>
+</content>
+</entry>

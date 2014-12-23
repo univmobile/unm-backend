@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7004_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7004_1.xml"/>
+<title>AEEAN</title>
+<updated>2014-08-15T01:47:42.176+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7004"
+	coordinates="48.902727240413,2.2114384174347"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T16:17:09.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2494"
+	name="AEEAN">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L'association  des étudiants en ethnologie et anthropologie de Nanterre permet de créer du lien entre les étudiants et tous les personnes qui vivent et travaillent dans le département d’ethnologie de l’université de Nanterre. </description>
+	<address>
+		<floor>Bâtiment E - Salle 111 - 1er étage</floor>
+		<url>http://aeean.etudions.net/</url>
+		<phone>06.26.12.41.71</phone>
+		<email>victorpineda60@hotmail.com</email>
+	</address>
+</content>
+</entry>

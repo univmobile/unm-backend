@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7413_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7413_1.xml"/>
+<title>Salon doré, Rohan</title>
+<updated>2014-08-15T01:47:46.002+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7413"
+	coordinates="48.859728143127,2.3594695329666"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-29T16:53:16.000+02:00"
+	updatedAt="2013-07-04T17:42:14.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7352"
+	name="Salon doré, Rohan">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>Cette salle accueil les cours de master.</description>
+	<address>
+		<floor>Hôtel de Rohan, Archives nationales, 87, rue Vieille-du-Temple, 1er étage, 75003 Paris</floor>
+		<url>http://www.enc.sorbonne.fr/master-technologies-numeriques-appliquees-l-histoire</url>
+		<phone>01.55.42.75.02</phone>
+		<email>etudes@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

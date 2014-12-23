@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3759_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3759_1.xml"/>
+<title>IUFM de Paris (site Molitor)</title>
+<updated>2014-08-15T01:47:10.149+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3759"
+	coordinates="48.845698775637,2.2654514014721"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:22:57.000+02:00"
+	updatedAt="2011-09-26T16:46:05.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3634"
+	name="IUFM de Paris (site Molitor)">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3760" active="true"/>
+</content>
+</entry>

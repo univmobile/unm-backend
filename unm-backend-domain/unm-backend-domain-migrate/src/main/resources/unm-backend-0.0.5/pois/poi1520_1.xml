@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1520_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1520_1.xml"/>
+<title>Centre de dépistage Belleville</title>
+<updated>2014-08-15T01:46:48.450+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1520"
+	coordinates="48.875225382748,2.396066598594"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:32:22.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Centre de dépistage Belleville">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<openingHours>Lundi, mardi, jeudi, vendredi: 10h30-18h30
+Mercredi: 9h-12h
+Samedi: 9h30-12h</openingHours>
+		<itinerary>Métro 11 Télégraphe</itinerary>
+		<phone>0147974049</phone>
+		<fullAddress>218 rue de Belleville
+75020 Paris</fullAddress>
+	</address>
+</content>
+</entry>

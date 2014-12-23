@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4524_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4524_1.xml"/>
+<title>Université Paris-Est Marne la Vallée</title>
+<updated>2014-08-15T01:47:18.213+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4524"
+	coordinates=""
+	markerType="point"
+	createdAt="2011-05-24T15:49:12.000+02:00"
+	updatedAt="2011-05-24T15:53:44.000+02:00"
+	deletedAt="2011-05-24T15:53:44.000+02:00"
+	createdBy="super admin"
+	updatedBy="super admin"
+	name="Université Paris-Est Marne la Vallée">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<address
+		zipCode="77454"
+		city="Marne-la-Vallée Cedex2 "
+		countryCode="FR">
+		<url>http://www.univ-mlv.fr/</url>
+		<fullAddress>5 boulevard Descartes 
+Champs-sur-Marne </fullAddress>
+	</address>
+</content>
+</entry>

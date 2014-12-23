@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7455_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7455_1.xml"/>
+<title>ADEMEC</title>
+<updated>2014-08-15T01:47:46.546+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7455"
+	coordinates="48.848639253092,2.3430363088846"
+	active="true"
+	markerType="point"
+	createdAt="2013-05-22T16:50:33.000+02:00"
+	updatedAt="2013-06-12T12:09:44.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7349"
+	name="ADEMEC">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’ADEMEC (Association des Diplômés et des Etudiants de Master de l'École des Chartes) est une association de loi 1901 créée le 15 janvier 2010 dont les buts sont les suivants:
+
+    - développer des liens de solidarité entre les membres de l’association ;
+
+    - promouvoir les compétences acquises et faciliter l’insertion des jeunes diplômés ;
+
+    - entretenir des relations avec le monde professionnel et associatif, au niveau national et international ;
+
+    - soutenir toutes les initiatives pouvant aider à la réalisation de ces derniers.
+
+Conformément à ses statuts, l’association se compose d’un Bureau, d’un Conseil d’Administration et de membres actifs ayant adhérés.</description>
+	<address>
+		<floor>19, rue de la Sorbonne - 75005 Paris</floor>
+		<url>http://ademec.com/</url>
+		<email>ademec.association@gmail.com </email>
+	</address>
+	<attachment id="287" title="ademec.jpg" type="image" url="/uploads/poi/6e983969ad08874822bf81cee11eec04c7a988aa.jpg"/>
+</content>
+</entry>

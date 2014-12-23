@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6301_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6301_1.xml"/>
+<title>DES de spécialités/DESC, DFMS/DFMSA et Thèse</title>
+<updated>2014-08-15T01:47:35.830+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6301"
+	coordinates="48.794863950643,2.4542373418808"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T15:23:42.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4875"
+	name="DES de spécialités/DESC, DFMS/DFMSA et Thèse">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 104</floor>
+		<url>http://medecine.u-pec.fr/enseignements/3eme-cycle/</url>
+		<phone>01 49 81 35 05 </phone>
+		<email>3eme.cycle.medecine.specialisee@u-pec.fr</email>
+	</address>
+</content>
+</entry>

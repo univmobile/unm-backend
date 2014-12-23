@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4911_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4911_1.xml"/>
+<title>Diplôme Universitaire Carriéres Publiques</title>
+<updated>2014-08-15T01:47:21.743+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4911"
+	coordinates="49.042659296599,2.0848091505468"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:30:54.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3920"
+	name="Diplôme Universitaire Carriéres Publiques">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Secrétariat de l’IPAG 
+
+</description>
+	<address>
+		<floor>3ème étage-bureau 377</floor>
+		<email>ipag@ml.u-cergy.fr</email>
+	</address>
+</content>
+</entry>

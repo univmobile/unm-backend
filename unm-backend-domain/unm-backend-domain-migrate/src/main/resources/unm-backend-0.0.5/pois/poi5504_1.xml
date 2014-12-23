@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5504_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5504_1.xml"/>
+<title>Résidence Universitaire La Pacaterie</title>
+<updated>2014-08-15T01:47:26.922+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5504"
+	coordinates="48.701072133421,2.1826965361834"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T16:01:41.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	deletedAt="2011-06-03T16:05:00.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Résidence Universitaire La Pacaterie">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

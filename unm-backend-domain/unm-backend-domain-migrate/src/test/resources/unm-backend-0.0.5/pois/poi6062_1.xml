@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6062_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6062_1.xml"/>
+<title>Médecine préventive</title>
+<updated>2014-08-15T01:47:33.269+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6062"
+	coordinates="48.787946968821,2.3293201625347"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T14:57:40.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5146"
+	name="Médecine préventive">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bâtiment B, bureau 012</floor>
+		<openingHours>Du lundi au vendredi
+9h00-17h00</openingHours>
+		<url>http://www.iut-cachan.u-psud.fr/fr/vie_etudiante/medecine_preventive_etudiants_handicapes.html</url>
+		<phone>01 41 24 11 09</phone>
+		<fax>01 41 24 11 99</fax>
+		<email>alain.celestine@u-psud.fr</email>
+	</address>
+</content>
+</entry>

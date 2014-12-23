@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6723_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6723_1.xml"/>
+<title>Cafétéria Saints-Pères</title>
+<updated>2014-08-15T01:47:39.628+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6723"
+	coordinates="48.85487003534,2.3313184082508"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-16T19:07:19.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6722"
+	name="Cafétéria Saints-Pères">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi de 8h00 à 18h00</openingHours>
+		<url>http://www.crous-paris.fr</url>
+	</address>
+	<attachment id="179" title="st_peres_1.jpg" type="image" url="/uploads/poi/acdc52af1f2fda059d505de6f4002acbd272313f.jpg"/>
+</content>
+</entry>

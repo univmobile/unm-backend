@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4085_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4085_1.xml"/>
+<title>UMR 7095</title>
+<updated>2014-08-15T01:47:13.491+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4085"
+	coordinates="48.836300945821,2.3362328857183"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:59:49.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3753"
+	name="UMR 7095">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut d'astrophysique de Paris (IAP) - UMR 7095</description>
+	<address>
+		<url>http://www.iap.fr/</url>
+		<phone>01 44 32 80 53</phone>
+		<email>blondin@iap.fr</email>
+	</address>
+</content>
+</entry>

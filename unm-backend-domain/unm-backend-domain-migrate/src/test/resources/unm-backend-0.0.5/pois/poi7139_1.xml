@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7139_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7139_1.xml"/>
+<title>Institutdes Langues et de Études Internationales (ILEI)</title>
+<updated>2014-08-15T01:47:43.689+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7139"
+	coordinates="48.780153921663,2.0446479320526"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-05T19:32:08.000+01:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	parentUid="6279"
+	name="Institutdes Langues et de Études Internationales (ILEI)">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<url>http://www.ilei.uvsq.fr</url>
+		<phone>01 39 25 52 70</phone>
+	</address>
+</content>
+</entry>

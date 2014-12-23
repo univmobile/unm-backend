@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4022_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4022_1.xml"/>
+<title>Campus des Cordeliers bâtiment A</title>
+<updated>2014-08-15T01:47:12.781+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4022"
+	coordinates="48.850720782007,2.3414903506637"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:24:02.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2723"
+	name="Campus des Cordeliers bâtiment A">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro: Ligne 4 ou 10 (station Odéon)
+Bus : Lignes 58 , 63, 70, 86, 87, 96 </itinerary>
+		<fullAddress>15 rue de l'école de médecine
+75006 Paris</fullAddress>
+	</address>
+	<child uid="4025" active="true"/>
+	<child uid="4026" active="true"/>
+</content>
+</entry>

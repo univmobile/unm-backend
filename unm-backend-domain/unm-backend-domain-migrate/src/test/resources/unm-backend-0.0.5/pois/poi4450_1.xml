@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4450_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4450_1.xml"/>
+<title>Formation en alternance</title>
+<updated>2014-08-15T01:47:17.442+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4450"
+	coordinates="48.626307564387,2.4307586252689"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:42:11.000+02:00"
+	updatedAt="2012-05-15T10:50:09.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Stéphanie ROCHE"
+	parentUid="4440"
+	name="Formation en alternance">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>FIPA : formation d'ingénieur par l'apprentissage (6semesters, en alternance en entreprises
+FIP : formation d'ingénieur en partenariat (en 2 ans, en alternance en entreprises)</description>
+	<address>
+		<floor>2e étage / bureau scolarité</floor>
+		<openingHours>lundi, mardi, mercredi, jeudi, vendredi de 9h00 à 17h00</openingHours>
+		<phone>01 69 36 73 17</phone>
+		<fax>01 69 36 73 09</fax>
+		<email>secfip@ensiie.fr</email>
+	</address>
+</content>
+</entry>

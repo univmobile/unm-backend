@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4283_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4283_1.xml"/>
+<title>UMA A 1272</title>
+<updated>2014-08-15T01:47:15.711+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4283"
+	coordinates="48.803664542172,2.0756373368204"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T15:11:03.000+02:00"
+	updatedAt="2011-09-05T14:18:32.000+02:00"
+	deletedAt="2011-05-20T15:55:33.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	name="UMA A 1272">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+</content>
+</entry>

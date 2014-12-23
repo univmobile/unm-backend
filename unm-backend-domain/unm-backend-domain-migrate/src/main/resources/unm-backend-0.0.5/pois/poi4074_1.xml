@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4074_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4074_1.xml"/>
+<title>LIP - UMR 7623</title>
+<updated>2014-08-15T01:47:13.357+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4074"
+	coordinates="48.850534181734,2.3412774503231"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:41:37.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3740"
+	name="LIP - UMR 7623">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire d'imagerie paramétrique - UMR 7623</description>
+	<address>
+		<url>http://www.labos.upmc.fr/lip/</url>
+		<phone>01 44 41 49 62</phone>
+		<email>pascal.laugier@upmc.fr</email>
+	</address>
+</content>
+</entry>

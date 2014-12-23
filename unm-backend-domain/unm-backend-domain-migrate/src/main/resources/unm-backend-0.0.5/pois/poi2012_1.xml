@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2012_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2012_1.xml"/>
+<title>MASS L1-3</title>
+<updated>2014-08-15T01:46:53.353+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2012"
+	coordinates="48.810692912457,2.1483246982"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T16:10:14.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="367"
+	name="MASS L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Fermat - Bureau 1201</floor>
+		<phone>0139254290       </phone>
+		<email>fatima.prevost@uvsq.fr</email>
+	</address>
+</content>
+</entry>

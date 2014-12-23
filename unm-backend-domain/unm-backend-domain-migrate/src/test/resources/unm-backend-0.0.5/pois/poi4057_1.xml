@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4057_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4057_1.xml"/>
+<title>Littérature française et comparée L2</title>
+<updated>2014-08-15T01:47:13.189+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4057"
+	coordinates="48.883852311046,2.3110925406218"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:10:28.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3702"
+	name="Littérature française et comparée L2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 328</floor>
+		<openingHours>Lundi : 14h00 / 16h30
+Mardi, mercredi, jeudi : 9h30 / 12h15 - 14h00 / 16h30
+Vendredi : 9h30 / 12h15</openingHours>
+		<phone>01 43 18 41 38</phone>
+	</address>
+</content>
+</entry>

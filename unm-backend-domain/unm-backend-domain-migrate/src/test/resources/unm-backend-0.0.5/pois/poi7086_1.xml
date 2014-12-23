@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7086_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7086_1.xml"/>
+<title>Institut français de géopolitique (IFG)</title>
+<updated>2014-08-15T01:47:43.094+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7086"
+	coordinates="48.946786607617,2.3611807823181"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-01T14:38:32.000+01:00"
+	updatedAt="2012-02-01T14:42:40.000+01:00"
+	createdBy="Marion MAINFRAY"
+	updatedBy="Marion MAINFRAY"
+	parentUid="3449"
+	name="Institut français de géopolitique (IFG)">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Université Paris 8
+2 rue de la Liberté
+93526 Saint-Denis cedex</description>
+	<address>
+		<floor>bâtiment D, au troisième étage, salle D307</floor>
+		<url>http://www.geopolitique.net/</url>
+		<phone>01 49 40 73 00</phone>
+		<fax>01 49 40 73 01</fax>
+		<email>geopolitique@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

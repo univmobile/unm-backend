@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5456_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5456_1.xml"/>
+<title>Résidence Universitaire Jean Zay</title>
+<updated>2014-08-15T01:47:26.376+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5456"
+	coordinates="48.761921777052,2.3025081306696"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T14:36:19.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5451"
+	name="Résidence Universitaire Jean Zay">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Cette résidence est située en face du parc de Sceaux, à 20 mn du RER Port Royal et à 15 mn en RER B d’Orsay Ville. Centre sportif, groupements d’études, salle polyvalente à disposition des étudiants.
+
+Chambres individuelles : 1 003
+Tarifs : de 146€ charges comprises.
+
+Logements deux pièces (T2) : 466
+Tarifs : de 235€ charges comprises. </description>
+	<address>
+		<openingHours>Accueil du public : loge du bâtiment A.
+Du lundi au vendredi, de 9h à 11h45 et de 13h à 16h.</openingHours>
+		<phone>01 46 74 63 71</phone>
+	</address>
+	<child uid="6837" active="true"/>
+	<attachment id="144" title="Jean Zay.jpg" type="image" url="/uploads/poi/be6220fb576a5ab706b03a36933653074ea9e6c0.jpg"/>
+</content>
+</entry>

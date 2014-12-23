@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4044_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4044_1.xml"/>
+<title>UMR 7586</title>
+<updated>2014-08-15T01:47:13.033+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4044"
+	coordinates="48.833112416688,2.3686205595732"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:52:01.000+02:00"
+	updatedAt="2011-09-05T14:18:32.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3928"
+	name="UMR 7586">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut de Mathématiques de Jussieu (IMJ) - UMR 7586</description>
+	<address>
+		<url>http://www.institut.math.jussieu.fr/</url>
+		<phone>01 44 27 75 68</phone>
+		<email>zadvat@math.jussieu.fr</email>
+	</address>
+</content>
+</entry>

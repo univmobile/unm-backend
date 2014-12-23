@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3618_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3618_1.xml"/>
+<title>Biologie cellulaire, physiologie et pathologie M1-2</title>
+<updated>2014-08-15T01:47:08.647+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3618"
+	coordinates="48.855561615196,2.3314991220832"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:00:22.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2331"
+	name="Biologie cellulaire, physiologie et pathologie M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>RDC </floor>
+		<openingHours>Lundi-Vendredi
+9h00-12h00
+13h00-17h00
+</openingHours>
+		<phone>01 42 86 43 28</phone>
+	</address>
+</content>
+</entry>

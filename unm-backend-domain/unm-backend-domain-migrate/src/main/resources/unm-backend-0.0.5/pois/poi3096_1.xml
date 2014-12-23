@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3096_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3096_1.xml"/>
+<title>UFR Littérature, Linguistique, Didactique</title>
+<updated>2014-08-15T01:47:02.957+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3096"
+	coordinates="48.84030276878,2.3540326952934"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:13:35.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3009"
+	name="UFR Littérature, Linguistique, Didactique">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>4e étage - Bureau 409 </floor>
+		<openingHours>Lundi : 9h30 - 12h30 et 13h30 - 16h30
+Mardi : 9h30 - 12h30 et 13h30 - 16h30
+Mercredi : 9h30 - 12h30
+Jeudi : 9h30 - 12h30 et 13h30 - 16h30
+Vendredi : 9h30 - 12h30</openingHours>
+		<phone>0145877807</phone>
+		<email>ufr-lld@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

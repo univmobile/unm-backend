@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2140_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2140_1.xml"/>
+<title>Brasserie Satellite Neuville III</title>
+<updated>2014-08-15T01:46:54.557+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2140"
+	coordinates="49.01647088798,2.07475908100"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-13T14:45:50.000+02:00"
+	updatedAt="2011-04-13T14:47:08.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Brasserie Satellite Neuville III">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+</content>
+</entry>

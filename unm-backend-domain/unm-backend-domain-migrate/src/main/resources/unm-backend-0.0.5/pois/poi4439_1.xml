@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4439_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4439_1.xml"/>
+<title>UMR_A 217</title>
+<updated>2014-08-15T01:47:17.293+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4439"
+	coordinates="48.839832285981,2.3475771211088"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:33:22.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4420"
+	name="UMR_A 217">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Interactions plantes pathogènes - UMR_A 217</description>
+	<address>
+		<url>http://www.agroparistech.fr/</url>
+		<phone>01 44 08 86 35</phone>
+		<email>dellagi@agroparistech.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4894_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4894_1.xml"/>
+<title>Club Photo Dauphine</title>
+<updated>2014-08-15T01:47:21.580+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4894"
+	coordinates="48.869451001256,2.2729830443859"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:08:28.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Club Photo Dauphine">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Ce local est notre chambre noire. Il n'y a pas de permanence, appelle-nous avant d'y passer.</description>
+	<address>
+		<floor>Local C001</floor>
+		<url>http://clubphotodauphine.free.fr/</url>
+		<phone>06 12 82 63 30</phone>
+		<email>clubphotodauphine@gmail.com</email>
+	</address>
+</content>
+</entry>

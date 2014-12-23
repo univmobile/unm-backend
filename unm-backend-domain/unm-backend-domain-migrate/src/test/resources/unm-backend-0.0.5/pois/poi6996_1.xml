@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6996_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6996_1.xml"/>
+<title>Association pour le développement des études germaniques</title>
+<updated>2014-08-15T01:47:42.084+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6996"
+	coordinates="48.905436085769,2.2152417898178"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:40:42.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2482"
+	name="Association pour le développement des études germaniques">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Encourager et soutenir la recherche universitaire dans le domaine des études germaniques en France</description>
+	<address>
+		<floor>BDIC</floor>
+		<url>http://www.ages-info.org/spip/</url>
+		<phone>01 43 27 02 82</phone>
+		<email>rolandkrebs@club-internet.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi448_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi448_1.xml"/>
+<title>UFR Sciences Sociales et de Gestion</title>
+<updated>2014-08-15T01:46:39.994+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="448"
+	coordinates="48.631667736104,2.4322915077209"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-06T11:24:42.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="273"
+	name="UFR Sciences Sociales et de Gestion">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<phone>01 69 47 78 90</phone>
+		<email>helene.marechal@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

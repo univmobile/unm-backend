@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi76_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi76_1.xml"/>
+<title>old Centre Pierre Mendès France</title>
+<updated>2014-08-15T01:46:38.402+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="76"
+	coordinates="48.82731007367,2.363868355751|48.82734538927,2.3639461398125|48.827287118516,2.3639783263206|48.827223550342,2.3639890551567|48.827190000441,2.3638951778412|48.827184703086,2.3637557029724|48.827235910827,2.3637396097183|48.827280055389,2.3637396097183|48.827308307889,2.3637476563454|48.827322434133,2.3638013005257|48.82731007367,2.36386835575"
+	markerType="polygon"
+	createdAt="2010-06-24T16:06:57.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-09-05T10:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="old Centre Pierre Mendès France">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Centre Pierre Mendès France
+90, rue de Tolbiac
+75634 Paris cedex 13
+
+M° ligne 14 Olympiades
+Bus 62,83</description>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

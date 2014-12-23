@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4960_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4960_1.xml"/>
+<title>SUAPS</title>
+<updated>2014-08-15T01:47:22.266+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4960"
+	coordinates="49.03962952357,2.0752832852304"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T15:26:31.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3850"
+	name="SUAPS">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<description>Le bureau du SUAPS se situe au centre sportif universitaire (CSU), sous la passerelle piéton du site des Chênes 1 :
+- Accueil : Daniel LEHONG
+</description>
+	<address>
+		<floor>sous la passerelle piéton du site des Chênes 1</floor>
+		<phone> 01.34.25.72.55 </phone>
+		<email>daniel.lehong@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

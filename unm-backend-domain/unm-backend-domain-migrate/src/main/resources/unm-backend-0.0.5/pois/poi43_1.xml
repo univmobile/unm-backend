@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi43_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi43_1.xml"/>
+<title>Scolarité Département CJ</title>
+<updated>2014-08-15T01:46:38.314+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="43"
+	coordinates="48.955691354894,2.34300443538"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T11:25:57.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-06-24T12:51:06.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Scolarité Département CJ">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Carrières Juridiques
+Le département délivre le DUT Carrières Juridiques en formation initiale classique, en formation continue et en apprentissage, ainsi que la Licence Professionnelle Banque &quot;Conseiller gestionnaire de clientèle particulière&quot; en formation initiale et en alternance.
+</description>
+	<address
+		zipCode=" 93430 "
+		city="VILLETANEUSE"
+		countryCode="FR">
+		<phone>01 49 40 31 18  </phone>
+		<fax>01 49 40 40 97</fax>
+		<email>scocj@iutv.univ-paris13.fr</email>
+		<fullAddress>99 avenue Jean-Baptiste Clément
+  93430  VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

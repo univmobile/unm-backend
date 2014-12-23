@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5374_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5374_1.xml"/>
+<title>Laboratoire de recherche sur la gouvernance </title>
+<updated>2014-08-15T01:47:25.699+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5374"
+	coordinates="48.787402678336,2.4440543353558"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T16:31:56.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4533"
+	name="Laboratoire de recherche sur la gouvernance ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>1er étage, bureau 112</floor>
+		<url>http://largotec.u-pec.fr</url>
+		<phone>01 45 17 18 75</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6662_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6662_1.xml"/>
+<title>Saint Christophe</title>
+<updated>2014-08-15T01:47:39.104+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6662"
+	coordinates="49.053744681038,2.0386216789484"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T15:04:42.000+02:00"
+	updatedAt="2012-01-10T11:33:30.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6654"
+	name="Saint Christophe">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>En voiture :
+• Depuis Paris : porte Maillot direction La Défense.
+A86 suivre Cergy-Pontoise. A15 direction Cergy-
+Pontoise, sortie 11 (au rond-point à gauche).
+• Depuis Versailles : N184 direction Beauvais jusqu’à
+Cergy-Pontoise.
+
+RER A  :direction Cergy-le-haut, arrêt Cergy-St-Christophe.
+
+En train :
+Depuis la gare Saint-Lazare ou Nanterre-Université,
+arrêt Cergy-Saint-Christophe.
+
+Bus : 34 Nord, 40, 44, 45, arrêt arrêt gare de Cergy-Saint-
+Christophe</itinerary>
+		<fullAddress>49, rue des Genottes 95024 CERGY PONTOISE</fullAddress>
+	</address>
+	<child uid="6664" active="true"/>
+</content>
+</entry>

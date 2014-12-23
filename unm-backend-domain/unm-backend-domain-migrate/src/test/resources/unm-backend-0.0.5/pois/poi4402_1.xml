@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4402_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4402_1.xml"/>
+<title>Economie quantitative M1-2</title>
+<updated>2014-08-15T01:47:16.899+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4402"
+	coordinates="49.039687290589,2.075171135366"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T13:57:52.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3850"
+	name="Economie quantitative M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau C445</floor>
+		<phone>01 34 25 60 39</phone>
+	</address>
+</content>
+</entry>

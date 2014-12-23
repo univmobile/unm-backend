@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7447_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7447_1.xml"/>
+<title>Restaurant administratif</title>
+<updated>2014-08-15T01:47:46.457+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7447"
+	coordinates="48.841266625745,2.3599791526794"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-30T17:03:18.000+02:00"
+	updatedAt="2013-05-03T12:34:53.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7404"
+	name="Restaurant administratif">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Restaurant administratif réservé au personnel et ses invités ainsi qu'aux étudiants inscrits au Muséum.</description>
+	<address>
+		<openingHours>11h30 - 14h30
+Le dernier repas est servi à 14h00</openingHours>
+	</address>
+</content>
+</entry>

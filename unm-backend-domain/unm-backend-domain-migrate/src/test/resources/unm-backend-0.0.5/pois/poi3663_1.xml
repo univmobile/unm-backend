@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3663_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3663_1.xml"/>
+<title>AIM-TECH</title>
+<updated>2014-08-15T01:47:09.073+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3663"
+	coordinates="48.846899529446,2.3574268631637"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T14:14:09.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3653"
+	name="AIM-TECH">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association des anciens d’immunotechnologies de l'upmc</description>
+	<address>
+		<floor>1è étage</floor>
+		<phone>06 76 48 01 61</phone>
+		<email>guillaume.goudeau@aimtech-asso.com</email>
+	</address>
+</content>
+</entry>

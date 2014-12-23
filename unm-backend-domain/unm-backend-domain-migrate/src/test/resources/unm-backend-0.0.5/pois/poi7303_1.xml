@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7303_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7303_1.xml"/>
+<title>Association des anciens élèves et élèves de l'ENS Cachan</title>
+<updated>2014-08-15T01:47:45.436+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7303"
+	coordinates="48.788782198753,2.3272008821368"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-18T14:14:05.000+01:00"
+	updatedAt="2012-12-18T14:16:18.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Association des anciens élèves et élèves de l'ENS Cachan">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Les activités  de l'Association sont la parution de 3 bulletins par année et la parution de l'annuaire des anciens élèves et élèves, l'organisation de colloques, de Journées thématiques, de  tables rondes, d'un congrès annuel à Cachan ou en province, et toute initiative des responsables ou de membres mandatés. L'association soutient certaines activités des élèves de l'ENS (Forum - Gala  journées inter-ENS sportives ou culturelles). </description>
+	<address>
+		<url>http://www.aae.ens-cachan.fr/</url>
+		<phone>09 79 04 26 43</phone>
+		<email>anciens@ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

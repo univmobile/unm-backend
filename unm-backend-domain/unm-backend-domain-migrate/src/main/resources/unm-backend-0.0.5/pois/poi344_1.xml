@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi344_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi344_1.xml"/>
+<title>UFR SMBH</title>
+<updated>2014-08-15T01:46:39.307+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="344"
+	coordinates="48.913139093009,2.41956174373"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T10:58:45.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-07-26T11:07:03.000+02:00"
+	createdBy="raphael"
+	updatedBy="raphael"
+	name="UFR SMBH">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5815_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5815_1.xml"/>
+<title>EMEPDPHMPSEEP - M1-2</title>
+<updated>2014-08-15T01:47:30.431+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5815"
+	coordinates="48.836994768298,2.5933413952589"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:26:52.000+02:00"
+	updatedAt="2011-06-15T15:48:51.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4598"
+	name="EMEPDPHMPSEEP - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>CONCOURS DE PREPARATION AU PROFESSORAT DES ECOLES : Master Education et métiers de l'enseignement du premier degré, parcours Histoire, mémoire, patrimoine, sociétés et espaces à l'école primaire</description>
+	<address>
+		<floor>C010</floor>
+		<phone>01 60 95 70 74</phone>
+		<fax>01 60 95 70 77</fax>
+		<email>Marie-Ange.Paquita@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

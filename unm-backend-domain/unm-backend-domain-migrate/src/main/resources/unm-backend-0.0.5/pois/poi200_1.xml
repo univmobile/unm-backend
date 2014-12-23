@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi200_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi200_1.xml"/>
+<title>Bibliothèque PMF</title>
+<updated>2014-08-15T01:46:38.634+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="200"
+	coordinates="48.827131729505,2.364737"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-05T11:09:13.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T16:14:05.000+01:00"
+	createdBy="yasmine"
+	updatedBy="cfontaine"
+	name="Bibliothèque PMF">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Domaine Sciences humaines</description>
+	<address
+		countryCode="FR">
+		<floor>Aile A, 5e étage</floor>
+		<openingHours>Lundi au vendredi 9h-19h
+Samedi
+9h-13h
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus  62, 64 et83
+Arrêt Tolbiac-Baudricourt
+</itinerary>
+		<phone>01 44 07 88 14</phone>
+		<email>dirscd@univ-paris1.fr</email>
+		<fullAddress>90 rue de Tolbiac 
+75013 Paris</fullAddress>
+	</address>
+</content>
+</entry>

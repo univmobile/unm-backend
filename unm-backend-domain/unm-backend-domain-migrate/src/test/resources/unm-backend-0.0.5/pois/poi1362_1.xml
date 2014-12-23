@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1362_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1362_1.xml"/>
+<title>Master Psychologie, mention psychologie cognitive appliquée</title>
+<updated>2014-08-15T01:46:46.729+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1362"
+	coordinates="48.902861766388,2.211933284"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:25:08.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	deletedAt="2011-04-08T17:31:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Master Psychologie, mention psychologie cognitive appliquée">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 403A, 4ème étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h30 / 12h
+14h / 17h30</openingHours>
+		<phone>01 40 97 70 70</phone>
+		<email>slimane@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7355_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7355_1.xml"/>
+<title>Grande salle</title>
+<updated>2014-08-15T01:47:45.556+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7355"
+	coordinates="48.848648519493,2.3430517315865"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-18T13:35:44.000+02:00"
+	updatedAt="2013-06-07T16:58:21.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7349"
+	name="Grande salle">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>La grande salle se situe au premier étage, à gauche.
+
+Cette salle accueille des cours et des conférences de l'École nationale des chartes. </description>
+	<address>
+		<floor>Sorbonne, 19, rue de la Sorbonne, 75005 Paris, 1er étage</floor>
+		<url>http://www.enc.sorbonne.fr</url>
+		<phone>01 55 42 75 00</phone>
+		<email>secretariat@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

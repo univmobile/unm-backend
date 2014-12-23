@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2240_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2240_1.xml"/>
+<title>Économie et gestion (L1)</title>
+<updated>2014-08-15T01:46:55.340+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2240"
+	coordinates="48.946649205222,2.36111104488"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T17:19:14.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Économie et gestion (L1)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1er étage Bâtiment D, bureau 109</floor>
+		<openingHours>Jeudi et vendredi 
+10h00 à 12h30</openingHours>
+		<url>http://aes-ecoges.univ-paris8.fr</url>
+		<phone>01 49 40 73 79</phone>
+		<email>isoline.bonus@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

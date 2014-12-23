@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6773_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6773_1.xml"/>
+<title>Residence Universitaire Flora Tristan</title>
+<updated>2014-08-15T01:47:40.123+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6773"
+	coordinates="48.635474507398,2.4301578104496"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T10:44:37.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5413"
+	name="Residence Universitaire Flora Tristan">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D : Evry-Courcouronnes. Bus 403, 404, 405 et 407. </itinerary>
+		<fullAddress>8, rue Jules Vallès - 91025 Evry.</fullAddress>
+	</address>
+	<child uid="6776" active="true"/>
+</content>
+</entry>

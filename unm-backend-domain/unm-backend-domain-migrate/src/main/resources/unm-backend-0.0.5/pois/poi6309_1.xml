@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6309_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6309_1.xml"/>
+<title>Droit général L1-3</title>
+<updated>2014-08-15T01:47:35.876+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6309"
+	coordinates="48.847024666833,2.34440356493"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T15:47:35.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1027"
+	name="Droit général L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://www.univ-paris1.fr/ufr/ufr260/</url>
+		<phone> 01 44 07 78 74</phone>
+		<email>ufr26@univ-paris1.fr</email>
+	</address>
+	<attachment id="131" title="RTEmagicC_centre-rene-cassin-facade.jpg.jpg" type="image" url="/uploads/poi/4736fdc6f975cc94e8010f0d5f5cfa41b8fa292f.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4903_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4903_1.xml"/>
+<title>Dauphine Evasion</title>
+<updated>2014-08-15T01:47:21.660+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4903"
+	coordinates="48.869621490691,2.2731238603592"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:20:14.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Dauphine Evasion">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Shopping à Londres pour Noël, éclate à Amsterdam en février, soleil et folie d'un Spring Break, ou détente à Berlin après les partiels de juin... Dauphine Evasion est une association qui perdure depuis 1985, et qui te fera découvrir l'Europe sous un nouveau jour.</description>
+	<address>
+		<floor>Local B 012</floor>
+		<email>dauphineevasion@hotmail.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6883_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6883_1.xml"/>
+<title>Scolarité L2</title>
+<updated>2014-08-15T01:47:40.968+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6883"
+	coordinates="48.843457301251,2.3335030674934"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-09T11:44:04.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="2846"
+	name="Scolarité L2">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>2 ème étage</floor>
+		<openingHours>Lundi et jeudi : 10h00 - 16h00 sans interruption
+Mardi, mercredi, vendredi : 9h00 - 12h00</openingHours>
+		<url>http://www.u-paris2.fr</url>
+		<email>isabelle.kling@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

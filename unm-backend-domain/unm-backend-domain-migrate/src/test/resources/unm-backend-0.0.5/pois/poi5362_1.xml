@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5362_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5362_1.xml"/>
+<title>Mathématiques (L3)</title>
+<updated>2014-08-15T01:47:25.571+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5362"
+	coordinates="48.703505514022,2.1769639849663"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T15:32:11.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4580"
+	name="Mathématiques (L3)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 425, bureau 22</floor>
+		<url>http://www.u-psud.fr/fr/les_formations/les_formations_par_diplome/licences/sciences_technologies_sante/mathematiques.html</url>
+		<phone>01 69 15 60 30</phone>
+		<email>nathalie.carrierre@math.u-psud.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1365_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1365_1.xml"/>
+<title>Psychologie M1-2</title>
+<updated>2014-08-15T01:46:46.760+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1365"
+	coordinates="48.902821449763,2.21170932054"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:29:43.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2494"
+	name="Psychologie M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Psychologie de l'enfance, de l'adolescence et des institutions, psychologie sociale appliquée, psychologie du travail et ergonomie, psychologie cognitive appliquée. </description>
+	<address>
+		<floor>Bureau 403 A, 4ème étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h30 / 12h - 14h / 17h30</openingHours>
+		<phone>01 40 97 70 70</phone>
+		<email>slimane@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

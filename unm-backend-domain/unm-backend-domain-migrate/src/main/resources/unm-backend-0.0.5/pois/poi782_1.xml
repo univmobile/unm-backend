@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi782_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi782_1.xml"/>
+<title>Centre Albert Châtelet </title>
+<updated>2014-08-15T01:46:41.878+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="782"
+	coordinates="48.841799740129,2.34856367111"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-16T14:51:08.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre Albert Châtelet ">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 7 
+Station Censier-Daubenton, Place Monge
+
+Bus  27 et 47</itinerary>
+		<fullAddress>6 rue Jean Calvin
+75005 Paris</fullAddress>
+	</address>
+	<child uid="1026" active="true"/>
+	<attachment id="38" title="albert_chatelet.jpg" type="image" url="/uploads/poi/918d4a15645591d182cb8e631f12d87f52d23d56.jpg"/>
+</content>
+</entry>

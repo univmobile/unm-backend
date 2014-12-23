@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6084_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6084_1.xml"/>
+<title>BU IUT Meaux</title>
+<updated>2014-08-15T01:47:33.542+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6084"
+	coordinates="48.954477338211,2.8782000392675"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:51:49.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5672"
+	name="BU IUT Meaux">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Collections:
+-Gestion des entreprises et des administrations
+-Comptabilité
+-Techniques de commercialisation
+-Communication et culture générale
+-Réseaux</description>
+	<address>
+		<floor>2è étage</floor>
+		<openingHours>Lundi-vendredi: 8h30-17h30 </openingHours>
+		<url>http://www.univ-mlv.fr/bibliotheque/bibliotheques/bibliotheque-iut-meaux/</url>
+		<phone>01 64 36 44 29</phone>
+		<email>bibmeaux@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

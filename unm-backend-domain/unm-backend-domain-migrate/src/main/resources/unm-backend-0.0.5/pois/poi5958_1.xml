@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5958_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5958_1.xml"/>
+<title>DULFCF</title>
+<updated>2014-08-15T01:47:32.090+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5958"
+	coordinates="49.038687241366,2.0750501006842"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:53:33.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3849"
+	name="DULFCF">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<description>Secrétaire du DULFCF (Diplôme Universitaire Langue Française et Cultures Francophones) : Hoa-Mi VAN
+</description>
+	<address>
+		<floor>Tour des Chênes - 3e étage - Bureau 317</floor>
+		<openingHours>Mardi : 9h00-12h30/ 13h30-17h00
+Jeudi : 9h00-12h30/ 13h30-17h00
+Vendredi : 9h00-12h30</openingHours>
+		<phone>01 34 25 22 51</phone>
+		<email>thihoami.van@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4119_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4119_1.xml"/>
+<title>UMR 7614</title>
+<updated>2014-08-15T01:47:13.872+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4119"
+	coordinates="48.844186651955,2.3436921089888"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:31:13.000+02:00"
+	updatedAt="2011-06-03T16:57:45.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4103"
+	name="UMR 7614">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de Chimie Physique-Matière et Rayonnement (LCPMR) - UMR 7614</description>
+	<address>
+		<floor>3ème étage, pièce 09 </floor>
+		<url>http://www.lcpmr.upmc.fr/</url>
+		<phone>01 44 27 66 33</phone>
+		<email>angela.fraioli@upmc.fr</email>
+	</address>
+</content>
+</entry>

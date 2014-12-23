@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7457_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7457_1.xml"/>
+<title>Master 1 « Technologies numériques appliquées à l’histoire »</title>
+<updated>2014-08-15T01:47:46.567+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7457"
+	coordinates="48.848641459378,2.3430369794369"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-07T16:18:57.000+02:00"
+	updatedAt="2013-06-07T17:03:07.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7349"
+	name="Master 1 « Technologies numériques appliquées à l’histoire »">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Grand établissement, l’École nationale des chartes forme des historiens et des responsables de la conservation du patrimoine qui travaillent notamment en archives, en bibliothèque et en musée.
+
+En 2006, elle a créé le master recherche et professionnel « Technologies numériques appliquées à l’histoire », dédié aux humanités numériques. Il répond à deux objectifs :
+
+- permettre une insertion professionnelle dans les secteurs public et privé, au service de projets utilisant l’informatique pour le traitement et la diffusion du patrimoine écrit et visuel ;
+- proposer une formation méthodologique qui fait une part très large aux technologies numériques dans l’élaboration de travaux de recherche.
+
+Ce master est noté A par l’AERES
+</description>
+	<address>
+		<floor>Sorbonne, 19, rue de la Sorbonne et 1 rue Victor Cousin, 75005 Paris</floor>
+		<url>http://www.enc.sorbonne.fr/master-technologies-numeriques-appliquees-l-histoire</url>
+		<phone>01.55.42.75.02</phone>
+		<email>etudes@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi61_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi61_1.xml"/>
+<title>Département CJ</title>
+<updated>2014-08-15T01:46:38.375+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="61"
+	coordinates="48.955614799052,2.34191179275"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T13:02:42.000+02:00"
+	updatedAt="2011-05-31T11:58:05.000+02:00"
+	deletedAt="2011-03-14T13:27:40.000+01:00"
+	createdBy="yasmine"
+	updatedBy="Kevin Mazille"
+	name="Département CJ">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Carrières Juridiques
+Le département délivre le DUT Carrières Juridiques en formation initiale classique, en  formation continue et en apprentissage, ainsi que la Licence Professionnelle Banque &quot;Conseiller gestionnaire de clientèle particulière&quot; en formation initiale et en alternance.</description>
+	<address>
+		<url>http://www.iutv.univ-paris13.fr</url>
+		<phone>01 49 40 31 40   </phone>
+		<fax>01 49 40 20 14</fax>
+		<email> secrcj@iutv.univ-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

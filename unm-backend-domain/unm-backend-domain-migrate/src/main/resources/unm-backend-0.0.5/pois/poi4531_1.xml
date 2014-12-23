@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4531_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4531_1.xml"/>
+<title>Site Descartes</title>
+<updated>2014-08-15T01:47:18.273+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4531"
+	coordinates="48.838775152981,2.5865828990936"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:58:03.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4527"
+	name="Site Descartes">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4581" active="true"/>
+	<child uid="4598" active="true"/>
+	<child uid="4622" active="true"/>
+	<child uid="4644" active="true"/>
+	<child uid="5589" active="true"/>
+	<child uid="5614" active="true"/>
+	<child uid="5647" active="true"/>
+	<child uid="5668" active="true"/>
+	<child uid="6068" active="true"/>
+	<child uid="6146" active="true"/>
+	<child uid="6162" active="true"/>
+</content>
+</entry>

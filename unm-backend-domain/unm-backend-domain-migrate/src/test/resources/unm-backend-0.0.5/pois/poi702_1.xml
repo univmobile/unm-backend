@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi702_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi702_1.xml"/>
+<title>Centre Rene Cassin</title>
+<updated>2014-08-15T01:46:41.196+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="702"
+	coordinates="48.836100300439,2.3459833860397|48.83602261966,2.3465412855148|48.835888443484,2.3464983701706|48.835966124472,2.3459565639496|48.836100300439,2.3459833860"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-02-11T15:05:32.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-16T15:10:00.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Centre Rene Cassin">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<fullAddress>17, rue St Hippolyte
+75013 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

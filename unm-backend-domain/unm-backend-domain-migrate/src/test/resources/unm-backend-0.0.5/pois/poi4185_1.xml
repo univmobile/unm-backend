@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4185_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4185_1.xml"/>
+<title>Littérature française XIXe -XXIe siècles</title>
+<updated>2014-08-15T01:47:14.694+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4185"
+	coordinates="48.852512179866,2.3414755985141"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T13:56:30.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	deletedAt="2011-05-20T13:56:49.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Littérature française XIXe -XXIe siècles">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+</content>
+</entry>

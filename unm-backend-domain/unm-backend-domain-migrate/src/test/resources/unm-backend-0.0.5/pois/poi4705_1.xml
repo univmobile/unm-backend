@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4705_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4705_1.xml"/>
+<title>Villetaneuse Paris 13</title>
+<updated>2014-08-15T01:47:19.709+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4705"
+	coordinates="48.952180233447,2.317042350769"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T12:01:00.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="4693"
+	name="Villetaneuse Paris 13">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Plateforme d'accueil des résidences de Villetaneuse (Paris 13)</description>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>9h00-17h00</openingHours>
+		<itinerary>SNCF : gare du nord puis bus 154</itinerary>
+		<phone>01-48-21-86-10</phone>
+		<email>residence93-p13@crous-creteil.fr</email>
+	</address>
+	<child uid="4916" active="true"/>
+	<child uid="4919" active="true"/>
+	<child uid="5883" active="true"/>
+	<child uid="5884" active="true"/>
+	<child uid="5885" active="true"/>
+	<child uid="5886" active="true"/>
+	<child uid="5887" active="true"/>
+	<child uid="5888" active="true"/>
+</content>
+</entry>

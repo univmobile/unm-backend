@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1062_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1062_1.xml"/>
+<title>Mathématiques L1-3</title>
+<updated>2014-08-15T01:46:44.432+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1062"
+	coordinates="48.958356997814,2.340289056301"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-14T11:40:09.000+01:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	parentUid="2457"
+	name="Mathématiques L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>OBJECTIFS pédagogiques généraux
+&gt; Cette licence avec ses deux parcours, Mathématiques et Mathématiques métiers
+de l'enseignement, propose une formation progressive dans les domaines
+fondamentaux des mathématiques et permet d’acquérir des savoirs-faire
+indispensables à tout scientifique.</description>
+	<address>
+		<floor>1er étage - Aile C - Bureau C 203.</floor>
+		<openingHours>9h - 12h15</openingHours>
+		<itinerary>En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<url>http://www-galilee.univ-paris13.fr/etu_licences_maths.htm</url>
+		<phone>01 49 40 36 57</phone>
+		<fax>01 49 40 30 07</fax>
+		<email>math.licence.galilee@univ-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

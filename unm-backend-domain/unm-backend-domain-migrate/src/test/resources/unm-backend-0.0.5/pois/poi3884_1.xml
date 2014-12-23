@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3884_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3884_1.xml"/>
+<title>BU CELLF</title>
+<updated>2014-08-15T01:47:11.310+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3884"
+	coordinates="48.849048061548,2.3440401256084"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:37:21.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3679"
+	name="BU CELLF">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>CELLF : Centre d'étude de la langue et de la littérature françaises des 17e et 18e siècles.
+Membres du CELLF et personnes autorisées, sur rendez-vous.</description>
+	<address>
+		<floor>Escalier G, 2e étage</floor>
+		<openingHours>Du lundi au vendredi : 
+9h00 / 17h00
+</openingHours>
+	</address>
+</content>
+</entry>

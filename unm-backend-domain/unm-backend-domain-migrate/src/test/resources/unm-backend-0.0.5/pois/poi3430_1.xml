@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3430_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3430_1.xml"/>
+<title>Bibliothèque de gestion du centre Charcot</title>
+<updated>2014-08-15T01:47:06.502+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3430"
+	coordinates="48.829997681625,2.36929412931"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:12:12.000+02:00"
+	updatedAt="2011-05-11T14:45:49.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2948"
+	name="Bibliothèque de gestion du centre Charcot">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>
+Public concerné : étudiants de l'IUP de gestion et de masters en gestion</description>
+	<address>
+		<openingHours>Du lundi au vendredi : 
+13h00 / 17h00</openingHours>
+		<phone>01 44 06 90 70</phone>
+	</address>
+</content>
+</entry>

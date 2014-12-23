@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7065_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7065_1.xml"/>
+<title>Département : Institut de Linguistique et Phonétique</title>
+<updated>2014-08-15T01:47:42.905+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7065"
+	coordinates=""
+	active="true"
+	createdAt="2012-01-17T16:22:46.000+01:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-17T16:47:04.000+01:00"
+	createdBy="Jean-François Maynier"
+	updatedBy="Jean-François Maynier"
+	name="Département : Institut de Linguistique et Phonétique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>http://www.univ-paris3.fr/dept-ilpga</floor>
+		<openingHours>    Horaires d'ouverture des locaux de l'ILPGA :
+    8h30 - 20h
+
+
+    Horaires d'ouverture du secrétariat :
+    9h30 - 12h / 14h - 16h30</openingHours>
+		<url>http://www.ilpga.univ-paris3.fr</url>
+		<phone>01 44 32 05 70</phone>
+		<fax>01 44 32 05 73</fax>
+		<email>dept-ilpga@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

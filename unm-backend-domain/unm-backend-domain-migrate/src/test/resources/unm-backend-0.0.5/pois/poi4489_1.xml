@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4489_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4489_1.xml"/>
+<title>Le Club Web aRiSE</title>
+<updated>2014-08-15T01:47:17.845+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4489"
+	coordinates="48.626568571942,2.4312994256616"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:06:13.000+02:00"
+	updatedAt="2011-10-24T13:27:41.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Stéphanie ROCHE"
+	parentUid="4440"
+	name="Le Club Web aRiSE">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>A pour rôle d'administrer les serveurs des élèves. Cela comporte notamment le site http://www.iiens.net, mais aussi de nombreux services, tels des forums de discussion, des listes de diffusion et la possibilité pour les associations et les élèves de créer leur propre site Web ou système d'information.</description>
+	<address>
+		<url>http://arise.iiens.net</url>
+	</address>
+</content>
+</entry>

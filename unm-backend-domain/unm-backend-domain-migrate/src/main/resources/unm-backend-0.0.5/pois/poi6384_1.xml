@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6384_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6384_1.xml"/>
+<title>Chimie, Biologie, Biochimie Licence pro</title>
+<updated>2014-08-15T01:47:36.668+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6384"
+	coordinates="48.788863118873,2.4442648887634"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T16:06:47.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4528"
+	name="Chimie, Biologie, Biochimie Licence pro">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Secrétariat
+
+</description>
+	<address>
+		<url>http://iut.u-pec.fr/formations/licences-professionnelles/</url>
+		<email>ch-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

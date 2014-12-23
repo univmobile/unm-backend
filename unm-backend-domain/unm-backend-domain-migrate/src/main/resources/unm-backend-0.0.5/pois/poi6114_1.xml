@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6114_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6114_1.xml"/>
+<title>ED 262 Sciences juridiques, politiques, économiques et de ge</title>
+<updated>2014-08-15T01:47:33.897+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6114"
+	coordinates="48.824222363918,2.3025926202536"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T17:14:33.000+02:00"
+	updatedAt="2011-06-14T17:16:24.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2447"
+	name="ED 262 Sciences juridiques, politiques, économiques et de ge">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Josie YEYE
+
+
+</description>
+	<address>
+		<url>http://www.droit.univ-paris5.fr/ED-Droit/</url>
+		<phone>01 41 17 33 17</phone>
+		<email>ecoledoctorale@droit.parisdescartes.fr</email>
+	</address>
+</content>
+</entry>

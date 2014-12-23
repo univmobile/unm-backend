@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7297_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7297_1.xml"/>
+<title>Assistance sociale</title>
+<updated>2014-08-15T01:47:45.368+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7297"
+	coordinates="48.789456872737,2.3260867595673"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T14:59:56.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7218"
+	name="Assistance sociale">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Service assuré par Mme LE FAUCHEUR</description>
+	<address>
+		<floor>Rez-de-chaussée</floor>
+		<openingHours>Permanences tous les vendredis, de 9h00 à 16h30, dans le bureau du médecin</openingHours>
+		<phone>06 09 20 46 27</phone>
+		<email>action.sociale@ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

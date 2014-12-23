@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5535_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5535_1.xml"/>
+<title>LMDE Sénart</title>
+<updated>2014-08-15T01:47:27.206+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5535"
+	coordinates="48.626611844078,2.5625610351562"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T17:10:52.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5482"
+	name="LMDE Sénart">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>La Mutuelle des étudiants (LMDE)
+</description>
+	<address>
+		<floor>Scolarité vie de l'étudiant, Rez de chaussée, bureau 002 </floor>
+		<openingHours>Lundi de 13h à 14h  et  jeudi de 12h à 13h
+</openingHours>
+		<url>www.lmde.com</url>
+	</address>
+</content>
+</entry>

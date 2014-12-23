@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4873_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4873_1.xml"/>
+<title>Bibliothèque de recherche</title>
+<updated>2014-08-15T01:47:21.373+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4873"
+	coordinates="48.870401065272,2.2736951708794"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T13:40:02.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	deletedAt="2011-05-27T13:42:03.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bibliothèque de recherche">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>La Bibliothèque de recherche accueille les enseignants chercheurs et les étudiants de M2 recherche et doctorat de l'université Paris-Dauphine.</description>
+	<address>
+		<openingHours>Du Lundi au Vendredi : 
+9h00 / 20h00
+
+</openingHours>
+		<url>http://www.bu.dauphine.fr</url>
+		<phone>01 44 05 40 94</phone>
+		<email>be@dauphine.fr</email>
+	</address>
+</content>
+</entry>

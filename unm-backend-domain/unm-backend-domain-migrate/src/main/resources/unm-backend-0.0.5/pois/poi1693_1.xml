@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1693_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1693_1.xml"/>
+<title>Prêts d'ordinateurs portables</title>
+<updated>2014-08-15T01:46:49.985+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1693"
+	coordinates="48.829341004002,2.382189854979"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T16:04:57.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	deletedAt="2011-04-29T14:25:55.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	name="Prêts d'ordinateurs portables">
+	<poiType id="30" label="Accessibilité PMR ordinateur" categoryId="7" categoryLabel="Relais handicap"/>
+	<description>Prêts d'ordinateurs portables (pour les examens) mais aussi de fauteuils roulants, blocs-notes braille, dictaphones MP3, certains documents pédagogiques numérisés.
+Des salles sont également à votre disposition (salle de repos, salle informatique, salle de travail…).</description>
+	<address>
+		<floor>Relais handicap Diderot</floor>
+	</address>
+</content>
+</entry>

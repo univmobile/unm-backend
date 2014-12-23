@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3299_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3299_1.xml"/>
+<title>EA 3382 - Laboratoire de droit social</title>
+<updated>2014-08-15T01:47:05.132+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3299"
+	coordinates="48.846791836759,2.3443455"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:55:27.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="EA 3382 - Laboratoire de droit social">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<url>http://ldsocial.u-paris2.fr/</url>
+		<phone>01 53 63 53 31</phone>
+	</address>
+</content>
+</entry>

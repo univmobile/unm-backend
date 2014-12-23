@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi765_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi765_1.xml"/>
+<title>Centre Malher</title>
+<updated>2014-08-15T01:46:41.770+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="765"
+	coordinates="48.856018118861,2.3610010743141|48.856008412632,2.361074835062|48.855904291142,2.3610399663448|48.855915762164,2.3609662055969|48.856018118861,2.361001074"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-02-15T15:45:41.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T15:53:02.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Centre Malher">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>CEMAF 
+Centre d'Etudes des Mondes Africains </description>
+	<address
+		countryCode="FR">
+		<itinerary>Métro 1
+Station Saint Paul
+</itinerary>
+		<fullAddress>9 rue Malher
+75004 Paris</fullAddress>
+	</address>
+</content>
+</entry>

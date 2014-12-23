@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4315_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4315_1.xml"/>
+<title>Cafétéria Clignancourt</title>
+<updated>2014-08-15T01:47:16.050+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4315"
+	coordinates="48.900310412423,2.3468564450741"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:06:29.000+02:00"
+	updatedAt="2011-09-26T17:02:52.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3710"
+	name="Cafétéria Clignancourt">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi :
+8h00 / 17h00</openingHours>
+	</address>
+</content>
+</entry>

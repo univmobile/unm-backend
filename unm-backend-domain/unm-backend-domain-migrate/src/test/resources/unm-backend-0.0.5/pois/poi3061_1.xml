@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3061_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3061_1.xml"/>
+<title>Laboratoire physiologie de la perception</title>
+<updated>2014-08-15T01:47:02.574+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3061"
+	coordinates="48.855300470468,2.3316577076912"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:39:37.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2331"
+	name="Laboratoire physiologie de la perception">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Room H416</floor>
+		<phone>01 42.86.33.63  </phone>
+		<fax>01 42.86.33.22</fax>
+	</address>
+</content>
+</entry>

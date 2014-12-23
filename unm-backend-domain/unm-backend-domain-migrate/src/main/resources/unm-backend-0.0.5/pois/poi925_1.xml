@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi925_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi925_1.xml"/>
+<title>Anthropologie et histoire des mondes antiques ANHIMA</title>
+<updated>2014-08-15T01:46:43.415+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="925"
+	coordinates="48.835368566271,2.35798962"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T15:20:15.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1029"
+	name="Anthropologie et histoire des mondes antiques ANHIMA">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Fusion d'&quot;Histoire et anthropologie des mondes antiques&quot; (HAMA), &quot;Glotz-mondes hellénistes et romains&quot;, &quot;Gernet&quot; ainsi que &quot;Phéacie&quot;.</description>
+	<address>
+		<itinerary>Métro 3 
+Station Bourse </itinerary>
+	</address>
+</content>
+</entry>

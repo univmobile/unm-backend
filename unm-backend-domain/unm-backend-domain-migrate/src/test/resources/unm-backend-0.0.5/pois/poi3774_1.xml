@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3774_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3774_1.xml"/>
+<title>Polytech'Paris</title>
+<updated>2014-08-15T01:47:10.243+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3774"
+	coordinates="48.845062588381,2.3569690436125"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:42:29.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2790"
+	name="Polytech'Paris">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Intégrer Polytech’Paris-UPMC, c’est bénéficier des ressources et du rayonnement intellectuel de l’UPMC.</description>
+	<address>
+		<url>http://www.polytech.upmc.fr/</url>
+		<phone>01 44 27 25 79</phone>
+		<email>direction-polytech@upmc.fr</email>
+	</address>
+</content>
+</entry>

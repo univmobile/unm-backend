@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4232_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4232_1.xml"/>
+<title>Centre de recherches sur la pensée antique</title>
+<updated>2014-08-15T01:47:15.216+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4232"
+	coordinates="48.848256843403,2.3431948944926"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T14:19:49.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Centre de recherches sur la pensée antique">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Centre de recherches sur la pensée antique (Centre Léon Robin)</description>
+	<address>
+		<phone>01 53 10 57 00</phone>
+	</address>
+</content>
+</entry>

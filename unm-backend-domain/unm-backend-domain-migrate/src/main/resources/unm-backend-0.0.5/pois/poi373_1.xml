@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi373_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi373_1.xml"/>
+<title>Versailles Descartes</title>
+<updated>2014-08-15T01:46:39.531+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="373"
+	coordinates="48.812955753065,2.148285806"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T15:59:36.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="raphael"
+	updatedBy="rrivoire"
+	parentUid="360"
+	name="Versailles Descartes">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Gare des Chantiers à Versailles
+Bus R Phébus</itinerary>
+		<fullAddress>45 avenue des Etats-Unis 
+78035 Versailles cedex  </fullAddress>
+	</address>
+	<child uid="2987" active="true"/>
+	<child uid="2612" active="true"/>
+	<child uid="2532" active="true"/>
+	<child uid="2530" active="true"/>
+	<child uid="2515" active="true"/>
+	<child uid="2496" active="true"/>
+	<child uid="2493" active="true"/>
+	<child uid="2490" active="true"/>
+	<child uid="2229" active="true"/>
+	<child uid="2228" active="true"/>
+	<child uid="2226" active="true"/>
+	<child uid="2222" active="true"/>
+	<child uid="2220" active="true"/>
+	<child uid="1980" active="true"/>
+	<child uid="2017" active="true"/>
+	<child uid="2006" active="true"/>
+	<child uid="2005" active="true"/>
+	<child uid="374" active="true"/>
+</content>
+</entry>

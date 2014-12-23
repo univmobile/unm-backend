@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6974_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6974_1.xml"/>
+<title>AMPHIBIX</title>
+<updated>2014-08-15T01:47:41.755+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6974"
+	coordinates="48.902616545626,2.213286459446"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T11:12:09.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="AMPHIBIX">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association apolitique qui vise à animer la vie étudiante (particulièrement celle du bâtiment G) à travers l'organisation : de soirées, de tournois sportifs sur le campus, d'évènements au sein du bâtiment G, tels que des petits dej's, des repas champêtres... et la sortie chaque mois du journal &quot; l'écho de l'écho&quot;, réalisé par des étudiants, sur la vie du bâtiment G et de ses étudiants. </description>
+	<address>
+		<floor>Bâtiment R - Salle R 107 - 1er étage</floor>
+	</address>
+</content>
+</entry>

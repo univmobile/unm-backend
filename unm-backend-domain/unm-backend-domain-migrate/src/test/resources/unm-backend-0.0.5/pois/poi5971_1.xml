@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5971_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5971_1.xml"/>
+<title>Service social étudiant handicapés</title>
+<updated>2014-08-15T01:47:32.245+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5971"
+	coordinates="49.038983048562,2.0738296955824"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T11:12:48.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3851"
+	name="Service social étudiant handicapés">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<address>
+		<phone>01 34 25 62 05</phone>
+		<email>http://www.crous-versailles.fr/</email>
+	</address>
+</content>
+</entry>

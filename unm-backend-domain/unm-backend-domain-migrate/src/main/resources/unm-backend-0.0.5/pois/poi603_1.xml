@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi603_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi603_1.xml"/>
+<title>Restaurant Moliere</title>
+<updated>2014-08-15T01:46:40.846+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="603"
+	coordinates="48.829257103355,2.363981008529"
+	active="true"
+	markerType="point"
+	createdAt="2011-01-24T11:01:45.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-01-24T11:09:27.000+01:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Restaurant Moliere">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address
+		countryCode="FR">
+		<floor>9 ème Aile C</floor>
+		<openingHours>12h 30</openingHours>
+	</address>
+</content>
+</entry>

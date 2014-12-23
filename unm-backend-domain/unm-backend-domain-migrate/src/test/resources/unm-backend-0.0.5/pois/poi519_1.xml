@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi519_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi519_1.xml"/>
+<title>Bibliothèque universitaire Jean Dausset</title>
+<updated>2014-08-15T01:46:40.574+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="519"
+	coordinates="48.913809757759,2.418231368064"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T17:45:47.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="yasmine"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="356"
+	name="Bibliothèque universitaire Jean Dausset">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Bibliothèque universitaire Jean Dausset.</description>
+	<address>
+		<floor>RDC.</floor>
+		<openingHours>Lundi, mercredi, jeudi, vendredi :
+9h - 22h
+Mardi :
+11h - 22h
+Samedi : 
+9h - 22h
+Dimanche : 
+9h - 18h</openingHours>
+		<url>www.univ-paris13.fr/bu/</url>
+		<phone>01 48 38 84 63</phone>
+		<fax>01 48 38 84 81</fax>
+	</address>
+</content>
+</entry>

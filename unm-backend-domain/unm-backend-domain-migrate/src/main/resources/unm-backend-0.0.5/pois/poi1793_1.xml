@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1793_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1793_1.xml"/>
+<title>IUT de Velizy</title>
+<updated>2014-08-15T01:46:50.973+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1793"
+	coordinates="48.781967932176,2.2175042331"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T15:32:48.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="505"
+	name="IUT de Velizy">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<phone>0130465106</phone>
+		<email>nadine.fabre@iut-velizy.uvsq.fr</email>
+	</address>
+</content>
+</entry>

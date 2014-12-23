@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3780_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3780_1.xml"/>
+<title>BU Michelet</title>
+<updated>2014-08-15T01:47:10.310+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3780"
+	coordinates="48.842361254666,2.3361192271113"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:49:31.000+02:00"
+	updatedAt="2011-09-26T16:46:05.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3728"
+	name="BU Michelet">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Accessible aux étudiants et enseignants de Paris-Sorbonne et Panthéon-Sorbonne (Paris-I).
+Disciplines : histoire de l’art (Ve-XXIe s.), archéologie (préhistoire, archéologie antique et médiévale) et musicologie.</description>
+	<address>
+		<openingHours>Du lundi au vendredi : 
+9h00 / 19h30</openingHours>
+		<phone>01 53 73 70 90</phone>
+	</address>
+</content>
+</entry>

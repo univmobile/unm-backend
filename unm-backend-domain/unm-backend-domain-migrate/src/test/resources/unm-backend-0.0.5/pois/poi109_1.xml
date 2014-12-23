@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi109_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi109_1.xml"/>
+<title>UFR 01 Droit, Administration et Secteur Publics</title>
+<updated>2014-08-15T01:46:38.460+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="109"
+	coordinates="48.846910877487,2.345295041886"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-28T15:53:06.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2010-09-05T10:22:57.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="UFR 01 Droit, Administration et Secteur Publics">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

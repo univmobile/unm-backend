@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3176_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3176_1.xml"/>
+<title>amphi martin</title>
+<updated>2014-08-15T01:47:03.677+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3176"
+	coordinates="48.625686766679,2.4203422665"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-09T15:32:37.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2011-05-10T10:56:16.000+02:00"
+	createdBy="j.richer"
+	updatedBy="super admin"
+	name="amphi martin">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3459_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3459_1.xml"/>
+<title>Mathématiques - L2-3</title>
+<updated>2014-08-15T01:47:06.871+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3459"
+	coordinates="48.847689584975,2.3583037778"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:54:48.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2830"
+	name="Mathématiques - L2-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La licence mention « mathématiques » prépare les étudiants en vue de deux types de débouchés : la poursuite d'études en Master ou en école d'ingénieur ou l'entrée dans la vie active directe ou via la préparation à un concours de recrutement.</description>
+	<address>
+		<floor>couloir B RdC et 1è étage</floor>
+		<openingHours>Lundi au vendredi 9h00-11h30/13h30-17h</openingHours>
+		<url>http://www.licence.math.upmc.fr</url>
+		<phone>01 44 27 40 01</phone>
+		<email>licence.math@upmc.fr</email>
+	</address>
+</content>
+</entry>

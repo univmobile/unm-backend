@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6263_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6263_1.xml"/>
+<title>P.Emergents &amp; en dvlpt M2</title>
+<updated>2014-08-15T01:47:35.460+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6263"
+	coordinates="48.844576432901,2.3425903916359"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-17T15:04:05.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1019"
+	name="P.Emergents &amp; en dvlpt M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 410</floor>
+		<openingHours>Lundi-vendredi : 9h30 à 12h15 - 14h à 16h
+sauf le mercredi</openingHours>
+		<url>http://www.univ-paris1.fr/ufr/ufr08-geographie/actualites/</url>
+		<phone>01.44.32.14.03</phone>
+		<email>annie.cordonnier@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

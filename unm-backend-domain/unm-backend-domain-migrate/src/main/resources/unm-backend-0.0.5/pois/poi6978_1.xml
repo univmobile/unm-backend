@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6978_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6978_1.xml"/>
+<title>Paris Ouest Junior Conseil</title>
+<updated>2014-08-15T01:47:41.816+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6978"
+	coordinates="48.902962117031,2.2154161334038"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T11:29:30.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2488"
+	name="Paris Ouest Junior Conseil">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Bâtiment G - Salle G308 - 3ème étage</floor>
+	</address>
+</content>
+</entry>

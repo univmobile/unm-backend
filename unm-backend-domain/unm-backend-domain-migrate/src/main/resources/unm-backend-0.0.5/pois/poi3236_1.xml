@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3236_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3236_1.xml"/>
+<title>Amphithéâtre 55B</title>
+<updated>2014-08-15T01:47:04.384+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3236"
+	coordinates="48.846044468293,2.356667798012"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:22:10.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2784"
+	name="Amphithéâtre 55B">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+</content>
+</entry>

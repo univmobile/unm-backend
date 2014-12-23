@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1719_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1719_1.xml"/>
+<title>RU des Etats Unis</title>
+<updated>2014-08-15T01:46:50.167+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1719"
+	coordinates="48.812515945818,2.14995145797"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T17:26:57.000+02:00"
+	updatedAt="2011-04-13T14:46:05.000+02:00"
+	deletedAt="2011-04-05T12:29:23.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="RU des Etats Unis">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+</content>
+</entry>

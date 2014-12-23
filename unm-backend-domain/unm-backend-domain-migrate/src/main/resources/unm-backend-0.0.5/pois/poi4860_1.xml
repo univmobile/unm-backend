@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4860_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4860_1.xml"/>
+<title>Cachan</title>
+<updated>2014-08-15T01:47:21.280+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4860"
+	coordinates="48.790020578981,2.3302173614502"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T12:03:39.000+02:00"
+	updatedAt="2011-07-27T09:40:13.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4694"
+	name="Cachan">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Plateforme d'accueil de la résidence de Cachan </description>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>9h00 - 17h00</openingHours>
+		<itinerary>Bus : 184 et 187 Division Leclerc</itinerary>
+		<phone>01-41-98-68-90</phone>
+		<email>residence.cachan@crous-creteil.fr</email>
+	</address>
+	<child uid="5915" active="true"/>
+	<child uid="5910" active="true"/>
+	<child uid="5909" active="true"/>
+	<child uid="5911" active="true"/>
+	<child uid="5908" active="true"/>
+	<child uid="5912" active="true"/>
+	<child uid="5913" active="true"/>
+	<child uid="5907" active="true"/>
+	<child uid="5914" active="true"/>
+	<child uid="5092" active="true"/>
+	<child uid="5089" active="true"/>
+	<child uid="4964" active="true"/>
+	<child uid="4945" active="true"/>
+	<child uid="4965" active="true"/>
+	<child uid="4966" active="true"/>
+	<child uid="4967" active="true"/>
+	<child uid="5077" active="true"/>
+	<child uid="5310" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4030_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4030_1.xml"/>
+<title>Cafétéria Gai Savoir</title>
+<updated>2014-08-15T01:47:12.889+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4030"
+	coordinates="48.944517658075,2.363321185112"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:36:28.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Cafétéria Gai Savoir">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Paninis, croque-monsieurs, salades, tartes et muffins.</description>
+	<address>
+		<floor>1er étage Bâtiment A, en haut de l'escalier au centre du hall</floor>
+		<openingHours>Du lundi au vendredi
+8h30-17h</openingHours>
+		<url>http://www.crous-creteil.fr/spip.php?article73</url>
+		<phone>01 49 40 67 23</phone>
+		<email>restaurant.paris8@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

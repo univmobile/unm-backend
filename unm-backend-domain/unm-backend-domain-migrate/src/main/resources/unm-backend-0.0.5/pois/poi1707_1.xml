@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1707_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1707_1.xml"/>
+<title>Association sportive </title>
+<updated>2014-08-15T01:46:50.079+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1707"
+	coordinates="48.829861561766,2.38155484199"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T16:40:54.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1774"
+	name="Association sportive ">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<address>
+		<floor>Batiment Grands Moulins</floor>
+		<phone>0157277960</phone>
+		<email>sport@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>
