@@ -8,8 +8,8 @@
 <meta http-equiv="Content-Language" content="en">
 <title>Administration d’UnivMobile — Utilisateurs</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
-<style type="text/css">
 
+<style type="text/css">
 td.id,
 td.name {
 	cursor: pointer;
@@ -23,7 +23,7 @@ td a:active {
 
 th.id,
 td.id {
-	display: none;
+	/*display: none;*/
 }
 
 body.results td.roles {
@@ -55,8 +55,8 @@ body.results td.roles.superadmin {
 	background-color: #f00;
 	xcolor: #f00;
 }
-
 </style>
+
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
@@ -85,36 +85,45 @@ body.results td.roles.superadmin {
 <div id="div-query">
    <form action="${baseURL}/users" method="GET">
    <input id="text-query" name="q">
-   <button id="button-search">
-      Rechercher
-   </button>
+   
+      <button id="button-search">
+         Rechercher
+      </button>
+      
    </form>
 </div>
 
 <div id="div-resultInfo">
 <span>
-	→
-	<c:choose>
-	<c:when test="${not empty usersInfo.context}">
-		<c:out value="${usersInfo.context}"/>
-		<c:if test="${not empty usersInfo.resultCount}">
-			(${usersInfo.resultCount})
-		</c:if>
-	</c:when>
-	<c:when test="${empty usersInfo.resultCount || usersInfo.resultCount == 0}">
-		Aucun résultat
-	</c:when>
-	<c:when test="${usersInfo.resultCount == 1}">
-		Un résultat
-	</c:when>
-	<c:otherwise>
-		${usersInfo.resultCount} résultats
-	</c:otherwise>
-	</c:choose>
+   →
+   <c:choose>
+	
+   <c:when test="${not empty usersInfo.context}">
+      <c:out value="${usersInfo.context}"/>
+	  <c:if test="${not empty usersInfo.resultCount}">
+	     (${usersInfo.resultCount})
+	  </c:if>
+   </c:when>
+   
+   <c:when test="${empty usersInfo.resultCount || usersInfo.resultCount == 0}">
+      Aucun résultat
+   </c:when>
+	
+   <c:when test="${usersInfo.resultCount == 1}">
+	  Un résultat
+   </c:when>
+   
+   <c:otherwise>
+	  ${usersInfo.resultCount} résultats
+   </c:otherwise>
+	
+   </c:choose>
 </span>
+
 <button id="button-export" disabled>
 	Export…
 </button>
+
 </div>
 
 <table>
@@ -122,10 +131,11 @@ body.results td.roles.superadmin {
 <thead>
    <tr>
       <th class="none"></th>
-      <th class="uid">uid</th>
-      <th class="roles"></th>
-      <th class="mail">mail</th>
-      <th class="edit"></th>
+      <th class="id">Id</th>
+      <th class="username">Username</th>
+      <th class="roles">Role</th>
+      <th class="email">E-mail</th>
+      <th class="edit">Action</th>
       <th class="none"></th>
    </tr>
 </thead>
@@ -136,41 +146,54 @@ body.results td.roles.superadmin {
 
    <td class="none">
       <c:choose>
-      <c:when test="${user.uid == u.uid}">
-      	<div class='principal <c:if test="${delegationUser.uid == u.uid}"> delegation </c:if>'
-         title="Principal : ${user.uid}">1</div>
+      
+      <c:when test="${user.id == u.id}">
+         <div class='principal 
+         <c:if test="${delegationUser.id == u.id}">
+            delegation
+         </c:if>'
+         title="Principal : ${user.username}">1</div>
       </c:when>
-      <c:when test="${delegationUser.uid == u.uid}">
-         <div class="delegation" title="Délégation : ${delegationUser.uid}">2</div>
+      
+      <c:when test="${delegationUser.id == u.id}">
+         <div class="delegation" title="Délégation : ${delegationUser.username}">2</div>
       </c:when>
+      
       </c:choose>
    </td>
    
-   <td class="uid">
-      ${u.uid}
+   <td class="id">
+      ${u.id}
+   </td>
+   
+   <td class="username">
+      ${u.username}
    </td>
    
    <c:choose>
-   <c:when test="${u.role eq 'superadmin'}">
-      <td class="roles superadmin" title="${u.uid} : Super Administrateur">S</td>
-   </c:when>
-   <c:when test="${u.role eq 'admin'}">
-      <td class="roles admin" title="${u.uid} : Administrateur">A</td>
-   </c:when>
-   <c:when test="${u.role eq 'student'}">
-      <td class="roles student" title="${u.uid} : Étudiant">É</td>
-   </c:when>
-   <c:otherwise>
-      <td class="roles unknown" title="(${u.uid} : Type inconnu)">-</td>
-   </c:otherwise>
+      <c:when test="${u.role eq 'superadmin'}">
+         <td class="roles superadmin" title="${u.id} : Super Administrateur">S</td>
+      </c:when>
+      
+      <c:when test="${u.role eq 'admin'}">
+         <td class="roles admin" title="${u.id} : Administrateur">A</td>
+      </c:when>
+      
+      <c:when test="${u.role eq 'student'}">
+         <td class="roles student" title="${u.id} : Étudiant">É</td>
+      </c:when>
+      
+      <c:otherwise>
+         <td class="roles unknown" title="(${u.id} : Type inconnu)">-</td>
+      </c:otherwise>
    </c:choose>
    
-   <td class="mail">
-      ${u.mail}
+   <td class="email">
+      ${u.email}
    </td>
    
    <td class="edit">
-      <a id="link-edit_${u.uid}" href="${baseURL}/usermodify/${u.uid}">Modifier…</a>
+      <a id="link-edit_${u.id}" href="${baseURL}/usermodify/${u.id}">Modifier…</a>
    </td>
    
    <td class="none">

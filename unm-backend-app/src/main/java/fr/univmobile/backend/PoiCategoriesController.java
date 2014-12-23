@@ -5,63 +5,56 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.commons.DataBeans.instantiate;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Nullable;
 
-import fr.univmobile.backend.core.PoiCategory;
-import fr.univmobile.backend.core.PoiCategoryDataSource;
-import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.backend.domain.Category;
+import fr.univmobile.backend.domain.CategoryRepository;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
 @Paths({ "poicategories", "poicategories/" })
 public class PoiCategoriesController extends AbstractBackendController {
 
-	public PoiCategoriesController(final PoiCategoryDataSource poiCategories) {
-
-		this.poiCategories = checkNotNull(poiCategories, "poicategories");
+	public PoiCategoriesController(final CategoryRepository categoryRepository) {
+		this.categoryRepository = checkNotNull(categoryRepository,
+				"categoryRepository");
 	}
 
-	private PoiCategoryDataSource poiCategories;
+	private CategoryRepository categoryRepository;
 
 	@Override
-	public View action() throws IOException, TransactionException {
+	public View action() {
 
 		getDelegationUser();
 
-		final Map<Integer, PoiCategory> allCategories = poiCategories.getAllBy(
-				Integer.class, "uid");
+		// 1. USERS DATA
 
-		final Map<Integer, PoiCategory> results = poiCategories.getAllBy(
-				Integer.class, "uid");
+		Iterable<Category> allCategories = categoryRepository.findAll();
 
-		// 1. USERS INFO
+		List<Category> poicategories = new ArrayList<Category>();
+
+		int size = 0;
+		for (Category c : allCategories) {
+			poicategories.add(c);
+			size++;
+		}
+
+		setAttribute("poicategories", poicategories);
+
+		// 2. USERS INFO
 
 		final PoiCategoriesInfo poiCategoriesInfo = instantiate(
 				PoiCategoriesInfo.class) //
-				.setCount(allCategories.size()) //
+				.setCount(size) //
 				.setContext("Tous les poi catégories") //
-				.setResultCount(results.size());
+				.setResultCount(size);
 
 		setAttribute("poiCategoriesInfo", poiCategoriesInfo);
 
-		// 2. USERS DATA
-
-		final List<PoiCategory> pc = new ArrayList<PoiCategory>();
-
-		setAttribute("poicategories", pc);
-
-		for (final PoiCategory p : allCategories.values()) {
-
-			pc.add(poiCategories.getLatest(p));
-
-		}
-
-		// 9. END
+		// 3. END
 
 		return new View("poicategories.jsp");
 	}

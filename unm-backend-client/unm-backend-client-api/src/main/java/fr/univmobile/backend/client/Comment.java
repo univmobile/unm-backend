@@ -80,7 +80,7 @@ public interface Comment {
 	String getAuthorLang();
 
 	boolean isNullAuthorLang();
-	
+
 	@Nullable
 	String getAuthorProfileImageUrl();
 
@@ -101,21 +101,24 @@ public interface Comment {
 
 		int[] getIndices();
 	}
-	
+
 	interface Url extends Entity {
-		
+
 		String getUrl();
-		
+
 		String getDisplayUrl();
-		
+
 		String getExpandedUrl();
 	}
-	
+
 	interface Hashtag extends Entity {
-		
+
 		String getText();
 	}
-	
+
 	// Author: Mauricio
 	String getActive();
+
+	// Author: Mauricio
+	int getContextUid();
 }

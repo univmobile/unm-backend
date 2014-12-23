@@ -3,26 +3,20 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static org.apache.commons.lang3.StringUtils.isBlank;
 
-import java.io.IOException;
-import java.text.NumberFormat;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import javax.annotation.Nullable;
 
-import fr.univmobile.backend.client.ClientException;
-import fr.univmobile.backend.core.Poi;
-import fr.univmobile.backend.core.PoiBuilder;
-import fr.univmobile.backend.core.PoiCategory;
-import fr.univmobile.backend.core.PoiCategoryDataSource;
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.Region;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.commons.tx.Lock;
-import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
+import fr.univmobile.backend.domain.Category;
+import fr.univmobile.backend.domain.CategoryRepository;
+import fr.univmobile.backend.domain.Poi;
+import fr.univmobile.backend.domain.PoiRepository;
+import fr.univmobile.backend.domain.Region;
+import fr.univmobile.backend.domain.RegionRepository;
+import fr.univmobile.backend.domain.UniversityRepository;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -32,71 +26,70 @@ import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.Regexp;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "poismodify/${uid}" })
+@Paths({ "poismodify/${id}" })
 public class PoisModifyController extends AbstractBackendController {
 
-	@PathVariable("${uid}")
-	private int getPoiUid() {
+	@PathVariable("${id}")
+	private long getPoiId() {
 
-		return getPathIntVariable("${uid}");
+		return getPathIntVariable("${id}");
 	}
 
-	public PoisModifyController(final TransactionManager tx,
-			final PoiDataSource pois, final PoisController poisController,
-			final RegionDataSource regions,
-			final PoiCategoryDataSource poicategories) {
-
-		this.pois = checkNotNull(pois, "pois");
-		this.tx = checkNotNull(tx, "tx");
+	public PoisModifyController(final PoiRepository poiRepository,
+			final CategoryRepository categoryRepository,
+			final RegionRepository regionRepository,
+			final UniversityRepository universityRepository,
+			final PoisController poisController) {
+		this.poiRepository = checkNotNull(poiRepository, "poiRepository");
+		this.categoryRepository = checkNotNull(categoryRepository,
+				"categoryRepository");
+		this.regionRepository = checkNotNull(regionRepository,
+				"regionRepository");
+		this.universityRepository = checkNotNull(universityRepository,
+				"universityRepository");
 		this.poisController = checkNotNull(poisController, "poisController");
-		this.regions = checkNotNull(regions, "regions");
-		this.poicategories = checkNotNull(poicategories, "poicategories");
 	}
 
-	private final TransactionManager tx;
-	private final PoiDataSource pois;
-	private final PoisController poisController;
-	private final RegionDataSource regions;
-	private final PoiCategoryDataSource poicategories;
+	private PoiRepository poiRepository;
+	private CategoryRepository categoryRepository;
+	private RegionRepository regionRepository;
+	private UniversityRepository universityRepository;
+	private PoisController poisController;
 
 	@Override
-	public View action() throws IOException, TransactionException,
-			ClientException {
+	public View action() {
 
 		// CATEGORIES
 
-		final Map<Integer, PoiCategory> dsPoiCategories = poicategories
-				.getAllBy(Integer.class, "uid");
+		Iterable<Category> allCategories = categoryRepository.findAll();
 
-		final List<PoiCategory> poiCategoriesData = new ArrayList<PoiCategory>();
+		List<Category> categories = new ArrayList<Category>();
 
-		for (final PoiCategory p : dsPoiCategories.values())
-			if (String.valueOf(p.getUid()).startsWith(
-					String.valueOf(PoiCategory.ROOT_UNIVERSITIES_CATEGORY_UID))
-					&& p.getActive() == "true")
-				poiCategoriesData.add(p);
-		setAttribute("poiCategoriesData", poiCategoriesData);
+		for (Category c : allCategories) {
+			// if (c.getParent() == null)
+			categories.add(c);
+		}
+
+		setAttribute("poiCategoriesData", categories);
 
 		// REGIONS
 
-		final Map<String, Region> dsRegions = regions.getAllBy(String.class,
-				"uid");
+		Iterable<Region> allRegions = regionRepository.findAll();
 
-		final List<Region> regionsData = new ArrayList<Region>();
+		List<Region> regions = new ArrayList<Region>();
 
-		for (final Region r : dsRegions.values())
-			regionsData.add(r);
-		setAttribute("regionsData", regionsData);
+		for (Region r : allRegions)
+			regions.add(r);
 
-		// 1.1 POI CATEGORY
+		setAttribute("regionsData", regions);
 
-		Poi poi;
+		// 1. POI
 
-		poi = pois.getByUid(getPoiUid());
+		Poi poi = poiRepository.findOne(getPoiId());
 
 		setAttribute("poimodify", poi);
 
-		// 1.2 HTTP
+		// 2. HTTP
 
 		final Poimodify form = getHttpInputs(Poimodify.class);
 
@@ -105,71 +98,60 @@ public class PoisModifyController extends AbstractBackendController {
 			return new View("poimodify.jsp");
 		}
 
-		// 2. APPLICATION VALIDATION
+		// 3. APPLICATION VALIDATION
 
-		final Integer uid = form.uid();
-
-		final Lock lock = tx.acquireLock(5000, "pois", uid);
-		try {
-
-			return poimodify(lock, form);
-
-		} finally {
-			lock.release();
-		}
+		return poimodify(form, poi);
 	}
 
-	private View poimodify(final Lock lock, final Poimodify form)
-			throws IOException, TransactionException {
-
-		final Integer uid = form.uid();
-
-		// final PoiBuilder poi = pois.create();
-		final PoiBuilder poi = pois.update(pois.getByUid(uid));
-
-		poi.setAuthorName(getDelegationUser().getAuthorName());
-
-		poi.setUid(uid);
-		poi.setName(form.name());
-
-		NumberFormat nf = NumberFormat.getInstance();
-		nf.setMaximumFractionDigits(2);
-
-		if (!form.poiCategory().equals("(aucune)"))
-			poi.setCategoryId(Integer.parseInt(form.poiCategory()));
+	private View poimodify(final Poimodify form, Poi poi) {
 
 		boolean hasErrors = false;
 
-		double latitude = 0;
-		double longitude = 0;
-
-		try {
-			latitude = Double.parseDouble(form.coordinates().split(",")[0]);
-			longitude = Double.parseDouble(form.coordinates().split(",")[1]);
-		} catch (Exception e) {
+		poi.setName(form.name());
+		if (isBlank(form.name())) {
 			hasErrors = true;
-			setAttribute("err_coord_not_valid", true);
+			setAttribute("err_poimodify_name", true);
+			setAttribute("err_incorrectFields", true);
 		}
 
-		poi.setUniversityIds(form.university());
-		poi.setFloors(form.floor());
+		poi.setCategory(categoryRepository.findByName(form.category()));
+		if (isBlank(form.category())) {
+			hasErrors = true;
+			setAttribute("err_poimodify_category", true);
+			setAttribute("err_incorrectFields", true);
+		}
+
+		poi.setAddress(form.address());
+		poi.setCity(form.city());
+		poi.setCountry(form.country());
+		poi.setEmail(form.email());
+		poi.setFloor(form.floor());
+		poi.setItinerary(form.itinerary());
+
+		poi.setLat(form.lat());
+		if (form.lat() == null) {
+			hasErrors = true;
+			setAttribute("err_poimodify_lat", true);
+			setAttribute("err_incorrectFields", true);
+		}
+
+		poi.setLng(form.lng());
+		if (form.lng() == null) {
+			hasErrors = true;
+			setAttribute("err_poimodify_lng", true);
+			setAttribute("err_incorrectFields", true);
+		}
+
 		poi.setOpeningHours(form.openingHours());
-		poi.setPhones(form.phone());
-		// poi.setAddresses(form.address());
-		poi.setFullAddresses(form.address());
-		// or? fullAddress = floor + address + zipCode + city
-		poi.setEmails(form.email());
-		poi.setItineraries(form.itinerary());
-		poi.setUrls(form.url());
-		poi.setCoordinates(form.coordinates());
+		poi.setPhones(form.phones());
+		poi.setUniversity(universityRepository.findByTitle(form.university()));
+		poi.setUrl(form.url());
+		poi.setZipcode(form.zipcode());
 
 		if (form.active().equals("yes"))
-			poi.setActive("true");
+			poi.setActive(true);
 		else
-			poi.setActive("false");
-
-		poi.setLatitudes(String.valueOf(nf.format(latitude)));
-		poi.setLongitudes(String.valueOf(nf.format(longitude)));
+			poi.setActive(false);
 
 		if (hasErrors) {
 
@@ -183,9 +165,7 @@ public class PoisModifyController extends AbstractBackendController {
 
 		// Otherwise, we’re clear: Save the data.
 
-		lock.save(poi);
-
-		lock.commit();
+		poiRepository.save(poi);
 
 		return poisController.action();
 	}
@@ -206,11 +186,6 @@ public class PoisModifyController extends AbstractBackendController {
 	interface Poimodify extends HttpInputs {
 
 		@HttpRequired
-		@HttpParameter(trim = true)
-		@Regexp("[0-9]+")
-		int uid();
-
-		@HttpRequired
 		@HttpParameter
 		@Regexp(".*")
 		String name();
@@ -225,7 +200,7 @@ public class PoisModifyController extends AbstractBackendController {
 		String openingHours();
 
 		@HttpParameter
-		String phone();
+		String phones();
 
 		@HttpParameter
 		String address();
@@ -240,12 +215,24 @@ public class PoisModifyController extends AbstractBackendController {
 		String url();
 
 		@HttpParameter
-		String coordinates();
-
-		@HttpParameter
 		String active();
 
 		@HttpParameter
-		String poiCategory();
+		String category();
+
+		@HttpParameter
+		Double lat();
+
+		@HttpParameter
+		Double lng();
+
+		@HttpParameter
+		String city();
+
+		@HttpParameter
+		String country();
+
+		@HttpParameter
+		String zipcode();
 	}
 }

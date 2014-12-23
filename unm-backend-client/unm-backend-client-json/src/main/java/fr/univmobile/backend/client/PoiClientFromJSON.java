@@ -56,6 +56,15 @@ public class PoiClientFromJSON extends AbstractClientFromJSON<PoiJSONClient>
 	}
 
 	@Override
+	public Pois getPoisByRegionAndCategory(String regionUid, Integer categoryId, int[] excludeCategories, String filterByUniversity, boolean completeWholeTree) throws IOException {
+		if (log.isDebugEnabled()) {
+			log.debug("getPoisByRegionAndCategory()...");
+		}
+		
+		return unmarshall(jsonClient.getPoisByRegionAndCategoryJSON(regionUid, categoryId, excludeCategories, filterByUniversity, completeWholeTree), PoisJSON.class);
+	}
+	
+	@Override
 	public Pois getPoisByCategory(int categoryId) throws IOException {
 		
 		if (log.isDebugEnabled()) {

@@ -1,28 +1,20 @@
 package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
+import static fr.univmobile.commons.DataBeans.instantiate;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 
-import java.io.IOException;
-import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
-import fr.univmobile.backend.client.ClientException;
-import fr.univmobile.backend.client.Comment;
-import fr.univmobile.backend.client.CommentClient;
-import fr.univmobile.backend.client.CommentClientFromLocal;
-import fr.univmobile.backend.client.Poi;
-import fr.univmobile.backend.client.PoiClient;
-import fr.univmobile.backend.client.PoiClientFromLocal;
-import fr.univmobile.backend.client.PoiNotFoundException;
-import fr.univmobile.backend.core.CommentDataSource;
-import fr.univmobile.backend.core.CommentManager;
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.SearchManager;
-import fr.univmobile.commons.DataBeans;
+import fr.univmobile.backend.domain.Comment;
+import fr.univmobile.backend.domain.CommentRepository;
+import fr.univmobile.backend.domain.Poi;
+import fr.univmobile.backend.domain.PoiRepository;
+import fr.univmobile.backend.domain.User;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -41,59 +33,25 @@ public class CommentsController extends AbstractBackendController {
 		return getPathStringVariable("${context}");
 	}
 
-	@PathVariable("${active}")
-	private String getCommentStatus() {
-
-		return getPathStringVariable("${active}");
-	}
-
 	private boolean hasCommentsContext() {
 
 		return hasPathStringVariable("${context}");
 	}
 
-	public CommentsController(final CommentDataSource comments,
-			final CommentManager commentManager,
-			final SearchManager searchManager, final RegionDataSource regions,
-			final PoiDataSource pois) {
-
-		this.comments = checkNotNull(comments, "comments");
-		this.commentManager = checkNotNull(commentManager, "commentManager");
-		this.searchManager = checkNotNull(searchManager, "searchManager");
-		this.pois = checkNotNull(pois, "pois");
-		this.regions = checkNotNull(regions, "regions");
+	public CommentsController(final CommentRepository commentRepository,
+			final PoiRepository poiRepository) {
+		this.commentRepository = checkNotNull(commentRepository,
+				"commentRepository");
+		this.poiRepository = checkNotNull(poiRepository, "poiRepository");
 	}
 
-	private final RegionDataSource regions;
-	private final PoiDataSource pois;
-	private final CommentDataSource comments;
-	private final CommentManager commentManager;
-	private final SearchManager searchManager;
-
-	private PoiClient getPoiClient() {
-
-		return new PoiClientFromLocal(getBaseURL(), pois, regions);
-	}
-
-	private CommentClient getCommentClient() {
-
-		return new CommentClientFromLocal(getBaseURL(), comments,
-				commentManager, searchManager);
-	}
+	private CommentRepository commentRepository;
+	private PoiRepository poiRepository;
 
 	private static final Log log = LogFactory.getLog(CommentsController.class);
 
 	@Override
 	public View action() throws Exception {
-
-		try {
-			
-			if (getAttribute("status", boolean.class) == true)
-				return mostRecentComments();
-			
-		} catch (Exception e) {
-
-		}
 
 		if (!hasCommentsContext()) {
 
@@ -112,11 +70,10 @@ public class CommentsController extends AbstractBackendController {
 
 	private View poiComments(final String context) throws Exception {
 
-		final int poiId;
-
+		Long poiId;
 		try {
 
-			poiId = Integer.parseInt(substringAfter(context, "poi"));
+			poiId = Long.parseLong(substringAfter(context, "poi"));
 
 		} catch (final NumberFormatException e) {
 			throw new PageNotFoundException();
@@ -128,50 +85,43 @@ public class CommentsController extends AbstractBackendController {
 
 		// 1. POI
 
-		final Poi poi;
-
-		try {
-
-			poi = getPoiClient().getPoi(poiId);
-
-		} catch (final PoiNotFoundException e) {
-			throw new PageNotFoundException();
-		}
-
-		System.out.println(poi.getName());
+		Poi poi = poiRepository.findOne(poiId);
 
 		setAttribute("poi", poi);
 
 		// 2. COMMENTS
 
-		final Comment[] comments = getCommentClient().getCommentsByPoiId(poiId);
+		Iterable<Comment> allComments = commentRepository.findByPoi(poi);
+
+		List<Comment> comments = new ArrayList<Comment>();
+
+		for (Comment c : allComments)
+			comments.add(c);
 
 		setAttribute("comments", comments);
 
 		// 3. COMMENTS INFO
 
-		setAttribute(
-				"commentsInfo",
-				DataBeans
-						.instantiate(CommentsInfo.class)
-						.setContext(
-								"Commentaires pour le POI " + poiId + " : "
-										+ poi.getName())
-						.setResultCount(comments.length));
+		final CommentsInfo commentsInfo = instantiate(CommentsInfo.class)
+				.setContext(
+						"Commentaires pour le POI " + poiId + " : "
+								+ poi.getName())
+				.setResultCount(comments.size());
+
+		setAttribute("commentsInfo", commentsInfo);
 
 		// 9. END
 
 		return new View("comments.jsp");
 	}
 
-	private View mostRecentComments() throws SQLException, IOException,
-			ClientException {
-
-		final Comment[] comments;
+	private View mostRecentComments() {
 
 		final String context;
 
 		final SearchQuery query = getHttpInputs(SearchQuery.class);
+
+		List<Comment> comments = new ArrayList<Comment>();
 
 		if (query.isHttpValid()) {
 
@@ -181,40 +131,65 @@ public class CommentsController extends AbstractBackendController {
 
 			context = "Query: " + q;
 
-			comments = getCommentClient().searchComments(q, 100);
+			Iterable<Comment> allComments = commentRepository.findAll();
+
+			for (Comment c : allComments)
+				comments.add(c);
 
 		} else {
 
 			context = "Commentaires les plus récents";
 
-			comments = getCommentClient().getMostRecentComments(80);
+			Iterable<Comment> allComments = commentRepository.findAll();
+
+			for (Comment c : allComments)
+				comments.add(c);
 		}
 
-		// final Comment[] comments =
-		// getCommentClient().getMostRecentComments(80);
+		CommentsInfo commentsInfo;
 
-		setAttribute("comments", comments);
+		User dUser = getDelegationUser();
 
-		// 3. COMMENTS INFO
+		if (dUser.getRole().equals(User.ADMIN)) {
 
-		setAttribute("commentsInfo", DataBeans.instantiate(CommentsInfo.class)
-				.setContext(context).setResultCount(comments.length));
+			List<Comment> auxComments = new ArrayList<Comment>();
 
-		// 9. END
+			for (Comment c : comments)
+				if (dUser.getUniversity().getId()
+						.equals(c.getPoi().getUniversity().getId()))
+					auxComments.add(c);
+
+			setAttribute("comments", auxComments.toArray());
+
+			commentsInfo = instantiate(CommentsInfo.class) //
+					.setContext(context) //
+					.setResultCount(auxComments.size());
+
+			setAttribute("commentsInfo", commentsInfo);
+
+		} else {
+			setAttribute("comments", comments);
+
+			commentsInfo = instantiate(CommentsInfo.class) //
+					.setContext(context) //
+					.setResultCount(comments.size());
+
+			setAttribute("commentsInfo", commentsInfo);
+		}
 
 		return new View("comments.jsp");
 	}
+}
 
-	private static interface CommentsInfo {
+interface CommentsInfo {
 
-		int getResultCount();
+	int getResultCount();
 
-		CommentsInfo setResultCount(int resultCount);
+	CommentsInfo setResultCount(int resultCount);
 
-		String getContext();
+	String getContext();
 
-		CommentsInfo setContext(String context);
-	}
+	CommentsInfo setContext(String context);
 }
 
 @HttpMethods("GET")
@@ -223,4 +198,5 @@ interface SearchQuery extends HttpInputs {
 	@HttpRequired
 	@HttpParameter("q")
 	String query();
+
 }

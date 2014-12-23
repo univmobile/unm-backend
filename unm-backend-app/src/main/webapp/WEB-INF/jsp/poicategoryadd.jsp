@@ -11,7 +11,9 @@
 <title>Administration d’UnivMobile — Ajouter une catégorie</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
+
 <style type="text/css">
+
 td span.error {
 	margin-left: 0.5em;
 }
@@ -21,9 +23,10 @@ td span.error {
 	font-size: x-small;
 }
 
-label.checkbox-parentUid {
+label.checkbox-parentCategory {
 	font-weight: bold;
 }
+
 </style>
 
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
@@ -48,47 +51,39 @@ label.checkbox-parentUid {
 
 <div class="div-poicategoryadd">
 
-   <c:if test="${err_duplicateUid}">
-   <div class="error">
-   	ERREUR — une catégorie avec ce uid = ${poicategoryadd.uid} existe déjà en base
-   </div>
-   </c:if>
    <c:if test="${err_incorrectFields}">
-   <div class="error">
-   	ERREUR — des champs sont incorrects
-   </div>
+      <div class="error">
+         ERREUR — des champs sont incorrects
+      </div>
    </c:if>
    
+   <c:if test="${err_duplicateName}">
+      <div class="error">
+         ERREUR - une catégorie avec ce NOM = ${poicategoryadd.name}
+         existe déjà en base
+      </div>
+   </c:if> 
    
    <h2>L'ajout d'une catégorie</h2>
    
    <table>
    
    <tbody>
-      <tr>
-         <th>Uid</th>
-         <td>
-            <input class="text" type="text" id="text-uid" name="uid" value="${poicategoryadd.uid}">
-         <c:if test="${err_poicategoryadd_uid}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
-         </td>
-      </tr>
-      
+         
       <tr>
          <th>Nom</th>
          <td>
             <input class="text" type="text" id="text-name" name="name" value="${poicategoryadd.name}">
-         <c:if test="${err_poicategoryadd_name}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
+            <c:if test="${err_poicategoryadd_name}">
+               <span class="error" title="Le champ est mal formé">Incorrect</span>
+            </c:if>
          </td>
       </tr>
       
       <tr>
          <th>Description</th>
          <td>
-           <input class="text" type="text" id="text-description" name="description" value="${poicategoryadd.description}">
+            <input class="text" type="text" id="text-description" name="description" value="${poicategoryadd.description}">
          </td>
       </tr>
       
@@ -101,28 +96,28 @@ label.checkbox-parentUid {
       </tr>
       
       <tr>
+<<<<<<< HEAD
          <th>Parent Uid</th>
+=======
+         <th>Catègorie pére</th>
+>>>>>>> c655fd5d736cec74f16a254eebf8c537d11a006e
          <td>
-         <select id="select-parentUid" name="parentUid">
+         <select id="select-parentCategory" name="parentCategory">
             <option value="(aucune)">(aucune)</option>
             <c:forEach var="pc" items="${poicategories}">
+<<<<<<< HEAD
                <option value="${pc.uid}">
                   ${pc.name} (uid : ${pc.uid})
+=======
+               <option value="${pc.id}">
+                  ${pc.name}
+>>>>>>> c655fd5d736cec74f16a254eebf8c537d11a006e
                </option>
             </c:forEach>
          </select>   
-         </td>
+         </td>   
       </tr>
       
-      <tr>
-         <th>ExternalUid</th>
-         <td>
-           <input class="text" type="text" id="text-externalUid" name="externalUid" value="${poicategoryadd.externalUid}">
-         <c:if test="${err_poicategoryadd_externalUid}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
-         </c:if>
-         </td> 
-      </tr>
    </tbody>
    
    </table>

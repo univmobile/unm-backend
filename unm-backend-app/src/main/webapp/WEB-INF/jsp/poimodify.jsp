@@ -10,6 +10,7 @@
 <meta http-equiv="Content-Language" content="en">
 <title>Administration d’UnivMobile — Modification d'un POI</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
+
 <style type="text/css">
 
 td span.error {
@@ -27,9 +28,11 @@ td span.error {
 }
 
 </style>
+
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
+
 <jsp:include page="js-adminMenu.h.jsp"/>
 
 </head>
@@ -39,7 +42,7 @@ td span.error {
 
 <div class="body-poimodify">
 
-<form method="POST" action="${baseURL}/poismodify/${poimodify.uid}">
+<form method="POST" action="${baseURL}/poismodify/${poimodify.id}">
 
 <h1   title="Version ${buildInfo.appVersion}
       Build ${buildInfo.buildDisplayName}
@@ -50,6 +53,20 @@ td span.error {
 
 <div id="div-poimodify">
 
+<c:if test="${err_incorrectFields}">
+   <div class="error">
+      ERREUR — des champs sont incorrects
+   </div>
+</c:if>
+
+<c:if test="${err_duplicateName}">
+   <div class="error">
+      ERREUR - un poi avec ce NOM = ${poimodify.name}
+      existe déjà dans la base
+   </div>
+</c:if>
+
+
 <h2>
    Modification d'un "poi"
 </h2>
@@ -57,85 +74,93 @@ td span.error {
 <table id="table-poimodify">
    <tbody>
    
-   <tr class="uid">
-      <th>
-         Uid
-      </th>
-      <td>
-         <input readonly class="text" id="text-uid" name="uid" value="${poimodify.uid}">
+   <c:choose>          
+   
+   <c:when test="${poimodify.active eq 'true'}">
+      <tr class="id">
+         <th>État</th>
+         <td>
+            <span id="span-active-yes" class="selected">
+               <label for="radio-active-yes">Actif</label>
+               <input type="radio" name="active" value="yes" checked id="radio-active-yes">
+            </span>
+            <span id="span-active-no">
+            	<label for="radio-active-no">Inactif</label>
+            	<input type="radio" name="active" value="no" id="radio-active-no">
+            </span>
+         </td>
+      </tr>
+   </c:when>       
          
-         <c:choose>
-            <c:when test="${poimodify.active eq 'true'}">
-               <span id="span-active-yes" class="selected">
-                  <label for="radio-active-yes">Actif</label>
-                  <input type="radio" name="active" value="yes" checked id="radio-active-yes">
-               </span>
-               <span id="span-active-no">
-                  <label for="radio-active-no">Inactif</label>
-                  <input type="radio" name="active" value="no" id="radio-active-no">
-               </span>
-            </c:when>
-            <c:otherwise>
-               <span id="span-active-yes" class="selected">
-                  <label for="radio-active-yes">Actif</label>
-                  <input type="radio" name="active" value="yes" id="radio-active-yes">
-               </span>
-               <span id="span-active-no">
-                  <label for="radio-active-no">Inactif</label>
-                  <input type="radio" name="active" value="no" checked id="radio-active-no">
-               </span>
-            </c:otherwise>
-         </c:choose>
-
-      </td>
-   </tr>
+   <c:otherwise>
+     <tr class="id">
+         <th>État</th>
+         <td>
+            <span id="span-active-yes" class="selected">
+               <label for="radio-active-yes">Actif</label>
+               <input type="radio" name="active" value="yes" id="radio-active-yes">
+            </span>
+            <span id="span-active-no">
+            	<label for="radio-active-no">Inactif</label>
+            	<input type="radio" name="active" value="no" checked id="radio-active-no">
+            </span>
+         </td>
+      </tr>   
+   </c:otherwise>
+      
+   </c:choose>
    
    <tr class="name">
-      <th>
-         Nom
-      </th>
+      <th>Nom</th>
       <td>
-         <input class="text" id="text-name" name="name" value="${poimodify.name}">
+         <input readonly class="text" id="text-name" name="name" value="${poimodify.name}">
+         <c:if test="${err_poimodify_name}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    
     <tr class="category">
-      <th>
-         Catégories
-      </th>
+      <th>Catégories</th>
       <td>
-         <select id="select-poiCategory" name="poiCategory">
-         <option value="(aucune)">(aucune)</option>
+         <select id="select-category" name="category">
          <c:forEach var="pc" items="${poiCategoriesData}">
             <c:choose>
-               <c:when test="${pc.uid eq poimodify.categoryId}">
-                  <option value="${pc.uid}" selected>${pc.name}</option>
+               
+               <c:when test="${pc.id eq poimodify.category.id}">
+                  <option value="${pc.name}" selected>${pc.name}</option>
                </c:when>
+               
                <c:otherwise>
-                  <option value="${pc.uid}">${pc.name}</option>
+                  <option value="${pc.name}">${pc.name}</option>
                </c:otherwise>
+               
             </c:choose>   
          </c:forEach>
          </select>
+         <c:if test="${err_poimodify_category}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
       </td>
    </tr>
    
    <tr class="university">
-      <th>
-   	     Universités
-      </th>
+      <th>Universités</th>
       <td>
          <select id="select-university" name="university">
             <c:forEach var="r" items="${regionsData}">
                <optgroup label="${r.label}">
                   <c:forEach var="u" items="${r.universities}">
                      <c:choose>
-                        <c:when test="${poimodify.universityIds[0] eq u.id}">
-                           <option value="${u.id}" selected>${u.title}</option>
+                        
+                        <c:when test="${poimodify.university.id eq u.id}">
+                           <option value="${u.title}" selected>${u.title}</option>
                         </c:when>
+                        
                         <c:otherwise>
-                           <option value="${u.id}">${u.title}</option>
+                           <option value="${u.title}">${u.title}</option>
                         </c:otherwise>
+                     
                      </c:choose>
                   </c:forEach>
                </optgroup>
@@ -145,75 +170,90 @@ td span.error {
    </tr>
    
    <tr class="floor">
-      <th>
-         Emplacement
-      </th>
+      <th>Emplacement</th>
       <td>
-   	     <input id="text-floor" name="floor" value="${poimodify.addresses[0].floor}"/>
+   	     <input id="text-floor" name="floor" value="${poimodify.floor}"/>
+      </td>
+   </tr>
+
+   <tr class="city">
+      <th>Ville</th>
+      <td>
+         <input id="text-city" name="city" value="${poimodify.city}"/>
+      </td>
+   </tr>
+   
+   <tr class="country">
+      <th>Pais</th>
+      <td>
+         <input id="text-country" name="country" value="${poimodify.country}"/>
+      </td>
+   </tr>
+   
+   <tr class="zipcode">
+      <th>Code postal</th>
+      <td>
+         <input id="text-zipcode" name="zipcode" value="${poimodify.zipcode}"/>
       </td>
    </tr>
    
    <tr class="openingHours">
-      <th>
-         Horaires
-      </th>
+      <th>Horaires</th>
       <td>
-   	     <input id="text-openingHours" name="openingHours" value="${poimodify.addresses[0].openingHours}"/>
+   	     <input id="text-openingHours" name="openingHours" value="${poimodify.openingHours}"/>
       </td>
    </tr>
    
-   <tr class="phone">
-      <th>
-         Téléphone
-      </th>
+   <tr class="phones">
+      <th>Téléphone</th>
       <td>
-   	     <input class="text" id="text-phone" name="phone" value="${poimodify.addresses[0].phone}">
+   	     <input class="text" id="text-phone" name="phone" value="${poimodify.phones}">
       </td>
    </tr>
    
    <tr class="address">
-      <th>
-   	     Adresse
-      </th>
+      <th>Adresse</th>
       <td>
-   	     <input id="text-address" name="address" value="${poimodify.addresses[0].fullAddress}"/>
+   	     <input id="text-address" name="address" value="${poimodify.address}"/>
       </td>
    </tr>
    
    <tr class="email">
-      <th>
-         E-mail
-      </th>
+      <th>E-mail</th>
       <td>
-   	     <input class="text" id="text-email" name="email" value="${poimodify.emails[0]}">
+   	     <input class="text" id="text-email" name="email" value="${poimodify.email}">
       </td>
    </tr>
    
    <tr class="itinerary">
-      <th>
-   	     Accès
-      </th>
+      <th>Accès</th>
       <td>
-   	     <input id="text-itinerary" name="itinerary" value="${poimodify.addresses[0].itinerary}"/>
+   	     <input id="text-itinerary" name="itinerary" value="${poimodify.itinerary}"/>
       </td>
    </tr>
    
    <tr class="url">
-      <th>
-   	     Site web
-      </th>
+      <th>Site web</th>
       <td>
-   	     <input class="text" id="text-url" name="url" value="${poimodify.urls[0]}">
+   	     <input class="text" id="text-url" name="url" value="${poimodify.url}">
       </td>
    </tr>
    
-   <tr class="coordinates">
-      <th>
-   	     Coordonnées Lat/Lng
-      </th>
+   <tr class="lat">
+      <th>Lat</th>
       <td>
-   	     <input class="text" id="text-coordinates" name="coordinates" value="${poimodify.coordinates}">
-         <c:if test="${err_coord_not_valid}">
+   	     <input id="text-lat" name="lat" value="${poimodify.lat}">
+         <c:if test="${err_poimodify_lat}">
+            <span class="error" title="Le champ est mal formé">Incorrect</span>
+         </c:if>
+      </td>
+   </tr>
+   
+   <tr class="lng">
+      <th>Lng</th>
+      <td>
+         <input id="text-lng" name="lng" value="${poimodify.lng}">
+         <c:if test="${err_poimodify_lng}">
             <span class="error" title="Le champ est mal formé">Incorrect</span>
          </c:if>
       </td>
@@ -226,17 +266,21 @@ td span.error {
       <td>
    	     <!-- <a href="${baseURL}/comments/poi${poimodify.id}" id="link-comments"> -->
    		 <c:choose>
-   		 <c:when test="${empty commentCount or commentCount == 0}">
-   		    aucun commentaire
-   		 </c:when>
-   		 <c:when test="${commentCount == 1}">
-            un commentaire
-   		 </c:when>
-   		 <c:otherwise>
-   		    ${commentCount} commentaires
-   		 </c:otherwise>
-   		 </c:choose>
-         <!-- </a> -->
+      		 
+             <c:when test="${empty commentCount or commentCount == 0}">
+      		    aucun commentaire
+      		 </c:when>
+      		 
+             <c:when test="${commentCount == 1}">
+                un commentaire
+      		 </c:when>
+      		 
+             <c:otherwise>
+      		    ${commentCount} commentaires
+      		 </c:otherwise>
+         
+         </c:choose>
+   	    <!-- </a> -->
       </td>
    </tr>
    
@@ -244,12 +288,15 @@ td span.error {
 </table>
 
 <div class="table bottom">
+   
    <button id="button-cancel" onclick="document.location.href = '${baseURL}/pois'; return false">
       Annuler
    </button>
+   
    <button id="button-save" onclick="submit()">
       Enregistrer
    </button>
+
 </div>
 
 </div> <!-- end of #div-poimodify -->

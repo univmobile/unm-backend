@@ -9,12 +9,13 @@
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
 		<init-param>
 			<param-name>baseURL</param-name>
-			<param-value>https://univmobile-dev.univ-paris1.fr/testSP/</param-value>
+			<param-value>http://localhost:8080/unm-backend/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>optional-jsonBaseURLs</param-name>
 			<param-value>
-				https://univmobile-dev.univ-paris1.fr/json/
+				http://localhost:8080/unm-backend/json/
+				http://127.0.0.1:8080/unm-backend/json/
 			</param-value>
 		</init-param>
 		<init-param>
@@ -31,7 +32,7 @@
 		</init-param>
 		<init-param>
 			<param-name>pois.nearestMaxDistanceInMeters</param-name>
-			<param-value>1000</param-value>
+			<param-value>6000</param-value>
 		</init-param>
 		<init-param>
 			<param-name>shibboleth.ssoBaseURL</param-name>
@@ -52,9 +53,48 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
+ 
+ <servlet>
+ <servlet-name>dispatcher</servlet-name>
+ <servlet-class>
+ org.springframework.web.servlet.DispatcherServlet
+ </servlet-class>
+    <init-param>
+        <param-name>contextConfigLocation</param-name>
+        <param-value>WEB-INF/dispatcher-servlet.xml</param-value>
+    </init-param>
+ <load-on-startup>1</load-on-startup>
+ </servlet>
+ 
+ <servlet-mapping>
+ <servlet-name>dispatcher</servlet-name>
+ <url-pattern>/api/*</url-pattern>
+ </servlet-mapping>
+ 
+ <context-param>
+ <param-name>contextConfigLocation</param-name>
+ <param-value>/WEB-INF/application-context.xml</param-value>
+ </context-param>
+ 
+ <listener>
+ <listener-class>
+ org.springframework.web.context.ContextLoaderListener
+ </listener-class>
+ </listener>	
+<!-- 
+	  <servlet>
+	    <servlet-name>SpringServlet</servlet-name>
+	    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	    <load-on-startup>1</load-on-startup>
+	  </servlet>
+
+	  <servlet-mapping>
+	    <servlet-name>SpringServlet</servlet-name>
+	    <url-pattern>/api/*</url-pattern>
+	  </servlet-mapping>		
+	 -->
 		<!-- Use NoShibbolethFilter only when Shibboleth is not available (-it.) -->
 	<!-- It will crash on a production environment, with Shibboleth/HTTPS. -->
-	 
 	<filter>
 		<filter-name>NoShibbolethFilter</filter-name>
 		<filter-class>fr.univmobile.backend.noshib.NoShibbolethFilter</filter-class>
@@ -64,6 +104,7 @@
 				mauricio-MOV
 				tomcat
 				cyborg.etherea
+				localhost
 				Davids-MacBook-Pro.local
 				mbpro.local
 				unm-ci
@@ -120,6 +161,14 @@
 	<servlet-mapping>
 		<servlet-name>PlainContentServlet</servlet-name>
 		<url-pattern>/img/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/fonts</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>PlainContentServlet</servlet-name>
+		<url-pattern>/fonts/*</url-pattern>
 	</servlet-mapping>
 
 	<resource-ref>

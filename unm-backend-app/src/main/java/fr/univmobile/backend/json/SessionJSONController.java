@@ -174,7 +174,7 @@ public class SessionJSONController extends AbstractJSONController {
 			return ""; // empty string
 		}
 
-		LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
+		LogQueueDbImpl.setPrincipal(appSession.getUser().getUsername());
 
 		final String json = sessionJSONClient.getAppTokenJSON(refresh.apiKey(),
 				appTokenId);
@@ -219,7 +219,7 @@ public class SessionJSONController extends AbstractJSONController {
 			return ""; // empty string
 		}
 
-		LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
+		LogQueueDbImpl.setPrincipal(appSession.getUser().getUsername());
 
 		final String json = sessionJSONClient.logoutJSON(logout.apiKey(),
 				appTokenId);
@@ -267,7 +267,7 @@ public class SessionJSONController extends AbstractJSONController {
 			return ""; // empty string
 		}
 
-		LogQueueDbImpl.setPrincipal(appSession.getUser().getUid());
+		LogQueueDbImpl.setPrincipal(appSession.getUser().getUsername());
 
 		final String json = sessionJSONClient.getAppTokenJSON(apiKey,
 				appSession.getId());

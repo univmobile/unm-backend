@@ -60,19 +60,20 @@ public class UsersTest {
 		assertFalse(users.hasParent(crezvani));
 
 		assertTrue(crezvani.isNullParent());
-		
-		assertTrue(crezvani.getRole() == "admin");
-		assertFalse(crezvani.getRole() == "superadmin");
-		assertFalse(crezvani.getRole() == "student");
-		
+
+		assertTrue(crezvani.getRole() == fr.univmobile.backend.domain.User.ADMIN);
+		assertFalse(crezvani.getRole() == fr.univmobile.backend.domain.User.SUPERADMIN);
+		assertFalse(crezvani.getRole() == fr.univmobile.backend.domain.User.STUDENT);
+
 		assertEquals("ubo", crezvani.getPrimaryUniversity());
 		assertEquals("Université de Bretagne Occidentale", crezvani.getPrimaryUniversity());
-		
+
 		assertEquals(1, crezvani.getSecondaryUniversities().length);
 
 		assertEquals("rennes1", crezvani.getSecondaryUniversities()[0]);
-		assertEquals("Université de Rennes 1", crezvani.getSecondaryUniversities()[0]);
-}
+		assertEquals("Université de Rennes 1",
+				crezvani.getSecondaryUniversities()[0]);
+	}
 
 	@Test(expected = NoSuchElementException.class)
 	public void test_crezvani_getParent() throws Exception {
@@ -90,17 +91,17 @@ public class UsersTest {
 		final User crezvani = users.getByUid("crezvani");
 
 		assertFalse(crezvani.isNullPassword());
-		
+
 		assertNotNull(crezvani.getPassword());
 
 		BinderUtils.detach(crezvani);
 
 		final User dandriana = users.getByUid("dandriana");
-	
+
 		assertTrue(dandriana.isNullPassword());
-		
-		//assertNull(dandriana.getPassword());
-		
+
+		// assertNull(dandriana.getPassword());
+
 		BinderUtils.detach(dandriana);
 	}
 

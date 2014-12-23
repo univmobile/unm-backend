@@ -3,78 +3,83 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.commons.DataBeans.instantiate;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import javax.annotation.Nullable;
 
-import fr.univmobile.backend.client.PoiClient;
-import fr.univmobile.backend.client.PoiClientFromLocal;
-import fr.univmobile.backend.client.PoiGroup;
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.model.Pois;
-import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.backend.domain.Poi;
+import fr.univmobile.backend.domain.PoiRepository;
+import fr.univmobile.backend.domain.Region;
+import fr.univmobile.backend.domain.RegionRepository;
+import fr.univmobile.backend.domain.University;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
 @Paths({ "pois", "pois/" })
 public class PoisController extends AbstractBackendController {
 
-	public PoisController(final RegionDataSource regions,
-			final PoiDataSource pois) {
+	public PoisController(final PoiRepository poiRepository,
+			final RegionRepository regionRepository) {
+		this.poiRepository = checkNotNull(poiRepository, "poiRepository");
+		this.regionRepository = checkNotNull(regionRepository,
+				"regionRepoitory");
 
-		this.pois = checkNotNull(pois, "pois");
-		this.regions = checkNotNull(regions, "regions");
 	}
 
-	private final RegionDataSource regions;
-	private final PoiDataSource pois;
-
-	private PoiClient getPoiClient() {
-
-		return new PoiClientFromLocal(getBaseURL(), pois, regions);
-	}
+	private PoiRepository poiRepository;
+	private RegionRepository regionRepository;
 
 	@Override
-	public View action() throws IOException, TransactionException {
+	public View action() {
 
-		final PoiGroup[] poiGroups = getPoiClient().getPois().getGroups();
+		// 1. POIS DATA
 
-		// 1. POIS INFO
+		List<PoiGroup> poiGroups = new ArrayList<PoiGroup>();
 
-		// final PoiTree poiTree = poiTrees.getByUid("ile_de_france"); // TODO
+		Iterable<Region> allRegions = regionRepository.findAll();
+
+		for (Region r : allRegions) {
+			PoiGroup poiGroup = instantiate(PoiGroup.class);
+			poiGroup.setRegion(r);
+			for (University u : r.getUniversities())
+				poiGroup.setPois(poiRepository.findByUniversity(u));
+			poiGroups.add(poiGroup);
+		}
+
+		setAttribute("poiGroups", poiGroups);
+
+		// 2. POIS INFO
 
 		int resultCount = 0;
 
 		for (final PoiGroup poiGroup : poiGroups) {
-
-			resultCount += poiGroup.getPois().length;
+			resultCount += poiGroup.getPois().size();
 		}
 
 		final PoisInfo poisInfo = instantiate(PoisInfo.class) //
-				// .setCount(poiTree.sizeOfAllPois()) //
-				.setCount(resultCount).setContext("POIS de plus haut niveau") //
-				.setResultCount(resultCount);
+				.setCount(resultCount) //
+				.setContext("POIS de plus haut niveau") //
+				.setResultCount(resultCount); //
 
 		setAttribute("poisInfo", poisInfo);
 
-		// 2. POIS DATA
-
-		final List<Pois> list = new ArrayList<Pois>();
-
-		setAttribute("pois", list);
-
-		for (final PoiGroup poiGroup : poiGroups) {
-
-			list.add(new Pois(poiGroup));
-		}
-
-		// 9. END
+		// 3. END
 
 		return new View("pois.jsp");
 	}
+}
+
+interface PoiGroup {
+
+	Region getRegion();
+
+	PoiGroup setRegion(Region region);
+
+	List<Poi> getPois();
+
+	PoiGroup setPois(List<Poi> pois);
+
 }
 
 interface PoisInfo {
@@ -100,38 +105,4 @@ interface PoisInfo {
 	int getResultCount();
 
 	PoisInfo setResultCount(int count);
-
-	Region[] getRegions();
-
-	PoisInfo addToRegions(Region region);
-
-	interface Region {
-
-		String getUid();
-
-		Region setUid(String uid);
-
-		String getLabel();
-
-		Region setLabel(String label);
-
-		University[] getUniversities();
-
-		Region addToUniversities(University university);
-	}
-
-	interface University {
-
-		String getId();
-
-		University setId(String id);
-
-		String getTitle();
-
-		University setTitle(String title);
-
-		int getPoiCount();
-
-		University setPoiCount(int poiCount);
-	}
 }
