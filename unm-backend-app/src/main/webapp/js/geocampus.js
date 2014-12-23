@@ -114,7 +114,7 @@ ko.utils.extend(Poi.prototype, {
         }
     },
     allowsUniversityFilling: function() {
-    	return this.isNew() && (this.parent() == undefined || this.parent() == '');
+    	return this.isNew && this.isNew() && (this.parent() == undefined || this.parent() == '');
     }
 });
 
