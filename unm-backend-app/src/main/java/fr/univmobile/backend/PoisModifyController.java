@@ -61,14 +61,18 @@ public class PoisModifyController extends AbstractBackendController {
 
 		// CATEGORIES
 
-		Iterable<Category> allCategories = categoryRepository.findAll();
+		/*
+		 * Iterable<Category> allCategories = categoryRepository.findAll();
+		 * 
+		 * List<Category> categories = new ArrayList<Category>();
+		 * 
+		 * for (Category c : allCategories) { // if (c.getParent() == null)
+		 * categories.add(c); }
+		 */
 
-		List<Category> categories = new ArrayList<Category>();
-
-		for (Category c : allCategories) {
-			// if (c.getParent() == null)
-			categories.add(c);
-		}
+		List<Category> categories = categoryRepository
+				.findByLegacyStartingWithOrderByLegacyAsc(Category
+						.getPlansLegacy());
 
 		setAttribute("poiCategoriesData", categories);
 

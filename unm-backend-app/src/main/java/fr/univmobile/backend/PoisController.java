@@ -13,6 +13,7 @@ import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.domain.Region;
 import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.University;
+import fr.univmobile.backend.domain.User;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
@@ -33,6 +34,10 @@ public class PoisController extends AbstractBackendController {
 	@Override
 	public View action() {
 
+		String dRole = getDelegationUser().getRole();
+
+		Long dUniversityId = getDelegationUser().getUniversity().getId();
+
 		// 1. POIS DATA
 
 		List<PoiGroup> poiGroups = new ArrayList<PoiGroup>();
@@ -43,8 +48,15 @@ public class PoisController extends AbstractBackendController {
 			PoiGroup poiGroup = instantiate(PoiGroup.class);
 			poiGroup.setRegion(r);
 			for (University u : r.getUniversities())
-				poiGroup.setPois(poiRepository.findByUniversity(u));
-			poiGroups.add(poiGroup);
+				if (dRole.equals(User.ADMIN)) {
+					if (u.getId() == dUniversityId) {
+						poiGroup.setPois(poiRepository.findByUniversity(u));
+						poiGroups.add(poiGroup);
+					}
+				} else {
+					poiGroup.setPois(poiRepository.findByUniversity(u));
+					poiGroups.add(poiGroup);
+				}
 		}
 
 		setAttribute("poiGroups", poiGroups);

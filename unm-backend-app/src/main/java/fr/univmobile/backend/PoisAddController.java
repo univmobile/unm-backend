@@ -3,6 +3,7 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,7 @@ import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.domain.Region;
 import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.UniversityRepository;
+import fr.univmobile.backend.domain.User;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -48,18 +50,16 @@ public class PoisAddController extends AbstractBackendController {
 	private PoisController poisController;
 
 	@Override
-	public View action() {
+	public View action() throws IOException {
+
+		if (!getDelegationUser().getRole().equals(User.SUPERADMIN))
+			return sendError403("Vous devez être super administrateur");
 
 		// CATEGORIES
 
-		Iterable<Category> allCategories = categoryRepository.findAll();
-
-		List<Category> categories = new ArrayList<Category>();
-
-		for (Category c : allCategories) {
-			// if (c.getParent() == null)
-			categories.add(c);
-		}
+		List<Category> categories = categoryRepository
+				.findByLegacyStartingWithOrderByLegacyAsc(Category
+						.getPlansLegacy());
 
 		setAttribute("poiCategoriesData", categories);
 
