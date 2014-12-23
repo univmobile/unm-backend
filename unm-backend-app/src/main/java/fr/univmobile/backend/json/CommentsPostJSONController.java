@@ -9,45 +9,40 @@ import org.apache.commons.logging.LogFactory;
 
 import fr.univmobile.backend.domain.Comment;
 import fr.univmobile.backend.domain.CommentRepository;
-import fr.univmobile.commons.tx.TransactionException;
+import fr.univmobile.backend.domain.Poi;
+import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
+import fr.univmobile.web.commons.PageNotFoundException;
 import fr.univmobile.web.commons.Paths;
-
 
 @Paths({ "json/comment/post", "json/comment/post/", "json/comment/post.json" })
 public class CommentsPostJSONController extends AbstractJSONController {
 
-	/*public CommentsPostJSONController(final CommentDataSource commentsDs, //
-			final CommentManager commentManager //
-	) {
-		this.commentsDs = checkNotNull(commentsDs, "commentDataSource");
-		this.commentManager = checkNotNull(commentManager, "commentManager");
+	public CommentsPostJSONController(
+			final CommentRepository commentRepository,
+			final PoiRepository poiRepository) {
+		this.commentRepository = checkNotNull(commentRepository,
+				"commentRepository");
+		this.poiRepository = checkNotNull(poiRepository, "poiRepository");
 	}
 
-	private final CommentDataSource commentsDs;
-	private final CommentManager commentManager;*/
-	
-	public CommentsPostJSONController(final CommentRepository commentRepository) {
-		this.commentRepository = checkNotNull(commentRepository, "commentRepository");
-	}
-	
 	private CommentRepository commentRepository;
-	
-	private static final Log log = LogFactory.getLog(CommentsPostJSONController.class);
-	
+	private PoiRepository poiRepository;
+
+	private static final Log log = LogFactory
+			.getLog(CommentsPostJSONController.class);
+
 	@Override
 	public String actionJSON(String baseURL) throws Exception {
-		
+
 		if (!hasDelegationUser()) {
 			// Not authenticated - Forbid
-			// throw new PageNotFoundException("Authorization required"); 
-			// TODO: 403
-			return "Autorisation requise";
+			throw new PageNotFoundException("Autorisation requise");
 		}
-		
+
 		// 1 HTTP
 
 		final CommentInfo data = getHttpInputs(CommentInfo.class);
@@ -58,57 +53,51 @@ public class CommentsPostJSONController extends AbstractJSONController {
 
 		// 2. APPLICATION VALIDATION
 
-		return String.format("{ \"result\": \"%s\" }", (commentSave(data) ? "ok" : "error"));
+		return String.format("{ \"result\": \"%s\" }",
+				(commentSave(data) ? "ok" : "error"));
 	}
-	
-	private boolean commentSave(CommentInfo form) throws IOException,
-		TransactionException {
+
+	private boolean commentSave(CommentInfo form) throws IOException {
 
 		boolean hasErrors = false;
-		
 		log.info("action()...");
 
-		// final DateTime now = new DateTime();
+		final Long poiId = form.poiId();
 
-		// final int poiId = postedComment.poiId();
-		
-		Comment comment = new Comment();
-		comment.setMessage(form.message());
-		comment.setTitle(form.title());
-		comment.setActive(true);
-		// comment.setPoi(poi);
-		
-		/*final CommentBuilder comment = commentsDs.create();
-		comment.setMessage(postedComment.message());
-		comment.setTitle(comment.getTitle());
-		comment.setPostedAt(now);
-		comment.setActive("true");
-		comment.setPostedBy(getDelegationUser().getDisplayName());
-		comment.setAuthorName(getDelegationUser().getUid());
-		comment.setContextUid(poiId);*/
-		
-		/*try {
-			LogQueueDbImpl.setPrincipal(getDelegationUser().getUid()); // TODO user? delegation?
-			commentManager.addToCommentThreadByPoiId(1, comment); // 1 here is a temporal assignment. Remember poiTree and commentsThreads went again already.
-			hasErrors = false;
-		} catch (Exception e) {
-			log.warn("Error posting a comment");
-			log.warn(e);
+		Poi p = null;
+
+		if (poiId != null)
+			p = poiRepository.findOne(poiId);
+		else
 			hasErrors = true;
-		}*/
-		
-		commentRepository.save(comment);
+
+		if (p != null) {
+
+			if (!getDelegationUser().isSuperAdmin())
+				if (getDelegationUser().getUniversity().getId() != p
+						.getUniversity().getId())
+					return false;
+
+			Comment comment = new Comment();
+			comment.setMessage(form.message());
+			comment.setTitle(form.title());
+			comment.setActive(true);
+			comment.setPoi(poiRepository.findOne(poiId));
+
+			commentRepository.save(comment);
+
+		} else
+			hasErrors = true;
 
 		return !hasErrors;
 	}
 
-
-	@HttpMethods({"POST", "GET"})
+	@HttpMethods({ "POST", "GET" })
 	interface CommentInfo extends HttpInputs {
-		
+
 		@HttpRequired
-		@HttpParameter(trim = true)
-		int poiId();
+		@HttpParameter
+		Long poiId();
 
 		@HttpRequired
 		@HttpParameter
@@ -117,5 +106,5 @@ public class CommentsPostJSONController extends AbstractJSONController {
 		@HttpParameter
 		String title();
 	}
-	
+
 }

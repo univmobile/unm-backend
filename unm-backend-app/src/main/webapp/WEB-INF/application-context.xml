@@ -13,8 +13,8 @@
 	<!-- Database -->
 	<bean id="datasource" class="org.springframework.jndi.JndiObjectFactoryBean">
 		<property name="jndiName" value="java:comp/env/jdbc/univmobile"/>
-	</bean>	 
-
+	</bean>
+	
 	<!-- Entity Manager -->
 	<bean id="entityManagerFactory"
 		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
