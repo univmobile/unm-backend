@@ -264,7 +264,9 @@ td span.error {
    	     Commentaires
       </th>
       <td>
+      
    	     <!-- <a href="${baseURL}/comments/poi${poimodify.id}" id="link-comments"> -->
+           
    		 <c:choose>
       		 
              <c:when test="${empty commentCount or commentCount == 0}">
@@ -280,7 +282,9 @@ td span.error {
       		 </c:otherwise>
          
          </c:choose>
-   	    <!-- </a> -->
+         
+   	     <!-- </a> -->
+           
       </td>
    </tr>
    

@@ -391,7 +391,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						universityRepository),
 				new NearestPoisJSONController(poiJSONClient, //
 						nearestPoisMaxMetersAway),
-				new CommentsPostJSONController(commentRepository),
+				new CommentsPostJSONController(commentRepository, poiRepository),
 				new GeocampusJSONController(regionJSONClient, //
 						poiCategoryJSONClient, //
 						imageMapJSONClient, //
