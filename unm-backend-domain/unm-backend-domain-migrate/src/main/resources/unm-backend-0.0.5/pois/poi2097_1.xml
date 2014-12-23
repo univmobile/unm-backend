@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2097_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2097_1.xml"/>
+<title>Études littéraires anglaises (DELA)</title>
+<updated>2014-08-15T01:46:54.055+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2097"
+	coordinates="48.946199121651,2.3621436953"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T17:49:33.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="yasmine"
+	parentUid="2603"
+	name="Études littéraires anglaises (DELA)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3ème étage Bâtiment B2, bureau 342</floor>
+		<openingHours>Lundi et vendredi
+10h-12h
+Mardi, mercredi et jeudi
+10h-12h
+14h-17h</openingHours>
+		<url>http://www.univ-paris8.fr/dela/</url>
+		<phone>01 49 40 68 13</phone>
+		<fax>01 49 40 68 20</fax>
+		<email>anne.bourse03@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

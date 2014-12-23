@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5913_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5913_1.xml"/>
+<title>Cafétéria</title>
+<updated>2014-08-15T01:47:31.575+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5913"
+	coordinates="48.788772612037,2.3636866360903"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T14:29:30.000+02:00"
+	updatedAt="2011-06-10T15:12:22.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4860"
+	name="Cafétéria">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>Dans l’Ecole Française d’Electronique et d’Informatique</floor>
+		<openingHours>8h00 - 14h00</openingHours>
+		<phone>01-46-77-46-78</phone>
+		<email>restaurant.villejuif@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

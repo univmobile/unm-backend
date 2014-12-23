@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4061_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4061_1.xml"/>
+<title>Centre de mobilité Paris Nord (CPMN)</title>
+<updated>2014-08-15T01:47:13.225+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4061"
+	coordinates="48.944512373134,2.3637664318085"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:12:29.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Centre de mobilité Paris Nord (CPMN)">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Le centre de mobilité a pour mission de faciliter la mobilité des chercheurs en Europe et vers l’Europe et proposent des services d’aide aux chercheurs sur tous les aspects liés à leur mobilité : formalités administratives, logement, scolarité des enfants, cours de langue.</description>
+	<address>
+		<floor>2ème étage Bâtiment A, bureau 2288</floor>
+		<openingHours>Du lundi au vendredi
+9h-12h
+14h-17h</openingHours>
+		<url>http://www.univ-paris8.fr/cmpn/</url>
+		<phone>01 49 40 71 06</phone>
+		<fax>01 49 40 67 84</fax>
+		<email>cmpn@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi655_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi655_1.xml"/>
+<title>BAIP Bureau d'Aide à l'Insertion Professionnelle </title>
+<updated>2014-08-15T01:46:40.964+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="655"
+	coordinates="48.827084053235,2.36440"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T20:23:00.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1023"
+	name="BAIP Bureau d'Aide à l'Insertion Professionnelle ">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Aile C, 8e étage, 8.07</floor>
+		<openingHours>Uniquement sur rendez-vous, pris par e-mail. </openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64, 83
+Arrêt Tolbiac-Baudricourt</itinerary>
+		<url>http://www.univ-paris1.fr/espace-professionnel/stages-et-emplois/conseil-et-formation-pour-les-recherches-stagesemplois/</url>
+		<phone>01 44 07 86 24</phone>
+		<email>Francois.Roux@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

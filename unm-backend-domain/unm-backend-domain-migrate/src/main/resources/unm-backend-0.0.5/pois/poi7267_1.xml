@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7267_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7267_1.xml"/>
+<title>Département langues étrangères, anglais de spécialité</title>
+<updated>2014-08-15T01:47:45.024+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7267"
+	coordinates="48.79041817362,2.3277148604393"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T11:44:29.000+01:00"
+	updatedAt="2012-12-17T14:47:38.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7221"
+	name="Département langues étrangères, anglais de spécialité">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Le département de langues comprend deux pôles d’activité et un centre de langues pratiques :
+
+- Le pôle anglicistes :
+son objectif premier est de former des anglicistes de haut niveau. Se destinant majoritairement à l’enseignement et à la recherche, les élèves du département suivent une formation spécifique, fortement axée sur l’anglais de spécialité et la linguistique de corpus.
+Le but final de la formation (master, agrégation, doctorat) est de former des enseignants et enseignants-chercheurs en anglais de spécialité, domaine où la demande est élevée. L’ENS Cachan est la seule ENS à proposer une formation spécifique dans le domaine de l'anglais de spécialité.
+
+- Le pôle LANSAD :
+À la demande des autres départements et des laboratoires, le département de langues assure les cours d’anglais général et de spécialité pour leurs formations au niveau L3, M1 et M2.
+</description>
+	<address>
+		<floor>2e étage</floor>
+		<url>http://www.dle.ens-cachan.fr/</url>
+		<phone>01 47 40 23 00</phone>
+		<fax>01 47 40 27 66</fax>
+		<email>secretariat@dlp.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5671_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5671_1.xml"/>
+<title>Restaurant Universitaire L’Arlequin</title>
+<updated>2014-08-15T01:47:28.689+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5671"
+	coordinates="48.626821038997,2.5640845298767"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:25:52.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="5483"
+	name="Restaurant Universitaire L’Arlequin">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>Bâtiment RU</floor>
+		<openingHours>du lundi au vendredi                                                                               8h30 - 15h30</openingHours>
+		<phone>01 60 60 59 51</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi742_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi742_1.xml"/>
+<title>Association Conférences et Etudes Internationales en Sorbonn</title>
+<updated>2014-08-15T01:46:41.597+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="742"
+	coordinates="48.846819916455,2.34463423"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T17:02:51.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	parentUid="1027"
+	name="Association Conférences et Etudes Internationales en Sorbonn">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone>06 85 94 28 15</phone>
+		<email>ceiscontact@gmail.com</email>
+		<fullAddress>12 place du Panthéon
+75005 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1400_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1400_1.xml"/>
+<title>Service de l'action culturelle et artistique</title>
+<updated>2014-08-15T01:46:47.261+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1400"
+	coordinates="48.955995228695,2.342877388000"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T18:23:21.000+01:00"
+	updatedAt="2011-05-31T11:58:05.000+02:00"
+	deletedAt="2011-03-30T21:27:18.000+02:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	name="Service de l'action culturelle et artistique">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<description>Vous pouvez contribuer à l'animation culturelle et artistique de l'université en participant à la gestion et à l'organisation d'événements culturels ou en concevant un projet.</description>
+	<address>
+		<floor>1er étage.</floor>
+		<url>http://www.univ-paris13.fr/aides-a-linitiative-etudiante.html</url>
+		<phone>01 49 40 38 27</phone>
+		<fax>01 49 40 38 28</fax>
+		<email>adm-cltarroupn.univ-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

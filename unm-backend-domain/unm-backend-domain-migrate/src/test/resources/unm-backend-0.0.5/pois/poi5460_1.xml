@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5460_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5460_1.xml"/>
+<title>SCUIO-IP</title>
+<updated>2014-08-15T01:47:26.431+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5460"
+	coordinates="48.787836402905,2.4441549181938"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T14:39:33.000+02:00"
+	updatedAt="2012-06-06T09:42:39.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4334"
+	name="SCUIO-IP">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Service commun universitaire d'information, d'orientation et d'insertion professionnelle (SCUIO-IP)
+
+</description>
+	<address>
+		<floor>Bât i3, Niveau dalle, salle 039 </floor>
+		<openingHours>du lundi au jeudi de 9h30 à 16h et samedi de 9h à 11h
+</openingHours>
+		<url>http://www.u-pec.fr/etudiant/orientation/</url>
+		<phone>01.45.17.12.17</phone>
+		<email>scuio@u-pec.fr</email>
+	</address>
+</content>
+</entry>

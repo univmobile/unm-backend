@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6312_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6312_1.xml"/>
+<title>CAVEJ</title>
+<updated>2014-08-15T01:47:35.900+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6312"
+	coordinates="48.836008753352,2.3461119644344"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T15:51:26.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="959"
+	name="CAVEJ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Centre Audiovisuel d'Études Juridiques des Universités de Paris</description>
+	<address>
+		<openingHours>Lundi-vendredi : 9h30-12h30 et 14h30-16h30
+ Sauf le mardi en journée continue : 9h30-16h</openingHours>
+		<url>http://www.e-cavej.org/</url>
+		<phone>01 44 08 63 50</phone>
+		<email>cavej@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

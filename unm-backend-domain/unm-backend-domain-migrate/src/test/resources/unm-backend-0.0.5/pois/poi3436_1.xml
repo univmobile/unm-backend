@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3436_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3436_1.xml"/>
+<title>Bibliothèque du CERSA</title>
+<updated>2014-08-15T01:47:06.574+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3436"
+	coordinates="48.849714747223,2.345708124339"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:18:52.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2916"
+	name="Bibliothèque du CERSA">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Public concerné : aux doctorants en Sciences administratives, Droit public et Sciences politiques. Les personnes venant d'autres formations et désirant avoir accès au fonds du Centre de documentation doivent téléphoner au préalable ou envoyer un courriel.</description>
+	<address>
+		<openingHours>Du lundi au vendredi :
+9h30 / 12h30 - 14h00 / 17h00</openingHours>
+	</address>
+</content>
+</entry>

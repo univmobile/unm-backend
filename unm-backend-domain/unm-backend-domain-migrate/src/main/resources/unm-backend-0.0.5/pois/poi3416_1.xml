@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3416_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3416_1.xml"/>
+<title>SAE - UMR 7138</title>
+<updated>2014-08-15T01:47:06.363+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3416"
+	coordinates="48.847323046354,2.35956458374"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:59:21.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2800"
+	name="SAE - UMR 7138">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Systématique, Adaptation, Evolution
+En somme, ces équipes travaillent sur la structuration historique et taxonomique de la biodiversité à petite et grande échelle, et sur les concepts associés.</description>
+	<address>
+		<floor>4è étage bureau 427B</floor>
+		<url>http://sae-umr7138.fr/</url>
+	</address>
+</content>
+</entry>

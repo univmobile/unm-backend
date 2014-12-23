@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6458_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6458_1.xml"/>
+<title>Sciences et génie de l'environnement (M2 SGE)</title>
+<updated>2014-08-15T01:47:37.440+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6458"
+	coordinates="48.827579854812,2.380655631423"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T16:46:51.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1778"
+	name="Sciences et génie de l'environnement (M2 SGE)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Pour le M1 SGE voir le M1 Chimie.</description>
+	<address>
+		<floor>Lamarck, 7ème étage, bureau 705</floor>
+		<url>http://www.master-sge.com/</url>
+		<phone>01 57 27 79 00</phone>
+		<fax>01 57 27 79 01</fax>
+		<email>esther.cohen@univ-paris-diderot.fr </email>
+	</address>
+</content>
+</entry>

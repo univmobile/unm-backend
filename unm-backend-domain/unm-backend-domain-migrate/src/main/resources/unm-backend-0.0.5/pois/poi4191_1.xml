@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4191_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4191_1.xml"/>
+<title>UMR 168</title>
+<updated>2014-08-15T01:47:14.739+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4191"
+	coordinates="48.843214966546,2.3443921655416"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T13:58:13.000+02:00"
+	updatedAt="2011-06-03T17:06:33.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4183"
+	name="UMR 168">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Physico-chimie Curie (PCC) - UMR 168</description>
+	<address>
+		<url>http://www.curie.fr/</url>
+		<phone>01 56 24 67 51</phone>
+		<email>umr168@curie.fr</email>
+	</address>
+</content>
+</entry>

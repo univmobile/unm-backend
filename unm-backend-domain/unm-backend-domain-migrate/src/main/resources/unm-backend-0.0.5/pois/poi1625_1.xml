@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1625_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1625_1.xml"/>
+<title>Association des éléves de l'IUT de Paris 7  </title>
+<updated>2014-08-15T01:46:49.356+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1625"
+	coordinates="48.846086926779,2.35670417547"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T14:37:18.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1785"
+	name="Association des éléves de l'IUT de Paris 7  ">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>l'association accueille essentiellement les étudiants et anciens étudiants, les enseignant et membres du personnel de l'IUT Paris-Jussieu, département de mesures physiques </description>
+	<address>
+		<phone>0157277989</phone>
+		<email>pierre_bourgoin @hotmail.fr</email>
+	</address>
+</content>
+</entry>

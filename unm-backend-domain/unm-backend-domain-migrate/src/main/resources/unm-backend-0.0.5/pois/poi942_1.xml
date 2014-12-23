@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi942_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi942_1.xml"/>
+<title>MATISSE</title>
+<updated>2014-08-15T01:46:43.621+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="942"
+	coordinates="48.835462490615,2.3580348864"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T17:50:52.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1028"
+	name="MATISSE">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Modélisation Appliquée, Trajectoires Institutionnelles et Stratégies Socio-Economiques</description>
+	<address>
+		<itinerary>Métro 5 
+Station Campo-Formio
+
+Bus 57 et 67 </itinerary>
+		<url>http://matisse.univ-paris1.fr</url>
+		<phone>01 44 07 81 55</phone>
+	</address>
+</content>
+</entry>

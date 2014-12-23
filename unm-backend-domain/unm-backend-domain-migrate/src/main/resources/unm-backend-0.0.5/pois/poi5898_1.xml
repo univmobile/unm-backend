@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5898_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5898_1.xml"/>
+<title>Cafétéria de la Pyramide</title>
+<updated>2014-08-15T01:47:31.407+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5898"
+	coordinates="48.796602573444,2.4482506513596"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T10:55:28.000+02:00"
+	updatedAt="2011-06-10T15:09:45.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4859"
+	name="Cafétéria de la Pyramide">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>1er étage</floor>
+		<openingHours>9h00 - 15h00</openingHours>
+		<phone>01-48-99-29-40</phone>
+		<email>restaurant.creteil@crous-creteil.fr</email>
+	</address>
+	<attachment id="123" title="cafet_Pyramides.jpg" type="image" url="/uploads/poi/98ef6af39bde281cbe98cbfeb537199b4e754a86.jpg"/>
+</content>
+</entry>

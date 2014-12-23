@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1935_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1935_1.xml"/>
+<title>Ecole doctorale de science juridiques et politiques</title>
+<updated>2014-08-15T01:46:52.584+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1935"
+	coordinates="48.902392128619,2.21493333578"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-06T15:40:04.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2491"
+	name="Ecole doctorale de science juridiques et politiques">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Bureau 511, 5ème étage</floor>
+		<openingHours>Mardi, Mercredi et Jeudi
+9h / 12h - 14h / 17h
+Lundi et Vendredi
+9h / 13h
+</openingHours>
+		<url>www.u-paris10.fr/edsjp</url>
+		<phone>01 40 97 58 84</phone>
+		<email>mthiant@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

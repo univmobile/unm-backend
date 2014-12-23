@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5264_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5264_1.xml"/>
+<title>Lettres</title>
+<updated>2014-08-15T01:47:24.671+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5264"
+	coordinates="48.787745835299,2.4439953267574"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T00:23:49.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4334"
+	name="Lettres">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2ème étage, Bureau 254</floor>
+		<openingHours>Lundi à vendredi : 9h15 -13h et 13h30-16h45
+</openingHours>
+		<url>http://lettres-sh.u-pec.fr/departements/lettres/</url>
+		<phone>01 45 17 11 41</phone>
+		<email>sec.lettres-llsh@u-pec.fr</email>
+	</address>
+</content>
+</entry>

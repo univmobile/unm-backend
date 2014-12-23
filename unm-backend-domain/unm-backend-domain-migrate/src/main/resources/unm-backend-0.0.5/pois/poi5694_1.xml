@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5694_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5694_1.xml"/>
+<title>COSEC Léo Lagrange</title>
+<updated>2014-08-15T01:47:28.951+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5694"
+	coordinates="48.701841260661,2.1621809899807"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:49:39.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-06-30T11:27:48.000+02:00"
+	createdBy="j.richer"
+	updatedBy="Fatma ARAS"
+	name="COSEC Léo Lagrange">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<description>Complexe sportif évolutif couvert (COSEC) Léo Lagrange (Bâtiment 335 bis).
+Dojo, gymnase sans gradin, mur d'escalade, salle d'agrès, studio de danse, pistes d'athlétisme...</description>
+	<address>
+		<openingHours>Du lundi au vendredi
+8h00-22h30
+Week-end
+9h00-19h00</openingHours>
+		<url>http://www.mairie-bures-sur-yvette.fr/Le-COSEC-Leo-Lagrange.html</url>
+	</address>
+</content>
+</entry>

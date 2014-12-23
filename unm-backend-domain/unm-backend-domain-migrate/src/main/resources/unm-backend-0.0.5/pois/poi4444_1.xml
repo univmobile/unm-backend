@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4444_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4444_1.xml"/>
+<title>Scolarité (IUT d'Orsay)</title>
+<updated>2014-08-15T01:47:17.372+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4444"
+	coordinates="48.711187877224,2.1702782437205"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:37:03.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4436"
+	name="Scolarité (IUT d'Orsay)">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>Bâtiment E 605, Bureau E009</floor>
+		<openingHours>Du lundi au vendredi
+9h00-12h00
+13h30-16h30</openingHours>
+		<url>http://www.iut-orsay.u-psud.fr</url>
+		<phone>01 69 33 60 25</phone>
+		<email>scolarite.iut-orsay@u-psud.fr</email>
+	</address>
+</content>
+</entry>

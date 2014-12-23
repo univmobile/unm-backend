@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi68_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi68_1.xml"/>
+<title>Département RT</title>
+<updated>2014-08-15T01:46:38.383+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="68"
+	coordinates="48.955792685496,2.341681122779"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T13:06:39.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-07-20T16:13:59.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Département RT">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Réseaux et Télécommunications
+Le département R&amp;T délivre le DUT Réseaux &amp; Télécommunications en formation initiale classique, en formation continue et en alternance ainsi que les Licences Professionnelles Réseaux et Télécommunications et Electronique, Optique et nanotechnologies.</description>
+	<address
+		zipCode="93430 "
+		city="VILLETANEUSE"
+		countryCode="FR">
+		<floor>1</floor>
+		<openingHours>9h30-11h30  14h00-16h00</openingHours>
+		<itinerary>EN VOITURE, A PARTIR DE PARIS
+Porte de la Chapelle,
+Autoroute A1 [direction Lille]
+Sortie N°2 (Saint-Denis - Stade de France)
+puis direction Villetaneuse Université.
+
+
+EN TRANSPORT EN COMMUN
+Depuis Paris
+Train, de la Gare du Nord, jusqu’à la gare d’Epinay-Villetaneuse. [En Gare du Nord, suivre l’un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s’arrête en gare d’Epinay-Villetaneuse].
+Gare d’Epinay-Villetaneuse, sortie côté Villetaneuse puis
+bus156 [direction Gare de St-Denis] ou
+bus 354 [direction Pierrefitte-Stains] ou
+bus 356 [direction St-Denis Université]
+jusqu’à l’arrêt Université Paris 13.
+
+Depuis le campus de de Saint-Denis
+Bus 256 [direction Gare d’Enghien],
+Arrêt Carnot.
+
+Depuis le campus de Bobigny
+Tramway Ligne n°1 [direction Gare de St-Denis],
+jusqu’à Marché de Saint-Denis puis
+Bus 256 [direction Gare d’Enghien],
+Arrêt Carnot.
+
+</itinerary>
+		<url>http://www.iutv.univ-paris13.fr</url>
+		<phone>01 49 40 37 16</phone>
+		<fax>01 49 40 20 16</fax>
+		<email> secrgtr@iutv.univ-paris13.fr</email>
+		<fullAddress>Bureau L 215 
+99 avenue Jean-Baptiste Clément
+
+ 93430  VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4314_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4314_1.xml"/>
+<title>FRE 3144</title>
+<updated>2014-08-15T01:47:16.034+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4314"
+	coordinates="48.706306710739,2.1312343329191"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:05:17.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4311"
+	name="FRE 3144">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Centre de génétique moléculaire (CGM) - FRE 3144</description>
+	<address>
+		<url>http://www.cgm.cnrs-gif.fr/</url>
+		<phone>01 69 82 31 86</phone>
+		<email>rozenn.Le.Guyader@cgm.cnrs-gif.fr</email>
+	</address>
+</content>
+</entry>

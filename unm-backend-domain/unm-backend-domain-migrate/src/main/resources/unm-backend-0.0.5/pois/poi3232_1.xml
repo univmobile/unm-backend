@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3232_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3232_1.xml"/>
+<title>Institut de droit des affaires</title>
+<updated>2014-08-15T01:47:04.315+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3232"
+	coordinates="48.845519187766,2.321009002625"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:21:08.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2936"
+	name="Institut de droit des affaires">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://ida.u-paris2.fr/</url>
+		<phone>01 53 63 80 79</phone>
+		<email>annie.roques@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi316_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi316_1.xml"/>
+<title>Villetaneuse BU Droit/Lettres</title>
+<updated>2014-08-15T01:46:39.102+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="316"
+	coordinates="48.956587002374,2.3419976234"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-20T16:39:19.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="248"
+	name="Villetaneuse BU Droit/Lettres">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Bibliothèque universitaire Droit/Lettres</description>
+	<address>
+		<floor>A coté du Forum</floor>
+		<openingHours>Lundi, mercredi, jeudi, vendredi de 9h à 18h.
+Mardi de 11h à 19h.
+Samedi de 9h à 16h</openingHours>
+		<itinerary>Entrée situé à l'intérieur du Forum.</itinerary>
+		<phone>01 49 40 30 94</phone>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+	<child uid="2010" active="true"/>
+	<child uid="1978" active="true"/>
+	<child uid="1058" active="true"/>
+	<child uid="987" active="true"/>
+	<child uid="518" active="true"/>
+	<child uid="318" active="true"/>
+</content>
+</entry>

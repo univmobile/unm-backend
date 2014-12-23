@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3972_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3972_1.xml"/>
+<title>Structures formelles du langage (SFL)</title>
+<updated>2014-08-15T01:47:12.248+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3972"
+	coordinates="48.947213183858,2.3618818446994"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:44:03.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Structures formelles du langage (SFL)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Unité mixte de recherche (UMR) 7023 - Structures formelles du langage appartenant à l'École doctorale (ED) 224 : Cognition, langage, interaction.
+Directrice : Sophie Wauquier
+Secrétariat : Corinne Marius</description>
+	<address>
+		<floor>3ème étage Bâtiment D, bureau 323</floor>
+		<url>http://www.umr7023.cnrs.fr/</url>
+		<phone>01 49 40 73 35</phone>
+		<fax>01 49 40 73 34</fax>
+		<email>corinne.marius@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

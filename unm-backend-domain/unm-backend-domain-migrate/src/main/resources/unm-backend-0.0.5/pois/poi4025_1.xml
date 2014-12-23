@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4025_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4025_1.xml"/>
+<title>Polygone</title>
+<updated>2014-08-15T01:47:12.821+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4025"
+	coordinates="48.850757765166,2.3412430845201|48.850838070521,2.3413108102977|48.850692903055,2.3417037539184|48.850606420109,2.3416360281408|48.850757765166,2.3412430845201"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-18T14:27:27.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4022"
+	name="Polygone">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

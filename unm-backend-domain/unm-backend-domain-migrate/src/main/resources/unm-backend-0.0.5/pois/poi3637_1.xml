@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3637_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3637_1.xml"/>
+<title>TV n'ère</title>
+<updated>2014-08-15T01:47:08.882+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3637"
+	coordinates="48.944564429782,2.3630254715681"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:15:57.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="TV n'ère">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Promotion et réalisation de vidéos étudiantes.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment A, bureau 026 bis</floor>
+	</address>
+</content>
+</entry>

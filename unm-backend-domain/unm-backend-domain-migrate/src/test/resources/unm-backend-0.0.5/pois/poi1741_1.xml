@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1741_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1741_1.xml"/>
+<title>Science et Santé M1-2</title>
+<updated>2014-08-15T01:46:50.438+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1741"
+	coordinates="48.914419658821,2.4189662933"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T23:25:59.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="356"
+	name="Science et Santé M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Il s’agit de permettre à l’étudiant d’acquérir suivant les spécialités :
+- des connaissances sur les méthodes expérimentales d’études et plus particulièrement sur l’approche raisonnée des phénomènes tissulaires, cellulaires et moléculaires.
+- des connaissances sur les concepts fondamentaux et les outils moléculaires nécessaires au développement de nouvelles biothérapies et de nouvelles molécules (biomolécules) à usage thérapeutique ainsi que les méthodologies expérimentales liées à leurs applications dans des modèles cellulaires et animaux.
+</description>
+	<address>
+		<url>http://www-smbh.univ-paris13.fr/smbh/enseig/enseig_lmd/enseig_lmd_master/master_ss_.html</url>
+		<phone>01 48 38 77 11</phone>
+		<email>sec_l3m1m2@smbh.univ-paris13.fr </email>
+	</address>
+</content>
+</entry>

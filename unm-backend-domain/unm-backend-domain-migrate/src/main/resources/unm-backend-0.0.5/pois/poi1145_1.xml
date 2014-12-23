@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1145_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1145_1.xml"/>
+<title>Master Science politique - Relations et échanges </title>
+<updated>2014-08-15T01:46:45.258+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1145"
+	coordinates="48.956671071234,2.3409968"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-22T14:34:50.000+01:00"
+	updatedAt="2011-05-31T11:58:05.000+02:00"
+	deletedAt="2011-03-29T23:17:46.000+02:00"
+	createdBy="Kevin Mazille"
+	updatedBy="Kevin Mazille Paris 8"
+	name="Master Science politique - Relations et échanges ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master Science politique - Relations et échanges internationaux.</description>
+	<address>
+		<floor>1er étage.</floor>
+		<openingHours>Lundi, Mardi, Jeudi : 9h30 - 11h30
+13h30 - 16h30
+Mercredi, Vendredi : 9h30 - 11h30</openingHours>
+		<itinerary>Bâtiment droit et économie - H 210.</itinerary>
+		<url>http://www.univ-paris13.fr/dsps/</url>
+		<phone>01 49 40 39 63</phone>
+		<fax>01 49 40 33 47</fax>
+		<email>m1rei.dsps@univ-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE </fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3788_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3788_1.xml"/>
+<title>Spécialité Robotique - Polytech</title>
+<updated>2014-08-15T01:47:10.412+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3788"
+	coordinates="48.845122831606,2.3569112084806"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:57:50.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2790"
+	name="Spécialité Robotique - Polytech">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La spécialité Robotique forme des ingénieurs pluridisciplinaires capables d'appréhender la création d'un système robotique dans son ensemble.</description>
+	<address>
+		<floor>3è étage bureau 330</floor>
+		<url>http://www.polytech.upmc.fr/specialite-robotique.html</url>
+		<phone>01 44 27 37 12</phone>
+		<email>rob-polytech@upmc.fr</email>
+	</address>
+</content>
+</entry>

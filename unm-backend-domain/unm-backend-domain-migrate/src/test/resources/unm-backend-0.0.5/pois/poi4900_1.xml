@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4900_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4900_1.xml"/>
+<title>Association Théâtre à Dauphine</title>
+<updated>2014-08-15T01:47:21.626+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4900"
+	coordinates="48.869704412216,2.2728636860847"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:18:20.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Association Théâtre à Dauphine">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L'ATD vous propose des cours de théâtre avec des professionnels tous les vendredis en Amphi 9 (3ème étage) à partir de 19H30 jusqu'à 22h30 environ.
+</description>
+	<address>
+		<floor>A l'entrée de l'amphi 9 (sur la gauche)</floor>
+		<phone>06 81 28 02 64</phone>
+	</address>
+</content>
+</entry>

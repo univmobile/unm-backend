@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4404_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4404_1.xml"/>
+<title>Campus d'Orsay</title>
+<updated>2014-08-15T01:47:16.922+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4404"
+	coordinates="48.699996621899,2.1774387359619"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:00:28.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4398"
+	name="Campus d'Orsay">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="6568" active="true"/>
+	<child uid="6590" active="true"/>
+	<child uid="6583" active="true"/>
+	<child uid="6567" active="true"/>
+	<child uid="6565" active="true"/>
+	<child uid="6566" active="true"/>
+	<child uid="6564" active="true"/>
+	<child uid="6562" active="true"/>
+	<child uid="6563" active="true"/>
+	<child uid="6560" active="true"/>
+	<child uid="6558" active="true"/>
+	<child uid="6557" active="true"/>
+	<child uid="6548" active="true"/>
+	<child uid="6547" active="true"/>
+	<child uid="6546" active="true"/>
+	<child uid="6545" active="true"/>
+	<child uid="6544" active="true"/>
+	<child uid="6540" active="true"/>
+	<child uid="6534" active="true"/>
+	<child uid="6524" active="true"/>
+	<child uid="6517" active="true"/>
+	<child uid="6516" active="true"/>
+	<child uid="6521" active="true"/>
+	<child uid="6514" active="true"/>
+	<child uid="6505" active="true"/>
+	<child uid="6494" active="true"/>
+	<child uid="6501" active="true"/>
+	<child uid="6497" active="true"/>
+	<child uid="6496" active="true"/>
+	<child uid="6493" active="true"/>
+	<child uid="6485" active="true"/>
+	<child uid="6484" active="true"/>
+	<child uid="5763" active="true"/>
+	<child uid="6476" active="true"/>
+	<child uid="6475" active="true"/>
+	<child uid="4501" active="true"/>
+	<child uid="5212" active="true"/>
+	<child uid="4573" active="true"/>
+	<child uid="4562" active="true"/>
+	<child uid="4400" active="true"/>
+	<child uid="4403" active="true"/>
+	<child uid="4411" active="true"/>
+	<child uid="4419" active="true"/>
+	<child uid="4577" active="true"/>
+	<child uid="4580" active="true"/>
+	<child uid="4583" active="true"/>
+	<child uid="4593" active="true"/>
+	<child uid="4750" active="true"/>
+	<child uid="4786" active="true"/>
+	<child uid="4802" active="true"/>
+	<child uid="4814" active="true"/>
+	<child uid="4824" active="true"/>
+	<child uid="4842" active="true"/>
+	<child uid="4897" active="true"/>
+	<child uid="5165" active="true"/>
+	<child uid="5174" active="true"/>
+	<child uid="5216" active="true"/>
+	<child uid="5219" active="true"/>
+	<child uid="5222" active="true"/>
+	<child uid="5327" active="true"/>
+	<child uid="5359" active="true"/>
+	<child uid="5364" active="true"/>
+	<child uid="5379" active="true"/>
+	<child uid="5452" active="true"/>
+	<child uid="5458" active="true"/>
+	<child uid="5685" active="true"/>
+	<child uid="5702" active="true"/>
+	<child uid="5706" active="true"/>
+	<child uid="5709" active="true"/>
+	<child uid="5741" active="true"/>
+	<child uid="5753" active="true"/>
+	<child uid="5760" active="true"/>
+	<child uid="5765" active="true"/>
+	<child uid="5773" active="true"/>
+	<child uid="5778" active="true"/>
+	<child uid="5788" active="true"/>
+	<child uid="5802" active="true"/>
+	<child uid="5823" active="true"/>
+	<child uid="5874" active="true"/>
+	<child uid="5928" active="true"/>
+	<child uid="5934" active="true"/>
+	<child uid="6002" active="true"/>
+	<child uid="6003" active="true"/>
+	<child uid="6004" active="true"/>
+	<child uid="6013" active="true"/>
+	<child uid="6016" active="true"/>
+</content>
+</entry>

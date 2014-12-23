@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3382_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3382_1.xml"/>
+<title>Centre de documentation des droits de l'Antiquité (CDDA)</title>
+<updated>2014-08-15T01:47:05.981+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3382"
+	coordinates="48.846891255591,2.3437216132"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:44:29.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="Centre de documentation des droits de l'Antiquité (CDDA)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<url>http://www.ihd.cnrs.fr/article.php3?id_article=3</url>
+		<phone>01 44 41 55 65 </phone>
+		<email>guillaume.leyte@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

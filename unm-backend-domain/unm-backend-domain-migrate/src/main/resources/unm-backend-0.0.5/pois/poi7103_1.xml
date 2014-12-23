@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7103_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7103_1.xml"/>
+<title>Assistante Sociale</title>
+<updated>2014-08-15T01:47:43.283+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7103"
+	coordinates="48.711098484019,2.1702933311462"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-03T11:40:25.000+01:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6634"
+	name="Assistante Sociale">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Etudiants concernés : IUT d'Orsay
+Etablissements sur le Plateau du Moulon</description>
+	<address>
+		<floor>Locaux de l'Infirmerie</floor>
+		<openingHours>Mercredi : 9h30-12h30 (1er trimestre)</openingHours>
+		<url>www.crous-versailles.fr</url>
+		<phone>01 69 33 60 29</phone>
+		<email>christine.catala@crous-versailles.fr</email>
+	</address>
+</content>
+</entry>

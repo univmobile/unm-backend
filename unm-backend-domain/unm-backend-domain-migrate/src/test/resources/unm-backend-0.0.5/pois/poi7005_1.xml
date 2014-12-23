@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7005_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7005_1.xml"/>
+<title>Textes pour l'histoire de l'Antiquité tardive (THAT)</title>
+<updated>2014-08-15T01:47:42.187+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7005"
+	coordinates="48.904440965225,2.2099632024765"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T16:23:06.000+01:00"
+	updatedAt="2011-11-15T16:24:38.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2507"
+	name="Textes pour l'histoire de l'Antiquité tardive (THAT)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>- favoriser la mise à disposition de la communauté scientifique internationale des textes de l'Antiquité Tardive (éditions critiques, traductions, commentaires)
+- favoriser la création d'instruments de travail et de documentation tels que répertoires, index, bibliographies, concordances, dictionnaires, bases de données
+- favoriser les rencontres entre les différents spécialistes mondiaux de l'Antiquité Tardive en contribuant à l'organisation de séminaires, journées d'études, colloques </description>
+	<address>
+		<floor>MAE</floor>
+		<url>http://recherche.univ-montp3.fr/THAT/</url>
+		<phone>02 28 21 05 88</phone>
+		<email>that@malosse.org</email>
+	</address>
+</content>
+</entry>

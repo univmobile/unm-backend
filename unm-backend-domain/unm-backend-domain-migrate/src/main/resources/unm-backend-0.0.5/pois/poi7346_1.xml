@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7346_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7346_1.xml"/>
+<title>Auditorium de la Grande Galerie</title>
+<updated>2014-08-15T01:47:45.495+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7346"
+	coordinates="48.841962144708,2.3563206195831"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-11T14:11:12.000+02:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Auditorium de la Grande Galerie">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1922_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1922_1.xml"/>
+<title>Modèles, Dynamiques, Corpus (MoDyCo)</title>
+<updated>2014-08-15T01:46:52.489+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1922"
+	coordinates="48.903761506203,2.21035212278"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-06T14:59:04.000+02:00"
+	updatedAt="2011-11-15T12:32:55.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="2516"
+	name="Modèles, Dynamiques, Corpus (MoDyCo)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Bureau 401 A, 401 B, 4ème étage</floor>
+		<openingHours>Mercredi et jeudi ouverts la journée.
+Mardi et vendredi ouverts le matin.</openingHours>
+		<url>http://www.modyco.fr/</url>
+		<phone>01 40 97 41 79</phone>
+	</address>
+</content>
+</entry>

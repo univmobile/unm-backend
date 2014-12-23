@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6011_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6011_1.xml"/>
+<title>1er et 2ème cycles médecine</title>
+<updated>2014-08-15T01:47:32.682+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6011"
+	coordinates="48.795298611992,2.4535882472992"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T13:08:37.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4875"
+	name="1er et 2ème cycles médecine">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Secrétariat des scolarités</description>
+	<address>
+		<openingHours>Lundi - vendredi: 13 h 30 - 17h</openingHours>
+		<url>http://medecine.u-pec.fr/enseignements/1er-et-2eme-cycles/</url>
+		<email>scolarite.medecine@u-pec.fr</email>
+	</address>
+</content>
+</entry>

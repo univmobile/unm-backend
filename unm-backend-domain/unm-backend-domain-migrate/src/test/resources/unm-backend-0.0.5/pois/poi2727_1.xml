@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2727_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2727_1.xml"/>
+<title>Campus Curie</title>
+<updated>2014-08-15T01:46:59.543+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2727"
+	coordinates="48.84450406079,2.3435238003731"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T17:07:35.000+02:00"
+	updatedAt="2011-05-24T15:06:49.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2714"
+	name="Campus Curie">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4290" active="true"/>
+	<child uid="3762" active="true"/>
+	<child uid="4103" active="true"/>
+	<child uid="4137" active="true"/>
+	<child uid="4183" active="true"/>
+	<child uid="4325" active="true"/>
+</content>
+</entry>

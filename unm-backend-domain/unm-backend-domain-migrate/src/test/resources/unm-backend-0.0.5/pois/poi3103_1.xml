@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3103_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3103_1.xml"/>
+<title>Centre de psychiatrie et neurosciences</title>
+<updated>2014-08-15T01:47:03.027+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3103"
+	coordinates="48.837280444995,2.3389130830765"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:21:45.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2472"
+	name="Centre de psychiatrie et neurosciences">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+</content>
+</entry>

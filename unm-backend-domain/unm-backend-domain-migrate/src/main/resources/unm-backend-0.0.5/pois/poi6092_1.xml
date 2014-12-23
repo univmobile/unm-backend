@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6092_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6092_1.xml"/>
+<title>Institut Francilien d'Urbanisme</title>
+<updated>2014-08-15T01:47:33.632+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6092"
+	coordinates="48.837610079,2.5870328396559"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T16:25:39.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4622"
+	name="Institut Francilien d'Urbanisme">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://ifu.univ-mlv.fr/presentation-de-linstitut/organisation-de-linstitut/</url>
+		<phone>01 60 95 78 79 </phone>
+		<email>marie-monique.ribon@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

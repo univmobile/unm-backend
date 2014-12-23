@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7469_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7469_1.xml"/>
+<title>Site d'Argenteuil</title>
+<updated>2014-08-15T01:47:46.705+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7469"
+	coordinates="48.949390135334,2.2330945730209"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-26T10:54:23.000+02:00"
+	updatedAt="2013-06-26T10:56:25.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="4060"
+	name="Site d'Argenteuil">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>génie de la production, gestion logistique et transport
+</description>
+	<address>
+		<floor>bât Argenteuil 2, 2e étage, salle 307</floor>
+		<openingHours>du lundi au vendredi de 8h30 à 18h Fermeture (voir le site web)</openingHours>
+		<url>http://www.u-cergy.fr/fr/bibliotheque.html</url>
+		<phone> 01 39 98 34 07</phone>
+		<email>bu-argenteuil @ ml.u-cergy.fr</email>
+	</address>
+</content>
+</entry>

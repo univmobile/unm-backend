@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5782_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5782_1.xml"/>
+<title>MSAPHD - LP</title>
+<updated>2014-08-15T01:47:30.006+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5782"
+	coordinates="48.854735733161,2.7750483155251"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:53:42.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4613"
+	name="MSAPHD - LP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>
+
+Licence Professionnelle Management des services d'accompagement aux personnes handicapées et/ou dépendantes
+
+</description>
+	<address>
+		<floor>Bureau 111</floor>
+		<phone>01 60 95 78 14</phone>
+		<fax>01 60 95 78 32</fax>
+		<email>sophie.jasmin@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4453_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4453_1.xml"/>
+<title>Site de Livry-Gargan/IUFM</title>
+<updated>2014-08-15T01:47:17.476+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4453"
+	coordinates="48.915971053688,2.537836432457"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:43:42.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	deletedAt="2011-05-24T14:44:06.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Site de Livry-Gargan/IUFM">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

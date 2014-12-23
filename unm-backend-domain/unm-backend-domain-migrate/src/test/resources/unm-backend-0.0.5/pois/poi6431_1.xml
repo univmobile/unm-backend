@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6431_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6431_1.xml"/>
+<title>Sciences du vivant (L3, secrétariat RH36 Chargelègue)</title>
+<updated>2014-08-15T01:47:37.162+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6431"
+	coordinates="48.827729444822,2.3806791007519"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T14:12:08.000+02:00"
+	updatedAt="2011-06-24T17:06:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1778"
+	name="Sciences du vivant (L3, secrétariat RH36 Chargelègue)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>- Biologie Biochimie Moléculaire (L3 BBM)
+- Biologie et Economie d’entreprise (L3 BEE) 
+- Microbiologie Industrielle et Biotechnologie (L3 MIB) - Parcours Interdisciplinaire en Biologie (PIB)
+- Microbiologie Industrielle et Biotechnologies (L3 Pro MIB)</description>
+	<address>
+		<floor>Bâtiment Lamarck, rez-de-chaussée haut, bureau 36</floor>
+		<url>http://www.sdv.univ-paris-diderot.fr/</url>
+		<phone>01 57 27 82 30</phone>
+		<email>marie.chargelegue@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

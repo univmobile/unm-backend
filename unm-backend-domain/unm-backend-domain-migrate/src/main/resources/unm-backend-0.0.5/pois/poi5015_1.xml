@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5015_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5015_1.xml"/>
+<title>Scolarité Faculté administration et échanges internationaux </title>
+<updated>2014-08-15T01:47:22.821+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5015"
+	coordinates="48.787470597132,2.4440824985504"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T16:59:44.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4533"
+	name="Scolarité Faculté administration et échanges internationaux ">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4394_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4394_1.xml"/>
+<title>ER 5</title>
+<updated>2014-08-15T01:47:16.814+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4394"
+	coordinates="48.837762147423,2.3608151637018"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T13:38:23.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3686"
+	name="ER 5">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Infections à mycobactéries (tuberculose, lèpre, mycobactériose) et antibiotique : aspects moléculaires, thérapeutiques et épidémiologiques - ER 5</description>
+	<address>
+		<phone>01 40 77 97 46</phone>
+		<email>jerome.robert0@upmc.fr</email>
+	</address>
+</content>
+</entry>

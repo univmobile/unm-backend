@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi397_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi397_1.xml"/>
+<title>St. Denis piscine La Baleine</title>
+<updated>2014-08-15T01:46:39.727+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="397"
+	coordinates="48.941277179693,2.3630529642"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T17:10:01.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="385"
+	name="St. Denis piscine La Baleine">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+	<child uid="399" active="true"/>
+</content>
+</entry>

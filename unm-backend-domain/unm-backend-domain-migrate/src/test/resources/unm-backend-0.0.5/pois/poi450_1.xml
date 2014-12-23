@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi450_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi450_1.xml"/>
+<title>Evry bâtiment 1 ers Cycles</title>
+<updated>2014-08-15T01:46:40.007+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="450"
+	coordinates="48.623569555554,2.4242663383484"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-06T11:36:56.000+02:00"
+	updatedAt="2011-06-15T17:22:03.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="268"
+	name="Evry bâtiment 1 ers Cycles">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<floor>Aile B,1er étage</floor>
+		<itinerary>Ligne D - station Evry Couronnes
+Ligne C - station Evry Couronnes (changement Juvisy) </itinerary>
+		<fullAddress>2 rue André Lalande 
+91025 Evry cedex</fullAddress>
+	</address>
+	<child uid="6190" active="true"/>
+	<child uid="482" active="true"/>
+	<child uid="484" active="true"/>
+	<child uid="2361" active="true"/>
+	<child uid="2360" active="true"/>
+	<child uid="451" active="true"/>
+	<child uid="452" active="true"/>
+	<child uid="497" active="true"/>
+	<child uid="2345" active="true"/>
+	<child uid="2347" active="true"/>
+	<child uid="2351" active="true"/>
+	<child uid="2353" active="true"/>
+	<child uid="2355" active="true"/>
+	<child uid="2358" active="true"/>
+	<child uid="2368" active="true"/>
+	<child uid="5168" active="true"/>
+	<child uid="5183" active="true"/>
+	<child uid="5190" active="true"/>
+</content>
+</entry>

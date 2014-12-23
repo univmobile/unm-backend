@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5644_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5644_1.xml"/>
+<title>La petite cafétéria</title>
+<updated>2014-08-15T01:47:28.379+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5644"
+	coordinates="48.788086692572,2.4436305463314"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T12:12:40.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5565"
+	name="La petite cafétéria">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>De 10h à 15h30
+</openingHours>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

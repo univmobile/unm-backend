@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1496_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1496_1.xml"/>
+<title>Service Commun de Formation continue</title>
+<updated>2014-08-15T01:46:48.215+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1496"
+	coordinates="48.830076857864,2.3808997"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:06:43.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="Service Commun de Formation continue">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>3 section :
+- DAEU : 0157276448
+- Section université ouverte : 0157276455
+- Section étudiants empêchés : 0157276458</description>
+	<address>
+		<floor>1er étage, Bureau 170C à 189C</floor>
+		<openingHours>Section DAEU : tous les jours : 9h30-12h et 14h-17h
+Section université ouverte : tous les jours : 9h-12h30 et 14h-17h
+Section des étudiants empêchés : 9h-12h30 et 14h-17h30</openingHours>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<fullAddress>10 esplanade Pierre Vidal Naquet
+75013 Paris</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2559_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2559_1.xml"/>
+<title>Scolarité administratif</title>
+<updated>2014-08-15T01:46:58.005+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2559"
+	coordinates="48.85164006538,2.3405720293"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:44:39.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	deletedAt="2011-06-08T13:21:42.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	name="Scolarité administratif">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>AIle Gauche ,RDC</floor>
+		<openingHours>Lundi-vendredi
+9h30-11h30
+13h00-16h30</openingHours>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5980_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5980_1.xml"/>
+<title>MESOS - M1-2</title>
+<updated>2014-08-15T01:47:32.340+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5980"
+	coordinates="48.854641315521,2.7752602100372"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T11:22:41.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4613"
+	name="MESOS - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master Management des établissements, services et organisations de santé</description>
+	<address>
+		<floor>Bureau 111</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-droit-economie-gestion/mention-management-des-organisations-sanitaires-et-sociales/master-management-des-etablissements-services-et-organisations-de-sante/</url>
+		<phone>01 60 95 78 14</phone>
+		<fax>01 60 95 78 32</fax>
+		<email>sophie.jasmin@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

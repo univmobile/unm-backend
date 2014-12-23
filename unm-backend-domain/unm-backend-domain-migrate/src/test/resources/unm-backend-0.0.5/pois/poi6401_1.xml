@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6401_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6401_1.xml"/>
+<title>Sciences de la terre, de l'environnement... (L2-L3 STEP)</title>
+<updated>2014-08-15T01:47:36.894+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6401"
+	coordinates="48.827653516832,2.3807635903358"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T16:45:42.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1778"
+	name="Sciences de la terre, de l'environnement... (L2-L3 STEP)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>L2 et L3 Sciences de la terre, de l'environnement et des planètes (STEP)</description>
+	<address>
+		<floor>Bâtiment Lamarck</floor>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=756</url>
+		<phone>01 57 27 84 99</phone>
+		<email>scol-step@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

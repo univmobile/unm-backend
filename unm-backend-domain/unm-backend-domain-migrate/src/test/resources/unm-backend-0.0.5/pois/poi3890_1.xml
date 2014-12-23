@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3890_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3890_1.xml"/>
+<title>Les mondes allemands</title>
+<updated>2014-08-15T01:47:11.384+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3890"
+	coordinates="48.946250207662,2.3626291751862"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:46:14.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2604"
+	name="Les mondes allemands">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 1577 - Les mondes allemands : régions, histoire, cultures, sociétés appartenant à l'École doctorale (ED) 31 : Pratiques et théories du sens.
+Directeur : Norbert Waszek
+Contact au département Études germaniques.</description>
+	<address>
+		<floor>2ème étage Bâtiment B1, bureau 204</floor>
+		<openingHours>Jeudi
+14h-15h
+Vendredi
+10h-12h
+14h-15h</openingHours>
+		<url>http://www.univ-paris8.fr/EA-1577-Les-mondes-allemands</url>
+		<phone>01 49 40 68 33</phone>
+		<fax>01 48 52 02 89</fax>
+		<email>norbertwaszek@free.fr</email>
+	</address>
+</content>
+</entry>

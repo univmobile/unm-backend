@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi173_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi173_1.xml"/>
+<title>Amphithéâtres A101 à 105</title>
+<updated>2014-08-15T01:46:38.595+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="173"
+	coordinates="48.62376856867,2.424351498"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-02T15:55:56.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-07-05T11:06:45.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	name="Amphithéâtres A101 à 105">
+	<poiType id="16" label="Département" categoryId="2" categoryLabel="Cours &amp; Formation"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6807_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6807_1.xml"/>
+<title>Cafétéria L'Asiatique</title>
+<updated>2014-08-15T01:47:40.404+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6807"
+	coordinates="48.902563387294,2.2145779430866"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T12:10:12.000+02:00"
+	updatedAt="2012-02-10T14:17:41.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6805"
+	name="Cafétéria L'Asiatique">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>de 11h30 à 15h</openingHours>
+	</address>
+	<attachment id="249" title="asiatique.jpg" type="image" url="/uploads/poi/fbe139be50e5a9e6558ff402458b8f8f8ad4b601.jpg"/>
+</content>
+</entry>

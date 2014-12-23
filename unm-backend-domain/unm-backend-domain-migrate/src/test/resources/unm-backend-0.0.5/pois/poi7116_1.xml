@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7116_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7116_1.xml"/>
+<title>Salle 213</title>
+<updated>2014-08-15T01:47:43.418+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7116"
+	coordinates="48.785721054385,2.0509135723114"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-05T12:36:18.000+01:00"
+	updatedAt="2012-02-05T16:39:53.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	parentUid="2595"
+	name="Salle 213">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Bâtiment Leclerc
+80 places</description>
+</content>
+</entry>

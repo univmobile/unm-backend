@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6574_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6574_1.xml"/>
+<title></title>
+<updated>2014-08-15T01:47:38.470+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6574"
+	coordinates="48.701777828574,2.1830740571022"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-04T11:31:51.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-07-04T13:39:26.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	name="">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

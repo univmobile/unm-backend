@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2425_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2425_1.xml"/>
+<title>Site STAPS</title>
+<updated>2014-08-15T01:46:56.688+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2425"
+	coordinates="48.833957796861,2.2908425331116"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:03:04.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="1163"
+	name="Site STAPS">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="2426" active="true"/>
+</content>
+</entry>

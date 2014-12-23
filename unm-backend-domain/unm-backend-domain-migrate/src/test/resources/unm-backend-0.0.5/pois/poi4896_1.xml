@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4896_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4896_1.xml"/>
+<title>Dauphine Discussion Débat</title>
+<updated>2014-08-15T01:47:21.592+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4896"
+	coordinates="48.869344496517,2.2732552886009"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:10:59.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Dauphine Discussion Débat">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Local C112</floor>
+		<url>http://www.dauphinedebat.com/</url>
+		<phone>06 66 28 71 57</phone>
+		<email> contact@dauphinedebat.com</email>
+	</address>
+</content>
+</entry>

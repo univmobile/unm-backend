@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3083_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3083_1.xml"/>
+<title>Salles de cours</title>
+<updated>2014-08-15T01:47:02.809+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3083"
+	coordinates="48.875220531482,2.352390512824"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:56:22.000+02:00"
+	updatedAt="2012-01-17T17:06:31.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3081"
+	name="Salles de cours">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro
+ligne 7 : Poissonnière
+ligne 4 : Château d'Eau</itinerary>
+		<fullAddress>26/28 rue de Paradis 
+75010 Paris</fullAddress>
+	</address>
+	<child uid="6911" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6165_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6165_1.xml"/>
+<title>UNEF - MLV</title>
+<updated>2014-08-15T01:47:34.537+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6165"
+	coordinates="48.839445461859,2.5864259898663"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:11:53.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="UNEF - MLV">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Union Nationale des Etudiants de France</description>
+	<address>
+		<floor>Bureau 0b052-53</floor>
+		<url>http://www.unef.fr/</url>
+		<phone>01 60 95 79 36</phone>
+		<email>unef_mlv@hotmail.fr</email>
+	</address>
+</content>
+</entry>

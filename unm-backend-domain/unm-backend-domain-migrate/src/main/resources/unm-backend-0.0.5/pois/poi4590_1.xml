@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4590_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4590_1.xml"/>
+<title>Bâtiment de l'institut d'urbanisme</title>
+<updated>2014-08-15T01:47:18.866+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4590"
+	coordinates="48.789050434839,2.4500960111618"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:40:21.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	deletedAt="2011-05-24T16:43:21.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Bâtiment de l'institut d'urbanisme">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

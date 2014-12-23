@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7491_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7491_1.xml"/>
+<title>Bibliothèque Lavisse</title>
+<updated>2014-08-15T01:47:46.866+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7491"
+	coordinates="48.849054474431,2.3432394862175"
+	active="true"
+	markerType="point"
+	createdAt="2013-09-26T09:42:01.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="Pascale.randriantiana "
+	updatedBy="Pascale.randriantiana "
+	parentUid="1002"
+	name="Bibliothèque Lavisse">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Bibliothèque spécialisée en histoire.
+Elle est réservée aux étudiants inscrits à la préparation aux concours de l'enseignement d'histoire et de géographie des universités Paris 1 et Paris 4. </description>
+	<address>
+		<floor>Escalier C, 3e étage</floor>
+		<openingHours>Du lundi au jeudi : 
+9h00-18h30
+Fermeture à 17h00 le vendredi</openingHours>
+		<url>http://www.univ-paris1.fr/bibliotheque/bibliotheque-lavisse/</url>
+		<phone>01 40 46 28 54</phone>
+		<email>bibliotheque.lavisse@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

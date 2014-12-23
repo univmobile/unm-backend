@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4134_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4134_1.xml"/>
+<title>UMR 7092</title>
+<updated>2014-08-15T01:47:14.083+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4134"
+	coordinates="48.816529559074,2.4022581428289"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:48:28.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4112"
+	name="UMR 7092">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de physique moléculaire pour l'atmosphère et l'astrophysique (LPMAA) - UMR 7092
+
+ 
+
+ 
+
+ 
+
+ 
+
+L'activité du LPMAA porte sur la physique moléculaire et ses applications pour l'étude de l'atmosphère terrestre, et sur la compréhension de processus moléculaires dans des milieux astrophysiques (comètes, planètes, milieu interstellaire). Son expertise s'étend des études expérimentales et théoriques en laboratoire (spectrométrie infrarouge et UV, spectrométrie de masse, surfaces cryogéniques, analyse spectrale, calculs de taux de relaxation, constitution de bases de données moléculaires) aux campagnes de mesures sur le terrain (sondage à distance de la composition troposphérique et stratosphérique sous ballon et depuis le sol, surveillance satellitaire). </description>
+	<address>
+		<url>http://www.lpmaa.jussieu.fr/</url>
+		<phone>0144274481</phone>
+		<email>salem.tacine@upmc.fr</email>
+	</address>
+</content>
+</entry>

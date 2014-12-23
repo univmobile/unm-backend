@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2303_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2303_1.xml"/>
+<title>Arts plastiques (M1-M2)</title>
+<updated>2014-08-15T01:46:55.697+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2303"
+	coordinates="48.943936311233,2.363380193710"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:16:14.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Arts plastiques (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment A, bureau 069</floor>
+		<openingHours>Lundi
+14h-16h
+Mardi
+10h-13h
+13h-16h
+Mercredi
+10h-12h
+14h-16h
+Jeudi
+9h-12h30
+14h-17h
+Vendredi
+10h-12h</openingHours>
+		<url>http://www-artweb.univ-paris8.fr/</url>
+		<phone>01 49 40 66 02</phone>
+		<email>anne-monique.weiss@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

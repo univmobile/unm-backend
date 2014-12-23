@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4013_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4013_1.xml"/>
+<title>Anglais L3, M1-2</title>
+<updated>2014-08-15T01:47:12.699+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4013"
+	coordinates="48.847967861001,2.3428975045681"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:07:46.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Anglais L3, M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>ou Tél : 01 40 46 25 98 (Masters et Concours)
+Tél : 01 40 46 32 56 (L3 LLCE)
+Une boîte aux lettres est à votre disposition (sur la gauche avant le couloir) pour déposer tout courrier hors des heures d’ouvertures du secrétariat.</description>
+	<address>
+		<floor>Escalier G, 2ème étage, bureau G 352 </floor>
+		<openingHours>Du lundi au vendredi : 
+10h00 / 12h00 - 14h00 / 16h00
+Fermeture le lundi après-midi et le vendredi après-midi</openingHours>
+		<phone>01 40 46 32 56</phone>
+		<email>sorbonne.anglais@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

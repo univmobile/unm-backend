@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi831_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi831_1.xml"/>
+<title>IDUP</title>
+<updated>2014-08-15T01:46:42.297+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="831"
+	coordinates="48.827188234656,2.364426"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T17:00:18.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1023"
+	name="IDUP">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Institut de démographie de l'Université Paris 1</description>
+	<address>
+		<floor> Aile C, 18e étage, 18.02</floor>
+		<openingHours>Lundi au vendredi
+09h00-17h00
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64 et 83
+Arrêt Tolbiac-Baudricourt</itinerary>
+		<phone>01 44 07 86 46</phone>
+		<email>idup@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

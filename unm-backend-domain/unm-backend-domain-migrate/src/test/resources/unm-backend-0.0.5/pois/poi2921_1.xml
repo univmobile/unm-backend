@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2921_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2921_1.xml"/>
+<title>Centre Ulm</title>
+<updated>2014-08-15T01:47:01.152+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2921"
+	coordinates="48.84547791292,2.34590392559"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T16:54:58.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2833"
+	name="Centre Ulm">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="2923" active="true"/>
+</content>
+</entry>

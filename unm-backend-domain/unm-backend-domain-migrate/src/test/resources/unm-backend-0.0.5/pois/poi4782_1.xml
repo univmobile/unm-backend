@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4782_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4782_1.xml"/>
+<title>Économie de la santé M2</title>
+<updated>2014-08-15T01:47:20.481+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4782"
+	coordinates="48.870426764596,2.2737823426723"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:14:08.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Économie de la santé M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Recherche en économie de la santé, santé publique et sciences sociales 
+Économie et gestion des organisations médico-sociales 
+</description>
+	<address>
+		<floor>Bureau D 409	</floor>
+		<openingHours>Du lundi au vendredi :
+9h00 / 16h30
+Secrétariat fermé le mercredi après-midi
+</openingHours>
+		<phone>01 44 05 44 46</phone>
+		<email>master4107@dauphine.fr </email>
+	</address>
+</content>
+</entry>

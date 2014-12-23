@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi30_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi30_1.xml"/>
+<title>Institut d'études culturelles</title>
+<updated>2014-08-15T01:46:38.280+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="30"
+	coordinates="48.780069084388,2.04414367675"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T12:22:54.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-05T13:58:57.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Institut d'études culturelles">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>L’institut d’études culturelles (IEC), situé sur le site de Saint Quentin-en-Yvelines, a été créé au printemps 2010. Fort d’environ 900 étudiants, 50 enseignants-chercheurs et chercheurs, d’un nombre équivalent d’intervenants extérieurs professionnels, il associe deux départements de formation (département d’histoire ; département des humanités : lettres, anglais, espagnol) et trois laboratoires de recherche (Centre d’histoire culturelle des sociétés contemporaines, ESR Moyen Age-Temps modernes, PROMODIA). Deux de ses laboratoires (CHCSC, ESR) sont classés A+ par l’AERES.
+ 
+Sa fondation répond à la politique de l’UVSQ qui, forte des compétences de ses équipes, reconnues sur le plan national et international, souhaite développer la formation aux métiers de la culture et les programmes scientifiques liés aux questions culturelles.
+ 
+L’IEC, qui favorise les passerelles entre ses formations, propose un cursus complet, de la licence au doctorat. Il couvre les disciplines de l’histoire, des lettres, des langues et des civilisations, dans des perspectives à la fois généraliste, spécialisée et professionnalisante (métiers de l’enseignement ; métiers de la culture). Son offre comprend quatre diplômes de licence (3 généralistes, 1 spécialisée : Musiques anciennes et monde contemporain) et dix diplômes de master (5 masters recherche, 5 masters professionnels), dont deux préparés en liaison avec l’Ecole nationale supérieure d’architecture de Versailles (ENSAV). Ses trois laboratoires accueillent, au total, environ 80 doctorants.
+ 
+L’IEC s’appuie, pour la formation comme pour la recherche, sur un réseau dense de partenaires universitaires, institutionnels, professionnels, au niveau local, national et international (Europe, Amérique, Asie). Il est un acteur essentiel des projets conduits par l’UVSQ dans le cadre du PRES UniverSud et du Campus Paris-Saclay.</description>
+	<address
+		zipCode="78280"
+		city="GUYANCOURT"
+		countryCode="FR">
+		<phone>01 39 25 50 00</phone>
+		<email>christian.delporte@uvsq.fr  </email>
+		<fullAddress>47 boulevard Vauban 78280 GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

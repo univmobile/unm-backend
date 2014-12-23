@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi722_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi722_1.xml"/>
+<title>Association Amnesty International</title>
+<updated>2014-08-15T01:46:41.400+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="722"
+	coordinates="48.848932805988,2.343635"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T16:01:24.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1002"
+	name="Association Amnesty International">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address
+		countryCode="FR">
+		<phone>06 20 96 79 92</phone>
+		<email>aj.sorbonne@gmail.com</email>
+		<fullAddress>17 rue de la Sorbonne
+75005 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

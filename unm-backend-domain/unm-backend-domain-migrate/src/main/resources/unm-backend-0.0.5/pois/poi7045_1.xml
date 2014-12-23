@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7045_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7045_1.xml"/>
+<title>Lettres, DU et autres formations à distance</title>
+<updated>2014-08-15T01:47:42.669+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7045"
+	coordinates="48.901871149355,2.2124650329351"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-06T11:54:44.000+01:00"
+	updatedAt="2012-01-06T12:42:21.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="7039"
+	name="Lettres, DU et autres formations à distance">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Marie-France ADON</description>
+	<address>
+		<floor>E. 202</floor>
+		<phone>0140975951</phone>
+		<email>madon@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

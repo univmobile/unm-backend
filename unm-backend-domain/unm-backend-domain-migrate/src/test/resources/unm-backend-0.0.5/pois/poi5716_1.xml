@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5716_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5716_1.xml"/>
+<title>Creperie L'Archipel</title>
+<updated>2014-08-15T01:47:29.220+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5716"
+	coordinates="48.788297691362,2.4450092017651"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T14:17:57.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5569"
+	name="Creperie L'Archipel">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>De 10h30 à 16h
+</openingHours>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

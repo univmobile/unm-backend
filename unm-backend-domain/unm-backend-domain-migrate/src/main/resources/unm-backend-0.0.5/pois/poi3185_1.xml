@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3185_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3185_1.xml"/>
+<title>UFR de sciences économiques, gestion, mathématiques, informa</title>
+<updated>2014-08-15T01:47:03.765+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3185"
+	coordinates="48.902916981299,2.2154852002"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T13:52:38.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2488"
+	name="UFR de sciences économiques, gestion, mathématiques, informa">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Bureau E03</floor>
+		<url>http://www.u-paris10.fr/21682799/0/fiche___pagelibre/</url>
+		<phone>01 40 97 47 81</phone>
+		<email>ufr-segmi@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7486_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7486_1.xml"/>
+<title>Carthothèque</title>
+<updated>2014-08-15T01:47:46.843+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7486"
+	coordinates="48.827287118516,2.3643873631954"
+	active="true"
+	markerType="point"
+	createdAt="2013-09-24T10:26:54.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="Pascale.randriantiana "
+	updatedBy="Pascale.randriantiana "
+	parentUid="1023"
+	name="Carthothèque">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>La cartothèque est ouverte à tous les étudiants et enseignants-chercheurs de Paris 1.</description>
+	<address>
+		<floor>12ème étage</floor>
+		<openingHours>Du lundi au vendredi : 
+9h00-17h00</openingHours>
+		<url>http://www.univ-paris1.fr/bibliotheques/trouver/une-bibliotheque/cartotheque/</url>
+		<phone>01 44 07 87 65</phone>
+		<email>cartotheque@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

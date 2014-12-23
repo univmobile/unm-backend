@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi514_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi514_1.xml"/>
+<title>Mantes La Jolie</title>
+<updated>2014-08-15T01:46:40.503+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="514"
+	coordinates="48.996730427718,1.710424572229"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T17:07:29.000+02:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	createdBy="haromoys"
+	updatedBy="haromoys"
+	parentUid="4"
+	name="Mantes La Jolie">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+	<child uid="515" active="true"/>
+	<child uid="516" active="true"/>
+</content>
+</entry>

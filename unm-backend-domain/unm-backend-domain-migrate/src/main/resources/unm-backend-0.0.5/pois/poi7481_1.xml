@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7481_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7481_1.xml"/>
+<title>Administration (finances, informatique, communication)</title>
+<updated>2014-08-15T01:47:46.803+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7481"
+	coordinates="48.84816931193,2.3433628678322"
+	active="true"
+	markerType="point"
+	createdAt="2013-07-09T17:45:06.000+02:00"
+	updatedAt="2013-07-12T17:02:46.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7477"
+	name="Administration (finances, informatique, communication)">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>- Agence comptable
+- Centre de ressources informatiques
+- Direction de la communication
+- Service financier</description>
+	<address>
+		<floor>Sorbonne, 1, rue Victor Cousin, Galerie Claude Bernard, esc. U, 3e étage</floor>
+		<openingHours>9h30 - 17h30</openingHours>
+		<url>http://www.enc.sorbonne.fr</url>
+		<phone>01 55 42 75 00</phone>
+		<email>secretariat@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

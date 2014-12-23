@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2538_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2538_1.xml"/>
+<title>Secrétariat pédagogique</title>
+<updated>2014-08-15T01:46:57.759+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2538"
+	coordinates="48.821363307328,2.31455795466"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:24:44.000+02:00"
+	updatedAt="2011-06-14T17:10:50.000+02:00"
+	deletedAt="2011-04-29T16:26:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	name="Secrétariat pédagogique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7330_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7330_1.xml"/>
+<title>Galerie de Minéralogie</title>
+<updated>2014-08-15T01:47:45.481+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7330"
+	coordinates="48.841651457228,2.3570072650909"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-11T12:51:30.000+02:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Galerie de Minéralogie">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>36, rue Geoffroy-Saint-Hilaire 75005 Paris</floor>
+		<openingHours>Fermée au public pour travaux</openingHours>
+		<itinerary>Fermée au public pour travaux</itinerary>
+		<url>http://www.mnhn.fr/museum/foffice/tous/tous/guidePratique/infPratiques/infopratique/fiche_info.xsp?LIEU_ID=170&amp;SITE_ID=10&amp;idx=1&amp;nav=liste</url>
+	</address>
+</content>
+</entry>

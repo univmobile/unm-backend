@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2816_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2816_1.xml"/>
+<title>Amphithéâtre Anzieu</title>
+<updated>2014-08-15T01:47:00.275+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2816"
+	coordinates="48.901636120689,2.393385395"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T14:28:32.000+02:00"
+	updatedAt="2011-06-14T17:24:36.000+02:00"
+	deletedAt="2011-06-08T10:16:51.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	name="Amphithéâtre Anzieu">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>RDC  OU Sous sol</floor>
+	</address>
+</content>
+</entry>

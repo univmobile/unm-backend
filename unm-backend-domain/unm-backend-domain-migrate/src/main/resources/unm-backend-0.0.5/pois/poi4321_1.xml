@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4321_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4321_1.xml"/>
+<title>UMR_S 872</title>
+<updated>2014-08-15T01:47:16.098+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4321"
+	coordinates="48.850502603603,2.3413575813174"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:14:31.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3740"
+	name="UMR_S 872">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Centre de recherche des Cordeliers - UMR_S 872</description>
+	<address>
+		<url>http://www.crc.jussieu.fr/crc/</url>
+		<phone>01 42 34 68 00</phone>
+		<email>tarik.rerzki@crc.jussieu.fr</email>
+	</address>
+</content>
+</entry>

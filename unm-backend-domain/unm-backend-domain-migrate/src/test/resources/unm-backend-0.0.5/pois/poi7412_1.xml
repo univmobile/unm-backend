@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7412_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7412_1.xml"/>
+<title>Grande anti chambre, Rohan</title>
+<updated>2014-08-15T01:47:45.987+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7412"
+	coordinates="48.859766965148,2.3595231771469"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-29T16:48:50.000+02:00"
+	updatedAt="2013-07-04T17:41:59.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7352"
+	name="Grande anti chambre, Rohan">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>Cette salle accueille les stages de la formation continue.</description>
+	<address>
+		<floor>Hôtel de Rohan, Archives nationales, 87, rue Vieille-du-Temple, 1er étage, 75003 Paris</floor>
+		<url>http://www.enc.sorbonne.fr/formation-continue.htm</url>
+		<phone>01.55.42.75.02</phone>
+		<email>etudes@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

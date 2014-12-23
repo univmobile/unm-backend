@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2328_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2328_1.xml"/>
+<title>Bibliothèque centrale</title>
+<updated>2014-08-15T01:46:55.954+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2328"
+	coordinates="48.857886194761,2.33221124857"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:47:05.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2544"
+	name="Bibliothèque centrale">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi :
+13h /19h 
+Du mardi au vendredi : 
+9h / 19h
+ Samedi : 10h / 18h</openingHours>
+		<phone>01 44 77 87 20</phone>
+	</address>
+</content>
+</entry>

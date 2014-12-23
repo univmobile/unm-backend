@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5957_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5957_1.xml"/>
+<title>CILFAC</title>
+<updated>2014-08-15T01:47:32.078+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5957"
+	coordinates="49.038710920087,2.0751359313726"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:53:04.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3849"
+	name="CILFAC">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<description>Centre International Langue Française et Action Culturelle
+Secrétaire du CILFAC : Audrey MAJERAC
+
+</description>
+	<address>
+		<floor>Tour des Chênes - 3e étage - Bureau 317</floor>
+		<openingHours>Lundi : 9h00-12h30/ 13h30-17h00
+Mercredi : 9h00-12h30/ 13h30-17h00
+Vendredi : 9h00-12h30</openingHours>
+		<phone>01 34 25 67 02</phone>
+		<email>audrey.majerac@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

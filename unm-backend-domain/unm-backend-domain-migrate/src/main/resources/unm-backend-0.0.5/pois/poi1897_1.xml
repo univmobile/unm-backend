@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1897_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1897_1.xml"/>
+<title>Bibliothèque Lebovici</title>
+<updated>2014-08-15T01:46:52.168+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1897"
+	coordinates="48.912771528022,2.4199003726"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T21:09:40.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="348"
+	name="Bibliothèque Lebovici">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Bibliothèque Lebovici.</description>
+	<address>
+		<floor>RDC.</floor>
+		<openingHours>Lundi, mercredi, jeudi, vendredi : 
+9 h à 22 h
+Mardi : 
+11h à 22h
+Samedi :
+9h à 19h</openingHours>
+		<phone>01 48 38 76 69</phone>
+	</address>
+</content>
+</entry>

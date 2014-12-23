@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4931_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4931_1.xml"/>
+<title>École doctorale Éco, Informatique, Mathématique</title>
+<updated>2014-08-15T01:47:21.960+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4931"
+	coordinates="48.870321820391,2.2732707113028"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:58:47.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="École doctorale Éco, Informatique, Mathématique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau A 406 </floor>
+		<url>http://www.edd.dauphine.fr/fr/contact.html</url>
+		<phone>01 44 05 44 52 </phone>
+	</address>
+</content>
+</entry>

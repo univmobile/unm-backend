@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5121_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5121_1.xml"/>
+<title>Bâtiment bibliothèque CMC</title>
+<updated>2014-08-15T01:47:23.422+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5121"
+	coordinates="48.787332756584,2.4434575438499|48.787444089364,2.4437552690506|48.787751578616,2.4437525868416|48.787774551875,2.4437096714973|48.787756880138,2.4436721205711|48.787864677637,2.4436613917351|48.787900021029,2.4435675144196|48.788055531657,2.4431651830673|48.787979543569,2.4429693818092|48.787673822891,2.4429559707642|48.787558956259,2.4432617425919|48.787525379809,2.4433502554893|48.787490036153,2.4432536959648|48.787414047209,2.4432536959648|48.787332756584,2.4434575438499"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-31T13:59:59.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	deletedAt="2011-06-08T14:32:52.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	name="Bâtiment bibliothèque CMC">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<url>http://ergotherapie.u-pec.fr</url>
+		<phone>01.45.17.10.00</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4908_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4908_1.xml"/>
+<title>Phinedo.com</title>
+<updated>2014-08-15T01:47:21.711+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4908"
+	coordinates="48.869794390736,2.2732499241829"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:26:20.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Phinedo.com">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>hinedo.com , c’est avant tout LE Portail étudiant de Dauphine fait par des dauphinois pour les dauphinois. Il propose un forum, une bibliothèque, un agenda, des articles divers et variés…
+Et au-delà d'être un simple site, Phinedo c'est aussi une assoce ancrée dans la vie dauphinoise qui te suivra à chacun des évènements qui rythment l'année : WEI, Ski club, Ski-études, Spi, soirées,…. </description>
+	<address>
+		<floor>Local B 014</floor>
+		<url>http://www.phinedo.fr/</url>
+	</address>
+</content>
+</entry>

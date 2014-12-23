@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3602_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3602_1.xml"/>
+<title>Anacrouse</title>
+<updated>2014-08-15T01:47:08.451+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3602"
+	coordinates="48.944227954417,2.3629745095968"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:51:04.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Anacrouse">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’association Anacrouse est née dès le début de la création du département danse, en 1989, et constitue, par-là même, l’une des associations les plus pérennes de l’université Paris 8. Gérée par les étudiants pour les étudiants, sa mission principale consiste à mettre en oeuvre des projets favorisant la recherche en danse et la création chorégraphique au sein de l’université.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment A, bureau 080</floor>
+		<url>http://anacrouse-danse.org</url>
+		<email>secretariat@anacrouse-danse.org</email>
+	</address>
+</content>
+</entry>

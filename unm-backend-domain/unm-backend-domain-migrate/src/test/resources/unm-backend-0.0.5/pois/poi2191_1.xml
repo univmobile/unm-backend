@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2191_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2191_1.xml"/>
+<title>Littérature française (M1-M2)</title>
+<updated>2014-08-15T01:46:55.080+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2191"
+	coordinates="48.946158605123,2.362029701"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T15:27:20.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2603"
+	name="Littérature française (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3ème étage Bâtiment B2, bureau 341</floor>
+		<openingHours>Lundi, mardi, jeudi
+10h-16h
+Vendredi
+11h-16h</openingHours>
+		<url>http://www2.univ-paris8.fr/litteraturefrancaise/index.php?option=com_content&amp;view=article&amp;id=17&amp;Itemid=4</url>
+		<phone>01 49 40 68 16</phone>
+		<fax>01 49 40 68 20</fax>
+		<email>gbenetti@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

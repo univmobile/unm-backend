@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4859_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4859_1.xml"/>
+<title>Créteil</title>
+<updated>2014-08-15T01:47:21.269+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4859"
+	coordinates="48.797528400836,2.450487613678"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T11:57:02.000+02:00"
+	updatedAt="2011-06-10T15:09:45.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4694"
+	name="Créteil">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Plateforme d'accueil des résidences de Créteil</description>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>9h00 - 17h00</openingHours>
+		<itinerary>métro : ligne 8 Créteil l'Echat</itinerary>
+		<phone>01-42-07-36-19</phone>
+		<email>residence.creteil@crous-creteil.fr</email>
+	</address>
+	<child uid="5902" active="true"/>
+	<child uid="5900" active="true"/>
+	<child uid="5898" active="true"/>
+	<child uid="4937" active="true"/>
+	<child uid="4932" active="true"/>
+	<child uid="5892" active="true"/>
+	<child uid="5893" active="true"/>
+	<child uid="5894" active="true"/>
+	<child uid="5895" active="true"/>
+	<child uid="5896" active="true"/>
+	<child uid="5897" active="true"/>
+	<child uid="5899" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1912_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1912_1.xml"/>
+<title>Solidarité internationale des étudiants en médecine</title>
+<updated>2014-08-15T01:46:52.378+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1912"
+	coordinates="48.914391264514,2.41825316"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-06T01:41:13.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="356"
+	name="Solidarité internationale des étudiants en médecine">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association de solidarité internationale des étudiants en médecine de Bobigny</description>
+	<address>
+		<floor>RDC - Bureau r 11.</floor>
+		<openingHours>Lundi à Jeudi :
+13h15 - 15h
+Vendredi : 
+13h30 - 14h30</openingHours>
+		<phone>01 48 38 77 83</phone>
+	</address>
+</content>
+</entry>

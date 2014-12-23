@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3750_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3750_1.xml"/>
+<title>ERASMUS</title>
+<updated>2014-08-15T01:47:10.061+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3750"
+	coordinates="48.901704244729,2.3931981436908"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:14:08.000+02:00"
+	updatedAt="2011-06-14T17:24:36.000+02:00"
+	deletedAt="2011-06-08T10:16:51.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	name="ERASMUS">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>European Region Action Scheme for the Mobility of University Students</description>
+	<address>
+		<floor>4ème étage, bureau N° 4066</floor>
+		<openingHours>Lundi - jeudi
+09h00 - 13h00  
+13h30 - 16h30 </openingHours>
+		<phone>01 55 20 58 66</phone>
+		<email>erasmus@psychologie.parisdescartes.fr</email>
+	</address>
+</content>
+</entry>

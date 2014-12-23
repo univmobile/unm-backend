@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5768_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5768_1.xml"/>
+<title>Institut de sciences moléculaires d'Orsay (ISMO)</title>
+<updated>2014-08-15T01:47:29.851+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5768"
+	coordinates="48.698234530673,2.1713112294674"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:45:19.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5765"
+	name="Institut de sciences moléculaires d'Orsay (ISMO)">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Unité mixte de recherche (UMR) 8214</description>
+	<address>
+		<floor>Bâtiment 210, bureau 215</floor>
+		<url>http://www.ismo.u-psud.fr/</url>
+		<phone>01 69 15 67 76</phone>
+		<fax>01 69 15 67 77</fax>
+		<email>marie-claire.paul@u-psud.fr</email>
+	</address>
+</content>
+</entry>

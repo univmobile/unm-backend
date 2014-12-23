@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi941_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi941_1.xml"/>
+<title>MASCIPO</title>
+<updated>2014-08-15T01:46:43.610+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="941"
+	coordinates="48.84903247058,2.34415043"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T17:39:19.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1002"
+	name="MASCIPO">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Mondes Américains, Sociétés, Circulations, Pouvoirs (XVe-XXIe s.)</description>
+	<address>
+		<floor>Galerie Dumas, esc. L, 1er étage droite</floor>
+		<itinerary>RER B 
+Station Saint Michel ou Luxembourg
+Métro 10 
+Station Cluny-La Sorbonne
+Bus 21, 27, 38, 82 et 85
+</itinerary>
+		<url>http://www.mascipo.fr/</url>
+		<phone>01 49 54 20 85</phone>
+		<email>mesquita@ehess.fr</email>
+	</address>
+</content>
+</entry>

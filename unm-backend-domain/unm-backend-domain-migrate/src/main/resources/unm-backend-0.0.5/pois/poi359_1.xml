@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi359_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi359_1.xml"/>
+<title>Guyancourt</title>
+<updated>2014-08-15T01:46:39.387+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="359"
+	coordinates="48.781369906852,2.0478558540344"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T15:29:40.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="raphael"
+	updatedBy="rrivoire"
+	parentUid="4"
+	name="Guyancourt">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+	<child uid="2595" active="true"/>
+	<child uid="2594" active="true"/>
+	<child uid="486" active="true"/>
+	<child uid="460" active="true"/>
+	<child uid="555" active="true"/>
+	<child uid="6279" active="true"/>
+	<child uid="7121" active="true"/>
+</content>
+</entry>

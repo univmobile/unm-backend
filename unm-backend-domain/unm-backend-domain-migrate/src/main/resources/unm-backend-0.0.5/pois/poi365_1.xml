@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi365_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi365_1.xml"/>
+<title>Polygone 1</title>
+<updated>2014-08-15T01:46:39.458+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="365"
+	coordinates="48.811221759706,2.149905860424|48.811122844148,2.150074839592|48.81061589885,2.1494525671005|48.810670126339,2.149356007576|48.810707749946,2.1492809057236|48.811221759706,2.1499058"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-07-26T15:39:06.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2011-06-03T15:04:07.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	name="Polygone 1">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>45 avenue des Etats-Unis
+ 78035 Versailles cedex  </fullAddress>
+	</address>
+</content>
+</entry>

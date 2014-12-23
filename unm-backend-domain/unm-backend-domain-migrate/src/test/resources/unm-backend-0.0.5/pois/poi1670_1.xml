@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1670_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1670_1.xml"/>
+<title>Accès réservé aux PMR</title>
+<updated>2014-08-15T01:46:49.740+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1670"
+	coordinates="48.828265175317,2.38142475485"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T15:34:20.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1777"
+	name="Accès réservé aux PMR">
+	<poiType id="14" label="Entrée PMR" categoryId="7" categoryLabel="Relais handicap"/>
+</content>
+</entry>

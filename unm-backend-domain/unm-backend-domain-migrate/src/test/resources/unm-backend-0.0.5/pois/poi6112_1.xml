@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6112_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6112_1.xml"/>
+<title>Service social des étudiants (CROUS)</title>
+<updated>2014-08-15T01:47:33.876+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6112"
+	coordinates="48.701853770082,2.1681086719036"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T17:06:57.000+02:00"
+	updatedAt="2013-06-20T16:15:07.000+02:00"
+	createdBy="j.richer"
+	updatedBy="anaelle.royer"
+	parentUid="4814"
+	name="Service social des étudiants (CROUS)">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bâtiment 332, 2ème étage</floor>
+		<url>http://www.u-psud.fr/fr/vie_etudiante/bourses.html</url>
+		<phone>01 69 15 70 64</phone>
+		<fax>01 69 15 70 57</fax>
+		<email>patricia.dubled@crous.u-psud.fr</email>
+	</address>
+</content>
+</entry>

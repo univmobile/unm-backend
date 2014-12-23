@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4464_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4464_1.xml"/>
+<title>Bibliothèque Universitaire d'Évry</title>
+<updated>2014-08-15T01:47:17.593+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4464"
+	coordinates="48.623496569125,2.4257697165012"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:51:47.000+02:00"
+	updatedAt="2011-09-06T12:08:56.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4470"
+	name="Bibliothèque Universitaire d'Évry">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi, mardi, mercredi, vendredi : 8h30 / 19h00
+Jeudi : 11h00 / 19h00
+Samedi : 9h00 / 17h00 </openingHours>
+		<phone>01 69 47 89 50</phone>
+		<email>accueil-bu@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

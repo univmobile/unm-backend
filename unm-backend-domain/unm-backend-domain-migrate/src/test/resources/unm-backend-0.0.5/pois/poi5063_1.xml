@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5063_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5063_1.xml"/>
+<title>Cafétéria U de Paris 8</title>
+<updated>2014-08-15T01:47:23.244+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5063"
+	coordinates="48.946665235532,2.3620511591434"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-30T10:31:23.000+02:00"
+	updatedAt="2011-07-26T14:25:05.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="yasmine"
+	parentUid="4696"
+	name="Cafétéria U de Paris 8">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>2 rue de la Liberté - 93200 Saint-Denis (RDC)</floor>
+		<openingHours>12h00 - 15h00</openingHours>
+		<phone>01-58-34-97-40</phone>
+		<email>restaurant.paris8@crous-creteil.fr</email>
+	</address>
+	<attachment id="118" title="resto_u_P8_small.jpg" type="image" url="/uploads/poi/2c415c4b04fd2b720ad70bdfa6c12347eca60dfd.jpg"/>
+</content>
+</entry>

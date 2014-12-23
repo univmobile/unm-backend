@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2993_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2993_1.xml"/>
+<title>Université Sorbonne Nouvelle Paris 3</title>
+<updated>2014-08-15T01:47:01.862+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2993"
+	coordinates="48.848747,2.34425"
+	markerType="point"
+	createdAt="2011-05-05T14:41:05.000+02:00"
+	updatedAt="2011-05-05T14:42:38.000+02:00"
+	deletedAt="2011-05-05T14:42:38.000+02:00"
+	createdBy="yasmine"
+	updatedBy="super admin"
+	name="Université Sorbonne Nouvelle Paris 3">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR"
+		latitude="48.85"
+		longitude="2.34">
+		<fullAddress>17 place de la Sorbonne</fullAddress>
+	</address>
+</content>
+</entry>

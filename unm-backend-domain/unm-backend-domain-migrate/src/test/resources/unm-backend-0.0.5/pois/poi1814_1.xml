@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1814_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1814_1.xml"/>
+<title>Observatoire de Versailles Saint-Quentin </title>
+<updated>2014-08-15T01:46:51.175+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1814"
+	coordinates="48.777830506821,2.048837542"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T16:47:37.000+02:00"
+	updatedAt="2012-02-06T07:48:30.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="rrivoire"
+	parentUid="486"
+	name="Observatoire de Versailles Saint-Quentin ">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>L'observatoire de Versailles Saint-Quentin-en-Yvelines (OVSQ) bénéficie du statut d'OSU, observatoire des sciences de l'univers. 
+L'OVSQ a trois missions principales : la recherche, l'observation et l'enseignement.</description>
+	<address>
+		<url>http://www.uvsq.fr/outils/observatoire-des-sciences-de-l-univers-de-l-uvsq-ovsq--45651.kjsp</url>
+		<phone>01 80 28 54 96</phone>
+	</address>
+</content>
+</entry>

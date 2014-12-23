@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6476_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6476_1.xml"/>
+<title>Restaurant du personnel (Bâtiment 98)</title>
+<updated>2014-08-15T01:47:37.620+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6476"
+	coordinates="48.699175213377,2.1778678894043"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-29T15:56:39.000+02:00"
+	updatedAt="2013-06-20T10:58:55.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="anaelle.royer"
+	parentUid="4404"
+	name="Restaurant du personnel (Bâtiment 98)">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>11h20 - 13h50</openingHours>
+		<phone>01 69 15 78 15</phone>
+	</address>
+</content>
+</entry>

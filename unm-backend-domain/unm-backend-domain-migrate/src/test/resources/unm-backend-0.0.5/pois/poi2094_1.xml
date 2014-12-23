@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2094_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2094_1.xml"/>
+<title>DUT GEA</title>
+<updated>2014-08-15T01:46:53.999+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2094"
+	coordinates="48.996488630215,1.71065658330"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T17:46:55.000+02:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="515"
+	name="DUT GEA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>0130981350</phone>
+	</address>
+</content>
+</entry>

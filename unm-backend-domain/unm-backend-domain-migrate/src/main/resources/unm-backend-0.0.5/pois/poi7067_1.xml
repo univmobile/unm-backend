@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7067_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7067_1.xml"/>
+<title>Maison de la recherche</title>
+<updated>2014-08-15T01:47:42.918+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7067"
+	coordinates="48.844539849697,2.3463431373239"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-17T17:06:31.000+01:00"
+	updatedAt="2012-01-18T16:05:08.000+01:00"
+	createdBy="Jean-François Maynier"
+	updatedBy="Jean-François Maynier"
+	parentUid="7066"
+	name="Maison de la recherche">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>4, rue des irlandais - 75005 Paris</description>
+	<address>
+		<openingHours>Horaires d'ouverture au public  9h - 17h</openingHours>
+		<itinerary>Maison de la Recherche
+Email : recherche@univ-paris3.fr
+Horaires d'ouverture au public : 9h - 17h
+Url : http://www.univ-paris3.fr/recherche
+Tél : 01 55 43 08 80</itinerary>
+		<url>http://www.univ-paris3.fr/recherche</url>
+		<phone>01 55 43 08 80</phone>
+		<email>recherche@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

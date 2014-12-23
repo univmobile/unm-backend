@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7097_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7097_1.xml"/>
+<title>Assistante Sociale</title>
+<updated>2014-08-15T01:47:43.212+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7097"
+	coordinates="48.901852724448,2.212491184473"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-03T10:23:22.000+01:00"
+	updatedAt="2012-02-03T12:30:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5437"
+	name="Assistante Sociale">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Etudiants concernés : Université Paris Ouest Nanterre
+Etablissements et Grandes Ecoles du 92 Nord</description>
+	<address>
+		<floor>Bât E - Porte E19 - RDC</floor>
+		<openingHours>Mardi, Vendredi : 9h15 - 11h15 &amp; 13h30 - 15h30</openingHours>
+		<url>www.crous-versailles.fr</url>
+		<phone>01 40 97 70 14</phone>
+		<fax>01 40 97 75 30</fax>
+		<email>fanou.sauret@crous-versailles.fr</email>
+	</address>
+</content>
+</entry>

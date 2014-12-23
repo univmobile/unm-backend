@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7424_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7424_1.xml"/>
+<title>BDEM</title>
+<updated>2014-08-15T01:47:46.139+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7424"
+	coordinates="48.84090297493,2.3592066764832"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-30T15:46:40.000+02:00"
+	updatedAt="2013-05-03T12:34:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7423"
+	name="BDEM">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Bureau des Doctorants et Étudiants du Muséum</description>
+	<address>
+		<url>http://bdem.mnhn.fr/accueil</url>
+		<email>assobdem@mnhn.fr</email>
+	</address>
+</content>
+</entry>

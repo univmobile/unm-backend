@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3386_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3386_1.xml"/>
+<title>Centre d’Étude d’Histoire Juridique (CEHJ)</title>
+<updated>2014-08-15T01:47:06.021+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3386"
+	coordinates="48.846884195228,2.34380476176"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:46:35.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="Centre d’Étude d’Histoire Juridique (CEHJ)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Adresse :
+60, rue des Francs-Bourgeois
+75141 Paris cedex 03</description>
+	<address>
+		<phone>01 40 27 64 19</phone>
+		<email>guillaume.leyte@culture.gouv.fr</email>
+	</address>
+</content>
+</entry>

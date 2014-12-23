@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5265_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5265_1.xml"/>
+<title>Philosophie L1-3</title>
+<updated>2014-08-15T01:47:24.686+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5265"
+	coordinates="48.787868211977,2.4445250630379"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T00:26:14.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4334"
+	name="Philosophie L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2ème étage, Bureau 254</floor>
+		<openingHours>Lundi-vendredi : 9h15-13h  et 13h30-16h45
+</openingHours>
+		<url>http://lettres-sh.u-pec.fr/departements/philosophie/</url>
+		<phone>01 45 17 11 41</phone>
+		<email>sec.lettres-llsh@u-pec.fr</email>
+	</address>
+</content>
+</entry>

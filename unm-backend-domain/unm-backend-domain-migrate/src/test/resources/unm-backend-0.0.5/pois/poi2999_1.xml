@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2999_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2999_1.xml"/>
+<title>Laboratoire de Mécanique et d' Energétique </title>
+<updated>2014-08-15T01:47:01.923+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2999"
+	coordinates="48.613905054557,2.42898032069"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:59:55.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="476"
+	name="Laboratoire de Mécanique et d' Energétique ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 69 47 75 51</phone>
+		<email>Lmee-sec@iup.univ-evry.fr</email>
+	</address>
+</content>
+</entry>

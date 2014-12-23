@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4257_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4257_1.xml"/>
+<title>UMR 7193</title>
+<updated>2014-08-15T01:47:15.489+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4257"
+	coordinates="48.847974597616,2.3586990684271"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T14:41:18.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2806"
+	name="UMR 7193">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut des sciences de la Terre de Paris (ISTeP) - UMR 7193</description>
+	<address>
+		<floor>2è étage</floor>
+		<url>http://www.istep.upmc.fr/</url>
+		<phone>01 44 27 52 47</phone>
+		<email>marie-jose.queyroy@upmc.fr</email>
+	</address>
+</content>
+</entry>

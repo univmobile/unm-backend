@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1722_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1722_1.xml"/>
+<title>Amphithéâtre 4</title>
+<updated>2014-08-15T01:46:50.187+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1722"
+	coordinates="48.939007803458,2.35435456037"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T21:18:54.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="390"
+	name="Amphithéâtre 4">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Amphithéâtre 4.</description>
+	<address>
+		<floor>1er étage.</floor>
+	</address>
+</content>
+</entry>

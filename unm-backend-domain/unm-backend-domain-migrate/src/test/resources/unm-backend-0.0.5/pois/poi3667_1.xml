@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3667_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3667_1.xml"/>
+<title>Association du parcours génétique et de la gestion de la bio</title>
+<updated>2014-08-15T01:47:09.098+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3667"
+	coordinates="48.846696778996,2.3576843552291"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T14:18:48.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3665"
+	name="Association du parcours génétique et de la gestion de la bio">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Promotion de l’étude, la gestion et la valorisation de la biodiversité</description>
+	<address>
+		<floor>bureau J01</floor>
+		<phone>01 44 27 36 84</phone>
+		<email>dessbiodiversite@yahoo.com</email>
+	</address>
+</content>
+</entry>

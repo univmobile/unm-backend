@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7414_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7414_1.xml"/>
+<title>Direction de l'enseignement (DEPF)</title>
+<updated>2014-08-15T01:47:46.013+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7414"
+	coordinates="48.845047731648,2.3578709363937"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-30T14:59:14.000+02:00"
+	updatedAt="2013-05-03T12:58:45.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7374"
+	name="Direction de l'enseignement (DEPF)">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Direction de l'Enseignement, de la Pédagogie et des Formations
+Coordination du Master
+Coordination de l'Ecole Doctorale
+Coordination de la formation des enseignants du primaire et du secondaire</description>
+	<address>
+		<floor>Jardin des Plantes - Pavillon de la Baleine</floor>
+		<openingHours>Vérifiez les horaires d'accueil sur le site www.mnhn.fr
+rubrique &quot;Enseignement Supérieur&quot;.</openingHours>
+		<url>www.mnhn.fr</url>
+		<phone>01.40.79.32.19</phone>
+		<fax>01.40.79.54.22</fax>
+		<email>direns@mnhn.fr</email>
+	</address>
+</content>
+</entry>

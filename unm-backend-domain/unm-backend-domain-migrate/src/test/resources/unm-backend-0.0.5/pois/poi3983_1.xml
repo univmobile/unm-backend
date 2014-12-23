@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3983_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3983_1.xml"/>
+<title>Centre de recherche interuniversitaire (EXPERICE)</title>
+<updated>2014-08-15T01:47:12.393+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3983"
+	coordinates="48.944350316022,2.362895719707"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:57:41.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Centre de recherche interuniversitaire (EXPERICE)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 3971 - Centre de recherche interuniversitaire, expérience, ressources culturelles, éducation (EXPERICE) appartenant à l'École doctorale (ED) 401 : Sciences sociales.
+Equipe co-habilitée Paris XIII (site principal) et Paris 8.
+Directeur : Gilles Brougère.
+Responsable Paris 8 : Rémi Hess.
+Contact au département Sciences de l’éducation.</description>
+	<address>
+		<floor>4ème étage Bâtiment A, bureau 457</floor>
+		<url>http://www.univ-paris8.fr/EA-3971-Centre-de-recherche</url>
+		<phone>01 49 40 66 50</phone>
+		<email>remihess@noos.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7445_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7445_1.xml"/>
+<title>Salle informatique</title>
+<updated>2014-08-15T01:47:46.425+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7445"
+	coordinates="48.842290482791,2.3594909906387"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-30T16:59:00.000+02:00"
+	updatedAt="2013-05-03T12:58:27.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7381"
+	name="Salle informatique">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>Salle de cours
+Entrée par la Galerie de botanique coté Phanérogamie
+2ème porte à droite dans le hall</description>
+</content>
+</entry>

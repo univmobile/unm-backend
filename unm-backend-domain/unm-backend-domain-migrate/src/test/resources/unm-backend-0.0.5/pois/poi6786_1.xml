@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6786_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6786_1.xml"/>
+<title>Restaurant Dauphine</title>
+<updated>2014-08-15T01:47:40.209+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6786"
+	coordinates="48.870550086373,2.2736924886703"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T11:21:09.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6788"
+	name="Restaurant Dauphine">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 2 : Porte Dauphine</itinerary>
+		<fullAddress>2 boulevard Lannes
+75016 Paris</fullAddress>
+	</address>
+	<child uid="6787" active="true"/>
+</content>
+</entry>

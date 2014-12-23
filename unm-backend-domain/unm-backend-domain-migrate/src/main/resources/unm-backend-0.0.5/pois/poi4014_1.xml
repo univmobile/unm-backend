@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4014_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4014_1.xml"/>
+<title>Laboratoire Dynamiques sociales et recomposition des espaces</title>
+<updated>2014-08-15T01:47:12.710+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4014"
+	coordinates="48.947197608775,2.3618935793638"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:12:49.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Laboratoire Dynamiques sociales et recomposition des espaces">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Unité mixte de recherche (UMR) 7533 - Laboratoire Dynamiques Sociales et recomposition des espaces (LADYSS) appartenant à l'École doctorale (ED) 401 : Sciences sociales.
+Cette UMR est pluri-sites : Paris 1, Paris 8 et Paris Ouest-Nanterre La Défense (site principal).
+Directeur Jean-Claude Billaud.
+Responsable Paris 8 : Alphonse Yapi-Diahou.</description>
+	<address>
+		<floor>1er étage Bâtiment D, bureau 144</floor>
+		<url>http://www.ladyss.com/</url>
+		<phone>01 49 40 73 60 </phone>
+		<fax>01 49 40 73 59 </fax>
+		<email>yapi_diahou@yahoo.fr</email>
+	</address>
+</content>
+</entry>

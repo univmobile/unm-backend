@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5224_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5224_1.xml"/>
+<title>École doctorale 422 : Sciences et technologies... (STITS)</title>
+<updated>2014-08-15T01:47:24.455+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5224"
+	coordinates="48.698204287684,2.1665509790182"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T19:10:01.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5222"
+	name="École doctorale 422 : Sciences et technologies... (STITS)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>École doctorale (ED) 422 : Sciences et technologies de l'information, des télécommunications et des systèmes (STITS).</description>
+	<address>
+		<floor>Bâtiment 220, bureau 084</floor>
+		<url>http://ed-stits.fr</url>
+		<phone>0169157849</phone>
+		<fax>0169154075</fax>
+		<email>ed-stits.sciences@u-psud.fr</email>
+	</address>
+</content>
+</entry>

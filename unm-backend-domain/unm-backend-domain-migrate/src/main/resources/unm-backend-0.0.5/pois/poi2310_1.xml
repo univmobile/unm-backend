@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2310_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2310_1.xml"/>
+<title>Cinéma (M1-M2)</title>
+<updated>2014-08-15T01:46:55.758+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2310"
+	coordinates="48.944670921114,2.363042235374"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:26:09.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Cinéma (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1er étage Bâtiment A, bureau 115</floor>
+		<openingHours>Lundi, mercredi et vendredi
+14h-17h
+Mardi et jeudi
+10h-12h30</openingHours>
+		<url>http://www-artweb.univ-paris8.fr/</url>
+		<phone>01 49 40 66 10</phone>
+		<fax>01 49 40 66 08</fax>
+		<email>cinema@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6027_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6027_1.xml"/>
+<title>CAPEPS : Master Education, sport, société</title>
+<updated>2014-08-15T01:47:32.857+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6027"
+	coordinates="48.839222703236,2.5886341184378"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T14:12:41.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="CAPEPS : Master Education, sport, société">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2B083</floor>
+		<phone>01 60 95 75 71</phone>
+		<fax>01 60 95 75 74</fax>
+		<email>Valerie.Allibert@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

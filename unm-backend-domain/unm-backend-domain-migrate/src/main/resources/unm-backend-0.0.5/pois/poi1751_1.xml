@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1751_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1751_1.xml"/>
+<title>Bâtiment S</title>
+<updated>2014-08-15T01:46:50.528+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1751"
+	coordinates="48.905030073921,2.2129629179835|48.90528747715,2.2134443745017|48.905169353915,2.2135945782065|48.905120870417,2.2135221585631|48.905003628308,2.213669680059|48.904893438106,2.2134524211287|48.904747986667,2.2136254236102|48.904621928411,2.2133934125304|48.904865229375,2.2130903229117|48.904882859834,2.2131117805839|48.905030073921,2.212962917983"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-05T14:30:44.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-05T14:31:17.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bâtiment S">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

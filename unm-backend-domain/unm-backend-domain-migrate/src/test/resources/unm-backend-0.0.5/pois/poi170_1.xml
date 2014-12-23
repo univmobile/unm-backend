@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi170_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi170_1.xml"/>
+<title>Test Evry 1er cycle</title>
+<updated>2014-08-15T01:46:38.591+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="170"
+	coordinates="48.623011073577,2.4236762523651|48.623831065826,2.425105366855"
+	active="true"
+	markerType="overlay"
+	createdAt="2010-07-02T15:52:51.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-07-03T17:07:36.000+02:00"
+	createdBy="raphael"
+	updatedBy="raphael"
+	name="Test Evry 1er cycle">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

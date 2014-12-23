@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3672_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3672_1.xml"/>
+<title>BAC</title>
+<updated>2014-08-15T01:47:09.167+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3672"
+	coordinates="48.847369901729,2.3594343289733"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T14:35:25.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2800"
+	name="BAC">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le Bureau d'Animation du Campus organise de nombreux événements pour rassembler les étudiants autour d’activités diverses telles que des voyages, week-ends d’intégration, week-ends en Europe, semaines aux Deux Alpes.</description>
+	<address>
+		<floor>Rez de Chaussée bureau 16</floor>
+		<url>www.bac-jussieu.com</url>
+		<phone>01 44 27 26 64</phone>
+		<email>jussieu.bde@gmail.com</email>
+	</address>
+</content>
+</entry>

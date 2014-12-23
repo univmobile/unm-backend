@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2978_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2978_1.xml"/>
+<title>Scolarité AES-Administration et gestion des entreprises</title>
+<updated>2014-08-15T01:47:01.696+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2978"
+	coordinates="48.843172380579,2.333361580967"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:21:37.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	deletedAt="2011-05-05T14:21:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Scolarité AES-Administration et gestion des entreprises">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

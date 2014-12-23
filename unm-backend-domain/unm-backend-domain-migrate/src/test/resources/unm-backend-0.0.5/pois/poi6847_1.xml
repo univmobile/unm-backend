@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6847_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6847_1.xml"/>
+<title>Résidence Universitaire Irène Joliot Curie</title>
+<updated>2014-08-15T01:47:40.730+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6847"
+	coordinates="49.014633439093,2.0775666832924"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T15:59:23.000+02:00"
+	updatedAt="2012-02-01T14:41:59.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6845"
+	name="Résidence Universitaire Irène Joliot Curie">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>180 studios (dont 10 pour étudiants à mobilité réduite). Les logements sont distribués autour d'un patio central arboré et sur 3 étages. Laverie, 3 salles à disposition des résidents, parking souterrain
+Tarifs : de 373€ à 467€ charges comprises.</description>
+	<address>
+		<openingHours>Juillet et août : l'accueil du public s'effectue du lundi au vendredi, de 9h00 à 12h30 et de 14h00 à 17h00, à la résidence LA CROIX ST-SYLVERE (Quartier Croix St-Sylvère</openingHours>
+		<phone>01 30 30 38 53</phone>
+	</address>
+	<attachment id="227" title="neuville.jpg" type="image" url="/uploads/poi/ea81ee65d4779780c537136b4d710b37201e9e91.jpg"/>
+</content>
+</entry>

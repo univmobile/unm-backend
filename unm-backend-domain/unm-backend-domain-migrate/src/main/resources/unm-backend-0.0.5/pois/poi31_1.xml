@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi31_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi31_1.xml"/>
+<title>Institut des langues et des études internationales</title>
+<updated>2014-08-15T01:46:38.283+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="31"
+	coordinates="48.779924153711,2.04374134540"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T12:24:19.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-05T13:58:11.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Institut des langues et des études internationales">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>L'Institut des Langues et des Etudes Internationales (ILEI)
+L'Institut des Langues et des Études Internationales correspond à la volonté de l'université de développer à l'échelle du campus tout entier un projet ambitieux en faveur des langues, de l'internationalisation des formations et des études internationales. Son originalité consiste à regrouper dans une structure tous les aspects de politique universitaire liés aux questions de langues et d'ouverture internationale pour mieux tirer parti de leur complémentarité.
+
+L’institut a pour mission fondamentale le développement de la recherche et de la formation, la diffusion et la valorisation des connaissances et des savoir-faire dans le domaine des langues, des cultures et des études internationales.
+Il entend développer et promouvoir la connaissance et la pratique des langues et cultures, la connaissance des aires géoculturelles, l’expertise interculturelle et l’ouverture internationale des formations.
+</description>
+	<address
+		zipCode="78280"
+		city="GUYANCOURT"
+		countryCode="FR">
+		<floor>Aile A, 3e étage</floor>
+		<url>www.ilei.uvsq.fr</url>
+		<phone>01 39 25 52 70</phone>
+		<email> secretariat@ilei.uvsq.fr</email>
+		<fullAddress>Bâtiment d'Alembert
+Aile A, 3e étage
+Bureau A 323
+5-7, boulevard d'Alembert 78280 GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

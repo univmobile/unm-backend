@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6658_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6658_1.xml"/>
+<title>Saint Martin</title>
+<updated>2014-08-15T01:47:39.063+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6658"
+	coordinates="49.042723067202,2.0848093181849"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T14:50:29.000+02:00"
+	updatedAt="2012-01-10T11:35:31.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6654"
+	name="Saint Martin">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>En voiture :
+• Depuis Paris : porte Maillot direction La Défense.
+A86 suivre Cergy-Pontoise. A15 direction Cergy-
+Pontoise, sortie 9 (serrer à droite).
+• Depuis Versailles : N184 direction Beauvais jusqu’à
+Cergy-Pontoise.
+
+RER A : direction Cergy-le-haut, arrêt Cergy-Préfecture.
+RER C : arrêt Pontoise (prendre ensuite le bus)
+
+En train :
+Depuis la gare Saint-Lazare ou Nanterre-Université,
+arrêt Cergy-Préfecture.
+
+Bus :
+• Depuis Cergy-Préfecture, lignes 30, 36,
+arrêt Plateau Saint-Martin.
+• Depuis Pontoise, station Canrobert, lignes 30, 36
+arrêt Plateau Saint-Martin.</itinerary>
+		<fullAddress>13, avenue du Général Schmitz - 95037 PONTOISE</fullAddress>
+	</address>
+	<child uid="6661" active="true"/>
+	<child uid="6660" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2371_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2371_1.xml"/>
+<title>Centres de Recherches Europes-Eurasie</title>
+<updated>2014-08-15T01:46:56.399+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2371"
+	coordinates="48.832728601023,2.4651053"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T16:58:39.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2566"
+	name="Centres de Recherches Europes-Eurasie">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Ce centre regroupe : le centre d’Etude de l’Europe Médiane (e-mail : marie.vrinat-nikolov@inalco.fr), centre d’Etudes Balkaniques, centre de Recherches Russes et Euro-Asiatiques.</description>
+	<address>
+		<phone>01 80 51 95 00</phone>
+		<email>vincent.benet@inalco.fr</email>
+	</address>
+</content>
+</entry>

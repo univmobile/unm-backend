@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1640_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1640_1.xml"/>
+<title>Association des sc. de la nature et de la vie </title>
+<updated>2014-08-15T01:46:49.481+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1640"
+	coordinates="48.828136775928,2.381760701"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T15:03:18.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1777"
+	name="Association des sc. de la nature et de la vie ">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Département SNV Bâtiment Buffon </floor>
+		<email>asnv@hotmail.fr</email>
+	</address>
+</content>
+</entry>

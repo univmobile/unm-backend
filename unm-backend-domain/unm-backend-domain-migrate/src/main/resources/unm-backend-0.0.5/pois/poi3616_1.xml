@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3616_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3616_1.xml"/>
+<title>DIPLO P6</title>
+<updated>2014-08-15T01:47:08.623+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3616"
+	coordinates="48.846502522297,2.35939912498"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:59:40.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2824"
+	name="DIPLO P6">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Diplo 6 fait la promotion de l’insertion professionnelle des futurs diplômés de 2e et 3e cycles de l’UPMC et favorise l’entraide entre ses membres autour de deux thèmes : l’emploi et la formation d’un réseau d’anciens diplômés.</description>
+	<address>
+		<floor>6è étage, bureau 632</floor>
+		<phone>01 44 27 25 62</phone>
+		<email>brossas@ccr.jussieu.fr</email>
+	</address>
+</content>
+</entry>

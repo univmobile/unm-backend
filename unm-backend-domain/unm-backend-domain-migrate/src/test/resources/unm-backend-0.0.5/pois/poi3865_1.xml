@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3865_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3865_1.xml"/>
+<title>Eco-construction pour un développement durable - CFA</title>
+<updated>2014-08-15T01:47:11.118+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3865"
+	coordinates="48.846103607145,2.3578300327063"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:20:48.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2813"
+	name="Eco-construction pour un développement durable - CFA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Former des spécialistes en éco-construction d’ouvrages en bois et matériaux organiques, depuis l’éco-conception jusqu’aux filières de recyclage et de valorisation en passant par le diagnostic d’ouvrages existants.
+
+ 
+Perspectives professionnelles
+
+    * Assistant d’études en éco-construction
+    * Chargé d’études en environnement domestique
+    * Conseiller en certification environnementale
+    * Chargé d’affaires en éco-combustion
+    * Technicien en évaluation d’impact environnemental
+    * Technico-commerciaux en prospection de marchés, négociation commerciale depuis les matériaux jusqu’aux équipements énergétiques (production et distribution)
+    * Conseiller en éco-bilan, bilan carbone, valorisation, recyclage de matériaux
+
+Les futurs professionnels sauront aborder autant les aspects techniques que scientifiques ou commerciaux, avec une vision globale du marché environnemental.
+
+ 
+Secteurs d’activité
+
+    * Collectivités territoriales
+    * Bureaux d’études, sociétés de conseils
+    * Entreprises en construction durable ou de maisons en bois et dérivés bois, vernis et peinture
+    * Concepteurs fabricants de mobiliers de bureaux professionnels
+    * Coopératives d’activités en emplois en éco-construction pour lesquels le bois et les matériaux organiques sont des ressources essentielles
+
+ 
+Nos partenaires
+
+Les entreprises et institutions prêtes à intervenir activement dans la formation sont : Ademe, Afcobois, Alsapan, Alter Bâtir, C.L.E.R.C., Codem, Domoos, Gaillard Rondino, Goubie Charpentes Bois, Groupe Jacob, Habitat Durable, Lapeyre/Saint Gobain, Marcanterra, Materic, Pacific C.R.M.B., Pobi, Prodema, Socobois, SEFCCO, Syndicat des Energies Renouvelables, Unifa, Urbia, V33...
+
+ 
+Déroulement de la formation
+
+La formation se déroule sur 12 mois de septembre de l’année n à septembre n+1 sur le mode de l’alternance université entreprise toutes les 3 semaines de septembre à fin mai, à plein temps en entreprise de juin à septembre.</description>
+	<address>
+		<url>http://www.cfa.upmc.fr/cfa_upmc/detail/Fiche_formation?item_id=45084650</url>
+		<phone>01 44 27 71 40</phone>
+		<email>najat.takvorian@upmc.fr</email>
+	</address>
+</content>
+</entry>

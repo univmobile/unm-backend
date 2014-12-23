@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5290_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5290_1.xml"/>
+<title>Bibliothèque du centre multidiscplinaire de Créteil </title>
+<updated>2014-08-15T01:47:24.893+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5290"
+	coordinates="48.78778868926,2.4433046579361"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T09:35:41.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="5119"
+	name="Bibliothèque du centre multidiscplinaire de Créteil ">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Niveau dalle</floor>
+		<openingHours>Du lundi au vendredi de 8h30 à 19h, samedi de 10h à 17h</openingHours>
+		<url>http://bibliotheque.u-pec.fr/bibliotheques/cmc/</url>
+		<phone>01 45 17 70 12</phone>
+		<fax>01 45 17 70 44</fax>
+		<email> bibcmc@u-pec.fr</email>
+	</address>
+</content>
+</entry>

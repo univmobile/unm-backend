@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2119_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2119_1.xml"/>
+<title>Restaurant Universitaire et Cafétéria de Ville d'Avray</title>
+<updated>2014-08-15T01:46:54.306+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2119"
+	coordinates="48.825684,2.19813"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-12T15:10:13.000+02:00"
+	updatedAt="2011-04-13T14:46:05.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Restaurant Universitaire et Cafétéria de Ville d'Avray">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+</content>
+</entry>

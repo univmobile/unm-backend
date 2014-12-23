@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi821_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi821_1.xml"/>
+<title>Bibliothèque de recherches africaines (BRA)</title>
+<updated>2014-08-15T01:46:42.185+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="821"
+	coordinates="48.855943733797,2.3610848933458"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T15:17:13.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Pascale.randriantiana "
+	parentUid="1001"
+	name="Bibliothèque de recherches africaines (BRA)">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Étudiants à partir du niveau M1 (maîtrise).
+Enseignants et chercheurs de Paris 1.</description>
+	<address>
+		<floor>Rez-de-chaussée, gauche</floor>
+		<openingHours>Du lundi au vendredi :
+09h30-18h00
+Sauf le mercredi : 
+13h00-18h00</openingHours>
+		<itinerary>Métro 1 
+Station St Paul
+
+Bus 76 et 96</itinerary>
+		<url>http://www.cemaf.cnrs.fr/spip.php?rubrique120</url>
+		<phone>01 44 78 33 34</phone>
+		<email> Michele.Raffutin@univ-paris1.fr </email>
+	</address>
+</content>
+</entry>

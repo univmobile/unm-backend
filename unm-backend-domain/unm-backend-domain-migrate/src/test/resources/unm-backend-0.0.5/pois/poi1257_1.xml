@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1257_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1257_1.xml"/>
+<title>Site Fontainebleau-Avon</title>
+<updated>2014-08-15T01:46:46.025+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1257"
+	coordinates="48.403194601969,2.697913348674"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T15:18:23.000+01:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Site Fontainebleau-Avon">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Gare Fontainebleau-Avon</itinerary>
+		<fullAddress>Route de la Tour Denecourt
+77300 Fontainebleau</fullAddress>
+	</address>
+	<child uid="1787" active="true"/>
+</content>
+</entry>

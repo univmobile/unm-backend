@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3341_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3341_1.xml"/>
+<title>LPNHE - UMR 7585</title>
+<updated>2014-08-15T01:47:05.610+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3341"
+	coordinates="48.84841730021,2.3561060428619"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:22:26.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3335"
+	name="LPNHE - UMR 7585">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de Physique Nucléaire et des Hautes Energies</description>
+	<address>
+		<floor>1è étage</floor>
+	</address>
+</content>
+</entry>

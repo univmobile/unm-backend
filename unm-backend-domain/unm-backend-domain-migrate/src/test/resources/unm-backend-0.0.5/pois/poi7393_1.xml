@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7393_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7393_1.xml"/>
+<title>Laboratoir de Minéralogie</title>
+<updated>2014-08-15T01:47:45.787+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7393"
+	coordinates="48.841270715302,2.3597411066294|48.841051819029,2.3591939359903|48.841180685499,2.3590786010027|48.841392520072,2.3596338182688|48.841270715302,2.3597411066294"
+	active="true"
+	markerType="polygon"
+	createdAt="2013-04-24T16:56:42.000+02:00"
+	updatedAt="2013-05-03T12:58:45.000+02:00"
+	deletedAt="2013-04-25T09:45:31.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Laboratoir de Minéralogie">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accès controlé
+Interdit au public</itinerary>
+		<fullAddress>43, Rue Buffon
+75005 Paris</fullAddress>
+	</address>
+</content>
+</entry>

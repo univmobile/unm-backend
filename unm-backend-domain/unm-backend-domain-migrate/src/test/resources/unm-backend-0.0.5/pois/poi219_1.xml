@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi219_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi219_1.xml"/>
+<title>Tutorats (Economie, Gestion, MASS et AES</title>
+<updated>2014-08-15T01:46:38.662+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="219"
+	coordinates="48.826950706594,2.36452750861"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-05T12:04:29.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-07-07T18:01:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Tutorats (Economie, Gestion, MASS et AES">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

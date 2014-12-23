@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2323_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2323_1.xml"/>
+<title>Bibliothèque centrale</title>
+<updated>2014-08-15T01:46:55.926+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2323"
+	coordinates="48.857878253597,2.3320167884231|48.857982370981,2.332103960216|48.857870312431,2.3324137553573|48.857769724229,2.3323386535048|48.857878253597,2.33201678842"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-27T15:43:40.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	deletedAt="2011-04-29T16:32:48.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bibliothèque centrale">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

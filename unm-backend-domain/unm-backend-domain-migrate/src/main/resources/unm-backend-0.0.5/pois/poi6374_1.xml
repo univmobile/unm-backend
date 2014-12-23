@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6374_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6374_1.xml"/>
+<title>Métiers des études, du donseil et de l'intervention (M1-M2)</title>
+<updated>2014-08-15T01:47:36.563+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6374"
+	coordinates="48.82577343836,2.3663138598204"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T14:38:36.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1772"
+	name="Métiers des études, du donseil et de l'intervention (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>- M1 Métiers des études, du donseil et de l'intervention (MECI)
+- M2 Consultants et chargés d'études socio-économique (CCESE)
+- M2 Ingénierie de l'aménagement, animation et développement local (IADL)
+- M2 Projets informatiques et stratégie d'entreprise (PISE)</description>
+	<address>
+		<floor>Les Olympiades Immeuble Montréal, 1er étage, bureau 114</floor>
+		<openingHours>Du lundi au vendredi
+10h-12h
+14h-17h
+(sauf le vendredi après-midi)</openingHours>
+		<url>http://www.master-meci.info/</url>
+		<phone>01 57 27 71 76</phone>
+		<email>olivier.bidaine@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

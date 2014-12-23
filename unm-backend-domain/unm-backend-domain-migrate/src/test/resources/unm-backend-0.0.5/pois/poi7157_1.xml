@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7157_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7157_1.xml"/>
+<title>Résidence Universitaire Alfred Sisley</title>
+<updated>2014-08-15T01:47:43.866+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7157"
+	coordinates="48.628091495335,2.5885529816151|48.628095040914,2.5888319313526|48.627733390485,2.5888480246067|48.62772984488,2.5885744392872|48.628091495335,2.5885529816151"
+	active="true"
+	markerType="polygon"
+	createdAt="2012-02-14T12:00:03.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="4505"
+	name="Résidence Universitaire Alfred Sisley">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>106, rue Bajot - ZAC du Centre                                                          77550 Moissy-Cramayel</fullAddress>
+	</address>
+	<child uid="7158" active="true"/>
+</content>
+</entry>

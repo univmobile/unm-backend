@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi642_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi642_1.xml"/>
+<title>Bibliothèque Cujas</title>
+<updated>2014-08-15T01:46:40.929+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="642"
+	coordinates="48.847185289388,2.3451170325279"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T17:29:08.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="sfernandes"
+	parentUid="1021"
+	name="Bibliothèque Cujas">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi au vendredi
+09h00-21h00
+Samedi
+09h00-18h00
+</openingHours>
+		<phone>01 44 07 78 70</phone>
+		<email>cujas@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

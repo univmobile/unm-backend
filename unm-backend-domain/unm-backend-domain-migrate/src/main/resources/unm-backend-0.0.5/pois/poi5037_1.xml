@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5037_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5037_1.xml"/>
+<title>Scolarité (Châtenay-Malabry)</title>
+<updated>2014-08-15T01:47:23.035+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5037"
+	coordinates="48.761832871821,2.2726504504681"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T17:10:59.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4984"
+	name="Scolarité (Châtenay-Malabry)">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>Bâtiment A, bureau AH 136</floor>
+		<openingHours>9h30-11h00
+13h00-16h00
+(sauf le Mercredi durant l'année et ouvert tous les jours durant la campagne d'inscription)</openingHours>
+		<url>http://www.pharmacie.u-psud.fr/fr/la_faculte/services_administratifs.html</url>
+		<phone>01 46 83 53 45</phone>
+		<fax>01 46 83 58 40</fax>
+		<email>isabelle.harmand@u-psud.fr</email>
+	</address>
+</content>
+</entry>

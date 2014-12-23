@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4902_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4902_1.xml"/>
+<title>Centre la pyramide</title>
+<updated>2014-08-15T01:47:21.649+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4902"
+	coordinates="48.796079579426,2.4484544992447"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:20:02.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4430"
+	name="Centre la pyramide">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro:ligne8, station &quot;Créteil L'Echat
+</itinerary>
+		<fullAddress>80 avenue du Général de Gaulle 94000 Créteil
+</fullAddress>
+	</address>
+	<child uid="7175" active="true"/>
+	<child uid="5143" active="true"/>
+	<child uid="5274" active="true"/>
+	<child uid="5612" active="true"/>
+	<child uid="5667" active="true"/>
+	<child uid="6078" active="true"/>
+	<child uid="6080" active="true"/>
+	<child uid="6192" active="true"/>
+	<child uid="6311" active="true"/>
+	<child uid="6314" active="true"/>
+	<child uid="6317" active="true"/>
+	<child uid="6318" active="true"/>
+	<child uid="6323" active="true"/>
+	<child uid="6327" active="true"/>
+	<child uid="6328" active="true"/>
+	<child uid="6329" active="true"/>
+	<child uid="6333" active="true"/>
+	<child uid="6337" active="true"/>
+	<child uid="6338" active="true"/>
+	<child uid="6344" active="true"/>
+	<child uid="6347" active="true"/>
+	<child uid="6350" active="true"/>
+	<child uid="6358" active="true"/>
+	<child uid="6361" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5211_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5211_1.xml"/>
+<title>École doctorale 427 : Informatique de Paris-Sud (EDIPS)</title>
+<updated>2014-08-15T01:47:24.336+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5211"
+	coordinates="48.702162609558,2.1816645562649"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T17:49:33.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4577"
+	name="École doctorale 427 : Informatique de Paris-Sud (EDIPS)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>École doctorale (ED) 427 : Informatique de Paris-Sud (EDIPS).</description>
+	<address>
+		<floor>Bâtiment 490, bureau 252</floor>
+		<url>http://edips.lri.fr/tiki-index.php</url>
+		<phone>01 69 15 63 19</phone>
+		<fax>01 69 15 63 87</fax>
+		<email>ed-info@lri.fr</email>
+	</address>
+</content>
+</entry>

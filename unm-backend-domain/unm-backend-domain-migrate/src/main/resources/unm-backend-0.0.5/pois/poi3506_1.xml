@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3506_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3506_1.xml"/>
+<title>Géographie (M1-M2)</title>
+<updated>2014-08-15T01:47:07.408+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3506"
+	coordinates="48.946923216936,2.3614054173231"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:25:22.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Géographie (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1er étage Bâtiment A, bureau 131</floor>
+		<openingHours>Lundi et mardi
+10h-12h
+14h-15h
+Jeudi et vendredi
+10h-12h</openingHours>
+		<url>http://www.univ-paris8.fr/geographie/</url>
+		<phone>01 49 40 72 75</phone>
+		<fax>01 49 40 72 76</fax>
+		<email>akalafate@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

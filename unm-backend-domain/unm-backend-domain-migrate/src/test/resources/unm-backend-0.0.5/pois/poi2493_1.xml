@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2493_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2493_1.xml"/>
+<title>AESFF</title>
+<updated>2014-08-15T01:46:57.305+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2493"
+	coordinates="48.812933438979,2.1476487815"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T15:07:36.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="373"
+	name="AESFF">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’Association des Etudiants Sages-Femmes de l’Hôpital Foch </description>
+	<address>
+		<email>aesffoch@gmail.com </email>
+	</address>
+</content>
+</entry>

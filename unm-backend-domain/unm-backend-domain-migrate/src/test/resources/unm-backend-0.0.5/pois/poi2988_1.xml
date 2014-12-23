@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2988_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2988_1.xml"/>
+<title>Droit L1-2</title>
+<updated>2014-08-15T01:47:01.804+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2988"
+	coordinates="48.842758272579,2.332644760608"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:28:54.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2846"
+	name="Droit L1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Ce bureau est ouvert pour les licences 2 &amp; 3 : licence double cursus en Droit et Histoire, licence double cursus en Droit et Sciences, licence double cursus en Histoire de l'art et Droit, licence en Droit mention Droit
+</description>
+	<address>
+		<floor>Immeuble rue Notre-Dame des Champs, 1er étage</floor>
+		<openingHours>Lundi et jeudi : 
+10h00 / 16h00 
+Mardi, mercredi, vendredi : 
+9h00 / 12h00
+</openingHours>
+		<phone>01 44 41 58 26</phone>
+	</address>
+</content>
+</entry>

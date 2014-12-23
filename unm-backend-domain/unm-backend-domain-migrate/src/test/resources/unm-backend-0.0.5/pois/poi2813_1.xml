@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2813_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2813_1.xml"/>
+<title>Campus Jussieu Atrium</title>
+<updated>2014-08-15T01:47:00.262+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2813"
+	coordinates="48.846222311184,2.357966154813"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T14:24:17.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2715"
+	name="Campus Jussieu Atrium">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3898" active="true"/>
+	<child uid="3895" active="true"/>
+	<child uid="3865" active="true"/>
+	<child uid="3496" active="true"/>
+	<child uid="3497" active="true"/>
+	<child uid="3498" active="true"/>
+	<child uid="3499" active="true"/>
+	<child uid="3500" active="true"/>
+	<child uid="3516" active="true"/>
+	<child uid="3584" active="true"/>
+	<child uid="3870" active="true"/>
+	<child uid="3872" active="true"/>
+	<child uid="3874" active="true"/>
+	<child uid="3877" active="true"/>
+	<child uid="3878" active="true"/>
+	<child uid="3880" active="true"/>
+	<child uid="3891" active="true"/>
+	<child uid="3903" active="true"/>
+	<child uid="3905" active="true"/>
+	<child uid="3908" active="true"/>
+	<child uid="3911" active="true"/>
+	<child uid="6171" active="true"/>
+</content>
+</entry>

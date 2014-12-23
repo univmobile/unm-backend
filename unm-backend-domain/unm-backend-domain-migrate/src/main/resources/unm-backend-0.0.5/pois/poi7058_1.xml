@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7058_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7058_1.xml"/>
+<title>Conventions de stages</title>
+<updated>2014-08-15T01:47:42.820+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7058"
+	coordinates="48.903083962698,2.2171810269356"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-10T15:54:40.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="2467"
+	name="Conventions de stages">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Yamina Lahmer-Khechai</description>
+	<address>
+		<floor>M R04</floor>
+		<phone>0140974189</phone>
+		<email>ylahmer@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

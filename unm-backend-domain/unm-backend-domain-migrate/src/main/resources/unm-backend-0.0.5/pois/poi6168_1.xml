@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6168_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6168_1.xml"/>
+<title>Accès au RU pour PMR</title>
+<updated>2014-08-15T01:47:34.569+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6168"
+	coordinates="48.84701742997,2.3604284226894"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:27:22.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3571"
+	name="Accès au RU pour PMR">
+	<poiType id="14" label="Entrée PMR" categoryId="7" categoryLabel="Relais handicap"/>
+	<description>L'accès au RU pour les personnes à mobilités réduites se fait derrière le CROUS - suivre le chemin balisé blanc et bleu</description>
+</content>
+</entry>

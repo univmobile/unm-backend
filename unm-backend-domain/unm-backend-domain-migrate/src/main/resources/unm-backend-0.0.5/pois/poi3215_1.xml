@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3215_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3215_1.xml"/>
+<title>Bibliothèque du Centre Interuniversitaire d'Études Hongroise</title>
+<updated>2014-08-15T01:47:04.133+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3215"
+	coordinates="48.841313486787,2.35560027882"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:11:38.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3012"
+	name="Bibliothèque du Centre Interuniversitaire d'Études Hongroise">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>3e étage</floor>
+		<openingHours>Lundi : 14h -18h
+Mardi : 14h -18h
+Mercredi : 10h - 13h / 14h - 17h30
+Jeudi : 14h - 17h</openingHours>
+		<phone>0145877884</phone>
+	</address>
+</content>
+</entry>

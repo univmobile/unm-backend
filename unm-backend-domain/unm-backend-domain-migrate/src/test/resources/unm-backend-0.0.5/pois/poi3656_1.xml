@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3656_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3656_1.xml"/>
+<title>UFR Langues et cultures étrangères - LEA (LLCE-LEA)</title>
+<updated>2014-08-15T01:47:09.017+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3656"
+	coordinates="48.946023872742,2.3624085634947"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T13:54:23.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2604"
+	name="UFR Langues et cultures étrangères - LEA (LLCE-LEA)">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>UFR de Langues, Littératures et Civilisations Etrangères - Langues Etrangères Appliquées (LLCE-LEA).
+Coordination : Françoise BASSIERE (responsable administrative).</description>
+	<address>
+		<floor>3ème étage Bâtiment B1, bureau 315</floor>
+		<url>http://www.univ-paris8.fr/ufr-langues/</url>
+		<phone>01 49 40 70 95</phone>
+		<fax>01 49 40 68 47</fax>
+		<email>francoise.bassiere@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

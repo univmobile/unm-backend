@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5775_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5775_1.xml"/>
+<title>ADEPSY</title>
+<updated>2014-08-15T01:47:29.930+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5775"
+	coordinates="48.834474069403,2.2474839538336"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:49:52.000+02:00"
+	updatedAt="2011-06-14T17:05:08.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5550"
+	name="ADEPSY">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association des étudiants de Psychologie de Paris Descartes
+
+
+</description>
+	<address>
+		<floor>Local : 0056 (couloir des associations)</floor>
+		<phone>01 55 20 58 29</phone>
+	</address>
+</content>
+</entry>

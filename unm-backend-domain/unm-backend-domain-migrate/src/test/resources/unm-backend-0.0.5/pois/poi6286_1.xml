@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6286_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6286_1.xml"/>
+<title>École Doctorale Démographie</title>
+<updated>2014-08-15T01:47:35.691+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6286"
+	coordinates="48.827291017954,2.3647058755159"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-20T17:00:16.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1023"
+	name="École Doctorale Démographie">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>18 ème étage, Bureau C18-02</floor>
+		<url>http://www.univ-paris1.fr/ufr/idup</url>
+		<email>idup@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

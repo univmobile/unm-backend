@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2542_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2542_1.xml"/>
+<title>Centre National de la Recherche Scientifique</title>
+<updated>2014-08-15T01:46:57.810+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2542"
+	coordinates="48.796870134633,2.3585119843"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:31:31.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2541"
+	name="Centre National de la Recherche Scientifique">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro :
+- ligne 7 : station Paul Vaillant Couturier
+Bus : 
+- ligne 162 : arrêt Hôpital Paul Brousse
+- ligne 185 : arrêt Paul Vaillant Couturier</itinerary>
+		<fullAddress>7 Rue Guy Môquet
+94800 Villejuif</fullAddress>
+	</address>
+	<child uid="2411" active="true"/>
+</content>
+</entry>

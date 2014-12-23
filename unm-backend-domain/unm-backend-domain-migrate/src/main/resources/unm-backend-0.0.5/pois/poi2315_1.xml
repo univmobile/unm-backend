@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2315_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2315_1.xml"/>
+<title>Secrétariat du département Afrique</title>
+<updated>2014-08-15T01:46:55.807+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2315"
+	coordinates="48.888875633865,2.3762936890"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:34:29.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2557"
+	name="Secrétariat du département Afrique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<openingHours>Lundi, mardi, jeudi, vendredi :
+9h 30 / 12h - 14h / 16h
+ </openingHours>
+		<phone>01 55 26 81 20</phone>
+		<email> lydie.bertrand@inalco.fr</email>
+	</address>
+</content>
+</entry>

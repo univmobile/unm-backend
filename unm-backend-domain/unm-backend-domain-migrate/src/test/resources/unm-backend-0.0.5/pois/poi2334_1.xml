@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2334_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2334_1.xml"/>
+<title>Bureau de la vie étudiante</title>
+<updated>2014-08-15T01:46:56.002+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2334"
+	coordinates="48.857787371297,2.3324885219"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T16:04:11.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bureau de la vie étudiante">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Ce bureau est ouvert aux étudiants pour répondre à toutes leurs questions concernant les sujets suivants: handicap, aide au voyage, conventions de stages, projets d’iniative étudiante, associations, etc
+bourses@inalco.fr pour toutes questions concernant le statut boursier 
+</description>
+	<address>
+		<floor>Bureau 21</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h30 - 13h30 / 16h30</openingHours>
+		<email>vie.etudiante@inalco.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2954_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2954_1.xml"/>
+<title>Sciences Exactes et Naturelles - L2-3</title>
+<updated>2014-08-15T01:47:01.452+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2954"
+	coordinates="48.846089162589,2.3555910587311"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:20:00.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2828"
+	name="Sciences Exactes et Naturelles - L2-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1er étage salle 104</floor>
+		<openingHours>Lundi au vendredi : 9h-11h30/13h30-17h</openingHours>
+		<url>http://www.upmc.fr/fr/formations/diplomes/sciences_et_technologies2/licences/licence_st_mention_sciences_fondamentales_naturelles_et_experimentales.html</url>
+		<phone>01 44 27 31 59</phone>
+		<email>licence.sen@upmc.fr</email>
+	</address>
+</content>
+</entry>

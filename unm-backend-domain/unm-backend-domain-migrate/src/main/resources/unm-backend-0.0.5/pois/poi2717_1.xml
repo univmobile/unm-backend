@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2717_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2717_1.xml"/>
+<title>Campus Jussieu Tour Zamansky</title>
+<updated>2014-08-15T01:46:59.454+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2717"
+	coordinates="48.84672813153,2.3554140329361"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:43:34.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Martin Gobert"
+	parentUid="2715"
+	name="Campus Jussieu Tour Zamansky">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Ligne 7 et 10 arrêt Jussieu</itinerary>
+		<fullAddress>4 Place Jussieu
+75 252 Paris Cedex 05</fullAddress>
+	</address>
+	<child uid="2912" active="true"/>
+	<child uid="2720" active="true"/>
+	<child uid="3423" active="true"/>
+</content>
+</entry>

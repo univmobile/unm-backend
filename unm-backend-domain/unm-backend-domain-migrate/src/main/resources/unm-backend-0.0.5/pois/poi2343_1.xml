@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2343_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2343_1.xml"/>
+<title>Centre de médecine préventive S.I.U.M.P.P.S. de Paris Descar</title>
+<updated>2014-08-15T01:46:56.081+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2343"
+	coordinates="48.855393100013,2.331373728811"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T16:25:43.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	deletedAt="2011-04-27T16:27:08.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Centre de médecine préventive S.I.U.M.P.P.S. de Paris Descar">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+</content>
+</entry>

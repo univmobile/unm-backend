@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi505_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi505_1.xml"/>
+<title>Vélizy IUT et ISTY</title>
+<updated>2014-08-15T01:46:40.393+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="505"
+	coordinates="48.7819778884,2.217628955"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T16:32:49.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="haromoys"
+	updatedBy="rrivoire"
+	parentUid="504"
+	name="Vélizy IUT et ISTY">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Bus RATP 295, 390, 179, 190, 379, 495
+Bus PHEBUS CVE,  CVM, CZI, RDV, LCV, RGV, VZI, 40, 42, 43, 45, 307 001</itinerary>
+		<fullAddress>10-12 avenue de l'Europe 
+78140 Vélizy</fullAddress>
+	</address>
+	<child uid="2179" active="true"/>
+	<child uid="2704" active="true"/>
+	<child uid="2665" active="true"/>
+	<child uid="2650" active="true"/>
+	<child uid="1794" active="true"/>
+	<child uid="1793" active="true"/>
+	<child uid="2468" active="true"/>
+	<child uid="2183" active="true"/>
+	<child uid="2182" active="true"/>
+	<child uid="2181" active="true"/>
+	<child uid="2178" active="true"/>
+	<child uid="2177" active="true"/>
+	<child uid="2172" active="true"/>
+	<child uid="2176" active="true"/>
+	<child uid="2175" active="true"/>
+	<child uid="2174" active="true"/>
+	<child uid="2165" active="true"/>
+	<child uid="1768" active="true"/>
+	<child uid="7123" active="true"/>
+	<child uid="7124" active="true"/>
+	<child uid="7125" active="true"/>
+	<child uid="7126" active="true"/>
+	<child uid="7127" active="true"/>
+	<child uid="7128" active="true"/>
+	<child uid="7140" active="true"/>
+	<child uid="7141" active="true"/>
+</content>
+</entry>

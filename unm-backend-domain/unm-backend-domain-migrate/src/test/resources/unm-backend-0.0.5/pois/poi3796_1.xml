@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3796_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3796_1.xml"/>
+<title>École doctorale 224 : Cognition, langage, intéraction</title>
+<updated>2014-08-15T01:47:10.500+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3796"
+	coordinates="48.946823600505,2.3611874878407"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T17:06:03.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="École doctorale 224 : Cognition, langage, intéraction">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>2ème étage Bâtiment D, bureau 220</floor>
+		<openingHours>Du lundi au jeudi
+9h-12h
+14h30-17h
+Vendredi
+9h-12h</openingHours>
+		<url>http://www.ecole-doctorale-cli.org/</url>
+		<phone>01 49 40 73 68</phone>
+		<fax>01 49 40 71 90</fax>
+		<email>rlara@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

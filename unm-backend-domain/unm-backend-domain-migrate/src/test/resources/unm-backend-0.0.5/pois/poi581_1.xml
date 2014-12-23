@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi581_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi581_1.xml"/>
+<title>Bâtiment Institut BIO</title>
+<updated>2014-08-15T01:46:40.820+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="581"
+	coordinates="48.625899392896,2.4397212266922|48.625610296585,2.4400296807289|48.625319543893,2.4401155114174|48.625028789527,2.4401262402534|48.625051305343,2.4399311095476|48.625232140492,2.4399150162935|48.625389927495,2.4398613721132|48.625375744413,2.4397943168879|48.625395246149,2.4397728592157|48.625350924012,2.4397299438715|48.625324330711,2.4396628886461|48.625331422259,2.4395690113306|48.62538815461,2.4394992738962|48.625466161488,2.4395046383142|48.625521120807,2.4395851045847|48.625544168245,2.439638748765|48.625572534309,2.4395985156298|48.625466161488,2.4393866211176|48.625602673234,2.4392471462488|48.625899392896,2.43972122"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-11-18T12:38:42.000+01:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	deletedAt="2011-05-03T17:29:59.000+02:00"
+	createdBy="pdeljurie"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bâtiment Institut BIO">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<floor>Universite d'Evry Val d'Essonne</floor>
+	</address>
+</content>
+</entry>

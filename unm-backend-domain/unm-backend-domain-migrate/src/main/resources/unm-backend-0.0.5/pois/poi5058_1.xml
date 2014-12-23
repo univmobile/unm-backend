@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5058_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5058_1.xml"/>
+<title>Cafétéria de l'IUT de Saint-Denis</title>
+<updated>2014-08-15T01:47:23.227+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5058"
+	coordinates="48.938974005428,2.3547012358904"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-30T09:46:53.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	deletedAt="2011-05-30T09:48:29.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	name="Cafétéria de l'IUT de Saint-Denis">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>Dans l'IUT de Saint-Denis</floor>
+		<openingHours>8h30 - 15h00</openingHours>
+	</address>
+</content>
+</entry>

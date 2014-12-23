@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4390_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4390_1.xml"/>
+<title>RU Evry</title>
+<updated>2014-08-15T01:47:16.812+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4390"
+	coordinates="49.037995953067,2.067414522171|49.037039404386,2.0677578449249|49.037461413424,2.0689165592194|49.038839951333,2.0678436756134|49.037995953067,2.067414522171"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-23T12:09:31.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	deletedAt="2011-05-23T12:10:42.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="RU Evry">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1498_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1498_1.xml"/>
+<title>Bureau d'aide aux étudiants scolarité centrale</title>
+<updated>2014-08-15T01:46:48.233+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1498"
+	coordinates="48.845792621747,2.356374263763"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:09:23.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Bureau d'aide aux étudiants scolarité centrale">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Pyramide 55/56 1er étage bureau 117</floor>
+		<openingHours>Lundi, mardi, vendredi: 9h-12h
+Jeudi: 9h-12h, 14h-16h30
+Mercredi: 9h-16h30</openingHours>
+		<itinerary>Métro 7 Jussieu</itinerary>
+		<phone>0144275643</phone>
+		<fullAddress>4 place Jussieu</fullAddress>
+	</address>
+</content>
+</entry>

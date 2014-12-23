@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3953_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3953_1.xml"/>
+<title>ED 127</title>
+<updated>2014-08-15T01:47:12.027+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3953"
+	coordinates="48.80946874686,2.2307798266411"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:17:04.000+02:00"
+	updatedAt="2011-09-05T16:46:43.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3951"
+	name="ED 127">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Ecole Doctorale : Astronomie et astrophysique d'Ile de France - ED 127</description>
+	<address>
+		<url>http://ecole-doctorale.obspm.fr/</url>
+		<phone>01 45 07 74 13</phone>
+		<email>ecole-doctorale.astro@obspm.fr</email>
+	</address>
+</content>
+</entry>

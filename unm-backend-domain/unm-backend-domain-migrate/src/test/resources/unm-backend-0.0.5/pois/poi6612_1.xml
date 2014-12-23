@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6612_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6612_1.xml"/>
+<title>Centre de formation des musiciens intervenant à l'école</title>
+<updated>2014-08-15T01:47:38.719+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6612"
+	coordinates="48.701650019958,2.1831277012825"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-06T15:17:23.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="super admin"
+	updatedBy="Fatma ARAS"
+	parentUid="6566"
+	name="Centre de formation des musiciens intervenant à l'école">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Centre de formation des musiciens intervenant à l'école (CFMI)</description>
+	<address>
+		<floor>Bâtiment 498 Campus d'Orsay</floor>
+		<phone>01 69 15 62 80</phone>
+		<fax>01 69 15 45 45</fax>
+	</address>
+</content>
+</entry>

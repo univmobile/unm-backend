@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3085_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3085_1.xml"/>
+<title>Néphropathies héréditaires</title>
+<updated>2014-08-15T01:47:02.829+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3085"
+	coordinates="48.845252489272,2.31474906206"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:02:00.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2937"
+	name="Néphropathies héréditaires">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 44 49 51 02</phone>
+		<fax>01 44 49 02 90 </fax>
+	</address>
+</content>
+</entry>

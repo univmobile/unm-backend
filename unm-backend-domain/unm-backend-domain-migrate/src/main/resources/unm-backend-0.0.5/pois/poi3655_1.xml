@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3655_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3655_1.xml"/>
+<title>INTERSYSTÈME</title>
+<updated>2014-08-15T01:47:09.004+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3655"
+	coordinates="48.846960557406,2.3573028109968"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T13:43:18.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3653"
+	name="INTERSYSTÈME">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Junior-Entreprise de Polytech’Paris-UPMC
+Association d’étudiants à but pédagogique, elle propose de réaliser des études.</description>
+	<address>
+		<floor>2è étage bureau 212</floor>
+		<url>www.intersysteme.org</url>
+		<phone>01 44 27 36 87</phone>
+		<email>intersysteme.junior@gmail.com</email>
+	</address>
+</content>
+</entry>

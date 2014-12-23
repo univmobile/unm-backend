@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4804_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4804_1.xml"/>
+<title>Laboratoire de physique des matériaux et des surfaces </title>
+<updated>2014-08-15T01:47:20.729+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4804"
+	coordinates="49.016979560021,2.0746725797653"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:42:26.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3935"
+	name="Laboratoire de physique des matériaux et des surfaces ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Directeur
+Karol Hricovini</description>
+	<address>
+		<phone>01 34 25 70 29</phone>
+		<fax>01 34 25 70 71</fax>
+		<email>karol.hricovini@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

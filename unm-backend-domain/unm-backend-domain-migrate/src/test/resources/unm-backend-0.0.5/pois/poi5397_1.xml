@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5397_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5397_1.xml"/>
+<title>UVSQ IUFM Saint Germain en Laye</title>
+<updated>2014-08-15T01:47:25.891+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5397"
+	coordinates="48.900401320336,2.069811411202"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T10:14:26.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="4679"
+	name="UVSQ IUFM Saint Germain en Laye">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Gare de Saint-germain en Laye + bus </itinerary>
+		<fullAddress>5, rue Pasteur - 78100 St-Germain en Laye</fullAddress>
+	</address>
+	<child uid="5399" active="true"/>
+</content>
+</entry>

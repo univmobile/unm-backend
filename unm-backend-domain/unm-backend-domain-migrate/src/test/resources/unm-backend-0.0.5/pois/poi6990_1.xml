@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6990_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6990_1.xml"/>
+<title>M2i Management Interculturel et International</title>
+<updated>2014-08-15T01:47:42.004+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6990"
+	coordinates="48.90445583368,2.2122430801392"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:19:12.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2464"
+	name="M2i Management Interculturel et International">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>- Entretenir des liens de solidarité entre étudiants et anciens étudiants du Master 2 M2i
+- Créer un véritable réseau professionnel pour promouvoir notre Master
+- Faciliter l'insertion professionnelle des étudiants du Master </description>
+	<address>
+		<floor>Bâtiment V</floor>
+		<openingHours>Sur rendez-vous par mail :  asso.m2i@gmail.com</openingHours>
+		<url>http://m2i.u-paris10.fr/</url>
+		<phone>06 78 20 37 05</phone>
+		<email>asso.m2i@gmail.com</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3974_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3974_1.xml"/>
+<title>Site faculté de Médecine Cordeliers</title>
+<updated>2014-08-15T01:47:12.271+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3974"
+	coordinates="48.85065531682,2.3404794931412"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:48:09.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="1163"
+	name="Site faculté de Médecine Cordeliers">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="2463" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3897_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3897_1.xml"/>
+<title>BU Institut d’études augustiniennes</title>
+<updated>2014-08-15T01:47:11.445+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3897"
+	coordinates="48.8539593928,2.3353120498359"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:51:37.000+02:00"
+	updatedAt="2011-09-26T17:08:44.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3893"
+	name="BU Institut d’études augustiniennes">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Enseignants-chercheurs, doctorants et étudiants à partir du master, sur recommandation du directeur de recherche.
+Disciplines : augustin et augustinisme, patristique grecque et latine, histoire du christianisme ancien (philosophie, théologie), histoire de l’Afrique du nord ancienne, Moyen-Âge chrétien.</description>
+	<address>
+		<openingHours>Lundi, mardi, mercredi, vendredi : 
+13h30 / 17h30
+Jeudi : 
+10h00 / 17h30
+
+</openingHours>
+		<phone>01 43 54 80 25</phone>
+	</address>
+</content>
+</entry>

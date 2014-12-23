@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7133_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7133_1.xml"/>
+<title>Boulogne-Billancourt</title>
+<updated>2014-08-15T01:47:43.634+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7133"
+	coordinates="48.848620279028,2.2370910644531"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-05T16:21:08.000+01:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	parentUid="4"
+	name="Boulogne-Billancourt">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="7132" active="true"/>
+</content>
+</entry>

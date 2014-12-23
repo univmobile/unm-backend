@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2608_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2608_1.xml"/>
+<title>UFR Arts, philosophie, esthétique</title>
+<updated>2014-08-15T01:46:58.423+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2608"
+	coordinates="48.94453791701,2.363106608"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T14:11:40.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="UFR Arts, philosophie, esthétique">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Coordination UFR : Jean-Paul PORGE (responsable administratif).</description>
+	<address>
+		<floor>1er étage Bâtiment A, bureau 137</floor>
+		<url>http://www-artweb.univ-paris8.fr/</url>
+		<phone>01 49 40 66 21</phone>
+		<fax>01 49 40 66 18</fax>
+		<email>coordination.arts@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

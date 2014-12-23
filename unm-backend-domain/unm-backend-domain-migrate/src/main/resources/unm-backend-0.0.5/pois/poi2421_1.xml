@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2421_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2421_1.xml"/>
+<title>Site de l'institut de linguistique française</title>
+<updated>2014-08-15T01:46:56.661+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2421"
+	coordinates="48.823294012509,2.34132640063"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T13:59:06.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2418"
+	name="Site de l'institut de linguistique française">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>44 Rue de l’Amiral Mouchez
+75014 PARIS</fullAddress>
+	</address>
+	<child uid="6143" active="true"/>
+	<child uid="6140" active="true"/>
+</content>
+</entry>

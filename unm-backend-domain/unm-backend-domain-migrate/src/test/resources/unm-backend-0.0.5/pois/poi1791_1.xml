@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1791_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1791_1.xml"/>
+<title>Cafétéria de la BU</title>
+<updated>2014-08-15T01:46:50.938+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1791"
+	coordinates="48.90532710126,2.21583455"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T15:07:26.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2481"
+	name="Cafétéria de la BU">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi :
+8h45 / 16h
+Samedi : 
+10h / 16h</openingHours>
+	</address>
+</content>
+</entry>

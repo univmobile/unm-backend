@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi499_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi499_1.xml"/>
+<title>D'Alembert</title>
+<updated>2014-08-15T01:46:40.338+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="499"
+	coordinates="48.77834402869,2.0466971397"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T15:30:37.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2010-10-13T11:24:24.000+02:00"
+	createdBy="haromoys"
+	updatedBy="yasmine"
+	name="D'Alembert">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

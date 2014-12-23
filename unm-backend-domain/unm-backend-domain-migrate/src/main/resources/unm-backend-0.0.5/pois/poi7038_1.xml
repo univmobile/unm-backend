@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7038_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7038_1.xml"/>
+<title>ADHA</title>
+<updated>2014-08-15T01:47:42.589+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7038"
+	coordinates="48.902318958528,2.2117924690247"
+	active="true"
+	markerType="point"
+	createdAt="2011-12-09T12:33:25.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2495"
+	name="ADHA">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>ADHA est l'association des historiens d'Art</description>
+	<address>
+		<floor>Bâtiment D</floor>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6088_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6088_1.xml"/>
+<title>Création Théâtrale</title>
+<updated>2014-08-15T01:47:33.588+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6088"
+	coordinates="48.839381909111,2.5870804488659"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T16:01:56.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="Création Théâtrale">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<description>Dans le cadre de sa résidence  à la Ferme du Buisson, avec le soutien du Conseil général, Jean François Augute, artiste vidéaste, hors norms et hétéroclyte, propose aux étudiants de créer une forme théâtrale hybride, hors cadre du théâtre classique, dans une perspective d'échanges et de participation.</description>
+	<address>
+		<floor>0b058</floor>
+		<phone>01 60 95 76 35</phone>
+		<email>vie.etudiante@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

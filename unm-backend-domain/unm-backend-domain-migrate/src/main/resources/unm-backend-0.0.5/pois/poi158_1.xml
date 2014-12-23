@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi158_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi158_1.xml"/>
+<title>Département langues</title>
+<updated>2014-08-15T01:46:38.565+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="158"
+	coordinates="48.623499405804,2.42485749"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-01T11:33:23.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	deletedAt="2010-07-19T12:01:35.000+02:00"
+	createdBy="yasmine"
+	updatedBy="plopes"
+	name="Département langues">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Le Département LEA assure la gestion de la filière LEA, ouverte depuis septembre 2000. Créé par les membres de l’équipe du Département des Langues, le Département LEA a vu croître ses activités au fil des ans : ouverture de la Licence puis du Master, et plus récemment du Master 2 en alternance ainsi qu’en formation initiale. La filière propose une formation en langues (Anglais + Espagnol ou Anglais + Allemand) et la mention Traduction spécialisée à la fin du cursus. </description>
+	<address
+		zipCode="91025"
+		city="Evry Cedex"
+		countryCode="FR">
+		<floor>1</floor>
+		<openingHours>9h à 12h 
+lundi et mardi : 9h à 12h et 14h à 16h30 </openingHours>
+		<phone>01 69 47 74 06</phone>
+		<email>nathalie.dhaeze@univ-evry.fr</email>
+		<fullAddress>bureau B104bis
+Bâtiment 1° cycles 
+Cours A Roméro 91025 Evry Cedex</fullAddress>
+	</address>
+</content>
+</entry>

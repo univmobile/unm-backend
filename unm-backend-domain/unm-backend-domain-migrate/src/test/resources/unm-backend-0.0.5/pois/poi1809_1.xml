@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1809_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1809_1.xml"/>
+<title>Assistance sociale</title>
+<updated>2014-08-15T01:46:51.123+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1809"
+	coordinates="48.901839706481,2.212774157"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T16:41:09.000+02:00"
+	updatedAt="2011-11-15T16:24:37.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2499"
+	name="Assistance sociale">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Rdc</floor>
+		<openingHours>Lundi, mardi, mercredi, vendredi :
+9h30 / 12h30</openingHours>
+		<phone>01 40 97 70 97</phone>
+		<email>rkia.karim@crous-versailles.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2863_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2863_1.xml"/>
+<title>Centre Saint-Guillaume</title>
+<updated>2014-08-15T01:47:00.729+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2863"
+	coordinates="48.854410962201,2.328403852"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T15:18:03.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2862"
+	name="Centre Saint-Guillaume">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro
+- Ligne 4 : station Saint Germain des Prés
+- Ligne 10 : station Odéon
+- Ligne 12 : station Rue du Bac
+Bus
+- Ligne 63 : arrêt Saint Guillaume
+- Ligne 86 : arrêt Saint Germain des Prés
+- Lignes 68, 83, 84 ou 94 : arrêt Varenne-Raspail </itinerary>
+		<fullAddress>28, rue Saint-Guillaume
+75007 Paris</fullAddress>
+	</address>
+	<child uid="3262" active="true"/>
+	<child uid="3229" active="true"/>
+	<child uid="3272" active="true"/>
+	<child uid="3282" active="true"/>
+	<child uid="3432" active="true"/>
+	<child uid="3437" active="true"/>
+</content>
+</entry>

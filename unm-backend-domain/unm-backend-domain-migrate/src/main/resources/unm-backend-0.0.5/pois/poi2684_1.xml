@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2684_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2684_1.xml"/>
+<title>DFE</title>
+<updated>2014-08-15T01:46:59.132+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2684"
+	coordinates="48.799629853713,2.14154206216"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:03:57.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="361"
+	name="DFE">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<phone>0139257884</phone>
+		<email>delphine.arnold@uvsq.fr</email>
+	</address>
+</content>
+</entry>

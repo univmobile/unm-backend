@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3204_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3204_1.xml"/>
+<title>Bibliothèque de littérature générale et comparée</title>
+<updated>2014-08-15T01:47:04.008+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3204"
+	coordinates="48.848782985078,2.3438074439"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:03:44.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3020"
+	name="Bibliothèque de littérature générale et comparée">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>17 rue de la Sorbonne - (Escalier C - 2ème étage) 75005 Paris</floor>
+		<openingHours>Du lundi au vendredi :   9h - 12h et  13h - 17h
+
+Fermé pendant les vacances universitaires, les samedis et les dimanches. 
+</openingHours>
+		<phone>0140462924</phone>
+		<fax>(33) 01 40 46 29 38</fax>
+		<email>Alain.Dupuis@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

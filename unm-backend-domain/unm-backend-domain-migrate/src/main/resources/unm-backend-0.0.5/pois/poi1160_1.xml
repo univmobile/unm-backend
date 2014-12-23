@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1160_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1160_1.xml"/>
+<title>Culture et médias M1-2</title>
+<updated>2014-08-15T01:46:45.386+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1160"
+	coordinates="48.955466853407,2.341206371784"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-22T16:49:40.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	parentUid="2756"
+	name="Culture et médias M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Cette 1ère année de Master constitue une formation ouvrant sur l’ensemble des spécialités de 2ème année de Master de la mention « Culture, médias » : « Dynamiques culturelles. Politiques, espaces, pratiques » (Paris 13), « Recherche et expertise dans les industries culturelles et les médias » (Paris 8 – Paris 13), « Industries créatrices : médias, web arts » (Paris 8), « Médias internationaux, enjeux et pratiques » (Paris 8) ; ainsi que sur la spécialité de 2ème année de Master de la mention « Édition » : « Politiques éditoriales » (Paris 13). Elle offre aux étudiants :
+- 1) une formation générale de haut niveau (leur permettant éventuellement d’obtenir le grade de la maîtrise et d’accéder à différents métiers) ;
+- 2) une introduction aux spécialités développées au niveau M2 ;
+- 3) une initiation à la recherche fondamentale ou à la recherche appliquée aux différents secteurs professionnels visés (notamment par l’intermédiaire du stage et du mémoire). Ces trois éléments doivent permettre aux étudiants de présenter leur candidature à l’entrée en M2 dans les meilleures conditions (niveau de formation et détermination du projet professionnel).</description>
+	<address>
+		<floor>1er étage - Aile G - Bureau G 210.</floor>
+		<openingHours>9h - 12h
+14h - 17h
+Fermé Lundi et Jeudi après midi.</openingHours>
+		<itinerary>En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<url>http://sic13.univ-paris13.fr/site/</url>
+		<phone>01 49 40 32 80 </phone>
+		<fax>01 49 40 44 79</fax>
+		<email>master.comlivre@univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

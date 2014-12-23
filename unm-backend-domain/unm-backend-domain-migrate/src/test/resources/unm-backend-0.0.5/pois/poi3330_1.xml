@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3330_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3330_1.xml"/>
+<title>Cafétéria Santeuil</title>
+<updated>2014-08-15T01:47:05.514+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3330"
+	coordinates="48.840210971911,2.3539710044861"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:09:35.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-16T11:55:24.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	name="Cafétéria Santeuil">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du Lundi au Vendredi :
+8h00 - 18h15</openingHours>
+	</address>
+</content>
+</entry>

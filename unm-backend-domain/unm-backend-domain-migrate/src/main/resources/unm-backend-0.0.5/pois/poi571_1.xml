@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi571_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi571_1.xml"/>
+<title>Bornes CMS </title>
+<updated>2014-08-15T01:46:40.779+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="571"
+	coordinates="48.624115620845,2.427238225936"
+	active="true"
+	markerType="point"
+	createdAt="2010-11-18T11:05:12.000+01:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="pdeljurie"
+	updatedBy="pdeljurie"
+	parentUid="256"
+	name="Bornes CMS ">
+	<poiType id="9" label="Borne CMS" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		countryCode="FR">
+		<floor>Hall Rdc bât IDF </floor>
+		<itinerary>RER D</itinerary>
+		<fullAddress>Bd François Mitterrand
+91025 Evry</fullAddress>
+	</address>
+</content>
+</entry>

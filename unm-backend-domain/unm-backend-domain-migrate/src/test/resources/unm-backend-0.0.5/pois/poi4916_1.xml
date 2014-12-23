@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4916_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4916_1.xml"/>
+<title>Résidence d'Epinay</title>
+<updated>2014-08-15T01:47:21.778+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4916"
+	coordinates="48.952137960397,2.317042350769"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:41:53.000+02:00"
+	updatedAt="2011-07-26T16:05:18.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4705"
+	name="Résidence d'Epinay">
+	<poiType id="31" label="Résidence universitaire "/>
+	<address>
+		<itinerary>SNCF : Gare du nord puis bus 154</itinerary>
+	</address>
+</content>
+</entry>

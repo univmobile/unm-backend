@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4049_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4049_1.xml"/>
+<title>Langue française L3</title>
+<updated>2014-08-15T01:47:13.094+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4049"
+	coordinates="48.847984364251,2.3434346169233"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:57:51.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Langue française L3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<openingHours>Lundi : 14h00 / 16h30
+Mardi, mercredi, jeudi : 9h30 / 12h15 - 14h00 / 16h30
+Vendredi : 9h30 / 12h15</openingHours>
+		<phone>01 40 46 25 26</phone>
+	</address>
+</content>
+</entry>

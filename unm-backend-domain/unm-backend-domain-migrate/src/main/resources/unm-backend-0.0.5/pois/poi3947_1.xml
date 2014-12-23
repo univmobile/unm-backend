@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3947_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3947_1.xml"/>
+<title>ED 107</title>
+<updated>2014-08-15T01:47:11.962+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3947"
+	coordinates="48.846724969071,2.3588281497359"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:07:58.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2767"
+	name="ED 107">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>L’école doctorale de physique de la région parisienne regroupe un large ensemble d’équipes d’accueil effectuant une recherche en physique de caractère essentiellement fondamental, aussi bien expérimentale que théorique.</description>
+	<address>
+		<floor>2è étage bureau 235</floor>
+		<url>http://www.phys.ens.fr/Ecole.Doctorale/</url>
+		<phone>01 44 27 40 70</phone>
+		<email>marianne.peuch@upmc.fr</email>
+	</address>
+</content>
+</entry>

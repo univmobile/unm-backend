@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2220_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2220_1.xml"/>
+<title>Laboratoire GEMAC</title>
+<updated>2014-08-15T01:46:55.193+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2220"
+	coordinates="48.812954634421,2.1477989852"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T16:31:42.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="373"
+	name="Laboratoire GEMAC">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>0139254650</phone>
+		<email>gemac@cnrs-bellevue.fr</email>
+	</address>
+</content>
+</entry>

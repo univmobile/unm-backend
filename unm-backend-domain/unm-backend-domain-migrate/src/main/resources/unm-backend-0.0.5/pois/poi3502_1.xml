@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3502_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3502_1.xml"/>
+<title>Anthropologie</title>
+<updated>2014-08-15T01:47:07.356+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3502"
+	coordinates="48.946867639621,2.3613068461418"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:17:38.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Anthropologie">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1er étage Bâtiment A, bureau 127</floor>
+		<openingHours>Lundi
+14h30-16h
+Mardi et jeudi
+10h30-12h
+14h30-16h
+Mercredi
+10h30-12h</openingHours>
+		<url>http://www.univ-paris8.fr/anthropologie/</url>
+		<phone>01 49 40 72 70</phone>
+		<fax>01 49 40 72 71</fax>
+		<email>michele.fedou@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

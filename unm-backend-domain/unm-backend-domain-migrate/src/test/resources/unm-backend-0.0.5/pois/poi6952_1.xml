@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6952_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6952_1.xml"/>
+<title>Master test </title>
+<updated>2014-08-15T01:47:41.521+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6952"
+	coordinates="48.626427704498,2.4311757087708"
+	active="true"
+	markerType="point"
+	createdAt="2011-10-13T11:34:18.000+02:00"
+	updatedAt="2011-10-13T11:41:30.000+02:00"
+	deletedAt="2011-10-13T11:35:27.000+02:00"
+	createdBy="Stéphanie ROCHE"
+	updatedBy="Stéphanie ROCHE"
+	name="Master test ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

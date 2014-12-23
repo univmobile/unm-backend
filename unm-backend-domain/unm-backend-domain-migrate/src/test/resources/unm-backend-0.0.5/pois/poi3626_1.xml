@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3626_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3626_1.xml"/>
+<title>Santé option instrumentation L3 Pro</title>
+<updated>2014-08-15T01:47:08.751+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3626"
+	coordinates="48.855721350039,2.3315743915737"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:07:16.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2331"
+	name="Santé option instrumentation L3 Pro">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>Lundi - Vendredi
+09h00 - 12h00
+13h00 - 17h00
+
+ </openingHours>
+		<phone>01 42 86 43 28</phone>
+	</address>
+</content>
+</entry>

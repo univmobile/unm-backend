@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi553_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi553_1.xml"/>
+<title>Bibliothèque</title>
+<updated>2014-08-15T01:46:40.686+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="553"
+	coordinates="48.618686440924,2.3061043024063|48.618668709718,2.3066407442093|48.6183424544,2.3066139221191|48.618363731985,2.3060238361359|48.618686440924,2.306104302"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-10-08T11:12:43.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2011-05-31T15:15:50.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bibliothèque">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address
+		countryCode="FR">
+		<floor>Bâtiment des Communs</floor>
+		<openingHours>Du Lundi au Vendredi
+de 9h à 12h et 13h à 17h</openingHours>
+		<itinerary>RER C</itinerary>
+		<phone>01 69 47 79 04</phone>
+		<fullAddress>Chemin de la Tuilerie
+91220 Brétigny sur Orge</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4484_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4484_1.xml"/>
+<title>ER 6</title>
+<updated>2014-08-15T01:47:17.792+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4484"
+	coordinates="48.837834426292,2.3609687201679"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:03:13.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3686"
+	name="ER 6">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Physiologie et physiopathologie de la motricité chez l'homme - ER 6</description>
+	<address>
+		<phone>01 42 16 11 01</phone>
+		<email>genevieve.bard@upmc.fr</email>
+	</address>
+</content>
+</entry>

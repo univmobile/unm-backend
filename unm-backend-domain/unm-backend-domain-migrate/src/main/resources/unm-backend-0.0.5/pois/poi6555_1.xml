@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6555_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6555_1.xml"/>
+<title>Laboratoire de Physique et Chimie (LCP), Centre Elyse-Clio </title>
+<updated>2014-08-15T01:47:38.271+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6555"
+	coordinates="48.698835316275,2.1713125705719"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-04T08:49:00.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="6521"
+	name="Laboratoire de Physique et Chimie (LCP), Centre Elyse-Clio ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Centre Elyse-Clio du LCP </description>
+	<address>
+		<floor>Bâtiment 201 porte 2</floor>
+		<url>http://www.lcp.u-psud.fr</url>
+		<phone>01 69 15 75 75</phone>
+		<fax>01 69 15 61 88</fax>
+		<email>accueil.clio@u-psud.fr</email>
+	</address>
+</content>
+</entry>

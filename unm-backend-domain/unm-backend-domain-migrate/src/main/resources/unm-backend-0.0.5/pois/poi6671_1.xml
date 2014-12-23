@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6671_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6671_1.xml"/>
+<title>IUFM Cergy</title>
+<updated>2014-08-15T01:47:39.184+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6671"
+	coordinates="49.033531286291,2.0791418105364"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T15:28:33.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6654"
+	name="IUFM Cergy">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>Avenue Bernard Hirsch - BP 308 - 95027 Cergy Pontoise</fullAddress>
+	</address>
+	<child uid="6673" active="true"/>
+</content>
+</entry>

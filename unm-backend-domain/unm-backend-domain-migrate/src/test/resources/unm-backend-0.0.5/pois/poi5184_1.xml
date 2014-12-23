@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5184_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5184_1.xml"/>
+<title>UFR Sciences et technologie</title>
+<updated>2014-08-15T01:47:24.020+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5184"
+	coordinates="48.613448785325,2.4283701181412"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:30:31.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="476"
+	name="UFR Sciences et technologie">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>L’UFR de Sciences et Technologie propose différentes formations à orientation Scientifique et Technologique.</description>
+	<address>
+		<phone>01 69 47 75 05 </phone>
+		<email>claire.gaurat@iup.univ-evry.fr</email>
+	</address>
+</content>
+</entry>

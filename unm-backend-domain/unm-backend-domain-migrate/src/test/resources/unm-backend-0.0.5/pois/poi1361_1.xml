@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1361_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1361_1.xml"/>
+<title>Amphithéâtres A et B</title>
+<updated>2014-08-15T01:46:46.712+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1361"
+	coordinates="48.85075756661,2.33609072864"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:22:54.000+01:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1786"
+	name="Amphithéâtres A et B">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>Bâtiment principal, Sous sol</floor>
+		<itinerary>Métro 4 Saint Sulpice
+Métro 10 Mabillon</itinerary>
+		<fullAddress>5 rue Garancière
+75006 Paris</fullAddress>
+	</address>
+</content>
+</entry>

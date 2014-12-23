@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4083_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4083_1.xml"/>
+<title>Infirmerie</title>
+<updated>2014-08-15T01:47:13.467+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4083"
+	coordinates="48.945919909255,2.3608696460724"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:56:47.000+02:00"
+	updatedAt="2012-02-10T16:48:46.000+01:00"
+	createdBy="j.richer"
+	updatedBy="Marion MAINFRAY"
+	parentUid="2599"
+	name="Infirmerie">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>L’infirmerie assure soins courants et gestes de première urgence pour l’ensemble de la communauté universitaire, dans le respect du secret professionnel.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment C, salle 009</floor>
+		<openingHours>Lundi, mardi et jeudi : 9h-17h
+Mercredi : fermé
+Vendredi : 9h-16h</openingHours>
+		<url>http://www.univ-paris8.fr/Infirmerie</url>
+		<phone>01 49 40 65 14</phone>
+		<fax>01 49 40 67 80</fax>
+		<email>amal.yada@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

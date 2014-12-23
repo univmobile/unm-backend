@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2385_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2385_1.xml"/>
+<title>BX 30</title>
+<updated>2014-08-15T01:46:56.562+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2385"
+	coordinates="48.613880228514,2.428850233554"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T17:09:39.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="476"
+	name="BX 30">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>RDC, bat B patio</floor>
+	</address>
+</content>
+</entry>

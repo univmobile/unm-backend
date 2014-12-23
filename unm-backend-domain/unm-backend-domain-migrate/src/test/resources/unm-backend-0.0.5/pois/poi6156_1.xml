@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6156_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6156_1.xml"/>
+<title>Accros'session</title>
+<updated>2014-08-15T01:47:34.425+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6156"
+	coordinates="48.841754490358,2.574313133955"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T15:48:51.000+02:00"
+	updatedAt="2011-06-15T15:50:03.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="Accros'session">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Accros'session est une association permettant aux étudiants d’Arts et Technologies d’unir leurs connaissances et leurs potentiels créatifs.</description>
+	<address>
+		<floor>Bureau A364</floor>
+		<url>http://www.univ-mlv.fr/vie-du-campus/vie-associative-et-culturelle/les-associations/accrossession/</url>
+		<phone>01 60 95 79 38</phone>
+		<email>accrossession@hotmail.com</email>
+	</address>
+</content>
+</entry>

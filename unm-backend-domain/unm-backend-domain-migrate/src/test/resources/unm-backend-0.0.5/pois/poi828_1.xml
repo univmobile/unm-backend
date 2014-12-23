@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi828_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi828_1.xml"/>
+<title>Institut d’Administration des Entreprises</title>
+<updated>2014-08-15T01:46:42.261+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="828"
+	coordinates="48.838274371832,2.348579764"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T16:50:11.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1024"
+	name="Institut d’Administration des Entreprises">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>4e étage, 414</floor>
+		<openingHours>Lundi au vendredi
+9h30 -16h00
+</openingHours>
+		<phone>01 53 55 28 00</phone>
+		<email>iae@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

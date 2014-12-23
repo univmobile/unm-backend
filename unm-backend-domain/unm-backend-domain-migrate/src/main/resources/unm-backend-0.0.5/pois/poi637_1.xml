@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi637_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi637_1.xml"/>
+<title>Bibliothèque de l'Institut de Géographie</title>
+<updated>2014-08-15T01:46:40.902+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="637"
+	coordinates="48.844694699295,2.3424991965294"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T17:00:56.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="super admin"
+	parentUid="1019"
+	name="Bibliothèque de l'Institut de Géographie">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>1er étage</floor>
+		<openingHours>Lundi au vendredi 
+09h00 - 17h45
+Samedi
+09h00-12h45
+</openingHours>
+		<itinerary>RER B et Bus 38
+Station Luxembourg
+
+Bus 21,27
+Arrêt Gay Lussac
+</itinerary>
+		<url>http://demartonne.univ-paris1.fr/</url>
+		<phone>01 44 32 14 60</phone>
+		<email>bibgeo@demartonne.univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

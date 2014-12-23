@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7266_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7266_1.xml"/>
+<title>Département de sciences sociales</title>
+<updated>2014-08-15T01:47:45.013+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7266"
+	coordinates="48.79060018256,2.3277577757835"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T11:41:37.000+01:00"
+	updatedAt="2012-12-17T14:47:38.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7221"
+	name="Département de sciences sociales">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Le département offre une formation scientifique de haut niveau à des étudiants se destinant :
+- à la recherche scientifique fondamentale ou appliquée
+- à l'enseignement supérieur
+- à l'enseignement secondaire, en particulier post-bac (classes préparatoires aux grandes écoles)
+ou au service des administrations de l'État, des collectivités territoriales, et des entreprises.</description>
+	<address>
+		<floor>4e étage</floor>
+		<url>http://www.sociens.ens-cachan.fr/</url>
+		<phone>01 47 40 21 42</phone>
+		<fax>01 47 40 24 69</fax>
+		<email>secretariat@sociens.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

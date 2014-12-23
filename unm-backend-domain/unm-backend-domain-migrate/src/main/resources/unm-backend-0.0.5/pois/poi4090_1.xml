@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4090_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4090_1.xml"/>
+<title>UMR 8028</title>
+<updated>2014-08-15T01:47:13.552+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4090"
+	coordinates="48.836348936991,2.3366479575634"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:04:00.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3753"
+	name="UMR 8028">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut de mécanique céleste et de calcul des éphémérides (IMCCE) - UMR 8028</description>
+	<address>
+		<floor>Bât A, 3ème étage, pièce 309 </floor>
+		<url>http://www.imcce.fr/</url>
+		<phone>01 40 51 22 79</phone>
+		<email>nicolas@imcce.fr</email>
+	</address>
+</content>
+</entry>

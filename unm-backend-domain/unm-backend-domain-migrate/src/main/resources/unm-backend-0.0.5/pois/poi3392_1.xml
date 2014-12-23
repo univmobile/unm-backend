@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3392_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3392_1.xml"/>
+<title>ED 514 - EDEAGE - Etudes Anglophones, Germanophones et Europ</title>
+<updated>2014-08-15T01:47:06.085+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3392"
+	coordinates="48.850698720058,2.341969124972"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:48:55.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="3030"
+	name="ED 514 - EDEAGE - Etudes Anglophones, Germanophones et Europ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Activités
+    Disciplines concernées par l'école doctorale :
+droit
+économie
+études anglophones
+études canadiennes
+études européennes
+études germanophones
+études irlandaises
+étude des médias
+histoire
+linguistique anglaise
+science politique
+traduction et communication transculturelle</description>
+	<address>
+		<url>http://www.univ-paris3.fr/ed514</url>
+		<phone>01 40 51 33 01</phone>
+		<fax>01 40 51 33 18</fax>
+		<email>ed514@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

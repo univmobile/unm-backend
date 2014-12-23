@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3321_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3321_1.xml"/>
+<title>Restaurant Dauphine </title>
+<updated>2014-08-15T01:47:05.391+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3321"
+	coordinates="48.869930887258,2.273701876401"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:06:16.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3063"
+	name="Restaurant Dauphine ">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du Lundi au Vendredi : 
+11h20 - 14h15</openingHours>
+	</address>
+</content>
+</entry>

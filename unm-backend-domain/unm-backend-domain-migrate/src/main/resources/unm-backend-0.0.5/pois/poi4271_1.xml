@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4271_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4271_1.xml"/>
+<title>GEMASS</title>
+<updated>2014-08-15T01:47:15.612+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4271"
+	coordinates="48.835999094737,2.3720608279109"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T15:02:14.000+02:00"
+	updatedAt="2011-05-20T15:02:58.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4265"
+	name="GEMASS">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Groupe d’Etudes des Méthodes de l’Analyse Sociologique de la Sorbonne</description>
+	<address>
+		<url>http://www.gemass.fr/?lang=fr</url>
+		<phone>01 49 54 21 55</phone>
+		<email>gemas@msh-paris.fr</email>
+	</address>
+</content>
+</entry>

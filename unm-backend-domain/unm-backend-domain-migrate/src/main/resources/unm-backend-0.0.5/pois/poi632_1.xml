@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi632_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi632_1.xml"/>
+<title>Centre rue d'Ulm</title>
+<updated>2014-08-15T01:46:40.881+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="632"
+	coordinates="48.845379579791,2.3459887504578"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T16:36:05.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre rue d'Ulm">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B 
+Station Luxembourg
+Métro 10
+Station Cardinal-Lemoine</itinerary>
+		<fullAddress>1 rue d’Ulm 
+75005 Paris </fullAddress>
+	</address>
+	<child uid="1016" active="true"/>
+	<attachment id="24" title="ulm.jpg" type="image" url="/uploads/poi/2758c5a11ab7e28485f11e7bb08802050378ea48.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi939_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi939_1.xml"/>
+<title>Laboratoire d' ésthétique théorique et appliquée LETA</title>
+<updated>2014-08-15T01:46:43.588+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="939"
+	coordinates="48.841909186751,2.28081107"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T17:04:34.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1025"
+	name="Laboratoire d' ésthétique théorique et appliquée LETA">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>2e étage</floor>
+		<itinerary>RER C
+Station Javel
+Métro 8 et 10
+Station Boucicaut ou Lourmel,Charles Michels ou Javel André Citroën
+</itinerary>
+		<url>http://leta.masteredit.com/leta/site/Accueil-34.html</url>
+		<phone>01 44 07 84 77</phone>
+		<email>helena.Granjo-pinto@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5469_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5469_1.xml"/>
+<title>Résidence Chatenay</title>
+<updated>2014-08-15T01:47:26.544+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5469"
+	coordinates="48.763698669688,2.2833410650492"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T14:58:13.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5450"
+	name="Résidence Chatenay">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B : Station Croix-de-Berny ou Robinson. Bus 195, 379, et 395, station Carrefour du 19 mars 1962</itinerary>
+		<fullAddress>75, rue Vincent Fayo - 92296 Châtenay-Malabry</fullAddress>
+	</address>
+	<child uid="5472" active="true"/>
+</content>
+</entry>

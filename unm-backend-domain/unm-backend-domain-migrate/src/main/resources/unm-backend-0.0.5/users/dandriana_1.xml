@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/users/001:dandriana_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/users/001:dandriana_1"/>
+<updated>2014-07-26T19:12:02Z</updated>
+<title>dandriana</title>
+<category term="users"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content>
+	<uid>dandriana</uid>
+	<cn>Andrianavalontsalama David</cn>
+	<sn>Andrianavalontsalama</sn>
+	<givenName>David</givenName>
+	<remoteUser>dandriana@univ-paris1.fr</remoteUser>
+	<mail>David.Andriana@univ-paris1.fr</mail>
+	<supannCivilite>M.</supannCivilite>
+	<secondaryUser>
+		<uid>dandrianavalontsalama</uid>
+		<remoteUser>d.andrianavalontsalama@tolbiac.fr</remoteUser>
+	</secondaryUser>
+	<displayName>David Andriana</displayName>
+	<login_classic active="true">
+		<!-- password: dummy -->
+		<password
+			saltPrefix="xyz"
+			encryptionAlgorithm="SHA-1"
+			encrypted="96b3a18d872dae15ab6e6711b6a882404326dce0"/>
+	</login_classic>
+</content>
+</entry>
+

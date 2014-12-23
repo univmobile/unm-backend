@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3145_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3145_1.xml"/>
+<title>Master 2 Science de l'information et de la com</title>
+<updated>2014-08-15T01:47:03.430+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3145"
+	coordinates="48.846985834929,2.343688756227"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T17:00:48.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2842"
+	name="Master 2 Science de l'information et de la com">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 107 B</floor>
+		<openingHours>Du lundi au vendredi :
+10h00 / 16h00</openingHours>
+		<phone>01 44 41 56 40</phone>
+		<email>elisabeth.paradis@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

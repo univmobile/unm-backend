@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7290_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7290_1.xml"/>
+<title>Bâtiment I</title>
+<updated>2014-08-15T01:47:45.270+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7290"
+	coordinates="48.790769983347,2.3297714442015"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T12:31:09.000+01:00"
+	updatedAt="2012-12-17T14:47:38.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7249"
+	name="Bâtiment I">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<address>
+		<url>www.crous-creteil.fr</url>
+		<phone>01 41 98 68 90</phone>
+		<fax>01 45 47 21 53</fax>
+		<email>residence.cachan@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

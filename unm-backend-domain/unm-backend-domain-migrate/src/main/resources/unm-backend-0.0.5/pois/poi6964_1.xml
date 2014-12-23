@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6964_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6964_1.xml"/>
+<title>AFEV</title>
+<updated>2014-08-15T01:47:41.634+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6964"
+	coordinates="48.902724478164,2.2135788202286"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T10:23:05.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="AFEV">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L'activité principale de l'Afev est l'accompagnement individualisé : 2h par semaine un étudiant bénévole accompagne un jeune à son domicile, dans son parcours scolaire, son ouverture culturelle, à la mobilité...
+
+Ces accompagnements concernent des enfants et des jeunes de 5 à 15 ans dans les périodes charnières du parcours scolaire :
+-    l'accompagnement vers la lecture,  pour les enfants de dernière année de maternelle et de CP, afin de rendre plus accessible l'univers du livre.
+-    L'accompagnement vers l'autonomie pour les élèves de cours moyen et de sixième, afin de préparer la transition vers le collège.
+-    L'accompagnement des 4èmes-3èmes afin de faciliter la compréhension des filières et de redonner confiance au jeune.
+-    Un accompagnement spécifique intitulé &quot;Collégiens Aujourd'hui Étudiants Demain&quot; est développé sur la sensibilisation à l'enseignement supérieur.</description>
+	<address>
+		<floor>Bâtiment R - Salles R206 et 207 - 2ème étage</floor>
+		<openingHours>- Université Paris Ouest La Défense, Maison de L'Etudiant, 2ème Etage, Bureaux 206 et 207 (permanence de 10h à 19h)
+- Nanterre,  33-39 boulevard des Provinces Françaises (au-dessus de la gare RER A Nanterre Université). Permanence de 9h à 18h
+- Asnières sur Seine, Maison des Associations, 8 rue Armand Numès, 92600 Asnières-Sur-Seine
+- Clichy, Maison des Associations, 80 bd du Général Leclerc, 92110 Clichy La Garenne</openingHours>
+		<url>http://www.afev.fr/</url>
+		<phone>01 47 24 31 93</phone>
+		<email>lea.gaveau@afev.org</email>
+	</address>
+</content>
+</entry>

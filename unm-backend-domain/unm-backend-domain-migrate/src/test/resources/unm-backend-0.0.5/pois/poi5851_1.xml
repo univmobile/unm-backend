@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5851_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5851_1.xml"/>
+<title>MPAAS - M1-2</title>
+<updated>2014-08-15T01:47:30.843+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5851"
+	coordinates="48.841958937813,2.5745310634375"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T17:03:26.000+02:00"
+	updatedAt="2011-06-08T17:04:10.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="MPAAS - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master Musique, Parcours Acousmatique et Arts Sonores</description>
+	<address>
+		<floor>Bureau 368</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-arts-lettres-langues/mention-lettres-et-arts/master-musique-parcours-acousmatique-et-arts-sonores/</url>
+		<phone>01 49 32 90 20</phone>
+		<fax>01 49 32 91 20</fax>
+		<email>Dominique.Peronnet@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

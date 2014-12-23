@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4338_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4338_1.xml"/>
+<title>Département d'Anglais</title>
+<updated>2014-08-15T01:47:16.293+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4338"
+	coordinates="48.788316776664,2.444364130497|48.788334448204,2.4444821476936|48.788281433566,2.4445679783821|48.787988084889,2.4445626139641|48.787719474959,2.4452385306358|48.787631116115,2.4452385306358|48.787599306893,2.4451473355293|48.787860848786,2.4444553256035|48.787705337554,2.4440637230873|48.787754818453,2.4439564347267|48.787825505366,2.4439510703087|48.787991619221,2.444364130497|48.788316776664,2.444364130497"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-20T16:26:07.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	deletedAt="2011-05-31T23:49:30.000+02:00"
+	createdBy="super admin"
+	updatedBy="Sihé NEYA"
+	name="Département d'Anglais">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2ème étage, Bureau 255</floor>
+		<openingHours>Du lundi au vendredi 9h à 12h45 et 13h30 à 17h00
+</openingHours>
+		<url>ttp://lettres-sh.u-pec.fr/departements/anglais/</url>
+		<phone> 01 45 17 82</phone>
+		<email>sec.anglais-llsh@u-pec.fr</email>
+	</address>
+</content>
+</entry>

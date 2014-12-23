@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi727_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi727_1.xml"/>
+<title>Association Œkoumène</title>
+<updated>2014-08-15T01:46:41.447+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="727"
+	coordinates="48.844603793062,2.3426721"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T16:13:54.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1019"
+	name="Association Œkoumène">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Local Centre PMF: C.15.04 ou Sorbonne F.720, 1er étage </floor>
+		<url>oekoumeneparis1.over-blog.com</url>
+		<phone>06 32  62 92 28</phone>
+	</address>
+</content>
+</entry>

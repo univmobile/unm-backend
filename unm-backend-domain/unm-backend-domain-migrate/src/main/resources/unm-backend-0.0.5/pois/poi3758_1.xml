@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3758_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3758_1.xml"/>
+<title>Service orientation et insertion professionnelle (SCUIO-IP)</title>
+<updated>2014-08-15T01:47:10.138+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3758"
+	coordinates="48.944399231229,2.3627844080329"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:22:29.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Service orientation et insertion professionnelle (SCUIO-IP)">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Service commun universitaire d’information, d’orientation
+et d’aide à l’insertion professionnelle (SCUIO-IP).</description>
+	<address>
+		<floor>3ème étage Bâtiment A, bureau 347</floor>
+		<openingHours>Lundi et vendredi
+9h30-12h30
+Mardi
+9h30-12h30
+14h-19h
+Mercredi et jeudi
+9h30-12h30
+14h-17h</openingHours>
+		<phone>01 49 40 67 15</phone>
+		<fax>01 49 40 67 79</fax>
+		<email>scuio@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

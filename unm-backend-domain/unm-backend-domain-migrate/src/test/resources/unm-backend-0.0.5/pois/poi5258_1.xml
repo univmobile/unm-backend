@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5258_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5258_1.xml"/>
+<title>Géographie L1-3</title>
+<updated>2014-08-15T01:47:24.600+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5258"
+	coordinates="48.787855841785,2.4442702531815"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T23:53:00.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4334"
+	name="Géographie L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2ème étage , Bureau 249</floor>
+		<openingHours>Lundi- vendredi :  8h30-12h30 et 13h-15h50 
+sauf le mercredi : 8h30-12h30 et 13h30-18h30
+</openingHours>
+		<url>http://lettres-sh.u-pec.fr/departements/geographie/</url>
+		<phone>01 45 17 10 91</phone>
+		<email>sec.geographie-llsh@u-pec.fr</email>
+	</address>
+</content>
+</entry>

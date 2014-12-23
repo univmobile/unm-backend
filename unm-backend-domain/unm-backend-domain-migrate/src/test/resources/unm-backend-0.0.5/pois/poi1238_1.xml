@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1238_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1238_1.xml"/>
+<title>Site Villemin</title>
+<updated>2014-08-15T01:46:45.960+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1238"
+	coordinates="48.876012984652,2.361767515540"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T15:05:12.000+01:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Site Villemin">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 5, 4, 7 Gare de l'est</itinerary>
+		<fullAddress>10 avenue de Verdun
+75010 Paris</fullAddress>
+	</address>
+	<child uid="1784" active="true"/>
+</content>
+</entry>

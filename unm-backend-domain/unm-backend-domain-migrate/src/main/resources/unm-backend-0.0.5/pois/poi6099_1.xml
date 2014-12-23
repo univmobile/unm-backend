@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6099_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6099_1.xml"/>
+<title>Service social des étudiants (CROUS)</title>
+<updated>2014-08-15T01:47:33.725+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6099"
+	coordinates="48.787979543569,2.3291552066803"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T16:44:15.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5146"
+	name="Service social des étudiants (CROUS)">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bâtiment B</floor>
+		<url>http://www.iut-cachan.u-psud.fr/fr/vie_etudiante/service_social.html</url>
+		<phone>01 41 24 11 08 </phone>
+		<email>agnes.jaffro@u-psud.fr</email>
+	</address>
+</content>
+</entry>

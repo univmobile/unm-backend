@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2940_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2940_1.xml"/>
+<title>Halte-Garderie</title>
+<updated>2014-08-15T01:47:01.311+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2940"
+	coordinates="48.846262879409,2.3594735562"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:07:43.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2820"
+	name="Halte-Garderie">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Le tarif est d’environ 1 à 2,20€ de l’heure (couches et repas fournis par les parents). La halte-garderie est fermée pendant les
+vacances universitaires et du 14 juillet au 1er septembre.</description>
+	<address>
+		<floor>Bâtiment F</floor>
+	</address>
+</content>
+</entry>

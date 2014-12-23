@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6214_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6214_1.xml"/>
+<title>AES L1-2</title>
+<updated>2014-08-15T01:47:34.996+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6214"
+	coordinates="48.827068161135,2.3649680614471"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-16T15:03:53.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1023"
+	name="AES L1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>14 ème étage, bureau B 1406</floor>
+		<phone>01 44 07 88 54 </phone>
+		<email>piperno@univ-paris1.fr </email>
+	</address>
+</content>
+</entry>

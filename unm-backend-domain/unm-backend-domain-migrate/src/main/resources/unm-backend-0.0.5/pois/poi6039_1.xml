@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6039_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6039_1.xml"/>
+<title>Stratégies Métropolitaines - M1</title>
+<updated>2014-08-15T01:47:32.992+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6039"
+	coordinates="48.837692111995,2.5870435684919"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T14:23:30.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4622"
+	name="Stratégies Métropolitaines - M1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 105</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-sciences-humaines-et-sociales/mention-urbanisme-amenagements-et-transports/master-strategies-metropolitaines/</url>
+		<phone>01 60 95 78 78</phone>
+		<fax>01 60 95 79 21</fax>
+		<email>Marie-Monique.Ribon@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

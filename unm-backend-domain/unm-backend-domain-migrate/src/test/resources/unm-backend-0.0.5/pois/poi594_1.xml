@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi594_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi594_1.xml"/>
+<title>test</title>
+<updated>2014-08-15T01:46:40.836+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="594"
+	coordinates="48.844794357643,2.3425538465381|48.844764423382,2.3426641523838|48.844695581879,2.3425568640232|48.844674326315,2.3426369950175|48.844653144286,2.3426316305995|48.844676974068,2.3425310477614|48.844730002643,2.342603802681|48.844765305965,2.3426695168018|48.844754714971,2.3427781462669|48.844738754931,2.3428274318576|48.84452163899,2.342728190124|48.844616075714,2.3423325642943|48.844770527917,2.3424103483558|48.844804948629,2.3424921557307|48.844738828476,2.3428666591644|48.844794357643,2.34255384653"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-01-17T14:33:29.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-01-24T10:27:49.000+01:00"
+	createdBy="yasmine"
+	updatedBy="cleasyP1"
+	name="test">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

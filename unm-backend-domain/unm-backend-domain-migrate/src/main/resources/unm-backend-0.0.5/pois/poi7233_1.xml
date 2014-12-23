@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7233_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7233_1.xml"/>
+<title>Service des relations internationales</title>
+<updated>2014-08-15T01:47:44.610+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7233"
+	coordinates="48.789956079998,2.3266969621181"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-07T14:15:39.000+01:00"
+	updatedAt="2013-01-14T09:38:45.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7219"
+	name="Service des relations internationales">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Le Service des relations internationales est chargé de mettre en œuvre la politique internationale de l'École. Il se charge également d'aider les élèves et enseignants-chercheurs à réaliser leurs projets de séjours scientifiques et/ou académiques à l'étranger, d'informer sur les programmes de financement de projets internationaux, de les appuyer dans la participation à des programmes européens et internationaux.</description>
+	<address>
+		<floor>rez-de-chaussée</floor>
+		<openingHours>Lundi au jeudi : 9h30 à 12h puis 14h à 17h
+Vendredi : 9h30 à 12h puis 14h à 16h
+Fermeture au public le mardi après-midi
+</openingHours>
+		<url>http://www.ens-cachan.fr/version-francaise/international/</url>
+		<phone>01 47 40 21 71</phone>
+		<fax>01 47 40 23 79</fax>
+		<email>ri@ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

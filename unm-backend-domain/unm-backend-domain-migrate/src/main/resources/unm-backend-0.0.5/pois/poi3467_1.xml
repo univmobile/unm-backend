@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3467_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3467_1.xml"/>
+<title>EA 3983 - Laboratoire Espace, santé et territoire - LEST</title>
+<updated>2014-08-15T01:47:06.952+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3467"
+	coordinates="48.850618988099,2.340535148978"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:11:13.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-05-26T14:24:07.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="EA 3983 - Laboratoire Espace, santé et territoire - LEST">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Escalier C, 1èr étage</floor>
+		<url>http://www.u-paris10.fr/02140039/0/fiche___pagelibre/&amp;RH=rec_lab</url>
+		<phone>01 43 54 13 87</phone>
+		<email>delphine.labainville@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

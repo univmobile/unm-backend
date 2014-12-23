@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3036_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3036_1.xml"/>
+<title>Institut Biologie Sytèmique et Synthèse (iSSB)</title>
+<updated>2014-08-15T01:47:02.326+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3036"
+	coordinates="48.618575679923,2.450684756040"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:21:48.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	deletedAt="2011-05-05T15:23:17.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Institut Biologie Sytèmique et Synthèse (iSSB)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+</content>
+</entry>

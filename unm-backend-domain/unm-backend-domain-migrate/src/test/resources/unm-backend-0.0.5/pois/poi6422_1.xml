@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6422_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6422_1.xml"/>
+<title>Droit privé L3</title>
+<updated>2014-08-15T01:47:37.073+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6422"
+	coordinates="48.847058571183,2.3448243364692"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-23T10:43:56.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1027"
+	name="Droit privé L3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://ecolededroitdelasorbonne.univ-paris1.fr</url>
+		<phone>01 44 07 80 62</phone>
+		<fax>01 44 07 77 21</fax>
+		<email>ufr26@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

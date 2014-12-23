@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6674_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6674_1.xml"/>
+<title>Le Parc</title>
+<updated>2014-08-15T01:47:39.207+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6674"
+	coordinates="49.033755553452,2.073122933507"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T15:46:00.000+02:00"
+	updatedAt="2011-09-02T16:01:20.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6654"
+	name="Le Parc">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>5 avenue du parc - 95000 Cergy Pontoise</fullAddress>
+	</address>
+	<child uid="6676" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4505_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4505_1.xml"/>
+<title>Site de Sénart</title>
+<updated>2014-08-15T01:47:18.022+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4505"
+	coordinates="48.626994776492,2.5629043579102"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:16:36.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="3841"
+	name="Site de Sénart">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>Avenue Pierre Point 77567 Lieusaint Cedex
+</description>
+	<address>
+		<url>http://www.u-pec.fr/footer-3/plans-d-acces/</url>
+	</address>
+	<child uid="7163" active="true"/>
+	<child uid="7162" active="true"/>
+	<child uid="7159" active="true"/>
+	<child uid="7157" active="true"/>
+	<child uid="7156" active="true"/>
+	<child uid="7155" active="true"/>
+	<child uid="5483" active="true"/>
+	<child uid="5473" active="true"/>
+	<child uid="5475" active="true"/>
+	<child uid="5477" active="true"/>
+	<child uid="5479" active="true"/>
+	<child uid="5482" active="true"/>
+	<child uid="7023" active="true"/>
+</content>
+</entry>

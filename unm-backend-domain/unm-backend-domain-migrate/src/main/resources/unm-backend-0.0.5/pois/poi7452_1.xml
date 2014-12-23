@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7452_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7452_1.xml"/>
+<title>Équipe d'accueil : centre Jean-Mabillon</title>
+<updated>2014-08-15T01:47:46.524+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7452"
+	coordinates="48.848640135607,2.3429940640926"
+	active="true"
+	markerType="point"
+	createdAt="2013-05-22T16:14:39.000+02:00"
+	updatedAt="2013-07-05T18:00:07.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7349"
+	name="Équipe d'accueil : centre Jean-Mabillon">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le centre Jean-Mabillon (Équipe d'Accueil n° 3624) a pris la suite, en septembre 2012 de l'Équipe « Histoire, mémoire, patrimoine ». Il rappelle par son intitulé sa volonté de prolonger le travail des érudits de l'époque moderne et de transmettre et approfondir leurs méthodes de critique historique. Il incarne la dimension collective, interdisciplinaire et internationale des activités de recherche dans le domaine des sciences historiques telles qu'elles sont enseignées à l'École nationale des chartes, établissement de rattachement du centre.
+
+Le centre Jean-Mabillon souhaite contribuer à une amélioration des connaissances historiques, d'une part grâce à une réflexion sur les sources de l'historien et du philologue, en particulier écrites, leur statut et leurs usages, d'autre part en suscitant et en réalisant des instruments de travail (éditions de texte, bases de données) de qualité et innovants, en particulier en faisant appel aux ressources des technologies numériques.
+
+En savoir plus : http://www.enc.sorbonne.fr/centre-jean-mabillon</description>
+	<address>
+		<floor>19, rue de la Sorbonne - 75005 Paris</floor>
+		<url>http://www.enc.sorbonne.fr/centre-jean-mabillon</url>
+		<phone>01 55 42 75 00</phone>
+		<email>olivier.poncet@enc.sorbonne.fr</email>
+	</address>
+	<attachment id="286" title="logo-CJM.png" type="image" url="/uploads/poi/5d904e97e85575acb898c740b3082d8a49278298.png"/>
+</content>
+</entry>

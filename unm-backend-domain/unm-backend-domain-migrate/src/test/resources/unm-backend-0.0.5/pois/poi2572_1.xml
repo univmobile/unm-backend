@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2572_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2572_1.xml"/>
+<title>Secrétariat de la Section Langues et cultures des Amériques</title>
+<updated>2014-08-15T01:46:58.145+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2572"
+	coordinates="48.8577604448,2.33263537287"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T17:09:25.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2560"
+	name="Secrétariat de la Section Langues et cultures des Amériques">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone> 01 70 23 26 04</phone>
+		<email>ffillolcordier@inalco.fr</email>
+	</address>
+</content>
+</entry>

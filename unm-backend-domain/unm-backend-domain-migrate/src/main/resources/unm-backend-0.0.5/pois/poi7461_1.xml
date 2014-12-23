@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7461_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7461_1.xml"/>
+<title>Sorbonne </title>
+<updated>2014-08-15T01:47:46.613+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7461"
+	coordinates="48.848171518237,2.3433957248926"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-07T16:51:14.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7329"
+	name="Sorbonne ">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="7462" active="true"/>
+	<child uid="7477" active="true"/>
+</content>
+</entry>

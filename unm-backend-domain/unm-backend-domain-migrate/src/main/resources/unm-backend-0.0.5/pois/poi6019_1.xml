@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6019_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6019_1.xml"/>
+<title>Résidence universitaire La Pacaterie (Bâtiment 499)</title>
+<updated>2014-08-15T01:47:32.770+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6019"
+	coordinates="48.700937183102,2.1827434748411"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T13:40:08.000+02:00"
+	updatedAt="2013-06-20T16:00:49.000+02:00"
+	createdBy="j.richer"
+	updatedBy="anaelle.royer"
+	parentUid="6016"
+	name="Résidence universitaire La Pacaterie (Bâtiment 499)">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<address>
+		<floor>Bâtiment 499</floor>
+		<openingHours>Du lundi au vendredi (sauf mercredi)
+9h15-12h00
+13h45-16h15
+
+Juillet et août, du lundi au vendredi, de 9h à 12h.
+</openingHours>
+		<url>http://www.crous-versailles.fr/_logement__liste_91.htm</url>
+		<phone>01 69 15 75 90</phone>
+	</address>
+</content>
+</entry>

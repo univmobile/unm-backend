@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6559_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6559_1.xml"/>
+<title>Laboratoire d' Ecologie Systématique et Evolution</title>
+<updated>2014-08-15T01:47:38.307+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6559"
+	coordinates="48.699203538032,2.1707224845886"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-04T09:27:10.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="6558"
+	name="Laboratoire d' Ecologie Systématique et Evolution">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Bâtiment 203, Campus Orsay</floor>
+		<url>http://www.ese.u-psud.fr</url>
+		<phone>01 64 46 82 09</phone>
+		<fax>01 64 46 80 84</fax>
+		<email>info@force-a.fr</email>
+	</address>
+</content>
+</entry>

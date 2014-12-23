@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4159_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4159_1.xml"/>
+<title>LISE - UPR 15</title>
+<updated>2014-08-15T01:47:14.418+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4159"
+	coordinates="48.816374695992,2.4028381705284"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T17:11:42.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4112"
+	name="LISE - UPR 15">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire interfaces et systèmes électrochimiques (LISE) - UPR 15</description>
+	<address>
+		<url>http://www.lise.upmc.fr/</url>
+		<phone>01 44 27 41 53</phone>
+		<email>lise@upmc.fr</email>
+	</address>
+</content>
+</entry>

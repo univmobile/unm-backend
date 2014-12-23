@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4660_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4660_1.xml"/>
+<title>LEA Anglais/Allemand - L1-3</title>
+<updated>2014-08-15T01:47:19.455+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4660"
+	coordinates="48.839145998254,2.5878569483757"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T17:18:56.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="LEA Anglais/Allemand - L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3B054</floor>
+		<phone>01 60 95 76 98</phone>
+		<fax>01 60 95 74 35</fax>
+		<email>thuzar.lefevre@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

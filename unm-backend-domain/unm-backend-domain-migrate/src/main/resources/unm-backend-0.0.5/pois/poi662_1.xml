@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi662_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi662_1.xml"/>
+<title>Restaurant Bullier</title>
+<updated>2014-08-15T01:46:40.996+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="662"
+	coordinates="48.839782054695,2.337369"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T14:04:36.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-04-29T16:16:36.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	name="Restaurant Bullier">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>1er et 2e étages</floor>
+		<openingHours>Lundi au dimanche
+11h30- 14h00
+18h15-20h00
+Dimanche
+10h30-Brunch
+</openingHours>
+		<itinerary>RER B 
+Station Port-Royal
+
+Bus 38, 83, 91
+Arrêt Observatoire-Port Royal
+</itinerary>
+	</address>
+</content>
+</entry>

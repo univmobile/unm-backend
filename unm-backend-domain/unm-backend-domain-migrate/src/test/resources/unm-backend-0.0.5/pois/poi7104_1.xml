@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7104_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7104_1.xml"/>
+<title>IUT Cachan</title>
+<updated>2014-08-15T01:47:43.295+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7104"
+	coordinates="48.787484852386,2.3287072777748"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-03T11:47:45.000+01:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5450"
+	name="IUT Cachan">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>- BUS 187 - Porte d'Orléans (arrêt à la plaine)
+- BUS 184 - Porte d'Italie (arrêt division Leclerc)
+- RER B - Station Arcueil-Cachan + Bus 187 (arrêt à la plaine)
+- Accès routier - Porte d'Orléans, Nationale 20 , direction Cachan</itinerary>
+		<fullAddress>9, avenue de la Division Leclerc - 94234 CACHAN</fullAddress>
+	</address>
+	<child uid="7105" active="true"/>
+</content>
+</entry>

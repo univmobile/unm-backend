@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi34_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi34_1.xml"/>
+<title>Résidence Universitaire</title>
+<updated>2014-08-15T01:46:38.290+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="34"
+	coordinates="48.779959502695,2.04475522041"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T14:26:48.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-05T13:58:23.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Résidence Universitaire">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Logements pour deux étudiants célibataires (T1bis) : 17 soit 34 lits. Logements deux pièces (T2) : 4 lits.
+Dans le centre-ville, au cœur de l’université. A 5 minutes à pied de la gare. Une bibliothèque, salles de travail, salle de télévision.
+Tarifs : de 296€ à 473€ charges comprises.</description>
+	<address
+		zipCode=" 78280 "
+		city="GUYANCOURT"
+		countryCode="FR">
+		<openingHours>Horaires d'ouverture du secrétariat : du lundi au vendredi, de 8h35 à 13h00 et de 14h45 à 18h15.
+Attention :
+Juillet et août : de 9h00 à 12h30 et de 14h00 à 17 h 30.</openingHours>
+		<phone>01 34 52 08 05 </phone>
+		<fax> 01 34 52 08 07</fax>
+		<email>residence.vauban@crous-versailles.fr</email>
+		<fullAddress>1, boulevard d’Alembert   78280  GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

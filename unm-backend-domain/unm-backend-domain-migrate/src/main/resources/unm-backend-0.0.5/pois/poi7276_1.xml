@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7276_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7276_1.xml"/>
+<title>LMT-Cachan</title>
+<updated>2014-08-15T01:47:45.113+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7276"
+	coordinates="48.787997215228,2.3253089189529"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T10:12:56.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7216"
+	name="LMT-Cachan">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le laboratoire de mécanique et technologie (LMT-Cachan), créé en 1975, est une unité mixte de recherche commune à l’ENS Cachan, au CNRS (UMR 8535) et à l’Université Pierre et Marie Curie (UPMC). 
+Les activités du LMT-Cachan concernent la modélisation des solides et des structures : mécanique des matériaux, mécanique expérimentale, simulation numérique et calcul haute performance. Elles relèvent du domaine que les anglo-saxons appellent « Engineering Sciences ». Les fondamentaux du LMT-Cachan reposent sur la recherche du meilleur niveau international dans chacun de ces domaines. La plupart des recherches, motivées par des problèmes et défis industriels et sociétaux, cherchent à dégager des idées, méthodes et concepts permettant d’apporter des réponses à ces défis sur le long terme et sont souvent menées en relation étroite avec d’autres domaines, tels la physique, la chimie, les mathématiques, le calcul scientifique et l’informatique. </description>
+	<address>
+		<url>http://www.lmt.ens-cachan.fr/</url>
+		<phone>01 47 40 22 38</phone>
+		<fax>01 47 40 22 40</fax>
+		<email>sandrine.patacchini@lmt.ens-cachan.fr</email>
+	</address>
+	<attachment id="278" title="LMT_trans.png" type="image" url="/uploads/poi/fcbf08dad9a26331e96b4e393834b56f89046172.png"/>
+</content>
+</entry>

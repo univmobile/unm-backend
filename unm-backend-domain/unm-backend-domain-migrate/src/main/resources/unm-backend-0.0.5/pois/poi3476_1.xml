@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3476_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3476_1.xml"/>
+<title>Bourse de mobilité internationale</title>
+<updated>2014-08-15T01:47:07.051+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3476"
+	coordinates="48.846835508126,2.3443137109"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:20:52.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="Bourse de mobilité internationale">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Et autres bourses de mobilité.</description>
+	<address>
+		<floor>Escalier M, 2ème étage</floor>
+		<openingHours>Lundi, mardi et jeudi :
+9h30 / 11h30 - 14h00 / 16h30
+Mercredi et vendredi :
+14h00 / 16h30 </openingHours>
+	</address>
+</content>
+</entry>

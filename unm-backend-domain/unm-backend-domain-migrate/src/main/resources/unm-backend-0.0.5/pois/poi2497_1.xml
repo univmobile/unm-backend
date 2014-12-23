@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2497_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2497_1.xml"/>
+<title>Bâtiment Blério</title>
+<updated>2014-08-15T01:46:57.372+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2497"
+	coordinates="48.841692794082,2.2688397020"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T15:10:59.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	deletedAt="2011-04-29T15:18:38.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	name="Bâtiment Blério">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Bus: 22 - 62 - 72 - PC1
+Métro: Église d’auteuil -Mirabeau - Exelmans -Chardon Lagache
+RER C: ligne Austerlitz -Versailles, Station Pont du
+Garigliano
+Tramway: T3:Pont du Garigliano Bd Victor (terminus)</itinerary>
+		<fullAddress>143 Avenue de
+Versailles 75016
+PARIS</fullAddress>
+	</address>
+</content>
+</entry>

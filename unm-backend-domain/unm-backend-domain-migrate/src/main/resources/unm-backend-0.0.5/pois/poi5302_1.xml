@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5302_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5302_1.xml"/>
+<title>Bibliothèque universitaire de formation des maîtres</title>
+<updated>2014-08-15T01:47:24.994+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5302"
+	coordinates="48.914863859533,2.5382548570633"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T10:16:43.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="5209"
+	name="Bibliothèque universitaire de formation des maîtres">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi au vendredi : 9h30-18h, Samedis 27/09, 18/10, 7/02, 14/03 de 9h à 12h
+</openingHours>
+		<phone>01 41 70 72 18</phone>
+		<email>bufm@creteil.iufm.fr</email>
+	</address>
+</content>
+</entry>

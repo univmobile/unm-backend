@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3187_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3187_1.xml"/>
+<title>UFR de droit et science politique</title>
+<updated>2014-08-15T01:47:03.789+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3187"
+	coordinates="48.902294597861,2.214390859"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T13:54:23.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2491"
+	name="UFR de droit et science politique">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Bureau E14, Rdc</floor>
+		<url>http://www.u-paris10.fr/80272800/0/fiche___pagelibre/&amp;RF=UFRSJAP</url>
+		<phone>01 40 97 77 59</phone>
+		<email>ufr-droit@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

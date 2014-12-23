@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5934_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5934_1.xml"/>
+<title>Campus d'Orsay - Bâtiment 362</title>
+<updated>2014-08-15T01:47:31.817+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5934"
+	coordinates="48.702273128047,2.1702879667282"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:16:03.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4404"
+	name="Campus d'Orsay - Bâtiment 362">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B direction Saint-Rémy-lès-Chevreuse en venant de Paris (arrêts Le Guichet, Orsay-Ville ou Bures-sur-Yvette).</itinerary>
+		<fullAddress>Campus universitaire d'Orsay
+Bâtiment 362, Rue du Doyen André Guinier
+91405 Orsay Cedex</fullAddress>
+	</address>
+	<child uid="5936" active="true"/>
+</content>
+</entry>

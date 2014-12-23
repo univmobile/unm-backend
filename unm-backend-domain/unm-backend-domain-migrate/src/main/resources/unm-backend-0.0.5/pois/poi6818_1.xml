@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6818_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6818_1.xml"/>
+<title>18 ème arrondissement</title>
+<updated>2014-08-15T01:47:40.499+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6818"
+	coordinates="48.899751766577,2.3336935043335"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T14:00:51.000+02:00"
+	updatedAt="2011-09-05T10:51:44.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3583"
+	name="18 ème arrondissement">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="6853" active="true"/>
+	<child uid="6819" active="true"/>
+	<child uid="6852" active="true"/>
+</content>
+</entry>

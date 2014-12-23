@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi893_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi893_1.xml"/>
+<title>Archéologie, Préhistoire et Antiquité ARSCAN</title>
+<updated>2014-08-15T01:46:42.988+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="893"
+	coordinates="48.904211707943,2.2101563"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T17:37:47.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1032"
+	name="Archéologie, Préhistoire et Antiquité ARSCAN">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<itinerary>RER A
+Station Nanterre-Université
+
+Bus 167, 304 et 367 </itinerary>
+		<phone>01 46 69 24 18</phone>
+		<email>arscan@mae.u-paris10.fr</email>
+	</address>
+</content>
+</entry>

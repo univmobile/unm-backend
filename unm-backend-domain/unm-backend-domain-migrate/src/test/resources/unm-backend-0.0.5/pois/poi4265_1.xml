@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4265_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4265_1.xml"/>
+<title>Fondation Maison des sciences de l’homme </title>
+<updated>2014-08-15T01:47:15.575+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4265"
+	coordinates="48.836071023047,2.3721181601286"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T14:58:01.000+02:00"
+	updatedAt="2011-05-20T15:06:03.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4264"
+	name="Fondation Maison des sciences de l’homme ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro :
+- ligne 6 : station Quai de la gare</itinerary>
+		<fullAddress>190, avenue de France
+75013 Paris</fullAddress>
+	</address>
+	<child uid="4271" active="true"/>
+</content>
+</entry>

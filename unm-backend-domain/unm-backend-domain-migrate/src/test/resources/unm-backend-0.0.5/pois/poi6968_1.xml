@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6968_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6968_1.xml"/>
+<title>Melo'dix</title>
+<updated>2014-08-15T01:47:41.678+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6968"
+	coordinates="48.90274563562,2.2132542729378"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T10:54:26.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Melo'dix">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Réunir des musiciens amateurs et futur professionnels (étudiants, enseignants, personnel administratif et extérieurs) sous la direction d'un chef professionnel, Fabrice Parmentier, et de son assistant Pierre Dumoussaud. </description>
+	<address>
+		<floor>Bâtiment R - Salle R 105, 1er étage</floor>
+		<openingHours>Répétitions le samedi matin de 10h à 13h dans le théâtre B.M. Koltès, bâtiment L de l'université.
+Un week-end complet de répétition est organisé avant chaque concert. </openingHours>
+		<url>http://www.orchestremelodix.com/</url>
+		<phone>06 24 63 35 91</phone>
+		<email>orchestremelodix@yahoo.fr</email>
+	</address>
+</content>
+</entry>

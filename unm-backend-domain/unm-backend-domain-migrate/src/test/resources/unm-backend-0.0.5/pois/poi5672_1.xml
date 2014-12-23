@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5672_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5672_1.xml"/>
+<title>IUT Meaux</title>
+<updated>2014-08-15T01:47:28.704+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5672"
+	coordinates="48.954608818742,2.8781376779079"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:27:21.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4537"
+	name="IUT Meaux">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER E Meaux</itinerary>
+		<fax>test</fax>
+		<fullAddress>17 rue Jablinot
+77100 Meaux</fullAddress>
+	</address>
+	<child uid="6058" active="true"/>
+	<child uid="6055" active="true"/>
+	<child uid="5674" active="true"/>
+	<child uid="5678" active="true"/>
+	<child uid="5681" active="true"/>
+	<child uid="5692" active="true"/>
+	<child uid="5701" active="true"/>
+	<child uid="5704" active="true"/>
+	<child uid="5747" active="true"/>
+	<child uid="5750" active="true"/>
+	<child uid="5752" active="true"/>
+	<child uid="5758" active="true"/>
+	<child uid="5776" active="true"/>
+	<child uid="6054" active="true"/>
+	<child uid="6063" active="true"/>
+	<child uid="6065" active="true"/>
+	<child uid="6084" active="true"/>
+</content>
+</entry>

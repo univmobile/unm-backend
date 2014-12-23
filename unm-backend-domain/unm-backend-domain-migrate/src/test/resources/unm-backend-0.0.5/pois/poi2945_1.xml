@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2945_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2945_1.xml"/>
+<title>Centre Vavin</title>
+<updated>2014-08-15T01:47:01.374+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2945"
+	coordinates="48.84382790605,2.33248852193"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:10:20.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2944"
+	name="Centre Vavin">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro
+- Ligne 4 : station Vavin
+Bus
+- Lignes 58, 82 ou 83 : arrêt Guynemer Vavin </itinerary>
+		<fullAddress>5/7, avenue Vavin
+75006 Paris</fullAddress>
+	</address>
+	<child uid="3362" active="true"/>
+</content>
+</entry>

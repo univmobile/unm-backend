@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5411_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5411_1.xml"/>
+<title>Résidence Universitaire de Nanterre</title>
+<updated>2014-08-15T01:47:25.950+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5411"
+	coordinates="48.904098900789,2.2163636237383"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T10:54:01.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	deletedAt="2011-06-03T12:05:25.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Résidence Universitaire de Nanterre">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>8 allée de l'Université - 92000 Nanterre</description>
+	<address>
+		<phone>01 41 20 32 03</phone>
+	</address>
+</content>
+</entry>

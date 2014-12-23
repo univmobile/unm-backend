@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5929_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5929_1.xml"/>
+<title>Espace Détente</title>
+<updated>2014-08-15T01:47:31.769+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5929"
+	coordinates="48.842202220077,2.5858104228973"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:09:22.000+02:00"
+	updatedAt="2011-08-25T10:32:37.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4861"
+	name="Espace Détente">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>8h00 - 15h30</openingHours>
+	</address>
+</content>
+</entry>

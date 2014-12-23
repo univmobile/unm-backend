@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1829_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1829_1.xml"/>
+<title>Département Licence professionnelle GSE</title>
+<updated>2014-08-15T01:46:51.342+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1829"
+	coordinates="48.779318238795,2.044773325324"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:00:54.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2011-04-05T17:03:12.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	name="Département Licence professionnelle GSE">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment d'Alembert - Aile B - RDC</floor>
+		<url>http://www.cfa.uvsq.fr</url>
+		<phone>0180710013</phone>
+		<email>Christelle.jaouen@uvsq.fr  </email>
+	</address>
+</content>
+</entry>

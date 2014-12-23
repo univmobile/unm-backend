@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7051_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7051_1.xml"/>
+<title>Scolarité du CREFOP</title>
+<updated>2014-08-15T01:47:42.742+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7051"
+	coordinates="48.903048950259,2.217264175415"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-10T15:12:21.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="2467"
+	name="Scolarité du CREFOP">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Responsable adjointe : Agnes DIAB
+Relations avec les entreprises : Marie-Christine GIRARD
+</description>
+	<address>
+		<email>accueil-crefop@u-paris10.fr</email>
+	</address>
+	<child uid="7055" active="true"/>
+	<child uid="7052" active="true"/>
+	<child uid="7053" active="true"/>
+	<child uid="7054" active="true"/>
+	<child uid="7056" active="true"/>
+	<child uid="7057" active="true"/>
+</content>
+</entry>

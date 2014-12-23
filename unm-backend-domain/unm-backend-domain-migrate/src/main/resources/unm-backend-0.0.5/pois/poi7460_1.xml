@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7460_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7460_1.xml"/>
+<title>Formation continue</title>
+<updated>2014-08-15T01:47:46.600+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7460"
+	coordinates="48.859740054432,2.3594869673252"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-07T16:31:45.000+02:00"
+	updatedAt="2013-06-07T17:05:19.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7352"
+	name="Formation continue">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Les formations organisées par l’École nationale des chartes dans le cadre de la formation continue s’adressent à un public de professionnels du patrimoine (personnels des services d’archives, des bibliothèques, des musées, de la fonction publique territoriale et de l’État), de chercheurs désireux d’approfondir leur connaissance des sources historiques et/ou d’amateurs. 
+
+En savoir plus : http://www.enc.sorbonne.fr/formation-continue.htm</description>
+	<address>
+		<floor>Hôtel de Rohan, Archives nationales, 87, rue Vieille-du-Temple, 75003 Paris</floor>
+		<url>http://www.enc.sorbonne.fr/formation-continue.htm</url>
+		<phone>01.55.42.75.02</phone>
+		<email>etudes@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

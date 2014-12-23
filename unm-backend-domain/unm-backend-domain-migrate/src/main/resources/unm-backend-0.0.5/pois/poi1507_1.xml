@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1507_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1507_1.xml"/>
+<title>Service Commun des activités physiques sportives </title>
+<updated>2014-08-15T01:46:48.336+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1507"
+	coordinates="48.829888341411,2.3813268"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:19:55.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1774"
+	name="Service Commun des activités physiques sportives ">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<address>
+		<floor>Service des sports, RDC, dans le loft</floor>
+		<openingHours>Du Lundi au Vendredi : 9h30-17h</openingHours>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<phone>0157277963</phone>
+	</address>
+</content>
+</entry>

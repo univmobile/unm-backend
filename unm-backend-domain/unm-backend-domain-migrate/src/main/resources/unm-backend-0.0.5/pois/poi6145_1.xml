@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6145_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6145_1.xml"/>
+<title>École Doctorale Sciences, Ingénierie et Environnement </title>
+<updated>2014-08-15T01:47:34.261+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6145"
+	coordinates="48.788447369185,2.4429854750633"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:55:59.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4525"
+	name="École Doctorale Sciences, Ingénierie et Environnement ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description> 61 av. du général de Gaulle
+    94010 CRETEIL Cedex</description>
+	<address>
+		<floor>Bâtiment P</floor>
+		<openingHours>   
+</openingHours>
+		<url>www.univ-paris-est.fr/ecole-doctorale-sie</url>
+		<email>ed-sie@univ-paris-est.fr</email>
+	</address>
+</content>
+</entry>

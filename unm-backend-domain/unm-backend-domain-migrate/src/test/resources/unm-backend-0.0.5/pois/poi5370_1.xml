@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5370_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5370_1.xml"/>
+<title>Laboratoire Eau - Environnement - Systèmes urbains - (LEESU)</title>
+<updated>2014-08-15T01:47:25.666+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5370"
+	coordinates="48.788003518143,2.4422411620617"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T16:10:46.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	deletedAt="2011-06-01T16:11:06.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Laboratoire Eau - Environnement - Systèmes urbains - (LEESU)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi506_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi506_1.xml"/>
+<title>Entrée principale</title>
+<updated>2014-08-15T01:46:40.411+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="506"
+	coordinates="48.781956679865,2.218229770660"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T16:34:32.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="haromoys"
+	updatedBy="haromoys"
+	parentUid="504"
+	name="Entrée principale">
+	<poiType id="6" label="Entrée principale" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<fullAddress>10-12 Avenue de l'Europe
+78140 Vélizy-Villacoublay</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4183_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4183_1.xml"/>
+<title>Institut Curie</title>
+<updated>2014-08-15T01:47:14.672+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4183"
+	coordinates="48.843132140864,2.3443638347089"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T13:54:45.000+02:00"
+	updatedAt="2011-05-24T15:06:49.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2727"
+	name="Institut Curie">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER : B (Luxembourg)</itinerary>
+		<fullAddress>26, rue de l'Ulm
+75005 Paris</fullAddress>
+	</address>
+	<child uid="4191" active="true"/>
+	<child uid="4337" active="true"/>
+</content>
+</entry>

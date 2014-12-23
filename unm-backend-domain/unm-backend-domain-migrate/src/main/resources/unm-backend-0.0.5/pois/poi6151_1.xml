@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6151_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6151_1.xml"/>
+<title>Institut Mondor de Recherche Biomédicale </title>
+<updated>2014-08-15T01:47:34.359+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6151"
+	coordinates="48.795004950935,2.4540469050407"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T15:11:36.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4875"
+	name="Institut Mondor de Recherche Biomédicale ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Classé parmi les les laboratoire sur le site internet de Paris-EST</description>
+	<address>
+		<phone>01 49 81 37 70</phone>
+		<email>institutmondor@inserm.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3670_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3670_1.xml"/>
+<title>TIMARCHA</title>
+<updated>2014-08-15T01:47:09.145+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3670"
+	coordinates="48.848566085235,2.3577031306922"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T14:25:18.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2811"
+	name="TIMARCHA">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association naturaliste de l’umpc
+Timarcha initie aux sorties naturalistes et travaille à l’approfondissement de la connaissance des milieux naturels et de leur protection.</description>
+	<address>
+		<floor>1è étage</floor>
+		<email>contact@timarcha.org</email>
+	</address>
+</content>
+</entry>

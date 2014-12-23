@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2665_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2665_1.xml"/>
+<title>Consultations étudiantes </title>
+<updated>2014-08-15T01:46:58.886+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2665"
+	coordinates="48.781952644338,2.21751831471"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T15:23:23.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="505"
+	name="Consultations étudiantes ">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bâtiment Garros - sous-sol</floor>
+		<openingHours>Consultations sur rendez-vous
+Infirmerie ouverte lundi, jeudi et vendredi de 9h à 17h</openingHours>
+		<phone>0139253711 </phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2919_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2919_1.xml"/>
+<title>LHEST</title>
+<updated>2014-08-15T01:47:01.137+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2919"
+	coordinates="48.624099369005,2.42758020758"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T16:51:38.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="256"
+	name="LHEST">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>LABORATOIRE D'HISTOIRE ECONOMIQUE SOCIALE ET DES TECHNIQUES 
+
+</description>
+	<address>
+		<floor> Bureau : 306 </floor>
+		<phone>06.82.69.60.89</phone>
+		<email> alain.pichon@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

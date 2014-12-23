@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6825_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6825_1.xml"/>
+<title>IUT de Sceaux</title>
+<updated>2014-08-15T01:47:40.573+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6825"
+	coordinates="48.775930117885,2.2881261259317"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T14:41:09.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5450"
+	name="IUT de Sceaux">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>8 Avenue de Cauchy - 92330 SCEAUX</fullAddress>
+	</address>
+	<child uid="6827" active="true"/>
+	<child uid="7106" active="true"/>
+</content>
+</entry>

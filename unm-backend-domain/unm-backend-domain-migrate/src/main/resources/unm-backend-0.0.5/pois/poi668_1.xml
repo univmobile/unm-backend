@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi668_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi668_1.xml"/>
+<title>Bibliothèque Sainte Barbe</title>
+<updated>2014-08-15T01:46:41.013+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="668"
+	coordinates="48.847727166077,2.34669283032"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T14:50:55.000+01:00"
+	updatedAt="2011-06-20T17:22:08.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="958"
+	name="Bibliothèque Sainte Barbe">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi au vendredi
+09h00-19h30
+</openingHours>
+		<itinerary>RER B
+Station Luxembourg 
+Métro 10 
+Station : Cluny-La Sorbonne ou Maubert-Mutualité 
+Bus 21, 27, 38, 82, 84, 85 et 89
+</itinerary>
+		<phone>01 44 07 78 08</phone>
+		<email>gwenola.lencot@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

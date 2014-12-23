@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5565_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5565_1.xml"/>
+<title>Centre multidisciplinaire Maison de l'étudiant</title>
+<updated>2014-08-15T01:47:27.515+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5565"
+	coordinates="48.788138588272,2.44364798069"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:37:14.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4332"
+	name="Centre multidisciplinaire Maison de l'étudiant">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro ligne 8
+Station Créteil Université</itinerary>
+		<fax>test</fax>
+		<fullAddress>61 avenue du Général de Gaulle
+94010 Créteil Cedex France
+</fullAddress>
+	</address>
+	<child uid="5585" active="true"/>
+	<child uid="5564" active="true"/>
+	<child uid="5558" active="true"/>
+	<child uid="5545" active="true"/>
+	<child uid="5580" active="true"/>
+	<child uid="5644" active="true"/>
+	<child uid="6105" active="true"/>
+</content>
+</entry>

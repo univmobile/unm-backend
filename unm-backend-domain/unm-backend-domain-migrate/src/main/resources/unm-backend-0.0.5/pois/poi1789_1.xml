@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1789_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1789_1.xml"/>
+<title>Restaurant Universitaire</title>
+<updated>2014-08-15T01:46:50.910+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1789"
+	coordinates="48.90422031762,2.21662849187"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T15:05:27.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2485"
+	name="Restaurant Universitaire">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi :
+11h30 / 14h</openingHours>
+	</address>
+	<attachment id="104" title="Resto U.JPG" type="image" url="/uploads/poi/9c882fd64708699f5aa3fe8676fe13f806efd579.jpg"/>
+</content>
+</entry>

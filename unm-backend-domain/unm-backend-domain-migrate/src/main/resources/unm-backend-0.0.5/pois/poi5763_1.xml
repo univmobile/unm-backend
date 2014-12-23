@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5763_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5763_1.xml"/>
+<title>Campus d'Orsay -  Bâtiment 102 </title>
+<updated>2014-08-15T01:47:29.795+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5763"
+	coordinates="48.697730634842,2.177267074585"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:40:12.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="Fatma ARAS"
+	parentUid="4404"
+	name="Campus d'Orsay -  Bâtiment 102 ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Unité mixte de recherche (UMR) 8608</description>
+	<address>
+		<floor>Bâtiment 100M, aile sud-ouest</floor>
+		<openingHours>Tous les jours
+8h45-12h30
+13h30-17h30</openingHours>
+		<itinerary>RER B direction Saint-Rémy-lès-Chevreuse en venant de Paris (arrêts Le Guichet, Orsay-Ville ou Bures-sur-Yvette).</itinerary>
+		<url>http://ipnweb.in2p3.fr/</url>
+		<phone>01 69 15 73 40</phone>
+		<fax>01 69 15 64 70</fax>
+		<email>user@ipno.in2p3.fr</email>
+		<fullAddress>Campus universitaire d'Orsay
+Bâtiment 106, Rue de la Chauffière
+91440 Bures-sur-Yvette</fullAddress>
+	</address>
+	<child uid="6489" active="true"/>
+</content>
+</entry>

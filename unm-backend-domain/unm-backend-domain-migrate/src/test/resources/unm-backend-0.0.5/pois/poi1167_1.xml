@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1167_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1167_1.xml"/>
+<title>Création, innovation, information numériques M1-2</title>
+<updated>2014-08-15T01:46:45.454+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1167"
+	coordinates="48.955480943487,2.341058850288"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-22T17:11:31.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	parentUid="2756"
+	name="Création, innovation, information numériques M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>L’objectif de la formation est de donner aux étudiants les moyens de comprendre, d’analyser et de conduire les projets technologiques : de télé-services : e-formation, e-santé, e-recrutement, e-commerce… des industries culturelles : musique en ligne, services interactifs dans la presse, l’édition, la radio, la télévision, le cinéma et les musées… d’entreprises, de collectivités territoriales et d’organismes : système de gestion de la clientèle (CRM), centre d’appels, progiciels de gestion intégrée, plate-forme électronique d’échanges, site internet, intranet (groupware, workflow, gestion de bases de connaissances) d’agences de communication et d’annonceurs : e-publicité, e-communication, outils du marketing direct ou relationnel…</description>
+	<address>
+		<floor>1er étage - Aile G - Bureau G 210.</floor>
+		<openingHours>9h - 12h
+14h - 17h
+Fermé Lundi et Jeudi après-midi.</openingHours>
+		<itinerary>En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<url>http://sic13.univ-paris13.fr/site/</url>
+		<phone>01 49 40 20 44</phone>
+		<fax>01 49 40 44 79</fax>
+	</address>
+</content>
+</entry>

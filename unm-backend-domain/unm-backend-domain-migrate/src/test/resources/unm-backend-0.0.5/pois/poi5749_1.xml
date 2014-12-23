@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5749_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5749_1.xml"/>
+<title>Economie Sociale - LP</title>
+<updated>2014-08-15T01:47:29.630+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5749"
+	coordinates="48.8377210795,2.5934476777911"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:25:11.000+02:00"
+	updatedAt="2011-06-15T15:48:51.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4598"
+	name="Economie Sociale - LP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>C112</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-licences-professionnelles/domaine-sciences-humaines-et-sociales/mention-management-des-organisations/licence-professionnelle-economie-sociale/</url>
+		<phone>01 60 95 72 46</phone>
+		<fax>01 60 95 70 77</fax>
+		<email>Monique.Imperinetti@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

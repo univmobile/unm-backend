@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5188_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5188_1.xml"/>
+<title>Institut de formation en ergothérapie (IFE) </title>
+<updated>2014-08-15T01:47:24.065+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5188"
+	coordinates="48.787587231147,2.4437177181244"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:38:09.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5119"
+	name="Institut de formation en ergothérapie (IFE) ">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://ergotherapie.u-pec.fr</url>
+		<phone>01 45 17 16 05</phone>
+		<email>ife@u-pec.fr</email>
+	</address>
+</content>
+</entry>

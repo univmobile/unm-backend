@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3850_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3850_1.xml"/>
+<title>Centre Chênes 1</title>
+<updated>2014-08-15T01:47:10.968+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3850"
+	coordinates="49.039576855511,2.075432986021"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T13:58:49.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Fatma ARAS"
+	parentUid="3804"
+	name="Centre Chênes 1">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accès en RER
+• RER A direction Cergy-le-haut, arrêt Cergy-Préfecture. 
+• RER C, arrêt Pontoise (prendre ensuite le bus)
+
+Accès en bus
+Depuis Pontoise, station Canrobert, lignes 44, 45, 56, 57, arrêt Cergy-Préfecture.
+
+Accès en voiture
+• Depuis Paris : porte Maillot direction La Défense.
+A86 suivre Cergy-Pontoise. A15 direction Cergy-Pontoise, sortie 9 (serrer à gauche). 
+• Depuis Versailles : N184 direction Beauvais jusqu’aCergy-Pontoise.	
+
+Accès en train
+Depuis la gare Saint-Lazare ou Nanterre-Université,
+arrêt Cergy-Préfecture.</itinerary>
+		<fullAddress>33, boulevard du Port 
+95011 Cergy-Pontoise cedex</fullAddress>
+	</address>
+	<child uid="5016" active="true"/>
+	<child uid="4407" active="true"/>
+	<child uid="4410" active="true"/>
+	<child uid="4388" active="true"/>
+	<child uid="4389" active="true"/>
+	<child uid="4186" active="true"/>
+	<child uid="4189" active="true"/>
+	<child uid="4190" active="true"/>
+	<child uid="4192" active="true"/>
+	<child uid="4194" active="true"/>
+	<child uid="4195" active="true"/>
+	<child uid="4196" active="true"/>
+	<child uid="4197" active="true"/>
+	<child uid="4198" active="true"/>
+	<child uid="4206" active="true"/>
+	<child uid="4207" active="true"/>
+	<child uid="4384" active="true"/>
+	<child uid="4385" active="true"/>
+	<child uid="4386" active="true"/>
+	<child uid="4402" active="true"/>
+	<child uid="4414" active="true"/>
+	<child uid="4418" active="true"/>
+	<child uid="4421" active="true"/>
+	<child uid="4422" active="true"/>
+	<child uid="4425" active="true"/>
+	<child uid="4428" active="true"/>
+	<child uid="4435" active="true"/>
+	<child uid="4816" active="true"/>
+	<child uid="4820" active="true"/>
+	<child uid="4822" active="true"/>
+	<child uid="4823" active="true"/>
+	<child uid="4825" active="true"/>
+	<child uid="4960" active="true"/>
+	<child uid="5013" active="true"/>
+	<child uid="5014" active="true"/>
+	<child uid="7466" active="true"/>
+</content>
+</entry>

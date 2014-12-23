@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1281_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1281_1.xml"/>
+<title>Polygone</title>
+<updated>2014-08-15T01:46:46.061+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1281"
+	coordinates="48.853129608968,2.3625319451094|48.853318449772,2.3627465218306|48.853168436107,2.3630522936583|48.85296900548,2.3628457635641|48.853129608968,2.36253"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T16:04:55.000+01:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	deletedAt="2011-06-03T14:50:11.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	name="Polygone">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 7 Sully-Morland
+Métro 1 Saint Paul
+</itinerary>
+		<fullAddress>8-10 rue Charles V
+75004 Paris</fullAddress>
+	</address>
+</content>
+</entry>

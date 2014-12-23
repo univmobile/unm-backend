@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1242_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1242_1.xml"/>
+<title>La terrasse</title>
+<updated>2014-08-15T01:46:45.979+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1242"
+	coordinates="48.904034342853,2.211761623621|48.904087235089,2.211756259203|48.904126022694,2.2118099033833|48.904104865822,2.2119547426701|48.904185967115,2.2121049463749|48.90426354214,2.2121049463749|48.904327012527,2.2121907770634|48.904309381872,2.2122819721699|48.904252963735,2.21230879426|48.904193019395,2.2123248875141|48.904020238247,2.2120083868504|48.90402729055,2.2119332849979|48.904002607484,2.2118528187275|48.904034342853,2.211761623"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T15:08:35.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-29T14:53:22.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="La terrasse">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

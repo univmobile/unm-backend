@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6601_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6601_1.xml"/>
+<title>Château</title>
+<updated>2014-08-15T01:47:38.710+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6601"
+	coordinates="48.70348843216,2.1350014954805|48.70348489188,2.1348351985216|48.703444178647,2.1348486095667|48.703442408506,2.1349585801363|48.703378683377,2.1349639445543|48.703373372946,2.1348700672388|48.703320268604,2.1348781138659|48.703314958167,2.1350095421076|48.70348843216,2.1350014954805"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-07-05T10:57:51.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-07-05T15:38:36.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	name="Château">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B direction Saint-Rémy-lès-Chevreuse en venant de Paris (arrêt Gif-Yvette).</itinerary>
+		<fullAddress>Campus de Gif sur Yvette
+Avenue de la Terrasse 
+91198 Gif-sur-Yvette cedex</fullAddress>
+	</address>
+</content>
+</entry>

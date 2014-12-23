@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7026_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7026_1.xml"/>
+<title>Résidence Boréal</title>
+<updated>2014-08-15T01:47:42.455+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7026"
+	coordinates="48.629072488747,2.5546109676361"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-25T11:34:19.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="7156"
+	name="Résidence Boréal">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description> - CROUS SENART - Résidence Boréal</description>
+	<address>
+		<floor>1, rue du Therme Boréal   77127 Lieusaint</floor>
+		<openingHours>Du lundi au vendredi      
+9h00 - 13h00 &amp; 14h00 - 17h00               
+sauf le mercredi de 9h00 à 13h00     </openingHours>
+		<phone>01 64 13 01 82</phone>
+	</address>
+</content>
+</entry>

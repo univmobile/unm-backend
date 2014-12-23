@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4913_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4913_1.xml"/>
+<title>Bâtiment</title>
+<updated>2014-08-15T01:47:21.755+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4913"
+	coordinates="48.793875023143,2.3961346596479"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:35:52.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	deletedAt="2011-05-27T15:04:14.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Bâtiment">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro ligne 14 direction Olympiades depuis Chatelet jusqu’à Bibliotheque-Francois Mitterrand, puis prendre le bus 132 direction Cite du Moulin Vert depuis BIBLIOTHEQUE ou A partir de Crétreil Université Métro, Prendre le Bus TVM direction La Croix de Berny-RERdepuis UNIVERSITE-METRO jusqu’à POMPADOUR, puis rendre le bus 339 direction Louis Aragon-Metrodepuis CARREFOUR POMPADOUR jusqu’à PAUL ARMANGOTFRANCOIS MITTERRAND jusqu’à  GROUPE SCOLAIRE JEAN-JACQUES ROUSSEAU
+</itinerary>
+		<fullAddress>122 rue Paul Armangot 94400 Vitry Sur Seine
+</fullAddress>
+	</address>
+</content>
+</entry>

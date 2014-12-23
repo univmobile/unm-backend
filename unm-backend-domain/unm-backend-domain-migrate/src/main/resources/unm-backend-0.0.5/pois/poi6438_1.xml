@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6438_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6438_1.xml"/>
+<title>Sciences du vivant (L3-M2, secrétariat RH66)</title>
+<updated>2014-08-15T01:47:37.212+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6438"
+	coordinates="48.827881300458,2.380523532629"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T14:45:17.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1778"
+	name="Sciences du vivant (L3-M2, secrétariat RH66)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>- Magistère Européen de Génétique (L3 MEG)
+- Vie et Terre (L3 VT)
+- Génomique et Productivité Végétale (M1-M2 GPV)
+- Biogéosciences (M1-M2 BGS)</description>
+	<address>
+		<floor>Bâtiment Lamarck, rez-de-chaussée haut, bureau 66</floor>
+		<url>http://www.sdv.univ-paris-diderot.fr/</url>
+		<phone>01 57 27 82 46</phone>
+		<email>laurence.muller-wurtz@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

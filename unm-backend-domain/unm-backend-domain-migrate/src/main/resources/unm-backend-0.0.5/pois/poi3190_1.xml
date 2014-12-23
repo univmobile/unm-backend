@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3190_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3190_1.xml"/>
+<title>UFR Sciences Psychologiques et Sciences de l'Education</title>
+<updated>2014-08-15T01:47:03.829+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3190"
+	coordinates="48.902691140461,2.211352251470"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T13:55:50.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2494"
+	name="UFR Sciences Psychologiques et Sciences de l'Education">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Bureau 406 b, 4ème étage</floor>
+		<url>http://www.u-paris10.fr/80016028/0/fiche___pagelibre/&amp;RF=SPSE</url>
+		<phone>01 40 97 75 02</phone>
+		<email>ufr-spse@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

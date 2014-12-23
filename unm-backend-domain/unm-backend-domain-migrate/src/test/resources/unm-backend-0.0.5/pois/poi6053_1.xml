@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6053_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6053_1.xml"/>
+<title>Médecine préventive</title>
+<updated>2014-08-15T01:47:33.161+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6053"
+	coordinates="48.762079578297,2.2723983228207"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T14:42:44.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4984"
+	name="Médecine préventive">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bâtiment A, rez-de-chaussée bas</floor>
+		<url>http://www.u-psud.fr/fr/vie_etudiante/medecine_preventive.html</url>
+		<phone>01 46 83 54 14</phone>
+		<email>marie-paule.cottin@u-psud.fr</email>
+	</address>
+</content>
+</entry>

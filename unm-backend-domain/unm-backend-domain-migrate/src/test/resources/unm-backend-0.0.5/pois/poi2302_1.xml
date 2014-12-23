@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2302_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2302_1.xml"/>
+<title>Arts plastiques (L1-L3)</title>
+<updated>2014-08-15T01:46:55.684+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2302"
+	coordinates="48.94448771007,2.363267540931"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:15:38.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Arts plastiques (L1-L3)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1er étage Bâtiment A, bureau 120</floor>
+		<openingHours>Lundi, mercredi et vendredi
+9h-12h30
+Mardi et jeudi
+9h-12h30
+14h-17h</openingHours>
+		<url>http://www-artweb.univ-paris8.fr/</url>
+		<phone>01 49 40 66 00</phone>
+		<fax>01 48 21 70 56</fax>
+		<email>lmchirgui@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

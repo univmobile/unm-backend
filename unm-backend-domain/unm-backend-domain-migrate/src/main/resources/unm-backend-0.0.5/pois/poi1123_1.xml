@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1123_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1123_1.xml"/>
+<title>Mathématiques et info appliquées à l’éco M1-2</title>
+<updated>2014-08-15T01:46:45.041+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1123"
+	coordinates="48.95859651476,2.33990550041"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-18T15:36:43.000+01:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	parentUid="2457"
+	name="Mathématiques et info appliquées à l’éco M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La licence &quot;Mathématiques et informatique appliquées à l’Économie et la Finance&quot; s’adresse aux bacheliers scientifiques et leur apporte une double formation en économie (Macroéconomie , Microéconomie) et finance internationales d’une part, en mathématiques (Analyse, Algèbre, Probabilités, Statistique) et informatique d’autre part qui répond à une demande croissante des milieux bancaires et financiers .</description>
+	<address>
+		<floor>1er étage - Aile K - Bureau K 201.</floor>
+		<openingHours>9h - 11h30
+14h - 16h.</openingHours>
+		<itinerary>En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<url>http://www-galilee.univ-paris13.fr/etu_licences_mief.htm</url>
+		<phone>01 49 40 39 04 </phone>
+		<fax>01 49 40 33 34</fax>
+		<email>maimouna.niakate@univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

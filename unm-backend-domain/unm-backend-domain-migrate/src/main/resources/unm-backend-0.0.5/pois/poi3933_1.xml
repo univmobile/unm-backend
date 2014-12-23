@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3933_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3933_1.xml"/>
+<title>Esthétiques, musicologie et créations musicales (MUSESCREA)</title>
+<updated>2014-08-15T01:47:11.801+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3933"
+	coordinates="48.946811959498,2.3611683771014"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:53:42.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Esthétiques, musicologie et créations musicales (MUSESCREA)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 1572 - Esthétiques, musicologie et créations musicales (MUSESCREA) appartenant à l'École doctorale (ED) 159 : Esthétique, sciences et technologies des arts.
+Directeur : Jean-Paul Olive</description>
+	<address>
+		<floor>2ème étage Bâtiment D, bureau 219</floor>
+		<url>http://www.univ-paris8.fr/EA-1572-Esthetiques-musicologie-et</url>
+		<phone>01 49 40 73 67</phone>
+		<fax>01 49 40 66 18</fax>
+		<email>jpolive@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

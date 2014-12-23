@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4029_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4029_1.xml"/>
+<title>ED 515</title>
+<updated>2014-08-15T01:47:12.878+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4029"
+	coordinates="48.847988475337,2.3586351983249"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:33:19.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2806"
+	name="ED 515">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Les questions que pose la biologie aujourd'hui sont de plus en plus transversales et requièrent donc des compétences variées, tant par la connaissance du niveau d'étude (molécule, cellule, organisme) que par les méthodes d'analyse (biochimie, génétique, biologie moléculaire ou cellulaire, bio-informatique).</description>
+	<address>
+		<floor>1è étage bureau B115</floor>
+		<url>http://www.ed515.upmc.fr/</url>
+		<phone>01 44 27 47 50</phone>
+		<email>elisabeth.clement@snv.jussieu.fr</email>
+	</address>
+</content>
+</entry>

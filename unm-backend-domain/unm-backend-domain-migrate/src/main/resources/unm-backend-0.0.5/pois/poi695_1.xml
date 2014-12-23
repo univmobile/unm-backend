@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi695_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi695_1.xml"/>
+<title>Bureau de la vie étudiante</title>
+<updated>2014-08-15T01:46:41.141+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="695"
+	coordinates="48.827085819024,2.3644798"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T14:49:33.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1023"
+	name="Bureau de la vie étudiante">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<openingHours>Lundi au mercredi
+9h00-12h00 
+14h00-17h00
+Jeudi
+9h00-15h00
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64 et 83
+Arrêt Tolbiac-Baudricourt</itinerary>
+		<phone>01 44 07 86 30</phone>
+		<email>charfe@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

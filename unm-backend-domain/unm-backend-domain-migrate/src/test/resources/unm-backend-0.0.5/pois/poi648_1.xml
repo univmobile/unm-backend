@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi648_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi648_1.xml"/>
+<title>Relais Handicap</title>
+<updated>2014-08-15T01:46:40.958+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="648"
+	coordinates="48.827082287447,2.36489295959"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T18:21:09.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T16:14:05.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Relais Handicap">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address
+		countryCode="FR">
+		<floor>Aile C, 9e étage, 9.03</floor>
+		<openingHours>Lundi au jeudi
+9h30-12h30
+14h-17h</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64, 83
+Arret Tolbiac-Baudricourt</itinerary>
+		<phone>01 44 07 89 27</phone>
+		<email>sevandi@univ-paris1.fr</email>
+		<fullAddress>90 rue de Tolbiac
+75013 PARIS
+</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi181_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi181_1.xml"/>
+<title>Centre PMF</title>
+<updated>2014-08-15T01:46:38.606+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="181"
+	coordinates="48.826990466351,2.3641821742058|48.827499011844,2.3651531"
+	active="true"
+	markerType="overlay"
+	createdAt="2010-07-03T15:30:49.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-07-16T15:32:53.000+02:00"
+	createdBy="raphael"
+	updatedBy="raphael"
+	name="Centre PMF">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1731_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1731_1.xml"/>
+<title>Scolarité</title>
+<updated>2014-08-15T01:46:50.308+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1731"
+	coordinates="48.914086505695,2.4190440773"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T22:12:16.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="356"
+	name="Scolarité">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Scolarité.</description>
+</content>
+</entry>

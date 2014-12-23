@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1410_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1410_1.xml"/>
+<title>Sciences de la vie Mention Sciences du vivant L1-3</title>
+<updated>2014-08-15T01:46:47.380+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1410"
+	coordinates="48.914525421254,2.41860687"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T20:46:06.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="356"
+	name="Sciences de la vie Mention Sciences du vivant L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La LICENCE SCIENCES DE LA VIE mention sciences du vivant (SV) offre un parcours pluridisciplinaire en Biologie, Chimie et Physique permettant aux étudiants de se spécialiser au fur et à mesure des 6 semestres en leur proposant deux parcours : «Biologie Cellulaire et Physiologie» (B) et «Structure des Biomolécules» (S). Les trois premiers semestres donnent des bases scientifiques généralistes. Les semestres S4, S5, et S6 sont déclinés sous la forme d'un tronc commun et d'UE de Parcours permettant de suivre deux parcours différenciés. Le premier &quot;Biologie Cellulaire et Physiologie &quot; est orienté vers une formation dans le domaine de la Biologie cellulaire et moléculaire et de la Physiologie ; le second &quot;Structure des Biomolécules&quot;, est orienté vers une formation dans le domaine de la Biologie, de la Chimie et de la Biophysique structurale et moléculaire.</description>
+	<address>
+		<floor>Mezzanine -  Bureau m 92.</floor>
+		<openingHours>Lundi : 
+13h45 - 16h
+Mardi, mercredi, jeudi :
+8h - 12h30 
+13h45 - 16h
+Vendredi : 
+8h - 12h30</openingHours>
+		<itinerary>Bâtiment Illustration - M92 </itinerary>
+		<url>http://www-smbh.univ-paris13.fr/smbh/enseig/enseig_lmd/enseig_lmd_lic/lic_ss_.html</url>
+		<phone>01 48 38 77 12</phone>
+		<email>licence-sv.smbh@univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

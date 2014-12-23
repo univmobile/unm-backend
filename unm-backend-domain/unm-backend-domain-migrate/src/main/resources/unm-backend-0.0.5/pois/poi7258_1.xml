@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7258_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7258_1.xml"/>
+<title>Département EEA (électronique électrotechnique automatique)</title>
+<updated>2014-08-15T01:47:44.925+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7258"
+	coordinates="48.789152928184,2.3274600505829"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T09:34:41.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Département EEA (électronique électrotechnique automatique)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Le département EEA (Électronique, Électrotechnique et Automatique) est à l'interface de disciplines fondamentales - physique et mathématiques - et de disciplines appliquées - sciences de l'ingénieur. Il n'a pas d'équivalent dans les autres ENS et offre des perspectives de carrières extrêmement diversifiées et une formation avancée dans des secteurs disciplinaires qui sont le lieu de grandes mutations scientifiques, technologiques et économiques.</description>
+	<address>
+		<floor>Secrétariat : 1er étage, pièce 105</floor>
+		<url>http://www.eea.ens-cachan.fr/</url>
+		<phone>01 47 40 74 00</phone>
+		<fax>01 47 40 24 31</fax>
+		<email>secretariat@eea.ens-cachan.fr</email>
+	</address>
+	<attachment id="266" title="Logo_EEA_Ref_en_JPG.jpg" type="image" url="/uploads/poi/ec403c46f3d6703ccff3a43a27c9224c0b1415b1.jpg"/>
+</content>
+</entry>

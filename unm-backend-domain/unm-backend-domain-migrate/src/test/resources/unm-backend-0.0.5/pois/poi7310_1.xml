@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7310_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7310_1.xml"/>
+<title>Salle Baleine 1</title>
+<updated>2014-08-15T01:47:45.451+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7310"
+	coordinates="48.8447635408,2.3578816652298"
+	active="true"
+	markerType="point"
+	createdAt="2013-03-11T16:52:06.000+01:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:21.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Salle Baleine 1">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<description>Salle Baleine 1. 
+Accès par l'entrée principale du Bâtiment la Baleine (porte grise), puis à droite. </description>
+	<address>
+		<openingHours>Accès public : 8h30-18h
+Accès restreint en dehors de ces horaires</openingHours>
+	</address>
+</content>
+</entry>

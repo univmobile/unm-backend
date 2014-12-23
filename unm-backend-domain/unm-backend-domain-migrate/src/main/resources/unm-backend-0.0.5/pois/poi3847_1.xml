@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3847_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3847_1.xml"/>
+<title>Biostatistique</title>
+<updated>2014-08-15T01:47:10.935+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3847"
+	coordinates="48.828643301265,2.3569118790329"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T13:52:26.000+02:00"
+	updatedAt="2011-09-05T16:46:43.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3842"
+	name="Biostatistique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>01 44 27 22 66</phone>
+		<email>elodie.sellam@upmc.fr</email>
+	</address>
+</content>
+</entry>

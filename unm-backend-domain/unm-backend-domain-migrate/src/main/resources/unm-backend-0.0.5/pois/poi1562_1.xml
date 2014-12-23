@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1562_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1562_1.xml"/>
+<title>Association Paris Montagne</title>
+<updated>2014-08-15T01:46:48.922+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1562"
+	coordinates="48.843460713995,2.34486155"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T17:14:21.000+02:00"
+	updatedAt="2011-05-13T14:05:46.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Association Paris Montagne">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>ENS 2e étage</floor>
+		<openingHours>10h-18h30</openingHours>
+		<itinerary>Métro 7 Place Monge
+RER Luxembourg</itinerary>
+		<url>http://http://paris-montagne.org/; http:// http://www.scienceacademie.org/</url>
+		<phone>0144322888</phone>
+		<email>contact@paris-montagne.org</email>
+	</address>
+</content>
+</entry>

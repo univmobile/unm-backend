@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3505_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3505_1.xml"/>
+<title>BU Biologie Enseignement</title>
+<updated>2014-08-15T01:47:07.396+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3505"
+	coordinates="48.848259182092,2.3573713749647"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:20:58.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2773"
+	name="BU Biologie Enseignement">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Rez de Chaussée</floor>
+		<openingHours>Lundi au Vendredi : 09h00-19h00</openingHours>
+		<url>http://www.jubil.upmc.fr/fr/bibliotheques_sciences/bib_be.html</url>
+		<phone>01 44 27 43 68</phone>
+		<email>bibbe@upmc.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7350_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7350_1.xml"/>
+<title>Battiment 2</title>
+<updated>2014-08-15T01:47:45.531+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7350"
+	coordinates="48.848042758093,2.3431241512299"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-12T14:48:48.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	deletedAt="2013-04-18T13:38:46.000+02:00"
+	createdBy="super admin"
+	updatedBy="david.fourcaud"
+	name="Battiment 2">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

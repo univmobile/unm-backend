@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2441_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2441_1.xml"/>
+<title>Villetaneuse bâtiment Sup Galilée</title>
+<updated>2014-08-15T01:46:56.828+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2441"
+	coordinates="48.957833754944,2.3394159"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:15:58.000+02:00"
+	updatedAt="2011-05-30T15:29:41.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="248"
+	name="Villetaneuse bâtiment Sup Galilée">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>&quot;&quot;&quot;En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.&quot;&quot;&quot;</itinerary>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+	<child uid="998" active="true"/>
+	<child uid="997" active="true"/>
+	<child uid="970" active="true"/>
+	<child uid="996" active="true"/>
+</content>
+</entry>

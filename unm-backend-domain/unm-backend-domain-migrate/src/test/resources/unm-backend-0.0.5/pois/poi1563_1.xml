@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1563_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1563_1.xml"/>
+<title>Restaurant Bullier</title>
+<updated>2014-08-15T01:46:48.935+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1563"
+	coordinates="48.840196849301,2.337491512298"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T17:14:23.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	deletedAt="2011-04-29T14:20:21.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	name="Restaurant Bullier">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du Lundi au Dimanche : 11h30-14h et 18h30-20h</openingHours>
+		<itinerary>RER B : Port Royal</itinerary>
+		<fullAddress>39 avenue George-Bernanos
+75005 Paris </fullAddress>
+	</address>
+</content>
+</entry>

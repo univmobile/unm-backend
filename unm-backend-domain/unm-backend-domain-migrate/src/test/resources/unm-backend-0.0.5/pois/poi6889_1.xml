@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6889_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6889_1.xml"/>
+<title>Scolarité Melun</title>
+<updated>2014-08-15T01:47:41.043+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6889"
+	coordinates="48.536652623298,2.65597935765"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-09T15:41:50.000+02:00"
+	updatedAt="2011-09-09T15:42:47.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="2854"
+	name="Scolarité Melun">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<url>http://www.u-paris2.fr</url>
+		<phone>01 64 79 72 29 </phone>
+	</address>
+</content>
+</entry>

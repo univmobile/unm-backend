@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3785_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3785_1.xml"/>
+<title>Centre de recherche historique</title>
+<updated>2014-08-15T01:47:10.377+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3785"
+	coordinates="48.946990156244,2.3614563792944"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:54:52.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Centre de recherche historique">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Équipe d'accueil (EA) 1571 Centre de recherches historiques : Histoire des pouvoirs, savoirs et sociétés appartenant à l'École doctorale 31 : Pratiques et théories du sens.</description>
+	<address>
+		<floor>3ème étage Bâtiment D, bureau 317</floor>
+		<url>http://www2.univ-paris8.fr/recherche-histoire/</url>
+		<phone>01 49 40 73 23</phone>
+		<email>recherche.histoire@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

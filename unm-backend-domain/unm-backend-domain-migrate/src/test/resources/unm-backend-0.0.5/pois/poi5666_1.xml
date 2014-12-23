@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5666_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5666_1.xml"/>
+<title>Bibliothèque</title>
+<updated>2014-08-15T01:47:28.636+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5666"
+	coordinates="48.776367977581,2.2882716357708"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:16:21.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5601"
+	name="Bibliothèque">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bureau 207</floor>
+		<openingHours>Lundi, mardi, jeudi et vendredi
+9h00-18h30
+Mercredi
+9h30-17h00</openingHours>
+		<url>http://www.iut-sceaux.u-psud.fr/fr/iut_sceaux/bibliotheque.html</url>
+		<phone> 01 40 91 24 66</phone>
+		<email>claire.lauga@iut-sceaux.u-psud.fr</email>
+	</address>
+</content>
+</entry>

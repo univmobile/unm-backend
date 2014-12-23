@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3006_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3006_1.xml"/>
+<title>Censier</title>
+<updated>2014-08-15T01:47:02.015+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3006"
+	coordinates="48.839413038195,2.3493576049805"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:06:07.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="2994"
+	name="Censier">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3009" active="true"/>
+</content>
+</entry>

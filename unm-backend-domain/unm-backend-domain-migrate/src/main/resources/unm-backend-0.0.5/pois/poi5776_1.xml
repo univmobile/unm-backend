@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5776_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5776_1.xml"/>
+<title>ATI - LP</title>
+<updated>2014-08-15T01:47:29.941+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5776"
+	coordinates="48.954206098009,2.8781195729971"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:49:54.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5672"
+	name="ATI - LP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence Professionnelle Administration et transmission de l'information</description>
+	<address>
+		<floor>Bureau A113</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-licences-professionnelles/domaine-sciences-technologies-sante/mention-reseaux-et-telecommunications/licence-professionnelle-administration-et-transmission-de-linformation/</url>
+		<phone>01 64 36 44 03</phone>
+		<fax>01 64 36 44 55</fax>
+		<email>daniele.nivert@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

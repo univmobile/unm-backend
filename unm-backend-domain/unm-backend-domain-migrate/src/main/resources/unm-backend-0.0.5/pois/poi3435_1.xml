@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3435_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3435_1.xml"/>
+<title>Bibliothèque de l'Institut français de presse IFP</title>
+<updated>2014-08-15T01:47:06.561+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3435"
+	coordinates="48.845910164511,2.324183396995"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:16:54.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2899"
+	name="Bibliothèque de l'Institut français de presse IFP">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Public concerné :x enseignants chercheurs ainsi qu'aux étudiants inscrits à l'IFP en Master 2 et Doctorat.</description>
+	<address>
+		<openingHours>Du lundi au vendredi : 
+14h00 / 16h00
+</openingHours>
+	</address>
+</content>
+</entry>

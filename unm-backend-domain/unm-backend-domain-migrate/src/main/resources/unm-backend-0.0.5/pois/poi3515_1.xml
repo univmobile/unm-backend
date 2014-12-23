@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3515_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3515_1.xml"/>
+<title>Scolarité Inscription M2</title>
+<updated>2014-08-15T01:47:07.524+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3515"
+	coordinates="48.846867279781,2.3443458974361"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:34:28.000+02:00"
+	updatedAt="2011-09-09T15:47:03.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2842"
+	name="Scolarité Inscription M2">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>1er étage </floor>
+		<openingHours>Bureaux ouverts au public
+du lundi au vendredi de 10h à 16h</openingHours>
+		<phone>01 44 41 55 89</phone>
+		<email>sandrine.thenot@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

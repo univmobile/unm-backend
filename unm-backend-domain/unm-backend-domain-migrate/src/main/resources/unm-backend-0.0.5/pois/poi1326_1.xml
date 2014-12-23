@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1326_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1326_1.xml"/>
+<title>Ecole doctorale Connaissance, Langage, Modélisation</title>
+<updated>2014-08-15T01:46:46.233+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1326"
+	coordinates="48.903796444659,2.2105023264"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T16:53:38.000+01:00"
+	updatedAt="2011-11-15T12:32:55.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="2516"
+	name="Ecole doctorale Connaissance, Langage, Modélisation">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Bureau 306A, 3ème étage</floor>
+		<openingHours>Lundi au vendredi :
+9h30 - 17h00</openingHours>
+		<url>http://www.u-paris10.fr/ed139</url>
+	</address>
+</content>
+</entry>

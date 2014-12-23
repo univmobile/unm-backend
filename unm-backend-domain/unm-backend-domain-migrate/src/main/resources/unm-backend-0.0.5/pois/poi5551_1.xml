@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5551_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5551_1.xml"/>
+<title>Vieillissement et handicap (M2 VHMA)</title>
+<updated>2014-08-15T01:47:27.382+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5551"
+	coordinates="48.811692076984,2.3529343307018"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:21:36.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4848"
+	name="Vieillissement et handicap (M2 VHMA)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master à finalité professionnelle Sciences de la Motricité, spécialité « Vieillissement et handicap : Mouvement et adaptation » (M2 VHMA)</description>
+	<address>
+		<floor>Bâtiment KB</floor>
+		<url>http://www.staps.u-psud.fr/fr/formations/masters/master2_vhma.html</url>
+		<phone>01 49 59 67 25</phone>
+		<email>myriam.pinson@u-psud.fr</email>
+	</address>
+</content>
+</entry>

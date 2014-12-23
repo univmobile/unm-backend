@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4746_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4746_1.xml"/>
+<title>Droit Notarial M2</title>
+<updated>2014-08-15T01:47:20.105+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4746"
+	coordinates="48.870709045586,2.2741524875164"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T15:11:28.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Droit Notarial M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau A 526</floor>
+		<openingHours>Du Lundi au vendredi :
+9h00 / 12h30
+</openingHours>
+		<phone>01 44 05 49 42</phone>
+		<email>catherine.gogue-meunier@dauphine.fR</email>
+	</address>
+</content>
+</entry>

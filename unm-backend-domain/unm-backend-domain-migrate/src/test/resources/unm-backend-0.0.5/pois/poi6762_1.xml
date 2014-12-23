@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6762_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6762_1.xml"/>
+<title>Cafétéria Vaugirard</title>
+<updated>2014-08-15T01:47:40.019+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6762"
+	coordinates="48.834674603571,2.292548418045"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T10:28:47.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6761"
+	name="Cafétéria Vaugirard">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi de 8h00 à 17h30</openingHours>
+		<url>http://www.crous-paris.fr/</url>
+	</address>
+	<attachment id="191" title="vaugirard_1.jpg" type="image" url="/uploads/poi/46182a26c9dcdc0836734d135a33d7ba18c707c6.jpg"/>
+</content>
+</entry>

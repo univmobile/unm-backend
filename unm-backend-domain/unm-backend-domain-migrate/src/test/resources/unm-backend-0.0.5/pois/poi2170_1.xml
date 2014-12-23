@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2170_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2170_1.xml"/>
+<title>DUT TC</title>
+<updated>2014-08-15T01:46:54.875+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2170"
+	coordinates="48.652338409786,1.85285322368"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:42:22.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="509"
+	name="DUT TC">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Pour les formations en apprentissage, L'e-mail : alternance.ramb@iut-velizy.uvsq.fr</description>
+	<address>
+		<phone>0130465106 </phone>
+		<email>secretariat.tc@iut-velizy.uvsq.fr</email>
+	</address>
+</content>
+</entry>

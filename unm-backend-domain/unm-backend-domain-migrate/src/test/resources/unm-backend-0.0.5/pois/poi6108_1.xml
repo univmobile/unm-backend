@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6108_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6108_1.xml"/>
+<title>Antenne Handicap</title>
+<updated>2014-08-15T01:47:33.831+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6108"
+	coordinates="48.787899726518,2.4443051218987"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T17:02:54.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4334"
+	name="Antenne Handicap">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Service Culture et vie de l'étudiant</description>
+	<address>
+		<floor>bâtiment i3, 1er étage</floor>
+		<phone>01 45 17 12 21</phone>
+	</address>
+</content>
+</entry>

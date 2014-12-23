@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4161_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4161_1.xml"/>
+<title>Laboratoire d’études sur les Monothéismes</title>
+<updated>2014-08-15T01:47:14.447+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4161"
+	coordinates="48.853949458208,2.33533333987"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T17:18:09.000+02:00"
+	updatedAt="2011-09-26T17:08:44.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3893"
+	name="Laboratoire d’études sur les Monothéismes">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 43 54 80 25</phone>
+	</address>
+</content>
+</entry>

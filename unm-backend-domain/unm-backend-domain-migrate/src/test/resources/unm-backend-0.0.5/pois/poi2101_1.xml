@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2101_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2101_1.xml"/>
+<title>Brasserie de l'IUFM</title>
+<updated>2014-08-15T01:46:54.079+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2101"
+	coordinates="48.900710952626,2.0701074"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-11T12:07:20.000+02:00"
+	updatedAt="2011-05-10T16:28:22.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Brasserie de l'IUFM">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+</content>
+</entry>

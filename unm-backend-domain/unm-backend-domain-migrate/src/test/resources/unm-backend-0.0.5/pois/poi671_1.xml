@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi671_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi671_1.xml"/>
+<title>Maison des Sciences Economiques</title>
+<updated>2014-08-15T01:46:41.032+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="671"
+	coordinates="48.835377276056,2.35805"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T15:29:57.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1028"
+	name="Maison des Sciences Economiques">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Rez-de-chaussée, droite</floor>
+		<openingHours>Lundi au vendredi
+10h00-19h00
+</openingHours>
+		<itinerary>Métro  5 
+Station Campo-Formio
+
+Bus 57 et 67 </itinerary>
+		<phone>01 44 07 83 38</phone>
+		<email>docmse@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

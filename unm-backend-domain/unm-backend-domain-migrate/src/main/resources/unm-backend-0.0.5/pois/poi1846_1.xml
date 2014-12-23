@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1846_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1846_1.xml"/>
+<title>ARCTS M2 pro</title>
+<updated>2014-08-15T01:46:51.460+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1846"
+	coordinates="48.779292050759,2.045027464"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:19:31.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="2594"
+	name="ARCTS M2 pro">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Alembert - Bureau A321</floor>
+		<phone>0139255009</phone>
+		<email>jane.bauluck@uvsq.fr </email>
+	</address>
+</content>
+</entry>

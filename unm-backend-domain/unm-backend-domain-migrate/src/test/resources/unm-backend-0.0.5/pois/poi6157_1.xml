@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6157_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6157_1.xml"/>
+<title>As de Coeur</title>
+<updated>2014-08-15T01:47:34.441+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6157"
+	coordinates="48.839106512937,2.5879870355129"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T15:52:52.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="As de Coeur">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Bureau 1B84bis</floor>
+		<url>http://www.univ-mlv.fr/vie-du-campus/vie-associative-et-culturelle/les-associations/as-de-coeur/</url>
+		<phone>01 60 95 79 35</phone>
+		<email>asdecoeur@gmail.com</email>
+	</address>
+</content>
+</entry>

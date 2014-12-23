@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3366_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3366_1.xml"/>
+<title>GEROPSY </title>
+<updated>2014-08-15T01:47:05.860+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3366"
+	coordinates="48.901566417032,2.393361255526"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:35:38.000+02:00"
+	updatedAt="2011-06-14T17:24:36.000+02:00"
+	deletedAt="2011-06-08T10:16:51.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	name="GEROPSY ">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>http://www.geropsy.com</floor>
+	</address>
+</content>
+</entry>

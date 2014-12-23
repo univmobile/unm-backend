@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4742_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4742_1.xml"/>
+<title>IUT de Tremblay-en-France</title>
+<updated>2014-08-15T01:47:20.066+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4742"
+	coordinates="48.97558167277,2.5603830814362"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T15:02:07.000+02:00"
+	updatedAt="2012-01-31T15:25:54.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1982"
+	name="IUT de Tremblay-en-France">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>- Accès en voiture :
+A104, Sortie Villepinte-Tremblay en France, Au rond-point, suivre Tremblay Vieux Pays, puis prendre la direction IUT
+
+- Accès en transport en commun :
+Ligne B du RER direction Mitry-Claye, Arrêt Vert-Galant, puis T’Bus direction Vieux Pays ou Petit Tremblay ou Bus 619 direction Centre Postal ou Vieux Pays</itinerary>
+		<fullAddress>3, rue de la Râperie 93290 Tremblay-en-France</fullAddress>
+	</address>
+	<child uid="4743" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7268_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7268_1.xml"/>
+<title>Formation continue et développement (FCD)</title>
+<updated>2014-08-15T01:47:45.036+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7268"
+	coordinates="48.788608650781,2.3271046578884"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T14:43:04.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Formation continue et développement (FCD)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Le service formation continue et développement (FCD) a pour mission le développement d'actions de formation continue et d'ingénierie pédagogique en articulation avec la recherche et la formation initiale de l'École. 1000 stagiaires sont admis chaque année en formation continue. Il organise également des colloques et séminaires scientifiques.
+Les dispositifs de formation du service FCD sont des formations professionnelles sur mesure ou conventionnées (par le Conseil régional d'Ile-de-France), des formations inter- et intra- entreprises et la formation des maîtres. </description>
+	<address>
+		<floor>1er étage</floor>
+		<url>http://www.ens-cachan.fr/version-francaise/formation/formation-continue/</url>
+		<phone>01 47 40 75 00</phone>
+		<fax>01 47 40 75 10</fax>
+		<email>fcd@ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

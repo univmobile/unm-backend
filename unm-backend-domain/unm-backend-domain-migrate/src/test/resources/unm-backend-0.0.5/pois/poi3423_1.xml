@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3423_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3423_1.xml"/>
+<title>Direction de l'Insertion Professionnelle</title>
+<updated>2014-08-15T01:47:06.435+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3423"
+	coordinates="48.847001022033,2.355571445077"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:05:29.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2717"
+	name="Direction de l'Insertion Professionnelle">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Dans ses missions, la direction de l'insertion professionnelle s'appuie en interne sur les formations, les enseignants-chercheurs, le CAIO, l'AFIP, le RHSE, la direction de la communication, … </description>
+	<address>
+		<floor>16è étage</floor>
+		<phone>01 44 27 79 42</phone>
+	</address>
+</content>
+</entry>

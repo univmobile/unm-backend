@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3926_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3926_1.xml"/>
+<title>Le centre de médecine préventive</title>
+<updated>2014-08-15T01:47:11.744+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3926"
+	coordinates="48.850818869352,2.3403963446617"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:28:12.000+02:00"
+	updatedAt="2011-05-20T15:06:03.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3923"
+	name="Le centre de médecine préventive">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Service Inter-universitaire de Médecine Préventive et de Promotion de la Santé (SIUMPPS).</description>
+	<address>
+		<phone>01 40 51 10 00</phone>
+		<email>siumpps@upmc.fr</email>
+	</address>
+</content>
+</entry>

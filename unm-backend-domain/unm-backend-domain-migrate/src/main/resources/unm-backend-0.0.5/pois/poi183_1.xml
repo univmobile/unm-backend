@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi183_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi183_1.xml"/>
+<title>Entrée PMR</title>
+<updated>2014-08-15T01:46:38.610+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="183"
+	coordinates="48.827426615058,2.364447712898"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-03T15:34:53.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-07-16T15:32:53.000+02:00"
+	createdBy="raphael"
+	updatedBy="raphael"
+	name="Entrée PMR">
+	<poiType id="14" label="Entrée PMR" categoryId="7" categoryLabel="Relais handicap"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

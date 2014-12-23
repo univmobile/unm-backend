@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1071_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1071_1.xml"/>
+<title>Informatique M1-2</title>
+<updated>2014-08-15T01:46:44.544+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1071"
+	coordinates="48.958274223308,2.340027540922"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-14T12:40:07.000+01:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	parentUid="2457"
+	name="Informatique M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>En master 1, les étudiants recevront une solide formation générale en informatique. Elle leur donnera les bases nécessaires pour aborder les thématiques spécifiques proposées par les deux spécialités. Cette première année permettra d'une part la poursuite des études dans une orientation à finalité professionnelle ou recherche et d'autre part favorisera les échanges (accueil d'étudiants d'autres masters) et la mobilité de nos étudiants (départ vers d'autres masters). </description>
+	<address>
+		<floor>1er étage - Aile D - Bureau D 202.</floor>
+		<openingHours>9h - 12h15</openingHours>
+		<itinerary>En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<url>http://www-galilee.univ-paris13.fr/etu_masters1_informatique.htm</url>
+		<phone>01 49 40 35 55 </phone>
+		<email>info.master.galilee@ univ-paris13.fr </email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE </fullAddress>
+	</address>
+</content>
+</entry>

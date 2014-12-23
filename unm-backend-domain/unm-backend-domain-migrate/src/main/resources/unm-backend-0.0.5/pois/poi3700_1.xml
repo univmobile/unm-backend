@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3700_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3700_1.xml"/>
+<title>Contact PMR Médecine Cordeliers</title>
+<updated>2014-08-15T01:47:09.505+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3700"
+	coordinates="48.850650345523,2.3402803391218"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T15:16:39.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2463"
+	name="Contact PMR Médecine Cordeliers">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<description>Madame BIZAGUET, Scolarité 1er et 2ème cycles
+</description>
+	<address>
+		<phone>01 53 10 46 45</phone>
+	</address>
+</content>
+</entry>

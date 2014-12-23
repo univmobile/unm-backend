@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1479_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1479_1.xml"/>
+<title>BAPU Luxembourg</title>
+<updated>2014-08-15T01:46:47.994+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1479"
+	coordinates="48.840729033575,2.3383494839"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:41:21.000+02:00"
+	updatedAt="2011-05-30T14:39:18.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	parentUid="1162"
+	name="BAPU Luxembourg">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Bureau d'aide psychologique universitaire</description>
+	<address>
+		<openingHours>Lundi-vendredi: 9h-19h</openingHours>
+		<itinerary>RER B Port Royal</itinerary>
+		<phone>0143296572</phone>
+	</address>
+</content>
+</entry>

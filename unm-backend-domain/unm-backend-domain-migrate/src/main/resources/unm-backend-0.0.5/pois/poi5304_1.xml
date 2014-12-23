@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5304_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5304_1.xml"/>
+<title>Résidence de l'Hermitage </title>
+<updated>2014-08-15T01:47:25.006+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5304"
+	coordinates="48.939854272942,2.3542010039091|48.939847225695,2.3543297499418|48.939412056309,2.3542814701796|48.939419103616,2.3541339486837|48.939854272942,2.3542010039091"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-06-01T10:23:39.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	deletedAt="2011-06-01T11:52:52.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Basile Michel"
+	name="Résidence de l'Hermitage ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : ligne 13 Saint-Denis Basilique
+Tramway : Place du Marché
+</itinerary>
+		<fullAddress>Place du 8 mai 1945 - 93200 Saint-Denis</fullAddress>
+	</address>
+</content>
+</entry>

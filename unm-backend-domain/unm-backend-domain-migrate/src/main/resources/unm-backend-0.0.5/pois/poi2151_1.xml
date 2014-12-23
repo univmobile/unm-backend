@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2151_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2151_1.xml"/>
+<title>BU universitaire</title>
+<updated>2014-08-15T01:46:54.686+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2151"
+	coordinates="48.825592675408,2.199132442"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:18:01.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2433"
+	name="BU universitaire">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bâtiment A, 2ème étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 18h</openingHours>
+		<phone>01 40 97 58 09</phone>
+		<email>bibliotheque_va@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

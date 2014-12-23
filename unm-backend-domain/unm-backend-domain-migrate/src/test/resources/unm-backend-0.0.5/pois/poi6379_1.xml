@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6379_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6379_1.xml"/>
+<title>Sociologie (M2 Genre et développement)</title>
+<updated>2014-08-15T01:47:36.616+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6379"
+	coordinates="48.825600165493,2.3664590343833"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T15:54:08.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1772"
+	name="Sociologie (M2 Genre et développement)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master Sociologie et anthropologie : politique, culture et migrations
+Spécialité Recherche : Genre et développement</description>
+	<address>
+		<floor>Les Olympiades Immeuble Montréal - 1er étage, bureau 115</floor>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=SPECIALITE?NS=922</url>
+		<phone>01 57 27 66 82 </phone>
+		<email>cedref@univ‐paris‐diderot.fr</email>
+	</address>
+</content>
+</entry>

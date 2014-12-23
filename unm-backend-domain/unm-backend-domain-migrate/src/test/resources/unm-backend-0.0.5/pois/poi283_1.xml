@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi283_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi283_1.xml"/>
+<title>SMEREP</title>
+<updated>2014-08-15T01:46:38.964+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="283"
+	coordinates="48.827212955639,2.364856749773|48.827256217331,2.3650458455086|48.827067395958,2.3651513456753|48.827002061714,2.3648723959377|48.827074459114,2.3648321628025|48.82704344008,2.3646998405457|48.827132612399,2.3646475374699|48.827137909759,2.364668995142|48.827153801837,2.3646622896194|48.827134495903,2.364569306319|48.82706904403,2.3646019399166|48.826998412414,2.364309579134|48.82719100105,2.364199161475|48.827264163351,2.364489287138|48.827230613477,2.3645107448101|48.827240443002,2.3645505308559|48.827418786779,2.3644512891224|48.827491183577,2.364738285487|48.827301244766,2.3648500442505|48.827289767188,2.3648151755333|48.827212955639,2."
+	active="true"
+	markerType="polygon"
+	createdAt="2010-07-16T15:35:03.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T16:14:05.000+01:00"
+	createdBy="raphael"
+	updatedBy="cfontaine"
+	name="SMEREP">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address
+		countryCode="FR">
+		<floor>Aile C, 9e étage, 9.05</floor>
+		<openingHours>Mardis
+14h-17h
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+
+Bus 62, 64, 83
+Arrêt Tolbiac-Baudricourt
+</itinerary>
+		<phone>01 56 54 36 34</phone>
+		<email>http://www.smerep.fr</email>
+		<fullAddress>90 rue de Tolbiac
+75013 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

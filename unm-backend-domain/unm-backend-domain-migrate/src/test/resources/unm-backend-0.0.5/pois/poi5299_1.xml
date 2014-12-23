@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5299_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5299_1.xml"/>
+<title>Bibliothèque du SCUIO</title>
+<updated>2014-08-15T01:47:24.967+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5299"
+	coordinates="48.78789825386,2.4442648887634"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T10:09:28.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4334"
+	name="Bibliothèque du SCUIO">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bâtiment I3, niveau dalle</floor>
+		<openingHours>Lundi au jeudi : 9h30 à 17h
+</openingHours>
+		<url>http://bibliotheque.u-pec.fr/bibliotheques/autres-bibliotheques-de-l-upec/scuio-baip/</url>
+		<phone>01 45 17 12 17</phone>
+		<email>scuio@u-pec.fr</email>
+	</address>
+</content>
+</entry>

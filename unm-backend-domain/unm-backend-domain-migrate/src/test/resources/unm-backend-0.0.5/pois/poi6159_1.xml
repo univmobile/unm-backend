@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6159_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6159_1.xml"/>
+<title>BDE UPEMLV</title>
+<updated>2014-08-15T01:47:34.472+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6159"
+	coordinates="48.839141820223,2.5863616168499"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:00:16.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="BDE UPEMLV">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le Bureau Des Etudiants de l'Université Paris-Est Marne-la-Vallée</description>
+	<address>
+		<floor>0S150</floor>
+		<url>http://www.univ-mlv.fr/vie-du-campus/vie-associative-et-culturelle/les-associations/bde-upemlv/</url>
+		<phone>01 60 95 73 91</phone>
+		<email>bdeupemlv@gmail.com</email>
+	</address>
+</content>
+</entry>

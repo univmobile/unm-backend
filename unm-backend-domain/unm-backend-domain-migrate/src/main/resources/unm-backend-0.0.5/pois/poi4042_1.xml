@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4042_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4042_1.xml"/>
+<title>UMR_S 678</title>
+<updated>2014-08-15T01:47:12.998+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4042"
+	coordinates="48.837685462273,2.3608555644751"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:48:33.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3686"
+	name="UMR_S 678">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le Laboratoire d'Imagerie Fonctionnelle (LIF) a pour objectifs de proposer, à partir d’applications ciblées, une approche multimodalité permettant d’extraire du contenu des images médicales, des biomarqueurs pertinents et validés.</description>
+	<address>
+		<url>http://www.imed.jussieu.fr/</url>
+		<phone>01 53 84 84 00</phone>
+		<email>secretariat@imed.jussieu.fr</email>
+	</address>
+</content>
+</entry>

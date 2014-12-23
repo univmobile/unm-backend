@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3585_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3585_1.xml"/>
+<title>IPAG</title>
+<updated>2014-08-15T01:47:08.322+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3585"
+	coordinates="48.90376805899,2.2106592357159"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:35:15.000+02:00"
+	updatedAt="2011-11-15T12:32:55.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2516"
+	name="IPAG">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Institut de préparation à l'administration générale</description>
+	<address>
+		<floor>Bureau 413, 4ème étage</floor>
+		<openingHours>Du lundi au jeudi :
+8h30 / 12h - 13h30 / 16h30
+Vendredi :
+8h30 / 12h
+
+
+
+
+</openingHours>
+		<url>http://www.ipag-nanterre-ladefense.fr/</url>
+		<phone>01 40 97 74 13</phone>
+		<email>ipag@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

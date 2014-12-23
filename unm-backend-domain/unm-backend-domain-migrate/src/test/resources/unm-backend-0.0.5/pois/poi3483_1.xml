@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3483_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3483_1.xml"/>
+<title>Physique et Applications - M1-2</title>
+<updated>2014-08-15T01:47:07.158+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3483"
+	coordinates="48.846387466784,2.3585039377213"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:24:49.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2767"
+	name="Physique et Applications - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Il offre aussi des ouvertures multiples vers les disciplines voisines où une formation en physique est appréciée : sciences de l'ingénieur, sciences de l'environnement et de la Terre, sciences de l'Univers, sciences du vivant ...</description>
+	<address>
+		<floor>2è étage bureau 233</floor>
+		<openingHours>Lundi au Vendredi : 9h00-11h30/13h30-17h00</openingHours>
+		<url>http://www.master.physique@upmc.fr</url>
+		<phone>01 44 27 62 03</phone>
+		<email>master.phys@upmc.fr</email>
+	</address>
+</content>
+</entry>

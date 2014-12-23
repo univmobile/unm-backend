@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5419_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5419_1.xml"/>
+<title>Restaurant et Cafétéria Universitaire Le Sablier</title>
+<updated>2014-08-15T01:47:26.003+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5419"
+	coordinates="48.624169783822,2.4269679933786"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T11:31:27.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5417"
+	name="Restaurant et Cafétéria Universitaire Le Sablier">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Restaurant
+de 11h30 à 14h
+
+Cafétéria des Sciences
+de 8h à 15h30</openingHours>
+		<phone>01 60 77 58 90</phone>
+	</address>
+	<attachment id="156" title="Sablier.jpg" type="image" url="/uploads/poi/8fc43dd14fa082868e841c045f1724935e5aa00c.jpg"/>
+</content>
+</entry>
