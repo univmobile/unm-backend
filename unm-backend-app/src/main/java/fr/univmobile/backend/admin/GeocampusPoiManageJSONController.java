@@ -13,6 +13,7 @@ import fr.univmobile.backend.domain.ImageMapRepository;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.domain.UniversityRepository;
+import fr.univmobile.backend.domain.User;
 import fr.univmobile.backend.json.AbstractJSONController;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
@@ -94,7 +95,12 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 			poi.setParent(parentPoi);
 			poi.setUniversity(parentPoi.getUniversity());
 		} else {
-			poi.setUniversity(universityRepository.findOne(Long.parseLong(data.university())));
+			User currentUser = getSessionAttribute(DELEGATION_USER, User.class);
+			if (currentUser.isSuperAdmin() && data.university() != null) {
+				poi.setUniversity(universityRepository.findOne(Long.parseLong(data.university())));
+			} else {
+				poi.setUniversity(currentUser.getUniversity());
+			}
 		}
 		
 		poi.setFloor(coalesce(data.floor()));
