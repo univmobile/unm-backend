@@ -19,15 +19,15 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 @Entity
 @Table(name = "poi")
 public class Poi extends AuditableEntityWithLegacy {
-	
+
 	@Id
 	@GeneratedValue
 	private Long id;
-	@Column(unique = true, nullable = false)
+	@Column(nullable = false)
 	private String name;
 	private String description;
-	private Double lat; 
-	private Double lng; 
+	private Double lat;
+	private Double lng;
 	@Column(name = "markertype")
 	private String markerType;
 	@Column(nullable = false)
@@ -53,7 +53,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	private String attachmentTitle;
 	@Column(name = "attachmenturl")
 	private String attachmentUrl;
-	
+
 	@JsonIgnore
 	private String legacy;
 	@ManyToOne
@@ -62,13 +62,13 @@ public class Poi extends AuditableEntityWithLegacy {
 	private Poi parent;
 	@OneToMany(mappedBy = "parent")
 	@JsonIgnore
-    private Collection<Poi> children;
+	private Collection<Poi> children;
 	@ManyToOne
-	@JoinColumn(nullable = false)	
+	@JoinColumn(nullable = false)
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	@JsonIdentityReference(alwaysAsId = true)
 	private Category category;
-	
+
 	@ManyToOne
 	@JoinColumn(nullable = false)
 	private University university;
@@ -287,7 +287,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	
+
 	public University getUniversity() {
 		return university;
 	}
@@ -303,4 +303,28 @@ public class Poi extends AuditableEntityWithLegacy {
 	public void setImageMap(ImageMap imageMap) {
 		this.imageMap = imageMap;
 	}
+
+	// NEAREST POI
+
+	public boolean nearestPoi(Double lat, Double lng, Double metersAway) {
+		return (getDistance(lat, lng) * 1000 <= metersAway);
+	}
+
+	public double getDistance(Double lat, Double lng) {
+		double r = 6371; // Radius of the earth in km
+		double dLat = deg2rad(this.lat - lat);
+		double dLon = deg2rad(this.lng - lng);
+		double a = (double) (Math.sin(dLat / 2) * Math.sin(dLat / 2) //
+		+ Math.cos(deg2rad(this.lat)) //
+				* Math.cos(deg2rad(lat)) //
+				* Math.sin(dLon / 2) * Math.sin(dLon / 2));
+		double c = (double) (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+		double d = r * c; // Distance in km
+		return d;
+	}
+
+	private static double deg2rad(double deg) {
+		return (double) (deg * (Math.PI / 180));
+	}
+
 }

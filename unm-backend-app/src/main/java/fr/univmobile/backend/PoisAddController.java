@@ -140,13 +140,6 @@ public class PoisAddController extends AbstractBackendController {
 		else
 			poi.setActive(false);
 
-		if (!isBlank(form.name())) {
-			if (poiRepository.findByName(form.name()).size() > 0) {
-				hasErrors = true;
-				setAttribute("err_duplicateName", true);
-			}
-		}
-
 		if (hasErrors) {
 
 			setAttribute("poiadd", poi);

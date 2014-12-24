@@ -13,7 +13,9 @@ http://www.springframework.org/schema/mvc/spring-mvc.xsd">
  <mvc:annotation-driven />
  
  <context:component-scan base-package="fr.univmobile.backend.api" />
- 
+
+ <context:property-placeholder local-override="true" ignore-unresolvable="true" ignore-resource-not-found="true"/>
+
  <!-- 
  <bean
  class="org.springframework.web.servlet.view.InternalResourceViewResolver">

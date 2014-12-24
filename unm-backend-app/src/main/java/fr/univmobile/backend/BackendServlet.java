@@ -91,7 +91,6 @@ import fr.univmobile.backend.json.CommentsJSONController;
 import fr.univmobile.backend.json.CommentsPostJSONController;
 import fr.univmobile.backend.json.EndpointsJSONController;
 import fr.univmobile.backend.json.JsonHtmler;
-import fr.univmobile.backend.json.NearestPoisJSONController;
 import fr.univmobile.backend.json.PoisJSONController;
 import fr.univmobile.backend.json.RegionsJSONController;
 import fr.univmobile.backend.json.SessionJSONController;
@@ -151,7 +150,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		this.universityRepository = (UniversityRepository) ctx
 				.getBean("universityRepository");
 		this.userRepository = (UserRepository) ctx.getBean("userRepository");
-
+		
 		if (log.isInfoEnabled()) {
 			log.info(this + ": init()...");
 		}
@@ -389,8 +388,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						imageMapRepository, //
 						categoryRepository, //
 						universityRepository),
-				new NearestPoisJSONController(poiJSONClient, //
-						nearestPoisMaxMetersAway),
+				// new NearestPoisJSONController(poiRepository, nearestPoisMaxMetersAway), //
 				new CommentsPostJSONController(commentRepository, poiRepository),
 				new GeocampusJSONController(regionJSONClient, //
 						poiCategoryJSONClient, //
