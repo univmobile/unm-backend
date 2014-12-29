@@ -1,22 +1,28 @@
 package fr.univmobile.backend.api;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
-import fr.univmobile.backend.core.PoiCategory;
 import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.domain.CategoryRepository;
 import fr.univmobile.backend.domain.ImageMap;
@@ -29,11 +35,27 @@ import fr.univmobile.backend.domain.University;
 import fr.univmobile.backend.domain.UniversityRepository;
 import fr.univmobile.backend.domain.User;
 import fr.univmobile.backend.domain.UserRepository;
+import fr.univmobile.backend.helpers.QrCode;
 
 @Controller
 @RequestMapping("/admin/geocampus")
 public class GeocampusController {
 
+	private static final Log log = LogFactory.getLog(GeocampusController.class);
+	
+	@Value("${baseURL}")
+	private String baseUrl;
+	@Value("${qrCodesBaseUrl}")
+	private String qrCodesBaseUrl;
+	@Value("${imageMapsBaseUrl}")
+	private String imageMapsBaseUrl;
+	@Value("${imageMapsBaseDir}")
+	private String imageMapsBaseDir;
+	@Value("${qrBaseDir}")
+	private String qrBaseDir;
+	@Value("${qrCodeLinkPattern}")
+	private String qrCodeLinkPattern;
+	
 	@Autowired
 	RegionRepository regionRepository;
 	@Autowired
@@ -46,18 +68,19 @@ public class GeocampusController {
 	UserRepository userRepository;
 	@Autowired
 	PoiRepository poiRepository;
-	
+
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
 	public GeocampusData get(HttpServletRequest request, HttpServletResponse response) throws IOException {
 		User currentUser = getCurrentUser(request);
-		GeocampusData data = new GeocampusData();
-
+		
 		if (currentUser == null || currentUser.isStudent()) {
 			response.sendError(HttpServletResponse.SC_FORBIDDEN);
 			return null;
 		}
 
+		GeocampusData data = new GeocampusData();
+		
 		if (currentUser.isSuperAdmin()) {
 			data.setRegions(regionRepository.findAllByOrderByNameAsc());
 		} else {
@@ -70,6 +93,7 @@ public class GeocampusController {
 
 		data.setPlansCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getPlansLegacy()));
 		data.setBonPlansCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getBonPlansLegacy()));
+		data.setImagesCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getImageMapsLegacy()));
 		data.setImageMaps(imageMapRepository.findAll());
 
 		return data;
@@ -77,18 +101,36 @@ public class GeocampusController {
 
 	@RequestMapping(value = "/filter", method = RequestMethod.GET)
 	@ResponseBody
-	public List<Poi> getFilteredPois(@RequestParam("type") String poiType, @RequestParam("reg") Long regionId, HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public List<Poi> getFilteredPois(
+			@RequestParam("type") String poiType, 
+			@RequestParam(value = "reg", required = false) Long regionId, 
+			@RequestParam(value = "cat", required = false) Long categoryId, 
+			@RequestParam(value = "im", required = false) Long imageMapId, 
+			HttpServletRequest request, HttpServletResponse response) throws IOException {
 		User currentUser = getCurrentUser(request);
-
+		
 		if (currentUser == null || currentUser.isStudent()) {
 			response.sendError(HttpServletResponse.SC_FORBIDDEN);
 			return null;
 		}
 
+		if (poiType.equals("images")) {
+			if (imageMapId == null) {
+				response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+				return null;
+			}
+			ImageMap im = imageMapRepository.findOne(imageMapId);
+			if (im == null) {
+				response.sendError(HttpServletResponse.SC_NOT_FOUND);
+				return null;
+			}
+			return im.getPois();
+		}
+		
 		String rootCategoryLegacy;
 		if (poiType.equals("bonplans")) {
 			rootCategoryLegacy = Category.getBonPlansLegacy();
-		} else if (poiType.equals("bonplans")) {
+		} else if (poiType.equals("images")) {
 			rootCategoryLegacy = Category.getImageMapsLegacy();
 		} else {
 			rootCategoryLegacy = Category.getPlansLegacy();
@@ -105,10 +147,104 @@ public class GeocampusController {
 		}
 	}
 
+	@RequestMapping(value = "/qr/create", method = RequestMethod.POST)
+	@ResponseBody
+	public Poi createQrCode(@RequestParam("poiId") long poiId, @RequestParam("imId") Long imageMapId, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		User currentUser = getCurrentUser(request);
+		
+		if (currentUser == null || currentUser.isStudent()) {
+			response.sendError(HttpServletResponse.SC_FORBIDDEN);
+			return null;
+		}
+
+		Poi poi = poiRepository.findOne(poiId);
+		if (poi == null) {
+			response.sendError(HttpServletResponse.SC_NOT_FOUND);
+			return null;
+		} else if (currentUser.isAdmin() && poi.getUniversity().getId() != currentUser.getUniversity().getId()) {
+			response.sendError(HttpServletResponse.SC_FORBIDDEN);
+			return null;
+		} else if (poi.getImageMap() == null || poi.getImageMap().getId() != imageMapId) {
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return null;
+		}
+		
+		String qrCode = QrCode.getQrFileName(poiId, imageMapId);
+		QrCode.createQrCode(QrCode.composeQrURL(qrCodeLinkPattern, ImageMapController.buildImageMapWithSelectedPoiUrl(request.getServletPath(), imageMapId, poiId)), QrCode.getQrFilePath(poiId, imageMapId, qrBaseDir));
+		
+		poi.setQrCode(qrCode);
+		poiRepository.save(poi);
+		
+		return poi;
+	}
+	
+	@RequestMapping(value = "/imagemap", method = RequestMethod.POST)
+	@ResponseBody
+	private ImageMap manageImageMap(@RequestParam(value = "id", required = false) Long id, @RequestParam("name") String name, @RequestParam("file") MultipartFile file, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		User currentUser = getCurrentUser(request);
+		
+		if (currentUser == null || currentUser.isStudent()) {
+			response.sendError(HttpServletResponse.SC_FORBIDDEN);
+			return null;
+		}
+		
+        try {
+        	ImageMap im;
+        	if (id != null) {
+        		im = imageMapRepository.findOne(id);
+        		if (im == null) {
+                	response.sendError(HttpServletResponse.SC_NOT_FOUND);
+                	return null;
+        		}
+        	} else {
+        		im = new ImageMap();
+        	}
+
+        	String imageMapFileName = handleFileUpload(file);
+        	if (imageMapFileName == null) {
+            	log.error(String.format("Upload failed for %s", name));
+            	response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            	return null;
+        	}
+    		im.setActive(true);
+    		im.setName(name);
+    		im.setUrl(imageMapFileName);
+    		imageMapRepository.save(im);
+            return im;
+        } catch (Exception e) {
+        	log.error(String.format("There was an error creating a new imageMap: %s", name));
+        	log.error(e);
+        	response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        	return null;
+        }
+	}
+
+	private String handleFileUpload(MultipartFile file) {
+		if (!file.isEmpty()) {
+            try {
+            	String imageMapFileName = String.format("imagemap_%s", file.getOriginalFilename());
+            	String imageMapFilePath = Paths.get(imageMapsBaseDir, imageMapFileName).toString();
+                byte[] bytes = file.getBytes();
+                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(imageMapFilePath)));
+                stream.write(bytes);
+                stream.close();
+                return imageMapFileName;
+            } catch (Exception e) {
+            	log.error(String.format("There was an error while uploading file"));
+            	log.error(e);
+            	return null;
+            }
+        } else {
+            log.warn(String.format("Image map uploading failed for because file is empty"));
+        	return null;
+        }
+	}
+	
 	public class GeocampusData {
 		private	Iterable<Region> regions;
 		private	List<Category> plansCategories;
 		private	List<Category> bonPlansCategories;
+		private	List<Category> imagesCategories;
 		private	Iterable<ImageMap> imageMaps;
 
 		public Iterable<Region> getRegions() {
@@ -133,6 +269,14 @@ public class GeocampusController {
 
 		public void setBonPlansCategories(List<Category> bonPlansCategories) {
 			this.bonPlansCategories = bonPlansCategories;
+		}
+
+		public List<Category> getImagesCategories() {
+			return imagesCategories;
+		}
+
+		public void setImagesCategories(List<Category> imagesCategories) {
+			this.imagesCategories = imagesCategories;
 		}
 
 		public Iterable<ImageMap> getImageMaps() {

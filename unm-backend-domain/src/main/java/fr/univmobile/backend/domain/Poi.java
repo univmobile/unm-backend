@@ -5,23 +5,32 @@ import java.util.Collection;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
 @Table(name = "poi")
 public class Poi extends AuditableEntityWithLegacy {
-	
+
+	@TableGenerator(
+			name = "poi_generator", 
+			table = "jpa_sequence", 
+			pkColumnName = "seq_name", 
+			valueColumnName = "value", 
+			allocationSize = 1)
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "poi_generator")
 	private Long id;
 	@Column(unique = true, nullable = false)
 	private String name;
@@ -79,6 +88,9 @@ public class Poi extends AuditableEntityWithLegacy {
 	@JsonIdentityReference(alwaysAsId = true)
 	private ImageMap imageMap;
 
+	@Column(name = "qrcode")
+	private String qrCode;
+	
 	@Override
 	public String toString() {
 		return String.format("Poi[id=%d, name='%s']", id, name);
@@ -302,5 +314,13 @@ public class Poi extends AuditableEntityWithLegacy {
 
 	public void setImageMap(ImageMap imageMap) {
 		this.imageMap = imageMap;
+	}
+
+	public String getQrCode() {
+		return qrCode;
+	}
+
+	public void setQrCode(String qrCode) {
+		this.qrCode = qrCode;
 	}
 }

@@ -103,8 +103,7 @@
                 
               <li role="presentation" data-bind="css: { active: activeTab() == 'pois' }"><a href="#" data-bind="click: function(data, event) { switchTab('pois') }">POIs</a></li>
               <li role="presentation" data-bind="css: { active: activeTab() == 'bonplans' }"><a href="#" data-bind="click: function(data, event) { switchTab('bonplans') }">Bon Plans</a></li>
-            <!--
-              <li role="presentation" data-bind="css: { active: activeTab() == 'images' }"><a href="#" data-bind="click: function(data, event) { switchTab('images') }">Images</a></li>-->
+              <li role="presentation" data-bind="css: { active: activeTab() == 'images' }"><a href="#" data-bind="click: function(data, event) { switchTab('images') }">Images</a></li>
             </ul>
             <p></p>
             <div class="panel panel-default">
@@ -113,7 +112,7 @@
                         <div class="btn-group  btn-group-xs pull-right" role="group">
                           <button type="button" class="btn btn-default" data-bind="click: createRootPoi"><span class="glyphicon glyphicon-plus" aria-label="Add root"></span></button>
                           <button type="button" class="btn btn-default" data-bind="enable: activePoi().id(), click: createPoi"><span class="glyphicon glyphicon-plus-sign" aria-label="Add child"></span></button>
-                          <button type="button" class="btn btn-default" data-bind="click: editPoi"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: activePoi().id(), click: editPoi"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
                         </div>
                     </div>
                 </div>
@@ -165,7 +164,7 @@
 
       <div id="imgView" class="col-sm-8 col-sm-offset-2 col-md-9 col-md-offset-3 main" data-bind="visible: activeTab() == 'images'">
             <div class="btn-group pull-right">
-              <button type="button" class="btn btn-default" data-bind="click: openImageMapModal"><span class="glyphicon glyphicon-plus"></span></button>
+              <button type="button" class="btn btn-default" data-bind="click: createImageMap"><span class="glyphicon glyphicon-plus"></span></button>
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 Images <span class="caret"></span>
               </button>
@@ -197,6 +196,7 @@
                 <li role="presentation" data-bind="css: { active: activePoiTab() == 'details' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('details') }">D&eacute;tails</a></li>
                   <!--
                 <li role="presentation" data-bind="css: { active: activePoiTab() == 'comments' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('comments') }">Commentaires</a></li>-->
+                <li role="presentation" data-bind="visible: activeTab() == 'images', css: { active: activePoiTab() == 'qr' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('qr') }">QR</a></li>
               </ul>
               <p></p>
               
@@ -300,6 +300,14 @@
                 </form>
             </div>
                 
+            <div data-bind="with: activePoi(), visible: activePoiTab() == 'qr'">
+                <br/>
+                <img class="center-block img-thumbnail" data-bind="visible: qrCode, attr: { src: qrCode }" />
+                <br data-bind="visible: qrCode" />
+                <a class="center-block btn btn-default" data-bind="visible: qrCode, attr: { href: qrCode }" target="_blank">Pour imprimer</a>
+                <button class="center-block btn btn-primary" data-bind="visible: !qrCode(), click: generateQrCode">Cr&eacute;er QR</button>
+            </div>
+                
             </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-bind="click: cancelPoi">Annuler</button>
@@ -318,24 +326,28 @@
           </div>
           <div class="modal-body">
 
-            <form class="form-horizontal" role="form">
+            <form id="imageupload" class="form-horizontal" role="form" action="${baseURL}/api/admin/geocampus/imagemap" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="id" data-bind="value: activeImage().id">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required">
+                  <input type="text" class="form-control" name="name" data-bind="value: activeImage().name" placeholder="" required="required">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Emplacement</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Imagen</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="">
+                  <input type="file" name="file">
                 </div>
               </div>
             </form>
-
+			<div id="progress">
+			    <div class="bar" style="width: 0%;"></div>
+			</div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-default" data-bind="click: cancelImageMap">Annuler</button>
+            <button id="uploadSubmit" type="button" class="btn btn-primary">Enregistrer</button>
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -352,9 +364,3 @@
     -->
   </body>
 </html>
-
-<!-- 
-1. Validaciones form de detalles
-2. Comentarios por AJAX
-3.
--->

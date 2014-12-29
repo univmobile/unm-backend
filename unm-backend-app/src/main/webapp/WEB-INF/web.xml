@@ -4,13 +4,44 @@
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
 
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/application-context.xml</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>baseURL</param-name>
+		<param-value>http://localhost:8080/unm-backend/</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>qrCodesBaseUrl</param-name>
+		<param-value>http://localhost:8080/unm-backend/qrcodes</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>imageMapsBaseUrl</param-name>
+		<param-value>http://localhost:8080/unm-backend/imagemaps</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>imageMapsBaseDir</param-name>
+		<param-value>/tmp/unm-backend/dataDir/imagemaps</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>qrBaseDir</param-name>
+		<param-value>/tmp/unm-backend/dataDir/qrcodes</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>qrCodeLinkPattern</param-name>
+		<param-value>univmobile://show_image_map:%LINK%</param-value>
+	</context-param>
+ 
 	<servlet>
 		<servlet-name>BackendServlet</servlet-name>
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
-		<init-param>
-			<param-name>baseURL</param-name>
-			<param-value>http://localhost:8080/unm-backend/</param-value>
-		</init-param>
 		<init-param>
 			<param-name>optional-jsonBaseURLs</param-name>
 			<param-value>
@@ -48,52 +79,32 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>BackendServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	    <init-param>
+			<param-name>contextConfigLocation</param-name>
+	        <param-value>WEB-INF/dispatcher-servlet.xml</param-value>
+	    </init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
  
- <servlet>
- <servlet-name>dispatcher</servlet-name>
- <servlet-class>
- org.springframework.web.servlet.DispatcherServlet
- </servlet-class>
-    <init-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>WEB-INF/dispatcher-servlet.xml</param-value>
-    </init-param>
- <load-on-startup>1</load-on-startup>
- </servlet>
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
  
- <servlet-mapping>
- <servlet-name>dispatcher</servlet-name>
- <url-pattern>/api/*</url-pattern>
- </servlet-mapping>
- 
- <context-param>
- <param-name>contextConfigLocation</param-name>
- <param-value>/WEB-INF/application-context.xml</param-value>
- </context-param>
- 
- <listener>
- <listener-class>
- org.springframework.web.context.ContextLoaderListener
- </listener-class>
- </listener>	
-<!-- 
-	  <servlet>
-	    <servlet-name>SpringServlet</servlet-name>
-	    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-	    <load-on-startup>1</load-on-startup>
-	  </servlet>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>	
 
-	  <servlet-mapping>
-	    <servlet-name>SpringServlet</servlet-name>
-	    <url-pattern>/api/*</url-pattern>
-	  </servlet-mapping>		
-	 -->
-		<!-- Use NoShibbolethFilter only when Shibboleth is not available (-it.) -->
+	<!-- Use NoShibbolethFilter only when Shibboleth is not available (-it.) -->
 	<!-- It will crash on a production environment, with Shibboleth/HTTPS. -->
 	<filter>
 		<filter-name>NoShibbolethFilter</filter-name>

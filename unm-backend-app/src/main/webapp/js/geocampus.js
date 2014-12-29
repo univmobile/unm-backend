@@ -3,6 +3,49 @@ var Univ = function(id, name) {
     this.name = name;
 };
 
+var ImageMap = function(data) {
+    this.id = ko.observable();
+    this.name = ko.observable();
+    this.url = ko.observable();
+    this.description = ko.observable();
+    this.active = ko.observable();
+    this.pois = ko.observableArray([]);
+
+    this.cache = function() {};
+    
+    this.update(data);
+};
+
+ko.utils.extend(ImageMap.prototype, {
+    isNew: function() {
+        return !(this.cache && this.cache.latestData && this.cache.latestData.id);
+    },
+    update: function (data) {
+        this.id(data ? data.id : '');
+        this.name(data ? data.name : '');
+        this.url(data ? data.url : '');
+        this.description(data ? data.description : null);
+        this.active(data ? data.active : true);
+        
+        this.cache.latestData = data;
+    },
+    revert: function() {
+        this.update(this.cache.latestData);
+    },
+    commit: function() {
+        this.cache.latestData = this.serialize();
+    },
+    serialize: function() {
+        var serialized = ko.toJS(this);
+        delete serialized['cache'];
+        delete serialized['commit'];
+        delete serialized['revert'];
+        delete serialized['update']        
+        delete serialized['isNew']        
+        return serialized;
+    }
+});
+
 var Poi = function(data) {
     this.id = ko.observable();
     this.name = ko.observable();
@@ -18,6 +61,8 @@ var Poi = function(data) {
     this.url = ko.observable();
     this.lat = ko.observable();
     this.lng = ko.observable();
+    this.imageMap = ko.observable();
+    this.qrCode = ko.observable();
     
     this.marker = null;
     
@@ -45,6 +90,8 @@ ko.utils.extend(Poi.prototype, {
         this.url(data ? data.url : '');
         this.lat(data ? data.lat : null);
         this.lng(data ? data.lng : null);
+        this.imageMap(data ? data.imageMap : null);
+        this.qrCode(data ? data.qrCode : null);
         
         this.cache.latestData = data;
     },
@@ -72,12 +119,12 @@ ko.utils.extend(Poi.prototype, {
         this.marker = tmpMarkerHolder;
         return serialized;
     },
-    createMarker: function(type) {
+    createMarker: function() {
         if (this.lat() && this.lng()) {
             this.clearMarker();
             this.marker = new google.maps.Marker({
                 position: new google.maps.LatLng(this.lat(), this.lng()),
-                map: type == 'image' ? imageMmap : gmap,
+                map: this.imageMap() ? imageMmap : gmap,
                 title: this.name(),
                 visible: true,
                 draggable: true,
@@ -141,53 +188,37 @@ var DataSource = function(baseUrl) {
     };
     this.getPois = function (type, filters) {
         var pois = [];
+        var self = this;
+        var params;
+
+        var regionId = filters.region && filters.region.id ? filters.region.id : 'all';
+        var categoryId = filters.category && filters.category.id ? filters.category.id : 0;
+        var imageMapId = filters.imageMap && filters.imageMap.id ? filters.imageMap.id : 0;
+
         if (type == 'images') {
-            var imagePois = filters && filters.imageMap && filters.imageMap.pois ? filters.imageMap.pois : [];
-            for (var i in imagePois) {
-                pois.push(new Poi(imagePois[i]));
-            }
+            params = { type: type, im: imageMapId };
         } else {
-            var self = this;
-            var regionId = filters.region && filters.region.id ? filters.region.id : 'all';
-            var categoryId = filters.category && filters.category.id ? filters.category.id : 0;
-            if (regionId != 'all' || categoryId != 0) {
-                var serviceUrl = this.getFullPath('api/admin/geocampus/filter');
-                $.getJSON( serviceUrl, { type: type, reg: regionId, cat: categoryId } )
-                    .done(function( json ) {
-                        var localPois = [];
-                        if (json && json.length > 0) {
-                            for (var i in json) {
-                                var sanitizePoi = json[i];
-                                /*
-                                var coords = jsonPois[i].coordinates && jsonPois[i].coordinates.length > 0 ? jsonPois[i].coordinates.split(',') : null;
-                                sanitizePoi.lat = coords ? coords[0] : null;
-                                sanitizePoi.lng = coords ? coords[1] : null;
-                                */
-                                localPois.push(new Poi(sanitizePoi));
-                            }
+            params = { type: type, reg: regionId, cat: categoryId };
+        }
+            
+        if (regionId != 'all' || categoryId != 0 || imageMapId != 0) {
+            var serviceUrl = this.getFullPath('api/admin/geocampus/filter');
+            $.getJSON( serviceUrl, params )
+                .done(function( json ) {
+                    var localPois = [];
+                    if (json && json.length > 0) {
+                        for (var i in json) {
+                            var sanitizePoi = json[i];
+                            localPois.push(new Poi(sanitizePoi));
                         }
-                        /*
-                        if (json.groups && json.groups.length > 0) {
-                            for (var gr = 0; gr < json.groups.length; gr++) {
-                                var jsonPois = json.groups[gr].pois ? json.groups[gr].pois : [];
-                                for (var i in jsonPois) {
-                                    var sanitizePoi = jsonPois[i];
-                                    var coords = jsonPois[i].coordinates && jsonPois[i].coordinates.length > 0 ? jsonPois[i].coordinates.split(',') : null;
-                                    sanitizePoi.lat = coords ? coords[0] : null;
-                                    sanitizePoi.lng = coords ? coords[1] : null;
-                                    localPois.push(new Poi(sanitizePoi));
-                                }
-                            }
-                        }
-                        */
-                        myViewModel.pois(localPois); // FIXME: Dependency
-                    })
-                    .fail(function( jqxhr, textStatus, error ) {
-                        var err = textStatus + ", " + error;
-                        console.log( "Request Failed: " + err );
-                        // TODO: Report error
-                });
-            }
+                    }
+                    myViewModel.pois(localPois); // FIXME: Dependency
+                })
+                .fail(function( jqxhr, textStatus, error ) {
+                    var err = textStatus + ", " + error;
+                    console.log( "Request Failed: " + err );
+                    // TODO: Report error
+            });
         }
         return pois;
     };
@@ -198,16 +229,29 @@ var DataSource = function(baseUrl) {
         if (!(this.cache && this.cache.regions)) {
             return [];
         }
-        var categories = (type == 'bonplans') ? 
-        		/*
-            this.adaptCategories(this.cache['bonPlansCategories']) : 
-            this.adaptCategories(this.cache['plansCategories']);*/
-            this.cache['bonPlansCategories'] : 
-           	this.cache['plansCategories'];
+        var categories;
+        switch (type) {
+            case 'images':
+                categories = this.cache['imagesCategories'];
+                break;
+            case 'bonplans':
+                categories = this.cache['bonPlansCategories'];
+                break;
+            case 'pois':
+            default:
+                categories = this.cache['plansCategories'];
+        }
         return categories;
     };
     this.getImages = function () {
-        return this.cache && this.cache['imageMaps'] ? this.cache['imageMaps'] : [];
+        return this.cache && this.cache['imageMaps'] ? this.adaptImageMaps(this.cache['imageMaps']) : [];
+    };
+    this.adaptImageMaps = function(ims) {
+        var adaptedIms = [];
+        for (var im in ims) {
+            adaptedIms.push(new ImageMap(ims[im]));
+        }
+        return adaptedIms;
     };
     this.adaptCategories = function(rootCategory) {
         var adaptedCategories = [];
@@ -237,6 +281,7 @@ var DataSource = function(baseUrl) {
             })
             .fail(function( data ) {
                 alert( "Data error: " + data );
+                console.error(data);
         });
     };
     this.getUniversities = function() {
@@ -248,6 +293,17 @@ var DataSource = function(baseUrl) {
             }
         }
         return univs;
+    };
+    this.createQrCode = function(imageMapId, poi) {
+        $.post( this.getFullPath("api/admin/geocampus/qr/create"), { poiId: poi.id(), imId: imageMapId })
+            .done(function( data ) {
+                poi.update(data);
+                poi.commit();
+            })
+            .fail(function( data ) {
+                alert( "Data error: " + data );
+                console.error(data);
+        });
     };
 };
 
@@ -273,6 +329,7 @@ var MyViewModel = function(ds) {
     self.regions = ko.observableArray(self.ds.getRegions());
     self.categoriesUniversities = ko.observableArray(self.ds.getCategories('universities'));
     self.categoriesBonplans = ko.observableArray(self.ds.getCategories('bonplans'));
+    self.categoriesImages = ko.observableArray(self.ds.getCategories('images'));
     self.images = ko.observableArray(self.ds.getImages());
     self.pois = ko.observableArray([]);
     self.universities = ko.observableArray(self.ds.getUniversities());
@@ -283,6 +340,7 @@ var MyViewModel = function(ds) {
     self.activeRegion = ko.observable({name: ''});
     self.activeCategoryUniversities = ko.observable({name: ''});
     self.activeCategoryBonplans = ko.observable({name: ''});
+    self.activeCategoryImages = ko.observable({name: ''});
     self.activeImage = ko.observable({name: ''});
     self.activePoi = ko.observable();
     
@@ -291,20 +349,10 @@ var MyViewModel = function(ds) {
         self.regions(self.ds.getRegions());
         self.categoriesUniversities(self.ds.getCategories('universities'));
         self.categoriesBonplans(self.ds.getCategories('bonplans'));
+        self.categoriesImages(self.ds.getCategories('images'));
         self.images(self.ds.getImages());
         self.universities(self.ds.getUniversities());
         self.pois([]);
-
-        /*
-        self.activeTab = ko.observable('pois');
-        self.activePoiTab = ko.observable('details');
-        
-        self.activeRegion = ko.observable({name: ''});
-        self.activeCategoryUniversities = ko.observable({name: ''});
-        self.activeCategoryBonplans = ko.observable({name: ''});
-        self.activeImage = ko.observable({name: ''});
-        self.activePoi = ko.observable();
-        */
     }
     
     self.resetActivePoi = function() {
@@ -317,16 +365,35 @@ var MyViewModel = function(ds) {
     self.resetActivePoi();
     
     self.getActiveCategory = function() {
-        return self.activeTab() == 'pois' ? self.activeCategoryUniversities() : self.activeCategoryBonplans();
+        switch (self.activeTab()) {
+            case 'images':
+                return self.activeCategoryImages();
+            case 'bonplans':
+                return self.activeCategoryBonplans();
+            case 'pois':
+            default:
+                return self.activeCategoryUniversities();
+        }       
     }
 
     self.getAvailableCategories = function() {
-        return self.activeTab() == 'pois' ? self.categoriesUniversities() : self.categoriesBonplans();
+        switch (self.activeTab()) {
+            case 'images':
+                return self.categoriesImages();
+            case 'bonplans':
+                return self.categoriesBonplans();
+            case 'pois':
+            default:
+                return self.categoriesUniversities();
+        }       
     }
 
     self.switchTab = function(tab) {
         self.activeTab(tab);
         if (tab == 'images') {
+            if (!imageMmap) {
+                imageMmap = initImagemap(imageCanvasId);
+            }
             self.pois(self.ds.getPois('images', { imageMap: self.activeImage() } ));    
         } else {
             self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));    
@@ -347,6 +414,10 @@ var MyViewModel = function(ds) {
     self.changeRegion = function(region) {
         self.activeRegion(region);    
     };
+
+    self.changeCategoryImages = function(category) {
+        self.activeCategoryImages(category);    
+    };
     
     self.changeCategoryUniversities = function(category) {
         self.activeCategoryUniversities(category);    
@@ -358,7 +429,7 @@ var MyViewModel = function(ds) {
 
     self.changeImage = function(image) {
         self.activeImage(image);
-        var newUrl = image && image.imageUrl && image.imageUrl.length > 0 ? image.imageUrl : null;
+        var newUrl = image && image.url() && image.url().length > 0 ? image.url() : null;
         changeImageMap(newUrl);
     };
 
@@ -375,7 +446,11 @@ var MyViewModel = function(ds) {
     });
 
     self.activeImage.subscribe(function(newValue) {
-        self.pois(self.ds.getPois('images', { imageMap: newValue } ));
+        if (newValue && newValue.id()) {
+            self.pois(self.ds.getPois('images', { imageMap: newValue } ));
+        } else {
+            self.pois([]);
+        }
     });
 
     self.pois.subscribe(function(oldValue) {
@@ -428,6 +503,10 @@ function selectNode(poi, doSelectOnTree) {
     myViewModel.activePoiTab('details');
 }
 
+function generateQrCode() {
+    ds.createQrCode(myViewModel.activeImage().id(), myViewModel.activePoi());
+}
+
 function createRootPoi() {
     return createPoi(false);
 }
@@ -435,7 +514,13 @@ function createRootPoi() {
 function createPoi(asChild) {
     $tree.jstree(true).deselect_all(true);
     var pos = asChild ? myViewModel.activePoi().id() : null;
-    myViewModel.setActivePoi(new Poi({ parent: pos}));
+    var attrs;
+    if (myViewModel.activeTab() == 'images') {
+        attrs = { parent: pos, imageMap: myViewModel.activeImage().id };
+    } else {
+        attrs = { parent: pos };
+    }
+    myViewModel.setActivePoi(new Poi(attrs));
     openPoiModal('create');
 }
         
@@ -461,18 +546,17 @@ function newPoi() {
 }
 
 function updatePoi() {
-    // TODO: DS call and commit on success/close modal, error otherwise
     myViewModel.ds.savePoi();
-    /*
-    myViewModel.activePoi().commit();
-    selectNode(myViewModel.activePoi(), true)
-    closePoiModal();
-    */
 }
 
 function cancelPoi() {
     myViewModel.activePoi().revert();
     closePoiModal();
+}
+
+function cancelImageMap() {
+    myViewModel.activeImage().revert();
+    closeImageMapModal();
 }
 
 function clearMarkers() {
@@ -487,6 +571,17 @@ function openPoiModal(action) {
     $poiModal.modal(options);
 }
 
+function createImageMap() {
+    $tree.jstree(true).deselect_all(true);
+    myViewModel.activeImage(new ImageMap());
+    openImageMapModal('create');
+}
+        
+function editPoi() {
+    openPoiModal('edit');
+}
+
+
 function openImageMapModal(action) {
     var options = { backdrop: 'static' };
     $imageMapModal.modal(options);
@@ -495,7 +590,11 @@ function openImageMapModal(action) {
 function closePoiModal() {
     $poiModal.modal('hide');
 }
-        
+
+function closeImageMapModal() {
+    $imageMapModal.modal('hide');
+}
+
 function buildTree(pois) {
     var treeData =  [];
     for (var i in pois) {
@@ -552,11 +651,11 @@ function handleNewPoiMarker(e) {
 function handleImageNewPoiMarker(e) {
     var poi = myViewModel.activePoi();
     if (poi && poi.id() && !poi.lat()) {
-        // TODO: Save coords on server
         poi.lat(e.latLng.lat());
         poi.lng(e.latLng.lng());
         poi.createMarker('image');
         poi.setActive();
+        updatePoi();
     }
 }
 
@@ -581,18 +680,20 @@ function initImagemap(canvasId) {
         maxZoom: 20,
         minZoom: 15,
         radius: 0,
-        disableDoubleClickZoom: true,
+        /*disableDoubleClickZoom: true,*/
         name: 'Image'
     };
     var customMapType = new google.maps.ImageMapType(customMapTypeOptions);
 
     var myLatlng = new google.maps.LatLng(0, 0);
-    var size = new google.maps.Size(527, 938); //FIXME: imagen
+    var size = new google.maps.Size(1200, 1200); //FIXME: imagen
     var optimalZoom = zoomLevelByDiag(size);
     var mapOptions = {
         center: myLatlng,
         //zoom: 17,
         zoom: optimalZoom,
+        disableDoubleClickZoom: true,
+        
         mapTypeControlOptions: {
             mapTypeIds: ['image']
         }
@@ -604,9 +705,6 @@ function initImagemap(canvasId) {
 
     var center = new google.maps.LatLng(0, 0);
     imageBounds = calcBounds(center, size)
-    
-    //imageOverlay = new google.maps.GroundOverlay('poiimages/image1.png', imageBounds);
-    //imageOverlay.setMap(map);
     
     var lastValidCenter = map.getCenter();
     google.maps.event.addListener(map, 'center_changed', function() {
@@ -622,19 +720,16 @@ function initImagemap(canvasId) {
 }
 
 function changeImageMap(newImage) {
-    if (newImage == null) {
+    if (imageOverlay != null) {
         imageOverlay.setMap(null);
         delete imageOverlay;
         imageOverlay = null;
-        return;  
     } 
-    
-    // Hack
-    if (newImage == 'http://univmobile-dev.univ-paris1.fr/image/plan/imagemap1.png') {
-        newImage = 'poiimages/2.jpg';
-    } else {
-        newImage = 'poiimages/image1.png';
+
+    if (newImage == null) {
+        return;
     }
+
     var url = newImage;
     var img = $("<img />").attr('src', url)
     .load(function() {
@@ -652,7 +747,8 @@ function changeImageMap(newImage) {
                 delete imageOverlay;
                 imageOverlay = null;
             }
-            imageOverlay = new google.maps.GroundOverlay(url, imageBounds);
+            var options = { clickable: false };
+            imageOverlay = new google.maps.GroundOverlay(url, imageBounds, options);
             imageOverlay.setMap(imageMmap);
         }
     });
@@ -686,10 +782,6 @@ function zoomLevelByDiag(size) {
     }
 }
 
-
-
-
-
 // Init code starts
 var gmapsCanvasId = "map_canvas";
 var imageCanvasId = "img_canvas";
@@ -708,7 +800,6 @@ var ds;
 
 $(function () {
     gmap = initGmaps(gmapsCanvasId, gmapsDefaultLat, gmapsDefaultLng);    
-    imageMmap = initImagemap(imageCanvasId);
     $tree = $('#jstree1');
     $poiModal = $('#poiModal');
     $imageMapModal = $('#imageMapModal');
@@ -720,41 +811,40 @@ $(function () {
     myViewModel = new MyViewModel(ds);
     ko.applyBindings(myViewModel);
    
-    /*
-    // Image upload event firing
-    $(document).on('change', '.btn-file :file', function() {
-        var input = $(this),
-            numFiles = input.get(0).files ? input.get(0).files.length : 1,
-            label = input.val().replace(/\\/g, '/').replace(/.*\//, '');
-        input.trigger('fileselect', [numFiles, label]);
-    });
-    // Handler for upload image event
-    $('.btn-file :file').on('fileselect', function(event, numFiles, label) {
-        alert('cargo');
-        console.log(numFiles);
-        console.log(label);
-    });
-    */
-   $('#fileupload').fileupload({
+   $('#imageupload').fileupload({
+       maxNumberOfFiles: 1,
+       autoUpload: false,
         dataType: 'json',
-        done: function (e, data) {
-            console.log('done');
-            //console.log(data.result);
-            /*
-            $.each(data.result.files, function (index, file) {
-                $('<p/>').text(file.name).appendTo(document.body);
+        change: function (e, data) {
+            $.each(data.files, function (index, file) {
+                alert('Selected file: ' + file.name);
             });
-            */
+        },
+        add: function(e, data) {
+            $('#uploadSubmit').unbind('click');
+            data.context = $('#uploadSubmit').click(function() {
+                console.log('sending upload data...');
+                data.submit();
+            });
+        },     
+        done: function (e, data) {
+            $('#uploadSubmit').unbind('click');
+            console.log('done');
+            if (!myViewModel.activeImage().id()) {
+                myViewModel.activeImage().update(data.result);
+                myViewModel.activeImage().commit();
+                myViewModel.ds.cache['imageMaps'].push(myViewModel.activeImage().serialize());
+                myViewModel.reload();
+                closeImageMapModal();
+            }
         },
         progressall: function (e, data) {
             var progress = parseInt(data.loaded / data.total * 100, 10);
-            console.log(progress);
-            /*
+            //console.log(progress);
             $('#progress .bar').css(
                 'width',
                 progress + '%'
             );
-            */
         }
     });    
 });

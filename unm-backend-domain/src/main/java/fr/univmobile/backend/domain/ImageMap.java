@@ -1,14 +1,19 @@
 package fr.univmobile.backend.domain;
 
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "imagemap")
 public class ImageMap extends AuditableEntity {
+	
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -19,6 +24,9 @@ public class ImageMap extends AuditableEntity {
 	private String description;
 	@Column(nullable = false)
 	private boolean active = true;
+
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "imageMap")
+	private List<Poi> pois;
 
 	public Long getId() {
 		return id;
@@ -64,4 +72,9 @@ public class ImageMap extends AuditableEntity {
 	public String toString() {
 		return String.format("ImageMap[id='%s', name='%s']", id, name);
 	}
+
+	public List<Poi> getPois() {
+		return pois;
+	}
+	
 }
