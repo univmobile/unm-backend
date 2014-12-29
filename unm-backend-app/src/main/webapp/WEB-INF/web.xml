@@ -3,6 +3,11 @@
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
+	
+	<context-param>
+		<param-name>nearestMaxDistanceInMeters</param-name>
+		<param-value>6000</param-value>
+	</context-param>
 
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
@@ -60,10 +65,6 @@
 		<init-param>
 			<param-name>twitter.consumerSecret</param-name>
 			<param-value>dd</param-value>
-		</init-param>
-		<init-param>
-			<param-name>pois.nearestMaxDistanceInMeters</param-name>
-			<param-value>6000</param-value>
 		</init-param>
 		<init-param>
 			<param-name>shibboleth.ssoBaseURL</param-name>

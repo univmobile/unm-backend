@@ -8,11 +8,13 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.domain.Region;
 import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.University;
+import fr.univmobile.backend.domain.User;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
@@ -33,7 +35,22 @@ public class PoisController extends AbstractBackendController {
 	@Override
 	public View action() {
 
+		User dUser = getDelegationUser();
+
+		setAttribute("user", dUser);
+
 		// 1. POIS DATA
+
+		List<Poi> allPois;
+
+		if (dUser.isSuperAdmin())
+			allPois = poiRepository
+					.findByParentIsNullAndCategory_LegacyStartingWithOrderByNameAsc(Category
+							.getPlansLegacy());
+		else
+			allPois = poiRepository
+					.findByParentIsNullAndCategory_LegacyStartingWithAndUniversityOrderByNameAsc(
+							Category.getPlansLegacy(), dUser.getUniversity());
 
 		List<PoiGroup> poiGroups = new ArrayList<PoiGroup>();
 
@@ -42,8 +59,12 @@ public class PoisController extends AbstractBackendController {
 		for (Region r : allRegions) {
 			PoiGroup poiGroup = instantiate(PoiGroup.class);
 			poiGroup.setRegion(r);
-			for (University u : r.getUniversities())
-				poiGroup.setPois(poiRepository.findByUniversity(u));
+			List<Poi> pois = new ArrayList<Poi>();
+			for (Poi p : allPois)
+				for (University u : r.getUniversities())
+					if (u.getId() == p.getUniversity().getId())
+						pois.add(p);
+			poiGroup.setPois(pois);
 			poiGroups.add(poiGroup);
 		}
 

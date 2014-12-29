@@ -13,9 +13,15 @@ public interface PoiRepository extends CrudRepository<Poi, Long> {
 	List<Poi> findByUniversity(University university);
 	
 	List<Poi> findAllByOrderByNameAsc();
-
+	
 	List<Poi> findByCategory_LegacyStartingWithOrderByNameAsc(String categoryLegacy);
 	
 	List<Poi> findByCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(String categoryLegacy, Region region);
+
+	List<Poi> findByParentIsNullAndCategory_LegacyStartingWithOrderByNameAsc(String categoryLegacy);
+	
+	List<Poi> findByParentIsNullAndCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(String categoryLegacy, Region region);
+	
+	List<Poi> findByParentIsNullAndCategory_LegacyStartingWithAndUniversityOrderByNameAsc(String categoryLegacy, University university);
 	
 }

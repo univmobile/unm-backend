@@ -107,7 +107,9 @@ td.id {
 </div>
 
 <div class="table bottom">
-   <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter à poi…</a>
+   <c:if test="${user.role eq 'superadmin'}">
+      <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter à poi…</a>
+   </c:if>
 </div>
 
 <c:forEach var="poiGroup" items="${poiGroups}">
@@ -181,7 +183,9 @@ td.id {
 </c:forEach>
 
 <div class="table bottom">
-   <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter à poi…</a>
+   <c:if test="${user.role eq 'superadmin'}">
+      <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter à poi…</a>
+   </c:if>
 </div>
 
 </div> <!-- end of #div-pois -->

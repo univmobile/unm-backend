@@ -192,8 +192,9 @@ td span.error {
 <tr>
    <th>Mot de passe</th>
    <td>
-      <input class="text" type="password" id="text-password" name="password" value="${usermodify_moreInfo.password}">
-	  <c:choose>
+      <input class="text" type="password" id="text-password" name="password" value="${usermodify.password}">
+	  
+     <c:choose>
      
          <c:when test="${usermodify.classicLoginAllowed eq 'true'}">
             <input class="checkbox" type="checkbox" id="checkbox-classicLoginAllowed" name="classicLoginAllowed" value="yes" checked>
