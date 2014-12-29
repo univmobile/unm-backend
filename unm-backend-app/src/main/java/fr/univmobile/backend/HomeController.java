@@ -95,13 +95,24 @@ public class HomeController extends AbstractBackendController {
 				return new View("home.jsp");
 			}
 
-			
 			if (delegationUser.getRole().equals("student")) {
-				
+
 				setAttribute("err_studentDelegationUid", true);
 				setAttribute("delegationUid", delegationUid);
 
 				return new View("home.jsp");
+			}
+
+			if (delegationUser.isClassicLoginAllowed()) {
+				
+				if (!delegationUser.getPassword().equals(form.password())) {
+
+					setAttribute("err_incorrectPassword", true);
+					setAttribute("delegationUid", delegationUid);
+
+					return new View("home.jsp");
+				}
+				
 			}
 
 			setSessionAttribute(DELEGATION_USER, delegationUser);
