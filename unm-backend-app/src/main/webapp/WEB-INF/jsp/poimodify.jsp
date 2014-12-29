@@ -153,14 +153,30 @@ td span.error {
                   <c:forEach var="u" items="${r.universities}">
                      <c:choose>
                         
-                        <c:when test="${poimodify.university.id eq u.id}">
-                           <option value="${u.title}" selected>${u.title}</option>
+                        <c:when test="${user.role eq 'superadmin'}">
+                        
+                           <c:choose>
+                         
+                              <c:when test="${poimodify.university.id eq u.id}">
+                                 <option value="${u.title}" selected>${u.title}</option>
+                              </c:when>
+                              
+                              <c:otherwise>
+                                 <option value="${u.title}">${u.title}</option>
+                              </c:otherwise>
+                           
+                           </c:choose>
+                           
                         </c:when>
                         
                         <c:otherwise>
-                           <option value="${u.title}">${u.title}</option>
+                        
+                           <c:if test="${user.university.id eq u.id}">
+                              <option value="${u.title}" selected>${u.title}</option>
+                           </c:if>
+                        
                         </c:otherwise>
-                     
+                        
                      </c:choose>
                   </c:forEach>
                </optgroup>

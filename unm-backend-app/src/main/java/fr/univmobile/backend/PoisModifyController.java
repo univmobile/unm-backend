@@ -18,6 +18,7 @@ import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.domain.Region;
 import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.UniversityRepository;
+import fr.univmobile.backend.domain.User;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -84,6 +85,12 @@ public class PoisModifyController extends AbstractBackendController {
 			regions.add(r);
 
 		setAttribute("regionsData", regions);
+
+		// USER
+
+		User user = getDelegationUser();
+
+		setAttribute("user", user);
 
 		// 1. POI
 
