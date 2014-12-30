@@ -118,6 +118,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private RegionRepository regionRepository;
 	private UniversityRepository universityRepository;
 	private UserRepository userRepository;
+	
+	private SessionAuditorAware sessionAuditorAware;
 
 	private UserDataSource users;
 	private RegionDataSource regions;
@@ -150,6 +152,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		this.universityRepository = (UniversityRepository) ctx
 				.getBean("universityRepository");
 		this.userRepository = (UserRepository) ctx.getBean("userRepository");
+		
+		this.sessionAuditorAware = (SessionAuditorAware) ctx.getBean("sessionAuditorAware");
 		
 		if (log.isInfoEnabled()) {
 			log.info(this + ": init()...");
@@ -538,6 +542,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			return;
 		}
 
+		this.sessionAuditorAware.setSessionUser(user);
+		
 		// final User user = users.getByRemoteUser(remoteUser);
 
 		/*
