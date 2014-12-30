@@ -325,11 +325,11 @@ public class Poi extends AuditableEntityWithLegacy {
 	}
 	// NEAREST POI
 
-	public boolean nearestPoi(Double lat, Double lng, Double metersAway) {
-		return (getDistance(lat, lng) * 1000 <= metersAway);
+	public boolean isNear(double lat, double lng, Double metersAway) {
+		return this.lat != null && this.lng != null && (getDistance(lat, lng) * 1000 <= metersAway);
 	}
 
-	public double getDistance(Double lat, Double lng) {
+	public double getDistance(double lat, double lng) {
 		double r = 6371; // Radius of the earth in km
 		double dLat = deg2rad(this.lat - lat);
 		double dLon = deg2rad(this.lng - lng);

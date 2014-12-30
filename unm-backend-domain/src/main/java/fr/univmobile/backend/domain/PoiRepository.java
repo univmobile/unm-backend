@@ -16,6 +16,10 @@ public interface PoiRepository extends CrudRepository<Poi, Long> {
 	
 	List<Poi> findByCategory_LegacyStartingWithOrderByNameAsc(String categoryLegacy);
 	
+	List<Poi> findByCategory_LegacyNotLike(String categoryLegacy);
+
+	List<Poi> findByUniversityAndCategory_LegacyNotLike(University university, String categoryLegacy);
+
 	List<Poi> findByCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(String categoryLegacy, Region region);
 
 	List<Poi> findByParentIsNullAndCategory_LegacyStartingWithOrderByNameAsc(String categoryLegacy);
@@ -23,5 +27,6 @@ public interface PoiRepository extends CrudRepository<Poi, Long> {
 	List<Poi> findByParentIsNullAndCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(String categoryLegacy, Region region);
 	
 	List<Poi> findByParentIsNullAndCategory_LegacyStartingWithAndUniversityOrderByNameAsc(String categoryLegacy, University university);
+
 	
 }

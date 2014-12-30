@@ -1,8 +1,9 @@
 package fr.univmobile.backend.api;
 
-import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,13 +14,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
-import fr.univmobile.backend.json.AbstractJSONController;
+import fr.univmobile.backend.domain.User;
 
 @Controller
 @RequestMapping("pois/nearest")
-public class NearestPoisJSONController extends AbstractJSONController {
+public class NearestPoisJSONController {
 
 	@Autowired
 	PoiRepository poiRepository;
@@ -31,31 +33,29 @@ public class NearestPoisJSONController extends AbstractJSONController {
 	@ResponseBody
 	public List<Poi> get(@RequestParam(value = "lat", required = false) Double lat,
 			@RequestParam(value = "lng", required = false) Double lng,
+			HttpServletRequest request,
 			HttpServletResponse response) {
 
-		List<Poi> result;
+		User currentUser = getCurrentUser(request);
+		List<Poi> result = new LinkedList<Poi>();
+		List<Poi> allPois;
 
-		if (getDelegationUser().isSuperAdmin()) {
-
-			result = new ArrayList<Poi>();
-
-			Iterable<Poi> allPois = poiRepository.findAll();
-
-			for (Poi p : allPois)
-				if (p.nearestPoi(lat, lng, nearestMaxDistanceInMeters))
-					result.add(p);
+		if (currentUser == null || currentUser.isSuperAdmin()) {
+			allPois = poiRepository.findByCategory_LegacyNotLike(Category.getImageMapsLegacy() + '%');
 		} else {
-			result = poiRepository.findByUniversity(getDelegationUser()
-					.getUniversity());
+			allPois = poiRepository.findByUniversityAndCategory_LegacyNotLike(currentUser
+					.getUniversity(), Category.getImageMapsLegacy() + '%');
 		}
+
+		for (Poi p : allPois)
+			if (p.isNear(lat, lng, nearestMaxDistanceInMeters))
+				result.add(p);
 
 		return result;
 	}
 
-	@Override
-	public String actionJSON(String baseURL) throws Exception {
-		// TODO Auto-generated method stub
-		return null;
+	private User getCurrentUser(HttpServletRequest request) {
+		return (User) request.getSession().getAttribute("user");
 	}
 
 }
