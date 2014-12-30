@@ -53,7 +53,8 @@ public class PoisAddController extends AbstractBackendController {
 	public View action() throws IOException {
 
 		if (!getDelegationUser().getRole().equals(User.SUPERADMIN))
-			return sendError403("Vous devez être super administrateur");
+			return sendError400();
+			//return sendError403("Vous devez être super administrateur");
 
 		// CATEGORIES
 

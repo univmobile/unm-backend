@@ -65,7 +65,8 @@ public class PoisModifyController extends AbstractBackendController {
 
 		if (getDelegationUser().isAdmin())
 			if (getDelegationUser().getUniversity().getId() != uId)
-				return sendError403("Vous n'êtes pas autorisé sur ce POI");
+				return sendError400();
+				//return sendError403("Vous n'êtes pas autorisé sur ce POI");
 
 		// CATEGORIES
 

@@ -173,7 +173,7 @@
               </ul>
             </div>
             
-          <h1 class="page-header">Images <small data-bind="text: activeImage().name"></small></h1>
+          <h1 class="page-header pull-left">Images <small data-bind="text: activeImage().name"></small></h1>
 
           <div class="row placeholders">
               <div id="img_canvas"></div>
@@ -196,7 +196,7 @@
                 <li role="presentation" data-bind="css: { active: activePoiTab() == 'details' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('details') }">D&eacute;tails</a></li>
                   <!--
                 <li role="presentation" data-bind="css: { active: activePoiTab() == 'comments' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('comments') }">Commentaires</a></li>-->
-                <li role="presentation" data-bind="visible: activeTab() == 'images', css: { active: activePoiTab() == 'qr' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('qr') }">QR</a></li>
+                <li role="presentation" data-bind="visible: activeTab() == 'images' && activePoi().id(), css: { active: activePoiTab() == 'qr' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('qr') }">QR</a></li>
               </ul>
               <p></p>
               
@@ -300,7 +300,7 @@
                 </form>
             </div>
                 
-            <div data-bind="with: activePoi(), visible: activePoiTab() == 'qr'">
+            <div data-bind="with: activePoi(), visible: activePoiTab() == 'qr' && activePoi().id()">
                 <br/>
                 <img class="center-block img-thumbnail" data-bind="visible: qrCode, attr: { src: qrCode }" />
                 <br data-bind="visible: qrCode" />
@@ -335,9 +335,10 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Imagen</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Image</label>
                 <div class="col-sm-10">
-                  <input type="file" name="file">
+                  <input type="file" name="file" style="display: none">
+                  <span data-bind="text: activeImage().temporalImageFile" style="line-height: 34px"></span>
                 </div>
               </div>
             </form>
@@ -346,6 +347,7 @@
 			</div>
           </div>
           <div class="modal-footer">
+            <button type="button" class="pull-left btn btn-success" data-bind="click: selectFile"><span class="glyphicon glyphicon-plus" aria-label="Add file"></span>&nbsp;Image</button>
             <button type="button" class="btn btn-default" data-bind="click: cancelImageMap">Annuler</button>
             <button id="uploadSubmit" type="button" class="btn btn-primary">Enregistrer</button>
           </div>

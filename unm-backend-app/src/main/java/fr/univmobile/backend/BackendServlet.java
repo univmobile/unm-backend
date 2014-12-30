@@ -355,16 +355,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final String shibbolethTargetBaseURL = checkedInitParameter("shibboleth.targetBaseURL");
 		final String shibbolethCallbackURL = checkedInitParameter("shibboleth.callbackURL");
 
-		Double nearestPoisMaxMetersAway;
-		try {
-			nearestPoisMaxMetersAway = Double
-					.parseDouble(checkedInitParameter("pois.nearestMaxDistanceInMeters"));
-		} catch (Exception e) {
-			log.warn("Config parameter 'pois.nearestMaxDistanceInMeters' has a wrong value at web.xml. Please review. Using 0 meters. Current value is: "
-					+ checkedInitParameter("pois.nearestMaxDistanceInMeters"));
-			nearestPoisMaxMetersAway = 0.0;
-		}
-
 		final SessionClient sessionClient = new SessionClientFromLocal(baseURL,
 				ssoBaseURL, shibbolethTargetBaseURL, shibbolethCallbackURL, //
 				sessionManager, twitter);

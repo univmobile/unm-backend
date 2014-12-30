@@ -10,6 +10,7 @@ var ImageMap = function(data) {
     this.description = ko.observable();
     this.active = ko.observable();
     this.pois = ko.observableArray([]);
+    this.temporalImageFile = ko.observable();
 
     this.cache = function() {};
     
@@ -568,6 +569,7 @@ function clearMarkers() {
 
 function openPoiModal(action) {
     var options = { backdrop: 'static' };
+    myViewModel.switchPoiTab('details');
     $poiModal.modal(options);
 }
 
@@ -782,6 +784,10 @@ function zoomLevelByDiag(size) {
     }
 }
 
+function selectFile() {
+    $('#imageupload input[type=file]').click();
+}
+
 // Init code starts
 var gmapsCanvasId = "map_canvas";
 var imageCanvasId = "img_canvas";
@@ -817,25 +823,26 @@ $(function () {
         dataType: 'json',
         change: function (e, data) {
             $.each(data.files, function (index, file) {
-                alert('Selected file: ' + file.name);
+                myViewModel.activeImage().temporalImageFile(file.name + ' (' + Math.round(file.size/1024) + 'KB)');
             });
         },
         add: function(e, data) {
             $('#uploadSubmit').unbind('click');
             data.context = $('#uploadSubmit').click(function() {
-                console.log('sending upload data...');
+                //console.log('sending upload data...');
                 data.submit();
             });
         },     
         done: function (e, data) {
             $('#uploadSubmit').unbind('click');
-            console.log('done');
+            //console.log('done');
             if (!myViewModel.activeImage().id()) {
                 myViewModel.activeImage().update(data.result);
                 myViewModel.activeImage().commit();
                 myViewModel.ds.cache['imageMaps'].push(myViewModel.activeImage().serialize());
                 myViewModel.reload();
                 closeImageMapModal();
+                myViewModel.changeImage(myViewModel.activeImage());
             }
         },
         progressall: function (e, data) {
