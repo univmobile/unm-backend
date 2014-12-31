@@ -19,7 +19,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public abstract class AuditableEntity {
 	
 	@CreatedBy
-	@ManyToOne(fetch = FetchType.LAZY)
+	@ManyToOne(fetch = FetchType.EAGER) // FIXME: Come back to lazy after fixing comments.jsp
 	@JoinColumn(name = "createdby")
 	@JsonIgnore
 	private User createdBy;

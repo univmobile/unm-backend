@@ -6,19 +6,19 @@ import fr.univmobile.backend.domain.User;
 
 public class SessionAuditorAware implements AuditorAware<User> {
 	
-	private User testingUser;
+	private User sessionUser;
 	
-	public User getTestingUser() {
-		return testingUser;
+	public User getSessionUser() {
+		return sessionUser;
 	}
 
-	public void setTestingUser(User testingUser) {
-		this.testingUser = testingUser;
+	public void setSessionUser(User user) {
+		this.sessionUser = user;
 	}
 
 	@Override
 	public User getCurrentAuditor() {
-		return this.testingUser;
+		return this.sessionUser;
 	}
 
 }
