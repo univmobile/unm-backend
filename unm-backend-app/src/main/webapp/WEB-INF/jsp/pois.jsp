@@ -100,10 +100,6 @@ td.id {
    
 </span>
 
-<button id="button-export" disabled>
-	Export…
-</button>
-
 </div>
 
 <div class="table bottom">

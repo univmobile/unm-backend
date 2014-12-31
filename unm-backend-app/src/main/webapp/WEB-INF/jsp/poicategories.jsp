@@ -87,9 +87,7 @@ td.id {
    	
    </c:choose>
 </span>
-<button id="button-export" disabled>
-	Export…
-</button>
+
 </div>
 
 <table>
