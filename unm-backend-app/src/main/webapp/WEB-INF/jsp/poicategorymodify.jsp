@@ -69,13 +69,6 @@ label.checkbox-parentCategory {
    <table>
    
    <tbody>
-   
-      <tr>
-         <th>Id</th>
-         <td>
-            <input readonly class="text" type="text" id="text-id" name="id" value="${poicategorymodify.id}">
-         </td>
-      </tr>
       
       <tr>
          <th>Name</th>
