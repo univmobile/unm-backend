@@ -12,11 +12,23 @@ import javax.annotation.Nullable;
 
 import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.domain.CategoryRepository;
+import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "poicategories", "poicategories/" })
+@Paths({ "poicategories", "poicategories/", "poicategories/${id}" })
 public class PoiCategoriesController extends AbstractBackendController {
+
+	@PathVariable("${id}")
+	private long getPoiCategoryId() {
+
+		return getPathLongVariable("${id}");
+	}
+
+	private boolean hasPoiCategoryContext() {
+
+		return hasPathStringVariable("${id}");
+	}
 
 	public PoiCategoriesController(final CategoryRepository categoryRepository) {
 		this.categoryRepository = checkNotNull(categoryRepository,
@@ -30,9 +42,22 @@ public class PoiCategoriesController extends AbstractBackendController {
 
 		getDelegationUser();
 
-		// 1. USERS DATA
+		// 1. CATEGORIES DATA
 
-		Iterable<Category> allCategories = categoryRepository.findAll();
+		Category parent;
+
+		if (hasPoiCategoryContext()) {
+
+			Long cId = getPoiCategoryId();
+			parent = categoryRepository.findOne(cId);
+			
+			setAttribute("has_father", true);
+			setAttribute("father", parent);
+		} else
+			parent = null;
+
+		Iterable<Category> allCategories = categoryRepository
+				.findByParent(parent);
 
 		List<Category> poicategories = new ArrayList<Category>();
 

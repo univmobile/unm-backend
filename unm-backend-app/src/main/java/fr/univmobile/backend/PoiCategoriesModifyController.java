@@ -15,7 +15,6 @@ import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
 import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
-import fr.univmobile.web.commons.Regexp;
 import fr.univmobile.web.commons.View;
 
 @Paths({ "poicategoriesmodify/${id}" })
@@ -24,7 +23,7 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 	@PathVariable("${id}")
 	private long getPoiCategoryId() {
 
-		return getPathIntVariable("${id}");
+		return getPathLongVariable("${id}");
 	}
 
 	public PoiCategoriesModifyController(
@@ -69,12 +68,14 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		boolean hasErrors = false;
 
-		poicategory.setName(form.name());
 		if (!isBlank(form.name())) {
-			if (categoryRepository.findByName(form.name()) != null) {
+			if (categoryRepository.findByName(form.name()) != null
+					&& !poicategory.getName().equals(form.name())) {
 				hasErrors = true;
 				setAttribute("err_duplicateName", true);
-			}
+				setAttribute("duplicateName", form.name());
+			} else
+				poicategory.setName(form.name());
 		} else {
 			hasErrors = true;
 			setAttribute("err_poicategorymodify_name", true);
@@ -99,7 +100,11 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		categoryRepository.save(poicategory);
 
-		return poiCategoriesController.action();
+		// return poiCategoriesController.action();
+
+		if (poicategory.getParent() != null)
+			setAttribute("parent", poicategory.getParent());
+		return new View("poicategorymodify_redirect.jsp");
 	}
 
 	/**
@@ -119,12 +124,6 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		@HttpRequired
 		@HttpParameter(trim = true)
-		@Regexp("[0-9]+")
-		String id();
-
-		@HttpRequired
-		@HttpParameter(trim = true)
-		@Regexp("[0-9]+")
 		String parentCategory();
 
 		@HttpParameter

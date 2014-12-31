@@ -59,7 +59,7 @@ label.checkbox-parentCategory {
    
    <c:if test="${err_duplicateName}">
       <div class="error">
-         ERREUR - une catégorie avec ce NOM = ${poicategorymodify.name}
+         ERREUR - une catégorie avec ce NOM = ${duplicateName}
          existe déjà en base
       </div>
    </c:if>    
@@ -114,7 +114,7 @@ label.checkbox-parentCategory {
    </table>
    
    <div class="table bottom">
-      <button id="button-cancel" onclick="document.location.href = '${baseURL}/poicategories'; return false;">
+      <button id="button-cancel" onclick="document.location.href = '${baseURL}/poicategories/${poicategorymodify.parent.id}'; return false;">
       	Annuler
       </button>
       
