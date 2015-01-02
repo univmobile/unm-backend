@@ -68,7 +68,7 @@ public class CommentRepositoryTest {
 		assertNotNull(dbcomment);
 		System.out.println(dbcomment);
 		
-		List<Comment> dbcomments = commentRepository.findTop2ByOrderByCreatedOnDesc();
+		List<Comment> dbcomments = commentRepository.findTop80ByOrderByCreatedOnDesc();
 		for (Comment c : dbcomments) {
 			System.out.println(c);
 		}
