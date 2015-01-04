@@ -96,22 +96,13 @@ label.checkbox-parentCategory {
       </tr>
       
       <tr>
-<<<<<<< HEAD
-         <th>Parent Uid</th>
-=======
          <th>Catègorie pére</th>
->>>>>>> c655fd5d736cec74f16a254eebf8c537d11a006e
          <td>
          <select id="select-parentCategory" name="parentCategory">
             <option value="(aucune)">(aucune)</option>
             <c:forEach var="pc" items="${poicategories}">
-<<<<<<< HEAD
-               <option value="${pc.uid}">
-                  ${pc.name} (uid : ${pc.uid})
-=======
                <option value="${pc.id}">
                   ${pc.name}
->>>>>>> c655fd5d736cec74f16a254eebf8c537d11a006e
                </option>
             </c:forEach>
          </select>   
