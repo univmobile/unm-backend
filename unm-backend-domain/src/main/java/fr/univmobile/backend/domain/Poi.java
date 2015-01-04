@@ -8,6 +8,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
@@ -33,6 +34,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	private Long id;
 	@Column(nullable = false)
 	private String name;
+	@Lob
 	private String description;
 	private Double lat;
 	private Double lng;
@@ -46,8 +48,10 @@ public class Poi extends AuditableEntityWithLegacy {
 	private String zipcode;
 	private String city;
 	private String country;
+	@Lob
 	private String itinerary;
 	@Column(name = "openinghours")
+	@Lob
 	private String openingHours;
 	private String phones;
 	private String email;
