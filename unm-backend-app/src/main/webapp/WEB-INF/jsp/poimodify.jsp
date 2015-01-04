@@ -66,6 +66,11 @@ td span.error {
    </div>
 </c:if>
 
+<c:if test="${err_coordinates}">
+   <div class="error">
+      ERREUR - les coordonnées sont incorrectes
+   </div>
+</c:if>
 
 <h2>
    Modification d'un "poi"
@@ -260,7 +265,7 @@ td span.error {
       <td>
    	     <input id="text-lat" name="lat" value="${poimodify.lat}">
          <c:if test="${err_poimodify_lat}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
+            <span class="error" title="Le champ est mal formé">Le champ est mal formé</span>
          </c:if>
       </td>
    </tr>
@@ -270,7 +275,7 @@ td span.error {
       <td>
          <input id="text-lng" name="lng" value="${poimodify.lng}">
          <c:if test="${err_poimodify_lng}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
+            <span class="error" title="Le champ est mal formé">Le champ est mal formé</span>
          </c:if>
       </td>
    </tr>

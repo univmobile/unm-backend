@@ -29,7 +29,7 @@ public class UserModifyController extends AbstractBackendController {
 	@PathVariable("${id}")
 	private long getUserId() {
 
-		return getPathIntVariable("${id}");
+		return getPathLongVariable("${id}");
 	}
 
 	public UserModifyController(final UserRepository userRepository,

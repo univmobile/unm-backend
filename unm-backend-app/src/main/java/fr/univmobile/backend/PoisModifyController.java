@@ -34,7 +34,7 @@ public class PoisModifyController extends AbstractBackendController {
 	@PathVariable("${id}")
 	private long getPoiId() {
 
-		return getPathIntVariable("${id}");
+		return getPathLongVariable("${id}");
 	}
 
 	public PoisModifyController(final PoiRepository poiRepository,
@@ -138,18 +138,30 @@ public class PoisModifyController extends AbstractBackendController {
 		poi.setFloor(form.floor());
 		poi.setItinerary(form.itinerary());
 
-		poi.setLat(form.lat());
-		if (form.lat() == null) {
-			hasErrors = true;
-			setAttribute("err_poimodify_lat", true);
-			setAttribute("err_incorrectFields", true);
+		try {
+			if (form.lat() != null && form.lat().length() > 0
+					&& form.lat() != null && form.lat().length() > 0) {
+				Double lat = Double.parseDouble(form.lat().trim());
+				poi.setLat(lat);
+			} else {
+				poi.setLat(null);
+			}
+		} catch (NumberFormatException e) {
+			hasErrors = true;		
+			setAttribute("err_coordinates", true);
 		}
-
-		poi.setLng(form.lng());
-		if (form.lng() == null) {
-			hasErrors = true;
-			setAttribute("err_poimodify_lng", true);
-			setAttribute("err_incorrectFields", true);
+		
+		try {
+			if (form.lng() != null && form.lng().length() > 0
+					&& form.lng() != null && form.lng().length() > 0) {
+				Double lng = Double.parseDouble(form.lng().trim());
+				poi.setLng(lng);
+			} else {
+				poi.setLng(null);
+			}
+		} catch (NumberFormatException e) {
+			hasErrors = true;		
+			setAttribute("err_coordinates", true);
 		}
 
 		poi.setOpeningHours(form.openingHours());
@@ -231,10 +243,10 @@ public class PoisModifyController extends AbstractBackendController {
 		String category();
 
 		@HttpParameter
-		Double lat();
+		String lat();
 
 		@HttpParameter
-		Double lng();
+		String lng();
 
 		@HttpParameter
 		String city();
