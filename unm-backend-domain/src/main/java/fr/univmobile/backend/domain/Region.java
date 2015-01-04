@@ -26,6 +26,8 @@ public class Region extends AuditableEntity {
 	private String url;
 	@OneToMany(fetch = FetchType.EAGER, mappedBy = "region")
 	private Collection<University> universities = new ArrayList<University>();
+	@Column(nullable = false)
+	private boolean allowBonplans = false;
 
 	@Override
 	public String toString() {
@@ -66,5 +68,13 @@ public class Region extends AuditableEntity {
 
 	public Collection<University> getUniversities() {
 		return universities;
+	}
+
+	public boolean getAllowBonplans() {
+		return allowBonplans;
+	}
+
+	public void setAllowBonplans(boolean allowBonplans) {
+		this.allowBonplans = allowBonplans;
 	}
 }

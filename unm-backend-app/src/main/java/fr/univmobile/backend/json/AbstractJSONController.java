@@ -2,8 +2,8 @@ package fr.univmobile.backend.json;
 
 import com.avcompris.lang.NotImplementedException;
 
-import fr.univmobile.backend.core.User;
-import fr.univmobile.web.commons.AbstractController;
+// import fr.univmobile.backend.core.User;
+import fr.univmobile.backend.domain.User;
 import fr.univmobile.web.commons.AbstractJspController;
 import fr.univmobile.web.commons.View;
 

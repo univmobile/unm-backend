@@ -2,6 +2,7 @@ package fr.univmobile.backend.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
@@ -10,6 +11,7 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "comment")
 public class Comment extends AuditableEntity {
+	
 	@Id
 	@GeneratedValue
 	private Long id;
@@ -66,4 +68,7 @@ public class Comment extends AuditableEntity {
 		this.poi = poi;
 	}
 
+	public String getAuthor() {
+		return this.getCreatedOn() == null ? null : String.format("%s", this.getCreatedBy().getDisplayName());
+	}
 }

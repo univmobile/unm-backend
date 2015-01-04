@@ -140,7 +140,7 @@ public class CommentsController extends AbstractBackendController {
 
 			context = "Commentaires les plus récents";
 
-			Iterable<Comment> allComments = commentRepository.findAll();
+			Iterable<Comment> allComments = commentRepository.findTop80ByOrderByCreatedOnDesc();
 
 			for (Comment c : allComments)
 				comments.add(c);

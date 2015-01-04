@@ -5,11 +5,14 @@ import java.util.Collection;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
@@ -19,15 +22,22 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 @Entity
 @Table(name = "poi")
 public class Poi extends AuditableEntityWithLegacy {
-	
+
+	@TableGenerator(
+			name = "poi_generator", 
+			table = "jpa_sequence", 
+			pkColumnName = "seq_name", 
+			valueColumnName = "value", 
+			allocationSize = 1)
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "poi_generator")
 	private Long id;
-	@Column(unique = true, nullable = false)
+	@Column(nullable = false)
 	private String name;
+	@Lob
 	private String description;
-	private Double lat; 
-	private Double lng; 
+	private Double lat;
+	private Double lng;
 	@Column(name = "markertype")
 	private String markerType;
 	@Column(nullable = false)
@@ -38,8 +48,10 @@ public class Poi extends AuditableEntityWithLegacy {
 	private String zipcode;
 	private String city;
 	private String country;
+	@Lob
 	private String itinerary;
 	@Column(name = "openinghours")
+	@Lob
 	private String openingHours;
 	private String phones;
 	private String email;
@@ -53,22 +65,20 @@ public class Poi extends AuditableEntityWithLegacy {
 	private String attachmentTitle;
 	@Column(name = "attachmenturl")
 	private String attachmentUrl;
-	
-	@JsonIgnore
-	private String legacy;
+
 	@ManyToOne
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	@JsonIdentityReference(alwaysAsId = true)
 	private Poi parent;
 	@OneToMany(mappedBy = "parent")
 	@JsonIgnore
-    private Collection<Poi> children;
+	private Collection<Poi> children;
 	@ManyToOne
-	@JoinColumn(nullable = false)	
+	@JoinColumn(nullable = false)
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	@JsonIdentityReference(alwaysAsId = true)
 	private Category category;
-	
+
 	@ManyToOne
 	@JoinColumn(nullable = false)
 	private University university;
@@ -79,6 +89,9 @@ public class Poi extends AuditableEntityWithLegacy {
 	@JsonIdentityReference(alwaysAsId = true)
 	private ImageMap imageMap;
 
+	@Column(name = "qrcode")
+	private String qrCode;
+	
 	@Override
 	public String toString() {
 		return String.format("Poi[id=%d, name='%s']", id, name);
@@ -260,14 +273,6 @@ public class Poi extends AuditableEntityWithLegacy {
 		this.attachmentUrl = attachmentUrl;
 	}
 
-	public String getLegacy() {
-		return legacy;
-	}
-
-	public void setLegacy(String legacy) {
-		this.legacy = legacy;
-	}
-
 	public Poi getParent() {
 		return parent;
 	}
@@ -287,7 +292,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	
+
 	public University getUniversity() {
 		return university;
 	}
@@ -303,4 +308,35 @@ public class Poi extends AuditableEntityWithLegacy {
 	public void setImageMap(ImageMap imageMap) {
 		this.imageMap = imageMap;
 	}
+
+	public String getQrCode() {
+		return qrCode;
+	}
+
+	public void setQrCode(String qrCode) {
+		this.qrCode = qrCode;
+	}
+	// NEAREST POI
+
+	public boolean isNear(double lat, double lng, Double metersAway) {
+		return this.lat != null && this.lng != null && (getDistance(lat, lng) * 1000 <= metersAway);
+	}
+
+	public double getDistance(double lat, double lng) {
+		double r = 6371; // Radius of the earth in km
+		double dLat = deg2rad(this.lat - lat);
+		double dLon = deg2rad(this.lng - lng);
+		double a = (double) (Math.sin(dLat / 2) * Math.sin(dLat / 2) //
+		+ Math.cos(deg2rad(this.lat)) //
+				* Math.cos(deg2rad(lat)) //
+				* Math.sin(dLon / 2) * Math.sin(dLon / 2));
+		double c = (double) (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+		double d = r * c; // Distance in km
+		return d;
+	}
+
+	private static double deg2rad(double deg) {
+		return (double) (deg * (Math.PI / 180));
+	}
+
 }

@@ -66,6 +66,12 @@ td span.error {
    </div>
 </c:if>
 
+<c:if test="${err_coordinates}">
+   <div class="error">
+      ERREUR - les coordonnées sont incorrectes
+   </div>
+</c:if>
+
 <h2>
    Ajouter à poi
 </h2>
@@ -201,7 +207,7 @@ td span.error {
       <td>
    	     <input id="text-lat" name="lat" value="${poiadd.lat}">
          <c:if test="${err_poiadd_lat}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
+            <span class="error" title="Le champ est mal formé">Le champ est mal formé</span>
          </c:if>
       </td>
    </tr>
@@ -211,7 +217,7 @@ td span.error {
       <td>
          <input id="text-lng" name="lng" value="${poiadd.lng}">
          <c:if test="${err_poiadd_lng}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
+            <span class="error" title="Le champ est mal formé">Le champ est mal formé</span>
          </c:if>
       </td>
    </tr>

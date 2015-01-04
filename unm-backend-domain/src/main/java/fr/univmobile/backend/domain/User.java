@@ -8,6 +8,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 @Table(name = "user")
 public class User extends AuditableEntity {
@@ -24,11 +26,15 @@ public class User extends AuditableEntity {
 	@Column(unique = true, nullable = false)
 	private String displayName;
 	@Column(nullable = false)
+	@JsonIgnore
 	private String role;
+	@JsonIgnore
 	private String password;
 	@Column(name = "classicloginallowed", nullable = false)
+	@JsonIgnore
 	private boolean classicLoginAllowed = false;
 	@Column(name = "remoteuser", unique = true, nullable = false)
+	@JsonIgnore
 	private String remoteUser;
 	private String title;
 	private String email;
@@ -36,12 +42,15 @@ public class User extends AuditableEntity {
 	private String profileImageUrl;
 	private String description;
 	@Column(name = "twitterscreenname")
+	@JsonIgnore
 	private String twitterScreenName;
 	@ManyToOne
-	@JoinColumn(nullable = false)
+	@JoinColumn(name = "university_id")
+	@JsonIgnore
 	private University university;
 	@ManyToOne
 	@JoinColumn(name = "secondaryuniversity_id")
+	@JsonIgnore
 	private University secondaryUniversity;
 
 	@Override

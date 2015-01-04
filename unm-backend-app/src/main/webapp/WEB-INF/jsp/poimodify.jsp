@@ -66,6 +66,11 @@ td span.error {
    </div>
 </c:if>
 
+<c:if test="${err_coordinates}">
+   <div class="error">
+      ERREUR - les coordonnées sont incorrectes
+   </div>
+</c:if>
 
 <h2>
    Modification d'un "poi"
@@ -153,14 +158,30 @@ td span.error {
                   <c:forEach var="u" items="${r.universities}">
                      <c:choose>
                         
-                        <c:when test="${poimodify.university.id eq u.id}">
-                           <option value="${u.title}" selected>${u.title}</option>
+                        <c:when test="${user.role eq 'superadmin'}">
+                        
+                           <c:choose>
+                         
+                              <c:when test="${poimodify.university.id eq u.id}">
+                                 <option value="${u.title}" selected>${u.title}</option>
+                              </c:when>
+                              
+                              <c:otherwise>
+                                 <option value="${u.title}">${u.title}</option>
+                              </c:otherwise>
+                           
+                           </c:choose>
+                           
                         </c:when>
                         
                         <c:otherwise>
-                           <option value="${u.title}">${u.title}</option>
+                        
+                           <c:if test="${user.university.id eq u.id}">
+                              <option value="${u.title}" selected>${u.title}</option>
+                           </c:if>
+                        
                         </c:otherwise>
-                     
+                        
                      </c:choose>
                   </c:forEach>
                </optgroup>
@@ -244,7 +265,7 @@ td span.error {
       <td>
    	     <input id="text-lat" name="lat" value="${poimodify.lat}">
          <c:if test="${err_poimodify_lat}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
+            <span class="error" title="Le champ est mal formé">Le champ est mal formé</span>
          </c:if>
       </td>
    </tr>
@@ -254,7 +275,7 @@ td span.error {
       <td>
          <input id="text-lng" name="lng" value="${poimodify.lng}">
          <c:if test="${err_poimodify_lng}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
+            <span class="error" title="Le champ est mal formé">Le champ est mal formé</span>
          </c:if>
       </td>
    </tr>
@@ -264,7 +285,9 @@ td span.error {
    	     Commentaires
       </th>
       <td>
+      
    	     <!-- <a href="${baseURL}/comments/poi${poimodify.id}" id="link-comments"> -->
+           
    		 <c:choose>
       		 
              <c:when test="${empty commentCount or commentCount == 0}">
@@ -280,7 +303,9 @@ td span.error {
       		 </c:otherwise>
          
          </c:choose>
-   	    <!-- </a> -->
+         
+   	     <!-- </a> -->
+           
       </td>
    </tr>
    

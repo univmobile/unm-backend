@@ -105,9 +105,9 @@ public class UseraddController extends AbstractBackendController {
 			setAttribute("err_incorrectFields", true);
 		}
 
-		if (form.classicLoginAllowed() != null)
-			user.setPassword(form.password());
+		user.setClassicLoginAllowed(form.classicLoginAllowed() != null);
 
+		user.setPassword(form.password());
 		user.setEmail(form.email());
 		user.setRole(form.role());
 

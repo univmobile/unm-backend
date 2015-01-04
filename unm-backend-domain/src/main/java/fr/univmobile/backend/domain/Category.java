@@ -6,10 +6,12 @@ import java.util.Collection;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+import javax.persistence.TableGenerator;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -25,15 +27,20 @@ public class Category extends AuditableEntityWithLegacy {
 		}
 	}
 	
+	@TableGenerator(
+			name = "category_generator", 
+			table = "jpa_sequence", 
+			pkColumnName = "seq_name", 
+			valueColumnName = "value", 
+			allocationSize = 1)
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "category_generator")
 	private Long id;
 	@Column(unique = true, nullable = false)
 	private String name;
 	private String description;
 	@Column(nullable = false)
 	private boolean active = true;
-	private String legacy;
 	@ManyToOne
 	@JsonIgnore
 	private Category parent;
@@ -80,10 +87,6 @@ public class Category extends AuditableEntityWithLegacy {
 
 	public void setActive(boolean active) {
 		this.active = active;
-	}
-
-	public String getLegacy() {
-		return legacy;
 	}
 
 	public Category getParent() {

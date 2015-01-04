@@ -87,9 +87,7 @@ td.id {
    	
    </c:choose>
 </span>
-<button id="button-export" disabled>
-	Export…
-</button>
+
 </div>
 
 <table>
@@ -155,7 +153,8 @@ td.id {
       </td>
       
       <td class="edit">
-         <a id="link-edit_${pc.id}" href="${baseURL}/poicategoriesmodify/${pc.id}">Modifier…</a>
+         <a id="link-modify_${pc.id}" href="${baseURL}/poicategoriesmodify/${pc.id}">Modifier…</a>
+         <a id="link-sons_${pc.id}" href="${baseURL}/poicategories/${pc.id}">Progéniture…</a>
       </td>
       
       <td class="none">
@@ -167,6 +166,12 @@ td.id {
 </tbody>
    
 </table>
+
+<div class="table bottom">
+   <c:if test="${not empty father}">
+      <a id="link-father_${father.parent.id}" href="${baseURL}/poicategories/${father.parent.id}">Père…</a>
+   </c:if>
+</div>
 
 <div class="table bottom">
    <a id="link-poicategoryadd" href="${baseURL}/poicategoriesadd">Ajouter une catégorie…</a>

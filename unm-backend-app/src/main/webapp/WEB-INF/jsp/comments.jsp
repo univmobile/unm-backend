@@ -182,10 +182,6 @@
    </c:choose>
 </span>
 
-   <button id="button-export" disabled>
-      Export…
-   </button>
-
 </div>
 
 <c:if test="${not empty poi}">

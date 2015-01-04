@@ -29,7 +29,7 @@ public class UserModifyController extends AbstractBackendController {
 	@PathVariable("${id}")
 	private long getUserId() {
 
-		return getPathIntVariable("${id}");
+		return getPathLongVariable("${id}");
 	}
 
 	public UserModifyController(final UserRepository userRepository,
@@ -100,7 +100,7 @@ public class UserModifyController extends AbstractBackendController {
 			setAttribute("err_usermodify_username", true);
 			setAttribute("err_incorrectFields", true);
 		}
-		
+
 		user.setDisplayName(form.displayName());
 		if (isBlank(form.displayName())) {
 			hasErrors = true;
@@ -108,14 +108,9 @@ public class UserModifyController extends AbstractBackendController {
 			setAttribute("err_incorrectFields", true);
 		}
 
-		if (form.classicLoginAllowed() != null) {
-			user.setClassicLoginAllowed(true);
-			user.setPassword(form.password());
-		} else {
-			user.setClassicLoginAllowed(false);
-			user.setPassword("");
-		}
+		user.setClassicLoginAllowed(form.classicLoginAllowed() != null);
 
+		user.setPassword(form.password());
 		user.setEmail(form.email());
 		user.setRole(form.role());
 
