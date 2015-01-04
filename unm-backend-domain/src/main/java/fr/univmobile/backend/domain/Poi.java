@@ -34,7 +34,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	private Long id;
 	@Column(nullable = false)
 	private String name;
-	@Lob
+	@Column(columnDefinition = "TEXT")
 	private String description;
 	private Double lat;
 	private Double lng;
@@ -48,10 +48,9 @@ public class Poi extends AuditableEntityWithLegacy {
 	private String zipcode;
 	private String city;
 	private String country;
-	@Lob
+	@Column(columnDefinition = "TEXT")
 	private String itinerary;
-	@Column(name = "openinghours")
-	@Lob
+	@Column(name = "openinghours", columnDefinition = "TEXT")
 	private String openingHours;
 	private String phones;
 	private String email;

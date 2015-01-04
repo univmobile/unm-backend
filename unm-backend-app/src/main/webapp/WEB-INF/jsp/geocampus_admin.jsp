@@ -201,11 +201,12 @@
               </ul>
               <p></p>
               
-            <div class="alert alert-danger" data-bind="visible: lastError()" role="alert">
-                <strong>Erreur!</strong> <span data-bind="text: lastError()"></span>
-            </div>
+            <div data-bind="visible: activePoiTab() == 'details'">
+                <div class="alert alert-danger" data-bind="visible: lastError()" role="alert">
+                    <strong>Erreur!</strong> <span data-bind="text: lastError()"></span>
+                </div>
 
-            <form class="form-horizontal" role="form" data-bind="with: activePoi(), visible: activePoiTab() == 'details'">
+            <form class="form-horizontal" role="form" data-bind="with: activePoi()">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
                 <div class="col-sm-10">
@@ -269,6 +270,8 @@
               </div>
             </form>
 
+            </div>
+              
             <div data-bind="visible: activePoiTab() == 'comments'">
                 <div class="alert alert-danger" data-bind="visible: lastError()" role="alert">
                     <strong>Erreur!</strong> <span data-bind="text: lastError()"></span>

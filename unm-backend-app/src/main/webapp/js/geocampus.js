@@ -682,7 +682,7 @@ function openPoiModal(action) {
 
 function createImageMap() {
     $tree.jstree(true).deselect_all(true);
-    myViewModel.activeImage(new ImageMap());
+    myViewModel.changeImage(new ImageMap());
     openImageMapModal('create');
 }
         
@@ -790,7 +790,6 @@ function initImagemap(canvasId) {
         maxZoom: 20,
         minZoom: 15,
         radius: 0,
-        /*disableDoubleClickZoom: true,*/
         name: 'Image'
     };
     var customMapType = new google.maps.ImageMapType(customMapTypeOptions);
@@ -800,7 +799,6 @@ function initImagemap(canvasId) {
     var optimalZoom = zoomLevelByDiag(size);
     var mapOptions = {
         center: myLatlng,
-        //zoom: 17,
         zoom: optimalZoom,
         disableDoubleClickZoom: true,
         
