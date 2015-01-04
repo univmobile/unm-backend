@@ -1,5 +1,6 @@
 package fr.univmobile.backend.domain;
 
+import java.util.Collection;
 import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
@@ -28,5 +29,14 @@ public interface PoiRepository extends CrudRepository<Poi, Long> {
 	
 	List<Poi> findByParentIsNullAndCategory_LegacyStartingWithAndUniversityOrderByNameAsc(String categoryLegacy, University university);
 
+	List<Poi> findByCategoryOrderByNameAsc(Category category);
+
+	List<Poi> findByCategoryAndUniversity_RegionOrderByNameAsc(Category category, Region region);
+
+	List<Poi> findByCategoryAndUniversityOrderByNameAsc(Category category, University university);
+
+	List<Poi> findByCategory_LegacyStartingWithAndUniversityOrderByNameAsc(String categoryLegacy, University university);
+
+	List<Poi> findByIdIn(Collection<Long> ids);
 	
 }

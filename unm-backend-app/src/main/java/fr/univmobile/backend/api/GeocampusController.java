@@ -7,7 +7,9 @@ import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -25,6 +27,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.domain.CategoryRepository;
+import fr.univmobile.backend.domain.Comment;
+import fr.univmobile.backend.domain.CommentRepository;
 import fr.univmobile.backend.domain.ImageMap;
 import fr.univmobile.backend.domain.ImageMapRepository;
 import fr.univmobile.backend.domain.Poi;
@@ -68,6 +72,8 @@ public class GeocampusController {
 	UserRepository userRepository;
 	@Autowired
 	PoiRepository poiRepository;
+	@Autowired
+	CommentRepository commentRepository;
 
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
@@ -136,15 +142,49 @@ public class GeocampusController {
 			rootCategoryLegacy = Category.getPlansLegacy();
 		}
 		
-		if (currentUser.isSuperAdmin()) {
-			return regionId == null 
-					? poiRepository.findByCategory_LegacyStartingWithOrderByNameAsc(rootCategoryLegacy) 
-					: poiRepository.findByCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(rootCategoryLegacy, regionRepository.findOne(regionId));
-		} else {
-			return regionId == null 
-					? poiRepository.findByCategory_LegacyStartingWithOrderByNameAsc(rootCategoryLegacy) 
-					: poiRepository.findByCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(rootCategoryLegacy, regionRepository.findOne(regionId));
+		Category category = null;
+		List<Poi> selectedPois = null, filteredPois;
+		
+		if (categoryId != null) {
+			category = categoryRepository.findOne(categoryId);
 		}
+		
+		if (currentUser.isSuperAdmin()) {
+			if (category != null) {
+				selectedPois = regionId == null 
+						? poiRepository.findByCategoryOrderByNameAsc(category) 
+						: poiRepository.findByCategoryAndUniversity_RegionOrderByNameAsc(category, regionRepository.findOne(regionId));
+			} else {
+				selectedPois = regionId == null 
+						? poiRepository.findByCategory_LegacyStartingWithOrderByNameAsc(rootCategoryLegacy) 
+						: poiRepository.findByCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(rootCategoryLegacy, regionRepository.findOne(regionId));
+			}
+		} else {
+			if (category != null) {
+				selectedPois = poiRepository.findByCategoryAndUniversityOrderByNameAsc(category, currentUser.getUniversity());
+			} else {
+				selectedPois = poiRepository.findByCategory_LegacyStartingWithAndUniversityOrderByNameAsc(rootCategoryLegacy, currentUser.getUniversity());
+			}
+		}
+		
+		if (category != null && selectedPois.size() > 0) {
+			// Filling tree to get a complete one
+			filteredPois = fillTree(selectedPois);
+		} else {
+			filteredPois = selectedPois;
+		}
+		
+		return filteredPois;
+	}
+
+	private List<Poi> fillTree(List<Poi> selectedPois) {
+		Set<Long> allPoiIds = new HashSet<Long>(selectedPois.size() * 2); // Making some allocated initial room
+		
+		for (Poi p : selectedPois) {
+			allPoiIds.addAll(p.getLegacyIds());
+		}
+		
+		return poiRepository.findByIdIn(allPoiIds);
 	}
 
 	@RequestMapping(value = "/qr/create", method = RequestMethod.POST)
@@ -176,6 +216,47 @@ public class GeocampusController {
 		poiRepository.save(poi);
 		
 		return poi;
+	}
+
+	@RequestMapping(value = "/comment/toggle", method = RequestMethod.POST)
+	@ResponseBody
+	public Comment toogleComment(@RequestParam("id") long commentId, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		User currentUser = getCurrentUser(request);
+		
+		if (currentUser == null || currentUser.isStudent()) {
+			response.sendError(HttpServletResponse.SC_FORBIDDEN);
+			return null;
+		}
+
+		Comment comment = commentRepository.findOne(commentId);
+		if (comment == null) {
+			response.sendError(HttpServletResponse.SC_NOT_FOUND);
+			return null;
+		} else if (currentUser.isAdmin() && comment.getPoi().getUniversity().getId() != currentUser.getUniversity().getId()) {
+			response.sendError(HttpServletResponse.SC_FORBIDDEN);
+			return null;
+		}
+		
+		comment.setActive(!comment.isActive());
+		
+		commentRepository.save(comment);
+		
+		return comment;
+	}
+
+	@RequestMapping(value = "/comments", method = RequestMethod.GET)
+	@ResponseBody
+	private List<Comment> getPoiComments(@RequestParam("poi") Long poiId, HttpServletRequest request, HttpServletResponse response) throws IOException {
+		User currentUser = getCurrentUser(request);
+		
+		if (currentUser == null || currentUser.isStudent()) {
+			response.sendError(HttpServletResponse.SC_FORBIDDEN);
+			return null;
+		}
+		
+		Poi p = poiRepository.findOne(poiId);
+		
+		return commentRepository.findTop10ByPoiOrderByIdDesc(p);
 	}
 	
 	@RequestMapping(value = "/imagemap", method = RequestMethod.POST)

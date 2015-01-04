@@ -17,7 +17,6 @@ import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 
 @Entity
 @Table(name = "poi")
@@ -63,8 +62,6 @@ public class Poi extends AuditableEntityWithLegacy {
 	@Column(name = "attachmenturl")
 	private String attachmentUrl;
 
-	@JsonIgnore
-	private String legacy;
 	@ManyToOne
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	@JsonIdentityReference(alwaysAsId = true)
@@ -270,14 +267,6 @@ public class Poi extends AuditableEntityWithLegacy {
 
 	public void setAttachmentUrl(String attachmentUrl) {
 		this.attachmentUrl = attachmentUrl;
-	}
-
-	public String getLegacy() {
-		return legacy;
-	}
-
-	public void setLegacy(String legacy) {
-		this.legacy = legacy;
 	}
 
 	public Poi getParent() {

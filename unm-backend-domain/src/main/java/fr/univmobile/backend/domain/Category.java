@@ -41,7 +41,6 @@ public class Category extends AuditableEntityWithLegacy {
 	private String description;
 	@Column(nullable = false)
 	private boolean active = true;
-	private String legacy;
 	@ManyToOne
 	@JsonIgnore
 	private Category parent;
@@ -88,16 +87,6 @@ public class Category extends AuditableEntityWithLegacy {
 
 	public void setActive(boolean active) {
 		this.active = active;
-	}
-
-	public String getLegacy() {
-		return legacy;
-	}
-	
-	// This method is only for testing purposes
-	
-	public void setLegacy(String legacy) {
-		this.legacy = legacy;
 	}
 
 	public Category getParent() {

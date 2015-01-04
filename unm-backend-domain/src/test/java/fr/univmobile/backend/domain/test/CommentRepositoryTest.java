@@ -38,7 +38,7 @@ public class CommentRepositoryTest {
 		comment.setActive(true);
 		comment.setMessage("This comment is only for testing purposes.");
 		comment.setTitle("The comment");
-		comment.setPoi(poiRepository.findByName("p2").get(0));
+		comment.setPoi(poiRepository.findByName("Poi 1").get(0));
 
 		commentRepository.save(comment);
 

@@ -3,6 +3,50 @@ var Univ = function(id, name) {
     this.name = name;
 };
 
+var Comment = function(data) {
+    this.id = ko.observable();
+    this.title = ko.observable();
+    this.message = ko.observable();
+    this.author = ko.observable();
+    this.active = ko.observable();
+    this.createdOn = ko.observableArray([]);
+
+    this.cache = function() {};
+    
+    this.update(data);
+};
+
+ko.utils.extend(Comment.prototype, {
+    isNew: function() {
+        return !(this.cache && this.cache.latestData && this.cache.latestData.id);
+    },
+    update: function (data) {
+        this.id(data ? data.id : '');
+        this.title(data ? data.title : '');
+        this.message(data ? data.message : '');
+        this.author(data ? data.author : null);
+        this.active(data ? data.active : true);
+        this.createdOn(data ? data.createdOn : null);
+        
+        this.cache.latestData = data;
+    },
+    revert: function() {
+        this.update(this.cache.latestData);
+    },
+    commit: function() {
+        this.cache.latestData = this.serialize();
+    },
+    serialize: function() {
+        var serialized = ko.toJS(this);
+        delete serialized['cache'];
+        delete serialized['commit'];
+        delete serialized['revert'];
+        delete serialized['update'];        
+        delete serialized['isNew'];
+        return serialized;
+    }
+});
+
 var ImageMap = function(data) {
     this.id = ko.observable();
     this.name = ko.observable();
@@ -41,8 +85,8 @@ ko.utils.extend(ImageMap.prototype, {
         delete serialized['cache'];
         delete serialized['commit'];
         delete serialized['revert'];
-        delete serialized['update']        
-        delete serialized['isNew']        
+        delete serialized['update'];      
+        delete serialized['isNew'];      
         return serialized;
     }
 });
@@ -192,7 +236,7 @@ var DataSource = function(baseUrl) {
         var self = this;
         var params;
 
-        var regionId = filters.region && filters.region.id ? filters.region.id : 'all';
+        var regionId = filters.region && filters.region.id ? filters.region.id : '';
         var categoryId = filters.category && filters.category.id ? filters.category.id : 0;
         var imageMapId = filters.imageMap && filters.imageMap.id ? filters.imageMap.id : 0;
 
@@ -202,7 +246,7 @@ var DataSource = function(baseUrl) {
             params = { type: type, reg: regionId, cat: categoryId };
         }
             
-        if (regionId != 'all' || categoryId != 0 || imageMapId != 0) {
+        if (regionId != '' || categoryId != 0 || imageMapId != 0) {
             var serviceUrl = this.getFullPath('api/admin/geocampus/filter');
             $.getJSON( serviceUrl, params )
                 .done(function( json ) {
@@ -222,6 +266,25 @@ var DataSource = function(baseUrl) {
             });
         }
         return pois;
+    };
+    this.getPoiComments = function (poiId) {
+        var serviceUrl = this.getFullPath('api/admin/geocampus/comments');
+        $.getJSON( serviceUrl, { poi: poiId })
+            .done(function( json ) {
+                var comments = [];
+                if (json && json.length > 0) {
+                    for (var i in json) {
+                        var sanitize = json[i];
+                        comments.push(new Comment(sanitize));
+                    }
+                }
+                myViewModel.poiComments(comments); // FIXME: Dependency
+            })
+            .fail(function( jqxhr, textStatus, error ) {
+                var err = textStatus + ", " + error;
+                console.log( "Request Failed: " + err );
+                // TODO: Report error
+        });
     };
     this.getRegions = function () {
         return this.cache && this.cache.regions ? this.cache.regions : [];
@@ -266,23 +329,27 @@ var DataSource = function(baseUrl) {
         }
         $.post( this.getFullPath("json/admin/geocampus/poi/manage/"), poi)
             .done(function( data ) {
-                var isNew = myViewModel.activePoi().isNew();
-                closePoiModal();
-                if (isNew) {
-                	myViewModel.activePoi().id(data.data);
+                if (data.result == 'ok') {
+                    myViewModel.lastError(false);
+                    var isNew = myViewModel.activePoi().isNew();
+                    closePoiModal();
+                    if (isNew) {
+                        myViewModel.activePoi().id(data.data);
+                        myViewModel.pois().push(myViewModel.activePoi());
+                        addNode(myViewModel.activePoi().id(), myViewModel.activePoi().name(), myViewModel.activePoi());
+                    }
                     myViewModel.activePoi().commit();
-                    myViewModel.pois().push(myViewModel.activePoi());
-                    addNode(myViewModel.activePoi().id(), myViewModel.activePoi().name(), myViewModel.activePoi());
-                }
-                selectNode(myViewModel.activePoi(), true);
-                // force KO pois refresh if there where no nodes (KO bug?)
-                if (myViewModel.pois().length == 1) {
-                    myViewModel.pois.valueHasMutated();
+                    selectNode(myViewModel.activePoi(), true);
+                    // force KO pois refresh if there where no nodes (KO bug?)
+                    if (myViewModel.pois().length == 1) {
+                        myViewModel.pois.valueHasMutated();
+                    }
+                } else {
+                    myViewModel.lastError("Erreur lors du chargement. Se il vous plaît donner votre avis");
                 }
             })
             .fail(function( data ) {
-                alert( "Data error: " + data );
-                console.error(data);
+                myViewModel.lastError("Erreur lors du chargement. Se il vous plaît donner votre avis");
         });
     };
     this.getUniversities = function() {
@@ -300,10 +367,23 @@ var DataSource = function(baseUrl) {
             .done(function( data ) {
                 poi.update(data);
                 poi.commit();
+                myViewModel.lastError(false);
             })
             .fail(function( data ) {
-                alert( "Data error: " + data );
-                console.error(data);
+                myViewModel.lastError("Erreur de création de QR . se il vous plaît donner votre avis");
+        });
+    };
+    this.toggleComment = function(comment) {
+        $.post( this.getFullPath("api/admin/geocampus/comment/toggle"), { id: comment.id() })
+            .done(function( data ) {
+                comment.update(data);
+                comment.commit();
+                myViewModel.lastError(false);
+            })
+            .fail(function( data ) {
+                comment.revert();
+                myViewModel.lastError("Erreur lors du chargement. Se il vous plaît donner votre avis");
+                
         });
     };
 };
@@ -327,12 +407,14 @@ var MyViewModel = function(ds) {
     
     self.ds = ds;
     
+    self.bonplansRegions = ko.observableArray([]);
     self.regions = ko.observableArray(self.ds.getRegions());
     self.categoriesUniversities = ko.observableArray(self.ds.getCategories('universities'));
     self.categoriesBonplans = ko.observableArray(self.ds.getCategories('bonplans'));
     self.categoriesImages = ko.observableArray(self.ds.getCategories('images'));
     self.images = ko.observableArray(self.ds.getImages());
     self.pois = ko.observableArray([]);
+    self.poiComments = ko.observableArray([]);
     self.universities = ko.observableArray(self.ds.getUniversities());
 
     self.activeTab = ko.observable('pois');
@@ -345,6 +427,7 @@ var MyViewModel = function(ds) {
     self.activeImage = ko.observable({name: ''});
     self.activePoi = ko.observable();
     
+    self.lastError = ko.observable(false);
     
     self.reload = function() {
         self.regions(self.ds.getRegions());
@@ -354,6 +437,7 @@ var MyViewModel = function(ds) {
         self.images(self.ds.getImages());
         self.universities(self.ds.getUniversities());
         self.pois([]);
+        self.poiComments([]);
     }
     
     self.resetActivePoi = function() {
@@ -396,12 +480,20 @@ var MyViewModel = function(ds) {
                 imageMmap = initImagemap(imageCanvasId);
             }
             self.pois(self.ds.getPois('images', { imageMap: self.activeImage() } ));    
+        } else if (tab == 'bonplans') {
+            self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));    
+            if (self.activeRegion() && !self.activeRegion().allowBonplans) {
+                self.activeRegion(self.bonplansRegions()[0]);
+            }
         } else {
             self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));    
         }
     };
     
     self.switchPoiTab = function(tab) {
+        if (tab == 'comments') {
+            self.ds.getPoiComments(self.activePoi().id());
+        }
         self.activePoiTab(tab);
     };
     
@@ -410,6 +502,7 @@ var MyViewModel = function(ds) {
             self.activePoi().setInactive();
         self.activePoi(poi);
         poi.setActive();
+        self.poiComments([]);
     };
     
     self.changeRegion = function(region) {
@@ -433,6 +526,10 @@ var MyViewModel = function(ds) {
         var newUrl = image && image.url() && image.url().length > 0 ? image.url() : null;
         changeImageMap(newUrl);
     };
+
+    self.activePoi.subscribe(function(newValue) {
+        myViewModel.lastError(false);
+    });
 
     self.activeRegion.subscribe(function(newValue) {
         self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));
@@ -461,6 +558,21 @@ var MyViewModel = function(ds) {
     self.pois.subscribe(function(newValue) {
         loadTree(newValue);
         self.resetActivePoi();
+    });
+
+    self.regions.subscribe(function(newValue) {
+        if (newValue != null && newValue.length == 1) {
+            self.activeRegion(newValue[0]);
+        }
+        
+        var bonplansRegions = [];
+        for (var i in newValue) {
+            if (newValue[i].allowBonplans) {
+                bonplansRegions.push(newValue[i]);
+            }
+        }
+        self.bonplansRegions(bonplansRegions);
+        
     });
 };
   
@@ -538,12 +650,7 @@ function savePoi() {
 }
 
 function newPoi() {
-    var uid = myViewModel.activePoi().id();
-    if (getPoiByUid(uid, myViewModel.pois()) == null) {
-        myViewModel.ds.savePoi();
-    } else {
-        // TODO: Error, uid exists   
-    }
+    myViewModel.ds.savePoi();
 }
 
 function updatePoi() {
@@ -591,6 +698,7 @@ function openImageMapModal(action) {
 
 function closePoiModal() {
     $poiModal.modal('hide');
+    myViewModel.lastError(false);
 }
 
 function closeImageMapModal() {
@@ -721,6 +829,10 @@ function initImagemap(canvasId) {
     return map;
 }
 
+function toggleComment(comment) {
+    myViewModel.ds.toggleComment(comment);
+}
+
 function changeImageMap(newImage) {
     if (imageOverlay != null) {
         imageOverlay.setMap(null);
@@ -843,7 +955,11 @@ $(function () {
                 myViewModel.reload();
                 closeImageMapModal();
                 myViewModel.changeImage(myViewModel.activeImage());
+                myViewModel.lastError(false);
             }
+        },
+        fail: function (e, data) {
+            myViewModel.lastError("Impossible de télécharger l'image");
         },
         progressall: function (e, data) {
             var progress = parseInt(data.loaded / data.total * 100, 10);

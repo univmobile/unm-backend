@@ -8,4 +8,6 @@ public interface CommentRepository extends CrudRepository<Comment, Long> {
 
 	List<Comment> findByPoi(Poi poi);
 
+	List<Comment> findTop10ByPoiOrderByIdDesc(Poi poi);
+
 }

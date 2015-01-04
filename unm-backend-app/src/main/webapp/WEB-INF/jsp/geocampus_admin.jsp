@@ -102,7 +102,7 @@
             <ul class="nav nav-tabs">
                 
               <li role="presentation" data-bind="css: { active: activeTab() == 'pois' }"><a href="#" data-bind="click: function(data, event) { switchTab('pois') }">POIs</a></li>
-              <li role="presentation" data-bind="css: { active: activeTab() == 'bonplans' }"><a href="#" data-bind="click: function(data, event) { switchTab('bonplans') }">Bon Plans</a></li>
+              <li role="presentation" data-bind="visible: bonplansRegions().length > 0, css: { active: activeTab() == 'bonplans' }"><a href="#" data-bind="click: function(data, event) { switchTab('bonplans') }">Bon Plans</a></li>
               <li role="presentation" data-bind="css: { active: activeTab() == 'images' }"><a href="#" data-bind="click: function(data, event) { switchTab('images') }">Images</a></li>
             </ul>
             <p></p>
@@ -110,9 +110,9 @@
                 <div class="panel-heading">
                     <div class="btn-toolbar" role="toolbar">
                         <div class="btn-group  btn-group-xs pull-right" role="group">
-                          <button type="button" class="btn btn-default" data-bind="click: createRootPoi"><span class="glyphicon glyphicon-plus" aria-label="Add root"></span></button>
-                          <button type="button" class="btn btn-default" data-bind="enable: activePoi().id(), click: createPoi"><span class="glyphicon glyphicon-plus-sign" aria-label="Add child"></span></button>
-                          <button type="button" class="btn btn-default" data-bind="enable: activePoi().id(), click: editPoi"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="click: createRootPoi" title="Ajouter un POI racine"><span class="glyphicon glyphicon-plus" aria-label="Add root"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: activePoi().id(), click: createPoi" title="Ajouter un POI ayant pour parent le POI s&eacute;lectionn&eacute;"><span class="glyphicon glyphicon-plus-sign" aria-label="Add child"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: activePoi().id(), click: editPoi" title="Modifier le POI"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
                         </div>
                     </div>
                 </div>
@@ -127,7 +127,6 @@
             </div>
             </div>
         <div id="mapView" class="col-sm-8 col-sm-offset-2 col-md-9 col-md-offset-3 main top-section" data-bind="visible: activeTab() != 'images'">
-            <!--<pre data-bind="text: ko.toJSON(pois, null, 2)"></pre>-->
             <div class="btn-group pull-right"  data-bind="visible: activeTab() == 'pois'">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 Cat&eacute;gorie <span class="caret"></span>
@@ -136,7 +135,7 @@
                 <li><a href="#" data-bind="text: name, click: $parent.changeCategoryUniversities"></a></li>
               </ul>
             </div>
-            <div class="btn-group pull-right" data-bind="visible: activeTab() == 'bonplansDisabled'">
+            <div class="btn-group pull-right" data-bind="visible: activeTab() == 'bonplans'">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 Cat&eacute;gorie <span class="caret"></span>
               </button>
@@ -144,11 +143,14 @@
                 <li><a href="#" data-bind="text: name, click: $parent.changeCategoryBonplans"></a></li>
               </ul>
             </div>
-            <div class="btn-group pull-right">
+            <div class="btn-group pull-right" data-bind="visible: regions().length > 1">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 R&eacute;gion <span class="caret"></span>
               </button>
-              <ul class="dropdown-menu" role="menu" data-bind="foreach: regions">
+              <ul class="dropdown-menu" role="menu" data-bind="visible: activeTab() == 'pois', foreach: regions">
+                <li><a href="#" data-bind="text: name, click: $parent.changeRegion"></a></li>
+              </ul>
+              <ul class="dropdown-menu" role="menu" data-bind="visible: activeTab() == 'bonplans', foreach: bonplansRegions">
                 <li><a href="#" data-bind="text: name, click: $parent.changeRegion"></a></li>
               </ul>
             </div>
@@ -194,12 +196,15 @@
 
               <ul class="nav nav-tabs">
                 <li role="presentation" data-bind="css: { active: activePoiTab() == 'details' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('details') }">D&eacute;tails</a></li>
-                  <!--
-                <li role="presentation" data-bind="css: { active: activePoiTab() == 'comments' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('comments') }">Commentaires</a></li>-->
+                <li role="presentation" data-bind="css: { active: activePoiTab() == 'comments' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('comments') }">Commentaires</a></li>
                 <li role="presentation" data-bind="visible: activeTab() == 'images' && activePoi().id(), css: { active: activePoiTab() == 'qr' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('qr') }">QR</a></li>
               </ul>
               <p></p>
               
+            <div class="alert alert-danger" data-bind="visible: lastError()" role="alert">
+                <strong>Erreur!</strong> <span data-bind="text: lastError()"></span>
+            </div>
+
             <form class="form-horizontal" role="form" data-bind="with: activePoi(), visible: activePoiTab() == 'details'">
               <div class="form-group">
                 <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
@@ -264,43 +269,40 @@
               </div>
             </form>
 
-            <div data-bind="with: activePoi(), visible: activePoiTab() == 'comments'">
-                <table class="table table-condensed table-striped">
+            <div data-bind="visible: activePoiTab() == 'comments'">
+                <div class="alert alert-danger" data-bind="visible: lastError()" role="alert">
+                    <strong>Erreur!</strong> <span data-bind="text: lastError()"></span>
+                </div>
+                
+                <p class="text-center">
+                    <br>
+                    <i data-bind="visible: poiComments().length == 0">Aucun message</i>
+                </p>
+                
+                <table data-bind="visible: poiComments().length > 0" class="table table-condensed table-striped">
                     <thead>
                         <tr>
-                            <th>#</th>
-                            <th>#</th>
-                            <th>#</th>
-                            <th>#</th>
+                            <th>Auteur</th>
+                            <th>Message</th>
+                            <th>Actif</th>
                         </tr>
                     </thead>
                     
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td>lluporini@blitzit.com.ar</td>
-                            <td>Comentario 1</td>
-                            <td>Unpublish</td>
-                        </tr>
-                        <tr>
-                            <td>2</td>
-                            <td>jluporini@blitzit.com.ar</td>
-                            <td>Comentario 2</td>
-                            <td>Publish</td>
+                        <tr data-bind="foreach: { data: poiComments, as: 'comment' }">
+                            <td><small data-bind="text: comment.createdOn"></small><br><small data-bind="text: comment.author"></small></td>
+                            <td><small data-bind="text: comment.message"></small></td>
+                            <td class="pull-center"><input type="checkbox" data-bind="checked: comment.active(), click: toggleComment" /></td>
                         </tr>
                     </tbody>
+                    
                 </table>
-                <form class="form-horizontal" role="form">
-                  <div class="form-group">
-                    <label for="inputEmail3" class="col-sm-2 control-label">Commentaire</label>
-                    <div class="col-sm-10">
-                      <textarea class="form-control"></textarea>
-                    </div>
-                  </div>
-                </form>
             </div>
                 
             <div data-bind="with: activePoi(), visible: activePoiTab() == 'qr' && activePoi().id()">
+                <div class="alert alert-danger" data-bind="visible: $parent.lastError()" role="alert">
+                    <strong>Erreur!</strong> <span data-bind="text: $parent.lastError()"></span>
+                </div>
                 <br/>
                 <img class="center-block img-thumbnail" data-bind="visible: qrCode, attr: { src: qrCode }" />
                 <br data-bind="visible: qrCode" />
@@ -310,8 +312,8 @@
                 
             </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-bind="click: cancelPoi">Annuler</button>
-            <button type="button" class="btn btn-primary" data-bind="click: savePoi">Enregistrer</button>              
+            <button type="button" class="btn btn-default" data-bind="visible: activePoiTab() == 'details', click: cancelPoi">Annuler</button>
+            <button type="button" class="btn btn-primary" data-bind="visible: activePoiTab() == 'details', click: savePoi">Enregistrer</button>              
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->
@@ -325,6 +327,10 @@
             <h4 class="modal-title">Image Map</span></h4>
           </div>
           <div class="modal-body">
+
+            <div class="alert alert-danger" data-bind="visible: lastError()" role="alert">
+                <strong>Erreur!</strong> <span data-bind="text: lastError()"></span>
+            </div>
 
             <form id="imageupload" class="form-horizontal" role="form" action="${baseURL}/api/admin/geocampus/imagemap" method="POST" enctype="multipart/form-data">
                 <input type="hidden" name="id" data-bind="value: activeImage().id">

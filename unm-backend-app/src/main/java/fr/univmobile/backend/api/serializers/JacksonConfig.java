@@ -6,6 +6,7 @@ import org.springframework.context.annotation.Configuration;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import fr.univmobile.backend.api.serializers.PoiMixIn;
+import fr.univmobile.backend.domain.Comment;
 import fr.univmobile.backend.domain.ImageMap;
 import fr.univmobile.backend.domain.Poi;
 
@@ -17,6 +18,7 @@ public class JacksonConfig {
 		final ObjectMapper mapper = new ObjectMapper();
 		mapper.addMixInAnnotations(Poi.class, PoiMixIn.class);
 		mapper.addMixInAnnotations(ImageMap.class, ImageMapMixIn.class);
+		mapper.addMixInAnnotations(Comment.class, CommentMixIn.class);
 		return mapper; 
 	}  
 
