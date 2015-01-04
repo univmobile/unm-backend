@@ -257,7 +257,7 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Accès</label>
+                <label for="inputEmail3" class="col-sm-2 control-label">Acc&egrave;s</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: itinerary">
                 </div>
@@ -327,7 +327,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title">Image Map</span></h4>
+            <h4 class="modal-title">Plan au format image</span></h4>
           </div>
           <div class="modal-body">
 

@@ -205,7 +205,7 @@ td span.error {
    </tr>
    
    <tr class="country">
-      <th>Pais</th>
+      <th>Pays</th>
       <td>
          <input id="text-country" name="country" value="${poimodify.country}"/>
       </td>

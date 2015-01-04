@@ -104,7 +104,7 @@ td.id {
 
 <div class="table bottom">
    <c:if test="${user.role eq 'superadmin'}">
-      <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter à poi…</a>
+      <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter un poi…</a>
    </c:if>
 </div>
 
@@ -180,7 +180,7 @@ td.id {
 
 <div class="table bottom">
    <c:if test="${user.role eq 'superadmin'}">
-      <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter à poi…</a>
+      <a id="link-poiadd" href="${baseURL}/poisadd">Ajouter un poi…</a>
    </c:if>
 </div>
 

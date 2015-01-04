@@ -103,7 +103,7 @@ label.checkbox-parentCategory {
       </tr>
       
       <tr>
-         <th>Catègorie pére</th>
+         <th>Catégorie parente</th>
          <td>
             <input readonly class="text" type="text" id="text-parentCategory" name="parentCategory" value="${poicategorymodify.parent.name}">
          </td>

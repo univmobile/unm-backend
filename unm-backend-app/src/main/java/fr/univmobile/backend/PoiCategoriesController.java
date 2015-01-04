@@ -74,7 +74,7 @@ public class PoiCategoriesController extends AbstractBackendController {
 		final PoiCategoriesInfo poiCategoriesInfo = instantiate(
 				PoiCategoriesInfo.class) //
 				.setCount(size) //
-				.setContext("Tous les poi catégories") //
+				.setContext("Toutes les catégories de POI") //
 				.setResultCount(size);
 
 		setAttribute("poiCategoriesInfo", poiCategoriesInfo);
