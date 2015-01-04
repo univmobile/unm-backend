@@ -481,10 +481,10 @@ var MyViewModel = function(ds) {
             }
             self.pois(self.ds.getPois('images', { imageMap: self.activeImage() } ));    
         } else if (tab == 'bonplans') {
-            self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));    
             if (self.activeRegion() && !self.activeRegion().allowBonplans) {
                 self.activeRegion(self.bonplansRegions()[0]);
             }
+            self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));    
         } else {
             self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));    
         }

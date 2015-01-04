@@ -161,7 +161,6 @@ textarea {
 <tr class="comments">
    <th>Commentaires</th>
    <td>
-      <a href="${baseURL}/comments/poi${poi.id}" id="link-comments">
    	     <c:choose>
       		 
              <c:when test="${empty commentCount or commentCount == 0}">
@@ -177,7 +176,6 @@ textarea {
       		 </c:otherwise>
          
          </c:choose>
-   	  </a>
    </td>
 </tr>
 

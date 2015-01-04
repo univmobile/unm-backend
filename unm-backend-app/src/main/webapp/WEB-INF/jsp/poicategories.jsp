@@ -155,11 +155,6 @@ td.id {
       <td class="edit">
          <a id="link-modify_${pc.id}" href="${baseURL}/poicategoriesmodify/${pc.id}">Modifier…</a>
          <a id="link-sons_${pc.id}" href="${baseURL}/poicategories/${pc.id}">Progéniture…</a>
-         <c:if test="${has_father eq true}">
-            <c:if test="${not empty father}">
-               <a id="link-father_${father.parent.id}" href="${baseURL}/poicategories/${father.parent.id}">Père…</a>
-            </c:if>
-         </c:if>
       </td>
       
       <td class="none">
@@ -173,7 +168,7 @@ td.id {
 </table>
 
 <div class="table bottom">
-   <c:if test="${poiCategoriesInfo.count eq 0}">
+   <c:if test="${not empty father}">
       <a id="link-father_${father.parent.id}" href="${baseURL}/poicategories/${father.parent.id}">Père…</a>
    </c:if>
 </div>
