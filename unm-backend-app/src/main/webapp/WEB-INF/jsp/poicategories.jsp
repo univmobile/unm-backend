@@ -174,7 +174,14 @@ td.id {
 </div>
 
 <div class="table bottom">
-   <a id="link-poicategoryadd" href="${baseURL}/poicategoriesadd">Ajouter une catégorie…</a>
+   <c:choose>
+       <c:when test="${not empty father}">
+           <a id="link-poicategoryadd" href="${baseURL}/poicategoriesadd/${father.id}">Ajouter une catégorie…</a>
+       </c:when>
+       <c:otherwise>
+           <a id="link-poicategoryadd" href="${baseURL}/poicategoriesadd">Ajouter une catégorie…</a>   
+       </c:otherwise>
+   </c:choose>
 </div>
 
 </div> <!-- end of #div-users -->

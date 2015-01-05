@@ -101,7 +101,17 @@ label.checkbox-parentCategory {
          <select id="select-parentCategory" name="parentCategory">
             <option value="(aucune)">(aucune)</option>
             <c:forEach var="pc" items="${poicategories}">
-               <option value="${pc.id}">
+            	<c:choose>
+            		<c:when test="${not empty poicategoryadd.parent and poicategoryadd.parent.id eq pc.id}">
+		            	<option selected="selected" value="${pc.id}" >
+        	    	</c:when>
+            		<c:when test="${not empty parentCategory and parentCategory.id eq pc.id}">
+		            	<option selected="selected" value="${pc.id}" >
+        	    	</c:when>
+            		<c:otherwise>
+		            	<option value="${pc.id}" >
+        	    	</c:otherwise>
+               </c:choose>
                   ${pc.name}
                </option>
             </c:forEach>
