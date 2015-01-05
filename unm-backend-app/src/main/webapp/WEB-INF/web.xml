@@ -21,22 +21,22 @@
 
 	<context-param>
 		<param-name>qrCodesBaseUrl</param-name>
-		<param-value>http://localhost:8080/unm-backend/qrcodes</param-value>
+		<param-value>http://localhost:8080/unm-backend/files/qrcodes</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>imageMapsBaseUrl</param-name>
-		<param-value>http://localhost:8080/unm-backend/imagemaps</param-value>
+		<param-value>http://localhost:8080/unm-backend/files/imagemaps</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>imageMapsBaseDir</param-name>
-		<param-value>/tmp/unm-backend/dataDir/imagemaps</param-value>
+		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/imagemaps</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>qrBaseDir</param-name>
-		<param-value>/tmp/unm-backend/dataDir/qrcodes</param-value>
+		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/qrcodes</param-value>
 	</context-param>
 
 	<context-param>
@@ -95,7 +95,7 @@
 	    </init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
- 
+
 	<servlet-mapping>
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/api/*</url-pattern>
