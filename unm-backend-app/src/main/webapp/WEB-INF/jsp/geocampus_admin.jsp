@@ -35,8 +35,7 @@
     <!-- JSTree -->
     <script src="${baseURL}/js/jstree.min.js"></script>
       
-    <!--<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&sensor=SET_TO_TRUE_OR_FALSE"></script>-->
-    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=geometry"></script>
       
     <script type='text/javascript' src='${baseURL}/js/knockout-3.2.0.js'></script>
 
