@@ -43,7 +43,7 @@
 		<param-name>qrCodeLinkPattern</param-name>
 		<param-value>univmobile://show_image_map:%LINK%</param-value>
 	</context-param>
- 
+
 	<servlet>
 		<servlet-name>BackendServlet</servlet-name>
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
@@ -100,7 +100,7 @@
 		<servlet-name>dispatcher</servlet-name>
 		<url-pattern>/api/*</url-pattern>
 	</servlet-mapping>
- 
+
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
 	</listener>	
@@ -113,6 +113,7 @@
 		<init-param>
 			<param-name>hosts.allow</param-name>
 			<param-value>
+				lauta-home
 				mauricio-MOV
 				tomcat
 				cyborg.etherea

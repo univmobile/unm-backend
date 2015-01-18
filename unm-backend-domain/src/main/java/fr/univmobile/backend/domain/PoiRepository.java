@@ -3,9 +3,9 @@ package fr.univmobile.backend.domain;
 import java.util.Collection;
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface PoiRepository extends CrudRepository<Poi, Long> {
+public interface PoiRepository extends JpaRepository<Poi, Long> {
 
 	//List<Poi> findByUniversityAndLegacyStartingWithOrderByLegacyAsc(University university, String legacy);
 	

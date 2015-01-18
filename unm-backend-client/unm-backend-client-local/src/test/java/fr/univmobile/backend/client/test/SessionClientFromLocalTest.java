@@ -105,7 +105,7 @@ public class SessionClientFromLocalTest {
 				twitterUser(3, "loulou", "Loulou"));
 
 		final SessionManager sessionManager = new SessionManagerImpl(logQueue,
-				users, H2, cxn);
+				null, H2, cxn);
 
 		client = new SessionClientFromLocal( //
 				"http://dummy/", "http://dummy/", "http://dummy/", //

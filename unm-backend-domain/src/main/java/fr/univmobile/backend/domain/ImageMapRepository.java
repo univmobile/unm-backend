@@ -1,10 +1,10 @@
 package fr.univmobile.backend.domain;
 
+import org.springframework.data.jpa.repository.JpaRepository;
+
 import java.util.List;
 
-import org.springframework.data.repository.CrudRepository;
-
-public interface ImageMapRepository extends CrudRepository<ImageMap, Long> {
+public interface ImageMapRepository extends JpaRepository<ImageMap, Long> {
 	
 	List<ImageMap> findByName(String name);
 	
