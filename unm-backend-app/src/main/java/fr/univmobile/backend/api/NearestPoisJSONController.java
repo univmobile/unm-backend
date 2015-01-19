@@ -6,6 +6,8 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.univmobile.backend.hateoas.assembler.PoiResourceAssembler;
+import fr.univmobile.backend.hateoas.resource.PoiResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -26,12 +28,15 @@ public class NearestPoisJSONController {
 	@Autowired
 	PoiRepository poiRepository;
 
+	@Autowired
+	PoiResourceAssembler poiResourceAssembler;
+
 	@Value("${nearestMaxDistanceInMeters}")
 	private Double nearestMaxDistanceInMeters;
 
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	public List<Poi> get(@RequestParam(value = "lat", required = false) Double lat,
+	public List<PoiResource> get(@RequestParam(value = "lat", required = false) Double lat,
 			@RequestParam(value = "lng", required = false) Double lng,
 			HttpServletRequest request,
 			HttpServletResponse response) {
@@ -51,7 +56,7 @@ public class NearestPoisJSONController {
 			if (p.isNear(lat, lng, nearestMaxDistanceInMeters))
 				result.add(p);
 
-		return result;
+		return poiResourceAssembler.toResources(result);
 	}
 
 	private User getCurrentUser(HttpServletRequest request) {

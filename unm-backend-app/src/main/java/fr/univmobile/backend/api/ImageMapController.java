@@ -5,6 +5,8 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import fr.univmobile.backend.hateoas.assembler.ImageMapDataResourceAssembler;
+import fr.univmobile.backend.hateoas.resource.ImageMapDataResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,10 +28,13 @@ public class ImageMapController {
 	
 	@Autowired
 	ImageMapRepository imageMapRepository;
+
+	@Autowired
+	ImageMapDataResourceAssembler imageMapDataResourceAssembler;
 	
 	@RequestMapping(method = RequestMethod.GET)
 	@ResponseBody
-	public ImageMapData get(@RequestParam(IMAGE_MAP_WITH_POI_SELECTED_IMAGE_MAP_ID_PARAM) Long imageMapId, @RequestParam(value = IMAGE_MAP_WITH_POI_SELECTED_POI_ID_PARAM, required = false) Long selectedPoiId, HttpServletRequest request, HttpServletResponse response) throws IOException {
+	public ImageMapDataResource get(@RequestParam(IMAGE_MAP_WITH_POI_SELECTED_IMAGE_MAP_ID_PARAM) Long imageMapId, @RequestParam(value = IMAGE_MAP_WITH_POI_SELECTED_POI_ID_PARAM, required = false) Long selectedPoiId, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		ImageMapData data = new ImageMapData();
 		data.imageMap = imageMapRepository.findOne(imageMapId);
 		
@@ -44,7 +49,7 @@ public class ImageMapController {
 			}
 		}
 
-		return data;
+		return imageMapDataResourceAssembler.toResource(data);
 	}
 
 	public static String buildImageMapWithSelectedPoiUrl(String apiPath, Long imageMapId, Long selectedPoiId) {
