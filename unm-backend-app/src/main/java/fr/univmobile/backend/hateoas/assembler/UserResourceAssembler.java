@@ -1,6 +1,6 @@
 package fr.univmobile.backend.hateoas.assembler;
 
-import fr.univmobile.backend.api.UserController;
+import fr.univmobile.backend.CommentController;
 import fr.univmobile.backend.domain.User;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.hateoas.Link;
@@ -9,7 +9,7 @@ import fr.univmobile.backend.hateoas.resource.UserResource;
 
 public class UserResourceAssembler extends ResourceAssemblerSupport<User, UserResource> {
 
-    private static final String USERS_PATH = "/api/users/";
+    private static final String USERS_PATH = "api/users/";
     private static final String UNIVERITY_PATH = "/university";
     private static final String UPDATED_BY_PATH = "/updatedBy";
     private static final String SECONDARY_UNIVERITY_PATH = "/secondaryUniversity";
@@ -19,7 +19,7 @@ public class UserResourceAssembler extends ResourceAssemblerSupport<User, UserRe
     private String baseUrl;
 
     public UserResourceAssembler() {
-        super(UserController.class, UserResource.class);
+        super(CommentController.class, UserResource.class);
     }
 
     @Override

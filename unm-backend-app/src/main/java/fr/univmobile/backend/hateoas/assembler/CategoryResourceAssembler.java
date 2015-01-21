@@ -1,6 +1,6 @@
 package fr.univmobile.backend.hateoas.assembler;
 
-import fr.univmobile.backend.api.CategoryController;
+import fr.univmobile.backend.CommentController;
 import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.hateoas.resource.CategoryResource;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,7 +9,7 @@ import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 
 public class CategoryResourceAssembler extends ResourceAssemblerSupport<Category, CategoryResource> {
 
-    private static final String CATEGORIES_PATH = "/api/categories/";
+    private static final String CATEGORIES_PATH = "api/categories/";
     private static final String POIS_PATH = "/pois";
     private static final String PARENT_PATH = "/parent";
     private static final String UPDATED_BY_PATH = "/updatedBy";
@@ -20,7 +20,7 @@ public class CategoryResourceAssembler extends ResourceAssemblerSupport<Category
     private String baseUrl;
 
     public CategoryResourceAssembler() {
-        super(CategoryController.class, CategoryResource.class);
+        super(CommentController.class, CategoryResource.class);
     }
 
     @Override

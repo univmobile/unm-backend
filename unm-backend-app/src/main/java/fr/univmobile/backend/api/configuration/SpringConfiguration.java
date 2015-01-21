@@ -39,4 +39,9 @@ public class SpringConfiguration {
     public UserResourceAssembler getUserResourceAssembler() {
         return new UserResourceAssembler();
     }
+
+    @Bean
+    public NotificationStatusAssembler getNotificationStatusAssembler() {
+        return new NotificationStatusAssembler();
+    }
 }

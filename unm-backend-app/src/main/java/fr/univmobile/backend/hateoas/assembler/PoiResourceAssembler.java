@@ -9,7 +9,7 @@ import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 
 public class PoiResourceAssembler extends ResourceAssemblerSupport<Poi, PoiResource> {
 
-    private static final String POIS_PATH = "/api/pois/";
+    private static final String POIS_PATH = "api/pois/";
     private static final String IMAGE_MAP_PATH = "/imageMap";
     private static final String UPDATED_BY_PATH = "/updatedBy";
     private static final String CATEGORY_PATH = "/category";

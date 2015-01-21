@@ -7,7 +7,10 @@ import javax.persistence.*;
 @Entity
 @Table(name = "notification")
 @EntityListeners({ AuditingEntityListener.class })
-@NamedQuery(name="Notification.searchByCreatedDate", query="Select n from Notification n where n.createdOn>=:date order by n.createdOn Desc") 
+@NamedQueries({
+		@NamedQuery(name="Notification.searchByCreatedDate", query="Select n from Notification n where n.createdOn>=:date order by n.createdOn Desc"),
+		@NamedQuery(name="Notification.countByCreatedDate", query="Select COUNT(*) from Notification n where n.createdOn>=:date")
+})
 public class Notification extends AuditableEntity {
 
 	@Id

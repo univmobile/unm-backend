@@ -1,14 +1,10 @@
 package fr.univmobile.backend.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.Date;
 
 @Entity
 @Table(name = "user")
@@ -52,6 +48,8 @@ public class User extends AuditableEntity {
 	@JoinColumn(name = "secondaryuniversity_id")
 	@JsonIgnore
 	private University secondaryUniversity;
+	@Column(name = "notifications_read_date")
+	private Date notificationsReadDate;
 
 	@Override
 	public String toString() {
@@ -182,5 +180,13 @@ public class User extends AuditableEntity {
 
 	public boolean isStudent() {
 		return this.role.equals(STUDENT);
+	}
+
+	public Date getNotificationsReadDate(){
+		return notificationsReadDate;
+	}
+
+	public void setNotificationsReadDate(Date date){
+		this.notificationsReadDate = date;
 	}
 }

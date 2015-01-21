@@ -6,4 +6,6 @@ import java.util.List;
 public interface NotificationRepositoryCustom {
 
 	List<Notification> notificationList(Integer limit, Date date);
+
+	Long countCotificationList(Date date);
 }

@@ -3,7 +3,11 @@ package fr.univmobile.backend.domain;
 import java.util.Collection;
 import java.util.List;
 
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 public interface PoiRepository extends JpaRepository<Poi, Long> {
 
@@ -38,5 +42,7 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 	List<Poi> findByCategory_LegacyStartingWithAndUniversityOrderByNameAsc(String categoryLegacy, University university);
 
 	List<Poi> findByIdIn(Collection<Long> ids);
-	
+
+	@Query("Select p from Poi p where p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%') order by p.name asc")
+	Page<Poi> searchValue(@Param("val") String val, Pageable pageable);
 }

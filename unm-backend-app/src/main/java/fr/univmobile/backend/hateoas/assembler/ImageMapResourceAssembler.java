@@ -9,7 +9,7 @@ import org.springframework.hateoas.mvc.ResourceAssemblerSupport;
 
 public class ImageMapResourceAssembler extends ResourceAssemblerSupport<ImageMap, ImageMapResource> {
 
-    private static final String IMAGE_MAP_PATH = "/api/imageMaps/";
+    private static final String IMAGE_MAP_PATH = "api/imageMaps/";
     private static final String UPDATED_BY_PATH = "/updatedBy";
     private static final String POIS_PATH = "/pois";
     private static final String CREATED_BY_PATH = "/createdBy";
