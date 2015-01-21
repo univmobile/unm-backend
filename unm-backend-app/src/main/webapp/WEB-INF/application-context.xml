@@ -6,18 +6,9 @@
     http://www.springframework.org/schema/data/jpa
     http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
 
-	<!-- Database
+	<!-- Database -->
 	<bean id="datasource" class="org.springframework.jndi.JndiObjectFactoryBean">
 		<property name="jndiName" value="java:comp/env/jdbc/univmobile"/>
-	</bean -->
-	
-	<!-- Database -->
-	<bean id="datasource"
-		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
-		<property name="url" value="jdbc:mysql://localhost:3306/test_univmobile" />
-		<property name="username" value="root" />
-		<property name="password" value="rosenrot123" />
 	</bean>
 	
 	<!-- Entity Manager -->
