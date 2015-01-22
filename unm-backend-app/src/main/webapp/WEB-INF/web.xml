@@ -44,6 +44,12 @@
 		<param-value>univmobile://show_image_map:%LINK%</param-value>
 	</context-param>
 
+	<context-param>
+		<param-name>notification.days</param-name>
+		<param-value>10</param-value>
+	</context-param>
+
+
 	<servlet>
 		<servlet-name>BackendServlet</servlet-name>
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>

@@ -48,8 +48,8 @@ public class User extends AuditableEntity {
 	@JoinColumn(name = "secondaryuniversity_id")
 	@JsonIgnore
 	private University secondaryUniversity;
-	@Column(name = "notifications_read_date")
-	private Date notificationsReadDate;
+	@Column(name = "notifications_read_date", nullable = false, columnDefinition="TIMESTAMP DEFAULT '1970-01-01'")
+	private Date notificationsReadDate = new Date(0);
 
 	@Override
 	public String toString() {

@@ -7,6 +7,7 @@ import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.backend.hateoas.assembler.NotificationStatusAssembler;
 import fr.univmobile.backend.hateoas.resource.NotificationStatusResource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
@@ -36,7 +37,7 @@ public class NotificationController {
 	@Autowired
 	UserRepository userRepository;
 
-//	@Value("${notification.days}")
+	@Value("${notification.days}")
 	int days = 0;
 
 	@ResponseBody
