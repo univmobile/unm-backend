@@ -4,12 +4,22 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URL;
 import java.net.URLConnection;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 import java.util.zip.GZIPInputStream;
+
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 
 import com.sun.syndication.feed.synd.SyndEnclosure;
@@ -32,6 +42,54 @@ public class Utils {
 
 	private static final Log log = LogFactory.getLog(Utils.class);
 
+	public void getArticleData(String urlString) {
+
+		try {
+			URL url = new URL(urlString);
+			URLConnection conn = url.openConnection();
+
+			DocumentBuilderFactory factory = DocumentBuilderFactory
+					.newInstance();
+			DocumentBuilder builder = factory.newDocumentBuilder();
+			Document doc = builder.parse(conn.getInputStream());
+
+			NodeList nodeList = doc.getDocumentElement().getChildNodes();
+
+			for (int i = 0; i < nodeList.getLength(); i++) {
+				Node node = nodeList.item(i);
+
+				if (node.getNodeType() == Node.ELEMENT_NODE) {
+					Element elem = (Element) node;
+
+					SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd",
+							Locale.US);
+					Date date = sdf.parse(elem.getAttribute("date"));
+
+					New newArticleFeed = newRepository.findByLinkAndId(
+							urlString, elem.getAttribute("id"));
+					if (newArticleFeed == null)
+						newArticleFeed = new New();
+
+					newArticleFeed.setTitle(elem.getAttribute("title"));
+					newArticleFeed.setLink(urlString);
+					newArticleFeed.setDescription(elem.getTextContent());
+					newArticleFeed.setPublishedDate(date);
+					newArticleFeed.setImageUrl(elem.getAttribute("image"));
+					newArticleFeed.setRestoId(elem.getAttribute("id"));
+					newArticleFeed.setCategory(elem.getAttribute("category"));
+
+					newRepository.save(newArticleFeed);
+				}
+
+			}
+		} catch (Exception e) {
+			log.error(
+					"Exception occured when building the article object out of the url",
+					e);
+		}
+
+	}
+
 	public void feedRss() throws IOException {
 		for (Feed feed : feedRepository.findAll()) {
 
@@ -53,43 +111,41 @@ public class Utils {
 					SyndFeedInput input = new SyndFeedInput();
 					rss = input.build(source);
 
-					New newRssFeed = new New();
-					newRssFeed.setTitle(rss.getTitle());
-					newRssFeed.setLink(rss.getUri());
-					newRssFeed.setDescription(rss.getDescription());
-					newRssFeed.setAuthor(rss.getAuthor());
-					newRssFeed.setGuid(rss.getUri());
-					newRssFeed.setPublishedDate(rss.getPublishedDate());
+					if (rss != null) {
 
-					List<SyndEntry> items = rss.getEntries();
-					if (items.size() > 0) {
-						List<SyndEnclosure> enclosures = items.get(0).getEnclosures();
-						if (enclosures.get(0).getType().contains("image/"))
-							newRssFeed.setImageUrl(enclosures.get(0).getUrl());
+						New newRssFeed = new New();
+						newRssFeed.setTitle(rss.getTitle());
+						newRssFeed.setLink(rss.getUri());
+						newRssFeed.setDescription(rss.getDescription());
+						newRssFeed.setAuthor(rss.getAuthor());
+						newRssFeed.setGuid(rss.getUri());
+						newRssFeed.setPublishedDate(rss.getPublishedDate());
+
+						List<SyndEntry> items = rss.getEntries();
+						if (items.size() > 0) {
+							List<SyndEnclosure> enclosures = items.get(0)
+									.getEnclosures();
+							if (enclosures.get(0).getType().contains("image/"))
+								newRssFeed.setImageUrl(enclosures.get(0)
+										.getUrl());
+						}
+
 					}
 
 				}
 
 				catch (Exception e) {
 					log.error(
-							"Exception occured when building the feed object out of the url",
+							"Exception occured when building the rss object out of the url",
 							e);
 				} finally {
 					if (is != null)
 						is.close();
 				}
 			} else if (feed.getType().equals(Feed.Type.RESTO)) {
-				// FIXME: make other parser
-				// New newRssFeed = new New();
-				// newRssFeed.setTitle(title);
-				// newRssFeed.setLink(link);
-				// newRssFeed.setDescription(description);
-				// newRssFeed.setAuthor(author);
-				// newRssFeed.setGuid(guid);
-				// newRssFeed.setPublishedDate(publishedDate);
-				// newRssFeed.setImageUrl(imageUrl);
-				// newRssFeed.setRestoId(restoId);
-				// newRssFeed.setCategory(category);
+
+				getArticleData(feed.getUrl());
+
 			}
 		}
 	}
