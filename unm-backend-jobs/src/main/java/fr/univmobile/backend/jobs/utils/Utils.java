@@ -29,20 +29,74 @@ import com.sun.syndication.io.SyndFeedInput;
 
 import fr.univmobile.backend.domain.Feed;
 import fr.univmobile.backend.domain.FeedRepository;
+import fr.univmobile.backend.jobs.domain.RestoMenu;
+import fr.univmobile.backend.jobs.domain.RestoMenuRepository;
 import fr.univmobile.backend.jobs.domain.New;
 import fr.univmobile.backend.jobs.domain.NewRepository;
 
 public class Utils {
 
 	@Autowired
+	FeedRepository feedRepository;
+
+	@Autowired
 	NewRepository newRepository;
 
 	@Autowired
-	FeedRepository feedRepository;
+	RestoMenuRepository restoMenuRepository;
 
 	private static final Log log = LogFactory.getLog(Utils.class);
 
-	public void getArticleData(String urlString) {
+	public void persistRssFeed(String urlString) {
+
+		SyndFeed rss = null;
+		InputStream is = null;
+
+		try {
+
+			URLConnection openConnection = new URL(urlString).openConnection();
+			is = new URL(urlString).openConnection().getInputStream();
+			if ("gzip".equals(openConnection.getContentEncoding())) {
+				is = new GZIPInputStream(is);
+			}
+			InputSource source = new InputSource(is);
+			SyndFeedInput input = new SyndFeedInput();
+			rss = input.build(source);
+
+			if (rss != null) {
+
+				New newRssFeed = new New();
+				newRssFeed.setTitle(rss.getTitle());
+				newRssFeed.setLink(rss.getUri());
+				newRssFeed.setDescription(rss.getDescription());
+				newRssFeed.setAuthor(rss.getAuthor());
+				newRssFeed.setGuid(rss.getUri());
+				newRssFeed.setPublishedDate(rss.getPublishedDate());
+
+				List<SyndEntry> items = rss.getEntries();
+				if (items.size() > 0) {
+					List<SyndEnclosure> enclosures = items.get(0)
+							.getEnclosures();
+					if (enclosures.get(0).getType().contains("image/"))
+						newRssFeed.setImageUrl(enclosures.get(0).getUrl());
+				}
+
+			}
+
+		} catch (Exception e) {
+			log.error("Exception occured building the rss object", e);
+		} finally {
+			if (is != null)
+				try {
+					is.close();
+				} catch (IOException e) {
+					log.error("Exception closing the inputStream", e);
+				}
+		}
+
+	}
+
+	public void persistArticleFeed(String urlString) {
 
 		try {
 			URL url = new URL(urlString);
@@ -83,68 +137,69 @@ public class Utils {
 
 			}
 		} catch (Exception e) {
-			log.error(
-					"Exception occured when building the article object out of the url",
-					e);
+			log.error("Exception occured building the article object", e);
 		}
 
 	}
 
-	public void feedRss() throws IOException {
+	public void persistMenu(String urlString) {
+
+		try {
+			URL url = new URL(urlString);
+			URLConnection conn = url.openConnection();
+
+			DocumentBuilderFactory factory = DocumentBuilderFactory
+					.newInstance();
+			DocumentBuilder builder = factory.newDocumentBuilder();
+			Document doc = builder.parse(conn.getInputStream());
+
+			NodeList nodeList = doc.getDocumentElement().getChildNodes();
+
+			for (int i = 0; i < nodeList.getLength(); i++) {
+				Node node = nodeList.item(i);
+
+				if (node.getNodeType() == Node.ELEMENT_NODE) {
+					Element elem = (Element) node;
+
+					System.out.println(elem.getAttribute("id"));
+
+					NodeList menues = elem.getElementsByTagName("menu");
+
+					for (int j = 0; j < menues.getLength(); j++) {
+						Element menuElem = (Element) menues.item(j);
+
+						SimpleDateFormat sdf = new SimpleDateFormat(
+								"yyyy-MM-dd", Locale.US);
+						Date date = sdf.parse(menuElem.getAttribute("date"));
+						
+						
+						RestoMenu restoMenu = new RestoMenu();
+
+						// menuFeed.setPoi(poi); FIXME: references poi
+						restoMenu.setEffectiveDate(date);
+						restoMenu.setDescription(menuElem.getTextContent());
+
+						restoMenuRepository.save(restoMenu);
+					}
+				}
+
+			}
+		} catch (Exception e) {
+			log.error("Exception occured building the article object", e);
+		}
+
+	}
+
+	public void persistFeeds() {
 		for (Feed feed : feedRepository.findAll()) {
 
 			if (feed.getType().equals(Feed.Type.RSS)) {
 
-				String url = feed.getUrl();
-				SyndFeed rss = null;
-				InputStream is = null;
+				persistRssFeed(feed.getUrl());
 
-				try {
-
-					URLConnection openConnection = new URL(url)
-							.openConnection();
-					is = new URL(url).openConnection().getInputStream();
-					if ("gzip".equals(openConnection.getContentEncoding())) {
-						is = new GZIPInputStream(is);
-					}
-					InputSource source = new InputSource(is);
-					SyndFeedInput input = new SyndFeedInput();
-					rss = input.build(source);
-
-					if (rss != null) {
-
-						New newRssFeed = new New();
-						newRssFeed.setTitle(rss.getTitle());
-						newRssFeed.setLink(rss.getUri());
-						newRssFeed.setDescription(rss.getDescription());
-						newRssFeed.setAuthor(rss.getAuthor());
-						newRssFeed.setGuid(rss.getUri());
-						newRssFeed.setPublishedDate(rss.getPublishedDate());
-
-						List<SyndEntry> items = rss.getEntries();
-						if (items.size() > 0) {
-							List<SyndEnclosure> enclosures = items.get(0)
-									.getEnclosures();
-							if (enclosures.get(0).getType().contains("image/"))
-								newRssFeed.setImageUrl(enclosures.get(0)
-										.getUrl());
-						}
-
-					}
-
-				}
-
-				catch (Exception e) {
-					log.error(
-							"Exception occured when building the rss object out of the url",
-							e);
-				} finally {
-					if (is != null)
-						is.close();
-				}
 			} else if (feed.getType().equals(Feed.Type.RESTO)) {
 
-				getArticleData(feed.getUrl());
+				persistArticleFeed(feed.getUrl());
 
 			}
 		}
