@@ -1,10 +1,12 @@
 package fr.univmobile.backend.api.configuration;
 
+import fr.univmobile.backend.converter.StringToPoiConverter;
 import fr.univmobile.backend.converter.StringToUniversityConverter;
 import fr.univmobile.backend.hateoas.assembler.*;
 import fr.univmobile.backend.hateoas.processor.FeedResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.MenuResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.NotificationResourceProcessor;
+import fr.univmobile.backend.hateoas.processor.PoiResourceProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -62,7 +64,17 @@ public class SpringConfiguration {
     }
 
     @Bean
+    public PoiResourceProcessor getPoiResourceProcessor(){
+        return new PoiResourceProcessor();
+    }
+
+    @Bean
     public StringToUniversityConverter getStringToUniversityConverter(){
         return new StringToUniversityConverter();
+    }
+
+    @Bean
+    public StringToPoiConverter getStringToPoiConverter(){
+        return new StringToPoiConverter();
     }
 }

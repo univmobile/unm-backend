@@ -1,5 +1,6 @@
 package fr.univmobile.backend.api.configuration;
 
+import fr.univmobile.backend.converter.StringToPoiConverter;
 import fr.univmobile.backend.converter.StringToUniversityConverter;
 import fr.univmobile.backend.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,10 +14,13 @@ public class CustomRepositoryRestMcvConfiguration extends RepositoryRestMvcConfi
 
     @Autowired
     StringToUniversityConverter stringToUniversityConverter;
+    @Autowired
+    StringToPoiConverter stringToPoiConverter;
 
     @Override
     protected void configureConversionService(ConfigurableConversionService conversionService) {
         conversionService.addConverter(stringToUniversityConverter);
+        conversionService.addConverter(stringToPoiConverter);
     }
 
     @Override
