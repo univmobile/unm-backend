@@ -22,8 +22,8 @@ public class Notification extends AuditableEntity {
 	String content;
 	
 	@ManyToOne
-	@JoinColumn(name = "university", nullable = true)
-	private University university_id;
+	@JoinColumn(name = "university_id", nullable = true)
+	private University university;
 
 	public Long getId() {
 		return id;
@@ -41,11 +41,11 @@ public class Notification extends AuditableEntity {
 		this.content = content;
 	}
 
-	public University getUniversity_id() {
-		return university_id;
+	public University getUniversity() {
+		return university;
 	}
 
-	public void setUniversity_id(University university_id) {
-		this.university_id = university_id;
+	public void setUniversity(University university) {
+		this.university = university;
 	}
 }

@@ -28,8 +28,8 @@ public class Feed extends AuditableEntity {
 	Type type;
 
 	@ManyToOne
-	@JoinColumn(name = "university", nullable = true)
-	private University university_id;
+	@JoinColumn(name = "university_id", nullable = true)
+	private University university;
 
 	public Long getId() {
 		return id;
@@ -59,12 +59,12 @@ public class Feed extends AuditableEntity {
 		return type;
 	}
 
-	public University getUniversity_id() {
-		return university_id;
+	public University getUniversity() {
+		return university;
 	}
 
-	public void setUniversity_id(University university_id) {
-		this.university_id = university_id;
+	public void setUniversity(University university) {
+		this.university = university;
 	}
 	
 }

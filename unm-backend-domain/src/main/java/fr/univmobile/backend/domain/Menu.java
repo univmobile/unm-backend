@@ -38,7 +38,7 @@ public class Menu extends AuditableEntity {
 	Group grouping;
 
 	@ManyToOne
-	@JoinColumn(name = "university", nullable = true)
+	@JoinColumn(name = "university_id", nullable = true)
 	private University university;
 
 	public Long getId() {
