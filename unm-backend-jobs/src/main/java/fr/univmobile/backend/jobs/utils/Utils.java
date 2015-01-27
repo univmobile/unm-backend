@@ -29,12 +29,12 @@ import com.sun.syndication.io.SyndFeedInput;
 
 import fr.univmobile.backend.domain.Feed;
 import fr.univmobile.backend.domain.FeedRepository;
+import fr.univmobile.backend.domain.News;
+import fr.univmobile.backend.domain.NewsRepository;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
-import fr.univmobile.backend.jobs.domain.New;
-import fr.univmobile.backend.jobs.domain.NewRepository;
-import fr.univmobile.backend.jobs.domain.RestoMenu;
-import fr.univmobile.backend.jobs.domain.RestoMenuRepository;
+import fr.univmobile.backend.domain.RestoMenu;
+import fr.univmobile.backend.domain.RestoMenuRepository;
 
 public class Utils {
 
@@ -42,7 +42,7 @@ public class Utils {
 	FeedRepository feedRepository;
 
 	@Autowired
-	NewRepository newRepository;
+	NewsRepository newRepository;
 
 	@Autowired
 	RestoMenuRepository restoMenuRepository;
@@ -70,7 +70,7 @@ public class Utils {
 
 			if (rss != null) {
 
-				New newRssFeed = new New();
+				News newRssFeed = new News();
 				newRssFeed.setTitle(rss.getTitle());
 				newRssFeed.setLink(rss.getUri());
 				newRssFeed.setDescription(rss.getDescription());
@@ -124,10 +124,10 @@ public class Utils {
 							Locale.US);
 					Date date = sdf.parse(elem.getAttribute("date"));
 
-					New newArticleFeed = newRepository.findByLinkAndId(
+					News newArticleFeed = newRepository.findByLinkAndId(
 							urlString, elem.getAttribute("id"));
 					if (newArticleFeed == null)
-						newArticleFeed = new New();
+						newArticleFeed = new News();
 
 					newArticleFeed.setTitle(elem.getAttribute("title"));
 					newArticleFeed.setLink(urlString);
@@ -167,7 +167,7 @@ public class Utils {
 					Element elem = (Element) node;
 
 					String restoId = elem.getAttribute("id");
-					
+
 					Poi poi = poiByRestoId(childPois, restoId);
 
 					NodeList menues = elem.getElementsByTagName("menu");
@@ -195,7 +195,7 @@ public class Utils {
 		}
 
 	}
-	
+
 	public Poi poiByRestoId(List<Poi> pois, String restoId) {
 		for (Poi poi : pois)
 			if (poi.getRestoId().equals(restoId))
@@ -220,7 +220,7 @@ public class Utils {
 				if (poi.getRestoMenuUrl() != null) {
 					List<Poi> childPois = poiRepository.findByParent(poi);
 					persistMenu(poi.getRestoMenuUrl(), childPois);
-					
+
 				}
 			}
 		}

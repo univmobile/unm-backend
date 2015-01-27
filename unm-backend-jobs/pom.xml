@@ -3,18 +3,19 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>unm-backend-jobs</artifactId>
-
-	<parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.1.10.RELEASE</version>
-    </parent>
+    
+    <parent>
+		<groupId>fr.univmobile</groupId>
+		<artifactId>unm-parent</artifactId>
+		<version>0.1.1-SNAPSHOT</version>
+		<relativePath />
+	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-backend-domain</artifactId>
-			<version>0.1.1-SNAPSHOT</version>
+			<version>${unm-version}</version>
 		</dependency>
 		<dependency>
 			<groupId>rome</groupId>
@@ -31,6 +32,7 @@
 		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-batch</artifactId>
+            <version>1.2.1.RELEASE</version>
         </dependency>
 		
 	</dependencies>

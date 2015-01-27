@@ -1,4 +1,4 @@
-package fr.univmobile.backend.jobs.domain;
+package fr.univmobile.backend.domain;
 
 import java.util.Date;
 
@@ -8,8 +8,6 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-
-import fr.univmobile.backend.domain.Poi;
 
 @Entity
 public class RestoMenu {

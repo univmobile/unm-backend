@@ -50,5 +50,12 @@
 			<artifactId>jackson-databind</artifactId>
 			<version>2.4.0</version>
 		</dependency>
+		
+		<!-- Spring Data Rest -->
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-rest-webmvc</artifactId>
+			<version>2.2.1.RELEASE</version>
+		</dependency>
 	</dependencies>
 </project>

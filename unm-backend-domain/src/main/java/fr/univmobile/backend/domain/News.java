@@ -1,4 +1,4 @@
-package fr.univmobile.backend.jobs.domain;
+package fr.univmobile.backend.domain;
 
 import java.util.Date;
 
@@ -13,12 +13,9 @@ import javax.persistence.ManyToOne;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-import fr.univmobile.backend.domain.AuditableEntity;
-import fr.univmobile.backend.domain.Feed;
-
 @Entity
 @EntityListeners({ AuditingEntityListener.class })
-public class New extends AuditableEntity {
+public class News extends AuditableEntity {
 
 	@Id
 	@GeneratedValue
