@@ -26,9 +26,20 @@ public class CustomRepositoryRestMcvConfiguration extends RepositoryRestMvcConfi
     @Override
     protected void configureRepositoryRestConfiguration(RepositoryRestConfiguration config) {
         config.exposeIdsFor(
+                Bookmark.class,
+                Category.class,
+                Comment.class,
                 Feed.class,
+                ImageMap.class,
                 Menu.class,
-                Notification.class
+                News.class,
+                Notification.class,
+                Poi.class,
+                Region.class,
+                RestoMenu.class,
+                University.class,
+                UsageStat.class,
+                User.class
         );
     }
 }
