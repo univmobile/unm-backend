@@ -45,4 +45,6 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 
 	@Query("Select p from Poi p where p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%') order by p.name asc")
 	Page<Poi> searchValue(@Param("val") String val, Pageable pageable);
+
+	List<Poi> findByParent(Poi poi);
 }

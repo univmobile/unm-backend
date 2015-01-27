@@ -81,6 +81,9 @@ public class Poi extends AuditableEntityWithLegacy {
 	@Column(name = "qrcode")
 	private String qrCode;
 	
+	private String restoMenuUrl;
+	private String restoId;
+	
 	@Override
 	public String toString() {
 		return String.format("Poi[id=%d, name='%s']", id, name);
@@ -326,6 +329,22 @@ public class Poi extends AuditableEntityWithLegacy {
 
 	private static double deg2rad(double deg) {
 		return (double) (deg * (Math.PI / 180));
+	}
+
+	public String getRestoMenuUrl() {
+		return restoMenuUrl;
+	}
+
+	public void setRestoMenuUrl(String restoMenuUrl) {
+		this.restoMenuUrl = restoMenuUrl;
+	}
+
+	public String getRestoId() {
+		return restoId;
+	}
+
+	public void setRestoId(String restoId) {
+		this.restoId = restoId;
 	}
 
 }

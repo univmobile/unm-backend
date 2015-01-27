@@ -29,10 +29,12 @@ import com.sun.syndication.io.SyndFeedInput;
 
 import fr.univmobile.backend.domain.Feed;
 import fr.univmobile.backend.domain.FeedRepository;
-import fr.univmobile.backend.jobs.domain.RestoMenu;
-import fr.univmobile.backend.jobs.domain.RestoMenuRepository;
+import fr.univmobile.backend.domain.Poi;
+import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.jobs.domain.New;
 import fr.univmobile.backend.jobs.domain.NewRepository;
+import fr.univmobile.backend.jobs.domain.RestoMenu;
+import fr.univmobile.backend.jobs.domain.RestoMenuRepository;
 
 public class Utils {
 
@@ -44,6 +46,9 @@ public class Utils {
 
 	@Autowired
 	RestoMenuRepository restoMenuRepository;
+
+	@Autowired
+	PoiRepository poiRepository;
 
 	private static final Log log = LogFactory.getLog(Utils.class);
 
@@ -142,7 +147,7 @@ public class Utils {
 
 	}
 
-	public void persistMenu(String urlString) {
+	public void persistMenu(String urlString, List<Poi> childPois) {
 
 		try {
 			URL url = new URL(urlString);
@@ -161,7 +166,9 @@ public class Utils {
 				if (node.getNodeType() == Node.ELEMENT_NODE) {
 					Element elem = (Element) node;
 
-					System.out.println(elem.getAttribute("id"));
+					String restoId = elem.getAttribute("id");
+					
+					Poi poi = poiByRestoId(childPois, restoId);
 
 					NodeList menues = elem.getElementsByTagName("menu");
 
@@ -171,11 +178,10 @@ public class Utils {
 						SimpleDateFormat sdf = new SimpleDateFormat(
 								"yyyy-MM-dd", Locale.US);
 						Date date = sdf.parse(menuElem.getAttribute("date"));
-						
-						
+
 						RestoMenu restoMenu = new RestoMenu();
 
-						// menuFeed.setPoi(poi); FIXME: references poi
+						restoMenu.setPoi(poi);
 						restoMenu.setEffectiveDate(date);
 						restoMenu.setDescription(menuElem.getTextContent());
 
@@ -189,6 +195,13 @@ public class Utils {
 		}
 
 	}
+	
+	public Poi poiByRestoId(List<Poi> pois, String restoId) {
+		for (Poi poi : pois)
+			if (poi.getRestoId().equals(restoId))
+				return poi;
+		return null;
+	}
 
 	public void persistFeeds() {
 		for (Feed feed : feedRepository.findAll()) {
@@ -201,6 +214,14 @@ public class Utils {
 
 				persistArticleFeed(feed.getUrl());
 
+			}
+
+			for (Poi poi : poiRepository.findAll()) {
+				if (poi.getRestoMenuUrl() != null) {
+					List<Poi> childPois = poiRepository.findByParent(poi);
+					persistMenu(poi.getRestoMenuUrl(), childPois);
+					
+				}
 			}
 		}
 	}
