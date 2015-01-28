@@ -4,12 +4,12 @@ import fr.univmobile.backend.converter.StringToPoiConverter;
 import fr.univmobile.backend.converter.StringToUniversityConverter;
 import fr.univmobile.backend.domain.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.support.ConfigurableConversionService;
 import org.springframework.data.rest.core.config.RepositoryRestConfiguration;
 import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
-import org.springframework.stereotype.Component;
 
-@Component
+@Configuration
 public class CustomRepositoryRestMcvConfiguration extends RepositoryRestMvcConfiguration {
 
     @Autowired
