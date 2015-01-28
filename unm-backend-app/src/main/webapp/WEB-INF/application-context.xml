@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:security="http://www.springframework.org/schema/security"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
-    http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/beans/spring-beans.xsd
     http://www.springframework.org/schema/data/jpa
-    http://www.springframework.org/schema/data/jpa/spring-jpa.xsd">
+    http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+    http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.2.xsd">
 
 	<!-- Database -->
 	<bean id="datasource" class="org.springframework.jndi.JndiObjectFactoryBean">
@@ -32,4 +36,19 @@
 
 	<jpa:auditing auditor-aware-ref="sessionAuditorAware" />
 
+	<security:http auto-config="true">
+	</security:http>
+
+	<security:global-method-security secured-annotations="enabled"/>
+
+	<bean id="unimobileAuthenticationProvider" class="fr.univmobile.backend.security.UnimobileAuthenticationProvider">
+		<property name="userRepository" ref="userRepository"/>
+		<property name="passwordEncoder" ref="passwordEncoder"/>
+	</bean>
+
+	<bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder"/>
+
+	<security:authentication-manager>
+		<security:authentication-provider ref="unimobileAuthenticationProvider"/>
+	</security:authentication-manager>
 </beans>

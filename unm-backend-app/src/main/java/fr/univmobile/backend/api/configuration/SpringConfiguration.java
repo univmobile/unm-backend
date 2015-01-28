@@ -1,13 +1,16 @@
 package fr.univmobile.backend.api.configuration;
 
+import fr.univmobile.backend.converter.StringToPoiConverter;
+import fr.univmobile.backend.converter.StringToUniversityConverter;
 import fr.univmobile.backend.hateoas.assembler.*;
+import fr.univmobile.backend.hateoas.processor.FeedResourceProcessor;
+import fr.univmobile.backend.hateoas.processor.MenuResourceProcessor;
+import fr.univmobile.backend.hateoas.processor.NotificationResourceProcessor;
+import fr.univmobile.backend.hateoas.processor.PoiResourceProcessor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Import;
-import org.springframework.data.rest.webmvc.config.RepositoryRestMvcConfiguration;
 
 @Configuration
-@Import(RepositoryRestMvcConfiguration.class)
 public class SpringConfiguration {
 
     @Bean
@@ -43,5 +46,35 @@ public class SpringConfiguration {
     @Bean
     public NotificationStatusAssembler getNotificationStatusAssembler() {
         return new NotificationStatusAssembler();
+    }
+
+    @Bean
+    public MenuResourceProcessor getUserResourceProcessor(){
+        return new MenuResourceProcessor();
+    }
+
+    @Bean
+    public FeedResourceProcessor getFeedResourceProcessor(){
+        return new FeedResourceProcessor();
+    }
+
+    @Bean
+    public NotificationResourceProcessor getNotificationResourceProcessor(){
+        return new NotificationResourceProcessor();
+    }
+
+    @Bean
+    public PoiResourceProcessor getPoiResourceProcessor(){
+        return new PoiResourceProcessor();
+    }
+
+    @Bean
+    public StringToUniversityConverter getStringToUniversityConverter(){
+        return new StringToUniversityConverter();
+    }
+
+    @Bean
+    public StringToPoiConverter getStringToPoiConverter(){
+        return new StringToPoiConverter();
     }
 }

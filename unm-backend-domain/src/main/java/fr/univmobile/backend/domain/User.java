@@ -4,6 +4,8 @@ import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.Date;
 
 @Entity
@@ -50,6 +52,9 @@ public class User extends AuditableEntity {
 	private University secondaryUniversity;
 	@Column(name = "notifications_read_date", nullable = false, columnDefinition="TIMESTAMP DEFAULT '1970-01-01'")
 	private Date notificationsReadDate = new Date(0);
+	@OneToMany(mappedBy="user", fetch = FetchType.EAGER)
+	@JsonIgnore
+	private Collection<Bookmark> bookmarks = new ArrayList<Bookmark>();
 
 	@Override
 	public String toString() {
@@ -188,5 +193,9 @@ public class User extends AuditableEntity {
 
 	public void setNotificationsReadDate(Date date){
 		this.notificationsReadDate = date;
+	}
+
+	public Collection<Bookmark> getBookmarks(){
+		return bookmarks;
 	}
 }
