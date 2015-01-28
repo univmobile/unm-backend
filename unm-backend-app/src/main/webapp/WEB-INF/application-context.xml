@@ -36,19 +36,23 @@
 
 	<jpa:auditing auditor-aware-ref="sessionAuditorAware" />
 
-	<security:http auto-config="true">
+	<security:http use-expressions="true" auto-config="true">
+		<security:intercept-url pattern="/api/**" access="isAuthenticated()" />
+		<security:form-login login-page="/"/>
+		<security:custom-filter ref="unimobilePreAuthenticationFilter" position="PRE_AUTH_FILTER" />
 	</security:http>
 
 	<security:global-method-security secured-annotations="enabled"/>
 
 	<bean id="unimobileAuthenticationProvider" class="fr.univmobile.backend.security.UnimobileAuthenticationProvider">
 		<property name="userRepository" ref="userRepository"/>
-		<property name="passwordEncoder" ref="passwordEncoder"/>
 	</bean>
 
-	<bean id="passwordEncoder" class="org.springframework.security.authentication.encoding.Md5PasswordEncoder"/>
-
-	<security:authentication-manager>
+	<security:authentication-manager alias="authenticationManager">
 		<security:authentication-provider ref="unimobileAuthenticationProvider"/>
 	</security:authentication-manager>
+
+	<bean id="unimobilePreAuthenticationFilter" class="fr.univmobile.backend.security.UnimobilePreAuthenticationFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+	</bean>
 </beans>
