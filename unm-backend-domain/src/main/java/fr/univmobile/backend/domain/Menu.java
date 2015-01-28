@@ -104,4 +104,12 @@ public class Menu extends AuditableEntity {
 		this.grouping = grouping;
 	}
 
+	public Long getUniversityId(){
+		Long universityId = null;
+		if (university != null){
+			universityId = university.getId();
+		}
+		return universityId;
+	}
+
 }

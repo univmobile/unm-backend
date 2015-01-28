@@ -66,5 +66,12 @@ public class Feed extends AuditableEntity {
 	public void setUniversity(University university) {
 		this.university = university;
 	}
-	
+
+	public Long getUniversityId(){
+		Long universityId = null;
+		if (university != null){
+			universityId = university.getId();
+		}
+		return universityId;
+	}
 }
