@@ -8,7 +8,6 @@ import javax.persistence.EntityListeners;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -24,7 +23,7 @@ public class News extends AuditableEntity {
 	@Column(nullable = false)
 	private String title;
 	private String link;
-	@Lob
+	@Column(columnDefinition = "TEXT")
 	private String description;
 	private String author;
 	private String guid;

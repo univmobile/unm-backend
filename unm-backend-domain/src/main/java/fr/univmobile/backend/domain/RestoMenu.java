@@ -2,12 +2,7 @@ package fr.univmobile.backend.domain;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
 @Entity
 public class RestoMenu {
@@ -17,7 +12,7 @@ public class RestoMenu {
 	private Long id;
 
 	private Date effectiveDate;
-	@Lob
+	@Column(columnDefinition = "TEXT")
 	private String description;
 
 	@ManyToOne

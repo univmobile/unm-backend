@@ -17,8 +17,7 @@ public class Notification extends AuditableEntity {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Lob
-	@Column(nullable = false)
+	@Column(nullable = false, columnDefinition = "TEXT")
 	String content;
 	
 	@ManyToOne

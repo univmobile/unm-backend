@@ -29,8 +29,7 @@ public class Menu extends AuditableEntity {
 	@Column(length = 512)
 	String url;
 
-	@Lob
-	@Column
+	@Column(columnDefinition = "TEXT")
 	String content;
 
 	@Column
