@@ -16,6 +16,8 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
 
 	List<Comment> findTop10ByPoiOrderByIdDesc(Poi poi);
 
+	Page<Comment> findByPoiOrderByCreatedOnDesc(@Param("poiId")Poi poiId, Pageable pageable);
+
 	@Query("Select c from Comment c where c.title like CONCAT('%',:val,'%') or c.message like CONCAT('%',:val,'%') order by c.createdOn desc")
 	Page<Comment> searchValue(@Param("val") String val, Pageable pageable);
 }
