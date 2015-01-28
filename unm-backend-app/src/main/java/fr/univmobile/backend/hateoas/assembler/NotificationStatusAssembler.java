@@ -31,7 +31,7 @@ public class NotificationStatusAssembler extends ResourceAssemblerSupport<Notifi
             notificationStatusResource.lastNotificationReadDate = notificationStatus.user.getNotificationsReadDate();
 
             notificationStatusResource.add(new Link(baseUrl + USERS_PATH + notificationStatus.user.getId(), "user"));
-            notificationStatusResource.add(new Link(baseUrl + NOTIFICATIONS_PATH + RECENT_WITH_DATE_PATH + notificationStatus.user.getNotificationsReadDate(), "unreadNotifications"));
+//            notificationStatusResource.add(new Link(baseUrl + NOTIFICATIONS_PATH + RECENT_WITH_DATE_PATH + notificationStatus.user.getNotificationsReadDate(), "unreadNotifications"));
         }
         return notificationStatusResource;
     }
