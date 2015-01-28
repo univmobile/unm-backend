@@ -11,7 +11,7 @@ import org.springframework.data.repository.query.Param;
 
 public interface PoiRepository extends JpaRepository<Poi, Long> {
 
-	//List<Poi> findByUniversityAndLegacyStartingWithOrderByLegacyAsc(University university, String legacy);
+	// List<Poi> findByUniversityAndLegacyStartingWithOrderByLegacyAsc(University university, String legacy);
 	
 	List<Poi> findByName(String name);
 
@@ -47,4 +47,6 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 	Page<Poi> searchValue(@Param("val") String val, Pageable pageable);
 
 	List<Poi> findByParent(Poi poi);
+	
+	Poi findByExternalId(Long externalId);
 }

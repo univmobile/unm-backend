@@ -36,7 +36,7 @@ import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.domain.RestoMenu;
 import fr.univmobile.backend.domain.RestoMenuRepository;
 
-public class Utils {
+public class FeedUtils {
 
 	@Autowired
 	FeedRepository feedRepository;
@@ -50,7 +50,7 @@ public class Utils {
 	@Autowired
 	PoiRepository poiRepository;
 
-	private static final Log log = LogFactory.getLog(Utils.class);
+	private static final Log log = LogFactory.getLog(FeedUtils.class);
 
 	public void persistRssFeed(String urlString) {
 

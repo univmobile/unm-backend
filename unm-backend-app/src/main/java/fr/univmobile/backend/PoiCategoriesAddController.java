@@ -42,13 +42,12 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 			final PoiCategoriesController poiCategoriesController) {
 		this.categoryRepository = checkNotNull(categoryRepository,
 				"categoryRepository");
-		this.poiCategoriesController = checkNotNull(poiCategoriesController,
+		checkNotNull(poiCategoriesController,
 				"poiCategoriesController");
 	}
 
 	private CategoryRepository categoryRepository;
-	private PoiCategoriesController poiCategoriesController;
-
+	
 	@Override
 	public View action() throws IOException, TransactionException {
 

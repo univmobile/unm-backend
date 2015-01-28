@@ -15,7 +15,8 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import fr.univmobile.backend.jobs.utils.Utils;
+import fr.univmobile.backend.jobs.utils.ApiParisUtils;
+import fr.univmobile.backend.jobs.utils.FeedUtils;
 
 @Configuration
 @EnableBatchProcessing
@@ -27,24 +28,49 @@ public class BatchConfiguration {
 
 	@Autowired
 	private StepBuilderFactory stepBuilderFactory;
-	
-	private Utils utils = new Utils();
+
+	private FeedUtils feedUtils = new FeedUtils();
+
+	private ApiParisUtils apiParisUtils = new ApiParisUtils();
 
 	@Bean
-	public Step step1() {
-		return stepBuilderFactory.get("step1").tasklet(new Tasklet() {
-			public RepeatStatus execute(StepContribution contribution, ChunkContext chunkContext) {
-				
-				utils.persistFeeds();
-				
+	public Step rssStep() {
+		return stepBuilderFactory.get("rssStep").tasklet(new Tasklet() {
+			public RepeatStatus execute(StepContribution contribution,
+					ChunkContext chunkContext) {
+
+				feedUtils.persistFeeds();
+
 				return null;
 			}
 		}).build();
 	}
 
 	@Bean
-	public Job job(Step step1) throws Exception {
-		return jobBuilderFactory.get("job1")
-				.incrementer(new RunIdIncrementer()).start(step1).build();
+	public Job rssJob(Step rssStep) throws Exception {
+		return jobBuilderFactory.get("rssJob")
+				.incrementer(new RunIdIncrementer()).start(rssStep).build();
+	}
+
+	// ApiParis Job
+
+	@Bean
+	public Step apiParisStep() {
+		return stepBuilderFactory.get("apiParisStep").tasklet(new Tasklet() {
+			public RepeatStatus execute(StepContribution contribution,
+					ChunkContext chunkContext) {
+
+				apiParisUtils.getEvents();
+
+				return null;
+			}
+		}).build();
+	}
+
+	@Bean
+	public Job apiParisJob(Step apiParisStep) throws Exception {
+		return jobBuilderFactory.get("apiParisJob")
+				.incrementer(new RunIdIncrementer()).start(apiParisStep)
+				.build();
 	}
 }

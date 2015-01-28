@@ -1,6 +1,7 @@
 package fr.univmobile.backend.domain;
 
 import java.util.Collection;
+import java.util.Date;
 
 import javax.persistence.*;
 
@@ -83,6 +84,9 @@ public class Poi extends AuditableEntityWithLegacy {
 	
 	private String restoMenuUrl;
 	private String restoId;
+	
+	private Long externalId;
+	private Date expDate;
 	
 	@Override
 	public String toString() {
@@ -345,6 +349,22 @@ public class Poi extends AuditableEntityWithLegacy {
 
 	public void setRestoId(String restoId) {
 		this.restoId = restoId;
+	}
+
+	public Long getExternalId() {
+		return externalId;
+	}
+
+	public void setExternalId(Long externalId) {
+		this.externalId = externalId;
+	}
+
+	public Date getExpDate() {
+		return expDate;
+	}
+
+	public void setExpDate(Date expDate) {
+		this.expDate = expDate;
 	}
 
 }

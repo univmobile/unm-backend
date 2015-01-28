@@ -43,6 +43,8 @@ public class Category extends AuditableEntityWithLegacy {
 	@OneToMany(mappedBy="category")
 	@JsonIgnore
     private Collection<Poi> pois = new ArrayList<Poi>();
+	
+	private Long apiParisId;
 
 	@Override
 	public String toString() {
@@ -107,5 +109,13 @@ public class Category extends AuditableEntityWithLegacy {
 
 	public static String getImageMapsLegacy() {
 		return buildRootLegacy(Type.IMAGE_MAPS.type);
+	}
+
+	public Long getApiParisId() {
+		return apiParisId;
+	}
+
+	public void setApiParisId(Long apiParisId) {
+		this.apiParisId = apiParisId;
 	}
 }

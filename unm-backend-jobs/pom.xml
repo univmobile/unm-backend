@@ -27,7 +27,21 @@
 			<artifactId>jdom</artifactId>
 			<version>1.1</version>
 		</dependency>
-
+		
+		<!-- Apache HttpClient -->
+		<dependency>
+			<groupId>org.apache.httpcomponents</groupId>
+			<artifactId>httpclient</artifactId>
+			<version>4.3.6</version>
+		</dependency>
+		
+		<!-- Minimal JSON -->
+		<dependency>
+			<groupId>com.eclipsesource.minimal-json</groupId>
+			<artifactId>minimal-json</artifactId>
+			<version>0.9.1</version>
+		</dependency>
+		
 		<!-- For the Spring Batch -->
 		<dependency>
             <groupId>org.springframework.boot</groupId>
