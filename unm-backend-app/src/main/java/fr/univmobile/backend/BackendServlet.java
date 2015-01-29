@@ -27,6 +27,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import fr.univmobile.backend.domain.*;
+import fr.univmobile.backend.json.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -78,23 +80,7 @@ import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.backend.core.impl.SessionManagerImpl;
 import fr.univmobile.backend.core.impl.UploadManagerImpl;
-import fr.univmobile.backend.domain.CategoryRepository;
-import fr.univmobile.backend.domain.CommentRepository;
-import fr.univmobile.backend.domain.ImageMapRepository;
-import fr.univmobile.backend.domain.PoiRepository;
-import fr.univmobile.backend.domain.RegionRepository;
-import fr.univmobile.backend.domain.UniversityRepository;
-import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.backend.history.LogQueue;
-import fr.univmobile.backend.json.AbstractJSONController;
-import fr.univmobile.backend.json.CommentsJSONController;
-import fr.univmobile.backend.json.CommentsPostJSONController;
-import fr.univmobile.backend.json.EndpointsJSONController;
-import fr.univmobile.backend.json.JsonHtmler;
-import fr.univmobile.backend.json.PoisJSONController;
-import fr.univmobile.backend.json.RegionsJSONController;
-import fr.univmobile.backend.json.SessionJSONController;
-import fr.univmobile.backend.json.UniversitiesJSONController;
 import fr.univmobile.backend.twitter.ApplicationOnly;
 import fr.univmobile.backend.twitter.TwitterAccess;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
@@ -118,6 +104,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private RegionRepository regionRepository;
 	private UniversityRepository universityRepository;
 	private UserRepository userRepository;
+	private TokenRepository tokenRepository;
 	
 	private SessionAuditorAware sessionAuditorAware;
 
@@ -152,6 +139,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		this.universityRepository = (UniversityRepository) ctx
 				.getBean("universityRepository");
 		this.userRepository = (UserRepository) ctx.getBean("userRepository");
+		this.tokenRepository = (TokenRepository) ctx.getBean("tokenRepository");
 		
 		this.sessionAuditorAware = (SessionAuditorAware) ctx.getBean("sessionAuditorAware");
 		
@@ -388,7 +376,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 						poiCategoryJSONClient, //
 						imageMapJSONClient, //
 						regions, //
-						imageMaps) //
+						imageMaps), //
+				new LoginJSONController(userRepository, tokenRepository),
+				new ShibbolethLoginJSONController(userRepository, tokenRepository)
 		};
 
 		for (final AbstractJSONController jsonController : jsonControllers) {
