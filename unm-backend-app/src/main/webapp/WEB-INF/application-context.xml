@@ -39,10 +39,8 @@
 	<security:http use-expressions="true" auto-config="true">
 		<security:intercept-url pattern="/api/**" access="isAuthenticated()" />
 		<security:form-login login-page="/"/>
-		<security:custom-filter ref="unimobilePreAuthenticationFilter" position="PRE_AUTH_FILTER" />
+		<security:custom-filter ref="compositePreAuthenticationFilter" position="PRE_AUTH_FILTER" />
 	</security:http>
-
-	<security:global-method-security secured-annotations="enabled"/>
 
 	<bean id="unimobileAuthenticationProvider" class="fr.univmobile.backend.security.UnimobileAuthenticationProvider">
 		<property name="userRepository" ref="userRepository"/>
@@ -54,5 +52,20 @@
 
 	<bean id="unimobilePreAuthenticationFilter" class="fr.univmobile.backend.security.UnimobilePreAuthenticationFilter">
 		<property name="authenticationManager" ref="authenticationManager" />
+	</bean>
+
+	<bean id="unimobileTokenPreAuthenticationFilter" class="fr.univmobile.backend.security.UnimobileTokenPreAuthenticationFilter">
+		<property name="authenticationManager" ref="authenticationManager" />
+		<property name="tokenRepository" ref="tokenRepository"/>
+		<property name="sessionAuditorAware" ref="sessionAuditorAware"/>
+	</bean>
+
+	<bean id="compositePreAuthenticationFilter" class="org.springframework.web.filter.CompositeFilter">
+		<property name="filters">
+			<list>
+				<ref bean="unimobileTokenPreAuthenticationFilter"/>
+				<ref bean="unimobilePreAuthenticationFilter"/>
+			</list>
+		</property>
 	</bean>
 </beans>

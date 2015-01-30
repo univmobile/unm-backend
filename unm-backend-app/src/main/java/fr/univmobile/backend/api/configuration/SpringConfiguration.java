@@ -1,5 +1,6 @@
 package fr.univmobile.backend.api.configuration;
 
+import fr.univmobile.backend.converter.StringToCategoryConverter;
 import fr.univmobile.backend.converter.StringToPoiConverter;
 import fr.univmobile.backend.converter.StringToUniversityConverter;
 import fr.univmobile.backend.hateoas.assembler.*;
@@ -76,5 +77,10 @@ public class SpringConfiguration {
     @Bean
     public StringToPoiConverter getStringToPoiConverter(){
         return new StringToPoiConverter();
+    }
+
+    @Bean
+    public StringToCategoryConverter getStringToCategoryConverter(){
+        return new StringToCategoryConverter();
     }
 }
