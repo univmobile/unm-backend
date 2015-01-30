@@ -71,7 +71,7 @@ Administration d’UnivMobile
 	<li class="flaticon icon-file6">
 		<a id="link-history" href="${baseURL}/history/">Historique<br>des actions</a>
 	<li class="flaticon icon-graph5">
-		<a id="link-stats" href="${baseURL}/stats/">Statistiques</a>
+		<a id="link-stats" href="${baseURL}/api/admin/stats/">Statistiques</a>
 	<li class="flaticon icon-check6">
 		<a id="link-monitoring" href="${baseURL}/monitoring/">Monitoring</a>
 	<li class="flaticon icon-black56">
