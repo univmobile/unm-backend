@@ -801,7 +801,7 @@ function initImagemap(canvasId) {
         center: myLatlng,
         zoom: optimalZoom,
         disableDoubleClickZoom: true,
-        
+        streetViewControl: false,
         mapTypeControlOptions: {
             mapTypeIds: ['image']
         }
