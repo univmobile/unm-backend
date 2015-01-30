@@ -85,7 +85,12 @@
             background: white;
             cursor: inherit;
             display: block;
-        }*/        
+        }*/  
+        .scrollable-menu {
+	    height: auto;
+	    max-height: 400px;
+	    overflow-x: hidden;        
+	}
     </style>
     <script>
         var baseUrl = '${baseURL}/';
@@ -101,7 +106,7 @@
             <ul class="nav nav-tabs">
                 
               <li role="presentation" data-bind="css: { active: activeTab() == 'pois' }"><a href="#" data-bind="click: function(data, event) { switchTab('pois') }">POIs</a></li>
-              <li role="presentation" data-bind="visible: bonplansRegions().length > 0, css: { active: activeTab() == 'bonplans' }"><a href="#" data-bind="click: function(data, event) { switchTab('bonplans') }">Bon Plans</a></li>
+              <li role="presentation" data-bind="visible: bonplansUniversities().length > 0, css: { active: activeTab() == 'bonplans' }"><a href="#" data-bind="click: function(data, event) { switchTab('bonplans') }">Bon Plans</a></li>
               <li role="presentation" data-bind="css: { active: activeTab() == 'images' }"><a href="#" data-bind="click: function(data, event) { switchTab('images') }">Images</a></li>
             </ul>
             <p></p>
@@ -109,15 +114,15 @@
                 <div class="panel-heading">
                     <div class="btn-toolbar" role="toolbar">
                         <div class="btn-group  btn-group-xs pull-right" role="group">
-                          <button type="button" class="btn btn-default" data-bind="click: createRootPoi" title="Ajouter un POI racine"><span class="glyphicon glyphicon-plus" aria-label="Add root"></span></button>
-                          <button type="button" class="btn btn-default" data-bind="enable: activePoi().id(), click: createPoi" title="Ajouter un POI ayant pour parent le POI s&eacute;lectionn&eacute;"><span class="glyphicon glyphicon-plus-sign" aria-label="Add child"></span></button>
-                          <button type="button" class="btn btn-default" data-bind="enable: activePoi().id(), click: editPoi" title="Modifier le POI"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: activeUniversity().id, click: createRootPoi" title="Ajouter un POI racine"><span class="glyphicon glyphicon-plus" aria-label="Add root"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: activeUniversity().id && activePoi().id(), click: createPoi" title="Ajouter un POI ayant pour parent le POI s&eacute;lectionn&eacute;"><span class="glyphicon glyphicon-plus-sign" aria-label="Add child"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: activeUniversity().id && activePoi().id(), click: editPoi" title="Modifier le POI"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
                         </div>
                     </div>
                 </div>
                 <div class="panel-body">
                     <p data-bind="visible: pois().length == 0">
-                        S&eacute;lectionnez une r&eacute;gion et une cat&eacute;gorie pour voir POI connexes
+                        S&eacute;lectionnez une universit&eacute et une cat&eacute;gorie pour voir POI connexes
                     </p>
                     <div id="jstree1" data-bind="visible: pois().length > 0">
                         <ul data-bind="template: { name: 'treenode-template', foreach: pois }"></ul>
@@ -142,19 +147,19 @@
                 <li><a href="#" data-bind="text: name, click: $parent.changeCategoryBonplans"></a></li>
               </ul>
             </div>
-            <div class="btn-group pull-right" data-bind="visible: regions().length > 1">
+            <div class="btn-group pull-right" data-bind="visible: universities().length > 1">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                R&eacute;gion <span class="caret"></span>
+                Universit&eacute; <span class="caret"></span>
               </button>
-              <ul class="dropdown-menu" role="menu" data-bind="visible: activeTab() == 'pois', foreach: regions">
-                <li><a href="#" data-bind="text: name, click: $parent.changeRegion"></a></li>
+              <ul class="dropdown-menu" role="menu" data-bind="visible: activeTab() == 'pois', foreach: universities">
+                <li><a href="#" data-bind="text: title, click: $parent.changeUniversity"></a></li>
               </ul>
-              <ul class="dropdown-menu" role="menu" data-bind="visible: activeTab() == 'bonplans', foreach: bonplansRegions">
-                <li><a href="#" data-bind="text: name, click: $parent.changeRegion"></a></li>
+              <ul class="dropdown-menu" role="menu" data-bind="visible: activeTab() == 'bonplans', foreach: bonplansUniversities">
+                <li><a href="#" data-bind="text: title, click: $parent.changeUniversity"></a></li>
               </ul>
             </div>
             
-          <h1 class="page-header text-left">POIs <small data-bind="text: activeRegion().name"></small><small data-bind="visible: activeRegion().label">&nbsp;</small><small data-bind="visible: activeTab() == 'pois', text: activeCategoryUniversities().name"></small><small data-bind="visible: activeTab() == 'bonplans', text: activeCategoryBonplans().name"></small></h1>
+          <h1 class="page-header text-left">POIs <small data-bind="text: activeUniversity().title"></small><small data-bind="visible: activeUniversity().id">&nbsp;</small><small data-bind="visible: activeTab() == 'pois', text: activeCategoryUniversities().name"></small><small data-bind="visible: activeTab() == 'bonplans', text: activeCategoryBonplans().name"></small></h1>
             
           <div class="row placeholders">
               <div id="map_canvas"></div>
@@ -169,7 +174,7 @@
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 Images <span class="caret"></span>
               </button>
-              <ul class="dropdown-menu" role="menu" data-bind="foreach: images">
+              <ul class="dropdown-menu scrollable-menu" role="menu" data-bind="foreach: images">
                 <li><a href="#" data-bind="text: name, click: $parent.changeImage"></a></li>
               </ul>
             </div>
@@ -210,13 +215,6 @@
                 <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
                 <div class="col-sm-10">
                   <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: name">
-                </div>
-              </div>
-              <div class="form-group" data-bind="visible: $parent.universities().length > 1 && allowsUniversityFilling()">
-                <label for="inputPassword3" class="col-sm-2 control-label">Universit&eacute;</label>
-                <div class="col-sm-10">
-                  <select class="form-control" required="required" data-bind="options: $parent.universities, optionsValue: 'id', optionsText: 'name', value: university">
-                  </select>
                 </div>
               </div>
               <div class="form-group">

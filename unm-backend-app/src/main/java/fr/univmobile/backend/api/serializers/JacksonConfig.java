@@ -9,6 +9,7 @@ import fr.univmobile.backend.api.serializers.PoiMixIn;
 import fr.univmobile.backend.domain.Comment;
 import fr.univmobile.backend.domain.ImageMap;
 import fr.univmobile.backend.domain.Poi;
+import fr.univmobile.backend.domain.University;
 
 @Configuration
 public class JacksonConfig {
@@ -19,6 +20,8 @@ public class JacksonConfig {
 		mapper.addMixInAnnotations(Poi.class, PoiMixIn.class);
 		mapper.addMixInAnnotations(ImageMap.class, ImageMapMixIn.class);
 		mapper.addMixInAnnotations(Comment.class, CommentMixIn.class);
+		mapper.addMixInAnnotations(University.class, UniversityMixIn.class);
+		
 		return mapper; 
 	}  
 

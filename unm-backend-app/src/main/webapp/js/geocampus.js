@@ -1,6 +1,7 @@
-var Univ = function(id, name) {
+var Univ = function(id, title, allowBonplans) {
     this.id = id;
-    this.name = name;
+    this.title = title;
+    this.allowBonplans = allowBonplans;
 };
 
 var Comment = function(data) {
@@ -236,17 +237,17 @@ var DataSource = function(baseUrl) {
         var self = this;
         var params;
 
-        var regionId = filters.region && filters.region.id ? filters.region.id : '';
+        var universityId = filters.university && filters.university.id ? filters.university.id : '';
         var categoryId = filters.category && filters.category.id ? filters.category.id : 0;
         var imageMapId = filters.imageMap && filters.imageMap.id ? filters.imageMap.id : 0;
 
         if (type == 'images') {
             params = { type: type, im: imageMapId };
         } else {
-            params = { type: type, reg: regionId, cat: categoryId };
+            params = { type: type, uni: universityId, cat: categoryId };
         }
             
-        if (regionId != '' || categoryId != 0 || imageMapId != 0) {
+        if (universityId != '' || categoryId != 0 || imageMapId != 0) {
             var serviceUrl = this.getFullPath('api/admin/geocampus/filter');
             $.getJSON( serviceUrl, params )
                 .done(function( json ) {
@@ -286,11 +287,8 @@ var DataSource = function(baseUrl) {
                 // TODO: Report error
         });
     };
-    this.getRegions = function () {
-        return this.cache && this.cache.regions ? this.cache.regions : [];
-    };
     this.getCategories = function (type) {
-        if (!(this.cache && this.cache.regions)) {
+        if (!(this.cache && this.cache.universities)) {
             return [];
         }
         var categories;
@@ -354,11 +352,9 @@ var DataSource = function(baseUrl) {
     };
     this.getUniversities = function() {
         var univs = [];
-        for (var r in this.cache.regions) {
-            for (var v in this.cache.regions[r].universities) {
-                var univ = this.cache.regions[r].universities[v];
-                univs.push(new Univ(univ.id, univ.title));
-            }
+	for (var v in this.cache.universities) {
+	    var univ = this.cache.universities[v];
+	    univs.push(new Univ(univ.id, univ.title, univ.allowBonplans));
         }
         return univs;
     };
@@ -407,8 +403,7 @@ var MyViewModel = function(ds) {
     
     self.ds = ds;
     
-    self.bonplansRegions = ko.observableArray([]);
-    self.regions = ko.observableArray(self.ds.getRegions());
+    self.bonplansUniversities = ko.observableArray([]);
     self.categoriesUniversities = ko.observableArray(self.ds.getCategories('universities'));
     self.categoriesBonplans = ko.observableArray(self.ds.getCategories('bonplans'));
     self.categoriesImages = ko.observableArray(self.ds.getCategories('images'));
@@ -420,7 +415,7 @@ var MyViewModel = function(ds) {
     self.activeTab = ko.observable('pois');
     self.activePoiTab = ko.observable('details');
     
-    self.activeRegion = ko.observable({name: ''});
+    self.activeUniversity = ko.observable({title: ''});
     self.activeCategoryUniversities = ko.observable({name: ''});
     self.activeCategoryBonplans = ko.observable({name: ''});
     self.activeCategoryImages = ko.observable({name: ''});
@@ -430,12 +425,11 @@ var MyViewModel = function(ds) {
     self.lastError = ko.observable(false);
     
     self.reload = function() {
-        self.regions(self.ds.getRegions());
+        self.universities(self.ds.getUniversities());
         self.categoriesUniversities(self.ds.getCategories('universities'));
         self.categoriesBonplans(self.ds.getCategories('bonplans'));
         self.categoriesImages(self.ds.getCategories('images'));
         self.images(self.ds.getImages());
-        self.universities(self.ds.getUniversities());
         self.pois([]);
         self.poiComments([]);
     }
@@ -481,12 +475,12 @@ var MyViewModel = function(ds) {
             }
             self.pois(self.ds.getPois('images', { imageMap: self.activeImage() } ));    
         } else if (tab == 'bonplans') {
-            if (self.activeRegion() && !self.activeRegion().allowBonplans) {
-                self.activeRegion(self.bonplansRegions()[0]);
+            if (self.activeUniversity() && !self.activeUniversity().allowBonplans) {
+                self.activeUniversity(self.bonplansUniversities()[0]);
             }
-            self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));    
+            self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));    
         } else {
-            self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));    
+            self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));    
         }
     };
     
@@ -505,8 +499,8 @@ var MyViewModel = function(ds) {
         self.poiComments([]);
     };
     
-    self.changeRegion = function(region) {
-        self.activeRegion(region);    
+    self.changeUniversity = function(university) {
+        self.activeUniversity(university);
     };
 
     self.changeCategoryImages = function(category) {
@@ -526,21 +520,33 @@ var MyViewModel = function(ds) {
         var newUrl = image && image.url() && image.url().length > 0 ? image.url() : null;
         changeImageMap(newUrl);
     };
+    
+    self.getAvailableUniversities = function() {
+        switch (self.activeTab()) {
+            case 'images':
+                return self.universities();
+            case 'bonplans':
+                return self.bonplansUniversities();
+            case 'pois':
+            default:
+                return self.universities();
+        }       
+    };
 
     self.activePoi.subscribe(function(newValue) {
         myViewModel.lastError(false);
     });
 
-    self.activeRegion.subscribe(function(newValue) {
-        self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));
+    self.activeUniversity.subscribe(function(newValue) {
+        self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
     });
 
     self.activeCategoryUniversities.subscribe(function(newValue) {
-        self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));
+        self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
     });
 
     self.activeCategoryBonplans.subscribe(function(newValue) {
-        self.pois(self.ds.getPois(self.activeTab(), { region: self.activeRegion(), category: self.getActiveCategory() }));
+        self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
     });
 
     self.activeImage.subscribe(function(newValue) {
@@ -560,18 +566,18 @@ var MyViewModel = function(ds) {
         self.resetActivePoi();
     });
 
-    self.regions.subscribe(function(newValue) {
+    self.universities.subscribe(function(newValue) {
         if (newValue != null && newValue.length == 1) {
-            self.activeRegion(newValue[0]);
+            self.activeUniversity(newValue[0]);
         }
         
-        var bonplansRegions = [];
+        var bonplansUniversities = [];
         for (var i in newValue) {
             if (newValue[i].allowBonplans) {
-                bonplansRegions.push(newValue[i]);
+                bonplansUniversities.push(newValue[i]);
             }
         }
-        self.bonplansRegions(bonplansRegions);
+        self.bonplansUniversities(bonplansUniversities);
         
     });
 };
@@ -629,9 +635,9 @@ function createPoi(asChild) {
     var pos = asChild ? myViewModel.activePoi().id() : null;
     var attrs;
     if (myViewModel.activeTab() == 'images') {
-        attrs = { parent: pos, imageMap: myViewModel.activeImage().id };
+        attrs = { parent: pos, imageMap: myViewModel.activeImage().id, university: myViewModel.activeUniversity().id };
     } else {
-        attrs = { parent: pos };
+        attrs = { parent: pos, university: myViewModel.activeUniversity().id };
     }
     myViewModel.setActivePoi(new Poi(attrs));
     openPoiModal('create');

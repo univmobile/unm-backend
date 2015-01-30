@@ -6,7 +6,6 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -33,8 +32,6 @@ import fr.univmobile.backend.domain.ImageMap;
 import fr.univmobile.backend.domain.ImageMapRepository;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
-import fr.univmobile.backend.domain.Region;
-import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.University;
 import fr.univmobile.backend.domain.UniversityRepository;
 import fr.univmobile.backend.domain.User;
@@ -61,8 +58,6 @@ public class GeocampusController {
 	private String qrCodeLinkPattern;
 	
 	@Autowired
-	RegionRepository regionRepository;
-	@Autowired
 	UniversityRepository universityRepository;
 	@Autowired
 	CategoryRepository categoryRepository;
@@ -88,13 +83,11 @@ public class GeocampusController {
 		GeocampusData data = new GeocampusData();
 		
 		if (currentUser.isSuperAdmin()) {
-			data.setRegions(regionRepository.findAllByOrderByNameAsc());
+			data.setUniversities(universityRepository.findAllByOrderByTitleAsc());
 		} else {
-			List<Region> regions = new ArrayList<Region>(1);
-			Region oneRegion = currentUser.getUniversity().getRegion();
-			oneRegion.getUniversities().retainAll(new ArrayList<University>(Arrays.asList(new University[]{currentUser.getUniversity()})));
-			regions.add(oneRegion);
-			data.setRegions(regions);
+			List<University> universities = new ArrayList<University>(1);
+			universities.add(currentUser.getUniversity());
+			data.setUniversities(universities);
 		}
 
 		data.setPlansCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getPlansLegacy()));
@@ -109,7 +102,7 @@ public class GeocampusController {
 	@ResponseBody
 	public List<Poi> getFilteredPois(
 			@RequestParam("type") String poiType, 
-			@RequestParam(value = "reg", required = false) Long regionId, 
+			@RequestParam(value = "uni", required = false) Long universityId, 
 			@RequestParam(value = "cat", required = false) Long categoryId, 
 			@RequestParam(value = "im", required = false) Long imageMapId, 
 			HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -151,13 +144,13 @@ public class GeocampusController {
 		
 		if (currentUser.isSuperAdmin()) {
 			if (category != null) {
-				selectedPois = regionId == null 
+				selectedPois = universityId == null 
 						? poiRepository.findByCategoryOrderByNameAsc(category) 
-						: poiRepository.findByCategoryAndUniversity_RegionOrderByNameAsc(category, regionRepository.findOne(regionId));
+						: poiRepository.findByCategoryAndUniversityOrderByNameAsc(category, universityRepository.findOne(universityId));
 			} else {
-				selectedPois = regionId == null 
+				selectedPois = universityId == null 
 						? poiRepository.findByCategory_LegacyStartingWithOrderByNameAsc(rootCategoryLegacy) 
-						: poiRepository.findByCategory_LegacyStartingWithAndUniversity_RegionOrderByNameAsc(rootCategoryLegacy, regionRepository.findOne(regionId));
+						: poiRepository.findByCategory_LegacyStartingWithAndUniversityOrderByNameAsc(rootCategoryLegacy, universityRepository.findOne(universityId));
 			}
 		} else {
 			if (category != null) {
@@ -322,18 +315,18 @@ public class GeocampusController {
 	}
 	
 	public class GeocampusData {
-		private	Iterable<Region> regions;
+		private	List<University> universities;
 		private	List<Category> plansCategories;
 		private	List<Category> bonPlansCategories;
 		private	List<Category> imagesCategories;
 		private	Iterable<ImageMap> imageMaps;
 
-		public Iterable<Region> getRegions() {
-			return regions;
+		public List<University> getUniversities() {
+			return universities;
 		}
 
-		public void setRegions(Iterable<Region> regions) {
-			this.regions = regions;
+		public void setUniversities(List<University> universities) {
+			this.universities = universities;
 		}
 
 		public List<Category> getPlansCategories() {

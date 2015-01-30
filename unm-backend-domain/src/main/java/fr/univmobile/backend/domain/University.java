@@ -2,6 +2,7 @@ package fr.univmobile.backend.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -19,7 +20,7 @@ public class University extends AuditableEntity {
 	private Long id;
 	@Column(unique = true, nullable = false)
 	private String title;
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER) // FIXME: Come back to lazy
 	@JoinColumn(nullable = false)
 	@JsonIgnore
 	private Region region;
@@ -53,4 +54,7 @@ public class University extends AuditableEntity {
 		this.region = region;
 	}
 
+	public boolean allowBonplans() {
+		return this.region.getAllowBonplans();
+	}
 }
