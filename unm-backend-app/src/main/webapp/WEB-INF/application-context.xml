@@ -37,7 +37,7 @@
 	<jpa:auditing auditor-aware-ref="sessionAuditorAware" />
 
 	<security:http use-expressions="true" auto-config="true">
-		<security:intercept-url pattern="/api/**" access="isAuthenticated()" />
+		<security:intercept-url pattern="/api/**" access="permitAll" />
 		<security:form-login login-page="/"/>
 		<security:custom-filter ref="compositePreAuthenticationFilter" position="PRE_AUTH_FILTER" />
 	</security:http>

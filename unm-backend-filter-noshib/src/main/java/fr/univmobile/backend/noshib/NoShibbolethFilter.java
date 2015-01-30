@@ -177,6 +177,13 @@ public class NoShibbolethFilter implements Filter {
 
 		final HttpServletRequest httpRequest = (HttpServletRequest) request;
 
+		final String requestURI = httpRequest.getRequestURI();
+
+		if (requestURI.contains("/api") || requestURI.contains("/json/login")) {
+
+			return request; // Do not filter /api and classic login for api
+		}
+		
 		final String httpHost = httpRequest.getHeader("host");
 
 		if (httpHost == null || (!httpHost.startsWith("localhost") //
@@ -218,8 +225,6 @@ public class NoShibbolethFilter implements Filter {
 		}
 
 		request.setCharacterEncoding(UTF_8);
-
-		final String requestURI = httpRequest.getRequestURI();
 
 		if (!requestURI.contains("json/shibbolethLogin") && requestURI.contains("/json")) {
 

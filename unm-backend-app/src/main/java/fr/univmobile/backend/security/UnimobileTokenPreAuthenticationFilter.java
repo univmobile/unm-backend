@@ -5,6 +5,7 @@ import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.domain.Token;
 import fr.univmobile.backend.domain.TokenRepository;
 import fr.univmobile.backend.domain.User;
+
 import org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter;
 
 import javax.servlet.http.HttpServletRequest;
@@ -42,7 +43,7 @@ public class UnimobileTokenPreAuthenticationFilter extends AbstractPreAuthentica
             	httpServletRequest.getSession().removeAttribute("remoteUserLoadedBySpringSecurity");
             }
         } else {
-        	httpServletRequest.getSession().removeAttribute("remoteUserLoadedBySpringSecurity");
+        	//httpServletRequest.getSession().removeAttribute("remoteUserLoadedBySpringSecurity");
         }
         return username;
     }

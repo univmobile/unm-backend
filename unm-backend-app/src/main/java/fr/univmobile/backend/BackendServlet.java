@@ -441,7 +441,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			// Note: We should not log any password here
 		}
 
-		if (requestURI.contains("/json/") || requestURI.endsWith("/json")) {
+		if ((requestURI.contains("/json/") || requestURI.endsWith("/json")) && !requestURI.contains("/json/shibbolethLogin")) {
 
 			serveJSON(request, response);
 
@@ -555,6 +555,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 9. CHAIN
 
+		if (requestURI.contains("/json/shibbolethLogin")) {
+
+			serveJSON(request, response);
+
+			return;
+		}
+		
+		
 		super.service(request, response);
 	}
 

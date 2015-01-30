@@ -58,9 +58,12 @@ public class User extends AuditableEntity {
 
 	@Override
 	public String toString() {
+		return this.getRemoteUser(); // TODO: Done this way tu support hybrid auth. Remove later after trashing legacy authentication.
+		/*
 		return String.format(
 				"User[id='%s', displayName='%s', role='%s', university='%s']",
 				id, displayName, role, university.getId());
+		*/
 	}
 
 	public Long getId() {
