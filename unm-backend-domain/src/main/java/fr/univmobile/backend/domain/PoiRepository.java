@@ -8,6 +8,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.data.rest.core.annotation.RestResource;
 
 public interface PoiRepository extends JpaRepository<Poi, Long> {
 
@@ -15,6 +16,7 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 	
 	List<Poi> findByName(String name);
 
+	@RestResource(exported = false)
 	List<Poi> findByUniversity(University university);
 	
 	List<Poi> findAllByOrderByNameAsc();
