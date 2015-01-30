@@ -20,11 +20,10 @@ public class BeforeCreatePoiValidator implements Validator {
         if (auth.isAuthenticated()){
             User user = (User) auth.getPrincipal();
             Poi poi = (Poi) o;
-            if (!poi.getUniversity().getId().equals(user.getUniversity().getId()) && (User.STUDENT.equals(user.getRole()) || User.ADMIN.equals(user.getRole()))){
+            if (!user.isSuperAdmin() && !poi.getUniversity().getId().equals(user.getUniversity().getId())){
                 errors.rejectValue("university", null, null, "University must match the User university");
             }
-            //TODO This should validate if the category is BonPlans or if it is a child of BonPlans
-            if (!poi.getCategory().getId().equals(new Long(2)) && User.STUDENT.equals(user.getRole())){
+            if (user.isStudent() && !poi.getCategory().getLegacy().startsWith(Category.getBonPlansLegacy())){
                 errors.rejectValue("category", null, null, "The only category allowed for students is BON_PLANS");
             }
         } else {

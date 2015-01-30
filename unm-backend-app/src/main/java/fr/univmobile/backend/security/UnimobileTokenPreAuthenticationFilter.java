@@ -26,6 +26,9 @@ public class UnimobileTokenPreAuthenticationFilter extends AbstractPreAuthentica
     protected Object getPreAuthenticatedPrincipal(HttpServletRequest httpServletRequest) {
         String t = httpServletRequest.getHeader("Authentication-Token");
         String username = null;
+        if (t == null || t.isEmpty()) {
+        	return null;
+        }
         Token token = tokenRepository.findByToken(t);
         if (token != null){
             User user = token.getUser();
@@ -34,7 +37,12 @@ public class UnimobileTokenPreAuthenticationFilter extends AbstractPreAuthentica
                 sessionAuditorAware.setSessionUser(user);
                 LogQueueDbImpl.setPrincipal(user.getUsername());
                 httpServletRequest.getSession().setAttribute("user", user);
+                httpServletRequest.getSession().setAttribute("remoteUserLoadedBySpringSecurity", user.getRemoteUser());
+            } else {
+            	httpServletRequest.getSession().removeAttribute("remoteUserLoadedBySpringSecurity");
             }
+        } else {
+        	httpServletRequest.getSession().removeAttribute("remoteUserLoadedBySpringSecurity");
         }
         return username;
     }
@@ -44,6 +52,9 @@ public class UnimobileTokenPreAuthenticationFilter extends AbstractPreAuthentica
         String t = httpServletRequest.getHeader("Authentication-Token");
         String password = null;
         Token token = tokenRepository.findByToken(t);
+        if (t == null || t.isEmpty()) {
+        	return null;
+        }
         if (token != null){
             User user = token.getUser();
             if (user != null){

@@ -5,12 +5,18 @@ import fr.univmobile.backend.domain.TokenRepository;
 import fr.univmobile.backend.domain.User;
 import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.web.commons.*;
+
 import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 
 import java.util.UUID;
 
 @Paths("json/shibbolethLogin")
 public class ShibbolethLoginJSONController extends AbstractJSONController {
+
+	private static final Log log = LogFactory
+			.getLog(ShibbolethLoginJSONController.class);
 
     UserRepository userRepository;
     TokenRepository tokenRepository;

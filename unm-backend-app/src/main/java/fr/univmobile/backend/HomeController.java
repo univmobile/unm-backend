@@ -7,6 +7,9 @@ import java.sql.SQLException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 
 import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.domain.User;
@@ -58,6 +61,9 @@ public class HomeController extends AbstractBackendController {
 			log.debug("Logout.isHttpValid()");
 
 			removeSessionAttribute(DELEGATION_USER);
+			removeSessionAttribute("remoteUserLoadedBySpringSecurity");
+			removeSessionAttribute("user");
+	        SecurityContextHolder.getContext().setAuthentication(null);			
 
 			return new View("home.jsp");
 		}
