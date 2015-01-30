@@ -63,6 +63,6 @@ public class Comment extends AuditableEntity {
 	}
 
 	public String getAuthor() {
-		return this.getCreatedOn() == null ? null : String.format("%s", this.getCreatedBy().getDisplayName());
+		return this.getCreatedBy() == null ? null : String.format("%s", this.getCreatedBy().getDisplayName());
 	}
 }
