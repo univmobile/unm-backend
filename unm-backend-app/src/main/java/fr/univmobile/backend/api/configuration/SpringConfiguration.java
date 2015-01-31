@@ -4,10 +4,13 @@ import fr.univmobile.backend.converter.StringToCategoryConverter;
 import fr.univmobile.backend.converter.StringToPoiConverter;
 import fr.univmobile.backend.converter.StringToUniversityConverter;
 import fr.univmobile.backend.hateoas.assembler.*;
+import fr.univmobile.backend.hateoas.processor.CategoryResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.FeedResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.MenuResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.NotificationResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.PoiResourceProcessor;
+import fr.univmobile.backend.hateoas.processor.UniversityResourceProcessor;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -55,6 +58,11 @@ public class SpringConfiguration {
     }
 
     @Bean
+    public CategoryResourceProcessor getCategoryResourceProcessor(){
+    	return new CategoryResourceProcessor();
+    }
+    
+    @Bean
     public FeedResourceProcessor getFeedResourceProcessor(){
         return new FeedResourceProcessor();
     }
@@ -69,6 +77,11 @@ public class SpringConfiguration {
         return new PoiResourceProcessor();
     }
 
+    @Bean
+    public UniversityResourceProcessor getUniversityResourceProcessor(){
+    	return new UniversityResourceProcessor();
+    }
+    
     @Bean
     public StringToUniversityConverter getStringToUniversityConverter(){
         return new StringToUniversityConverter();
