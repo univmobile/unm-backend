@@ -60,10 +60,15 @@ public class HomeController extends AbstractBackendController {
 
 			log.debug("Logout.isHttpValid()");
 
+			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+			if (auth != null) {
+				new SecurityContextLogoutHandler().logout(checkedRequest(), checkedResponse(), auth);
+			}
+	        SecurityContextHolder.getContext().setAuthentication(null);			
 			removeSessionAttribute(DELEGATION_USER);
 			removeSessionAttribute("remoteUserLoadedBySpringSecurity");
 			removeSessionAttribute("user");
-	        SecurityContextHolder.getContext().setAuthentication(null);			
+			checkedRequest().getSession().invalidate();
 
 			return new View("home.jsp");
 		}

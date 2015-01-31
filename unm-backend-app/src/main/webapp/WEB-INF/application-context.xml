@@ -50,6 +50,8 @@
 		<security:authentication-provider ref="unimobileAuthenticationProvider"/>
 	</security:authentication-manager>
 
+	<security:global-method-security pre-post-annotations="enabled"/>
+	
 	<bean id="unimobilePreAuthenticationFilter" class="fr.univmobile.backend.security.UnimobilePreAuthenticationFilter">
 		<property name="authenticationManager" ref="authenticationManager" />
 	</bean>

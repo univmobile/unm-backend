@@ -19,4 +19,6 @@ public interface NotificationRepository extends	JpaRepository<Notification, Long
 	@Query("Select n from Notification n where (n.university = :universityId or n.university = null) and n.createdOn > :since order by n.createdOn desc")
 	Page<News> findNotificationsForUniversitySince(@Param("universityId") University universityId, @Param("since") @DateTimeFormat(iso = ISO.DATE_TIME) Date since, Pageable pageable);
 
+	Page<Feed> findByUniversityOrderByCreatedOnDesc(@Param("universityId")University universityId, Pageable pageable);
+	
 }

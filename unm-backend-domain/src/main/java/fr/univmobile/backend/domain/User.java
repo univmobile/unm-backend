@@ -51,7 +51,7 @@ public class User extends AuditableEntity {
 	@JsonIgnore
 	private University secondaryUniversity;
 	@Column(name = "notifications_read_date", nullable = false, columnDefinition="TIMESTAMP DEFAULT '1970-01-01'")
-	private Date notificationsReadDate = new Date(0);
+	private Date notificationsReadDate = new Date(1000 * 60 * 60 * 24 * 365 * 10);
 	@OneToMany(mappedBy="user", fetch = FetchType.EAGER)
 	@JsonIgnore
 	private Collection<Bookmark> bookmarks = new ArrayList<Bookmark>();

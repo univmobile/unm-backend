@@ -9,6 +9,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.data.rest.core.annotation.RestResource;
+import org.springframework.security.access.prepost.PreAuthorize;
 
 public interface PoiRepository extends JpaRepository<Poi, Long> {
 
@@ -45,9 +46,10 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 
 	List<Poi> findByIdIn(Collection<Long> ids);
 
-	@Query("Select p from Poi p where p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%') order by p.name asc")
-	Page<Poi> searchValue(@Param("val") String val, Pageable pageable);
-
+	@PreAuthorize(value="hasRole('superadmin') or (hasRole('admin') and principal.university.id == #universityId)")
+	@Query("Select p from Poi p where p.university.id = :universityId and (p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%')) order by p.name asc")
+	Page<Poi> searchValue(@Param("val") String val, @Param("universityId") Long universityId, Pageable pageable);
+	
 	Page<Poi> findByUniversity(@Param("universityId") University universityId, Pageable pageable);
 
 	Page<Poi> findByUniversityAndCategory(@Param("universityId") University universityId, @Param("categoryId") Category categoryId, Pageable pageable);
