@@ -153,8 +153,9 @@ td.id {
       </td>
       
       <td class="edit">
-         <a id="link-modify_${pc.id}" href="${baseURL}/poicategoriesmodify/${pc.id}">Modifier…</a>
-         <a id="link-sons_${pc.id}" href="${baseURL}/poicategories/${pc.id}">Sous-catégories…</a>
+         <a id="link-modify_${pc.id}" href="${baseURL}/poicategoriesmodify/${pc.id}">Modifier…</a><br/>
+         <a id="link-sons_${pc.id}" href="${baseURL}/poicategories/${pc.id}">Sous-catégories…</a><br/>
+         <a id="link-icons_${pc.id}" href="${baseURL}/api/categories/manage/${pc.id}/icons">Icônes…</a>
       </td>
       
       <td class="none">

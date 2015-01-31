@@ -46,6 +46,13 @@ public class Category extends AuditableEntityWithLegacy {
 	
 	private Long apiParisId;
 
+	@Column(name = "activeiconurl")
+	private String activeIconUrl;
+	@Column(name = "inactiveiconurl")
+	private String inactiveIconUrl;
+	@Column(name = "markerIconUrl")
+	private String markerIconUrl;
+
 	@Override
 	public String toString() {
 		return String.format("Category[id=%d, name='%s']", id, name);
@@ -117,5 +124,29 @@ public class Category extends AuditableEntityWithLegacy {
 
 	public void setApiParisId(Long apiParisId) {
 		this.apiParisId = apiParisId;
+	}
+
+	public String getActiveIconUrl() {
+		return activeIconUrl;
+	}
+
+	public void setActiveIconUrl(String activeIconUrl) {
+		this.activeIconUrl = activeIconUrl;
+	}
+
+	public String getInactiveIconUrl() {
+		return inactiveIconUrl;
+	}
+
+	public void setInactiveIconUrl(String inactiveIconUrl) {
+		this.inactiveIconUrl = inactiveIconUrl;
+	}
+
+	public String getMarkerIconUrl() {
+		return markerIconUrl;
+	}
+
+	public void setMarkerIconUrl(String markerIconUrl) {
+		this.markerIconUrl = markerIconUrl;
 	}
 }

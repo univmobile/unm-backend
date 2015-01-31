@@ -71,7 +71,7 @@ label.checkbox-parentCategory {
    <tbody>
       
       <tr>
-         <th>Name</th>
+         <th>Nom</th>
          <td>
             <input class="text" type="text" id="text-name" name="name" value="${poicategorymodify.name}">
          <c:if test="${err_poicategorymodify_name}">
