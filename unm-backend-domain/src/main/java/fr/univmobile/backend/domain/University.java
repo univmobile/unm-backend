@@ -24,6 +24,9 @@ public class University extends AuditableEntity {
 	@JoinColumn(nullable = false)
 	@JsonIgnore
 	private Region region;
+	
+	@Column(name = "moderatecomments", nullable = false)
+	private boolean moderateComments = false;
 
 	@Override
 	public String toString() {
@@ -52,6 +55,14 @@ public class University extends AuditableEntity {
 
 	public void setRegion(Region region) {
 		this.region = region;
+	}
+
+	public boolean getModerateComments() {
+		return this.moderateComments;
+	}
+
+	public void setModerateComments(boolean moderateComments) {
+		this.moderateComments = moderateComments;
 	}
 
 	public boolean allowBonplans() {

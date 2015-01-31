@@ -57,24 +57,21 @@ td.id {
 <table>
 <thead>
    <tr>
-      <th class="id">Id</th>
       <th class="title">Titre</th>
+      <th class="edit">Action</th>
    </tr>
 </thead>
 
 <tbody>
    <c:forEach var="u" items="${universities}">
-   
       <tr>
-      
-      <td class="id">
-         ${u.id}
-      </td>
-      
-      <td class="title">
-         ${u.title}
-      </td>
-      
+	      <td class="title">
+	         ${u.title}
+	      </td>
+	      <td class="edit">
+	         <a href="${u.id}">Modifier…</a>
+	      </td>
+	  </tr>      
    </c:forEach>
 </tbody>
    
