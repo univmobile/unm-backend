@@ -45,6 +45,16 @@
 	</context-param>
 
 	<context-param>
+		<param-name>categoriesIconsBaseUrl</param-name>
+		<param-value>http://localhost:8080/unm-backend/files/categoriesicons</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>categoriesIconsBaseDir</param-name>
+		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/categoriesicons</param-value>
+	</context-param>
+
+	<context-param>
 		<param-name>qrBaseDir</param-name>
 		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/qrcodes</param-value>
 	</context-param>
