@@ -1,5 +1,7 @@
 package fr.univmobile.backend.domain;
 
+import java.util.Date;
+
 import javax.persistence.*;
 
 @Entity
@@ -64,5 +66,9 @@ public class Comment extends AuditableEntity {
 
 	public String getAuthor() {
 		return this.getCreatedBy() == null ? null : String.format("%s", this.getCreatedBy().getDisplayName());
+	}
+
+	public Date getPostedOn() {
+		return this.getCreatedOn();
 	}
 }

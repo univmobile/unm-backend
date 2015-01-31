@@ -24,9 +24,12 @@ public class University extends AuditableEntity {
 	@JoinColumn(nullable = false)
 	@JsonIgnore
 	private Region region;
-	
 	@Column(name = "moderatecomments", nullable = false)
 	private boolean moderateComments = false;
+	@Column(name = "logourl")
+	private String logoUrl;
+	@Column(name = "mobileshibbolethurl")
+	private String mobileShibbolethUrl;
 
 	@Override
 	public String toString() {
@@ -63,6 +66,22 @@ public class University extends AuditableEntity {
 
 	public void setModerateComments(boolean moderateComments) {
 		this.moderateComments = moderateComments;
+	}
+
+	public String getLogoUrl() {
+		return logoUrl;
+	}
+
+	public void setLogoUrl(String logoUrl) {
+		this.logoUrl = logoUrl;
+	}
+
+	public String getMobileShibbolethUrl() {
+		return mobileShibbolethUrl;
+	}
+
+	public void setMobileShibbolethUrl(String mobileShibbolethUrl) {
+		this.mobileShibbolethUrl = mobileShibbolethUrl;
 	}
 
 	public boolean allowBonplans() {

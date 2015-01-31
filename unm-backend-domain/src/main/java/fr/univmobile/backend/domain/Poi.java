@@ -312,6 +312,11 @@ public class Poi extends AuditableEntityWithLegacy {
 	public void setQrCode(String qrCode) {
 		this.qrCode = qrCode;
 	}
+	
+	public Long getUniversityId() {
+		return this.university.getId();
+	}
+	
 	// NEAREST POI
 
 	public boolean isNear(double lat, double lng, Double metersAway) {

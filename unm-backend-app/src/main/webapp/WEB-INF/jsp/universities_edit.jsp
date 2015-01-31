@@ -27,7 +27,7 @@
 </style>
 </head>
 
-<body id="body-regions" class="results entered">
+<body id="body-regions" class="entered">
 
 <div id="div-entered">
 
@@ -45,7 +45,7 @@
 </div>
 
 <div class="body">
-<form:form modelAttribute="university" method="POST">
+<form:form modelAttribute="universityForm" method="post" enctype="multipart/form-data">
 
 <h1   title="Version ${buildInfo.appVersion}
       Build ${buildInfo.buildDisplayName}
@@ -54,17 +54,70 @@
       Administration d’UnivMobile
 </h1>
 
-<div id="div-regions">
+<div id="">
 
-<h2>Universités - ${university.title}</h2>
+<h2>Universit&eacute;s - ${universityForm.title}</h2>
 
-<div>
-<form:input type="text" path="title"/>
-<form:checkbox path="moderateComments" value="true" />
-<input type="submit" value="Envoyer">
-</div>
+<form:errors element="div" cssClass="error" cssStyle="color: white;"/>
 
+<table>
+   
+   <tbody>
+         
+      <tr>
+         <th>Titre</th>
+         <td>
+         	<form:input type="text" path="title"/>
+         	<form:errors cssClass="error" path="title" cssStyle="color: #ff0000;"/>
+         </td>
+      </tr>
+      
+      <tr>
+         <th>Mobile Shibboleth Url</th>
+         <td>
+         	<form:input type="text" path="mobileShibbolethUrl" />
+         </td>
+      </tr>
+      
+      <tr>
+         <th>Mod&eacute;r&eacute; Commentaires ?</th>
+         <td>
+         	<form:checkbox path="moderateComments" value="true" />
+            <label for="checkbox-active"></label>
+         </td>   
+      </tr>
 
+	  <c:if test="${not empty universityForm.logoUrl}">
+      <tr>
+         <th>Courant Logo</th>
+         <td>
+         	${universityForm.logoUrl}<br/>
+         	<form:hidden id="logoUrl" path="logoUrl" />
+         	<input type="checkbox" onclick="$('#logoUrl').val(this.checked ? '' : '${universityForm.logoUrl}')" /> clair
+         </td>   
+      </tr>
+	  </c:if>
+	  
+      <tr>
+         <th>Nouveau Logo</th>
+         <td>
+         	<input type="file" name="file" />
+         </td>   
+      </tr>
+      
+   </tbody>
+   
+   </table>
+   
+   <div class="table bottom">
+      <button id="button-cancel" onclick="document.location.href = '${baseURL}/api/universities/manage/'; return false;">
+      	Annuler
+      </button>
+      
+      <button id="button-save" type="submit">
+      	Enregistrer
+      </button>
+   </div>
 
 </div>
 

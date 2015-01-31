@@ -35,6 +35,16 @@
 	</context-param>
 
 	<context-param>
+		<param-name>universitiesLogoBaseUrl</param-name>
+		<param-value>http://localhost:8080/unm-backend/files/universitieslogos</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>universitiesLogoBaseDir</param-name>
+		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/universitieslogos</param-value>
+	</context-param>
+
+	<context-param>
 		<param-name>qrBaseDir</param-name>
 		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/qrcodes</param-value>
 	</context-param>
