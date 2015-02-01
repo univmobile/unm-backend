@@ -50,6 +50,10 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 	@Query("Select p from Poi p where p.university.id = :universityId and (p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%')) order by p.name asc")
 	Page<Poi> searchValue(@Param("val") String val, @Param("universityId") Long universityId, Pageable pageable);
 	
+	@PreAuthorize(value="hasRole('superadmin')")
+	@Query("Select p from Poi p where (p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%')) order by p.name asc")
+	Page<Poi> searchGlobalValue(@Param("val") String val, Pageable pageable);
+	
 	Page<Poi> findByUniversity(@Param("universityId") University universityId, Pageable pageable);
 
 	Page<Poi> findByUniversityAndCategory(@Param("universityId") University universityId, @Param("categoryId") Category categoryId, Pageable pageable);

@@ -24,4 +24,9 @@ public interface CommentRepository extends JpaRepository<Comment, Long> {
 	@PreAuthorize(value="hasRole('superadmin') or (hasRole('admin') and principal.university.id == #universityId)")
 	@Query("Select c from Comment c where c.poi.university.id = :universityId and (c.title like CONCAT('%',:val,'%') or c.message like CONCAT('%',:val,'%')) order by c.createdOn desc")
 	Page<Comment> searchValue(@Param("val") String val, @Param("universityId") Long universityId, Pageable pageable);
+	
+	@PreAuthorize(value="hasRole('superadmin')")
+	@Query("Select c from Comment c where (c.title like CONCAT('%',:val,'%') or c.message like CONCAT('%',:val,'%')) order by c.createdOn desc")
+	Page<Poi> searchGlobalValue(@Param("val") String val, Pageable pageable);
+	
 }
