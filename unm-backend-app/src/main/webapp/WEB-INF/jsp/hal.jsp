@@ -13,4 +13,4 @@
       </div>
       --> <div ng-view=""></div> </div> <div id="alert-global" class="alert alert-global" role="alert"></div> <div id="dialog-global" class="modal delete"> <div class="modal-dialog"> <div class="modal-content"> <div class="modal-header"> <a href="#" class="close" data-dismiss="modal"></a> <h3 id="dialog-title">Удалить объект</h3> </div> <div class="modal-body"> <div id="dialog-body" class="modal-body-inner"> Вы уверены? </div> </div> <div class="modal-footer"> <button id="dialog-global-btn-ok" class="btn btn-primary primary">OK</button> <button id="dialog-global-btn-cancel" class="btn btn-secondary secondary">Cancel</button> </div> </div> </div> </div> <!--[if lt IE 9]>
     <script src="${baseUrl}js/oldieshim.76f279db.js"></script>
-    <![endif]--> <script src="${baseUrl}js/vendor.d546a3d4.js"></script> <script src="${baseUrl}js/scripts.0f71a524.js"></script>  
+    <![endif]--> <script src="${baseUrl}js/vendor.d546a3d4.js"></script> <script src="${baseUrl}js/scripts.fb9b3a1a.js"></script>  
