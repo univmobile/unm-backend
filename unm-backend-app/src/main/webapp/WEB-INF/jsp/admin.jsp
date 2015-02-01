@@ -38,34 +38,44 @@ Administration d’UnivMobile
 
 <div id="div-query">
 <form action="${baseURL}/" method="GET">
+<!-- 
 <input id="text-query" name="q">
 <button id="button-search">
 	Rechercher
 </button>
+-->
 </form>
 </div>
 
 <ul class="homeMenu" id="ul-home-data">
 	<li class="flaticon icon-search8">
-		<a id="link-search" href="${baseURL}/search/">Recherche avancée</a>
+		<a id="link-search" href="${baseURL}/api/app#/main">Recherche avancée</a>
 	<li class="flaticon icon-location14">
 		<a id="link-pois" href="${baseURL}/pois/">Points of Interest (POIs)</a>
 	<li class="flaticon icon-chat2">
 		<a id="link-comments" href="${baseURL}/comments/">Commentaires</a>
-	<li class="flaticon icon-website1">
-		<a id="link-regions" href="${baseURL}/regions/">Régions, universités</a>
+	<li class="flaticon icon-globe5">
+		<a id="link-regions" href="${baseURL}/regions/">Régions</a>
 	<li class="clear">
 	<li class="flaticon icon-compass6">
 		<a id="link-geocampus" href="${baseURL}/geocampus/admin/">Géocampus</a>
 	<li class="flaticon icon-rss9">
-		<a id="link-news" href="${baseURL}/news/">Fils d’actualités des universités</a>
+		<a id="link-news" href="${baseURL}/api/app#/feeds">Fils d’actualités des universités</a>
 	<li class="flaticon icon-address7">
 		<a id="link-users" href="${baseURL}/users/">Utilisateurs</a>
 	<li class="flaticon icon-address7">
 		<a id="link-categories" href="${baseURL}/poicategories/">Catégories</a>
 	<li class="clear">
-	<li class="flaticon icon-website1">
+	<li class="flaticon icon-globe6">
 		<a id="link-universities" href="${baseURL}/api/universities/manage/">Universités</a>
+	</li>
+	<li class="flaticon icon-calendar7">
+		<a id="link-universities" href="${baseURL}/api/app#/notifications">Notifications</a>
+	</li>
+	<li class="flaticon icon-website1">
+		<a id="link-universities" href="${baseURL}/api/app#/menus">Menus</a>
+	</li>
+		
 </ul>
 
 <h2 class="homeMenu"><a id="link-system" href="${baseURL}/system/">Système</a></h2>
@@ -75,12 +85,8 @@ Administration d’UnivMobile
 		<a id="link-history" href="${baseURL}/history/">Historique<br>des actions</a>
 	<li class="flaticon icon-graph5">
 		<a id="link-stats" href="${baseURL}/api/admin/stats/">Statistiques</a>
-	<li class="flaticon icon-check6">
-		<a id="link-monitoring" href="${baseURL}/monitoring/">Monitoring</a>
 	<li class="flaticon icon-black56">
 		<a id="link-logs" href="${baseURL}/logs/">Logs techniques</a>
-	<li class="flaticon icon-down9">
-		<a id="link-backups" href="${baseURL}/backups/">Sauvegardes (backups)</a>
 </ul>
 
 <h2 class="homeMenu">Général</h2>

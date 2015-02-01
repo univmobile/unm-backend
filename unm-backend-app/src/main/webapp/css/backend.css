@@ -713,6 +713,8 @@ body.admin li.flaticon.icon-black56 a { background-image: url('../img/flaticon.c
 body.admin li.flaticon.icon-file6 a { background-image: url('../img/flaticon.com/file6.png'); }
 body.admin li.flaticon.icon-website1 a { background-image: url('../img/flaticon.com/website1.png'); }
 body.admin li.flaticon.icon-globe6 a { background-image: url('../img/flaticon.com/globe6.png'); }
+body.admin li.flaticon.icon-globe5 a { background-image: url('../img/flaticon.com/globe5.png'); }
+body.admin li.flaticon.icon-calendar7 a { background-image: url('../img/flaticon.com/calendar7.png'); }
 body.entered #text-query {
 	width: 380px;
 }
