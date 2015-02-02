@@ -1,0 +1,51 @@
+<div>
+    <div class="page-title">
+        <h1 ng-if="item.id">Modifier Menu</h1>
+        <h1 ng-if="!item.id">Ajouter Menu</h1>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="name" class="control-label">Nom *</label>
+            <input type="text" class="form-control" id="name" ng-model="item.name" validator="[required]"/>
+        </div>
+        <div class="form-group">
+            <label for="university" class="control-label">Université</label>
+            <select class="form-control" id="university"
+                    ng-model="item.universityId"
+                    ng-options="uni.id as uni.title for uni in unis"
+                    >
+	      <option ng-if="isSuperAdmin()" value="">---</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="grouping" class="control-label">Groupe *</label>
+            <select class="form-control" id="type"
+                    ng-model="item.grouping"
+                    ng-options="grouping for grouping in groups"
+                    validator="[required]"
+                    >
+            </select>
+        </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-model="item.active" /> Actif
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="ordinal" class="control-label">Ordre *</label>
+            <input type="text" class="form-control" id="ordinal" ng-model="item.ordinal" validator="[required]"/>
+        </div>
+        <div class="form-group">
+            <label for="url" class="control-label">URL</label>
+            <input type="text" class="form-control" id="url" ng-model="item.url"/>
+        </div>
+        <div class="form-group">
+            <label for="content" class="control-label">Content</label>
+            <textarea class="form-control notification-content" id="content" ng-model="item.content"></textarea>
+        </div>
+
+        <button type="button" class="btn btn-success" ng-click="handleSaveClicked( item )">Enregister</button>
+        <a href="#/menus" class="btn btn-danger">Annuler</a>
+    </form>
+</div>

@@ -1,0 +1,36 @@
+<div>
+    <div class="page-title">
+        <h1 ng-if="item.id">Modifier Flux</h1>
+        <h1 ng-if="!item.id">Ajouter Flux</h1>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="name" class="control-label">Nom *</label>
+            <input type="text" class="form-control" id="name" ng-model="item.name" validator="[required]"/>
+        </div>
+        <div class="form-group">
+            <label for="university" class="control-label">Universit&eacute;</label>
+            <select class="form-control" id="university"
+                    ng-model="item.universityId"
+                    ng-options="uni.id as uni.title for uni in unis"
+                    >
+	      <option ng-if="isSuperAdmin()" value="">---</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="type" class="control-label">Type</label>
+            <select class="form-control" id="type"
+                    ng-model="item.type"
+                    ng-options="type for type in types"
+                    >
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="url" class="control-label">URL *</label>
+            <input type="text" class="form-control" id="url" ng-model="item.url" validator="[required]"/>
+        </div>
+        <button type="button" class="btn btn-success" ng-click="handleSaveClicked( item )">Enregister</button>
+        <a href="#/feeds" class="btn btn-danger">Annuler</a>
+    </form>
+</div>
