@@ -18,7 +18,7 @@ if len(sys.argv) > 1:
 
 logging.basicConfig(filename='log')
         
-logger = logging.getLogger('monitoring')
+logger = logging.getLogger('log monitoring')
 logger.setLevel(logging.INFO)
 
 try:
