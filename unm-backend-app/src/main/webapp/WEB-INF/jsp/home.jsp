@@ -59,6 +59,14 @@ ${displayName}
    </span>
 </div>
 </c:if>
+<c:if test="${err_incorrectPassword}">
+<div class="error">
+   ERREUR — 
+   <span class="message">
+   Mot de passe incorrect
+   </span>
+</div>
+</c:if>
 <div class="layout">
 
 <form action="${baseURL}/" method="POST">

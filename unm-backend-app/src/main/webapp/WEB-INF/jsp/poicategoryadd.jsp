@@ -88,7 +88,7 @@ label.checkbox-parentCategory {
       </tr>
       
       <tr>
-         <th>Est-il actif?</th>
+         <th>Catégorie active ?</th>
          <td>
             <input class="checkbox" type="checkbox" id="checkbox-active" name="active" value="yes">
             <label for="checkbox-active"></label>
@@ -96,12 +96,22 @@ label.checkbox-parentCategory {
       </tr>
       
       <tr>
-         <th>Catègorie pére</th>
+         <th>Catégorie parente</th>
          <td>
          <select id="select-parentCategory" name="parentCategory">
             <option value="(aucune)">(aucune)</option>
             <c:forEach var="pc" items="${poicategories}">
-               <option value="${pc.id}">
+            	<c:choose>
+            		<c:when test="${not empty poicategoryadd.parent and poicategoryadd.parent.id eq pc.id}">
+		            	<option selected="selected" value="${pc.id}" >
+        	    	</c:when>
+            		<c:when test="${not empty parentCategory and parentCategory.id eq pc.id}">
+		            	<option selected="selected" value="${pc.id}" >
+        	    	</c:when>
+            		<c:otherwise>
+		            	<option value="${pc.id}" >
+        	    	</c:otherwise>
+               </c:choose>
                   ${pc.name}
                </option>
             </c:forEach>

@@ -2,6 +2,7 @@ package fr.univmobile.backend.domain;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
@@ -19,10 +20,16 @@ public class University extends AuditableEntity {
 	private Long id;
 	@Column(unique = true, nullable = false)
 	private String title;
-	@ManyToOne
+	@ManyToOne(fetch = FetchType.EAGER) // FIXME: Come back to lazy
 	@JoinColumn(nullable = false)
 	@JsonIgnore
 	private Region region;
+	@Column(name = "moderatecomments", nullable = false)
+	private boolean moderateComments = false;
+	@Column(name = "logourl")
+	private String logoUrl;
+	@Column(name = "mobileshibbolethurl")
+	private String mobileShibbolethUrl;
 
 	@Override
 	public String toString() {
@@ -53,4 +60,31 @@ public class University extends AuditableEntity {
 		this.region = region;
 	}
 
+	public boolean getModerateComments() {
+		return this.moderateComments;
+	}
+
+	public void setModerateComments(boolean moderateComments) {
+		this.moderateComments = moderateComments;
+	}
+
+	public String getLogoUrl() {
+		return logoUrl;
+	}
+
+	public void setLogoUrl(String logoUrl) {
+		this.logoUrl = logoUrl;
+	}
+
+	public String getMobileShibbolethUrl() {
+		return mobileShibbolethUrl;
+	}
+
+	public void setMobileShibbolethUrl(String mobileShibbolethUrl) {
+		this.mobileShibbolethUrl = mobileShibbolethUrl;
+	}
+
+	public boolean allowBonplans() {
+		return this.region.getAllowBonplans();
+	}
 }

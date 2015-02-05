@@ -18,26 +18,43 @@ import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.HttpRequired;
+import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.Regexp;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "poicategoriesadd" })
+@Paths({ "poicategoriesadd", "poicategoriesadd/${id}" })
 public class PoiCategoriesAddController extends AbstractBackendController {
+
+	@PathVariable("${id}")
+	private Long getParentCategoryId() {
+		Long id;
+		try {
+			id = getPathLongVariable("${id}");
+		} catch (Exception e) {
+			id = null;
+		}
+		return id;
+	}
+
 	public PoiCategoriesAddController(
 			final CategoryRepository categoryRepository,
 			final PoiCategoriesController poiCategoriesController) {
 		this.categoryRepository = checkNotNull(categoryRepository,
 				"categoryRepository");
-		this.poiCategoriesController = checkNotNull(poiCategoriesController,
+		checkNotNull(poiCategoriesController,
 				"poiCategoriesController");
 	}
 
 	private CategoryRepository categoryRepository;
-	private PoiCategoriesController poiCategoriesController;
-
+	
 	@Override
 	public View action() throws IOException, TransactionException {
+
+		Category parentCategory = getParentCategoryId() != null ? categoryRepository.findOne(getParentCategoryId()) : null;
+		if (parentCategory != null) {
+			setAttribute("parentCategory", parentCategory);
+		}
 
 		// 1. CATEGORIES
 
@@ -55,7 +72,6 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 		final PoiCategoryadd form = getHttpInputs(PoiCategoryadd.class);
 
 		if (!form.isHttpValid()) {
-
 			return new View("poicategoryadd.jsp");
 		}
 
@@ -108,7 +124,10 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 
 		categoryRepository.save(poicategory);
 
-		return poiCategoriesController.action();
+		if (poicategory.getParent() != null)
+			setAttribute("parent", poicategory.getParent());
+		return new View("poicategorymodify_redirect.jsp");
+
 	}
 
 	/**

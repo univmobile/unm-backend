@@ -1,0 +1,24 @@
+<div>
+    <div class="page-title">
+        <h1 ng-if="item.id">Modifier Notification</h1>
+        <h1 ng-if="!item.id">Ajouter Notification</h1>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="university" class="control-label">Université</label>
+            <select class="form-control" id="university"
+                    ng-model="item.universityId"
+                    ng-options="uni.id as uni.title for uni in unis"
+                    >
+		<option ng-if="isSuperAdmin()" value="">---</option>
+	    </select>
+        </div>
+        <div class="form-group">
+            <label for="content" class="control-label">Content *</label>
+            <textarea class="form-control notification-content" id="content" ng-model="item.content" validator="[required]"></textarea>
+        </div>
+        <button type="button" class="btn btn-success" ng-click="handleSaveClicked( item )">Enregister</button>
+        <a href="#/notifications" class="btn btn-danger">Annuler</a>
+    </form>
+</div>

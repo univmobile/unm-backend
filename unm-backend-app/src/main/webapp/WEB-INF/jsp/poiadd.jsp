@@ -8,7 +8,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
-<title>Administration d’UnivMobile — Ajouter à poi</title>
+<title>Administration d’UnivMobile — Ajouter un poi</title>
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 
 <style type="text/css">
@@ -66,8 +66,14 @@ td span.error {
    </div>
 </c:if>
 
+<c:if test="${err_coordinates}">
+   <div class="error">
+      ERREUR - les coordonnées sont incorrectes
+   </div>
+</c:if>
+
 <h2>
-   Ajouter à poi
+   Ajouter un poi
 </h2>
 
 <table id="table-poiadd">
@@ -141,7 +147,7 @@ td span.error {
    </tr>
    
    <tr class="country">
-      <th>Pais</th>
+      <th>Pays</th>
       <td>
          <input id="text-country" name="country"/>
       </td>
@@ -201,7 +207,7 @@ td span.error {
       <td>
    	     <input id="text-lat" name="lat" value="${poiadd.lat}">
          <c:if test="${err_poiadd_lat}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
+            <span class="error" title="Le champ est mal formé">Le champ est mal formé</span>
          </c:if>
       </td>
    </tr>
@@ -211,7 +217,7 @@ td span.error {
       <td>
          <input id="text-lng" name="lng" value="${poiadd.lng}">
          <c:if test="${err_poiadd_lng}">
-            <span class="error" title="Le champ est mal formé">Incorrect</span>
+            <span class="error" title="Le champ est mal formé">Le champ est mal formé</span>
          </c:if>
       </td>
    </tr>

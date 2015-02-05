@@ -104,8 +104,8 @@
 
 <div class="table bottom">
    JSON :
-   <a id="link-json" href="${baseURL}/json/regions">
-      ${baseURL}/json/regions
+   <a id="link-json" href="${baseURL}/api/regions">
+      ${baseURL}/api/regions
    </a>
 </div>
 

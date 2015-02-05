@@ -1,12 +1,12 @@
 package fr.univmobile.backend.domain;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
+import javax.persistence.*;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Date;
 
 @Entity
 @Table(name = "user")
@@ -24,11 +24,15 @@ public class User extends AuditableEntity {
 	@Column(unique = true, nullable = false)
 	private String displayName;
 	@Column(nullable = false)
+	@JsonIgnore
 	private String role;
+	@JsonIgnore
 	private String password;
 	@Column(name = "classicloginallowed", nullable = false)
+	@JsonIgnore
 	private boolean classicLoginAllowed = false;
 	@Column(name = "remoteuser", unique = true, nullable = false)
+	@JsonIgnore
 	private String remoteUser;
 	private String title;
 	private String email;
@@ -36,19 +40,31 @@ public class User extends AuditableEntity {
 	private String profileImageUrl;
 	private String description;
 	@Column(name = "twitterscreenname")
+	@JsonIgnore
 	private String twitterScreenName;
 	@ManyToOne
-	@JoinColumn
+	@JoinColumn(nullable = false)
+	@JoinColumn(name = "university_id")
+	@JsonIgnore
 	private University university;
 	@ManyToOne
 	@JoinColumn(name = "secondaryuniversity_id")
+	@JsonIgnore
 	private University secondaryUniversity;
+	@Column(name = "notifications_read_date", nullable = false, columnDefinition="TIMESTAMP DEFAULT '1970-01-01'")
+	private Date notificationsReadDate = new Date(1000 * 60 * 60 * 24 * 365 * 10);
+	@OneToMany(mappedBy="user", fetch = FetchType.EAGER)
+	@JsonIgnore
+	private Collection<Bookmark> bookmarks = new ArrayList<Bookmark>();
 
 	@Override
 	public String toString() {
+		return this.getRemoteUser(); // TODO: Done this way tu support hybrid auth. Remove later after trashing legacy authentication.
+		/*
 		return String.format(
 				"User[id='%s', displayName='%s', role='%s', university='%s']",
 				id, displayName, role, university.getId());
+		*/
 	}
 
 	public Long getId() {
@@ -173,5 +189,17 @@ public class User extends AuditableEntity {
 
 	public boolean isStudent() {
 		return this.role.equals(STUDENT);
+	}
+
+	public Date getNotificationsReadDate(){
+		return notificationsReadDate;
+	}
+
+	public void setNotificationsReadDate(Date date){
+		this.notificationsReadDate = date;
+	}
+
+	public Collection<Bookmark> getBookmarks(){
+		return bookmarks;
 	}
 }

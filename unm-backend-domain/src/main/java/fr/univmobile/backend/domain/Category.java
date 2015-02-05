@@ -3,13 +3,7 @@ package fr.univmobile.backend.domain;
 import java.util.ArrayList;
 import java.util.Collection;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
@@ -25,15 +19,20 @@ public class Category extends AuditableEntityWithLegacy {
 		}
 	}
 	
+	@TableGenerator(
+			name = "category_generator", 
+			table = "jpa_sequence", 
+			pkColumnName = "seq_name", 
+			valueColumnName = "value", 
+			allocationSize = 1)
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "category_generator")
 	private Long id;
 	@Column(unique = true, nullable = false)
 	private String name;
 	private String description;
 	@Column(nullable = false)
 	private boolean active = true;
-	private String legacy;
 	@ManyToOne
 	@JsonIgnore
 	private Category parent;
@@ -44,6 +43,15 @@ public class Category extends AuditableEntityWithLegacy {
 	@OneToMany(mappedBy="category")
 	@JsonIgnore
     private Collection<Poi> pois = new ArrayList<Poi>();
+	
+	private Long apiParisId;
+
+	@Column(name = "activeiconurl")
+	private String activeIconUrl;
+	@Column(name = "inactiveiconurl")
+	private String inactiveIconUrl;
+	@Column(name = "markerIconUrl")
+	private String markerIconUrl;
 
 	@Override
 	public String toString() {
@@ -82,10 +90,6 @@ public class Category extends AuditableEntityWithLegacy {
 		this.active = active;
 	}
 
-	public String getLegacy() {
-		return legacy;
-	}
-
 	public Category getParent() {
 		return parent;
 	}
@@ -112,5 +116,37 @@ public class Category extends AuditableEntityWithLegacy {
 
 	public static String getImageMapsLegacy() {
 		return buildRootLegacy(Type.IMAGE_MAPS.type);
+	}
+
+	public Long getApiParisId() {
+		return apiParisId;
+	}
+
+	public void setApiParisId(Long apiParisId) {
+		this.apiParisId = apiParisId;
+	}
+
+	public String getActiveIconUrl() {
+		return activeIconUrl;
+	}
+
+	public void setActiveIconUrl(String activeIconUrl) {
+		this.activeIconUrl = activeIconUrl;
+	}
+
+	public String getInactiveIconUrl() {
+		return inactiveIconUrl;
+	}
+
+	public void setInactiveIconUrl(String inactiveIconUrl) {
+		this.inactiveIconUrl = inactiveIconUrl;
+	}
+
+	public String getMarkerIconUrl() {
+		return markerIconUrl;
+	}
+
+	public void setMarkerIconUrl(String markerIconUrl) {
+		this.markerIconUrl = markerIconUrl;
 	}
 }

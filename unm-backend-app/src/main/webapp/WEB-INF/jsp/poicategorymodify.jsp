@@ -59,7 +59,7 @@ label.checkbox-parentCategory {
    
    <c:if test="${err_duplicateName}">
       <div class="error">
-         ERREUR - une catégorie avec ce NOM = ${poicategorymodify.name}
+         ERREUR - une catégorie avec ce NOM = ${duplicateName}
          existe déjà en base
       </div>
    </c:if>    
@@ -69,16 +69,9 @@ label.checkbox-parentCategory {
    <table>
    
    <tbody>
-   
-      <tr>
-         <th>Id</th>
-         <td>
-            <input readonly class="text" type="text" id="text-id" name="id" value="${poicategorymodify.id}">
-         </td>
-      </tr>
       
       <tr>
-         <th>Name</th>
+         <th>Nom</th>
          <td>
             <input class="text" type="text" id="text-name" name="name" value="${poicategorymodify.name}">
          <c:if test="${err_poicategorymodify_name}">
@@ -110,7 +103,7 @@ label.checkbox-parentCategory {
       </tr>
       
       <tr>
-         <th>Catègorie pére</th>
+         <th>Catégorie parente</th>
          <td>
             <input readonly class="text" type="text" id="text-parentCategory" name="parentCategory" value="${poicategorymodify.parent.name}">
          </td>
@@ -121,7 +114,7 @@ label.checkbox-parentCategory {
    </table>
    
    <div class="table bottom">
-      <button id="button-cancel" onclick="document.location.href = '${baseURL}/poicategories'; return false;">
+      <button id="button-cancel" onclick="document.location.href = '${baseURL}/poicategories/${poicategorymodify.parent.id}'; return false;">
       	Annuler
       </button>
       

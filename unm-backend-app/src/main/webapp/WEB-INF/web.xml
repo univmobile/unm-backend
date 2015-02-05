@@ -3,14 +3,76 @@
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
 	version="2.4">
+	
+	<context-param>
+		<param-name>nearestMaxDistanceInMeters</param-name>
+		<param-value>6000</param-value>
+	</context-param>
 
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/application-context.xml</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>baseURL</param-name>
+		<param-value>http://localhost:8080/unm-backend/</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>qrCodesBaseUrl</param-name>
+		<param-value>http://localhost:8080/unm-backend/files/qrcodes</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>imageMapsBaseUrl</param-name>
+		<param-value>http://localhost:8080/unm-backend/files/imagemaps</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>imageMapsBaseDir</param-name>
+		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/imagemaps</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>universitiesLogoBaseUrl</param-name>
+		<param-value>http://localhost:8080/unm-backend/files/universitieslogos</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>universitiesLogoBaseDir</param-name>
+		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/universitieslogos</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>categoriesIconsBaseUrl</param-name>
+		<param-value>http://localhost:8080/unm-backend/files/categoriesicons</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>categoriesIconsBaseDir</param-name>
+		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/categoriesicons</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>qrBaseDir</param-name>
+		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/qrcodes</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>qrCodeLinkPattern</param-name>
+		<param-value>univmobile://show_image_map:%LINK%</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>notification.days</param-name>
+		<param-value>10</param-value>
+	</context-param>
+
+ 
 	<servlet>
 		<servlet-name>BackendServlet</servlet-name>
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
-		<init-param>
-			<param-name>baseURL</param-name>
-			<param-value>http://localhost:8080/unm-backend/</param-value>
-		</init-param>
 		<init-param>
 			<param-name>optional-jsonBaseURLs</param-name>
 			<param-value>
@@ -31,10 +93,6 @@
 			<param-value>dd</param-value>
 		</init-param>
 		<init-param>
-			<param-name>pois.nearestMaxDistanceInMeters</param-name>
-			<param-value>6000</param-value>
-		</init-param>
-		<init-param>
 			<param-name>shibboleth.ssoBaseURL</param-name>
 			<param-value>https://univmobile-dev.univ-paris1.fr/Shibboleth.sso/Login</param-value>
 		</init-param>
@@ -48,52 +106,28 @@
 		</init-param>
 		<load-on-startup>1</load-on-startup>
 	</servlet>
+
 	<servlet-mapping>
 		<servlet-name>BackendServlet</servlet-name>
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 	
- 
- <servlet>
- <servlet-name>dispatcher</servlet-name>
- <servlet-class>
- org.springframework.web.servlet.DispatcherServlet
- </servlet-class>
-    <init-param>
-        <param-name>contextConfigLocation</param-name>
-        <param-value>WEB-INF/dispatcher-servlet.xml</param-value>
-    </init-param>
- <load-on-startup>1</load-on-startup>
- </servlet>
- 
- <servlet-mapping>
- <servlet-name>dispatcher</servlet-name>
- <url-pattern>/api/*</url-pattern>
- </servlet-mapping>
- 
- <context-param>
- <param-name>contextConfigLocation</param-name>
- <param-value>/WEB-INF/application-context.xml</param-value>
- </context-param>
- 
- <listener>
- <listener-class>
- org.springframework.web.context.ContextLoaderListener
- </listener-class>
- </listener>	
-<!-- 
-	  <servlet>
-	    <servlet-name>SpringServlet</servlet-name>
-	    <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-	    <load-on-startup>1</load-on-startup>
-	  </servlet>
+	<servlet>
+		<servlet-name>dispatcher</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+	    <init-param>
+			<param-name>contextConfigLocation</param-name>
+	        <param-value>WEB-INF/dispatcher-servlet.xml</param-value>
+	    </init-param>
+		<load-on-startup>2</load-on-startup>
+	</servlet>
 
-	  <servlet-mapping>
-	    <servlet-name>SpringServlet</servlet-name>
-	    <url-pattern>/api/*</url-pattern>
-	  </servlet-mapping>		
-	 -->
-		<!-- Use NoShibbolethFilter only when Shibboleth is not available (-it.) -->
+	<servlet-mapping>
+		<servlet-name>dispatcher</servlet-name>
+		<url-pattern>/api/*</url-pattern>
+	</servlet-mapping>
+ 
+	<!-- Use NoShibbolethFilter only when Shibboleth is not available (-it.) -->
 	<!-- It will crash on a production environment, with Shibboleth/HTTPS. -->
 	<filter>
 		<filter-name>NoShibbolethFilter</filter-name>
@@ -101,6 +135,7 @@
 		<init-param>
 			<param-name>hosts.allow</param-name>
 			<param-value>
+				lauta-home
 				mauricio-MOV
 				tomcat
 				cyborg.etherea
@@ -177,4 +212,19 @@
 		<res-auth>Container</res-auth>
 	</resource-ref>
 	
+       <!-- Spring Security -->
+       <filter>
+               <filter-name>springSecurityFilterChain</filter-name>
+               <filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+       </filter>
+
+       <filter-mapping>
+               <filter-name>springSecurityFilterChain</filter-name>
+               <servlet-name>dispatcher</servlet-name>
+       </filter-mapping>
+       
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>	
+
 </web-app>

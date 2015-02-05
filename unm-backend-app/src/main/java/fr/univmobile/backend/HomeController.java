@@ -7,6 +7,9 @@ import java.sql.SQLException;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 
 import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.domain.User;
@@ -57,7 +60,15 @@ public class HomeController extends AbstractBackendController {
 
 			log.debug("Logout.isHttpValid()");
 
+			Authentication auth = SecurityContextHolder.getContext().getAuthentication();
+			if (auth != null) {
+				new SecurityContextLogoutHandler().logout(checkedRequest(), checkedResponse(), auth);
+			}
+	        SecurityContextHolder.getContext().setAuthentication(null);			
 			removeSessionAttribute(DELEGATION_USER);
+			removeSessionAttribute("remoteUserLoadedBySpringSecurity");
+			removeSessionAttribute("user");
+			checkedRequest().getSession().invalidate();
 
 			return new View("home.jsp");
 		}
@@ -95,13 +106,24 @@ public class HomeController extends AbstractBackendController {
 				return new View("home.jsp");
 			}
 
-			
 			if (delegationUser.getRole().equals("student")) {
-				
+
 				setAttribute("err_studentDelegationUid", true);
 				setAttribute("delegationUid", delegationUid);
 
 				return new View("home.jsp");
+			}
+
+			if (delegationUser.isClassicLoginAllowed()) {
+				
+				if (!delegationUser.getPassword().equals(form.password())) {
+
+					setAttribute("err_incorrectPassword", true);
+					setAttribute("delegationUid", delegationUid);
+
+					return new View("home.jsp");
+				}
+				
 			}
 
 			setSessionAttribute(DELEGATION_USER, delegationUser);

@@ -177,6 +177,13 @@ public class NoShibbolethFilter implements Filter {
 
 		final HttpServletRequest httpRequest = (HttpServletRequest) request;
 
+		final String requestURI = httpRequest.getRequestURI();
+
+		if (requestURI.contains("/api") || requestURI.contains("/json/login")) {
+
+			return request; // Do not filter /api and classic login for api
+		}
+		
 		final String httpHost = httpRequest.getHeader("host");
 
 		if (httpHost == null || (!httpHost.startsWith("localhost") //
@@ -194,9 +201,18 @@ public class NoShibbolethFilter implements Filter {
 
 		final String remoteUser = httpRequest.getRemoteUser();
 
-		if (remoteUser != null) {
+		final HttpSession httpSession = httpRequest.getSession();
 
-			return error(response, "REMOTE_USER exists: " + remoteUser);
+		if (remoteUser != null) {
+			if (httpSession.getAttribute("remoteUserLoadedBySpringSecurity") == null) {
+				return error(response, "REMOTE_USER exists: " + remoteUser);
+			}
+			return new HttpServletRequestWrapper(httpRequest) {
+				@Override
+				public String getRemoteUser() {
+					return (String) httpSession.getAttribute("remoteUserLoadedBySpringSecurity");
+				}
+			};			
 		}
 
 		final Object shibIdentityProvider = request
@@ -210,9 +226,7 @@ public class NoShibbolethFilter implements Filter {
 
 		request.setCharacterEncoding(UTF_8);
 
-		final String requestURI = httpRequest.getRequestURI();
-
-		if (requestURI.contains("/json")) {
+		if (!requestURI.contains("json/shibbolethLogin") && requestURI.contains("/json")) {
 
 			return request; // Do not filter /json
 		}
@@ -230,8 +244,6 @@ public class NoShibbolethFilter implements Filter {
 		request.getParameter("NO_SHIB_displayName");
 		final String remoteUserParam = //
 		request.getParameter("NO_SHIB_remoteUser");
-
-		final HttpSession httpSession = httpRequest.getSession();
 
 		final String HOLDER = NoShibbolethHolder.class.getName();
 

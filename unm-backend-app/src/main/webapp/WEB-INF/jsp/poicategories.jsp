@@ -87,9 +87,7 @@ td.id {
    	
    </c:choose>
 </span>
-<button id="button-export" disabled>
-	Export…
-</button>
+
 </div>
 
 <table>
@@ -99,7 +97,7 @@ td.id {
       <th class="cId">Id</th>
       <th class="nom">Nom</th>
       <th class="description">Description</th>
-      <th class="active">Actif</th>
+      <th class="active">Active</th>
       <th class="edit">Action</th>
       <th class="none"></th>
    </tr>
@@ -144,18 +142,20 @@ td.id {
          <c:choose>
          
             <c:when test="${pc.active}">
-            	Actif
+            	Active
             </c:when>
             
             <c:otherwise>
-            	Inactif    
+            	Inactive    
             </c:otherwise>
          
          </c:choose>
       </td>
       
       <td class="edit">
-         <a id="link-edit_${pc.id}" href="${baseURL}/poicategoriesmodify/${pc.id}">Modifier…</a>
+         <a id="link-modify_${pc.id}" href="${baseURL}/poicategoriesmodify/${pc.id}">Modifier…</a><br/>
+         <a id="link-sons_${pc.id}" href="${baseURL}/poicategories/${pc.id}">Sous-catégories…</a><br/>
+         <a id="link-icons_${pc.id}" href="${baseURL}/api/categories/manage/${pc.id}/icons">Icônes…</a>
       </td>
       
       <td class="none">
@@ -169,7 +169,20 @@ td.id {
 </table>
 
 <div class="table bottom">
-   <a id="link-poicategoryadd" href="${baseURL}/poicategoriesadd">Ajouter une catégorie…</a>
+   <c:if test="${not empty father}">
+      <a id="link-father_${father.parent.id}" href="${baseURL}/poicategories/${father.parent.id}">Catégorie parente…</a>
+   </c:if>
+</div>
+
+<div class="table bottom">
+   <c:choose>
+       <c:when test="${not empty father}">
+           <a id="link-poicategoryadd" href="${baseURL}/poicategoriesadd/${father.id}">Ajouter une catégorie…</a>
+       </c:when>
+       <c:otherwise>
+           <a id="link-poicategoryadd" href="${baseURL}/poicategoriesadd">Ajouter une catégorie…</a>   
+       </c:otherwise>
+   </c:choose>
 </div>
 
 </div> <!-- end of #div-users -->

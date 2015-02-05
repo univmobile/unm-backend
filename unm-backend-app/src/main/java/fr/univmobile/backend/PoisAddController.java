@@ -3,6 +3,7 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -15,6 +16,7 @@ import fr.univmobile.backend.domain.PoiRepository;
 import fr.univmobile.backend.domain.Region;
 import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.UniversityRepository;
+import fr.univmobile.backend.domain.User;
 import fr.univmobile.web.commons.HttpInputs;
 import fr.univmobile.web.commons.HttpMethods;
 import fr.univmobile.web.commons.HttpParameter;
@@ -48,18 +50,17 @@ public class PoisAddController extends AbstractBackendController {
 	private PoisController poisController;
 
 	@Override
-	public View action() {
+	public View action() throws IOException {
+
+		if (!getDelegationUser().getRole().equals(User.SUPERADMIN))
+			return sendError400();
+		// return sendError403("Vous devez être super administrateur");
 
 		// CATEGORIES
 
-		Iterable<Category> allCategories = categoryRepository.findAll();
-
-		List<Category> categories = new ArrayList<Category>();
-
-		for (Category c : allCategories) {
-			// if (c.getParent() == null)
-			categories.add(c);
-		}
+		List<Category> categories = categoryRepository
+				.findByLegacyStartingWithOrderByLegacyAsc(Category
+						.getPlansLegacy());
 
 		setAttribute("poiCategoriesData", categories);
 
@@ -115,18 +116,30 @@ public class PoisAddController extends AbstractBackendController {
 		poi.setFloor(form.floor());
 		poi.setItinerary(form.itinerary());
 
-		poi.setLat(form.lat());
-		if (form.lat() == null) {
-			hasErrors = true;
-			setAttribute("err_poiadd_lat", true);
-			setAttribute("err_incorrectFields", true);
+		try {
+			if (form.lat() != null && form.lat().length() > 0
+					&& form.lat() != null && form.lat().length() > 0) {
+				Double lat = Double.parseDouble(form.lat().trim());
+				poi.setLat(lat);
+			} else {
+				poi.setLat(null);
+			}
+		} catch (NumberFormatException e) {
+			hasErrors = true;		
+			setAttribute("err_coordinates", true);
 		}
-
-		poi.setLng(form.lng());
-		if (form.lng() == null) {
-			hasErrors = true;
-			setAttribute("err_poiadd_lng", true);
-			setAttribute("err_incorrectFields", true);
+		
+		try {
+			if (form.lng() != null && form.lng().length() > 0
+					&& form.lng() != null && form.lng().length() > 0) {
+				Double lng = Double.parseDouble(form.lng().trim());
+				poi.setLng(lng);
+			} else {
+				poi.setLng(null);
+			}
+		} catch (NumberFormatException e) {
+			hasErrors = true;		
+			setAttribute("err_coordinates", true);
 		}
 
 		poi.setOpeningHours(form.openingHours());
@@ -139,13 +152,6 @@ public class PoisAddController extends AbstractBackendController {
 			poi.setActive(true);
 		else
 			poi.setActive(false);
-
-		if (!isBlank(form.name())) {
-			if (poiRepository.findByName(form.name()).size() > 0) {
-				hasErrors = true;
-				setAttribute("err_duplicateName", true);
-			}
-		}
 
 		if (hasErrors) {
 
@@ -215,10 +221,10 @@ public class PoisAddController extends AbstractBackendController {
 		String category();
 
 		@HttpParameter
-		Double lat();
+		String lat();
 
 		@HttpParameter
-		Double lng();
+		String lng();
 
 		@HttpParameter
 		String city();

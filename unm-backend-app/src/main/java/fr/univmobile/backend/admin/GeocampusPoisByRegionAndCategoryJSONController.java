@@ -76,7 +76,8 @@ public class GeocampusPoisByRegionAndCategoryJSONController extends AbstractJSON
 			log.debug(String.format("Filters: %s - %s - %d | excluded: %s", poiType, regionIdFilter, categoryIdFilter, excludedCategories));
 		}
 		
-		final String filterByUniversity = hasDelegationUser() && !getDelegationUser().getRole().equals("superadmin") ? getDelegationUser().getPrimaryUniversity() : null;
+		//final String filterByUniversity = hasDelegationUser() && !getDelegationUser().getRole().equals("superadmin") ? getDelegationUser().getUniversity() : null;
+		final String filterByUniversity = "TO DROP";
 		final String poisJson = poisJSONClient.getPoisByRegionAndCategoryJSON(regionIdFilter, categoryIdFilter, excludedCategories, filterByUniversity, true);
 
 		final String json = "{\"url\":\""

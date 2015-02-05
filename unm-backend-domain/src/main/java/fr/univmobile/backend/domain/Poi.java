@@ -1,16 +1,9 @@
 package fr.univmobile.backend.domain;
 
 import java.util.Collection;
+import java.util.Date;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.JsonIdentityReference;
@@ -20,17 +13,22 @@ import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 @Entity
 @Table(name = "poi")
 public class Poi extends AuditableEntityWithLegacy {
-	
+
+	@TableGenerator(
+			name = "poi_generator", 
+			table = "jpa_sequence", 
+			pkColumnName = "seq_name", 
+			valueColumnName = "value", 
+			allocationSize = 1)
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.TABLE, generator = "poi_generator")
 	private Long id;
 	@Column(nullable = false)
 	private String name;
-	@Lob
 	@Column(columnDefinition = "TEXT")
 	private String description;
-	private Double lat; 
-	private Double lng; 
+	private Double lat;
+	private Double lng;
 	@Column(name = "markertype")
 	private String markerType;
 	@Column(nullable = false)
@@ -41,11 +39,9 @@ public class Poi extends AuditableEntityWithLegacy {
 	private String zipcode;
 	private String city;
 	private String country;
-	@Lob
 	@Column(columnDefinition = "TEXT")
 	private String itinerary;
-	@Lob
-	@Column(columnDefinition = "TEXT")
+	@Column(name = "openinghours", columnDefinition = "TEXT")
 	private String openingHours;
 	private String phones;
 	private String email;
@@ -59,24 +55,22 @@ public class Poi extends AuditableEntityWithLegacy {
 	private String attachmentTitle;
 	@Column(name = "attachmenturl")
 	private String attachmentUrl;
-	
-	@JsonIgnore
-	private String legacy;
+
 	@ManyToOne
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	@JsonIdentityReference(alwaysAsId = true)
 	private Poi parent;
 	@OneToMany(mappedBy = "parent")
 	@JsonIgnore
-    private Collection<Poi> children;
+	private Collection<Poi> children;
 	@ManyToOne
-	@JoinColumn(nullable = false)	
+	@JoinColumn(nullable = false)
 	@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 	@JsonIdentityReference(alwaysAsId = true)
 	private Category category;
-	
+
 	@ManyToOne
-	@JoinColumn
+	@JoinColumn(nullable = false)
 	private University university;
 
 	@ManyToOne
@@ -85,6 +79,15 @@ public class Poi extends AuditableEntityWithLegacy {
 	@JsonIdentityReference(alwaysAsId = true)
 	private ImageMap imageMap;
 
+	@Column(name = "qrcode")
+	private String qrCode;
+	
+	private String restoMenuUrl;
+	private String restoId;
+	
+	private Long externalId;
+	private Date expDate;
+	
 	@Override
 	public String toString() {
 		return String.format("Poi[id=%d, name='%s']", id, name);
@@ -266,14 +269,6 @@ public class Poi extends AuditableEntityWithLegacy {
 		this.attachmentUrl = attachmentUrl;
 	}
 
-	public String getLegacy() {
-		return legacy;
-	}
-
-	public void setLegacy(String legacy) {
-		this.legacy = legacy;
-	}
-
 	public Poi getParent() {
 		return parent;
 	}
@@ -293,7 +288,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	
+
 	public University getUniversity() {
 		return university;
 	}
@@ -309,4 +304,72 @@ public class Poi extends AuditableEntityWithLegacy {
 	public void setImageMap(ImageMap imageMap) {
 		this.imageMap = imageMap;
 	}
+
+	public String getQrCode() {
+		return qrCode;
+	}
+
+	public void setQrCode(String qrCode) {
+		this.qrCode = qrCode;
+	}
+	
+	public Long getUniversityId() {
+		return this.university.getId();
+	}
+	
+	// NEAREST POI
+
+	public boolean isNear(double lat, double lng, Double metersAway) {
+		return this.lat != null && this.lng != null && (getDistance(lat, lng) * 1000 <= metersAway);
+	}
+
+	public double getDistance(double lat, double lng) {
+		double r = 6371; // Radius of the earth in km
+		double dLat = deg2rad(this.lat - lat);
+		double dLon = deg2rad(this.lng - lng);
+		double a = (double) (Math.sin(dLat / 2) * Math.sin(dLat / 2) //
+		+ Math.cos(deg2rad(this.lat)) //
+				* Math.cos(deg2rad(lat)) //
+				* Math.sin(dLon / 2) * Math.sin(dLon / 2));
+		double c = (double) (2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a)));
+		double d = r * c; // Distance in km
+		return d;
+	}
+
+	private static double deg2rad(double deg) {
+		return (double) (deg * (Math.PI / 180));
+	}
+
+	public String getRestoMenuUrl() {
+		return restoMenuUrl;
+	}
+
+	public void setRestoMenuUrl(String restoMenuUrl) {
+		this.restoMenuUrl = restoMenuUrl;
+	}
+
+	public String getRestoId() {
+		return restoId;
+	}
+
+	public void setRestoId(String restoId) {
+		this.restoId = restoId;
+	}
+
+	public Long getExternalId() {
+		return externalId;
+	}
+
+	public void setExternalId(Long externalId) {
+		this.externalId = externalId;
+	}
+
+	public Date getExpDate() {
+		return expDate;
+	}
+
+	public void setExpDate(Date expDate) {
+		this.expDate = expDate;
+	}
+
 }

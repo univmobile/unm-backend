@@ -95,7 +95,7 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 
 		return DataBeans.instantiate(MutableAppToken.class) //
 				.setId(sessionId) //
-				.setUser(getUser(dsUser));
+				.setUser(getUser(null));
 	}
 
 	private static final Log log = LogFactory
@@ -128,13 +128,13 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 			return null;
 		}
 
-		final fr.univmobile.backend.core.User dsUser = session.getUser();
+		final fr.univmobile.backend.domain.User dsUser = session.getUser();
 
 		final String sessionId = session.getId();
 
 		return DataBeans.instantiate(MutableAppToken.class) //
 				.setId(sessionId) //
-				.setUser(getUser(dsUser));
+				.setUser(getUser(null));
 	}
 
 	@Override
@@ -166,13 +166,13 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 			return null;
 		}
 
-		final fr.univmobile.backend.core.User dsUser = session.getUser();
+		final fr.univmobile.backend.domain.User dsUser = session.getUser();
 
 		final String sessionId = session.getId();
 
 		return DataBeans.instantiate(MutableAppToken.class) //
 				.setId(sessionId) //
-				.setUser(getUser(dsUser));
+				.setUser(getUser(null));
 	}
 
 	@Override

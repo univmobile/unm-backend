@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Content-Language" content="fr">
+    <title>UnivMobile</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    
+    <!--(if target dist)>
+    <link href="${baseUrl}css/backend.css" rel="stylesheet">
+    <!(endif)-->
+    
+    <!-- build:css(.) css/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="bower_components/angular-loading-bar/build/loading-bar.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css(.tmp) css/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/app.css">
+    <!-- endbuild -->
+    
+    <!--(if target dev)><!-->
+    <script>
+      var universityId = 1;
+      var isSuperAdmin = true;
+      var baseUrl = "http://localhost:81/unm-backend/";
+    </script>
+    <!--<!(endif)-->
+    
+    <!--(if target dist)>
+    <script>
+      var universityId = ${universityId};
+      var isSuperAdmin = ${isSuperAdmin};
+      var baseUrl = "${baseUrl}";
+    </script>
+    <!(endif)-->    
+  </head>
+  <body ng-app="halSearchApp" ng-controller="CtrlApp">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    
+    <!--(if target dist)><jsp:include page="div-entered.h.jsp"></jsp:include><input type="hidden"/><!(endif)-->
+    
+    <div class="container">
+      <!--
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li ng-class="{ 'active' : mainMenu == '' }"><a ng-href="#/">Main</a></li>
+          <li ng-class="{ 'active' : mainMenu == 'notifications' }"><a ng-href="#/notifications">Notifications</a></li>
+          <li ng-class="{ 'active' : mainMenu == 'feeds' }"><a ng-href="#/feeds">Feeds</a></li>
+          <li ng-class="{ 'active' : mainMenu == 'menus' }"><a ng-href="#/menus">Menus</a></li>
+        </ul>
+      </div>
+      -->
+      <div ng-view=""></div>
+
+    </div>
+
+    <div id="alert-global" class="alert alert-global" role="alert"></div>
+
+    <div id="dialog-global" class="modal delete">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <a href="#" class="close" data-dismiss="modal"></a>
+                    <h3 id="dialog-title">Удалить объект</h3>
+                </div>
+                <div class="modal-body">
+                    <div id="dialog-body" class="modal-body-inner">
+                        Вы уверены?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button id="dialog-global-btn-ok" class="btn btn-primary primary">OK</button>
+                    <button id="dialog-global-btn-cancel" class="btn btn-secondary secondary">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- build:js(.) js/oldieshim.js -->
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <![endif]-->
+    <!-- endbuild -->
+
+    <!-- build:js(.) js/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-hateoas/src/angular-hateoas.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/angular-loading-bar/build/loading-bar.js"></script>
+    <script src="bower_components/spin.js/spin.js"></script>
+    <script src="bower_components/angular-spinner/angular-spinner.js"></script>
+    <script src="bower_components/angular-mocks/angular-mocks.js"></script>
+    <script src="bower_components/angular-validator/dist/angular-validator.js"></script>
+    <script src="bower_components/angular-validator/dist/angular-validator-rules.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+        <!-- build:js({.tmp,app}) js/scripts.js -->
+        <script src="scripts/templates.js"></script>
+        <script src="scripts/app.js"></script>
+        <script src="scripts/services/universityService.js"></script>
+        <script src="scripts/services/categoryService.js"></script>
+        <script src="scripts/services/commentsService.js"></script>
+        <script src="scripts/services/feedService.js"></script>
+        <script src="scripts/services/menuService.js"></script>
+        <script src="scripts/services/notificationService.js"></script>
+        <script src="scripts/services/poiService.js"></script>
+        <script src="scripts/services/userService.js"></script>
+        <script src="scripts/controllers/ctrl-app.js"></script>
+        <script src="scripts/controllers/ctrl-main.js"></script>
+        <script src="scripts/controllers/ctrl-notifications.js"></script>
+        <script src="scripts/controllers/ctrl-feeds.js"></script>
+        <script src="scripts/controllers/ctrl-menus.js"></script>
+        <!-- endbuild -->
+</body>
+</html>

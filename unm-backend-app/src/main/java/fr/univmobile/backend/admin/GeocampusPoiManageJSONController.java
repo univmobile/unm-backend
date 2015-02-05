@@ -9,6 +9,7 @@ import org.apache.commons.logging.LogFactory;
 
 import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.domain.CategoryRepository;
+import fr.univmobile.backend.domain.ImageMap;
 import fr.univmobile.backend.domain.ImageMapRepository;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
@@ -86,6 +87,15 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		
 		if (data.imageMapId() != null) {
 			poi.setCategory(categoryRepository.findOne(Category.Type.IMAGE_MAPS.type));
+			
+			if (poi.getImageMap() == null) {
+				ImageMap im = imageMapRepository.findOne(Long.valueOf(data.imageMapId()));
+				if (im == null) {
+					setAttribute("err_notexistsImageMapId", true);
+					return errorId;
+				}
+				poi.setImageMap(im);
+			}
 		} else {
 			poi.setCategory(categoryRepository.findOne(data.category()));
 		}
@@ -127,14 +137,6 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 			return errorId;
 		}
 
-		/*
-		// 4. IMAGE MAP
-		if (data.imageMapId() != null) {
-			final ImageMapBuilder imageMap = imageMapDs.update(imageMapDs.getByUid(data.imageMapId()));
-			//imageMap
-		}
-		*/
-		
 		return poi.getId();
 	}
 

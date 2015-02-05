@@ -27,6 +27,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
 
+import fr.univmobile.backend.domain.*;
+import fr.univmobile.backend.json.*;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -78,28 +80,10 @@ import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.backend.core.impl.SessionManagerImpl;
 import fr.univmobile.backend.core.impl.UploadManagerImpl;
-import fr.univmobile.backend.domain.CategoryRepository;
-import fr.univmobile.backend.domain.CommentRepository;
-import fr.univmobile.backend.domain.ImageMapRepository;
-import fr.univmobile.backend.domain.PoiRepository;
-import fr.univmobile.backend.domain.RegionRepository;
-import fr.univmobile.backend.domain.UniversityRepository;
-import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.backend.history.LogQueue;
-import fr.univmobile.backend.json.AbstractJSONController;
-import fr.univmobile.backend.json.CommentsJSONController;
-import fr.univmobile.backend.json.CommentsPostJSONController;
-import fr.univmobile.backend.json.EndpointsJSONController;
-import fr.univmobile.backend.json.JsonHtmler;
-import fr.univmobile.backend.json.NearestPoisJSONController;
-import fr.univmobile.backend.json.PoisJSONController;
-import fr.univmobile.backend.json.RegionsJSONController;
-import fr.univmobile.backend.json.SessionJSONController;
-import fr.univmobile.backend.json.UniversitiesJSONController;
 import fr.univmobile.backend.twitter.ApplicationOnly;
 import fr.univmobile.backend.twitter.TwitterAccess;
 import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
-import fr.univmobile.commons.tx.TransactionManager;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.BuildInfoUtils;
 import fr.univmobile.web.commons.PageNotFoundException;
@@ -120,6 +104,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private RegionRepository regionRepository;
 	private UniversityRepository universityRepository;
 	private UserRepository userRepository;
+	private TokenRepository tokenRepository;
+	
+	private SessionAuditorAware sessionAuditorAware;
 
 	private UserDataSource users;
 	private RegionDataSource regions;
@@ -152,7 +139,10 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		this.universityRepository = (UniversityRepository) ctx
 				.getBean("universityRepository");
 		this.userRepository = (UserRepository) ctx.getBean("userRepository");
-
+		this.tokenRepository = (TokenRepository) ctx.getBean("tokenRepository");
+		
+		this.sessionAuditorAware = (SessionAuditorAware) ctx.getBean("sessionAuditorAware");
+		
 		if (log.isInfoEnabled()) {
 			log.info(this + ": init()...");
 		}
@@ -308,7 +298,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new PoisAddController(poiRepository, categoryRepository,
 						regionRepository, universityRepository, poisController), //
 				new PoisModifyController(poiRepository, categoryRepository,
-				regionRepository, universityRepository, poisController), //
+						regionRepository, universityRepository, poisController), //
 				new UserModifyController(userRepository, regionRepository,
 						universityRepository, usersController),
 				new CommentStatusController(commentRepository),
@@ -357,16 +347,6 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 		final String shibbolethTargetBaseURL = checkedInitParameter("shibboleth.targetBaseURL");
 		final String shibbolethCallbackURL = checkedInitParameter("shibboleth.callbackURL");
 
-		Double nearestPoisMaxMetersAway;
-		try {
-			nearestPoisMaxMetersAway = Double
-					.parseDouble(checkedInitParameter("pois.nearestMaxDistanceInMeters"));
-		} catch (Exception e) {
-			log.warn("Config parameter 'pois.nearestMaxDistanceInMeters' has a wrong value at web.xml. Please review. Using 0 meters. Current value is: "
-					+ checkedInitParameter("pois.nearestMaxDistanceInMeters"));
-			nearestPoisMaxMetersAway = 0.0;
-		}
-
 		final SessionClient sessionClient = new SessionClientFromLocal(baseURL,
 				ssoBaseURL, shibbolethTargetBaseURL, shibbolethCallbackURL, //
 				sessionManager, twitter);
@@ -378,21 +358,28 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new EndpointsJSONController(), //
 				new RegionsJSONController(regionJSONClient), //
 				new UniversitiesJSONController(regions, regionJSONClient), //
-				/* new ImageMapJSONController(imageMaps, imageMapJSONClient), // */
+				// new ImageMapJSONController(imageMaps, imageMapJSONClient),
 				new PoisJSONController(poiJSONClient), //
-				new CommentsJSONController(pois, commentJSONClient), //
-				new SessionJSONController( //
-						sessionManager, sessionJSONClient), //
+				new CommentsJSONController(pois, //
+						commentJSONClient),
+				new SessionJSONController(sessionManager, //
+						sessionJSONClient),
 				new GeocampusPoisByRegionAndCategoryJSONController(
 						poiJSONClient),
-				new GeocampusPoiManageJSONController(poiRepository, imageMapRepository, categoryRepository, universityRepository),
-				new NearestPoisJSONController(poiJSONClient,
-						nearestPoisMaxMetersAway),
-				// new CommentsPostJSONController(tx, comments, commentManager),
-				new CommentsPostJSONController(comments, commentManager),
-				new GeocampusJSONController(regionJSONClient,
-						poiCategoryJSONClient, imageMapJSONClient, regions,
-						imageMaps) };
+				new GeocampusPoiManageJSONController(poiRepository, //
+						imageMapRepository, //
+						categoryRepository, //
+						universityRepository),
+				// new NearestPoisJSONController(poiRepository, nearestPoisMaxMetersAway), //
+				new CommentsPostJSONController(commentRepository, poiRepository),
+				new GeocampusJSONController(regionJSONClient, //
+						poiCategoryJSONClient, //
+						imageMapJSONClient, //
+						regions, //
+						imageMaps), //
+				new LoginJSONController(userRepository, tokenRepository),
+				new ShibbolethLoginJSONController(userRepository, tokenRepository)
+		};
 
 		for (final AbstractJSONController jsonController : jsonControllers) {
 			if (log.isDebugEnabled()) {
@@ -454,7 +441,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			// Note: We should not log any password here
 		}
 
-		if (requestURI.contains("/json/") || requestURI.endsWith("/json")) {
+		if ((requestURI.contains("/json/") || requestURI.endsWith("/json")) && !requestURI.contains("/json/shibbolethLogin")) {
 
 			serveJSON(request, response);
 
@@ -545,6 +532,8 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 			return;
 		}
 
+		this.sessionAuditorAware.setSessionUser(user);
+		
 		// final User user = users.getByRemoteUser(remoteUser);
 
 		/*
@@ -566,6 +555,14 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 9. CHAIN
 
+		if (requestURI.contains("/json/shibbolethLogin")) {
+
+			serveJSON(request, response);
+
+			return;
+		}
+		
+		
 		super.service(request, response);
 	}
 
