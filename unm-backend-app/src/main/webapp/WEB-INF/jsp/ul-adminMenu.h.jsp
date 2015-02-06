@@ -19,6 +19,12 @@
 		<li><a id="link-adminMenu-geocampus" href="${baseURL}/geocampus/">Géocampus</a>
 		<li><a id="link-adminMenu-news" href="${baseURL}/news/">Fils d’actualités des universités</a>
 		<li><a id="link-adminMenu-users" href="${baseURL}/users/">Utilisateurs</a>
+		
+		<li><a id="link-adminMenu-categories" href="${baseURL}/poicategories">Catégories</a>
+		<li><a id="link-adminMenu-universities" href="${baseURL}/api/universities/manage/">Universités</a>
+		<li><a id="link-adminMenu-notifications" href="${baseURL}/api/app#/notifications">Notifications</a>
+		<li><a id="link-adminMenu-menues" href="${baseURL}/api/app#/menus">Menus</a>
+
 		</ul>
 	<li class="top">
 		<a id="link-adminMenu-system" class="top" href="${baseURL}/system/">Système<span
