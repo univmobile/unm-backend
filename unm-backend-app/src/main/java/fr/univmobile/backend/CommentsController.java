@@ -154,9 +154,10 @@ public class CommentsController extends AbstractBackendController {
 
 			List<Comment> auxComments = new ArrayList<Comment>();
 
+			// We're keeping only the comments posted by the students of the same University of the admin
 			for (Comment c : comments)
-				if (dUser.getUniversity().getId()
-						.equals(c.getPoi().getUniversity().getId()))
+				if (c.getCreatedBy() != null && c.getCreatedBy().getUniversity() != null && dUser.getUniversity().getId()
+						.equals(c.getCreatedBy().getUniversity().getId()))
 					auxComments.add(c);
 
 			setAttribute("comments", auxComments.toArray());
