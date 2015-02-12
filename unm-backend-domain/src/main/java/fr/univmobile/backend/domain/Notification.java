@@ -1,8 +1,20 @@
 package fr.univmobile.backend.domain;
 
-import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import java.util.Date;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
+import javax.persistence.Table;
+
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 @Entity
 @Table(name = "notification")
@@ -54,5 +66,9 @@ public class Notification extends AuditableEntity {
 			universityId = university.getId();
 		}
 		return universityId;
+	}
+	
+	public Date getNotificationTime() {
+		return getCreatedOn();
 	}
 }

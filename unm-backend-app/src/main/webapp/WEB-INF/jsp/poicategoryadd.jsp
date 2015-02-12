@@ -119,6 +119,13 @@ label.checkbox-parentCategory {
          </td>   
       </tr>
       
+      <tr>
+         <th>Catégorie API Paris</th>
+         <td>
+            <input class="text" type="text" id="text-cid" name="cid" value="${poicategorymodify.apiParisId}">
+         </td>
+      </tr>
+      
    </tbody>
    
    </table>

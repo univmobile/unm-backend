@@ -21,4 +21,5 @@ public interface NotificationRepository extends	JpaRepository<Notification, Long
 
 	Page<Feed> findByUniversityOrderByCreatedOnDesc(@Param("universityId")University universityId, Pageable pageable);
 	
+	Page<Feed> findByOrderByCreatedOnDesc(Pageable pageable);
 }

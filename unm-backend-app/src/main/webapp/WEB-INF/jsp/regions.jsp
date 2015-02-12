@@ -7,30 +7,18 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta http-equiv="Content-Language" content="en">
 <title>Administration d’UnivMobile — Régions</title>
+
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/backend.css">
 <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
 <script type="text/javascript" src="${baseURL}/js/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
-
 <jsp:include page="js-adminMenu.h.jsp"/>
+
 </head>
 
 <body id="body-regions" class="results entered">
 
-<div id="div-entered">
-
-<jsp:include page="ul-adminMenu.h.jsp"/>
-
-<ul id="ul-adminUser">
-   <li> Principal : ${user.username}
-      <c:if test="${user.id != delegationUser.id}">
-         <li> Délégation : ${delegationUser.username}
-      </c:if>
-   <li id="li-logout">
-      <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
-</ul>
-
-</div>
+<jsp:include page="div-entered.h.jsp"/>
 
 <div class="body">
 <form action="${baseURL}/regions/" method="POST">

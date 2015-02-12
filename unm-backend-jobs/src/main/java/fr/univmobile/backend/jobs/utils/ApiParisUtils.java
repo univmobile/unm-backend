@@ -21,6 +21,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import com.eclipsesource.json.JsonArray;
 import com.eclipsesource.json.JsonObject;
 
+import fr.univmobile.backend.domain.Category;
+import fr.univmobile.backend.domain.CategoryRepository;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
 
@@ -28,6 +30,9 @@ public class ApiParisUtils {
 	
 	@Autowired
 	PoiRepository poiRepository;
+	
+	@Autowired
+	CategoryRepository categoryRepository;
 	
 	private static final Log log = LogFactory.getLog(ApiParisUtils.class);
 
@@ -43,7 +48,17 @@ public class ApiParisUtils {
 	
 			List<NameValuePair> urlParameters = new ArrayList<NameValuePair>();
 			urlParameters.add(new BasicNameValuePair("token", "ba14fa26b212ad9e3867312a5abb1a3749dc8e122e204de026709289033047f7"));
-			urlParameters.add(new BasicNameValuePair("cid", "3,42,25"));
+			
+			String cid = new String("");
+			for (Category c : categoryRepository.findAll()) {
+				if (c.getApiParisId() != null && c.isActive())
+					cid += String.valueOf(c.getApiParisId());
+			}
+			
+			if (cid.length() > 0)
+				cid = cid.substring(0, cid.length() - 2);
+			
+			urlParameters.add(new BasicNameValuePair("cid", cid));
 			urlParameters.add(new BasicNameValuePair("tag", "3,42,25"));
 			urlParameters.add(new BasicNameValuePair("created", "0"));
 			urlParameters.add(new BasicNameValuePair("start", "0"));

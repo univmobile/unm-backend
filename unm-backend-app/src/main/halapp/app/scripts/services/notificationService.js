@@ -27,7 +27,8 @@ halApp.factory('notificationService', [ '$resource', '$http', 'universityService
 
     f.loadItems = function( isSuperAdmin, universityId, cbSuccess ) {
 	var serviceUri = isSuperAdmin 
-	    ? baseUrl + "api/notifications/?size=1000"
+	    // ? baseUrl + "api/notifications/?size=1000"
+		? baseUrl + "api/notifications/findByOrderByCreatedOnDesc?size=1000"
 	    : baseUrl + "api/notifications/search/findByUniversityOrderByCreatedOnDesc?universityId=" + universityId + "&size=1000";
 	
 	$resource( serviceUri ).get( null, function( res ) {

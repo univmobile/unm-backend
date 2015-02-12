@@ -89,6 +89,10 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		if (form.description() != null)
 			poicategory.setDescription(form.description());
+		
+		if (form.cid() != null)
+			poicategory.setApiParisId(Long.parseLong(form.cid()));
+		else poicategory.setApiParisId(null);
 
 		if (hasErrors) {
 
@@ -134,5 +138,8 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 
 		@HttpParameter
 		String description();
+		
+		@HttpParameter
+		String cid();
 	}
 }
