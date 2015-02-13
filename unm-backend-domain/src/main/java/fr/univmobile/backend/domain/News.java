@@ -35,6 +35,11 @@ public class News extends AuditableEntity {
 	@ManyToOne
 	@JoinColumn(name = "feed", nullable = false)
 	private Feed feed;
+	
+	@Override
+	public String toString() {
+		return String.format("News[id=%d, title='%s']", id, title);
+	}
 
 	public Long getId() {
 		return id;

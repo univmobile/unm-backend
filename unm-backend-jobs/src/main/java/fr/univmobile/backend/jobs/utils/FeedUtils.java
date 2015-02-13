@@ -15,7 +15,6 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -38,17 +37,20 @@ import fr.univmobile.backend.domain.RestoMenuRepository;
 
 public class FeedUtils {
 
-	@Autowired
 	FeedRepository feedRepository;
-
-	@Autowired
-	NewsRepository newRepository;
-
-	@Autowired
+	NewsRepository newsRepository;
 	RestoMenuRepository restoMenuRepository;
-
-	@Autowired
 	PoiRepository poiRepository;
+
+	public FeedUtils(FeedRepository feedRepository,
+			NewsRepository newsRepository,
+			RestoMenuRepository restoMenuRepository,
+			PoiRepository poiRepository) {
+		this.feedRepository = feedRepository;
+		this.newsRepository = newsRepository;
+		this.restoMenuRepository = restoMenuRepository;
+		this.poiRepository = poiRepository;
+	}
 
 	private static final Log log = LogFactory.getLog(FeedUtils.class);
 
@@ -70,7 +72,11 @@ public class FeedUtils {
 
 			if (rss != null) {
 
-				News newRssFeed = new News();
+				News newRssFeed = newsRepository.findByLinkAndTitle(urlString,
+						rss.getTitle());
+				if (newRssFeed == null)
+					newRssFeed = new News();
+
 				newRssFeed.setTitle(rss.getTitle());
 				newRssFeed.setLink(rss.getUri());
 				newRssFeed.setDescription(rss.getDescription());
@@ -82,9 +88,20 @@ public class FeedUtils {
 				if (items.size() > 0) {
 					List<SyndEnclosure> enclosures = items.get(0)
 							.getEnclosures();
-					if (enclosures.get(0).getType().contains("image/"))
-						newRssFeed.setImageUrl(enclosures.get(0).getUrl());
+					if (enclosures.size() > 0)
+						if (enclosures.get(0).getType().contains("image/"))
+							newRssFeed.setImageUrl(enclosures.get(0).getUrl());
 				}
+
+				List<Feed> feeds = feedRepository.findByName("Feed");
+				if (feeds == null) {
+					Feed f = new Feed();
+					f.setName("Feed");
+					feedRepository.save(f);
+				}
+				newRssFeed.setFeed(feeds.get(0));
+
+				newsRepository.save(newRssFeed);
 
 			}
 
@@ -124,8 +141,9 @@ public class FeedUtils {
 							Locale.US);
 					Date date = sdf.parse(elem.getAttribute("date"));
 
-					News newArticleFeed = newRepository.findByLinkAndId(
+					News newArticleFeed = newsRepository.findByLinkAndRestoId(
 							urlString, elem.getAttribute("id"));
+
 					if (newArticleFeed == null)
 						newArticleFeed = new News();
 
@@ -137,14 +155,21 @@ public class FeedUtils {
 					newArticleFeed.setRestoId(elem.getAttribute("id"));
 					newArticleFeed.setCategory(elem.getAttribute("category"));
 
-					newRepository.save(newArticleFeed);
+					List<Feed> feeds = feedRepository.findByName("Feed");
+					if (feeds == null) {
+						Feed f = new Feed();
+						f.setName("Feed");
+						feedRepository.save(f);
+					}
+					newArticleFeed.setFeed(feeds.get(0));
+
+					newsRepository.save(newArticleFeed);
 				}
 
 			}
 		} catch (Exception e) {
 			log.error("Exception occured building the article object", e);
 		}
-
 	}
 
 	public void persistMenu(String urlString, List<Poi> childPois) {

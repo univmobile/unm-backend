@@ -5,18 +5,12 @@
 	<groupId>fr.univmobile</groupId>
 	<artifactId>unm-backend-jobs</artifactId>
 	<version>0.1.1-SNAPSHOT</version>
-    
-	<!--
-	<parent>
-		<groupId>fr.univmobile</groupId>
-		<artifactId>unm-parent</artifactId>
-		<version>0.1.1-SNAPSHOT</version>
-		<relativePath />
-	</parent>
-	-->
+
+	<!-- <parent> <groupId>fr.univmobile</groupId> <artifactId>unm-parent</artifactId> 
+		<version>0.1.1-SNAPSHOT</version> <relativePath /> </parent> -->
 
 	<parent>
-        	<groupId>org.springframework.boot</groupId>
+		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>1.2.1.RELEASE</version>
 		<relativePath />
@@ -39,21 +33,21 @@
 			<artifactId>jdom</artifactId>
 			<version>1.1</version>
 		</dependency>
-		
+
 		<!-- Apache HttpClient -->
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.3.6</version>
 		</dependency>
-		
+
 		<!-- Minimal JSON -->
 		<dependency>
 			<groupId>com.eclipsesource.minimal-json</groupId>
 			<artifactId>minimal-json</artifactId>
 			<version>0.9.1</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -69,10 +63,15 @@
 			<artifactId>mysql-connector-java</artifactId>
 		</dependency>
 		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+
 	</dependencies>
 
 	<build>
-        	<plugins>
+		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
