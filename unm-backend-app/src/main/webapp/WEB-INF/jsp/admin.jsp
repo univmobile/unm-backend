@@ -81,8 +81,6 @@ Administration d’UnivMobile
 <h2 class="homeMenu"><a id="link-system" href="${baseURL}/system/">Système</a></h2>
 
 <ul class="homeMenu" id="ul-home-system">
-	<li class="flaticon icon-file6">
-		<a id="link-history" href="${baseURL}/history/">Historique<br>des actions</a>
 	<li class="flaticon icon-graph5">
 		<a id="link-stats" href="${baseURL}/api/admin/stats/">Statistiques</a>
 	<li class="flaticon icon-black56">
@@ -95,12 +93,7 @@ Administration d’UnivMobile
 	<li class="flaticon icon-question5">
 		<a id="link-help" href="${baseURL}/help/">Aide</a>
 	<li class="flaticon icon-person9">
-		<a id="link-profile" href="${baseURL}/profile/">Mon profil&#160;:
-			${user.id}
-			<c:if test="${user.id != delegationUser.id}">
-				(${delegationUser.id})
-			</c:if>
-	</a>
+		<a id="link-profile" href="${baseURL}/usermodify/${user.id}">Mon profil</a>
 	<li class="flaticon icon-go3">
 		<a id="link-home-logout" href="${baseURL}/?logout">Déconnexion</a>
 </ul>
