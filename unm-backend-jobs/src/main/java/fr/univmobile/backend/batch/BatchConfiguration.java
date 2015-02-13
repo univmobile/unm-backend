@@ -12,15 +12,25 @@ import org.springframework.batch.core.step.tasklet.Tasklet;
 import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 
 import fr.univmobile.backend.jobs.utils.ApiParisUtils;
 import fr.univmobile.backend.jobs.utils.FeedUtils;
 
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
 @Configuration
-@EnableBatchProcessing
 @EnableAutoConfiguration
+@ComponentScan
+@EntityScan(basePackages = "fr.univmobile.backend.domain")
+@EnableJpaRepositories(basePackages = "fr.univmobile.backend.domain")
+//@EnableJpaAuditing(auditorAwareRef = "auditorProvider")
+@EnableBatchProcessing
 public class BatchConfiguration {
 
 	@Autowired
@@ -28,11 +38,23 @@ public class BatchConfiguration {
 
 	@Autowired
 	private StepBuilderFactory stepBuilderFactory;
+ 
+	@Autowired
+	private FeedUtils feedUtils;
 
-	private FeedUtils feedUtils = new FeedUtils();
+	@Autowired
+	private ApiParisUtils apiParisUtils;
 
-	private ApiParisUtils apiParisUtils = new ApiParisUtils();
+	@Bean 
+	FeedUtils feedUtils() {
+		return new FeedUtils();
+	}
 
+	@Bean 
+	ApiParisUtils apiParisUtils() {
+		return new ApiParisUtils();
+	}
+	    
 	@Bean
 	public Step rssStep() {
 		return stepBuilderFactory.get("rssStep").tasklet(new Tasklet() {
@@ -72,5 +94,5 @@ public class BatchConfiguration {
 		return jobBuilderFactory.get("apiParisJob")
 				.incrementer(new RunIdIncrementer()).start(apiParisStep)
 				.build();
-	}
+	} 
 }

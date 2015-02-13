@@ -17,7 +17,7 @@ import fr.univmobile.backend.domain.Region;
 import fr.univmobile.backend.domain.RegionRepository;
 
 @Controller
-@RequestMapping("/regions")
+@RequestMapping("/regionsp")
 public class RegionController {
 
 	@Value("${baseURL}")

@@ -2,20 +2,32 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<groupId>fr.univmobile</groupId>
 	<artifactId>unm-backend-jobs</artifactId>
+	<version>0.1.1-SNAPSHOT</version>
     
-    <parent>
+	<!--
+	<parent>
 		<groupId>fr.univmobile</groupId>
 		<artifactId>unm-parent</artifactId>
 		<version>0.1.1-SNAPSHOT</version>
 		<relativePath />
 	</parent>
+	-->
+
+	<parent>
+        	<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.2.1.RELEASE</version>
+		<relativePath />
+	</parent>
+
 
 	<dependencies>
 		<dependency>
 			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-backend-domain</artifactId>
-			<version>${unm-version}</version>
+			<version>0.1.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<groupId>rome</groupId>
@@ -42,12 +54,31 @@
 			<version>0.9.1</version>
 		</dependency>
 		
-		<!-- For the Spring Batch -->
 		<dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-batch</artifactId>
-            <version>1.2.1.RELEASE</version>
-        </dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-batch</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+		</dependency>
 		
 	</dependencies>
+
+	<build>
+        	<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+
 </project>
+
