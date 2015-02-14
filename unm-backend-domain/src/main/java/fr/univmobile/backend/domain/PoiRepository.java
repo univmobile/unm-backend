@@ -46,7 +46,6 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 
 	List<Poi> findByIdIn(Collection<Long> ids);
 
-	@PreAuthorize(value="hasRole('superadmin') or (hasRole('admin') and principal.university.id == #universityId)")
 	@Query("Select p from Poi p where p.university.id = :universityId and (p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%')) order by p.name asc")
 	Page<Poi> searchValue(@Param("val") String val, @Param("universityId") Long universityId, Pageable pageable);
 	
