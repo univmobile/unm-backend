@@ -39,6 +39,7 @@ halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'me
 
     $scope.groups = ['MS', 'AU', 'TT', 'MU'];
 
+    $scope.submitTracking = false;
 
     $scope.itemId = parseInt( $routeParams.itemId );
     $scope.unis = null;
@@ -52,21 +53,25 @@ halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'me
         } );
     });
 
-
     $scope.handleSaveClicked = function( item ) {
+        $scope.submitTracking = true;
         var isNew = !item.id;
         $validator.validate( $scope, 'item' ).success( function() {
-            menuService.save( item, function( res ) {
-                if ( isNew ) {
-                    location.hash = "#/menus/" + res.id + "/edit";
-                    setTimeout( function() {
-                        halApp.showAlert( "Menu &eacute;tabli!" );
-                    }, 0 )
-                } else {
-                    halApp.showAlert( "Menu sauv&eacute;!" );
-                }
-                location.hash = "#/menus";
-            } );
+            if ( (item.url && item.url.replace(' ', '')) || (item.content && item.content.replace(' ', '')) ) {
+                menuService.save( item, function( res ) {
+                    if ( isNew ) {
+                        location.hash = "#/menus/" + res.id + "/edit";
+                        setTimeout( function() {
+                            halApp.showAlert( "Menu &eacute;tabli!" );
+                        }, 0 )
+                    } else {
+                        halApp.showAlert( "Menu sauv&eacute;!" );
+                    }
+                    location.hash = "#/menus";
+                } );
+            } else {
+                // Nothing to do
+            }
         });
     };
 

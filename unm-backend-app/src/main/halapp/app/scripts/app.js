@@ -6,7 +6,7 @@ var halApp = angular.module( 'halSearchApp', [
 halApp.model = {};
 halApp.URL_PREF = baseUrl;
 
-halApp.config( [ '$routeProvider', 'HateoasInterceptorProvider', 'HateoasInterfaceProvider', function( $routeProvider, HateoasInterceptorProvider, HateoasInterfaceProvider ) {
+halApp.config( [ '$routeProvider', 'HateoasInterceptorProvider', 'HateoasInterfaceProvider', '$validatorProvider', function( $routeProvider, HateoasInterceptorProvider, HateoasInterfaceProvider, $validatorProvider ) {
     $routeProvider
         .when( '/main', {
             templateUrl: 'views/main.html',
@@ -36,7 +36,17 @@ halApp.config( [ '$routeProvider', 'HateoasInterceptorProvider', 'HateoasInterfa
 
         HateoasInterceptorProvider.transformAllResponses();
         HateoasInterfaceProvider.setLinksKey("_links");
-
+        
+        $validatorProvider.register('optionalUrl', {
+            invoke: 'blur',
+            validator: /((((http[s]{0,1}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)|^$)/,
+            error: "Ce champ doit être l'URL ."
+        });
+        $validatorProvider.register('requiredUrl', {
+            invoke: 'blur',
+            validator: /(((http[s]{0,1}:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)/,
+            error: "Ce champ doit être l'URL ."
+        });
 } ] );
 
 halApp.showAlert = function( msg, error ) {

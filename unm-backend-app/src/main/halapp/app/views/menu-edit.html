@@ -4,6 +4,12 @@
         <h1 ng-if="!item.id">Ajouter Menu</h1>
     </div>
 
+    <div class="alert alert-danger" role="alert" ng-if="submitTracking && !((item.url && item.url.replace(' ', '')) || (item.content && item.content.replace(' ', '')))">
+        <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+        <span class="sr-only">Error:</span>
+        Entrez une URL ou le contenu
+    </div>
+
     <form>
         <div class="form-group">
             <label for="name" class="control-label">Nom *</label>
@@ -38,7 +44,7 @@
         </div>
         <div class="form-group">
             <label for="url" class="control-label">URL</label>
-            <input type="text" class="form-control" id="url" ng-model="item.url"/>
+            <input type="text" class="form-control" id="url" ng-model="item.url" validator="[optionalUrl]" validator-required="false" />
         </div>
         <div class="form-group">
             <label for="content" class="control-label">Content</label>
