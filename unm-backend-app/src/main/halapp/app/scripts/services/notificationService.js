@@ -86,6 +86,7 @@ var Notification = function( raw ) {
     this.content = raw ? raw.content : "";
     this.links = raw ? raw._links : {};
     this.universityId = raw ? raw.universityId : 0;
+    this.notificationTime = raw ? raw.notificationTime : 0;
 };
 
 Notification.prototype.toObject = function() {

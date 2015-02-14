@@ -14,6 +14,7 @@
         <tr>
             <th>Université</th>
             <th>Content</th>
+            <th>Date</th>
             <th class="alt-action">Action</th>
         </tr>
         <tr ng-if="!items">
@@ -25,6 +26,7 @@
         <tr ng-repeat="item in items">
             <td>{{item.getUni().title}}</td>
             <td>{{item.content}}</td>
+            <td>{{item.notificationTime | date : 'dd-MM-yy H:mm:ss'}}</td>
             <td>
                 <button class="btn btn-info btn-sm" ng-click="handleEditClick( item )"><span class="glyphicon glyphicon-pencil"></span></button>
                 <button class="btn btn-danger btn-sm" ng-click="handleDeleteClick( item )"><span class="glyphicon glyphicon-remove"></span></button>
