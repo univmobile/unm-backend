@@ -1,8 +1,10 @@
 'use strict';
 
-var halApp = angular.module( 'halSearchApp', [
-    'halApp.templates', 'ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'hateoas', 'ui.bootstrap', 'angular-loading-bar', 'angularSpinner', 'validator', 'validator.rules'
-] );
+var toInject = ['ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'hateoas', 'ui.bootstrap', 'angular-loading-bar', 'angularSpinner', 'validator', 'validator.rules'];
+if (typeof isDev == 'undefined' || !isDev) {
+    toInject.push('halApp.templates');
+}
+var halApp = angular.module( 'halSearchApp', toInject);
 halApp.model = {};
 halApp.URL_PREF = baseUrl;
 

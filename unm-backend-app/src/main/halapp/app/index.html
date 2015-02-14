@@ -28,6 +28,7 @@
       var universityId = 1;
       var isSuperAdmin = true;
       var baseUrl = "http://localhost:81/unm-backend/";
+      var isDev = true;
     </script>
     <!--<!(endif)-->
     
@@ -76,8 +77,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="dialog-global-btn-ok" class="btn btn-primary primary">OK</button>
-                    <button id="dialog-global-btn-cancel" class="btn btn-secondary secondary">Cancel</button>
+                    <button id="dialog-global-btn-ok" class="btn btn-primary primary">Supprimmer</button>
+                    <button id="dialog-global-btn-cancel" class="btn btn-secondary secondary">Annuler</button>
                 </div>
             </div>
         </div>
@@ -114,7 +115,7 @@
     <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) js/scripts.js -->
-        <script src="scripts/templates.js"></script>
+        <!--(if target dist)><script src="scripts/templates.js"></script><!(endif)-->
         <script src="scripts/app.js"></script>
         <script src="scripts/services/universityService.js"></script>
         <script src="scripts/services/categoryService.js"></script>
