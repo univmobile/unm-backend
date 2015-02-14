@@ -25,7 +25,7 @@ halApp.controller( 'CtrlFeeds', [ '$rootScope', '$scope', '$location', 'feedServ
                 $scope.loadItems();
             } );
         } )
-    }
+    };
 
     $scope.handleEditClick = function( item ) {
         $rootScope.pagerCache.feeds = $scope.pager;

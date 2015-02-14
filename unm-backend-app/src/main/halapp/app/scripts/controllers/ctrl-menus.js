@@ -25,7 +25,7 @@ halApp.controller( 'CtrlMenus', [ '$rootScope', '$scope', '$location', 'menuServ
                 $scope.loadItems();
             } );
         } )
-    }
+    };
 
     $scope.handleEditClick = function( item ) {
         $rootScope.pagerCache.menus = $scope.pager;
