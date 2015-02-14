@@ -371,5 +371,9 @@ public class Poi extends AuditableEntityWithLegacy {
 	public void setExpDate(Date expDate) {
 		this.expDate = expDate;
 	}
-
+	
+	public Long getCategoryId() {
+		return this.category.getId();
+	}
+	
 }
