@@ -27,8 +27,8 @@ halApp.factory('menuService', [ '$resource', '$http', 'universityService', funct
 
     f.loadItems = function( isSuperAdmin, universityId, pager, cbSuccess ) {
 	var serviceUri = isSuperAdmin 
-	    ? baseUrl + "api/menues/?" + pager.toQS()
-	    : baseUrl + "api/menues/search/findByUniversityOrderByCreatedOnDesc?universityId=" + universityId + "&" + pager.toQS();
+	    ? baseUrl + "api/menues/search/findByOrderByGroupingAscOrdinalAsc?" + pager.toQS()
+	    : baseUrl + "api/menues/search/findByUniversityOrderByGroupingAscOrdinalAsc?universityId=" + universityId + "&" + pager.toQS();
 	
 	$resource( serviceUri ).get( null, function( res ) {
             pager.totalCount = res.page.totalElements;

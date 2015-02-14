@@ -16,6 +16,10 @@ public interface MenuRepository extends JpaRepository<Menu, Long> {
 	@Query("From Menu m order by m.grouping,m.ordinal")
 	public List<Menu> findAll();
 
-	Page<Feed> findByUniversityOrderByCreatedOnDesc(@Param("universityId")University universityId, Pageable pageable);
+	Page<Menu> findByOrderByGroupingAscOrdinalAsc(Pageable pageable);
+	
+	Page<Menu> findByUniversityOrderByGroupingAscOrdinalAsc(@Param("universityId")University universityId, Pageable pageable);
+	
+	Page<Menu> findByUniversityOrderByCreatedOnDesc(@Param("universityId")University universityId, Pageable pageable);
 	
 }
