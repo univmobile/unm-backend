@@ -38,6 +38,7 @@ halApp.factory( 'universityService', [ '$resource', function( $resource ) {
 var University = function( raw ) {
     this.id = raw ? raw.id : 0;
     this.title = raw ? raw.title : '';
+    this.regionName = raw ? raw.regionName : '';
 };
 University.prototype.getLink = function() {
     return halApp.URL_PREF + "api/universities/" + this.id;

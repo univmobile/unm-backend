@@ -1,22 +1,34 @@
 'use strict';
 
-halApp.controller( 'CtrlFeeds', [ '$scope', 'feedService', 'universityService', function( $scope, feedService, universityService ) {
+halApp.controller( 'CtrlFeeds', [ '$rootScope', '$scope', '$location', 'feedService', 'universityService', function( $rootScope, $scope, $location, feedService, universityService ) {
 
     $scope.items = null;
+    $scope.pager = $scope.pagerCache.feeds ? $scope.pagerCache.feeds : new Pager();
+    $scope.pagerCache.feeds = null;
 
-    universityService.loadItems( function( unis ) {
-        feedService.loadItems( isSuperAdmin, universityId, function( items ) {
+    $scope.loadItems = function() {
+        feedService.loadItems( isSuperAdmin, universityId, $scope.pager, function( items ) {
             $scope.items = items;
         } );
+    };
+
+    universityService.loadItems( function( unis ) {
+	$scope.loadItems();
     } );
 
     $scope.handleDeleteClick = function( item ) {
         halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprim&eacute; Flux?', function() {
             feedService.remove( item, function() {
+                $scope.pagerCache.feeds = null;
                 halApp.hideDialog();
                 halApp.showAlert("Flux supprim&eacute;!");
             } );
         } )
+    }
+
+    $scope.handleEditClick = function( item ) {
+        $rootScope.pagerCache.feeds = $scope.pager;
+        $location.path('/feeds/' + (item ? item.id : 0) + '/edit');
     }
 
 } ] );
@@ -51,6 +63,7 @@ halApp.controller( 'CtrlFeedEdit', [ '$scope', '$routeParams', '$validator', 'fe
                 } else {
                     halApp.showAlert( "Flux sauv&eacute;!" );
                 }
+                location.hash = "#/feeds";
             } );
         });
     };

@@ -87,4 +87,9 @@ public class University extends AuditableEntity {
 	public boolean allowBonplans() {
 		return this.region.getAllowBonplans();
 	}
+	
+	public String getRegionName() {
+		return this.region.getName();
+	}
+	
 }

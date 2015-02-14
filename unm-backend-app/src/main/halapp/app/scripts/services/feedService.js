@@ -25,13 +25,15 @@ halApp.factory('feedService', [ '$resource', '$http', 'universityService', funct
             halApp.model.feeds.splice( ind, 1 );
     };
 
-    f.loadItems = function( isSuperAdmin, universityId, cbSuccess ) {
+    f.loadItems = function( isSuperAdmin, universityId, pager, cbSuccess ) {
 	var serviceUri = isSuperAdmin 
-	    ? baseUrl + "api/feeds/?size=1000"
-	    : baseUrl + "api/feeds/search/findByUniversityOrderByCreatedOnDesc?universityId=" + universityId + "&size=1000";
+	    ? baseUrl + "api/feeds/?" + pager.toQS()
+	    : baseUrl + "api/feeds/search/findByUniversityOrderByCreatedOnDesc?universityId=" + universityId + "&" + pager.toQS();
 	    
         $resource( serviceUri ).get( null, function( res ) {
-	    var feeds = res._embedded ? res._embedded.feeds : [];
+            pager.totalCount = res.page.totalElements;
+            pager.numPages = res.page.totalPages;
+            var feeds = res._embedded ? res._embedded.feeds : [];
             halApp.model.feeds = initItems( feeds );
             cbSuccess( halApp.model.feeds );
         });

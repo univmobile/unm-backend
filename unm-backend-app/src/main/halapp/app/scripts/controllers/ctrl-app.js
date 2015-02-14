@@ -1,4 +1,4 @@
-angular.module( 'halSearchApp' ).controller( "CtrlApp", ["$scope", "$route", "$http", function( $scope, $route, $http ) {
+angular.module( 'halSearchApp' ).controller( "CtrlApp", ["$rootScope", "$scope", "$route", "$http", function( $rootScope, $scope, $route, $http ) {
 
     var initAppData = function() {
     };
@@ -29,6 +29,8 @@ angular.module( 'halSearchApp' ).controller( "CtrlApp", ["$scope", "$route", "$h
         return false;
     };
 
+    $rootScope.pagerCache = {};
+    
     initAppData();
 
 
