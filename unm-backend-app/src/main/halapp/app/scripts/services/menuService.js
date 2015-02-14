@@ -25,12 +25,14 @@ halApp.factory('menuService', [ '$resource', '$http', 'universityService', funct
             halApp.model.menus.splice( ind, 1 );
     };
 
-    f.loadItems = function( isSuperAdmin, universityId, cbSuccess ) {
+    f.loadItems = function( isSuperAdmin, universityId, pager, cbSuccess ) {
 	var serviceUri = isSuperAdmin 
-	    ? baseUrl + "api/menues/?size=1000"
-	    : baseUrl + "api/menues/search/findByUniversityOrderByCreatedOnDesc?universityId=" + universityId + "&size=1000";
+	    ? baseUrl + "api/menues/?" + pager.toQS()
+	    : baseUrl + "api/menues/search/findByUniversityOrderByCreatedOnDesc?universityId=" + universityId + "&" + pager.toQS();
 	
 	$resource( serviceUri ).get( null, function( res ) {
+            pager.totalCount = res.page.totalElements;
+            pager.numPages = res.page.totalPages;	  
 	    var menus = res._embedded ? res._embedded.menu : [];
             halApp.model.menus = initItems( menus );
             cbSuccess( halApp.model.menus );

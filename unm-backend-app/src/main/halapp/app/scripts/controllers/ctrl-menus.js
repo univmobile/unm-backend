@@ -1,25 +1,39 @@
 'use strict';
 
-halApp.controller( 'CtrlMenus', [ '$scope', 'menuService', 'universityService', function( $scope, menuService, universityService ) {
+halApp.controller( 'CtrlMenus', [ '$rootScope', '$scope', '$location', 'menuService', 'universityService', function( $rootScope, $scope, $location, menuService, universityService ) {
 
     $scope.items = null;
+    $scope.pager = $scope.pagerCache.menus ? $scope.pagerCache.menus : new Pager();
+    $scope.pagerCache.menus = null;
 
-    universityService.loadItems( function( unis ) {
-        menuService.loadItems( isSuperAdmin, universityId, function( items ) {
+    $scope.loadItems = function() {
+        menuService.loadItems( isSuperAdmin, universityId, $scope.pager, function( items ) {
             $scope.items = items;
         } );
+    };
+    
+    universityService.loadItems( function( unis ) {
+        $scope.loadItems();
     } );
 
     $scope.handleDeleteClick = function( item ) {
         halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprim&eacute; Menu?', function() {
             menuService.remove( item, function() {
+                $scope.pagerCache.menus = null;
                 halApp.hideDialog();
                 halApp.showAlert("Menu supprim&eacute;!");
+                $scope.loadItems();
             } );
         } )
     }
 
+    $scope.handleEditClick = function( item ) {
+        $rootScope.pagerCache.menus = $scope.pager;
+        $location.path('/menus/' + (item ? item.id : 0) + '/edit');
+    }
+    
 } ] );
+
 halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'menuService', 'universityService', function(
     $scope, $routeParams, $validator, menuService, universityService ) {
 
@@ -51,6 +65,7 @@ halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'me
                 } else {
                     halApp.showAlert( "Menu sauv&eacute;!" );
                 }
+                location.hash = "#/menus";
             } );
         });
     };
