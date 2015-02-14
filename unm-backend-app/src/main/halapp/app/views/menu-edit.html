@@ -4,7 +4,7 @@
         <h1 ng-if="!item.id">Ajouter Menu</h1>
     </div>
 
-    <div class="alert alert-danger" role="alert" ng-if="submitTracking && !((item.url && item.url.replace(' ', '')) || (item.content && item.content.replace(' ', '')))">
+    <div class="alert alert-danger" role="alert" ng-if="submitTracking && !validateUrlOrContent(item)">
         <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
         <span class="sr-only">Error:</span>
         Entrez une URL ou le contenu

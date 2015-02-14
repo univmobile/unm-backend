@@ -53,11 +53,17 @@ halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'me
         } );
     });
 
+    $scope.validateUrlOrContent = function( item ) {
+        var urlPresent = item.url && item.url.replace(' ', '');
+        var contentPresent = item.content && item.content.replace(' ', '');
+        return (urlPresent && !contentPresent) || (contentPresent && !urlPresent);
+    };
+    
     $scope.handleSaveClicked = function( item ) {
         $scope.submitTracking = true;
         var isNew = !item.id;
         $validator.validate( $scope, 'item' ).success( function() {
-            if ( (item.url && item.url.replace(' ', '')) || (item.content && item.content.replace(' ', '')) ) {
+            if ( $scope.validateUrlOrContent(item) ) {
                 menuService.save( item, function( res ) {
                     if ( isNew ) {
                         location.hash = "#/menus/" + res.id + "/edit";
