@@ -22,6 +22,7 @@ halApp.controller( 'CtrlFeeds', [ '$rootScope', '$scope', '$location', 'feedServ
                 $scope.pagerCache.feeds = null;
                 halApp.hideDialog();
                 halApp.showAlert("Flux supprim&eacute;!");
+                $scope.loadItems();
             } );
         } )
     }
