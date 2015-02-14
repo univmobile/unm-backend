@@ -22,4 +22,6 @@ public interface MenuRepository extends JpaRepository<Menu, Long> {
 	
 	Page<Menu> findByUniversityOrderByCreatedOnDesc(@Param("universityId")University universityId, Pageable pageable);
 	
+	@Query("select m from Menu m where m.university.id = :universityId or m.university is null order by m.grouping, m.ordinal")
+	Page<Menu> findAllForUniversity(@Param("universityId")Long universityId, Pageable pageable);
 }
