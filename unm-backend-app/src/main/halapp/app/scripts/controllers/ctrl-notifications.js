@@ -1,25 +1,39 @@
 'use strict';
 
-halApp.controller( 'CtrlNotifications', [ '$scope', 'notificationService', 'universityService', function( $scope, notificationService, universityService ) {
+halApp.controller( 'CtrlNotifications', [ '$rootScope', '$scope', '$location', 'notificationService', 'universityService', function(  $rootScope, $scope, $location, notificationService, universityService ) {
 
     $scope.items = null;
+    $scope.pager = $scope.pagerCache.notifications ? $scope.pagerCache.notifications : new Pager();
+    $scope.pagerCache.notifications = null;    
 
-    universityService.loadItems( function( unis ) {
-        notificationService.loadItems( isSuperAdmin, universityId, function( items ) {
+    $scope.loadItems = function() {
+        notificationService.loadItems( isSuperAdmin, universityId, $scope.pager, function( items ) {
             $scope.items = items;
         } );
+    };
+    
+    universityService.loadItems( function( unis ) {
+        $scope.loadItems();
     } );
 
     $scope.handleDeleteClick = function( item ) {
         halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprim&eacute; notification?', function() {
             notificationService.remove( item, function() {
+                $scope.pagerCache.notifications = null;
                 halApp.hideDialog();
                 halApp.showAlert( "Notification supprim&eacute;!" );
+                $scope.loadItems();
             } );
         } )
-    }
+    };
 
+    $scope.handleEditClick = function( item ) {
+        $rootScope.pagerCache.notifications = $scope.pager;
+        $location.path('/notifications/' + (item ? item.id : 0) + '/edit');
+    }
+  
 } ] );
+
 halApp.controller( 'CtrlNotificationEdit', [ '$scope', '$routeParams', '$validator', 'notificationService', 'universityService', function( $scope, $routeParams, $validator, notificationService, universityService ) {
 
     $scope.itemId = parseInt( $routeParams.itemId );
@@ -47,6 +61,7 @@ halApp.controller( 'CtrlNotificationEdit', [ '$scope', '$routeParams', '$validat
                 } else {
                     halApp.showAlert( "Notification sauv&eacute;!" );
                 }
+                location.hash = "#/notifications";
             } );
         } )
             .error( function() {} )

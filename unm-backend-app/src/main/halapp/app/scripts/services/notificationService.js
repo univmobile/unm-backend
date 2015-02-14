@@ -25,14 +25,15 @@ halApp.factory('notificationService', [ '$resource', '$http', 'universityService
             halApp.model.notifications.splice( ind, 1 );
     };
 
-    f.loadItems = function( isSuperAdmin, universityId, cbSuccess ) {
+    f.loadItems = function( isSuperAdmin, universityId, pager, cbSuccess ) {
 	var serviceUri = isSuperAdmin 
-	    // ? baseUrl + "api/notifications/?size=1000"
-		? baseUrl + "api/notifications/findByOrderByCreatedOnDesc?size=1000"
-	    : baseUrl + "api/notifications/search/findByUniversityOrderByCreatedOnDesc?universityId=" + universityId + "&size=1000";
+		? baseUrl + "api/notifications/search/findByOrderByCreatedOnDesc?" + pager.toQS()
+	    : baseUrl + "api/notifications/search/findByUniversityOrderByCreatedOnDesc?universityId=" + universityId + "&" + pager.toQS();
 	
 	$resource( serviceUri ).get( null, function( res ) {
-	    var notifications = res._embedded ? res._embedded.notifications : [];
+            pager.totalCount = res.page.totalElements;
+            pager.numPages = res.page.totalPages;
+	        var notifications = res._embedded ? res._embedded.notifications : [];
             halApp.model.notifications = initItems( notifications );
             cbSuccess( halApp.model.notifications );
         });

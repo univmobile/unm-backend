@@ -4,7 +4,7 @@
             <h1>Notifications</h1>
         </div>
         <div class="col-sm-3">
-            <a href="#/notifications/0/edit" class="btn btn-success pull-right">Ajouter Notification</a>
+            <button class="btn btn-success pull-right" ng-click="handleEditClick( null )">Ajouter Notification</button>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -25,10 +25,20 @@
         <tr ng-repeat="item in items">
             <td>{{item.getUni().title}}</td>
             <td>{{item.content}}</td>
-            <td><a class="btn btn-info btn-sm" href="#/notifications/{{item.id}}/edit"><span class="glyphicon glyphicon-pencil"></span></a>
+            <td>
+                <button class="btn btn-info btn-sm" ng-click="handleEditClick( item )"><span class="glyphicon glyphicon-pencil"></span></button>
                 <button class="btn btn-danger btn-sm" ng-click="handleDeleteClick( item )"><span class="glyphicon glyphicon-remove"></span></button>
             </td>
         </tr>
     </table>
 
+    <div class="main-search-pager" ng-show="pager.numPages > 1">
+        <pagination total-items="pager.totalCount" items-per-page="pager.pageSize"
+                    max-size="10" boundary-links="true" class="pagination-sm" ng-model="pager.page"
+                    ng-change="loadItems()" num-pages="pager.numPages"
+                    previous-text="pr&eacute;c&eacute;dent" next-text="suivant"
+                    first-text="première" last-text="dernier"></pagination>
+        <pre>Page: {{pager.page}} / {{pager.numPages}}</pre>
+    </div> 
+    
 </div>
