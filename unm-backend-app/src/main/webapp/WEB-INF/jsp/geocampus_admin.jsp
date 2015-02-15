@@ -152,6 +152,7 @@
                 Universit&eacute; <span class="caret"></span>
               </button>
               <ul class="dropdown-menu" role="menu" data-bind="visible: activeTab() == 'pois', foreach: universities">
+                <li role="presentation" class="dropdown-header" data-bind="visible: $index() == 0 || ($data.regionName != $parent.universities()[$index()-1].regionName)"><strong class="text-uppercase" style="color: #000" data-bind="text: regionName"></strong></li>
                 <li><a href="#" data-bind="text: title, click: $parent.changeUniversity"></a></li>
               </ul>
               <ul class="dropdown-menu" role="menu" data-bind="visible: activeTab() == 'bonplans', foreach: bonplansUniversities">

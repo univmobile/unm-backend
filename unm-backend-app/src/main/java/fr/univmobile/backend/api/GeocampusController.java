@@ -83,7 +83,7 @@ public class GeocampusController {
 		GeocampusData data = new GeocampusData();
 		
 		if (currentUser.isSuperAdmin()) {
-			data.setUniversities(universityRepository.findAllByOrderByTitleAsc());
+			data.setUniversities(universityRepository.findAllByOrderByRegion_NameAscTitleAsc());
 		} else {
 			List<University> universities = new ArrayList<University>(1);
 			universities.add(currentUser.getUniversity());

@@ -11,7 +11,9 @@ public interface UniversityRepository extends JpaRepository<University, Long> {
 	University findByTitle(String title);
 	
 	List<University> findAllByOrderByTitleAsc();
-	
+
+	List<University> findAllByOrderByRegion_NameAscTitleAsc();
+
 	@PostFilter("hasRole('superadmin') or (isAuthenticated() and principal.university.id == filterObject.id)")
 	@Query("select u from University u order by u.title")
 	List<University> getAuthorizedUniversities();
