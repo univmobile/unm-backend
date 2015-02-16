@@ -123,6 +123,9 @@ label.checkbox-parentCategory {
          <th>Catégorie API Paris</th>
          <td>
             <input class="text" type="text" id="text-cid" name="cid" value="${poicategorymodify.apiParisId}">
+            <c:if test="${err_poicategoryadd_apiparisid}">
+               <span class="error" title="Le champ est mal formé">Incorrect</span>
+            </c:if>
          </td>
       </tr>
       

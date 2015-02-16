@@ -1,8 +1,10 @@
 <%@ page pageEncoding="UTF-8"%> 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <ul id="ul-adminMenu">
 	<li id="li-adminMenu-home" class="top">
 		<a id="link-adminMenu-home" class="top" href="${baseURL}/">Accueil</a>
+	<c:if test="${delegationUser.role != 'librarian'}">	
 	<li class="top">
 		<a id="link-adminMenu-data" class="top" href="${baseURL}/data/">Données<span
 			class="top ui-menu-icon ui-icon ui-icon-carat-1-s"></span></a>
@@ -36,6 +38,7 @@
 		<li><a id="link-adminMenu-logs" href="${baseURL}/logs/">Logs techniques</a>
 		<li><a id="link-adminMenu-backups" href="${baseURL}/backups/">Sauvegardes (backups)</a>
 		</ul>
+	</c:if>
 	<li id="li-adminMenu-help" class="top">
 		<a id="link-adminMenu-help" class="top" href="${baseURL}/help/">Aide</a>
 </ul>

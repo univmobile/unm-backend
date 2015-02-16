@@ -3,6 +3,7 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -45,7 +46,11 @@ public class UseraddController extends AbstractBackendController {
 	// private final Encrypt encrypt = new EncryptSHA256();
 
 	@Override
-	public View action() {
+	public View action() throws IOException {
+
+		if (getDelegationUser().isLibrarian()) {
+			return sendError403("FORBIDDEN");
+		}
 
 		// REGIONS DATA
 
@@ -75,7 +80,7 @@ public class UseraddController extends AbstractBackendController {
 		return useradd(form);
 	}
 
-	private View useradd(final Useradd form) {
+	private View useradd(final Useradd form) throws IOException {
 
 		User user = new User();
 
@@ -109,12 +114,22 @@ public class UseraddController extends AbstractBackendController {
 
 		user.setPassword(form.password());
 		user.setEmail(form.email());
-		user.setRole(form.role());
+		
+		if (getDelegationUser().isSuperAdmin()) {
+			user.setRole(form.role());
+		} else {
+			user.setRole(User.STUDENT);
+		}
 
 		if (form.titleCivilite() != null)
 			user.setTitleCivilite(form.titleCivilite());
 
-		University pU = universityRepository.findOne(form.primaryUniversity());
+		University pU;
+		if (getDelegationUser().isSuperAdmin()) {
+			pU = universityRepository.findOne(form.primaryUniversity());
+		} else {
+			pU = getDelegationUser().getUniversity();
+		}
 		user.setUniversity(pU);
 
 		University sU = universityRepository

@@ -5,6 +5,7 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.commons.DataBeans.instantiate;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,9 +39,11 @@ public class PoiCategoriesController extends AbstractBackendController {
 	private CategoryRepository categoryRepository;
 
 	@Override
-	public View action() {
+	public View action() throws IOException {
 
-		getDelegationUser();
+		if (getDelegationUser().isLibrarian()) {
+			return sendError403("FORBIDDEN");
+		}
 
 		// 1. CATEGORIES DATA
 

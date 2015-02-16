@@ -28,7 +28,9 @@ public class LogsController extends AbstractBackendController {
 	@Override
 	public View action() throws Exception {
 
-		getDelegationUser();
+		if (getDelegationUser().isLibrarian()) {
+			return sendError403("FORBIDDEN");
+		}
 
 		// 1. LOGS
 

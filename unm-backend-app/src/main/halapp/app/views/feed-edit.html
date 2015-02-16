@@ -30,6 +30,11 @@
             <label for="url" class="control-label">URL *</label>
             <input type="text" class="form-control" id="url" ng-model="item.url" validator="[requiredUrl]"/>
         </div>
+        <div class="checkbox">
+            <label>
+                <input type="checkbox" ng-model="item.active" /> Actif
+            </label>
+        </div>
         <button type="button" class="btn btn-success" ng-click="handleSaveClicked( item )">Enregister</button>
         <a href="#/feeds" class="btn btn-danger">Annuler</a>
     </form>

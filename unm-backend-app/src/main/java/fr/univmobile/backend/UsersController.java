@@ -3,6 +3,7 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static fr.univmobile.commons.DataBeans.instantiate;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +24,10 @@ public class UsersController extends AbstractBackendController {
 	private UserRepository userRepository;
 
 	@Override
-	public View action() {
+	public View action() throws IOException {
+		if (getDelegationUser().isLibrarian()) {
+			return sendError403("FORBIDDEN");
+		}
 
 		User dUser = getDelegationUser();
 

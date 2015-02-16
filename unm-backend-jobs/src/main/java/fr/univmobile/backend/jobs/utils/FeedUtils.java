@@ -229,25 +229,21 @@ public class FeedUtils {
 	}
 
 	public void persistFeeds() {
-		for (Feed feed : feedRepository.findAll()) {
+		for (Feed feed : feedRepository.findByActiveIsTrueAndType(Feed.Type.RSS)) {
+			persistRssFeed(feed.getUrl());
+		}
 
-			if (feed.getType().equals(Feed.Type.RSS)) {
+		for (Feed feed : feedRepository.findByActiveIsTrueAndType(Feed.Type.RESTO)) {
+			persistArticleFeed(feed.getUrl());
+		}
 
-				persistRssFeed(feed.getUrl());
+		for (Poi poi : poiRepository.findAll()) {
+			if (poi.getRestoMenuUrl() != null) {
+				List<Poi> childPois = poiRepository.findByParent(poi);
+				persistMenu(poi.getRestoMenuUrl(), childPois);
 
-			} else if (feed.getType().equals(Feed.Type.RESTO)) {
-
-				persistArticleFeed(feed.getUrl());
-
-			}
-
-			for (Poi poi : poiRepository.findAll()) {
-				if (poi.getRestoMenuUrl() != null) {
-					List<Poi> childPois = poiRepository.findByParent(poi);
-					persistMenu(poi.getRestoMenuUrl(), childPois);
-
-				}
 			}
 		}
+		
 	}
 }

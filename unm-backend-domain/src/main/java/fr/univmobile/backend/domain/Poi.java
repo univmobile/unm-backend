@@ -88,6 +88,19 @@ public class Poi extends AuditableEntityWithLegacy {
 	private Long externalId;
 	private Date expDate;
 	
+	// Library supporting fields
+	private String publicWelcome;
+	private String disciplines;
+	@Column(name = "haswifi", nullable = false)
+	private boolean hasWifi = false;
+	@Column(name = "hasethernet", nullable = false)
+	private boolean hasEthernet = false;
+	@Column(name = "iconruedesfacs", nullable = false)
+	private boolean iconRuedesfacs = false;
+	@Column(name = "closinghours")
+	private String closingHours;
+	// Library supporting fields
+
 	@Override
 	public String toString() {
 		return String.format("Poi[id=%d, name='%s']", id, name);
@@ -374,6 +387,54 @@ public class Poi extends AuditableEntityWithLegacy {
 	
 	public Long getCategoryId() {
 		return this.category.getId();
+	}
+
+	public String getPublicWelcome() {
+		return publicWelcome;
+	}
+
+	public void setPublicWelcome(String publicWelcome) {
+		this.publicWelcome = publicWelcome;
+	}
+
+	public String getDisciplines() {
+		return disciplines;
+	}
+
+	public void setDisciplines(String disciplines) {
+		this.disciplines = disciplines;
+	}
+
+	public boolean getHasWifi() {
+		return hasWifi;
+	}
+
+	public void setHasWifi(boolean hasWifi) {
+		this.hasWifi = hasWifi;
+	}
+
+	public boolean getHasEthernet() {
+		return hasEthernet;
+	}
+
+	public void setHasEthernet(boolean hasEthernet) {
+		this.hasEthernet = hasEthernet;
+	}
+
+	public String getClosingHours() {
+		return closingHours;
+	}
+
+	public void setClosingHours(String closingHours) {
+		this.closingHours = closingHours;
+	}
+
+	public boolean getIconRuedesfacs() {
+		return iconRuedesfacs;
+	}
+
+	public void setIconRuedesfacs(boolean iconRuedesfacs) {
+		this.iconRuedesfacs = iconRuedesfacs;
 	}
 	
 }

@@ -110,6 +110,15 @@ var Poi = function(data) {
     this.lng = ko.observable();
     this.imageMap = ko.observable();
     this.qrCode = ko.observable();
+
+    // Library supporting fields
+    this.publicWelcome = ko.observable();
+    this.disciplines = ko.observable();
+    this.hasWifi = ko.observable();
+    this.hasEthernet = ko.observable();
+    this.iconRuedesfacs = ko.observable();
+    this.closingHours = ko.observable();
+    // End library supporting fields
     
     this.marker = null;
     
@@ -139,6 +148,12 @@ ko.utils.extend(Poi.prototype, {
         this.lng(data ? data.lng : null);
         this.imageMap(data ? data.imageMap : null);
         this.qrCode(data ? data.qrCode : null);
+        this.publicWelcome(data ? data.publicWelcome : '');
+        this.disciplines(data ? data.disciplines : '');
+        this.hasWifi(data ? data.hasWifi : false);
+        this.hasEthernet(data ? data.hasEthernet : false);
+        this.iconRuedesfacs(data ? data.iconRuedesfacs : false);
+        this.closingHours(data ? data.closingHours : '');
         
         this.cache.latestData = data;
     },
@@ -297,6 +312,9 @@ var DataSource = function(baseUrl) {
             case 'images':
                 categories = this.cache['imagesCategories'];
                 break;
+            case 'libraries':
+                categories = this.cache['librariesCategories'];
+                break;
             case 'bonplans':
                 categories = this.cache['bonPlansCategories'];
                 break;
@@ -407,18 +425,20 @@ var MyViewModel = function(ds) {
     self.bonplansUniversities = ko.observableArray([]);
     self.categoriesUniversities = ko.observableArray(self.ds.getCategories('universities'));
     self.categoriesBonplans = ko.observableArray(self.ds.getCategories('bonplans'));
+    self.categoriesLibraries = ko.observableArray(self.ds.getCategories('libraries'));
     self.categoriesImages = ko.observableArray(self.ds.getCategories('images'));
     self.images = ko.observableArray(self.ds.getImages());
     self.pois = ko.observableArray([]);
     self.poiComments = ko.observableArray([]);
     self.universities = ko.observableArray(self.ds.getUniversities());
 
-    self.activeTab = ko.observable('pois');
+    self.activeTab = ko.observable(userRole == 'librarian' ? 'libraries' : 'pois');
     self.activePoiTab = ko.observable('details');
     
     self.activeUniversity = ko.observable({title: ''});
     self.activeCategoryUniversities = ko.observable({name: ''});
     self.activeCategoryBonplans = ko.observable({name: ''});
+    self.activeCategoryLibraries = ko.observable({name: ''});
     self.activeCategoryImages = ko.observable({name: ''});
     self.activeImage = ko.observable({name: ''});
     self.activePoi = ko.observable();
@@ -429,6 +449,7 @@ var MyViewModel = function(ds) {
         self.universities(self.ds.getUniversities());
         self.categoriesUniversities(self.ds.getCategories('universities'));
         self.categoriesBonplans(self.ds.getCategories('bonplans'));
+        self.categoriesLibraries(self.ds.getCategories('libraries'));
         self.categoriesImages(self.ds.getCategories('images'));
         self.images(self.ds.getImages());
         self.pois([]);
@@ -448,6 +469,8 @@ var MyViewModel = function(ds) {
         switch (self.activeTab()) {
             case 'images':
                 return self.activeCategoryImages();
+            case 'libraries':
+                return self.activeCategoryLibraries();
             case 'bonplans':
                 return self.activeCategoryBonplans();
             case 'pois':
@@ -456,10 +479,25 @@ var MyViewModel = function(ds) {
         }       
     }
 
+    self.getTabTitle = function() {
+        switch (self.activeTab()) {
+            case 'images':
+                return 'Images';
+            case 'libraries':
+                return 'Bibliothèques';
+            case 'bonplans':
+                return 'Bon Plans';
+            case 'pois':
+                return 'POIs';
+        }       
+    }
+
     self.getAvailableCategories = function() {
         switch (self.activeTab()) {
             case 'images':
                 return self.categoriesImages();
+            case 'libraries':
+                return self.categoriesLibraries();
             case 'bonplans':
                 return self.categoriesBonplans();
             case 'pois':
@@ -475,11 +513,13 @@ var MyViewModel = function(ds) {
                 imageMmap = initImagemap(imageCanvasId);
             }
             self.pois(self.ds.getPois('images', { imageMap: self.activeImage() } ));    
+        } else if (tab == 'libraries') {
+            self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
         } else if (tab == 'bonplans') {
             if (self.activeUniversity() && !self.activeUniversity().allowBonplans) {
                 self.activeUniversity(self.bonplansUniversities()[0]);
             }
-            self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));    
+            self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
         } else {
             self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));    
         }
@@ -508,6 +548,10 @@ var MyViewModel = function(ds) {
         self.activeCategoryImages(category);    
     };
     
+    self.changeCategoryLibraries = function(category) {
+        self.activeCategoryLibraries(category);    
+    };
+
     self.changeCategoryUniversities = function(category) {
         self.activeCategoryUniversities(category);    
     };
@@ -547,6 +591,10 @@ var MyViewModel = function(ds) {
     });
 
     self.activeCategoryBonplans.subscribe(function(newValue) {
+        self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
+    });
+
+    self.activeCategoryLibraries.subscribe(function(newValue) {
         self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
     });
 

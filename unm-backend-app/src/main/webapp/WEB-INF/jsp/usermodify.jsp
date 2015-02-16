@@ -78,63 +78,29 @@ td span.error {
    </td>
 </tr>
 
+<c:choose>
+	<c:when test="${role eq 'superadmin'}">
 
 <tr class="role">
    <th>Role</th>
-   
-   <c:choose>
-   
-      <c:when test="${role eq 'superadmin'}">
-         <c:choose>
-         
-         <c:when test="${usermodify.role eq 'superadmin'}">
-            <td>
-               <input type="radio" id="radio-type-superadmin" name="role" value="superadmin" checked>
-               <label for="radio-type-superadmin">Super Administrateur</label>
-               <input type="radio" id="radio-type-admin" name="role" value="admin">
-               <label for="radio-type-admin">Administrateur</label>
-              <input type="radio" id="radio-type-student" name="role" value="student">
-               <label for="radio-type-student">Étudiant</label>
-            </td>
-         </c:when>
-         
-         <c:when test="${usermodify.role eq 'admin'}">
-            <td>
-               <input type="radio" id="radio-type-superadmin" name="role" value="superadmin">
-               <label for="radio-type-superadmin">Super Administrateur</label>
-               <input type="radio" id="radio-type-admin" name="role" value="admin" checked>
-               <label for="radio-type-admin">Administrateur</label>
-               <input type="radio" id="radio-type-student" name="role" value="student">
-               <label for="radio-type-student">Étudiant</label>
-            </td>
-         </c:when>
-         
-         <c:when test="${usermodify.role eq 'student'}">
-            <td>
-               <input type="radio" id="radio-type-superadmin" name="role" value="superadmin">
-               <label for="radio-type-superadmin">Super Administrateur</label>
-               <input type="radio" id="radio-type-admin" name="role" value="admin">
-               <label for="radio-type-admin">Administrateur</label>
-               <input type="radio" id="radio-type-student" name="role" value="student" checked>
-               <label for="radio-type-student">Étudiant</label>
-            </td>
-         </c:when>
-         </c:choose>
-      </c:when>
-      
-      <c:otherwise>
-         <td>
-            <input disabled type="radio" id="radio-type-superadmin" name="role" value="superadmin">
-            <label for="radio-type-superadmin">Super Administrateur</label>
-            <input disabled type="radio" id="radio-type-admin" name="role" value="admin">
-            <label for="radio-type-admin">Administrateur</label>
-            <input type="radio" id="radio-type-student" name="role" value="student" checked>
-            <label for="radio-type-student">Étudiant</label>
-         </td>
-      </c:otherwise>
-      
-   </c:choose>
+   <td>
+      <input type="radio" id="radio-type-superadmin" name="role" value="superadmin" <c:if test="${usermodify.role eq 'superadmin'}">checked</c:if>>
+      <label for="radio-type-superadmin">Super Administrateur</label>
+      <input type="radio" id="radio-type-admin" name="role" value="admin" <c:if test="${usermodify.role eq 'admin'}">checked</c:if>>
+      <label for="radio-type-admin">Administrateur</label>
+      <input type="radio" id="radio-type-student" name="role" value="student" <c:if test="${usermodify.role eq 'student'}">checked</c:if>>
+      <label for="radio-type-student">Étudiant</label>
+      <input type="radio" id="radio-type-librarian" name="role" value="librarian" <c:if test="${usermodify.role eq 'librarian'}">checked</c:if>>
+<label for="radio-type-student">Biblioth&eacute;caire</label>
+   </td>
 </tr>
+	</c:when>
+	
+	<c:otherwise>
+		 <input type="hidden" id="radio-type-librarian" name="role" value="${usermodify.role}">
+	</c:otherwise>
+
+</c:choose>
 
 <tr>
    <th>REMOTE_USER</th>
@@ -303,9 +269,18 @@ td span.error {
 
 <div class="table bottom">
    
-   <button id="button-cancel" onclick="document.location.href = '${baseURL}/users'; return false;">
-      Annuler
-   </button>
+   <c:choose>
+   <c:when test="${role eq 'librarian'}">
+	   <button id="button-cancel" onclick="document.location.href = '${baseURL}'; return false;">
+	      Annuler
+	   </button>
+   </c:when>
+   <c:otherwise>
+	   <button id="button-cancel" onclick="document.location.href = '${baseURL}/users'; return false;">
+	      Annuler
+	   </button>
+   </c:otherwise>
+   </c:choose>
    
    <button id="button-save" onclick="submit()">
       Enregistrer

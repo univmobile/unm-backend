@@ -121,7 +121,7 @@
                     </tr>
                     <tr ng-repeat="user in users">
                         <td>{{user.username}}</td>
-                        <td><span ng-if="user.superAdmin">S</span><span ng-if="user.admin">A</span><span ng-if="user.student">E</span></td>
+                        <td><span ng-if="user.superAdmin">S</span><span ng-if="user.admin">A</span><span ng-if="user.student">E</span><span ng-if="user.librarian">B</span></td>
                         <td>{{user.email}}</td>
                         <td>
                             <a href="{{ baseUrl }}usermodify/{{ user.id }}">Modifier…</a>

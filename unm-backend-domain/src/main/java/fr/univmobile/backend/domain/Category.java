@@ -12,7 +12,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Category extends AuditableEntityWithLegacy {
 	
 	public enum Type {
-		PLANS(1), BON_PLANS(2), IMAGE_MAPS(3);
+		PLANS(1), BON_PLANS(2), IMAGE_MAPS(3), LIBRARIES(4);
 		public final long type;
 		private Type(long type) {
 			this.type = type;
@@ -118,6 +118,10 @@ public class Category extends AuditableEntityWithLegacy {
 		return buildRootLegacy(Type.IMAGE_MAPS.type);
 	}
 
+	public static String getLibrariesLegacy() {
+		return buildRootLegacy(Type.LIBRARIES.type);
+	}
+	
 	public Long getApiParisId() {
 		return apiParisId;
 	}

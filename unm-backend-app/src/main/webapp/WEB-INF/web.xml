@@ -31,7 +31,7 @@
 
 	<context-param>
 		<param-name>imageMapsBaseDir</param-name>
-		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/imagemaps</param-value>
+		<param-value>/tmp/unm-backend/dataDir/imagemaps</param-value>
 	</context-param>
 
 	<context-param>
@@ -41,7 +41,7 @@
 
 	<context-param>
 		<param-name>universitiesLogoBaseDir</param-name>
-		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/universitieslogos</param-value>
+		<param-value>/tmp/unm-backend/dataDir/universitieslogos</param-value>
 	</context-param>
 
 	<context-param>
@@ -51,12 +51,12 @@
 
 	<context-param>
 		<param-name>categoriesIconsBaseDir</param-name>
-		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/categoriesicons</param-value>
+		<param-value>/tmp/unm-backend/dataDir/categoriesicons</param-value>
 	</context-param>
 
 	<context-param>
 		<param-name>qrBaseDir</param-name>
-		<param-value>CONFIGURE_PATH_TO_WEBAPPS_CONTEXTDIR/files/qrcodes</param-value>
+		<param-value>/tmp/unm-backend/dataDir/qrcodes</param-value>
 	</context-param>
 
 	<context-param>

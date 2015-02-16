@@ -57,10 +57,11 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 
 	Page<Poi> findByUniversityAndCategory(@Param("universityId") University universityId, @Param("categoryId") Category categoryId, Pageable pageable);
 	
-	@Query("Select p from Poi p where p.university.id = :universityId and p.category.legacy like CONCAT((select c.legacy from Category c WHERE c.id = :categoryId),'%') order by p.name asc")	
-	Page<Poi> findByUniversityAndCategoryRoot(@Param("universityId") Long universityId, @Param("categoryId") Long categoryId, Pageable pageable);
-	
-	Page<Poi> findByUniversityAndCategoryIn(@Param("universityId") University universityId, @Param("categories") Collection<Category> categories, Pageable pageable);
+	@Query("Select p from Poi p where (p.university.id = :universityId OR (:allRestos = TRUE AND p.restoId IS NOT NULL)) and p.category.active = TRUE and p.category.legacy like CONCAT((select c.legacy from Category c WHERE c.id = :categoryId),'%') order by p.name asc")	
+	Page<Poi> findByUniversityAndCategoryRoot(@Param("universityId") Long universityId, @Param("allRestos") Boolean allRestos, @Param("categoryId") Long categoryId, Pageable pageable);
+
+	@Query("Select p from Poi p where (p.university.id = :universityId OR (:allRestos = TRUE AND p.restoId IS NOT NULL)) and p.category.active = TRUE and p.category in :categories order by p.name asc")
+	Page<Poi> findByUniversityAndCategoryIn(@Param("universityId") Long universityId, @Param("allRestos") Boolean allRestos, @Param("categories") Collection<Category> categories, Pageable pageable);
 	
 	List<Poi> findByParent(Poi poi);
 	

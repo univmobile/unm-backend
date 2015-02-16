@@ -138,6 +138,8 @@ $(function () {
             <label for="radio-type-admin">Administrateur</label>
             <input type="radio" id="radio-type-student" name="role" value="student" class="selected" checked>
             <label for="radio-type-student">Étudiant</label>
+            <input type="radio" id="radio-type-librarian" name="role" value="librarian">
+            <label for="radio-type-student">Biblioth&eacute;caire</label>
          </c:otherwise>
       </c:choose>
       

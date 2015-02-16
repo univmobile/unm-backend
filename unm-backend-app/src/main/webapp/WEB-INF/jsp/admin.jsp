@@ -36,18 +36,8 @@ Administration d’UnivMobile
 
 <h2 class="homeMenu"><a id="link-data" href="${baseURL}/data/">Données</a></h2>
 
-<div id="div-query">
-<form action="${baseURL}/" method="GET">
-<!-- 
-<input id="text-query" name="q">
-<button id="button-search">
-	Rechercher
-</button>
--->
-</form>
-</div>
-
 <ul class="homeMenu" id="ul-home-data">
+<c:if test="${delegationUser.role != 'librarian'}">
 	<li class="flaticon icon-search8">
 		<a id="link-search" href="${baseURL}/api/app#/main">Recherche avancée</a>
 	<li class="flaticon icon-location14">
@@ -75,9 +65,15 @@ Administration d’UnivMobile
 	<li class="flaticon icon-website1">
 		<a id="link-universities" href="${baseURL}/api/app#/menus">Menus</a>
 	</li>
-		
+</c:if>
+<c:if test="${delegationUser.role == 'librarian'}">
+	<li class="flaticon icon-compass6">
+		<a id="link-geocampus" href="${baseURL}/geocampus/admin/">Géocampus</a>
+	</li>
+</c:if>		
 </ul>
 
+<c:if test="${delegationUser.role != 'librarian'}">
 <h2 class="homeMenu"><a id="link-system" href="${baseURL}/system/">Système</a></h2>
 
 <ul class="homeMenu" id="ul-home-system">
@@ -86,6 +82,7 @@ Administration d’UnivMobile
 	<li class="flaticon icon-black56">
 		<a id="link-logs" href="${baseURL}/logs/">Logs techniques</a>
 </ul>
+</c:if>
 
 <h2 class="homeMenu">Général</h2>
 

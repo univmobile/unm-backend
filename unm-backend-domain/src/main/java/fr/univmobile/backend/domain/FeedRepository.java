@@ -12,5 +12,7 @@ public interface FeedRepository extends JpaRepository<Feed, Long> {
 	Page<Feed> findByUniversityOrderByCreatedOnDesc(@Param("universityId")University universityId, Pageable pageable);
 
 	List<Feed> findByName(String string);
+	
+	List<Feed> findByActiveIsTrueAndType(Feed.Type type);
 
 }

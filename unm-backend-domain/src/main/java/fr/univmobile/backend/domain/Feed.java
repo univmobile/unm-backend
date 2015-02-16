@@ -31,6 +31,9 @@ public class Feed extends AuditableEntity {
 	@JoinColumn(name = "university_id", nullable = true)
 	private University university;
 
+	@Column(nullable = false)
+	private boolean active = true;
+
 	public Long getId() {
 		return id;
 	}
@@ -73,5 +76,13 @@ public class Feed extends AuditableEntity {
 			universityId = university.getId();
 		}
 		return universityId;
+	}
+
+	public boolean getActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 }

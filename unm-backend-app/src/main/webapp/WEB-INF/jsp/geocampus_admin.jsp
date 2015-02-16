@@ -29,7 +29,12 @@
 
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
     <link rel="stylesheet" href="${baseURL}/css/jquery.fileupload.css">
-      
+
+    <script>
+        var baseUrl = '${baseURL}/';
+        var userRole = '${delegationUser.role}';
+    </script>
+
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <!-- JSTree -->
@@ -92,9 +97,6 @@
 	    overflow-x: hidden;        
 	}
     </style>
-    <script>
-        var baseUrl = '${baseURL}/';
-    </script>
     <jsp:include page="js-adminMenu.h.jsp"/>
 </head>
 <body>
@@ -105,24 +107,25 @@
 
             <ul class="nav nav-tabs">
                 
-              <li role="presentation" data-bind="css: { active: activeTab() == 'pois' }"><a href="#" data-bind="click: function(data, event) { switchTab('pois') }">POIs</a></li>
-              <li role="presentation" data-bind="visible: bonplansUniversities().length > 0, css: { active: activeTab() == 'bonplans' }"><a href="#" data-bind="click: function(data, event) { switchTab('bonplans') }">Bon Plans</a></li>
-              <li role="presentation" data-bind="css: { active: activeTab() == 'images' }"><a href="#" data-bind="click: function(data, event) { switchTab('images') }">Images</a></li>
+              <li role="presentation" data-bind="visible: userRole != 'librarian', css: { active: activeTab() == 'pois' }"><a href="#" data-bind="click: function(data, event) { switchTab('pois') }">POIs</a></li>
+              <li role="presentation" data-bind="visible: userRole != 'librarian' && bonplansUniversities().length > 0, css: { active: activeTab() == 'bonplans' }"><a href="#" data-bind="click: function(data, event) { switchTab('bonplans') }">Bon Plans</a></li>
+              <li role="presentation" data-bind="visible: userRole != 'librarian', css: { active: activeTab() == 'images' }"><a href="#" data-bind="click: function(data, event) { switchTab('images') }">Images</a></li>
+              <li role="presentation" data-bind="visible: userRole == 'librarian' || userRole == 'superadmin', css: { active: activeTab() == 'libraries' }"><a href="#" data-bind="click: function(data, event) { switchTab('libraries') }">Biblioth&egrave;ques</a></li>
             </ul>
             <p></p>
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <div class="btn-toolbar" role="toolbar">
                         <div class="btn-group  btn-group-xs pull-right" role="group">
-                          <button type="button" class="btn btn-default" data-bind="enable: activeUniversity().id, click: createRootPoi" title="Ajouter un POI racine"><span class="glyphicon glyphicon-plus" aria-label="Add root"></span></button>
-                          <button type="button" class="btn btn-default" data-bind="enable: activeUniversity().id && activePoi().id(), click: createPoi" title="Ajouter un POI ayant pour parent le POI s&eacute;lectionn&eacute;"><span class="glyphicon glyphicon-plus-sign" aria-label="Add child"></span></button>
-                          <button type="button" class="btn btn-default" data-bind="enable: activeUniversity().id && activePoi().id(), click: editPoi" title="Modifier le POI"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: activeUniversity().id || activeTab() == 'libraries', click: createRootPoi" title="Ajouter un POI racine"><span class="glyphicon glyphicon-plus" aria-label="Add root"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: (activeUniversity().id || activeTab() == 'libraries') && activePoi().id(), click: createPoi" title="Ajouter un POI ayant pour parent le POI s&eacute;lectionn&eacute;"><span class="glyphicon glyphicon-plus-sign" aria-label="Add child"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: (activeUniversity().id  || activeTab() == 'libraries') && activePoi().id(), click: editPoi" title="Modifier le POI"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
                         </div>
                     </div>
                 </div>
                 <div class="panel-body">
                     <p data-bind="visible: pois().length == 0">
-                        S&eacute;lectionnez une universit&eacute et une cat&eacute;gorie pour voir POI connexes
+                        S&eacute;lectionnez<span data-bind="visible: activeTab() != 'libraries'"> une universit&eacute et</span> une cat&eacute;gorie pour voir POI connexes
                     </p>
                     <div id="jstree1" data-bind="visible: pois().length > 0">
                         <ul data-bind="template: { name: 'treenode-template', foreach: pois }"></ul>
@@ -147,7 +150,15 @@
                 <li><a href="#" data-bind="text: name, click: $parent.changeCategoryBonplans"></a></li>
               </ul>
             </div>
-            <div class="btn-group pull-right" data-bind="visible: universities().length > 1">
+            <div class="btn-group pull-right" data-bind="visible: activeTab() == 'libraries'">
+              <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Cat&eacute;gorie <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" role="menu" data-bind="foreach: categoriesLibraries">
+                <li><a href="#" data-bind="text: name, click: $parent.changeCategoryLibraries"></a></li>
+              </ul>
+            </div>
+            <div class="btn-group pull-right" data-bind="visible: activeTab() != 'libraries' && universities().length > 1">
               <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                 Universit&eacute; <span class="caret"></span>
               </button>
@@ -160,7 +171,7 @@
               </ul>
             </div>
             
-          <h1 class="page-header text-left">POIs <small data-bind="text: activeUniversity().title"></small><small data-bind="visible: activeUniversity().id">&nbsp;</small><small data-bind="visible: activeTab() == 'pois', text: activeCategoryUniversities().name"></small><small data-bind="visible: activeTab() == 'bonplans', text: activeCategoryBonplans().name"></small></h1>
+          <h2 class="page-header text-left"><span data-bind="text: getTabTitle()"></span> <small data-bind="visible: activeTab() != 'libraries', text: activeUniversity().title"></small><small data-bind="visible: activeTab() != 'libraries' && activeUniversity().id">&nbsp;</small><small data-bind="visible: activeTab() == 'pois', text: activeCategoryUniversities().name"></small><small data-bind="visible: activeTab() == 'bonplans', text: activeCategoryBonplans().name"></small><small data-bind="visible: activeTab() == 'libraries', text: activeCategoryLibraries().name"></small></h2>
             
           <div class="row placeholders">
               <div id="map_canvas"></div>
@@ -180,7 +191,7 @@
               </ul>
             </div>
             
-          <h1 class="page-header pull-left">Images <small data-bind="text: activeImage().name"></small></h1>
+          <h2 class="page-header pull-left">Images <small data-bind="text: activeImage().name"></small></h2>
 
           <div class="row placeholders">
               <div id="img_canvas"></div>
@@ -203,6 +214,7 @@
                 <li role="presentation" data-bind="css: { active: activePoiTab() == 'details' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('details') }">D&eacute;tails</a></li>
                 <li role="presentation" data-bind="css: { active: activePoiTab() == 'comments' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('comments') }">Commentaires</a></li>
                 <li role="presentation" data-bind="visible: activeTab() == 'images' && activePoi().id(), css: { active: activePoiTab() == 'qr' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('qr') }">QR</a></li>
+                <li role="presentation" data-bind="visible: activeTab() == 'libraries', css: { active: activePoiTab() == 'library' }"><a href="#" data-bind="click: function(data, event) { switchPoiTab('library') }">Biblioth&egrave;que</a></li>
               </ul>
               <p></p>
               
@@ -299,7 +311,59 @@
                     
                 </table>
             </div>
-                
+
+            <div data-bind="visible: activePoiTab() == 'library'">
+                <div class="alert alert-danger" data-bind="visible: lastError()" role="alert">
+                    <strong>Erreur!</strong> <span data-bind="text: lastError()"></span>
+                </div>
+
+                <form class="form-horizontal" role="form" data-bind="with: activePoi()">
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Publics accueillis</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: publicWelcome">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword3" class="col-sm-2 control-label">Disciplines</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: disciplines">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Wifi</label>
+                        <div class="col-sm-10">
+                        <input type="checkbox" data-bind="checked: hasWifi" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Ethernet</label>
+                        <div class="col-sm-10">
+                        <input type="checkbox" data-bind="checked: hasEthernet" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Picto Ruedesfacs</label>
+                        <div class="col-sm-10">
+                        <input type="checkbox" data-bind="checked: iconRuedesfacs" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Fermetures</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: openingHours">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmail3" class="col-sm-2 control-label">Horaires et jours d'ouverture</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: closingHours">
+                        </div>
+                    </div>
+                </form>
+
+            </div>
+            
             <div data-bind="with: activePoi(), visible: activePoiTab() == 'qr' && activePoi().id()">
                 <div class="alert alert-danger" data-bind="visible: $parent.lastError()" role="alert">
                     <strong>Erreur!</strong> <span data-bind="text: $parent.lastError()"></span>
@@ -313,8 +377,8 @@
                 
             </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-bind="visible: activePoiTab() == 'details', click: cancelPoi">Annuler</button>
-            <button type="button" class="btn btn-primary" data-bind="visible: activePoiTab() == 'details', click: savePoi">Enregistrer</button>              
+            <button type="button" class="btn btn-default" data-bind="visible: activePoiTab() == 'details' || activePoiTab() == 'library', click: cancelPoi">Annuler</button>
+            <button type="button" class="btn btn-primary" data-bind="visible: activePoiTab() == 'details' || activePoiTab() == 'library', click: savePoi">Enregistrer</button>              
           </div>
         </div><!-- /.modal-content -->
       </div><!-- /.modal-dialog -->

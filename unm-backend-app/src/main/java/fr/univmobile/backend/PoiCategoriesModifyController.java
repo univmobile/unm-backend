@@ -5,6 +5,8 @@ package fr.univmobile.backend;
 import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
+import java.io.IOException;
+
 import javax.annotation.Nullable;
 
 import fr.univmobile.backend.domain.Category;
@@ -40,7 +42,11 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 	private final PoiCategoriesController poiCategoriesController;
 
 	@Override
-	public View action() {
+	public View action() throws IOException {
+
+		if (getDelegationUser().isLibrarian()) {
+			return sendError403("FORBIDDEN");
+		}
 
 		// 1. POI CATEGORY
 

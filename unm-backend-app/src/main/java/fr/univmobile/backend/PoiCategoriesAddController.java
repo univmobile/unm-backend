@@ -51,6 +51,10 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 	@Override
 	public View action() throws IOException, TransactionException {
 
+		if (getDelegationUser().isLibrarian()) {
+			return sendError403("FORBIDDEN");
+		}
+
 		Category parentCategory = getParentCategoryId() != null ? categoryRepository.findOne(getParentCategoryId()) : null;
 		if (parentCategory != null) {
 			setAttribute("parentCategory", parentCategory);
@@ -110,9 +114,16 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 		if (form.description() != null)
 			poicategory.setDescription(form.description());
 		
-		if (form.cid() != null)
-			poicategory.setApiParisId(Long.parseLong(form.cid()));
-
+		if (form.cid() != null && form.cid().trim().length() > 0) {
+			try {
+				poicategory.setApiParisId(Long.parseLong(form.cid()));
+			} catch (java.lang.NumberFormatException e) {
+				hasErrors = true;
+				setAttribute("err_poicategoryadd_apiparisid", true);
+				setAttribute("err_incorrectFields", true);
+			}
+		}
+		
 		if (hasErrors) {
 
 			setAttribute("poicategoryadd", poicategory);

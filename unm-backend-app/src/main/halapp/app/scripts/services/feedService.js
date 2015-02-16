@@ -86,6 +86,7 @@ var Feed = function( raw ) {
     this.url = raw ? raw.url : '';
     this.type = raw ? raw.type : 'RSS';
     this.universityId = raw ? raw.universityId : 0;
+    this.active = raw ? raw.active : true;
 };
 
 Feed.prototype.toObject = function() {
@@ -95,7 +96,8 @@ Feed.prototype.toObject = function() {
         name: this.name,
         url: this.url,
         type: this.type,
-        university: uni ? uni.getLink() : null
+        university: uni ? uni.getLink() : null,
+        active: this.active
     }
 };
 Feed.prototype.getUni = function() {

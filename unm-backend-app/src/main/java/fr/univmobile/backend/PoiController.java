@@ -2,6 +2,7 @@ package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import java.io.IOException;
 import java.util.Collection;
 
 import fr.univmobile.backend.domain.Comment;
@@ -32,7 +33,10 @@ public class PoiController extends AbstractBackendController {
 	private final CommentRepository commentRepository;
 
 	@Override
-	public View action() {
+	public View action() throws IOException {
+		if (getDelegationUser().isLibrarian()) {
+			return sendError403("FORBIDDEN");
+		}
 
 		final Long poiId = getPoiId();
 

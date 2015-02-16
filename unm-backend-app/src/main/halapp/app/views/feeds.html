@@ -16,6 +16,7 @@
             <th>Nom</th>
             <th>Type</th>
             <th>Url</th>
+            <th>Actif</th>
             <th class="alt-action">Action</th>
         </tr>
         <tr ng-if="!items">
@@ -29,6 +30,10 @@
             <td>{{item.name}}</td>
             <td>{{item.type}}</td>
             <td>{{item.url}}</td>
+            <td>
+                <span ng-if="item.active" class="glyphicon glyphicon-ok text-success"></span>
+                <span ng-if="!item.active" class="glyphicon glyphicon-remove text-danger"></span>
+            </td>
             <td>
                 <button class="btn btn-info btn-sm" ng-click="handleEditClick( item )"><span class="glyphicon glyphicon-pencil"></span></button>
                 <button class="btn btn-danger btn-sm" ng-click="handleDeleteClick( item )"><span class="glyphicon glyphicon-remove"></span></button>

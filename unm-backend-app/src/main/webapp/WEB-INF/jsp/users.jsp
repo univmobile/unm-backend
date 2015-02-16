@@ -51,6 +51,10 @@ body.results td.roles.admin {
 	background-color: #f60;
 }
 
+body.results td.roles.librarian {
+	background-color: #06f;
+}
+
 body.results td.roles.superadmin {
 	background-color: #f00;
 	xcolor: #f00;
@@ -177,6 +181,10 @@ body.results td.roles.superadmin {
       
       <c:when test="${u.role eq 'student'}">
          <td class="roles student" title="${u.id} : Étudiant">É</td>
+      </c:when>
+      
+      <c:when test="${u.role eq 'librarian'}">
+         <td class="roles librarian" title="${u.id} : Biblioth&eacute;caire">B</td>
       </c:when>
       
       <c:otherwise>

@@ -53,6 +53,10 @@ public class ImageMapController extends AbstractBackendController {
 
 	@Override
 	public View action() throws Exception {
+		if (getDelegationUser().isLibrarian()) {
+			return sendError403("FORBIDDEN");
+		}
+		
 		final int id = getImageMapId();
 		
 		final int selectedPoiId = getSelectedPoiId();

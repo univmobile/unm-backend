@@ -92,6 +92,7 @@ public class GeocampusController {
 
 		data.setPlansCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getPlansLegacy()));
 		data.setBonPlansCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getBonPlansLegacy()));
+		data.setLibrariesCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getLibrariesLegacy()));
 		data.setImagesCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getImageMapsLegacy()));
 		data.setImageMaps(imageMapRepository.findAll());
 
@@ -131,6 +132,9 @@ public class GeocampusController {
 			rootCategoryLegacy = Category.getBonPlansLegacy();
 		} else if (poiType.equals("images")) {
 			rootCategoryLegacy = Category.getImageMapsLegacy();
+		} else if (poiType.equals("libraries")) {
+			rootCategoryLegacy = Category.getLibrariesLegacy();
+			universityId = null;
 		} else {
 			rootCategoryLegacy = Category.getPlansLegacy();
 		}
@@ -140,6 +144,11 @@ public class GeocampusController {
 		
 		if (categoryId != null) {
 			category = categoryRepository.findOne(categoryId);
+			
+			if (currentUser.isLibrarian() && !category.getLegacy().startsWith(Category.getLibrariesLegacy())) {
+				response.sendError(HttpServletResponse.SC_FORBIDDEN);
+				return null;
+			}
 		}
 		
 		if (currentUser.isSuperAdmin()) {
@@ -153,10 +162,14 @@ public class GeocampusController {
 						: poiRepository.findByCategory_LegacyStartingWithAndUniversityOrderByNameAsc(rootCategoryLegacy, universityRepository.findOne(universityId));
 			}
 		} else {
-			if (category != null) {
-				selectedPois = poiRepository.findByCategoryAndUniversityOrderByNameAsc(category, currentUser.getUniversity());
+			if (currentUser.isLibrarian()) {
+				selectedPois = category != null 
+						? poiRepository.findByCategoryOrderByNameAsc(category)
+						: poiRepository.findByCategory_LegacyStartingWithOrderByNameAsc(rootCategoryLegacy);
 			} else {
-				selectedPois = poiRepository.findByCategory_LegacyStartingWithAndUniversityOrderByNameAsc(rootCategoryLegacy, currentUser.getUniversity());
+				selectedPois = category != null
+						? poiRepository.findByCategoryAndUniversityOrderByNameAsc(category, currentUser.getUniversity())
+						: poiRepository.findByCategory_LegacyStartingWithAndUniversityOrderByNameAsc(rootCategoryLegacy, currentUser.getUniversity());
 			}
 		}
 		
@@ -318,6 +331,7 @@ public class GeocampusController {
 		private	List<University> universities;
 		private	List<Category> plansCategories;
 		private	List<Category> bonPlansCategories;
+		private	List<Category> librariesCategories;
 		private	List<Category> imagesCategories;
 		private	Iterable<ImageMap> imageMaps;
 
@@ -345,6 +359,14 @@ public class GeocampusController {
 			this.bonPlansCategories = bonPlansCategories;
 		}
 
+		public List<Category> getLibrariesCategories() {
+			return librariesCategories;
+		}
+
+		public void setLibrariesCategories(List<Category> librariesCategories) {
+			this.librariesCategories = librariesCategories;
+		}
+		
 		public List<Category> getImagesCategories() {
 			return imagesCategories;
 		}

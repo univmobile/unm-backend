@@ -15,6 +15,8 @@ public class User extends AuditableEntity {
 	public final static String STUDENT = "student";
 	public final static String ADMIN = "admin";
 	public final static String SUPERADMIN = "superadmin";
+	public final static String LIBRARIAN = "librarian";
+	
 
 	@Id
 	@GeneratedValue
@@ -190,6 +192,10 @@ public class User extends AuditableEntity {
 		return this.role.equals(STUDENT);
 	}
 
+	public boolean isLibrarian() {
+		return this.role.equals(LIBRARIAN);
+	}
+	
 	public Date getNotificationsReadDate(){
 		return notificationsReadDate;
 	}

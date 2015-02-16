@@ -4,6 +4,8 @@ import static com.google.common.base.Preconditions.checkNotNull;
 
 import java.io.IOException;
 
+import javax.persistence.Column;
+
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -53,6 +55,24 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		}
 
 		// 2. APPLICATION VALIDATION
+		if (getDelegationUser().isLibrarian()) {
+			if (data.category() == null) { 
+				return "{ \"result\": \"invalid\" }";
+			} else {
+				Category cat = categoryRepository.findOne(data.category());
+				if (cat == null || !cat.getLegacy().startsWith(Category.getLibrariesLegacy())) {
+					return "{ \"result\": \"invalid\" }";
+				}
+			}
+		} else if (getDelegationUser().isAdmin()) {
+			if (data.category() != null) { 
+				Category cat = categoryRepository.findOne(data.category());
+				if (cat == null || cat.getLegacy().startsWith(Category.getLibrariesLegacy())) {
+					return "{ \"result\": \"invalid\" }";
+				}
+			}
+		}
+		
 		long resultId = poiSave(data);
 		return String.format("{ \"result\": \"%s\", \"data\": %d }", resultId != errorId ? "ok" : "error", resultId);
 	}
@@ -120,6 +140,13 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		poi.setEmail(coalesce(data.email()));
 		poi.setItinerary(coalesce(data.itinerary()));
 		poi.setUrl(coalesce(data.url()));
+		
+		poi.setPublicWelcome(coalesce(data.publicWelcome()));
+		poi.setDisciplines(coalesce(data.disciplines()));
+		poi.setHasWifi(coalesce(data.hasWifi()).equals("true"));
+		poi.setHasEthernet(coalesce(data.hasEthernet()).equals("true"));
+		poi.setIconRuedesfacs(coalesce(data.iconRuedesfacs()).equals("true"));
+		poi.setClosingHours(coalesce(data.closingHours()));
 		
 		if (data.lat() != null && data.lat().length() > 0 && data.lat() != null && data.lat().length() > 0 ) {
 			poi.setLat(Double.valueOf(data.lat()));
@@ -197,6 +224,25 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		
 		@HttpParameter(trim = true)
 		String imageMapId();
+		
+		@HttpParameter
+		String publicWelcome();
+		
+		@HttpParameter
+		String disciplines();
+		
+		@HttpParameter
+		String hasWifi();
+		
+		@HttpParameter
+		String hasEthernet();
+		
+		@HttpParameter
+		String iconRuedesfacs();
+		
+		@HttpParameter
+		String closingHours();
+		
 	}
 	
 }
