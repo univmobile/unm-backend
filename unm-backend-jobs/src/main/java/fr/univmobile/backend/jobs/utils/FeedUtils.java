@@ -15,6 +15,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
@@ -37,33 +38,30 @@ import fr.univmobile.backend.domain.RestoMenuRepository;
 
 public class FeedUtils {
 
+	@Autowired
 	FeedRepository feedRepository;
-	NewsRepository newsRepository;
-	RestoMenuRepository restoMenuRepository;
-	PoiRepository poiRepository;
 
-	public FeedUtils(FeedRepository feedRepository,
-			NewsRepository newsRepository,
-			RestoMenuRepository restoMenuRepository,
-			PoiRepository poiRepository) {
-		this.feedRepository = feedRepository;
-		this.newsRepository = newsRepository;
-		this.restoMenuRepository = restoMenuRepository;
-		this.poiRepository = poiRepository;
-	}
+	@Autowired
+	NewsRepository newsRepository;
+
+	@Autowired
+	RestoMenuRepository restoMenuRepository;
+
+	@Autowired
+	PoiRepository poiRepository;
 
 	private static final Log log = LogFactory.getLog(FeedUtils.class);
 
-	public void persistRssFeed(String urlString) {
+	private void persistRssFeed(Feed feed) {
 
 		SyndFeed rss = null;
 		InputStream is = null;
 
 		try {
-
-			URLConnection openConnection = new URL(urlString).openConnection();
-			is = new URL(urlString).openConnection().getInputStream();
-			if ("gzip".equals(openConnection.getContentEncoding())) {
+			String urlString = feed.getUrl();
+			URLConnection connection = new URL(urlString).openConnection();
+			is = connection.getInputStream();
+			if ("gzip".equals(connection.getContentEncoding())) {
 				is = new GZIPInputStream(is);
 			}
 			InputSource source = new InputSource(is);
@@ -72,37 +70,29 @@ public class FeedUtils {
 
 			if (rss != null) {
 
-				News newRssFeed = newsRepository.findByLinkAndTitle(urlString,
-						rss.getTitle());
-				if (newRssFeed == null)
-					newRssFeed = new News();
+				List<SyndEntry> entries = rss.getEntries();
+				for (SyndEntry se : entries){
+					News newRssFeed = newsRepository.findByGuidAndFeed(se.getUri(), feed);
+					if (newRssFeed == null)
+						newRssFeed = new News();
 
-				newRssFeed.setTitle(rss.getTitle());
-				newRssFeed.setLink(rss.getUri());
-				newRssFeed.setDescription(rss.getDescription());
-				newRssFeed.setAuthor(rss.getAuthor());
-				newRssFeed.setGuid(rss.getUri());
-				newRssFeed.setPublishedDate(rss.getPublishedDate());
+					newRssFeed.setTitle(se.getTitle());
+					newRssFeed.setLink(se.getUri());
+					newRssFeed.setDescription(se.getDescription().getValue());
+					newRssFeed.setAuthor(se.getAuthor());
+					newRssFeed.setGuid(se.getUri());
+					newRssFeed.setPublishedDate(se.getPublishedDate());
 
-				List<SyndEntry> items = rss.getEntries();
-				if (items.size() > 0) {
-					List<SyndEnclosure> enclosures = items.get(0)
-							.getEnclosures();
-					if (enclosures.size() > 0)
-						if (enclosures.get(0).getType().contains("image/"))
+					newRssFeed.setFeed(feed);
+					newsRepository.save(newRssFeed);
+
+					List<SyndEnclosure> enclosures = se.getEnclosures();
+					if (enclosures.size() > 0){
+						if (enclosures.get(0).getType().contains("image/")){
 							newRssFeed.setImageUrl(enclosures.get(0).getUrl());
+						}
+					}
 				}
-
-				List<Feed> feeds = feedRepository.findByName("Feed");
-				if (feeds == null) {
-					Feed f = new Feed();
-					f.setName("Feed");
-					feedRepository.save(f);
-				}
-				newRssFeed.setFeed(feeds.get(0));
-
-				newsRepository.save(newRssFeed);
-
 			}
 
 		} catch (Exception e) {
@@ -118,9 +108,11 @@ public class FeedUtils {
 
 	}
 
-	public void persistArticleFeed(String urlString) {
+	private void persistArticleFeed(Feed feed) {
 
 		try {
+			String urlString = feed.getUrl();
+
 			URL url = new URL(urlString);
 			URLConnection conn = url.openConnection();
 
@@ -141,8 +133,7 @@ public class FeedUtils {
 							Locale.US);
 					Date date = sdf.parse(elem.getAttribute("date"));
 
-					News newArticleFeed = newsRepository.findByLinkAndRestoId(
-							urlString, elem.getAttribute("id"));
+					News newArticleFeed = newsRepository.findByGuidAndFeed(elem.getAttribute("id"), feed);
 
 					if (newArticleFeed == null)
 						newArticleFeed = new News();
@@ -152,16 +143,10 @@ public class FeedUtils {
 					newArticleFeed.setDescription(elem.getTextContent());
 					newArticleFeed.setPublishedDate(date);
 					newArticleFeed.setImageUrl(elem.getAttribute("image"));
-					newArticleFeed.setRestoId(elem.getAttribute("id"));
+					newArticleFeed.setGuid(elem.getAttribute("id"));
 					newArticleFeed.setCategory(elem.getAttribute("category"));
 
-					List<Feed> feeds = feedRepository.findByName("Feed");
-					if (feeds == null) {
-						Feed f = new Feed();
-						f.setName("Feed");
-						feedRepository.save(f);
-					}
-					newArticleFeed.setFeed(feeds.get(0));
+					newArticleFeed.setFeed(feed);
 
 					newsRepository.save(newArticleFeed);
 				}
@@ -172,7 +157,7 @@ public class FeedUtils {
 		}
 	}
 
-	public void persistMenu(String urlString, List<Poi> childPois) {
+	private void persistMenu(String urlString, List<Poi> childPois) {
 
 		try {
 			URL url = new URL(urlString);
@@ -204,8 +189,11 @@ public class FeedUtils {
 								"yyyy-MM-dd", Locale.US);
 						Date date = sdf.parse(menuElem.getAttribute("date"));
 
-						RestoMenu restoMenu = new RestoMenu();
 
+						RestoMenu restoMenu = restoMenuRepository.findByPoiAndEffectiveDate(poi, date);
+						if (restoMenu == null){
+							restoMenu = new RestoMenu();
+						}
 						restoMenu.setPoi(poi);
 						restoMenu.setEffectiveDate(date);
 						restoMenu.setDescription(menuElem.getTextContent());
@@ -221,29 +209,29 @@ public class FeedUtils {
 
 	}
 
-	public Poi poiByRestoId(List<Poi> pois, String restoId) {
+	private Poi poiByRestoId(List<Poi> pois, String restoId) {
 		for (Poi poi : pois)
 			if (poi.getRestoId().equals(restoId))
 				return poi;
 		return null;
 	}
 
-	public void persistFeeds() {
+	public void persistRssFeeds() {
 		for (Feed feed : feedRepository.findByActiveIsTrueAndType(Feed.Type.RSS)) {
-			persistRssFeed(feed.getUrl());
+			persistRssFeed(feed);
 		}
+	}
 
+	public void persistCustomFeed(){
 		for (Feed feed : feedRepository.findByActiveIsTrueAndType(Feed.Type.RESTO)) {
-			persistArticleFeed(feed.getUrl());
+			persistArticleFeed(feed);
 		}
+	}
 
-		for (Poi poi : poiRepository.findAll()) {
-			if (poi.getRestoMenuUrl() != null) {
-				List<Poi> childPois = poiRepository.findByParent(poi);
-				persistMenu(poi.getRestoMenuUrl(), childPois);
-
-			}
+	public void persistRestoMenues(){
+		for (Poi poi : poiRepository.findAllByRestoMenuUrlNotNull()) {
+			List<Poi> childPois = poiRepository.findByParent(poi);
+			persistMenu(poi.getRestoMenuUrl(), childPois);
 		}
-		
 	}
 }
