@@ -15,6 +15,8 @@ import fr.univmobile.backend.domain.Region;
 import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.University;
 import fr.univmobile.backend.domain.User;
+import fr.univmobile.web.commons.HttpInputs;
+import fr.univmobile.web.commons.HttpParameter;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
@@ -43,14 +45,13 @@ public class PoisController extends AbstractBackendController {
 
 		List<Poi> allPois;
 
-		if (dUser.isSuperAdmin())
-			allPois = poiRepository
-					.findByParentIsNullAndCategory_LegacyStartingWithOrderByNameAsc(Category
-							.getPlansLegacy());
-		else
-			allPois = poiRepository
-					.findByParentIsNullAndCategory_LegacyStartingWithAndUniversityOrderByNameAsc(
-							Category.getPlansLegacy(), dUser.getUniversity());
+		final Search search = getHttpInputs(Search.class);
+		String query = (search.q() != null) ? search.q() : "";
+		if (dUser.isSuperAdmin()) {
+			allPois = poiRepository.findByParentIsNullAndRootCategoryAndNameAndDescription(Category.getPlansLegacy(), query);
+		} else {
+			allPois = poiRepository.findByParentIsNullAndRootCategoryAndUniversityAndNameAndDescription(Category.getPlansLegacy(), dUser.getUniversity(), query);
+		}
 
 		List<PoiGroup> poiGroups = new ArrayList<PoiGroup>();
 
@@ -126,4 +127,9 @@ interface PoisInfo {
 	int getResultCount();
 
 	PoisInfo setResultCount(int count);
+}
+
+interface Search extends HttpInputs {
+	@HttpParameter
+	String q();
 }
