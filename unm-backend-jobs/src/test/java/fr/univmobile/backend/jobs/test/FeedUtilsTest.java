@@ -52,7 +52,7 @@ public class FeedUtilsTest {
 	
 	@Test
 	public void testRssFeed() {
-		
+		/*
 		restoMenuRepository.deleteAll();
 
 		FeedUtils feedUtils = new FeedUtils(feedRepository, newsRepository, restoMenuRepository, poiRepository);
@@ -66,6 +66,7 @@ public class FeedUtilsTest {
 			System.out.println(n);
 		
 		System.out.println("--- END RESULT ---");
+		*/
 	}
 
 }
