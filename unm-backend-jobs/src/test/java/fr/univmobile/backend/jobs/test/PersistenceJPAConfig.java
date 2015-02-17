@@ -21,7 +21,6 @@ import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import fr.univmobile.backend.domain.User;
-import fr.univmobile.backend.domain.test.TestAuditorAware;
 import fr.univmobile.backend.jobs.utils.ApiParisUtils;
 
 @Configuration
