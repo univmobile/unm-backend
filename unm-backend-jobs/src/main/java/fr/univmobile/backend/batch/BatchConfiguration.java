@@ -15,13 +15,12 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.orm.jpa.EntityScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.ImportResource;
 
 import fr.univmobile.backend.jobs.utils.ApiParisUtils;
 import fr.univmobile.backend.jobs.utils.FeedUtils;
 
+import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @Configuration
@@ -29,7 +28,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @ComponentScan
 @EntityScan(basePackages = "fr.univmobile.backend.domain")
 @EnableJpaRepositories(basePackages = "fr.univmobile.backend.domain")
-//@EnableJpaAuditing(auditorAwareRef = "auditorProvider")
+@EnableJpaAuditing(auditorAwareRef = "sessionAuditorAware")
 @EnableBatchProcessing
 public class BatchConfiguration {
 
@@ -45,23 +44,23 @@ public class BatchConfiguration {
 	@Autowired
 	private ApiParisUtils apiParisUtils;
 
-	@Bean 
+	@Bean
 	FeedUtils feedUtils() {
 		return new FeedUtils();
 	}
 
-	@Bean 
+	@Bean
 	ApiParisUtils apiParisUtils() {
 		return new ApiParisUtils();
 	}
-	    
+
 	@Bean
-	public Step rssStep() {
-		return stepBuilderFactory.get("rssStep").tasklet(new Tasklet() {
+	public Step rssFeedStep() {
+		return stepBuilderFactory.get("rssFeedStep").tasklet(new Tasklet() {
 			public RepeatStatus execute(StepContribution contribution,
 					ChunkContext chunkContext) {
 
-				feedUtils.persistFeeds();
+				feedUtils.persistRssFeeds();
 
 				return null;
 			}
@@ -69,9 +68,43 @@ public class BatchConfiguration {
 	}
 
 	@Bean
-	public Job rssJob(Step rssStep) throws Exception {
-		return jobBuilderFactory.get("rssJob")
+	public Job rssFeedJob(Step rssStep) throws Exception {
+		return jobBuilderFactory.get("rssFeedJob")
 				.incrementer(new RunIdIncrementer()).start(rssStep).build();
+	}
+
+	@Bean
+	public Step customFeedStep() {
+		return stepBuilderFactory.get("customFeedStep").tasklet(new Tasklet() {
+			public RepeatStatus execute(StepContribution contribution,
+										ChunkContext chunkContext) {
+
+				feedUtils.persistCustomFeed();
+
+				return null;
+			}
+		}).build();
+	}
+	@Bean
+	public Job customFeedJob(Step customNewsStep) throws Exception {
+		return jobBuilderFactory.get("customFeedStep").incrementer(new RunIdIncrementer()).start(customNewsStep).build();
+	}
+
+	@Bean
+	public Step restoMenuesStep() {
+		return stepBuilderFactory.get("restoMenuesStep").tasklet(new Tasklet() {
+			public RepeatStatus execute(StepContribution contribution,
+										ChunkContext chunkContext) {
+
+				feedUtils.persistRestoMenues();
+
+				return null;
+			}
+		}).build();
+	}
+	@Bean
+	public Job restoMenuesJob(Step restoMenuesStep) throws Exception {
+		return jobBuilderFactory.get("restoMenuesStep").incrementer(new RunIdIncrementer()).start(restoMenuesStep).build();
 	}
 
 	// ApiParis Job
@@ -94,5 +127,5 @@ public class BatchConfiguration {
 		return jobBuilderFactory.get("apiParisJob")
 				.incrementer(new RunIdIncrementer()).start(apiParisStep)
 				.build();
-	} 
+	}
 }

@@ -64,6 +64,8 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 	Page<Poi> findByUniversityAndCategoryIn(@Param("universityId") Long universityId, @Param("allRestos") Boolean allRestos, @Param("categories") Collection<Category> categories, Pageable pageable);
 	
 	List<Poi> findByParent(Poi poi);
+
+	List<Poi> findAllByRestoMenuUrlNotNull();
 	
 	Poi findByExternalId(Long externalId);
 }

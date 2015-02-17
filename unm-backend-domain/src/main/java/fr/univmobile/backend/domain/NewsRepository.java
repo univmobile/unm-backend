@@ -16,4 +16,7 @@ public interface NewsRepository extends JpaRepository<News, Long> {
 	News findByLinkAndTitle(String urlString, String title);
 
 	News findByLinkAndRestoId(String urlString, String attribute);
+
+	News findByGuidAndFeed(String guid, Feed feed);
+
 }

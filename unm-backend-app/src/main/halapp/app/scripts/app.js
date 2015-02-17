@@ -12,7 +12,18 @@ halApp.config( [ '$routeProvider', 'HateoasInterceptorProvider', 'HateoasInterfa
     $routeProvider
         .when( '/main', {
             templateUrl: 'views/main.html',
-            controller: 'MainCtrl'
+            controller: 'MainCtrl',
+            resolve: { managedEntity: function() { return { showsAll: true, title: 'Recherche avancée' } } }
+        } )
+        .when( '/manage/comments', {
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl',
+            resolve: { managedEntity: function() { return { showsAll: false, tab: 'comments', title: 'Commentaires' } } }
+        } )
+        .when( '/manage/users', {
+            templateUrl: 'views/main.html',
+            controller: 'MainCtrl',
+            resolve: { managedEntity: function() { return { showsAll: false, tab: 'users', title: 'Utilisateurs' } } }
         } )
         .when( '/notifications', {
             templateUrl: 'views/notifications.html', controller: 'CtrlNotifications'

@@ -3,10 +3,10 @@
 var modes = [ 'categories', 'comments', 'pois', 'users' ];
 
 angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource', 'usSpinnerService',
-        'categoryService', 'commentsService', 'poiService', 'userService',
-    function( $scope, $resource, usSpinnerService, categoryService, commentsService, poiService, userService) {
-
-	$scope.baseUrl = baseUrl;
+        'categoryService', 'commentsService', 'poiService', 'userService', 'managedEntity',
+    function( $scope, $resource, usSpinnerService, categoryService, commentsService, poiService, userService, managedEntity) {
+        $scope.managedEntity = managedEntity;
+        $scope.baseUrl = baseUrl;
         $scope.searchText = "";
         $scope.pager = new Pager();
 
@@ -22,6 +22,9 @@ angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource'
         } );
         setTimeout( function() {
             $( "#main-search" ).focus();
+            if (!$scope.managedEntity.showsAll) {
+                $( '#main-tabs li a[aria-controls="' + $scope.managedEntity.tab + '"]' ).click();
+            }
             $scope.showCurrentTab();
         } );
 
@@ -77,6 +80,12 @@ angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource'
             } );
         };
 
+        $scope.toggleCommentStatus = function( comment ) {
+            commentsService.changeStatus(comment, comment.active, function() { 
+                // nothing to do
+            } );
+        };
+        
         var getCurrentMode = function() {
             return $( '#main-tabs li.active a' ).attr( 'aria-controls' );
         };

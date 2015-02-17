@@ -43,7 +43,7 @@ Administration d’UnivMobile
 	<li class="flaticon icon-location14">
 		<a id="link-pois" href="${baseURL}/pois/">Points of Interest (POIs)</a>
 	<li class="flaticon icon-chat2">
-		<a id="link-comments" href="${baseURL}/comments/">Commentaires</a>
+		<a id="link-comments" href="${baseURL}/api/app#/manage/comments">Commentaires</a>
 	<li class="flaticon icon-globe5">
 		<a id="link-regions" href="${baseURL}/regions/">Régions</a>
 	<li class="clear">
@@ -52,7 +52,7 @@ Administration d’UnivMobile
 	<li class="flaticon icon-rss9">
 		<a id="link-news" href="${baseURL}/api/app#/feeds">Fils d’actualités des universités</a>
 	<li class="flaticon icon-address7">
-		<a id="link-users" href="${baseURL}/users/">Utilisateurs</a>
+		<a id="link-users" href="${baseURL}/api/app#/manage/users">Utilisateurs</a>
 	<li class="flaticon icon-address7">
 		<a id="link-categories" href="${baseURL}/poicategories/">Catégories</a>
 	<li class="clear">

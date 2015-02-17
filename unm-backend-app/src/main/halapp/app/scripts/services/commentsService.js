@@ -1,6 +1,6 @@
 halApp.model.comments = [];
 
-halApp.factory('commentsService', [ '$resource', function( $resource ) {
+halApp.factory('commentsService', [ '$resource', '$http', function( $resource, $http ) {
     var f = {
 
     };
@@ -15,8 +15,15 @@ halApp.factory('commentsService', [ '$resource', function( $resource ) {
         });
     };
 
+    f.changeStatus = function( item, status, cbSuccess ) {
+        var serviceUrl = baseUrl + "api/comments/changeStatus?commentId=" + item.id + "&status=" + status;
 
-
+        if ( item.id ) {
+            $http.patch( serviceUrl ).success( function( res ) {
+                cbSuccess( item, res );
+            });
+        }
+    };
 
     return f;
 
