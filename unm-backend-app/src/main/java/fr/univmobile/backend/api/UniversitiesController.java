@@ -21,10 +21,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.validation.ObjectError;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import fr.univmobile.backend.domain.University;
@@ -50,17 +47,22 @@ public class UniversitiesController {
 	UniversityRepository universityRepository;
 
 	@RequestMapping(method = RequestMethod.GET)
-	public String get(HttpServletRequest request, HttpServletResponse response,
-			Model model) throws IOException {
+	public String get(@RequestParam(value = "regionId", required = false) Long regionId, Model model) throws IOException {
 
 		List<University> universities;
 
 		if (getPrincipal().isSuperAdmin()) {
-			universities = universityRepository.findAll();
+			if (regionId == null){
+				universities = universityRepository.findAll();
+			} else {
+				universities = universityRepository.findAllByRegion_Id(regionId);
+			}
 		} else {
 			University userUniversity = universityRepository.findOne(getPrincipal().getUniversity().getId());
 			universities = new ArrayList<University>(1);
-			universities.add(userUniversity);
+			if (regionId == null || regionId.equals(userUniversity.getRegion().getId())){
+				universities.add(userUniversity);
+			}
 		}
 
 		model.addAttribute("universities", universities);

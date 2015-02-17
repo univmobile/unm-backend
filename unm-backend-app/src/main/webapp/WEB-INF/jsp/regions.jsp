@@ -56,7 +56,7 @@
    </td>
    
    <td class="id">
-      <a href="${baseURL}/regions/${r.id}">
+      <a href="${baseURL}/api/universities/manage/?regionId=${r.id}">
          ${r.id}
       </a>
    </td>

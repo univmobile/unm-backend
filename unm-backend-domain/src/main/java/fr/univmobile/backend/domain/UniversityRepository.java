@@ -18,4 +18,6 @@ public interface UniversityRepository extends JpaRepository<University, Long> {
 	@Query("select u from University u order by u.title")
 	List<University> getAuthorizedUniversities();
 
+	List<University> findAllByRegion_Id(Long regionId);
+
 }
