@@ -36,8 +36,10 @@ import fr.univmobile.backend.domain.UniversityRepository;
 
 public class ApiParisUtils {
 	
-    @Value("${api.paris.activities.url:http://localhost:8082/paris.html}")
-    private String API_PARIS_ACTIVITIES_URL;
+    
+    //@Value("${api.paris.activities.url:http://localhost:8082/paris.html}")
+	@Value("${api.paris.activities.url:https://api.paris.fr/api/data/1.4/QueFaire/get_activities/}")
+	private String API_PARIS_ACTIVITIES_URL;
 
     @Value("${api.paris.parameter.token:ba14fa26b212ad9e3867312a5abb1a3749dc8e122e204de026709289033047f7}")
     private String API_PARIS_PARAMETER_TOKEN;
@@ -96,7 +98,7 @@ public class ApiParisUtils {
 	}
 	
 
-	public void getEvents(String start, String end, String limit, String offset) {
+	public void getEvents() {
 
 		try {
 
@@ -114,7 +116,7 @@ public class ApiParisUtils {
 			String url = API_PARIS_ACTIVITIES_URL + "?token=" +  API_PARIS_PARAMETER_TOKEN + "&created=" + API_PARIS_PARAMETER_CREATED
 					+ "&start=" + API_PARIS_PARAMETER_START + "&end=" + API_PARIS_PARAMETER_END + "&offset="
 					+ API_PARIS_PARAMETER_OFFSET + "&limit=" + API_PARIS_PARAMETER_LIMIT
-					+ cid ;
+					+ "&" + cid + "&tag=";
 
 			
 			HttpClient client = HttpClientBuilder.create().build();
@@ -125,10 +127,14 @@ public class ApiParisUtils {
 			
 			HttpResponse response = client.execute(get);
 			
+			if (response.getStatusLine().getStatusCode() != 200) {
+				throw new Exception(String.format("HTTP Error. Code: %d - Reason: %s", response.getStatusLine().getStatusCode(), response.getStatusLine().getReasonPhrase()));
+			}
+			
 			
 			BufferedReader rd = new BufferedReader(new InputStreamReader(
 					response.getEntity().getContent()));
-
+			
 			JsonObject jsonObject = JsonObject.readFrom(rd);
 
 			JsonArray dataArray = JsonArray.readFrom(jsonObject.get("data")

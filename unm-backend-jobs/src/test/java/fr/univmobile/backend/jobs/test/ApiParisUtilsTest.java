@@ -41,22 +41,7 @@ public class ApiParisUtilsTest {
 	@Test
 	public void test() {
 
-		/*
-		//poiRepository.deleteAll();
 
-		//ApiParisUtils apiParisUtils = new ApiParisUtils(poiRepository, categoryRepository, universityRepository, regionRepository);
-		apiParisUtils.getEvents("0", "0", "3", "0");
-		
-		assertEquals(poiRepository.findAll().size(), 3);
-		
-		System.out.println("--- RESULT ---");
-		
-		for (Poi p : poiRepository.findAll())
-			System.out.println(p);
-		
-		System.out.println("--- END RESULT ---");
-		*/
-		
 		assertTrue(apiParisUtils.apiCategoryIsAmongSelected("cid=3","3"));
 		assertTrue(apiParisUtils.apiCategoryIsAmongSelected("cid=3,20","3"));
 		assertTrue(apiParisUtils.apiCategoryIsAmongSelected("cid=20,3","3"));
@@ -66,7 +51,7 @@ public class ApiParisUtilsTest {
 		
 		
 		
-		apiParisUtils.getEvents("0", "0", "3", "0");
+		apiParisUtils.getEvents();
 	}
 
 }
