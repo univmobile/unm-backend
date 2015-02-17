@@ -13,8 +13,10 @@ import fr.univmobile.backend.hateoas.processor.UniversityResourceProcessor;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
+@EnableTransactionManagement
 public class SpringConfiguration {
 
     @Bean

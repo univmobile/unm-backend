@@ -281,7 +281,7 @@ $(function () {
 </table>
 
 <div class="table bottom">
-   <button id="button-cancel" onclick="document.location.href = '${baseURL}/users'; return false;">
+   <button id="button-cancel" onclick="document.location.href = '${baseURL}/api/app#/manage/users'; return false;">
       Annuler
    </button>
    <button id="button-save" onclick="submit()">

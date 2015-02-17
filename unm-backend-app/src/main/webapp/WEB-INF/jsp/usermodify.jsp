@@ -276,7 +276,7 @@ td span.error {
 	   </button>
    </c:when>
    <c:otherwise>
-	   <button id="button-cancel" onclick="document.location.href = '${baseURL}/users'; return false;">
+	   <button id="button-cancel" onclick="document.location.href = '${baseURL}/api/app#/manage/users'; return false;">
 	      Annuler
 	   </button>
    </c:otherwise>
