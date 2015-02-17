@@ -5,6 +5,7 @@ import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.config.PropertyPlaceholderConfigurer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor;
@@ -21,6 +22,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import fr.univmobile.backend.domain.User;
 import fr.univmobile.backend.domain.test.TestAuditorAware;
+import fr.univmobile.backend.jobs.utils.ApiParisUtils;
 
 @Configuration
 @EnableJpaRepositories("fr.univmobile.backend.domain")
@@ -28,10 +30,15 @@ import fr.univmobile.backend.domain.test.TestAuditorAware;
 @EnableJpaAuditing
 public class PersistenceJPAConfig {
 
-	@Bean
-	public AuditorAware<User> TestAuditorAwarebean() {
-		return new TestAuditorAware();
-	}
+	 @Bean
+	 public AuditorAware<User> TestAuditorAwarebean() {
+	  return new AuditorAware<User>() {
+	   @Override
+	   public User getCurrentAuditor() {
+	    return null;
+	   }
+	  };
+	 }
 
 	@Bean
 	public LocalContainerEntityManagerFactoryBean entityManagerFactory() {
@@ -50,9 +57,9 @@ public class PersistenceJPAConfig {
 	public DataSource dataSource() {
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 		dataSource.setDriverClassName("com.mysql.jdbc.Driver");
-		dataSource.setUrl("jdbc:mysql://localhost:3306/test_univmobile");
+		dataSource.setUrl("jdbc:mysql://localhost:3306/univmobile_new");
 		dataSource.setUsername("root");
-		dataSource.setPassword("rosenrot123");
+		dataSource.setPassword("123456");
 		return dataSource;
 	}
 
@@ -78,4 +85,17 @@ public class PersistenceJPAConfig {
 				"org.hibernate.dialect.MySQL5Dialect");
 		return properties;
 	}
+	
+	 @Bean 
+	 public ApiParisUtils apiParisUtils() {
+	  return new ApiParisUtils();
+	 }
+	 
+	 @Bean
+	 public static PropertyPlaceholderConfigurer propertyPlaceholderConfigurer() {
+	     PropertyPlaceholderConfigurer ppc = new PropertyPlaceholderConfigurer();
+	     ppc.setIgnoreResourceNotFound(true);
+	     return ppc;
+	 }
+	 
 }

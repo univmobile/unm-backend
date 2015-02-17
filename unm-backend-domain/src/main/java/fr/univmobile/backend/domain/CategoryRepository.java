@@ -18,4 +18,9 @@ public interface CategoryRepository extends JpaRepository<Category, Long> {
 
 	@Query("Select c from Category c where c.name like CONCAT('%',:val,'%') or c.description like CONCAT('%',:val,'%') order by c.name asc")
 	Page<Category> searchValue(@Param("val") String val, Pageable pageable);
+	
+	@Query("Select c from Category  c where c.apiParisId is not null and c.active = true")
+	List<Category> findAllWhereApiParisIdIsNotNullAndActive();
+	
+	Category findByApiParisId(Long id);
 }
