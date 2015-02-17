@@ -68,9 +68,9 @@ public class BatchConfiguration {
 	}
 
 	@Bean
-	public Job rssFeedJob(Step rssStep) throws Exception {
+	public Job rssFeedJob(Step rssFeedStep) throws Exception {
 		return jobBuilderFactory.get("rssFeedJob")
-				.incrementer(new RunIdIncrementer()).start(rssStep).build();
+				.incrementer(new RunIdIncrementer()).start(rssFeedStep).build();
 	}
 
 	@Bean
@@ -86,8 +86,8 @@ public class BatchConfiguration {
 		}).build();
 	}
 	@Bean
-	public Job customFeedJob(Step customNewsStep) throws Exception {
-		return jobBuilderFactory.get("customFeedStep").incrementer(new RunIdIncrementer()).start(customNewsStep).build();
+	public Job customFeedJob(Step customFeedStep) throws Exception {
+		return jobBuilderFactory.get("customFeedJob").incrementer(new RunIdIncrementer()).start(customFeedStep).build();
 	}
 
 	@Bean
@@ -104,7 +104,7 @@ public class BatchConfiguration {
 	}
 	@Bean
 	public Job restoMenuesJob(Step restoMenuesStep) throws Exception {
-		return jobBuilderFactory.get("restoMenuesStep").incrementer(new RunIdIncrementer()).start(restoMenuesStep).build();
+		return jobBuilderFactory.get("restoMenuesJob").incrementer(new RunIdIncrementer()).start(restoMenuesStep).build();
 	}
 
 	// ApiParis Job
