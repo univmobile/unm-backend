@@ -18,5 +18,6 @@ public interface RestoMenuRepository extends JpaRepository<RestoMenu, Long> {
     @Query("Select COUNT(*) from RestoMenu r where r.effectiveDate >= CURRENT_DATE and r.poi = :poi order by r.effectiveDate asc ")
     Long CountRestoMenuesForPoi(@Param("poi") Poi poi);
 
+    @RestResource(exported = false)
     RestoMenu findByPoiAndEffectiveDate(Poi poi, Date effectiveDate);
 }

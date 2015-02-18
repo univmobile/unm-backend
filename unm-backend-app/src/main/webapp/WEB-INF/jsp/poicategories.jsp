@@ -40,7 +40,7 @@ td.id {
 <script>
 function myFunction() {
     var x = document.getElementById("text-query").value;
-    window.location = "/unm-backend/poicategories/" + x;
+    window.location = "${baseURL}/poicategories/" + x;
 }
 </script>
 
