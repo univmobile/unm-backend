@@ -78,6 +78,21 @@ td.id {
 </table>
 
 </div> <!-- end of #div-universities -->
+
+    <div class="table bottom">
+        <c:choose>
+            <c:when test="${regionId != null}">
+                <button id="return-button" onclick="document.location.href = '${baseURL}/regions/'; return false;">
+                    Reviens
+                </button>
+            </c:when>
+            <c:otherwise>
+                <button id="return-button" onclick="document.location.href = '${baseURL}/'; return false;">
+                    Reviens
+                </button>
+            </c:otherwise>
+        </c:choose>
+    </div>
    
 </div> <!-- end of div.body -->
 
