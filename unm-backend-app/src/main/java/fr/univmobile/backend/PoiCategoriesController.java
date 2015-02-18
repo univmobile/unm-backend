@@ -11,24 +11,29 @@ import java.util.List;
 
 import javax.annotation.Nullable;
 
+import antlr.StringUtils;
+import fr.univmobile.backend.PoiCategoriesAddController.PoiCategoryadd;
 import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.domain.CategoryRepository;
+import fr.univmobile.web.commons.HttpInputs;
+import fr.univmobile.web.commons.HttpMethods;
+import fr.univmobile.web.commons.HttpRequired;
 import fr.univmobile.web.commons.PathVariable;
 import fr.univmobile.web.commons.Paths;
 import fr.univmobile.web.commons.View;
 
-@Paths({ "poicategories", "poicategories/", "poicategories/${id}" })
+@Paths({ "poicategories", "poicategories/", "poicategories/${value}" })
 public class PoiCategoriesController extends AbstractBackendController {
 
-	@PathVariable("${id}")
-	private long getPoiCategoryId() {
+	@PathVariable("${value}")
+	private String getPoiCategoryId() {
 
-		return getPathLongVariable("${id}");
+		return getPathStringVariable("${value}");
 	}
 
 	private boolean hasPoiCategoryContext() {
 
-		return hasPathStringVariable("${id}");
+		return hasPathStringVariable("${value}");
 	}
 
 	public PoiCategoriesController(final CategoryRepository categoryRepository) {
@@ -38,6 +43,16 @@ public class PoiCategoriesController extends AbstractBackendController {
 
 	private CategoryRepository categoryRepository;
 
+	public static boolean isLong(String s) {
+		try {
+			Long.parseLong(s);
+		} catch (NumberFormatException e) {
+			return false;
+		}
+		// only got here if we didn't return false
+		return true;
+	}
+
 	@Override
 	public View action() throws IOException {
 
@@ -45,29 +60,53 @@ public class PoiCategoriesController extends AbstractBackendController {
 			return sendError403("FORBIDDEN");
 		}
 
+		// System.out.println(getPathStringVariable("${id}"));
+
 		// 1. CATEGORIES DATA
 
-		Category parent;
+		Category parent = null;
+
+		int size = 0;
+		
+		List<Category> poicategories;
 
 		if (hasPoiCategoryContext()) {
 
-			Long cId = getPoiCategoryId();
-			parent = categoryRepository.findOne(cId);
-			
-			setAttribute("has_father", true);
-			setAttribute("father", parent);
-		} else
-			parent = null;
+			String value = getPoiCategoryId();
 
-		Iterable<Category> allCategories = categoryRepository
-				.findByParent(parent);
+			if (isLong(value)) {
 
-		List<Category> poicategories = new ArrayList<Category>();
+				Long cId = Long.parseLong(value);
+				parent = categoryRepository.findOne(cId);
 
-		int size = 0;
-		for (Category c : allCategories) {
-			poicategories.add(c);
-			size++;
+				setAttribute("has_father", true);
+				setAttribute("father", parent);
+				
+				Iterable<Category> allCategories = categoryRepository
+						.findByParent(parent);
+
+				poicategories = new ArrayList<Category>();
+
+				for (Category c : allCategories) {
+					poicategories.add(c);
+					size++;
+				}
+			} else {
+				
+				poicategories = categoryRepository.findByNameContainingOrderByNameAsc(value);
+				
+			}
+		} else {
+
+			Iterable<Category> allCategories = categoryRepository
+					.findByParent(parent);
+
+			poicategories = new ArrayList<Category>();
+
+			for (Category c : allCategories) {
+				poicategories.add(c);
+				size++;
+			}
 		}
 
 		setAttribute("poicategories", poicategories);
@@ -86,6 +125,7 @@ public class PoiCategoriesController extends AbstractBackendController {
 
 		return new View("poicategories.jsp");
 	}
+
 }
 
 interface PoiCategoriesInfo {

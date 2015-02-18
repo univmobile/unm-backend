@@ -37,6 +37,13 @@ td.id {
 </head>
 <body id="body-poicategories" class="entered results">
 
+<script>
+function myFunction() {
+    var x = document.getElementById("text-query").value;
+    window.location = "/unm-backend/poicategories/" + x;
+}
+</script>
+
 <jsp:include page="div-entered.h.jsp"/>
 
 <div class="body results">
@@ -55,10 +62,14 @@ td.id {
 </h2>
 
 <div id="div-query">
-   <form action="${baseURL}/poicategories" method="GET">
-      <input id="text-query" name="q">
-	     <button id="button-search">Rechercher</button>
-      </form>
+   <form action="javascript: myFunction()" method="GET">
+   <input id="text-query" name="q">
+   
+      <button id="button-search">
+         Rechercher
+      </button>
+      
+   </form>
 </div>
 
 <div id="div-resultInfo">
