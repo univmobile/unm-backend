@@ -27,7 +27,7 @@ public class BeforeCreateCommentValidator implements Validator {
         if (!(auth instanceof AnonymousAuthenticationToken)){
             User user = (User) auth.getPrincipal();
             Comment comment = (Comment) o;
-            if (user.isStudent() && (comment.getCreatedBy() == null || comment.getCreatedBy().getId() != user.getId() )){
+            if (user.isStudent() && comment.getCreatedBy() != null && comment.getCreatedBy().getId() != user.getId() ){
             	errors.rejectValue("createdBy", null, null, "Cannot comment on behalf of another user");
             }
             if (!user.isSuperAdmin() && !comment.getPoi().getUniversity().getId().equals(user.getUniversity().getId())){
