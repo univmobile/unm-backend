@@ -3,6 +3,8 @@ package fr.univmobile.backend.validator;
 import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.User;
+
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.validation.Errors;
@@ -17,7 +19,7 @@ public class BeforeCreatePoiValidator implements Validator {
     @Override
     public void validate(Object o, Errors errors) {
         Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth.isAuthenticated()){
+        if (!(auth instanceof AnonymousAuthenticationToken)){
             User user = (User) auth.getPrincipal();
             Poi poi = (Poi) o;
             if (!user.isSuperAdmin() && !poi.getUniversity().getId().equals(user.getUniversity().getId())){
