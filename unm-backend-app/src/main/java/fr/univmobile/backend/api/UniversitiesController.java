@@ -65,6 +65,7 @@ public class UniversitiesController {
 			}
 		}
 
+		model.addAttribute("regionId", regionId);
 		model.addAttribute("universities", universities);
 
 		return "universities";
