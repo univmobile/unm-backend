@@ -29,7 +29,8 @@
 
     <!-- CSS to style the file input field as button and adjust the Bootstrap progress bars -->
     <link rel="stylesheet" href="${baseURL}/css/jquery.fileupload.css">
-
+    <link type="text/css" rel="stylesheet" href="${baseURL}/css/jquery-ui-1.11.1-smoothness.css">
+    
     <script>
         var baseUrl = '${baseURL}/';
         var userRole = '${delegationUser.role}';
@@ -37,6 +38,7 @@
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
     <!-- JSTree -->
     <script src="${baseURL}/js/jstree.min.js"></script>
       

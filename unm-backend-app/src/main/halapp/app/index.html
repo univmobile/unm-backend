@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width">
     
     <!--(if target dist)>
+    <link type="text/css" rel="stylesheet" href="${baseUrl}css/jquery-ui-1.11.1-smoothness.css">
     <link href="${baseUrl}css/backend.css" rel="stylesheet">
     <!(endif)-->
     
@@ -33,11 +34,13 @@
     <!--<!(endif)-->
     
     <!--(if target dist)>
+
     <script>
       var universityId = ${universityId};
       var isSuperAdmin = ${isSuperAdmin};
       var baseUrl = "${baseUrl}";
     </script>
+    
     <!(endif)-->    
   </head>
   <body ng-app="halSearchApp" ng-controller="CtrlApp">
@@ -131,5 +134,11 @@
         <script src="scripts/controllers/ctrl-feeds.js"></script>
         <script src="scripts/controllers/ctrl-menus.js"></script>
         <!-- endbuild -->
+
+        <!--(if target dist)>
+            <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
+            <jsp:include page="js-adminMenu.h.jsp"></jsp:include>
+            <script>// DO NOT REMOVE THIS</script>
+        <!(endif)-->
 </body>
 </html>

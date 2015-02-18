@@ -584,7 +584,7 @@ div.body.results #button-export {
 	position: absolute;
 	border: 1px solid #9bc9e1;
 	margin: 0 0 0 1px;
-	z-index: 1;
+	z-index: 2000;
 } 
 #ul-adminMenu ul li:hover {
 	margin: 0;
