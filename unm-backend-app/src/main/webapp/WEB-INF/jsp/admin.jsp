@@ -54,7 +54,8 @@ Administration d’UnivMobile
 	<li class="flaticon icon-address7">
 		<a id="link-users" href="${baseURL}/api/app#/manage/users">Utilisateurs</a>
 	<li class="flaticon icon-address7">
-		<a id="link-categories" href="${baseURL}/poicategories/">Catégories</a>
+		<!-- a id="link-categories" href="${baseURL}/api/app#/manage/categories">Catégories</a -->
+		<a id="link-categories" href="${baseURL}/poicategories">Catégories</a>	
 	<li class="clear">
 	<li class="flaticon icon-globe6">
 		<a id="link-universities" href="${baseURL}/api/universities/manage/">Universités</a>

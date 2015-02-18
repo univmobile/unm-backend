@@ -9,20 +9,15 @@
 		<a id="link-adminMenu-data" class="top" href="${baseURL}/data/">Données<span
 			class="top ui-menu-icon ui-icon ui-icon-carat-1-s"></span></a>
 		<ul id="ul-adminMenu-data">
-		<li><a id="link-adminMenu-search" href="${baseURL}/search/">Recherche avancée</a>
+		<li><a id="link-adminMenu-search" href="${baseURL}/api/app#/main">Recherche avancée</a>
 		<li><a id="link-adminMenu-pois" href="${baseURL}/pois/">Points of Interest (POIs)</a>
-		<li><a id="link-adminMenu-comments" href="${baseURL}/comments/">Commentaires</a>
+		<li><a id="link-adminMenu-comments" href="${baseURL}/api/app#/manage/comments">Commentaires</a>
 		<li><a id="link-adminMenu-regions" href="${baseURL}/regions/">Régions, universités</a>
-			<ul id="ul-adminMenu-data-regions">
-			<li><a id="link-adminMenu-regions-bretagne" href="${baseURL}/regions/bretagne/">Bretagne — universités</a>
-			<li><a id="link-adminMenu-regions-ile_de_france" href="${baseURL}/regions/ile_de_france/">Île de France — universités</a>
-			<li><a id="link-adminMenu-regions-unrpcl" href="${baseURL}/regions/unrpcl/">Limousin/Poitou-Charentes — universités</a>
-			</ul>
-		<li><a id="link-adminMenu-geocampus" href="${baseURL}/geocampus/">Géocampus</a>
-		<li><a id="link-adminMenu-news" href="${baseURL}/news/">Fils d’actualités des universités</a>
-		<li><a id="link-adminMenu-users" href="${baseURL}/users/">Utilisateurs</a>
-		
+		<li><a id="link-adminMenu-geocampus" href="${baseURL}/geocampus/admin/">Géocampus</a>
+		<li><a id="link-adminMenu-news" href="${baseURL}/api/app#/feeds">Fils d’actualités des universités</a>
+		<li><a id="link-adminMenu-users" href="${baseURL}/api/app#/manage/users">Utilisateurs</a>
 		<li><a id="link-adminMenu-categories" href="${baseURL}/poicategories">Catégories</a>
+		<!-- li><a id="link-adminMenu-categories" href="${baseURL}/api/app#/manage/categories">Catégories</a  -->
 		<li><a id="link-adminMenu-universities" href="${baseURL}/api/universities/manage/">Universités</a>
 		<li><a id="link-adminMenu-notifications" href="${baseURL}/api/app#/notifications">Notifications</a>
 		<li><a id="link-adminMenu-menues" href="${baseURL}/api/app#/menus">Menus</a>
@@ -32,11 +27,8 @@
 		<a id="link-adminMenu-system" class="top" href="${baseURL}/system/">Système<span
 			class="top ui-menu-icon ui-icon ui-icon-carat-1-s"></span></a>
 		<ul id="ul-adminMenu-system">
-		<li><a id="link-adminMenu-history" href="${baseURL}/history/">Historique des actions</a>
-		<li><a id="link-adminMenu-stats" href="${baseURL}/stats/">Statistiques</a>
-		<li><a id="link-adminMenu-monitoring" href="${baseURL}/monitoring/">Monitoring</a>
+		<li><a id="link-adminMenu-stats" href="${baseURL}/api/admin/stats/">Statistiques</a>
 		<li><a id="link-adminMenu-logs" href="${baseURL}/logs/">Logs techniques</a>
-		<li><a id="link-adminMenu-backups" href="${baseURL}/backups/">Sauvegardes (backups)</a>
 		</ul>
 	</c:if>
 	<li id="li-adminMenu-help" class="top">
