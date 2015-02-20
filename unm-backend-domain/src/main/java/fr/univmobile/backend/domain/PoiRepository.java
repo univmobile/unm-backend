@@ -74,4 +74,8 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 
 	@Query("Select p from Poi p where p.parent IS NULL and p.category.legacy like CONCAT(:category, '%') and (p.name like CONCAT('%',:name_description,'%') or p.description like CONCAT('%',:name_description,'%')) and p.university = :university order by p.name asc")
 	List<Poi> findByParentIsNullAndRootCategoryAndUniversityAndNameAndDescription(@Param("category") String category, @Param("university") University university, @Param("name_description") String name_description);
+	
+	@Query("Select p from Poi p where p.category.active = TRUE and p.category.legacy like CONCAT((select c.legacy from Category c WHERE c.id = :categoryId),'%') order by p.name asc")	
+	Page<Poi> findByCategoryRoot(@Param("categoryId") Long categoryId, Pageable pageable);
+
 }
