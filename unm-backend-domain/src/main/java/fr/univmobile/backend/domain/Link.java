@@ -1,7 +1,5 @@
 package fr.univmobile.backend.domain;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
-
 import javax.persistence.*;
 
 @Entity
@@ -14,9 +12,8 @@ public class Link {
     private String label;
     @Column(nullable = false)
     private String url;
-    @ManyToOne
+    @ManyToOne(optional = false)
     @JoinColumn(name = "university_id")
-    @JsonIgnore
     private University university;
 
     public Long getId() {
