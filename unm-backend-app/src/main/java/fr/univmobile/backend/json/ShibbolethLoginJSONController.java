@@ -39,6 +39,7 @@ public class ShibbolethLoginJSONController extends AbstractJSONController {
                 token.setUser(user);
                 token.setToken(newUUID(40));
                 tokenRepository.save(token);
+                json.put("id", user.getId().toString());
                 json.put("username", user.getUsername());//TODO Maybe we should use remoteUser here
                 json.put("Authentication-Token", token.getToken());
             }
