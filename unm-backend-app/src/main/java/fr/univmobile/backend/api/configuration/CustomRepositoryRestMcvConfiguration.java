@@ -4,7 +4,9 @@ import fr.univmobile.backend.converter.StringToPoiConverter;
 import fr.univmobile.backend.converter.StringToUniversityConverter;
 import fr.univmobile.backend.domain.*;
 import fr.univmobile.backend.validator.BeforeCreateCommentValidator;
+import fr.univmobile.backend.validator.BeforeCreateLinkValidator;
 import fr.univmobile.backend.validator.BeforeCreatePoiValidator;
+import fr.univmobile.backend.validator.BeforeCreateUniversityLibraryValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.support.ConfigurableConversionService;
@@ -50,5 +52,7 @@ public class CustomRepositoryRestMcvConfiguration extends RepositoryRestMvcConfi
     protected void configureValidatingRepositoryEventListener(ValidatingRepositoryEventListener v) {
         v.addValidator("beforeCreate", new BeforeCreateCommentValidator());
         v.addValidator("beforeCreate", new BeforeCreatePoiValidator());
+        v.addValidator("beforeCreate", new BeforeCreateLinkValidator());
+        v.addValidator("beforeCreate", new BeforeCreateUniversityLibraryValidator());
     }
 }
