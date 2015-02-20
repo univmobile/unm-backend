@@ -37,7 +37,7 @@
             </td>
             <td>{{item.ordinal}}</td>
             <td>{{item.url}}</td>
-            <td>{{item.content}}</td>
+            <td>{{item.content|limitTo:50}}</td>
             <td>
                 <button class="btn btn-info btn-sm" ng-click="handleEditClick( item )"><span class="glyphicon glyphicon-pencil"></span></button>
                 <button class="btn btn-danger btn-sm" ng-click="handleDeleteClick( item )"><span class="glyphicon glyphicon-remove"></span></button>

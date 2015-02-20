@@ -1,6 +1,6 @@
 'use strict';
 
-var toInject = ['ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'hateoas', 'ui.bootstrap', 'angular-loading-bar', 'angularSpinner', 'validator', 'validator.rules'];
+var toInject = ['ngCookies', 'ngResource', 'ngRoute', 'ngSanitize', 'hateoas', 'ui.bootstrap', 'angular-loading-bar', 'angularSpinner', 'validator', 'validator.rules', 'textAngular'];
 if (typeof isDev == 'undefined' || !isDev) {
     toInject.push('halApp.templates');
 }
