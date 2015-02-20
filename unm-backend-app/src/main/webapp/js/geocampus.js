@@ -119,6 +119,9 @@ var Poi = function(data) {
     this.iconRuedesfacs = ko.observable();
     this.closingHours = ko.observable();
     // End library supporting fields
+
+    this.restoMenuUrl = ko.observable();
+    this.restoId = ko.observable();
     
     this.marker = null;
     
@@ -154,6 +157,8 @@ ko.utils.extend(Poi.prototype, {
         this.hasEthernet(data ? data.hasEthernet : false);
         this.iconRuedesfacs(data ? data.iconRuedesfacs : false);
         this.closingHours(data ? data.closingHours : '');
+        this.restoMenuUrl(data ? data.restoMenuUrl : '');
+        this.restoId(data ? data.restoId : '');
         
         this.cache.latestData = data;
     },

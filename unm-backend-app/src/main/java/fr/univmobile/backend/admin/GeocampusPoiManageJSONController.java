@@ -147,6 +147,8 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		poi.setHasEthernet(coalesce(data.hasEthernet()).equals("true"));
 		poi.setIconRuedesfacs(coalesce(data.iconRuedesfacs()).equals("true"));
 		poi.setClosingHours(coalesce(data.closingHours()));
+		poi.setRestoMenuUrl(coalesce(data.restoMenuUrl()));
+		poi.setRestoId(coalesce(data.restoId()));
 		
 		if (data.lat() != null && data.lat().length() > 0 && data.lat() != null && data.lat().length() > 0 ) {
 			poi.setLat(Double.valueOf(data.lat()));
@@ -242,6 +244,12 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		
 		@HttpParameter
 		String closingHours();
+
+		@HttpParameter
+		String restoMenuUrl();
+		
+		@HttpParameter
+		String restoId();
 		
 	}
 	

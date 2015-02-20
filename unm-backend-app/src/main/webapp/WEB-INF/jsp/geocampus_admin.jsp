@@ -280,6 +280,18 @@
                   <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: url">
                 </div>
               </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Crous URL</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: restoMenuUrl">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Resto Id</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: restoId">
+                </div>
+              </div>
             </form>
 
             </div>
