@@ -48,5 +48,8 @@ public class Link {
         this.university = university;
     }
 
+	public Long getUniversityId() {
+		return this.university.getId();
+	}
 
 }

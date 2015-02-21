@@ -1,0 +1,46 @@
+<div>
+    <div class="page-title">
+        <div class="col-sm-9">
+            <h1>Mediathèques</h1>
+        </div>
+        <div class="col-sm-3">
+            <button class="btn btn-success pull-right" ng-click="handleEditClick( null )">Ajouter un Mediathèque</button>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+
+
+    <table class="table table-striped table-condensed table-links">
+        <tr>
+            <th>Université</th>
+            <th>Étiquette</th>
+            <th>Url</th>
+            <th class="alt-action">Action</th>
+        </tr>
+        <tr ng-if="!items">
+            <td colspan="5">Chargement ...</td>
+        </tr>
+        <tr ng-if="items && !items.length">
+            <td colspan="5"> - Aucun donn&eacute;es -</td>
+        </tr>
+        <tr ng-repeat="item in items">
+            <td>{{item.getUni().title}}</td>
+            <td>{{item.label}}</td>
+            <td>{{item.url}}</td>
+            <td>
+                <button class="btn btn-info btn-sm" ng-click="handleEditClick( item )"><span class="glyphicon glyphicon-pencil"></span></button>
+                <button class="btn btn-danger btn-sm" ng-click="handleDeleteClick( item )"><span class="glyphicon glyphicon-remove"></span></button>
+            </td>
+        </tr>
+    </table>
+    
+    <div class="main-search-pager" ng-show="pager.numPages > 1">
+        <pagination total-items="pager.totalCount" items-per-page="pager.pageSize"
+                    max-size="10" boundary-links="true" class="pagination-sm" ng-model="pager.page"
+                    ng-change="loadItems()" num-pages="pager.numPages"
+                    previous-text="pr&eacute;c&eacute;dent" next-text="suivant"
+                    first-text="première" last-text="dernier"></pagination>
+        <pre>Page: {{pager.page}} / {{pager.numPages}}</pre>
+    </div>
+
+</div>

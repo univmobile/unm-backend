@@ -44,6 +44,8 @@ Administration d’UnivMobile
 		<a id="link-pois" href="${baseURL}/pois/">Points of Interest (POIs)</a>
 	<li class="flaticon icon-chat2">
 		<a id="link-comments" href="${baseURL}/api/app#/manage/comments">Commentaires</a>
+	<li class="flaticon icon-address7">
+		<a id="link-categories" href="${baseURL}/poicategories">Catégories</a>	
 	<li class="flaticon icon-globe5">
 		<a id="link-regions" href="${baseURL}/regions/">Régions</a>
 	<li class="clear">
@@ -53,18 +55,21 @@ Administration d’UnivMobile
 		<a id="link-news" href="${baseURL}/api/app#/feeds">Fils d’actualités des universités</a>
 	<li class="flaticon icon-address7">
 		<a id="link-users" href="${baseURL}/api/app#/manage/users">Utilisateurs</a>
-	<li class="flaticon icon-address7">
-		<!-- a id="link-categories" href="${baseURL}/api/app#/manage/categories">Catégories</a -->
-		<a id="link-categories" href="${baseURL}/poicategories">Catégories</a>	
-	<li class="clear">
-	<li class="flaticon icon-globe6">
-		<a id="link-universities" href="${baseURL}/api/universities/manage/">Universités</a>
-	</li>
 	<li class="flaticon icon-calendar7">
 		<a id="link-universities" href="${baseURL}/api/app#/notifications">Notifications</a>
 	</li>
 	<li class="flaticon icon-website1">
 		<a id="link-universities" href="${baseURL}/api/app#/menus">Menus</a>
+	</li>
+	<li class="clear">
+	<li class="flaticon icon-globe6">
+		<a id="link-universities" href="${baseURL}/api/universities/manage/">Universités</a>
+	</li>
+	<li class="flaticon icon-film63">
+		<a id="link-universities" href="${baseURL}/api/app#/links">Mediathèques</a>
+	</li>
+	<li class="flaticon icon-center13">
+		<a id="link-universities" href="${baseURL}/api/app#/university-libraries">Bibliothèques</a>
 	</li>
 </c:if>
 <c:if test="${delegationUser.role == 'librarian'}">

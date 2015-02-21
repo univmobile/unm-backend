@@ -3,7 +3,10 @@ package fr.univmobile.backend.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "university_library")
+@Table(
+		name = "university_library",
+		uniqueConstraints = @UniqueConstraint( columnNames = { "poi_id", "university_id" } )
+)
 public class UniversityLibrary {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -38,4 +41,14 @@ public class UniversityLibrary {
     public void setUniversity(University university) {
         this.university = university;
     }
+
+	public Long getPoiId() {
+		return this.poi.getId();
+	}
+
+	public Long getUniversityId() {
+		return this.university.getId();
+	}
+
+
 }

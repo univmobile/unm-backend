@@ -78,4 +78,7 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 	@Query("Select p from Poi p where p.category.active = TRUE and p.category.legacy like CONCAT((select c.legacy from Category c WHERE c.id = :categoryId),'%') order by p.name asc")	
 	Page<Poi> findByCategoryRoot(@Param("categoryId") Long categoryId, Pageable pageable);
 
+	@Query("Select p from Poi p where p.category.active = TRUE and p.category.legacy like '/4/%' order by p.name asc") // Unhardcode legacy root	
+	List<Poi> findAllLibraries();
+
 }

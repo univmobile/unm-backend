@@ -37,11 +37,20 @@ halApp.config( [ '$routeProvider', 'HateoasInterceptorProvider', 'HateoasInterfa
         .when( '/feeds/:itemId/edit', {
             templateUrl: 'views/feed-edit.html', controller: 'CtrlFeedEdit'
         } )
+        .when( '/links', {
+            templateUrl: 'views/links.html', controller: 'CtrlLinks'
+        } )
+        .when( '/links/:itemId/edit', {
+            templateUrl: 'views/link-edit.html', controller: 'CtrlLinkEdit'
+        } )
         .when( '/menus', {
             templateUrl: 'views/menus.html', controller: 'CtrlMenus'
         } )
         .when( '/menus/:itemId/edit', {
             templateUrl: 'views/menu-edit.html', controller: 'CtrlMenuEdit'
+        } )
+        .when( '/university-libraries', {
+            templateUrl: 'views/university-libraries.html', controller: 'CtrlUniversityLibraries'
         } )
         .otherwise( {
             redirectTo: '/main'
