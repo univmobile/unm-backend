@@ -45,7 +45,7 @@ public class User extends AuditableEntity {
 	@JsonIgnore
 	private String twitterScreenName;
 	@ManyToOne
-	@JoinColumn(name = "university_id")
+	@JoinColumn(name = "university_id", nullable = false)
 	@JsonIgnore
 	private University university;
 	@ManyToOne

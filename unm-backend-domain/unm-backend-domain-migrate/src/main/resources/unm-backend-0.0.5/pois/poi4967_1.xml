@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4967_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4967_1.xml"/>
+<title>Résidence Cachan Bât J</title>
+<updated>2014-08-15T01:47:22.352+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4967"
+	coordinates="48.790799095806,2.328840047121"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T15:42:10.000+02:00"
+	updatedAt="2011-07-26T16:21:12.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4860"
+	name="Résidence Cachan Bât J">
+	<poiType id="31" label="Résidence universitaire "/>
+	<address>
+		<itinerary>Bus : 184 et 187 Division Leclerc</itinerary>
+	</address>
+</content>
+</entry>

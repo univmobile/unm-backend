@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5171_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5171_1.xml"/>
+<title>Horizon Logistique</title>
+<updated>2014-08-15T01:47:23.864+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5171"
+	coordinates="48.62612809233,2.4309745430946"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:02:21.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2648"
+	name="Horizon Logistique">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’objectif de notre projet au sein de l’association Horizon Logistique est de récupérer un maximum de fonds financiers afin de subvenir aux besoins des autres projets de la promotion de deuxième année à l’iUT GLT</description>
+	<address>
+		<url>www.viadeo.com/fr/ profile/horizon.logistique</url>
+		<phone>01 69 47 72 34</phone>
+		<email>horizon.logistique@yahoo.fr</email>
+	</address>
+</content>
+</entry>

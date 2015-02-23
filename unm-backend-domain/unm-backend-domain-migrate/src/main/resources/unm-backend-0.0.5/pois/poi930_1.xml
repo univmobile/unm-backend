@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi930_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi930_1.xml"/>
+<title>Institut d' histoire, de philo, sciences et techniques</title>
+<updated>2014-08-15T01:46:43.477+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="930"
+	coordinates="48.852772339041,2.3352237"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T15:58:03.000+01:00"
+	updatedAt="2011-06-20T15:43:02.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1118"
+	name="Institut d' histoire, de philo, sciences et techniques">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<openingHours>Lundi au vendredi 
+9h00-12h00
+14h00-16h00</openingHours>
+		<itinerary>Métro 4 et 10 
+Station  Odéon ou Saint-Germain-des-Près, Mabillon
+
+Bus 63, 70, 86, 87 et 96</itinerary>
+		<url>http://www-ihpst.univ-paris1.fr/</url>
+		<phone>01 43 54 60 36</phone>
+		<email>ihpst@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

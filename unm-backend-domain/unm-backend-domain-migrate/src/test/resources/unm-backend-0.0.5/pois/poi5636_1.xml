@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5636_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5636_1.xml"/>
+<title>Gérontologie, DPEA, neuropsychologie, psy. cognitives, sc.co</title>
+<updated>2014-08-15T01:47:28.264+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5636"
+	coordinates="48.834311949505,2.2476425394416"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:59:37.000+02:00"
+	updatedAt="2011-06-14T17:05:08.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5550"
+	name="Gérontologie, DPEA, neuropsychologie, psy. cognitives, sc.co">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Fatiha Zerarka-Barucci</description>
+	<address>
+		<floor>Bureau 2052 2éme étage </floor>
+		<phone>01 55 20 59 11</phone>
+	</address>
+</content>
+</entry>

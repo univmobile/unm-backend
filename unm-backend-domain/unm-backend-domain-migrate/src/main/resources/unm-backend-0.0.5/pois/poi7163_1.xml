@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7163_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7163_1.xml"/>
+<title>Service relations internationales</title>
+<updated>2014-08-15T01:47:43.943+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7163"
+	coordinates="48.626902589324,2.5635266304016"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-14T13:53:17.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="4505"
+	name="Service relations internationales">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Bâtiment FU2 - 1er étage bureau 104</floor>
+		<phone>01 64 13 15 50</phone>
+	</address>
+</content>
+</entry>

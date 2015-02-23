@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1583_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1583_1.xml"/>
+<title>Cafétéria Institut Catholique </title>
+<updated>2014-08-15T01:46:49.051+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1583"
+	coordinates="48.847980392856,2.3296373337"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T17:31:37.000+02:00"
+	updatedAt="2011-05-13T14:05:46.000+02:00"
+	deletedAt="2011-04-29T14:33:32.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	name="Cafétéria Institut Catholique ">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du Lundi au Vendredi : 8h30-18h</openingHours>
+		<itinerary>Métro 4 : Saint-Sulpice </itinerary>
+		<fullAddress>21 rue d'Assas
+75006 Paris </fullAddress>
+	</address>
+</content>
+</entry>

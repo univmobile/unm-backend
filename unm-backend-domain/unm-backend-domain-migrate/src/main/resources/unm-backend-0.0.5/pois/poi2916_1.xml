@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2916_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2916_1.xml"/>
+<title>Centre Thénard</title>
+<updated>2014-08-15T01:47:01.123+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2916"
+	coordinates="48.849840738005,2.3457845672"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T16:50:35.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2915"
+	name="Centre Thénard">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro
+- Ligne 10 : station Cluny La Sorbonne
+Bus
+- Lignes 24, 47, 63, 86 ou 87 : arrêt Dante </itinerary>
+		<fullAddress>10, rue Thénard
+75005 Paris
+4e étage</fullAddress>
+	</address>
+	<child uid="3324" active="true"/>
+	<child uid="3436" active="true"/>
+</content>
+</entry>

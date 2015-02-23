@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7459_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7459_1.xml"/>
+<title>Doctorat</title>
+<updated>2014-08-15T01:47:46.589+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7459"
+	coordinates="48.848633075491,2.3429806530476"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-07T16:24:23.000+02:00"
+	updatedAt="2013-06-07T17:03:41.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7349"
+	name="Doctorat">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>L'École nationale des chartes délivre un doctorat en histoire, dans le cadre de deux écoles doctorales conjointes, avec les universités Paris I-Panthéon-Sorbonne et Paris-Sorbonne Paris-IV.</description>
+	<address>
+		<floor>Sorbonne, 19, rue de la Sorbonne et 1 rue Victor Cousin, 75005 Paris</floor>
+		<url>http://www.enc.sorbonne.fr/doctorat</url>
+		<phone>01.55.42.75.18</phone>
+		<email>etudes@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

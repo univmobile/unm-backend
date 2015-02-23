@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3954_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3954_1.xml"/>
+<title>Laboratoire d’analyse, géométrie et application (LAGA)</title>
+<updated>2014-08-15T01:47:12.038+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3954"
+	coordinates="48.94423140432,2.362721376121"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:17:06.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Laboratoire d’analyse, géométrie et application (LAGA)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Unité mixte de recherche (UMR) 7539 - Laboratoire d’analyse, géométrie et application (LAGA) appartenant à l'École doctorale (ED) 224 : Cognition, langage, interaction.
+Cette UMR relève de deux établissements, Paris 8 et Paris XIII qui en est le site principal.
+Directrice : Laurence Halpern, responsable Paris 8 : Claude Carlet
+Contact au département de Mathématiques.</description>
+	<address>
+		<floor>1er étage Bâtiment A, bureau 149</floor>
+		<url>http://www.math.univ-paris13.fr/</url>
+		<phone>01 49 40 64 20</phone>
+		<email> claude.carlet@inria.fr</email>
+	</address>
+</content>
+</entry>

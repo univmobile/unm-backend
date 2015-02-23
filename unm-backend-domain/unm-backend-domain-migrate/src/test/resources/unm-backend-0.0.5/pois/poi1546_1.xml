@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1546_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1546_1.xml"/>
+<title>L'académie de musique des universités et grandes écoles</title>
+<updated>2014-08-15T01:46:48.770+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1546"
+	coordinates="48.827188823269,2.346809506"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T17:00:18.000+02:00"
+	updatedAt="2011-05-13T14:05:46.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="L'académie de musique des universités et grandes écoles">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Ecoles des Télécom</floor>
+		<openingHours>Orchestre: 
+Lundi 20h-23h
+Chœur symphonique:
+mercredi 19h45-23h
+Chœur de chambre:
+mardi 20h-22h15
+mercredi 19h45-23h
+Ensemble vocal:
+jeudi 19h45-23h</openingHours>
+		<itinerary>Métro 7 Tolbiac
+Métro 6 Corvisart</itinerary>
+		<url>http://www.academie-de-musique.com</url>
+		<phone>0145208256</phone>
+		<email>contact@académie-de-musique.com</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6507_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6507_1.xml"/>
+<title>Médecine préventive</title>
+<updated>2014-08-15T01:47:37.874+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6507"
+	coordinates="48.702552816101,2.1806573867798"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-30T11:00:21.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="6505"
+	name="Médecine préventive">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Service universitaire de médecine préventive et de promotion de la santé (SUMPPS).</description>
+	<address>
+		<floor>Bâtiment 452</floor>
+		<url>http://www.u-psud.fr/fr/vie_etudiante/medecine_preventive.html</url>
+		<phone>01 69 15 65 39</phone>
+		<fax>01 69 15 45 51</fax>
+		<email>medecine.preventive@u-psud.fr</email>
+	</address>
+</content>
+</entry>

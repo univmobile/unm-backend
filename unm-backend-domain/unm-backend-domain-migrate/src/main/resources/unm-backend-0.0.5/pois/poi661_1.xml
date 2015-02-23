@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi661_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi661_1.xml"/>
+<title>Cafétéria Grands Moulins</title>
+<updated>2014-08-15T01:46:40.995+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="661"
+	coordinates="48.83018953775,2.381103"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T13:58:42.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-04-29T16:45:06.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	name="Cafétéria Grands Moulins">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Lundi au vendredi
+08h00-16h40
+</openingHours>
+		<itinerary>RER C et Métro
+Station F. Mitterrand
+Bus 62
+Arrêt F. Mitterrand
+
+</itinerary>
+	</address>
+</content>
+</entry>

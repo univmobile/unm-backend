@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7324_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7324_1.xml"/>
+<title>Amphithéâtre Rouelle</title>
+<updated>2014-08-15T01:47:45.464+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7324"
+	coordinates="48.844835912535,2.3578870296478"
+	active="true"
+	markerType="point"
+	createdAt="2013-03-21T13:56:41.000+01:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:21.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Amphithéâtre Rouelle">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Amphithéâtre Rouelle 
+Accès par l'entrée principale du Bâtiment la Baleine (porte grise), puis au fond (grande double porte grise)</description>
+	<address>
+		<openingHours>Accés public : 8h30-18h
+Accès restreint en dehors de ces horaires</openingHours>
+	</address>
+</content>
+</entry>

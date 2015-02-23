@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3623_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3623_1.xml"/>
+<title>AAE IFITEP</title>
+<updated>2014-08-15T01:47:08.717+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3623"
+	coordinates="48.845074532588,2.3569529503584"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:03:56.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2790"
+	name="AAE IFITEP">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association des anciens élèves de l’institut de formation
+d’ingénieur en techniques électroniques de Paris</description>
+	<address>
+		<floor>2è étage</floor>
+		<url>www.ifitep.com/aae</url>
+		<phone>01 44 27 75 94</phone>
+		<email>aae-info@ifitep.com</email>
+	</address>
+</content>
+</entry>

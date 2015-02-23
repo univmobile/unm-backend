@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6113_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6113_1.xml"/>
+<title>Ecole Doctorale Cognition, Comportements, Conduites Humaines</title>
+<updated>2014-08-15T01:47:33.886+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6113"
+	coordinates="48.834397739668,2.247556373477"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T17:10:50.000+02:00"
+	updatedAt="2011-06-14T17:12:44.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5550"
+	name="Ecole Doctorale Cognition, Comportements, Conduites Humaines">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Secrétariat : Véronique LECONTE
+</description>
+	<address>
+		<floor>Bureau 3059 - 3e étage</floor>
+		<phone>01 55 20 59 82</phone>
+		<fax>01 55 20 54 41</fax>
+		<email>http://ed261.psycho.univ-paris5.fr/</email>
+	</address>
+</content>
+</entry>

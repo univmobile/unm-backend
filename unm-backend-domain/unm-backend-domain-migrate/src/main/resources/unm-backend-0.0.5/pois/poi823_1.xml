@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi823_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi823_1.xml"/>
+<title>Cafétéria Saint-Charles</title>
+<updated>2014-08-15T01:46:42.208+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="823"
+	coordinates="48.841859994694,2.2806850075"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T15:51:01.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1025"
+	name="Cafétéria Saint-Charles">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Lundi au vendredi
+08h00-18h00
+</openingHours>
+		<itinerary>RER C
+Station Javel
+Métro 8, 10 et 12
+Station  Boucicaut ou Lourmel, Javeil-André Citröen, Convention
+
+Bus 42 et 62
+Arrêt Convention Boucicaut
+</itinerary>
+	</address>
+</content>
+</entry>

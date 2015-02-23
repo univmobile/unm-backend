@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7232_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7232_1.xml"/>
+<title>Bureau des études et de la vie étudiante (BEVE)</title>
+<updated>2014-08-15T01:47:44.598+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7232"
+	coordinates="48.78891790003,2.3273903131485"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-07T14:11:37.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Bureau des études et de la vie étudiante (BEVE)">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>La vocation du bureau est d'accueillir et d'informer les étudiants sur les cursus liés aux formations de l'École : il est un portail d'entrée et d'orientation vers les différents interlocuteurs de l'École. À ce titre, les élèves et étudiants peuvent y trouver une aide aux formalités d'inscription aux formations de l'ENS Cachan, ainsi que des conseils sur leur cursus.</description>
+	<address>
+		<floor>1er étage, couloir de gauche</floor>
+		<openingHours>- tous les matins, du lundi au vendredi de 9h à 12h (sauf le jeudi matin : bureau fermé) ;
+- tous les après-midi de 14h à 16h (ouverture les lundi, mardi et jeudi, jusqu'à 17h).</openingHours>
+		<url>http://www.ens-cachan.fr/-19518.kjsp</url>
+		<phone>01 47 40 20 00</phone>
+		<email>beve@ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

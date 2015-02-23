@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi670_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi670_1.xml"/>
+<title>Bibliothèque Centre du Four</title>
+<updated>2014-08-15T01:46:41.031+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="670"
+	coordinates="48.852935590475,2.335407435"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T15:19:26.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-02-23T14:43:39.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Bibliothèque Centre du Four">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Étudiants de Paris 1 à partir de L3 Sciences politiques</description>
+	<address
+		countryCode="FR">
+		<floor>3e étage</floor>
+		<openingHours>Lundi au mercredi
+10h00 - 12h45
+14h00 - 18h00
+Jeudi 
+14h00 – 18h00
+Vendredi 
+10h - 18h</openingHours>
+		<itinerary>Métro 4 et 10
+Station Odéon ou St Germain des prés, Mabillon
+
+Bus 63, 70, 86, 87, 96</itinerary>
+		<phone>01 43 54 07 06</phone>
+		<email>christine.kosmopoulos@parisgeo.cnrs.fr</email>
+		<fullAddress>13 rue du Four
+75006 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

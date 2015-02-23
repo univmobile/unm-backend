@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4803_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4803_1.xml"/>
+<title>Communication marketing intégré M2</title>
+<updated>2014-08-15T01:47:20.716+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4803"
+	coordinates="48.869463468966,2.2726665437222"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:42:19.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Communication marketing intégré M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau C 501bis</floor>
+		<phone>01 44 05 45 88</phone>
+		<email>anne.morgat@dauphine.fr</email>
+	</address>
+</content>
+</entry>

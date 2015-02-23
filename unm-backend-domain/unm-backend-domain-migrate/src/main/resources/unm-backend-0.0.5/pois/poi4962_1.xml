@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4962_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4962_1.xml"/>
+<title>Emplois et stages</title>
+<updated>2014-08-15T01:47:22.283+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4962"
+	coordinates="48.869458058436,2.2731922566891"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T15:28:17.000+02:00"
+	updatedAt="2011-05-27T15:29:58.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Emplois et stages">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Aile P dans la cour d'honneur</floor>
+		<openingHours>Lundi : 9h00 / 13h00 
+Du mardi au jeudi : 10h00 / 17h00 
+Vendredi : 9h00 / 12h00</openingHours>
+		<phone>01 44 05 41 47</phone>
+		<email>geodes@dauphine.fr</email>
+	</address>
+</content>
+</entry>

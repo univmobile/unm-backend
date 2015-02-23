@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6409_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6409_1.xml"/>
+<title>MAE Spé : Gestion des dynamiques org° M2 FA</title>
+<updated>2014-08-15T01:47:36.957+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6409"
+	coordinates="48.838383826157,2.3485730588436"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T17:01:28.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1024"
+	name="MAE Spé : Gestion des dynamiques org° M2 FA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>MASTER Administration des Entreprises - Spécialité : Gestion des Dynamiques Organisationnelles (formation apprentissage)</description>
+	<address>
+		<url>http://iae.univ-paris1.fr</url>
+		<phone>01 53 55 27 62</phone>
+		<email>zonyi.iae@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

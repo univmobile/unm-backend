@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi424_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi424_1.xml"/>
+<title>Bibliothèque Saint Charles</title>
+<updated>2014-08-15T01:46:39.941+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="424"
+	coordinates="48.841859759274,2.2805482"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-05T10:34:42.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="raphael"
+	updatedBy="Pascale.randriantiana "
+	parentUid="1025"
+	name="Bibliothèque Saint Charles">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>2e étage, salle 260</floor>
+		<openingHours>Lundi au jeudi :
+09h30-18h00
+Fermeture à 17h le vendredi. </openingHours>
+		<itinerary>RER C
+Station Javel
+Métro 8 et10
+Arrêt Boucicaut , Lourmel, Charles Michels ou Javel André Citroën
+
+Bus 42, 62 et 88
+Arret rond-point St Charles, Convention-st charles, Cauchy
+</itinerary>
+		<url>http://www.univ-paris1.fr/ufr/ufr04/la-bibliotheque/informations-pratiques/</url>
+		<phone>01 44 07 84 71</phone>
+		<email>patricia.bourgoint@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

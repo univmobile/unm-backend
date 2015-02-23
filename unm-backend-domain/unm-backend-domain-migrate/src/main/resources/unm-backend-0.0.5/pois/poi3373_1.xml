@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3373_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3373_1.xml"/>
+<title>Labo photo Pharma Paris V</title>
+<updated>2014-08-15T01:47:05.898+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3373"
+	coordinates="48.843159626854,2.335634082555"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:39:45.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2450"
+	name="Labo photo Pharma Paris V">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Le labo est situé au sous-sol entre les amphis Bussy et Bourquelot, du côté des panneaux d’affichage.</floor>
+		<phone>01 53 73 95 34</phone>
+		<email>http://labophotopp5.free.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6895_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6895_1.xml"/>
+<title>Boutique PSN</title>
+<updated>2014-08-15T01:47:41.077+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6895"
+	coordinates="48.849760092776,2.343333363533"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-13T10:59:47.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Martine HATTON"
+	updatedBy="Martine HATTON"
+	parentUid="3003"
+	name="Boutique PSN">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro ligne 4 : Saint-Michel
+RER B : Saint-Michel Notre-Dame</itinerary>
+		<fullAddress>8 rue de la Sorbonne 
+75005 Paris</fullAddress>
+	</address>
+	<child uid="6910" active="true"/>
+</content>
+</entry>

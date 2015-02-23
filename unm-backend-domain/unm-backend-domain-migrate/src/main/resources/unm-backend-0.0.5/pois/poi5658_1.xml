@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5658_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5658_1.xml"/>
+<title>Bibliothèque Jacques Hadamard (Mathématiques)</title>
+<updated>2014-08-15T01:47:28.555+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5658"
+	coordinates="48.703482325183,2.1768526732922"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T12:28:52.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4580"
+	name="Bibliothèque Jacques Hadamard (Mathématiques)">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bâtiment 425</floor>
+		<openingHours>Du lundi au vendredi
+8h30-19h00
+Samedi
+9h00-17h00</openingHours>
+		<url>http://hip.math.u-psud.fr</url>
+		<phone>01 69 15 70 51</phone>
+		<fax>01 69 15 62 21</fax>
+		<email>bibmat.orsay@math.u-psud.fr</email>
+	</address>
+</content>
+</entry>

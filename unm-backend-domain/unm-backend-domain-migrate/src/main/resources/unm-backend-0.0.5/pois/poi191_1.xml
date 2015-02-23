@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi191_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi191_1.xml"/>
+<title>Assistantes sociales</title>
+<updated>2014-08-15T01:46:38.621+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="191"
+	coordinates="48.8275268522,2.36484128"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-05T10:04:50.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-09-05T10:15:57.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Assistantes sociales">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Assistantes sociales
+
+Aile C, 9e étage
+Bureau C09-06 à 08</description>
+	<address
+		zipCode="75634"
+		city="Paris cedex 13"
+		countryCode="FR">
+		<floor>Aile C, 9e étage</floor>
+		<fullAddress>Bureau C09-06 à 08
+90, rue de Tolbiac 75634 Paris cedex 13</fullAddress>
+	</address>
+</content>
+</entry>

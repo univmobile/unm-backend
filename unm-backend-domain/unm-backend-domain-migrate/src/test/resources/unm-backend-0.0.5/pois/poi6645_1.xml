@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6645_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6645_1.xml"/>
+<title>Résidence Universitaire Le Bosquet</title>
+<updated>2014-08-15T01:47:38.957+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6645"
+	coordinates="48.68018485853,2.1652081981301"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T11:31:04.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6643"
+	name="Résidence Universitaire Le Bosquet">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Cette Résidence Universitaire est située dans le centre-ville des Ulis, à 20 mn de l’Université. 
+Elle dispose de 159 chambres. 
+Salle télé, laboratoire photo, foyer, ville câblée, veilleur.
+Tarif : 146€ charges comprises.</description>
+	<address>
+		<openingHours>Du lundi au vendredi, de 8h30 à 12h00 et de 13h30 à 16h30.
+
+Attention :
+Du 1er juillet au 8 juillet, du lundi au vendredi, de 8h30 à 12h.
+Fermé du 9 juillet au 31 août inclus.</openingHours>
+		<phone>01 69 07 62 40</phone>
+	</address>
+	<attachment id="140" title="Le Bosquet.jpg" type="image" url="/uploads/poi/edb1d6fd9bfa46e226d9268b00a6706263ad5080.jpg"/>
+</content>
+</entry>

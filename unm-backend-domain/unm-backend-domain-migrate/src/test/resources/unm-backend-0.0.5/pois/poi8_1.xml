@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi8_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi8_1.xml"/>
+<title>Bornes wifi Vauban</title>
+<updated>2014-08-15T01:46:38.228+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="8"
+	coordinates="48.780896241706,2.045323848"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-22T15:25:36.000+02:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	deletedAt="2010-06-23T10:56:17.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Bornes wifi Vauban">
+	<poiType id="7" label="Zones WiFi" categoryId="5" categoryLabel="Bornes CMS &amp; Zones WiFi"/>
+	<description>Des bornes wifi se trouvent dans le hall du RDC et au cinquième étage.</description>
+	<address
+		zipCode="78280"
+		city="GUYANCOURT"
+		countryCode="FR">
+		<fullAddress>47 boulevard de Vauban 78280 GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

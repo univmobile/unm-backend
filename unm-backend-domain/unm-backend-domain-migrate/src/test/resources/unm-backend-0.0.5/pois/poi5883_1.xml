@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5883_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5883_1.xml"/>
+<title>Restaurant U Les Vergers</title>
+<updated>2014-08-15T01:47:31.233+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5883"
+	coordinates="48.954835525667,2.3416388779879"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T09:38:09.000+02:00"
+	updatedAt="2011-07-26T16:07:46.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4705"
+	name="Restaurant U Les Vergers">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>4 pôles :
+
+pizzeria, grillade, cuisine du monde, sandwich grec</description>
+	<address>
+		<floor>1er étage</floor>
+		<openingHours>11h30 - 14h00</openingHours>
+		<phone>01-48-22-09-52</phone>
+		<email>restaurant.villetaneuse@crous-creteil.fr</email>
+	</address>
+	<attachment id="119" title="P3230021.jpg" type="image" url="/uploads/poi/f46b92dc5a55b262a265efd3cc6f792f2a6dd9fc.jpg"/>
+</content>
+</entry>

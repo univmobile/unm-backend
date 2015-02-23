@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5186_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5186_1.xml"/>
+<title>Institut de préparation à l'administration générale (IPAG) </title>
+<updated>2014-08-15T01:47:24.043+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5186"
+	coordinates="48.787484734603,2.4440556764603"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:34:46.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4533"
+	name="Institut de préparation à l'administration générale (IPAG) ">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>Niveau dalle</floor>
+		<url>http://ipag.u-pec.fr </url>
+	</address>
+</content>
+</entry>

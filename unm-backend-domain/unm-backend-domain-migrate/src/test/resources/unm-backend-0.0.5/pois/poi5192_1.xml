@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5192_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5192_1.xml"/>
+<title>Génie éléctrique</title>
+<updated>2014-08-15T01:47:24.129+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5192"
+	coordinates="48.613934786675,2.429064810276"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:44:00.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="476"
+	name="Génie éléctrique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<openingHours>Du lundi au vendredi :
+9h00 / 12h00 - 13h30 / 17h00</openingHours>
+		<phone>01 69 47 75 27</phone>
+		<email>ufrst@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

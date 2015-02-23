@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3737_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3737_1.xml"/>
+<title>Atelier théâtre</title>
+<updated>2014-08-15T01:47:09.931+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3737"
+	coordinates="48.944904139875,2.3626451008022"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T15:57:15.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2609"
+	name="Atelier théâtre">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<description>L’atelier théâtre est ouvert aux étudiants de toutes disciplines pour leur permettre d’enrichir leur culture théâtrale, de découvrir la pratique du jeu et d’approfondir les formes de langage du théâtre : le geste, le rythme, la parole, le rapport à l’espace, l’expression du corps...
+La dramaturgie est abordée par la lecture de textes classiques et contemporains.
+Les séances sont assurées par un comédien dramaturge.</description>
+	<address>
+		<floor>1er étage Bâtiment G, bureau 105</floor>
+		<url>http://www.univ-paris8.fr/Atelier-theatre,135</url>
+		<phone>01 49 40 65 28</phone>
+		<email>aca@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

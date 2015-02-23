@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5607_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5607_1.xml"/>
+<title>Trans-Ponts</title>
+<updated>2014-08-15T01:47:27.965+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5607"
+	coordinates="48.789046134851,2.4500142037868"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:26:31.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4600"
+	name="Trans-Ponts">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

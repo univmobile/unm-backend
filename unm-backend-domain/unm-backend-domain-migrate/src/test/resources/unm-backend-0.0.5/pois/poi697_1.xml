@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi697_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi697_1.xml"/>
+<title>Antenne du Centre Saint Charles</title>
+<updated>2014-08-15T01:46:41.165+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="697"
+	coordinates="48.841920719835,2.2805435"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T14:54:44.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	parentUid="1025"
+	name="Antenne du Centre Saint Charles">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>Rez-de-chaussée</floor>
+		<openingHours>Lundi au vendredi
+09h30-12h00
+14h00-16h00
+</openingHours>
+		<itinerary>RER C
+Station Javel
+
+Métro 8 et 10
+Station Lourmel ou Bouccicaut, Javel-André Citröen
+
+</itinerary>
+		<phone>01 44 07 84 40</phone>
+		<email>Catherine.rouchouse@univ-paris1.fr</email>
+		<fullAddress>47 rue des Bergers
+75015 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

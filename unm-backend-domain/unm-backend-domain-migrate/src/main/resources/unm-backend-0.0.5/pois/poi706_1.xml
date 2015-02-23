@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi706_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi706_1.xml"/>
+<title>Association INTERNEO</title>
+<updated>2014-08-15T01:46:41.238+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="706"
+	coordinates="48.84237521485,2.336169183"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T15:17:01.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="960"
+	name="Association INTERNEO">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone>02 31 38 39 16</phone>
+		<email>cyrille.billard@culture.gouv.fr</email>
+	</address>
+	<attachment id="90" title="wa_zoom.jpg" type="image" url="/uploads/poi/bad2530f2190902f742f70c18854efacf9857523.jpg"/>
+</content>
+</entry>

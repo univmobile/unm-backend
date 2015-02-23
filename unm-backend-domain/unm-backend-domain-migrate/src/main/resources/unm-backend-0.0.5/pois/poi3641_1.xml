@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3641_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3641_1.xml"/>
+<title>AE POLYTECH'</title>
+<updated>2014-08-15T01:47:08.928+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3641"
+	coordinates="48.845143572148,2.3571559600532"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:23:58.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2790"
+	name="AE POLYTECH'">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association des élèves de Polytech’ (anciennement AEIST)</description>
+	<address>
+		<floor>3è étage</floor>
+		<url>bde@polytech.upmc.fr</url>
+		<phone>06 50 02 79 82</phone>
+		<email>bde@polytech.upmc.fr</email>
+	</address>
+</content>
+</entry>

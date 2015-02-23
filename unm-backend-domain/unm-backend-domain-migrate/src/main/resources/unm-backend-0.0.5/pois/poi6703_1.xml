@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6703_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6703_1.xml"/>
+<title>Cafétéria du Panthéon </title>
+<updated>2014-08-15T01:47:39.443+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6703"
+	coordinates="48.846956004957,2.3448742926121"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-16T15:55:17.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3826"
+	name="Cafétéria du Panthéon ">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi de 8h00 à 18h00</openingHours>
+		<url>http://www.crous-paris.fr</url>
+	</address>
+	<attachment id="172" title="pantheon_2.jpg" type="image" url="/uploads/poi/8275c0a0c68c0d9ff8be4694851d4956ca1e6a47.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7239_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7239_1.xml"/>
+<title>Bureau des étudiants (BDE)</title>
+<updated>2014-08-15T01:47:44.680+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7239"
+	coordinates="48.789388139315,2.3303263261914"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-12T14:23:04.000+01:00"
+	updatedAt="2013-01-14T09:38:20.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7222"
+	name="Bureau des étudiants (BDE)">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le BDE a pour principale activité la gestion de la Maison de l'étudiant, couramment appelée Kfet. Il y organise des soirées dans la semaine, vend des sandwichs le midi, et des petits-déjeuners le week-end. Le BDE a également en charge la gestion de la salle Kokarde, qui est la boîte de nuit des étudiants.
+En parallèle, le BDE est responsable des activités de nombreux clubs.
+C'est également l'association qui organise le week-end d'intégration (WEI) en début d'année, ainsi que de nombreuses soirées dans l'année.
+</description>
+	<address>
+		<openingHours>La Kfet est ouverte tous les midis de 12h à 14h et tous les soirs de 18h à minuit (sauf le week-end de 11h à 14h)</openingHours>
+		<url>http://bde.ens-cachan.fr</url>
+		<phone>01 45 46 84 05</phone>
+		<fax>01 45 46 84 05</fax>
+	</address>
+</content>
+</entry>

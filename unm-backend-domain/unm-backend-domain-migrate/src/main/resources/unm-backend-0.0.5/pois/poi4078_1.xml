@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4078_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4078_1.xml"/>
+<title>LIMSI - UPR 3251</title>
+<updated>2014-08-15T01:47:13.411+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4078"
+	coordinates="48.707017642518,2.1774534881115"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:48:33.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4031"
+	name="LIMSI - UPR 3251">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le Laboratoire d’Informatique pour la Mécanique et les Sciences de l’Ingénieur - LIMSI UPR 3251</description>
+	<address>
+		<floor>Bât. 508, 502bis &amp; 512 </floor>
+		<url>http://www.limsi.fr/</url>
+		<phone>01 69 85 80 52</phone>
+		<email>contact@limsi.fr</email>
+	</address>
+</content>
+</entry>

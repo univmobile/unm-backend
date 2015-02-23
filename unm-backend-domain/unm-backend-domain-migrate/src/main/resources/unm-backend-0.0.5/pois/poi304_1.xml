@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi304_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi304_1.xml"/>
+<title>Villetaneuse R.U Arlequin</title>
+<updated>2014-08-15T01:46:39.013+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="304"
+	coordinates="48.954797570008,2.34170794"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-20T16:27:47.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="248"
+	name="Villetaneuse R.U Arlequin">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Restaurant universitaire l'arlequin.</description>
+	<address>
+		<openingHours>11h30-14h</openingHours>
+		<phone>01 49 40 70 61</phone>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+	<child uid="1173" active="true"/>
+	<child uid="1137" active="true"/>
+	<child uid="1061" active="true"/>
+	<child uid="306" active="true"/>
+	<child uid="1060" active="true"/>
+</content>
+</entry>

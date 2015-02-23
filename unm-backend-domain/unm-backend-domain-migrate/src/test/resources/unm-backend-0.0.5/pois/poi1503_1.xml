@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1503_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1503_1.xml"/>
+<title>Observatoire de la vie étudiante</title>
+<updated>2014-08-15T01:46:48.312+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1503"
+	coordinates="48.829727369089,2.38075017929"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:13:42.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="Observatoire de la vie étudiante">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Grands Moulins SAOIP RDC</floor>
+		<openingHours>9h-18h</openingHours>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<phone>0157276338</phone>
+		<fullAddress>10 esplanade Pierre Vidal Naquet
+75013 Paris</fullAddress>
+	</address>
+</content>
+</entry>

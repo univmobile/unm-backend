@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1735_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1735_1.xml"/>
+<title>DUT Génie biologique</title>
+<updated>2014-08-15T01:46:50.369+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1735"
+	coordinates="48.913850300546,2.418982"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T22:37:43.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="356"
+	name="DUT Génie biologique">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Le DUT « Génie biologique » forme des techniciens supérieurs dans le domaine de l’analyse. Cette formation pluridisciplinaire est basée sur l’acquisition de connaissances et la pratique expérimentale. L’objectif est de développer des compétences à partir d’un raisonnement scientifique: la réalisation de manipulations en laboratoire suivie du contrôle, de l’interprétation et de l’exploitation des résultats, la mise en pratique de projets, l’élaboration de nouveaux produits, de nouveaux procédés...
+</description>
+	<address>
+		<floor>1er étage.</floor>
+		<url>http://www.iut-bobigny.univ-paris13.fr/?rubrique=5&amp;page=107</url>
+		<phone>01 48 38 84 19 </phone>
+		<fax>01 48 38 88 35</fax>
+		<email>davina.cellini@univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

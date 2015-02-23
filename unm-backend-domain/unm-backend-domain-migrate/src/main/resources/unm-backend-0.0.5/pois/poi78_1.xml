@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi78_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi78_1.xml"/>
+<title>Vie étudiante et Vie culturelle Centre Pierre-Mendès-France</title>
+<updated>2014-08-15T01:46:38.406+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="78"
+	coordinates="48.827283116085,2.36510"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T17:01:41.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-09-05T10:16:52.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Vie étudiante et Vie culturelle Centre Pierre-Mendès-France">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Vie étudiante et Vie culturelle Centre Pierre-Mendès-France
+
+Aile C, 9e étage
+bureau C 09-02
+</description>
+	<address
+		zipCode="75634"
+		city="Paris"
+		countryCode="FR">
+		<floor>Aile C, 9e étage</floor>
+		<openingHours>Ouvert tous les jours de 9h30 à 12h et de 14h à 16h sauf le mardi de 9h30 à 16h30.
+Le Service Vie Étudiante est un service d'accueil et d'informations : informations pédagogiques, sociales, associatives et culturelles. </openingHours>
+		<itinerary>M°14 Olympiades
+Bus 62,83</itinerary>
+		<url>http://www.univ-paris1.fr/etudiant/</url>
+		<phone>01 44 07 86 30</phone>
+		<fullAddress>bureau C`09-02
+90, rue de Tolbiac 
+
+
+  75634 Paris</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6428_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6428_1.xml"/>
+<title>Sciences du vivant (M1, secrétariat RH36 Perez)</title>
+<updated>2014-08-15T01:47:37.139+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6428"
+	coordinates="48.827740922299,2.3806697130203"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T13:48:54.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1778"
+	name="Sciences du vivant (M1, secrétariat RH36 Perez)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>- Infectiologie, Microbiologie,Virologie, Immunologie (M1 IMVI)
+- Biochimie, Cellule, Cibles thérapeutiques (M1 BC2T)</description>
+	<address>
+		<floor>Bâtiment Lamarck, rez-de-chaussée haut, bureau 36</floor>
+		<url>http://www.sdv.univ-paris-diderot.fr/</url>
+		<phone>01 57 27 82 44</phone>
+		<email>pperez@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

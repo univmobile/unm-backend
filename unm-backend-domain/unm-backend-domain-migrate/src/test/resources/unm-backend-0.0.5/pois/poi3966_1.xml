@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3966_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3966_1.xml"/>
+<title>ADEAS</title>
+<updated>2014-08-15T01:47:12.189+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3966"
+	coordinates="48.883804688764,2.3108591884375"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:35:26.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3702"
+	name="ADEAS">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Unis toutes et tous les étudiant(e)s originaires d’Afrique, de Caraïbe, des Antilles...dans un cadre amical et fraternel ; entretient l’héritage littéraire et idéologique des anciens étudiants &quot;noirs&quot; de Paris ; transmet la mémoire et construit l’avenir ; organise des rencontres culturelles étudiantes afin de connaître les cultures de nos pays ; favoriser les échanges intellectuels, artistiques et sportifs entre les pays.</description>
+	<address>
+		<openingHours>Lundi : 10h00 / 12h00 
+Mardi : 10h00 / 11h00 
+Mercredi : 16h00 / 18h00; Samba Doucouré, sur rdv
+Jeudi : 16h30 / 18h00; Mahamadou Sawaneh, sur rdv
+Vendredi : 13h30 / 14h30; Ndèye Katy Dieng, sur rdv
+                 16h00 / 18h00 : Abdérémane Aboubakar Hakim:, sur rdv</openingHours>
+		<url>www.adeas.fr</url>
+		<phone>06 27 70 50 74</phone>
+		<email> contact@adeas.fr</email>
+	</address>
+</content>
+</entry>

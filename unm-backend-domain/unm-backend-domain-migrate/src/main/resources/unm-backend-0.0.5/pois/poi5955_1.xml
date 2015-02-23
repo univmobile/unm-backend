@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5955_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5955_1.xml"/>
+<title>MQSE - M1-2</title>
+<updated>2014-08-15T01:47:32.057+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5955"
+	coordinates="48.837083040189,2.5844418257475"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:51:15.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5668"
+	name="MQSE - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master de Management de la Qualité,de la Sécurité et de l'Environnement</description>
+	<address>
+		<floor>Bureau 111</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-droit-economie-gestion/mention-management-de-la-qualite-de-la-securite-et-de-lenvironnement/master-management-de-la-qualite-de-la-securite-et-de-lenvironnement/</url>
+		<phone>01 60 95 78 14</phone>
+		<fax>01 60 95 78 32</fax>
+		<email>sophie.jasmin@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

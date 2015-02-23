@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5833_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5833_1.xml"/>
+<title>Matériaux et santé</title>
+<updated>2014-08-15T01:47:30.653+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5833"
+	coordinates="48.762213952052,2.273540943861"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:44:42.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4992"
+	name="Matériaux et santé">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 401</description>
+	<address>
+		<floor>Tour D2, 1er et 2ème étages</floor>
+		<url>http://www.materiauxetsante.u-psud.fr/</url>
+		<phone>01 46 83 56 06</phone>
+		<fax>01 46 83 54 54</fax>
+		<email>najet.yagoubi@u-psud.fr</email>
+	</address>
+</content>
+</entry>

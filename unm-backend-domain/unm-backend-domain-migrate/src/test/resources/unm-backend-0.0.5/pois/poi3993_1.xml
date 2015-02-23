@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3993_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3993_1.xml"/>
+<title>Service Culturel</title>
+<updated>2014-08-15T01:47:12.483+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3993"
+	coordinates="48.848722062335,2.3437973856926"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T13:38:40.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3679"
+	name="Service Culturel">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<description>Le Service Culturel oriente ses actions d’aide à la création, de programmation et de diffusion artistique et culturelle en direction du grand public, des étudiants et du personnel enseignant et administratif de l’Université Paris-Sorbonne.</description>
+	<address>
+		<floor>Galerie Claude Bernard, escalier i, rez-de-chaussée</floor>
+		<openingHours>Du lundi au vendredi :
+9h00 / 13h00 - 14h00 / 17h00</openingHours>
+		<phone>01 40 46 32 83</phone>
+		<email>action-culturelle@paris-sorbonne.fr </email>
+	</address>
+</content>
+</entry>

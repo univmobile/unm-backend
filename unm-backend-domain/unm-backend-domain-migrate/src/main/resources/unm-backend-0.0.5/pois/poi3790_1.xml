@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3790_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3790_1.xml"/>
+<title>Spécialité Génie Mécanique en partenariat - Polytech</title>
+<updated>2014-08-15T01:47:10.443+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3790"
+	coordinates="48.845065125784,2.357031237334"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T17:01:43.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2790"
+	name="Spécialité Génie Mécanique en partenariat - Polytech">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Associée au CFAI MECAVENIR, en partenariat avec l'ITII île de France, la spécialité Génie mécanique forme des ingénieurs pluridisciplinaire de terrain par la voie de l'apprentissage.</description>
+	<address>
+		<floor>3è étage bureau 325</floor>
+		<url>http://www.polytech.upmc.fr/specialite-meca_partenariat.html</url>
+		<phone>01 44 27 42 74</phone>
+		<email>gm-polytech@upmc.fr</email>
+	</address>
+</content>
+</entry>

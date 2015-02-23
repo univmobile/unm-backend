@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7159_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7159_1.xml"/>
+<title>Résidence Universitaire de Combs la Ville</title>
+<updated>2014-08-15T01:47:43.888+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7159"
+	coordinates="48.665372665961,2.5579932332039|48.665301806714,2.5586262345314|48.665096314336,2.5585404038429|48.665195517658,2.5579074025154|48.665372665961,2.5579932332039"
+	active="true"
+	markerType="polygon"
+	createdAt="2012-02-14T13:40:24.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="4505"
+	name="Résidence Universitaire de Combs la Ville">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>20, rue des Brandons   
+77380 Combs La Ville</fullAddress>
+	</address>
+	<child uid="7160" active="true"/>
+</content>
+</entry>

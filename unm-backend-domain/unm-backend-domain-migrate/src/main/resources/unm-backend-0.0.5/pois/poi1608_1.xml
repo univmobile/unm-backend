@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1608_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1608_1.xml"/>
+<title>Atelier de Gospel</title>
+<updated>2014-08-15T01:46:49.189+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1608"
+	coordinates="48.829264754738,2.381544113159"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T14:17:54.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="Atelier de Gospel">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>Halle aux farines, Amphi Vilgrain 1A </floor>
+		<openingHours>Mercredi : 12h30-14h30</openingHours>
+	</address>
+</content>
+</entry>

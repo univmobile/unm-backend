@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6983_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6983_1.xml"/>
+<title>Association IHENU</title>
+<updated>2014-08-15T01:47:41.902+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6983"
+	coordinates="48.902961852494,2.2095501422882"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T12:32:55.000+01:00"
+	updatedAt="2011-11-15T12:34:16.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2520"
+	name="Association IHENU">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Institut des Hautes Etudes sur les Nations Unies</description>
+	<address>
+		<email>Bâtiment T</email>
+	</address>
+</content>
+</entry>

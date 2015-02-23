@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2166_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2166_1.xml"/>
+<title>Département Génie Thermique et Energie</title>
+<updated>2014-08-15T01:46:54.840+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2166"
+	coordinates="48.825344883123,2.199267894"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:38:00.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2429"
+	name="Département Génie Thermique et Energie">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 323 A</floor>
+		<openingHours>Du lundi au jeudi :
+8h / 12h - 13h30 / 16h
+Vendredi :
+8h / 13h</openingHours>
+		<phone>01 40 97 58 01</phone>
+		<email>secretariat_gte@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

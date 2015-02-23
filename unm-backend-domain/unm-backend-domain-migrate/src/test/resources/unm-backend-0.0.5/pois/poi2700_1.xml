@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2700_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2700_1.xml"/>
+<title>Relais Handicap</title>
+<updated>2014-08-15T01:46:59.301+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2700"
+	coordinates="48.77800177955,2.047221511602"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:24:17.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="555"
+	name="Relais Handicap">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<address>
+		<floor>Bâtiment François Rabelais - 1er étage</floor>
+		<phone>0139255740</phone>
+		<email>francoise.jenssonnie@uvsq.fr</email>
+	</address>
+</content>
+</entry>

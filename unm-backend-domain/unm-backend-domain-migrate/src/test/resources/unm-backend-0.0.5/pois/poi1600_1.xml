@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1600_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1600_1.xml"/>
+<title>SMEREP</title>
+<updated>2014-08-15T01:46:49.115+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1600"
+	coordinates="48.95636772991,2.340849637985"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-30T21:38:18.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2011-03-31T01:02:27.000+02:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	name="SMEREP">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Devenir étudiant, c'est aussi prendre en charge ses propres dépenses de santé. Vous ne dépendez plus de la Sécurité sociale de vos parents, mais de la Sécu étudiante, obligatoire dès 16 ans, pour les étudiants inscrits en France dans un établissement d'enseignement supérieur (universités, écoles, IUT, BTS et classes préparatoires), et même en cas d'échange ERASMUS.</description>
+	<address>
+		<floor>RDC - Acceuil principal.</floor>
+		<openingHours>Mercredi 10h - 13h.</openingHours>
+		<url>http://www.smerep.fr/index</url>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

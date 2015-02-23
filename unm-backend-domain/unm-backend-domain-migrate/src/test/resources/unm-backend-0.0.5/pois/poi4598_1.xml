@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4598_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4598_1.xml"/>
+<title>Bois de l'Etang</title>
+<updated>2014-08-15T01:47:18.937+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4598"
+	coordinates="48.837435449427,2.5932642817497"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:44:50.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4531"
+	name="Bois de l'Etang">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER : A Noisy Champs</itinerary>
+		<fullAddress>5 rue Galilée
+77420 Champs sur Marne</fullAddress>
+	</address>
+	<child uid="5867" active="true"/>
+	<child uid="4603" active="true"/>
+	<child uid="4610" active="true"/>
+	<child uid="4612" active="true"/>
+	<child uid="4641" active="true"/>
+	<child uid="5661" active="true"/>
+	<child uid="5662" active="true"/>
+	<child uid="5749" active="true"/>
+	<child uid="5800" active="true"/>
+	<child uid="5801" active="true"/>
+	<child uid="5804" active="true"/>
+	<child uid="5805" active="true"/>
+	<child uid="5815" active="true"/>
+	<child uid="5817" active="true"/>
+	<child uid="5818" active="true"/>
+	<child uid="5819" active="true"/>
+	<child uid="5820" active="true"/>
+	<child uid="5861" active="true"/>
+	<child uid="5863" active="true"/>
+	<child uid="5865" active="true"/>
+	<child uid="5951" active="true"/>
+	<child uid="5953" active="true"/>
+	<child uid="5997" active="true"/>
+	<child uid="5999" active="true"/>
+	<child uid="6022" active="true"/>
+	<child uid="6024" active="true"/>
+	<child uid="6072" active="true"/>
+	<child uid="6074" active="true"/>
+	<child uid="6110" active="true"/>
+	<child uid="6149" active="true"/>
+	<child uid="6152" active="true"/>
+	<child uid="6172" active="true"/>
+	<child uid="6173" active="true"/>
+</content>
+</entry>

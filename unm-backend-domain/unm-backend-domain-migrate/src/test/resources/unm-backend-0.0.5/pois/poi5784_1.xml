@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5784_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5784_1.xml"/>
+<title>Laboratoire de physique des gaz et des plasmas (LPGP)</title>
+<updated>2014-08-15T01:47:30.030+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5784"
+	coordinates="48.698331780489,2.1701310575008"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:55:31.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5765"
+	name="Laboratoire de physique des gaz et des plasmas (LPGP)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Unité mixte de recherche (UMR) 8578</description>
+	<address>
+		<floor>Bâtiment 210</floor>
+		<url>www.lpgp.u-psud.fr</url>
+		<phone>01 69 15 72 51</phone>
+		<fax>01 69 15 78 44</fax>
+		<email>lpgp.lpgp@u-psud.fr </email>
+	</address>
+</content>
+</entry>

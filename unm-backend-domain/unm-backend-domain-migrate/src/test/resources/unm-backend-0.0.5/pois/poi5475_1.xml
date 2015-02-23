@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5475_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5475_1.xml"/>
+<title>Bâtiment GIM</title>
+<updated>2014-08-15T01:47:26.617+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5475"
+	coordinates="48.62712064716,2.5614076852798"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T15:11:27.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4505"
+	name="Bâtiment GIM">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D, Station Lieusaint Moissy
+</itinerary>
+		<fullAddress>Avenue Pierre Point 77567 Lieusaint Cedex
+</fullAddress>
+	</address>
+	<child uid="5725" active="true"/>
+</content>
+</entry>

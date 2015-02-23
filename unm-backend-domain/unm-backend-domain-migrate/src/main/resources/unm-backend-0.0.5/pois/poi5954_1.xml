@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5954_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5954_1.xml"/>
+<title>Service commun universitaire d'information et d'orientation</title>
+<updated>2014-08-15T01:47:32.043+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5954"
+	coordinates="48.76206543367,2.272285670042"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:49:03.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4984"
+	name="Service commun universitaire d'information et d'orientation">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Service commun universitaire d'information et d'orientation (SCUIO).</description>
+	<address>
+		<floor>Bâtiment A, bureau AH 110</floor>
+		<openingHours>Lundi, mercredi, jeudi
+13h00-17h00
+Vendredi
+13h00-16h00</openingHours>
+		<url>http://www.pharmacie.u-psud.fr/fr/la_faculte/information_orientation.html</url>
+		<phone>01 46 83 53 29</phone>
+		<fax>01 46 83 58 15</fax>
+		<email>scuio@u-psud.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1767_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1767_1.xml"/>
+<title>Site Paradis</title>
+<updated>2014-08-15T01:46:50.618+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1767"
+	coordinates="48.87509913242,2.35263"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T14:51:03.000+02:00"
+	updatedAt="2011-06-22T15:01:00.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	parentUid="1231"
+	name="Site Paradis">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 4,5,7 Gare de l'est
+Métro 4,5 Gare du Nord
+RER E,B,D Gare du Nord</itinerary>
+	</address>
+	<child uid="6349" active="true"/>
+	<child uid="6351" active="true"/>
+	<child uid="6348" active="true"/>
+	<child uid="1397" active="true"/>
+	<child uid="1355" active="true"/>
+	<child uid="1467" active="true"/>
+	<child uid="6376" active="true"/>
+	<child uid="6377" active="true"/>
+</content>
+</entry>

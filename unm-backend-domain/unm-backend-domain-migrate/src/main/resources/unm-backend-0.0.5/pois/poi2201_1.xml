@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2201_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2201_1.xml"/>
+<title>Master 2 professionnel</title>
+<updated>2014-08-15T01:46:55.142+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2201"
+	coordinates="48.779804291013,2.0445185154"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T15:42:12.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2011-05-31T15:03:08.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	name="Master 2 professionnel">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Vauban - Bureau 409</floor>
+		<phone>0139255055</phone>
+		<email>selima.ben-debba@uvsq.fr </email>
+	</address>
+</content>
+</entry>

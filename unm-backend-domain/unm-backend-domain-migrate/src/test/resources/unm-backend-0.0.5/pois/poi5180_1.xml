@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5180_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5180_1.xml"/>
+<title>Transversale</title>
+<updated>2014-08-15T01:47:23.972+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5180"
+	coordinates="48.632007318388,2.4319602549076"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:17:48.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="273"
+	name="Transversale">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’association a pour objet de promouvoir la sociologie, faciliter l’insertion des diplômés de sociologie de l’Université d’Évry-Val-d’Essonne, en particulier de Master
+2 et de doctorat en animant un réseau d’anciens étudiants, en liaison avec les entreprises et les collectivités territoriales.</description>
+	<address>
+		<floor>Bureau 422</floor>
+		<phone>06 75 21 99 46</phone>
+		<email>bertille.watrelot@gmail.com</email>
+	</address>
+</content>
+</entry>

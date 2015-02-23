@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5835_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5835_1.xml"/>
+<title>Technique de commercialisation</title>
+<updated>2014-08-15T01:47:30.677+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5835"
+	coordinates="48.62252125912,2.4270531535149"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:46:27.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="269"
+	name="Technique de commercialisation">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>01 69 47 73 60</phone>
+		<email> secretariat-tc-evry@iut.univ-evry.fr </email>
+	</address>
+</content>
+</entry>

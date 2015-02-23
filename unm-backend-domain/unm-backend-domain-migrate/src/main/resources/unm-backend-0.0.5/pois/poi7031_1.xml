@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7031_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7031_1.xml"/>
+<title>Association des étudiants en droit social de Paris Ouest</title>
+<updated>2014-08-15T01:47:42.515+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7031"
+	coordinates="48.90231196474,2.2146315872669"
+	active="true"
+	markerType="point"
+	createdAt="2011-12-02T11:10:39.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2491"
+	name="Association des étudiants en droit social de Paris Ouest">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association des étudiants en droit social de Paris Ouest (A.E.D.S.N) :
+- Encourager, favoriser, soutenir et animer l'essor et le développement de la formation en droit social, notamment en participant activement à la réalisation d'activités de promotion (forum, journal...) en insistant sur les spécificités d'une formation universitaire ou en renforçant les liens avec le monde de l'entreprise 
+- Contribuer à l'échange d'informations en devenant l'interface efficace entre les étudiants et les équipes professorales et administratives de droit social
+- Développer les contacts avec d'autres associations étudiantes, associations professionnelles, amicales et association d'anciens dans le but de promouvoir et de sensibiliser un large public à l'importance que revêt le droit social et de favoriser l'échange des points de vue à une échelle non réduite à la France
+- Défendre les intérêts moraux et matériels des étudiants en droit social
+- Développer entre les étudiants des relations de solidarité et entreprendre des actions pouvant renforcer celles-ci dans les limites de ses capacités. </description>
+	<address>
+		<floor>Bâtiment F - Salle 518</floor>
+		<url>http://aedsn.fr/</url>
+		<email>aedsn@free.fr</email>
+	</address>
+</content>
+</entry>

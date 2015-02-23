@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3031_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3031_1.xml"/>
+<title>Physiopathologie de la mucoviscidose</title>
+<updated>2014-08-15T01:47:02.266+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3031"
+	coordinates="48.837441098804,2.3389238119125"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:19:38.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2472"
+	name="Physiopathologie de la mucoviscidose">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 42 34 14 40 </phone>
+		<fax>01 44 07 25 38</fax>
+	</address>
+</content>
+</entry>

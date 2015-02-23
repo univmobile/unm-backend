@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3074_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3074_1.xml"/>
+<title>Homéostasie cellulaire et cancer </title>
+<updated>2014-08-15T01:47:02.711+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3074"
+	coordinates="48.855625191536,2.3319688439369"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:50:26.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2331"
+	name="Homéostasie cellulaire et cancer ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 57 27 67 26</phone>
+		<email>evelyne.segal-bendirdjian@inserm.fr </email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6063_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6063_1.xml"/>
+<title>Services et Réseaux de Communication - DUT</title>
+<updated>2014-08-15T01:47:33.280+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6063"
+	coordinates="48.954913770576,2.878087721765"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:01:51.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5672"
+	name="Services et Réseaux de Communication - DUT">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>A103</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-diplomes-universitaires-de-technologie-dut/dut-services-et-reseaux-de-communication-src/</url>
+		<phone>01 64 36 44 06</phone>
+		<fax>01 64 36 44 55</fax>
+		<email>Chantal.Jean-Louis@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

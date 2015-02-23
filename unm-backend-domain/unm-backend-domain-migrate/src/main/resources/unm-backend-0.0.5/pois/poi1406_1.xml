@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1406_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1406_1.xml"/>
+<title>DUT Hygiène Sécurité Environnement</title>
+<updated>2014-08-15T01:46:47.323+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1406"
+	coordinates="48.938954067268,2.3536115884"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T19:34:09.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="390"
+	name="DUT Hygiène Sécurité Environnement">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Le technicien HSE doit être en mesure de prévenir les différents risques auxquels sont exposés les individus : risque chimique, risque biologique, risque électrique, risque radiologique, risques liés au bruit… </description>
+	<address>
+		<floor>1er étage - Aile C - Bureau C 103.</floor>
+		<url>www.iutsd.univ-paris13.fr/hse</url>
+		<phone>01 49 40 62 24 </phone>
+		<fax>01 49 40 61 98</fax>
+	</address>
+</content>
+</entry>

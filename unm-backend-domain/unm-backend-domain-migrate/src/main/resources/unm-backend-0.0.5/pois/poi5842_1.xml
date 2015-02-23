@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5842_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5842_1.xml"/>
+<title>Carrières Professionelle</title>
+<updated>2014-08-15T01:47:30.755+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5842"
+	coordinates="48.622514167177,2.4264952540398"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:52:21.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="269"
+	name="Carrières Professionelle">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>01 69 47 73 69</phone>
+		<email>f.jeannin@iut.univ-evry.fr  </email>
+	</address>
+</content>
+</entry>

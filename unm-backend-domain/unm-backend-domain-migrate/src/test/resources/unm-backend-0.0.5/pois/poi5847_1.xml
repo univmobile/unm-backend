@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5847_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5847_1.xml"/>
+<title>Edition, livre et multimédia - M1-2</title>
+<updated>2014-08-15T01:47:30.799+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5847"
+	coordinates="48.839258010441,2.5864266604185"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:56:06.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="Edition, livre et multimédia - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>2B045</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-arts-lettres-langues/mention-lettres-et-arts/master-edition-livre-et-multimedia/</url>
+		<phone>01 60 95 71 01</phone>
+		<fax>01 60 95 71 09</fax>
+		<email>Nathalie.Landeau@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

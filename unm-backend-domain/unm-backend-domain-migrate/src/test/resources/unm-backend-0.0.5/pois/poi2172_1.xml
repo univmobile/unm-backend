@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2172_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2172_1.xml"/>
+<title>ATC STIC L-pro</title>
+<updated>2014-08-15T01:46:54.897+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2172"
+	coordinates="48.781979979798,2.2174"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:46:04.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="505"
+	name="ATC STIC L-pro">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence professionnelle Activités et Techniques de Communication (ATC), spécialité Services et Technologies de l'Information et de la communication (STIC) - métier Chef de projet multimédia junior (Refonte de sites web)</description>
+	<address>
+		<floor>Bâtiment Garros - Bureau 04</floor>
+		<phone>0139254847</phone>
+		<email>violette.fadila@iut-velizy.uvsq.fr </email>
+	</address>
+</content>
+</entry>

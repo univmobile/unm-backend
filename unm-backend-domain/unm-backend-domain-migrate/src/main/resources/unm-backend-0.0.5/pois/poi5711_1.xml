@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5711_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5711_1.xml"/>
+<title>Comité d'entraide sociale de la faculté d'Orsay (CESFO)</title>
+<updated>2014-08-15T01:47:29.153+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5711"
+	coordinates="48.700163085297,2.1820615231991"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T14:11:35.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5709"
+	name="Comité d'entraide sociale de la faculté d'Orsay (CESFO)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Cette association a pour objet de promouvoir et contribuer à la réalisation et à la gestion de toutes oeuvres et tous projets à caractère social, culturel et sportif, à l'usage de ses membres en activité ou retraités, ainsi que leurs conjoints et personnes à charge.</description>
+	<address>
+		<floor>Bâtiment 304</floor>
+		<url>http://www.cesfo.u-psud.fr/</url>
+		<phone>01 69 15 70 50</phone>
+		<fax>01 69 28 14 97</fax>
+		<email>secretariat-cesfo.asso@u-psud.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3472_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3472_1.xml"/>
+<title>Informatique - M1-2</title>
+<updated>2014-08-15T01:47:07.015+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3472"
+	coordinates="48.847619820832,2.358664199709"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:16:55.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2830"
+	name="Informatique - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La mention informatique propose un enseignement scientifique et technique de haut niveau destiné à former des informaticiens capables de s’adapter à l’évolution rapide des technologies de l’information.</description>
+	<address>
+		<floor>couloir B 2è étage bureau 207</floor>
+		<openingHours>Lundi au Vendredi : 09h00-11h30/13h30-17h</openingHours>
+		<url>http://www.master.info@upmc.fr</url>
+		<phone>01 44 27 25 50</phone>
+		<email>master.info@upmc.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2699_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2699_1.xml"/>
+<title>BU IUT - Paris</title>
+<updated>2014-08-15T01:46:59.290+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2699"
+	coordinates="48.841938063562,2.268040738"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:23:38.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2511"
+	name="BU IUT - Paris">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>3ème étage</floor>
+		<openingHours>Lundi -Vendredi
+9h30 à 18h30</openingHours>
+		<email>cedocel@bu.parisdescartes.fr</email>
+	</address>
+</content>
+</entry>

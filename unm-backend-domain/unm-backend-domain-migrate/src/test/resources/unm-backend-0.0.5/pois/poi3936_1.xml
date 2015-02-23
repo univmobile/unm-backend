@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3936_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3936_1.xml"/>
+<title>UNEF</title>
+<updated>2014-08-15T01:47:11.839+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3936"
+	coordinates="48.900139175327,2.3467578738928"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:56:20.000+02:00"
+	updatedAt="2011-09-26T17:02:52.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3710"
+	name="UNEF">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Union Nationale des Étudiants de France.</description>
+	<address>
+		<phone>01 49 25 86 23</phone>
+	</address>
+</content>
+</entry>

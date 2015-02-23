@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6959_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6959_1.xml"/>
+<title>IUT Fontainebleau bâtiment GEA</title>
+<updated>2014-08-15T01:47:41.580+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6959"
+	coordinates="48.397970302112,2.6868492364883"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-09T16:18:09.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	deletedAt="2011-11-09T16:30:34.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	name="IUT Fontainebleau bâtiment GEA">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>Route forestière Hurtault
+77300 Fontainebleau 
+Tel : 01 60 74 68 00</fullAddress>
+	</address>
+</content>
+</entry>

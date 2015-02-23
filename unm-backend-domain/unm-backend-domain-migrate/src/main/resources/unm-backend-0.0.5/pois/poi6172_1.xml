@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6172_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6172_1.xml"/>
+<title>Espaces Ethiques et Politiques- EA 4118</title>
+<updated>2014-08-15T01:47:34.615+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6172"
+	coordinates="48.83743789162,2.5933467596769"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:38:10.000+02:00"
+	updatedAt="2011-06-15T16:40:10.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="4598"
+	name="Espaces Ethiques et Politiques- EA 4118">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le secrétariat du laboratoire EEP est assuré par :
+
+Marianne FERRARI, responsable administrative</description>
+	<address>
+		<floor>Bureau C 114 situé dans le bâtiment C du Bois de l'Etang </floor>
+		<phone>01.60.95.70.31</phone>
+		<email>marianne.ferrari@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

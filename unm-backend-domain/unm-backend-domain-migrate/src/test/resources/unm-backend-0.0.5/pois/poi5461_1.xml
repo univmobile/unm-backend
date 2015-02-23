@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5461_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5461_1.xml"/>
+<title>Gymnase Jean Zay</title>
+<updated>2014-08-15T01:47:26.443+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5461"
+	coordinates="48.759670013128,2.3001746088266"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T14:41:46.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5457"
+	name="Gymnase Jean Zay">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+</content>
+</entry>

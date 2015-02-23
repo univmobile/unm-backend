@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3047_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3047_1.xml"/>
+<title>Institut droit et santé (IDS)</title>
+<updated>2014-08-15T01:47:02.430+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3047"
+	coordinates="48.855447786439,2.33157288283"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:30:11.000+02:00"
+	updatedAt="2011-06-15T13:39:11.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2331"
+	name="Institut droit et santé (IDS)">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<phone>01.42.86.42.10</phone>
+		<email>ids@parisdescartes.fr</email>
+	</address>
+</content>
+</entry>

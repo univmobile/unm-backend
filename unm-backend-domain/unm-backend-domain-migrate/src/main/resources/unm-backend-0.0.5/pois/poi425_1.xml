@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi425_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi425_1.xml"/>
+<title>Cafétéria Saint Charles</title>
+<updated>2014-08-15T01:46:39.957+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="425"
+	coordinates="48.842047171542,2.280542850"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-05T10:39:00.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T17:18:49.000+01:00"
+	createdBy="raphael"
+	updatedBy="cfontaine"
+	name="Cafétéria Saint Charles">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address
+		countryCode="FR">
+		<openingHours>Lundi au vendredi
+8h-18h
+</openingHours>
+		<itinerary>Métro 12
+Station Convention
+
+Bus
+62.42
+Arrêt Convention Boucicaut
+</itinerary>
+		<fullAddress>47-43 rue des Bergers
+75015 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

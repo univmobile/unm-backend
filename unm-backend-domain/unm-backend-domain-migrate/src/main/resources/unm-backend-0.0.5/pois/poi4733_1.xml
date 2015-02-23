@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4733_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4733_1.xml"/>
+<title>Bibliothèque universitaire : Droit-Économie-Gestion</title>
+<updated>2014-08-15T01:47:19.996+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4733"
+	coordinates="48.782191770072,2.2865932434797"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T14:42:24.000+02:00"
+	updatedAt="2013-06-20T10:14:45.000+02:00"
+	createdBy="j.richer"
+	updatedBy="anaelle.royer"
+	parentUid="4667"
+	name="Bibliothèque universitaire : Droit-Économie-Gestion">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Bâtiment G</floor>
+		<openingHours>Du lundi au vendredi
+9h00-19h00
+
+Samedi
+9h00-17h00
+
+Attention ! pour les horaires réduits et les fermetures, consulter le site.</openingHours>
+		<url>http://www.u-psud.fr/fr/biblio/bu.html</url>
+		<phone>01 40 91 19 24</phone>
+		<fax>01 40 91 18 14</fax>
+		<email>agnes.rosolen@u-psud.fr</email>
+	</address>
+</content>
+</entry>

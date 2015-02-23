@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4766_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4766_1.xml"/>
+<title>Immobilier M2</title>
+<updated>2014-08-15T01:47:20.316+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4766"
+	coordinates="48.896175315586,2.236937507987"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T15:58:09.000+02:00"
+	updatedAt="2011-05-26T16:08:15.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4586"
+	name="Immobilier M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Management de l'immobilier, Financial markets 
+
+</description>
+	<address>
+		<floor>Bureau E 654</floor>
+		<openingHours>Lundi, Mardi : 
+9h30 / 18h30 
+Mercredi, Jeudi, Vendredi : 
+9h30 / 13h30
+</openingHours>
+		<phone>01 41 16 76 19</phone>
+		<email>master-immo@dauphine.fr</email>
+	</address>
+</content>
+</entry>

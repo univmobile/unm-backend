@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4858_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4858_1.xml"/>
+<title>département de Val-de-Marne</title>
+<updated>2014-08-15T01:47:21.268+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4858"
+	coordinates="48.842420934787,2.5855408608913"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T11:55:16.000+02:00"
+	updatedAt="2011-06-10T15:12:22.000+02:00"
+	deletedAt="2011-05-27T11:55:58.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	name="département de Val-de-Marne">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

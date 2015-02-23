@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6929_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6929_1.xml"/>
+<title>Institut de géographie et d’aménagement</title>
+<updated>2014-08-15T01:47:41.372+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6929"
+	coordinates="48.844714197043,2.3425084166229"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-26T16:43:08.000+02:00"
+	updatedAt="2011-09-26T16:46:05.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3733"
+	name="Institut de géographie et d’aménagement">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+</content>
+</entry>

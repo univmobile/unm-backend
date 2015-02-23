@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3433_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3433_1.xml"/>
+<title>Service Social</title>
+<updated>2014-08-15T01:47:06.539+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3433"
+	coordinates="48.846465293292,2.355491481721"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:15:30.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2761"
+	name="Service Social">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Tél. Mme Plancel 01 44 27 21 47   
+Tél. Mme Séradin 01 44 27 35 05
+Tél. Mme Tossah 01 44 27 39 48</description>
+	<address>
+		<openingHours>Du lundi au vendredi de 9h15 à 12h00 et de 14h00 à 16h30
+Fermeture au public le mardi jusqu'à 15h00.</openingHours>
+		<url>http://www.upmc.fr/fr/vie_des_campus/sante_et_solidarite/etre_aide_pour_etudier/le_service_social.html</url>
+	</address>
+</content>
+</entry>

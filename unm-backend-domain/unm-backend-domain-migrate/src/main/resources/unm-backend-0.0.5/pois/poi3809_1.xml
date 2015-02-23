@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3809_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3809_1.xml"/>
+<title>BU Léon-Robin</title>
+<updated>2014-08-15T01:47:10.628+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3809"
+	coordinates="48.848383514461,2.3431238159537"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T17:23:12.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3679"
+	name="BU Léon-Robin">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Escalier E, 2e étage, salle F 371</floor>
+	</address>
+</content>
+</entry>

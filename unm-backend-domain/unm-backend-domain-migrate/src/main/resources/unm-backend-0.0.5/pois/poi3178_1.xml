@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3178_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3178_1.xml"/>
+<title>test</title>
+<updated>2014-08-15T01:47:03.680+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3178"
+	coordinates="48.850552360981,2.340356111526"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T11:11:45.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	deletedAt="2011-05-10T11:12:07.000+02:00"
+	createdBy="super admin"
+	updatedBy="super admin"
+	name="test">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+</content>
+</entry>

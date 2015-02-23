@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7277_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7277_1.xml"/>
+<title>SATIE</title>
+<updated>2014-08-15T01:47:45.124+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7277"
+	coordinates="48.788029024197,2.3271918296814"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T10:24:23.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7215"
+	name="SATIE">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>SATIE (Systèmes et applications des technologies de l'information et de l'énergie) est un laboratoire de recherche de renommée internationale dans le domaine des sciences et technologies des systèmes. On y mène des travaux dans des disciplines fondamentales (le génie électrique, la physique, la physique des systèmes et des microsystèmes) au service de la modélisation, de la conception et de l'optimisation d'un système d'énergie et/ou d'information.</description>
+	<address>
+		<url>http://www.satie.ens-cachan.fr/</url>
+		<phone>01 47 40 21 13</phone>
+		<fax>01 47 40 21 99</fax>
+		<email>satie@satie.ens-cachan.fr</email>
+	</address>
+	<attachment id="277" title="LogoSATIE.jpg" type="image" url="/uploads/poi/fa791fad306dd204beb22321ebc29f69c1a15a84.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2331_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2331_1.xml"/>
+<title>Centre  Saints Pères Principal</title>
+<updated>2014-08-15T01:46:55.976+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2331"
+	coordinates="48.855517539676,2.3317542672157"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:51:20.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2330"
+	name="Centre  Saints Pères Principal">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro :
+Ligne 4 : Saint Germain des Près
+Ligne 10 : Mabillon
+Ligne 12 : rue du Bac ou Sèvres-Babylone
+Bus :
+Lignes 39 et 95 : Jacob et Saint Germain des Prés
+Lignes 63 et 86 : Saint Germain des Prés
+Lignes 70, 87 et 96 : Bonaparte Saint Germain </itinerary>
+		<fullAddress>45 rue des Saints Pères
+75 006 Paris </fullAddress>
+	</address>
+	<child uid="3628" active="true"/>
+	<child uid="3016" active="true"/>
+	<child uid="3696" active="true"/>
+	<child uid="3620" active="true"/>
+	<child uid="3618" active="true"/>
+	<child uid="3626" active="true"/>
+	<child uid="3607" active="true"/>
+	<child uid="2619" active="true"/>
+	<child uid="3575" active="true"/>
+	<child uid="3572" active="true"/>
+	<child uid="3569" active="true"/>
+	<child uid="2596" active="true"/>
+	<child uid="3559" active="true"/>
+	<child uid="3082" active="true"/>
+	<child uid="3077" active="true"/>
+	<child uid="3075" active="true"/>
+	<child uid="3074" active="true"/>
+	<child uid="3070" active="true"/>
+	<child uid="3066" active="true"/>
+	<child uid="3061" active="true"/>
+	<child uid="3059" active="true"/>
+	<child uid="3056" active="true"/>
+	<child uid="3052" active="true"/>
+	<child uid="3048" active="true"/>
+	<child uid="3047" active="true"/>
+	<child uid="3044" active="true"/>
+	<child uid="3043" active="true"/>
+	<child uid="3021" active="true"/>
+	<child uid="3019" active="true"/>
+	<child uid="3017" active="true"/>
+	<child uid="3013" active="true"/>
+	<child uid="3005" active="true"/>
+	<child uid="3004" active="true"/>
+	<child uid="2997" active="true"/>
+	<child uid="2996" active="true"/>
+	<child uid="2957" active="true"/>
+	<child uid="2871" active="true"/>
+	<child uid="2875" active="true"/>
+	<child uid="2877" active="true"/>
+	<child uid="2874" active="true"/>
+	<child uid="2876" active="true"/>
+	<child uid="2873" active="true"/>
+	<child uid="2872" active="true"/>
+	<child uid="2869" active="true"/>
+	<child uid="2764" active="true"/>
+	<child uid="2607" active="true"/>
+	<child uid="3322" active="true"/>
+	<child uid="3333" active="true"/>
+	<child uid="3383" active="true"/>
+	<child uid="3443" active="true"/>
+	<child uid="3564" active="true"/>
+	<child uid="3570" active="true"/>
+	<child uid="3576" active="true"/>
+	<child uid="3577" active="true"/>
+	<child uid="3704" active="true"/>
+	<child uid="4735" active="true"/>
+</content>
+</entry>

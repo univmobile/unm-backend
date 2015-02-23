@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1779_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1779_1.xml"/>
+<title>BDIC</title>
+<updated>2014-08-15T01:46:50.777+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1779"
+	coordinates="48.905318286109,2.215560302"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T14:58:02.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2482"
+	name="BDIC">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Bibliothèque de Documentation Internationale et Contemporaine</description>
+	<address>
+		<openingHours>Lundi : 9h / 20h, sauf les premiers lundi du mois; 11h / 20h
+Du mardi au vendredi : 9h / 19h
+Samedi : 9h / 18h</openingHours>
+		<email>renseignement@bdic.fr</email>
+	</address>
+</content>
+</entry>

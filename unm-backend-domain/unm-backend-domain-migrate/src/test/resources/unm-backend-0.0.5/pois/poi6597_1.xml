@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6597_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6597_1.xml"/>
+<title>Bureau d'accueil du campus</title>
+<updated>2014-08-15T01:47:38.706+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6597"
+	coordinates="48.704678925564,2.1330387890339|48.704717867702,2.1331407129765|48.704647063792,2.1331836283207|48.7046187422,2.1330977976322|48.704678925564,2.1330387890339"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-07-05T10:42:49.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-07-05T11:33:09.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	name="Bureau d'accueil du campus">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

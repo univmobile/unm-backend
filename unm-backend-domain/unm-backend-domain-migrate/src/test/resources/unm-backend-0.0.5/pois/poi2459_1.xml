@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2459_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2459_1.xml"/>
+<title>Site de Saint Cloud</title>
+<updated>2014-08-15T01:46:56.980+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2459"
+	coordinates="48.843550607314,2.21544764935"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:37:38.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="1161"
+	name="Site de Saint Cloud">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="2460" active="true"/>
+</content>
+</entry>

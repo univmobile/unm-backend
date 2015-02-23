@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5359_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5359_1.xml"/>
+<title>Campus d'Orsay - Bâtiment 640 (P.U.I.O.)</title>
+<updated>2014-08-15T01:47:25.549+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5359"
+	coordinates="48.710428701001,2.1732638776302"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T15:11:41.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4404"
+	name="Campus d'Orsay - Bâtiment 640 (P.U.I.O.)">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B direction Saint-Rémy-lès-Chevreuse en venant de Paris (arrêts Le Guichet, Orsay-Ville ou Bures-sur-Yvette).</itinerary>
+		<fullAddress>Campus universitaire d'Orsay
+Bâtiment 640, Rue Louis de Broglie
+91405 Orsay cedex</fullAddress>
+	</address>
+	<child uid="5361" active="true"/>
+	<child uid="5484" active="true"/>
+	<child uid="5491" active="true"/>
+	<child uid="6023" active="true"/>
+	<child uid="6585" active="true"/>
+	<child uid="6593" active="true"/>
+</content>
+</entry>

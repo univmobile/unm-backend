@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3404_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3404_1.xml"/>
+<title>SOLEM </title>
+<updated>2014-08-15T01:47:06.217+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3404"
+	coordinates="48.850706375558,2.340298946946"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:53:13.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2463"
+	name="SOLEM ">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>solidarité Etudiants Médecine</description>
+	<address>
+		<floor>Local : rez-de chaussée à droite</floor>
+		<phone>01 42 34 68 59</phone>
+	</address>
+</content>
+</entry>

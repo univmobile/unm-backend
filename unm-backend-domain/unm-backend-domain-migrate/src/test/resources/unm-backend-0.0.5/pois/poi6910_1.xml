@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6910_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6910_1.xml"/>
+<title>Boutique PSN</title>
+<updated>2014-08-15T01:47:41.240+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6910"
+	coordinates="48.849834222277,2.3433735966682"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-13T12:17:46.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Martine HATTON"
+	updatedBy="Martine HATTON"
+	parentUid="6895"
+	name="Boutique PSN">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+</content>
+</entry>

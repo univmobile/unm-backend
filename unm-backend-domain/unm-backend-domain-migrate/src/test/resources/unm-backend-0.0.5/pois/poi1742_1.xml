@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1742_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1742_1.xml"/>
+<title>Santé et Société M1-2</title>
+<updated>2014-08-15T01:46:50.449+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1742"
+	coordinates="48.914520133138,2.418585419"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T23:27:56.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="356"
+	name="Santé et Société M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Il s’agit de permettre à l’étudiant d’acquérir suivant les spécialités :
+- des connaissances sur les méthodes expérimentales d’études et plus particulièrement sur l’approche raisonnée des phénomènes tissulaires, cellulaires et moléculaires.
+- des connaissances sur les concepts fondamentaux et les outils moléculaires nécessaires au développement de nouvelles biothérapies et de nouvelles molécules (biomolécules) à usage thérapeutique ainsi que les méthodologies expérimentales liées à leurs applications dans des modèles cellulaires et animaux. </description>
+	<address>
+		<floor>Mezzanine -  Bureau m 90.</floor>
+		<openingHours>Lundi : 
+13h45 - 16h
+Mardi, mercredi, jeudi :
+8h - 12h30 
+13h45 - 16h
+Vendredi : 
+8h - 12h30</openingHours>
+		<url>http://www-smbh.univ-paris13.fr/smbh/enseig/enseig_lmd/enseig_lmd_master/master_sss_sante_population_.html</url>
+		<phone>01 49 54 24 61 </phone>
+		<email>sec_l3m1m2@smbh.univ-paris13.fr </email>
+	</address>
+</content>
+</entry>

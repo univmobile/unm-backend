@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5154_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5154_1.xml"/>
+<title>UFR médecine </title>
+<updated>2014-08-15T01:47:23.705+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5154"
+	coordinates="48.796913540275,2.4534970521927"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T15:39:44.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	deletedAt="2011-05-31T15:54:13.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="UFR médecine ">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<url>http://medecine.u-pec.fr </url>
+	</address>
+</content>
+</entry>

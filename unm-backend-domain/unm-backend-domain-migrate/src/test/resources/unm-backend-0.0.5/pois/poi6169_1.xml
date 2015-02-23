@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6169_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6169_1.xml"/>
+<title>Analyse comparée des pouvoirs (ACP) </title>
+<updated>2014-08-15T01:47:34.580+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6169"
+	coordinates="48.839136465354,2.5871139764786"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:28:59.000+02:00"
+	updatedAt="2011-06-15T16:46:31.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="4644"
+	name="Analyse comparée des pouvoirs (ACP) ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Analyse Comparée des Pouvoirs (ACP) - EA 3350</description>
+	<address>
+		<url>http://acp.univ-mlv.fr </url>
+		<phone>01 60 95 70 31 </phone>
+	</address>
+</content>
+</entry>

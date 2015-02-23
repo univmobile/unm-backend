@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5272_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5272_1.xml"/>
+<title>Économie et gestion L1</title>
+<updated>2014-08-15T01:47:24.759+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5272"
+	coordinates="48.788460210464,2.4498224258423"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T07:51:46.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4606"
+	name="Économie et gestion L1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 07</floor>
+		<url>http://economie.u-pec.fr</url>
+		<phone>01 41 78 46 17</phone>
+		<email>marzouk@u-pec.fr</email>
+	</address>
+</content>
+</entry>

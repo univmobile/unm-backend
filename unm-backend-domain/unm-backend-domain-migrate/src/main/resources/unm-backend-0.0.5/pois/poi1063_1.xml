@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1063_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1063_1.xml"/>
+<title>Sciences pour l'ingénieur L1-3</title>
+<updated>2014-08-15T01:46:44.452+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1063"
+	coordinates="48.958414235424,2.340287715196"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-14T12:16:34.000+01:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	parentUid="2457"
+	name="Sciences pour l'ingénieur L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La mention Sciences pour l'ingénieur a pour but de donner aux étudiants une formation de base dans le domaine de l'EEA (Électronique, Électrotechnique, Automatique) et de l’Ingénierie Électrique avec la possibilité d’une coloration plus importante en Traitement de l'information ou en Optoélectronique et nanotechnologies selon le parcours choisi à partir du semestre 5.</description>
+	<address>
+		<floor>1er étage - Aile C - Bureau C 203.</floor>
+		<openingHours>9h - 12h15</openingHours>
+		<itinerary>En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<url>http://www-galilee.univ-paris13.fr/etu_licences_spi.htm</url>
+		<phone>01 49 40 38 18</phone>
+		<fax>01 49 40 30 07</fax>
+		<email> licence-elec@galilee.univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7055_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7055_1.xml"/>
+<title>VAE-VES</title>
+<updated>2014-08-15T01:47:42.787+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7055"
+	coordinates="48.902938696991,2.2173352539539"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-10T15:38:27.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="7051"
+	name="VAE-VES">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Maria TERUEL</description>
+	<address>
+		<floor>M R05</floor>
+		<phone>0140974809</phone>
+		<email>maria.teruel@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

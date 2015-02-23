@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4584_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4584_1.xml"/>
+<title>Pôle Universitaire Léonard de Vinci</title>
+<updated>2014-08-15T01:47:18.804+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4584"
+	coordinates="48.896133494705,2.2366780042648"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:35:28.000+02:00"
+	updatedAt="2011-05-26T17:18:55.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4540"
+	name="Pôle Universitaire Léonard de Vinci">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<floor>Bureau E603</floor>
+		<phone>01 41 16 76 43</phone>
+		<email>marie-elisabeth.clement@dauphine.fr</email>
+	</address>
+	<child uid="4586" active="true"/>
+</content>
+</entry>

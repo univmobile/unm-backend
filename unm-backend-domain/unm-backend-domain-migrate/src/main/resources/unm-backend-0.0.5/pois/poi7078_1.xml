@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7078_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7078_1.xml"/>
+<title>Chez Karim</title>
+<updated>2014-08-15T01:47:43.018+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7078"
+	coordinates="48.946099591859,2.3621758818626"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-23T15:30:02.000+01:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="Marion MAINFRAY"
+	updatedBy="Marion MAINFRAY"
+	parentUid="2603"
+	name="Chez Karim">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Restauration rapide</description>
+	<address>
+		<openingHours>Du lundi au jeudi de 8h30 à 18h
+Le vendredi de 8h30 à 15h30
+Le samedi de 8h30 à 15h30</openingHours>
+	</address>
+</content>
+</entry>

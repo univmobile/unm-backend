@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3645_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3645_1.xml"/>
+<title>Département des Yvelines</title>
+<updated>2014-08-15T01:47:08.955+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3645"
+	coordinates="48.810650696299,2.1499943733215"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-12T11:43:45.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	deletedAt="2011-05-26T10:03:51.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Département des Yvelines">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

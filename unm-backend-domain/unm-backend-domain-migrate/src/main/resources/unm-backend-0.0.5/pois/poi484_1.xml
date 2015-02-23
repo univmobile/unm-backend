@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi484_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi484_1.xml"/>
+<title>LEA</title>
+<updated>2014-08-15T01:46:40.257+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="484"
+	coordinates="48.623725574811,2.4240303039551"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T14:32:43.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="450"
+	name="LEA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Aile B, 3 e étage </floor>
+		<phone>0169477417 </phone>
+		<email>stephanie.genty@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

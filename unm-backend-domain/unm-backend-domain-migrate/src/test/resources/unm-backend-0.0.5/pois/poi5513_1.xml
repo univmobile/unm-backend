@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5513_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5513_1.xml"/>
+<title>Médicaments et autres produits de santé (M2)</title>
+<updated>2014-08-15T01:47:26.982+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5513"
+	coordinates="48.762065404182,2.2724271565676"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T16:10:32.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4984"
+	name="Médicaments et autres produits de santé (M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment A, bureau : AH 134</floor>
+		<url>http://www.pharmacie.u-psud.fr/fr/les_formations/masters/master_medicaments_et_autres_produits_de_sante.html</url>
+		<phone>01 46 83 53 43</phone>
+		<fax>01 46 83 58 40</fax>
+		<email>caroline.parant@u-psud.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi36_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi36_1.xml"/>
+<title>Polygone 1</title>
+<updated>2014-08-15T01:46:38.294+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="36"
+	coordinates="48.780136247243,2.0440337061882|48.780290014493,2.0443207025528|48.780088526276,2.044537961483|48.780053177383,2.0449107885361|48.780535687627,2.0443689823151|48.7801768984,2.0436608791351|48.780136247243,2.044033706188"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-06-23T14:38:17.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-10-13T13:54:23.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Polygone 1">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<url>http://www.uvsq.fr</url>
+		<fullAddress>47 boulevard Vauban 78280 GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

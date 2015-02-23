@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5615_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5615_1.xml"/>
+<title>IUT d'Orsay</title>
+<updated>2014-08-15T01:47:28.065+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5615"
+	coordinates="48.711019400172,2.1702658385038"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:39:21.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	deletedAt="2011-07-05T09:09:29.000+02:00"
+	createdBy="j.richer"
+	updatedBy="Fatma ARAS"
+	name="IUT d'Orsay">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Accueil</description>
+	<address>
+		<floor>Bâtiment 605, 	bureau E 011</floor>
+		<url>http://www.iut-orsay.u-psud.fr/</url>
+		<phone>01 69 33 60 00</phone>
+		<fax>01 60 19 33 18</fax>
+		<email>informations@iut-orsay.fr</email>
+	</address>
+</content>
+</entry>

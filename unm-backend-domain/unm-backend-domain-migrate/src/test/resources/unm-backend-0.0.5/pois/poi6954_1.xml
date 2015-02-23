@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6954_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6954_1.xml"/>
+<title>UNEF</title>
+<updated>2014-08-15T01:47:41.533+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6954"
+	coordinates="48.902692741963,2.2132086753845"
+	active="true"
+	markerType="point"
+	createdAt="2011-10-25T14:12:57.000+02:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="UNEF">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Bâtiment R - Salle R104 - 1er étage</floor>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7309_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7309_1.xml"/>
+<title>Pavillon de la Baleine</title>
+<updated>2014-08-15T01:47:45.450+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7309"
+	coordinates="48.844737063309,2.3578333854675"
+	active="true"
+	markerType="point"
+	createdAt="2013-03-11T16:44:07.000+01:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:21.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Pavillon de la Baleine">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Porte grise en face de l'enclos des wallaby
+Interdit au public
+</itinerary>
+		<fullAddress>Jardin des Plantes
+57, Rue Cuvier
+75005 Paris</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6970_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6970_1.xml"/>
+<title>Dix de choeur</title>
+<updated>2014-08-15T01:47:41.700+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6970"
+	coordinates="48.902648281875,2.2133776545525"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T10:59:49.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Dix de choeur">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Dix de choeur propose des répétitions tous les vendredis de 12h30 à 14h30 au Théâtre B.M.Koltès, des stages et des concerts. Dirigé par Fabrice Parmentier, chef professionnel, il travaille des œuvres allant du baroque au contemporain. </description>
+	<address>
+		<floor>Bâtiment R - Salle R 105 - 1er étage</floor>
+		<openingHours>Les répétitions ont lieu tous les lundi de 18h à 20h et les vendredi de 12h30 à 14h30 à la Maison de l'Etudiant.</openingHours>
+		<url>http://www.dixdechoeur.fr/</url>
+		<phone>01 40 97 56 56</phone>
+	</address>
+</content>
+</entry>

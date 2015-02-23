@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5462_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5462_1.xml"/>
+<title>Matériaux pour les structures et l’énergie (M2)</title>
+<updated>2014-08-15T01:47:26.454+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5462"
+	coordinates="48.70271036122,2.1828930079937"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T14:44:55.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5364"
+	name="Matériaux pour les structures et l’énergie (M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 470, bureau D 325</floor>
+		<url>http://www.u-psud.fr/fr/les_formations/les_formations_par_diplome/masters/chimie/materiaux_pour_les_structures_et_l_energie.html</url>
+		<phone>01 69 15 73 97 </phone>
+		<email>veronique.epie@u-psud.fr</email>
+	</address>
+</content>
+</entry>

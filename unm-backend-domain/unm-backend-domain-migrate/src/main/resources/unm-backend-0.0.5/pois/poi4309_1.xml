@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4309_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4309_1.xml"/>
+<title>Pôle Information et Orientation</title>
+<updated>2014-08-15T01:47:15.976+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4309"
+	coordinates="48.849493666917,2.3444209992886"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T15:54:47.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Pôle Information et Orientation">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Entrée : 46, rue Saint-Jacques 75005 Paris
+Le Pôle information et orientation accompagne les étudiants dans leur parcours professionnel en proposant des ressources documentaires et des entretiens individuels.</description>
+	<address>
+		<openingHours>Du lundi au jeudi : 
+9h00 / 17H00 
+vendredi : 
+9h00 / 13h00</openingHours>
+		<url>http://www.paris-sorbonne.fr/nos-formations/orientation-insertion-et-debouches/orientation-au-cours-des-etudes/presentation-4502/</url>
+		<email>contact.pio@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

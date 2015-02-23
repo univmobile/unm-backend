@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3488_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3488_1.xml"/>
+<title>Sciences de l'Ingénieur - M1-2</title>
+<updated>2014-08-15T01:47:07.207+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3488"
+	coordinates="48.845149205923,2.357175406068"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:32:32.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2790"
+	name="Sciences de l'Ingénieur - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Les sciences de l’ingénieur (SDI) sont un ensemble de disciplines complémentaires qui se caractérisent par de fortes interactions entre établissements de recherche et tissu industriel. </description>
+	<address>
+		<floor>2è étage bureau 234</floor>
+		<openingHours>Lundi au Vendredi : 9h00-11h30h/13h30-17h00</openingHours>
+		<url>http://www.master.sdi.upmc.fr/</url>
+		<email>master.sdi@upmc.fr</email>
+	</address>
+</content>
+</entry>

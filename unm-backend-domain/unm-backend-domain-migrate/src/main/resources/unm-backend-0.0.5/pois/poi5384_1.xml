@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5384_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5384_1.xml"/>
+<title>PLMC - Physique des liquides et milieux complexes </title>
+<updated>2014-08-15T01:47:25.798+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5384"
+	coordinates="48.78828702954,2.4432617425919"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T17:21:07.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4525"
+	name="PLMC - Physique des liquides et milieux complexes ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Bâtiment Marie Curie P2</description>
+	<address>
+		<floor>P2</floor>
+		<url>http://www.plmc.u-pec.fr/</url>
+		<phone>01 45 17 15 69</phone>
+		<email>denis.gueganno@u-pec.fr</email>
+	</address>
+</content>
+</entry>

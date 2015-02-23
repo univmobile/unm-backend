@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4482_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4482_1.xml"/>
+<title>Forum Horizons Informatiques</title>
+<updated>2014-08-15T01:47:17.770+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4482"
+	coordinates="48.626308849702,2.4311223998666"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:02:10.000+02:00"
+	updatedAt="2011-10-24T13:21:56.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Stéphanie ROCHE"
+	parentUid="4440"
+	name="Forum Horizons Informatiques">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L'association Forum Horizons Informatiques organise chaque année le forum étudiants/entreprises de l'ENSIIE, forum de recrutement des métiers de l'informatique et de la finance. Il permet de mettre en contact élèves-ingénieur et responsables de recrutement de grandes entreprises dans le but d’échanger CV, propositions de stages et perspectives d’avenir.</description>
+	<address>
+		<openingHours>Permanences (hors jours fériés) :
+- les lundis, mardis et vendredis de 18h00 à 19h00
+- les mercredis et jeudis de 14h00 à 18h00 
+</openingHours>
+		<url>http://www.diese.org</url>
+		<phone>Tel : 01.60.78.15.89</phone>
+		<fax>Fax : 01.60.78.15.89</fax>
+		<email>info@diese.org</email>
+	</address>
+</content>
+</entry>

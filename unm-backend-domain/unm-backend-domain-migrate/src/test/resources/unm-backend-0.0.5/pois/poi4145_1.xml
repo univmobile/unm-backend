@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4145_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4145_1.xml"/>
+<title>ESPE Saint-Germain-en-Laye</title>
+<updated>2014-08-15T01:47:14.228+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4145"
+	coordinates="48.901117117108,2.0698791369796"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:59:02.000+02:00"
+	updatedAt="2013-06-27T14:21:05.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Fatma ARAS"
+	parentUid="4143"
+	name="ESPE Saint-Germain-en-Laye">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Depuis PARIS PORTE D’AUTEUIL : (A)
+Emprunter l’A13 direction ROUEN. Prendre la sortie 6 STGERMAIN-EN-LAYE/LE CHESNAY/VERSAILLES/MARLY-LE-ROI. En haut de la rampe de sortie, suivre ST-GERMAIN-EN-LAYE sur la N186. A ST-GERMAIN-EN-LAYE, suivre N13 MANTES-LAJOLIE.
+Prendre le tunnel et à la sortie de ce tunnel, faire 350 m et tourner à droite rue Claude Chappe (puis voir loupe).
+Depuis VERSAILLES : (B)
+Emprunter la D186 direction A13/ST-GERMAIN-EN-LAYE.
+Suivre ST-GERMAIN-EN-LAYE, passer sur l’A13 et vous êtes
+sur la N186 jusqu’à ST-GERMAIN-EN-LAYE. Suivre N13
+MANTES-LA-JOLIE. Prendre le tunnel et à la sortie de ce tunnel,
+faire 350 m et tourner à droite rue Claude Chappe
+(puis voir loupe).
+TRANSPORTS EN COMMUN : Depuis PARIS
+Prendre le RER A direction ST-GERMAIN-EN-LAYE. Arrêt STGERMAIN-EN-LAYE (Terminus). 
+Prendre le Bus ligne R2 OU R4, circuit Nord. 
+Arrêts ECOLE NORMALE OU PÉREIRE.</itinerary>
+		<fullAddress>5, Rue Pasteur
+78100 Saint-Germain-en-Laye</fullAddress>
+	</address>
+	<child uid="6037" active="true"/>
+	<child uid="7473" active="true"/>
+</content>
+</entry>

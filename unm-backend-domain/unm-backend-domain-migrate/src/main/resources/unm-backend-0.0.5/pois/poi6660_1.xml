@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6660_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6660_1.xml"/>
+<title>Restaurant Universitaire Saint Martin</title>
+<updated>2014-08-15T01:47:39.079+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6660"
+	coordinates="49.042647465511,2.0848602801561"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T14:52:37.000+02:00"
+	updatedAt="2012-02-01T15:59:23.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6658"
+	name="Restaurant Universitaire Saint Martin">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>De 11h30 à 13h30</openingHours>
+	</address>
+	<attachment id="165" title="ST MARTIN.jpg" type="image" url="/uploads/poi/fa7fff6a5c53f8fcef3addf46966423f0c28324d.jpg"/>
+</content>
+</entry>

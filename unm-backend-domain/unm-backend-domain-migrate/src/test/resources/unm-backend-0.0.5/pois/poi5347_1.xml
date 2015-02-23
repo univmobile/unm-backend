@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5347_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5347_1.xml"/>
+<title>Amphi 1</title>
+<updated>2014-08-15T01:47:25.400+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5347"
+	coordinates="48.795485903933,2.4537813663483"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T14:50:52.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4875"
+	name="Amphi 1">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>Rez de chausée</floor>
+	</address>
+</content>
+</entry>

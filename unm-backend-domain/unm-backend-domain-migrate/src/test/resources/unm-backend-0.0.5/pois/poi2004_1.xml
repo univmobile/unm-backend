@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2004_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2004_1.xml"/>
+<title>Équipement tech. et propulsion aéronautiques</title>
+<updated>2014-08-15T01:46:53.272+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2004"
+	coordinates="48.825189326219,2.1982634067"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T15:43:27.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2439"
+	name="Équipement tech. et propulsion aéronautiques">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence professionnelle mention électricité et électronique; spécialité : équipements aéronautiques et spatiaux, Licence professionnelle mécaniques, techniques aéronautiques et spatiales, Licence professionnelle production industrielle; spécialité : propulsion aéronautique et spatiales.</description>
+	<address>
+		<floor>Bureau D 02.2, Rdc</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h - 13h / 17h</openingHours>
+		<phone>01 40 97 48 22</phone>
+		<email>mireille.dagnon@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

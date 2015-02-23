@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2243_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2243_1.xml"/>
+<title>Institut National des Langues et Civilisations Orientales</title>
+<updated>2014-08-15T01:46:55.353+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2243"
+	coordinates="48.857839944811,2.332652807235"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T17:31:42.000+02:00"
+	updatedAt="2011-05-19T14:18:24.000+02:00"
+	createdBy="yasmine"
+	updatedBy="super admin"
+	name="Institut National des Langues et Civilisations Orientales">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<address
+		zipCode="75"
+		countryCode="FR"
+		latitude="48.85"
+		longitude="2.31">
+		<fullAddress>2 rue de Lille </fullAddress>
+	</address>
+	<child uid="2290" active="true"/>
+	<child uid="2287" active="true"/>
+	<child uid="2281" active="true"/>
+	<child uid="2294" active="true"/>
+	<child uid="2295" active="true"/>
+	<child uid="2293" active="true"/>
+	<child uid="2554" active="true"/>
+	<child uid="2544" active="true"/>
+	<child uid="2541" active="true"/>
+	<child uid="2539" active="true"/>
+</content>
+</entry>

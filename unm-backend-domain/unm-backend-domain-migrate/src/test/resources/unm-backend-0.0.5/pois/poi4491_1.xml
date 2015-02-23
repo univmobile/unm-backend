@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4491_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4491_1.xml"/>
+<title>UMR 7141</title>
+<updated>2014-08-15T01:47:17.868+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4491"
+	coordinates="48.844183430496,2.3440183326602"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:06:49.000+02:00"
+	updatedAt="2011-06-03T17:10:15.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4290"
+	name="UMR 7141">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Physiologie membranaire et moléculaire du chloroplaste - UMR 7141</description>
+	<address>
+		<url>http://www.ibpc.fr/UMR7141/</url>
+		<phone>01 58 41 50 02</phone>
+		<email>Marie-Noel.Mannevy@ibpc.fr</email>
+	</address>
+</content>
+</entry>

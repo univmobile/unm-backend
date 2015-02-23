@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi728_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi728_1.xml"/>
+<title>Association Arrimage</title>
+<updated>2014-08-15T01:46:41.458+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="728"
+	coordinates="48.857840180101,2.38837972283"
+	markerType="point"
+	createdAt="2011-02-11T16:17:37.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Association Arrimage">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Tous les mardis soirs, projection de films documentaires à partir de 20h30.</description>
+	<address>
+		<floor>1er étage</floor>
+		<phone>06 15 77 89 95</phone>
+		<email>asso.arrimage@gmail.com </email>
+	</address>
+</content>
+</entry>

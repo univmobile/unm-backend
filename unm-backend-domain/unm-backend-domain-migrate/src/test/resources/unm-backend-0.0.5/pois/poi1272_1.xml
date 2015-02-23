@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1272_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1272_1.xml"/>
+<title>Licence Histoire de l'Art et Archéologie</title>
+<updated>2014-08-15T01:46:46.052+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1272"
+	coordinates="48.902330771532,2.2114397585392|48.902552926123,2.2118635475636|48.90200106409,2.2125528752804|48.901824749057,2.2122390568256|48.902057484769,2.211941331625|48.902004590385,2.2118367254734|48.902330771532,2.21143975853"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T15:55:04.000+01:00"
+	updatedAt="2011-11-15T16:24:37.000+01:00"
+	deletedAt="2011-03-29T14:24:02.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Licence Histoire de l'Art et Archéologie">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 103, 1er étage</floor>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6161_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6161_1.xml"/>
+<title>Culturae</title>
+<updated>2014-08-15T01:47:34.494+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6161"
+	coordinates="48.838944099098,2.5871877372265"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:05:35.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="Culturae">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Elle a pour intention de diffuser la culture artistique auprès d'un public de non-spécialistes ou de passionnés, ceci à travers l'organisation de différentes activités culturelles.</description>
+	<address>
+		<floor>Bureau 0S032</floor>
+		<url>http://camouret.free.fr/culturae/</url>
+		<phone>01 60 95 79 34</phone>
+		<email>culturae.asso@gmail.com </email>
+	</address>
+</content>
+</entry>

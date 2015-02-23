@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1494_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1494_1.xml"/>
+<title>Crous de Paris</title>
+<updated>2014-08-15T01:46:48.179+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1494"
+	coordinates="48.840222387686,2.337467037141"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:05:10.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Crous de Paris">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bâtiment Sarrailh 1er étage</floor>
+		<openingHours>Tous les jours de 9h à 12h sauf le vendredi
+Sans RDV
+
+Service logement: 9h30-12h</openingHours>
+		<itinerary>RER B Port Royal</itinerary>
+		<phone>0140513600</phone>
+		<email>logement@crous.fr</email>
+		<fullAddress>39 avenue Georges Bernanos 
+75005 Paris</fullAddress>
+	</address>
+</content>
+</entry>

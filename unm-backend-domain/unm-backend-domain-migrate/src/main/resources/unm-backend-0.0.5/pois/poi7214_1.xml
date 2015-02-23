@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7214_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7214_1.xml"/>
+<title>DSI</title>
+<updated>2014-08-15T01:47:44.417+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7214"
+	coordinates="48.789006256608,2.3268646001816"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-06T08:58:21.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	deletedAt="2012-12-06T15:13:17.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	name="DSI">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

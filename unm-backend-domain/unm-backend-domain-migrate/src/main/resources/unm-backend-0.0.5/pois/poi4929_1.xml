@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4929_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4929_1.xml"/>
+<title>Économie-Gestion (L3-M1)</title>
+<updated>2014-08-15T01:47:21.935+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4929"
+	coordinates="48.782186438513,2.2842885553837"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:54:59.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4664"
+	name="Économie-Gestion (L3-M1)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Inscriptions pédagogiques, gestion des résultats, relevés de notes, etc.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment B, bureau 010</floor>
+		<url>http://www.u-psud.fr/fr/les_formations/les_formations_par_diplome/licences/deg/mention_economie_gestion.html</url>
+		<phone>01 40 91 18 79</phone>
+		<fax>01 40 91 17 15</fax>
+		<email>licence3-economie-gestion.droit-eco-gestion@u-psud.fr</email>
+	</address>
+</content>
+</entry>

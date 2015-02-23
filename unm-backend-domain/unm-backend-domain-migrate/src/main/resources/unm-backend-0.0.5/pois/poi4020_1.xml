@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4020_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4020_1.xml"/>
+<title>Restaurant universitaire</title>
+<updated>2014-08-15T01:47:12.759+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4020"
+	coordinates="48.946571696012,2.3623877763748"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:22:20.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2602"
+	name="Restaurant universitaire">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Les 4 pôles de distribution vous proposent quotidiennement un large choix de plats chauds :
+- Pizzas et pâtes
+- Grillades
+- Régions du monde
+- Le traditionnel </description>
+	<address>
+		<floor>1er étage Bâtiment Crous</floor>
+		<openingHours>Du lundi au vendredi
+11h30-14h00</openingHours>
+		<url>http://www.crous-creteil.fr/spip.php?article73</url>
+		<phone>01 49 40 67 27</phone>
+		<fax>01 49 40 00 33</fax>
+		<email>restaurant.paris8@crous-creteil.fr</email>
+	</address>
+	<attachment id="97" title="jpg_17-ru-herbe-etud.jpg" type="image" url="/uploads/poi/c0b319bf891c5bea755ce8851bc28b86d3f593de.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4126_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4126_1.xml"/>
+<title>École doctorale Mondes anciens et médiévaux</title>
+<updated>2014-08-15T01:47:13.960+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4126"
+	coordinates="48.852663541226,2.3417050950229"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:42:09.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3695"
+	name="École doctorale Mondes anciens et médiévaux">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>ED 1</description>
+	<address>
+		<phone>01 53 10 58 11</phone>
+	</address>
+</content>
+</entry>

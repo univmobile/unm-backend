@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6698_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6698_1.xml"/>
+<title>Institut de longévité</title>
+<updated>2014-08-15T01:47:39.387+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6698"
+	coordinates="48.805829458625,2.3958241939545"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-27T16:25:24.000+02:00"
+	updatedAt="2011-09-05T14:18:32.000+02:00"
+	deletedAt="2011-09-05T14:18:32.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Institut de longévité">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+</content>
+</entry>

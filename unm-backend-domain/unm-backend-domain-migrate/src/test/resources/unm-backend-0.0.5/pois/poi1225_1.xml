@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1225_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1225_1.xml"/>
+<title>Bâtiment DD</title>
+<updated>2014-08-15T01:46:45.913+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1225"
+	coordinates="48.902595652547,2.2122927010059|48.902465181035,2.2120298445225|48.902246552332,2.2122766077518|48.902401708284,2.2125287353992|48.902595652547,2.21229270100"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T14:54:59.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-05T16:52:54.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bâtiment DD">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

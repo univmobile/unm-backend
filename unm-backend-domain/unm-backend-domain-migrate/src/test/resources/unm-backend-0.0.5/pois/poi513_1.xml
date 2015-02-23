@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi513_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi513_1.xml"/>
+<title>Entrée principale</title>
+<updated>2014-08-15T01:46:40.491+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="513"
+	coordinates="48.984667043216,1.702044010162"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T17:04:36.000+02:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	createdBy="haromoys"
+	updatedBy="haromoys"
+	parentUid="511"
+	name="Entrée principale">
+	<poiType id="6" label="Entrée principale" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<fullAddress>28 Boulevard Roger Salengro
+78711 Mantes-la-Ville</fullAddress>
+	</address>
+</content>
+</entry>

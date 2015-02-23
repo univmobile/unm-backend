@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1438_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1438_1.xml"/>
+<title>Master LEA, Affaires Internationales et Négociations Intercu</title>
+<updated>2014-08-15T01:46:47.613+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1438"
+	coordinates="48.904512134053,2.21238590776"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T14:48:21.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	deletedAt="2011-04-05T14:22:53.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Master LEA, Affaires Internationales et Négociations Intercu">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 112, 1er étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h
+14h / 17h</openingHours>
+		<phone>01 40 97 76 04</phone>
+		<email>francine.viard@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

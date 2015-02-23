@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3359_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3359_1.xml"/>
+<title>Formes et idées de la Renaissance aux Lumières</title>
+<updated>2014-08-15T01:47:05.791+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3359"
+	coordinates="48.840128325165,2.354632839560"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:33:00.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-17T17:01:47.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	name="Formes et idées de la Renaissance aux Lumières">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<url>http://www.univ-paris3.fr/ea174</url>
+		<phone>0145874136</phone>
+		<email>Jean-Paul.Sermain@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

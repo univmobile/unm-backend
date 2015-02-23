@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1276_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1276_1.xml"/>
+<title>Licence 1 Droit, économie</title>
+<updated>2014-08-15T01:46:46.056+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1276"
+	coordinates="48.902909076659,2.2149829566479|48.902597004297,2.215374559164|48.903058941225,2.2162221372128|48.903147096642,2.2161175310612|48.903178832554,2.2161765396595|48.903148859749,2.2162301838398|48.903346327312,2.2165949642658|48.90351911079,2.2163669764996|48.903321643909,2.2160075604916|48.903261698452,2.2160692512989|48.903231725696,2.2160102427006|48.903367484505,2.2158224880695|48.902909076659,2.21498295664"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T15:59:36.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	deletedAt="2011-03-29T16:46:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Licence 1 Droit, économie">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau R35 A, Rdc</floor>
+		<openingHours>Du lundi au jeudi :
+9h / 12h - 14h / 16h
+Vendredi : 9h / 12h</openingHours>
+		<phone>01 40 97 78 72</phone>
+		<email>ccontout@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

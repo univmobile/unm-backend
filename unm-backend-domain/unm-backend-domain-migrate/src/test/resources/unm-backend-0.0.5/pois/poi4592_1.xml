@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4592_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4592_1.xml"/>
+<title>Musique et Métiers du Son - L1-3</title>
+<updated>2014-08-15T01:47:18.882+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4592"
+	coordinates="48.841842268409,2.5742242857814"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:40:35.000+02:00"
+	updatedAt="2011-06-08T14:20:03.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="Musique et Métiers du Son - L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Cette formation s'adresse à des musiciens déjà confirmés, pratiquant tous styles de musique. Au terme de cette formation initiale, nos diplômés auront abordé l'ensemble des métiers de la musique et les théories qui s'y rapportent. Cette formation recherche un équilibre entre la culture générale et musicale indispensable et les aspects techniques (en acquérir les bases indispensables pour une formation autonome des diplômés une fois sur le terrain) qui permettront aux étudiants une compréhension fine de la vie culturelle et artistique. Cette licence a pour but de préparer les étudiants aux différentes facettes des métiers de la musique et du son. Elle offre un éventail assez large de disciplines complémentaires, et fournit aux musiciens de terrain les connaissances et compétences nécessaires à différents métiers du son. La première année est une année d'introduction à la discipline et d'orientation.</description>
+	<address>
+		<floor>A240</floor>
+		<phone>01 49 32 90 11</phone>
+		<fax>01 49 32 91 20</fax>
+		<email>corinne.aupied@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

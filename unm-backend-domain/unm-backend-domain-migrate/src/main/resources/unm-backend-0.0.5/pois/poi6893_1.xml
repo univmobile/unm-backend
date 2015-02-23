@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6893_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6893_1.xml"/>
+<title>Sorbonne- Bd St-Jacque</title>
+<updated>2014-08-15T01:47:41.076+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6893"
+	coordinates="48.849598448908,2.3444223403931"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-13T10:55:32.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2011-09-13T10:57:58.000+02:00"
+	createdBy="Martine HATTON"
+	updatedBy="Martine HATTON"
+	name="Sorbonne- Bd St-Jacque">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

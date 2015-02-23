@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4698_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4698_1.xml"/>
+<title>Restaurant Hermitage</title>
+<updated>2014-08-15T01:47:19.703+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4698"
+	coordinates="48.939820886609,2.3539173603058"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T11:30:14.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	deletedAt="2011-05-30T09:36:49.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Basile Michel"
+	name="Restaurant Hermitage">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>Place du 8 mai 1945 -93200</floor>
+		<openingHours>11h30 - 13h45
+</openingHours>
+		<phone>01-48-29-14-76</phone>
+		<email>restaurant.saint-denis@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

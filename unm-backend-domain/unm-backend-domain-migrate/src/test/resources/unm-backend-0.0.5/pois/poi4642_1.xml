@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4642_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4642_1.xml"/>
+<title>Faculté de droit bâtiment A</title>
+<updated>2014-08-15T01:47:19.287+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4642"
+	coordinates="48.793316101597,2.4451982975006"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T17:06:32.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4372"
+	name="Faculté de droit bâtiment A">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Metro: ligne8, station Créteil-l'Echat
+</itinerary>
+		<fullAddress>83-85 avenue du Général de Gaulle 94000 Créteil
+</fullAddress>
+	</address>
+	<child uid="5051" active="true"/>
+	<child uid="5053" active="true"/>
+	<child uid="5153" active="true"/>
+	<child uid="5339" active="true"/>
+	<child uid="5341" active="true"/>
+	<child uid="5595" active="true"/>
+	<child uid="5786" active="true"/>
+	<child uid="5854" active="true"/>
+	<child uid="5860" active="true"/>
+	<child uid="5868" active="true"/>
+	<child uid="5873" active="true"/>
+	<child uid="5876" active="true"/>
+	<child uid="5880" active="true"/>
+	<child uid="5933" active="true"/>
+	<child uid="5938" active="true"/>
+	<child uid="5940" active="true"/>
+	<child uid="5942" active="true"/>
+	<child uid="5956" active="true"/>
+	<child uid="5961" active="true"/>
+	<child uid="5963" active="true"/>
+	<child uid="5966" active="true"/>
+	<child uid="5970" active="true"/>
+	<child uid="5976" active="true"/>
+	<child uid="6056" active="true"/>
+	<child uid="6061" active="true"/>
+	<child uid="6064" active="true"/>
+	<child uid="6067" active="true"/>
+	<child uid="6290" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4535_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4535_1.xml"/>
+<title>Site Serris</title>
+<updated>2014-08-15T01:47:18.307+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4535"
+	coordinates="48.85500927859,2.7771592140198"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:01:05.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4527"
+	name="Site Serris">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4613" active="true"/>
+</content>
+</entry>

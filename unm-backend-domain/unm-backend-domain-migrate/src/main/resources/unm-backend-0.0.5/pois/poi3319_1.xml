@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3319_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3319_1.xml"/>
+<title>AS Paris Descartes </title>
+<updated>2014-08-15T01:47:05.369+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3319"
+	coordinates="48.851710515243,2.34038561582"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:05:22.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2479"
+	name="AS Paris Descartes ">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone>01 40 46 19 94</phone>
+	</address>
+</content>
+</entry>

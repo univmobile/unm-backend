@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3600_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3600_1.xml"/>
+<title>Arc-en-ciel (Association des étudiants comoriens de Paris 8)</title>
+<updated>2014-08-15T01:47:08.427+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3600"
+	coordinates="48.946042428204,2.3611157387495"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:49:59.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Arc-en-ciel (Association des étudiants comoriens de Paris 8)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Défense des intérêts respectifs des étudiants de Paris 8 de toutes les couleurs et de toutes les nations.
+Promotion des richesses culturelles de l’Océan indien notamment celles des îles au
+parfum : les Comores.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment C, bureau 007</floor>
+		<url>http://www.comores-paris8.com/</url>
+		<phone>01 48 27 17 51</phone>
+		<email>contact@comores-paris8.com</email>
+	</address>
+</content>
+</entry>

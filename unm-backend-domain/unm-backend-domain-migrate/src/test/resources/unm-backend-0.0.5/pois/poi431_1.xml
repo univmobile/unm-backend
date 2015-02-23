@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi431_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi431_1.xml"/>
+<title>Cafétéria Galilée</title>
+<updated>2014-08-15T01:46:39.966+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="431"
+	coordinates="48.957615074933,2.33982503"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-05T19:13:52.000+02:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	deletedAt="2011-03-04T11:20:05.000+01:00"
+	createdBy="rchervet"
+	updatedBy="Kevin Mazille"
+	name="Cafétéria Galilée">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address
+		countryCode="FR">
+		<floor>Institut Galilée</floor>
+		<phone>0149404049</phone>
+	</address>
+</content>
+</entry>

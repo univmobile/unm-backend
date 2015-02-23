@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1412_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1412_1.xml"/>
+<title>UFR Physique</title>
+<updated>2014-08-15T01:46:47.393+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1412"
+	coordinates="48.828698105199,2.38308101892"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T14:09:35.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1775"
+	name="UFR Physique">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<openingHours>Tous les jours : 9h-12h30 et 14h-17h15 sauf le vendredi après-midi </openingHours>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<phone>0157276130</phone>
+		<email>cecci@univ-paris--diderot.fr</email>
+	</address>
+	<attachment id="63" title="condorcet.jpg" type="image" url="/uploads/poi/12602994b4b5bad320f942596f3565875c290f94.jpg"/>
+</content>
+</entry>

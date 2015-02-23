@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6136_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6136_1.xml"/>
+<title>Écoles Doctorale Science de la Vie et de la Santé </title>
+<updated>2014-08-15T01:47:34.175+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6136"
+	coordinates="48.795101365734,2.4538122117519"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:28:26.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	deletedAt="2011-06-15T14:28:41.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Écoles Doctorale Science de la Vie et de la Santé ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+</content>
+</entry>

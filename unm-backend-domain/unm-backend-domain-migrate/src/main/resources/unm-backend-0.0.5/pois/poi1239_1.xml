@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1239_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1239_1.xml"/>
+<title>Bâtiment N</title>
+<updated>2014-08-15T01:46:45.976+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1239"
+	coordinates="48.905145068066,2.2139663994312|48.905222641603,2.2138859331608|48.90555056477,2.2144545614719|48.905289636834,2.2147281467915|48.905247324067,2.2146852314472|48.905141541993,2.2147978842258|48.905088650873,2.2147174179554|48.905116859477,2.2146637737751|48.905042811856,2.2145242989063|48.90506396833,2.2144867479801|48.905025181454,2.2144223749638|48.905049864015,2.2143848240376|48.905014603209,2.2143043577671|48.905035759696,2.2142453491688|48.90500049888,2.2141487896442|48.905145068066,2.2139663994"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T15:06:16.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-29T14:55:33.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bâtiment N">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

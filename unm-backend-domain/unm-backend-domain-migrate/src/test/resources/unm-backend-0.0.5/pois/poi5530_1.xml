@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5530_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5530_1.xml"/>
+<title>SMEREP</title>
+<updated>2014-08-15T01:47:27.149+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5530"
+	coordinates="48.788255220734,2.4438142776489"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T16:47:29.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5528"
+	name="SMEREP">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>à coté de la maion de l'étudiant, niveau dalle</floor>
+		<openingHours>Du lundi au jeudi de 9h à 12h30 et de 13h15 à 16h45 vendredi à 16h30 
+</openingHours>
+		<url>www.smerep.fr</url>
+		<phone>01.56.54.36.34</phone>
+	</address>
+</content>
+</entry>

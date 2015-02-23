@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1435_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1435_1.xml"/>
+<title>UFR Géographie, Histoire et Sciences de la Société (GHSS)</title>
+<updated>2014-08-15T01:46:47.576+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1435"
+	coordinates="48.825602299236,2.36644729971"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T14:45:07.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1772"
+	name="UFR Géographie, Histoire et Sciences de la Société (GHSS)">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Bureau 116</floor>
+		<openingHours>Tous les jours : 10h-12h et 14h-16h sauf le mercredi après-midi</openingHours>
+		<itinerary>Métro 14 Olympiades
+Métro 7 Tolbiac
+Bus 62, 64, 83 Tolbiac Baudricourt</itinerary>
+		<phone>0157277171</phone>
+	</address>
+	<attachment id="72" title="javelot.gif" type="image" url="/uploads/poi/20ee8a85b0786a1ecb5a6ef373af102315958e04.gif"/>
+</content>
+</entry>

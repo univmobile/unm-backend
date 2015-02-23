@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2728_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2728_1.xml"/>
+<title>Hôpital Quinze-Vingt</title>
+<updated>2014-08-15T01:46:59.562+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2728"
+	coordinates="48.851261995352,2.3721803538"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T17:08:17.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2714"
+	name="Hôpital Quinze-Vingt">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4399" active="true"/>
+</content>
+</entry>

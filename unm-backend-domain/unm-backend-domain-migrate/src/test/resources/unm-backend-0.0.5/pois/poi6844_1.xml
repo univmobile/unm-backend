@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6844_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6844_1.xml"/>
+<title>Résidence Universitaire Louise Bourgeois</title>
+<updated>2014-08-15T01:47:40.708+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6844"
+	coordinates="48.736262542166,2.2849376499653"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T15:52:50.000+02:00"
+	updatedAt="2012-02-10T13:57:32.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6842"
+	name="Résidence Universitaire Louise Bourgeois">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>Nouvelle résidence conventionnée - ouverture : rentrée 2011
+Studio : 110 T1
+Tarifs : de 432€ charges comprises.</description>
+	<attachment id="242" title="Louise bourgeois.jpg" type="image" url="/uploads/poi/b6f54c6e0a00b72a56bb88d506df9b7d65180afb.jpg"/>
+</content>
+</entry>

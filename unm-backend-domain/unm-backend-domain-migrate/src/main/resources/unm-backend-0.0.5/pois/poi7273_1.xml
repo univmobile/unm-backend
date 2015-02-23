@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7273_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7273_1.xml"/>
+<title>PPSM</title>
+<updated>2014-08-15T01:47:45.090+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7273"
+	coordinates="48.788106779372,2.3268458247185"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T16:30:15.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7215"
+	name="PPSM">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de chimie au sein de l'ENS de Cachan, les activités du laboratoire de photophysique et photochimie supramoléculaires et macromoléculaires (PPSM) se focalisent sur la recherche et l'étude de molécules et de matériaux stimulables via des phénomènes photo-induits, l'action des électrons, la sensibilité à la présence d'ions ou encore une activité biologique.
+Les membres du PPSM se positionnent dans la communauté scientifique de recherche à l'échelle nationale et internationale, en contribuant à l'avancée des connaissances fondamentales dans ses domaines de compétences de base : photochimie, fluorescence, spectroscopie, électrochimie, nanomatériaux, reconnaissance moléculaire, synthèse organique.
+Le PPSM est membre de l'Institut d'ALEMBERT (FR3242).
+Le PPSM participe également à l'initiative d'excellence (IdEx) campus Paris-Saclay et à deux laboratoires d'excellence : le LabEx NanoSaclay et le LabEx Charmmmat</description>
+	<address>
+		<url>http://www.ppsm.ens-cachan.fr/</url>
+		<phone>01 47 40 53 38</phone>
+		<fax>01 47 40 24 54</fax>
+		<email>secretariat@ppsm.ens-cachan.fr</email>
+	</address>
+	<attachment id="274" title="Logo_PPSM.jpg" type="image" url="/uploads/poi/d8a6d58e7459e2c60e57efda17ae6f53223fec29.jpg"/>
+</content>
+</entry>

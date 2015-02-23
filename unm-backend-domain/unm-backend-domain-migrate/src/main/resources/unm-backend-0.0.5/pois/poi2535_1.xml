@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2535_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2535_1.xml"/>
+<title>Amphithéâtre S2</title>
+<updated>2014-08-15T01:46:57.741+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2535"
+	coordinates="48.905034437443,2.213059812784"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:06:00.000+02:00"
+	updatedAt="2012-01-10T15:42:00.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2469"
+	name="Amphithéâtre S2">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+</content>
+</entry>

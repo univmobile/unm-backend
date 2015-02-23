@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4136_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4136_1.xml"/>
+<title>École doctorale Concepts et langages</title>
+<updated>2014-08-15T01:47:14.100+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4136"
+	coordinates="48.85257519384,2.3416963778436"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:50:06.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3695"
+	name="École doctorale Concepts et langages">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>ED 5 
+OU 01 53 10 58 50</description>
+	<address>
+		<floor>Bureau D312, 3ème étage</floor>
+		<openingHours>Du lundi au vendredi :
+10h00 / 12h00 - 14h00 / 16h00
+
+</openingHours>
+		<phone>01 53 10 58 91</phone>
+	</address>
+</content>
+</entry>

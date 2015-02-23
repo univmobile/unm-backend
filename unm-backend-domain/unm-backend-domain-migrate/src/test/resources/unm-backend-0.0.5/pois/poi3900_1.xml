@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3900_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3900_1.xml"/>
+<title>Centre bibliothèque universitaire</title>
+<updated>2014-08-15T01:47:11.480+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3900"
+	coordinates="49.037482865369,2.08092212677"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:55:06.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3806"
+	name="Centre bibliothèque universitaire">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accès en RER
+• RER A direction Cergy-le-haut, arrêt Cergy-Préfecture. 
+• RER C, arrêt Pontoise (prendre ensuite le bus)
+
+Accès en bus
+Depuis Pontoise, station Canrobert, lignes 44, 45, 56, 57, arrêt Cergy-Préfecture.
+
+Accès en voiture
+• Depuis Paris : porte Maillot direction La Défense.
+A86 suivre Cergy-Pontoise. A15 direction Cergy-Pontoise, sortie 9 (serrer à gauche). 
+• Depuis Versailles : N184 direction Beauvais jusqu’aCergy-Pontoise.	
+
+Accès en train
+Depuis la gare Saint-Lazare ou Nanterre-Université,
+arrêt Cergy-Préfecture.</itinerary>
+		<fullAddress>Place des Cerclades 
+95015 Cergy-Pontoise cedex</fullAddress>
+	</address>
+	<child uid="5840" active="true"/>
+</content>
+</entry>

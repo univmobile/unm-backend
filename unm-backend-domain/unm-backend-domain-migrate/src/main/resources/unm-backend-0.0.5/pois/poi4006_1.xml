@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4006_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4006_1.xml"/>
+<title>ED 387</title>
+<updated>2014-08-15T01:47:12.609+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4006"
+	coordinates="48.849263481115,2.3838474601507"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T13:57:48.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3716"
+	name="ED 387">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>iViv - interdisciplinaire pour le Vivant (ED 387)</description>
+	<address>
+		<floor>2è étage bureau 206</floor>
+		<url>http://psb00.snv.jussieu.fr/interbio/index1.html</url>
+		<phone>01 40 01 13 27</phone>
+		<fax>01 40 01 13 83</fax>
+		<email>secretariat.interbio@snv.jussieu.fr</email>
+	</address>
+</content>
+</entry>

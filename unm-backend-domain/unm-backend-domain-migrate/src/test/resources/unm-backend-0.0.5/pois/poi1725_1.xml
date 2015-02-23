@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1725_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1725_1.xml"/>
+<title>Amphithéâtre 1</title>
+<updated>2014-08-15T01:46:50.230+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1725"
+	coordinates="48.938911783013,2.3542177677155"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T21:22:46.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="390"
+	name="Amphithéâtre 1">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Amphithéâtre 1.</description>
+</content>
+</entry>

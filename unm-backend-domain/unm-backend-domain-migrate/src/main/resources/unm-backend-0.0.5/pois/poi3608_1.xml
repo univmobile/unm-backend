@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3608_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3608_1.xml"/>
+<title>Cinema Politica Paris 8</title>
+<updated>2014-08-15T01:47:08.532+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3608"
+	coordinates="48.946321551831,2.3608964681625"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:54:17.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Cinema Politica Paris 8">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Cinema Politica Paris 8 est la première antenne d’un réseau international de diffusion de films oeuvrant principalement au sein d’universités.
+
+ 
+
+En utilisant le genre documentaire comme support et en s’appuyant sur une politique de diffusion gratuite, l’association entend permettre un accès à des oeuvres peu diffusées, proposer un autre regard via le contenu des films et le débat et provoquer des rencontres inter-UFR entre étudiants d’une même université.</description>
+	<address>
+		<url>www.cinemapolitica.org/paris</url>
+		<email>etiennechosson@free.fr</email>
+	</address>
+</content>
+</entry>

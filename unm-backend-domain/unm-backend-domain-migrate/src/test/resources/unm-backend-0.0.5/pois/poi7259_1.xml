@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7259_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7259_1.xml"/>
+<title>Département informatique</title>
+<updated>2014-08-15T01:47:44.936+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7259"
+	coordinates="48.788985051043,2.3269182443619"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T09:58:00.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Département informatique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Le département propose une formation orientée vers les fondements de l'informatique préparant en particulier aux métiers de la recherche scientifique.
+Cette formation comporte une année de licence (L3) et deux années de master recherche, en général dans le cadre du master parisien de recherche en informatique (MPRI). Elle permet aussi de suivre un cursus mixte mathématiques/informatique à la carte, avec la possibilité de passer l'agrégation de mathématiques option informatique en bénéficiant de la seule préparation à cette option en région parisienne.
+À l'issue de cette solide formation, les étudiants ont la capacité à suivre des carrières diversifiées. </description>
+	<address>
+		<floor>Le secrétariat se trouve au Laboratoire Spécification et Vérification (LSV) - rez-de-chaussée</floor>
+		<url>http://www.dptinfo.ens-cachan.fr/</url>
+		<phone>01 47 40 75 20</phone>
+		<fax>01 47 40 75 21</fax>
+		<email>secretariat@dptinfo.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

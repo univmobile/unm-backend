@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4448_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4448_1.xml"/>
+<title>Scolarité 1ère et 2ème année</title>
+<updated>2014-08-15T01:47:17.419+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4448"
+	coordinates="48.626665679354,2.4308069050312"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:40:42.000+02:00"
+	updatedAt="2012-05-15T10:57:47.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Stéphanie ROCHE"
+	parentUid="4440"
+	name="Scolarité 1ère et 2ème année">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Formation d'ingénieur (6 semestres à temps plein, 11 mois de stages)
+3 pôles de formation : informatique / Mathématiques / Organisation de l'entreprise</description>
+	<address>
+		<openingHours>lundi, mardi, mercredi, jeudi, vendredi de 9h0 à 17h</openingHours>
+		<url>www.ensiie.fr</url>
+		<phone>01 69 36 73 13</phone>
+		<fax>01 69 36 73 09</fax>
+		<email>scolarite@ensiie.fr</email>
+	</address>
+</content>
+</entry>

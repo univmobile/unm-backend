@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5061_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5061_1.xml"/>
+<title>Restaurant Universitaire de Paris 8</title>
+<updated>2014-08-15T01:47:23.243+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5061"
+	coordinates="48.945489314314,2.3638857901096"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-30T10:02:49.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	deletedAt="2011-05-30T10:03:56.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	name="Restaurant Universitaire de Paris 8">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+</content>
+</entry>

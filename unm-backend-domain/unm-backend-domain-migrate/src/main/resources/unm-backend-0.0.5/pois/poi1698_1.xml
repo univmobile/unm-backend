@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1698_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1698_1.xml"/>
+<title>Association G.E.N.E.P.I</title>
+<updated>2014-08-15T01:46:50.026+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1698"
+	coordinates="48.824901814708,2.35200427472"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T16:13:00.000+02:00"
+	updatedAt="2011-05-13T14:05:46.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1162"
+	name="Association G.E.N.E.P.I">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<url>http://www.genepi.fr</url>
+		<phone>0145883700</phone>
+		<email>genepi@genepi.fr</email>
+	</address>
+</content>
+</entry>

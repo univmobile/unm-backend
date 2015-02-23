@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6158_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6158_1.xml"/>
+<title>Association de Traducation Spécialisée</title>
+<updated>2014-08-15T01:47:34.458+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6158"
+	coordinates="48.839424277619,2.587101906538"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T15:58:37.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="Association de Traducation Spécialisée">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association des étudiants du Master de Traduction Spécialisée</description>
+	<address>
+		<floor>3è étage</floor>
+		<url>http://www.univ-mlv.fr/vie-du-campus/vie-associative-et-culturelle/les-associations/association-des-etudiants-du-master-de-traduction-specialisee/</url>
+		<phone>06 71 24 72 10</phone>
+		<email>assotsmlv@yahoogroupes.fr</email>
+	</address>
+</content>
+</entry>

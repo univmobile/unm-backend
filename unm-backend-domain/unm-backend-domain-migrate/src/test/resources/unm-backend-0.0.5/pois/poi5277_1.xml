@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5277_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5277_1.xml"/>
+<title>Génie électrique et info industrielle </title>
+<updated>2014-08-15T01:47:24.822+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5277"
+	coordinates="48.788735884988,2.4450346827507"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T08:19:48.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4528"
+	name="Génie électrique et info industrielle ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://iut.u-pec.fr/departements/genie-elect-et-info-indust-/</url>
+		<phone>01 45 17 17 55</phone>
+		<email>geii-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

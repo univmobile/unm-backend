@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1477_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1477_1.xml"/>
+<title>BAPU Pascal </title>
+<updated>2014-08-15T01:46:47.975+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1477"
+	coordinates="48.837380338775,2.3489995"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:36:37.000+02:00"
+	updatedAt="2011-05-30T14:38:35.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	parentUid="1162"
+	name="BAPU Pascal ">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Bureau d'aide psychologique universitaire</description>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>Lundi: 9h-17h
+Mardi, mercredi, jeudi: 9h-19h
+Vendredi: 9h-18h
+Samedi: 9h-13h</openingHours>
+		<itinerary>Métro 7 Censier</itinerary>
+		<phone>0143313132</phone>
+	</address>
+</content>
+</entry>

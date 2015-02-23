@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3375_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3375_1.xml"/>
+<title>BIOEMCO - UMR 7618</title>
+<updated>2014-08-15T01:47:05.911+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3375"
+	coordinates="48.845942297133,2.355922814458"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:40:43.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2838"
+	name="BIOEMCO - UMR 7618">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Biogéochimie et Écologie des Milieux Continentaux</description>
+	<address>
+		<floor>2è étage</floor>
+		<url>http://www.biologie.ens.fr/bioemco/</url>
+	</address>
+</content>
+</entry>

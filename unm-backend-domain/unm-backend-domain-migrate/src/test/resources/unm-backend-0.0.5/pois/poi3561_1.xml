@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3561_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3561_1.xml"/>
+<title>LEA M2</title>
+<updated>2014-08-15T01:47:08.049+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3561"
+	coordinates="48.904431474055,2.2124167531729"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T15:58:09.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2464"
+	name="LEA M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>LEA Affaires internationales et négociations interculturelles (master 2)</description>
+	<address>
+		<floor>Bureau 112, 1èr étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h - 14h / 17h</openingHours>
+		<phone>01 40 97 76 04</phone>
+		<email>francine.viard@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

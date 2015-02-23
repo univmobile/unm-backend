@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4825_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4825_1.xml"/>
+<title>Centre d’études et de recherches : fondements du droit publi</title>
+<updated>2014-08-15T01:47:20.961+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4825"
+	coordinates="49.039820509786,2.0752345025539"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:56:14.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3850"
+	name="Centre d’études et de recherches : fondements du droit publi">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Directrice
+Dorothée Meyer
+</description>
+	<address>
+		<phone>01 34 25 60 26</phone>
+		<email>dorothee.meyer@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

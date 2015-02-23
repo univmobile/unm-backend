@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5080_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5080_1.xml"/>
+<title>Restaurant l'Arlequin</title>
+<updated>2014-08-15T01:47:23.281+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5080"
+	coordinates="48.7908830903,2.3293067514896"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-30T12:29:54.000+02:00"
+	updatedAt="2011-06-10T15:09:45.000+02:00"
+	deletedAt="2011-05-30T12:31:56.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	name="Restaurant l'Arlequin">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>3 pôles pizza, grillade, plats chauds</description>
+	<address>
+		<floor>2ème et 3ème</floor>
+		<openingHours>11h15 - 14h00</openingHours>
+		<phone>01-41-98-39-80</phone>
+		<email>restauran.cachan@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

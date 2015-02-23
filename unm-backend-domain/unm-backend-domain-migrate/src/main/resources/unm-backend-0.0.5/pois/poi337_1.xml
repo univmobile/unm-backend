@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi337_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi337_1.xml"/>
+<title>Institut Galilée</title>
+<updated>2014-08-15T01:46:39.288+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="337"
+	coordinates="48.958469711814,2.339720427"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T10:28:44.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2011-03-04T11:20:05.000+01:00"
+	createdBy="raphael"
+	updatedBy="Kevin Mazille"
+	name="Institut Galilée">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>L'institut Galilée, se consacre à l'enseignement et à la recherche des mathématiques, de la physique, de la chimie et de l'informatique, depuis 35 ans.
+
+Une véritable politique de recherche qui s'appuie sur 8 laboratoires reconnus et le développement des formations professionnelles sont les atouts majeurs de l'Institut scientifique.</description>
+	<address
+		countryCode="FR">
+		<url>http://www-galilee.univ-paris13.fr/</url>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5507_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5507_1.xml"/>
+<title>Campus d'Orsay Bât 332</title>
+<updated>2014-08-15T01:47:26.935+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5507"
+	coordinates="48.701684214392,2.1677593141794"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T16:07:56.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5450"
+	name="Campus d'Orsay Bât 332">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B : BURES S/ YVETTE</itinerary>
+		<fullAddress>Bâtiment 332, 91440 Bures sur Yvette</fullAddress>
+	</address>
+	<child uid="5511" active="true"/>
+	<child uid="7101" active="true"/>
+	<child uid="7102" active="true"/>
+</content>
+</entry>

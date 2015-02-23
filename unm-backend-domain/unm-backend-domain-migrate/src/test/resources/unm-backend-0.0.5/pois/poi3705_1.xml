@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3705_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3705_1.xml"/>
+<title>Contact PMR Sc. pharmaceutiques et biologiques</title>
+<updated>2014-08-15T01:47:09.575+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3705"
+	coordinates="48.843039591608,2.3356877267361"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T15:22:37.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2450"
+	name="Contact PMR Sc. pharmaceutiques et biologiques">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<description>Madame MARTIN professeur
+Madame MISSEBOUKPO, Responsable scolarité
+</description>
+	<address>
+		<phone>01 53 73 96 60</phone>
+	</address>
+</content>
+</entry>

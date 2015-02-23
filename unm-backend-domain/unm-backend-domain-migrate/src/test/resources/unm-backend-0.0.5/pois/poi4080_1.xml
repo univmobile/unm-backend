@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4080_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4080_1.xml"/>
+<title>UMR 7598</title>
+<updated>2014-08-15T01:47:13.432+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4080"
+	coordinates="48.833034731276,2.368596419692"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:53:42.000+02:00"
+	updatedAt="2011-09-05T14:18:32.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3928"
+	name="UMR 7598">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire Jacques-Louis Lions (LJLL) - UMR 7598</description>
+	<address>
+		<floor>Bâtiment C Bureau 2C12 </floor>
+		<url>http://www.ann.jussieu.fr/</url>
+		<phone>01 44 27 42 98</phone>
+		<email>boulic@ann.jussieu.fr</email>
+	</address>
+</content>
+</entry>

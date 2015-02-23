@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1211_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1211_1.xml"/>
+<title>IUT Saint Cloud</title>
+<updated>2014-08-15T01:46:45.867+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1211"
+	coordinates="48.843565273253,2.2152324020863|48.84351584741,2.2152484953403|48.843498195312,2.2151277959347|48.843429352068,2.2151438891888|48.843524673457,2.2158037126064|48.84359351657,2.2157849371433|48.843582925328,2.215723246336|48.843641177131,2.2156937420368|48.843565273253,2.215232402086"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T14:22:36.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-03-25T14:23:30.000+01:00"
+	createdBy="marine gianfermi Paris X"
+	updatedBy="marine gianfermi Paris X"
+	name="IUT Saint Cloud">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4863_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4863_1.xml"/>
+<title>Fontainebleau</title>
+<updated>2014-08-15T01:47:21.316+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4863"
+	coordinates="48.404081846235,2.6975874602795"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T12:30:23.000+02:00"
+	updatedAt="2011-07-26T15:58:38.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="yasmine"
+	parentUid="4695"
+	name="Fontainebleau">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Plateforme d'accueil de la résidence de fontainbleau</description>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>9h00 - 17h00</openingHours>
+		<phone>01-60-71-12-12</phone>
+		<email>residence.fontainbleau@crous-creteil.fr</email>
+	</address>
+	<child uid="4971" active="true"/>
+	<child uid="5903" active="true"/>
+	<child uid="5904" active="true"/>
+</content>
+</entry>

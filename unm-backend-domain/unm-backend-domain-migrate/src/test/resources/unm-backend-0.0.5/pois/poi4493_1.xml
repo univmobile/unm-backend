@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4493_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4493_1.xml"/>
+<title>Médecine préventive</title>
+<updated>2014-08-15T01:47:17.890+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4493"
+	coordinates="48.710969312683,2.1702658385038"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:08:38.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4436"
+	name="Médecine préventive">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Médecine préventive &amp; Infirmerie</description>
+	<address>
+		<floor>Bâtiment 605, bureau 005</floor>
+		<openingHours>Tous les jours sauf le jeudi après-midi</openingHours>
+		<url>http://www.iut-orsay.u-psud.fr/fr/services/service_medical.html</url>
+		<phone>01 69 33 60 28</phone>
+		<fax>01 60 19 33 18</fax>
+		<email>service-medical.iut-orsay@u-psud.fr</email>
+	</address>
+</content>
+</entry>

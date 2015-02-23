@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6186_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6186_1.xml"/>
+<title>BU Saint-Antoine</title>
+<updated>2014-08-15T01:47:34.683+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6186"
+	coordinates="48.849398180378,2.383848130703"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T17:15:41.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3716"
+	name="BU Saint-Antoine">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>153 places
+Accessible aux étudiants en médecine de l'UPMC, médecins, chercheurs, enseignants, paramédicaux.</description>
+	<address>
+		<openingHours>Lundi-vendredi: 9h00-22h00</openingHours>
+		<phone>01 40 01 13 92</phone>
+	</address>
+</content>
+</entry>

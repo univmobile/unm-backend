@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5603_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5603_1.xml"/>
+<title>Scolarité (IUT de Sceaux)</title>
+<updated>2014-08-15T01:47:27.917+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5603"
+	coordinates="48.776057943917,2.2881482541561"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:21:52.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5601"
+	name="Scolarité (IUT de Sceaux)">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>Bureau 330</floor>
+		<openingHours>Tous les jours
+8h30-12h00
+13h30-17h30</openingHours>
+		<url>http://www.iut-sceaux.u-psud.fr/</url>
+		<phone>01 40 91 24 00</phone>
+		<email>scolarite@iut-sceaux.u-psud.fr</email>
+	</address>
+</content>
+</entry>

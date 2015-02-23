@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2701_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2701_1.xml"/>
+<title>Université Panthéon-Assas</title>
+<updated>2014-08-15T01:46:59.316+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2701"
+	coordinates=""
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:24:18.000+02:00"
+	updatedAt="2011-05-03T16:59:50.000+02:00"
+	deletedAt="2011-05-03T16:59:50.000+02:00"
+	createdBy="super admin"
+	updatedBy="super admin"
+	name="Université Panthéon-Assas">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR"
+		latitude="48.88"
+		longitude="2.34">
+	</address>
+</content>
+</entry>

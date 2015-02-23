@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4039_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4039_1.xml"/>
+<title>Italien et roumain L-M</title>
+<updated>2014-08-15T01:47:12.975+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4039"
+	coordinates="48.884153756098,2.3112323507667"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:43:56.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3702"
+	name="Italien et roumain L-M">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 324, 3ème étage, </floor>
+		<openingHours>Le lundi et le vendredi :
+9h30 / 11h30 
+Du mardi au jeudi : 
+14h30 / 16h30</openingHours>
+		<phone>01 43 18 41 65</phone>
+		<email>antonia.moya@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

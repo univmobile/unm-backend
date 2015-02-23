@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7001_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7001_1.xml"/>
+<title>Paris X Finance</title>
+<updated>2014-08-15T01:47:42.141+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7001"
+	coordinates="48.902945867013,2.2155046463013"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T16:06:32.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2488"
+	name="Paris X Finance">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Paris X Finance a été créée par des étudiants du Master Banque Assurance et Finance de l’université Paris Ouest Nanterre La Défense.
+
+Tous sont mus par l’intérêt qu’ils portent au monde de la finance et par la volonté qu’ils ont d’en promouvoir les métiers et la culture à travers une association dynamique, novatrice et pleine d’ambition.
+
+L’association Paris X Finance a pour vocation de rassembler tous les étudiants, actuels et anciens, des Master Banque, Finance Assurance, Économie Appliquée, Gestion d’Actifs et Banque Monnaie Marchés, et ainsi développer l’esprit de promotion au-delà des générations. </description>
+	<address>
+		<floor>Bâtiment G</floor>
+		<email>parisxfinance@yahoo.fr</email>
+	</address>
+</content>
+</entry>

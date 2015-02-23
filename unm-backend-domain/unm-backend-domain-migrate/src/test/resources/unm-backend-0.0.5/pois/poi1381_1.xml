@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1381_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1381_1.xml"/>
+<title>Bibliothèque études anglophones</title>
+<updated>2014-08-15T01:46:46.987+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1381"
+	coordinates="48.85312878536,2.36280854791"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T17:47:15.000+01:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1771"
+	name="Bibliothèque études anglophones">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>1er étage</floor>
+		<openingHours>Du lundi au jeudi: 9h15-18h</openingHours>
+		<phone>0157275866</phone>
+	</address>
+</content>
+</entry>

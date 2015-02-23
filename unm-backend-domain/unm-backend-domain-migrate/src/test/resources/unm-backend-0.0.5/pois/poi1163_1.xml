@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1163_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1163_1.xml"/>
+<title>Université Paris Descartes</title>
+<updated>2014-08-15T01:46:45.420+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1163"
+	coordinates="48.8465,2.34592"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-22T16:56:28.000+01:00"
+	updatedAt="2011-06-14T17:24:36.000+02:00"
+	createdBy="martin"
+	updatedBy="super admin"
+	name="Université Paris Descartes">
+	<poiType id="1" label="Université" categoryId="1" categoryLabel="Plans"/>
+	<university id="paris5"/>
+	<address
+		countryCode="FR"
+		latitude="48.85"
+		longitude="2.35">
+	</address>
+	<child uid="5544" active="true"/>
+	<child uid="2336" active="true"/>
+	<child uid="3107" active="true"/>
+	<child uid="2477" active="true"/>
+	<child uid="2330" active="true"/>
+	<child uid="2425" active="true"/>
+	<child uid="2510" active="true"/>
+	<child uid="2545" active="true"/>
+	<child uid="2929" active="true"/>
+	<child uid="3212" active="true"/>
+	<child uid="3226" active="true"/>
+	<child uid="3235" active="true"/>
+	<child uid="3959" active="true"/>
+	<child uid="3974" active="true"/>
+	<child uid="3980" active="true"/>
+</content>
+</entry>

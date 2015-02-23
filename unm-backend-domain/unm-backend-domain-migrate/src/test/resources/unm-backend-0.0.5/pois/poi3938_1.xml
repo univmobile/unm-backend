@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3938_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3938_1.xml"/>
+<title>Scènes et savoirs</title>
+<updated>2014-08-15T01:47:11.861+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3938"
+	coordinates="48.944464206731,2.3628353700042"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:58:07.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Scènes et savoirs">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 1573 : Scènes et savoirs appartenant à l'École doctorale (ED) 159 : Esthétique, sciences et technologies des arts.
+Directeur : Philippe Tancelin
+Contact département Théâtre</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment A, bureau 031</floor>
+		<url>http://www.univ-paris8.fr/EA-1573-Scenes-et-savoirs</url>
+		<phone>01 49 40 66 16</phone>
+		<email>phtan@sfr.fr</email>
+	</address>
+</content>
+</entry>

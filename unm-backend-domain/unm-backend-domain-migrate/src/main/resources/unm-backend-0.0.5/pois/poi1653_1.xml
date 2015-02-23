@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1653_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1653_1.xml"/>
+<title>Droit Espagnol, Anglais et Américain</title>
+<updated>2014-08-15T01:46:49.635+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1653"
+	coordinates="48.90260314586,2.215074822"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T15:20:23.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2491"
+	name="Droit Espagnol, Anglais et Américain">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 101B, 1er étage</floor>
+		<openingHours>Du lundi au mercredi :
+8h30 / 12h30 - 13h30 / 17h30
+Jeudi à vendredi :
+8h30 / 12h30</openingHours>
+		<phone>01 40 97 47 51</phone>
+		<email>alheuillier@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

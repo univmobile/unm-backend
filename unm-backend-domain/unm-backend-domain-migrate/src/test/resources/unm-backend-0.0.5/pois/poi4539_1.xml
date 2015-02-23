@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4539_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4539_1.xml"/>
+<title>Bâtiment</title>
+<updated>2014-08-15T01:47:18.346+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4539"
+	coordinates="48.78802419394,2.4423632025719|48.788321076714,2.4423632025719|48.788462448846,2.4428030848503|48.788179704184,2.4434575438499|48.788222115985,2.4435755610466|48.788306939479,2.4435433745384|48.788575546265,2.4428567290306|48.789098618511,2.4428567290306|48.789148098036,2.4427708983421|48.789098618511,2.4426850676537|48.788582614845,2.4426528811455|48.788434174452,2.4422666430473|48.788349351172,2.4422559142113|48.788306939479,2.4421700835228|48.788017125282,2.4421700835228|48.78802419394,2.4423632025719"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-24T16:05:28.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	deletedAt="2011-05-24T16:06:16.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Bâtiment">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi350_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi350_1.xml"/>
+<title>test martin</title>
+<updated>2014-08-15T01:46:39.336+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="350"
+	coordinates="48.846448421806,2.34399855136"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T11:11:52.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-07-26T11:12:46.000+02:00"
+	createdBy="martin"
+	updatedBy="martin"
+	name="test martin">
+	<poiType id="6" label="Entrée principale" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<floor>test martin</floor>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7217_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7217_1.xml"/>
+<title>Bâtiment Iris</title>
+<updated>2014-08-15T01:47:44.440+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7217"
+	coordinates="48.789486619168,2.3259955644608"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-06T15:50:50.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	deletedAt="2012-12-06T15:51:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	name="Bâtiment Iris">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

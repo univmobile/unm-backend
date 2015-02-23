@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3278_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3278_1.xml"/>
+<title>D'ALEMBERT - UMR 7190</title>
+<updated>2014-08-15T01:47:04.886+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3278"
+	coordinates="48.845649646071,2.357296943664"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:44:09.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3283"
+	name="D'ALEMBERT - UMR 7190">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>L'Institut Jean le Rond d'Alembert (DALEMBERT) est un laboratoire de recherrche dont la vocation est d’étendre le champ des connaissances dans tous les domaines de la Mécanique, de l’Acoustique et de l’Energétique.</description>
+	<address>
+		<floor>5è étage</floor>
+	</address>
+</content>
+</entry>

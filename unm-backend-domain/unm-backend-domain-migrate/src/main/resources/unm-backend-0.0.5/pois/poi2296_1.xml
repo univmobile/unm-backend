@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2296_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2296_1.xml"/>
+<title>Secrétariat du département Chine</title>
+<updated>2014-08-15T01:46:55.626+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2296"
+	coordinates="48.871806882728,2.272699065"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T14:55:36.000+02:00"
+	updatedAt="2011-04-29T17:14:53.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2568"
+	name="Secrétariat du département Chine">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau P 121, 1er étage</floor>
+		<openingHours>Du lundi au jeudi :
+14h / 17h
+Vendredi :
+10h / 12h - 14h / 17h</openingHours>
+		<phone>01 44 05 41 08</phone>
+		<email>secretariat.chine@inalco.fr</email>
+	</address>
+</content>
+</entry>

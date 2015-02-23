@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2079_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2079_1.xml"/>
+<title>Bureau des étudiants étrangers</title>
+<updated>2014-08-15T01:46:53.916+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2079"
+	coordinates="48.944804805683,2.36378252506"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T17:25:21.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Bureau des étudiants étrangers">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Suivi des admissions des étudiants étrangers à titre individuel, hors EEE.</description>
+	<address>
+		<openingHours>Lundi, mercredi et vendredi
+9h30-12h
+13h30-16h</openingHours>
+		<phone>01 49 40 64 33</phone>
+		<email>etudiants.etrangers@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

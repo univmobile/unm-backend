@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2752_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2752_1.xml"/>
+<title>Campus d'Orsay</title>
+<updated>2014-08-15T01:46:59.820+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2752"
+	coordinates="48.69835308328,2.1794289350"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T17:27:52.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2714"
+	name="Campus d'Orsay">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="6474"/>
+	<child uid="4122" active="true"/>
+	<child uid="3957" active="true"/>
+	<child uid="4031" active="true"/>
+	<child uid="4055" active="true"/>
+	<child uid="4311" active="true"/>
+</content>
+</entry>

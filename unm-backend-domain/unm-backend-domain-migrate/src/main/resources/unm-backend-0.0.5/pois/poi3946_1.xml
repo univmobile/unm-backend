@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3946_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3946_1.xml"/>
+<title>Theoria praxis</title>
+<updated>2014-08-15T01:47:11.949+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3946"
+	coordinates="48.849067153117,2.3435445874929"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:07:19.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Theoria praxis">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Promouvoir la médiation et la réflexion culturelle et artistique par l’organisation d’évènements, l’élaboration de produits audiovisuels, l’édition de nouvelles, d’essais, d’analyses et de critiques et par la fondation d’un journal. Promouvoir la réflexion politique et philosophique au moyen de débats, d’analyses dans l’idée d’élaborer un nouveau projet de société.</description>
+	<address>
+		<floor>Salle F660, escalier i, 1er étage</floor>
+		<openingHours>Le lundi, mardi et mercredi : 
+14h00 / 17h00
+Le jeudi : 
+13h00 / 18h00 </openingHours>
+		<phone>06 67 06 07 06</phone>
+		<email>contact@theoriapraxis.org</email>
+	</address>
+</content>
+</entry>

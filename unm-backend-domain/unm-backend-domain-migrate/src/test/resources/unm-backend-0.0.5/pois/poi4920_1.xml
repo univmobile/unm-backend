@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4920_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4920_1.xml"/>
+<title>Droit (M2 secrétariat A)</title>
+<updated>2014-08-15T01:47:21.830+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4920"
+	coordinates="48.782100735711,2.2843043133616"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:45:28.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4664"
+	name="Droit (M2 secrétariat A)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Candidatures, inscriptions pédagogiques, gestion des résultats, relevés de notes, etc.</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment B, bureau 002</floor>
+		<url>http://www.jm.u-psud.fr/fr/vie_etudiante/service_des_etudes_et_de_la_vie_de_l_etudiant.html</url>
+		<phone>01 40 91 18 15</phone>
+		<email>martine.delaville@u-psud.fr</email>
+	</address>
+</content>
+</entry>

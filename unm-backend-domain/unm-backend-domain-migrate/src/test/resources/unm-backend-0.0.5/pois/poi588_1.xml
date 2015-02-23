@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi588_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi588_1.xml"/>
+<title>SITE PIERRE MENDES FRANCE</title>
+<updated>2014-08-15T01:46:40.830+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="588"
+	coordinates="48.827491536727,2.3647373914719|48.827302598524,2.3648500442505|48.827292003837,2.3648178577423|48.827216075184,2.3648527264595|48.827258453981,2.3650377988815|48.827069514899,2.3651531338692|48.827004180659,2.3648634552956|48.827073046478,2.3648285865784|48.827044793845,2.3646971583366|48.827133083268,2.3646488785744|48.827136614842,2.3646730184555|48.827150741134,2.3646596074104|48.827133083268,2.3645710945129|48.827069514899,2.3646059632301|48.827004180659,2.3643055558205|48.827189588417,2.3642036318779|48.827260219764,2.3644879460335|48.82722843567,2.3645120859146|48.827240796153,2.3645523190498|48.827417374152,2.3644477128983|48.827491536727,2.364737391471"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-01-10T19:24:12.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-01-10T19:28:04.000+01:00"
+	createdBy="cleasyP1"
+	updatedBy="cleasyP1"
+	name="SITE PIERRE MENDES FRANCE">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

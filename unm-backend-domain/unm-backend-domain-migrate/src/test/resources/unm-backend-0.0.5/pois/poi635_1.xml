@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi635_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi635_1.xml"/>
+<title>Cafétéria Pierre Mendès France</title>
+<updated>2014-08-15T01:46:40.901+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="635"
+	coordinates="48.827386002181,2.36462473"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T16:54:02.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-01T17:44:53.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Cafétéria Pierre Mendès France">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<floor>RDC et 9e étage</floor>
+		<openingHours>Lundi au vendredi
+9h15-17h45
+</openingHours>
+		<fullAddress>90 rue de Tolbiac
+75013 Paris</fullAddress>
+	</address>
+</content>
+</entry>

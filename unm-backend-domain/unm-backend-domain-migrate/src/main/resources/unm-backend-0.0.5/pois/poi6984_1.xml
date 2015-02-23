@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6984_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6984_1.xml"/>
+<title>AMEIX</title>
+<updated>2014-08-15T01:47:41.921+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6984"
+	coordinates="48.902881425126,2.215273976326"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:00:29.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2488"
+	name="AMEIX">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description> L'objectif de l'AMEIX (Assocation des étudiants du M2 EIPMC de l’université Paris ouest) est triple:
+- renforcer les liens entre les étudiants de chaque promotion
+- entretenir un réseau dynamique d’anciens élèves.
+- renforcer la notoriété du master dans le monde professionnel. </description>
+	<address>
+		<floor>Bâtiment G</floor>
+		<url>http://ameix.free.fr/index.php</url>
+		<email>ameix.paris10@gmail.com</email>
+	</address>
+</content>
+</entry>

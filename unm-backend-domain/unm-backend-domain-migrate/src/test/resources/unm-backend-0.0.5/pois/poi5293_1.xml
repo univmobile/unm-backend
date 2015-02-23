@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5293_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5293_1.xml"/>
+<title>Bibliothèque de médecine </title>
+<updated>2014-08-15T01:47:24.931+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5293"
+	coordinates="48.795457633496,2.453738451004"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T09:46:22.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4875"
+	name="Bibliothèque de médecine ">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi de 8h 30 à 22h, samedi de 10h à 20h
+</openingHours>
+		<url>http://bibliotheque.u-pec.fr/bibliotheques/medecine/</url>
+		<phone>01 49 81 36 07</phone>
+		<fax>01 48 98 07 18</fax>
+		<email> bibmed@u-pec.fr</email>
+	</address>
+</content>
+</entry>

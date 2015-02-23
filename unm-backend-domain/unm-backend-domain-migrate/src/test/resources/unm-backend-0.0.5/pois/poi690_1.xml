@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi690_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi690_1.xml"/>
+<title>UFR 05 Droit des affaires</title>
+<updated>2014-08-15T01:46:41.134+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="690"
+	coordinates="48.849072124571,2.343746423721"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-04T16:50:07.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-02-15T17:04:53.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="UFR 05 Droit des affaires">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		countryCode="FR">
+		<floor>Galerie Richelieu salle Louis Liard</floor>
+		<phone>01 44 07 77 35</phone>
+		<email>ufr05@univ-paris1.fr</email>
+		<fullAddress>17 rue Sorbonne
+ 75005 Paris</fullAddress>
+	</address>
+</content>
+</entry>

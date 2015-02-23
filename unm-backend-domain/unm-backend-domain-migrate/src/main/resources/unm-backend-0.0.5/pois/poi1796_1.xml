@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1796_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1796_1.xml"/>
+<title>Master 1 Biologie - Santé</title>
+<updated>2014-08-15T01:46:51.001+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1796"
+	coordinates="48.810698152744,2.14833945035"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T15:40:12.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2011-04-08T16:08:54.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	name="Master 1 Biologie - Santé">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 208 - Bâtiment Descartes</floor>
+		<phone>0139254022</phone>
+		<email>florence.armand@uvsq.fr </email>
+	</address>
+</content>
+</entry>

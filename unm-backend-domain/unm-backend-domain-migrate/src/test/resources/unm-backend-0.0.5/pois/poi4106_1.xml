@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4106_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4106_1.xml"/>
+<title>UMR 7223</title>
+<updated>2014-08-15T01:47:13.724+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4106"
+	coordinates="48.844266077904,2.3433787934482"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:20:47.000+02:00"
+	updatedAt="2011-06-03T16:56:30.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4103"
+	name="UMR 7223">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire Charles Friedel - UMR 7223</description>
+	<address>
+		<url>http://www.enscp.fr/spip.php?article96</url>
+		<phone>01 44 27 66 97</phone>
+		<email>anne.vessieres_-_jaouen@upmc.fr</email>
+	</address>
+</content>
+</entry>

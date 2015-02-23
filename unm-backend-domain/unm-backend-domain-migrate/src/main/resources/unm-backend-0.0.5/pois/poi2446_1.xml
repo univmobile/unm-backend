@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2446_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2446_1.xml"/>
+<title>Site du SITEC</title>
+<updated>2014-08-15T01:46:56.858+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2446"
+	coordinates="48.825317100417,2.19868116080"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:19:23.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="1161"
+	name="Site du SITEC">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="2456" active="true"/>
+	<child uid="2454" active="true"/>
+	<child uid="2451" active="true"/>
+	<child uid="2449" active="true"/>
+	<child uid="2424" active="true"/>
+	<child uid="2429" active="true"/>
+	<child uid="2433" active="true"/>
+	<child uid="2434" active="true"/>
+	<child uid="2437" active="true"/>
+	<child uid="2439" active="true"/>
+	<child uid="2444" active="true"/>
+</content>
+</entry>

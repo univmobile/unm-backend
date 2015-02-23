@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi589_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi589_1.xml"/>
+<title>Université Paris1 Panthéon-Sorbonne</title>
+<updated>2014-08-15T01:46:40.831+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="589"
+	coordinates="48.849050120714,2.343451380729"
+	active="true"
+	markerType="point"
+	createdAt="2011-01-11T18:19:00.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-01-11T18:42:17.000+01:00"
+	createdBy="cleasyP1"
+	updatedBy="cleasyP1"
+	name="Université Paris1 Panthéon-Sorbonne">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<floor>1, rue Victor Cousin 75005 </floor>
+	</address>
+</content>
+</entry>

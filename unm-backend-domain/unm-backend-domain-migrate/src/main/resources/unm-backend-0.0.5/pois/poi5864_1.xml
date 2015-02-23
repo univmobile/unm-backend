@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5864_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5864_1.xml"/>
+<title>Centre d'études et de recherche en droit de l'immatériel</title>
+<updated>2014-08-15T01:47:30.996+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5864"
+	coordinates="48.782246587961,2.2848759591579"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T17:21:35.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4661"
+	name="Centre d'études et de recherche en droit de l'immatériel">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Centre d'études et de recherche en droit de l'immatériel (CERDI).
+Équipe d'accueil (EA) 3537 appartenant à l'École doctorale (ED) 263 Sciences juridiques, économiques et de gestion.</description>
+	<address>
+		<floor>Bâtiment D, bureau 202</floor>
+		<url>http://www.cerdi.u-psud.fr/</url>
+		<phone>01 40 91 18 40</phone>
+		<fax>01 40 91 19 31</fax>
+		<email>cerdi@u-psud.fr</email>
+	</address>
+</content>
+</entry>

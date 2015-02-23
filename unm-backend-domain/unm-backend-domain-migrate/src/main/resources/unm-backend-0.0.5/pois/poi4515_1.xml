@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4515_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4515_1.xml"/>
+<title>UMR_S 974</title>
+<updated>2014-08-15T01:47:18.111+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4515"
+	coordinates="48.837476730927,2.3607053607702"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:21:47.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3686"
+	name="UMR_S 974">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Thérapies des maladies des muscles striés - UMR_S 974</description>
+	<address>
+		<url>http://www.ifrcmv.chups.jussieu.fr/</url>
+		<phone>01 42 16 57 05</phone>
+		<email>s.sandal@institut-myologie.org</email>
+	</address>
+</content>
+</entry>

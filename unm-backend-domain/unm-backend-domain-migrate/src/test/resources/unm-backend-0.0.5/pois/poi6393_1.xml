@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6393_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6393_1.xml"/>
+<title>Mathématiques (L3-M1)</title>
+<updated>2014-08-15T01:47:36.778+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6393"
+	coordinates="48.828404845721,2.3833492398262"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T16:35:58.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1781"
+	name="Mathématiques (L3-M1)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Biopark-Watt, 3ème étage, bureau 307</floor>
+		<openingHours>Lundi et jeudi
+9h00-12h00
+13h30-17h00
+Mardi
+9h00-16h30
+Mercredi
+9h00-12h00
+Vendredi
+9h00-16h00</openingHours>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=929</url>
+		<phone>01 57 27 65 37</phone>
+		<email>senecal@math.jussieu.fr</email>
+	</address>
+</content>
+</entry>

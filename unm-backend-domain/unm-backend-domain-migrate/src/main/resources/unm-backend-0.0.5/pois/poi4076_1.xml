@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4076_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4076_1.xml"/>
+<title>Philosophie L3, M1-2</title>
+<updated>2014-08-15T01:47:13.386+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4076"
+	coordinates="48.848292306035,2.3432388156652"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:43:54.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Philosophie L3, M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Escalier J, 2ème étage, bureau F653</floor>
+		<openingHours>du lundi au jeudi : 
+9h30 / 12h30 - 14H00 / 16h30
+vendredi : 
+9h30 / 12h30 
+</openingHours>
+		<phone>01 40 46 26 37</phone>
+		<email>secretariat.philosophie@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

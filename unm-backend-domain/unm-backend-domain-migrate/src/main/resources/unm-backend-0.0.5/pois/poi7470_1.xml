@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7470_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7470_1.xml"/>
+<title>Site de Sarcelles</title>
+<updated>2014-08-15T01:47:46.716+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7470"
+	coordinates="48.97491321677,2.3769206553698"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-26T10:58:29.000+02:00"
+	updatedAt="2013-06-26T11:00:54.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="4066"
+	name="Site de Sarcelles">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>génie électrique, services et réseaux de communication, techniques de commercialisation</description>
+	<address>
+		<floor>3e étage</floor>
+		<openingHours>du lundi au vendredi de 8h30 à 18h Fermeture (voir le site web)</openingHours>
+		<url>http://www.u-cergy.fr/fr/bibliotheque.html</url>
+		<phone>01 34 28 26 31</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2741_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2741_1.xml"/>
+<title>Communication numérique (M1-M2)</title>
+<updated>2014-08-15T01:46:59.689+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2741"
+	coordinates="48.944396985121,2.36304894089"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T17:19:20.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Communication numérique (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Pour les M1 Industries créatives
+Pour les M1 et M2 Communication numérique
+Contactez M. Daniel Dujo</description>
+	<address>
+		<floor>3ème étage Bâtiment A, bureau 333</floor>
+		<openingHours>Lundi et jeudi
+11h30-12h30
+14h-17h
+Mardi, mercredi et jeudi
+14h-17h</openingHours>
+		<url>http://com-media.univ-paris8.fr/index.htm</url>
+		<phone>01 49 40 71 86</phone>
+		<fax>01 49 40 71 68</fax>
+		<email>daniel.dujo@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

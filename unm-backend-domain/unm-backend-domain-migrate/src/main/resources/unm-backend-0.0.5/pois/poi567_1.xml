@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi567_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi567_1.xml"/>
+<title>Orientation et conseil</title>
+<updated>2014-08-15T01:46:40.744+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="567"
+	coordinates="48.62355371718,2.4268653988"
+	active="true"
+	markerType="point"
+	createdAt="2010-11-18T10:39:01.000+01:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	deletedAt="2011-04-05T15:41:00.000+02:00"
+	createdBy="pdeljurie"
+	updatedBy="yasmine"
+	name="Orientation et conseil">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<floor>Bâtiment Maupertuis</floor>
+		<openingHours>8h30 à 18h</openingHours>
+		<itinerary>RER D</itinerary>
+	</address>
+</content>
+</entry>

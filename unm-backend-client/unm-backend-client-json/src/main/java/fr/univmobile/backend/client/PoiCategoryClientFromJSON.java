@@ -35,11 +35,6 @@ public class PoiCategoryClientFromJSON extends
 	}
 	
 	@XPath("/*")
-	public interface PoisCategoriesJSON extends PoisCategories {
-		
-	}
-
-	@XPath("/*")
 	public interface PoiCategoryJSON extends PoiCategory {
 		
 		@XPath("@id")

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7019_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7019_1.xml"/>
+<title>L3 Socio, M1 Eco et soc parcours socio et bidisciplinaire </title>
+<updated>2014-08-15T01:47:42.375+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7019"
+	coordinates="48.90196327406,2.212205529213"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-21T14:55:56.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="6956"
+	name="L3 Socio, M1 Eco et soc parcours socio et bidisciplinaire ">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Sophie THOMAS</description>
+	<address>
+		<floor>D.212B</floor>
+		<phone>01 40 97 75 09</phone>
+		<email>sthomas@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

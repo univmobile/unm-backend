@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1288_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1288_1.xml"/>
+<title>Polygone</title>
+<updated>2014-08-15T01:46:46.066+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1288"
+	coordinates="48.833443902522,2.3685749620199|48.833562195204,2.3687519878149|48.833270876901,2.3691891878843|48.833157880255,2.3690255731344|48.833207316319,2.3689129203558|48.832967197836,2.3685722798109|48.832983088065,2.3685454577208|48.832824185546,2.3682986944914|48.83292658945,2.3681297153234|48.833016634088,2.3682477325201|48.833092553952,2.3681484907866|48.833203785173,2.3683067411184|48.833124334326,2.3684354871511|48.833260283476,2.3686902970076|48.833251455621,2.3687332123518|48.833299126023,2.3687949031591|48.833443902522,2.3685"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T16:15:13.000+01:00"
+	updatedAt="2011-06-22T15:01:00.000+02:00"
+	deletedAt="2011-06-03T14:50:11.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="yasmine"
+	name="Polygone">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 6 Chevaleret
+Métro 14 Bibliothèque François Mitterrand 
+RER C Bibliothèque François Mitterrand
+Bus 27 Clisson
+Bus 89 Grande Bibliothèque</itinerary>
+		<fullAddress>175 rue du Chevaleret
+75013 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2298_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2298_1.xml"/>
+<title>Secrétariat licence du département Japon</title>
+<updated>2014-08-15T01:46:55.647+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2298"
+	coordinates="48.871796973732,2.2727610915"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:01:32.000+02:00"
+	updatedAt="2011-04-29T17:14:53.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2568"
+	name="Secrétariat licence du département Japon">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>bureau P121 bis</floor>
+		<openingHours>Du lundi au jeudi :
+14h / 17h
+Vendredi :
+9h30 / 12h - 14h / 17h</openingHours>
+		<phone>01 44 05 41 10</phone>
+		<email>secretariat.japon@inalco.fr</email>
+	</address>
+</content>
+</entry>

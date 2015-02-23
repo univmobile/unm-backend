@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5195_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5195_1.xml"/>
+<title>Formation de l'ingénieur</title>
+<updated>2014-08-15T01:47:24.169+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5195"
+	coordinates="48.613447780535,2.428607493639"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:50:14.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="476"
+	name="Formation de l'ingénieur">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<openingHours>Du lundi au vendredi :
+9h00 / 12h00 - 13h30 / 17h00</openingHours>
+		<phone>01 69 47 75 93</phone>
+		<email>ufrst@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

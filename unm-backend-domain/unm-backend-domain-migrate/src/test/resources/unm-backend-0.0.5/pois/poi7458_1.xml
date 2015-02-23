@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7458_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7458_1.xml"/>
+<title>Master 2 « Technologies numériques appliquées à l’histoire »</title>
+<updated>2014-08-15T01:47:46.578+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7458"
+	coordinates="48.859766523989,2.3595245182514"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-07T16:22:41.000+02:00"
+	updatedAt="2013-06-07T17:04:24.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7352"
+	name="Master 2 « Technologies numériques appliquées à l’histoire »">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Grand établissement, l’École nationale des chartes forme des historiens et des responsables de la conservation du patrimoine qui travaillent notamment en archives, en bibliothèque et en musée.
+
+En 2006, elle a créé le master recherche et professionnel « Technologies numériques appliquées à l’histoire », dédié aux humanités numériques. Il répond à deux objectifs :
+
+- permettre une insertion professionnelle dans les secteurs public et privé, au service de projets utilisant l’informatique pour le traitement et la diffusion du patrimoine écrit et visuel ;
+- proposer une formation méthodologique qui fait une part très large aux technologies numériques dans l’élaboration de travaux de recherche.
+
+Ce master est noté A par l’AERES.
+</description>
+	<address>
+		<floor>Hôtel de Rohan, Archives nationales, 87, rue Vieille-du-Temple, 75003 Paris</floor>
+		<url>http://www.enc.sorbonne.fr/master-technologies-numeriques-appliquees-l-histoire</url>
+		<phone>01.55.42.75.02</phone>
+		<email>etudes@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

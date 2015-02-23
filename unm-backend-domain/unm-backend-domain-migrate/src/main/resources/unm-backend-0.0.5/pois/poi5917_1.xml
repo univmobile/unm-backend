@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5917_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5917_1.xml"/>
+<title>Caféteria Cergy les Chenes</title>
+<updated>2014-08-15T01:47:31.622+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5917"
+	coordinates="49.03871528656,2.0751057565212"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T09:47:24.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3849"
+	name="Caféteria Cergy les Chenes">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Lundi - Vendredi
+11h30 à 13h45</openingHours>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3978_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3978_1.xml"/>
+<title>Effervescence</title>
+<updated>2014-08-15T01:47:12.338+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3978"
+	coordinates="48.849008584037,2.34350502491"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:51:22.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Effervescence">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’association des élèves et anciens élèves du master de Lettres Modernes Appliquées a pour but de créer des liens entre les promotions afin de favoriser l’insertion professionnelle ; l’expérience personnelle de chacun devant servir à faire connaître le Master, à aider les étudiants en cours de formation dans leur recherche de stage et à faciliter les rencontres avec les spécialistes de l’édition et de l’audiovisuel.</description>
+	<address>
+		<url>http://www.effervescencesorbonne.com/index.php</url>
+		<phone>01 40 46 26 44</phone>
+		<email>info@effervescencesorbonne.com</email>
+	</address>
+</content>
+</entry>

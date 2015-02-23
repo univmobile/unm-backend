@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4490_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4490_1.xml"/>
+<title>Site de Melun/IUFM</title>
+<updated>2014-08-15T01:47:17.856+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4490"
+	coordinates="48.532457167417,2.6524955034256"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:06:26.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="3841"
+	name="Site de Melun/IUFM">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>3, rue Belle Ombre 7700 Melum Cedex
+</description>
+	<address>
+		<url>http://www.creteil.iufm.fr</url>
+		<phone>01 64 41 35 00 </phone>
+	</address>
+	<child uid="5247" active="true"/>
+</content>
+</entry>

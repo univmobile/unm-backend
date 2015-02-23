@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5417_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5417_1.xml"/>
+<title>Université d'Evry Bât Ile-de-France</title>
+<updated>2014-08-15T01:47:25.988+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5417"
+	coordinates="48.624131754513,2.4272127449512"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T11:29:50.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5413"
+	name="Université d'Evry Bât Ile-de-France">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D : Station Evry - Courcouronnes</itinerary>
+		<fullAddress>Boulevard des Coquibus - 91000 Évry</fullAddress>
+	</address>
+	<child uid="7092" active="true"/>
+	<child uid="5419" active="true"/>
+</content>
+</entry>

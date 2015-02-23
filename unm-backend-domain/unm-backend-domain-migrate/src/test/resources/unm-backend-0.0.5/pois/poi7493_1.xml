@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7493_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7493_1.xml"/>
+<title>BDIE</title>
+<updated>2014-08-15T01:47:46.892+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7493"
+	coordinates="48.846964683289,2.3449701815844"
+	active="true"
+	markerType="point"
+	createdAt="2013-09-26T18:00:25.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="Pascale.randriantiana "
+	updatedBy="Pascale.randriantiana "
+	parentUid="1027"
+	name="BDIE">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>La Bibliothèque du département d’études internationales et européennes (BDIE) accueille, outre les étudiants qui préparent une thèse en droit international et européen, tous les étudiants des masters recherche et masters professionnel de l'UFR 07.
+ </description>
+	<address>
+		<floor>Bureau 310</floor>
+		<openingHours>Du lundi au vendredi : 
+9h30 - 18h30</openingHours>
+		<url>http://www.univ-paris1.fr/ecoles-doctorales/droit-international-et-europeen-ed-283/les-centres-de-recherche-et-de-documentation/bdie/</url>
+		<phone>01 44 07 77 55</phone>
+		<email>Nicolae.Florea@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

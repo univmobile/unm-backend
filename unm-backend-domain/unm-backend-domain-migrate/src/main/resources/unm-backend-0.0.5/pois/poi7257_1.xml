@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7257_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7257_1.xml"/>
+<title>Département de chimie</title>
+<updated>2014-08-15T01:47:44.915+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7257"
+	coordinates="48.78894440702,2.3273313045502"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T09:26:41.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Département de chimie">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La vocation première du département de chimie est de préparer aux métiers de l'enseignement et de la recherche dans toutes les spécialités de la chimie et aux interfaces avec la physique ou la biologie, pour une insertion professionnelle en milieu académique ou en entreprise.
+Le département propose une formation de haut niveau à la fois théorique et expérimentale aussi bien aux auditeurs libres qu'aux élèves normaliens, en partenariat étroit avec l'Université Paris 11 d'Orsay.
+Les enseignement proposés s'étendent du niveau licence 3 au master 2, avec en supplément l'organisation d'une préparation à temps plein au concours de l'agrégation. La scolarité dure quatre années, offrant ainsi la possibilité d'une année de complément de formation aux étudiants qui ne souhaitent pas préparer l'agrégation.</description>
+	<address>
+		<floor>3e étage</floor>
+		<openingHours>Ouverture du secrétariat du lundi au vendredi 8h30-12h et 14h-18h sauf mercredi après-midi.</openingHours>
+		<url>http://www.chimie.ens-cachan.fr/</url>
+		<phone>01 47 40 53 38</phone>
+		<fax>01 47 40 24 54</fax>
+	</address>
+</content>
+</entry>

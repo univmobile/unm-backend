@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2715_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2715_1.xml"/>
+<title>Campus Jussieu</title>
+<updated>2014-08-15T01:46:59.441+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2715"
+	coordinates="48.846689299397,2.356159687042"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:41:33.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Martin Gobert"
+	parentUid="2714"
+	name="Campus Jussieu">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="4244" active="true"/>
+	<child uid="3665" active="true"/>
+	<child uid="3653" active="true"/>
+	<child uid="3554" active="true"/>
+	<child uid="3542" active="true"/>
+	<child uid="3389" active="true"/>
+	<child uid="3343" active="true"/>
+	<child uid="3205" active="true"/>
+	<child uid="2838" active="true"/>
+	<child uid="2828" active="true"/>
+	<child uid="2773" active="true"/>
+	<child uid="2767" active="true"/>
+	<child uid="2761" active="true"/>
+	<child uid="2717" active="true"/>
+	<child uid="2777" active="true"/>
+	<child uid="2784" active="true"/>
+	<child uid="2790" active="true"/>
+	<child uid="2800" active="true"/>
+	<child uid="2806" active="true"/>
+	<child uid="2811" active="true"/>
+	<child uid="2813" active="true"/>
+	<child uid="2820" active="true"/>
+	<child uid="2824" active="true"/>
+	<child uid="2830" active="true"/>
+	<child uid="2841" active="true"/>
+	<child uid="2847" active="true"/>
+	<child uid="2855" active="true"/>
+	<child uid="3210" active="true"/>
+	<child uid="3239" active="true"/>
+	<child uid="3246" active="true"/>
+	<child uid="3267" active="true"/>
+	<child uid="3283" active="true"/>
+	<child uid="3287" active="true"/>
+	<child uid="3295" active="true"/>
+	<child uid="3304" active="true"/>
+	<child uid="3313" active="true"/>
+	<child uid="3335" active="true"/>
+	<child uid="3348" active="true"/>
+	<child uid="3365" active="true"/>
+	<child uid="3402" active="true"/>
+	<child uid="3425" active="true"/>
+	<child uid="3532"/>
+	<child uid="3563" active="true"/>
+	<child uid="3571" active="true"/>
+	<child uid="3986" active="true"/>
+	<child uid="3994" active="true"/>
+	<child uid="4233" active="true"/>
+	<child uid="4250" active="true"/>
+	<child uid="4261" active="true"/>
+	<child uid="4460" active="true"/>
+</content>
+</entry>

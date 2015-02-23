@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4420_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4420_1.xml"/>
+<title>AgroParisTech</title>
+<updated>2014-08-15T01:47:17.077+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4420"
+	coordinates="48.839818553116,2.3476647958159"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:14:21.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2729"
+	name="AgroParisTech">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : 7 (Censier-Daubenton)
+RER : B (Port-Royal)</itinerary>
+		<fullAddress>16 rue claude bernard
+75005 Paris</fullAddress>
+	</address>
+	<child uid="4423" active="true"/>
+	<child uid="4439" active="true"/>
+</content>
+</entry>

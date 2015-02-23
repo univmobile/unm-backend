@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5932_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5932_1.xml"/>
+<title>Cafétéria de l' IUT de Champs</title>
+<updated>2014-08-15T01:47:31.795+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5932"
+	coordinates="48.837237309679,2.5844760239124"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:13:17.000+02:00"
+	updatedAt="2011-07-26T16:35:52.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4861"
+	name="Cafétéria de l' IUT de Champs">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>10h00 - 14h00</openingHours>
+		<phone>01-60-95-75-68</phone>
+		<email>restaurant.champs-sur-marne@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi846_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi846_1.xml"/>
+<title>Institut d’études judiciaires</title>
+<updated>2014-08-15T01:46:42.448+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="846"
+	coordinates="48.848504022326,2.3433199524"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-18T17:25:02.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-03-15T17:37:54.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Institut d’études judiciaires">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Hall Saint Jacques, Escalier O, 2e étage</floor>
+		<openingHours>Lundi au vendredi
+ 9h30-12h00 et
+14h00-16h00
+Fermé le Mercredi</openingHours>
+		<phone> 01 44 07 77 89</phone>
+		<email>iej@univ-paris1.fr</email>
+		<fullAddress>17 rue Sorbonne
+75005 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

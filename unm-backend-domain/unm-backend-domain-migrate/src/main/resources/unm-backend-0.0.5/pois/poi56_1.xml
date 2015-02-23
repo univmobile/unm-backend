@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi56_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi56_1.xml"/>
+<title>Campus Villetaneuse</title>
+<updated>2014-08-15T01:46:38.341+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="56"
+	coordinates="48.959380455018,2.3381284478819|48.960000366148,2.3407033685362|48.958337859834,2.3425916436827|48.957788375224,2.3446730378782|48.954519521154,2.3430422547972|48.954984500533,2.3389009240782|48.958661912022,2.3373345140135|48.959380455018,2.33812844788"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-06-24T12:43:02.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-06-24T12:46:23.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Campus Villetaneuse">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

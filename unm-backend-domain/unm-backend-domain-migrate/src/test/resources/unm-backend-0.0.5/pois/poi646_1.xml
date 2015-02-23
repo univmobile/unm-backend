@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi646_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi646_1.xml"/>
+<title>Cafétéria Châtelet</title>
+<updated>2014-08-15T01:46:40.945+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="646"
+	coordinates="48.841778556885,2.3484617"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T18:13:44.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1026"
+	name="Cafétéria Châtelet">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Lundi au vendredi
+11h30-14h00
+</openingHours>
+		<itinerary>Métro 7 
+Arrêt Censier Daubenton</itinerary>
+	</address>
+</content>
+</entry>

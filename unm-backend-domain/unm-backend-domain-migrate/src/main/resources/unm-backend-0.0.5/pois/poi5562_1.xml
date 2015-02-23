@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5562_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5562_1.xml"/>
+<title>Institut Psychologie </title>
+<updated>2014-08-15T01:47:27.475+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5562"
+	coordinates="48.834419337998,2.2477736324072"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:32:02.000+02:00"
+	updatedAt="2011-06-14T17:05:08.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5550"
+	name="Institut Psychologie ">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<phone>01 55 20 58 58</phone>
+		<fax>01 55 20 57 45</fax>
+		<email>Scolarite@psychologie.parisdescartes.fr</email>
+	</address>
+</content>
+</entry>

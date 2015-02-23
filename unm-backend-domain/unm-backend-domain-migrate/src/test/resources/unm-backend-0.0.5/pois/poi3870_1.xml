@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3870_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3870_1.xml"/>
+<title>LIQUAL - CFA</title>
+<updated>2014-08-15T01:47:11.156+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3870"
+	coordinates="48.846278353554,2.3582001775503"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:25:23.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2813"
+	name="LIQUAL - CFA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence Professionnelle Gestion de la qualité et des risques dans les bio-industries</description>
+	<address>
+		<url>http://www.cfa.upmc.fr/cfa_upmc/detail/Fiche_formation?item_id=45084640</url>
+		<phone>01 44 27 71 40</phone>
+		<email>helene.pouzet@upmc.fr</email>
+	</address>
+</content>
+</entry>

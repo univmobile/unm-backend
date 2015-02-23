@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi927_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi927_1.xml"/>
+<title>Institut d' ésthétique des arts contemporains IDEAC</title>
+<updated>2014-08-15T01:46:43.440+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="927"
+	coordinates="48.8480007498,2.3437705636024"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T15:32:46.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1025"
+	name="Institut d' ésthétique des arts contemporains IDEAC">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<itinerary>RER C
+Station Javel
+Métro 8 et 10
+Station Boucicaut ou Lourmel,Charles Michels ou Javel André Citroën
+
+Bus 42, 62 et 88</itinerary>
+		<url>http://ideac-cnrs.univ-paris1.fr/  </url>
+		<phone>01 41 13 24 54</phone>
+		<email>ideac.cnrs@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

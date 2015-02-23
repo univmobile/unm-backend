@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi705_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi705_1.xml"/>
+<title>Association Rastapopoulos</title>
+<updated>2014-08-15T01:46:41.227+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="705"
+	coordinates="48.822391721156,2.354971468"
+	markerType="point"
+	createdAt="2011-02-11T15:13:53.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Association Rastapopoulos">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone>06 89 35 27 74</phone>
+		<email>bolletor@hotmail.com</email>
+	</address>
+</content>
+</entry>

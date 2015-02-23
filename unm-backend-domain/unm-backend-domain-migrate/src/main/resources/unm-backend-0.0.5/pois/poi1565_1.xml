@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1565_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1565_1.xml"/>
+<title>Cafétéria Cuvier-Jussieu</title>
+<updated>2014-08-15T01:46:48.949+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1565"
+	coordinates="48.84585345982,2.35630385577"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T17:17:22.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="2428"
+	name="Cafétéria Cuvier-Jussieu">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>Dans le prolongement du Batiment A</floor>
+		<openingHours>Du Lundi au vendredi : 8h15-16h</openingHours>
+		<itinerary>Métro 10, 7 : Jussieu </itinerary>
+		<fullAddress>4 place Jussieu 
+75005 Paris </fullAddress>
+	</address>
+</content>
+</entry>

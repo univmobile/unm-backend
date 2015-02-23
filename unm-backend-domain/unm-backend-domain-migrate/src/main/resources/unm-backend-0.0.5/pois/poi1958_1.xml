@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1958_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1958_1.xml"/>
+<title>Analyse des conflits M2</title>
+<updated>2014-08-15T01:46:52.793+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1958"
+	coordinates="48.785719611137,2.0511998981"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T14:18:47.000+02:00"
+	updatedAt="2012-02-05T16:39:53.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2595"
+	name="Analyse des conflits M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Leclerc - Bureau 201</floor>
+		<phone>0139255386</phone>
+		<email>nadia.simon@uvsq.fr</email>
+	</address>
+</content>
+</entry>

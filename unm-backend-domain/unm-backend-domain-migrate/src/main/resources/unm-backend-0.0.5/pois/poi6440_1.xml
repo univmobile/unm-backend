@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6440_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6440_1.xml"/>
+<title>1er degré</title>
+<updated>2014-08-15T01:47:37.234+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6440"
+	coordinates="48.938951189595,2.353513687849"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T14:58:55.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	deletedAt="2011-06-24T15:16:49.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="1er degré">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://www.creteil.iufm.fr/</url>
+		<phone>01 41 70 72 01</phone>
+		<email>liliane.guillemet@u-pec.fr</email>
+	</address>
+</content>
+</entry>

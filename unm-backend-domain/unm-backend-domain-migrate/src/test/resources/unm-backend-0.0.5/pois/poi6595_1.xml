@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6595_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6595_1.xml"/>
+<title>Institut de Biologie des Plantes - UMR 8618 (IBP)</title>
+<updated>2014-08-15T01:47:38.693+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6595"
+	coordinates="48.7112967093,2.1677827835083"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-05T09:24:59.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="5174"
+	name="Institut de Biologie des Plantes - UMR 8618 (IBP)">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>Bâtiment 630, Campus Orsay</floor>
+		<url>http://www.ibp.u-psud.fr/</url>
+		<phone>01 69 15 33 30</phone>
+		<fax>01 69 15 34 24</fax>
+		<email>secdir.ibp@u-psud.fr</email>
+	</address>
+</content>
+</entry>

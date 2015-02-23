@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3124_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3124_1.xml"/>
+<title>Département LGC Licence </title>
+<updated>2014-08-15T01:47:03.214+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3124"
+	coordinates="48.840417014443,2.35435120761"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:39:54.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2011-05-05T16:44:48.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	name="Département LGC Licence ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 416 A</floor>
+		<phone>0145874131</phone>
+		<email>dept-lgc@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

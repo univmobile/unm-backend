@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3605_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3605_1.xml"/>
+<title>Forum Etudiant</title>
+<updated>2014-08-15T01:47:08.488+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3605"
+	coordinates="48.847053231799,2.3599972575903"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:52:50.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2800"
+	name="Forum Etudiant">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’engagement au service des étudiants, voilà ce qui résume le mieux l’action de l’association.</description>
+	<address>
+		<floor>Maison de la vie étudiante, rez de chaussée bureau 03</floor>
+		<url>www.forumetudiant.org</url>
+		<phone>01 44 27 26 33</phone>
+		<email>fetudiant@gmail.com</email>
+	</address>
+</content>
+</entry>

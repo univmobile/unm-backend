@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7462_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7462_1.xml"/>
+<title>Esc. R, 4e étage</title>
+<updated>2014-08-15T01:47:46.629+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7462"
+	coordinates="48.848175489589,2.3433823138475"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-07T16:52:29.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7461"
+	name="Esc. R, 4e étage">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Sorbonne, 1, rue Victor Cousin, Galerie Dumas,esc. R, 4e étage.</itinerary>
+		<fullAddress>Sorbonne, 1, rue Victor Cousin, Galerie Dumas,esc. R, 4e étage.</fullAddress>
+	</address>
+	<child uid="7463" active="true"/>
+	<child uid="7464" active="true"/>
+	<child uid="7465" active="true"/>
+</content>
+</entry>

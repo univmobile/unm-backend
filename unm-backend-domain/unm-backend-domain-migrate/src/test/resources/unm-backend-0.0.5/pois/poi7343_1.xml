@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7343_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7343_1.xml"/>
+<title>Salle de TP Bio</title>
+<updated>2014-08-15T01:47:45.493+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7343"
+	coordinates="48.841474929392,2.3579406738281"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-11T14:08:00.000+02:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:50:30.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Salle de TP Bio">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+</content>
+</entry>

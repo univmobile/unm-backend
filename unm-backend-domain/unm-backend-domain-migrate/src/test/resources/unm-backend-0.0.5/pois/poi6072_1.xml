@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6072_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6072_1.xml"/>
+<title>BU d'Economie</title>
+<updated>2014-08-15T01:47:33.395+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6072"
+	coordinates="48.838058522501,2.5934574007988"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:20:20.000+02:00"
+	updatedAt="2011-06-15T15:48:51.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4598"
+	name="BU d'Economie">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Collections :
+-Economie générale
+-Finances, Bourse, Banques
+-Statistiques
+-Mathématiques appliquées à l'économie
+-Comptabilité
+-Gestion des entreprises
+-Services, Qualité, Marketing
+-Ouvrages de langues pour économistes (anglais, espagnol, allemand, russe)
+-Droit</description>
+	<address>
+		<floor>Bât A - 1è étage</floor>
+		<openingHours>Lundi - vendredi : 8h30-18h30 </openingHours>
+		<url>http://www.univ-mlv.fr/bibliotheque/bibliotheques/bibliotheque-deconomie/</url>
+		<phone>01 60 95 76 32</phone>
+		<email>bibboi@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

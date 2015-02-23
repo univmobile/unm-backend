@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6716_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6716_1.xml"/>
+<title>Restaurant Assas</title>
+<updated>2014-08-15T01:47:39.545+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6716"
+	coordinates="48.843424880184,2.3335821926594"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-16T18:30:48.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6709"
+	name="Restaurant Assas">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : Notre Dame des Champs</itinerary>
+		<fullAddress>92 rue d'Assas
+75006 Paris</fullAddress>
+	</address>
+	<child uid="6717" active="true"/>
+</content>
+</entry>

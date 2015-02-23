@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6081_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6081_1.xml"/>
+<title>Service universitaire des activités physiques et sportives</title>
+<updated>2014-08-15T01:47:33.502+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6081"
+	coordinates="48.781836556898,2.2864638268948"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:46:25.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4667"
+	name="Service universitaire des activités physiques et sportives">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<description>Service universitaire des activités physiques et sportives (SUAPS).</description>
+	<address>
+		<floor>Bâtiment G</floor>
+		<url>http://www.u-psud.fr/fr/l_universite/organisation_generale/services_communs/suaps.html</url>
+		<phone>01 40 91 17 91 </phone>
+		<email>didier.michel@u-psud.fr</email>
+	</address>
+</content>
+</entry>

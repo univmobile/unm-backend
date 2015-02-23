@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6976_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6976_1.xml"/>
+<title>MET Nanterre (Le mouvement des étudiants de Nanterre)</title>
+<updated>2014-08-15T01:47:41.787+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6976"
+	coordinates="48.902184960012,2.2142708301544"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T11:15:58.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2491"
+	name="MET Nanterre (Le mouvement des étudiants de Nanterre)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>- Le Mouvement des Etudiants est un mouvement national né en janvier 2010 du rassemblement d’une vingtaine d’associations s’étant donné comme priorité l’insertion professionnelle des étudiants, la qualité de l’offre de formation proposée, la qualité des conditions d’études et la liberté d’expression et d’opinion sur les campus universitaires.
+
+- Fort de ses centaines d’élus dans les différents conseils d’université à travers la France, le MET se différencie des syndicats étudiants souvent archaïques contestataires en faisant le choix de la liberté face aux blocages, celui de l’égalité des chances face à l’égalitarisme, et celui de la responsabilité face à l’assistanat. Promouvant le mérite et l’innovation, le MET se veut un mouvement ouvert et entreprenant, qui apportera une critique constructive face aux propositions des différents acteurs de l’enseignement supérieur.
+
+- Le MET Nanterre est l’association locale du Mouvement des Etudiants. Elle comprend une vingtaine de membres issus de plusieurs UFR différentes. </description>
+	<address>
+		<floor>Bâtiment F - Bureau F214bis - 2ème étage</floor>
+		<openingHours>Les horaires de permanence varient selon les semaines et les disponibilités de nos membres. Tu peux passer nous voir dans notre local, mais le plus simple est encore de nous contacter directement pour prendre rendez-vous !</openingHours>
+		<url>http://www.mouvementdesetudiants.fr/</url>
+		<email>metparis10@gmail.com</email>
+	</address>
+</content>
+</entry>

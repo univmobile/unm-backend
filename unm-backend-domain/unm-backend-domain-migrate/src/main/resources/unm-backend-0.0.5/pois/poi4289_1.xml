@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4289_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4289_1.xml"/>
+<title>Centre de géographie - CNRS</title>
+<updated>2014-08-15T01:47:15.763+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4289"
+	coordinates="48.847976877471,2.3468601331115"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T15:16:35.000+02:00"
+	updatedAt="2011-09-26T17:08:44.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4288"
+	name="Centre de géographie - CNRS">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro :
+- ligne 4 : station Saint Michel
+RER :
+- Ligne B, C : station Saint Michel / Saint Michel notre dame</itinerary>
+		<fullAddress>2, rue valette
+75005 Paris</fullAddress>
+	</address>
+	<child uid="4295" active="true"/>
+</content>
+</entry>

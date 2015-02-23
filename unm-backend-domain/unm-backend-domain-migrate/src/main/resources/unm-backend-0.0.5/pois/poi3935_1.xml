@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3935_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3935_1.xml"/>
+<title>Centre Neuville-sur-Oise</title>
+<updated>2014-08-15T01:47:11.827+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3935"
+	coordinates="49.017255823946,2.074613571167"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:55:52.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3811"
+	name="Centre Neuville-sur-Oise">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accès en voiture
+• Depuis Paris : porte Maillot direction La Défense.
+A86 suivre Cergy-Pontoise. A15 direction Cergy-
+Pontoise, sortie 7. N184 direction Versailles/Jouy-le-moutier/Neuville-sur-Oise (au feu à droite).
+• Depuis Versailles : N184 direction Beauvais jusqu’à Cergy-Pontoise.
+Accès en RER
+• RER A direction Cergy-le-haut, arrêt Neuville-Université.
+Accès en train
+Depuis la gare Saint-Lazare ou Nanterre-Université,
+arrêt Neuville-Université.</itinerary>
+		<fullAddress>5 mail Gay Lussac
+95031 Cergy-Pontoise cedex</fullAddress>
+	</address>
+	<child uid="4804" active="true"/>
+	<child uid="4811" active="true"/>
+	<child uid="4657" active="true"/>
+	<child uid="4654" active="true"/>
+	<child uid="4234" active="true"/>
+	<child uid="4235" active="true"/>
+	<child uid="4236" active="true"/>
+	<child uid="4237" active="true"/>
+	<child uid="4238" active="true"/>
+	<child uid="4241" active="true"/>
+	<child uid="4280" active="true"/>
+	<child uid="4297" active="true"/>
+	<child uid="4620" active="true"/>
+	<child uid="4621" active="true"/>
+	<child uid="4623" active="true"/>
+	<child uid="4624" active="true"/>
+	<child uid="4627" active="true"/>
+	<child uid="4630" active="true"/>
+	<child uid="4634" active="true"/>
+	<child uid="4637" active="true"/>
+	<child uid="4638" active="true"/>
+	<child uid="4714" active="true"/>
+	<child uid="4715" active="true"/>
+	<child uid="4783" active="true"/>
+	<child uid="4784" active="true"/>
+	<child uid="4801" active="true"/>
+	<child uid="4810" active="true"/>
+	<child uid="4827" active="true"/>
+	<child uid="4973" active="true"/>
+	<child uid="5012" active="true"/>
+	<child uid="5023" active="true"/>
+	<child uid="5024" active="true"/>
+	<child uid="5882" active="true"/>
+	<child uid="5922" active="true"/>
+	<child uid="7468" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4975_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4975_1.xml"/>
+<title>Résidence de Lieusaint</title>
+<updated>2014-08-15T01:47:22.432+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4975"
+	coordinates="48.628845575529,2.5537794828415"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T15:58:16.000+02:00"
+	updatedAt="2011-07-27T09:51:51.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4862"
+	name="Résidence de Lieusaint">
+	<poiType id="31" label="Résidence universitaire "/>
+	<address>
+		<itinerary>RER D : Lieusaint Moissy</itinerary>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6987_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6987_1.xml"/>
+<title>Hypothémuse</title>
+<updated>2014-08-15T01:47:41.970+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6987"
+	coordinates="48.902244142759,2.2118085622787"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:10:04.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2495"
+	name="Hypothémuse">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Promouvoir la connaissance et le rayonnement du Master 2 professionnel «Conduite de projets culturels – connaissance des publics», notamment auprès des professionnels de la culture et des futurs étudiants du Master.
+
+Par ailleurs, l’objectif est une mise en réseau des anciens étudiants avec les promotions en cours, pour créer une véritable base de données du Master.
+
+Promouvoir et réaliser le festival annuel « Les Marmites Artistiques ». </description>
+	<address>
+		<floor>Bâtiment D - Bureau 212b - 2ème étage</floor>
+		<openingHours>Pas de permanences régulières.
+Pour nous rencontrer, veuillez prendre rendez-vous en envoyant un mail à : Asso-presidence@hypothemuse.net ou webmaster@hypothemuse.net</openingHours>
+		<url>http://hypothemuse.org/</url>
+		<phone>0648184068</phone>
+		<email>webmaster@hypothemuse.net</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi128_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi128_1.xml"/>
+<title>P</title>
+<updated>2014-08-15T01:46:38.499+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="128"
+	coordinates="48.955591491764,2.3421737999161|48.955589730508,2.3426485509117|48.955434739744,2.3426431864937|48.955413604602,2.3424259275635|48.955425933436,2.3418572992523|48.955591491764,2.3418519348343|48.955591491764,2.342173799916"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-06-29T14:50:38.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-07-20T16:13:59.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="P">
+	<poiType id="6" label="Entrée principale" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

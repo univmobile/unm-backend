@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3150_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3150_1.xml"/>
+<title>Département : Institut de la Communication et des Médias</title>
+<updated>2014-08-15T01:47:03.515+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3150"
+	coordinates="48.840221563866,2.3534560203552"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T17:07:43.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="3009"
+	name="Département : Institut de la Communication et des Médias">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>En dehors des heures d'ouverture, une boîte aux lettres est à votre disposition porte 201 A</description>
+	<address>
+		<floor>Bureau 201 A - 2e étage</floor>
+		<openingHours>Lundi - mardi - mercredi - jeudi de 14 h 30 à 16 h 30
+Mardi - vendredi de 10 h à 12 h</openingHours>
+		<phone>01 45 87 48 75</phone>
+		<fax>01 45 87 78 78</fax>
+		<email>dept-icm@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

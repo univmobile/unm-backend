@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7024_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7024_1.xml"/>
+<title>Département GEA</title>
+<updated>2014-08-15T01:47:42.443+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7024"
+	coordinates="48.626880103901,2.5625536590815"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-22T14:53:18.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="7023"
+	name="Département GEA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>IUT de Sénart
+Gestion des entreprises et des administrations</description>
+	<address>
+		<floor>Bâtiment B</floor>
+		<openingHours>Du lundi au vendredi 
+8h30 - 17h30</openingHours>
+		<phone>01 64 13 44 83</phone>
+		<email>bouchra.lakhdar@u-pec.fr</email>
+	</address>
+</content>
+</entry>

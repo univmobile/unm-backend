@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2966_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2966_1.xml"/>
+<title>Scolarité Melun L1</title>
+<updated>2014-08-15T01:47:01.576+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2966"
+	coordinates="48.536582737638,2.65594951808"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:06:11.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2854"
+	name="Scolarité Melun L1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Ce bureau est ouvert pour les licences premières années de : licence Économie-Gestion mention Sciences économiques, parcours Économie internationale, licence Économie-Gestion mention Sciences économiques, parcours Économie managériale et industrielle, licence Économie-Gestion mention Sciences économiques, parcours Monnaie et finance
+licence en Sciences politiques et sociales mention Science politique, licence Economie-Gestion, mention AES-Administration et gestion des entreprises (L1 et L2)
+
+</description>
+	<address>
+		<openingHours>Du lundi au jeudi :
+8h30 / 17h00
+Vendredi :
+8h30 / 12h30 - 13h30 / 17h00 </openingHours>
+		<phone>01 64 79 72 33</phone>
+	</address>
+</content>
+</entry>

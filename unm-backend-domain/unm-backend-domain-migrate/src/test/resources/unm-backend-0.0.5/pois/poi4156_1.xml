@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4156_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4156_1.xml"/>
+<title>LGPPTS - UR 3</title>
+<updated>2014-08-15T01:47:14.362+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4156"
+	coordinates="48.844212445725,2.3434525541961"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T17:07:36.000+02:00"
+	updatedAt="2011-06-03T16:58:52.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4103"
+	name="LGPPTS - UR 3">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Génie des procédés plasmas et traitements de surface (LGPPTS) - UR 3</description>
+	<address>
+		<url>http://www.enscp.fr/labos/lgppts</url>
+		<phone>01 46 33 42 83</phone>
+		<email>daniel.morvan@chimie-paristech.fr</email>
+	</address>
+</content>
+</entry>

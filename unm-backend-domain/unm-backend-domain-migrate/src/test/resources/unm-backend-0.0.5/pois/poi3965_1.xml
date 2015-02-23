@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3965_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3965_1.xml"/>
+<title>Geofood</title>
+<updated>2014-08-15T01:47:12.174+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3965"
+	coordinates="48.844751920134,2.3425226658583"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:33:13.000+02:00"
+	updatedAt="2011-09-26T16:46:05.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3733"
+	name="Geofood">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Développer l’éducation aux goûts à l’université, en proposant un atelier du goût par mois qui se déroule dans les locaux de l’UFR de géographie.</description>
+	<address>
+		<phone>06 76 29 17 19</phone>
+		<email>revue.geofood@gmail.com</email>
+	</address>
+</content>
+</entry>

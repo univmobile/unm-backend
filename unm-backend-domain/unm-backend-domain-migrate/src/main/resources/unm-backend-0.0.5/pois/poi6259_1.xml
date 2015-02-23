@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6259_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6259_1.xml"/>
+<title>Géographie L3</title>
+<updated>2014-08-15T01:47:35.407+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6259"
+	coordinates="48.844737063309,2.342437505722"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-17T14:55:31.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1019"
+	name="Géographie L3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 407</floor>
+		<openingHours>Lundi-vendredi : 9h30 à 12h15 - 14h à 16h</openingHours>
+		<url>http://www.univ-paris1.fr/ufr/ufr08-geographie/actualites/</url>
+		<phone>01.44.32.14.05</phone>
+		<email>beudot@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

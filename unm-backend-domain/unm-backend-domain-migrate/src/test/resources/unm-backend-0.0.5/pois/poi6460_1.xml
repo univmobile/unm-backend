@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6460_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6460_1.xml"/>
+<title>Analyse des matériaux - Biophonique (L3 Pro)</title>
+<updated>2014-08-15T01:47:37.465+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6460"
+	coordinates="48.828605757351,2.3829086869955"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T16:55:41.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1775"
+	name="Analyse des matériaux - Biophonique (L3 Pro)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>- Analyse des matériaux (L3 Pro)
+- Biophotonique (L3 Pro)</description>
+	<address>
+		<floor>Condorcet, 2ème étage</floor>
+		<url>http://www.physique.univ-paris-diderot.fr/rubrique.php3?id_rubrique=151</url>
+		<phone>01 57 27 61 32</phone>
+		<email>isabelle.andre@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

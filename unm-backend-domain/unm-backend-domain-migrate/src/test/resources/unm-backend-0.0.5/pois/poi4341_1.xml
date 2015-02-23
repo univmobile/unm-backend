@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4341_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4341_1.xml"/>
+<title>UFR Lettres, langues et sciences humaines</title>
+<updated>2014-08-15T01:47:16.326+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4341"
+	coordinates="48.787723009309,2.4449542164803"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:29:06.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="super admin"
+	updatedBy="Gérald MORIN"
+	parentUid="4334"
+	name="UFR Lettres, langues et sciences humaines">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Aile I1, 1 et étage bureau 129</floor>
+		<url>htttp//:lettres-sh.upec.fr</url>
+		<phone>01 45 17 11 79</phone>
+		<email>scola-llsh@u-pec.fr</email>
+	</address>
+</content>
+</entry>

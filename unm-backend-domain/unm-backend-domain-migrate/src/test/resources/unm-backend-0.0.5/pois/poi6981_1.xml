@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6981_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6981_1.xml"/>
+<title>Lame de fond</title>
+<updated>2014-08-15T01:47:41.867+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6981"
+	coordinates="48.902339734156,2.2145417332649"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T11:57:05.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2491"
+	name="Lame de fond">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>La Lame de Fond , association sans couleur politique, forte de ses 23 ans d'ancienneté au sein de l'UFR de Droit, concilie animations, soirées, polycopiés de cours et renseignements. En effet, l'association a pour but d'améliorer et d'égayer le bâtiment, de faciliter l'intégration des étudiants et de leur offrir le plus grand nombre d'aides et services. </description>
+	<address>
+		<floor>Bâtiment F - Salle F214b - 2ème étage</floor>
+		<phone>01 40 97 76 76</phone>
+	</address>
+</content>
+</entry>

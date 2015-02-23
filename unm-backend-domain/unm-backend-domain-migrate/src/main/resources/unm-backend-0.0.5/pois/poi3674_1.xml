@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3674_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3674_1.xml"/>
+<title>ASP6</title>
+<updated>2014-08-15T01:47:09.190+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3674"
+	coordinates="48.847992292265,2.3585679754615"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T14:42:22.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2806"
+	name="ASP6">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association sportive de l'UPMC
+L’AS Paris 6 a pour but de développer et favoriser la pratique des activités physiques et sportives à l’UPMC en compétition et en loisir.</description>
+	<address>
+		<floor>Rez de Chaussée, Centre Sportif Jean Talbot</floor>
+		<url>http://assop6.free.fr/</url>
+		<phone>01 44 27 36 69</phone>
+		<email>asp6@cicrp.jussieu.fr</email>
+	</address>
+</content>
+</entry>

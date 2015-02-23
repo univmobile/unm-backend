@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2372_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2372_1.xml"/>
+<title>Site centre Henri Pieron </title>
+<updated>2014-08-15T01:46:56.417+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2372"
+	coordinates="48.902025277953,2.393402159214|48.901658542164,2.3929300904274|48.901069643488,2.3939546942711|48.901147223351,2.3940619826317|48.901228329443,2.3941799998283|48.902025277953,2.393402159"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-27T16:58:44.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	deletedAt="2011-05-18T14:07:46.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	name="Site centre Henri Pieron ">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

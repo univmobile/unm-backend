@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7190_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7190_1.xml"/>
+<title>Auditorium</title>
+<updated>2014-08-15T01:47:44.230+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7190"
+	coordinates="48.764873063998,2.4844296276569"
+	active="true"
+	markerType="point"
+	createdAt="2012-03-01T10:20:57.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="5241"
+	name="Auditorium">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+</content>
+</entry>

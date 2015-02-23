@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1726_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1726_1.xml"/>
+<title>Bibliothèque</title>
+<updated>2014-08-15T01:46:50.241+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1726"
+	coordinates="48.938904735634,2.35494196414"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T21:24:32.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="390"
+	name="Bibliothèque">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Bibliothèque.</description>
+	<address>
+		<floor>3ème étage -  Aile A - Bureau A 305.</floor>
+		<openingHours>Lundi - Jeudi : 
+9h - 18h
+Vendredi : 
+9h - 12h</openingHours>
+		<url>http://www.iutsd.univ-paris13.fr/iutsd/index.php</url>
+		<phone>01 49 40 61 26</phone>
+		<fax>01 49 40 61 50</fax>
+	</address>
+</content>
+</entry>

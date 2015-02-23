@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi880_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi880_1.xml"/>
+<title>Amphithéâtre 2b</title>
+<updated>2014-08-15T01:46:42.839+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="880"
+	coordinates="48.846921409204,2.34445586800"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T15:51:00.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1027"
+	name="Amphithéâtre 2b">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Capacité 120 places.</description>
+	<address>
+		<floor>Aile Cujas</floor>
+		<itinerary>RER B
+Station Luxembourg
+Bus 21, 27, 38, 82, 84, 85 et 89</itinerary>
+	</address>
+</content>
+</entry>

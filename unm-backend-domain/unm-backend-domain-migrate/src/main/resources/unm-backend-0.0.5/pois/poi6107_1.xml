@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6107_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6107_1.xml"/>
+<title>RU Crous-Club</title>
+<updated>2014-08-15T01:47:33.812+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6107"
+	coordinates="48.84264064887,2.5847737491131"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T17:00:19.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="RU Crous-Club">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>traditionnel et pizzeria</description>
+	<address>
+		<openingHours>11h30-14h00</openingHours>
+		<phone>01 64 68 11 25</phone>
+	</address>
+</content>
+</entry>

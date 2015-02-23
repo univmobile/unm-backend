@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5637_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5637_1.xml"/>
+<title>Génie mécanique et productique (DUT)</title>
+<updated>2014-08-15T01:47:28.275+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5637"
+	coordinates="48.787972474904,2.3291873931885"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T12:01:09.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5146"
+	name="Génie mécanique et productique (DUT)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment B, bureau 123</floor>
+		<url>http://www.iut-cachan.u-psud.fr/fr/les_formations/dut/gmp.html</url>
+		<phone>01 41 24 11 88</phone>
+		<email>souhila.zenoud@u-psud.fr</email>
+	</address>
+</content>
+</entry>

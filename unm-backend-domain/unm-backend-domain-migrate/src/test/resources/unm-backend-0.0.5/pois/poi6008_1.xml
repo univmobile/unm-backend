@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6008_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6008_1.xml"/>
+<title>Résidence universitaire Les rives de l’Yvette (Bâtiment 233)</title>
+<updated>2014-08-15T01:47:32.658+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6008"
+	coordinates="48.700228702794,2.1653835475445"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T13:06:26.000+02:00"
+	updatedAt="2013-06-20T15:57:48.000+02:00"
+	createdBy="j.richer"
+	updatedBy="anaelle.royer"
+	parentUid="6004"
+	name="Résidence universitaire Les rives de l’Yvette (Bâtiment 233)">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<address>
+		<floor>Bâtiment 233</floor>
+		<openingHours>Lundi, mardi, jeudi, vendredi
+9h15-12h30
+13h30-16h15
+
+JUILLET-AOUT
+Lundi, mercredi, vendredi : de 09h00 à 12h30
+Mardi, jeudi toute la journée : de 09h00 à 12h30 et de 13h30 à 16h00</openingHours>
+		<url>http://www.crous-versailles.fr/_logement__liste_91.htm</url>
+		<phone>01 69 15 77 02</phone>
+	</address>
+</content>
+</entry>

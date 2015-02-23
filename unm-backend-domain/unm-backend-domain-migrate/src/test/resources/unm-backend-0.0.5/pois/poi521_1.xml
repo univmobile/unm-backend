@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi521_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi521_1.xml"/>
+<title>Restaurant administratif Allée Verte</title>
+<updated>2014-08-15T01:46:40.591+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="521"
+	coordinates="48.958291834916,2.33888089656"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T17:58:26.000+02:00"
+	updatedAt="2011-05-31T11:58:05.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="319"
+	name="Restaurant administratif Allée Verte">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Restaurant administratif Allée Verte.</description>
+	<address>
+		<itinerary>En transport en commun:
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

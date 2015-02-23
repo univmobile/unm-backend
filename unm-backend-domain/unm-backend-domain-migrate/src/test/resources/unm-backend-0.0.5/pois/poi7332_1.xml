@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7332_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7332_1.xml"/>
+<title>Cabinet d'Histoire</title>
+<updated>2014-08-15T01:47:45.483+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7332"
+	coordinates="48.843854472286,2.3566424846649"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-11T13:24:22.000+02:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Cabinet d'Histoire">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>57, rue Cuvier 75005 Paris</floor>
+		<openingHours>Ouverture : tous les jours de 10:00 à 17:00
+Fermeture : tous les mardis et le 1er mai </openingHours>
+		<itinerary>Ouvert tous les jours de 10h à 17h
+Fermé le Mardi et le 1er mai
+
+Bus :
+Lignes 24, 57, 61,63, 89 et 91
+
+Metro, RER :
+M5 : Austerlitz - M7 : Censier Daubenton - M 10 : Jussieu ou Austerlitz - RER C
+
+Gare SNCF :
+Austerlitz - Gare de Lyon</itinerary>
+		<url>http://www.mnhn.fr/museum/foffice/tous/tous/guidePratique/infPratiques/infopratique/fiche_info.xsp?LIEU_ID=165&amp;SITE_ID=10&amp;idx=6&amp;nav=liste</url>
+		<email>valhuber@mnhn.fr </email>
+	</address>
+</content>
+</entry>

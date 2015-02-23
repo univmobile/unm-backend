@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/regions/001:unrpcl_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/regions/001:unrpcl_1"/>
+<title>Limousin/Poitou-Charentes</title>
+<updated>2014-07-27T20:06:02Z</updated>
+<category term="regions"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content>
+	<uid>unrpcl</uid>
+	<label>Limousin/Poitou-Charentes</label>
+	<url>${baseURL}/json/regions/unrpcl</url>
+	<universities>
+		<university>
+			<id>ulr</id>
+			<title>Université de La Rochelle</title>
+		</university>
+		<university>
+			<id>ul</id>
+			<title>Université de Limoges</title>
+		</university>
+		<university>
+			<id>up</id>
+			<title>Université de Poitiers</title>
+		</university>
+		<university>
+			<id>ensma</id>
+			<title>ISAE-ENSMA</title>
+		</university>
+		<university>
+			<id>crousp</id>
+			<title>CROUS PCL</title>
+		</university>
+	</universities>
+</content>
+</entry>

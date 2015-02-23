@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5902_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5902_1.xml"/>
+<title>Cafétéria STAPS</title>
+<updated>2014-08-15T01:47:31.445+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5902"
+	coordinates="48.768712969215,2.4576504528522"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T11:20:33.000+02:00"
+	updatedAt="2011-06-10T15:09:45.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4859"
+	name="Cafétéria STAPS">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor> Située dans le nouveau bâtiment STAPS de l’université de Paris 12</floor>
+		<openingHours>11h30 - 14h30</openingHours>
+		<phone>01-48-99-29-40</phone>
+		<email>restaurant.creteil@crous-creteil.fr</email>
+	</address>
+	<attachment id="126" title="Cafet_STAPS_Creteil_16_.jpg" type="image" url="/uploads/poi/ec74031c337be3f8d9495966e40b7a690ec7836f.jpg"/>
+</content>
+</entry>

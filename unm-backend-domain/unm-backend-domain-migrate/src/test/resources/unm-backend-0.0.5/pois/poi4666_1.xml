@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4666_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4666_1.xml"/>
+<title>Campus de Sceaux - Bâtiment F</title>
+<updated>2014-08-15T01:47:19.528+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4666"
+	coordinates="48.781996534234,2.2861319035292"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T17:20:00.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4529"
+	name="Campus de Sceaux - Bâtiment F">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B direction Robinson (arrêt Robinson).</itinerary>
+		<fullAddress>Faculté Jean Monnet (Université Paris-Sud 11)
+Bâtiment F
+54, Boulevard Desgranges
+92330 Sceaux</fullAddress>
+	</address>
+	<child uid="4835" active="true"/>
+	<child uid="5728" active="true"/>
+</content>
+</entry>

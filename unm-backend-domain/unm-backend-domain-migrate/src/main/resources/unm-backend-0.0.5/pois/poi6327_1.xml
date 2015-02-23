@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6327_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6327_1.xml"/>
+<title>SESS-Encadrement éducatif, médiation et vie scolaire M1</title>
+<updated>2014-08-15T01:47:36.060+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6327"
+	coordinates="48.796127285187,2.4487307667732"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T16:51:47.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4902"
+	name="SESS-Encadrement éducatif, médiation et vie scolaire M1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>6è étage</floor>
+		<url>http://sess-staps.u-pec.fr/formations/masters/</url>
+		<phone>01 45 17 44 10 </phone>
+		<email>ingrid.odye@u-pec.fr</email>
+	</address>
+</content>
+</entry>

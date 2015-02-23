@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5519_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5519_1.xml"/>
+<title>Campus d'Orsay Bât 330</title>
+<updated>2014-08-15T01:47:27.045+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5519"
+	coordinates="48.703522477843,2.1697200089693"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T16:17:11.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	deletedAt="2011-09-02T15:05:02.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Campus d'Orsay Bât 330">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>Bâtiment 330, 91440 Bures sur Yvette</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7087_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7087_1.xml"/>
+<title>Assistante Sociale</title>
+<updated>2014-08-15T01:47:43.105+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7087"
+	coordinates="48.780228154161,2.0444601774216"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-01T16:12:28.000+01:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="4686"
+	name="Assistante Sociale">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Etudiants concernés : Université VSQ Pôle St Quentin
+Etablissements et Grandes Ecoles du 78 environnant</description>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>Lundi, Mardi, Mercredi : 9h00-12h00</openingHours>
+		<url>www.crous-versailles.fr</url>
+		<phone>01 39 25 53 91</phone>
+		<fax>01 39 25 50 91</fax>
+		<email>francoise.bouchain@crous-versailles.fr</email>
+	</address>
+</content>
+</entry>

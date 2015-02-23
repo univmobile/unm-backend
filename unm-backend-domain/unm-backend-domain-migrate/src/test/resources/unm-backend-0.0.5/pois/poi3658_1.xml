@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3658_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3658_1.xml"/>
+<title>ISF</title>
+<updated>2014-08-15T01:47:09.029+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3658"
+	coordinates="48.845163202116,2.3568215221167"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T14:01:17.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2790"
+	name="ISF">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Ingénieurs sans frontières paris jussieu
+</description>
+	<address>
+		<floor>3è étage</floor>
+		<email>lemenage@polytech.upmc.fr</email>
+	</address>
+</content>
+</entry>

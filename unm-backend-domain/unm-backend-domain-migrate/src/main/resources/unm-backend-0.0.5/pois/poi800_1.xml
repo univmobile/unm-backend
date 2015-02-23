@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi800_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi800_1.xml"/>
+<title>Association Prométhée</title>
+<updated>2014-08-15T01:46:41.999+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="800"
+	coordinates="48.827176815924,2.364480569"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-16T17:14:05.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1023"
+	name="Association Prométhée">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Aile C, 18e étage, 18.03</floor>
+		<phone>06  50 64 79 38</phone>
+		<email>piston-x@hotmail.fr</email>
+	</address>
+</content>
+</entry>

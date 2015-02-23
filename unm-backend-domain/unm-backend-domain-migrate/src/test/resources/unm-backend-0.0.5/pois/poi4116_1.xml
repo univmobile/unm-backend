@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4116_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4116_1.xml"/>
+<title>LCT - UMR 7616</title>
+<updated>2014-08-15T01:47:13.848+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4116"
+	coordinates="48.816817471866,2.4015735089779"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:29:17.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4112"
+	name="LCT - UMR 7616">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de chimie théorique (LCT) - UMR 7616
+LCT</description>
+	<address>
+		<url>http://www.lct.jussieu.fr/</url>
+		<phone>01 44 27 38 44</phone>
+		<email>mariele@lct.jussieu.fr</email>
+	</address>
+</content>
+</entry>

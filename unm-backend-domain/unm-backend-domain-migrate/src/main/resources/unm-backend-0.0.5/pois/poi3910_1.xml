@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3910_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3910_1.xml"/>
+<title>Transferts critiques et dynamique des savoirs</title>
+<updated>2014-08-15T01:47:11.590+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3910"
+	coordinates="48.946967167881,2.3614181578159"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:02:06.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Transferts critiques et dynamique des savoirs">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 1569 - Transferts critiques et dynamique des savoirs (domaine anglophone) appartenant à l'École doctorale (ED) 31 : Pratiques et théories du sens.
+Directrice : Noelle Batt</description>
+	<address>
+		<floor>3ème étage Bâtiment D, bureau 316</floor>
+		<url>http://www.univ-paris8.fr/anglaisllce/article2.php3?id_article=44</url>
+		<phone>01 49 40 73 21</phone>
+		<email>noelle.batt@wanadoo.fr</email>
+	</address>
+</content>
+</entry>

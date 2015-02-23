@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6463_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6463_1.xml"/>
+<title>Métrologie, qualité et sûreté industrielle (L3 Pro MQSI)</title>
+<updated>2014-08-15T01:47:37.502+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6463"
+	coordinates="48.827378173923,2.381789535284"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T17:03:06.000+02:00"
+	updatedAt="2011-06-24T17:04:11.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1781"
+	name="Métrologie, qualité et sûreté industrielle (L3 Pro MQSI)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>IUT Paris Jussieu - Batiment Biopark</floor>
+		<url>http://www.iut.univ-paris7.fr/fr/Formations/Formations-LP</url>
+		<phone>01 57 27 79 90 </phone>
+		<email>iut.dir@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

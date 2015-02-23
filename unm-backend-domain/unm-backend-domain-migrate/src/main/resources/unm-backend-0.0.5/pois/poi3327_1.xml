@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3327_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3327_1.xml"/>
+<title>MIME</title>
+<updated>2014-08-15T01:47:05.461+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3327"
+	coordinates="48.944199679808,2.363071739673"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:08:41.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="MIME">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Département Micro-informatique et machines embarquées.</description>
+	<address>
+		<floor>1er étage Bâtiment A, bureau 181</floor>
+		<openingHours>Du lundi au vendredi
+9h30-12h</openingHours>
+		<url>http://www.mime.univ-paris8.fr/</url>
+		<phone>01 49 40 64 15</phone>
+		<fax>01 49 40 64 14</fax>
+		<email>secretariat@mime.univ-paris8.fr </email>
+	</address>
+</content>
+</entry>

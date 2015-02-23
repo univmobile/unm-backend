@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6226_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6226_1.xml"/>
+<title>Gestion des sites culturels et naturels...M2 rech.</title>
+<updated>2014-08-15T01:47:35.162+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6226"
+	coordinates="48.841836972603,2.3485941812396"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-16T17:14:45.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1026"
+	name="Gestion des sites culturels et naturels...M2 rech.">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<openingHours>Lundi-vendredi : 10h-12h et 14h-16h
+excepté mercredi : 10h-12h</openingHours>
+		<url>http://www.univ-paris1.fr/ufr/irest/</url>
+		<phone>01 55 43 46 58</phone>
+		<email>irest@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

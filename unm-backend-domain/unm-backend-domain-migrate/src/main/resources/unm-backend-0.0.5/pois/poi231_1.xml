@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi231_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi231_1.xml"/>
+<title>Borne CMS</title>
+<updated>2014-08-15T01:46:38.680+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="231"
+	coordinates="48.623686451821,2.42474368216"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-08T01:30:05.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-07-16T15:30:33.000+02:00"
+	createdBy="raphael"
+	updatedBy="raphael"
+	name="Borne CMS">
+	<poiType id="9" label="Borne CMS" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Aile A, RDC</description>
+	<address
+		countryCode="FR">
+		<floor>Aile A, RDC</floor>
+	</address>
+</content>
+</entry>

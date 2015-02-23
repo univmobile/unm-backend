@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4984_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4984_1.xml"/>
+<title>Campus de Châtenay-Malabry - Bâtiment A</title>
+<updated>2014-08-15T01:47:22.490+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4984"
+	coordinates="48.761889391644,2.2724425792694"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T16:28:11.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4538"
+	name="Campus de Châtenay-Malabry - Bâtiment A">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B :
+- direction Robinson en venant de Paris (arrêt Robinson) + Bus 294 direction Igny RER (arrêt Faculté de pharmacie) ou Bus 195 direction Chatillon Montrouge (arrêt Les Vallées).
+- direction Saint-Rémy-lès-Chevreuse (arrêt La Croix de Berny) + Bus 379 direction Velizy 2 (arrêt Les Vallées).</itinerary>
+		<fullAddress>Faculté de pharmacie (Université Paris-Sud 11)
+Bâtiment A
+5, Rue Jean-Baptiste Clément
+92290 Châtenay-Malabry</fullAddress>
+	</address>
+	<child uid="5052" active="true"/>
+	<child uid="5028" active="true"/>
+	<child uid="5037" active="true"/>
+	<child uid="5208" active="true"/>
+	<child uid="5512" active="true"/>
+	<child uid="5513" active="true"/>
+	<child uid="5954" active="true"/>
+	<child uid="5978" active="true"/>
+	<child uid="6053" active="true"/>
+	<child uid="6121" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1778_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1778_1.xml"/>
+<title>Paris Rive Gauche  Lamarck</title>
+<updated>2014-08-15T01:46:50.762+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1778"
+	coordinates="48.827619967218,2.3805798590183"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T14:57:54.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="j.richer"
+	parentUid="1215"
+	name="Paris Rive Gauche  Lamarck">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+	</address>
+	<child uid="6430" active="true"/>
+	<child uid="1672" active="true"/>
+	<child uid="1671" active="true"/>
+	<child uid="1354" active="true"/>
+	<child uid="1352" active="true"/>
+	<child uid="1350" active="true"/>
+	<child uid="1349" active="true"/>
+	<child uid="1655" active="true"/>
+	<child uid="1651" active="true"/>
+	<child uid="1648" active="true"/>
+	<child uid="1642" active="true"/>
+	<child uid="1635" active="true"/>
+	<child uid="1629" active="true"/>
+	<child uid="1418" active="true"/>
+	<child uid="1416" active="true"/>
+	<child uid="6401" active="true"/>
+	<child uid="6411" active="true"/>
+	<child uid="6428" active="true"/>
+	<child uid="6431" active="true"/>
+	<child uid="6436" active="true"/>
+	<child uid="6437" active="true"/>
+	<child uid="6438" active="true"/>
+	<child uid="6458" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1441_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1441_1.xml"/>
+<title>UFR Sciences Sociales</title>
+<updated>2014-08-15T01:46:47.632+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1441"
+	coordinates="48.825733089008,2.36626826226"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T14:51:33.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1772"
+	name="UFR Sciences Sociales">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<itinerary>Métro 14 Olympiades
+Métro 7 Tolbiac
+Bus 62, 64, 83 Tolbiac Baudricourt</itinerary>
+		<phone>01 57 27 66 74</phone>
+		<email>ufr.sciences.sociales@univ-paris-diderot.fr</email>
+	</address>
+	<attachment id="74" title="javelot.gif" type="image" url="/uploads/poi/642ec5b49839c7b4f196001f74bd87a351aef8d2.gif"/>
+</content>
+</entry>

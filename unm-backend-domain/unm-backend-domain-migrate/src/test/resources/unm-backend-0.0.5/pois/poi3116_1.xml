@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3116_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3116_1.xml"/>
+<title>Département : Didactique du Français Langue Etrangère (DFLE)</title>
+<updated>2014-08-15T01:47:03.136+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3116"
+	coordinates="48.840113878886,2.35376983881"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:33:54.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="3009"
+	name="Département : Didactique du Français Langue Etrangère (DFLE)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Centre Censier
+Bureau 401B (4ème étage)
+13, rue Santeuil - 75231 Paris Cedex 05
+
+Structure(s) de rattachement :
+    UFR Littérature, Linguistique, Didactique (LLD)</description>
+	<address>
+		<floor>Bureau 401B (4ème étage)</floor>
+		<openingHours>Organisation
+    Secrétariat licence, ECDF, DULF, DUEF
+Centre Censier
+Bureau 401B (4ème étage)
+13, rue Santeuil - 75231 Paris Cedex 05
+- Parcours FLES de la Licence, ECDF, DUEF niveau 2 : courriel, +33 (0)1 45 87 41 21
+- DULF, DUEF niveau 1 : courriel, +33 (0)1 45 87 41 22
+Fax : +33 (0)1 45 87 78 42
+
+Horaires d'ouverture :
+- lundi, mardi, vendredi, le matin uniquement, de 9h30 à 13h00
+- mercredi, de 11h30 à 12h30 et de 14h00 à 16h00
+- jeudi, l'après-midi uniquement, de 14h00 à 17h00         </openingHours>
+		<url>http://www.univ-paris3.fr/dept-dfle</url>
+		<phone>01 45 87 41 21</phone>
+		<fax>01 45 87 78 42</fax>
+		<email>dept-dfle@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

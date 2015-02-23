@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5592_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5592_1.xml"/>
+<title>AMDPIA</title>
+<updated>2014-08-15T01:47:27.772+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5592"
+	coordinates="48.792846083188,2.4452519416809"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:13:11.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4645"
+	name="AMDPIA">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

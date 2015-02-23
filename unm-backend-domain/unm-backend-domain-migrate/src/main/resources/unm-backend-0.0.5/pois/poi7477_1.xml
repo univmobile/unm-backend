@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7477_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7477_1.xml"/>
+<title>Esc. U, 3e étage</title>
+<updated>2014-08-15T01:47:46.788+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7477"
+	coordinates="48.84816931193,2.3433628678322"
+	active="true"
+	markerType="point"
+	createdAt="2013-07-04T18:42:02.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7461"
+	name="Esc. U, 3e étage">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="7481" active="true"/>
+</content>
+</entry>

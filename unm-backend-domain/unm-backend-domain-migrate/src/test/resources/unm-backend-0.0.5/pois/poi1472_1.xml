@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1472_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1472_1.xml"/>
+<title>UFR Odontologie</title>
+<updated>2014-08-15T01:46:47.912+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1472"
+	coordinates="48.850807956028,2.33594236895"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:28:37.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="1786"
+	name="UFR Odontologie">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<openingHours>Tous les jours : 9h-12h
+L'après-midi sur rendez-vous</openingHours>
+		<itinerary>Métro 4 Saint Sulpice
+Métro 10 Mabillon
+</itinerary>
+		<phone>01572778713</phone>
+		<email>gregory.aupiais@univ-paris-diderot.fr</email>
+	</address>
+	<attachment id="85" title="garanciere.gif" type="image" url="/uploads/poi/7b0daa6fb5661f7c1a629ff68adffc573722b9a5.gif"/>
+</content>
+</entry>

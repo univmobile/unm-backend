@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2239_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2239_1.xml"/>
+<title>Économie et gestion (M1-M2 EITF MIF et M2 EITF MPPP)</title>
+<updated>2014-08-15T01:46:55.328+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2239"
+	coordinates="48.946677390359,2.3612800240"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T16:57:57.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Économie et gestion (M1-M2 EITF MIF et M2 EITF MPPP)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>- Master économie et gestion Economie des institutions territoriales et financières (EITF) parcours Marchés, institutions, finance (MIF, M1-M2)
+- M2 économie et gestion spécialité Economie des institutions territoriales et financières (EITF) parcours Management des projets publics/privés (MPPP).</description>
+	<address>
+		<floor>1er étage Bâtiment D, bureau 107</floor>
+		<openingHours>Lundi, mercredi et jeudi
+14h-16h
+Mardi
+9h-12h</openingHours>
+		<url>http://aes-ecoges.univ-paris8.fr/</url>
+		<phone>01 49 40 72 59</phone>
+		<fax>01 49 40 72 67</fax>
+		<email>sylvie.guegan@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

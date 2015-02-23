@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4462_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4462_1.xml"/>
+<title>Site de Torcy/IUFM</title>
+<updated>2014-08-15T01:47:17.573+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4462"
+	coordinates="48.842202220077,2.6503497362137"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:50:27.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="3841"
+	name="Site de Torcy/IUFM">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>2, avenue Salvador Allende 77200 Torcy
+</description>
+	<child uid="5237" active="true"/>
+</content>
+</entry>

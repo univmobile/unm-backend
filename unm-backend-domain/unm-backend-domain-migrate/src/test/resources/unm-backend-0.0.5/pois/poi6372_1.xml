@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6372_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6372_1.xml"/>
+<title>Mesures physiques DUT</title>
+<updated>2014-08-15T01:47:36.540+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6372"
+	coordinates="48.788453789825,2.4425952136517"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T14:36:15.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4528"
+	name="Mesures physiques DUT">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Secrétaire du département
+
+
+</description>
+	<address>
+		<url>http://iut.u-pec.fr/formations/dut/</url>
+		<phone> 01 45 17 17 49</phone>
+		<email>mp-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

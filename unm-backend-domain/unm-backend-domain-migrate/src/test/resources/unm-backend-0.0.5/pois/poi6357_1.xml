@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6357_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6357_1.xml"/>
+<title>Droit de la protection complémentaire M2 pro.</title>
+<updated>2014-08-15T01:47:36.378+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6357"
+	coordinates="48.845443757431,2.3459307476878"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T14:02:19.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1016"
+	name="Droit de la protection complémentaire M2 pro.">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://www.univ-paris1.fr/ufr/ufr02/</url>
+	</address>
+</content>
+</entry>

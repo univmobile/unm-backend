@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2320_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2320_1.xml"/>
+<title>Philosophie (M1-M2)</title>
+<updated>2014-08-15T01:46:55.881+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2320"
+	coordinates="48.944507088193,2.3628893494606"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:37:27.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Philosophie (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment A, bureau 030</floor>
+		<openingHours>Mardi, mercredi et jeudi
+9h30-13h
+14h-17h
+Vendredi
+14h-17h</openingHours>
+		<url>http://www-artweb.univ-paris8.fr/</url>
+		<phone>01 49 40 66 13</phone>
+		<fax>01 49 40 66 68</fax>
+		<email>logos@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

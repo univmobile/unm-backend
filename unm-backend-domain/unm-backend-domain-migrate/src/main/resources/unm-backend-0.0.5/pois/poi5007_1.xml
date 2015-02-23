@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5007_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5007_1.xml"/>
+<title>Résidence de Lognes</title>
+<updated>2014-08-15T01:47:22.720+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5007"
+	coordinates="48.836839085726,2.629337310791"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T16:50:50.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	deletedAt="2011-05-27T16:51:56.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	name="Résidence de Lognes">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

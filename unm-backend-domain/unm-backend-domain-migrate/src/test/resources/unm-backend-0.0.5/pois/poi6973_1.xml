@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6973_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6973_1.xml"/>
+<title>Association Sportive de RUGBY X (ASRX)</title>
+<updated>2014-08-15T01:47:41.737+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6973"
+	coordinates="48.902680018104,2.2136324644089"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T11:09:57.000+01:00"
+	updatedAt="2011-12-15T15:03:56.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Association Sportive de RUGBY X (ASRX)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>- Promouvoir la pratique du rugby par les étudiants au sein, et, en dehors du campus 
+- Organiser des évènements sportifs ou extra sportifs, en faveur de l'équipe de rugby 
+- Se faire connaître en dehors de l'université via l'organisation de manifestations sportives </description>
+	<address>
+		<floor>Bâtiment R - Salle R 107 - 1er étage</floor>
+		<url>https://www.facebook.com/group.php?gid=32482204645</url>
+		<email>asso.rugby.nanterre@gmail.com</email>
+	</address>
+</content>
+</entry>

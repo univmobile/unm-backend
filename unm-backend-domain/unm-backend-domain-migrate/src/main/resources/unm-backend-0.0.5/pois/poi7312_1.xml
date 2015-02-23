@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7312_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7312_1.xml"/>
+<title>Salle la Baleine 1</title>
+<updated>2014-08-15T01:47:45.453+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7312"
+	coordinates="48.844744123975,2.3578333854675"
+	active="true"
+	markerType="point"
+	createdAt="2013-03-11T16:59:10.000+01:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-03-11T17:02:05.000+01:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Salle la Baleine 1">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+</content>
+</entry>

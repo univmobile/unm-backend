@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi775_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi775_1.xml"/>
+<title>Centre rue de Tolbiac</title>
+<updated>2014-08-15T01:46:41.841+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="775"
+	coordinates="48.829031797953,2.3745200"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-15T17:22:46.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre rue de Tolbiac">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 14 et RER C
+Station F. Mitterrand
+
+Bus 62, 64
+Arrêt Tolbiac-Bibliothèque F. Mitterrand</itinerary>
+		<fullAddress>17 rue de Tolbiac
+75013 Paris</fullAddress>
+	</address>
+	<child uid="1018" active="true"/>
+	<attachment id="20" title="rue_tolbiac.jpg" type="image" url="/uploads/poi/96aca78489223b8db531ed52811a168176869f86.jpg"/>
+</content>
+</entry>

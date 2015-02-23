@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6071_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6071_1.xml"/>
+<title>BU Guy Auliac</title>
+<updated>2014-08-15T01:47:33.384+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6071"
+	coordinates="48.839266042832,2.5866338610649"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:18:40.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="BU Guy Auliac">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Informatique, mathématiques, chimie, physique, électronique, ingénierie, matériaux, mécanique
+Sciences et techniques des activités physiques et sportives (STAPS)
+Mathématiques (Capes et Agrégation)
+Histoire des Sciences, culture générale, orientation professionnelle</description>
+	<address>
+		<floor>Rez de Chaussée</floor>
+		<openingHours>Lundi-vendredi: 8h30-19h </openingHours>
+		<url>http://www.univ-mlv.fr/bibliotheque/bibliotheques/bibliotheque-guy-auliac/</url>
+		<phone>01 60 95 76 15</phone>
+		<email>bibsci@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

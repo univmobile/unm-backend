@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2561_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2561_1.xml"/>
+<title>Stud'en scène</title>
+<updated>2014-08-15T01:46:58.020+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2561"
+	coordinates="48.779160933615,2.04525612294"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:46:22.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="2594"
+	name="Stud'en scène">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Compagnie de théâtre issue des ateliers théâtre avec le théâtre de SQY </description>
+	<address>
+		<openingHours>Tous les lundis de 19h à 21h au Théâtre de SQY</openingHours>
+		<url>http://studenscene.fr/</url>
+		<email>studenscene@gmail.com</email>
+	</address>
+</content>
+</entry>

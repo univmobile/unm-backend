@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3601_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3601_1.xml"/>
+<title>AVERROES</title>
+<updated>2014-08-15T01:47:08.439+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3601"
+	coordinates="48.847192673309,2.3597209900618"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:50:24.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2800"
+	name="AVERROES">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Maison de la vie étudiante, rez de chaussée bureau 17</floor>
+		<openingHours>Permanence du lundi au vendredi entre 12h et 14h</openingHours>
+		<url>http://averroes-jussieu.hautetfort.com/</url>
+		<phone>01 44 27 25 74</phone>
+		<email>averroesjussieu@yahoo.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi657_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi657_1.xml"/>
+<title>Centre Arago - Maison Internationale</title>
+<updated>2014-08-15T01:46:40.991+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="657"
+	coordinates="48.835027706554,2.34269231557"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T20:33:52.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T17:18:06.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Centre Arago - Maison Internationale">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<fullAddress>58 boulevard Arago 
+75013 PARIS
+</fullAddress>
+	</address>
+</content>
+</entry>

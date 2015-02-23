@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3584_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3584_1.xml"/>
+<title>Atrium Café</title>
+<updated>2014-08-15T01:47:08.304+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3584"
+	coordinates="48.84625965807,2.3579966649413"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:34:20.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2813"
+	name="Atrium Café">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Toutes prestations de cafétaria
+Moyens de paiements : monétiques et espèces</description>
+	<address>
+		<floor>Rez de Chaussée</floor>
+		<openingHours>Lundi au Vendredi : 08h00-17h00</openingHours>
+		<url>http://www.crous-paris.fr/article.asp?idcat=AAAB&amp;idart=ADCV</url>
+	</address>
+</content>
+</entry>

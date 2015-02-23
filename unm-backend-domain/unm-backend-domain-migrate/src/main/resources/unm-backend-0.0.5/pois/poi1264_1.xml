@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1264_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1264_1.xml"/>
+<title>Bâtiment Lamarck</title>
+<updated>2014-08-15T01:46:46.045+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1264"
+	coordinates="48.827731858039,2.3800782859325|48.827548218059,2.3802284896374|48.827583533492,2.3803035914898|48.827449334715,2.3804323375225|48.827647101209,2.3809258639812|48.827760110284,2.3808132112026|48.827738921102,2.3807595670223|48.827834272351,2.3806576430798|48.827869587582,2.380700558424|48.82795081252,2.3806308209896|48.827731858039,2.380078285932"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T15:34:42.000+01:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	deletedAt="2011-03-25T17:13:09.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	name="Bâtiment Lamarck">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

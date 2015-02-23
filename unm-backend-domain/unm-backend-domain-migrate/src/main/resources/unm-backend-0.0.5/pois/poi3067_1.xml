@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3067_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3067_1.xml"/>
+<title>Genopole Campus 2</title>
+<updated>2014-08-15T01:47:02.628+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3067"
+	coordinates="48.624399288794,2.438583970069"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:41:35.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="268"
+	name="Genopole Campus 2">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>2 rue Gaston Crémieux 
+91 057 Evry cedex</fullAddress>
+	</address>
+	<child uid="3122" active="true"/>
+	<child uid="3118" active="true"/>
+	<child uid="3112" active="true"/>
+</content>
+</entry>

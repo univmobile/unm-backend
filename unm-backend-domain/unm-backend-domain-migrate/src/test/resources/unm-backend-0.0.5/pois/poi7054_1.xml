@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7054_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7054_1.xml"/>
+<title>Aide a la personne, FPE, CAFEL, CGPNT et carriere junior</title>
+<updated>2014-08-15T01:47:42.776+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7054"
+	coordinates="48.902988181728,2.2173231840134"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-10T15:34:06.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="7051"
+	name="Aide a la personne, FPE, CAFEL, CGPNT et carriere junior">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Djawad KHADIR</description>
+	<address>
+		<floor>M R01</floor>
+		<phone>0140974754</phone>
+		<email>djawad.khadir@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

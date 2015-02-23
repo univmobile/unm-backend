@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4082_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4082_1.xml"/>
+<title>Espagnol L1-2</title>
+<updated>2014-08-15T01:47:13.455+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4082"
+	coordinates="48.900344530448,2.3465459793806"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:56:02.000+02:00"
+	updatedAt="2011-09-26T17:02:52.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3710"
+	name="Espagnol L1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<openingHours>Lundi et vendredi : 
+9h30 / 12h30
+Mardi, mercredi, jeudi : 
+9h30 / 12h30 - 14h00 / 17h00
+</openingHours>
+		<phone>01 49 25 86 19</phone>
+		<email>clignancourt.espagnol@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

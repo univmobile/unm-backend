@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5393_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5393_1.xml"/>
+<title>UVSQ Ecole d'Architecture</title>
+<updated>2014-08-15T01:47:25.865+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5393"
+	coordinates="48.801522661323,2.1266839653254"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T10:04:48.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	deletedAt="2011-06-03T10:05:13.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="UVSQ Ecole d'Architecture">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

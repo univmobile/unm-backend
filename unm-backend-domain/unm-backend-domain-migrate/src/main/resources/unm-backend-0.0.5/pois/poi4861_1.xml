@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4861_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4861_1.xml"/>
+<title>Marne-La-Vallée</title>
+<updated>2014-08-15T01:47:21.291+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4861"
+	coordinates="48.84243170281,2.5857943296432"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T12:19:26.000+02:00"
+	updatedAt="2011-08-25T10:20:13.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4695"
+	name="Marne-La-Vallée">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER A : Noisy-Champs</itinerary>
+		<fullAddress>7 - 7 Bis boulevard Copernic - 77420 Champs sur Marne</fullAddress>
+	</address>
+	<child uid="5947" active="true"/>
+	<child uid="4997" active="true"/>
+	<child uid="4994" active="true"/>
+	<child uid="5002" active="true"/>
+	<child uid="5004" active="true"/>
+	<child uid="5006" active="true"/>
+	<child uid="5923" active="true"/>
+	<child uid="5924" active="true"/>
+	<child uid="5925" active="true"/>
+	<child uid="5927" active="true"/>
+	<child uid="5929" active="true"/>
+	<child uid="5932" active="true"/>
+	<child uid="5960" active="true"/>
+	<child uid="5962" active="true"/>
+	<child uid="5968" active="true"/>
+	<child uid="5981" active="true"/>
+</content>
+</entry>

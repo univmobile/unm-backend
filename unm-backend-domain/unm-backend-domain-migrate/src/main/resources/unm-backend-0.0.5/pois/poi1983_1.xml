@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1983_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1983_1.xml"/>
+<title>Service des affaires culturelles</title>
+<updated>2014-08-15T01:46:53.122+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1983"
+	coordinates="48.903897307652,2.2170723974"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T14:58:15.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="2461"
+	name="Service des affaires culturelles">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>Bureau R28, Rdc</floor>
+		<openingHours>Lundi, mardi et jeudi :
+10h / 12h
+14h / 17h
+Mercredi et vendredi :
+10h / 12h</openingHours>
+		<phone>01 40 97 56 56</phone>
+	</address>
+</content>
+</entry>

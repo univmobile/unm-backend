@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3798_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3798_1.xml"/>
+<title>BU Boutruche</title>
+<updated>2014-08-15T01:47:10.522+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3798"
+	coordinates="48.848191374994,2.3430477082729"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T17:07:12.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3679"
+	name="BU Boutruche">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Étudiants à partir de la licence.
+Discipline : histoire médiévale.</description>
+	<address>
+		<floor>Salle Léon-Boutruche, escalier E, 3e étage</floor>
+		<openingHours>Vendredi : 
+9h00 / 12h30
+</openingHours>
+	</address>
+</content>
+</entry>

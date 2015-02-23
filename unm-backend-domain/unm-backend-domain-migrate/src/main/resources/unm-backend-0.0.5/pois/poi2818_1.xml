@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2818_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2818_1.xml"/>
+<title>Amphithéâtre Fraisse</title>
+<updated>2014-08-15T01:47:00.277+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2818"
+	coordinates="48.901706647043,2.3934739"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T14:31:18.000+02:00"
+	updatedAt="2011-06-14T17:24:36.000+02:00"
+	deletedAt="2011-06-08T10:16:51.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	name="Amphithéâtre Fraisse">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>RDC ou sous sol</floor>
+	</address>
+</content>
+</entry>

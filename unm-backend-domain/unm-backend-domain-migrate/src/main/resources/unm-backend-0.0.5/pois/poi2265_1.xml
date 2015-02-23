@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2265_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2265_1.xml"/>
+<title>Bâtiment 2</title>
+<updated>2014-08-15T01:46:55.408+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2265"
+	coordinates="48.832135675701,2.4663756787777|48.83205092632,2.466524541378|48.831890255224,2.4663314223289|48.831974122069,2.466162443161|48.832135675701,2.466375678"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-26T17:53:28.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	deletedAt="2011-04-27T14:19:44.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bâtiment 2">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>R.E.R. A : station Nogent-sur-Marne
+Autobus :
+- ligne 112 (au château de Vincennes) - arrêt Mortemart
+- lignes 114, 210 (au château de Vincennes) - arrêt RER-Nogent</itinerary>
+		<fullAddress>49bis avenue de la Belle Gabrielle
+75012 Paris</fullAddress>
+	</address>
+</content>
+</entry>

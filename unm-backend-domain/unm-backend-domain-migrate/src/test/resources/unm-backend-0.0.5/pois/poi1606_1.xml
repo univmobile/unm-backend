@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1606_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1606_1.xml"/>
+<title>Cinésept</title>
+<updated>2014-08-15T01:46:49.159+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1606"
+	coordinates="48.829681460986,2.3810184001"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T14:16:31.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="Cinésept">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>4 pôles:
+- pôle Ciné-Club: projections
+poleproduction.cinesept@gmail.com
+- Pôle Festival: films étudiants
+
+- Pôle Presse: rédaction d'un magazine
+http://babelmag.free.fr
+- Pôle Production: projets de films
+
+Tarif de l'adhésion: 10 €</description>
+	<address>
+		<floor>UFR LAC</floor>
+		<url>http://inconnufestival.over-blog.com; http://cinesept.free.fr</url>
+		<email>poleproduction.cinesept@gmail.com</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1907_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1907_1.xml"/>
+<title>Gymnase</title>
+<updated>2014-08-15T01:46:52.308+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1907"
+	coordinates="48.914285751495,2.419740110"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T21:53:08.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="340"
+	name="Gymnase">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+</content>
+</entry>

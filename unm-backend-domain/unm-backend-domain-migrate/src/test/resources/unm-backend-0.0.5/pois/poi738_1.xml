@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi738_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi738_1.xml"/>
+<title>Association les gabiers de Paris 1</title>
+<updated>2014-08-15T01:46:41.551+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="738"
+	coordinates="48.846908171031,2.344974875"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T16:59:54.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	parentUid="1027"
+	name="Association les gabiers de Paris 1">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone>06 79 72 81 81</phone>
+		<email>hug.lvl@gmail.com</email>
+		<fullAddress>12 place du Panthéon
+75005 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

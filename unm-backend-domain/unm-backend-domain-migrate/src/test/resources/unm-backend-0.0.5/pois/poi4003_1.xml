@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4003_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4003_1.xml"/>
+<title>ED 158</title>
+<updated>2014-08-15T01:47:12.576+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4003"
+	coordinates="48.847991564178,2.3585473559797"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T13:52:44.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2806"
+	name="ED 158">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Cerveau, cognition et comportement (ED 158)</description>
+	<address>
+		<floor>7è étage bureau 700</floor>
+		<url>http://ed3c.snv.jussieu.fr/</url>
+		<phone>01 44 27 32 33</phone>
+		<email>annie.Sansonetti@snv.jussieu.fr</email>
+	</address>
+</content>
+</entry>

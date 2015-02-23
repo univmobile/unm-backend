@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6913_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6913_1.xml"/>
+<title>Amphithéâtre H2</title>
+<updated>2014-08-15T01:47:41.265+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6913"
+	coordinates="48.701614645353,2.1673864871264"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-15T10:58:47.000+02:00"
+	updatedAt="2011-09-19T13:57:02.000+02:00"
+	deletedAt="2011-09-19T13:57:02.000+02:00"
+	createdBy="Daniel Kerboeuf"
+	updatedBy="yasmine"
+	name="Amphithéâtre H2">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>RDC</floor>
+	</address>
+</content>
+</entry>

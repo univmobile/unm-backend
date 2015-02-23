@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3856_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3856_1.xml"/>
+<title>CFA UPMC</title>
+<updated>2014-08-15T01:47:11.037+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3856"
+	coordinates="48.845173793023,2.3573391884565"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:09:41.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2790"
+	name="CFA UPMC">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Le Centre de formation d’apprentis UPMC est implanté au cœur de l’université à Paris dans le 5ème arrondissement.</description>
+	<address>
+		<url>http://www.cfa.upmc.fr/cfa_upmc</url>
+		<phone>01 44 27 71 40</phone>
+		<email>cfa@upmc.fr</email>
+	</address>
+</content>
+</entry>

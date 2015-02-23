@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1641_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1641_1.xml"/>
+<title>EN ACT</title>
+<updated>2014-08-15T01:46:49.496+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1641"
+	coordinates="48.806746356655,2.3314199969"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T15:08:27.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1785"
+	name="EN ACT">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Ateliers de communication, théâtres, masques
+</description>
+	<address>
+		<openingHours>Prendre contact avec l'association pour le détail des horaires et des lieux</openingHours>
+		<email>bernu@lptmc.jussieu.fr</email>
+	</address>
+</content>
+</entry>

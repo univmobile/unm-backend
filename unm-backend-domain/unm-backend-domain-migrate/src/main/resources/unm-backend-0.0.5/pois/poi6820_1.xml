@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6820_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6820_1.xml"/>
+<title>Restaurant Bichat</title>
+<updated>2014-08-15T01:47:40.529+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6820"
+	coordinates="48.900234300621,2.3338517546654"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T14:02:55.000+02:00"
+	updatedAt="2011-09-05T10:51:44.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6819"
+	name="Restaurant Bichat">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>RU : du lundi au vendredi de 11h30 à 14h15
+Cafétéria : du lundi au vendredi de 8h00 à 17h00</openingHours>
+		<url>http://www.crous-paris.fr/</url>
+	</address>
+	<attachment id="198" title="bichat_1.jpg" type="image" url="/uploads/poi/38015b21a856a0adb05e384fee67eac0aedfdef5.jpg"/>
+</content>
+</entry>

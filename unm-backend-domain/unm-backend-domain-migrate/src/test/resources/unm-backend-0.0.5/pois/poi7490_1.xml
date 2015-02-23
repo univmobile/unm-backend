@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7490_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7490_1.xml"/>
+<title>Bibliothèque Lavisse</title>
+<updated>2014-08-15T01:47:46.866+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7490"
+	coordinates="48.849054474431,2.3432394862175"
+	active="true"
+	markerType="point"
+	createdAt="2013-09-26T09:41:55.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2013-09-26T10:11:35.000+02:00"
+	createdBy="Pascale.randriantiana "
+	updatedBy="Pascale.randriantiana "
+	name="Bibliothèque Lavisse">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+</content>
+</entry>

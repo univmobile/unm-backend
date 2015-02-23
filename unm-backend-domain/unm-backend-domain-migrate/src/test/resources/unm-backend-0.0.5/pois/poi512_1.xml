@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi512_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi512_1.xml"/>
+<title>ISTY Mécatronique Mantes la Ville </title>
+<updated>2014-08-15T01:46:40.480+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="512"
+	coordinates="48.985218343942,1.7002737522"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T17:03:16.000+02:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	createdBy="haromoys"
+	updatedBy="rrivoire"
+	parentUid="511"
+	name="ISTY Mécatronique Mantes la Ville ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>SNCF Ligne Paris-Saint-Lazare - Mantes-la-Jolie ou Ligne Paris Montparnasse - Mantes-la-Jolie </itinerary>
+		<fullAddress>28 boulevard Roger Salengro
+78711 Mantes-la-Ville</fullAddress>
+	</address>
+	<child uid="2503" active="true"/>
+	<child uid="2505" active="true"/>
+</content>
+</entry>

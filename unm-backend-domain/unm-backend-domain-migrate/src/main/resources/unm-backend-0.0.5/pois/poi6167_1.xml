@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6167_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6167_1.xml"/>
+<title>Ecole doctorale MSTIC</title>
+<updated>2014-08-15T01:47:34.558+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6167"
+	coordinates="48.840792525798,2.5877697765827"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:13:36.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="6162"
+	name="Ecole doctorale MSTIC">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Bernard LAPEYRE
+directeur
+</description>
+	<address>
+		<phone>01 64 15 35 76</phone>
+	</address>
+</content>
+</entry>

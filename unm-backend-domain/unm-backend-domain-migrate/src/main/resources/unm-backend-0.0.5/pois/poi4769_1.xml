@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4769_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4769_1.xml"/>
+<title>Contrôle de gestion M2</title>
+<updated>2014-08-15T01:47:20.350+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4769"
+	coordinates="48.896128968737,2.2369556128979"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:05:18.000+02:00"
+	updatedAt="2011-05-26T16:08:15.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4586"
+	name="Contrôle de gestion M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau E 701a</floor>
+		<openingHours>Du lundi au Vendredi : 
+8h00 / 12h00 - 13h00 / 16h30
+</openingHours>
+		<phone>01 41 16 75 38</phone>
+		<email>corinne.malborough@dauphine.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5978_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5978_1.xml"/>
+<title>Relations internationales</title>
+<updated>2014-08-15T01:47:32.317+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5978"
+	coordinates="48.761736569975,2.2722427546978"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T11:18:46.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4984"
+	name="Relations internationales">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Mobilité étudiante</description>
+	<address>
+		<floor>Bâtiment A, bureau AH 118</floor>
+		<url>http://www.u-psud.fr/fr/international.html</url>
+		<phone>01 46 83 53 19</phone>
+		<email>corinne.coquin@u-psud.fr</email>
+	</address>
+</content>
+</entry>

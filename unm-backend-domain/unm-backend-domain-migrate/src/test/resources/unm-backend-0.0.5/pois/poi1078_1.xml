@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1078_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1078_1.xml"/>
+<title>DUT Informatique</title>
+<updated>2014-08-15T01:46:44.583+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1078"
+	coordinates="48.956009318627,2.3419922"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-14T13:30:40.000+01:00"
+	updatedAt="2011-05-31T11:58:05.000+02:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	parentUid="301"
+	name="DUT Informatique">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>L’objectif du DUT Informatique est de former des professionnels de l’informatique, compétents au plan technologique, capables d’entretenir des rapports de travail avec les utilisateurs de l’informatique et les titulaires des différentes fonctions dans l’entreprise.
+
+
+</description>
+	<address>
+		<floor>RDC - Aile T - Bureau T 107.</floor>
+		<openingHours>9h15 - 12h
+13h30 - 17h
+Mardi après-midi fermée.</openingHours>
+		<itinerary>En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<url>http://www-info.iutv.univ-paris13.fr/</url>
+		<phone>01 49 40 31 20</phone>
+		<fax>01 49 40 20 15</fax>
+		<email>secrinfo@iutv.univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

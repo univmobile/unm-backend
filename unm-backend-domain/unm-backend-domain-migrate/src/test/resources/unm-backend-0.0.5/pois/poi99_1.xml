@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi99_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi99_1.xml"/>
+<title>Centre Panthéon</title>
+<updated>2014-08-15T01:46:38.443+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="99"
+	coordinates="48.846712127963,2.3453111351409|48.846080219294,2.3449892700592|48.845695421841,2.3467380703369|48.846337926027,2.3470545710006|48.846712127963,2.3453111351"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-06-28T15:35:50.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-09-05T10:23:34.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Centre Panthéon">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>UFR 26 Études juridiques générales
+UFR 01  Droit Administration et Secteur publics
+UFR 07 Études Internationales et Européennes
+UFR 05 Droit des Affaires</description>
+	<address
+		zipCode="75231 "
+		city="Paris cedex 05"
+		countryCode="FR">
+		<itinerary>RER Luxembourg
+Bus 21, 27, 38, 82, 84, 85, 89 </itinerary>
+		<url>http://www.univ-paris1.fr</url>
+		<phone>01 44 07 80 00</phone>
+		<fax>01 46 34 20 56 </fax>
+		<fullAddress>12, place du Panthéon 75231  Paris cedex 05</fullAddress>
+	</address>
+</content>
+</entry>

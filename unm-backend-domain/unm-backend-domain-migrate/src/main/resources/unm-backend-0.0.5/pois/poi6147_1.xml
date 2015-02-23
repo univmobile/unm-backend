@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6147_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6147_1.xml"/>
+<title>Ingénieurs 2000</title>
+<updated>2014-08-15T01:47:34.307+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6147"
+	coordinates="48.835336434281,2.5923416018486"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:58:49.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="6146"
+	name="Ingénieurs 2000">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<phone>01 60 95 81 00</phone>
+	</address>
+</content>
+</entry>

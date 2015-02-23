@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3579_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3579_1.xml"/>
+<title>Rôtisserie</title>
+<updated>2014-08-15T01:47:08.247+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3579"
+	coordinates="48.846731661723,2.3600649833679"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:28:24.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3571"
+	name="Rôtisserie">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>viandes rôties et plat du jour</description>
+	<address>
+		<floor>niveau -1</floor>
+		<openingHours>Lundi au Vendredi : 11h30-13h45</openingHours>
+		<url>http://www.upmc.fr/fr/vie_des_campus/logement_et_restauration/resto_u.html</url>
+	</address>
+</content>
+</entry>

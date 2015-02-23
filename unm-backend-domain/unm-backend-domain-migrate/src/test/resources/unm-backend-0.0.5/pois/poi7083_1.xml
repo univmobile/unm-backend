@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7083_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7083_1.xml"/>
+<title>test</title>
+<updated>2014-08-15T01:47:43.061+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7083"
+	coordinates="48.96284129224,2.3260170221329"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-25T18:02:10.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Marion MAINFRAY"
+	updatedBy="Marion MAINFRAY"
+	parentUid="2"
+	name="test">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

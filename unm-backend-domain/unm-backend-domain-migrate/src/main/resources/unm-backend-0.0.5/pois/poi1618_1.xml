@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1618_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1618_1.xml"/>
+<title>La clé des chants ensemble</title>
+<updated>2014-08-15T01:46:49.271+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1618"
+	coordinates="48.812223386494,2.306859344"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T14:27:16.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="La clé des chants ensemble">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Concerts, représentations.
+Le siège de l'association est situé 20 rue du Poitou 92120 Montrouge.
+Les lieux de répétitions sont situés à l'Université Pierre et Marie Curie, à France Ô, à la Mairie du 11e, à l'école élémentaire Boulard et à l'Université Paris 7.</description>
+	<address>
+		<floor>UPMC, Université Paris 7, France Ô, Mairie du 11e, Ecole élémentaire Boulard</floor>
+		<openingHours>5 lieux de répétitions:
+- UPMC: lundi 18h30-20h (jours paris) 
+4 place Jussieu 75005 Paris, amphi 41B, Métro 7 Jussieu
+- Université Paris 7: mercredi 12h30-14h
+5 rue Thomas Mann 75013 Paris, salle Pierre Albouy Grands Moulins, bâtiment C, 6e étage, RER C Métro 14 Bibliothèque François Mitterrand, Bus 89, 62, 64, 325
+- France Ô: 13h30-14h30
+35 rue Danton 92240 Malakoff, 5e étage, Métro 13 Malakoff, Plateau de Vanves
+- Marie du 11e: lundi 18h30-20h (jours impairs), Place Léon Blum, salle Sedaine, sous sol, Métro 9 Voltaire
+- Ecole élémentaire Boulard: mardi 18h30-20h
+46 rue Boulard 75014 Paris, Métro 4 Mouton-Duvernet</openingHours>
+		<url>http://www.clefdeschants.fr</url>
+		<phone>0663061357</phone>
+		<email>chorale@clefdeschants.fr</email>
+	</address>
+</content>
+</entry>

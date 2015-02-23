@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6785_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6785_1.xml"/>
+<title>Residence Universitaire de Nanterre</title>
+<updated>2014-08-15T01:47:40.195+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6785"
+	coordinates="48.905807436383,2.2142185270786"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T11:09:24.000+02:00"
+	updatedAt="2012-02-03T12:30:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6780"
+	name="Residence Universitaire de Nanterre">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+	<description>720 chambres avec cabine trifonction
+Tarifs : 227€ charges comprises.
+
+396 T1 dont 9 pour personne à mobilité réduite
+Tarifs : 387€ charges comprises.
+
+15 logements équipés en domotique (pour étudiants handicapés dépendants avec auxiliaire de vie - admission soumise au médecin du Rectorat)
+Tarifs : 438€ charges comprises.</description>
+	<address>
+		<openingHours>Du lundi au vendredi, de 9h à 16h.
+
+JUILLET - AOUT
+de 9h00 à 12h00 et de 13h00 à 16h00
+</openingHours>
+		<phone>01 41 20 32 00</phone>
+	</address>
+	<attachment id="222" title="nanterre.jpg" type="image" url="/uploads/poi/f8e65c571f2399063750e3ca41455e5d2ffd80ae.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5278_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5278_1.xml"/>
+<title>Mesures physiques</title>
+<updated>2014-08-15T01:47:24.837+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5278"
+	coordinates="48.78893733849,2.4443882703781"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T08:22:09.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4528"
+	name="Mesures physiques">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://iut.u-pec.fr/departements/mesures-physiques/</url>
+		<phone>01 45 17 17 79</phone>
+		<email>mp-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

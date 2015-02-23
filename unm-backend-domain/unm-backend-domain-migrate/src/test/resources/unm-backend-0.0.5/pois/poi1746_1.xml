@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1746_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1746_1.xml"/>
+<title>Mangement des organisations sanitaires et sociales M1-2</title>
+<updated>2014-08-15T01:46:50.490+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1746"
+	coordinates="48.913318834876,2.42033556103"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T23:44:03.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="348"
+	name="Mangement des organisations sanitaires et sociales M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>4ème étage -  Bureau 414.</floor>
+		<url>http://www-smbh.univ-paris13.fr/smbh/enseig/enseig_lmd/enseig_lmd_master/master_moss.html</url>
+		<phone>01 48 38 89 19</phone>
+		<fax>01 48 38 89 20</fax>
+		<email>aurelie.hiolin@univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

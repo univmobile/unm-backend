@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2616_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2616_1.xml"/>
+<title>Sciences de la société M1-2</title>
+<updated>2014-08-15T01:46:58.496+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2616"
+	coordinates="48.855259880187,2.332290709018"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T14:27:47.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2333"
+	name="Sciences de la société M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>4éme étage ,bureau 422-424</floor>
+		<openingHours>Lundi-Jeudi
+9h30-12h30
+13h30-16h30
+Vendredi fermé au public</openingHours>
+		<phone>01 53 10 47 15</phone>
+	</address>
+</content>
+</entry>

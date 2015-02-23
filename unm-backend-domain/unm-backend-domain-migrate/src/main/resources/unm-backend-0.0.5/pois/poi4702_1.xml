@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4702_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4702_1.xml"/>
+<title>UVSQ Etats-Unis</title>
+<updated>2014-08-15T01:47:19.705+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4702"
+	coordinates="48.812980186706,2.1480336785316"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T11:42:23.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	deletedAt="2011-05-26T11:43:04.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="UVSQ Etats-Unis">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

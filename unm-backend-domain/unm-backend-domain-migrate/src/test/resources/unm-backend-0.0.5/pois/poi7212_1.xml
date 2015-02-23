@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7212_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7212_1.xml"/>
+<title>Assocition sportive</title>
+<updated>2014-08-15T01:47:44.416+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7212"
+	coordinates="48.789082360921,2.3271623253822"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-05T14:31:11.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	deletedAt="2012-12-07T14:09:19.000+01:00"
+	createdBy="super admin"
+	updatedBy="enscachan"
+	name="Assocition sportive">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+</content>
+</entry>

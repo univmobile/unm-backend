@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4307_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4307_1.xml"/>
+<title>UMR_S 938</title>
+<updated>2014-08-15T01:47:15.954+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4307"
+	coordinates="48.84915749233,2.3837260901928"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T15:28:18.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3716"
+	name="UMR_S 938">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>CDR Saint-Antoine - UMR_S 938</description>
+	<address>
+		<url>http://www.chusa.upmc.fr/CDR_saint_antoine/</url>
+		<phone>01 49 28 46 87</phone>
+		<email>nicolas.lafon@upmc.fr</email>
+	</address>
+</content>
+</entry>

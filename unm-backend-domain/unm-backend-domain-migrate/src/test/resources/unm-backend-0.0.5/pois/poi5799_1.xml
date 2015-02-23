@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5799_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5799_1.xml"/>
+<title>TTT - M1-2</title>
+<updated>2014-08-15T01:47:30.208+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5799"
+	coordinates="48.839180010906,2.5880768895149"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T16:05:26.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="TTT - M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Master Technologies et Techniques des Télécommunications</description>
+	<address>
+		<floor>2B106/108 </floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-masters/domaine-sciences-technologies-sante/mention-electronique-telecommunication-geomatique/master-technologies-et-techniques-des-telecommunications/</url>
+		<phone>01 60 95 72 04</phone>
+		<fax>01 60 95 77 07</fax>
+		<email>Jocelyne.Wiecha@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

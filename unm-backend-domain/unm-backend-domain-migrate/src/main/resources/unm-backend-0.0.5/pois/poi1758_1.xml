@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1758_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1758_1.xml"/>
+<title>UFR des sciences de la santé</title>
+<updated>2014-08-15T01:46:50.544+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1758"
+	coordinates="48.778054805048,2.047186642"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T14:40:17.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="rrivoire"
+	parentUid="555"
+	name="UFR des sciences de la santé">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Bâtiment Rabelais</floor>
+		<url>http://www.uvsq.fr/outils/ufr-des-sciences-de-la-sante-77764.kjsp</url>
+		<phone>01 39 25 57 40</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3990_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3990_1.xml"/>
+<title>Secrétariat du Pôle de la vie de l'étudiant</title>
+<updated>2014-08-15T01:47:12.450+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3990"
+	coordinates="48.848824669018,2.3438832163811"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T13:32:27.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3679"
+	name="Secrétariat du Pôle de la vie de l'étudiant">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<phone>01 40 46 26 55</phone>
+		<email>vie-etudiante@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>
