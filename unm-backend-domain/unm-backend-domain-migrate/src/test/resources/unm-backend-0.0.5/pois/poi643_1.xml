@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi643_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi643_1.xml"/>
+<title>Cafétéria Poincaré</title>
+<updated>2014-08-15T01:46:40.942+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="643"
+	coordinates="48.844546424965,2.3"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T18:03:11.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-04-29T16:14:58.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	name="Cafétéria Poincaré">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Lundi au vendredi
+08h00-16h00
+</openingHours>
+		<itinerary>RER B 
+Station Luxembourg
+
+Bus 21,27
+Arrêt Gay Lussac
+</itinerary>
+	</address>
+</content>
+</entry>

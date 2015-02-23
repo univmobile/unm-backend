@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7333_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7333_1.xml"/>
+<title>Grandes Serres</title>
+<updated>2014-08-15T01:47:45.484+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7333"
+	coordinates="48.843353153658,2.358101606369"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-11T13:30:48.000+02:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Grandes Serres">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<openingHours>En été : de 10 h à 18 h jusqu'à 18 h 30 le dimanche.
+En hiver : de 10 h à 17 h.
+Les Grandes Serres sont fermées le mardi.</openingHours>
+		<itinerary>En été : de 10 h à 18 h jusqu'à 18 h 30 le dimanche.
+En hiver : de 10 h à 17 h.
+Les Grandes Serres sont fermées le mardi.</itinerary>
+		<url>http://www.jardindesplantes.net</url>
+	</address>
+</content>
+</entry>

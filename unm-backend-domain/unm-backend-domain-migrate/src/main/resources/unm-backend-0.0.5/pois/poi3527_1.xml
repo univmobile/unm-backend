@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3527_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3527_1.xml"/>
+<title>UFR 926</title>
+<updated>2014-08-15T01:47:07.675+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3527"
+	coordinates="48.846605310104,2.3595466464758"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:48:31.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2824"
+	name="UFR 926">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>UFR de Chimie</description>
+	<address>
+		<url>http://www.chimie.upmc.fr/fr/index.html</url>
+		<phone>01 44 27 31 89</phone>
+	</address>
+</content>
+</entry>

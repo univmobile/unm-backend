@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi528_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi528_1.xml"/>
+<title>Evry bâtiment Tour Évry 2</title>
+<updated>2014-08-15T01:46:40.611+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="528"
+	coordinates="48.628817211305,2.4278980493546|48.628795938126,2.4281877279282|48.628309961743,2.4281216562667|48.628335017057,2.4278336763382|48.628817211305,2.42789804935"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-09-17T13:32:20.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2011-05-31T14:37:46.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Evry bâtiment Tour Évry 2">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<fullAddress>523, place des terrasses
+91025 Évry</fullAddress>
+	</address>
+</content>
+</entry>

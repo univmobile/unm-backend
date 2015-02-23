@@ -1,2 +1,3 @@
 local-deploy.sh
 unm_ci-package-unm-backend-app-noshib.sh
+/target/

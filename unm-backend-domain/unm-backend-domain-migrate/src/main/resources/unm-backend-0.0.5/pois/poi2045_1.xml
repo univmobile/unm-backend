@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2045_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2045_1.xml"/>
+<title>Entrée du bâtiment D</title>
+<updated>2014-08-15T01:46:53.642+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2045"
+	coordinates="48.902158219055,2.2123879"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T16:54:31.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2495"
+	name="Entrée du bâtiment D">
+	<poiType id="14" label="Entrée PMR" categoryId="7" categoryLabel="Relais handicap"/>
+</content>
+</entry>

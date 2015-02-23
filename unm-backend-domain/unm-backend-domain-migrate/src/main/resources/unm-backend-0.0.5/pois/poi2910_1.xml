@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2910_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2910_1.xml"/>
+<title>Centre Sainte Barbe</title>
+<updated>2014-08-15T01:47:01.075+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2910"
+	coordinates="48.847758054637,2.346731722354"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T16:46:57.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2909"
+	name="Centre Sainte Barbe">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro
+- Ligne 10 : station Maubert-Mutualite
+Bus
+- Lignes 84, 89 : arrêt  Mairie du V-Panthéon </itinerary>
+		<fullAddress>4, rue Valette
+3e étage
+75005 Paris</fullAddress>
+	</address>
+	<child uid="3422" active="true"/>
+	<child uid="3424" active="true"/>
+</content>
+</entry>

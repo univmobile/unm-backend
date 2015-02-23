@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3984_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3984_1.xml"/>
+<title>Centre de recherches et d’analyses géopolitiques</title>
+<updated>2014-08-15T01:47:12.404+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3984"
+	coordinates="48.946856204131,2.3612206801772"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T17:05:41.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Centre de recherches et d’analyses géopolitiques">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 353 : Centre de recherches et d’analyses géopolitiques appartenant à l'École doctorale (ED) 401 : Sciences sociales.
+Directrice : Béatrice Giblin</description>
+	<address>
+		<floor>3ème étage Bâtiment D, bureau 307</floor>
+		<url>http://www.geopolitique.net/</url>
+		<phone>01 49 40 73 00</phone>
+		<fax>01 49 40 73 01</fax>
+		<email>secretariat@geopolitique.net</email>
+	</address>
+</content>
+</entry>

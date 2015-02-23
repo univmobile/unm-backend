@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6164_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6164_1.xml"/>
+<title>TNT Expresso</title>
+<updated>2014-08-15T01:47:34.525+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6164"
+	coordinates="48.839201842553,2.587643712759"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:10:05.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="TNT Expresso">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>TNT-eXpresso est une des principales associations de l'université Paris-Est Marne-la Vallée. Depuis 2001, TNT-eXpresso anime la vie du campus en proposant différentes activités.</description>
+	<address>
+		<floor>Bureau 0S040</floor>
+		<url>http://www.umlv.net/</url>
+		<phone>01 60 95 79 32</phone>
+		<email>tnt@umlv.net</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6859_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6859_1.xml"/>
+<title>Restaurant Rabelais </title>
+<updated>2014-08-15T01:47:40.792+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6859"
+	coordinates="48.898497626567,2.3446020483971"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-05T10:47:58.000+02:00"
+	updatedAt="2011-09-05T10:51:44.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6852"
+	name="Restaurant Rabelais ">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>RU : du lundi au vendredi de 11h15 à 14h00
+ Cafétéria : du lundi au vendredi de 11h15 à 14h00</openingHours>
+		<url>http://www.crous-paris.fr/</url>
+	</address>
+	<attachment id="199" title="rabelais_2.jpg" type="image" url="/uploads/poi/78edd68c39f91e0dbe5fc70935d79eee9935de43.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1911_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1911_1.xml"/>
+<title>Bouge ton IUT</title>
+<updated>2014-08-15T01:46:52.363+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1911"
+	coordinates="48.91396997503,2.41878289729"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-06T01:34:47.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="356"
+	name="Bouge ton IUT">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Bouge ton IUT</description>
+</content>
+</entry>

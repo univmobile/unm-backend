@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7260_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7260_1.xml"/>
+<title>Département de physique</title>
+<updated>2014-08-15T01:47:44.947+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7260"
+	coordinates="48.789269558289,2.3278141021729"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T10:02:32.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Département de physique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Le département de physique, créé en 1966, a pour but de donner une formation de haut niveau en physique fondamentale.
+La formation intègre le cycle LMD (L3, M1 et M2), en ajoutant la préparation à l'agrégation de physique que les élèves effectuent durant leur troisième année de scolarité.</description>
+	<address>
+		<floor>Niveau 1, couloir de droite avant l'amphithéâtre Marie Curie</floor>
+		<url>http://www.physique.ens-cachan.fr/</url>
+		<phone>01 47 40 21 00</phone>
+		<fax>01 47 40 24 65</fax>
+		<email>secretariat@physique.ens-cachan.fr</email>
+	</address>
+	<attachment id="267" title="physique.jpg" type="image" url="/uploads/poi/b8a9225554471521b6a54a937d49a662e1e802aa.jpg"/>
+</content>
+</entry>

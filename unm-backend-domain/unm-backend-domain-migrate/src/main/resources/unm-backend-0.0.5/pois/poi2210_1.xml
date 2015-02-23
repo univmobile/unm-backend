@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2210_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2210_1.xml"/>
+<title>GSE L-pro</title>
+<updated>2014-08-15T01:46:55.164+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2210"
+	coordinates="48.779438426691,2.04485915"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T16:16:24.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2594"
+	name="GSE L-pro">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>0130943861</phone>
+	</address>
+</content>
+</entry>

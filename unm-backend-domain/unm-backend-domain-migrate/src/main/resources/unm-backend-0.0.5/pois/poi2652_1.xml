@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2652_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2652_1.xml"/>
+<title>Sciences économiques et gestions  M1-2</title>
+<updated>2014-08-15T01:46:58.740+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2652"
+	coordinates="48.824342466319,2.3025924526"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T15:09:07.000+02:00"
+	updatedAt="2011-06-14T17:10:50.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2447"
+	name="Sciences économiques et gestions  M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor> RDC/E26 – E27 –E26</floor>
+		<openingHours>Lundi-Mardi
+13h30-16h30
+Mercredi-Vendredi
+9h30-12h00</openingHours>
+		<phone>01 41 17 30 00</phone>
+	</address>
+</content>
+</entry>

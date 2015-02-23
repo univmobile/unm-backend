@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5543_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5543_1.xml"/>
+<title>Antenne Culture</title>
+<updated>2014-08-15T01:47:27.274+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5543"
+	coordinates="48.787915925547,2.4443346261978"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:15:15.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4334"
+	name="Antenne Culture">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>i3, 1er étage</floor>
+		<openingHours>Lundi de 10h à 17h30, mardi, mercredi, jeudi de 9h à 17h30, vendredi 9h à 17h30
+</openingHours>
+		<phone>01 45 17 19 84</phone>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

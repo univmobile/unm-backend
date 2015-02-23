@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2142_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2142_1.xml"/>
+<title>Résidence Universitaire Les Linandes Mauves</title>
+<updated>2014-08-15T01:46:54.578+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2142"
+	coordinates="49.042921462489,2.070978172123"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-13T14:51:43.000+02:00"
+	updatedAt="2011-04-13T14:51:43.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Résidence Universitaire Les Linandes Mauves">
+	<poiType id="31" label="Résidence universitaire "/>
+</content>
+</entry>

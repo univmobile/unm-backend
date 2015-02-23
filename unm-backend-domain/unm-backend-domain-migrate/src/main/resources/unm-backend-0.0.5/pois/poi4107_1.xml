@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4107_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4107_1.xml"/>
+<title>CELSA</title>
+<updated>2014-08-15T01:47:13.743+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4107"
+	coordinates="48.894623342704,2.2747652046382"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:22:38.000+02:00"
+	updatedAt="2011-09-26T17:08:44.000+02:00"
+	deletedAt="2011-09-26T16:52:39.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	name="CELSA">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Information Formation étudiante</description>
+	<address>
+		<phone>01 46 43 76 02</phone>
+		<email>information@celsa.paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

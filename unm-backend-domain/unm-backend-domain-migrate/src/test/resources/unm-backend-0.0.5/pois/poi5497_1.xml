@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5497_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5497_1.xml"/>
+<title>Résidence Universitaire Les Rives de l'Yvette</title>
+<updated>2014-08-15T01:47:26.865+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5497"
+	coordinates="48.699288128351,2.1637789160013"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T15:53:41.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5450"
+	name="Résidence Universitaire Les Rives de l'Yvette">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B : Station Bures-sur-Yvette (sur le campus)</itinerary>
+		<fullAddress>Centre Universitaire - Bât 231-232-233 - 91440 Bures-sur-Yvette.</fullAddress>
+	</address>
+	<child uid="5500" active="true"/>
+</content>
+</entry>

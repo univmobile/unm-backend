@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1680_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1680_1.xml"/>
+<title>4 télé agrandisseurs</title>
+<updated>2014-08-15T01:46:49.860+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1680"
+	coordinates="48.830214110149,2.38150924444"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T15:55:43.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="4 télé agrandisseurs">
+	<poiType id="28" label="Télé agrandisseur" categoryId="7" categoryLabel="Relais handicap"/>
+	<description>Un télé agrandisseur est à votre disposition à chacun des étages de la bibliothèque</description>
+	<address>
+		<floor>Bibliothèque centrale</floor>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2356_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2356_1.xml"/>
+<title>UFR Culture et communication</title>
+<updated>2014-08-15T01:46:56.201+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2356"
+	coordinates="48.944492114189,2.363172322"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T16:39:13.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="UFR Culture et communication">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Gisèle BOULZAGUET (responsable administrative).</description>
+	<address>
+		<floor>3ème étage Bâtiment A, bureau 332</floor>
+		<url>http://com-media.univ-paris8.fr/index.htm</url>
+		<phone>01 49 40 66 57</phone>
+		<fax>01 49 40 71 68</fax>
+		<email>gb@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

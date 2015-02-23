@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6162_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6162_1.xml"/>
+<title>UR NAVIER</title>
+<updated>2014-08-15T01:47:34.504+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6162"
+	coordinates="48.840830303312,2.5873513519764"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:06:15.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="4531"
+	name="UR NAVIER">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>En RER A
+• Ligne A, station Noisy - Champs, sortie 3 - Cité Descartes.
+• L’École est à 25 mn du centre de Paris et à 20 mn de la gare TGV de Chessy.
+Par l’autoroute A4
+• En venant de Paris, autoroute A4, direction Metz - Nancy, sortie Champs-sur-Marne,
+direction Cité Descartes. L’École est à 15 km de la porte de Bercy.
+• En venant de la province, autoroute A4, direction Paris, sortie Marne-la-Vallée,
+Val Maubuée centre, direction Marne-la-Vallée - Cité Descartes.
+Par le bus
+• Bus 213 : ligne Gare SNCF Chelles-Gournay / Lognes-le-village, arrêt CROUS.
+• Bus 212 : ligne Pointe de Champs / Gare SNCF Émerainville, arrêt CROUS.
+</itinerary>
+		<fullAddress>Cité Descartes - 6/8 Av. Blaise Pascal - 
+77455 Champs-s/Marne - Marne-la-Vallée Cedex 2 </fullAddress>
+	</address>
+	<child uid="6166" active="true"/>
+	<child uid="6167" active="true"/>
+</content>
+</entry>

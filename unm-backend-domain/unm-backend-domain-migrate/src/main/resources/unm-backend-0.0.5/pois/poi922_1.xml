@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi922_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi922_1.xml"/>
+<title>PHARE </title>
+<updated>2014-08-15T01:46:43.367+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="922"
+	coordinates="48.835395872627,2.358024492"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T14:25:58.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1028"
+	name="PHARE ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Pôle d'Histoire et d'Analyse des Représentations Économiques</description>
+	<address>
+		<itinerary>Métro 5 
+Station Campo-Formio
+
+Bus 57 et 67 </itinerary>
+		<url>http://phare.univ-paris1.fr/</url>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi950_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi950_1.xml"/>
+<title>Mission université-entreprise</title>
+<updated>2014-08-15T01:46:43.704+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="950"
+	coordinates="48.827147621585,2.36431628"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-04T09:16:05.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1023"
+	name="Mission université-entreprise">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Prendre rendez-vous par mail, via le site.</description>
+	<address>
+		<floor>Aile C, 8e étage, 8.07</floor>
+		<itinerary>Métro 14
+Terminus Olympiades
+Bus 62, 64 et 83
+Arrêt Tolbiac-Baudricourt</itinerary>
+		<url>http://mue.univ-paris1.fr</url>
+	</address>
+</content>
+</entry>

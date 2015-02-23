@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2284_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2284_1.xml"/>
+<title>Centre de Langues</title>
+<updated>2014-08-15T01:46:55.537+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2284"
+	coordinates="48.946318909456,2.36276462674"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T14:03:12.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2604"
+	name="Centre de Langues">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3ème étage Bâtiment B1, bureau 301</floor>
+		<openingHours>Lundi, mercredi et vendredi
+9h-12h
+Mardi et jeudi
+14h- 17h</openingHours>
+		<url>http://www.univ-paris8.fr/cdl</url>
+		<phone>01 49 40 68 43</phone>
+		<fax>01 49 40 68 53</fax>
+		<email>CLTD@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

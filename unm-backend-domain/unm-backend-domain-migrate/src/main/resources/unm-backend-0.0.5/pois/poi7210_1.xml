@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7210_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7210_1.xml"/>
+<title>École normale supérieure de Cachan</title>
+<updated>2014-08-15T01:47:44.394+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7210"
+	coordinates="48.788947941284,2.3257809877396"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-05T14:16:18.000+01:00"
+	updatedAt="2013-01-14T09:38:20.000+01:00"
+	createdBy="super admin"
+	updatedBy="enscachan"
+	parentUid="7209"
+	name="École normale supérieure de Cachan">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="7221" active="true"/>
+	<child uid="7211" active="true"/>
+	<child uid="7215" active="true"/>
+	<child uid="7216" active="true"/>
+	<child uid="7218" active="true"/>
+	<child uid="7219" active="true"/>
+	<child uid="7220" active="true"/>
+	<child uid="7222" active="true"/>
+</content>
+</entry>

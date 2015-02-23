@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7145_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7145_1.xml"/>
+<title>Amphi rouge</title>
+<updated>2014-08-15T01:47:43.764+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7145"
+	coordinates="48.62683876734,2.56252348423"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-14T09:44:53.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="7023"
+	name="Amphi rouge">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>Bâtiment B - RDC</floor>
+		<openingHours>Selon les heures de cours</openingHours>
+	</address>
+</content>
+</entry>

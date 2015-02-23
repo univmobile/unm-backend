@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1554_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1554_1.xml"/>
+<title>Arrimage</title>
+<updated>2014-08-15T01:46:48.823+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1554"
+	coordinates="48.857651532828,2.388447951"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T17:06:40.000+02:00"
+	updatedAt="2011-05-13T14:05:46.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Arrimage">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<openingHours>Mardi soir: 20h30</openingHours>
+		<itinerary>Métro 2 Philippe-Auguste</itinerary>
+		<url>http://www.arrimage.asso.fr</url>
+		<phone>0626592479</phone>
+		<email>asso.arrimage@gmail.com</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5420_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5420_1.xml"/>
+<title>Université d'Evry Bât Maupertuis</title>
+<updated>2014-08-15T01:47:26.016+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5420"
+	coordinates="48.623462794384,2.4271637946367"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T11:35:04.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5413"
+	name="Université d'Evry Bât Maupertuis">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D : Station Evry - Courcouronnes</itinerary>
+		<fullAddress>Rue du père André Jarlan - 91000 Evry</fullAddress>
+	</address>
+	<child uid="5422" active="true"/>
+</content>
+</entry>

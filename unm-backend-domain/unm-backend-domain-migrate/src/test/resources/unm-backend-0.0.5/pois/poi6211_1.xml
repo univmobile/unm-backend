@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6211_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6211_1.xml"/>
+<title>MIAGE L3 et M1 apprentissage</title>
+<updated>2014-08-15T01:47:34.950+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6211"
+	coordinates="48.827199462111,2.3647062107921"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-16T14:53:44.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1023"
+	name="MIAGE L3 et M1 apprentissage">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://www.univ-paris1.fr/ufr/ufr27</url>
+		<phone>01 44 07 88 94 </phone>
+		<email>jérôme.genoux@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6529_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6529_1.xml"/>
+<title>Campus d'Orsay - Bâtiment 601</title>
+<updated>2014-08-15T01:47:38.056+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6529"
+	coordinates="48.71015690327,2.1707761287689"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-30T15:20:44.000+02:00"
+	updatedAt="2013-07-10T14:26:41.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="anaelle.royer"
+	parentUid="4426"
+	name="Campus d'Orsay - Bâtiment 601">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B direction Saint-Rémy-lès-Chevreuse en venant de Paris (arrêts Le Guichet, Orsay-Ville ou Bures-sur-Yvette).</itinerary>
+		<fullAddress>IUT d'Orsay
+Bâtiment 601
+plateau de Moulon
+rue Noetzlin
+91400 ORSAY</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5907_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5907_1.xml"/>
+<title>Restaurant l' Encyclopédie (VIP)</title>
+<updated>2014-08-15T01:47:31.499+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5907"
+	coordinates="48.791107330199,2.3292624950409"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T13:53:24.000+02:00"
+	updatedAt="2011-07-26T16:26:35.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4860"
+	name="Restaurant l' Encyclopédie (VIP)">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Sur réservation</description>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>11h30 - 15h00</openingHours>
+		<phone>01-41-98-39-80</phone>
+		<email>restaurant.cachan@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

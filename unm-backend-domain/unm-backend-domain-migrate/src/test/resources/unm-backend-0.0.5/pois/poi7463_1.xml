@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7463_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7463_1.xml"/>
+<title>Delisle</title>
+<updated>2014-08-15T01:47:46.640+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7463"
+	coordinates="48.848189749675,2.3433697409928"
+	active="true"
+	markerType="point"
+	createdAt="2013-06-07T16:54:02.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7462"
+	name="Delisle">
+	<poiType id="40" label="Salle" categoryId="24" categoryLabel="Salle"/>
+	<address>
+		<floor>Sorbonne, 1, rue Victor Cousin, Galerie Dumas,esc. R, 4e étage</floor>
+		<url>http://www.enc.sorbonne.fr</url>
+		<phone>01-43-37-00-66</phone>
+		<email>etudes@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

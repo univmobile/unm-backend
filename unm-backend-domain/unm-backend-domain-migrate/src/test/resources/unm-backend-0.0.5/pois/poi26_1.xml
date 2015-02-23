@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi26_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi26_1.xml"/>
+<title>L'Observatoire de la Vie Etudiante</title>
+<updated>2014-08-15T01:46:38.271+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="26"
+	coordinates="48.780217549525,2.044664025"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T11:04:03.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-05T13:58:52.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="L'Observatoire de la Vie Etudiante">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>L'Observatoire de la Vie Etudiante de l'université de Versailles Saint-Quentin (OVE-UVSQ) a été créé en 1992. Il a rejoint la Direction de la Réussite et de l'Insertion Professionnelle (DRIP) depuis septembre 2008. Hébergé par le Laboratoire Printemps, il y bénéficie d'un environnement scientifique approprié à la réalisation de ses enquêtes.</description>
+	<address
+		zipCode="78047 "
+		city="Guyancourt cedex"
+		countryCode="FR">
+		<phone>01 39 25 58 00</phone>
+		<email>ove@uvsq.fr</email>
+		<fullAddress>Bureau 604
+47 boulevard Vauban
+ 78047  Guyancourt cedex</fullAddress>
+	</address>
+</content>
+</entry>

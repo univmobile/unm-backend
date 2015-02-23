@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4704_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4704_1.xml"/>
+<title>Restaurant  Universitaire Les Etats-Unis</title>
+<updated>2014-08-15T01:47:19.707+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4704"
+	coordinates="48.812102629466,2.1500533819199"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T11:44:14.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	deletedAt="2011-06-03T12:14:50.000+02:00"
+	createdBy="yasmine"
+	updatedBy="d.rasse"
+	name="Restaurant  Universitaire Les Etats-Unis">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>45, avenue des États-Unis - 78000 Versailles</description>
+	<address>
+		<floor>1 ère étage</floor>
+		<openingHours>11h30-14h00</openingHours>
+		<phone>01 39 50 10 04</phone>
+	</address>
+</content>
+</entry>

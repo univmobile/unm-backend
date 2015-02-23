@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6120_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6120_1.xml"/>
+<title>Service du Développement International Enseignement</title>
+<updated>2014-08-15T01:47:33.974+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6120"
+	coordinates="48.839197076109,2.5879535079002"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T13:54:03.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="Service du Développement International Enseignement">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Programmes MICEFA, SAAS, et conventions (Amérique Latine) :
++33 (0)1 60 95 70 25 / Mme SIMION
+Programmes CREPUQ, ERASMUS (Italie, IUT - toutes destinations), et conventions (Asie) :
++33 (0)1 60 95 70 18 / Mme CAPODIFERRO
+Programmes ERASMUS (sauf Italie) :
++33 (0)1 60 95 70 82 / Mme ERUAM</description>
+	<address>
+		<floor>Bureau 0B058</floor>
+		<url>http://www.univ-mlv.fr/international/etudiants-inscrits-a-lupemlv-outgoing-students/</url>
+		<phone>01 60 95 70 18</phone>
+		<fax>01 60 95 70 90 </fax>
+		<email>international@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4683_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4683_1.xml"/>
+<title>Bâtiment Vauban</title>
+<updated>2014-08-15T01:47:19.600+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4683"
+	coordinates="48.780015560256,2.0436575263739|48.779992583444,2.0440142601728|48.779799931306,2.0442315191031|48.779941327443,2.0445158332586|48.779904210995,2.0448591560125|48.77981053603,2.0446848124266|48.779778721851,2.0447384566069|48.779582533967,2.0443146675825|48.779601976044,2.0442878454924|48.779562591116,2.0441906154156|48.780015560256,2.0436575263739"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-05-26T10:31:20.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	deletedAt="2011-05-26T10:33:05.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Bâtiment Vauban">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

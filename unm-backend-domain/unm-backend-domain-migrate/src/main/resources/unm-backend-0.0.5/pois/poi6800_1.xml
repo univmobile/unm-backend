@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6800_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6800_1.xml"/>
+<title>17 ème arrondissement</title>
+<updated>2014-08-15T01:47:40.338+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6800"
+	coordinates="48.883775027704,2.3099492490292"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T11:55:55.000+02:00"
+	updatedAt="2011-09-02T12:02:38.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="3583"
+	name="17 ème arrondissement">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="6797" active="true"/>
+</content>
+</entry>

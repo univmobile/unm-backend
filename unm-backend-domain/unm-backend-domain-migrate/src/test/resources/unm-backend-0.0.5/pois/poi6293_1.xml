@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6293_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6293_1.xml"/>
+<title>Sciences économiques et sociales (L1-L2)</title>
+<updated>2014-08-15T01:47:35.772+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6293"
+	coordinates="48.829591410353,2.3808869719505"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T14:55:28.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1774"
+	name="Sciences économiques et sociales (L1-L2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment C, 1er étage, pièce 193</floor>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=915</url>
+		<phone>01 57 27 63 20</phone>
+		<email>nadia.lokmane@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

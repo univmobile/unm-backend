@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1883_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1883_1.xml"/>
+<title>Fédération des Associations de Paris X - FAX</title>
+<updated>2014-08-15T01:46:52.004+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1883"
+	coordinates="48.902594006988,2.2135305404663"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:42:41.000+02:00"
+	updatedAt="2011-12-02T11:32:08.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Fédération des Associations de Paris X - FAX">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>La F.A.X. et les associations qu'elle réunit organisent tout au long de l'année des animations et des activités culturelles pour les étudiants. Chacune de ces associations a sa spécialité et c'est précisément cette hétérogénéité qui est enrichissante.</description>
+	<address>
+		<floor>Bâtiment R - Salle R.106 - 1er étage</floor>
+		<phone>01 40 97 71 41</phone>
+		<email>association.fax@gmail.com</email>
+	</address>
+</content>
+</entry>

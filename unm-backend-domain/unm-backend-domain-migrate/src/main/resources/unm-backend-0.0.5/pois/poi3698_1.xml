@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3698_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3698_1.xml"/>
+<title>FMPMC</title>
+<updated>2014-08-15T01:47:09.488+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3698"
+	coordinates="48.83774361059,2.3608191870153"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T15:15:34.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3686"
+	name="FMPMC">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Faculté de Médecine de Pierre et Marie Curie</description>
+	<address>
+		<floor>Bureau 105</floor>
+		<phone>01.40.77.95.62</phone>
+	</address>
+</content>
+</entry>

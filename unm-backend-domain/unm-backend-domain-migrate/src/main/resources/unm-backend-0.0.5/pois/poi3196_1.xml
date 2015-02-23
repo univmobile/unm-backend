@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3196_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3196_1.xml"/>
+<title>Bibliothèque des Études italiennes et roumaines</title>
+<updated>2014-08-15T01:47:03.912+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3196"
+	coordinates="48.84127826194,2.35566314309"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T13:58:24.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Martine HATTON"
+	parentUid="3012"
+	name="Bibliothèque des Études italiennes et roumaines">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>1,5 rue de Censier - Paris 5ème</description>
+	<address>
+		<floor>5e étage</floor>
+		<openingHours>Du lundi au vendredi :  9h - 18h
+
+Fermé pendant les vacances universitaires, les samedis et les dimanches. 
+</openingHours>
+		<url>http://www.univ-paris3.fr/30576751/0/fiche___pagelibre/&amp;RH=1179926246054</url>
+		<phone>0145874178 </phone>
+	</address>
+</content>
+</entry>

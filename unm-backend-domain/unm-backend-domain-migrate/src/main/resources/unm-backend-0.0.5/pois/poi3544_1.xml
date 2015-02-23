@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3544_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3544_1.xml"/>
+<title>UFR 925</title>
+<updated>2014-08-15T01:47:07.850+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3544"
+	coordinates="48.847659189114,2.35720558092"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T15:10:45.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	deletedAt="2011-06-08T16:57:38.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	name="UFR 925">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>L'Unité de Formation et de Recherche de Physique (UFR 925) est dénommée Faculté de Physique Pierre et Marie Curie.
+Grâce à son potentiel en enseignement et en recherche, elle est l'un des pôles de compétences en physique fondamentale et appliquée les plus importants de France et en Europe. 283 enseignants-chercheurs, 245 chercheurs, 235 personnels techniciens et administratifs travaillent au sein de la Faculté de Physique.
+
+Elle accueille entre 2200 et 2500 étudiants par an dans des formations allant de la licence au doctorat:
+Licence de physique
+Master de physique et applications
+Ecole doctorale de physique de l'UPMC: &quot;Physique de la particule à la matière condensée&quot; - ED 389
+Elle participe également à d'autres écoles doctorales dont:
+&quot;Physique et chimie des matériaux&quot; - ED 397
+&quot;Physique de la région parisienne&quot; - ED 107
+&quot;iViv - interdisciplinaire pour le vivant&quot; - ED 387
+&quot;astronomie et astrophysique d'Ile-de-France&quot; - ED 127
+&quot;Particules, Noyaux et Cosmos&quot; - ED 517
+
+Elle regroupe 20 laboratoires, tous associés au CNRS, et deux fédérations de recherche.
+Les équipes sont toutes impliquées dans des collaborations avec les grands établissements scientifiques de la région Ile-de-France et les grand équipements européens comme le CERN, par exemple. Les recherches, au plus haut niveau, visent pratiquement tous les domaines de la physique et recouvrent l'astrophysique, l'astronomie, la physique des hautes énergies et des plasmas, les nano sciences et nano matériaux, les thématiques situées à l'interfacede la physique et de la biologie, la physique quantique et la physique théorique et statistique. Aux travaux de recherche fondamentale s'ajoute une recherche plus appliquée tournée vers les besoins des autres disciplines,comme la médecine, et les entreprises. Elle est impliquée dans un grand nombre de collaborations internationales et accueille des chercheurs et des doctorants du monde entier au sein de ses laboratoires.
+
+Pendant la durée des travaux de désamiantage du campus Jussieu, les activités de la faculté sont répartie sur plusieurs sites de la région parisienne:
+Les services d'enseignement restent localisés sur le campus, de même que 3 laboratoires de recherche. Les autres laboratoires se répartissent sur 3 sites provisoires: le campus Boucicaut (140, rue de Lourmel dans le XVème arrondissement de Paris), à Ivry-sur-Seine (Immeuble le Raphaël 3, rue Galilée) et au Génopôle (5, rue Henry Desbruères à Evry). En outre, plusieurs laboratoires associés à la Faculté de physique sont situés à l'ENS et à l'Observatoire de Paris ou de Meudon.
+A l'issue du chantier, toutes les activités de la faculté, provisoirement délocalisées, seront regroupées dans les secteur ouest du campus Jussieu.
+
+La direction de l'UFR de physique déménage à partir du lundi 28 juin. Nous prendrons possession de nos nouveaux locaux le 2 juillet.
+Il sera impossible de nous joindre la semaine prochaine et peut-être même un peu après.
+En cas de problème urgent vous pourrez contacter Patrick Boissé à l'IAP (mél : boisse@iap.fr et tél. : 01 44 32 81 65).
+Notre nouvelle localisation :
+Tour 22, couloir 22-23, 1er étage
+L'adresse postale, nos téléphones et adresses électroniques restent inchangés. </description>
+	<address>
+		<floor>2è étage bureau D4</floor>
+		<url>http://www.ufr925.upmc.fr/</url>
+		<phone>01 44 27 40 37</phone>
+		<email>francoise.marchand@upmc.fr</email>
+	</address>
+</content>
+</entry>

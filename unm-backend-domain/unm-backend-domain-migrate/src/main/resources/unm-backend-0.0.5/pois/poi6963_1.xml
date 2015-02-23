@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6963_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6963_1.xml"/>
+<title>L'Envolée Bleue</title>
+<updated>2014-08-15T01:47:41.623+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6963"
+	coordinates="48.902812634171,2.213471531868"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-14T17:17:27.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="L'Envolée Bleue">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Depuis 2005, L'Envolée bleue propose des ateliers et développe des projets artistiques en cinéma, théâtre, photo et danse. Elle compte, parmi ses réalisations, des expositions en partenariat avec la RATP, la participation au Mois de la Photo-OFF, l'organisation du festival de la culture étudiante Libres comme l'art ou encore la création du festival de courts métrages Silence, on court !
+
+L'association propose également, à des tarifs abordables, des ateliers d'initiation et de perfectionnement dans ses domaines de prédilection (théâtre, cinéma, photo, danse, écriture). Depuis 2010, elle réfléchit à la mise en place d'ateliers et de projets dans les quartiers franciliens sensibles.
+
+Enfin, L'Envolée bleue accompagne les porteurs de projets dans la concrétisation de leurs idées.</description>
+	<address>
+		<floor>Bâtiment R - Salle R 205, 2ème étage</floor>
+		<email>contact@envoleebleue.com</email>
+	</address>
+</content>
+</entry>

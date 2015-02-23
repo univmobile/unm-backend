@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4909_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4909_1.xml"/>
+<title>ADDA</title>
+<updated>2014-08-15T01:47:21.722+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4909"
+	coordinates="48.86971146936,2.2735208272934"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:29:38.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="ADDA">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association Dauphine Droit des Affaires</description>
+	<address>
+		<floor>Bureau A 506</floor>
+		<url>http://www.adda.dauphine.fr/</url>
+	</address>
+</content>
+</entry>

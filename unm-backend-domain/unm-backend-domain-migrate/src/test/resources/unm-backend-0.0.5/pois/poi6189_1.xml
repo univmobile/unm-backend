@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6189_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6189_1.xml"/>
+<title>BU Tenon</title>
+<updated>2014-08-15T01:47:34.717+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6189"
+	coordinates="48.866451285992,2.4004101008177"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T17:18:49.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4413"
+	name="BU Tenon">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Accessible aux étudiants en santé de l'UPMC (DCEM, paramédicaux), chercheurs, praticiens, internes et stagiaires de l'hôpital Tenon. </description>
+	<address>
+		<floor>Secteur orange, porte 18, entresol</floor>
+		<openingHours>Lundi-vendredi : 9h-22h (fin du prêt à 17h45) </openingHours>
+		<phone>01 43 64 57 81</phone>
+	</address>
+</content>
+</entry>

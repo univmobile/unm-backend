@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6436_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6436_1.xml"/>
+<title>Biologie cellulaire physiologie et pathologie (M1-M2 BCPP)</title>
+<updated>2014-08-15T01:47:37.189+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6436"
+	coordinates="48.827776237596,2.3806335031986"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T14:44:04.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1778"
+	name="Biologie cellulaire physiologie et pathologie (M1-M2 BCPP)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment Lamarck, rez-de-chaussée haut, bureau 44</floor>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=886</url>
+		<phone>01 57 27 82 35</phone>
+		<email>anicette.anon@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

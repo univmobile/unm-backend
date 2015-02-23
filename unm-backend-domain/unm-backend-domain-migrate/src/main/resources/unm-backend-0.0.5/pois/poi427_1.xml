@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi427_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi427_1.xml"/>
+<title>Vauban</title>
+<updated>2014-08-15T01:46:39.960+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="427"
+	coordinates="48.780022895094,2.044419944"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-05T13:49:08.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2010-10-13T13:54:23.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	name="Vauban">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

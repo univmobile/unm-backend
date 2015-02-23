@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4502_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4502_1.xml"/>
+<title>UMR_S 933</title>
+<updated>2014-08-15T01:47:18.002+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4502"
+	coordinates="48.842704852088,2.4053391627967"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:15:34.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4496"
+	name="UMR_S 933">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Physiopathologie des maladies génétiques d'expression pédiatrique - UMR_S 933</description>
+	<address>
+		<phone>01 44 73 52 39</phone>
+		<email>michele.leguennec@trs.aphp.fr</email>
+	</address>
+</content>
+</entry>

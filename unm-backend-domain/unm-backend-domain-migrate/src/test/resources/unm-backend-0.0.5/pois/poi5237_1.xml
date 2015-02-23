@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5237_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5237_1.xml"/>
+<title>IUFM Torcy</title>
+<updated>2014-08-15T01:47:24.485+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5237"
+	coordinates="48.84232225733,2.6504731178284"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T22:07:51.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4462"
+	name="IUFM Torcy">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<floor>2, avenue Salvador Allende 77200 Torcy</floor>
+		<itinerary>RER A, descendre à la gare de torcy puis bus n°211 direction Gare de Vaires, arret  &quot;rue de Maubuée&quot;
+</itinerary>
+		<url>http://www.creteil.iufm.fr/les-sites-de-formation/site-departemental-1er-degre-de-seine-et-marne/</url>
+		<phone>01 60 05 93 40</phone>
+		<fullAddress>2, avenue Salvador Allende 77200 Torcy</fullAddress>
+	</address>
+	<child uid="5305" active="true"/>
+	<child uid="5680" active="true"/>
+	<child uid="6446" active="true"/>
+	<child uid="6615" active="true"/>
+	<child uid="7198" active="true"/>
+	<child uid="7199" active="true"/>
+</content>
+</entry>

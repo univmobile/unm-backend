@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6962_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6962_1.xml"/>
+<title>Centre Mail des Mèches maisons des langues</title>
+<updated>2014-08-15T01:47:41.610+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6962"
+	coordinates="48.788700542185,2.4500852823257|48.788863118873,2.4505627155304|48.788661665073,2.4507182836533|48.788566239307,2.4507558345795|48.788481416251,2.4507397413254|48.788350647092,2.4506270885468|48.788431936068,2.4502944946289|48.788700542185,2.4500852823257"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-11-09T16:57:27.000+01:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="4367"
+	name="Centre Mail des Mèches maisons des langues">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

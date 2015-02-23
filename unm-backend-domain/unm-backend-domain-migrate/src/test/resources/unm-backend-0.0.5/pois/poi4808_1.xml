@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4808_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4808_1.xml"/>
+<title>Coin café Les Marais de Bures</title>
+<updated>2014-08-15T01:47:20.782+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4808"
+	coordinates="48.69840955651,2.1683393418789"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:45:08.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4802"
+	name="Coin café Les Marais de Bures">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>Bâtiment 230</floor>
+		<openingHours>Du lundi au vendredi
+11h30-14h00</openingHours>
+		<url>http://www.u-psud.fr/fr/vie_etudiante/restauration.html</url>
+	</address>
+</content>
+</entry>

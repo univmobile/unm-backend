@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi887_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi887_1.xml"/>
+<title>UFR 07 Etudes internationales et européennes</title>
+<updated>2014-08-15T01:46:42.933+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="887"
+	coordinates="48.846940472172,2.344500124454"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T16:11:58.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-22T16:15:13.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="UFR 07 Etudes internationales et européennes">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5756_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5756_1.xml"/>
+<title>Scolarité  Sciences et technologie L1</title>
+<updated>2014-08-15T01:47:29.716+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5756"
+	coordinates="48.788487454017,2.4429257959127"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:31:00.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="yasmine"
+	updatedBy="Sihé NEYA"
+	parentUid="4525"
+	name="Scolarité  Sciences et technologie L1">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>P2 069 et 070</floor>
+		<openingHours>lundi: 13h-17h
+Mardi - jeudi: 13h-17h30
+Vendredi: 9h30 à 12h30
+fermé le mercredi toute la journée</openingHours>
+		<url>http://sciences-tech.u-pec.fr/formations/</url>
+		<phone>01 45 17 13 13 </phone>
+		<email>felicite.dangabo-moussa@u-pec.fr   </email>
+	</address>
+</content>
+</entry>

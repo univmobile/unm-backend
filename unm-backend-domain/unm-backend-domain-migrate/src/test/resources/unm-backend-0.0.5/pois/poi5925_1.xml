@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5925_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5925_1.xml"/>
+<title>Restaurant U le Crous-Club</title>
+<updated>2014-08-15T01:47:31.726+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5925"
+	coordinates="48.842579983402,2.5857138633728"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:03:57.000+02:00"
+	updatedAt="2011-08-25T10:20:08.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4861"
+	name="Restaurant U le Crous-Club">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>11h30 - 14h00</openingHours>
+		<phone>01-60-95-75-68</phone>
+		<email>restaurant.champs-sur-marne@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

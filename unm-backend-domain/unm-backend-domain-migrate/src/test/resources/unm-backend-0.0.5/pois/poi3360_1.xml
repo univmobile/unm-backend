@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3360_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3360_1.xml"/>
+<title>LM2N - UMR 7070</title>
+<updated>2014-08-15T01:47:05.792+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3360"
+	coordinates="48.845756958768,2.35823890194"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:33:12.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2824"
+	name="LM2N - UMR 7070">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire des Matérieux Mésoscopiques et Nanométriques</description>
+	<address>
+		<floor>6ème étage bureau 638</floor>
+		<url>http://www.sri.jussieu.fr/</url>
+	</address>
+</content>
+</entry>

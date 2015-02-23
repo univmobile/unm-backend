@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4456_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4456_1.xml"/>
+<title>Relations internationales</title>
+<updated>2014-08-15T01:47:17.504+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4456"
+	coordinates="48.626697590466,2.4311770498753"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:44:41.000+02:00"
+	updatedAt="2011-09-06T12:08:56.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4440"
+	name="Relations internationales">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Les élèves ont la possibilité d'effectuer une partie de leur scolarité dans un pays étranger. Près de la moitié des étudiants accomplissent l'un de leurs stages dans des entreprises ou des laboratoires de recherche à l'étranger (Europe, Etats-Unis, Japon, Australie).</description>
+	<address>
+		<phone>01 69 36 73 15</phone>
+		<email>stages@ensiie.fr</email>
+	</address>
+</content>
+</entry>

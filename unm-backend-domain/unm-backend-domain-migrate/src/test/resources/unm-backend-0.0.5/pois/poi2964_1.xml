@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2964_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2964_1.xml"/>
+<title>Laboratoire analyse et modélisation pour la biologie</title>
+<updated>2014-08-15T01:47:01.553+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2964"
+	coordinates="48.623635568313,2.42768007517"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T11:13:32.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="264"
+	name="Laboratoire analyse et modélisation pour la biologie">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>1er étage aile ouest</floor>
+		<phone> 01 69 47 76 61</phone>
+		<email>ketty.fixot@univ-ev ry.fr</email>
+	</address>
+</content>
+</entry>

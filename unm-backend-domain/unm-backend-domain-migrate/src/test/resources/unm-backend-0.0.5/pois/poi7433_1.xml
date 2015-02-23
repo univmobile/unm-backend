@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7433_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7433_1.xml"/>
+<title>Jardin écologique</title>
+<updated>2014-08-15T01:47:46.249+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7433"
+	coordinates="48.84424634462,2.3617655038834"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-30T16:36:53.000+02:00"
+	updatedAt="2013-05-03T12:34:53.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7397"
+	name="Jardin écologique">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<description>Créé en 1932 à l’initiative de Pierre Vaccaria, professeur au Muséum et titulaire de la chaire de cryptogamie (étude des plantes sans fleurs, dont les organes reproducteurs sont peu visibles), et Camille Guinet, ingénieur horticole au Jardin des Plantes, le jardin écologique est un enclos dévolu à la présentation des milieux naturels en Île-de-France.</description>
+	<address>
+		<openingHours>Pour tous renseignements, appelez le 01 40 79 56 01 de 10 h à 17 h tous les jours ou le 01 40 79 56 50 tous les jours de 9 h à 20 h</openingHours>
+		<url>http://www.jardindesplantes.net</url>
+	</address>
+</content>
+</entry>

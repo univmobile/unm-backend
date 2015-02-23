@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4918_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4918_1.xml"/>
+<title>Service de la vie étudiante</title>
+<updated>2014-08-15T01:47:21.803+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4918"
+	coordinates="48.869662069327,2.2731614112854"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:43:51.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Service de la vie étudiante">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bureau B 027</floor>
+		<openingHours>Du lundi au vendredi :
+9h00 / 12h00 - 13h30 / 16h30 </openingHours>
+		<phone>01 44 05 49 48</phone>
+		<email>vietudiante@dauphine.fr</email>
+	</address>
+</content>
+</entry>

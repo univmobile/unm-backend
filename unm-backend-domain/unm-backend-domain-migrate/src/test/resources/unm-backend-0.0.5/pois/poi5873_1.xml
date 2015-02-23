@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5873_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5873_1.xml"/>
+<title>Droit des assurances et de la responsabilité M2</title>
+<updated>2014-08-15T01:47:31.108+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5873"
+	coordinates="48.793367785683,2.4448502808809"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T17:38:20.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4642"
+	name="Droit des assurances et de la responsabilité M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://droit.u-pec.fr/formations/master-2/</url>
+		<phone> 01 56 72 60 15</phone>
+		<email>anh.huynh@u-pec.fr  </email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6625_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6625_1.xml"/>
+<title>Résidence Universitaire Les Aunettes</title>
+<updated>2014-08-15T01:47:38.846+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6625"
+	coordinates="48.617590817967,2.4336272478104"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T09:56:38.000+02:00"
+	updatedAt="2012-02-03T11:27:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5413"
+	name="Résidence Universitaire Les Aunettes">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D : Evry-Courcouronnes puis Bus 407 arrêt Place des Aunettes.</itinerary>
+		<fullAddress>1, impasse Prédecelle - 91000 Evry</fullAddress>
+	</address>
+	<child uid="6770" active="true"/>
+</content>
+</entry>

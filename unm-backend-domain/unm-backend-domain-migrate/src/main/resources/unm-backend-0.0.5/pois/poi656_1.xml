@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi656_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi656_1.xml"/>
+<title>Centre Arago - Maison internationale</title>
+<updated>2014-08-15T01:46:40.976+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="656"
+	coordinates="48.835063016716,2.343993186"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T20:33:50.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre Arago - Maison internationale">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<floor>4e étage</floor>
+		<openingHours>Lundi au vendredi
+9h30-12h00
+14h00-16h00
+</openingHours>
+		<itinerary>Bus 83</itinerary>
+		<phone>01 44 07 76 79</phone>
+		<email>relinter@univ-paris1.fr</email>
+		<fullAddress>58 boulevard Arago 
+75013 Paris</fullAddress>
+	</address>
+	<child uid="1022" active="true"/>
+	<attachment id="30" title="arago.jpg" type="image" url="/uploads/poi/6c2b388490b40e7242a0dec5a1aa24fc69c91609.jpg"/>
+</content>
+</entry>

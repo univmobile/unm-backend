@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4259_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4259_1.xml"/>
+<title>UMR 8190</title>
+<updated>2014-08-15T01:47:15.513+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4259"
+	coordinates="48.846283509153,2.3558517359197"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T14:47:37.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3389"
+	name="UMR 8190">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire atmosphères, milieux et observations spatiales (LATMOS) - UMR 8190</description>
+	<address>
+		<floor>4è étage</floor>
+		<url>http://www.latmos.ipsl.fr/</url>
+		<phone>01 44 27 27 60</phone>
+		<email>evelyne.quinsac@latmos.ipsl.fr</email>
+	</address>
+</content>
+</entry>

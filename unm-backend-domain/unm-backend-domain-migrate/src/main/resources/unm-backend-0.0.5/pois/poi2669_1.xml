@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2669_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2669_1.xml"/>
+<title>Service social</title>
+<updated>2014-08-15T01:46:58.925+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2669"
+	coordinates="48.77978661647,2.044092044234"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T15:27:35.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2011-06-20T15:45:30.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="haromoys"
+	name="Service social">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>Bâtiment Vauban - 2e étage - Bureau 201</floor>
+		<openingHours>Accueil sur rendez-vous uniquement de 9h30 à 12h30, Lundi, Mardi, Jeudi après-midi</openingHours>
+		<phone>0169157064</phone>
+	</address>
+</content>
+</entry>

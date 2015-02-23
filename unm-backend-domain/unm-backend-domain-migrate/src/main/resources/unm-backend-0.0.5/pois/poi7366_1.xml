@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7366_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7366_1.xml"/>
+<title>URFIST</title>
+<updated>2014-08-15T01:47:45.650+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7366"
+	coordinates="48.85001816297,2.35072016716"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-18T14:46:11.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7361"
+	name="URFIST">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>L'Urfist de Paris, Unité Régionale de Formation à l'Information Scientifique et Technique, est un service inter-académique destiné à développer l'usage de l'information scientifique et technique dans l'enseignement supérieur, plus particulièrement pour les personnels des bibliothèques et services de documentation universitaires. Il s'adresse également aux étudiants des écoles doctorales à travers un programme spécifique de formations ainsi qu'aux enseignants-chercheurs.
+
+Les deux autres axes des missions de l'Urfist de Paris sont la réalisation d'outils pédagogiques en ligne et la veille et recherche dans les domaines de compétence de son équipe.
+
+L’Urfist de Paris fait partie d’un dispositif national plus vaste constitué de six autres Urfist et a lié de nombreux partenariats tant au niveau scientifique que pédagogique.</description>
+	<address>
+		<floor>17 Rue des Bernardins, 75005 Paris </floor>
+		<url>http://urfist.enc.sorbonne.fr</url>
+		<phone>01 43 26 85 22</phone>
+		<fax>01 56 24 97 33</fax>
+		<email>secretariat-urfist@enc.sorbonne.fr</email>
+	</address>
+	<attachment id="283" title="logo-urfist.png" type="image" url="/uploads/poi/9c8cd70e801d884604737aca7ff874ff6971b42e.png"/>
+</content>
+</entry>

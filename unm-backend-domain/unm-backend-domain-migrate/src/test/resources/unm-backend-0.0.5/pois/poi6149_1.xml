@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6149_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6149_1.xml"/>
+<title>Ecogestion</title>
+<updated>2014-08-15T01:47:34.338+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6149"
+	coordinates="48.837161690317,2.5931462645531"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T15:05:56.000+02:00"
+	updatedAt="2011-06-15T15:48:51.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4598"
+	name="Ecogestion">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>UFR Sciences Economiques et de Gestion</description>
+	<address>
+		<url>http://ecogestion.univ-mlv.fr/</url>
+		<phone>01 60 95 70 51</phone>
+		<email>Veronique.Lehdili@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

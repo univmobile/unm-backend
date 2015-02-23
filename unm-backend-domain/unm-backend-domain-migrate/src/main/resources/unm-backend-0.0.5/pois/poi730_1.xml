@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi730_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi730_1.xml"/>
+<title>Association DEMOSTATA</title>
+<updated>2014-08-15T01:46:41.471+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="730"
+	coordinates="48.827219194742,2.364619709551"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T16:22:20.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-02-15T16:14:05.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Association DEMOSTATA">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<phone>06 64 39 88 45</phone>
+		<email>fabienpensaries@yahoo.fr</email>
+		<fullAddress>90 rue de Tolbiac
+75013 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

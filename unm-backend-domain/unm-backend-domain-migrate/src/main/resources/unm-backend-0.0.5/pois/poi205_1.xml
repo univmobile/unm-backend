@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi205_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi205_1.xml"/>
+<title>Salle info Géographie</title>
+<updated>2014-08-15T01:46:38.641+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="205"
+	coordinates="48.827442507044,2.365885376930"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-05T11:18:19.000+02:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2010-09-05T10:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Salle info Géographie">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address
+		zipCode="75634"
+		city="Paris cedex 13"
+		countryCode="FR">
+		<floor>C12-04</floor>
+		<fullAddress>Bureau C12-04
+90, rue de Tolbiac 75634 Paris cedex 13</fullAddress>
+	</address>
+</content>
+</entry>

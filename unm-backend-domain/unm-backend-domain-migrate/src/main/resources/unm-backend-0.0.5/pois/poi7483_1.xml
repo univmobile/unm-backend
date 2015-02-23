@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7483_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7483_1.xml"/>
+<title>Administration (direction, RH, internationnal, recherche...)</title>
+<updated>2014-08-15T01:47:46.816+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7483"
+	coordinates="48.848649887393,2.3430281840251"
+	active="true"
+	markerType="point"
+	createdAt="2013-07-09T17:47:42.000+02:00"
+	updatedAt="2013-07-12T17:06:22.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7349"
+	name="Administration (direction, RH, internationnal, recherche...)">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>- Direction
+- Éditions
+- Patrimoine et logistique
+- Ressources humaines
+- Relations internationales et stages
+- Recherche
+- Scolarité</description>
+	<address>
+		<floor>19, rue de la Sorbonne 75005 PARIS</floor>
+		<openingHours>lundi-vendredi : 9h30-19h30</openingHours>
+		<url>http://www.enc.sorbonne.fr</url>
+		<phone>01 55 42 75 00</phone>
+		<email>secretariat@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

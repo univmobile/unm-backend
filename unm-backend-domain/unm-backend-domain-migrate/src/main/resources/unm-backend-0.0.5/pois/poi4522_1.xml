@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4522_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4522_1.xml"/>
+<title>IBISC </title>
+<updated>2014-08-15T01:47:18.185+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4522"
+	coordinates="48.613958755595,2.4287489801645"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:27:52.000+02:00"
+	updatedAt="2011-10-13T11:41:30.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4519"
+	name="IBISC ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Informatique, Biologie Intégrative et Systèmes Complexes de l'Université d'Evry</description>
+	<address>
+		<url>http://www.ibisc.univ-evry.fr/start</url>
+		<phone>01 69 47 75 51</phone>
+	</address>
+</content>
+</entry>

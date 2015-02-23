@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7384_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7384_1.xml"/>
+<title>Ecole de Botanique</title>
+<updated>2014-08-15T01:47:45.781+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7384"
+	coordinates="48.843660535584,2.3581364750862|48.84421833708,2.3604002594948|48.843632292305,2.3607650399208|48.843046240673,2.358458340168|48.843660535584,2.3581364750862"
+	active="true"
+	markerType="polygon"
+	createdAt="2013-04-24T16:34:59.000+02:00"
+	updatedAt="2013-05-03T12:58:27.000+02:00"
+	deletedAt="2013-04-25T09:46:07.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Ecole de Botanique">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accessible à la visite
+Vérifiez les horaires sur www.mnhn.fr
+
+Bus :
+Lignes 24, 57, 61, 63, 67, 89 et 91 - Batobus : arrêt Jardin des Plantes
+
+Metro, RER :
+M5 : Austerlitz - M7 : Censier Daubenton - M 10 : Jussieu ou Austerlitz - RER C
+
+Gare SNCF :
+Gare d'Austerlitz et Gare de Lyon</itinerary>
+	</address>
+</content>
+</entry>

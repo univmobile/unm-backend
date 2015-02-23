@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4588_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4588_1.xml"/>
+<title>Etudes visuelles, multimédia et arts numériques - L1-3</title>
+<updated>2014-08-15T01:47:18.850+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4588"
+	coordinates="48.841854625287,2.5742926821113"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:38:49.000+02:00"
+	updatedAt="2011-06-08T14:19:51.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="Etudes visuelles, multimédia et arts numériques - L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Ce parcours propose d'articuler des connaissances artistiques, à la pratique de l'outil informatique. Constitué d'un tronc commun de deux ans fondé sur des matières théoriques et pratiques, dans les domaines de l'art, du multimédia et du numérique, il se divise en deux options en troisième année. L'option études visuelles et histoire des arts, permet un approfondissement de la dimension théorique de la connaissance des arts. L'option multimédia et arts numériques, prépare les étudiants à la conduite de projets autour des métiers du multimédia.
+
+La poursuite d'études peut s'envisager dans plusieurs formations de l'université Paris-Est Marne-la-Vallée : le master Edition, livre, multimédia ;  le master Aigeme cultures et métiers du web ; le diplôme d'ingénieur Imac ;  le master cinéma, audiovisuel et archives. Des orientations sont également possibles à partir de la deuxième année, en direction de licences professionnelles, présentes à l'université Paris-Est Marne-la-Vallée ou dans d'autres universités, autour des métiers du multimédia. Après les trois ans, les étudiants peuvent aussi entreprendre des recherches en arts visuels (master en histoire de l'art moderne ou contemporain, esthétique, études photographiques) ou des recherches dans le domaine du multimédia et arts numériques (master arts numériques).
+
+Dans le cadre d'une orientation après la licence, l'option histoire des arts et études visuelles, peut initier aux métiers de la médiation culturelle, de la critique d'art, ou de la conception d'expositions, plus particulièrement sur la période contemporaine. L'option multimédia et arts numériques ouvre des perspectives de travail dans le secteur de la production multimédia : création de sites Internet, de CDRom interactifs ou de jeux vidéo. D'autres professions sont envisageables comme réalisateur ou chef de projet multimédia artistique, concepteur multimédia et assistant de production.</description>
+	<address>
+		<floor>A362</floor>
+		<phone>01 49 32 90 38</phone>
+		<fax>01 49 32 91 20</fax>
+		<email>therese.plusquellec@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1409_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1409_1.xml"/>
+<title>DUT Techniques de Commercialisation</title>
+<updated>2014-08-15T01:46:47.369+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1409"
+	coordinates="48.939137298628,2.35305368"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T19:49:05.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="390"
+	name="DUT Techniques de Commercialisation">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Objectifs
+
+Le DUT Techniques de Commercialisation est une formation universitaire professionnalisante, post baccalauréat, qui forme en deux ans des étudiants à des fonctions d’encadrement technique supérieur dans des domaines tels que l’administration et la gestion commerciale, les études de marchés, la promotion et la publicité, la vente, l’exportation, les achats - approvisionnements ...</description>
+	<address>
+		<floor>3ème étage -  Aile C - Bureau C 327.</floor>
+		<url>www.iutsd.univ-paris13.fr</url>
+		<phone>01 49 40 62 71 </phone>
+		<fax>01 49 40 62 73</fax>
+	</address>
+</content>
+</entry>

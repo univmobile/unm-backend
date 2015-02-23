@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7315_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7315_1.xml"/>
+<title>Bibliothèque Centrale</title>
+<updated>2014-08-15T01:47:45.455+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7315"
+	coordinates="48.842643532092,2.3558807373047"
+	active="true"
+	markerType="point"
+	createdAt="2013-03-18T16:18:37.000+01:00"
+	updatedAt="2013-04-22T14:54:48.000+02:00"
+	deletedAt="2013-04-22T14:51:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Bibliothèque Centrale">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Bibliothèque de recherche - Médiathèque</description>
+	<address>
+		<itinerary>Jardin des Plantes,
+38, rue Geoffroy Saint-Hilaire
+75005 Paris</itinerary>
+		<url>http://mussi.mnhn.fr</url>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2341_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2341_1.xml"/>
+<title>Centre de médecine préventive S.I.U.M.P.P.S. de Paris Descar</title>
+<updated>2014-08-15T01:46:56.067+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2341"
+	coordinates="48.855393100013,2.3313737288"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T16:25:36.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Centre de médecine préventive S.I.U.M.P.P.S. de Paris Descar">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Pour les étudiants des sites d’Asnières, Clichy, Belle Gabrielle, Riquet et rue de Lille.</description>
+	<address>
+		<floor>Porte T 143, 1er Etage</floor>
+		<phone>01 42 86 21 29</phone>
+	</address>
+</content>
+</entry>

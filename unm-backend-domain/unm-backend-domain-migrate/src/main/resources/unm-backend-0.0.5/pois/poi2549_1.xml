@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2549_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2549_1.xml"/>
+<title>scolarité</title>
+<updated>2014-08-15T01:46:57.912+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2549"
+	coordinates="48.821545792641,2.31476046144"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:34:36.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	deletedAt="2011-05-11T15:48:15.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	name="scolarité">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>RDC Bureau 03</floor>
+		<openingHours>Lundi-vendredi
+9h30-11h30
+13h30-16h00
+Mercredi fermé</openingHours>
+	</address>
+</content>
+</entry>

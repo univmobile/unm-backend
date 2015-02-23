@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6453_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6453_1.xml"/>
+<title>Santé publique (M1)</title>
+<updated>2014-08-15T01:47:37.382+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6453"
+	coordinates="48.899131165732,2.3328231275082"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T16:28:40.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1785"
+	name="Santé publique (M1)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bichat, 1er étage, bureau 146</floor>
+		<url>http://www.medecine.univ-paris-diderot.fr/index.php/filiere-scientifique/masters-1-sante</url>
+		<phone>01 57 27 74 12</phone>
+		<fax>01 57 27 76 01</fax>
+		<email>joan.jarry@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

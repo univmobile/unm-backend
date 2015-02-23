@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1739_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1739_1.xml"/>
+<title>Sciences sanitaires et sociales L1-3</title>
+<updated>2014-08-15T01:46:50.414+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1739"
+	coordinates="48.914553624531,2.41845399"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T22:52:44.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="356"
+	name="Sciences sanitaires et sociales L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>La licence Santé, Sciences Sociales sous la  mention « Santé, Sciences Sociales » fait partie des cursus de formation de l’université Paris 13
+
+L’enseignement se fait à Bobigny, en Seine Saint Denis dans le cadre de l’UFR Santé Médecine Biologie Humaine.
+
+Première étape dans le LMD, cette filière ouvre vers les Masters : SST (Santé et Sécurité au Travail), le Master ISU (Ingénierie Sociale et Urbaine) le Master MOSS (Management des Organisations Sanitaires et Sociales).
+Des passerelles sont possibles avec d’autres formations.
+
+Elle est particulièrement adaptée aux étudiants titulaires deS Bacs S, L, ES, STG, ST2S.</description>
+	<address>
+		<floor>Mezzanine -  Bureau m 86.</floor>
+		<openingHours>Lundi, Mardi, Jeudi, Vendredi : 
+9h15 - 11h45
+13h30 - 16h30
+Fermée Mercredi.
+</openingHours>
+		<url>http://www-smbh.univ-paris13.fr/smbh/enseig/enseig_lmd/enseig_lmd_lic/lic_sss_.html</url>
+		<phone>01 48 38 77 66</phone>
+		<email>tomada@smbh.univ-paris.fr</email>
+	</address>
+</content>
+</entry>

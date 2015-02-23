@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2615_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2615_1.xml"/>
+<title>Pauses Dej'</title>
+<updated>2014-08-15T01:46:58.494+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2615"
+	coordinates="48.779898407826,2.0440135896"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T14:21:15.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2011-06-20T15:45:30.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="haromoys"
+	name="Pauses Dej'">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<description>La direction de l'action culturelle, sociale et sportive, en collaboration avec la direction de la vie étudiante propose des activités chaque jour entre 12h30 et 14h00. Etudiants et personnels de l'UVSQ pourront s'adonner, le temps du déjeuner, à des sports collectifs et individuels, ou à des loisirs tels que la danse. </description>
+	<address>
+		<phone>0139255092</phone>
+		<email>christel.allegri@uvsq.fr </email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2258_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2258_1.xml"/>
+<title>Site d’enseignement d’Asnières</title>
+<updated>2014-08-15T01:46:55.383+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2258"
+	coordinates="48.915208832134,2.3028883337975|48.915463538922,2.3034703731537|48.915367473193,2.3035736382008|48.915383337271,2.3036125302315|48.915329575653,2.3036701977253|48.91531194888,2.3036339879036|48.915294322101,2.3036447167397|48.915178866544,2.3033966124058|48.915103952491,2.3034743964672|48.915191205319,2.3036782443523|48.914955886738,2.3039330542088|48.914734668633,2.303436845541|48.914971750946,2.3031914234161|48.915062529378,2.3033872246742|48.915138324835,2.3033121228218|48.915036089075,2.3030653595924|48.915208832134,2.30288833379"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-26T17:45:23.000+02:00"
+	updatedAt="2011-04-29T17:29:26.000+02:00"
+	deletedAt="2011-04-29T16:47:41.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Site d’enseignement d’Asnières">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro : ligne 13 - station Gabriel Péri - Asnières-Gennevilliers
+Autobus : ligne 177 - arrêt Cité-Jardin
+R.E.R. C - station Grésillons</itinerary>
+		<fullAddress>94 avenue des Grésillons
+92600 Asnières</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi380_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi380_1.xml"/>
+<title>Entrée principale</title>
+<updated>2014-08-15T01:46:39.594+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="380"
+	coordinates="48.812334546288,2.149492800"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T16:09:22.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	parentUid="379"
+	name="Entrée principale">
+	<poiType id="6" label="Entrée principale" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<itinerary>RER C, arrêt Versailles-Chantiers</itinerary>
+		<fullAddress>45, avenue des États-Unis
+
+78000 Versailles</fullAddress>
+	</address>
+</content>
+</entry>

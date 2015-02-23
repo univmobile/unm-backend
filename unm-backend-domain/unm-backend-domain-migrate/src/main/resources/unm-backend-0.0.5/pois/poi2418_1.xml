@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2418_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2418_1.xml"/>
+<title>Site de l'institut de linguistique française</title>
+<updated>2014-08-15T01:46:56.624+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2418"
+	coordinates="48.82330377658,2.34126705676"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T13:37:29.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="1161"
+	name="Site de l'institut de linguistique française">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="2421" active="true"/>
+</content>
+</entry>

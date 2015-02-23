@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2274_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2274_1.xml"/>
+<title>Études arabes</title>
+<updated>2014-08-15T01:46:55.448+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2274"
+	coordinates="48.946062598435,2.3625956475"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T13:57:31.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2604"
+	name="Études arabes">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3ème étage Bâtiment B1, bureau 319</floor>
+		<openingHours>Lundi et jeudi
+14h30-17h30
+Mardi
+10h-13h15
+14h30-17h30
+Vendredi
+10h-13h15</openingHours>
+		<url>http://www.univ-paris8.fr/arabe/</url>
+		<phone>01 49 40 68 36</phone>
+		<email>amassoudi@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

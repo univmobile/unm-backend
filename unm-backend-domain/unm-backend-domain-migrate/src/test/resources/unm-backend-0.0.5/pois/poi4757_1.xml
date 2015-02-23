@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4757_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4757_1.xml"/>
+<title>Institut Confucius</title>
+<updated>2014-08-15T01:47:20.225+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4757"
+	coordinates="48.903695654947,2.2107370197773"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T15:23:50.000+02:00"
+	updatedAt="2011-11-15T12:32:55.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2516"
+	name="Institut Confucius">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>Bureau 102, 1er étage</floor>
+		<openingHours>Du lundi au vendredi : 
+9h30 / 12h30 - 13h30 / 17h00
+</openingHours>
+		<phone>01 40 97 76 88</phone>
+		<email>institut-confucius@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

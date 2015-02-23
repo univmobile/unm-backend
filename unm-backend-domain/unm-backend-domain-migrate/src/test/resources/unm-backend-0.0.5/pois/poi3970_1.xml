@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3970_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3970_1.xml"/>
+<title>AIA</title>
+<updated>2014-08-15T01:47:12.236+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3970"
+	coordinates="48.842411990891,2.3359827697277"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:42:07.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3695"
+	name="AIA">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Art Inter Action a pour but de rassembler les étudiants des UFR d’Histoire de l’art et d’Archéologie des universités Paris I et Paris IV, en restant ouverte aux participants extérieurs ; et de participer à la vie de l’Institut d’Art et d’Archéologie par l’action culturelle (organisation de conférences, débats, projections, sorties, expositions, etc.).</description>
+	<address>
+		<url>http://art-interaction.blogspot.com/</url>
+		<phone>06 47 81 04 65</phone>
+		<email>art-interaction@live.fr</email>
+	</address>
+</content>
+</entry>

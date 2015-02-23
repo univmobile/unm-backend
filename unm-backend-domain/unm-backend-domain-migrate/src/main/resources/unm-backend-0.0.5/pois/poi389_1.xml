@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi389_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi389_1.xml"/>
+<title>Polygone 3</title>
+<updated>2014-08-15T01:46:39.665+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="389"
+	coordinates="48.940089738503,2.353407740593|48.940036884381,2.3542982339859|48.939866693716,2.3542848229408|48.939860703569,2.3543518781662|48.939388535928,2.3542928695679|48.939402630549,2.3541158437729|48.939709187574,2.354137301445|48.939733853,2.3536437749863|48.939674655947,2.3536357283592|48.939697559573,2.353233397007|48.939966412131,2.3532682657242|48.9399593649,2.3533916473389|48.940089738503,2.3"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-07-26T16:40:34.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2011-04-08T14:10:25.000+02:00"
+	createdBy="raphael"
+	updatedBy="Kevin Mazille Paris 8"
+	name="Polygone 3">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

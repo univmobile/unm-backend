@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1025_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1025_1.xml"/>
+<title>Centre Saint-Charles</title>
+<updated>2014-08-15T01:46:44.233+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1025"
+	coordinates="48.841907362644,2.2805961593"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-11T15:52:58.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="421"
+	name="Centre Saint-Charles">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER C
+Station Javel
+Métro 8 et 10
+Station Boucicaut ou Lourmel et Charles Michels ou Javel-André Citroën
+
+Bus 42, 62 et 88</itinerary>
+		<fullAddress>47-53 rue des bergers
+75015 Paris</fullAddress>
+	</address>
+	<child uid="823" active="true"/>
+	<child uid="697" active="true"/>
+	<child uid="424" active="true"/>
+	<child uid="829" active="true"/>
+	<child uid="858" active="true"/>
+	<child uid="895" active="true"/>
+	<child uid="927" active="true"/>
+	<child uid="928" active="true"/>
+	<child uid="939" active="true"/>
+	<child uid="6195" active="true"/>
+	<child uid="6196" active="true"/>
+	<child uid="6198" active="true"/>
+	<child uid="6199" active="true"/>
+	<child uid="6201" active="true"/>
+	<child uid="6202" active="true"/>
+	<child uid="6204" active="true"/>
+	<child uid="6205" active="true"/>
+	<child uid="6206" active="true"/>
+	<child uid="6427" active="true"/>
+	<attachment id="37" title="st-charles.jpg" type="image" url="/uploads/poi/cfb0a0fa373d3277ed40600b3ae91af6b8e852b0.jpg"/>
+</content>
+</entry>

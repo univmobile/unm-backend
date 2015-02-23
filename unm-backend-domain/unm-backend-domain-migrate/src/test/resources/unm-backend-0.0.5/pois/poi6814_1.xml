@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6814_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6814_1.xml"/>
+<title>Restaurant Universitaire Gennevilliers</title>
+<updated>2014-08-15T01:47:40.459+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6814"
+	coordinates="48.936993566967,2.3026683926582"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T12:37:46.000+02:00"
+	updatedAt="2012-02-10T14:19:20.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6812"
+	name="Restaurant Universitaire Gennevilliers">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>de 11h30 à 14h30</openingHours>
+	</address>
+	<attachment id="250" title="Ru gennevilliers.jpg" type="image" url="/uploads/poi/cd331d9f9de98cf1223652760ac0521675a5d302.jpg"/>
+</content>
+</entry>

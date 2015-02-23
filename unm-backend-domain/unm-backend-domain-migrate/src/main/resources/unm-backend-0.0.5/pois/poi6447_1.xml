@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6447_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6447_1.xml"/>
+<title>Enseignement prof en lettres, histoire et géographie</title>
+<updated>2014-08-15T01:47:37.295+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6447"
+	coordinates="48.938939032885,2.3534506559372"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T15:46:47.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5252"
+	name="Enseignement prof en lettres, histoire et géographie">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Responsable de la spécialité : Anne-Marie Gérin Grataloup   Tel : 06.73.91.97.07
+
+
+
+
+ </description>
+	<address>
+		<url>http://www.creteil.iufm.fr/sites-de-formation/site-scientifique-technologique-et-professionnel-sstp/offre-de-formation/enseignements-litteraires/</url>
+		<phone>01.49.71.87.00</phone>
+		<email>scol-2nd-degre@u-pec.fr</email>
+	</address>
+</content>
+</entry>

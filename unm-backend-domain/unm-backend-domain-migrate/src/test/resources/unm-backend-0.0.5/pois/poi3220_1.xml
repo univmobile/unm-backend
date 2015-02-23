@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3220_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3220_1.xml"/>
+<title>Association ELZEVIR</title>
+<updated>2014-08-15T01:47:04.166+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3220"
+	coordinates="48.840104022471,2.354576513171"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:14:10.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3009"
+	name="Association ELZEVIR">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Nous avons pour volonté d'aider à l'insertion professionnelle en proposant sur notre site les CV des étudiants et des diplômés du Master 2 Pro ainsi que les parcours professionnels d'anciens étudiants dont les carrières témoignent des perspectives ouvertes par le Master 2 Pro. </description>
+	<address>
+		<url>http://elzevir.asso.free.fr</url>
+		<email>contact@elzevir.org</email>
+	</address>
+</content>
+</entry>

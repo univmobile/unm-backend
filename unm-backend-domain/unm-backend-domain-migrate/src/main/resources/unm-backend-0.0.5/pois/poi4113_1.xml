@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4113_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4113_1.xml"/>
+<title>IUFM Etiolles </title>
+<updated>2014-08-15T01:47:13.814+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4113"
+	coordinates="48.633520904507,2.4678401648998"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:27:29.000+02:00"
+	updatedAt="2013-06-26T11:02:25.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="4108"
+	name="IUFM Etiolles ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>DEPUIS PARIS PORTE D’ORLÉANS PAR LA N20 :
+Rejoindre l’A6 en direction de LYON. Suivre N104
+METZ/NANCY/CORBEIL-ESSONNES/MELUN - SÉNART
+/MELUN/MARNE-LA-VALLÉE/A5 direction TROYES. Vous êtes sur la
+N104 (Francilienne). Prendre la sortie 29 CORBEIL RIVEDROITE/
+ETIOLLES/SOISY-SUR-SEINE (puis voir loupe).
+TRANSPORTS EN COMMUN :
+Depuis PARIS GARE DE LYON
+Prendre le RER D direction JUVISY/CORBEIL.
+- Arrêt EVRY-GRAND BOURG. Prendre le Bus 403 direction LES
+MEILLOTTES/SOISY-SUR-SEINE arrêt LE BOIS DES COUDRAIES (2mn de bus). Terminer à pied direction CORBEIL-ESSONNES jusqu’au 1er feu puis à gauche.
+- Arrêt Evry-Courcouronnes. 
+Prendre le bus ligne 91.01 arrêt
+ECOLE NORMALE.</itinerary>
+		<fullAddress>Domaine du Saulchoir
+91450 ETIOLLES</fullAddress>
+	</address>
+	<child uid="6034" active="true"/>
+</content>
+</entry>

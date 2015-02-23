@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2462_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2462_1.xml"/>
+<title>Site faculté de medecine </title>
+<updated>2014-08-15T01:46:57.020+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2462"
+	coordinates="48.851360824353,2.3401817679405|48.850817222035,2.3410722613335|48.850739564079,2.3409220576286|48.850570128121,2.3410508036613|48.850315973108,2.3417374491692|48.850005337452,2.340085208416|48.850965477798,2.3395809531212|48.851360824353,2.340181767"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-04-29T14:41:23.000+02:00"
+	updatedAt="2011-06-14T17:24:36.000+02:00"
+	deletedAt="2011-05-17T16:53:27.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	name="Site faculté de medecine ">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

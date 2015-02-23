@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7114_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7114_1.xml"/>
+<title>Amphithéâtre Bertin</title>
+<updated>2014-08-15T01:47:43.394+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7114"
+	coordinates="48.810650696299,2.1495115756989"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-04T15:25:48.000+01:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	parentUid="364"
+	name="Amphithéâtre Bertin">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>250 places</description>
+	<address>
+		<floor>Bâtiment Buffon</floor>
+	</address>
+</content>
+</entry>

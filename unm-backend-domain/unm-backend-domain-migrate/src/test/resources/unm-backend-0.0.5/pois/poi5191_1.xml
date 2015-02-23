@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5191_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5191_1.xml"/>
+<title>IAE Gustave Eiffel</title>
+<updated>2014-08-15T01:47:24.109+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5191"
+	coordinates="48.78766852136,2.4499297142029"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:43:34.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="5131"
+	name="IAE Gustave Eiffel">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://www.iae.u-pec.fr</url>
+	</address>
+</content>
+</entry>

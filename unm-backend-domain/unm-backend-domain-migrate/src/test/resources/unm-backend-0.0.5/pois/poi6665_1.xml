@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6665_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6665_1.xml"/>
+<title>Argenteuil</title>
+<updated>2014-08-15T01:47:39.138+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6665"
+	coordinates="48.949410891387,2.2328672558069"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-20T15:10:02.000+02:00"
+	updatedAt="2011-09-02T16:09:32.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6654"
+	name="Argenteuil">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="6667" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi157_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi157_1.xml"/>
+<title>Laboratoire de langues d'enseignement assisté par ordinateur</title>
+<updated>2014-08-15T01:46:38.563+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="157"
+	coordinates="48.623328818063,2.4238650798"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-01T11:30:26.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-07-19T12:01:35.000+02:00"
+	createdBy="yasmine"
+	updatedBy="plopes"
+	name="Laboratoire de langues d'enseignement assisté par ordinateur">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address
+		zipCode="91025"
+		city="Evry Cedex"
+		countryCode="FR">
+		<floor>Aile C, 2e étage</floor>
+		<itinerary>RER D : arrêt Évry-Courcouronnes
+RER C : avec un changement à Juvisy</itinerary>
+		<fullAddress>Bureau C212
+Rue Pierre Bérégovoy 91025 Evry Cedex</fullAddress>
+	</address>
+</content>
+</entry>

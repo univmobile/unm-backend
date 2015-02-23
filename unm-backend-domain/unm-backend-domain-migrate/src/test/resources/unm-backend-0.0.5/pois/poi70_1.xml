@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi70_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi70_1.xml"/>
+<title>Borne WIFI</title>
+<updated>2014-08-15T01:46:38.388+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="70"
+	coordinates="48.955602470265,2.342024445533"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T13:07:59.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-07-02T17:17:22.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Borne WIFI">
+	<poiType id="7" label="Zones WiFi" categoryId="5" categoryLabel="Bornes CMS &amp; Zones WiFi"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

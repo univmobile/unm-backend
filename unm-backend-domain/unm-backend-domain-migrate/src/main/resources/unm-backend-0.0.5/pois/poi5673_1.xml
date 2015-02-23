@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5673_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5673_1.xml"/>
+<title>Cafétéria</title>
+<updated>2014-08-15T01:47:28.716+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5673"
+	coordinates="48.626558658791,2.5606888532639"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T13:28:56.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="5473"
+	name="Cafétéria">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>Bâtiment TC - RDV</floor>
+		<openingHours>du lundi au vendredi                                                                               11h30 - 14h30
+</openingHours>
+		<phone>01 60 60 59 51</phone>
+	</address>
+</content>
+</entry>

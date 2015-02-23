@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3668_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3668_1.xml"/>
+<title>Biopharmaging</title>
+<updated>2014-08-15T01:47:09.114+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3668"
+	coordinates="48.846700853431,2.3576608859003"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T14:20:56.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3665"
+	name="Biopharmaging">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Association du parcours professionnel de biologie
+et de pharmacologie du développement.</description>
+	<address>
+		<phone>01 44 27 26 95</phone>
+	</address>
+</content>
+</entry>

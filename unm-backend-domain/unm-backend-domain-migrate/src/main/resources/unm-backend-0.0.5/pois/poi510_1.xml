@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi510_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi510_1.xml"/>
+<title>Entrée principale</title>
+<updated>2014-08-15T01:46:40.458+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="510"
+	coordinates="48.652798904814,1.85246229171"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-07T16:47:39.000+02:00"
+	updatedAt="2012-02-06T07:53:44.000+01:00"
+	createdBy="haromoys"
+	updatedBy="haromoys"
+	parentUid="508"
+	name="Entrée principale">
+	<poiType id="6" label="Entrée principale" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<fullAddress>19 allée des Vignes
+78120 Rambouillet</fullAddress>
+	</address>
+</content>
+</entry>

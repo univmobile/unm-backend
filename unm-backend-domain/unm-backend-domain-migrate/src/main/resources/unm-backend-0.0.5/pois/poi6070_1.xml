@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6070_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6070_1.xml"/>
+<title>Anglais M1-2</title>
+<updated>2014-08-15T01:47:33.372+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6070"
+	coordinates="48.787696796186,2.445080280304"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:18:15.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4334"
+	name="Anglais M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bât.i, 2ème étage bureau 266</floor>
+		<url>http://lettres-sh.u-pec.fr/departements/anglais/formations/</url>
+		<phone>01 45 17 11 89</phone>
+		<email>sec.masters-llsh@u-pec.fr</email>
+	</address>
+</content>
+</entry>

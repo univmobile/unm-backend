@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi59_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi59_1.xml"/>
+<title>Scolarité générale IUT</title>
+<updated>2014-08-15T01:46:38.352+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="59"
+	coordinates="48.955234366507,2.342276573181"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T13:00:53.000+02:00"
+	updatedAt="2011-05-31T11:58:05.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="301"
+	name="Scolarité générale IUT">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Scolarité générale IUT</description>
+	<address>
+		<floor>1er étage - Aile O - Bureau 0202</floor>
+		<openingHours>9h30 -11h30
+14h - 16h.</openingHours>
+		<itinerary>En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<url>http://www.iutv.univ-paris13.fr</url>
+		<phone>01 49 40 44 51</phone>
+		<fax>01 49 40 40 97</fax>
+		<email>secrdir@iutv.univ-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

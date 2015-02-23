@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi573_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi573_1.xml"/>
+<title>Médecin</title>
+<updated>2014-08-15T01:46:40.802+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="573"
+	coordinates="48.624135123067,2.427780032157"
+	active="true"
+	markerType="point"
+	createdAt="2010-11-18T11:26:11.000+01:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="pdeljurie"
+	updatedBy="yasmine"
+	parentUid="256"
+	name="Médecin">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>RDC, Aile Est</floor>
+	</address>
+</content>
+</entry>

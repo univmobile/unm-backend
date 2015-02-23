@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5449_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5449_1.xml"/>
+<title>Chimie organique (M2)</title>
+<updated>2014-08-15T01:47:26.297+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5449"
+	coordinates="48.702838816207,2.1814794838428"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T14:26:41.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4573"
+	name="Chimie organique (M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 460</floor>
+		<url>http://www.icmo.u-psud.fr/enseignements/m2/index.php</url>
+		<phone>01 69 15 74 42</phone>
+		<fax>01 69 15 58 96</fax>
+		<email>therese.pelloin@u-psud.fr </email>
+	</address>
+</content>
+</entry>

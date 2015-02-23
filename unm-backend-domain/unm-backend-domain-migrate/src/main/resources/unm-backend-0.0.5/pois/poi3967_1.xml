@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3967_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3967_1.xml"/>
+<title>Laboratoire Paragraphe</title>
+<updated>2014-08-15T01:47:12.201+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3967"
+	coordinates="48.943936795694,2.3632953688502"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:35:57.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Laboratoire Paragraphe">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 349 - Laboratoire Paragraphe appartenant à l'École doctorale (ED) 224 : Cognition, langage, interaction.
+Directeur : Imad Saleh
+Contact au département Hypermédia</description>
+	<address>
+		<floor>1er étage Bâtiment A, bureau 168</floor>
+		<url>http://paragraphe.info/</url>
+		<phone>01 49 40 67 58</phone>
+		<fax>01 49 40 67 83</fax>
+		<email>imad.saleh@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

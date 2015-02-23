@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5190_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5190_1.xml"/>
+<title>UFR Langues, Arts et Musique</title>
+<updated>2014-08-15T01:47:24.092+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5190"
+	coordinates="48.623631845169,2.4249020218849"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T16:39:28.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="450"
+	name="UFR Langues, Arts et Musique">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<address>
+		<floor>Bureau B 310</floor>
+		<openingHours>Du lundi au vendredi :
+9h00 / 12h00 - 13h00 / 17h00
+
+</openingHours>
+		<phone>01 69 47 74 45</phone>
+		<email>yveline.thiry@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

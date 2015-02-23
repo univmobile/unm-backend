@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3209_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3209_1.xml"/>
+<title>Amphithéâtre 56B</title>
+<updated>2014-08-15T01:47:04.060+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3209"
+	coordinates="48.845739748743,2.3562393151"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:07:35.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3205"
+	name="Amphithéâtre 56B">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>sous la pyramide</floor>
+	</address>
+</content>
+</entry>

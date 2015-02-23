@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi532_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi532_1.xml"/>
+<title>Restaurant  le Boomerang</title>
+<updated>2014-08-15T01:46:40.615+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="532"
+	coordinates="48.618422422621,2.307032346725"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-17T13:52:34.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="2666"
+	name="Restaurant  le Boomerang">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>RDC</floor>
+		<openingHours>Restaurant : 11h30 - 14h00 
+Cafétéria : 09h00 - 15h00     </openingHours>
+		<itinerary>RER C</itinerary>
+	</address>
+</content>
+</entry>

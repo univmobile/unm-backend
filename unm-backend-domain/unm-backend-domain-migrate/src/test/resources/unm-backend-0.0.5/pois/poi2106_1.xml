@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2106_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2106_1.xml"/>
+<title>Résidence Universitaire Jean-Baptiste Lamarck</title>
+<updated>2014-08-15T01:46:54.138+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2106"
+	coordinates="48.76588911176,1.94924175739"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-11T12:21:16.000+02:00"
+	updatedAt="2011-04-13T14:46:05.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Résidence Universitaire Jean-Baptiste Lamarck">
+	<poiType id="31" label="Résidence universitaire "/>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4469_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4469_1.xml"/>
+<title>ER 4</title>
+<updated>2014-08-15T01:47:17.640+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4469"
+	coordinates="48.837918283186,2.360905688256"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:53:59.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3686"
+	name="ER 4">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Modélisation en recherche clinique - ER 4</description>
+	<address>
+		<phone>01 40 77 98 47</phone>
+		<email>jean-louis.golmard@upmc.fr</email>
+	</address>
+</content>
+</entry>

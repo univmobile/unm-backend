@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7165_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7165_1.xml"/>
+<title>Département informatique</title>
+<updated>2014-08-15T01:47:43.965+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7165"
+	coordinates="48.398339413557,2.6868250966072"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-14T14:00:05.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="3841"
+	name="Département informatique">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>1er étage - aile informatique</floor>
+		<openingHours>Du lundi au vendredi     
+8h30 - 17h30</openingHours>
+		<phone>01 60 74 68 02 </phone>
+		<email>nathalie.gillet@u-pec.fr</email>
+	</address>
+</content>
+</entry>

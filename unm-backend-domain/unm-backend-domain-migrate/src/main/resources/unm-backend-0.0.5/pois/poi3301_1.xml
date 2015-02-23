@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3301_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3301_1.xml"/>
+<title>Infirmerie</title>
+<updated>2014-08-15T01:47:05.158+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3301"
+	coordinates="48.840264667224,2.354445084929"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:55:35.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3009"
+	name="Infirmerie">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>RDC - Porte 24</floor>
+		<openingHours>Du Lundi au Vendredi : 
+9h00 - 12h30 
+13h - 16h30</openingHours>
+		<phone>0145874030</phone>
+	</address>
+</content>
+</entry>

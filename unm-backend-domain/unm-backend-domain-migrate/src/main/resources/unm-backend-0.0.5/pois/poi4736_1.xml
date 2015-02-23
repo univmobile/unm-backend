@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4736_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4736_1.xml"/>
+<title>IUT de Montreuil</title>
+<updated>2014-08-15T01:47:20.030+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4736"
+	coordinates="48.862484549456,2.4641534686089"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T14:54:34.000+02:00"
+	updatedAt="2012-01-31T15:25:54.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1981"
+	name="IUT de Montreuil">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>- Accès en voiture :
+Périphérique jusqu'à la Porte de Bagnolet, puis autoroute A3, sortie n°2 puis suivre Montreau-Ruffins puis Montreuil Th. Sueur. Vous arrivez en face d'une station service BP. Aller tout droit (légèrement à gauche) en laissant la station BP sur votre droite. Au feu suivant, tourner à droite (direction Fontenay-souss-bois) et juste avant le feu suivant tourner à droite. L'I.U.T. est un batiment moderne. Vous pouvez vous garer sur le parking à droite, en face de l'IUT.
+- Accès en transports :
+RER A4 - Arrêt 'Val de Fontenay', sortie &quot;Bus&quot;, puis BUS 122 (à droite en sortant de la gare de RER) - Arrêt 'Nouvelle France'.
+ou Métro ligne 9 - Arrêt 'Mairie de Montreuil' puis BUS 122 - Arrêt 'Nouvelle France'</itinerary>
+		<fullAddress>140 rue de la Nouvelle France 93100 Montreuil</fullAddress>
+	</address>
+	<child uid="4740" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7229_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7229_1.xml"/>
+<title>Bibliothèque centrale</title>
+<updated>2014-08-15T01:47:44.564+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7229"
+	coordinates="48.788916132897,2.3273152112961"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-07T11:42:39.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Bibliothèque centrale">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>La bibliothèque de l'ENS offre des collections scientifiques pluridisciplinaires ainsi que l'accès à des bases de données et des périodiques en ligne. On y trouve également des livres et des revues plus généraux reflets de l'actualité scientifique, politique, économique, administrative et culturelle.</description>
+	<address>
+		<floor>Rez-de-chaussée du bâtiment d'Alembert</floor>
+		<openingHours>Lundi : 10h - 21h45
+Mardi : 9h30 - 21h45
+Mercredi : 9h30 - 21h45
+Jeudi : 9h30 - 21h45
+Vendredi : 9h30 - 18h
+Samedi : 9h - 12h30
+</openingHours>
+		<url>http://www.bibli.ens-cachan.fr/</url>
+		<phone>01 47 40 29 73</phone>
+		<fax>01 47 40 21 59</fax>
+		<email>biblio@bib.ens-cachan.fr</email>
+	</address>
+	<attachment id="252" title="com.univ.collaboratif.utils.jpg" type="image" url="/uploads/poi/376d1379628878d80b4c02d905da997b75af3fdc.jpg"/>
+</content>
+</entry>

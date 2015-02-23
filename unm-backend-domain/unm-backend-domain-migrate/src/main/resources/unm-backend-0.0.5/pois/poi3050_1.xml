@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3050_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3050_1.xml"/>
+<title>Centre M.Haurion, droit public</title>
+<updated>2014-08-15T01:47:02.464+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3050"
+	coordinates="48.824309458972,2.30259714648"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:32:13.000+02:00"
+	updatedAt="2011-06-14T17:10:50.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2447"
+	name="Centre M.Haurion, droit public">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<openingHours># 1 41 17 30 45
+# Fax :  +33 (0) 1 41 17 30 </openingHours>
+		<phone>01 41 17 30 45</phone>
+		<fax>01 41 17 30 45</fax>
+	</address>
+</content>
+</entry>

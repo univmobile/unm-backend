@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi638_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi638_1.xml"/>
+<title>Bibliothèque Broca</title>
+<updated>2014-08-15T01:46:40.914+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="638"
+	coordinates="48.838191398232,2.3488372"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T17:09:22.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-01T17:57:30.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Bibliothèque Broca">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+		<openingHours>Lundi au mercredi 
+ 9 h à 20 h
+Jeudi et vendredi 
+ 9 h à 19 h
+Samedi 
+ 9 h à 13 h
+</openingHours>
+		<itinerary>Métro 7
+Station Censier-Daubenton
+
+Bus 27, 47, 83 et 91
+Arrêt Claude Bernard, Monge, Gobelins ou Pascal</itinerary>
+		<phone>01 53 55 28 48</phone>
+		<email>bibbroca@univ-paris1.fr</email>
+		<fullAddress>21 rue Broca 
+75005 Paris</fullAddress>
+	</address>
+</content>
+</entry>

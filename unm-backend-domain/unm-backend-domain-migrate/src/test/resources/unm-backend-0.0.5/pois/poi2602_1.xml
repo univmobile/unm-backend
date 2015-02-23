@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2602_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2602_1.xml"/>
+<title>Saint-Denis Bâtiment Crous</title>
+<updated>2014-08-15T01:46:58.354+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2602"
+	coordinates="48.946663650128,2.3622080683"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T14:07:08.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1990"
+	name="Saint-Denis Bâtiment Crous">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro Ligne 13 arrêt St-Denis Université</itinerary>
+		<fullAddress>Université Paris 8 - 2 rue de la Liberté - 93526 Saint-Denis cedex</fullAddress>
+	</address>
+	<child uid="4020" active="true"/>
+	<child uid="4024" active="true"/>
+</content>
+</entry>

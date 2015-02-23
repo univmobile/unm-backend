@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5126_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5126_1.xml"/>
+<title>Administration</title>
+<updated>2014-08-15T01:47:23.468+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5126"
+	coordinates="48.623980937094,2.4269177019596"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T14:19:12.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="256"
+	name="Administration">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Durant la campagne d’inscription (Juillet, septembre et jusqu’au 15 octobre), du lundi au vendredi : 9h00 / 11h 45 - 13h 30 / 16h00. </description>
+	<address>
+		<floor>Rdc</floor>
+		<openingHours>Du lundi au vendredi :  
+9h00 / 11h 45.
+</openingHours>
+		<phone>01 69 47 71 93</phone>
+	</address>
+</content>
+</entry>

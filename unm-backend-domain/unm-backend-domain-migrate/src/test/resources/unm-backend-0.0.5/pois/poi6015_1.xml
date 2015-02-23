@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6015_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6015_1.xml"/>
+<title>Département Biologie Santé Master</title>
+<updated>2014-08-15T01:47:32.729+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6015"
+	coordinates="48.795026153956,2.4540656805038"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T13:30:06.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	deletedAt="2011-06-14T13:30:53.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Département Biologie Santé Master">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

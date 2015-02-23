@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6803_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6803_1.xml"/>
+<title>Cafétéria l'AnK</title>
+<updated>2014-08-15T01:47:40.369+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6803"
+	coordinates="48.902383548032,2.2124750912189"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T12:00:46.000+02:00"
+	updatedAt="2012-02-03T12:30:14.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="6801"
+	name="Cafétéria l'AnK">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>de 8h à 15h</openingHours>
+	</address>
+	<attachment id="232" title="ank.jpg" type="image" url="/uploads/poi/8c657f62e46cd41ac2bac30504239e3e18cf6d22.jpg"/>
+</content>
+</entry>

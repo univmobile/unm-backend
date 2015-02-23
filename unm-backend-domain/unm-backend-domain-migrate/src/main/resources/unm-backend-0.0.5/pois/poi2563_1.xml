@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2563_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2563_1.xml"/>
+<title>DCEM3</title>
+<updated>2014-08-15T01:46:58.043+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2563"
+	coordinates="48.850662376651,2.3406484723091"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T16:48:52.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2463"
+	name="DCEM3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>aile B ,3éme étage/bureau 311</floor>
+		<openingHours>Lundi-vendredi
+9h30-12h30
+13h30-17h30</openingHours>
+	</address>
+</content>
+</entry>

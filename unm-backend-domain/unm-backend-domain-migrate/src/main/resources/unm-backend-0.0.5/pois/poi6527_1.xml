@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6527_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6527_1.xml"/>
+<title>UFR Droit-Economie-Gestion </title>
+<updated>2014-08-15T01:47:38.055+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6527"
+	coordinates="48.699773568324,2.1612328290939"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-30T14:44:56.000+02:00"
+	updatedAt="2011-07-06T15:47:00.000+02:00"
+	deletedAt="2011-06-30T15:08:09.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	name="UFR Droit-Economie-Gestion ">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>UFR Droit-Economie-Gestion 
+Campus d' Orsay</description>
+	<address>
+		<floor>Bâtiment 236, Campus d'Orsay</floor>
+		<email>doyen.droit-eco-gestion@u-psud.fr</email>
+	</address>
+</content>
+</entry>

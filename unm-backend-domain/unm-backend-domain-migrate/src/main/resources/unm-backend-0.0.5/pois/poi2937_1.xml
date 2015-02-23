@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2937_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2937_1.xml"/>
+<title>Hôpital Necker</title>
+<updated>2014-08-15T01:47:01.292+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2937"
+	coordinates="48.845351969985,2.3150746151"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T17:05:53.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2929"
+	name="Hôpital Necker">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>156 Rue de Vaugirard
+75730 Paris Cedex 15</fullAddress>
+	</address>
+	<child uid="3093" active="true"/>
+	<child uid="3091" active="true"/>
+	<child uid="3089" active="true"/>
+	<child uid="3088" active="true"/>
+	<child uid="3094" active="true"/>
+	<child uid="3086" active="true"/>
+	<child uid="3085" active="true"/>
+	<child uid="3002" active="true"/>
+	<child uid="3097" active="true"/>
+	<child uid="3045" active="true"/>
+	<child uid="3041" active="true"/>
+	<child uid="2951" active="true"/>
+	<child uid="3099" active="true"/>
+	<child uid="3076" active="true"/>
+</content>
+</entry>

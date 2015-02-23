@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3326_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3326_1.xml"/>
+<title>AS Pharma Paris V</title>
+<updated>2014-08-15T01:47:05.449+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3326"
+	coordinates="48.843020571288,2.33554255217"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:07:47.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2450"
+	name="AS Pharma Paris V">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone> 01 43 29 82 45</phone>
+		<email>http://aspp5.fr ee.fr/</email>
+	</address>
+</content>
+</entry>

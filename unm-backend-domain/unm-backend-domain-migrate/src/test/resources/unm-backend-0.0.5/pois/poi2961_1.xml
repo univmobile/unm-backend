@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2961_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2961_1.xml"/>
+<title>Evry bâtiment STAPS</title>
+<updated>2014-08-15T01:47:01.529+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2961"
+	coordinates="48.624997231962,2.428915858"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T10:02:59.000+02:00"
+	updatedAt="2011-06-15T17:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Basile Michel"
+	parentUid="268"
+	name="Evry bâtiment STAPS">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>﻿</itinerary>
+		<fullAddress>Boulevard des Coquibus
+91025 Evry Cedex</fullAddress>
+	</address>
+	<child uid="1708" active="true"/>
+</content>
+</entry>

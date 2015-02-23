@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6398_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6398_1.xml"/>
+<title>Systèmes embarqués, systèmes mécatroniques et éco-conception</title>
+<updated>2014-08-15T01:47:36.848+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6398"
+	coordinates="48.788514550274,2.4450708925724"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T16:41:55.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4528"
+	name="Systèmes embarqués, systèmes mécatroniques et éco-conception">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Département de Génie électrique et informatique industrielle
+</description>
+	<address>
+		<floor>L3</floor>
+		<phone>01 45 17 17 55</phone>
+		<email>geii-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

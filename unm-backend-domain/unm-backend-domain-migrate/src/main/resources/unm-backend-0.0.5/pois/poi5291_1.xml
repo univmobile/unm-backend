@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5291_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5291_1.xml"/>
+<title>Bibliothèque de sciences économiques, gestion et urbanisme </title>
+<updated>2014-08-15T01:47:24.905+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5291"
+	coordinates="48.788364784315,2.4500209093094"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T09:39:15.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4606"
+	name="Bibliothèque de sciences économiques, gestion et urbanisme ">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>3 ème étage</floor>
+		<openingHours>Du lundi au vendredi de 8h30 à 19h, samedi de 10h à 17h
+</openingHours>
+		<url>http://bibliotheque.u-pec.fr/bibliotheques/mail-des-meches/</url>
+		<phone>01 41 78 47 11</phone>
+		<fax>01 41 78 47 05</fax>
+		<email>bibmdm@u-pec.fr </email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5455_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5455_1.xml"/>
+<title>Nanosciences (M2)</title>
+<updated>2014-08-15T01:47:26.364+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5455"
+	coordinates="48.698423837102,2.1667970716953"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T14:33:55.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5222"
+	name="Nanosciences (M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 220</floor>
+		<url>http://www.master-nanosciences-saclay.fr/</url>
+		<phone>01 69 15 65 14</phone>
+		<email>maria-soledad.verstraete@u-psud.fr</email>
+	</address>
+</content>
+</entry>

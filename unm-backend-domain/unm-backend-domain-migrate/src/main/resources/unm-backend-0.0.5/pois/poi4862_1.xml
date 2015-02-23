@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4862_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4862_1.xml"/>
+<title>Sénart</title>
+<updated>2014-08-15T01:47:21.302+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4862"
+	coordinates="48.628902303929,2.5538089871407"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T12:24:11.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4695"
+	name="Sénart">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Plateforme d'accueil des résidence de Sénart</description>
+	<address>
+		<openingHours>9h00 - 17h00</openingHours>
+		<itinerary>RER D : Lieusaint Moissy</itinerary>
+		<phone>01-64-13-01-82</phone>
+		<email>residence.lieusaint@crous-creteil.fr</email>
+	</address>
+	<child uid="4975" active="true"/>
+	<child uid="4976" active="true"/>
+	<child uid="4978" active="true"/>
+	<child uid="5905" active="true"/>
+	<child uid="5906" active="true"/>
+</content>
+</entry>

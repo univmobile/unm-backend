@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4997_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4997_1.xml"/>
+<title>Résidence Condorcet</title>
+<updated>2014-08-15T01:47:22.645+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4997"
+	coordinates="48.842604696791,2.5855100154877"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T16:41:05.000+02:00"
+	updatedAt="2011-07-26T16:30:55.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4861"
+	name="Résidence Condorcet">
+	<poiType id="31" label="Résidence universitaire "/>
+	<address>
+		<itinerary>RER A : Noisy-Champs</itinerary>
+	</address>
+</content>
+</entry>

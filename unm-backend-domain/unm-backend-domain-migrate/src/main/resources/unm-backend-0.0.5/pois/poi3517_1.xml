@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3517_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3517_1.xml"/>
+<title>Pôle Langues</title>
+<updated>2014-08-15T01:47:07.553+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3517"
+	coordinates="48.842874483848,2.3328177630901"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T14:37:23.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2846"
+	name="Pôle Langues">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>Bureaux 610 à 612, 6e étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h30 / 12h00 - 14h00 / 17h15
+
+</openingHours>
+		<url>http://crl.u-paris2.fr/polelangues/index.html</url>
+		<phone>01 44 41 57 75 </phone>
+		<email>marisette.sambin@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

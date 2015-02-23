@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6073_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6073_1.xml"/>
+<title>Formations linguistiques</title>
+<updated>2014-08-15T01:47:33.408+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6073"
+	coordinates="48.78235616466,2.2844092547894"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:20:32.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4664"
+	name="Formations linguistiques">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Les deux parcours &quot;Economie-Gestion et Langues&quot; et &quot;Droit langues approfondies&quot; proposent aux étudiants disposant d'un bon niveau en langues, de suivre un enseignement complet dans leur discipline principale, ainsi qu'un enseignement renforcé en langues vivantes (anglais obligatoire, et allemand ou espagnol au choix, au titre de la seconde langue).</description>
+	<address>
+		<floor>Bâtiment B, bureau 211</floor>
+		<url>http://www.jm.u-psud.fr/fr/les_formations/formations_linguistiques.html</url>
+		<phone>01 40 91 17 81</phone>
+		<fax>01 46 60 89 36</fax>
+		<email>langues.droit-eco-gestion@u-psud.fr</email>
+	</address>
+</content>
+</entry>

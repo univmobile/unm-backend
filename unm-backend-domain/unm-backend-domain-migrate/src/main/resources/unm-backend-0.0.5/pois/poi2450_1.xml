@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2450_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2450_1.xml"/>
+<title>Faculté de Pharmacie</title>
+<updated>2014-08-15T01:46:56.904+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2450"
+	coordinates="48.843022557181,2.3358976095"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:25:56.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3959"
+	name="Faculté de Pharmacie">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B: Luxembourg ou Port-Royal
+Bus: 38, 82, 83 val de grace
+Métro 4 vavin</itinerary>
+		<fullAddress>4 avenue observatoire
+75006 paris</fullAddress>
+	</address>
+	<child uid="3057" active="true"/>
+	<child uid="3046" active="true"/>
+	<child uid="3073" active="true"/>
+	<child uid="2955" active="true"/>
+	<child uid="3051" active="true"/>
+	<child uid="3072" active="true"/>
+	<child uid="3029" active="true"/>
+	<child uid="3027" active="true"/>
+	<child uid="3028" active="true"/>
+	<child uid="3018" active="true"/>
+	<child uid="3015" active="true"/>
+	<child uid="3011" active="true"/>
+	<child uid="3000" active="true"/>
+	<child uid="2958" active="true"/>
+	<child uid="2837" active="true"/>
+	<child uid="2836" active="true"/>
+	<child uid="2835" active="true"/>
+	<child uid="2834" active="true"/>
+	<child uid="2832" active="true"/>
+	<child uid="2636" active="true"/>
+	<child uid="2697" active="true"/>
+	<child uid="3296" active="true"/>
+	<child uid="3326" active="true"/>
+	<child uid="3354" active="true"/>
+	<child uid="3368" active="true"/>
+	<child uid="3373" active="true"/>
+	<child uid="3385" active="true"/>
+	<child uid="3387" active="true"/>
+	<child uid="3390" active="true"/>
+	<child uid="3403" active="true"/>
+	<child uid="3446" active="true"/>
+	<child uid="3705" active="true"/>
+	<child uid="5552" active="true"/>
+	<child uid="6115" active="true"/>
+</content>
+</entry>

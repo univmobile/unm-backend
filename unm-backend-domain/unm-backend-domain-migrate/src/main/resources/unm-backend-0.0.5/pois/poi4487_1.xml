@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4487_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4487_1.xml"/>
+<title>Le Club de Robotique de l'ENSIIE</title>
+<updated>2014-08-15T01:47:17.824+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4487"
+	coordinates="48.626403697228,2.4313423410058"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:05:07.000+02:00"
+	updatedAt="2011-09-06T12:08:56.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4440"
+	name="Le Club de Robotique de l'ENSIIE">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Permet à chacun de mettre en œuvre ses connaissances de façon ludique, et d'en acquérir de nouvelles, en participant depuis 1995 à la coupe de France de Robotique organisée par l'ANSTJ, avec la participation de d'E=M6.</description>
+	<address>
+		<phone>01 69 36 73 85 </phone>
+	</address>
+</content>
+</entry>

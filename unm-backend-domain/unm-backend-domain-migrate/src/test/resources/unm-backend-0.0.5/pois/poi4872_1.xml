@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4872_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4872_1.xml"/>
+<title>Résidence Internationale</title>
+<updated>2014-08-15T01:47:21.356+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4872"
+	coordinates="48.94670909862,2.3622161149979"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T13:37:13.000+02:00"
+	updatedAt="2011-07-26T15:47:40.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="yasmine"
+	parentUid="4696"
+	name="Résidence Internationale">
+	<poiType id="31" label="Résidence universitaire "/>
+	<address>
+		<itinerary>Métro : ligne 13 Saint-Denis Université</itinerary>
+	</address>
+</content>
+</entry>

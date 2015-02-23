@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6575_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6575_1.xml"/>
+<title>Instut d' Optique</title>
+<updated>2014-08-15T01:47:38.471+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6575"
+	coordinates="48.706843531678,2.1744239330292"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-04T11:36:22.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="4398"
+	name="Instut d' Optique">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://institutoptique.fr</url>
+		<phone>01 64 53 32 05</phone>
+		<email>cathel.tourmente@institutoptique.fr</email>
+	</address>
+</content>
+</entry>

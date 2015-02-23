@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3349_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3349_1.xml"/>
+<title>EA 3386 - LARGEPA</title>
+<updated>2014-08-15T01:47:05.707+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3349"
+	coordinates="48.845955535561,2.324097733944"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:28:50.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2899"
+	name="EA 3386 - LARGEPA">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 53 59 44 73</phone>
+	</address>
+</content>
+</entry>

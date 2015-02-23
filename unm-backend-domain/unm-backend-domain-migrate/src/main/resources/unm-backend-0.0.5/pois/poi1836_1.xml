@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1836_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1836_1.xml"/>
+<title>Salle des diplômes</title>
+<updated>2014-08-15T01:46:51.379+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1836"
+	coordinates="48.903705498842,2.21038430929"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:08:55.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-08T14:36:36.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Salle des diplômes">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>Salle 206, 2ème étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h - 13h / 16h30
+Mercredi : 
+9h / 13h</openingHours>
+	</address>
+</content>
+</entry>

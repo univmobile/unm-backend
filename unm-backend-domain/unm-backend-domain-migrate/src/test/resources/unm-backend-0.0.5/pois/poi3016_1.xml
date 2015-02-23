@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3016_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3016_1.xml"/>
+<title>CERLIS, recherche sur les liens sociaux</title>
+<updated>2014-08-15T01:47:02.118+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3016"
+	coordinates="48.855475184783,2.3313465714455"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:12:41.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2331"
+	name="CERLIS, recherche sur les liens sociaux">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 42 86 33 44</phone>
+		<fax>01 42 86 21 60</fax>
+	</address>
+</content>
+</entry>

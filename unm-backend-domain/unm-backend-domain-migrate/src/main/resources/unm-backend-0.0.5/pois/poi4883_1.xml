@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4883_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4883_1.xml"/>
+<title>Accueil étudiants handicapés</title>
+<updated>2014-08-15T01:47:21.467+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4883"
+	coordinates="48.870351607071,2.2739647328854"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T13:57:03.000+02:00"
+	updatedAt="2011-05-27T15:28:17.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4540"
+	name="Accueil étudiants handicapés">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<address>
+		<floor>Bureau B 029, Rdc</floor>
+		<openingHours>Du lundi au vendredi :
+9h00 / 12h00 - 13h30 / 16h30</openingHours>
+		<phone>01 44 05 42 54</phone>
+		<email>handicap@dauphine.fr</email>
+	</address>
+</content>
+</entry>

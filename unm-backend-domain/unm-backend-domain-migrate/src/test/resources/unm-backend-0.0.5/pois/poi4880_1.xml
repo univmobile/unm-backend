@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4880_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4880_1.xml"/>
+<title>Centre de médecine préventive</title>
+<updated>2014-08-15T01:47:21.444+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4880"
+	coordinates="48.870604190137,2.2737944126129"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T13:51:12.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Centre de médecine préventive">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Pour les consultations médicales, les médecins sont à votre disposition pour tout problèmes médicaux. Une visite médicale est proposée aux étudiants lors de leur première inscription à Dauphine. Ils délivrent aussi des certificats médicaux, certificats pour un stage, des attestations d'aménagement des conditions d'examens.
+Les consultations médicales spécialisées sur rdv : nutrition, sevrage tabagique.
+Des consultations psychologiques, assurées par une psychologue, sont proposées sur rdv pour toutes difficultés ( gestion du stress lors des examens, anxiété, état dépressif, difficultés relationnelles et familiales, etc...). </description>
+	<address>
+		<floor>Bureau B 033, Rdc</floor>
+		<openingHours>Du lundi au vendredi :
+9h00 / 17h00
+ 
+
+</openingHours>
+		<phone>01 44 05 46 91 </phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3406_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3406_1.xml"/>
+<title>Bureau des étudiants étrangers</title>
+<updated>2014-08-15T01:47:06.230+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3406"
+	coordinates="48.846890005314,2.34407868236"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:54:00.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="Bureau des étudiants étrangers">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Pour les masters 2 et DSU :
+- 01 44 41 55 31
+- virginie.sebille@u-paris2.fr</description>
+	<address>
+		<floor>Aile Soufflot, escalier M, 2ème étage, bureau M12</floor>
+		<phone>01 44 41 55 33</phone>
+		<email>michele.lardan@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6616_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6616_1.xml"/>
+<title>IUFM Bonneuil</title>
+<updated>2014-08-15T01:47:38.745+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6616"
+	coordinates="48.764951621145,2.4844497442245"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-13T10:31:35.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="5241"
+	name="IUFM Bonneuil">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<url>http://www.creteil.iufm.fr/les-sites-de-formation/site-departemental-1er-degre-du-val-de-marne/</url>
+		<phone>01 49 56 37 16  </phone>
+	</address>
+</content>
+</entry>

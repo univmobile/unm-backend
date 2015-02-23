@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6971_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6971_1.xml"/>
+<title>Ski Club Nanterre</title>
+<updated>2014-08-15T01:47:41.711+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6971"
+	coordinates="48.902736438017,2.2137048840523"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T11:03:50.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Ski Club Nanterre">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le Ski Club est l'une des principales associations de l'université de par son nombre d'adhérents. Nous sommes sans couleur politique et à but non lucratif. L'association est composée d'une dizaine d'étudiants bénévoles de Paris Ouest issus des différentes UFR, qui se retrouvent autour d'une passion commune : la montagne. Notre association a pour but de faciliter la rencontre entre étudiants des différentes UFR de la fac, de rendre le ski accessible au plus grand nombre et d'égayer à travers différents évènements autour de la montagne nos journées studieuses. </description>
+	<address>
+		<floor>Bâtiment R - Salle R 107 - 1er étage</floor>
+		<phone>01.40.97.71.41</phone>
+		<email>contact@skiclubnanterre.fr</email>
+	</address>
+</content>
+</entry>

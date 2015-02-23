@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4480_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4480_1.xml"/>
+<title>Site de Bonneuil/IUFM</title>
+<updated>2014-08-15T01:47:17.745+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4480"
+	coordinates="48.764852614336,2.4841868877411"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:01:28.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="3841"
+	name="Site de Bonneuil/IUFM">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>rue Jean Macé 94861 Bonneuil-sur-Marne Cedex
+</description>
+	<child uid="5241" active="true"/>
+</content>
+</entry>

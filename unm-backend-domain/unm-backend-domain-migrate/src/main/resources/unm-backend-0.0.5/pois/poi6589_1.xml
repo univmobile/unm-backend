@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6589_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6589_1.xml"/>
+<title>Borne CMS</title>
+<updated>2014-08-15T01:47:38.636+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6589"
+	coordinates="48.698415988717,2.1682146191597"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-04T16:01:34.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	parentUid="4802"
+	name="Borne CMS">
+	<poiType id="9" label="Borne CMS" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+</content>
+</entry>

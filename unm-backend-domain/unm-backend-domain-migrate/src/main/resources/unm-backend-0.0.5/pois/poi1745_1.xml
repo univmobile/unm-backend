@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1745_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1745_1.xml"/>
+<title>Master Informatique et sciences du vivant</title>
+<updated>2014-08-15T01:46:50.489+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1745"
+	coordinates="48.913103896709,2.420743256807"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T23:39:36.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2011-04-05T20:44:24.000+02:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	name="Master Informatique et sciences du vivant">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Former le public à :
+- Une activité pluridisciplinaire qui nécessite l’apprentissage des concepts fondamentaux des différents domaines et la maîtrise d’un langage commun.
+- La modélisation des systèmes complexes caractéristiques des domaines du vivant
+- La conception et l’évaluation de nouveaux outils infromatiques adaptés aux professions concernées
+- La gestion des volumes considérables de données et connaissances traitées en sciences de la vie</description>
+	<address>
+		<url>http://www-smbh.univ-paris13.fr/smbh/enseig/enseig_lmd/enseig_lmd_master/choixens_lmd_master_.html#</url>
+		<email>avenot@smbh.univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

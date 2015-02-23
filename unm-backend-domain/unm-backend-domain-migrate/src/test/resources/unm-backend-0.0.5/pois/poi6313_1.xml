@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6313_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6313_1.xml"/>
+<title>LLCE Japonais (L1-L3)</title>
+<updated>2014-08-15T01:47:35.919+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6313"
+	coordinates="48.82980114569,2.3813315480947"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T15:54:31.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1774"
+	name="LLCE Japonais (L1-L3)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>UFR Langues et Civilisations de l'Asie Orientale (LCAO)
+Licence Langues, littératures, civilisations étrangères (LLCE) - Japonais</description>
+	<address>
+		<floor>Grand Moulins - Bâtiment C, 4ème étage</floor>
+		<openingHours>Tous les jours
+9h15-11h45
+14h00-16h30</openingHours>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=PARCOURS?NP=72</url>
+		<phone>01 57 27 64 16</phone>
+		<email>dominique.jouini@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

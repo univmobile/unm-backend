@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3279_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3279_1.xml"/>
+<title>Médecine Préventive des Etudiants</title>
+<updated>2014-08-15T01:47:04.898+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3279"
+	coordinates="48.840139329055,2.354597970843"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:45:03.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3009"
+	name="Médecine Préventive des Etudiants">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<floor>2e étage - Porte 247</floor>
+		<phone>0145874032</phone>
+		<email>medecine.preventive@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6082_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6082_1.xml"/>
+<title>BU Lavoisier</title>
+<updated>2014-08-15T01:47:33.519+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6082"
+	coordinates="48.838313534148,2.592450901866"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:46:53.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="5589"
+	name="BU Lavoisier">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Collections :
+-Chimie
+-Physique
+-Génie des Procédés</description>
+	<address>
+		<floor>3è étage</floor>
+		<openingHours>Lundi-Vendredi
+Accès réservé aux enseignants-chercheurs</openingHours>
+		<url>http://www.univ-mlv.fr/bibliotheque/bibliotheques/bibliotheque-de-lavoisier/</url>
+		<phone>01 60 95 73 23</phone>
+		<email>biblav@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

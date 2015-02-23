@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2078_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2078_1.xml"/>
+<title>Bureau des transferts</title>
+<updated>2014-08-15T01:46:53.902+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2078"
+	coordinates="48.944968637627,2.3629188537598"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T17:21:10.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="Marion MAINFRAY"
+	parentUid="2609"
+	name="Bureau des transferts">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Suivi des dossiers des étudiants venus d’autres universités qui souhaitent s’inscrire à Paris 8 (transferts « accueil »).</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment G, bureau 014</floor>
+		<openingHours>Du lundi au vendredi
+9h30-11h30
+14h-16h</openingHours>
+		<phone>01 49 40 64 05</phone>
+		<email>scolarité.transferts@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

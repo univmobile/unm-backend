@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3222_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3222_1.xml"/>
+<title>ATEP3</title>
+<updated>2014-08-15T01:47:04.203+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3222"
+	coordinates="48.840304857747,2.354616746306"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:16:04.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3009"
+	name="ATEP3">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Culture, Sports - Loisirs, Vie de l'établissement, Vie étudiante</description>
+	<address>
+		<phone>0623206355 </phone>
+		<email>atep3@hotmail.fr</email>
+	</address>
+</content>
+</entry>

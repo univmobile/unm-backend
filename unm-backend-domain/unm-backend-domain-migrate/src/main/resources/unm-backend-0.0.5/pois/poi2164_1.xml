@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2164_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2164_1.xml"/>
+<title>Histoire (M1-M2)</title>
+<updated>2014-08-15T01:46:54.817+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2164"
+	coordinates="48.946124254127,2.36182451"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:34:00.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2603"
+	name="Histoire (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3ème étage Bâtiment B2, bureau 347</floor>
+		<openingHours>Mardi et jeudi
+10h-12h30
+14h-16h30
+Mercredi et vendredi
+10h-12h30</openingHours>
+		<url>http://www.univ-paris8.fr/histoire/?page_id=10</url>
+		<phone>01 49 40 68 24</phone>
+		<email>thierry.virginie@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

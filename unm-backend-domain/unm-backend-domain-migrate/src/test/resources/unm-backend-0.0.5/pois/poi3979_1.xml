@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3979_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3979_1.xml"/>
+<title>ED 397</title>
+<updated>2014-08-15T01:47:12.353+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3979"
+	coordinates="48.841761661773,2.2826703451574"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:51:28.000+02:00"
+	updatedAt="2011-09-05T14:18:32.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3975"
+	name="ED 397">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Physique et chimie des matériaux (ED 397)</description>
+	<address>
+		<floor>Campus Boucicaut - Bâtiment 7. 2ème étage</floor>
+		<url>http://www.ed397.upmc.fr/</url>
+		<phone>01 44 27 50 66</phone>
+		<email>abhay.shukla@upmc.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3806_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3806_1.xml"/>
+<title>Site des Cerclades</title>
+<updated>2014-08-15T01:47:10.596+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3806"
+	coordinates="49.037437147916,2.0808175206184"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T17:20:31.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3792"
+	name="Site des Cerclades">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3900" active="true"/>
+</content>
+</entry>

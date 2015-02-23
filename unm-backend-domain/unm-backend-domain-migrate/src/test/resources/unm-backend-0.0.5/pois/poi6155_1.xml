@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6155_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6155_1.xml"/>
+<title>A l'Ecole de la Solidarité</title>
+<updated>2014-08-15T01:47:34.406+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6155"
+	coordinates="48.839241504342,2.5866781175137"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T15:45:38.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="A l'Ecole de la Solidarité">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L'association À l'école de la solidarité est une association étudiante du campus de l'Université Paris-Est Marne-la-Vallée. Nous cherchons à défendre une éducation libre, gratuite et laïque pour tous et à promouvoir l'émancipation intellectuelle à travers le monde.</description>
+	<address>
+		<floor>Bureau 0S060-61</floor>
+		<url>http://www.alecoledelasolidarite.org/</url>
+		<phone>01 60 95 79 31</phone>
+		<email>alecoledelasolidarite@gmail.com</email>
+	</address>
+</content>
+</entry>

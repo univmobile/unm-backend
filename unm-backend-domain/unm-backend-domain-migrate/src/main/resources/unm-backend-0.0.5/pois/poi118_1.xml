@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi118_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi118_1.xml"/>
+<title>baitment</title>
+<updated>2014-08-15T01:46:38.478+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="118"
+	coordinates="48.630369183463,2.4253041751217|48.62665344655,2.4244458682369|48.626454888022,2.4281365878414|48.630142276076,2.4288232333492|48.630369183463,2.42530417512"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-06-29T12:19:53.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-06-29T14:14:39.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="baitment">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

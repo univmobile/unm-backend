@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi810_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi810_1.xml"/>
+<title>Restaurant Censier</title>
+<updated>2014-08-15T01:46:42.121+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="810"
+	coordinates="48.838690179316,2.35676117"
+	markerType="point"
+	createdAt="2011-02-16T18:43:07.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1027"
+	name="Restaurant Censier">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>1er et 2e étages</floor>
+		<openingHours>Lundi au vendredi
+11h00-14h30
+</openingHours>
+		<itinerary>Métro 7 
+Station Censier Daubenton	
+Bus 24, 47, 67 et 89</itinerary>
+	</address>
+</content>
+</entry>

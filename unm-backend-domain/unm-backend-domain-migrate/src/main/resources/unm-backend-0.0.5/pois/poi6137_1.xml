@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6137_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6137_1.xml"/>
+<title>École doctorale Sciences de la Vie et de la Santé </title>
+<updated>2014-08-15T01:47:34.176+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6137"
+	coordinates="48.795078513595,2.4538068473339"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:29:29.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4875"
+	name="École doctorale Sciences de la Vie et de la Santé ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Secrétariat de l'École Doctorale 
+8 rue du Général Sarrail -
+Faculté de médecine - Université Paris XII
+94010 Créteil cedex</description>
+	<address>
+		<floor>rez de chaussée, Bureau 108</floor>
+		<url>www.univ-paris-est.fr/ecole-doctorale-svs</url>
+		<phone>01 49 81 43 93</phone>
+		<email>ed-svs@univ-paris-est.fr</email>
+	</address>
+</content>
+</entry>

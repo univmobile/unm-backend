@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3997_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3997_1.xml"/>
+<title>ED 129</title>
+<updated>2014-08-15T01:47:12.510+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3997"
+	coordinates="48.846285715542,2.3563747666776"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T13:45:04.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3994"
+	name="ED 129">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Sciences de l'environnement d'Ile-de-France (ED 129)</description>
+	<address>
+		<floor>3è étage</floor>
+		<url>http://www.ed129.upmc.fr/</url>
+		<phone>01 44 27 48 19</phone>
+		<email>laurence.touchon@lmd.jussieu.fr</email>
+	</address>
+</content>
+</entry>

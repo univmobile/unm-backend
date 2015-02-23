@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1920_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1920_1.xml"/>
+<title>Association des étudiants en Science Politique - ASPIX</title>
+<updated>2014-08-15T01:46:52.462+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1920"
+	coordinates="48.902311905984,2.214378118515"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-06T14:50:23.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2491"
+	name="Association des étudiants en Science Politique - ASPIX">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>- Intégration des étudiants en science politique de l'Université Paris Ouest Nanterre la Défense - Décloisonnement des différentes promotions du cursus - Promotion de la recherche en science politique - Constitution d'un réseau professionnel Interface avec les enseignants, chargés de cours et de TD </description>
+	<address>
+		<floor>Bâtiment F - Bureau 520 - 5ème étage</floor>
+		<openingHours>Mercredi et jeudi :
+14h30 / 16h30</openingHours>
+		<url>http://www.aspix.fr/</url>
+		<email>aspix10@yahoo.fr</email>
+	</address>
+</content>
+</entry>

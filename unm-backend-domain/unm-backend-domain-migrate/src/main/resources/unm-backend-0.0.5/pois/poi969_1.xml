@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi969_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi969_1.xml"/>
+<title>Monte Escalier</title>
+<updated>2014-08-15T01:46:43.808+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="969"
+	coordinates="48.958504934887,2.339452207088"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-07T15:40:38.000+01:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	deletedAt="2011-03-09T15:06:51.000+01:00"
+	createdBy="Kevin Mazille"
+	updatedBy="Kevin Mazille"
+	name="Monte Escalier">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>Monte Escalier pour PMR.</description>
+	<address>
+		<floor>Etage 5</floor>
+		<itinerary>Etage 5</itinerary>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clement
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

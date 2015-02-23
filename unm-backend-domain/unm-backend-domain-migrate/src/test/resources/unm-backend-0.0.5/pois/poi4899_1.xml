@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4899_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4899_1.xml"/>
+<title>Droit (L1-L2 site d'Orsay)</title>
+<updated>2014-08-15T01:47:21.615+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4899"
+	coordinates="48.700016581608,2.168733291328"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:15:41.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4897"
+	name="Droit (L1-L2 site d'Orsay)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Inscriptions pédagogiques, gestion des résultats, relevés de notes, etc.</description>
+	<address>
+		<floor>Bâtiment 236 bis</floor>
+		<openingHours>Tous les jours
+8h00-11h45
+13h30-16h</openingHours>
+		<url>http://www.jm.u-psud.fr/fr/vie_etudiante/service_des_etudes_et_de_la_vie_de_l_etudiant.html</url>
+		<phone>01 69 15 46 05</phone>
+		<email>marie-ange.marchetti@u-psud.fr</email>
+	</address>
+</content>
+</entry>

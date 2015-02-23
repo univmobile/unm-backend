@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5403_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5403_1.xml"/>
+<title>Pôle Universitaire Paris Ouest Nanterre</title>
+<updated>2014-08-15T01:47:25.944+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5403"
+	coordinates="48.903763181182,2.2140052914619"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T10:31:08.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	deletedAt="2011-06-03T12:05:25.000+02:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	name="Pôle Universitaire Paris Ouest Nanterre">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

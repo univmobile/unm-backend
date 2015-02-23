@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3395_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3395_1.xml"/>
+<title>LMD - UMR 8239</title>
+<updated>2014-08-15T01:47:06.110+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3395"
+	coordinates="48.846267439274,2.3563340306282"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:49:48.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3994"
+	name="LMD - UMR 8239">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le Laboratoire de Météorologie Dynamique (LMD)</description>
+	<address>
+		<floor>3è étage</floor>
+		<url>http://www.lmd.jussieu.fr/</url>
+	</address>
+</content>
+</entry>

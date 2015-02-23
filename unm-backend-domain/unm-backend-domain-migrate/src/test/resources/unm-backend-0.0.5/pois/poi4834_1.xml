@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4834_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4834_1.xml"/>
+<title>Restaurant universitaire La coulée verte</title>
+<updated>2014-08-15T01:47:21.054+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4834"
+	coordinates="48.78227127221,2.2858160734177"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T17:10:38.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4665"
+	name="Restaurant universitaire La coulée verte">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>Bâtiment E</floor>
+		<openingHours>Tous les jours
+11h30-14h00</openingHours>
+	</address>
+</content>
+</entry>

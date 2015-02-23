@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1414_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1414_1.xml"/>
+<title>Bibliothèque pédiatrique de l'hôpital Robert Debré</title>
+<updated>2014-08-15T01:46:47.405+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1414"
+	coordinates="48.879717499147,2.402658462"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T14:13:55.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="2420"
+	name="Bibliothèque pédiatrique de l'hôpital Robert Debré">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Au 6e étage de l’hôpital Robert Debré (passerelle Bretonneau, bâtiment Ecran), la bibliothèque pédiatrique est l’une des quatre bibliothèques du secteur santé de l’Université Paris Diderot-Paris 7. Sur une surface de 155 m², elle offre 28 places assises, 4 ordinateurs publics et l’ensemble de ses collections en accès libre :
+    * 4600 ouvrages médicaux (notamment en pédiatrie, gynécologie et obstétrique) ;
+    * 254 titres de périodiques dont 136 titres vivants ;
+    * 55 titres de CD-rom ;
+    * le libre accès à la documentation électronique du SCD de l’Université Paris-Diderot Paris 7 et aux revues électroniques de l’AP-HP.</description>
+	<address>
+		<floor>Hôpital Robert Debré Bâtiment Ecran 6e étage</floor>
+		<openingHours>Lundi, mardi, vendredi: 9h30-18h
+Mercredi, jeudi: 9h30-18h30
+Mois d'août: 9h30-17h30</openingHours>
+		<itinerary>Métro 3bis, 11 Porte des Lilas 
+Métro 7bis Pré-Saint-Gervais
+Bus PC2, PC3, 48</itinerary>
+		<phone>0148031577</phone>
+	</address>
+</content>
+</entry>

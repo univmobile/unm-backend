@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi808_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi808_1.xml"/>
+<title>Cafétéria PMF</title>
+<updated>2014-08-15T01:46:42.092+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="808"
+	coordinates="48.827299066962,2.3646113"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-16T17:38:25.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1023"
+	name="Cafétéria PMF">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<floor>RDC et Aile B, 9e étage</floor>
+		<openingHours>Au RDC lundi au vendredi
+08h00-18h00
+Au 9e étage 
+09h00-16h00
+sauf vendredi 
+09h30-15h30
+
+</openingHours>
+		<itinerary>Métro 14
+Terminus Olympiades
+Bus 62, 64, 83
+Arrêt Tolbiac Baudricourt
+</itinerary>
+	</address>
+</content>
+</entry>

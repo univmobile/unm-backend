@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3384_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3384_1.xml"/>
+<title>Systèmes Linguistiques, Énonciation et Discursivité</title>
+<updated>2014-08-15T01:47:06.008+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3384"
+	coordinates="48.839899552723,2.354690842330"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:44:52.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-17T17:03:11.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	name="Systèmes Linguistiques, Énonciation et Discursivité">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<url>http://syled.univ-paris3.fr/</url>
+		<phone>0145874137</phone>
+	</address>
+</content>
+</entry>

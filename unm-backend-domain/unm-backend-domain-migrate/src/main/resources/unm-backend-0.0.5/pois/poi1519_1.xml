@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1519_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1519_1.xml"/>
+<title>DU Chef de projet &quot;Apprentissage et Formation en ligne&quot;</title>
+<updated>2014-08-15T01:46:48.449+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1519"
+	coordinates="48.904023147352,2.21732486039"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:31:03.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-05T15:26:05.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="DU Chef de projet &quot;Apprentissage et Formation en ligne&quot;">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 114, 1er étage</floor>
+		<openingHours>Lundi et mardi :
+9h / 11h45 - 14h / 17h30
+Mercredi : 9h / 11h45</openingHours>
+		<phone>01 40 97 70 75</phone>
+		<email>jbianchi@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

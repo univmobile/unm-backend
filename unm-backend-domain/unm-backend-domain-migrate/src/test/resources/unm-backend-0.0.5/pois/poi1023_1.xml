@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1023_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1023_1.xml"/>
+<title>Centre Pierre Mendès France</title>
+<updated>2014-08-15T01:46:44.210+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1023"
+	coordinates="48.827190824475,2.36455734"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-11T15:50:00.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="super admin"
+	parentUid="281"
+	name="Centre Pierre Mendès France">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 14
+Terminus Olympiades
+Bus 62, 64 et 83</itinerary>
+		<fullAddress>90 rue de Tolbiac
+75013 Paris</fullAddress>
+	</address>
+	<child uid="7486" active="true"/>
+	<child uid="6341" active="true"/>
+	<child uid="6330" active="true"/>
+	<child uid="6284" active="true"/>
+	<child uid="6210" active="true"/>
+	<child uid="808" active="true"/>
+	<child uid="769" active="true"/>
+	<child uid="733" active="true"/>
+	<child uid="695" active="true"/>
+	<child uid="799" active="true"/>
+	<child uid="800" active="true"/>
+	<child uid="801" active="true"/>
+	<child uid="802" active="true"/>
+	<child uid="731" active="true"/>
+	<child uid="797" active="true"/>
+	<child uid="798" active="true"/>
+	<child uid="803" active="true"/>
+	<child uid="804" active="true"/>
+	<child uid="806" active="true"/>
+	<child uid="805" active="true"/>
+	<child uid="807" active="true"/>
+	<child uid="767" active="true"/>
+	<child uid="655" active="true"/>
+	<child uid="950" active="true"/>
+	<child uid="809" active="true"/>
+	<child uid="831" active="true"/>
+	<child uid="830" active="true"/>
+	<child uid="839" active="true"/>
+	<child uid="838" active="true"/>
+	<child uid="837" active="true"/>
+	<child uid="836" active="true"/>
+	<child uid="835" active="true"/>
+	<child uid="834" active="true"/>
+	<child uid="832" active="true"/>
+	<child uid="944" active="true"/>
+	<child uid="840" active="true"/>
+	<child uid="949" active="true"/>
+	<child uid="856" active="true"/>
+	<child uid="872" active="true"/>
+	<child uid="873" active="true"/>
+	<child uid="874" active="true"/>
+	<child uid="875" active="true"/>
+	<child uid="876" active="true"/>
+	<child uid="877" active="true"/>
+	<child uid="905" active="true"/>
+	<child uid="917" active="true"/>
+	<child uid="6208" active="true"/>
+	<child uid="6209" active="true"/>
+	<child uid="6211" active="true"/>
+	<child uid="6212" active="true"/>
+	<child uid="6214" active="true"/>
+	<child uid="6236" active="true"/>
+	<child uid="6246" active="true"/>
+	<child uid="6247" active="true"/>
+	<child uid="6248" active="true"/>
+	<child uid="6282" active="true"/>
+	<child uid="6285" active="true"/>
+	<child uid="6286" active="true"/>
+	<child uid="6334" active="true"/>
+	<child uid="6339" active="true"/>
+	<child uid="6352" active="true"/>
+	<child uid="6353" active="true"/>
+	<child uid="6354" active="true"/>
+	<attachment id="33" title="pmf_01.jpg" type="image" url="/uploads/poi/21aa60d26f554a18ebee585d31e2434f77e28895.jpg"/>
+</content>
+</entry>

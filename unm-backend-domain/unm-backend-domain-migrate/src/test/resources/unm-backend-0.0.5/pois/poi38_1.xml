@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi38_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi38_1.xml"/>
+<title>Service universitaire de médecine préventive et de promotion</title>
+<updated>2014-08-15T01:46:38.299+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="38"
+	coordinates="48.780111503043,2.044519"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T15:58:30.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2010-09-05T13:53:59.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Service universitaire de médecine préventive et de promotion">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>5,7 boulevard d'Alembert</description>
+	<address
+		zipCode="78280"
+		city="GUYANCOURT"
+		countryCode="FR">
+		<floor>1</floor>
+		<openingHours>Consultations sur rendez-vous 
+Infirmerie ouverte de 8h45 à 17h. 
+Médecins: consultations sur rdv les lundi, mardi, mercredi, jeudi et vendredi de 9h30 à 16h30
+Psychologue : le lundi sur rdv au bâtiment d'Alembert
+
+Portable d'urgence : 06 60 30 20 13</openingHours>
+		<itinerary>Des consultations médicales ont lieu sur chaque site de l'Université selon un planning disponible en ligne, sur les panneaux d'affichages annonçant les permanences à la rentrée, ainsi que sur les livrets d'accueil et les guides agendas.
+
+Outre la visite médicale de première inscription obligatoire à l'université pour laquelle les étudiants sont systématiquement convoqués, les médecins peuvent recevoir les étudiants qui le souhaitent pour des raisons diverses telles que :
+
+ demande d'entretien avec le médecin (sur rendez-vous),
+ urgences diverses, maladies (sans rendez-vous),
+ orientations vers les consultations spécialisées
+ établissement de certificats médicaux : certificat pour la pratique d'un sport, certificat de non contagion, de bonne santé, certificats demandés pour l'inscription en Ecole d'ingénieur, ou demandés pour  certains stages ou pour l'exercice des fonctions de moniteur (centre aéré, colonies de vacances ...).
+ départ en voyage : vaccinations, prévention (paludisme ...),
+ soutien, entretien, conseils sur les vaccinations, les IST, la contraception, la prévention, le dépistage du SIDA, le tabac, les toxicomanies, les problèmes alimentaires ...
+ - Consultations d'aide au sevrage tabagique sur les différents sites de l'université. Le Docteur MATHIOT-VICAIGNE, Médecin tabacologue, reçoit sur RV. Renseignements auprès des infirmeries des différents sites.
+
+D'autre part, les étudiants présentant une maladie handicapante ou invalidante, même provisoire, peuvent bénéficier après consultation et sur avis du médecin du service médical universitaire, de dispositions ou d'aménagements spécifiques pour les examens et (ou) le déroulement de leurs études.
+
+Les étudiants qui présentent des problèmes médicaux susceptibles d'être incompatibles avec les activités et manipulations organisées dans le cadre de leurs études,  sont invités à se signaler le plus rapidement possible au service de médecine préventive.</itinerary>
+		<phone>01 39 25 53 82</phone>
+		<fullAddress>5,7 boulevard d'Alembert
+
+ 78280 GUYANCOURT</fullAddress>
+	</address>
+</content>
+</entry>

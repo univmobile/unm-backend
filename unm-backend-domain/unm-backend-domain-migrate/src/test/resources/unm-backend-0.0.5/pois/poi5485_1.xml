@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5485_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5485_1.xml"/>
+<title>Cafétéria Le Tropical</title>
+<updated>2014-08-15T01:47:26.751+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5485"
+	coordinates="48.702666387285,2.1790939942002"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-03T15:19:54.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5478"
+	name="Cafétéria Le Tropical">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5031_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5031_1.xml"/>
+<title>Open Word</title>
+<updated>2014-08-15T01:47:22.981+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5031"
+	coordinates="49.053728780366,2.0387584716082"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T17:08:35.000+02:00"
+	updatedAt="2011-06-08T17:21:45.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="4035"
+	name="Open Word">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<phone>01 34 25 63 86</phone>
+		<email>gerard.roy@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

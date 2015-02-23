@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2995_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2995_1.xml"/>
+<title>Laboratoire analyse et probabilité </title>
+<updated>2014-08-15T01:47:01.875+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2995"
+	coordinates="48.624113552445,2.42775186896"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:54:40.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="256"
+	name="Laboratoire analyse et probabilité ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 69 47 02 05</phone>
+		<email>valérie.picot@univ-evry.fr</email>
+	</address>
+</content>
+</entry>

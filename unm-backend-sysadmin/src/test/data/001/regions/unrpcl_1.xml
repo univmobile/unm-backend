@@ -13,5 +13,11 @@
 	<uid>unrpcl</uid>
 	<label>Limousin/Poitou-Charentes</label>
 	<url>http://univmobile.vswip.com/unm-backend-mock/listUniversities_unrpcl</url>
+	<universities>
+		<university>
+			<id>ulr</id>
+			<title>Université de La Rochelle</title>
+		</university>
+	</universities>>
 </atom:content>
 </atom:entry>

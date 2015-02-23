@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7147_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7147_1.xml"/>
+<title>Amphi Paul Séramy</title>
+<updated>2014-08-15T01:47:43.788+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7147"
+	coordinates="48.626802069642,2.5606690048517"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-14T09:55:13.000+01:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Gérald MORIN"
+	updatedBy="Gérald MORIN"
+	parentUid="5473"
+	name="Amphi Paul Séramy">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>Bâtiment TC - RDC</floor>
+		<openingHours>Selon les heures de cours</openingHours>
+	</address>
+</content>
+</entry>

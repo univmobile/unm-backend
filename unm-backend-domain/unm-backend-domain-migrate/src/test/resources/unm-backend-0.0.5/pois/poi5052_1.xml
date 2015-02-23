@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5052_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5052_1.xml"/>
+<title>Bibliothèque universitaire : Pharmacie</title>
+<updated>2014-08-15T01:47:23.199+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5052"
+	coordinates="48.762136981827,2.2724251449108"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T17:27:07.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4984"
+	name="Bibliothèque universitaire : Pharmacie">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>3ème étage Bâtiment A</floor>
+		<openingHours>Du lundi au vendredi
+9h00-19h00 (1er étage)
+10h00-17h00 (3ème étage)</openingHours>
+		<url>http://www.u-psud.fr/fr/biblio/bu/bibliotheque_universitaire_pharmacie.html</url>
+		<phone>01 46 83 54 48</phone>
+		<fax>01 46 83 54 35 </fax>
+		<email>monique.gingold@u-psud.fr</email>
+	</address>
+</content>
+</entry>

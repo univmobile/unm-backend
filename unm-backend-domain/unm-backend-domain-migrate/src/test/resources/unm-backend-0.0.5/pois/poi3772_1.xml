@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3772_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3772_1.xml"/>
+<title></title>
+<updated>2014-08-15T01:47:10.241+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3772"
+	coordinates="49.035291311094,2.0604836940765"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T16:41:42.000+02:00"
+	updatedAt="2012-02-03T12:12:02.000+01:00"
+	deletedAt="2011-05-16T10:55:07.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="">
+	<poiType id="38" label="Hébergement " categoryId="23" categoryLabel="Résidence Universitaire "/>
+</content>
+</entry>

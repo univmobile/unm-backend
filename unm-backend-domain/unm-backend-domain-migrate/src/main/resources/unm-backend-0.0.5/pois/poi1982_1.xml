@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1982_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1982_1.xml"/>
+<title>IUT de Tremblay-en-France</title>
+<updated>2014-08-15T01:46:53.110+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1982"
+	coordinates="48.975639770886,2.5597661733627"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T14:49:46.000+02:00"
+	updatedAt="2012-01-31T15:25:54.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1164"
+	name="IUT de Tremblay-en-France">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<floor>3, rue de la Râperie 93290 Tremblay-en-France</floor>
+		<url>http://www.iu2t.univ-paris8.fr/</url>
+		<phone>01 41 51 12 22</phone>
+		<fax>01 48 61 38 17</fax>
+		<email>adm@iu2t.univ-paris8.fr</email>
+	</address>
+	<child uid="4742" active="true"/>
+</content>
+</entry>

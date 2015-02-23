@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3861_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3861_1.xml"/>
+<title>Bibliothèque d’études latines</title>
+<updated>2014-08-15T01:47:11.094+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3861"
+	coordinates="48.849379883182,2.3443298041821"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:16:24.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	deletedAt="2011-05-17T14:17:12.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Bibliothèque d’études latines">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+</content>
+</entry>

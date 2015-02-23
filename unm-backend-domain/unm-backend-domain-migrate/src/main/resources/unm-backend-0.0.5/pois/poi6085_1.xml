@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6085_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6085_1.xml"/>
+<title>BU de Tourisme Management</title>
+<updated>2014-08-15T01:47:33.554+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6085"
+	coordinates="48.854746645595,2.7751763910055"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:53:26.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4613"
+	name="BU de Tourisme Management">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Collections:
+-Tourisme (Hôtellerie, Transports, Loisirs, Guides de voyage)
+-Management (Services, Qualité, Marketing, Immobilier)
+-Intelligence économique
+-Social (Santé, Insertion)</description>
+	<address>
+		<floor>Rez de Chaussée</floor>
+		<openingHours>Lundi à jeudi: 9h00-18h30
+Vendredi: 9h00-17h00</openingHours>
+		<url>http://www.univ-mlv.fr/bibliotheque/bibliotheques/bibliotheque-de-tourisme-management/</url>
+		<phone>01 60 95 76 38</phone>
+		<email>bibval@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

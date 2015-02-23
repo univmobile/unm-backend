@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1736_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1736_1.xml"/>
+<title>DUT Carrières sociales</title>
+<updated>2014-08-15T01:46:50.380+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1736"
+	coordinates="48.913874978748,2.418998479"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T22:41:29.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="356"
+	name="DUT Carrières sociales">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Le DUT Carrières sociales, option Animation sociale et socioculturelle, forme en deux ans des professionnels de l’action sociale et socioculturelle.
+</description>
+	<address>
+		<floor>Mezzanine -  Bureau m 19.</floor>
+		<openingHours>9h15 - 13h30
+14h30 - 17h45</openingHours>
+		<url>http://www.iut-bobigny.univ-paris13.fr/?rubrique=5&amp;page=49&amp;sous_page=203</url>
+		<phone>01 48 38 73 72</phone>
+		<fax>01 48 38 88 35</fax>
+		<email>francoise.coffin@univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1419_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1419_1.xml"/>
+<title>Lettres et Sc. Humaines (LSH) L1-2 </title>
+<updated>2014-08-15T01:46:47.442+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1419"
+	coordinates="48.829702649346,2.3801332712173"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T14:27:17.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	deletedAt="2011-06-21T16:42:12.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="j.richer"
+	name="Lettres et Sc. Humaines (LSH) L1-2 ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment C, 1 er étage bureau 195 C</floor>
+		<itinerary>RER C Bibliothèque François Mitterrand
+Métro 14 Bibliothèque François Mitterrand
+Bus 89, 62, 64, 325 Bibliothèque François Mitterand</itinerary>
+		<phone>0157276318</phone>
+		<email>sabine.zyzemski@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

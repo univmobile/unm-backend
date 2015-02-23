@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5790_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5790_1.xml"/>
+<title>DTIDM - LP</title>
+<updated>2014-08-15T01:47:30.103+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5790"
+	coordinates="48.83933745156,2.5874298065901"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:57:54.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="DTIDM - LP">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence Professionnelle Décision et traitement de l'information - data mining</description>
+	<address>
+		<floor>3B080</floor>
+		<url>http://www.univ-mlv.fr/formations/loffre-de-formations-upemlv/les-licences-professionnelles/domaine-sciences-technologies-sante/mention-systemes-informatiques-et-logiciels/licence-professionnelle-decision-et-traitement-de-linformation-data-mining/</url>
+		<phone>01 60 95 77 03</phone>
+		<fax>01 60 95 75 49</fax>
+		<email>Brigitte.Perreul@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

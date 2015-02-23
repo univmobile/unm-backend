@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2195_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2195_1.xml"/>
+<title>Science politique (M1-M2)</title>
+<updated>2014-08-15T01:46:55.125+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2195"
+	coordinates="48.945946333208,2.3618835"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T15:31:17.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2603"
+	name="Science politique (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3ème étage Bâtiment B2, bureau 333</floor>
+		<openingHours>Lundi, mardi, mercredi, jeudi
+9h30-12h
+14h-18h
+Vendredi
+9h30-12h</openingHours>
+		<url>http://www.univ-paris8.fr/scpo/spip/spip.php?rubrique9</url>
+		<phone>01 49 40 70 75</phone>
+		<fax>01 49 40 71 35</fax>
+		<email>master-scpo@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

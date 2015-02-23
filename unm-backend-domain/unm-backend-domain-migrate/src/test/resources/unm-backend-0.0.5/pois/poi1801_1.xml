@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1801_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1801_1.xml"/>
+<title>BU du CEDIN</title>
+<updated>2014-08-15T01:46:51.032+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1801"
+	coordinates="48.902098889286,2.2143191099"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T16:19:55.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2491"
+	name="BU du CEDIN">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>Salle 139, 1er étage</floor>
+		<openingHours>Lundi : 9h30 / 12h - 13h30 / 17h30
+Mardi : 9h30 / 13h - 13h30 / 17h
+Mercredi : 9h30 / 13h - 13h30 / 17h30
+Jeudi : 9h30 / 13h - 14h / 17h30
+Vendredi : 9h30 / 13h - 13h30 / 17h30</openingHours>
+	</address>
+</content>
+</entry>

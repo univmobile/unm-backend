@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4644_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4644_1.xml"/>
+<title>Copernic</title>
+<updated>2014-08-15T01:47:19.298+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4644"
+	coordinates="48.839163092857,2.5873600691557"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T17:08:28.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4531"
+	name="Copernic">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER A (Noisy Champs)</itinerary>
+		<fullAddress>5 boulevard Descartes
+77420 Champs sur Marne</fullAddress>
+	</address>
+	<child uid="6091" active="true"/>
+	<child uid="5857" active="true"/>
+	<child uid="5855" active="true"/>
+	<child uid="5586" active="true"/>
+	<child uid="4649" active="true"/>
+	<child uid="4656" active="true"/>
+	<child uid="4660" active="true"/>
+	<child uid="4668" active="true"/>
+	<child uid="4671" active="true"/>
+	<child uid="5583" active="true"/>
+	<child uid="5596" active="true"/>
+	<child uid="5602" active="true"/>
+	<child uid="5610" active="true"/>
+	<child uid="5663" active="true"/>
+	<child uid="5664" active="true"/>
+	<child uid="5679" active="true"/>
+	<child uid="5705" active="true"/>
+	<child uid="5734" active="true"/>
+	<child uid="5770" active="true"/>
+	<child uid="5785" active="true"/>
+	<child uid="5790" active="true"/>
+	<child uid="5794" active="true"/>
+	<child uid="5796" active="true"/>
+	<child uid="5797" active="true"/>
+	<child uid="5799" active="true"/>
+	<child uid="5825" active="true"/>
+	<child uid="5826" active="true"/>
+	<child uid="5827" active="true"/>
+	<child uid="5828" active="true"/>
+	<child uid="5830" active="true"/>
+	<child uid="5832" active="true"/>
+	<child uid="5834" active="true"/>
+	<child uid="5837" active="true"/>
+	<child uid="5838" active="true"/>
+	<child uid="5839" active="true"/>
+	<child uid="5847" active="true"/>
+	<child uid="5848" active="true"/>
+	<child uid="5987" active="true"/>
+	<child uid="5988" active="true"/>
+	<child uid="5990" active="true"/>
+	<child uid="6025" active="true"/>
+	<child uid="6026" active="true"/>
+	<child uid="6027" active="true"/>
+	<child uid="6028" active="true"/>
+	<child uid="6071" active="true"/>
+	<child uid="6077" active="true"/>
+	<child uid="6086" active="true"/>
+	<child uid="6087" active="true"/>
+	<child uid="6088" active="true"/>
+	<child uid="6089" active="true"/>
+	<child uid="6095" active="true"/>
+	<child uid="6098" active="true"/>
+	<child uid="6100" active="true"/>
+	<child uid="6104" active="true"/>
+	<child uid="6106" active="true"/>
+	<child uid="6107" active="true"/>
+	<child uid="6118" active="true"/>
+	<child uid="6119" active="true"/>
+	<child uid="6120" active="true"/>
+	<child uid="6122" active="true"/>
+	<child uid="6124" active="true"/>
+	<child uid="6125" active="true"/>
+	<child uid="6127" active="true"/>
+	<child uid="6148" active="true"/>
+	<child uid="6150" active="true"/>
+	<child uid="6153" active="true"/>
+	<child uid="6154" active="true"/>
+	<child uid="6155" active="true"/>
+	<child uid="6157" active="true"/>
+	<child uid="6158" active="true"/>
+	<child uid="6159" active="true"/>
+	<child uid="6160" active="true"/>
+	<child uid="6161" active="true"/>
+	<child uid="6163" active="true"/>
+	<child uid="6164" active="true"/>
+	<child uid="6165" active="true"/>
+	<child uid="6169" active="true"/>
+</content>
+</entry>

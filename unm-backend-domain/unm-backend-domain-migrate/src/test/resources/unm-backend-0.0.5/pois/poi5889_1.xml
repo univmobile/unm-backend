@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5889_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5889_1.xml"/>
+<title>Restaurant U le Pont de Pierre</title>
+<updated>2014-08-15T01:47:31.302+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5889"
+	coordinates="48.913150492166,2.4197387695312"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T10:14:04.000+02:00"
+	updatedAt="2011-07-26T14:28:14.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="yasmine"
+	parentUid="4856"
+	name="Restaurant U le Pont de Pierre">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>11h30 - 14h00</openingHours>
+		<phone>01-48-36-25-59</phone>
+		<email>restaurant.bobigny@crous-creteil.fr </email>
+	</address>
+	<attachment id="120" title="Bobigny_Darty_dec_07.jpg" type="image" url="/uploads/poi/2655f6a6fa0dbc334f39c09037493e9e03d00ca3.jpg"/>
+</content>
+</entry>

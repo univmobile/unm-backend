@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6746_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6746_1.xml"/>
+<title>Cafétéria Grand Moulin</title>
+<updated>2014-08-15T01:47:39.895+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6746"
+	coordinates="48.83005802379,2.380785048008"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-17T20:09:03.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6745"
+	name="Cafétéria Grand Moulin">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>Du lundi au vendredi de 8h30 à 17h30</openingHours>
+		<url>http://www.crous-paris.fr</url>
+	</address>
+	<attachment id="188" title="Sans-titre-1.gif" type="image" url="/uploads/poi/a955572474058f57080fca719a555941d3b6f1c7.gif"/>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6975_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6975_1.xml"/>
+<title>Handiversité</title>
+<updated>2014-08-15T01:47:41.771+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6975"
+	coordinates="48.902787568508,2.2133374214172"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T11:14:30.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Handiversité">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Bâtiment R - Salle RR04 - rdc</floor>
+	</address>
+</content>
+</entry>

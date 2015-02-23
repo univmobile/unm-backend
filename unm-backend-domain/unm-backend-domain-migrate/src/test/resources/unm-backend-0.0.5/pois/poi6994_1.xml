@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6994_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6994_1.xml"/>
+<title>ARKEOTEK</title>
+<updated>2014-08-15T01:47:42.051+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6994"
+	coordinates="48.904285815604,2.2098237276077"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:32:43.000+01:00"
+	updatedAt="2011-11-15T16:24:37.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2507"
+	name="ARKEOTEK">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Arkeotek (Association Européenne pour l'Archéologie des Techniques) est une association européenne sans but lucratif, regroupant des spécialistes de l'archéologie des techniques, et engagée dans des projets de publications innovants destinés à améliorer le partage des connaissances au sein de la communauté. Face à la crise de l'information scientifique, Arkeotek propose de nouvelles pratiques d'écriture inspirées par le programme de recherche logiciste. Arkeotek met en oeuvre ces pratiques dans des publications éditées selon un format électronique nouveau, intitulé format SCD (Scientific Constructs and Data). </description>
+	<address>
+		<floor>MAE</floor>
+		<url>http://arkeotek.org/</url>
+		<phone>01 46 69 25 74</phone>
+		<email>valentine.roux@mae.u-paris10.fr</email>
+	</address>
+</content>
+</entry>

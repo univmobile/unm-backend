@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5168_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5168_1.xml"/>
+<title>Evry ASU</title>
+<updated>2014-08-15T01:47:23.831+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5168"
+	coordinates="48.623794955998,2.4248483777046"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T15:56:20.000+02:00"
+	updatedAt="2011-06-15T17:21:41.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="450"
+	name="Evry ASU">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Apporter une pratique sportive compétitive et sous forme de stage aux étudiants de l’université.
+Représenter l’Université au niveau des compétitions universitaires régionales, nationales voir internationales.</description>
+	<address>
+		<floor>Bureau B7</floor>
+		<url>www.univ-evry.fr</url>
+		<phone>06 59 42 24 88</phone>
+		<email>sa-ines@hotmail.fr</email>
+	</address>
+</content>
+</entry>

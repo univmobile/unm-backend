@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1404_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1404_1.xml"/>
+<title>DUT Mesures Physiques spécialité Techniques Instrumentales</title>
+<updated>2014-08-15T01:46:47.291+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1404"
+	coordinates="48.938952305425,2.3535713553"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T19:11:00.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="390"
+	name="DUT Mesures Physiques spécialité Techniques Instrumentales">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>Le diplômé en Mesures Physiques assure le choix, l’implantation et la mise en œuvre de la chaîne de mesures depuis le capteur d’acquisition jusqu’à l’ordinateur d’exploitation et l’interprétation des phénomènes observés. Le caractère pluridisciplinaire de la formation permet aux diplômés de s’adapter rapidement aux problèmes posés par l’évolution rapide des sciences et des techniques.</description>
+	<address>
+		<floor>2ème étage - Aile C - Bureau C 203.</floor>
+		<url>www.iutsd.univ-paris13.fr/mp</url>
+		<phone>01 49 40 61 34</phone>
+		<fax>01 49 40 62 54 </fax>
+		<email>mp-adm@iutsd.univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

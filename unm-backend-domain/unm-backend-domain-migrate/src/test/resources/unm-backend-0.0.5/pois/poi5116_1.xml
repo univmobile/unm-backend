@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5116_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5116_1.xml"/>
+<title>Scolarité de la Faculté de médecine </title>
+<updated>2014-08-15T01:47:23.376+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5116"
+	coordinates="48.794948762909,2.4540066719055"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T13:39:58.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4875"
+	name="Scolarité de la Faculté de médecine ">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<url>http:medecine.u-pec.fr</url>
+		<phone>01.48.91.35.01 ou 00</phone>
+		<email>scolarite.medecine@univ-paris12.f</email>
+	</address>
+</content>
+</entry>

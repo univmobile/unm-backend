@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2426_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2426_1.xml"/>
+<title>UFR STAPS</title>
+<updated>2014-08-15T01:46:56.702+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2426"
+	coordinates="48.833904830441,2.2909927368164"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:03:39.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2425"
+	name="UFR STAPS">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>métro M°12: Porte de Versailles
+Tram T3 : Porte de Versailles (PARC DES
+EXPOSITIONS)</itinerary>
+		<fullAddress>1 rue Lacretelle 
+75015 PARIS</fullAddress>
+	</address>
+	<child uid="5549" active="true"/>
+	<child uid="2850" active="true"/>
+	<child uid="2702" active="true"/>
+	<child uid="2628" active="true"/>
+	<child uid="2627" active="true"/>
+	<child uid="3329" active="true"/>
+	<child uid="3342" active="true"/>
+	<child uid="3401" active="true"/>
+	<child uid="3690" active="true"/>
+	<child uid="5682" active="true"/>
+	<child uid="5684" active="true"/>
+	<child uid="5687" active="true"/>
+</content>
+</entry>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4568_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4568_1.xml"/>
+<title>Science de la vie L2</title>
+<updated>2014-08-15T01:47:18.658+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4568"
+	coordinates="49.043163767096,2.0844019576907"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:23:57.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3920"
+	name="Science de la vie L2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>01.34.25.65.06</phone>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3437_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3437_1.xml"/>
+<title>Bibliothèque du Centre de droit européen CDE</title>
+<updated>2014-08-15T01:47:06.587+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3437"
+	coordinates="48.854410285688,2.328256331384"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:20:50.000+02:00"
+	updatedAt="2011-09-09T15:33:46.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2863"
+	name="Bibliothèque du Centre de droit européen CDE">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Public concerné : étudiants en master de droit de l'Union européenne, master de droit européen des affaires.</description>
+	<address>
+		<openingHours>Du lundi au vendredi :
+9h30 / 12h30 - 13h30 / 17h30.</openingHours>
+	</address>
+</content>
+</entry>

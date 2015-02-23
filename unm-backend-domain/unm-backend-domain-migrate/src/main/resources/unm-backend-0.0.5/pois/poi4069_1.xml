@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4069_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4069_1.xml"/>
+<title>Service social du CROUS</title>
+<updated>2014-08-15T01:47:13.298+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4069"
+	coordinates="48.945694424287,2.3611754179001"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:20:49.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="Marion MAINFRAY"
+	parentUid="2600"
+	name="Service social du CROUS">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Le service social du CROUS à Paris 8 est un lieu d’accueil et d’écoute à la disposition des étudiants ayant besoin d’une aide momentanée ou prolongée.</description>
+	<address>
+		<floor>Maison de l'étudiant</floor>
+		<openingHours>9h30-12h30</openingHours>
+		<url>http://www.univ-paris8.fr/Service-Social</url>
+		<phone>01 49 40 70 80</phone>
+		<fax>01 48 21 04 46 </fax>
+		<email>loys.remoue@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

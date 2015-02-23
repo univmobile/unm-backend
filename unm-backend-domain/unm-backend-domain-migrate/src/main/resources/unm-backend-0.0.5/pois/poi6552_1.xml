@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6552_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6552_1.xml"/>
+<title></title>
+<updated>2014-08-15T01:47:38.269+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6552"
+	coordinates="48.702694429713,2.1701431274414"
+	active="true"
+	markerType="point"
+	createdAt="2011-07-01T09:28:38.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-07-01T09:36:15.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	name="">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+</content>
+</entry>

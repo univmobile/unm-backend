@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2850_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2850_1.xml"/>
+<title>Amphithéâtre</title>
+<updated>2014-08-15T01:47:00.602+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2850"
+	coordinates="48.833825542549,2.290441207"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T15:07:50.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2426"
+	name="Amphithéâtre">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>1er étage</floor>
+	</address>
+</content>
+</entry>

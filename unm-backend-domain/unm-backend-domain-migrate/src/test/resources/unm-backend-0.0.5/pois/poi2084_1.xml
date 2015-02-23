@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2084_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2084_1.xml"/>
+<title>Master 2 professionnel Coordinateur d'études dans le domaine</title>
+<updated>2014-08-15T01:46:53.931+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2084"
+	coordinates="48.780187827077,2.043960615"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-08T17:33:21.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	deletedAt="2011-04-08T17:34:15.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	name="Master 2 professionnel Coordinateur d'études dans le domaine">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi546_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi546_1.xml"/>
+<title>Polygone 1</title>
+<updated>2014-08-15T01:46:40.677+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="546"
+	coordinates="48.996573042423,1.7109167575836|48.996096132032,1.7103427648544|48.996212280371,1.7101335525513|48.99653960605,1.7105278372765|48.996680390627,1.7102515697479|48.996622317037,1.7101737856865|48.996604718966,1.7101952433586|48.996293232083,1.7098143696785|48.996544885479,1.7093423008919|48.996844052197,1.70972853899|48.996669831797,1.7100611329079|48.996782459196,1.7102006077766|48.996961958586,1.7098626494408|48.997069305952,1.7099967598915|48.996573042423,1.7109167575"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-10-08T10:04:54.000+02:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	deletedAt="2011-06-03T15:04:07.000+02:00"
+	createdBy="raphael"
+	updatedBy="yasmine"
+	name="Polygone 1">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>7 rue Jean Hoët
+78200 Mantes-La-Jolie </fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5926_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5926_1.xml"/>
+<title>Institut d’électronique fondamentale (IEF)</title>
+<updated>2014-08-15T01:47:31.737+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5926"
+	coordinates="48.698154748068,2.1658556163311"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:04:23.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5222"
+	name="Institut d’électronique fondamentale (IEF)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Unité mixte de recherche (UMR) 8622.</description>
+	<address>
+		<floor>Bâtiment 220, bureau 132</floor>
+		<url>http://www.ief.u-psud.fr/</url>
+		<phone>01 69 15 76 12</phone>
+		<fax>01 69 15 40 50</fax>
+		<email>patricia.polselli@ief.u-psud.fr</email>
+	</address>
+</content>
+</entry>

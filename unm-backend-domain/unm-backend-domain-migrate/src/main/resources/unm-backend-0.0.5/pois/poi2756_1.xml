@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2756_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2756_1.xml"/>
+<title>Villetaneuse UFR Sc.de la Communication</title>
+<updated>2014-08-15T01:46:59.837+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2756"
+	coordinates="48.955510356539,2.340891569765"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-04T10:36:27.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="248"
+	name="Villetaneuse UFR Sc.de la Communication">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="1067" active="true"/>
+	<child uid="1159" active="true"/>
+	<child uid="1160" active="true"/>
+	<child uid="1167" active="true"/>
+	<child uid="1166" active="true"/>
+	<child uid="1151" active="true"/>
+</content>
+</entry>

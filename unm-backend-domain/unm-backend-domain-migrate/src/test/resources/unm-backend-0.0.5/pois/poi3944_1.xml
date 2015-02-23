@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3944_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3944_1.xml"/>
+<title>ED 391</title>
+<updated>2014-08-15T01:47:11.927+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3944"
+	coordinates="48.844555412639,2.3432847484946"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T16:04:12.000+02:00"
+	updatedAt="2011-06-03T16:54:09.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3762"
+	name="ED 391">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Sciences mécaniques, acoustique et électronique de Paris (ED 391)</description>
+	<address>
+		<url>http://www.ed391.upmc.fr/index.php</url>
+		<phone>01 44 27 40 71</phone>
+		<email>marie.aubin@upmc.fr</email>
+	</address>
+</content>
+</entry>

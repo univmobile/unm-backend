@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi892_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi892_1.xml"/>
+<title>Archéologie des Amériques ARCHAM</title>
+<updated>2014-08-15T01:46:42.976+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="892"
+	coordinates="48.904165045341,2.209936"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T17:34:19.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1032"
+	name="Archéologie des Amériques ARCHAM">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Permanence téléphonique jeudi et vendredi.</description>
+	<address>
+		<itinerary>RER A
+Station Nanterre-Université
+
+Bus 167, 304 et 367
+</itinerary>
+		<url>http://www.mae.u-paris10.fr/archam/Presentation-generale.html</url>
+		<phone>01 46 69 25 16</phone>
+		<email>chantal.thomas@mae.u-paris10.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3606_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3606_1.xml"/>
+<title>Bok Xalat « vers le même but »</title>
+<updated>2014-08-15T01:47:08.501+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3606"
+	coordinates="48.94601071952,2.3608260601759"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:53:32.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Bok Xalat « vers le même but »">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Représenter une image du Sénégal et de l’Afrique de l’Ouest en général et accompagner les étudiants durant leur scolarité universitaire dans de bonnes conditions (éviter la nostalgie du pays et la solitude).</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment C, bureau 021</floor>
+		<phone>06 99 49 32 77</phone>
+		<email>AESPARIS8@yahoo.fr</email>
+	</address>
+</content>
+</entry>

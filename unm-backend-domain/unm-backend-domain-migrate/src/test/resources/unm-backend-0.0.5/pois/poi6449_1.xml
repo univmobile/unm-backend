@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6449_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6449_1.xml"/>
+<title>Mathématiques (M2 Recherche)</title>
+<updated>2014-08-15T01:47:37.328+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6449"
+	coordinates="48.832913700689,2.3682926595211"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-24T16:06:51.000+02:00"
+	updatedAt="2011-06-24T16:15:53.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1770"
+	name="Mathématiques (M2 Recherche)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>- Logique mathématique et fondements de l’informatique (M2 LMFI)
+- Mathématiques fondamentales (M2)</description>
+	<address>
+		<floor>Chevaleret, 5ème étage, bureau 5C24</floor>
+		<openingHours>Du lundi au vendredi
+9h00-12h00
+14h00-17h00</openingHours>
+		<url>http://www.math.univ-paris-diderot.fr/</url>
+		<phone>01 57 27 93 06</phone>
+		<fax>01 57 27 91 40</fax>
+		<email>catherine.prudlo@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

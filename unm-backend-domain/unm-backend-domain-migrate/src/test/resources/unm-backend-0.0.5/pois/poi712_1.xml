@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi712_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi712_1.xml"/>
+<title>Association MAGISTRAM</title>
+<updated>2014-08-15T01:46:41.288+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="712"
+	coordinates="48.852925883648,2.33541414141"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-11T15:33:13.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	deletedAt="2011-02-23T14:43:39.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="Association MAGISTRAM">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address
+		countryCode="FR">
+		<phone>01 46 64 94 86</phone>
+		<email>assomagistram@yahoo.fr</email>
+		<fullAddress>13 rue du Four 
+75006 Paris
+</fullAddress>
+	</address>
+</content>
+</entry>

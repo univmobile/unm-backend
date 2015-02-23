@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5604_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5604_1.xml"/>
+<title>Association sportive de l'UPEC</title>
+<updated>2014-08-15T01:47:27.928+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5604"
+	coordinates="48.787855841785,2.4443131685257"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T11:22:01.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4334"
+	name="Association sportive de l'UPEC">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<fax>test</fax>
+	</address>
+</content>
+</entry>

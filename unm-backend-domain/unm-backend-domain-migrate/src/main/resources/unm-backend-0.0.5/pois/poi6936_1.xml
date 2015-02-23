@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6936_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6936_1.xml"/>
+<title>UFR Musique et musicologie</title>
+<updated>2014-08-15T01:47:41.458+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6936"
+	coordinates="48.900267272596,2.3467920720577"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-26T16:59:19.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	deletedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="UFR Musique et musicologie">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+</content>
+</entry>

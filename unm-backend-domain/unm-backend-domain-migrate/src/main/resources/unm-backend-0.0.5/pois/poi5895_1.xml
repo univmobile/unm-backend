@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5895_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5895_1.xml"/>
+<title>Créperie Comptoir de l' Archipel</title>
+<updated>2014-08-15T01:47:31.372+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5895"
+	coordinates="48.788213928103,2.4434991180897"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T10:37:43.000+02:00"
+	updatedAt="2011-07-26T16:14:07.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4859"
+	name="Créperie Comptoir de l' Archipel">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>10h30 - 16h00</openingHours>
+		<phone>01-48-99-29-40</phone>
+		<email>restaurant.creteil@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

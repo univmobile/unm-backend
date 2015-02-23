@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3613_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3613_1.xml"/>
+<title>CISED</title>
+<updated>2014-08-15T01:47:08.586+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3613"
+	coordinates="48.946279273817,2.3605504631996"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:57:30.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="CISED">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>5, rue de la liberté 93200 Saint-Denis</floor>
+		<url>www.cised.fr</url>
+		<phone>01 49 71 20 15</phone>
+		<email>cised@free.fr</email>
+	</address>
+</content>
+</entry>

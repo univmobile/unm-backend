@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1733_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1733_1.xml"/>
+<title>Infirmerie</title>
+<updated>2014-08-15T01:46:50.344+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1733"
+	coordinates="48.914084772346,2.4190232902"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T22:26:14.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="356"
+	name="Infirmerie">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Infirmerie.</description>
+	<address>
+		<floor>RDC - r 011.</floor>
+		<openingHours>Lundi - Jeudi :
+8h30 - 17h
+Vendredi :
+8h30 - 12h</openingHours>
+		<phone>06 15 71 64 96</phone>
+	</address>
+</content>
+</entry>

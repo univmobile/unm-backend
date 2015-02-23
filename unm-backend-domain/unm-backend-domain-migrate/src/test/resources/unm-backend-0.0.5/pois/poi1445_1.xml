@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1445_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1445_1.xml"/>
+<title>Géographie (M2)</title>
+<updated>2014-08-15T01:46:47.675+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1445"
+	coordinates="48.825433013671,2.3666042089462"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T14:58:23.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="j.richer"
+	parentUid="1772"
+	name="Géographie (M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Les Olympiades Immeuble Montréal - 1er étage, bureau 118</floor>
+		<openingHours>Du lundi au vendredi
+10h-12h
+14h-16h</openingHours>
+		<itinerary>Métro 14 Olympiades
+Métro 7 Tolbiac
+Bus 62, 64, 83 Tolbiac Baudricourt</itinerary>
+		<url>http://www.univ-paris-diderot.fr/sc/site.php?bc=formations&amp;np=MENTION?ND=894</url>
+		<phone>01 57 27 71 62</phone>
+		<email>kabadiakite@univ-paris-diderot.fr</email>
+	</address>
+	<attachment id="76" title="javelot.gif" type="image" url="/uploads/poi/1a6878ec2160a2770ea022e38bcabf8116fe5d2a.gif"/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7002_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7002_1.xml"/>
+<title>Université &amp; Solidarité Internationale (USI)</title>
+<updated>2014-08-15T01:47:42.153+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7002"
+	coordinates="48.902854185007,2.2154456377029"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T16:11:09.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2488"
+	name="Université &amp; Solidarité Internationale (USI)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>- Relayer et promouvoir à l’université et à Nanterre, des mouvements de solidarité internationale tels que les associations SURVIE, ATTAC, CADTM, CCFD, et les sociétés civiles du Nord et du Sud.
+- Relayer les mobilisations contre les relations de domination ou de dépendance Nord/Sud.
+- Promouvoir une économie au service des peuples.
+- Défendre une université populaire et engagée contre toute forme de domination des peuples. Défendre une pédagogie active. </description>
+	<address>
+		<floor>Bâtiment G - Salle 209 - 2ème étage</floor>
+		<url>https://www.facebook.com/profile.php?id=100001641028908</url>
+		<email>usi.nanterre@gmail.com</email>
+	</address>
+</content>
+</entry>

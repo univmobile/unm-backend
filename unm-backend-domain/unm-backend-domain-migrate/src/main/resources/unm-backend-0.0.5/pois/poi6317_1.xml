@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6317_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6317_1.xml"/>
+<title>STAPS-Entraînement sportif L1</title>
+<updated>2014-08-15T01:47:35.966+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6317"
+	coordinates="48.795884633224,2.4480816721916"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T16:30:29.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4902"
+	name="STAPS-Entraînement sportif L1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://sess-staps.u-pec.fr/formations/</url>
+		<phone>01 45 17  44 05</phone>
+		<email>champagne@u-pec.fr </email>
+	</address>
+</content>
+</entry>

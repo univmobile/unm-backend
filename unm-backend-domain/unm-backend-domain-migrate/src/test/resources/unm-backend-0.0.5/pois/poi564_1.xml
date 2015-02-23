@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi564_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi564_1.xml"/>
+<title>Polygone 1</title>
+<updated>2014-08-15T01:46:40.730+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="564"
+	coordinates="48.78017477745,2.0437091588974|48.780531799264,2.0443689823151|48.780068730877,2.0448786020279|48.780100544872,2.0445621013641|48.780302033041,2.0443314313889|48.780153568153,2.0440256595612|48.78017477745,2.0437091588"
+	active="true"
+	markerType="polygon"
+	createdAt="2010-10-13T13:58:01.000+02:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	deletedAt="2011-06-03T15:06:55.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Polygone 1">
+	<poiType id="32" label="Polygone" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>47 boulevard Vauban
+78280 Guyancourt</fullAddress>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4772_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4772_1.xml"/>
+<title>Qualité, logistique industrielle et organisation</title>
+<updated>2014-08-15T01:47:20.382+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4772"
+	coordinates="48.949178581748,2.2330570220947"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:08:24.000+02:00"
+	updatedAt="2011-06-08T17:45:32.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="4060"
+	name="Qualité, logistique industrielle et organisation">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Nadjia Touati</description>
+	<address>
+		<email>iutqlio@ml.u-cergy.fr</email>
+	</address>
+</content>
+</entry>

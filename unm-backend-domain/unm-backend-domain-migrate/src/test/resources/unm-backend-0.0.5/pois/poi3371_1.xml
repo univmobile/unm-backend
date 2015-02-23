@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3371_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3371_1.xml"/>
+<title>PECSA - UMR 7195</title>
+<updated>2014-08-15T01:47:05.886+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3371"
+	coordinates="48.845961272212,2.35859831795"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:38:18.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2824"
+	name="PECSA - UMR 7195">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Physicochimie des électrolytes, colloïdes, et sciences analytiques</description>
+	<address>
+		<floor>5è étage bureau 553</floor>
+		<url>http://www.pecsa.upmc.fr/</url>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4941_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4941_1.xml"/>
+<title>CICLaS (EA 4405)</title>
+<updated>2014-08-15T01:47:22.061+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4941"
+	coordinates="48.870034656118,2.2730910032988"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T15:06:13.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="CICLaS (EA 4405)">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Centre de recherche interdisciplinaire sur les Identités Culturelles et les Langues de Spécialités</description>
+	<address>
+		<floor>Bureau B 307</floor>
+		<url>http://www.ciclas.dauphine.fr/</url>
+		<phone>01 44 05 43 37 </phone>
+		<email>stephanie.deschamps@dauphine.fr   </email>
+	</address>
+</content>
+</entry>

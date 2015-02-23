@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2156_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2156_1.xml"/>
+<title>Secrétariat de la scolarité</title>
+<updated>2014-08-15T01:46:54.741+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2156"
+	coordinates="48.825462518024,2.19906672835"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:27:35.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	deletedAt="2011-04-26T15:08:00.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Secrétariat de la scolarité">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau B220</floor>
+	</address>
+</content>
+</entry>

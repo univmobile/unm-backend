@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4613_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4613_1.xml"/>
+<title>ERASME</title>
+<updated>2014-08-15T01:47:19.022+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4613"
+	coordinates="48.854755146112,2.7751260995865"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T16:52:41.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4535"
+	name="ERASME">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER A : Val d'Europe</itinerary>
+		<fullAddress>6 cours du Danube
+77700 Serris</fullAddress>
+	</address>
+	<child uid="5985" active="true"/>
+	<child uid="5983" active="true"/>
+	<child uid="5977" active="true"/>
+	<child uid="5979" active="true"/>
+	<child uid="5980" active="true"/>
+	<child uid="4618" active="true"/>
+	<child uid="5676" active="true"/>
+	<child uid="5696" active="true"/>
+	<child uid="5739" active="true"/>
+	<child uid="5743" active="true"/>
+	<child uid="5779" active="true"/>
+	<child uid="5782" active="true"/>
+	<child uid="5783" active="true"/>
+	<child uid="5821" active="true"/>
+	<child uid="5822" active="true"/>
+	<child uid="5945" active="true"/>
+	<child uid="5949" active="true"/>
+	<child uid="5973" active="true"/>
+	<child uid="6085" active="true"/>
+</content>
+</entry>

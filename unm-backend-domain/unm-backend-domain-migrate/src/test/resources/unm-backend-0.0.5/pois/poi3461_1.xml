@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3461_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3461_1.xml"/>
+<title>Sciences du Vivant - L2-3</title>
+<updated>2014-08-15T01:47:06.895+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3461"
+	coordinates="48.846558681998,2.3587614297867"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:02:01.000+02:00"
+	updatedAt="2011-07-20T14:41:54.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="yasmine"
+	parentUid="2767"
+	name="Sciences du Vivant - L2-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>L’objectif de la licence est de permettre aux étudiants d’acquérir de solides connaissances scientifiques pour une réelle compréhension du Vivant. 
+
+
+
+
+</description>
+	<address>
+		<floor>1è étage</floor>
+		<openingHours>Lundi au vendredi : 9h00-11h30/13h30-17h00</openingHours>
+		<url>http://www.licence.sdv.upmc.fr</url>
+		<phone>01 44 27 38 92</phone>
+		<email>licence.sdv@upmc.fr</email>
+	</address>
+</content>
+</entry>

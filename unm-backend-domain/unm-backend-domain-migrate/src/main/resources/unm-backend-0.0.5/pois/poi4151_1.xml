@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4151_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4151_1.xml"/>
+<title>Centre d’études médiévales anglaises</title>
+<updated>2014-08-15T01:47:14.296+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4151"
+	coordinates="48.852654091723,2.3415751755238"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T17:03:54.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3695"
+	name="Centre d’études médiévales anglaises">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<phone>01 53 10 57 00</phone>
+	</address>
+</content>
+</entry>

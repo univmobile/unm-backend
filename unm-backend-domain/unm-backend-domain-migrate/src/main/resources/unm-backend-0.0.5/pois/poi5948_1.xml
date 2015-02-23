@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5948_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5948_1.xml"/>
+<title>Droit privé des personnes et du patrimoine Maste</title>
+<updated>2014-08-15T01:47:31.977+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5948"
+	coordinates="48.793259116517,2.4456153810024"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:41:49.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	deletedAt="2011-06-21T14:22:29.000+02:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	name="Droit privé des personnes et du patrimoine Maste">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau A026 </floor>
+		<url>http://droit.u-pec.fr/formations/master-2-droit-prive-des-personnes-et-du-patrimoine-298266.kjsp?RH=1240410556083</url>
+		<phone>01 56 72 60 39</phone>
+		<email>charpateau-jammes@u-pec.fr  </email>
+	</address>
+</content>
+</entry>

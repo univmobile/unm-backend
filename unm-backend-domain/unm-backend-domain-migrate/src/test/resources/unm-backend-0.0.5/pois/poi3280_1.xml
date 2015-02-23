@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3280_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3280_1.xml"/>
+<title>EA 2294 - Centre de recherche de l'Institut des Hautes Etude</title>
+<updated>2014-08-15T01:47:04.910+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3280"
+	coordinates="48.846765154409,2.344518564641"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:45:23.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="EA 2294 - Centre de recherche de l'Institut des Hautes Etude">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<url>http://www.u-paris2.fr/IHEI/0/fiche___pagelibre/</url>
+		<phone>01 44 41 55 50</phone>
+		<email>ihei@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

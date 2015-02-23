@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7079_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7079_1.xml"/>
+<title>La boîte à frites</title>
+<updated>2014-08-15T01:47:43.029+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7079"
+	coordinates="48.944891125807,2.363857626915"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-23T15:31:17.000+01:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="Marion MAINFRAY"
+	updatedBy="Marion MAINFRAY"
+	parentUid="3450"
+	name="La boîte à frites">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Restauration rapide</description>
+	<address>
+		<openingHours>Lundi au vendredi de 8h à 18h</openingHours>
+	</address>
+</content>
+</entry>

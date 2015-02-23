@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6329_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6329_1.xml"/>
+<title>STAPS- Santé : Vieillissement et activités physiques adaptée</title>
+<updated>2014-08-15T01:47:36.085+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6329"
+	coordinates="48.79597356646,2.4485215544701"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T17:07:00.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4902"
+	name="STAPS- Santé : Vieillissement et activités physiques adaptée">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://sess-staps.u-pec.fr/formations/licences/</url>
+		<phone>01 45 17 44 07 </phone>
+		<email>ferrasson@u-pec.fr </email>
+	</address>
+</content>
+</entry>

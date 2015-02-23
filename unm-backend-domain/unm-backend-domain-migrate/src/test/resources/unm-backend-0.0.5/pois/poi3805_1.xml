@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3805_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3805_1.xml"/>
+<title>BU Gernet-Glotz</title>
+<updated>2014-08-15T01:47:10.582+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3805"
+	coordinates="48.866674790982,2.3392828926444"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-13T17:16:44.000+02:00"
+	updatedAt="2011-09-26T16:46:05.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="yasmine"
+	parentUid="3770"
+	name="BU Gernet-Glotz">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Enseignants-chercheurs, chercheurs et étudiants de master et de doctorat travaillant dans le domaine de l'Antiquité et membres des unités de recherche et des établissements de rattachement des centres Gernet et Glotz (Paris-Sorbonne, Panthéon-Sorbonne (Paris-I), Denis-Diderot (Paris-VII), EHESS, EPHE).
+Discipline : histoire ancienne (mondes grec, hellénistique et romain, hors Égypte) </description>
+	<address>
+		<floor>Escalier A, niveau E1</floor>
+		<openingHours>Du lundi au vendredi :
+9h30 / 18h00</openingHours>
+		<phone>01 47 03 84 35</phone>
+	</address>
+</content>
+</entry>

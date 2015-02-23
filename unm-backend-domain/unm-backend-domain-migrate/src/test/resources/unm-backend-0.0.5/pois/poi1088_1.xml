@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1088_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1088_1.xml"/>
+<title>Études et recherches européennes</title>
+<updated>2014-08-15T01:46:44.681+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1088"
+	coordinates="48.846904582015,2.3447130247"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-15T17:17:13.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1027"
+	name="Études et recherches européennes">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>Aile Cujas, esc. A, 3e étage</floor>
+		<itinerary>12 place du Panthéon
+75005 Paris</itinerary>
+	</address>
+</content>
+</entry>

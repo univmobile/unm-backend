@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6074_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6074_1.xml"/>
+<title>BU de Sociologie</title>
+<updated>2014-08-15T01:47:33.419+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6074"
+	coordinates="48.837112258155,2.5931033492088"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:22:32.000+02:00"
+	updatedAt="2011-06-15T15:48:51.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4598"
+	name="BU de Sociologie">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Collections :
+-Sociologie générale
+-Processus sociaux
+-Démographie
+-Groupes sociaux
+-Pratiques
+-Enseignement, etc.
+-Luxe</description>
+	<address>
+		<floor>Bât A - Rez de Jardin</floor>
+		<openingHours>Lundi - vendredi 8h30 - 18h30 </openingHours>
+		<url>http://www.univ-mlv.fr/bibliotheque/bibliotheques/bibliotheque-de-sociologie/</url>
+		<phone>01 60 95 76 30</phone>
+		<email>bibbor@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

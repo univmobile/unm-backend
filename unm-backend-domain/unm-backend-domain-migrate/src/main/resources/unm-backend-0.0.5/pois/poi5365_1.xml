@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5365_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5365_1.xml"/>
+<title>Physique et applications (L3 PAPP)</title>
+<updated>2014-08-15T01:47:25.606+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5365"
+	coordinates="48.70277231703,2.1822506189346"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T15:41:16.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5364"
+	name="Physique et applications (L3 PAPP)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 470, bureau C 206</floor>
+		<openingHours>Lundi et vendredi
+8h30-16h00
+Mardi et jeudi
+8h30-17h00
+(fermé 1h le midi)</openingHours>
+		<url>http://h0.web.u-psud.fr/lpa/spip/</url>
+		<phone>01 69 15 74 47</phone>
+		<fax>01 69 15 58 74</fax>
+		<email>cecile.farnier@u-psud.fr</email>
+	</address>
+</content>
+</entry>

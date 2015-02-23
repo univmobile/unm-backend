@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4485_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4485_1.xml"/>
+<title>DIESE</title>
+<updated>2014-08-15T01:47:17.802+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4485"
+	coordinates="48.62637001308,2.430919893086"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:04:18.000+02:00"
+	updatedAt="2011-09-06T12:08:56.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4440"
+	name="DIESE">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>DIESE est la Junior-Entreprise de l'ENSIIE. Depuis plus de 25 ans, elle propose des missions rémunérées permettant de mettre en pratique les connaissances acquises à l'école. DIESE a su tout au long de son
+existence cultiver un goût pour le dynamisme et le professionnalisme. </description>
+	<address>
+		<phone>01 60 78 15 89</phone>
+		<email>info@diese.org</email>
+	</address>
+</content>
+</entry>

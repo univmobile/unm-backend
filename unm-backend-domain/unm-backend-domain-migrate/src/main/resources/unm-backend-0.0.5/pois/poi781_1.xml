@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi781_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi781_1.xml"/>
+<title>Centre Bourg -la-Reine</title>
+<updated>2014-08-15T01:46:41.867+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="781"
+	coordinates="48.778326883889,2.3180401325"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-16T14:45:52.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1"
+	name="Centre Bourg -la-Reine">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B 
+Station Bourg-la-Reine </itinerary>
+		<fullAddress>16 boulevard Carnot.
+92340 Bourg-la-Reine </fullAddress>
+	</address>
+	<child uid="972" active="true"/>
+	<attachment id="16" title="bourg_la_reine.jpg" type="image" url="/uploads/poi/0d5c0c49d28a0e50ef220e867605f4d6bf0e004e.jpg"/>
+</content>
+</entry>

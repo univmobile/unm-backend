@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7123_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7123_1.xml"/>
+<title>Amphithéâtre A</title>
+<updated>2014-08-15T01:47:43.516+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7123"
+	coordinates="48.782281876412,2.216534614563"
+	active="true"
+	markerType="point"
+	createdAt="2012-02-05T15:20:35.000+01:00"
+	updatedAt="2012-02-05T19:46:27.000+01:00"
+	createdBy="rrivoire"
+	updatedBy="rrivoire"
+	parentUid="505"
+	name="Amphithéâtre A">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>165 places</description>
+	<address>
+		<floor>Bâtiment Mermoz</floor>
+	</address>
+</content>
+</entry>

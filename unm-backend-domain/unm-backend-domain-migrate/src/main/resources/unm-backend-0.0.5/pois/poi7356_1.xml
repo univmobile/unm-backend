@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7356_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7356_1.xml"/>
+<title>Bibliothèque de l'École nationale des chartes</title>
+<updated>2014-08-15T01:47:45.567+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7356"
+	coordinates="48.848640576864,2.3430410027504"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-18T13:36:32.000+02:00"
+	updatedAt="2013-07-05T17:49:28.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	parentUid="7349"
+	name="Bibliothèque de l'École nationale des chartes">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Les ressources documentaires et bibliographiques de la bibliothèque s’inscrivent dans la vocation fondamentale de l’établissement : l’explication et l’exploitation des sources historiques, ainsi que la réflexion sur le patrimoine.
+
+Ses collections sont particulièrement développées en sources de l’histoire de France et diplomatique, paléographie, philologie latine et romane, histoire du livre, bibliographie et codicologie, histoire du droit, archéologie et histoire de l’art ; et concernent principalement la période médiévale.
+
+Aujourd’hui, la bibliothèque de l’Ecole nationale des chartes représente dans sa spécialité un pôle d’excellence reconnu en France comme à l’étranger ; ses collections sont riches de plus de 150 000 volumes, de 1200 titres de périodiques, dont 670 vivants, et d’autant de séries, rassemblant monographies ou éditions de sources essentielles.
+
+Cette bibliothèque de l’Ecole nationale des chartes est accessible directement aux enseignants-chercheurs et doctorants (SHS), et sur accréditation aux étudiants de master et à tout autre public justifiant d'une recherche à la bibliothèque.
+
+Conditions d’accès :
+
+La bibliothèque accueille, dans la limite des places disponibles :
+
+   -  les élèves, étudiants, enseignants-chercheurs et le personnel de l’École nationale des chartes,
+   - les archivistes paléographes,
+    - les personnels de l’URFIST et du CTHS,
+    - les doctorants et les enseignants-chercheurs en sciences humaines et sociales des établissements d’enseignement supérieur,
+    - les étudiants de master en sciences humaines (sur demande justifiée),
+    - les personnels des archives, bibliothèques et musées, les professionnels de la filière du livre.
+
+En savoir plus : http://www.enc.sorbonne.fr/venir-la-bibliotheque
+</description>
+	<address>
+		<floor>19, rue de la Sorbonne 75005 PARIS</floor>
+		<openingHours>La bibliothèque est ouverte :
+
+    - lundi-vendredi : 9h00-19h00
+    - samedi : 9h30-18h00
+
+La bibliothèque est fermée :
+
+    - pendant les périodes d’examens ou de concours
+    - pendant les vacances universitaires de Noël et du mois d’août.
+
+Des horaires réduits sont appliqués au début du mois de septembre, de 9h00 à 17h00, du lundi au vendredi.</openingHours>
+		<url>http://www.enc.sorbonne.fr/bibliotheque</url>
+		<phone>01 55 42 75 08</phone>
+		<fax>01 55 42 75 04</fax>
+		<email>bibliotheque@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

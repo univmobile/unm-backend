@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3106_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3106_1.xml"/>
+<title>Département : Monde anglophone</title>
+<updated>2014-08-15T01:47:03.054+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3106"
+	coordinates="48.850704485574,2.3419476673"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T16:26:18.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="3030"
+	name="Département : Monde anglophone">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Organisation
+Licences : bureau N°376 à  Censier 
+Mme Gross, Mme Himidi, M. Le Bourdon
+Tél. : 01 45 87 41 54
+Mél. : licence.monde.anglophone@univ-paris3.fr
+
+Masters et concours, et les VAC :  l'Institut 5, rue de l'école de Médecine  
+Mme Michel
+Tél. : 01 40 51 33 00
+Mél. : master.monde.anglophone@univ-paris3.fr
+
+Chargés de cours et Enseignants :
+Institut du Monde Anglophone - 5, rue de l'école de Médecine
+Melle Redondo
+Tél : 01 40 51 33 17
+Mél : pauline.redondo@univ-paris3.fr </description>
+	<address>
+		<phone>01 40 51 33 00</phone>
+		<fax>01 40 51 33 19</fax>
+		<email>dept-ma@univ-paris3.fr</email>
+	</address>
+</content>
+</entry>

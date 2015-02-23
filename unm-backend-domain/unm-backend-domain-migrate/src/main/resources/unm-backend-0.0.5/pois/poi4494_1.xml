@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4494_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4494_1.xml"/>
+<title>UMR INSERM 952 - CNRS 7224</title>
+<updated>2014-08-15T01:47:17.905+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4494"
+	coordinates="48.848111227191,2.3584057018161"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:08:47.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2806"
+	name="UMR INSERM 952 - CNRS 7224">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Physiopathologie des maladies du système nerveux central - UMR INSERM 952-CNRS 7224</description>
+	<address>
+		<floor>4è étage</floor>
+		<url>http://pmsnc.snv.jussieu.fr/</url>
+		<phone>01 44 27 60 65</phone>
+		<email>barbara.rebecchi@snv.jussieu.fr</email>
+	</address>
+</content>
+</entry>

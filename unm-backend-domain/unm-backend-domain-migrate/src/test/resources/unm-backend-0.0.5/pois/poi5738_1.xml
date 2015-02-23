@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5738_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5738_1.xml"/>
+<title>Lpcp</title>
+<updated>2014-08-15T01:47:29.495+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5738"
+	coordinates="48.834377193297,2.2477003745735"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T15:14:24.000+02:00"
+	updatedAt="2011-06-14T17:05:08.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5550"
+	name="Lpcp">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de Psychologie Clinique et Psychopathologie
+MARTY FRANCOIS</description>
+	<address>
+		<phone>01 55 20 59 79</phone>
+		<fax>01 55 20 59 56 </fax>
+	</address>
+</content>
+</entry>

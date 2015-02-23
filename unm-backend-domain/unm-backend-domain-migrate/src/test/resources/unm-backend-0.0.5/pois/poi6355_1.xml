@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6355_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6355_1.xml"/>
+<title>Sciences du langage (L1-M1)</title>
+<updated>2014-08-15T01:47:36.349+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6355"
+	coordinates="48.83303973374,2.3686259239912"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T13:58:37.000+02:00"
+	updatedAt="2011-06-22T15:01:00.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1770"
+	name="Sciences du langage (L1-M1)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>- Licence Sciences du langage
+- Master 1 Sciences du langage</description>
+	<address>
+		<floor>4e étage, plateau D, bureau 4D04</floor>
+		<openingHours>Tous les jours
+9h30-12h30
+14h-16h30</openingHours>
+		<url>http://www.linguist.univ-paris-diderot.fr/</url>
+		<phone>01 57 27 56 88</phone>
+		<email>scolarite@linguist.jussieu.fr</email>
+	</address>
+</content>
+</entry>

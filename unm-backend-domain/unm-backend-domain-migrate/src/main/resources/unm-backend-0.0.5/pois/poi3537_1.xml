@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3537_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3537_1.xml"/>
+<title>UFR 929</title>
+<updated>2014-08-15T01:47:07.787+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3537"
+	coordinates="48.847493169913,2.3545756749809"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T15:03:12.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	deletedAt="2011-06-01T15:46:27.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	name="UFR 929">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description> L’Unité de Formation et de Recherche (UFR 929) de mathématiques de l’Université Pierre et Marie Curie – Paris 6 (UPMC), dénommée Faculté de Mathématiques Pierre et Marie Curie, réunit l’ensemble des départements de formation et des unités de recherche de mathématiques de l’université.
+	
+
+Avec un potentiel de 240 enseignants chercheurs et 50 chercheurs encadrant près de 250 doctorants, avec 60 moniteurs et une équipe de 50 ingénieurs, administratifs et techniciens, la Faculté de Mathématiques représente l’un des plus importants pôles de compétences de haut niveau d’Europe et du monde pour la formation et la recherche en mathématiques pures et appliquées.
+	
+Chaque année, la Faculté de Mathématiques accueille de nombreux mathématiciens du monde entier : étudiants, doctorants, post doctorants ou chercheurs reconnus, venant compléter leur formation ou participer à des programmes de recherche.</description>
+	<address>
+		<floor>1è étage bureau 116</floor>
+		<url>http://www.ufrmath.upmc.fr/</url>
+		<phone>01 44 27 58 72 </phone>
+		<email>ufrmath@upmc.fr</email>
+	</address>
+</content>
+</entry>

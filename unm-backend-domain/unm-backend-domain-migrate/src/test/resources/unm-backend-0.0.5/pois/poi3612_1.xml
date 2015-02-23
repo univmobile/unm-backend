@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3612_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3612_1.xml"/>
+<title>Centre d’initiatives et de services des étudiants de Seine-S</title>
+<updated>2014-08-15T01:47:08.584+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3612"
+	coordinates="48.946247594636,2.3606222122908"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:57:08.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	deletedAt="2011-05-11T16:58:45.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	name="Centre d’initiatives et de services des étudiants de Seine-S">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+</content>
+</entry>

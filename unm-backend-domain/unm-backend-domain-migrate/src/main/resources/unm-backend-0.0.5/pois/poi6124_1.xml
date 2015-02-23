@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6124_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6124_1.xml"/>
+<title>Cellule Accueil Handicap</title>
+<updated>2014-08-15T01:47:34.029+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6124"
+	coordinates="48.839294465119,2.5875739753246"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T14:06:28.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="Cellule Accueil Handicap">
+	<poiType id="33" label="service d'accueil des étudiants handicapés " categoryId="7" categoryLabel="Relais handicap"/>
+	<description>Accueil, prise en charge et aide aux élèves en situtation d'handicap</description>
+	<address>
+		<floor>Bureau OB089</floor>
+		<url>http://www.univ-mlv.fr/vie-du-campus/vie-etudiante/informations-sante-sociale-handicap/</url>
+		<phone>01 60 95 72 95</phone>
+		<email>accueilhandicap@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

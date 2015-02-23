@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2505_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2505_1.xml"/>
+<title>ISTY 2000</title>
+<updated>2014-08-15T01:46:57.430+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2505"
+	coordinates="48.985047896667,1.69985935091"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T15:16:08.000+02:00"
+	updatedAt="2012-02-06T08:57:32.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="512"
+	name="ISTY 2000">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L’ISTY 2000 est l’association de robotique de l’école d’Ingénieurs ISTY Mécatronique. Elle a pour but de développer un robot et de participer à la Coupe de France de robotique</description>
+	<address>
+		<email>isty2000@gmail.com</email>
+	</address>
+</content>
+</entry>

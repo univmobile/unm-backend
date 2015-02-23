@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4065_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4065_1.xml"/>
+<title>UMR 7599</title>
+<updated>2014-08-15T01:47:13.263+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4065"
+	coordinates="48.833206713081,2.3687952384353"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:18:16.000+02:00"
+	updatedAt="2011-09-05T14:18:32.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3928"
+	name="UMR 7599">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de probabilités et modèles aléatoires (LPMA) - UMR 7599</description>
+	<address>
+		<floor>Bureau 3E8</floor>
+		<url>http://www.proba.jussieu.fr/</url>
+		<phone>01 44 27 53 19</phone>
+		<email>isabelle.mariage@upmc.fr</email>
+	</address>
+</content>
+</entry>

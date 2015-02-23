@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5542_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5542_1.xml"/>
+<title>SUAPS</title>
+<updated>2014-08-15T01:47:27.263+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5542"
+	coordinates="48.787919459883,2.4442863464355"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:12:28.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="yasmine"
+	parentUid="4334"
+	name="SUAPS">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<address>
+		<floor>i3, 1er étage</floor>
+		<openingHours>Lundi-jeudi :  9h-12h30 et 13h30-17h30,
+Vendredi : 9h-12h30 et 13h30-16h30
+
+</openingHours>
+		<phone>01 45 17 13 84</phone>
+		<email>suaps@u-pec.fr</email>
+	</address>
+</content>
+</entry>

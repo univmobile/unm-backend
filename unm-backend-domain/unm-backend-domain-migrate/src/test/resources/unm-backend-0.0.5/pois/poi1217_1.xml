@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1217_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1217_1.xml"/>
+<title>Maison de l'Archéologie et de L'Ethnologie</title>
+<updated>2014-08-15T01:46:45.895+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1217"
+	coordinates="48.904539990377,2.2100678086281|48.904455363538,2.2101321816444|48.904293161696,2.2098532319069|48.904152116189,2.2100034356117|48.904328423011,2.2103038430214|48.904250848086,2.210421860218|48.904000726897,2.2099752724171|48.904293396768,2.209599763155|48.904539990377,2.21006780862"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-03-25T14:46:29.000+01:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	deletedAt="2011-04-29T15:17:06.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	name="Maison de l'Archéologie et de L'Ethnologie">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<fullAddress>21, allée de l'université
+92023 Nanterre CEDEX</fullAddress>
+	</address>
+</content>
+</entry>

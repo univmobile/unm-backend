@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4434_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4434_1.xml"/>
+<title>Site de Vitry</title>
+<updated>2014-08-15T01:47:17.248+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4434"
+	coordinates="48.776116922392,2.3709225654602"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T14:30:36.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="3841"
+	name="Site de Vitry">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<description>122 rue Paul Armangot 94400 Vitry Sur Seine
+</description>
+	<child uid="4950" active="true"/>
+</content>
+</entry>

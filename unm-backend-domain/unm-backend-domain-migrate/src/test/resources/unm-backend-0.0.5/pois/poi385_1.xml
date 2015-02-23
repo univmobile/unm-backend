@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi385_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi385_1.xml"/>
+<title>Saint-Denis</title>
+<updated>2014-08-15T01:46:39.640+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="385"
+	coordinates="48.939601599168,2.353005409"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-26T16:27:52.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="raphael"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="2"
+	name="Saint-Denis">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+	<child uid="409" active="true"/>
+	<child uid="397" active="true"/>
+	<child uid="391" active="true"/>
+	<child uid="390" active="true"/>
+	<child uid="394" active="true"/>
+	<child uid="400" active="true"/>
+	<child uid="403" active="true"/>
+	<child uid="406" active="true"/>
+</content>
+</entry>

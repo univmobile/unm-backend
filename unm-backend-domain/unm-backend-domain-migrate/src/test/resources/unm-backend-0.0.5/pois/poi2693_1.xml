@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2693_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2693_1.xml"/>
+<title>BU Sc. et techniques biomédicales </title>
+<updated>2014-08-15T01:46:59.218+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2693"
+	coordinates="48.855495641613,2.33256127"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:17:48.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2333"
+	name="BU Sc. et techniques biomédicales ">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>1er étage</floor>
+		<openingHours>Lundi-Vendredi
+9h00-20h00
+Samedi 10h00-17h00
+horaires réduits
+Noël 9h00-17h00
+9h-18h en été</openingHours>
+		<phone>01 42 86 33 31</phone>
+		<email>sciences.saintsperes@ bu.parisd escartes.fr</email>
+	</address>
+</content>
+</entry>

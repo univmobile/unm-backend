@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3049_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3049_1.xml"/>
+<title>LABORATOIRE ADAPTATIONS TRAVAIL INDIVIDU</title>
+<updated>2014-08-15T01:47:02.463+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3049"
+	coordinates="48.901624234033,2.39344608038"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:31:04.000+02:00"
+	updatedAt="2011-06-14T17:24:36.000+02:00"
+	deletedAt="2011-06-08T10:16:51.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	name="LABORATOIRE ADAPTATIONS TRAVAIL INDIVIDU">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Hélène Godart
+
+Secrétaire 
+</description>
+	<address>
+		<floor>Bureau 6008</floor>
+		<phone>01 55 20 59 79</phone>
+		<fax>01 55 20 59 56</fax>
+	</address>
+</content>
+</entry>

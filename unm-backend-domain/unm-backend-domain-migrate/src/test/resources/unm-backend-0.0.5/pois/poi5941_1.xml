@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5941_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5941_1.xml"/>
+<title>Histoire et philosophie des sciences (M1-M2)</title>
+<updated>2014-08-15T01:47:31.900+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5941"
+	coordinates="48.828678534997,2.3828718066216"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T10:36:55.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="yasmine"
+	updatedBy="j.richer"
+	parentUid="1775"
+	name="Histoire et philosophie des sciences (M1-M2)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>M1 &amp; M2 interdomaine mention « Histoire et philosophie des sciences »
+Spécialité : Logique, Philosophie, Histoire et Sociologie des sciences  - Sciences de la cognition et des systèmes complexes (LOPHISS-SC2)</description>
+	<address>
+		<floor>Bâtiment Condorcet, 2ème étage, bureau 273A</floor>
+		<url>http://hps.master.univ-paris7.fr</url>
+		<phone>01 57 27 68 81</phone>
+		<email>dep.hps@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3449_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3449_1.xml"/>
+<title>Saint-Denis Bâtiment D</title>
+<updated>2014-08-15T01:47:06.725+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3449"
+	coordinates="48.946890539946,2.3614744842052"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T16:38:56.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1990"
+	name="Saint-Denis Bâtiment D">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<child uid="7086" active="true"/>
+	<child uid="3933" active="true"/>
+	<child uid="3901" active="true"/>
+	<child uid="3868" active="true"/>
+	<child uid="3796" active="true"/>
+	<child uid="2239" active="true"/>
+	<child uid="2240" active="true"/>
+	<child uid="2238" active="true"/>
+	<child uid="2237" active="true"/>
+	<child uid="2231" active="true"/>
+	<child uid="2230" active="true"/>
+	<child uid="3501" active="true"/>
+	<child uid="2086" active="true"/>
+	<child uid="2011" active="true"/>
+	<child uid="3502" active="true"/>
+	<child uid="3504" active="true"/>
+	<child uid="3506" active="true"/>
+	<child uid="3508" active="true"/>
+	<child uid="3511" active="true"/>
+	<child uid="3513" active="true"/>
+	<child uid="3568" active="true"/>
+	<child uid="3777" active="true"/>
+	<child uid="3785" active="true"/>
+	<child uid="3793" active="true"/>
+	<child uid="3797" active="true"/>
+	<child uid="3854" active="true"/>
+	<child uid="3887" active="true"/>
+	<child uid="3899" active="true"/>
+	<child uid="3910" active="true"/>
+	<child uid="3972" active="true"/>
+	<child uid="3984" active="true"/>
+	<child uid="3985" active="true"/>
+	<child uid="4002" active="true"/>
+	<child uid="4014" active="true"/>
+	<child uid="4017" active="true"/>
+	<child uid="4110" active="true"/>
+	<child uid="7077" active="true"/>
+</content>
+</entry>

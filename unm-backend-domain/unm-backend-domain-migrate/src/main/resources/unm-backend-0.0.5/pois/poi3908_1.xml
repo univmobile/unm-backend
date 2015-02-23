@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3908_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3908_1.xml"/>
+<title>QUESS - CFA</title>
+<updated>2014-08-15T01:47:11.565+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3908"
+	coordinates="48.846212904623,2.3580357246101"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:00:39.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2813"
+	name="QUESS - CFA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Qualité Environnement et Sécurité Sanitaire
+
+Les objectifs de la formation
+
+La formation permet de répondre aux attentes des entreprises souhaitant faire appel à des expertises transversales en matière de qualité et de gestion des risques. Cela nécessite de savoir analyser, maîtriser, prévenir et gérer les risques en respect des législations et des normes qualité en vigueur.
+
+ 
+Perspectives professionnelles
+
+Les métiers et postes suivants sont envisagés :
+
+Qualité en agro-alimentaire
+
+    * Ingénieur qualité
+    * Responsable de laboratoire en Agro-alimentaire
+
+Environnement
+
+    * Chargé d’étude spécialisé en environnement
+    * Ingénieur mesures et analyses en environnement, spécialisé microbiologie
+    * Ingénieur procédés en environnement orienté éco-solutions
+
+Santé
+
+    * Assureur qualité
+    * Responsable de contrôle en microbiologie
+
+ 
+Secteurs d’activité
+
+Le diplômé pourra intégrer un grand nombre d’entreprises (secteur agro-alimentaire, de la santé et de l’environnement) tant en R&amp;D, qu’en production ou dans des organismes publics, dans les services suivants :
+
+    * Hygiène et sécurité sanitaire
+    * Hygiène et qualité en santé
+    * Hygiène et qualité en industrie pharmaceutique
+    * Maîtrise des développements microbiens
+    * Ecologie microbienne
+    * Qualité agro-alimentaire
+    * Défense de l’environnement
+    * Dépollution des eaux, des sols ou de l’air
+
+ 
+Nos partenaires
+
+A.E.S., AGEPS, BWT, Biorad, Cargill, Chemunex, CIBA sc, Clinique de l'Alma, Danone, EDF, INRA, Valleys, Halieutis, Hôpital Gouin (Clichy), Laboratoires Biomag, Leclerc Rumaldis, Sanofi France, Savoie Labo SA, Servair, SNCF, Sodexo, Veolia, Total.
+
+ 
+Déroulement de la formation
+
+La formation se déroule sur 1 ou 2 ans de septembre n à septembre n+1 ou n+2, sur le mode de l’alternance université-entreprise :
+
+    * 2 semaines sur le site de l’Université Pierre et Marie Curie (UPMC), au sein du CFA UPMC
+    * 2 semaines en entreprise</description>
+	<address>
+		<url>http://www.cfa.upmc.fr/cfa_upmc/detail/Fiche_formation?item_id=45084626</url>
+		<phone>01 44 27 71 40</phone>
+		<email>vincent.marechal@upmc.fr</email>
+	</address>
+</content>
+</entry>

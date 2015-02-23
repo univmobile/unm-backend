@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi634_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi634_1.xml"/>
+<title>CPCA-Centre de Préparation aux Concours Administratifs</title>
+<updated>2014-08-15T01:46:40.900+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="634"
+	coordinates="48.845174822686,2.3459458351"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-01T16:44:43.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-15T16:59:15.000+01:00"
+	createdBy="cfontaine"
+	updatedBy="cfontaine"
+	name="CPCA-Centre de Préparation aux Concours Administratifs">
+	<poiType id="20" label="Scolarité" categoryId="2" categoryLabel="Cours &amp; Formation"/>
+	<address
+		countryCode="FR">
+		<openingHours>Lundi au vendredi
+9h30-12h 
+14h-16h 30
+</openingHours>
+		<phone>01 44 07 79 35</phone>
+		<email>cipcea@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

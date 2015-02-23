@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6407_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6407_1.xml"/>
+<title>Chimie - Analyse et contrôle des matières premières</title>
+<updated>2014-08-15T01:47:36.945+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6407"
+	coordinates="48.775590827753,2.3700360953808"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T16:55:22.000+02:00"
+	updatedAt="2012-03-01T10:19:12.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4950"
+	name="Chimie - Analyse et contrôle des matières premières">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Département de Chimie
+Licence professionnelle Chimie - Analyse et contrôle des matières premières et des produits formulés</description>
+	<address>
+		<url>http://iut.u-pec.fr/formations/licences-professionnelles/</url>
+		<phone>01 41 80 73 06</phone>
+		<email>ch-iutcv@u-pec.fr</email>
+	</address>
+</content>
+</entry>

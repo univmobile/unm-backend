@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5251_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5251_1.xml"/>
+<title>IUFM Saint-Denis bât A</title>
+<updated>2014-08-15T01:47:24.537+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5251"
+	coordinates="48.938964638327,2.3542606830597"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-31T23:06:15.000+02:00"
+	updatedAt="2012-03-01T10:35:58.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4520"
+	name="IUFM Saint-Denis bât A">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER D
+Station Saint-Denis
+Bus 255 direction &quot;les prévoyants descendre, Arrêt  Saint-Denis
+</itinerary>
+		<fullAddress>Place du 8 mai 1945
+93203 Saint-Denis-Cedex
+</fullAddress>
+	</address>
+	<child uid="5308" active="true"/>
+	<child uid="6619" active="true"/>
+	<child uid="7196" active="true"/>
+	<child uid="7197" active="true"/>
+</content>
+</entry>

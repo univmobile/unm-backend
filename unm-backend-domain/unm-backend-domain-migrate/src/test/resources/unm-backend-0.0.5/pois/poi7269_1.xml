@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7269_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7269_1.xml"/>
+<title>Service concours</title>
+<updated>2014-08-15T01:47:45.047+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7269"
+	coordinates="48.789092757542,2.3274506628513"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T15:17:23.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Service concours">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Le service concours assure la gestion des concours d'admission à l'ENS Cachan pour les étudiants en classes préparatoires aux grandes écoles (concours 1re année) ou pour les étudiants titulaires d'un L3 ou M1 (second concours).</description>
+	<address>
+		<floor>Aile P, Niveau 1</floor>
+		<url>http://www.ens-cachan.fr/version-francaise/admission/sur-concours/</url>
+		<phone>01 47 40 20 78</phone>
+		<fax>01 47 40 27 45</fax>
+		<email>concours@ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

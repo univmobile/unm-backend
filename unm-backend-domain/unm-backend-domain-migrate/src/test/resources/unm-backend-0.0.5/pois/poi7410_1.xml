@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7410_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7410_1.xml"/>
+<title>Laboratoire de Chimie</title>
+<updated>2014-08-15T01:47:45.953+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7410"
+	coordinates="48.841316053808,2.357195019722"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-25T10:13:12.000+02:00"
+	updatedAt="2013-05-03T12:34:47.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7403"
+	name="Laboratoire de Chimie">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Accès controlé, interdit au public</itinerary>
+		<fullAddress>55, Rue Buffon
+75005 Paris</fullAddress>
+	</address>
+	<child uid="7440" active="true"/>
+</content>
+</entry>

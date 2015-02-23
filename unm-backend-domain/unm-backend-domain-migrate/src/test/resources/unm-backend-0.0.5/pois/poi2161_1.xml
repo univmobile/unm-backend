@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2161_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2161_1.xml"/>
+<title>Histoire (L1-L3)</title>
+<updated>2014-08-15T01:46:54.780+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2161"
+	coordinates="48.946138346846,2.361898273"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:33:18.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2603"
+	name="Histoire (L1-L3)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>3ème étage Bâtiment B2, bureau 346</floor>
+		<openingHours>Lundi, mardi, jeudi et vendredi
+10h-17h</openingHours>
+		<url>http://www2.univ-paris8.fr/histoire/?page_id=11</url>
+		<phone>01 49 40 68 25</phone>
+		<fax>01 49 40 65 82</fax>
+		<email>martine.roman@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

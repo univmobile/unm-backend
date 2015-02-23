@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3221_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3221_1.xml"/>
+<title>Institut de Criminologie de Paris</title>
+<updated>2014-08-15T01:47:04.185+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3221"
+	coordinates="48.846814782976,2.34446894377"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:15:53.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="Institut de Criminologie de Paris">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<address>
+		<floor>Escaliers K, 4e étage</floor>
+		<phone>01 44 41 55 82</phone>
+		<email>caroline.touchet@u-paris2.fr</email>
+	</address>
+</content>
+</entry>

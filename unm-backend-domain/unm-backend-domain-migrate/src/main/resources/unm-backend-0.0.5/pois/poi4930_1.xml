@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4930_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4930_1.xml"/>
+<title>Crèche</title>
+<updated>2014-08-15T01:47:21.947+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4930"
+	coordinates="48.869601054346,2.2733324021101"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T14:55:15.000+02:00"
+	updatedAt="2011-05-27T15:28:17.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4540"
+	name="Crèche">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>La crèche accueille les enfants du personnel administratif, des enseignants et des étudiants. </description>
+	<address>
+		<floor>Local P 020, rdc</floor>
+		<openingHours>Du lundi au vendredi : 
+9h00 / 17h00 (de septembre à la mi juillet)</openingHours>
+		<phone>01 44 05 42 81</phone>
+	</address>
+</content>
+</entry>

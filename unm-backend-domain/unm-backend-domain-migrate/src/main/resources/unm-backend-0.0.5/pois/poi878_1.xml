@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi878_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi878_1.xml"/>
+<title>Amphithéâtre 1</title>
+<updated>2014-08-15T01:46:42.811+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="878"
+	coordinates="48.847044082774,2.34477505087"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T15:49:06.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1027"
+	name="Amphithéâtre 1">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Capacité 240 places.</description>
+	<address>
+		<floor>Aile Soufflot</floor>
+		<itinerary>RER B
+Station Luxembourg
+Bus 21, 27, 38, 82, 84, 85 et 89</itinerary>
+	</address>
+</content>
+</entry>

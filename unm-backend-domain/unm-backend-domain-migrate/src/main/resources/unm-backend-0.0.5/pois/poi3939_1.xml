@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3939_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3939_1.xml"/>
+<title>ED 390</title>
+<updated>2014-08-15T01:47:11.872+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3939"
+	coordinates="48.844508841476,2.3436106368899"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T15:58:36.000+02:00"
+	updatedAt="2011-06-03T16:53:01.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3762"
+	name="ED 390">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Le secteur &quot;procédés et haute technologie&quot; vise à associer la conception de la transformation de la matière à celle des procédés chimiques qui lui sont associés : réacteurs, combustion, catalyse, procédés plasma et laser, robotique, contrôle commande.</description>
+	<address>
+		<url>http://www.enscp.fr/edgpht/</url>
+		<phone>01 44 27 67 18</phone>
+		<email>farzaneh.arefi@upmc.fr</email>
+	</address>
+</content>
+</entry>

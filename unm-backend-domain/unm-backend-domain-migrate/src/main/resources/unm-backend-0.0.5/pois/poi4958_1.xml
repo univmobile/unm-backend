@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4958_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4958_1.xml"/>
+<title>Service des Relations Internationales</title>
+<updated>2014-08-15T01:47:22.243+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4958"
+	coordinates="48.869614139503,2.2726987302303"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-27T15:23:54.000+02:00"
+	updatedAt="2011-05-27T15:25:54.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Service des Relations Internationales">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Il est chargé de mettre en oeuvre la politique internationale et de gérer les mobilités étudiantes dans le cadre des programmes d'échange et des accords inter-universitaires de l'Université Paris-Dauphine.</description>
+	<address>
+		<floor>Bureau P 039</floor>
+		<openingHours>Lundi au vendredi :
+9h00 / 12h30 - 13h30 / 17h00
+Mercredi :
+9h00 / 12h30 </openingHours>
+		<url>http://www.dauphine.fr/fr/presentation/le-service-des-ri.html</url>
+	</address>
+</content>
+</entry>

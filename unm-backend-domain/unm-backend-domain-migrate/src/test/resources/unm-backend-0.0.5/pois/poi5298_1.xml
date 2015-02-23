@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5298_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5298_1.xml"/>
+<title>Carthotèque </title>
+<updated>2014-08-15T01:47:24.956+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5298"
+	coordinates="48.78792299422,2.4443238973618"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T10:05:32.000+02:00"
+	updatedAt="2012-03-01T10:00:42.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4334"
+	name="Carthotèque ">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>2ème étage, Salle 235 </floor>
+		<openingHours>Mardi de 13h à 14h et jeudi de 12h à 14h</openingHours>
+		<phone>01 45 17 10 91</phone>
+	</address>
+</content>
+</entry>

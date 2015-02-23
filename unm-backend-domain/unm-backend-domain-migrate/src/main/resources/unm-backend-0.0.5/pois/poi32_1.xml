@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi32_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi32_1.xml"/>
+<title>Caféteria Vauban</title>
+<updated>2014-08-15T01:46:38.285+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="32"
+	coordinates="48.779878199994,2.044197320938"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-23T14:21:42.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	deletedAt="2010-06-23T17:02:28.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Caféteria Vauban">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

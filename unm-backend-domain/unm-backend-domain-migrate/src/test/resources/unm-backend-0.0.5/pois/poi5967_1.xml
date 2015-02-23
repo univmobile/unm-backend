@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5967_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5967_1.xml"/>
+<title>Direction des relations internationales (DRI)</title>
+<updated>2014-08-15T01:47:32.193+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5967"
+	coordinates="48.702452152233,2.1778437495232"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T11:08:14.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4750"
+	name="Direction des relations internationales (DRI)">
+	<poiType id="25" label="Mobilité" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Bâtiment 407, 1er étage</floor>
+		<url>http://www.u-psud.fr/fr/l_universite/organisation_generale/services/direction_des_relations_internationales.html</url>
+		<phone>01 69 15 30 84 </phone>
+		<fax>01 69 15 30 92</fax>
+		<email>relations.internationales@u-psud.fr</email>
+	</address>
+</content>
+</entry>

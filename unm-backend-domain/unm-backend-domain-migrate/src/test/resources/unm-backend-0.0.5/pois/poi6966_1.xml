@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6966_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6966_1.xml"/>
+<title>Association France Chine Interaction</title>
+<updated>2014-08-15T01:47:41.656+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6966"
+	coordinates="48.902699412456,2.2136351466179"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T10:47:13.000+01:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Association France Chine Interaction">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>L'association France Chine Interaction vise à favoriser les échanges linguistiques et culturels entre les étudiants français sinophones et chinois francophones de l'Université Paris Ouest Nanterre La Défense.
+Elle proposera aux étudiants français la pratique du chinois, suscitera leur intérêt pour la culture chinoise et permettra aux étudiants chinois d'intégrer et de mieux comprendre la culture française. </description>
+	<address>
+		<floor>Bâtiment R - Salle R 101, 1er étage</floor>
+		<url>https://sites.google.com/site/francechineinteraction/</url>
+		<phone>06.33.12.23.33</phone>
+		<email>france-chine-interaction@hotmail.fr</email>
+	</address>
+</content>
+</entry>

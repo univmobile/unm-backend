@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4055_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4055_1.xml"/>
+<title>Campus d'Orsay SUPELEC</title>
+<updated>2014-08-15T01:47:13.163+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4055"
+	coordinates="48.708687359022,2.1638285368681"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T15:06:42.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2752"
+	name="Campus d'Orsay SUPELEC">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B</itinerary>
+		<fullAddress>11 rue Joliot-Curie
+91192 Gif sur Yvette</fullAddress>
+	</address>
+	<child uid="4059" active="true"/>
+</content>
+</entry>

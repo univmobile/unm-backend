@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi606_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi606_1.xml"/>
+<title>Site Panthéon</title>
+<updated>2014-08-15T01:46:40.849+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="606"
+	coordinates="48.829264166203,2.3638200759888|48.829363045967,2.3639810085297|48.828395428465,2.3648071289062|48.828289483808,2.3646461963654|48.829264166203,2.363820075988"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-01-24T11:10:31.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2011-02-01T17:19:06.000+01:00"
+	createdBy="yasmine"
+	updatedBy="cfontaine"
+	name="Site Panthéon">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<address
+		countryCode="FR">
+	</address>
+</content>
+</entry>

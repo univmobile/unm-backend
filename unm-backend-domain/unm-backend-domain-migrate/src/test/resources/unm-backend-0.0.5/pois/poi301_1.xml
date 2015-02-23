@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi301_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi301_1.xml"/>
+<title>IUT de Villetaneuse</title>
+<updated>2014-08-15T01:46:38.986+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="301"
+	coordinates="48.955660591663,2.34227657318"
+	active="true"
+	markerType="point"
+	createdAt="2010-07-20T16:16:56.000+02:00"
+	updatedAt="2013-04-12T16:56:42.000+02:00"
+	createdBy="raphael"
+	updatedBy="rchervet"
+	parentUid="248"
+	name="IUT de Villetaneuse">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<description>L’IUT de Villetaneuse, accueille 1400 étudiants en formation initiale (classique ou par la voie de l'apprentissage) dans 5 départements d’enseignement. 
+
+Notre Centre de Formation Continue reçoit 200 adultes, salariés en plan de formation, en congé individuel de formation ou demandeurs d’emploi bénéficiant de l’aide du Conseil Régional.</description>
+	<address>
+		<itinerary>Porte de la Chapelle,
+Autoroute A1 [direction Lille]
+Sortie N°2 (Saint-Denis - Stade de France)
+puis direction Villetaneuse Université.
+
+EN TRANSPORT EN COMMUN
+Depuis Paris
+Train, de la Gare du Nord, jusqu’à la gare d’Epinay-Villetaneuse. [En Gare du Nord, suivre l’un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s’arrête en gare d’Epinay-Villetaneuse].
+Gare d’Epinay-Villetaneuse, sortie côté Villetaneuse puis
+bus156 [direction Gare de St-Denis] ou
+bus 354 [direction Pierrefitte-Stains] ou
+bus 356 [direction St-Denis Université]
+jusqu’à l’arrêt Université Paris 13.
+
+</itinerary>
+		<url>http://iutv.univ-paris13.fr</url>
+		<phone>01 49 40 30 28</phone>
+		<fax>01 49 40 20 21</fax>
+		<email>secrdirarroiutv.univ-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+	<child uid="1603" active="true"/>
+	<child uid="1112" active="true"/>
+	<child uid="1401" active="true"/>
+	<child uid="1113" active="true"/>
+	<child uid="1082" active="true"/>
+	<child uid="1081" active="true"/>
+	<child uid="1080" active="true"/>
+	<child uid="1079" active="true"/>
+	<child uid="1078" active="true"/>
+	<child uid="989" active="true"/>
+	<child uid="59" active="true"/>
+	<child uid="303" active="true"/>
+</content>
+</entry>

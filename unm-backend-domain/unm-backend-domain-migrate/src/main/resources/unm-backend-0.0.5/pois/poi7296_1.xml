@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7296_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7296_1.xml"/>
+<title>Service médical</title>
+<updated>2014-08-15T01:47:45.355+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7296"
+	coordinates="48.789428598903,2.3261135816574"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T14:54:18.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7218"
+	name="Service médical">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Activités :
+- visites médicales préventives et suivi médical
+- premiers soins en cas de blessure, de maladie ou de malaise et coordination des secours durant les heures d'ouverture du service médical
+- entretiens sanitaires - relation d'aide pour les étudiants
+- actions de prévention : informations sur les différents thèmes de santé publique.
+
+Organisation :
+- Médecin du travail et de prévention : Anh Thuy Van Pham
+- Infirmière : Dominique Deval
+- Secrétaire : Diana Miléna Caïcedo
+
+Le médecin de prévention et un psychologue à temps partiel reçoivent sur rendez-vous.</description>
+	<address>
+		<floor>Rez-de-chaussée</floor>
+		<openingHours>Le médecin de permanence est présent les lundi, mardi et jeudi, de 9h à 12h et de 14h à 17h.</openingHours>
+		<phone>01 47 40 75 86</phone>
+		<fax>01 47 40 22 80</fax>
+		<email>secretariat.medical@ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

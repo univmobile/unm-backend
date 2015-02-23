@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3030_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3030_1.xml"/>
+<title>Institut du Monde Anglophone </title>
+<updated>2014-08-15T01:47:02.249+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3030"
+	coordinates="48.850704735616,2.3418447375298"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:19:06.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="3003"
+	name="Institut du Monde Anglophone ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro :
+ligne 4 : Cluny-La Sorbonne
+ligne 10 et 4 : Odéon</itinerary>
+		<fullAddress>5, rue de l' École de Médecine
+75006-Paris</fullAddress>
+	</address>
+	<child uid="3191" active="true"/>
+	<child uid="3106" active="true"/>
+	<child uid="3392" active="true"/>
+	<child uid="6903" active="true"/>
+</content>
+</entry>

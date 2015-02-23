@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6117_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6117_1.xml"/>
+<title>ED 474  IEFV</title>
+<updated>2014-08-15T01:47:33.937+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6117"
+	coordinates="48.836590981275,2.3395031690598"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T17:24:36.000+02:00"
+	updatedAt="2011-06-15T13:36:46.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="5675"
+	name="ED 474  IEFV">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Directeur : François TADDEI
+
+Secrétariat : Céline Garrigues
+CRI 
+
+</description>
+	<address>
+		<floor>2e étage Cochin Bureau 2004</floor>
+		<url>http://www.fdv-paris.org/fr/ecole-doctorale-fdv/</url>
+		<phone>01 44 41 25 22</phone>
+		<fax>01 44 41 25 29</fax>
+		<email>dir-fdv@univ-paris5.fr</email>
+	</address>
+</content>
+</entry>

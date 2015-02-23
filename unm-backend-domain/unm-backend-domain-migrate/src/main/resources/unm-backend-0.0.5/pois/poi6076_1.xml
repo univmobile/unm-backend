@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6076_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6076_1.xml"/>
+<title>BU de l'IFI</title>
+<updated>2014-08-15T01:47:33.441+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6076"
+	coordinates="48.841764758351,2.5743379443884"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T15:26:00.000+02:00"
+	updatedAt="2011-06-14T15:32:49.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4581"
+	name="BU de l'IFI">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Collection :
+-Arts de l'enregistrement et du Spectacle, Image, Son et Multimédia</description>
+	<address>
+		<floor>Bât A - Rez de Chaussée</floor>
+		<openingHours>Lundi, mercredi : 8h15-18h30
+Mardi, jeudi : 8h15-18h00
+Vendredi : 8h30-12h30/13h30-18h30 </openingHours>
+		<url>http://www.univ-mlv.fr/bibliotheque/bibliotheques/bibliotheque-de-lifi/</url>
+		<phone>01 49 32 90 28</phone>
+		<email>bibifi@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

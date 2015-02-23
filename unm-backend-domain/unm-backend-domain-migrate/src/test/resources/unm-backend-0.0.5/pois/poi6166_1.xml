@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6166_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6166_1.xml"/>
+<title>Ecole Doctorale Ville, Transports et Territoires ED 528</title>
+<updated>2014-08-15T01:47:34.548+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6166"
+	coordinates="48.84079705672,2.5875645875931"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-15T16:12:32.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="6162"
+	name="Ecole Doctorale Ville, Transports et Territoires ED 528">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Catherine Alcouffe, responsable administrative
+	
+
+Adresse : Ecole Doctorale &quot;Ville, Transports et Territoires&quot; - ED 528 - Cité Descartes - 6/8 Av. Blaise Pascal - 77455 Champs-s/Marne - Marne-la-Vallée Cedex 2
+</description>
+	<address>
+		<floor>Aile Vicat - 4ème étage - Bureau V. 425</floor>
+		<url>http://www.univ-paris-est.fr/images/2009/07/1246527610-36.gif</url>
+		<phone>01 64 15 36 24</phone>
+		<fax>01 64 15 36 91</fax>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3276_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3276_1.xml"/>
+<title>BAIP</title>
+<updated>2014-08-15T01:47:04.865+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3276"
+	coordinates="48.840371939965,2.354565784335"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T14:42:57.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="3009"
+	name="BAIP">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Le BAIP  de l'université Sorbonne Nouvelle, situé dans les locaux du SCUIO-IP, a pour mission de mettre en place et de coordonner des actions visant à aider les étudiants à trouver leur premier emploi.</description>
+	<address>
+		<floor>SCUIO Bureau 4 à 6B </floor>
+		<phone>0145874297</phone>
+		<email>patrick.farges@univ-paris3.fr  </email>
+	</address>
+</content>
+</entry>

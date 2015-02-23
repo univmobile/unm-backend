@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi136_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi136_1.xml"/>
+<title>Service des sports</title>
+<updated>2014-08-15T01:46:38.517+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="136"
+	coordinates="48.623573012799,2.42500425"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-30T14:03:49.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	deletedAt="2010-07-19T12:01:35.000+02:00"
+	createdBy="yasmine"
+	updatedBy="plopes"
+	name="Service des sports">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description> Le Service  Universitaire des Activités Physiques et Sportives  est un service commun de l’université. Il a pour mission l’enseignement, le développement, la promotion et la gestion des Activités Physiques  Sportives et Artistiques (APSA).
+
+</description>
+	<address
+		zipCode="91025 "
+		city="Evry Cedex"
+		countryCode="FR">
+		<floor>Aile B, RDC</floor>
+		<openingHours>Lundi        9h-12h -  14h-16h
+Mardi        9h-12h
+Mercredi   9h-12h
+Jeudi        9h-12h  -  13h-16h
+Vendredi   9h-12h</openingHours>
+		<phone>01 69 47 74 32 </phone>
+		<fax>01 69 47 74 88</fax>
+		<email>fcadoret@univ-evry.fr</email>
+		<fullAddress>Bureau B7
+Rue Pierre Bérégovoy 91025  Evry Cedex</fullAddress>
+	</address>
+</content>
+</entry>

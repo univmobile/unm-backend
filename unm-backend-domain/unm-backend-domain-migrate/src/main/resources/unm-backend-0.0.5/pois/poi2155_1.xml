@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2155_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2155_1.xml"/>
+<title>Inscription admnistrative</title>
+<updated>2014-08-15T01:46:54.730+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2155"
+	coordinates="48.825488637814,2.199251800"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-26T14:25:53.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2429"
+	name="Inscription admnistrative">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address>
+		<floor>Bâtiment A, Bureau B220 jusqu'au bureau B222</floor>
+	</address>
+</content>
+</entry>

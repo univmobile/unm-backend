@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi916_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi916_1.xml"/>
+<title>Gustave Glotz mondes hellenistiques et romains</title>
+<updated>2014-08-15T01:46:43.285+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="916"
+	coordinates="48.866594349307,2.33911190"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-23T15:19:38.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="yasmine"
+	parentUid="1029"
+	name="Gustave Glotz mondes hellenistiques et romains">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<floor>2e étage, 263</floor>
+		<itinerary>Métro 3 
+Station Bourse
+
+ </itinerary>
+		<url>http://www.centre-glotz.cnrs.fr</url>
+		<phone>01 47 03 84 28</phone>
+		<email>centre.glotz@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6328_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6328_1.xml"/>
+<title>SESS-Information-documentation, médiations des savoirs</title>
+<updated>2014-08-15T01:47:36.074+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6328"
+	coordinates="48.795836397133,2.4482761323452"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-21T16:56:37.000+02:00"
+	updatedAt="2012-03-01T10:15:41.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Sihé NEYA"
+	parentUid="4902"
+	name="SESS-Information-documentation, médiations des savoirs">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>6è étage</floor>
+		<url>http://sess-staps.u-pec.fr/formations/masters/</url>
+		<phone>01 45 17 44 10</phone>
+		<email> ingrid.odye@u-pec.fr</email>
+	</address>
+</content>
+</entry>

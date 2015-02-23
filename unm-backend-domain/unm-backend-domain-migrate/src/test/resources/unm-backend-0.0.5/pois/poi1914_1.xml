@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1914_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1914_1.xml"/>
+<title>Gala Léonard de Vinci</title>
+<updated>2014-08-15T01:46:52.405+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1914"
+	coordinates="48.914388620449,2.4182880297"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-06T01:52:34.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="356"
+	name="Gala Léonard de Vinci">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Gala Léonard de Vinci</description>
+	<address>
+		<floor>RDC - Bureau r 11.</floor>
+		<openingHours>Lundi à Jeudi : 
+13h15 - 15h
+Vendredi :
+13h30 - 14h30</openingHours>
+	</address>
+</content>
+</entry>

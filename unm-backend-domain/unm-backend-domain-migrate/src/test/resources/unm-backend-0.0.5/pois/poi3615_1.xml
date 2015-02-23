@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3615_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3615_1.xml"/>
+<title>Kreyol’s (Association des étudiants afro-caribéens)</title>
+<updated>2014-08-15T01:47:08.611+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3615"
+	coordinates="48.946300412828,2.3608428239822"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:59:38.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Kreyol’s (Association des étudiants afro-caribéens)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<url>www.kreyolsp8.com</url>
+		<phone>06 17 77 01 58</phone>
+		<email>Kreyolsp8@hotmail.com</email>
+	</address>
+</content>
+</entry>

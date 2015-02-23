@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6912_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6912_1.xml"/>
+<title>Salles de cours St Médard</title>
+<updated>2014-08-15T01:47:41.264+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6912"
+	coordinates="48.841142672909,2.3546576499939"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-13T12:25:09.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	deletedAt="2012-01-17T14:04:28.000+01:00"
+	createdBy="Martine HATTON"
+	updatedBy="Jean-François Maynier"
+	name="Salles de cours St Médard">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+</content>
+</entry>

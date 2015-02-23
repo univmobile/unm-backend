@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1757_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1757_1.xml"/>
+<title>Institut des langues et des études Internationales</title>
+<updated>2014-08-15T01:46:50.544+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1757"
+	coordinates="48.779343484181,2.04487860202"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T14:37:53.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	deletedAt="2011-04-05T15:29:09.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	name="Institut des langues et des études Internationales">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<phone>0139255270</phone>
+	</address>
+</content>
+</entry>

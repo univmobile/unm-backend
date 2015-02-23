@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4479_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4479_1.xml"/>
+<title>UR 5</title>
+<updated>2014-08-15T01:47:17.732+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4479"
+	coordinates="48.848551082465,2.3577359877527"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:01:06.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2811"
+	name="UR 5">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Physiologie cellulaire et moléculaire des plantes (PCMP) - UR 5</description>
+	<address>
+		<floor>3è étage</floor>
+		<url>http://pcmp.snv.jussieu.fr/</url>
+		<phone>01 44 27 96 47</phone>
+		<email>eric.ruelland@snv.jussieu.fr</email>
+	</address>
+</content>
+</entry>

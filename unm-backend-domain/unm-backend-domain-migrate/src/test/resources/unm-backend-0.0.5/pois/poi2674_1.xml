@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2674_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2674_1.xml"/>
+<title>Service de l'information et de l'orientation</title>
+<updated>2014-08-15T01:46:58.968+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2674"
+	coordinates="48.810836930009,2.14793309569"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T15:54:06.000+02:00"
+	updatedAt="2012-02-05T19:33:41.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="367"
+	name="Service de l'information et de l'orientation">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<address>
+		<floor>Bâtiment Fermat - Niveau 2 - Bureau 1202</floor>
+		<openingHours>Lundi de 9h30 à 17h
+Mardi de 9h30 à 12h
+Mercredi de 9h30 à 12h et de 13h30 à 17h
+Jeudi de 9h30 à 17h sans interruption
+Vendredi de 13h30 à 17h</openingHours>
+		<phone>0139254610</phone>
+		<email>orientation.vers@uvsq.fr</email>
+	</address>
+</content>
+</entry>

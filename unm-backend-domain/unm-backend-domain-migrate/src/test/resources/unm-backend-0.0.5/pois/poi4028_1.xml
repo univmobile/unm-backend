@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4028_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4028_1.xml"/>
+<title>Grande cafétéria</title>
+<updated>2014-08-15T01:47:12.867+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4028"
+	coordinates="48.944490851688,2.3636772483587"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:32:49.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Grande cafétéria">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Kebabs, grillades, frites, sandwicherie...</description>
+	<address>
+		<floor>Rez-de-chaussée Bâtiment A, hall</floor>
+		<openingHours>Du lundi au vendredi
+8h30-18h30
+Samedi
+9h-15h</openingHours>
+		<url>http://www.crous-creteil.fr/spip.php?article73</url>
+		<phone>01 49 40 67 22</phone>
+		<email>restaurant.paris8@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

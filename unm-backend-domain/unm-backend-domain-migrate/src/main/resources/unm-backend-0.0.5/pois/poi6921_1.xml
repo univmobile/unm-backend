@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6921_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6921_1.xml"/>
+<title>Bibliothèque Universitaire des Langues et Civilisations</title>
+<updated>2014-08-15T01:47:41.308+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6921"
+	coordinates="48.857876209483,2.3322772979736"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-19T17:05:38.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="yasmine"
+	updatedBy="Jean-François Maynier"
+	parentUid="6898"
+	name="Bibliothèque Universitaire des Langues et Civilisations">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<openingHours>Lundi : 14h-19h
+Mardi au vendredi : 9h-19h
+Samedi : 10h-19h</openingHours>
+		<url>http://www.bulac.fr</url>
+		<phone>01 81 69 18 00</phone>
+		<fax>01 81 69 18 99</fax>
+		<email>contact@bulac.fr</email>
+	</address>
+</content>
+</entry>

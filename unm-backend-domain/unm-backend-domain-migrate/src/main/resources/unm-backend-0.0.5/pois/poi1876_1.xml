@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1876_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1876_1.xml"/>
+<title>Amphithéâtre C</title>
+<updated>2014-08-15T01:46:51.898+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1876"
+	coordinates="48.902431799105,2.2146208584"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:37:08.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2491"
+	name="Amphithéâtre C">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>Rdc</floor>
+	</address>
+</content>
+</entry>

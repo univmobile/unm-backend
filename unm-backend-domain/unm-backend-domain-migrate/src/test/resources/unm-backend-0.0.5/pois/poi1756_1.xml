@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1756_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1756_1.xml"/>
+<title>STAPS et M2 MELS </title>
+<updated>2014-08-15T01:46:50.532+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1756"
+	coordinates="48.904715370226,2.2134095057"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T14:37:50.000+02:00"
+	updatedAt="2012-01-10T15:42:00.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2469"
+	name="STAPS et M2 MELS ">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 100, 1er étage</floor>
+		<openingHours>Du lundi au vendredi de:
+9h / 12h - 13h / 17h</openingHours>
+		<phone>01 40 97 56 52</phone>
+		<email>sandrine.quinterne@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

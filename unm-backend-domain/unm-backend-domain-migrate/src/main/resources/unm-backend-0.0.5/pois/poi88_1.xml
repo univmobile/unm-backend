@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi88_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi88_1.xml"/>
+<title>Association sportive (AS)</title>
+<updated>2014-08-15T01:46:38.424+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="88"
+	coordinates="48.827147621585,2.364474534988"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T18:02:30.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-09-05T10:20:53.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Association sportive (AS)">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<address
+		zipCode="75634"
+		city="Paris cedex 13"
+		countryCode="FR">
+		<floor>Aile C, 8e étage</floor>
+		<openingHours>10h-12h et 14h-16h
+(lundi, mercredi et vendredi)
+
+10h-13h (mardi)
+
+10h30-15h30 (jeudi)</openingHours>
+		<itinerary>M° ligne 14 Olympiades
+Bus 62,83</itinerary>
+		<phone>01 44 07 89 49</phone>
+		<email>assport@univ-paris1.fr</email>
+		<fullAddress>Bureau C08-10
+90, rue de Tolbiac 75634 Paris cedex 13</fullAddress>
+	</address>
+</content>
+</entry>

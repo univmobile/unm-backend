@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1697_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1697_1.xml"/>
+<title>Droit Social M2</title>
+<updated>2014-08-15T01:46:50.014+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1697"
+	coordinates="48.902440614764,2.21487432718"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T16:10:10.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2491"
+	name="Droit Social M2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau 132, 1er étage</floor>
+		<openingHours>Lundi et mardi : 
+9h / 12h - 13h / 17h
+Mercredi et jeudi : 
+9h / 12h - 13h / 18h
+Vendredi : 9h / 12h</openingHours>
+		<phone>01 40 97 41 96</phone>
+		<email>m2droitsocial@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

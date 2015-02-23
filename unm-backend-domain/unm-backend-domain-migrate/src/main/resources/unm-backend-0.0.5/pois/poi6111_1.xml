@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6111_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6111_1.xml"/>
+<title>Ecole Doctorale GC2iD </title>
+<updated>2014-08-15T01:47:33.865+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6111"
+	coordinates="48.850460141522,2.340497598052"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T17:06:19.000+02:00"
+	updatedAt="2011-06-14T17:17:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2463"
+	name="Ecole Doctorale GC2iD ">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>ED 157 Génétique-Cellule-Immunologie-Infectiologie-Développement « Gc2iD »
+
+Directeur : Marc DELPECH
+
+Secrétariat : Michèle PITTE
+</description>
+	<address>
+		<floor>Porte 321</floor>
+		<phone>01 53 10 46 58</phone>
+		<fax>01 53 10 46 60</fax>
+		<email> http://gc2id.parisdescartes.fr/</email>
+	</address>
+</content>
+</entry>

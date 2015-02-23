@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6828_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6828_1.xml"/>
+<title>Cafétéria de l'EPF</title>
+<updated>2014-08-15T01:47:40.594+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6828"
+	coordinates="48.778595573545,2.3032457381487"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-02T14:47:21.000+02:00"
+	updatedAt="2012-02-03T12:30:15.000+01:00"
+	createdBy="d.rasse"
+	updatedBy="d.rasse"
+	parentUid="5450"
+	name="Cafétéria de l'EPF">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER B: ARRET SCEAUX</itinerary>
+		<fullAddress>3 Bis rue Lakanal - 92330 SCEAUX</fullAddress>
+	</address>
+	<child uid="6830" active="true"/>
+</content>
+</entry>

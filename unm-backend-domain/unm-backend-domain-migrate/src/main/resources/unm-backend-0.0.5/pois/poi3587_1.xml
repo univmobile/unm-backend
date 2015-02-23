@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3587_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3587_1.xml"/>
+<title>Cafétaria</title>
+<updated>2014-08-15T01:47:08.338+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3587"
+	coordinates="48.847291517687,2.3548098653555"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T16:39:35.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="3239"
+	name="Cafétaria">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Tout service Cafétaria
+Paiement espèce ou carte monéo</description>
+	<address>
+		<floor>Tour 25</floor>
+		<openingHours>Lundi au Vendredi : 08h00-17h00</openingHours>
+	</address>
+</content>
+</entry>

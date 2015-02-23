@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5569_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5569_1.xml"/>
+<title>Centre multidisciplinaire  Restaurant universitaire</title>
+<updated>2014-08-15T01:47:27.540+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5569"
+	coordinates="48.788234014852,2.4453592300415"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-08T10:45:27.000+02:00"
+	updatedAt="2012-03-01T10:01:11.000+01:00"
+	createdBy="Sihé NEYA"
+	updatedBy="Gérald MORIN"
+	parentUid="4332"
+	name="Centre multidisciplinaire  Restaurant universitaire">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro ligne 8
+Station Créteil Université</itinerary>
+		<fax>test</fax>
+		<fullAddress>61 avenue du Général de Gaulle
+94010 Créteil Cedex France
+</fullAddress>
+	</address>
+	<child uid="5641" active="true"/>
+	<child uid="5642" active="true"/>
+	<child uid="5716" active="true"/>
+</content>
+</entry>

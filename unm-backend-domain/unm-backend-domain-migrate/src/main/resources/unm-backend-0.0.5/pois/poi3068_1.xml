@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3068_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3068_1.xml"/>
+<title>Asnières</title>
+<updated>2014-08-15T01:47:02.639+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3068"
+	coordinates="48.91488501185,2.3029661178589"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T15:43:56.000+02:00"
+	updatedAt="2012-01-18T16:31:20.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Jean-François Maynier"
+	parentUid="2994"
+	name="Asnières">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3069" active="true"/>
+</content>
+</entry>

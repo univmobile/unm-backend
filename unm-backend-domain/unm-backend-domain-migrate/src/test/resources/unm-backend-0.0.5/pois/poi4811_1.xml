@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4811_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4811_1.xml"/>
+<title>Laboratoire d’étude du rayonnement et de la matière en astro</title>
+<updated>2014-08-15T01:47:20.815+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4811"
+	coordinates="49.016985760806,2.0744553208351"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:48:51.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="3935"
+	name="Laboratoire d’étude du rayonnement et de la matière en astro">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Directeur
+Jean-Louis Lemaire</description>
+	<address>
+		<phone>01 34 25 70 35</phone>
+		<fax>01 34 25 70 71</fax>
+		<email>jean-louis.lemaire@u-cergy.fr</email>
+	</address>
+</content>
+</entry>

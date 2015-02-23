@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4023_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4023_1.xml"/>
+<title>Allemand L3, M1-2</title>
+<updated>2014-08-15T01:47:12.794+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4023"
+	coordinates="48.884320432723,2.3110553249717"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T14:26:13.000+02:00"
+	updatedAt="2011-09-26T17:07:18.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="3702"
+	name="Allemand L3, M1-2">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Permanence téléphonique tous les jours de 9h30 à 12h00.</description>
+	<address>
+		<floor>Bureau 311, 3ème étage</floor>
+		<openingHours>Le lundi : 9h30 / 12h30 
+Le mardi, mercredi et jeudi : 9h30 / 12h30 - 14h / 16h30
+Le vendredi : 9h30 / 12h30 </openingHours>
+		<phone>01 43 18 41 42</phone>
+		<email>etudes-germaniques@paris-sorbonne.fr</email>
+	</address>
+</content>
+</entry>

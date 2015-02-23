@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi914_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi914_1.xml"/>
+<title>GEO-CITES</title>
+<updated>2014-08-15T01:46:43.250+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="914"
+	coordinates="48.844640096734,2.342599108"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-23T14:56:13.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1019"
+	name="GEO-CITES">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Trois équipes : C.R.I.A (les deux autres E.H.G.O. et P.A.R.I.S. au Centre rue du Four)</description>
+	<address>
+		<floor>3e étage, 314</floor>
+		<itinerary>RER B 
+Station Luxembourg
+
+Bus 21, 27, 38 et 85 </itinerary>
+		<url>http://www.parisgeo.cnrs.fr/</url>
+		<phone>01 44 32 14 18</phone>
+	</address>
+</content>
+</entry>

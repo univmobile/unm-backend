@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7211_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7211_1.xml"/>
+<title>Bâtiment d'Alembert</title>
+<updated>2014-08-15T01:47:44.405+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7211"
+	coordinates="48.788739419267,2.3270899057388"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-05T14:29:09.000+01:00"
+	updatedAt="2012-12-18T14:14:05.000+01:00"
+	createdBy="super admin"
+	updatedBy="enscachan"
+	parentUid="7210"
+	name="Bâtiment d'Alembert">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>RER ligne B : arrêt Bagneux
+Bus 184 Porte d'Italie - L'Hay-les-Roses : arrêt Camille Desmoulins
+Bus 187 Porte d'Orléans - Fresnes : arrêt Camille Desmoulins
+Bus 197 Porte d'Orléans - Bourg-la-Reine : arrêt RER Bagneux
+Bus 162 Villejuif - Cachan - Meudon : arrêt Mairie de Cachan</itinerary>
+		<fullAddress>61, avenue du Président Wilson
+94235 Cachan cedex</fullAddress>
+	</address>
+	<child uid="7255" active="true"/>
+	<child uid="7231" active="true"/>
+	<child uid="7224" active="true"/>
+	<child uid="7225" active="true"/>
+	<child uid="7226" active="true"/>
+	<child uid="7227" active="true"/>
+	<child uid="7229" active="true"/>
+	<child uid="7230" active="true"/>
+	<child uid="7232" active="true"/>
+	<child uid="7236" active="true"/>
+	<child uid="7254" active="true"/>
+	<child uid="7256" active="true"/>
+	<child uid="7257" active="true"/>
+	<child uid="7258" active="true"/>
+	<child uid="7259" active="true"/>
+	<child uid="7260" active="true"/>
+	<child uid="7268" active="true"/>
+	<child uid="7269" active="true"/>
+	<child uid="7270" active="true"/>
+	<child uid="7300" active="true"/>
+	<child uid="7303" active="true"/>
+</content>
+</entry>

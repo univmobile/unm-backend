@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2460_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2460_1.xml"/>
+<title>St. Cloud Pôle des métiers du livres</title>
+<updated>2014-08-15T01:46:56.994+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2460"
+	coordinates="48.84354972471,2.21532560884"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:38:51.000+02:00"
+	updatedAt="2011-06-30T11:59:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2459"
+	name="St. Cloud Pôle des métiers du livres">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Depuis Paris : gare Saint-Lazare ou La Défense, arrêt à la gare de Saint Cloud</itinerary>
+		<fullAddress>11, avenue Pozzo-di-Borgo
+92210 Saint-Cloud</fullAddress>
+	</address>
+	<child uid="2000" active="true"/>
+</content>
+</entry>

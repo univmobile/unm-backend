@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi909_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi909_1.xml"/>
+<title>Développement social</title>
+<updated>2014-08-15T01:46:43.196+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="909"
+	coordinates="48.832842900755,2.46773589"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-23T14:35:14.000+01:00"
+	updatedAt="2011-06-03T14:39:55.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="954"
+	name="Développement social">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<itinerary>RER A 
+Station Nogent-sur-Marne 
+Métro 1
+Station Château de Vincennes
+Bus 114 et 210</itinerary>
+		<url>http://recherche-iedes.univ-paris1.fr/</url>
+		<phone>01 43 94 72 85</phone>
+		<email>contact-web@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7256_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7256_1.xml"/>
+<title>Département de biologie</title>
+<updated>2014-08-15T01:47:44.903+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7256"
+	coordinates="48.789043366325,2.3274117708206"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T09:20:25.000+01:00"
+	updatedAt="2012-12-17T15:06:36.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7211"
+	name="Département de biologie">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Le département de Biologie (ancien département de biochimie et génie biologique) est ouvert à des étudiants se destinant aux métiers de l'enseignement et de la recherche, dans tous les domaines de la biologie.
+Les disciplines de prédilection sont la biochimie, la microbiologie et la biologie humaine. Elles permettent d'aborder la biologie moderne de manière intégrée et en faisant une place importante aux pathologies humaines (maladies infectieuses, cancer, etc.) </description>
+	<address>
+		<floor>1er étage - Bureau P2-30</floor>
+		<url>http://www.biologie.ens-cachan.fr/</url>
+		<phone>01 47 40 76 26</phone>
+		<fax>01 47 40 76 27</fax>
+		<email>catherine.bonnemaison@ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

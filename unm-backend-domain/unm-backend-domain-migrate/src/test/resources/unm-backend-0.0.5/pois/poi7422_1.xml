@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7422_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7422_1.xml"/>
+<title>Les Amis du Muséum</title>
+<updated>2014-08-15T01:47:46.107+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7422"
+	coordinates="48.844482878689,2.3572218418121"
+	active="true"
+	markerType="point"
+	createdAt="2013-04-30T15:36:32.000+02:00"
+	updatedAt="2013-05-03T12:34:53.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	parentUid="7401"
+	name="Les Amis du Muséum">
+	<poiType id="37" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<floor>Maison Cuvier</floor>
+		<openingHours>Du mardi au samedi de 13 h 30 à 17 h 30</openingHours>
+		<url>www.mnhn.fr/amismuseum</url>
+		<phone>01 43 31 77 42</phone>
+		<fax>01 43 31 77 42</fax>
+		<email>steamnhn@mnhn.fr</email>
+	</address>
+</content>
+</entry>

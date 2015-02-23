@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2599_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2599_1.xml"/>
+<title>Saint-Denis Bâtiment C</title>
+<updated>2014-08-15T01:46:58.327+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2599"
+	coordinates="48.946149268722,2.36089915037"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T13:59:48.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="1990"
+	name="Saint-Denis Bâtiment C">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro Ligne 13 arrêt St-Denis Université</itinerary>
+		<fullAddress>Université Paris 8 - 2 rue de la Liberté - 93526 Saint-Denis cedex</fullAddress>
+	</address>
+	<child uid="4083" active="true"/>
+	<child uid="3615" active="true"/>
+	<child uid="3597" active="true"/>
+	<child uid="3598" active="true"/>
+	<child uid="3600" active="true"/>
+	<child uid="3604" active="true"/>
+	<child uid="3606" active="true"/>
+	<child uid="3608" active="true"/>
+	<child uid="3613" active="true"/>
+	<child uid="3614" active="true"/>
+	<child uid="3619" active="true"/>
+	<child uid="3630" active="true"/>
+	<child uid="3631" active="true"/>
+	<child uid="3633" active="true"/>
+	<child uid="3636" active="true"/>
+	<child uid="3638" active="true"/>
+	<child uid="3640" active="true"/>
+	<child uid="4038" active="true"/>
+</content>
+</entry>

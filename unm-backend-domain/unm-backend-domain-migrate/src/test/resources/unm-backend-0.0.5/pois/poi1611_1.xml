@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1611_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1611_1.xml"/>
+<title>L'aventure des echecs</title>
+<updated>2014-08-15T01:46:49.223+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1611"
+	coordinates="48.829784518737,2.381188720464"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T14:21:08.000+02:00"
+	updatedAt="2011-06-24T17:03:06.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1774"
+	name="L'aventure des echecs">
+	<poiType id="24" label="Culture" categoryId="16" categoryLabel="Culture"/>
+	<address>
+		<floor>Batiment Grands Moulins, UFR LAC, Salle 793C</floor>
+		<openingHours>Jeudi : 12h30-14h30</openingHours>
+	</address>
+</content>
+</entry>

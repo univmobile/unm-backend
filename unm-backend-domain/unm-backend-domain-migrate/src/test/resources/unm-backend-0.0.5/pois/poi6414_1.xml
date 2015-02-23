@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6414_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6414_1.xml"/>
+<title>Management systèmes d'info et de connaissance M2 FA</title>
+<updated>2014-08-15T01:47:37.017+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6414"
+	coordinates="48.838367937641,2.3487259447575"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-22T17:11:09.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1024"
+	name="Management systèmes d'info et de connaissance M2 FA">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<url>http://iae.univ-paris1.fr</url>
+		<phone> 01 53 55 27 45</phone>
+		<email> morti.iae@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

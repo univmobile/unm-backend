@@ -10,33 +10,29 @@
 		<servlet-class>fr.univmobile.backend.BackendServlet</servlet-class>
 		<init-param>
 			<param-name>baseURL</param-name>
-			<param-value>http://localhost:8380/unm-backend/</param-value>
+			<param-value>http://localhost:8080/unm-backend/</param-value>
 		</init-param>
 		<init-param>
 			<param-name>optional-jsonBaseURLs</param-name>
 			<param-value>
-				http://localhost:8380/unm-backend/json/
-				http://10.0.2.2:8380/unm-backend/json/
-				http://192.168.0.40:8080/unm-backend/json/
-				http://192.168.0.10:8080/unm-backend/json/
 				http://localhost:8080/unm-backend/json/
 			</param-value>
 		</init-param>
 		<init-param>
 			<param-name>dataDir</param-name>
-			<param-value>/tmp/unm-backend/dataDir</param-value>
+			<param-value>/var/univmobile</param-value>
 		</init-param>
-		<init-param>
+		<!-- <init-param>
 			<param-name>externalConfig</param-name>
 			<param-value>/etc/univmobile/unm-backend.xml</param-value>
-		</init-param>
+		</init-param> -->
 		<init-param>
 			<param-name>twitter.consumerKey</param-name>
-			<param-value></param-value>
+			<param-value>mytweetwrconnsumerKey</param-value>
 		</init-param>
 		<init-param>
 			<param-name>twitter.consumerSecret</param-name>
-			<param-value></param-value>
+			<param-value>mytweetwrconnsumerSecret</param-value>
 		</init-param>
 		<init-param>
 			<param-name>shibboleth.ssoBaseURL</param-name>
@@ -66,6 +62,7 @@
 		<init-param>
 			<param-name>hosts.allow</param-name>
 			<param-value>
+				odifis-VirtualBox
 				Davids-MacBook-Pro.local
 				mbpro.local
 				unm-ci

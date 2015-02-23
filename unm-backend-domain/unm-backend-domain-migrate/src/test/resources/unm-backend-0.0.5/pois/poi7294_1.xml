@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7294_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7294_1.xml"/>
+<title>Resto U Le Traditionnel</title>
+<updated>2014-08-15T01:47:45.330+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7294"
+	coordinates="48.791238092173,2.3291605710983"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T14:43:28.000+01:00"
+	updatedAt="2012-12-17T14:45:40.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7243"
+	name="Resto U Le Traditionnel">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Le Traditionnel avec son pôle Jardins du Crous et sa formule entrée, plat garni (viande ou poisson) fromage ou dessert. Avec la possibilité de pizzas à emporter.</description>
+	<address>
+		<floor>2e étage</floor>
+		<openingHours>Service de 11h15  à 14 h30 et le soir de 19h à 20h30</openingHours>
+	</address>
+</content>
+</entry>

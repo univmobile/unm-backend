@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1513_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1513_1.xml"/>
+<title>Centre Hostater</title>
+<updated>2014-08-15T01:46:48.399+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1513"
+	coordinates="48.851962,2.3440"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:25:08.000+02:00"
+	updatedAt="2011-05-13T14:05:46.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="Centre Hostater">
+	<poiType id="10" label="Santé" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<address>
+		<openingHours>Lundi-vendredi: 9h-18h30</openingHours>
+		<itinerary>Métro 10 Cluny la Sorbonne</itinerary>
+		<phone>0146334515</phone>
+		<fullAddress>24 rue de la Harpe
+75005 Paris</fullAddress>
+	</address>
+</content>
+</entry>

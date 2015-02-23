@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi453_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi453_1.xml"/>
+<title>Bibliothèque de l'UFR SSG</title>
+<updated>2014-08-15T01:46:40.042+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="453"
+	coordinates="48.631819298679,2.432186901569"
+	active="true"
+	markerType="point"
+	createdAt="2010-09-06T13:53:33.000+02:00"
+	updatedAt="2011-06-15T17:30:00.000+02:00"
+	createdBy="yasmine"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="273"
+	name="Bibliothèque de l'UFR SSG">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>RDC hall d'entrée</floor>
+		<openingHours>Du lundi au jeudi :
+12h00 / 19h00
+Mardi : 
+11h00 / 19h00 </openingHours>
+		<itinerary>RER D</itinerary>
+		<phone>01 69 47 82 51 </phone>
+	</address>
+</content>
+</entry>

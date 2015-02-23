@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2309_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2309_1.xml"/>
+<title>Département Cinéma</title>
+<updated>2014-08-15T01:46:55.757+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2309"
+	coordinates="48.944464808642,2.363307774066"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:22:05.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	deletedAt="2011-05-10T14:04:18.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	name="Département Cinéma">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

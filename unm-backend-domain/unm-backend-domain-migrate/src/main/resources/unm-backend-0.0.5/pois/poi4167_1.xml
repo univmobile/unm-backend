@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4167_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4167_1.xml"/>
+<title>ESPE Gennevilliers </title>
+<updated>2014-08-15T01:47:14.544+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4167"
+	coordinates="48.935640693633,2.3025839030743"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T17:24:34.000+02:00"
+	updatedAt="2013-06-27T14:21:37.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Fatma ARAS"
+	parentUid="4165"
+	name="ESPE Gennevilliers ">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>DEPUIS PARIS PORTE DE CLICHY :
+Depuis LA PORTE DE CLICHY, entrer dans CLICHY par la RUE DU 8 MAI 1945, puis à
+droite BD VICTOR HUGO/D912. Tourner à gauche BD DU GÉNÉRAL LECLERC, et arrivé
+PLACE DE LA RÉPUBLIQUE prendre LA RUE DU GÉNÉRAL ROGUET/D17 direction
+GENNEVILLIERS. Traverser le PONT DE GENNEVILLIERS et suivre direction
+D17/GENNEVILLIERS-CENTRE/PARC D’ACTIVITÉS/VILLENEUVE-LA-GARENNE et continuer tout
+droit AVENUE LAURENT CÉLY jusqu’au ROND-POINT PIERRE TIMBAUD (puis voir loupe).
+DEPUIS A86/NANTERRE :
+Emprunter la sortie A15/EPINAY-SUR-SEINE/GENNEVILLIERS-VILLAGE puis D911/EPINAYSUR-
+SEINE/GENNEVILLIERS-VILLAGE. Au bout de la sortie prendre à droite AVENUE
+MARCEL PAUL (puis voir loupe).
+DEPUIS A86/CRÉTEIL :
+Emprunter la sortie n°6 GENNEVILLIERS-CENTRE. Au bout de la sortie, prendre à
+gauche AVENUE DU GÉNÉRAL DE GAULLE, puis au ROND-POINT PIERRE TIMBAUD, prendre à droite AVENUE MARCEL PAUL (puis voir loupe).
+DEPUIS A15/CERGY-PONTOISE :
+Emprunter la sortie A86/SAINT-DENIS/GENNEVILLIERS-VILLAGE puis D911/ GENNEVILLIERS-VILLAGE. Au bout de la sortie prendre à droite AVENUE MARCEL PAUL (puis voir loupe).
+TRANSPORTS EN COMMUN :
+RER : De Paris, RER C direction ARGENTEUIL/MONTIGNY-BEAUCHAMP, arrêt GENNEVILLIERS.
+Metro : Ligne 13 station ASNIÈRES-GENNEVILLIERS/LES COURTILLES.
+Bus : Lignes 138/166/178/240/340/378 arrêt ROND-POINT PIERRE TIMBAUD.</itinerary>
+		<fullAddress>Avenue Marcel Paul, Z.A.C. des Barbanniers
+92230 Gennevilliers</fullAddress>
+	</address>
+	<child uid="4211" active="true"/>
+	<child uid="6038" active="true"/>
+	<child uid="7474" active="true"/>
+</content>
+</entry>

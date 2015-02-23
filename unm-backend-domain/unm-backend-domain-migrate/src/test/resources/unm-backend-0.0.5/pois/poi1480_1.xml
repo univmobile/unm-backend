@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1480_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1480_1.xml"/>
+<title>Ecrifore et  Diapason</title>
+<updated>2014-08-15T01:46:48.011+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1480"
+	coordinates="48.90391104498,2.2170697152"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T15:41:34.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2461"
+	name="Ecrifore et  Diapason">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau R06, Rdc</floor>
+		<openingHours>Lundi, mardi et jeudi :
+8h30 / 12h - 13h30 / 16h45
+Mercredi : 8h30 / 12h
+Vendredi : 8h30 / 13h15</openingHours>
+		<phone>01 40 97 47 50</phone>
+		<email>yhebert@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

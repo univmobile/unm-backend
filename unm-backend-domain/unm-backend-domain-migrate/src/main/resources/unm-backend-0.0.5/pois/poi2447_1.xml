@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2447_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2447_1.xml"/>
+<title>Faculté de Droit</title>
+<updated>2014-08-15T01:46:56.872+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2447"
+	coordinates="48.824285200103,2.302628159"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-29T14:20:05.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2336"
+	name="Faculté de Droit">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Métro 13 : Malakoff-plateau de Vanves
+Bus : 48-58-95- T3</itinerary>
+		<fullAddress>10 avenue pierre Larousse 
+92240 Malakoff</fullAddress>
+	</address>
+	<child uid="5548" active="true"/>
+	<child uid="3008" active="true"/>
+	<child uid="3526" active="true"/>
+	<child uid="3525" active="true"/>
+	<child uid="3050" active="true"/>
+	<child uid="2998" active="true"/>
+	<child uid="2826" active="true"/>
+	<child uid="2825" active="true"/>
+	<child uid="2822" active="true"/>
+	<child uid="2823" active="true"/>
+	<child uid="2703" active="true"/>
+	<child uid="2652" active="true"/>
+	<child uid="2643" active="true"/>
+	<child uid="3336" active="true"/>
+	<child uid="3344" active="true"/>
+	<child uid="3361" active="true"/>
+	<child uid="3448" active="true"/>
+	<child uid="3711" active="true"/>
+	<child uid="6114" active="true"/>
+</content>
+</entry>

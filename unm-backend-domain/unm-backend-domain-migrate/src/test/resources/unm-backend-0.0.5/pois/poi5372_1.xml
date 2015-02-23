@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5372_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5372_1.xml"/>
+<title>Physique et chimie (L3 PC)</title>
+<updated>2014-08-15T01:47:25.678+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5372"
+	coordinates="48.702708591053,2.1828675270081"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-01T16:12:30.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="5364"
+	name="Physique et chimie (L3 PC)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bâtiment 470, bureau D 325</floor>
+		<url>http://www.u-psud.fr/fr/les_formations/les_formations_par_diplome/licences/sciences_technologies_sante/physique/parcours_physique_et_chimie.html</url>
+		<phone>01 69 15 73 97</phone>
+		<email>veronique.epie@u-psud.fr</email>
+	</address>
+</content>
+</entry>

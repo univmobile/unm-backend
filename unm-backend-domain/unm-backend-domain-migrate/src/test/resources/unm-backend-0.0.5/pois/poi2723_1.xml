@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2723_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2723_1.xml"/>
+<title>Campus des Cordeliers</title>
+<updated>2014-08-15T01:46:59.492+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2723"
+	coordinates="48.850734739861,2.3414102196693"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T17:03:20.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2714"
+	name="Campus des Cordeliers">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="3740" active="true"/>
+	<child uid="4022" active="true"/>
+	<child uid="4344" active="true"/>
+</content>
+</entry>

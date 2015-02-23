@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7265_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7265_1.xml"/>
+<title>Département économie et gestion</title>
+<updated>2014-08-15T01:47:45.001+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7265"
+	coordinates="48.790487089704,2.3278087377548"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-13T11:34:26.000+01:00"
+	updatedAt="2012-12-17T14:47:38.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7221"
+	name="Département économie et gestion">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Le département d'économie et de gestion accueille des normaliens et des auditeurs libres pour une formation de haut niveau aux sciences économiques et aux sciences de gestion.
+Le statut d'élève fonctionnaire stagiaire permet d'être rémunéré trois ou quatre années avec des possibilités de césure, de parcours à l'étranger, de stage de recherche et en entreprise.
+Le département assure la préparation au concours de l'agrégation externe d'économie et de gestion dans le cadre d'un Master de Formation pour l'Enseignement Supérieur.
+Les demandes sont nombreuses et diversifiées dans les secteurs public et privé.</description>
+	<address>
+		<floor>5e étage</floor>
+		<url>http://www.ecogest.ens-cachan.fr/</url>
+		<phone>01 47 40 29 77</phone>
+		<fax>01 47 40 24 60</fax>
+		<email>secretariat@ecogest.ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

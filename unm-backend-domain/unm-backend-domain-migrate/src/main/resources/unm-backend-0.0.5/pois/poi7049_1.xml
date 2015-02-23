@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7049_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7049_1.xml"/>
+<title>C2i</title>
+<updated>2014-08-15T01:47:42.719+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7049"
+	coordinates="48.901752606662,2.2125964611769"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-06T12:47:57.000+01:00"
+	updatedAt="2012-01-06T12:49:39.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="7048"
+	name="C2i">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Laurence Hector</description>
+	<address>
+		<floor>E. 400</floor>
+		<phone>0140977139</phone>
+		<email>hector@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

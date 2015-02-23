@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1403_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1403_1.xml"/>
+<title>Secteur vie sociale étudiante</title>
+<updated>2014-08-15T01:46:47.290+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1403"
+	coordinates="48.956689387898,2.33970299363"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-25T18:55:24.000+01:00"
+	updatedAt="2011-05-31T11:58:05.000+02:00"
+	deletedAt="2011-03-31T00:23:25.000+02:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="Kevin Mazille Paris 8"
+	name="Secteur vie sociale étudiante">
+	<poiType id="13" label="Social" categoryId="12" categoryLabel="Santé &amp; Social"/>
+	<description>Vous avez des ressources limitées, vous avez peut-être droit à une bourse sur critères sociaux pour vous aider à financer vos études.
+Elles sont accordées sur barème national tenant compte des ressources et des charges de la famille. Pour en bénéficier, il faut avoir moins de 28 ans au 1er octobre de l'année universitaire. Ces prestations sont gérées par le CROUS (Centre régional des œuvres universitaires et scolaires) qui édite un document unique de demande de bourse et/ou de logement : le Dossier social étudiant.</description>
+	<address>
+		<openingHours>Du lundi au vendredi de 9h30 à 12h30 et de 14h00 à 16h30.
+Fermé le mercredi et le vendredi après midi.</openingHours>
+		<itinerary>F 110</itinerary>
+		<url>http://www.univ-paris13.fr/bourses-aides.html</url>
+		<phone>01 49 40 30 29</phone>
+		<email>scol-vse1arrouniv-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

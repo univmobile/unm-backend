@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6596_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6596_1.xml"/>
+<title>Entré principale</title>
+<updated>2014-08-15T01:47:38.705+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6596"
+	coordinates="48.70378490017,2.1324755251408|48.703788440429,2.1326740086079|48.703696393627,2.1326740086079|48.703692853362,2.1325023472309|48.70378490017,2.1324755251408"
+	active="true"
+	markerType="polygon"
+	createdAt="2011-07-05T10:41:04.000+02:00"
+	updatedAt="2011-09-19T13:57:20.000+02:00"
+	deletedAt="2011-07-05T15:36:25.000+02:00"
+	createdBy="Fatma ARAS"
+	updatedBy="Fatma ARAS"
+	name="Entré principale">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

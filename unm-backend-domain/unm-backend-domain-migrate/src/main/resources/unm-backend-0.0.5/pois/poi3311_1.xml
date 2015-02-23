@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3311_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3311_1.xml"/>
+<title>DOGMA</title>
+<updated>2014-08-15T01:47:05.278+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3311"
+	coordinates="48.847158813178,2.343821525573"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:01:14.000+02:00"
+	updatedAt="2011-09-09T15:41:50.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2842"
+	name="DOGMA">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Institut pour l’étude des disciplines dogmatiques et l’histoire générale des formes.
+
+Adresse :
+158, rue St Jacques
+75005 PARIS
+Adresse postale :
+Université Panthéon Assas (Paris II)
+Institut Cujas
+12 place du Panthéon
+75231 PARIS cedex 05</description>
+	<address>
+		<floor>http://www.disdog.fr</floor>
+		<email>rials@disdog.fr</email>
+	</address>
+</content>
+</entry>

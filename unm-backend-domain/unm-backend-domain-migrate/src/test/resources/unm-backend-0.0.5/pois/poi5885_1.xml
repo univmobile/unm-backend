@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5885_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5885_1.xml"/>
+<title>Cafétéria Café Expo</title>
+<updated>2014-08-15T01:47:31.259+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5885"
+	coordinates="48.956086813176,2.3411312699318"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T09:49:54.000+02:00"
+	updatedAt="2011-07-26T14:25:04.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4705"
+	name="Cafétéria Café Expo">
+	<poiType id="15" label="Cafétéria" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>Sous le Forum</description>
+	<address>
+		<openingHours>8h00 - 17h30 (du lundi au vendredi)
+8h00 - 15h00 (le samedi)</openingHours>
+		<phone>01-48-22-09-52</phone>
+		<email>restaurant.villetaneuse@crous-creteil.fr</email>
+	</address>
+</content>
+</entry>

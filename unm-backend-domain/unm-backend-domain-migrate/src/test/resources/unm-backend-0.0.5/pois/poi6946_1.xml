@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6946_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6946_1.xml"/>
+<title>BU Bourdieu</title>
+<updated>2014-08-15T01:47:41.496+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6946"
+	coordinates="48.947392700303,2.363683283329"
+	active="true"
+	markerType="point"
+	createdAt="2011-09-29T15:48:55.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="1164"
+	name="BU Bourdieu">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+</content>
+</entry>

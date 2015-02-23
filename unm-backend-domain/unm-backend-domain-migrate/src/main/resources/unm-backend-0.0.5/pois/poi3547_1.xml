@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3547_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3547_1.xml"/>
+<title>UFR 918</title>
+<updated>2014-08-15T01:47:07.876+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3547"
+	coordinates="48.845937443041,2.3559261672199"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T15:22:01.000+02:00"
+	updatedAt="2011-06-29T15:41:20.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="2838"
+	name="UFR 918">
+	<poiType id="34" label="UFR" categoryId="21" categoryLabel="Unité de Formation et de Recherche - Faculté"/>
+	<description>Une approche globale des problématiques environnementales</description>
+	<address>
+		<floor>2è étage</floor>
+		<url>http://ufr918.upmc.fr/fr/</url>
+		<phone>01.44.27.43.07</phone>
+		<email>direction.ufr918@listes.upmc.fr</email>
+	</address>
+</content>
+</entry>

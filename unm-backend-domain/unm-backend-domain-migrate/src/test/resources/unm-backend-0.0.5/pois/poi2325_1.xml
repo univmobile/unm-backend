@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2325_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2325_1.xml"/>
+<title>Département Théâtre</title>
+<updated>2014-08-15T01:46:55.928+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2325"
+	coordinates="48.943323247227,2.36433506011"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-27T15:45:30.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	deletedAt="2011-05-04T17:08:47.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	name="Département Théâtre">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+</content>
+</entry>

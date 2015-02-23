@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6999_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6999_1.xml"/>
+<title>Kleio</title>
+<updated>2014-08-15T01:47:42.120+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6999"
+	coordinates="48.902270707292,2.2118997573853"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:56:56.000+01:00"
+	updatedAt="2011-11-15T16:24:37.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2507"
+	name="Kleio">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>- resserer les liens entre les étudiants d'Histoire de l'université Paris Ouest Nanterre La Défense
+
+- soutenir les projets étudiants et enseignants susceptibles d'animer la vie culturelle et intellectuelle du département d'Histoire
+
+- améliorer la communication entre étudiants, enseignants et personnels du département. </description>
+	<address>
+		<floor>Bâtiment D</floor>
+		<url>http://www.u-paris10.fr/1272893861042/0/fiche___associationetudiant/</url>
+		<email>kleiop10@gmail.com</email>
+	</address>
+</content>
+</entry>

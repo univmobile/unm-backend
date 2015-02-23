@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1800_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1800_1.xml"/>
+<title>BU Droit et Science Politique</title>
+<updated>2014-08-15T01:46:51.018+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1800"
+	coordinates="48.902321044907,2.214335203"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T16:18:56.000+02:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2491"
+	name="BU Droit et Science Politique">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>E16, Rdc</floor>
+		<openingHours>Du lundi au jeudi :
+9h / 18h
+Vendredi :
+9h / 13h</openingHours>
+	</address>
+</content>
+</entry>

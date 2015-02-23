@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2595_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2595_1.xml"/>
+<title>Guyancourt Leclerc</title>
+<updated>2014-08-15T01:46:58.284+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2595"
+	coordinates="48.785692601711,2.05107316374"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T13:51:26.000+02:00"
+	updatedAt="2012-02-05T19:27:09.000+01:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="rrivoire"
+	parentUid="359"
+	name="Guyancourt Leclerc">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+	<address>
+		<itinerary>Gare de Saint-Quentin-en-Yvelines (Montigny le Bretonneux)</itinerary>
+		<fullAddress>3 rue de la Division Leclerc
+78280 Guyancourt</fullAddress>
+	</address>
+	<child uid="2984" active="true"/>
+	<child uid="2983" active="true"/>
+	<child uid="2982" active="true"/>
+	<child uid="2981" active="true"/>
+	<child uid="2979" active="true"/>
+	<child uid="1977" active="true"/>
+	<child uid="1976" active="true"/>
+	<child uid="1974" active="true"/>
+	<child uid="1973" active="true"/>
+	<child uid="1972" active="true"/>
+	<child uid="1971" active="true"/>
+	<child uid="1970" active="true"/>
+	<child uid="1969" active="true"/>
+	<child uid="1968" active="true"/>
+	<child uid="1967" active="true"/>
+	<child uid="1966" active="true"/>
+	<child uid="1953" active="true"/>
+	<child uid="1965" active="true"/>
+	<child uid="1964" active="true"/>
+	<child uid="1963" active="true"/>
+	<child uid="1961" active="true"/>
+	<child uid="1960" active="true"/>
+	<child uid="1958" active="true"/>
+	<child uid="1956" active="true"/>
+	<child uid="1954" active="true"/>
+	<child uid="1892" active="true"/>
+	<child uid="1890" active="true"/>
+	<child uid="1889" active="true"/>
+	<child uid="1887" active="true"/>
+	<child uid="1843" active="true"/>
+	<child uid="2698" active="true"/>
+	<child uid="2662" active="true"/>
+	<child uid="2649" active="true"/>
+	<child uid="2626" active="true"/>
+	<child uid="2625" active="true"/>
+	<child uid="2583" active="true"/>
+	<child uid="2524" active="true"/>
+	<child uid="2523" active="true"/>
+	<child uid="2522" active="true"/>
+	<child uid="7116" active="true"/>
+	<child uid="7136" active="true"/>
+</content>
+</entry>

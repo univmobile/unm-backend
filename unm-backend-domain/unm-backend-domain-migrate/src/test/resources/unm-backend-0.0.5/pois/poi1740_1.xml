@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1740_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1740_1.xml"/>
+<title>Sciences et Techniques des Activités Physiques L1-3</title>
+<updated>2014-08-15T01:46:50.426+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1740"
+	coordinates="48.91447606548,2.418740987"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-04T22:55:20.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille Paris 8"
+	updatedBy="yasmine"
+	parentUid="356"
+	name="Sciences et Techniques des Activités Physiques L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Donner une formation scientifique générale dans le domaine des APS, puis approfondir ces connaissances dans le domaine de l’intervention éducative. Sensibiliser aux problèmes posés par l’étude de l’homme en mouvement dans différents milieux d’exploitation des APS.
+- Comprendre par une approche scientifique, technique et pratique, les activités physiques et sportives dans leurs diversités
+- Intégrer les dimensions culturelles, historiques et technologiques des activités physiques et sportives
+- Acquérir des connaissances générales permettant l’intervention dans différents milieux et pour diverses populations
+- Permettre l’acquisition des méthodes nécessaires au travail universitaire
+- Initier aux problématiques de la recherche dans le domaine des APS</description>
+	<address>
+		<floor>Mezzanine -  Bureau m 64.</floor>
+		<openingHours>Lundi à Jeudi :
+9h15 - 12h 
+13h15 - 16h30
+Vendredi : 
+9h15 - 12h
+13h15 - 15h30</openingHours>
+		<url>http://www-smbh.univ-paris13.fr/smbh/enseig/enseig_lmd/enseig_lmd_lic/lic_staps_.html</url>
+		<phone>01 48 38 84 13</phone>
+		<email>staps1@smbh.univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

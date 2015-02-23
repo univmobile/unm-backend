@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1888_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1888_1.xml"/>
+<title>Étudions Gayment</title>
+<updated>2014-08-15T01:46:52.061+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1888"
+	coordinates="48.902689215717,2.213482260704"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-05T17:49:21.000+02:00"
+	updatedAt="2011-11-15T11:21:12.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="6511"
+	name="Étudions Gayment">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Cette association féministe respectueuse de tous les genres et de toutes les sexualités est une association militante ouverte à toutes et tous, étrangerEs, handicapéEs, hétéro, homo, trans, intersexe, de culture et de solidarité. Elle :
+- Lutte contre les discriminations sexistes, homophobes, transphobes et lesbophobes sur la fac et en Ile de France.
+- Cadre de réflexion sur les genres, les sexualités, les oppressions (également de type racistes et capitalistes)
+- Informer sur les risques toujours actuels que représentent les IST et le VIH, notamment chez les jeunes.</description>
+	<address>
+		<floor>Bâtiment R - Salle R 201, 2ème étage</floor>
+		<openingHours>- lundi de 15h à 17h
+- jeudi de 10h à 17h
+- vendredi 10-16h
+- Réunion hebdomadaire : jeudi dès 17h
+
+(Ces horaires étant susceptibles de changer selon les semestres, n'hésitez pas à prendre directement contact avec l'association)</openingHours>
+		<url>http://etudionsgayment.blogspot.com/</url>
+		<phone>01 40 97 59 39</phone>
+		<email>etudionsgayment@gmail.com</email>
+	</address>
+</content>
+</entry>

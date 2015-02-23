@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1645_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1645_1.xml"/>
+<title>EURO-FIL</title>
+<updated>2014-08-15T01:46:49.553+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1645"
+	coordinates="48.826782749934,2.3647950589"
+	active="true"
+	markerType="point"
+	createdAt="2011-04-01T15:13:36.000+02:00"
+	updatedAt="2012-03-20T12:55:41.000+01:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1162"
+	name="EURO-FIL">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<address>
+		<url>http://www.euro-fil.com</url>
+		<email>eurofil@univ-paris1.fr</email>
+	</address>
+</content>
+</entry>

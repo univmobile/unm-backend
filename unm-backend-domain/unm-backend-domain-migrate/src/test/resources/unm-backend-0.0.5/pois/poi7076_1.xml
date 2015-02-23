@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7076_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7076_1.xml"/>
+<title>Saint-Denis préfabriqués</title>
+<updated>2014-08-15T01:47:42.988+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7076"
+	coordinates="48.944119436214,2.3623522371054"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-23T15:21:58.000+01:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="Marion MAINFRAY"
+	updatedBy="Marion MAINFRAY"
+	parentUid="1990"
+	name="Saint-Denis préfabriqués">
+	<poiType id="3" label="Bâtiment" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

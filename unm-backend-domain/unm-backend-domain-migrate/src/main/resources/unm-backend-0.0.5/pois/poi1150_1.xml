@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1150_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1150_1.xml"/>
+<title>Sc. de l'éducation L1-3</title>
+<updated>2014-08-15T01:46:45.294+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1150"
+	coordinates="48.955935346444,2.341237217187"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-22T15:10:19.000+01:00"
+	updatedAt="2011-05-24T11:33:24.000+02:00"
+	createdBy="Kevin Mazille"
+	updatedBy="yasmine"
+	parentUid="328"
+	name="Sc. de l'éducation L1-3">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>A partir de ses trois parcours, la licence Sciences de l’Education - Interventions sociales et culturelles vise à présenter les différentes formes d’interventions éducatives (didactique, formelle, informelle) et à analyser leurs déclinaisons pour les différents publics (petite enfance, enfance, jeunesse, adultes, personnes âgées, personnes en situation de handicap…) et dans les différents milieux (scolaires, loisir, intervention sociale). L’année d’étude comporte des enseignements propres à chacun des trois parcours et des enseignements communs.</description>
+	<address>
+		<floor>1er étage - Aile A - Bureau A203.</floor>
+		<openingHours>9h30 - 12h
+14h - 16h 
+Mercredi fermé.</openingHours>
+		<itinerary>En transport en commun:
+
+Depuis Paris
+Train, de la Gare du Nord, jusqu'à la gare d'Epinay-Villetaneuse.
+[En Gare du Nord, suivre l'un des directions Ermont-Eaubonne, Luzarches, Persan-Beaumont ou Valmondois en vérifiant, sur le quai de départ, que le train s'arrête en gare d'Epinay-Villetaneuse] Gare d'Epinay-Villetaneuse, sortie côté Villetaneuse puis bus156 [direction Gare de St-Denis] ou bus 356 [direction St-Denis Université] jusqu'à l'arrêt Université Paris 13.</itinerary>
+		<url>http://www.univ-paris13.fr/lshs/</url>
+		<phone>01 49 40 31 67</phone>
+		<fax>01 49 40 37 06</fax>
+		<email>sec-sciences-educ.lshs@univ-paris13.fr</email>
+		<fullAddress>Université Paris 13
+Avenue J.B. Clément
+93430
+VILLETANEUSE </fullAddress>
+	</address>
+</content>
+</entry>

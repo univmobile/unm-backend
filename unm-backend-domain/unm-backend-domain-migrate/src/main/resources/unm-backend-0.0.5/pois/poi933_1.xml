@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi933_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi933_1.xml"/>
+<title>CERDIN</title>
+<updated>2014-08-15T01:46:43.518+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="933"
+	coordinates="48.846951474565,2.3446241"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-25T16:15:44.000+01:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1027"
+	name="CERDIN">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Centre d'Etudes et de Recherche en Droit International</description>
+	<address>
+		<floor>Aile Cujas, 3e étage, 303</floor>
+		<openingHours>Lundi au vendredi
+09h00-12h00
+14h00-16h30</openingHours>
+		<itinerary>RER B
+Station Luxembourg
+Bus 21, 27, 38, 82, 84, 85 et 89</itinerary>
+		<url>http://cerdin.univ-paris1.fr/</url>
+		<phone>01 44 07 81 17</phone>
+		<email>cerdin@univ-paris1.fr </email>
+	</address>
+</content>
+</entry>

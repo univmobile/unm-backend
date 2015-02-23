@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1202_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1202_1.xml"/>
+<title>Laboratoire Acides Nucléiques, Biosciences et Photonique</title>
+<updated>2014-08-15T01:46:45.766+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1202"
+	coordinates="48.913377886896,2.41988897323"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-24T20:13:26.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="348"
+	name="Laboratoire Acides Nucléiques, Biosciences et Photonique">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire Acides Nucléiques, Biosciences et Photonique - ANBIOPHI - FRE 3207 CNRS-UP6-UP13.</description>
+	<address>
+		<phone>01 48 38 73 91</phone>
+		<email>penhoat8@aol.com</email>
+	</address>
+</content>
+</entry>

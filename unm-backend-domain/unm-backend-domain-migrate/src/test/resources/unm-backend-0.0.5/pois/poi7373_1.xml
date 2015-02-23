@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7373_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7373_1.xml"/>
+<title>Ilôt poliveau</title>
+<updated>2014-08-15T01:47:45.691+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7373"
+	coordinates="48.842053938368,2.3596492409706|48.841369012392,2.3600891232491|48.841573785057,2.3610761761665|48.841135994203,2.3612692952156|48.840295707488,2.3563876748085|48.840740566917,2.3574820160866|48.841404318083,2.3571172356606|48.842053938368,2.3596492409706"
+	active="true"
+	markerType="polygon"
+	createdAt="2013-04-24T15:14:34.000+02:00"
+	updatedAt="2013-05-03T12:58:45.000+02:00"
+	deletedAt="2013-04-24T17:16:07.000+02:00"
+	createdBy="carole.francq"
+	updatedBy="carole.francq"
+	name="Ilôt poliveau">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+</content>
+</entry>

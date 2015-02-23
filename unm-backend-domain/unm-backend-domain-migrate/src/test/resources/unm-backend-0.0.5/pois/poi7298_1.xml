@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7298_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7298_1.xml"/>
+<title>Service des sports</title>
+<updated>2014-08-15T01:47:45.378+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7298"
+	coordinates="48.790308614523,2.3277980089188"
+	active="true"
+	markerType="point"
+	createdAt="2012-12-17T15:06:36.000+01:00"
+	updatedAt="2012-12-18T10:11:54.000+01:00"
+	createdBy="enscachan"
+	updatedBy="enscachan"
+	parentUid="7221"
+	name="Service des sports">
+	<poiType id="12" label="Sport" categoryId="13" categoryLabel="Equipements sportifs &amp; service des sports"/>
+	<description>A l'ENS, l'organisation de la pratique sportive est pilotée par 2 structures : l'Association Sportive et le Service des sports qui travaillent en complète collaboration afin de développer la pratique sportive sous toutes ses formes.
+Le Service des sports coordonne la gestion des activités physiques et sportives pour les étudiants et personnels du campus et des compétitions FFSU. Il est responsable de la gestion des installations sportives et assure le suivi de la réalisation de tous les événements sportifs proposés aux étudiants de l'École.</description>
+	<address>
+		<floor>Rez-de-chaussée</floor>
+		<url>http://www.bds.ens-cachan.fr/</url>
+		<phone>01 47 40 21 80</phone>
+		<fax>01 47 40 68 89</fax>
+		<email>sds@ens-cachan.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6098_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6098_1.xml"/>
+<title>SIO</title>
+<updated>2014-08-15T01:47:33.715+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6098"
+	coordinates="48.839392589514,2.5866197794676"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-14T16:42:39.000+02:00"
+	updatedAt="2011-06-15T16:43:04.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4644"
+	name="SIO">
+	<poiType id="26" label="Orientation" categoryId="11" categoryLabel="Orientation &amp; Insertion professionnelle"/>
+	<description>Le SIO (Service d'Information et d'Orientation) accompagne tous les étudiants au long de leur cursus et aide aussi les nouveaux bacheliers à mieux s’intégrer à l’université et à construire avec eux un parcours de formation. </description>
+	<address>
+		<floor>Bureau 0B089</floor>
+		<openingHours>Lundi-Vendredi: 9h00-17h00</openingHours>
+		<url>http://www.univ-mlv.fr/vie-du-campus/orientation-et-insertion/information-et-orientation-sio/</url>
+		<phone>01 60 95 74 74</phone>
+		<email>sio@univ-mlv.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi873_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi873_1.xml"/>
+<title>Amphithéâtre I</title>
+<updated>2014-08-15T01:46:42.740+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="873"
+	coordinates="48.827202360933,2.3650"
+	active="true"
+	markerType="point"
+	createdAt="2011-02-22T15:42:23.000+01:00"
+	updatedAt="2013-09-26T18:24:27.000+02:00"
+	createdBy="cfontaine"
+	updatedBy="Aurélie Massie P7"
+	parentUid="1023"
+	name="Amphithéâtre I">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<description>Capacité 400 places.</description>
+	<address>
+		<floor>Aile A, rez-de-chaussée</floor>
+		<itinerary>Métro 14
+Terminus Olympiades
+Bus 62, 64 et 83
+Arrêt Tolbiac-Baudricourt</itinerary>
+	</address>
+</content>
+</entry>

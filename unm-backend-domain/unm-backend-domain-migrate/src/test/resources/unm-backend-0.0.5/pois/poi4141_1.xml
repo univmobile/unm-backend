@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4141_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4141_1.xml"/>
+<title>UMR 8550</title>
+<updated>2014-08-15T01:47:14.170+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4141"
+	coordinates="48.842828418604,2.3465625755489"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-18T16:55:52.000+02:00"
+	updatedAt="2011-06-03T17:00:02.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4137"
+	name="UMR 8550">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de physique statistique de l'Ecole Normale Supérieure (LPS) - UMR 8550</description>
+	<address>
+		<url>http://www.lps.ens.fr/</url>
+		<phone>01 44 32 37 61</phone>
+		<email>marie.gefflot@lps.ens.fr</email>
+	</address>
+</content>
+</entry>

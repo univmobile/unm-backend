@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi42_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi42_1.xml"/>
+<title>Scolarité Département INFO</title>
+<updated>2014-08-15T01:46:38.311+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="42"
+	coordinates="48.955789984929,2.3428166807"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T11:22:08.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-06-24T12:51:06.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Scolarité Département INFO">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Informatique
+Le département délivre le DUT Informatique en formation initiale classique, en formation continue et en alternance ainsi que la Licence Professionnelle Systèmes Informatiques et Logiciels.</description>
+	<address
+		zipCode="93430 "
+		city="VILLETANEUSE"
+		countryCode="FR">
+		<phone>01 49 40 31 29    </phone>
+		<fax>01 49 40 40 97</fax>
+		<email>scoinfo@iutv.univ-paris13.fr</email>
+		<fullAddress>99 avenue Jean-Baptiste Clément
+ 93430  VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

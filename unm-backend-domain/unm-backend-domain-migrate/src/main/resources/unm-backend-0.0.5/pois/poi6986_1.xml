@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6986_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6986_1.xml"/>
+<title>BDE Miage Nanterre - HotSpot</title>
+<updated>2014-08-15T01:47:41.955+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6986"
+	coordinates="48.903104547011,2.2155421972275"
+	active="true"
+	markerType="point"
+	createdAt="2011-11-15T15:07:27.000+01:00"
+	updatedAt="2012-01-06T12:50:05.000+01:00"
+	createdBy="Elsa ROMANIELLO"
+	updatedBy="Elsa ROMANIELLO"
+	parentUid="2488"
+	name="BDE Miage Nanterre - HotSpot">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Le BDE Miage Nanterre est une association loi 1901 à but non lucratif. Son objectif principal est de développer la vie étudiante de la Miage. Outre la promotion de la Miage et de son diplôme, le BDE se veut être un moyen d'échange, de partage et d'ouverture d'esprit pour tous les étudiants. </description>
+	<address>
+		<floor>Bâtiment G - Salle 210 - 2ème étage</floor>
+		<url>http://bde.miagenanterre.fr/</url>
+		<email>secretaire@bde.miagenanterre.fr</email>
+	</address>
+</content>
+</entry>

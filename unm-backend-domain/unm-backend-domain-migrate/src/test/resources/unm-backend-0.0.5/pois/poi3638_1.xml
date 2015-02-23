@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3638_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3638_1.xml"/>
+<title>Union des étudiants algériens de France (UEAF)</title>
+<updated>2014-08-15T01:47:08.893+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3638"
+	coordinates="48.94624051894,2.3606765270233"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-11T17:16:44.000+02:00"
+	updatedAt="2012-02-01T16:16:04.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="2599"
+	name="Union des étudiants algériens de France (UEAF)">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>Défense des intérêts moraux et matériels de tous les étudiants. L’UEAF organise la solidarité, l’orientation et l’accompagnement des étudiants dans leurs démarches universitaires.
+
+ 
+
+Tout au long de l’année, elle organise des manifestations diverses pour la promotion de la culture maghrébine en général et algérienne en particulier (conférences, colloques, concerts...). Trait d’union, d’échanges et de solidarité entre les deux rives de la Méditerranée.</description>
+	<address>
+		<phone>06 26 73 36 35</phone>
+		<email>ueaf_asso@yahoo.fr</email>
+	</address>
+</content>
+</entry>

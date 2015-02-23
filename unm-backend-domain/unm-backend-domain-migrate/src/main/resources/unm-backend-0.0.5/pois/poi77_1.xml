@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi77_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi77_1.xml"/>
+<title>Bibliothèque Pierre Mendès France</title>
+<updated>2014-08-15T01:46:38.404+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="77"
+	coordinates="48.827244739743,2.36353576183"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T16:07:46.000+02:00"
+	updatedAt="2014-03-31T12:14:33.000+02:00"
+	deletedAt="2010-09-05T10:20:23.000+02:00"
+	createdBy="yasmine"
+	updatedBy="raphael"
+	name="Bibliothèque Pierre Mendès France">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<description>Sciences Juridiques et Politiques,
+Sciences Économiques et Gestion,
+Sciences humaines  Informatique et sciences de l'information</description>
+	<address
+		zipCode="75634"
+		city="Paris"
+		countryCode="FR">
+		<floor>Aile A, 6e étage</floor>
+		<openingHours> D'octobre à mai 
+ lundi: 12h - 19h
+ mardi au vendredi : 9h -19h
+ samedi : 9h-12h
+
+En juin, juillet, septembre :
+lundi : 12h-18h
+mardi au vendredi : 9h-18h
+
+Fermeture :
+Congés de Noël, de printemps, et de fin juillet à fin août.
+
+Le prêt ferme 1/4 d'heure avant la fermeture de la bibliothèque.
+Le lundi matin, la bibliothèque procède au rangement des collections.
+
+ </openingHours>
+		<itinerary>M° Olympiades
+Bus 62,83</itinerary>
+		<url>http://www.univ-paris1.fr/bibliotheques/la-bibliotheque-pierre-mendes-france/</url>
+		<phone>01 44 07 89 10</phone>
+		<fullAddress>90 rue de Tolbiac
+
+
+
+
+
+  75634 Paris</fullAddress>
+	</address>
+</content>
+</entry>

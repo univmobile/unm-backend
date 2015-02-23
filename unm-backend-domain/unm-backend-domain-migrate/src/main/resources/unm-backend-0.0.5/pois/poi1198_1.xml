@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1198_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1198_1.xml"/>
+<title>Laboratoire de pédagogie de la santé</title>
+<updated>2014-08-15T01:46:45.720+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1198"
+	coordinates="48.913328529989,2.42031544446"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-24T18:56:20.000+01:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	createdBy="Kevin Mazille"
+	updatedBy="Kevin Mazille Paris 8"
+	parentUid="348"
+	name="Laboratoire de pédagogie de la santé">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Laboratoire de pédagogie de la santé - LPS - EA 3412 UP13</description>
+	<address>
+		<url>www-smbh.univ-paris13.fr/dpss/index.html</url>
+		<phone>01 48 38 76 41</phone>
+		<fax>01 48 38 76 19</fax>
+		<email>dpssarrosmbh.univ-paris13.fr</email>
+	</address>
+</content>
+</entry>

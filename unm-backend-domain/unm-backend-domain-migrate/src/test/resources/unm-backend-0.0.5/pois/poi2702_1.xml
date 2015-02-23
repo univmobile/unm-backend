@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2702_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2702_1.xml"/>
+<title>Centre Documentaire des Sc. du Sport</title>
+<updated>2014-08-15T01:46:59.318+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2702"
+	coordinates="48.833841020551,2.290533743"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-03T16:24:50.000+02:00"
+	updatedAt="2011-06-14T17:14:33.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="2426"
+	name="Centre Documentaire des Sc. du Sport">
+	<poiType id="5" label="Bibliothèque" categoryId="9" categoryLabel="Bibliothèque Universitaire"/>
+	<address>
+		<floor>2ème étage</floor>
+		<openingHours>Lundi-Vendredi
+9h00-19h00</openingHours>
+		<phone>01 56 56 12 48</phone>
+		<fax>01 56 56 12 11</fax>
+	</address>
+</content>
+</entry>

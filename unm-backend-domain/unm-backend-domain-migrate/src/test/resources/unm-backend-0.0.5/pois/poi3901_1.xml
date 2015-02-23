@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3901_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3901_1.xml"/>
+<title>Recherches sur la pluralité esthétique</title>
+<updated>2014-08-15T01:47:11.491+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3901"
+	coordinates="48.947150178994,2.3616498336196"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:55:16.000+02:00"
+	updatedAt="2012-02-01T14:39:19.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3449"
+	name="Recherches sur la pluralité esthétique">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 1575 - Recherches sur la pluralité esthétique appartenant à l'École doctorale (ED) 31 : Pratiques et théories du sens.
+Directeur : Christian Doumet</description>
+	<address>
+		<floor>3ème étage Bâtiment D, bureau 321</floor>
+		<url>http://www.univ-paris8.fr/EA-1575-Recherches-sur-la</url>
+		<phone>01 49 40 73 31</phone>
+		<fax>01 49 40 68 20</fax>
+		<email>cdoumet@yahoo.fr</email>
+	</address>
+</content>
+</entry>

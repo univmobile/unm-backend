@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1590_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1590_1.xml"/>
+<title>Cinéma et Musiques</title>
+<updated>2014-08-15T01:46:49.058+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1590"
+	coordinates="48.825691650686,2.366297766"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T17:38:13.000+02:00"
+	updatedAt="2011-06-24T16:06:51.000+02:00"
+	createdBy="Aurélie Massie P7"
+	updatedBy="Amélie Lagrene P7"
+	parentUid="1772"
+	name="Cinéma et Musiques">
+	<poiType id="23" label="Association" categoryId="15" categoryLabel="Association"/>
+	<description>- Organisation de concerts
+- Programmations cinématographiques
+- Expositions
+
+Adhésion annuelle: 6€ pour les étudiants et les demandeurs d'emploi, 10 € pour les autres</description>
+	<address>
+		<floor>Bâtiment Montréal UFR GHSS Case 7001</floor>
+		<itinerary>Métro 14 Olympiades</itinerary>
+		<url>http://www.cinemusiques.blogspot.com/</url>
+		<phone>0157277171</phone>
+		<email>cine.musiques@univ-paris-diderot.fr</email>
+	</address>
+</content>
+</entry>

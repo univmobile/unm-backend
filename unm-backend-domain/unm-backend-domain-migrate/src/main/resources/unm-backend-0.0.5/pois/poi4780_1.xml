@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4780_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4780_1.xml"/>
+<title>Services et réseaux de communication</title>
+<updated>2014-08-15T01:47:20.460+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4780"
+	coordinates="48.97459733954,2.3766785860062"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-26T16:12:31.000+02:00"
+	updatedAt="2013-06-26T10:54:23.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="Abdul Aziz Sao"
+	parentUid="4066"
+	name="Services et réseaux de communication">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Annadouré Roch</description>
+	<address>
+		<email>iutsrc@ml.u-cergy.fr</email>
+	</address>
+</content>
+</entry>

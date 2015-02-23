@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7040_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7040_1.xml"/>
+<title>Allemand à distance</title>
+<updated>2014-08-15T01:47:42.611+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7040"
+	coordinates="48.901772383378,2.2126534581184"
+	active="true"
+	markerType="point"
+	createdAt="2012-01-06T10:52:14.000+01:00"
+	updatedAt="2012-01-06T12:42:21.000+01:00"
+	createdBy="Aurélie BOUYGE"
+	updatedBy="Aurélie BOUYGE"
+	parentUid="7039"
+	name="Allemand à distance">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<description>Annick Patoux</description>
+	<address>
+		<floor>E. 202</floor>
+		<phone>0140977347</phone>
+		<email>anpatoux@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

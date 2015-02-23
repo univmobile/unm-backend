@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3883_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3883_1.xml"/>
+<title>CIRCEFT</title>
+<updated>2014-08-15T01:47:11.296+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3883"
+	coordinates="48.944582838965,2.3629966378212"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-17T14:36:39.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="CIRCEFT">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Equipe d'accueil (EA) 4384 - Centre interdisciplinaire de recherche, culture, éducation, formation, travail (CIRCEFT) appartenant à l'École doctorale (ED) 31 : Pratiques et théories du sens.</description>
+	<address>
+		<floor>4ème étage Bâtiment A, bureau 427</floor>
+		<url>www.circeft.org</url>
+		<phone>01 49 40 65 24</phone>
+		<email>asavoye@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

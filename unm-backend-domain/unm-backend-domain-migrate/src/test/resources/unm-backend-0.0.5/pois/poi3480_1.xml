@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3480_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3480_1.xml"/>
+<title>Sciences de l’éducation (L3)</title>
+<updated>2014-08-15T01:47:07.109+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3480"
+	coordinates="48.944571388275,2.363024801015"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T17:22:54.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Sciences de l’éducation (L3)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>4ème étage Bâtiment A, bureau 435</floor>
+		<openingHours>Lundi
+14h-16h
+Mardi, mercredi et jeudi
+9h-12h
+14h-16h
+Vendredi
+9h-12h</openingHours>
+		<url>http://www.ufr-sepf.univ-paris8.fr/?-Licence-L3-</url>
+		<phone>01 49 40 66 61</phone>
+		<fax>01 49 40 71 25</fax>
+		<email>lic3.education@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

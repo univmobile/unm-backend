@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi44_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi44_1.xml"/>
+<title>Scolarité Département GEA GEII R&amp;T</title>
+<updated>2014-08-15T01:46:38.317+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="44"
+	coordinates="48.955832254884,2.34316000351"
+	active="true"
+	markerType="point"
+	createdAt="2010-06-24T11:29:37.000+02:00"
+	updatedAt="2013-03-07T15:35:54.000+01:00"
+	deletedAt="2010-06-24T12:51:06.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	name="Scolarité Département GEA GEII R&amp;T">
+	<poiType id="4" label="Scolarité" categoryId="8" categoryLabel="Scolarité &amp; Inscription "/>
+	<address
+		zipCode="93430 "
+		city="VILLETANEUSE"
+		countryCode="FR">
+		<phone>01 49 40 39 93</phone>
+		<email>scogea@iutv.univ-paris13.fr</email>
+		<fullAddress>99 avenue Jean-Baptiste Clément
+ 93430  VILLETANEUSE</fullAddress>
+	</address>
+</content>
+</entry>

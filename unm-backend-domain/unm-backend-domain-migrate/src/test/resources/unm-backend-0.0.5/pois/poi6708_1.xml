@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi6708_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi6708_1.xml"/>
+<title>Restaurant Censier</title>
+<updated>2014-08-15T01:47:39.477+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="6708"
+	coordinates="48.84080258806,2.3555508255959"
+	active="true"
+	markerType="point"
+	createdAt="2011-08-16T16:08:42.000+02:00"
+	updatedAt="2011-09-02T11:58:21.000+02:00"
+	createdBy="yasmine"
+	updatedBy="yasmine"
+	parentUid="6707"
+	name="Restaurant Censier">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<description>1er étage : stand pizzas cuite devant le client stand cuisine de terrain
+2ème étage : stand cuisine exotique, stand grillade et frites</description>
+	<address>
+		<openingHours>RU : du lundi au vendredi de 11h00 à 14h30
+Cafétéria : du lundi au vendredi de 8h00 à 18h15</openingHours>
+		<url>http://www.crous-paris.fr</url>
+	</address>
+	<attachment id="173" title="censier_1.jpg" type="image" url="/uploads/poi/47ce58b5e4206853de7031bb3aee3e480b6fc947.jpg"/>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi1490_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi1490_1.xml"/>
+<title>Art du spectacle : cinéma et théâtre</title>
+<updated>2014-08-15T01:46:48.144+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="1490"
+	coordinates="48.904050328093,2.2172735631"
+	active="true"
+	markerType="point"
+	createdAt="2011-03-29T16:00:26.000+02:00"
+	updatedAt="2012-01-10T15:57:44.000+01:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="2461"
+	name="Art du spectacle : cinéma et théâtre">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>OU malika.ousad@u-paris10.fr au 01 40 97 73 06</description>
+	<address>
+		<floor>Bureau 112, 1er étage</floor>
+		<openingHours>Du lundi au vendredi :
+9h / 12h - 14h / 17h
+Sauf le mercredi après midi</openingHours>
+		<phone>01 40 97 73 04</phone>
+		<email>michele.levy@u-paris10.fr</email>
+	</address>
+</content>
+</entry>

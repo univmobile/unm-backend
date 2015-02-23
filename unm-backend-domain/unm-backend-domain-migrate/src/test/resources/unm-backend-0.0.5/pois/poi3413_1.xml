@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3413_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3413_1.xml"/>
+<title>Psychologie (L1-L3, de A à K)</title>
+<updated>2014-08-15T01:47:06.328+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3413"
+	coordinates="48.944189990688,2.362906783819"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-10T15:58:03.000+02:00"
+	updatedAt="2012-02-01T14:39:08.000+01:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="3450"
+	name="Psychologie (L1-L3, de A à K)">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<description>Licence de Psychologie (pour les étudiants dont le nom commence par les lettres A à K) et Master 2 Psychologie de l’Enfance et de l’Adolescence.</description>
+	<address>
+		<floor>2ème étage Bâtiment A, bureau 278</floor>
+		<openingHours>Lundi
+14h-19h
+Mardi et jeudi
+10h-12h30
+Mercredi
+14h-16h</openingHours>
+		<url>http://www.univ-paris8.fr/ufr-psycho/</url>
+		<phone>01 49 40 64 71</phone>
+		<fax>01 49 40 64 73</fax>
+		<email>catherine.peytavid@univ-paris8.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4647_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4647_1.xml"/>
+<title>Gestion M1</title>
+<updated>2014-08-15T01:47:19.339+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4647"
+	coordinates="48.86933920362,2.2734215855598"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T17:10:16.000+02:00"
+	updatedAt="2011-05-27T15:18:57.000+02:00"
+	createdBy="Marine Gianfermi Paris X"
+	updatedBy="Marine Gianfermi Paris X"
+	parentUid="4543"
+	name="Gestion M1">
+	<poiType id="17" label="Formation" categoryId="17" categoryLabel="Formation"/>
+	<address>
+		<floor>Bureau D 408</floor>
+		<openingHours>Lundi,mercredi, jeudi :
+9h00 / 12h30 - 13h30 /17h00 
+Mardi et vendredi :
+9h00 / 12h30</openingHours>
+		<phone>01 44 05 42 23</phone>
+		<email>harry.fadel@dauphine.fr</email>
+	</address>
+</content>
+</entry>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4523_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4523_1.xml"/>
+<title>IUT de Sceaux</title>
+<updated>2014-08-15T01:47:18.196+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4523"
+	coordinates="48.776802740256,2.2872376441956"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-24T15:43:43.000+02:00"
+	updatedAt="2011-07-05T09:20:02.000+02:00"
+	createdBy="j.richer"
+	updatedBy="j.richer"
+	parentUid="4398"
+	name="IUT de Sceaux">
+	<poiType id="2" label="Site" categoryId="1" categoryLabel="Plans"/>
+	<child uid="5601" active="true"/>
+</content>
+</entry>

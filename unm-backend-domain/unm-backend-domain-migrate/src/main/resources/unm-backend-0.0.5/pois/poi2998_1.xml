@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi2998_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi2998_1.xml"/>
+<title>CEDAG, Centre d'études droit des affaires et gestion</title>
+<updated>2014-08-15T01:47:01.909+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="2998"
+	coordinates="48.824308576029,2.302573006"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-05T14:59:08.000+02:00"
+	updatedAt="2011-06-14T17:10:50.000+02:00"
+	createdBy="Abdul Aziz Sao"
+	updatedBy="yasmine"
+	parentUid="2447"
+	name="CEDAG, Centre d'études droit des affaires et gestion">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<address>
+		<url>http://www.droit.univ-paris5.fr</url>
+		<phone>01 41 17 30 00</phone>
+		<fax>01 46 56 05 29</fax>
+	</address>
+</content>
+</entry>

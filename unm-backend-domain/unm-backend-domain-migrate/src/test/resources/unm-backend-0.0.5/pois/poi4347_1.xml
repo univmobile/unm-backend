@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi4347_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi4347_1.xml"/>
+<title>UMR_S 667</title>
+<updated>2014-08-15T01:47:16.393+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="4347"
+	coordinates="48.848975784156,2.3452424257994"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-20T16:36:05.000+02:00"
+	updatedAt="2011-07-20T14:38:29.000+02:00"
+	createdBy="Martin Gobert"
+	updatedBy="Martin Gobert"
+	parentUid="4344"
+	name="UMR_S 667">
+	<poiType id="19" label="Laboratoire" categoryId="14" categoryLabel="Recherche"/>
+	<description>Dynamique et physiopathologie des réseaux neuronaux - UMR_S 667</description>
+	<address>
+		<url>http://www.college-de-france.fr/chaires/chaire4/</url>
+		<phone>01 44 27 12 30</phone>
+		<email>marie-helene.levi@college-de-france.fr</email>
+	</address>
+</content>
+</entry>

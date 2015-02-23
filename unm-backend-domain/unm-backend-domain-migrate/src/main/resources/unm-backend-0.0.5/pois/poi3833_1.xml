@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi3833_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi3833_1.xml"/>
+<title>Amphithéâtre 4C, 5C, 9E, 10E</title>
+<updated>2014-08-15T01:47:10.774+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="3833"
+	coordinates="48.829194126217,2.3817318677902"
+	active="true"
+	markerType="point"
+	createdAt="2011-05-16T20:52:37.000+02:00"
+	updatedAt="2011-06-24T17:14:21.000+02:00"
+	createdBy="Amélie Lagrene P7"
+	updatedBy="yasmine"
+	parentUid="2453"
+	name="Amphithéâtre 4C, 5C, 9E, 10E">
+	<poiType id="11" label="Amphithéâtre" categoryId="3" categoryLabel="Amphithéâtre "/>
+	<address>
+		<floor>1er étage - Hall C et E</floor>
+	</address>
+</content>
+</entry>

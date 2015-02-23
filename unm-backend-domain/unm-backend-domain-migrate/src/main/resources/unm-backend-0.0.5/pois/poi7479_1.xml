@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi7479_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi7479_1.xml"/>
+<title>Services administratifs</title>
+<updated>2014-08-15T01:47:46.800+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="7479"
+	coordinates="48.848656469474,2.3430264182389"
+	active="true"
+	markerType="point"
+	createdAt="2013-07-05T17:27:56.000+02:00"
+	updatedAt="2013-07-10T13:21:37.000+02:00"
+	deletedAt="2013-07-10T13:21:37.000+02:00"
+	createdBy="david.fourcaud"
+	updatedBy="david.fourcaud"
+	name="Services administratifs">
+	<poiType id="18" label="Institut" categoryId="22" categoryLabel="Institut &amp; École"/>
+	<description>- Direction
+- Éditions
+- Patrimoine et logistique
+- Ressources humaines
+- Relations internationales et stages
+- Recherche
+- Scolarité</description>
+	<address>
+		<floor>19, rue de la Sorbonne 75005 PARIS</floor>
+		<openingHours>lundi-vendredi : 9h30-19h30</openingHours>
+		<url>http://www.enc.sorbonne.fr</url>
+		<phone>01 55 42 75 00</phone>
+		<email>secretariat@enc.sorbonne.fr</email>
+	</address>
+</content>
+</entry>

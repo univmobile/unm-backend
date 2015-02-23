@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<entry xmlns="http://www.w3.org/2005/Atom">
+<id>fr.univmobile:unm-backend:test/pois/002:poi5904_1</id>
+<link rel="self" href="fr.univmobile:unm-backend:test/pois/002:poi5904_1.xml"/>
+<title>Restaurant U Fréteau de Saint-Just</title>
+<updated>2014-08-15T01:47:31.466+02:00</updated>
+<category term="pois"/>
+<author>
+	<name>dandriana</name>
+	<uri>fr.univmobile:unm-backend:test/users:dandriana</uri>
+</author>
+<content uid="5904"
+	coordinates="48.536976875472,2.6560742408037"
+	active="true"
+	markerType="point"
+	createdAt="2011-06-10T11:32:29.000+02:00"
+	updatedAt="2011-07-27T09:57:42.000+02:00"
+	createdBy="Basile Michel"
+	updatedBy="Basile Michel"
+	parentUid="4863"
+	name="Restaurant U Fréteau de Saint-Just">
+	<poiType id="8" label="Restaurant" categoryId="4" categoryLabel="Restauration Universitaire"/>
+	<address>
+		<openingHours>11h30 - 14h00</openingHours>
+		<phone>01-64-37-32-45</phone>
+		<email>restaurant.melun@crous-creteil.fr</email>
+	</address>
+	<attachment id="127" title="Repas_gratuit_Melun_6_.jpg" type="image" url="/uploads/poi/2fd903dbdeabcc84c4974cfdbff338746cfba09d.jpg"/>
+</content>
+</entry>
