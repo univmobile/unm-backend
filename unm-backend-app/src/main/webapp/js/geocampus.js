@@ -366,6 +366,11 @@ var DataSource = function(baseUrl) {
                     if (myViewModel.pois().length == 1) {
                         myViewModel.pois.valueHasMutated();
                     }
+                    if (poi.isNew && poi.imageMap == null && userGeolocation != undefined) {
+                        // Center map and a marker for the just created poi
+                        gmap.setCenter(new google.maps.LatLng(userGeolocation.lat, userGeolocation.lng));
+                        handleNewPoiMarker(userGeolocation);
+                    }
                 } else {
                     myViewModel.lastError("Erreur lors du chargement. Se il vous plaît donner votre avis");
                 }
@@ -810,8 +815,15 @@ function addNode(nodeId, nodeText, nodeData) {
 function handleNewPoiMarker(e) {
     var poi = myViewModel.activePoi();
     if (poi && poi.id() && !poi.lat()) {
-        poi.lat(e.latLng.lat());
-        poi.lng(e.latLng.lng());
+        if (e.target) {
+            // e is in fact an event
+            poi.lat(e.latLng.lat());
+            poi.lng(e.latLng.lng());
+        } else {
+            // e is a userGeolocation holder
+            poi.lat(e.lat);
+            poi.lng(e.lng);
+        }
         poi.createMarker();
         poi.setActive();
         updatePoi();
@@ -958,6 +970,18 @@ function selectFile() {
     $('#imageupload input[type=file]').click();
 }
 
+function askUserGeolocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function(position) {
+            userGeolocation = {
+                lat: position.coords.latitude,
+                lng: position.coords.longitude
+            };
+        });
+    } 
+}
+
+
 // Init code starts
 var gmapsCanvasId = "map_canvas";
 var imageCanvasId = "img_canvas";
@@ -973,6 +997,7 @@ var $tree;
 var $poiModal;
 var $imageMapModal;
 var ds;
+var userGeolocation;
 
 $(function () {
     gmap = initGmaps(gmapsCanvasId, gmapsDefaultLat, gmapsDefaultLng);    
@@ -1028,5 +1053,7 @@ $(function () {
             );
         }
     });    
+
+    askUserGeolocation();
 });
 // Init code ends
