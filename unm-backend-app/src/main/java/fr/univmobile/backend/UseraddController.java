@@ -169,7 +169,7 @@ public class UseraddController extends AbstractBackendController {
 
 		userRepository.save(user);
 
-		return sendRedirect(String.format("%s/api/app#/manage/users", getBaseURL()));
+		return sendRedirect(String.format("%s/api/app#/manage/users", getContextBaseUrl()));
 	}
 
 	/**

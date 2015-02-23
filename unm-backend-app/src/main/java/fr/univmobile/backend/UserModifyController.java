@@ -154,7 +154,7 @@ public class UserModifyController extends AbstractBackendController {
 
 		userRepository.save(user);
 
-		return sendRedirect(getDelegationUser().isLibrarian() ? getBaseURL() : String.format("%s/api/app#/manage/users", getBaseURL()));
+		return sendRedirect(getDelegationUser().isLibrarian() ? getContextBaseUrl() : String.format("%sapi/app#/manage/users", getContextBaseUrl()));
 	}
 
 	/**
