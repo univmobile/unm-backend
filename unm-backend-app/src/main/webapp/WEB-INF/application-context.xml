@@ -70,4 +70,5 @@
 			</list>
 		</property>
 	</bean>
+	<bean id="securityEvaluationContextExtension" class="org.springframework.security.data.repository.query.SecurityEvaluationContextExtension"/>
 </beans>

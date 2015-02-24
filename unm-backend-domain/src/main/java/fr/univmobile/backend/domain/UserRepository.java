@@ -7,9 +7,23 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
+import org.springframework.security.access.prepost.PostAuthorize;
 import org.springframework.security.access.prepost.PreAuthorize;
 
 public interface UserRepository extends JpaRepository<User, Long> {
+
+	@Override
+	@PreAuthorize(value="isAuthenticated()")
+	@Query("Select u from User u where " +
+			"(1 = ?#{hasRole('superadmin')?1:0}) or " +
+			"(1 = ?#{hasRole('admin')?1:0} and u.university.id = ?#{principal.university.id}) or " +
+			"(1 = ?#{hasRole('student')?1:0} and u.id = ?#{principal.id})")
+	Page<User> findAll(Pageable var1);
+
+	@PostAuthorize(value="hasRole('superadmin') or " +
+			"(hasRole('admin') and returnObject.university.id == principal.university.id) or" +
+			"(hasRole('student') and returnObject.id == principal.id)")
+	User findOne(Long var1);
 
 	User findByRemoteUser(String remoteUser);
 
