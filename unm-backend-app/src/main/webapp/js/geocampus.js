@@ -366,10 +366,17 @@ var DataSource = function(baseUrl) {
                     if (myViewModel.pois().length == 1) {
                         myViewModel.pois.valueHasMutated();
                     }
-                    if (poi.isNew && poi.imageMap == null && userGeolocation != undefined) {
+                    if (poi.isNew && poi.imageMap == null && poi.address) {
                         // Center map and a marker for the just created poi
-                        gmap.setCenter(new google.maps.LatLng(userGeolocation.lat, userGeolocation.lng));
-                        handleNewPoiMarker(userGeolocation);
+                        geocoder = new google.maps.Geocoder();
+                        geocoder.geocode( { 'address': poi.address }, function(results, status) {
+                            if (status == google.maps.GeocoderStatus.OK) {
+                                gmap.setCenter(results[0].geometry.location);
+                                handleNewPoiMarker(results[0].geometry.location);
+                            } else {
+                                // Marker not created. Geocoding could not resolve the address
+                            }
+                        });
                     }
                 } else {
                     myViewModel.lastError("Erreur lors du chargement. Se il vous plaît donner votre avis");
@@ -815,14 +822,14 @@ function addNode(nodeId, nodeText, nodeData) {
 function handleNewPoiMarker(e) {
     var poi = myViewModel.activePoi();
     if (poi && poi.id() && !poi.lat()) {
-        if (e.target) {
+        if (e.latLng) {
             // e is in fact an event
             poi.lat(e.latLng.lat());
             poi.lng(e.latLng.lng());
         } else {
-            // e is a userGeolocation holder
-            poi.lat(e.lat);
-            poi.lng(e.lng);
+            // e is a latLng object
+            poi.lat(e.lat());
+            poi.lng(e.lng());
         }
         poi.createMarker();
         poi.setActive();
@@ -970,18 +977,6 @@ function selectFile() {
     $('#imageupload input[type=file]').click();
 }
 
-function askUserGeolocation() {
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(function(position) {
-            userGeolocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-        });
-    } 
-}
-
-
 // Init code starts
 var gmapsCanvasId = "map_canvas";
 var imageCanvasId = "img_canvas";
@@ -997,7 +992,6 @@ var $tree;
 var $poiModal;
 var $imageMapModal;
 var ds;
-var userGeolocation;
 
 $(function () {
     gmap = initGmaps(gmapsCanvasId, gmapsDefaultLat, gmapsDefaultLng);    
@@ -1054,6 +1048,5 @@ $(function () {
         }
     });    
 
-    askUserGeolocation();
 });
 // Init code ends
