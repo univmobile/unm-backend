@@ -9,6 +9,7 @@ import fr.univmobile.backend.hateoas.resource.NotificationStatusResource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -82,6 +83,7 @@ public class NotificationController {
 	}
 
 	@ResponseBody
+	@PreAuthorize(value="isAuthenticated() and principal.id == #userId")
 	@RequestMapping(value = { "/lastRead" }, method = RequestMethod.GET)
 	public NotificationStatusResource lastRead(@RequestParam(value = "userId") Long userId, @RequestParam(value = "notificationId") Long notificationId) {
 		Notification notification = notificationRepository.findOne(notificationId);
