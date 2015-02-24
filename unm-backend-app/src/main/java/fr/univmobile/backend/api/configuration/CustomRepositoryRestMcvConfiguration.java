@@ -3,10 +3,7 @@ package fr.univmobile.backend.api.configuration;
 import fr.univmobile.backend.converter.StringToPoiConverter;
 import fr.univmobile.backend.converter.StringToUniversityConverter;
 import fr.univmobile.backend.domain.*;
-import fr.univmobile.backend.validator.BeforeCreateCommentValidator;
-import fr.univmobile.backend.validator.BeforeCreateLinkValidator;
-import fr.univmobile.backend.validator.BeforeCreatePoiValidator;
-import fr.univmobile.backend.validator.BeforeCreateUniversityLibraryValidator;
+import fr.univmobile.backend.validator.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.convert.support.ConfigurableConversionService;
@@ -56,5 +53,6 @@ public class CustomRepositoryRestMcvConfiguration extends RepositoryRestMvcConfi
         v.addValidator("beforeCreate", new BeforeCreatePoiValidator());
         v.addValidator("beforeCreate", new BeforeCreateLinkValidator());
         v.addValidator("beforeCreate", new BeforeCreateUniversityLibraryValidator());
+        v.addValidator("beforeCreate", new BeforeCreateBookmarkValidator());
     }
 }
