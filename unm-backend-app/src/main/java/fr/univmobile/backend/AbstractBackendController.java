@@ -9,6 +9,8 @@ abstract class AbstractBackendController extends AbstractJspController {
 
 	protected static final String DELEGATION_USER = "delegationUser";
 
+	private String contextUrl;
+
 	protected AbstractBackendController() {
 
 	}
@@ -44,5 +46,12 @@ abstract class AbstractBackendController extends AbstractJspController {
 	protected final View entered() throws TransactionException {
 
 		return new View("admin.jsp");
+	}
+
+	protected final String getContextBaseUrl(){
+		if (contextUrl == null){
+			contextUrl = getServletContext().getInitParameter("baseURL");
+		}
+		return contextUrl;
 	}
 }
