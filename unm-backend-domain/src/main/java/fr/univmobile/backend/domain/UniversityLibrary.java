@@ -45,6 +45,14 @@ public class UniversityLibrary {
 	public Long getPoiId() {
 		return this.poi.getId();
 	}
+	
+	public String getPoiName() {
+		if (poi != null) {
+			return poi.getName();
+		} else {
+			return null;
+		}
+	}
 
 	public Long getUniversityId() {
 		return this.university.getId();
