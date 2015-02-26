@@ -63,6 +63,9 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 	@Query("Select p from Poi p where (p.university.id = :universityId OR (:allRestos = TRUE AND p.restoId IS NOT NULL)) and p.category.active = TRUE and p.category in :categories order by p.name asc")
 	Page<Poi> findByUniversityAndCategoryIn(@Param("universityId") Long universityId, @Param("allRestos") Boolean allRestos, @Param("categories") Collection<Category> categories, Pageable pageable);
 	
+	@Query("Select p from Poi p where p.category.active = TRUE and p.category in :categories order by p.name asc")
+	Page<Poi> findByCategoryIn(@Param("categories") Collection<Category> categories, Pageable pageable);
+	
 	List<Poi> findByParent(Poi poi);
 
 	List<Poi> findAllByRestoMenuUrlNotNull();
