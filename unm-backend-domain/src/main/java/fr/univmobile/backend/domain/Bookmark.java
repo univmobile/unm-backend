@@ -27,6 +27,30 @@ public class Bookmark extends AuditableEntity {
     public Poi getPoi() {
         return poi;
     }
+    
+    public Long getPoiId() {
+    	if (poi != null) {
+    		return poi.getId();
+    	} else {
+    		return null;
+    	}
+    }
+    
+    public String getPoiName() {
+    	if (poi != null) {
+    		return poi.getName();
+    	} else {
+    		return null;
+    	}
+    }
+    
+    public Long getPoiCategoryId() {
+    	if (poi != null) {
+    		return poi.getCategoryId();
+    	} else {
+    		return null;
+    	}
+    }
 
     public void setPoi(Poi poi) {
         this.poi = poi;
