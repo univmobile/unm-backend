@@ -49,6 +49,12 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 	@Query("Select p from Poi p where p.university.id = :universityId and (p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%')) order by p.name asc")
 	Page<Poi> searchValue(@Param("val") String val, @Param("universityId") Long universityId, Pageable pageable);
 	
+	@Query("Select p from Poi p where p.category.active = TRUE and p.category.legacy like CONCAT((select c.legacy from Category c WHERE c.id = :categoryId),'%') and (p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%')) order by p.name asc")
+	Page<Poi> searchValueInCategoryRoot(@Param("val") String val, @Param("categoryId") Long categoryId, Pageable pageable);
+	
+	@Query("Select p from Poi p where p.university.id = :universityId and p.category.legacy like CONCAT((select c.legacy from Category c WHERE c.id = :categoryId),'%') and (p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%')) order by p.name asc")
+	Page<Poi> searchValueInUniversityAndCategoryRoot(@Param("val") String val, @Param("universityId") Long universityId, @Param("categoryId") Long categoryId, Pageable pageable);
+	
 	@PreAuthorize(value="hasRole('superadmin')")
 	@Query("Select p from Poi p where (p.name like CONCAT('%',:val,'%') or p.description like CONCAT('%',:val,'%')) order by p.name asc")
 	Page<Poi> searchGlobalValue(@Param("val") String val, Pageable pageable);
