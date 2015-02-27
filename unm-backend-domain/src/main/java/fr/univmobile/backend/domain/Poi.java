@@ -388,6 +388,18 @@ public class Poi extends AuditableEntityWithLegacy {
 	public Long getCategoryId() {
 		return this.category.getId();
 	}
+	
+	public String getCategoryMarkerIcon() {
+		return this.category.getMarkerIconUrl();
+	}
+
+	public String getCategoryActiveIcon() {
+		return this.category.getActiveIconUrl();
+	}
+
+	public String getCategoryInactiveIcon() {
+		return this.category.getInactiveIconUrl();
+	}
 
 	public String getPublicWelcome() {
 		return publicWelcome;

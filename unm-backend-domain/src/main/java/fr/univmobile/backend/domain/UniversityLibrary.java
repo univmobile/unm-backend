@@ -53,6 +53,14 @@ public class UniversityLibrary {
 			return null;
 		}
 	}
+	
+	public boolean getIconRuedesfacs() {
+		if (poi != null) {
+			return poi.getIconRuedesfacs();
+		} else {
+			return false;
+		}
+	}
 
 	public Long getUniversityId() {
 		return this.university.getId();
