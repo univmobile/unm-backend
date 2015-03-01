@@ -2,6 +2,8 @@ package fr.univmobile.backend.security;
 
 import fr.univmobile.backend.SessionAuditorAware;
 import fr.univmobile.backend.core.impl.LogQueueDbImpl;
+import fr.univmobile.backend.domain.AuthenticatedSession;
+import fr.univmobile.backend.domain.AuthenticatedSessionRepository;
 import fr.univmobile.backend.domain.Token;
 import fr.univmobile.backend.domain.TokenRepository;
 import fr.univmobile.backend.domain.User;
@@ -12,11 +14,11 @@ import javax.servlet.http.HttpServletRequest;
 
 public class UnimobileTokenPreAuthenticationFilter extends AbstractPreAuthenticatedProcessingFilter {
 
-    TokenRepository tokenRepository;
+    AuthenticatedSessionRepository sessionsRepository;
     SessionAuditorAware sessionAuditorAware;
 
-    public void setTokenRepository(TokenRepository tokenRepository){
-        this.tokenRepository = tokenRepository;
+    public void setTokenRepository(AuthenticatedSessionRepository sessionsRepository){
+        this.sessionsRepository = sessionsRepository;
     }
 
     public void setSessionAuditorAware(SessionAuditorAware sessionAuditorAware){
@@ -30,9 +32,9 @@ public class UnimobileTokenPreAuthenticationFilter extends AbstractPreAuthentica
         if (t == null || t.isEmpty()) {
         	return null;
         }
-        Token token = tokenRepository.findByToken(t);
-        if (token != null){
-            User user = token.getUser();
+        AuthenticatedSession session = sessionsRepository.findByToken(t);
+        if (session != null){
+            User user = session.getUser();
             if (user != null){
                 username = user.getUsername();
                 sessionAuditorAware.setSessionUser(user);
@@ -52,12 +54,12 @@ public class UnimobileTokenPreAuthenticationFilter extends AbstractPreAuthentica
     protected Object getPreAuthenticatedCredentials(HttpServletRequest httpServletRequest) {
         String t = httpServletRequest.getHeader("Authentication-Token");
         String password = null;
-        Token token = tokenRepository.findByToken(t);
+        AuthenticatedSession session = sessionsRepository.findByToken(t);
         if (t == null || t.isEmpty()) {
         	return null;
         }
-        if (token != null){
-            User user = token.getUser();
+        if (session != null){
+            User user = session.getUser();
             if (user != null){
                 password = user.getPassword();
             }
