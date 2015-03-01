@@ -23,10 +23,6 @@ public interface SessionManager {
 	// User getCurrentUser(AppSession appSession) throws IOException,
 	// SQLException;
 
-	void save(AppSession session, UserBuilder user)
-			throws TransactionException, IOException, SQLException,
-			InvalidSessionException;
-
 	AppSession getAppSession(String sessionId) throws IOException,
 			SQLException, InvalidSessionException;
 
