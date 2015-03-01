@@ -58,7 +58,8 @@
 
 	<bean id="unimobileTokenPreAuthenticationFilter" class="fr.univmobile.backend.security.UnimobileTokenPreAuthenticationFilter">
 		<property name="authenticationManager" ref="authenticationManager" />
-		<property name="tokenRepository" ref="tokenRepository"/>
+		<!-- <property name="tokenRepository" ref="tokenRepository"/> -->
+		<property name="authenticatedSessionRepository" ref="authenticatedSessionRepository"/>
 		<property name="sessionAuditorAware" ref="sessionAuditorAware"/>
 	</bean>
 

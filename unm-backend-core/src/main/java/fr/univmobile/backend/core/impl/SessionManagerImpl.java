@@ -125,7 +125,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 			user = users.findByRemoteUser(login);
 		}
 
-		if (users == null) {
+		if (user == null) {
 			if (log.isInfoEnabled()) {
 				log.info("No user with login: " + login);
 			}

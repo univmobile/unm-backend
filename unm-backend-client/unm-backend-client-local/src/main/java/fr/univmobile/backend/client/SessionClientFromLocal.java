@@ -216,7 +216,7 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 			throws IOException {
 
 		final MutableUser user = DataBeans.instantiate(MutableUser.class) //
-				.setUid(dsUser.getUsername()) //
+				.setUid(String.valueOf(dsUser.getId())) //
 				.setDisplayName(dsUser.getDisplayName());
 
 		if (dsUser.getEmail() != null) {

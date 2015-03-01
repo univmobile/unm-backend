@@ -4,8 +4,6 @@ import fr.univmobile.backend.SessionAuditorAware;
 import fr.univmobile.backend.core.impl.LogQueueDbImpl;
 import fr.univmobile.backend.domain.AuthenticatedSession;
 import fr.univmobile.backend.domain.AuthenticatedSessionRepository;
-import fr.univmobile.backend.domain.Token;
-import fr.univmobile.backend.domain.TokenRepository;
 import fr.univmobile.backend.domain.User;
 
 import org.springframework.security.web.authentication.preauth.AbstractPreAuthenticatedProcessingFilter;
@@ -17,7 +15,7 @@ public class UnimobileTokenPreAuthenticationFilter extends AbstractPreAuthentica
     AuthenticatedSessionRepository sessionsRepository;
     SessionAuditorAware sessionAuditorAware;
 
-    public void setTokenRepository(AuthenticatedSessionRepository sessionsRepository){
+    public void setAuthenticatedSessionRepository(AuthenticatedSessionRepository sessionsRepository){
         this.sessionsRepository = sessionsRepository;
     }
 
