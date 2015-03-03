@@ -96,6 +96,7 @@ ko.utils.extend(ImageMap.prototype, {
 var Poi = function(data) {
     this.id = ko.observable();
     this.name = ko.observable();
+    this.description = ko.observable();
     this.university = ko.observable();
     this.parent = ko.observable();
     this.category = ko.observable();
@@ -110,6 +111,7 @@ var Poi = function(data) {
     this.lng = ko.observable();
     this.imageMap = ko.observable();
     this.qrCode = ko.observable();
+    this.active = ko.observable();
 
     // Library supporting fields
     this.publicWelcome = ko.observable();
@@ -137,6 +139,7 @@ ko.utils.extend(Poi.prototype, {
     update: function (data) {
         this.id(data ? data.id : '');
         this.name(data ? data.name : '');
+        this.description(data ? data.description : '');
         this.university(data ? data.university : null);
         this.parent(data ? data.parent : null);
         this.category(data ? data.category : null);
@@ -156,6 +159,7 @@ ko.utils.extend(Poi.prototype, {
         this.hasWifi(data ? data.hasWifi : false);
         this.hasEthernet(data ? data.hasEthernet : false);
         this.iconRuedesfacs(data ? data.iconRuedesfacs : false);
+        this.active(data ? data.active : true);
         this.closingHours(data ? data.closingHours : '');
         this.restoMenuUrl(data ? data.restoMenuUrl : '');
         this.restoId(data ? data.restoId : '');

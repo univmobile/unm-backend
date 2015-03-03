@@ -452,14 +452,14 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	private User retrieve_validate(final String loginToken, final String key)
 			throws IOException, SQLException {
 
-		final String userUid = executeQueryGetStringNullable(
-				"getPreparedUserUid", loginToken, key);
+		//final String userUid = executeQueryGetStringNullable(
+		//		"getPreparedUserUid", loginToken, key);
 		
 		Token token = tokens.findByToken(loginToken);
 		if (!token.getTokenKey().equals(key)) {
 			if  (token.getUser() == null) {
 				if (log.isInfoEnabled()) {
-					log.info("No user: " + userUid + " for loginToken: "
+					log.info("No user: " + token.getUser().getUsername() + " for loginToken: "
 							+ loginToken);
 				}
 			}
