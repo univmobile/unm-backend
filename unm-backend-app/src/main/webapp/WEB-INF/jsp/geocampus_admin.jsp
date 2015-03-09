@@ -127,7 +127,7 @@
                 </div>
                 <div class="panel-body">
                     <p data-bind="visible: pois().length == 0">
-                        S&eacute;lectionnez<span data-bind="visible: activeTab() != 'libraries'"> une universit&eacute et</span> une cat&eacute;gorie pour voir POI connexes
+                        S&eacute;lectionnez<span data-bind="visible: activeTab() != 'libraries'"> une universit&eacute; et</span> une cat&eacute;gorie pour voir POI connexes
                     </p>
                     <div id="jstree1" data-bind="visible: pois().length > 0">
                         <ul data-bind="template: { name: 'treenode-template', foreach: pois }"></ul>
@@ -202,7 +202,7 @@
         </div>
       </div>
 
-    </div>
+    
 
     <div id="poiModal" class="modal fade">
       <div class="modal-dialog">
@@ -229,13 +229,13 @@
               <div class="form-group">
                 <label for="inputNom" class="col-sm-2 control-label">Nom</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id=""inputNom"" placeholder="" required="required" data-bind="value: name">
+                  <input type="text" class="form-control" id="inputNom" placeholder="" required="required" data-bind="value: name">
                 </div>
               </div>
               <div class="form-group">
                 <label class="col-sm-2 control-label">Description</label>
                 <div class="col-sm-10">
-                  <textarea class="form-control" placeholder="" required="required" data-bind="value: description"></textarea>
+                  <textarea class="form-control" placeholder="" data-bind="value: description"></textarea>
                 </div>
               </div>
               <div class="form-group">
@@ -251,9 +251,9 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputHoraires" class="col-sm-2 control-label">Horaires</label>
+                <label for="inputHoraires" class="col-sm-2 control-label">Horaires et jours d'ouverture</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputHoraires" placeholder="" data-bind="value: openingHours">
+                  <textarea class="form-control" id="inputHoraires" placeholder="" data-bind="value: openingHours"></textarea>
                 </div>
               </div>
               <div class="form-group">
@@ -265,7 +265,7 @@
               <div class="form-group">
                 <label for="inputAdress" class="col-sm-2 control-label">Adresse</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputAdress" placeholder="" data-bind="value: address">
+                  <textarea class="form-control" id="inputAdress" placeholder="" data-bind="value: address"></textarea>
                 </div>
               </div>
               <div class="form-group">
@@ -287,9 +287,9 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputAccess" class="col-sm-2 control-label">Acc&egrave;s</label>
+                <label for="inputAccess" class="col-sm-2 control-label">Itin&eacute;raire</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputAccess" placeholder="" data-bind="value: itinerary">
+                  <textarea class="form-control" id="inputAccess" placeholder="" data-bind="value: itinerary"></textarea>
                 </div>
               </div>
               <div class="form-group">
@@ -361,13 +361,13 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Publics accueillis</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: publicWelcome">
+                        <textarea class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: publicWelcome"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputPassword3" class="col-sm-2 control-label">Disciplines</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: disciplines">
+                        <textarea class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: disciplines"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -391,13 +391,7 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Fermetures</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: openingHours">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Horaires et jours d'ouverture</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: closingHours">
+                        <textarea class="form-control" id="inputEmail3" placeholder="" data-bind="value: closingHours"></textarea>
                         </div>
                     </div>
                 </form>
@@ -429,7 +423,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title">Plan au format image</span></h4>
+            <h4 class="modal-title"><span>Plan au format image</span></h4>
           </div>
           <div class="modal-body">
 

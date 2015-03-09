@@ -67,7 +67,7 @@
          
 	  <c:if test="${not empty categoryForm.activeIconUrl}">
       <tr>
-         <th>Courant icône active</th>
+         <th>Icône active courante</th>
          <td>
          	${categoryForm.activeIconUrl}<br/>
          	<form:hidden id="activeIconUrl" path="activeIconUrl" />
@@ -77,7 +77,7 @@
 	  </c:if>
 	  
       <tr>
-         <th>Nouveau icône active</th>
+         <th>Choisir une nouvelle icône active</th>
          <td>
          	<input type="file" name="file" />
          </td>   
@@ -85,7 +85,7 @@
       
 	  <c:if test="${not empty categoryForm.inactiveIconUrl}">
       <tr>
-         <th>Courant icône inactive</th>
+         <th>Icône inactive courante</th>
          <td>
          	${categoryForm.inactiveIconUrl}<br/>
          	<form:hidden id="inactiveIconUrl" path="inactiveIconUrl" />
@@ -95,7 +95,7 @@
 	  </c:if>
 	  
       <tr>
-         <th>Nouveau icône inactive</th>
+         <th>Chosir une nouvelle icône inactive</th>
          <td>
          	<input type="file" name="file2" />
          </td>   
@@ -103,7 +103,7 @@
       
 	  <c:if test="${not empty categoryForm.markerIconUrl}">
       <tr>
-         <th>Courant icône marqueur</th>
+         <th>Icône marqueur carte courante</th>
          <td>
          	${categoryForm.markerIconUrl}<br/>
          	<form:hidden id="markerIconUrl" path="markerIconUrl" />
@@ -113,7 +113,7 @@
 	  </c:if>
 	  
       <tr>
-         <th>Nouveau icône marqueur</th>
+         <th>Choisir une nouvelle icône marqueur map</th>
          <td>
          	<input type="file" name="file3" />
          </td>   

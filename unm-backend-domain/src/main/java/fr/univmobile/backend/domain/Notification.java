@@ -21,7 +21,7 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @EntityListeners({ AuditingEntityListener.class })
 @NamedQueries({
 		@NamedQuery(name="Notification.searchByCreatedDate", query="Select n from Notification n where n.createdOn>:date order by n.createdOn Desc"),
-		@NamedQuery(name="Notification.countByCreatedDate", query="Select COUNT(*) from Notification n where n.createdOn>:date")
+		@NamedQuery(name="Notification.countByCreatedDate", query="Select COUNT(n.id) from Notification n where n.createdOn>:date")
 })
 public class Notification extends AuditableEntity {
 

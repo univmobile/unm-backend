@@ -210,9 +210,12 @@ public class FeedUtils {
 	}
 
 	private Poi poiByRestoId(List<Poi> pois, String restoId) {
-		for (Poi poi : pois)
-			if (poi.getRestoId().equals(restoId))
+		for (Poi poi : pois) {
+			if (poi.getRestoId() != null && poi.getRestoId().equals(restoId)) {
 				return poi;
+			}
+		}
+		log.warn("Resto " + restoId + " not found.");
 		return null;
 	}
 
@@ -229,7 +232,7 @@ public class FeedUtils {
 	}
 
 	public void persistRestoMenues(){
-		for (Poi poi : poiRepository.findAllByRestoMenuUrlNotNull()) {
+		for (Poi poi : poiRepository.findAllByRestoMenuUrlNotNullOrEmpty()) {
 			List<Poi> childPois = poiRepository.findByParent(poi);
 			persistMenu(poi.getRestoMenuUrl(), childPois);
 		}

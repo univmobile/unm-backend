@@ -76,7 +76,13 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 
 	List<Poi> findAllByRestoMenuUrlNotNull();
 	
+	@Query("Select p from Poi p where p.restoMenuUrl IS NOT NULL AND p.restoMenuUrl <> ''") 
+	List<Poi> findAllByRestoMenuUrlNotNullOrEmpty();
+	
 	Poi findByExternalId(Long externalId);
+	
+	//@Query("Select p from Poi p where p.legacy like CONCAT(:poi.legacy, '%')")
+	//List<Poi> findAllChildren(Poi poi);
 
 	@Query("Select p from Poi p where p.parent IS NULL and p.category.legacy like CONCAT(:category, '%') and (p.name like CONCAT('%',:name_description,'%') or p.description like CONCAT('%',:name_description,'%')) order by p.name asc")
 	List<Poi> findByParentIsNullAndRootCategoryAndNameAndDescription(@Param("category") String category, @Param("name_description") String name_description);

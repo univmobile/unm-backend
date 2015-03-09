@@ -64,7 +64,7 @@ label.checkbox-parentCategory {
       </div>
    </c:if>    
    
-   <h2>Modifier d'une catégorie</h2>
+   <h2>Modifier une catégorie</h2>
    
    <table>
    
@@ -88,7 +88,7 @@ label.checkbox-parentCategory {
       </tr>
       
       <tr>
-         <th>Est-il actif?</th>
+         <th>Cat&eacute;gorie active ?</th>
          <td>
             <c:choose>
                <c:when test="${poicategorymodify.active eq 'true'}">

@@ -19,6 +19,7 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.message.BasicNameValuePair;
+import org.jsoup.Jsoup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
@@ -213,20 +214,36 @@ public class ApiParisUtils {
 					if (poi == null)
 						poi = new Poi();
 
-				
-					poi.setName(name);
-					poi.setDescription(smallDescription);
+					// Remove the prefixed and suffixed "
+					// Remove the HTML code
+					if (name != null) {
+						poi.setName(Jsoup.parse(name.replaceAll("^\"|\"$", "")).text());
+					}
+					if (description != null) {
+						String descriptionFitlered = Jsoup.parse(description.replaceAll("^\"|\"$", "").replace("\\n", "<br>").replace("\\r", "")).text();
+						poi.setDescription(Jsoup.parse(descriptionFitlered).text());
+					}
 					poi.setLat(lat);
 					poi.setLng(lng);
-					poi.setAddress(address);
-					poi.setZipcode(zipCode);
-					poi.setCity(city);
-					poi.setFloor(place);
+					if (address != null) {
+						poi.setAddress(address.replaceAll("^\"|\"$", ""));
+					}
+					if (zipCode != null) {
+						poi.setZipcode(zipCode.replaceAll("^\"|\"$", ""));
+					}
+					if (city != null) {
+						poi.setCity(city.replaceAll("^\"|\"$", ""));
+					}
+					if (place != null) {
+						poi.setFloor(place.replaceAll("^\"|\"$", ""));
+					}
 					poi.setExpDate(expDate);
 					poi.setCreatedOn(new Date());
 					poi.setUpdatedOn(new Date());
 					poi.setExternalId(idActivity);
-					poi.setDisciplines(discipline);
+					if (discipline != null) {
+						poi.setDisciplines(discipline.replaceAll("^\"|\"$", ""));
+					}
 					poi.setCategory(c);
 				
 					University u = universityRepository.findOne(Long.parseLong(API_PARIS_UNIVERSITY_ID));
