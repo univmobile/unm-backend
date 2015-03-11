@@ -3,7 +3,10 @@ package fr.univmobile.backend.domain;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "bookmark")
+@Table(
+        name = "bookmark",
+        uniqueConstraints = @UniqueConstraint(columnNames = {"user_id", "poi_id"})
+)
 public class Bookmark extends AuditableEntity {
 
     @Id
