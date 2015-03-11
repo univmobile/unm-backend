@@ -27,45 +27,34 @@ public class RegionsController extends AbstractBackendController {
 	@Override
 	public View action() {
 
-		Region ile_de_france;
-		Region bretagne;
-		Region unrpcl;
-
-		ile_de_france = regionRepository.findByLabel("ile_de_france");
-		bretagne = regionRepository.findByLabel("bretagne");
-		unrpcl = regionRepository.findByLabel("unrpcl");
-		
 		// 1. UPDATE?
 
 		final UpdateRegions ur = getHttpInputs(UpdateRegions.class);
-
 		if (ur.isHttpValid()) {
 
-			if (!ile_de_france.getLabel().equals(ur.region_ile_de_france())) {
-				ile_de_france.setLabel(ur.region_ile_de_france());
-				regionRepository.save(ile_de_france);
+			Region region1 = regionRepository.findOne(new Long(1));
+			Region region2 = regionRepository.findOne(new Long(2));
+			Region region3 = regionRepository.findOne(new Long(3));
+
+			if (!region1.getLabel().equals(ur.region_1())) {
+				region1.setLabel(ur.region_1());
+				regionRepository.save(region1);
 			}
 
-			if (!bretagne.getLabel().equals(ur.region_bretagne())) {
-				bretagne.setLabel(ur.region_bretagne());
-				regionRepository.save(bretagne);
+			if (!region2.getLabel().equals(ur.region_2())) {
+				region2.setLabel(ur.region_2());
+				regionRepository.save(region2);
 			}
 
-			if (!unrpcl.getLabel().equals(ur.region_unrpcl())) {
-				unrpcl.setLabel(ur.region_unrpcl());
-				regionRepository.save(unrpcl);
+			if (!region3.getLabel().equals(ur.region_3())) {
+				region3.setLabel(ur.region_3());
+				regionRepository.save(region3);
 			}
 		}
 
 		// 2. VIEW
 
-		Iterable<Region> allRegions = regionRepository.findAll();
-
-		List<Region> regions = new ArrayList<Region>();
-
-		for (Region r : allRegions)
-			regions.add(r);
-
+		List<Region> regions = regionRepository.findAll();
 		setAttribute("regions", regions);
 
 		// 3. END
@@ -78,14 +67,14 @@ public class RegionsController extends AbstractBackendController {
 
 		@HttpRequired
 		@HttpParameter(trim = true)
-		String region_ile_de_france();
+		String region_1();
 
 		@HttpRequired
 		@HttpParameter(trim = true)
-		String region_bretagne();
+		String region_2();
 
 		@HttpRequired
 		@HttpParameter(trim = true)
-		String region_unrpcl();
+		String region_3();
 	}
 }

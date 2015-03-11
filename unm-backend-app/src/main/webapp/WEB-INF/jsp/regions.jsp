@@ -62,7 +62,7 @@
    </td>
    
    <td class="label">
-      <input type="text" id="text-region_${r.id}" name="region_ile_de_france" value="${r.label}"/>
+      <input type="text" id="text-region_${r.id}" name="region_${r.id}" value="${r.label}"/>
    </td>
    
    <td class="universityCount">
