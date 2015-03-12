@@ -24,6 +24,18 @@ public class RegionsController extends AbstractBackendController {
 
 	private RegionRepository regionRepository;
 
+	private boolean updateRegionLabel(Long regionId, String newLabel){
+		if (newLabel != null && !newLabel.isEmpty()){
+			Region region = regionRepository.findOne(new Long(regionId));
+			if (region != null && !region.getLabel().equals(newLabel)) {
+				region.setLabel(newLabel);
+				regionRepository.save(region);
+				return true;
+			}
+		}
+		return false;
+	}
+
 	@Override
 	public View action() {
 
@@ -31,25 +43,10 @@ public class RegionsController extends AbstractBackendController {
 
 		final UpdateRegions ur = getHttpInputs(UpdateRegions.class);
 		if (ur.isHttpValid()) {
-
-			Region region1 = regionRepository.findOne(new Long(1));
-			Region region2 = regionRepository.findOne(new Long(2));
-			Region region3 = regionRepository.findOne(new Long(3));
-
-			if (!region1.getLabel().equals(ur.region_1())) {
-				region1.setLabel(ur.region_1());
-				regionRepository.save(region1);
-			}
-
-			if (!region2.getLabel().equals(ur.region_2())) {
-				region2.setLabel(ur.region_2());
-				regionRepository.save(region2);
-			}
-
-			if (!region3.getLabel().equals(ur.region_3())) {
-				region3.setLabel(ur.region_3());
-				regionRepository.save(region3);
-			}
+			updateRegionLabel(new Long(1), ur.region_1());
+			updateRegionLabel(new Long(2), ur.region_2());
+			updateRegionLabel(new Long(3), ur.region_3());
+			updateRegionLabel(new Long(4), ur.region_4());
 		}
 
 		// 2. VIEW
@@ -65,16 +62,16 @@ public class RegionsController extends AbstractBackendController {
 	@HttpMethods("POST")
 	interface UpdateRegions extends HttpInputs {
 
-		@HttpRequired
 		@HttpParameter(trim = true)
 		String region_1();
 
-		@HttpRequired
 		@HttpParameter(trim = true)
 		String region_2();
 
-		@HttpRequired
 		@HttpParameter(trim = true)
 		String region_3();
+
+		@HttpParameter(trim = true)
+		String region_4();
 	}
 }
