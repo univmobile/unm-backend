@@ -105,15 +105,16 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 	private UniversityRepository universityRepository;
 	private UserRepository userRepository;
 	private TokenRepository tokenRepository;
+	private AuthenticatedSessionRepository authenticatedSessionRepository;
 	
 	private SessionAuditorAware sessionAuditorAware;
 
-	private UserDataSource users;
-	private RegionDataSource regions;
-	private PoiDataSource pois;
+	//private UserDataSource users;
+	//private RegionDataSource regions;
+	//private PoiDataSource pois;
 
 	// Categories
-	private PoiCategoryDataSource poiCategories;
+	// private PoiCategoryDataSource poiCategories;
 
 	private UploadManager uploadManager;
 
@@ -140,6 +141,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				.getBean("universityRepository");
 		this.userRepository = (UserRepository) ctx.getBean("userRepository");
 		this.tokenRepository = (TokenRepository) ctx.getBean("tokenRepository");
+		this.authenticatedSessionRepository = (AuthenticatedSessionRepository) ctx.getBean("authenticatedSessionRepository");
 		
 		this.sessionAuditorAware = (SessionAuditorAware) ctx.getBean("sessionAuditorAware");
 		
@@ -194,28 +196,28 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// final TransactionManager tx = TransactionManager.getInstance();
 
-		final File usersDir = new File(dataDir, "users");
-		final File regionsDir = new File(dataDir, "regions");
-		final File poisDir = new File(dataDir, "pois");
+		//final File usersDir = new File(dataDir, "users");
+		//final File regionsDir = new File(dataDir, "regions");
+		//final File poisDir = new File(dataDir, "pois");
 		final File uploadsDir = new File(dataDir, "uploads");
-		final File commentsDir = new File(dataDir, "comments");
+		//final File commentsDir = new File(dataDir, "comments");
 		final File imageMapsDir = new File(dataDir, "imagemaps");
 
 		// Categories
-		final File poiCategoriesDir = new File(dataDir, "poiscategories");
+		//final File poiCategoriesDir = new File(dataDir, "poiscategories");
 
 		// 2. DATASOURCES AND CLIENTS
 
-		final ImageMapDataSource imageMaps;
+		/*final ImageMapDataSource imageMaps;
 		final CommentDataSource comments;
 		final CommentManager commentManager;
-		final SearchManager searchManager;
+		final SearchManager searchManager;*/
 		final SessionManager sessionManager;
 		final DataSource ds;
 
 		try {
 
-			users = BackendDataSourceFileSystem.newDataSource(
+			/*users = BackendDataSourceFileSystem.newDataSource(
 					UserDataSource.class, usersDir);
 
 			regions = BackendDataSourceFileSystem.newDataSource(
@@ -226,15 +228,15 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			// Added by Mauricio
 			poiCategories = BackendDataSourceFileSystem.newDataSource(
-					PoiCategoryDataSource.class, poiCategoriesDir);
+					PoiCategoryDataSource.class, poiCategoriesDir);*/
 
-			uploadManager = new UploadManagerImpl(uploadsDir);
+			/*uploadManager = new UploadManagerImpl(uploadsDir);*/
 
-			comments = BackendDataSourceFileSystem.newDataSource(
+			/*comments = BackendDataSourceFileSystem.newDataSource(
 					CommentDataSource.class, commentsDir);
 
 			imageMaps = BackendDataSourceFileSystem.newDataSource(
-					ImageMapDataSource.class, imageMapsDir);
+					ImageMapDataSource.class, imageMapsDir);*/
 
 			final InitialContext context = new InitialContext();
 
@@ -244,12 +246,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 			final LogQueue logQueue = new LogQueueDbImpl(MYSQL, ds);
 
-			searchManager = new SearchManagerImpl(logQueue, MYSQL, ds);
+			/*searchManager = new SearchManagerImpl(logQueue, MYSQL, ds);*/
 
-			commentManager = new CommentManagerImpl(logQueue, comments,
-					searchManager, MYSQL, ds);
+			/*commentManager = new CommentManagerImpl(logQueue, comments,
+					searchManager, MYSQL, ds);*/
 
-			sessionManager = new SessionManagerImpl(logQueue, userRepository,
+			sessionManager = new SessionManagerImpl(logQueue, userRepository, tokenRepository, authenticatedSessionRepository,
 					MYSQL, ds);
 
 		} catch (final NamingException e) {
@@ -279,12 +281,12 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				new UseraddController(userRepository, regionRepository,
 						universityRepository, usersController), //
 				new RegionsController(regionRepository), //
-				new AdminGeocampusController(regions, pois), //
+				//new AdminGeocampusController(regions, pois), //
 				new SystemController(ds), //
 				poisController, //
 				new PoiController(poiRepository, commentRepository), //
 				commentsController, //
-				new CommentController(comments, commentManager), //
+				//new CommentController(comments, commentManager), //
 				new HelpController(), //
 				new LogsController(), //
 				poisCategoriesController, //
@@ -308,7 +310,7 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		final String baseURL = getBaseURL();
 
-		final RegionClient regionClient = new RegionClientFromLocal(baseURL,
+		/*final RegionClient regionClient = new RegionClientFromLocal(baseURL,
 				regions, pois);
 
 		final RegionJSONClient regionJSONClient = new RegionJSONClientImpl(
@@ -329,13 +331,13 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 				poiCategoryClient);
 
 		final ImageMapJSONClient imageMapJSONClient = new ImageMapJSONClientImpl(
-				imageMapClient);
+				imageMapClient);*/
 
-		final CommentClient commentClient = new CommentClientFromLocal(baseURL,
+		/*final CommentClient commentClient = new CommentClientFromLocal(baseURL,
 				comments, commentManager, searchManager);
 
 		final CommentJSONClient commentJSONClient = new CommentJSONClientImpl(
-				commentClient);
+				commentClient);*/
 
 		final String consumerKey = checkedInitParameter("twitter.consumerKey");
 		final String consumerSecret = checkedInitParameter("twitter.consumerSecret");
@@ -356,27 +358,27 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		this.jsonControllers = new AbstractJSONController[] {
 				new EndpointsJSONController(), //
-				new RegionsJSONController(regionJSONClient), //
-				new UniversitiesJSONController(regions, regionJSONClient), //
+				//new RegionsJSONController(regionJSONClient), //
+				//new UniversitiesJSONController(regions, regionJSONClient), //
 				// new ImageMapJSONController(imageMaps, imageMapJSONClient),
-				new PoisJSONController(poiJSONClient), //
-				new CommentsJSONController(pois, //
-						commentJSONClient),
+				//new PoisJSONController(poiJSONClient), //
+				/*new CommentsJSONController(pois, //
+						commentJSONClient),*/
 				new SessionJSONController(sessionManager, //
 						sessionJSONClient),
-				new GeocampusPoisByRegionAndCategoryJSONController(
-						poiJSONClient),
+				/*new GeocampusPoisByRegionAndCategoryJSONController(
+						poiJSONClient),*/
 				new GeocampusPoiManageJSONController(poiRepository, //
 						imageMapRepository, //
 						categoryRepository, //
 						universityRepository),
 				// new NearestPoisJSONController(poiRepository, nearestPoisMaxMetersAway), //
 				new CommentsPostJSONController(commentRepository, poiRepository),
-				new GeocampusJSONController(regionJSONClient, //
+				/*new GeocampusJSONController(regionJSONClient, //
 						poiCategoryJSONClient, //
 						imageMapJSONClient, //
 						regions, //
-						imageMaps), //
+						imageMaps), //*/
 				new LoginJSONController(userRepository, tokenRepository),
 				new ShibbolethLoginJSONController(userRepository, tokenRepository)
 		};
@@ -511,9 +513,9 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 3. DATA
 
-		regions.reload();
+		// regions.reload();
 
-		users.reload();
+		// users.reload();
 
 		// 4. USER
 

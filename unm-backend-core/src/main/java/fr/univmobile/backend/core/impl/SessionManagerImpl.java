@@ -6,25 +6,27 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.List;
+import java.util.Date;
 import java.util.UUID;
+import java.util.logging.Logger;
 
 import javax.annotation.Nullable;
 import javax.sql.DataSource;
 
-import org.apache.commons.lang3.NotImplementedException;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.joda.time.DateTime;
-
-import com.google.common.collect.Lists;
 
 import fr.univmobile.backend.core.AppSession;
 import fr.univmobile.backend.core.InvalidSessionException;
 import fr.univmobile.backend.core.LoginConversation;
 import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.core.UserBuilder;
+import fr.univmobile.backend.domain.AuthenticatedSession;
+import fr.univmobile.backend.domain.AuthenticatedSessionRepository;
+import fr.univmobile.backend.domain.Token;
+import fr.univmobile.backend.domain.TokenRepository;
 import fr.univmobile.backend.domain.User;
 import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.backend.history.LogQueue;
@@ -41,6 +43,8 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 	public SessionManagerImpl(final LogQueue logQueue,
 			final UserRepository users,  
+			final TokenRepository tokens,
+			final AuthenticatedSessionRepository sessions,
 			final ConnectionType dbType,
 			final Connection cxn) throws IOException {
 
@@ -48,10 +52,14 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		this.logQueue = checkNotNull(logQueue, "logQueue");
 		this.users = checkNotNull(users, "users");
+		this.tokens = checkNotNull(tokens, "tokens");
+		this.sessions = checkNotNull(sessions, "sessions");
 	}
 
 	public SessionManagerImpl(final LogQueue logQueue,
 			final UserRepository users,
+			final TokenRepository tokens,
+			final AuthenticatedSessionRepository sessions,
 			final ConnectionType dbType,
 			final DataSource ds) throws IOException {
 
@@ -59,10 +67,14 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		this.logQueue = checkNotNull(logQueue, "logQueue");
 		this.users = checkNotNull(users, "users");
+		this.tokens = checkNotNull(tokens, "tokens");
+		this.sessions = checkNotNull(sessions, "sessions");
 	}
 
 	private final LogQueue logQueue;
 	private final UserRepository users;
+	private final TokenRepository tokens;
+	private final AuthenticatedSessionRepository sessions;
 
 	private final Encrypt encryptSHA1 = new EncryptSHA1();
 	private final Encrypt encryptSHA256 = new EncryptSHA256();
@@ -113,7 +125,7 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 			user = users.findByRemoteUser(login);
 		}
 
-		if (users == null) {
+		if (user == null) {
 			if (log.isInfoEnabled()) {
 				log.info("No user with login: " + login);
 			}
@@ -215,32 +227,16 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 			return;
 		}
-
-		executeUpdate("endSession", new DateTime(), sessionId);
-
-		logQueue.log(new LoggableString("LOGOUT:INVALID:{uid=\"\", token=%s}",
-				userUid, sessionId));
-	}
-
-	@Override
-	public void save(final AppSession appSession, final UserBuilder user)
-			throws TransactionException, IOException, SQLException,
-			InvalidSessionException {
 		
-		appSession.check();
+		//executeUpdate("endSession", new DateTime(), sessionId);
+		AuthenticatedSession session = sessions.findByToken(sessionId);
+		if (session.getEndedAt() == null) {
+			session.setEndedAt(new Date());
+		}
+		sessions.save(session);
 
-		final TransactionManager tx = TransactionManager.getInstance();
-
-		final Lock lock = tx.acquireLock(5000, "users", "toto");
-
-		lock.save(user);
-
-		lock.commit();
-
-		logQueue.log(new LoggableString("USER:UPDATE:{uid=\"%s\"}", //
-				user.getUid()));
-
-		//users.reload();
+		logQueue.log(new LoggableString("LOGOUT:VALID:{uid=\"\", token=%s}",
+				userUid, sessionId));
 	}
 
 	/**
@@ -251,7 +247,14 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		final String uuid = newUUID(40);
 
-		executeUpdate("insertAppToken", uuid, user.getUsername(), new DateTime());
+		// executeUpdate("insertAppToken", uuid, user.getUsername(), new DateTime());
+		AuthenticatedSession session = new AuthenticatedSession();
+		session.setToken(uuid);
+		session.setStartedAt(new Date());
+		session.setUser(user);
+		sessions.save(session);
+		
+		log.info("Create session for user " + user.getUsername());
 
 		return uuid;
 	}
@@ -269,9 +272,14 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		final String sessionId = session.getId();
 
-		final int result = executeQueryGetInt("checkSession", sessionId);
-
-		return result == 1;
+		//final int result = executeQueryGetInt("checkSession", sessionId);
+		
+		AuthenticatedSession authenticatedSession = sessions.findByToken(sessionId);
+		if (authenticatedSession.getEndedAt() == null) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 
 	private final class AppSessionImpl implements AppSession {
@@ -323,26 +331,14 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		checkNotNull(sessionId, "sessionId");
 
-		final String userUid;
+		AuthenticatedSession session = sessions.findByToken(sessionId);
 
-		try {
-
-			userUid = executeQueryGetStringNullable("getActiveSession_userUid",
-					sessionId);
-
-		} catch (final SQLException e) {
+		if (session.getUser() == null) {
 
 			throw new InvalidSessionException("sessionId: " + sessionId);
 		}
 
-		if (userUid == null) {
-
-			throw new InvalidSessionException("sessionId: " + sessionId);
-		}
-
-		final User user = users.findByUsername(userUid);
-
-		return new AppSessionImpl(sessionId, user);
+		return new AppSessionImpl(sessionId, session.getUser());
 	}
 
 	@Override
@@ -352,8 +348,16 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		final String loginToken = newUUID(40);
 		final String key = newUUID(40);
 
-		executeUpdate("insertLoginConversation", loginToken, key,
-				new DateTime());
+		/*executeUpdate("insertLoginConversation", loginToken, key,
+				new DateTime());*/
+		
+		Token token = new Token();
+		token.setToken(loginToken);
+		token.setTokenKey(key);
+		token.setStartedAt(new Date());
+		tokens.save(token);
+		
+		log.info("Generated token. Login token : " + loginToken + " ; key : " + key + " start date : " + token.getStartedAt());
 
 		return new LoginConversationImpl(loginToken, key);
 	}
@@ -395,18 +399,13 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		checkNotNull(loginToken, "loginToken");
 		checkNotNull(user, "user");
 
-		final String uid = user.getUsername();
-
-		final int result = executeUpdate("updateLoginConversation", uid,
-				loginToken);
-
-		final int REF = 1;
-
-		if (result != REF) {
-
-			throw new IllegalStateException("Illegal result: " + result
-					+ ", should be: " + REF + " for loginToken: " + loginToken
-					+ ", user: " + uid);
+		Token token = tokens.findByToken(loginToken);
+		if (token.getUser() == null) {
+			token.setUser(user);
+			tokens.save(token);
+		} else {
+			throw new IllegalStateException("Illegal result for loginToken: " + loginToken
+					+ ", user: " + user.getUsername());
 		}
 	}
 
@@ -453,31 +452,20 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 	private User retrieve_validate(final String loginToken, final String key)
 			throws IOException, SQLException {
 
-		final String userUid = executeQueryGetStringNullable(
-				"getPreparedUserUid", loginToken, key);
-
-		if (userUid == null) {
-			return null; // Bad loginToken+key
-		}
-
-		final User user =  users.findByUsername(userUid);
-
-		if (user == null) {
-			if (log.isInfoEnabled()) {
-				log.info("No user: " + userUid + " for loginToken: "
-						+ loginToken);
+		//final String userUid = executeQueryGetStringNullable(
+		//		"getPreparedUserUid", loginToken, key);
+		
+		Token token = tokens.findByToken(loginToken);
+		if (!token.getTokenKey().equals(key)) {
+			if  (token.getUser() == null) {
+				if (log.isInfoEnabled()) {
+					log.info("No user: " + token.getUser().getUsername() + " for loginToken: "
+							+ loginToken);
+				}
 			}
-			return null; // Bad login
+			return null;
 		}
 
-		/*
-		if (user.isNullPrimaryUser()) {
-
-			return user;
-		}
-
-		return recursiveGetPrimaryUser(Lists.newArrayList(user));
-		*/
-		return user;
+		return token.getUser();
 	}
 }

@@ -34,6 +34,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	@Column(nullable = false)
 	private boolean active = true;
 	private String logo;
+	@Column(columnDefinition = "TEXT")
 	private String address;
 	private String floor;
 	private String zipcode;
@@ -89,7 +90,9 @@ public class Poi extends AuditableEntityWithLegacy {
 	private Date expDate;
 	
 	// Library supporting fields
+	@Column(columnDefinition = "TEXT")
 	private String publicWelcome;
+	@Column(columnDefinition = "TEXT")
 	private String disciplines;
 	@Column(name = "haswifi", nullable = false)
 	private boolean hasWifi = false;
@@ -97,7 +100,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	private boolean hasEthernet = false;
 	@Column(name = "iconruedesfacs", nullable = false)
 	private boolean iconRuedesfacs = false;
-	@Column(name = "closinghours")
+	@Column(name = "closinghours", columnDefinition = "TEXT")
 	private String closingHours;
 	// Library supporting fields
 
@@ -387,6 +390,18 @@ public class Poi extends AuditableEntityWithLegacy {
 	
 	public Long getCategoryId() {
 		return this.category.getId();
+	}
+	
+	public String getCategoryMarkerIcon() {
+		return this.category.getMarkerIconUrl();
+	}
+
+	public String getCategoryActiveIcon() {
+		return this.category.getActiveIconUrl();
+	}
+
+	public String getCategoryInactiveIcon() {
+		return this.category.getInactiveIconUrl();
 	}
 
 	public String getPublicWelcome() {

@@ -127,7 +127,7 @@
                 </div>
                 <div class="panel-body">
                     <p data-bind="visible: pois().length == 0">
-                        S&eacute;lectionnez<span data-bind="visible: activeTab() != 'libraries'"> une universit&eacute et</span> une cat&eacute;gorie pour voir POI connexes
+                        S&eacute;lectionnez<span data-bind="visible: activeTab() != 'libraries'"> une universit&eacute; et</span> une cat&eacute;gorie pour voir POI connexes
                     </p>
                     <div id="jstree1" data-bind="visible: pois().length > 0">
                         <ul data-bind="template: { name: 'treenode-template', foreach: pois }"></ul>
@@ -202,7 +202,7 @@
         </div>
       </div>
 
-    </div>
+    
 
     <div id="poiModal" class="modal fade">
       <div class="modal-dialog">
@@ -227,39 +227,57 @@
 
             <form class="form-horizontal" role="form" data-bind="with: activePoi()">
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
+                <label for="inputNom" class="col-sm-2 control-label">Nom</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: name">
+                  <input type="text" class="form-control" id="inputNom" placeholder="" required="required" data-bind="value: name">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputPassword3" class="col-sm-2 control-label">Cat&eacute;gorie</label>
+                <label class="col-sm-2 control-label">Description</label>
+                <div class="col-sm-10">
+                  <textarea class="form-control" placeholder="" data-bind="value: description"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label">Cat&eacute;gorie</label>
                 <div class="col-sm-10">
                   <select class="form-control" required="required" data-bind="options: $parent.getAvailableCategories(), optionsValue: 'id', optionsText: 'name', value: category"></select>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Emplacement</label>
+                <label for="inputEmplacement" class="col-sm-2 control-label">Emplacement</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: floor">
+                  <input type="text" class="form-control" id="inputEmplacement" placeholder="" data-bind="value: floor">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Horaires</label>
+                <label for="inputHoraires" class="col-sm-2 control-label">Horaires et jours d'ouverture</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: openingHours">
+                  <textarea class="form-control" id="inputHoraires" placeholder="" data-bind="value: openingHours"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">T&eacute;l&eacute;phones</label>
+                <label for="inputPhones" class="col-sm-2 control-label">T&eacute;l&eacute;phones</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: phones">
+                  <input type="text" class="form-control" id="inputPhones" placeholder="" data-bind="value: phones">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Adresse</label>
+                <label for="inputAdress" class="col-sm-2 control-label">Adresse</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: address">
+                  <textarea class="form-control" id="inputAdress" placeholder="" data-bind="value: address"></textarea>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputLat" class="col-sm-2 control-label">Latitude</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputLat" placeholder="" data-bind="value: lat">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputLng" class="col-sm-2 control-label">Longitude</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputLng" placeholder="" data-bind="value: lng">
                 </div>
               </div>
               <div class="form-group">
@@ -269,30 +287,38 @@
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Acc&egrave;s</label>
+                <label for="inputAccess" class="col-sm-2 control-label">Itin&eacute;raire</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: itinerary">
+                  <textarea class="form-control" id="inputAccess" placeholder="" data-bind="value: itinerary"></textarea>
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Site web</label>
+                <label for="inputWebsite" class="col-sm-2 control-label">Site web</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: url">
+                  <input type="text" class="form-control" id="inputWebsite" placeholder="" data-bind="value: url">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Crous URL</label>
+                <label for="inputRestoMenuUrl" class="col-sm-2 control-label">Crous URL</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: restoMenuUrl">
+                  <input type="text" class="form-control" id="inputRestoMenuUrl" placeholder="" data-bind="value: restoMenuUrl">
                 </div>
               </div>
               <div class="form-group">
-                <label for="inputEmail3" class="col-sm-2 control-label">Resto Id</label>
+                <label for="inputRestoId" class="col-sm-2 control-label">Resto Id</label>
                 <div class="col-sm-10">
-                  <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: restoId">
+                  <input type="text" class="form-control" id="inputRestoId" placeholder="" data-bind="value: restoId">
                 </div>
               </div>
-            </form>
+
+							<div class="form-group">
+								<label class="col-sm-2 control-label">Actif</label>
+								<div class="col-sm-10">
+									<input type="checkbox" data-bind="checked: active" />
+								</div>
+							</div>
+
+			</form>
 
             </div>
               
@@ -335,13 +361,13 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Publics accueillis</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: publicWelcome">
+                        <textarea class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: publicWelcome"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="inputPassword3" class="col-sm-2 control-label">Disciplines</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: disciplines">
+                        <textarea class="form-control" id="inputEmail3" placeholder="" required="required" data-bind="value: disciplines"></textarea>
                         </div>
                     </div>
                     <div class="form-group">
@@ -365,13 +391,7 @@
                     <div class="form-group">
                         <label for="inputEmail3" class="col-sm-2 control-label">Fermetures</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: openingHours">
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="inputEmail3" class="col-sm-2 control-label">Horaires et jours d'ouverture</label>
-                        <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputEmail3" placeholder="" data-bind="value: closingHours">
+                        <textarea class="form-control" id="inputEmail3" placeholder="" data-bind="value: closingHours"></textarea>
                         </div>
                     </div>
                 </form>
@@ -403,7 +423,7 @@
         <div class="modal-content">
           <div class="modal-header">
             <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title">Plan au format image</span></h4>
+            <h4 class="modal-title"><span>Plan au format image</span></h4>
           </div>
           <div class="modal-body">
 

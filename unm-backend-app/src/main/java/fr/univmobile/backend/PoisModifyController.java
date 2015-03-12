@@ -157,6 +157,8 @@ public class PoisModifyController extends AbstractBackendController {
 				Double lng = Double.parseDouble(form.lng().trim());
 				poi.setLng(lng);
 			} else {
+				// TODO use Geocoding to try to get the coordinates from the address field.
+				// eg. http://code.google.com/p/geocoder-java/
 				poi.setLng(null);
 			}
 		} catch (NumberFormatException e) {
@@ -256,5 +258,8 @@ public class PoisModifyController extends AbstractBackendController {
 
 		@HttpParameter
 		String zipcode();
+		
+		@HttpParameter
+		String description();
 	}
 }

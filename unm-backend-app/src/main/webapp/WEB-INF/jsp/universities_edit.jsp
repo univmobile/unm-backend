@@ -80,7 +80,7 @@
       </tr>
       
       <tr>
-         <th>Mod&eacute;r&eacute; Commentaires ?</th>
+         <th>Mod&eacute;rer les commentaires par d&eacute;faut ?</th>
          <td>
          	<form:checkbox path="moderateComments" value="true" />
             <label for="checkbox-active"></label>

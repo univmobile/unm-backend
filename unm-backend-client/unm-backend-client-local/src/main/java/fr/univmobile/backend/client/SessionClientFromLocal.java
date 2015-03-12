@@ -95,7 +95,7 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 
 		return DataBeans.instantiate(MutableAppToken.class) //
 				.setId(sessionId) //
-				.setUser(getUser(null));
+				.setUser(getUser(dsUser));
 	}
 
 	private static final Log log = LogFactory
@@ -134,7 +134,7 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 
 		return DataBeans.instantiate(MutableAppToken.class) //
 				.setId(sessionId) //
-				.setUser(getUser(null));
+				.setUser(getUser(dsUser));
 	}
 
 	@Override
@@ -172,7 +172,7 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 
 		return DataBeans.instantiate(MutableAppToken.class) //
 				.setId(sessionId) //
-				.setUser(getUser(null));
+				.setUser(getUser(dsUser));
 	}
 
 	@Override
@@ -212,24 +212,23 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 		}
 	}
 
-	private User getUser(final fr.univmobile.backend.core.User dsUser)
+	private User getUser(final fr.univmobile.backend.domain.User dsUser)
 			throws IOException {
 
 		final MutableUser user = DataBeans.instantiate(MutableUser.class) //
-				.setUid(dsUser.getUid()) //
+				.setUid(String.valueOf(dsUser.getId())) //
 				.setDisplayName(dsUser.getDisplayName());
 
-		if (!dsUser.isNullMail()) {
-			user.setMail(dsUser.getMail());
+		if (dsUser.getEmail() != null) {
+			user.setMail(dsUser.getEmail());
 		}
 
 		if (log.isDebugEnabled()) {
-			log.debug("getUser(" + dsUser.getUid()
-					+ ").isNullTwitterScreenName?: "
-					+ dsUser.isNullTwitterScreenName());
+			log.debug("getUser(" + dsUser.getUsername()
+					);
 		}
 
-		if (!dsUser.isNullTwitterScreenName()) {
+		/*if (!dsUser.isNullTwitterScreenName()) {
 
 			final String twitterScreenName = dsUser.getTwitterScreenName();
 
@@ -253,7 +252,7 @@ public class SessionClientFromLocal extends AbstractClientFromLocal implements
 
 				user.addToTwitterFollowers(twitterFollower);
 			}
-		}
+		}*/
 
 		return user;
 	}

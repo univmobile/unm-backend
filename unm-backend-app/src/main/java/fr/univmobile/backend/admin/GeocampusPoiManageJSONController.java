@@ -104,6 +104,7 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		}
 
 		poi.setName(data.name());
+		poi.setDescription(coalesce(data.description()));
 		
 		if (data.imageMapId() != null) {
 			poi.setCategory(categoryRepository.findOne(Category.Type.IMAGE_MAPS.type));
@@ -128,7 +129,7 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 			User currentUser = getSessionAttribute(DELEGATION_USER, User.class);
 			if (currentUser.isSuperAdmin() && data.university() != null) {
 				poi.setUniversity(universityRepository.findOne(Long.parseLong(data.university())));
-			} else {
+			} else if (poi.getUniversity() == null) {
 				poi.setUniversity(currentUser.getUniversity());
 			}
 		}
@@ -181,6 +182,9 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 		@HttpParameter
 		@Regexp(".*")
 		String name();
+		
+		@HttpParameter
+		String description();
 
 		@HttpParameter(trim = true)
 		String university();

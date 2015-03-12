@@ -30,6 +30,11 @@ public class University extends AuditableEntity {
 	private String logoUrl;
 	@Column(name = "mobileshibbolethurl")
 	private String mobileShibbolethUrl;
+	
+	/** Central location for the university, to center correctly the map if there is no geolocalisation */
+	private Double centralLat;
+	private Double centralLng;
+
 
 	@Override
 	public String toString() {
@@ -88,8 +93,28 @@ public class University extends AuditableEntity {
 		return this.region.getAllowBonplans();
 	}
 	
+	public Long getRegionId() {
+		return this.region.getId();
+	}
+	
 	public String getRegionName() {
 		return this.region.getName();
+	}
+
+	public Double getCentralLat() {
+		return centralLat;
+	}
+
+	public void setCentralLat(Double centralLat) {
+		this.centralLat = centralLat;
+	}
+
+	public Double getCentralLng() {
+		return centralLng;
+	}
+
+	public void setCentralLng(Double centralLng) {
+		this.centralLng = centralLng;
 	}
 	
 }

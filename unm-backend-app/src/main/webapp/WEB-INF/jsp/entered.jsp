@@ -17,9 +17,9 @@
 <div id="div-entered">
 <jsp:include page="ul-adminMenu.h.jsp"/>
 <ul id="ul-adminUser">
-<li> Principal : <a href="${baseUrl}/unm-backend/usermodify/${user.id}">${user.uid}</a>
+<li> Principal : <a href="${baseURL}/usermodify/${user.id}">${user.uid}</a>
 <c:if test="${user.uid != delegationUser.uid}">
-<li> Délégation : <a href="${baseUrl}/unm-backend/usermodify/${delegationUser.id}">${delegationUser.id}</a>
+<li> Délégation : <a href="${baseURL}/usermodify/${delegationUser.id}">${delegationUser.id}</a>
 </c:if>
 <li id="li-logout"> <a id="link-logout" href="${baseURL}/?logout">Déconnexion</a>
 </ul>
