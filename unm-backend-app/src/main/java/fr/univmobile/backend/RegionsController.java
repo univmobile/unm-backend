@@ -36,17 +36,17 @@ public class RegionsController extends AbstractBackendController {
 			Region region2 = regionRepository.findOne(new Long(2));
 			Region region3 = regionRepository.findOne(new Long(3));
 
-			if (!region1.getLabel().equals(ur.region_1())) {
+			if (region1 != null && ur.region_1() != null && !region1.getLabel().equals(ur.region_1())) {
 				region1.setLabel(ur.region_1());
 				regionRepository.save(region1);
 			}
 
-			if (!region2.getLabel().equals(ur.region_2())) {
+			if (region2 != null && ur.region_2() != null && !region2.getLabel().equals(ur.region_2())) {
 				region2.setLabel(ur.region_2());
 				regionRepository.save(region2);
 			}
 
-			if (!region3.getLabel().equals(ur.region_3())) {
+			if (region3 != null && ur.region_3() != null && !region3.getLabel().equals(ur.region_3())) {
 				region3.setLabel(ur.region_3());
 				regionRepository.save(region3);
 			}
@@ -65,15 +65,12 @@ public class RegionsController extends AbstractBackendController {
 	@HttpMethods("POST")
 	interface UpdateRegions extends HttpInputs {
 
-		@HttpRequired
 		@HttpParameter(trim = true)
 		String region_1();
 
-		@HttpRequired
 		@HttpParameter(trim = true)
 		String region_2();
 
-		@HttpRequired
 		@HttpParameter(trim = true)
 		String region_3();
 	}

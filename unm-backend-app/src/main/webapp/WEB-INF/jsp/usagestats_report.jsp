@@ -70,13 +70,13 @@
 		Université: <form:select path="university" id="university" items="${universities}" itemValue="id" itemLabel="title" /><br/>
 	</c:if>
 	
-	à partir de: <form:input type="text" path="from"/>&nbsp;&nbsp;à: <form:input type="text" path="to"/>
+	de: <form:input type="text" path="from"/>&nbsp;&nbsp; à: <form:input type="text" path="to"/>
 		 
 	<p style="text-align: center"><input type="submit" value="Envoyer"><p>
 </div>
 
 <c:if test="${fn:length(stats) eq 0}">
-	<div style="text-align: center"><h3>Aucun statistiques</h3></div>
+	<div style="text-align: center"><h3>Aucune statistique</h3></div>
 </c:if>
 
 
@@ -87,7 +87,7 @@
 
 <tr>
    <th class="id">Origine</th>
-   <th class="label">Connexions comptent</th>
+   <th class="label">Nombre de connexions</th>
 </tr>
 
 </thead>
