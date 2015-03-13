@@ -8,7 +8,6 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Date;
 import java.util.UUID;
-import java.util.logging.Logger;
 
 import javax.annotation.Nullable;
 import javax.sql.DataSource;
@@ -16,13 +15,11 @@ import javax.sql.DataSource;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.joda.time.DateTime;
 
 import fr.univmobile.backend.core.AppSession;
 import fr.univmobile.backend.core.InvalidSessionException;
 import fr.univmobile.backend.core.LoginConversation;
 import fr.univmobile.backend.core.SessionManager;
-import fr.univmobile.backend.core.UserBuilder;
 import fr.univmobile.backend.domain.AuthenticatedSession;
 import fr.univmobile.backend.domain.AuthenticatedSessionRepository;
 import fr.univmobile.backend.domain.Token;
@@ -31,10 +28,6 @@ import fr.univmobile.backend.domain.User;
 import fr.univmobile.backend.domain.UserRepository;
 import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.history.LoggableString;
-import fr.univmobile.backend.history.Logged;
-import fr.univmobile.commons.tx.Lock;
-import fr.univmobile.commons.tx.TransactionException;
-import fr.univmobile.commons.tx.TransactionManager;
 
 public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		SessionManager {
@@ -88,8 +81,8 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 		checkNotNull(login, "login");
 		checkNotNull(password, "password");
 
-		final Logged logged = logQueue.log(new LoggableString(
-				"LOGIN:{apiKey=%s, login=\"%s\"}", apiKey, login));
+		//final Logged logged = logQueue.log(new LoggableString(
+		//		"LOGIN:{apiKey=%s, login=\"%s\"}", apiKey, login));
 
 		final User user = login_classic_validate(login, password);
 
@@ -99,8 +92,8 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 				log.info("Invalid log-in for: " + login);
 			}
 
-			logQueue.log(logged, new LoggableString(
-					"LOGIN:INVALID:%s:{login=\"%s\"}", logged, login));
+			//logQueue.log(logged, new LoggableString(
+			//		"LOGIN:INVALID:%s:{login=\"%s\"}", logged, login));
 
 			return null;
 		}
@@ -109,9 +102,9 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		final AppSession appSession = new AppSessionImpl(appToken, user);
 
-		logQueue.log(logged, new LoggableString(
-				"LOGIN:OK:%s:{login=\"%s\", appToken:%s}", logged, login,
-				appToken));
+		//logQueue.log(logged, new LoggableString(
+		//		"LOGIN:OK:%s:{login=\"%s\", appToken:%s}", logged, login,
+		//		appToken));
 
 		return appSession;
 	}
@@ -222,8 +215,8 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		if (!isValid(appSession)) {
 
-			logQueue.log(new LoggableString(
-					"LOGOUT:INVALID:{uid=\"\", token=%s}", userUid, sessionId));
+			//logQueue.log(new LoggableString(
+			//		"LOGOUT:INVALID:{uid=\"\", token=%s}", userUid, sessionId));
 
 			return;
 		}
@@ -419,8 +412,8 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		LogQueueDbImpl.setAnonymous();
 		
-		final Logged logged = logQueue.log(new LoggableString(
-				"RETRIEVE:{apiKey=%s, loginToken=\"%s\"}", apiKey, loginToken));
+		//final Logged logged = logQueue.log(new LoggableString(
+		//		"RETRIEVE:{apiKey=%s, loginToken=\"%s\"}", apiKey, loginToken));
 
 		final User user = retrieve_validate(loginToken, key);
 
@@ -430,9 +423,9 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 				log.info("Invalid login token: " + loginToken);
 			}
 
-			logQueue.log(logged, new LoggableString(
-					"RETRIEVE:INVALID:%s:{loginToken=\"%s\"}", logged,
-					loginToken));
+			//logQueue.log(logged, new LoggableString(
+			//		"RETRIEVE:INVALID:%s:{loginToken=\"%s\"}", logged,
+			//		loginToken));
 
 			return null;
 		}
@@ -441,9 +434,9 @@ public class SessionManagerImpl extends AbstractDbManagerImpl implements
 
 		final AppSession appSession = new AppSessionImpl(appToken, user);
 
-		logQueue.log(logged, new LoggableString(
-				"RETRIEVE:%s:{loginToken=\"%s\", appToken:%s}", logged,
-				loginToken, appToken));
+		//logQueue.log(logged, new LoggableString(
+		//		"RETRIEVE:%s:{loginToken=\"%s\", appToken:%s}", logged,
+		//		loginToken, appToken));
 
 		return appSession;
 	}

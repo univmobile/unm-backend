@@ -256,8 +256,8 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 
 		checkNotNull(context, "context");
 
-		final Logged logged = logQueue.log(new LoggableSearchQuery(context,
-				query));
+		//final Logged logged = logQueue.log(new LoggableSearchQuery(context,
+		//		query));
 
 		if (!SearchContextImpl.class.equals(context.getClass())) {
 			throw new NotImplementedException("context.class: "
@@ -349,7 +349,7 @@ public class SearchManagerImpl extends AbstractDbManagerImpl implements
 		final CommentRef[] array = Iterables.toArray(commentRefs,
 				CommentRef.class);
 
-		logQueue.log(logged, new LoggableSearchResult(logged, array));
+		//logQueue.log(logged, new LoggableSearchResult(logged, array));
 
 		return array;
 	}
