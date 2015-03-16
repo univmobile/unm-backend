@@ -17,8 +17,6 @@ import fr.univmobile.backend.core.UserBuilder;
 import fr.univmobile.backend.core.UserDataSource;
 import fr.univmobile.backend.core.UserManager;
 import fr.univmobile.backend.history.LogQueue;
-import fr.univmobile.backend.history.LoggableString;
-import fr.univmobile.backend.history.Logged;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.TransactionException;
 import fr.univmobile.commons.tx.TransactionManager;
@@ -75,8 +73,8 @@ public class UserManagerImpl extends AbstractDbManagerImpl implements
 			log.debug("addUser:" + user.getUid());
 		}
 
-		final Logged logged = logQueue.log(new LoggableString(
-				"USER:ADD:{uid=%s}", user.getUid()));
+		//final Logged logged = logQueue.log(new LoggableString(
+		//		"USER:ADD:{uid=%s}", user.getUid()));
 
 		final TransactionManager tx = TransactionManager.getInstance();
 
@@ -86,9 +84,9 @@ public class UserManagerImpl extends AbstractDbManagerImpl implements
 
 		lock.commit();
 
-		logQueue.log(logged,
-				new LoggableString("USER:ADD:%s:{uid=%s}", logged, user
-						.getUid()));
+		//logQueue.log(logged,
+		//		new LoggableString("USER:ADD:%s:{uid=%s}", logged, user
+		//				.getUid()));
 
 		users.reload(saved);
 		

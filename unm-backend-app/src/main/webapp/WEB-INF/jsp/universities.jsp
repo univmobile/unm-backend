@@ -83,12 +83,12 @@ td.id {
         <c:choose>
             <c:when test="${regionId != null}">
                 <button id="return-button" onclick="document.location.href = '${baseURL}/regions/'; return false;">
-                    Reviens
+                    Retour
                 </button>
             </c:when>
             <c:otherwise>
                 <button id="return-button" onclick="document.location.href = '${baseURL}/'; return false;">
-                    Reviens
+                    Retour
                 </button>
             </c:otherwise>
         </c:choose>

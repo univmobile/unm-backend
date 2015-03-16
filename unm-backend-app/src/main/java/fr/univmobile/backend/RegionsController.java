@@ -21,13 +21,8 @@ public class RegionsController extends AbstractBackendController {
 
 	@Override
 	public View action() {
-		// 2. VIEW
-
 		List<Region> regions = regionRepository.findAll();
 		setAttribute("regions", regions);
-
-		// 3. END
-
 		return new View("regions.jsp");
 	}
 }

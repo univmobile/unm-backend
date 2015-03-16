@@ -29,8 +29,6 @@ import fr.univmobile.backend.core.CommentThread;
 import fr.univmobile.backend.core.SearchEntry;
 import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.backend.history.LogQueue;
-import fr.univmobile.backend.history.LoggableString;
-import fr.univmobile.backend.history.Logged;
 import fr.univmobile.commons.tx.Lock;
 import fr.univmobile.commons.tx.SequenceTimeoutException;
 import fr.univmobile.commons.tx.TransactionException;
@@ -148,8 +146,8 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 
 		final int uid = newCommentUid();
 
-		final Logged logged = logQueue.log(new LoggableString(
-				"COMMENT:ADD:{uid=%d}", uid));
+		//final Logged logged = logQueue.log(new LoggableString(
+		//		"COMMENT:ADD:{uid=%d}", uid));
 
 		final Lock lock = tx.acquireLock(5000, "comments\\poi", poiId);
 
@@ -178,8 +176,8 @@ public class CommentManagerImpl extends AbstractDbManagerImpl implements
 
 		lock.commit();
 
-		logQueue.log(logged, new LoggableString(
-				"COMMENT:ADD:%s:{uid=%d, entity_id:%d}", logged, uid, entityId));
+		//logQueue.log(logged, new LoggableString(
+		//		"COMMENT:ADD:%s:{uid=%d, entity_id:%d}", logged, uid, entityId));
 	}
 
 	@Override
