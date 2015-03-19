@@ -41,7 +41,7 @@ Administration d’UnivMobile
 	<li class="flaticon icon-search8">
 		<a id="link-search" href="${baseURL}/api/app#/main">Recherche avancée</a>
 	<li class="flaticon icon-location14">
-		<a id="link-pois" href="${baseURL}/pois/">Points of Interest (POIs)</a>
+		<a id="link-pois" href="${baseURL}/pois/">Universités</a>
 	<li class="flaticon icon-chat2">
 		<a id="link-comments" href="${baseURL}/api/app#/manage/comments">Commentaires</a>
 	<li class="flaticon icon-address7">
