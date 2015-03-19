@@ -128,5 +128,12 @@ public class News extends AuditableEntity {
 	public void setFeed(Feed feed) {
 		this.feed = feed;
 	}
+	
+	public String getFeedName() {
+		if (getFeed() != null) {
+			return getFeed().getName();
+		}
+		return null;
+	}
 
 }
