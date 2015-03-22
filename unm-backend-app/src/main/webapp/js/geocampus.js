@@ -272,7 +272,7 @@ var DataSource = function(baseUrl) {
             params = { type: type, uni: universityId, cat: categoryId };
         }
             
-        if (universityId != '' || categoryId != 0 || imageMapId != 0) {
+        if (type == 'libraries' || universityId != '' || categoryId != 0 || imageMapId != 0) {
             var serviceUrl = this.getFullPath('api/admin/geocampus/filter');
             $.getJSON( serviceUrl, params )
                 .done(function( json ) {

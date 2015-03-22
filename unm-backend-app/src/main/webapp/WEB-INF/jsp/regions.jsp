@@ -21,7 +21,7 @@
 <jsp:include page="div-entered.h.jsp"/>
 
 <div class="body">
-<form action="${baseURL}/regions/" method="POST">
+<form action="${baseURL}/api/regionsp/modifyLabels" method="POST">
 
 <h1   title="Version ${buildInfo.appVersion}
       Build ${buildInfo.buildDisplayName}
@@ -62,7 +62,7 @@
    </td>
    
    <td class="label">
-      <input type="text" id="text-region_${r.id}" name="region_${r.id}" value="${r.label}"/>
+      <input type="text" id="text-region_${r.id}" name="${r.id}" value="${r.label}"/>
    </td>
    
    <td class="universityCount">
