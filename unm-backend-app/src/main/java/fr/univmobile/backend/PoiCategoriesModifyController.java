@@ -96,7 +96,7 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 		if (form.description() != null)
 			poicategory.setDescription(form.description());
 		
-		if (form.cid() != null)
+		if (form.cid() != null && !form.cid().isEmpty())
 			poicategory.setApiParisId(Long.parseLong(form.cid()));
 		else poicategory.setApiParisId(null);
 
