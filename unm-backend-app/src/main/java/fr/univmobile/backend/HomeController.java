@@ -82,9 +82,22 @@ public class HomeController extends AbstractBackendController {
 
 		if (getHttpInputs(Myself.class).isHttpValid()) {
 
+			User user = getUser();
+
+			if (user == null) {
+				setAttribute("err_studentDelegationUid", true);
+				return new View("home.jsp");
+			}
+
+			if (user.getRole().equals("student")) {
+				setAttribute("err_studentDelegationUid", true);
+				setAttribute("delegationUid", user.getUsername());
+				return new View("home.jsp");
+			}
+
 			log.debug("Myself.isHttpValid()");
 
-			setSessionAttribute(DELEGATION_USER, getUser());
+			setSessionAttribute(DELEGATION_USER, user);
 
 			return entered();
 		}

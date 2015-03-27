@@ -37,7 +37,10 @@
 	<jpa:auditing auditor-aware-ref="sessionAuditorAware" />
 
 	<security:http use-expressions="true" auto-config="true">
-		<security:intercept-url pattern="/api/**" access="permitAll" />
+        <!--remove createdBy and updatedBy patterns when https://jira.spring.io/browse/DATAREST-87 is fixed-->
+        <security:intercept-url pattern="/**/createdBy" access="hasRole('superadmin')"/>
+        <security:intercept-url pattern="/**/updatedBy" access="hasRole('superadmin')"/>
+        <security:intercept-url pattern="/**" access="permitAll" />
 		<security:form-login login-page="/"/>
 		<security:custom-filter ref="compositePreAuthenticationFilter" position="PRE_AUTH_FILTER" />
 	</security:http>
