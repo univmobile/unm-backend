@@ -10,7 +10,8 @@ public interface NewsRepository extends JpaRepository<News, Long> {
 
 	News findByLinkAndId(String link, String id);
 
-	@Query("Select n from News n where n.feed.active  = TRUE and n.feed.university = :universityId or n.feed.university = null order by n.createdOn desc")
+	/** We add in the news the news of the related CROUS */
+	@Query("Select n from News n where n.feed.active  = TRUE and n.feed.university = :universityId or n.feed.university in (select uc.crous from UniversityCrous uc where uc.university.id = :universityId) or n.feed.university = null order by n.publishedDate desc")
 	Page<News> findNewsForUniversity(@Param("universityId") University universityId, Pageable pageable);
 
 	News findByLinkAndTitle(String urlString, String title);

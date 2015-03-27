@@ -34,7 +34,10 @@ public class University extends AuditableEntity {
 	/** Central location for the university, to center correctly the map if there is no geolocalisation */
 	private Double centralLat;
 	private Double centralLng;
-
+	
+	/** Return true if the university is showing a CROUS */
+	@Column(name = "iscrous", nullable = false)
+	private boolean crous;
 
 	@Override
 	public String toString() {
@@ -115,6 +118,14 @@ public class University extends AuditableEntity {
 
 	public void setCentralLng(Double centralLng) {
 		this.centralLng = centralLng;
+	}
+
+	public boolean isCrous() {
+		return crous;
+	}
+
+	public void setCrous(boolean crous) {
+		this.crous = crous;
 	}
 	
 }
