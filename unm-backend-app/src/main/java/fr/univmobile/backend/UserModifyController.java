@@ -72,7 +72,7 @@ public class UserModifyController extends AbstractBackendController {
 
 		// 1.1 USER
 
-		User user = userRepository.findOne(getUserId());
+		User user = userRepository.findFirstById(getUserId());
 
 		setAttribute("usermodify", user);
 
@@ -94,7 +94,7 @@ public class UserModifyController extends AbstractBackendController {
 
 	private View usermodify(final Usermodify form) throws IOException {
 
-		User user = userRepository.findOne(getUserId());
+		User user = userRepository.findFirstById(getUserId());
 
 		boolean hasErrors = false;
 

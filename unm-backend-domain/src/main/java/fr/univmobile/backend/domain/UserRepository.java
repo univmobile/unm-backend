@@ -25,6 +25,8 @@ public interface UserRepository extends JpaRepository<User, Long> {
 			"(hasRole('student') and returnObject.id == principal.id)")
 	User findOne(Long var1);
 
+    User findFirstById(Long var1);
+
 	User findByRemoteUser(String remoteUser);
 
 	User findByUsername(String username);
