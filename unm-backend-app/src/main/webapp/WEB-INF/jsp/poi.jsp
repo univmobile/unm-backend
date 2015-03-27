@@ -163,7 +163,6 @@ textarea {
    <td>
    	     <c:choose>
       		 
-      		 <c:choose>
              <c:when test="${empty commentCount or commentCount == 0}">
       		    aucun commentaire
       		 </c:when>

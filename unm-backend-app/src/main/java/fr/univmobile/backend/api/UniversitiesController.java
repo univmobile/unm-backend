@@ -110,6 +110,7 @@ public class UniversitiesController {
 		existingUniversity.setTitle(universityForm.getTitle());
 		existingUniversity.setModerateComments(universityForm.getModerateComments());
 		existingUniversity.setMobileShibbolethUrl(universityForm.getMobileShibbolethUrl());
+		existingUniversity.setCrous(universityForm.getCrous());
 
         model.addAttribute("universityForm", universityForm);
 
@@ -169,6 +170,7 @@ public class UniversitiesController {
 		private String logoUrl;
 		private String mobileShibbolethUrl;
 		private MultipartFile file;
+		private boolean crous;
 
 		public UniversityForm() {
 		}
@@ -187,6 +189,14 @@ public class UniversitiesController {
 
 		public void setModerateComments(boolean moderateComments) {
 			this.moderateComments = moderateComments;
+		}
+
+		public boolean getCrous() {
+			return crous;
+		}
+
+		public void setCrous(boolean crous) {
+			this.crous = crous;
 		}
 
 		public String getLogoUrl() {

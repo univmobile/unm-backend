@@ -37,11 +37,11 @@ Administration d’UnivMobile
 <h2 class="homeMenu">Données</h2>
 
 <ul class="homeMenu" id="ul-home-data">
-<c:if test="${delegationUser.role != 'librarian'}">
+<c:if test="${delegationUser.role != 'librarian' && delegationUser.role != 'student'}">
 	<li class="flaticon icon-search8">
 		<a id="link-search" href="${baseURL}/api/app#/main">Recherche avancée</a>
 	<li class="flaticon icon-location14">
-		<a id="link-pois" href="${baseURL}/pois/">Universités</a>
+		<a id="link-pois" href="${baseURL}/pois/">POIs Universités</a>
 	<li class="flaticon icon-chat2">
 		<a id="link-comments" href="${baseURL}/api/app#/manage/comments">Commentaires</a>
 	<li class="flaticon icon-address7">
@@ -71,6 +71,9 @@ Administration d’UnivMobile
 	<li class="flaticon icon-center13">
 		<a id="link-universities" href="${baseURL}/api/app#/university-libraries">Bibliothèques</a>
 	</li>
+	<li class="flaticon icon-crous">
+		<a id="link-universities" href="${baseURL}/api/app#/university-crous">Liens CROUS</a>
+	</li>
 </c:if>
 <c:if test="${delegationUser.role == 'librarian'}">
 	<li class="flaticon icon-compass6">
@@ -79,7 +82,7 @@ Administration d’UnivMobile
 </c:if>		
 </ul>
 
-<c:if test="${delegationUser.role != 'librarian'}">
+<c:if test="${delegationUser.role != 'librarian' && delegationUser.role != 'student'}">
 <h2 class="homeMenu">Système</h2>
 
 <ul class="homeMenu" id="ul-home-system">

@@ -90,13 +90,6 @@
    
 </div>
 
-<div class="table bottom">
-   JSON :
-   <a id="link-json" href="${baseURL}/api/regions">
-      ${baseURL}/api/regions
-   </a>
-</div>
-
 </div> <!-- end of #div-regions -->
 
 </form>

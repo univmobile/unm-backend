@@ -163,7 +163,7 @@ public class GeocampusPoiManageJSONController extends AbstractJSONController {
 			poiRepository.save(poi);
 		} catch (Exception e) {
 			log.error("Error persisting Poi");
-			log.error(e);
+			log.error(e.getMessage(), e);
 			return errorId;
 		}
 

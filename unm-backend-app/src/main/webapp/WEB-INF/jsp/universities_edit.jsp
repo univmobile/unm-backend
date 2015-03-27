@@ -89,7 +89,7 @@
 
 	  <c:if test="${not empty universityForm.logoUrl}">
       <tr>
-         <th>Courant Logo</th>
+         <th>Logo actuel</th>
          <td>
          	${universityForm.logoUrl}<br/>
          	<form:hidden id="logoUrl" path="logoUrl" />
@@ -102,6 +102,14 @@
          <th>Nouveau Logo</th>
          <td>
          	<input type="file" name="file" />
+         </td>   
+      </tr>
+      
+      <tr>
+         <th>Type CROUS ?</th>
+         <td>
+         	<form:checkbox path="crous" value="true" />
+            <label for="checkbox-active"></label>
          </td>   
       </tr>
       

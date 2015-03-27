@@ -156,7 +156,7 @@ td.id {
          </td>
          
          <td class="name" onclick="document.location.href = '${href}'">
-            <a href="${href}" id="link-poi-${poi.id}-name">
+            <a href="${baseURL}/poismodify/${poi.id}" id="link-poi-${poi.id}-name">
                ${poi.name}
       	    </a>
          </td>

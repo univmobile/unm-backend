@@ -43,8 +43,7 @@ public class PoisController extends AbstractBackendController {
 
 		// 1. POIS DATA
 
-		List<Poi> allPois;
-
+		List<Poi> allPois = new ArrayList<Poi>();
 		final Search search = getHttpInputs(Search.class);
 		String query = (search.q() != null) ? search.q() : "";
 		if (dUser.isSuperAdmin()) {

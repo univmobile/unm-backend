@@ -43,7 +43,8 @@ public class CustomRepositoryRestMcvConfiguration extends RepositoryRestMvcConfi
                 UsageStat.class,
                 User.class,
                 Link.class,
-                UniversityLibrary.class
+                UniversityLibrary.class,
+                UniversityCrous.class
         );
     }
 
