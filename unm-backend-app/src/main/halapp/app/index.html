@@ -31,7 +31,7 @@
     <script>
       var universityId = 1;
       var isSuperAdmin = true;
-      var baseUrl = "http://localhost:81/unm-backend/";
+      var baseUrl = "http://localhost:8080/unm-backend/";
       var isDev = true;
     </script>
     <!--<!(endif)-->
@@ -83,7 +83,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button id="dialog-global-btn-ok" class="btn btn-primary primary">Supprimmer</button>
+                    <button id="dialog-global-btn-ok" class="btn btn-primary primary">Supprimer</button>
                     <button id="dialog-global-btn-cancel" class="btn btn-secondary secondary">Annuler</button>
                 </div>
             </div>
@@ -118,16 +118,16 @@
     <script src="bower_components/angular-validator/dist/angular-validator.js"></script>
     <script src="bower_components/angular-validator/dist/angular-validator-rules.js"></script>
     <script src="bower_components/rangy/rangy-core.min.js"></script>
-    <script src="bower_components/rangy/rangy-classapplier.min.js"></script>
-    <script src="bower_components/rangy/rangy-highlighter.min.js"></script>
+    <script src="bower_components/rangy/rangy-cssclassapplier.min.js"></script>
     <script src="bower_components/rangy/rangy-selectionsaverestore.min.js"></script>
     <script src="bower_components/rangy/rangy-serializer.min.js"></script>
-    <script src="bower_components/rangy/rangy-textrange.min.js"></script>
     <script src="bower_components/textAngular/src/textAngular.js"></script>
     <script src="bower_components/textAngular/src/textAngular-sanitize.js"></script>
     <script src="bower_components/textAngular/src/textAngularSetup.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    
+   
 
         <!-- build:js({.tmp,app}) js/scripts.js -->
         <!--(if target dist)><script src="scripts/templates.js"></script><!(endif)-->
@@ -143,6 +143,7 @@
         <script src="scripts/services/linkService.js"></script>
         <script src="scripts/services/libraryService.js"></script>
         <script src="scripts/services/universityLibrariesService.js"></script>
+        <script src="scripts/services/universityCrousService.js"></script>
         <script src="scripts/controllers/ctrl-app.js"></script>
         <script src="scripts/controllers/ctrl-main.js"></script>
         <script src="scripts/controllers/ctrl-notifications.js"></script>
@@ -150,6 +151,7 @@
         <script src="scripts/controllers/ctrl-menus.js"></script>
         <script src="scripts/controllers/ctrl-links.js"></script>
         <script src="scripts/controllers/ctrl-university-libraries.js"></script>
+        <script src="scripts/controllers/ctrl-university-crous.js"></script>
         <!-- endbuild -->
 
         <!--(if target dist)>

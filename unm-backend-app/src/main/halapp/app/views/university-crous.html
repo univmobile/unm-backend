@@ -1,7 +1,7 @@
 <div>
     <div class="page-title">
         <div class="col-sm-9">
-            <h1>Bibliothèques</h1>
+            <h1>Association Universit&eacute;s - CROUS</h1>
         </div>
         <div class="clearfix"></div>
     </div>
@@ -11,7 +11,7 @@
 
         <table class="table table-striped table-condensed table-links">
             <tr>
-                <th>Bibliothèque</th>
+                <th>CROUS</th>
                 <th class="alt-action">Action</th>
             </tr>
             <tr ng-if="!items">
@@ -21,7 +21,7 @@
                 <td colspan="5"> - Aucune donn&eacute;e -</td>
             </tr>
             <tr ng-repeat="item in items">
-                <td>{{item.getPoi().name}}</td>
+                <td>{{item.getCrous().title}}</td>
                 <td>
                     <button class="btn btn-danger btn-sm" ng-click="handleDeleteClick( item )"><span class="glyphicon glyphicon-remove"></span></button>
                 </td>
@@ -41,10 +41,10 @@
                 </select>
             </div>
             <div class="form-group">
-                <label for="university" class="control-label">Bibliothèque</label>
-                <select class="form-control" id="library"
-                        ng-model="toAdd.poiId"
-                        ng-options="poi.id as poi.name for poi in elegibleLibraries()"
+                <label for="crous" class="control-label">CROUS</label>
+                <select class="form-control" id="crous"
+                        ng-model="toAdd.crousId"
+                        ng-options="crous.id as crous.title for crous in elegibleCrous()"
                         >
                 </select>
             </div>

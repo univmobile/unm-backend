@@ -25,7 +25,7 @@
             <td colspan="8">Chargement ...</td>
         </tr>
         <tr ng-if="items && !items.length">
-            <td colspan="8"> - Aucun donn&eacute;es -</td>
+            <td colspan="8"> - Aucune donn&eacute;e -</td>
         </tr>
         <tr ng-repeat="item in items">
             <td>{{item.getUni().title}}</td>
@@ -49,8 +49,8 @@
         <pagination total-items="pager.totalCount" items-per-page="pager.pageSize"
                     max-size="10" boundary-links="true" class="pagination-sm" ng-model="pager.page"
                     ng-change="loadItems()" num-pages="pager.numPages"
-                    previous-text="pr&eacute;c&eacute;dent" next-text="suivant"
-                    first-text="première" last-text="dernier"></pagination>
+                    previous-text="page pr&eacute;c&eacute;dente" next-text="page suivane"
+                    first-text="première page" last-text="dernière page"></pagination>
         <pre>Page: {{pager.page}} / {{pager.numPages}}</pre>
     </div>    
 

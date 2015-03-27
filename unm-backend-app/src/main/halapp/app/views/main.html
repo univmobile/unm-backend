@@ -67,7 +67,7 @@
                         <td colspan="5">Chargement ...</td>
                     </tr>
                     <tr ng-if="comments && !comments.length">
-                        <td colspan="5"> - Aucun donn&eacute;es -</td>
+                        <td colspan="5"> - Aucune donn&eacute;e -</td>
                     </tr>
                     <tr ng-repeat="comment in comments">
                         <td>{{comment.postedOn | date:'dd-MM-yyyy HH:mm:ss'}}</td>
@@ -91,7 +91,7 @@
                         <td colspan="4">Chargement ...</td>
                     </tr>
                     <tr ng-if="pois && !pois.length">
-                        <td colspan="4"> - Aucun donn&eacute;es -</td>
+                        <td colspan="4"> - Aucune donn&eacute;e -</td>
                     </tr>
                     <tr ng-repeat="poi in pois">
                         <td>{{poi.name}}</td>
@@ -115,7 +115,7 @@
                         <td colspan="5">Chargement ...</td>
                     </tr>
                     <tr ng-if="users && !users.length">
-                        <td colspan="5"> - Aucun donn&eacute;es -</td>
+                        <td colspan="5"> - Aucune donn&eacute;e -</td>
                     </tr>
                     <tr ng-repeat="user in users">
                         <td>{{user.username}}</td>
@@ -134,8 +134,8 @@
                 <pagination total-items="pager.totalCount" items-per-page="pager.pageSize"
                             max-size="10" boundary-links="true" class="pagination-sm" ng-model="pager.page"
                             ng-change="showCurrentTab( true )" num-pages="pager.numPages"
-                            previous-text="pr&eacute;c&eacute;dent" next-text="suivant"
-                            first-text="première" last-text="dernier"></pagination>
+                            previous-text="page pr&eacute;c&eacute;dente" next-text="page suivane"
+                    first-text="première page" last-text="dernière page"></pagination>
                 <pre>Page: {{pager.page}} / {{pager.numPages}}</pre>
             </div>
 

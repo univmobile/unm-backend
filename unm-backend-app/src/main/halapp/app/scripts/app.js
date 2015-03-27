@@ -52,6 +52,9 @@ halApp.config( [ '$routeProvider', 'HateoasInterceptorProvider', 'HateoasInterfa
         .when( '/university-libraries', {
             templateUrl: 'views/university-libraries.html', controller: 'CtrlUniversityLibraries'
         } )
+        .when( '/university-crous', {
+            templateUrl: 'views/university-crous.html', controller: 'CtrlUniversityCrous'
+        } )
         .otherwise( {
             redirectTo: '/main'
         } );

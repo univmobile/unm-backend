@@ -1,4 +1,6 @@
 halApp.model.universities = null;
+halApp.model.universitiesWithoutCrous = null;
+halApp.model.crous = null;
 
 halApp.factory( 'universityService', [ '$resource', function( $resource ) {
     var f = {
@@ -25,6 +27,32 @@ halApp.factory( 'universityService', [ '$resource', function( $resource ) {
                 return cbSuccess( halApp.model.universities );
         }
     };
+    
+    f.loadItemsWithoutCrous = function( cbSuccess, force ) {
+        if ( !halApp.model.universities || force ) {
+            $resource( baseUrl + "api/universities/search/getAuthorizedUniversitiesWithoutCROUS" ).get( null, function( res ) {
+                halApp.model.universities = initItems( res._embedded ? res._embedded.universities : [] );
+                if ( cbSuccess )
+                    cbSuccess( halApp.model.universities );
+            } );
+        } else {
+            if ( cbSuccess )
+                return cbSuccess( halApp.model.universities );
+        }
+    };
+    
+    f.loadCrous = function( cbSuccess, force ) {
+    	if ( !halApp.model.crous || force ) {
+            $resource( baseUrl + "api/universities/search/getCrous" ).get( null, function( res ) {
+                halApp.model.crous = initItems( res._embedded ? res._embedded.universities : [] );
+                if ( cbSuccess )
+                    cbSuccess( halApp.model.crous );
+            } );
+        } else {
+            if ( cbSuccess )
+                return cbSuccess( halApp.model.crous );
+        }
+    }
 
 
     f.getItem = function( id ) {

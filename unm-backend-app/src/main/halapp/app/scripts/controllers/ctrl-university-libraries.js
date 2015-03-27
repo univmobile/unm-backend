@@ -24,11 +24,11 @@ halApp.controller( 'CtrlUniversityLibraries', [ '$rootScope', '$scope', '$locati
     } );
 
     $scope.handleDeleteClick = function( item ) {
-        halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprim&eacute; Bibliothèque?', function() {
+        halApp.showDialog( 'Veuillez confirmez l\'op&eacute;ration', 'Supprimer la bibliothèque?', function() {
             universityLibrariesService.remove( item, function() {
                 $scope.pagerCache.universityLibraries = null;
                 halApp.hideDialog();
-                halApp.showAlert("Bibliothèque supprim&eacute;!");
+                halApp.showAlert("La bibliothèque a &eacute;t&eacute; supprim&eacute; !");
             } );
         } )
     };
@@ -40,7 +40,7 @@ halApp.controller( 'CtrlUniversityLibraries', [ '$rootScope', '$scope', '$locati
             var newUniversityLibrary = new UniversityLibraries( item );
             universityLibrariesService.save( newUniversityLibrary, function( res ) {
                 setTimeout( function() {
-                    halApp.showAlert( "Bibliothèque &eacute;tabli!" );
+                    halApp.showAlert( "La bibliothèque a &eacute;t&eacute; cr&eacute;e!" );
                     $scope.toAdd = {};
                 }, 0 )
             } );
@@ -57,17 +57,19 @@ halApp.controller( 'CtrlUniversityLibraries', [ '$rootScope', '$scope', '$locati
         } else {
             var elegibles = [];
             var skip = false;
-            for (var i = 0; i < $scope.libraries.length; i++) {
-                for (var j = 0; j < $scope.items.length; j++) {
-                    if ($scope.libraries[i].id == $scope.items[j].poiId) {
-                        skip = true;
-                        continue;
-                    }
-                }
-                if (!skip) {
-                    elegibles.push($scope.libraries[i]);
-                }
-                skip = false;
+            if ($scope.libraries != null) {
+	            for (var i = 0; i < $scope.libraries.length; i++) {
+	                for (var j = 0; j < $scope.items.length; j++) {
+	                    if ($scope.libraries[i].id == $scope.items[j].poiId) {
+	                        skip = true;
+	                        continue;
+	                    }
+	                }
+	                if (!skip) {
+	                    elegibles.push($scope.libraries[i]);
+	                }
+	                skip = false;
+	            }
             }
             return elegibles;
         }
