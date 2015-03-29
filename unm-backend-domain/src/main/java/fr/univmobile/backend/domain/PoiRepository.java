@@ -105,6 +105,10 @@ public interface PoiRepository extends JpaRepository<Poi, Long> {
 	@Query("Select p from Poi p where p.restoMenuUrl IS NOT NULL AND p.restoMenuUrl <> ''") 
 	List<Poi> findAllByRestoMenuUrlNotNullOrEmpty();
 	
+	@RestResource(exported = false)
+	@Query("Select p from Poi p where p.restoId IS NOT NULL AND p.restoId <> '' and p.legacy like CONCAT(:poiLegacy, '%')")
+	List<Poi> findAllChildRestaurant(@Param("poiLegacy") String poiLegacy);
+	
 	Poi findByExternalId(Long externalId);
 	
 	//@Query("Select p from Poi p where p.legacy like CONCAT(:poi.legacy, '%')")

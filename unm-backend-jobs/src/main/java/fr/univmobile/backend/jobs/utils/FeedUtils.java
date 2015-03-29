@@ -179,6 +179,8 @@ public class FeedUtils {
 					String restoId = elem.getAttribute("id");
 
 					Poi poi = poiByRestoId(childPois, restoId);
+					
+					if (poi != null) {
 
 					NodeList menues = elem.getElementsByTagName("menu");
 
@@ -199,6 +201,7 @@ public class FeedUtils {
 						restoMenu.setDescription(menuElem.getTextContent());
 
 						restoMenuRepository.save(restoMenu);
+					}
 					}
 				}
 
@@ -233,7 +236,8 @@ public class FeedUtils {
 
 	public void persistRestoMenues(){
 		for (Poi poi : poiRepository.findAllByRestoMenuUrlNotNullOrEmpty()) {
-			List<Poi> childPois = poiRepository.findByParent(poi);
+			//List<Poi> childPois = poiRepository.findByParent(poi);
+			List<Poi> childPois = poiRepository.findAllChildRestaurant(poi.getLegacy());
 			persistMenu(poi.getRestoMenuUrl(), childPois);
 		}
 	}

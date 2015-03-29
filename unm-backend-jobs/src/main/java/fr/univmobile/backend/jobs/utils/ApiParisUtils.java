@@ -1,7 +1,6 @@
 package fr.univmobile.backend.jobs.utils;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -11,14 +10,9 @@ import java.util.List;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.http.HttpResponse;
-import org.apache.http.NameValuePair;
-import org.apache.http.client.ClientProtocolException;
 import org.apache.http.client.HttpClient;
-import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.HttpClientBuilder;
-import org.apache.http.message.BasicNameValuePair;
 import org.jsoup.Jsoup;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -26,11 +20,12 @@ import org.springframework.beans.factory.annotation.Value;
 import com.eclipsesource.json.JsonArray;
 import com.eclipsesource.json.JsonObject;
 
+import fr.univmobile.backend.domain.Bookmark;
+import fr.univmobile.backend.domain.BookmarkRepository;
 import fr.univmobile.backend.domain.Category;
 import fr.univmobile.backend.domain.CategoryRepository;
 import fr.univmobile.backend.domain.Poi;
 import fr.univmobile.backend.domain.PoiRepository;
-import fr.univmobile.backend.domain.Region;
 import fr.univmobile.backend.domain.RegionRepository;
 import fr.univmobile.backend.domain.University;
 import fr.univmobile.backend.domain.UniversityRepository;
@@ -71,6 +66,9 @@ public class ApiParisUtils {
 	 
 	@Autowired
 	private UniversityRepository universityRepository;
+	
+	@Autowired
+	private BookmarkRepository bookmarkRepository;
 	 
 	@Autowired
 	private RegionRepository regionRepository;
@@ -226,23 +224,23 @@ public class ApiParisUtils {
 					poi.setLat(lat);
 					poi.setLng(lng);
 					if (address != null) {
-						poi.setAddress(address.replaceAll("^\"|\"$", ""));
+						poi.setAddress(Jsoup.parse(address.replaceAll("^\"|\"$", "")).text());
 					}
 					if (zipCode != null) {
 						poi.setZipcode(zipCode.replaceAll("^\"|\"$", ""));
 					}
 					if (city != null) {
-						poi.setCity(city.replaceAll("^\"|\"$", ""));
+						poi.setCity(Jsoup.parse(city.replaceAll("^\"|\"$", "")).text());
 					}
 					if (place != null) {
-						poi.setFloor(place.replaceAll("^\"|\"$", ""));
+						poi.setFloor(Jsoup.parse(place.replaceAll("^\"|\"$", "")).text());
 					}
 					poi.setExpDate(expDate);
 					poi.setCreatedOn(new Date());
 					poi.setUpdatedOn(new Date());
 					poi.setExternalId(idActivity);
 					if (discipline != null) {
-						poi.setDisciplines(discipline.replaceAll("^\"|\"$", ""));
+						poi.setDisciplines(Jsoup.parse(discipline.replaceAll("^\"|\"$", "")).text());
 					}
 					poi.setCategory(c);
 				
@@ -262,8 +260,14 @@ public class ApiParisUtils {
 			
 			Date currentDate = new Date();
 			for (Poi poi : poiRepository.findAll()) {
-				if (poi.getExpDate() != null && poi.getExpDate().before(currentDate))
+				if (poi.getExpDate() != null && poi.getExpDate().before(currentDate)) {
+					// TODO Remove the bookmarks to the poi
+					List<Bookmark> bookmarksToDelete = bookmarkRepository.findByPoi(poi);
+					for (Bookmark bookmark : bookmarksToDelete) {
+						bookmarkRepository.delete(bookmark);
+					}
 					poiRepository.delete(poi);
+				}
 			}
 
 		} catch (Exception e) {
