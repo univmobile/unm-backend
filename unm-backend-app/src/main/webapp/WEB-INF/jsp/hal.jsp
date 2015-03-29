@@ -15,6 +15,6 @@ var baseUrl = "${baseUrl}";</script>  <body ng-app="halSearchApp" ng-controller=
 <script src="${baseUrl}js/oldieshim.6559be49.js"></script>
 <![endif]-->
 <script src="${baseUrl}js/vendor.7cd0c20b.js"></script>
-<script src="${baseUrl}js/scripts.0d73475e.js"></script> 
+<script src="${baseUrl}js/scripts.709f8a16.js"></script> 
 <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"> </script>
 <jsp:include page="js-adminMenu.h.jsp"></jsp:include> <script>// DO NOT REMOVE THIS</script>
