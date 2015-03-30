@@ -2,6 +2,7 @@ package fr.univmobile.backend;
 
 import static com.google.common.base.Preconditions.checkNotNull;
 
+import java.io.IOException;
 import java.util.List;
 
 import fr.univmobile.backend.domain.Region;
@@ -20,7 +21,10 @@ public class RegionsController extends AbstractBackendController {
 	private RegionRepository regionRepository;
 
 	@Override
-	public View action() {
+	public View action() throws IOException {
+		if (!getDelegationUser().isSuperAdmin()) {
+			return sendError403("FORBIDDEN");
+		}
 		List<Region> regions = regionRepository.findAll();
 		setAttribute("regions", regions);
 		return new View("regions.jsp");

@@ -44,7 +44,7 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 	@Override
 	public View action() throws IOException {
 
-		if (getDelegationUser().isLibrarian()) {
+		if (!getDelegationUser().isSuperAdmin()) {
 			return sendError403("FORBIDDEN");
 		}
 

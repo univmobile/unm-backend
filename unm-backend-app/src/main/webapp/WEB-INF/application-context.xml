@@ -40,6 +40,7 @@
         <!--remove createdBy and updatedBy patterns when https://jira.spring.io/browse/DATAREST-87 is fixed-->
         <security:intercept-url pattern="/**/createdBy" access="hasRole('superadmin')"/>
         <security:intercept-url pattern="/**/updatedBy" access="hasRole('superadmin')"/>
+		<security:intercept-url pattern="/api/regionsp/modifyLabels" access="hasRole('superadmin')" method="POST"/>
         <security:intercept-url pattern="/**" access="permitAll" />
 		<security:form-login login-page="/"/>
 		<security:custom-filter ref="compositePreAuthenticationFilter" position="PRE_AUTH_FILTER" />
