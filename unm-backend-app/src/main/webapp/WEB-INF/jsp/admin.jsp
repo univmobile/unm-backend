@@ -44,9 +44,9 @@ Administration d’UnivMobile
 		<a id="link-pois" href="${baseURL}/pois/">Universités</a>
 	<li class="flaticon icon-chat2">
 		<a id="link-comments" href="${baseURL}/api/app#/manage/comments">Commentaires</a>
-	<li class="flaticon icon-address7">
-		<a id="link-categories" href="${baseURL}/poicategories">Catégories</a>
 	<c:if test="${delegationUser.role == 'superadmin'}">
+		<li class="flaticon icon-address7">
+			<a id="link-categories" href="${baseURL}/poicategories">Catégories</a>
 		<li class="flaticon icon-globe5">
 			<a id="link-regions" href="${baseURL}/regions/">Régions</a>
 	</c:if>
