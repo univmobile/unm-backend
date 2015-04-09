@@ -91,9 +91,10 @@
       <tr>
          <th>Logo actuel</th>
          <td>
+         	<a id="logoThumbnail" href="${logoBaseDir}${universityForm.logoUrl}"></a>
          	${universityForm.logoUrl}<br/>
          	<form:hidden id="logoUrl" path="logoUrl" />
-         	<input type="checkbox" onclick="$('#logoUrl').val(this.checked ? '' : '${universityForm.logoUrl}')" /> clair
+         	<input type="checkbox" onclick="$('#logoUrl').val(this.checked ? '' : '${universityForm.logoUrl}')" /> effacer
          </td>   
       </tr>
 	  </c:if>
@@ -109,6 +110,14 @@
          <th>Type CROUS ?</th>
          <td>
          	<form:checkbox path="crous" value="true" />
+            <label for="checkbox-active"></label>
+         </td>   
+      </tr>
+      
+      <tr>
+         <th>Universit&eacute; active ?</th>
+         <td>
+         	<form:checkbox path="active" value="true" />
             <label for="checkbox-active"></label>
          </td>   
       </tr>

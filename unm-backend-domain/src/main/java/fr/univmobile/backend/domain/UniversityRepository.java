@@ -8,6 +8,9 @@ import org.springframework.security.access.prepost.PostFilter;
 
 public interface UniversityRepository extends JpaRepository<University, Long> {
 	
+	@Query("select u from University u where u.active = TRUE and u.crous = FALSE order by u.region.id, u.title")
+	public java.util.List<University> findAllActiveWithoutCrous();
+	
 	/**
 	 * Only the universities (not CROUS) should be returned by the list
 	 */
