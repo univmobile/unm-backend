@@ -119,9 +119,9 @@
                 <div class="panel-heading">
                     <div class="btn-toolbar" role="toolbar">
                         <div class="btn-group  btn-group-xs pull-right" role="group">
-                          <button type="button" class="btn btn-default" data-bind="enable: activeUniversity().id || activeTab() == 'libraries', click: createRootPoi" title="Ajouter un POI racine"><span class="glyphicon glyphicon-plus" aria-label="Add root"></span></button>
-                          <button type="button" class="btn btn-default" data-bind="enable: (activeUniversity().id || activeTab() == 'libraries') && activePoi().id(), click: createPoi" title="Ajouter un POI ayant pour parent le POI s&eacute;lectionn&eacute;"><span class="glyphicon glyphicon-plus-sign" aria-label="Add child"></span></button>
-                          <button type="button" class="btn btn-default" data-bind="enable: (activeUniversity().id  || activeTab() == 'libraries') && activePoi().id(), click: editPoi" title="Modifier le POI"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: canAddPoi(true), click: createRootPoi" title="Ajouter un POI racine"><span class="glyphicon glyphicon-plus" aria-label="Add root"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: canAddPoi(false), click: createPoi" title="Ajouter un POI ayant pour parent le POI s&eacute;lectionn&eacute;"><span class="glyphicon glyphicon-plus-sign" aria-label="Add child"></span></button>
+                          <button type="button" class="btn btn-default" data-bind="enable: canAddPoi(false), click: editPoi" title="Modifier le POI"><span class="glyphicon glyphicon-edit" aria-label="Edit"></span></button>
                         </div>
                     </div>
                 </div>

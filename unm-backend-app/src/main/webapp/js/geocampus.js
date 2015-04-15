@@ -650,6 +650,21 @@ var MyViewModel = function(ds) {
         self.bonplansUniversities(bonplansUniversities);
         
     });
+    
+    self.canAddPoi = function(isRoot) {
+        var conditionIfAddingChild = isRoot ? true : self.activePoi().id();
+        switch (self.activeTab()) {
+            case 'images':
+                return self.activeImage().id && conditionIfAddingChild;
+            case 'libraries':
+                return true && conditionIfAddingChild;
+            case 'bonplans':
+            case 'pois':
+            default:
+                return self.activeUniversity().id && conditionIfAddingChild;
+        }       
+    }
+    
 };
   
 function getPoiByUid(id, pois) {
