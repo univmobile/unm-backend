@@ -74,6 +74,28 @@ halApp.config( [ '$routeProvider', 'HateoasInterceptorProvider', 'HateoasInterfa
         });
 } ] );
 
+halApp.config(function($provide){
+    $provide.decorator('taOptions', ['taRegisterTool', '$delegate', function(taRegisterTool, taOptions){
+      taRegisterTool('uploadImage', {
+        iconclass: 'fa fa-picture-o',
+        tooltiptext: 'Upload Image',
+        action: function() {
+          var editor = this.$editor;
+          openImageUploadModal(function(imageLink) {
+            editor().wrapSelection('insertImage', imageLink, true);
+          });
+          return true;
+        }/*,
+        onElementSelect: {
+          element: 'img',
+          action: imgOnSelectAction
+        }*/
+      });
+      taOptions.toolbar[1].push('uploadImage');
+      return taOptions;
+    }]);
+});
+
 halApp.showAlert = function( msg, error ) {
     var $alert = $("#alert-global");
     $alert.html( msg );

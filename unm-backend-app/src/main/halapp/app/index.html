@@ -118,9 +118,11 @@
     <script src="bower_components/angular-validator/dist/angular-validator.js"></script>
     <script src="bower_components/angular-validator/dist/angular-validator-rules.js"></script>
     <script src="bower_components/rangy/rangy-core.min.js"></script>
-    <script src="bower_components/rangy/rangy-cssclassapplier.min.js"></script>
+    <script src="bower_components/rangy/rangy-classapplier.min.js"></script>
+    <script src="bower_components/rangy/rangy-highlighter.min.js"></script>
     <script src="bower_components/rangy/rangy-selectionsaverestore.min.js"></script>
     <script src="bower_components/rangy/rangy-serializer.min.js"></script>
+    <script src="bower_components/rangy/rangy-textrange.min.js"></script>
     <script src="bower_components/textAngular/src/textAngular.js"></script>
     <script src="bower_components/textAngular/src/textAngular-sanitize.js"></script>
     <script src="bower_components/textAngular/src/textAngularSetup.js"></script>
@@ -154,8 +156,17 @@
         <script src="scripts/controllers/ctrl-university-crous.js"></script>
         <!-- endbuild -->
 
+        <!--(if target dev)><!-->
+        <script src="/unm-backend/js/vendor/jquery.ui.widget.js"></script>
+        <script src="/unm-backend/js/jquery.iframe-transport.js"></script>
+        <script src="/unm-backend/js/jquery.fileupload.js"></script>
+        <!--<!(endif)-->
+
         <!--(if target dist)>
             <script type="text/javascript" src="${baseURL}/js/jquery-ui-1.11.1.min.js"></script>
+            <script src="${baseURL}/js/vendor/jquery.ui.widget.js"></script>
+            <script src="${baseURL}/js/jquery.iframe-transport.js"></script>
+            <script src="${baseURL}/js/jquery.fileupload.js"></script>
             <jsp:include page="js-adminMenu.h.jsp"></jsp:include>
             <script>// DO NOT REMOVE THIS</script>
         <!(endif)-->

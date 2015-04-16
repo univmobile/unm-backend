@@ -15,7 +15,56 @@ angular.module('halApp.templates', []).run(['$templateCache', function($template
     "    background-color: #F0F0F0;\n" +
     "    padding: 5px 2px;\n" +
     "    margin-bottom: 5px;\n" +
-    "}</style><div><div class=page-title><h1 ng-if=item.id>Modifier Menu</h1><h1 ng-if=!item.id>Ajouter Menu</h1></div><div class=\"alert alert-danger\" role=alert ng-if=\"submitTracking && !validateUrlOrContent(item)\"><span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=true></span> <span class=sr-only>Error:</span> Entrez une URL ou le contenu</div><form><div class=form-group><label for=name class=control-label>Nom *</label><input class=form-control id=name ng-model=item.name validator=\"[required]\"></div><div class=form-group><label for=university class=control-label>Université</label><select class=form-control id=university ng-model=item.universityId ng-options=\"uni.id as uni.title group by uni.regionName for uni in unis\"><option ng-if=isSuperAdmin() value=\"\">---</option></select></div><div class=form-group><label for=grouping class=control-label>Groupe *</label><select class=form-control id=type ng-model=item.grouping ng-options=\"grouping for grouping in groups\" validator=[required]></select></div><div class=checkbox><label><input type=checkbox ng-model=\"item.active\"> Actif</label></div><div class=form-group><label for=ordinal class=control-label>Ordre *</label><input class=form-control id=ordinal ng-model=item.ordinal validator=\"[required]\"></div><div class=form-group><label for=url class=control-label>URL</label><input class=form-control id=url ng-model=item.url validator=[optionalUrl] validator-required=\"false\"></div><div class=form-group><label for=content class=control-label>Content</label><div id=content text-angular ta-toolbar=\"[['h1','h2','h3','h4','h5','h6','p','pre','quote'],['bold','italics','underline','ul','ol','undo','redo','clear'],['justifyLeft','justifyCenter','justifyRight','indent','outdent'],['html']]\" ng-model=item.content></div></div><button type=button class=\"btn btn-success\" ng-click=\"handleSaveClicked( item )\">Enregister</button> <a href=#/menus class=\"btn btn-danger\">Annuler</a></form></div>");
+    "}</style><div><div class=page-title><h1 ng-if=item.id>Modifier Menu</h1><h1 ng-if=!item.id>Ajouter Menu</h1></div><div class=\"alert alert-danger\" role=alert ng-if=\"submitTracking && !validateUrlOrContent(item)\"><span class=\"glyphicon glyphicon-exclamation-sign\" aria-hidden=true></span> <span class=sr-only>Error:</span> Entrez une URL ou le contenu</div><form><div class=form-group><label for=name class=control-label>Nom *</label><input class=form-control id=name ng-model=item.name validator=\"[required]\"></div><div class=form-group><label for=university class=control-label>Université</label><select class=form-control id=university ng-model=item.universityId ng-options=\"uni.id as uni.title group by uni.regionName for uni in unis\"><option ng-if=isSuperAdmin() value=\"\">---</option></select></div><div class=form-group><label for=grouping class=control-label>Groupe *</label><select class=form-control id=type ng-model=item.grouping ng-options=\"grouping for grouping in groups\" validator=[required]></select></div><div class=checkbox><label><input type=checkbox ng-model=\"item.active\"> Actif</label></div><div class=form-group><label for=ordinal class=control-label>Ordre *</label><input class=form-control id=ordinal ng-model=item.ordinal validator=\"[required]\"></div><div class=form-group><label for=url class=control-label>URL</label><input class=form-control id=url ng-model=item.url validator=[optionalUrl] validator-required=\"false\"></div><div class=form-group><label for=content class=control-label>Content</label><div id=content text-angular ta-toolbar=\"[['h1','h2','h3','h4','h5','h6','p','pre','quote','colourRed'],['bold','italics','underline','ul','ol','undo','redo','clear'],['justifyLeft','justifyCenter','justifyRight','indent','outdent'],['html']]\" ng-model=item.content></div></div><button type=button class=\"btn btn-success\" ng-click=\"handleSaveClicked( item )\">Enregister</button> <a href=#/menus class=\"btn btn-danger\">Annuler</a></form></div><div id=imageMapModal class=\"modal fade\"><div class=modal-dialog><div class=modal-content><div class=modal-header><button type=button class=close data-dismiss=modal><span aria-hidden=true>&times;</span><span class=sr-only>Close</span></button><h4 class=modal-title><span>Plan au format image</span></h4></div><div class=modal-body><div class=\"alert alert-danger\" data-bind=\"visible: lastError()\" role=alert><strong>Erreur!</strong> <span data-bind=\"text: lastError()\"></span></div><form id=imageupload class=form-horizontal role=form action=/api/admin/geocampus/imagemap method=POST enctype=multipart/form-data><input type=hidden name=id data-bind=\"value: activeImage().id\"><div class=form-group><label for=inputEmail3 class=\"col-sm-2 control-label\">Nom</label><div class=col-sm-10><input class=form-control name=name data-bind=\"value: activeImage().name\" placeholder=\"\" required></div></div><div class=form-group><label for=inputEmail3 class=\"col-sm-2 control-label\">Image</label><div class=col-sm-10><input type=file name=file style=\"display: none\"> <span data-bind=\"text: activeImage().temporalImageFile\" style=\"line-height: 34px\"></span></div></div></form><div id=progress><div class=bar style=\"width: 0%\"></div></div></div><div class=modal-footer><button type=button class=\"pull-left btn btn-success\" data-bind=\"click: selectFile\"><span class=\"glyphicon glyphicon-plus\" aria-label=\"Add file\"></span>&nbsp;Image</button> <button type=button class=\"btn btn-default\" data-bind=\"click: cancelImageMap\">Annuler</button> <button id=uploadSubmit type=button class=\"btn btn-primary\">Enregistrer</button></div></div></div></div><script src=/unm-backend/js/jquery.fileupload.js></script><script>function openImageMapModal(cb) {\n" +
+    "    var options = { backdrop: 'static' };\n" +
+    "    $imageMapModal.modal(options);\n" +
+    "    cb();\n" +
+    "}\n" +
+    "var $imageMapModal = $('#imageMapModal');\n" +
+    "/*\n" +
+    "   $('#imageupload').fileupload({\n" +
+    "       maxNumberOfFiles: 1,\n" +
+    "       autoUpload: false,\n" +
+    "        dataType: 'json',\n" +
+    "        change: function (e, data) {\n" +
+    "            $.each(data.files, function (index, file) {\n" +
+    "                //myViewModel.activeImage().temporalImageFile(file.name + ' (' + Math.round(file.size/1024) + 'KB)');\n" +
+    "            });\n" +
+    "        },\n" +
+    "        add: function(e, data) {\n" +
+    "            $('#uploadSubmit').unbind('click');\n" +
+    "            data.context = $('#uploadSubmit').click(function() {\n" +
+    "                //console.log('sending upload data...');\n" +
+    "                data.submit();\n" +
+    "            });\n" +
+    "        },     \n" +
+    "        done: function (e, data) {\n" +
+    "            $('#uploadSubmit').unbind('click');\n" +
+    "            //console.log('done');\n" +
+    "            if (!myViewModel.activeImage().id()) {\n" +
+    "                myViewModel.activeImage().update(data.result);\n" +
+    "                myViewModel.activeImage().commit();\n" +
+    "                myViewModel.ds.cache['imageMaps'].push(myViewModel.activeImage().serialize());\n" +
+    "                myViewModel.reload();\n" +
+    "                closeImageMapModal();\n" +
+    "                myViewModel.changeImage(myViewModel.activeImage());\n" +
+    "                myViewModel.lastError(false);\n" +
+    "            }\n" +
+    "        },\n" +
+    "        fail: function (e, data) {\n" +
+    "            //myViewModel.lastError(\"Impossible de télécharger l'image\");\n" +
+    "            alert('error');\n" +
+    "        },\n" +
+    "        progressall: function (e, data) {\n" +
+    "            var progress = parseInt(data.loaded / data.total * 100, 10);\n" +
+    "            //console.log(progress);\n" +
+    "            $('#progress .bar').css(\n" +
+    "                'width',\n" +
+    "                progress + '%'\n" +
+    "            );\n" +
+    "        }\n" +
+    "    });    \n" +
+    "*/</script>");
   $templateCache.put("views/menus.html",
     "<div><div class=page-title><div class=col-sm-9><h1>Menus</h1></div><div class=col-sm-3><button class=\"btn btn-success pull-right\" ng-click=\"handleEditClick( null )\">Ajouter un Menu</button></div><div class=clearfix></div></div><table class=\"table table-striped table-condensed table-menus\"><tr><th>Université</th><th>Nom</th><th>Groupe</th><th>Actif</th><th>Ordre</th><th>Url</th><th>Content</th><th class=alt-action>Action</th></tr><tr ng-if=!items><td colspan=8>Chargement ...</td></tr><tr ng-if=\"items && !items.length\"><td colspan=8>- Aucune donn&eacute;e -</td></tr><tr ng-repeat=\"item in items\"><td>{{item.getUni().title}}</td><td>{{item.name}}</td><td>{{item.grouping}}</td><td><span ng-if=item.active class=\"glyphicon glyphicon-ok text-success\"></span> <span ng-if=!item.active class=\"glyphicon glyphicon-remove text-danger\"></span></td><td>{{item.ordinal}}</td><td>{{item.url}}</td><td>{{item.content|limitTo:50}}</td><td><button class=\"btn btn-info btn-sm\" ng-click=\"handleEditClick( item )\"><span class=\"glyphicon glyphicon-pencil\"></span></button> <button class=\"btn btn-danger btn-sm\" ng-click=\"handleDeleteClick( item )\"><span class=\"glyphicon glyphicon-remove\"></span></button></td></tr></table><div class=main-search-pager ng-show=\"pager.numPages > 1\"><pagination total-items=pager.totalCount items-per-page=pager.pageSize max-size=10 boundary-links=true class=pagination-sm ng-model=pager.page ng-change=loadItems() num-pages=pager.numPages previous-text=\"page pr&eacute;c&eacute;dente\" next-text=\"page suivane\" first-text=\"première page\" last-text=\"dernière page\"></pagination><pre>Page: {{pager.page}} / {{pager.numPages}}</pre></div></div>");
   $templateCache.put("views/notification-edit.html",
