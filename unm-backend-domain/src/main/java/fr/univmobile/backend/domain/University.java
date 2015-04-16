@@ -38,6 +38,8 @@ public class University extends AuditableEntity {
 	/** Return true if the university is showing a CROUS */
 	@Column(name = "iscrous", nullable = false)
 	private boolean crous;
+	
+	private boolean active;
 
 	@Override
 	public String toString() {
@@ -126,6 +128,14 @@ public class University extends AuditableEntity {
 
 	public void setCrous(boolean crous) {
 		this.crous = crous;
+	}
+
+	public boolean isActive() {
+		return active;
+	}
+
+	public void setActive(boolean active) {
+		this.active = active;
 	}
 	
 }
