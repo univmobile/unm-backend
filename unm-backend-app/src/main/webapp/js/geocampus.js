@@ -358,7 +358,6 @@ var DataSource = function(baseUrl) {
                 if (data.result == 'ok') {
                     myViewModel.lastError(false);
                     var isNew = myViewModel.activePoi().isNew();
-                    closePoiModal();
                     if (isNew) {
                         myViewModel.activePoi().id(data.data);
                         myViewModel.pois().push(myViewModel.activePoi());
@@ -382,6 +381,7 @@ var DataSource = function(baseUrl) {
                             }
                         });
                     }
+                    closePoiModal();
                 } else {
                     myViewModel.lastError("Erreur lors du chargement. Se il vous plaît donner votre avis");
                 }
@@ -749,7 +749,6 @@ function updatePoi() {
 }
 
 function cancelPoi() {
-    myViewModel.activePoi().revert();
     closePoiModal();
 }
 
@@ -1018,6 +1017,8 @@ $(function () {
     $poiModal = $('#poiModal');
     $imageMapModal = $('#imageMapModal');
     $poiModal.on('hide.bs.modal', function(e) {
+        myViewModel.activePoi().name.valueHasMutated();
+        myViewModel.activePoi().revert();
         updateNode(myViewModel.activePoi().id(), myViewModel.activePoi().name());
     });
     ds = new DataSource(baseUrl);
