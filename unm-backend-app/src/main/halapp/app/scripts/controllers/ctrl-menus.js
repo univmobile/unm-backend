@@ -17,11 +17,11 @@ halApp.controller( 'CtrlMenus', [ '$rootScope', '$scope', '$location', 'menuServ
     } );
 
     $scope.handleDeleteClick = function( item ) {
-        halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprim&eacute; Menu?', function() {
+        halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprimer le menu?', function() {
             menuService.remove( item, function() {
                 $scope.pagerCache.menus = null;
                 halApp.hideDialog();
-                halApp.showAlert("Menu supprim&eacute;!");
+                halApp.showAlert("Menu supprim&eacute; !");
                 $scope.loadItems();
             } );
         } )
