@@ -34,15 +34,24 @@ halApp.controller( 'CtrlMenus', [ '$rootScope', '$scope', '$location', 'menuServ
     
 } ] );
 
-halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'menuService', 'universityService', function(
-    $scope, $routeParams, $validator, menuService, universityService ) {
+halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'menuService', 'universityService', 'textAngularManager', function(
+    $scope, $routeParams, $validator, menuService, universityService, textAngularManager ) {
 
+    $scope.uploadUrl = baseUrl + '/api/admin/menu/upload';
+    
+    $scope.upload = {
+      progress: false,
+      lastError: null
+    };
+      
     $scope.groups = ['MS', 'AU', 'TT', 'MU'];
 
     $scope.submitTracking = false;
 
     $scope.itemId = parseInt( $routeParams.itemId );
     $scope.unis = null;
+    $scope.temporalImageFile = '';
+    
     universityService.loadItems( function( unis ) {
         $scope.unis = unis;
         menuService.getItem( $scope.itemId, function( item ) {
@@ -81,9 +90,72 @@ halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'me
         });
     };
 
-    
     $scope.isSuperAdmin = function() {
-	return isSuperAdmin;
+      return isSuperAdmin;
     };
+    
+    $scope.selectFile = function() {
+      $('#imageupload input[type=file]').click();
+      $scope.editorScope = textAngularManager.retrieveEditor('content').scope; 
+    };
+    
+    $scope.openImageUploadModal = function(cb) {
+      var options = { backdrop: 'static' };
+      $('#imageMapModal').modal(options);
+      uploadCallback = cb;
+    }
+
+    $scope.closeImageUploadModal = function() {
+      $('#imageMapModal').modal('hide');
+      $scope.temporalImageFile = null;
+      $scope.upload.lastError = null;
+      $scope.upload.progress = false;
+      textAngularManager.retrieveEditor('content').scope.displayElements.text.trigger('focus');
+    }
+
+    $('#imageupload').fileupload({
+      maxNumberOfFiles: 1,
+      autoUpload: false,
+        dataType: 'json',
+        change: function (e, data) {
+          $.each(data.files, function (index, file) {
+            $scope.$apply(function() {
+              $scope.temporalImageFile = file.name + ' (' + Math.round(file.size/1024) + 'KB)';
+            });
+          });
+        },
+        add: function(e, data) {
+          $('#uploadSubmit').unbind('click');
+          data.context = $('#uploadSubmit').click(function() {
+            data.submit();
+          });
+        },     
+        done: function (e, data) {
+            $('#uploadSubmit').unbind('click');
+            $scope.closeImageUploadModal();
+            $scope.editorScope.displayElements.text.trigger('focus');
+            uploadCallback(data.result.url);
+            $scope.upload.lastError = null;
+            $scope.upload.progress = false;
+        },
+        fail: function (e, data) {
+            $scope.upload.lastError = "Impossible de télécharger l'image";
+        },
+        progressall: function (e, data) {
+            var progress = parseInt(data.loaded / data.total * 100, 10);
+            $scope.$apply(function() {
+              $scope.upload.progress = progress;
+            });
+        }
+    });    
+    
 
 } ] );
+
+var uploadCallback;
+function openImageUploadModal(cb) {
+      var options = { backdrop: 'static' };
+      $('#imageMapModal').modal(options);
+      uploadCallback = cb;
+}
+

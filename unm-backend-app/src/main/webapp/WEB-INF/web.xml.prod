@@ -20,6 +20,16 @@
 	</context-param>
 
 	<context-param>
+		<param-name>menuImagesBaseUrl</param-name>
+		<param-value>http://localhost:81/unm-backend/files/upload</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>menuImagesBaseDir</param-name>
+		<param-value>/tmp/data</param-value>
+	</context-param>
+
+	<context-param>
 		<param-name>qrCodesBaseUrl</param-name>
 		<param-value>http://localhost:8080/unm-backend/files/qrcodes</param-value>
 	</context-param>
@@ -139,6 +149,7 @@
 				mauricio-MOV
 				tomcat
 				cyborg.etherea
+				cyborg
 				localhost
 				Davids-MacBook-Pro.local
 				mbpro.local

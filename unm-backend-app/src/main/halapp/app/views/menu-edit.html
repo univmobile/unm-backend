@@ -55,10 +55,45 @@
         </div>
         <div class="form-group">
             <label for="content" class="control-label">Content</label>
-            <div id="content" text-angular ta-toolbar="[['h1','h2','h3','h4','h5','h6','p','pre','quote'],['bold','italics','underline','ul','ol','undo','redo','clear'],['justifyLeft','justifyCenter','justifyRight','indent','outdent'],['html']]" ng-model="item.content"></div>
+            <div id="content" name="content" text-angular ta-toolbar="[['h1','h2','h3','h4','h5','h6','p','pre','quote'],['bold','italics','underline','ul','ol','undo','redo','clear'],['justifyLeft','justifyCenter','justifyRight','indent','outdent'],['html'],['insertImage', 'uploadImage']]" ng-model="item.content"></div>
         </div>
 
         <button type="button" class="btn btn-success" ng-click="handleSaveClicked( item )">Enregister</button>
         <a href="#/menus" class="btn btn-danger">Annuler</a>
     </form>
 </div>
+
+    <div id="imageMapModal" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Annuler</span></button>
+            <h4 class="modal-title"><span>T&eacute;l&eacute;charger une image</span></h4>
+          </div>
+          <div class="modal-body">
+
+            <div class="alert alert-danger" ng-show="upload.lastError" role="alert">
+                <strong>Erreur!</strong> <span>{{ upload.lastError }}</span>
+            </div>
+
+            <form id="imageupload" class="form-horizontal" role="form" action="{{ uploadUrl }}" method="POST" enctype="multipart/form-data">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Image</label>
+                <div class="col-sm-10">
+                  <input type="file" name="file" style="display: none">
+                  <span style="line-height: 34px">{{ temporalImageFile }}</span>
+                </div>
+              </div>
+            </form>
+          <div id="progress" ng-show="upload.progress !== false && upload.progress > 0">
+            <div class="bar">Chargement {{ upload.progress }}%</div>
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="pull-left btn btn-success" ng-click="selectFile()"><span class="glyphicon glyphicon-plus" aria-label="Add file"></span>&nbsp;Image</button>
+            <button type="button" class="btn btn-default" ng-click="closeImageUploadModal()">Annuler</button>
+            <button id="uploadSubmit" type="button" class="btn btn-primary">T&eacute;l&eacute;charger</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->

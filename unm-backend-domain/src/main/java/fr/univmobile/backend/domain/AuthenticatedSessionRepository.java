@@ -1,9 +1,9 @@
 package fr.univmobile.backend.domain;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.rest.core.annotation.RestResource;
+import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RestResource(exported = false)
+@RepositoryRestResource(exported = false)
 public interface AuthenticatedSessionRepository extends JpaRepository<AuthenticatedSession, Long> {
 
 	public AuthenticatedSession findByToken(String token);
