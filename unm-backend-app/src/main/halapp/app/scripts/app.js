@@ -74,7 +74,7 @@ halApp.config( [ '$routeProvider', 'HateoasInterceptorProvider', 'HateoasInterfa
         });
 } ] );
 
-halApp.config(function($provide){
+halApp.config( [ '$provide', function($provide) {
     $provide.decorator('taOptions', ['taRegisterTool', '$delegate', function(taRegisterTool, taOptions){
       taRegisterTool('uploadImage', {
         iconclass: 'fa fa-picture-o',
@@ -94,7 +94,7 @@ halApp.config(function($provide){
       taOptions.toolbar[1].push('uploadImage');
       return taOptions;
     }]);
-});
+}]);
 
 halApp.showAlert = function( msg, error ) {
     var $alert = $("#alert-global");
