@@ -287,6 +287,14 @@ public class GeocampusController {
         		im = new ImageMap();
         	}
 
+        	// We allow only image files
+        	if (! (file.getContentType().equalsIgnoreCase("image/gif") ||
+        			file.getContentType().equalsIgnoreCase("image/jpeg") ||
+        			file.getContentType().equalsIgnoreCase("image/png"))){
+        		log.error(String.format("Upload failed for %s, this file does not contains an image", name));
+            	response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+            	return null;
+        	}
         	String imageMapFileName = handleFileUpload(file);
         	if (imageMapFileName == null) {
             	log.error(String.format("Upload failed for %s", name));
