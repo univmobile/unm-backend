@@ -126,7 +126,7 @@ public class CategoryController {
 			} catch (Exception e) {
 				log.error("Error persisting category icons");
 				log.error(e);
-				result.addError(new ObjectError("entity", "Il y avait une erreur en essayant de sauver les changements . Se il vous plaît vérifier votre entrée")); // FIXME: Review message
+				result.addError(new ObjectError("entity", "Une erreur est survenue lors de la sauvegarde. Merci d'essayer de nouveau.")); // FIXME: Review message
 				categoryForm.setActiveIconUrl(currentActiveIconUrl);
 				categoryForm.setInactiveIconUrl(currentInactiveIconUrl);
 				categoryForm.setMarkerIconUrl(currentMarkerIconUrl);

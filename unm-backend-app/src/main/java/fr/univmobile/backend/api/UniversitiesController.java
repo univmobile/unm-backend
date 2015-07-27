@@ -76,6 +76,7 @@ public class UniversitiesController {
         University university = universityRepository.findOne(universityId);
         model.addAttribute("universityForm", university);
 
+        model.addAttribute("logoBaseDir", universitiesLogoBaseUrl);
         return "universities_edit";
     }
 
@@ -101,7 +102,7 @@ public class UniversitiesController {
 	    	String fileName = handleFileUpload(universityForm.file, String.format("ul_%s_", existingUniversity.getId()));
 	    	if (fileName == null) {
 	        	log.error(String.format("Upload failed for university [%s] logo", existingUniversity.getTitle()));
-		        result.addError(new ObjectError("logo", "Il y avait une erreur en essayant de sauver les changements . Se il vous plaît vérifier votre entrée"));
+		        result.addError(new ObjectError("logo", "Une erreur est survenue lors de la sauvegarde. Merci d'essayer de nouveau."));
 	    	} else {
 	    		existingUniversity.setLogoUrl(fileName);
 	    	}
@@ -124,7 +125,7 @@ public class UniversitiesController {
 			} catch (Exception e) {
 				log.error("Error persisting university update");
 				log.error(e);
-				result.addError(new ObjectError("entity", "Il y avait une erreur en essayant de sauver les changements . Se il vous plaît vérifier votre entrée"));
+				result.addError(new ObjectError("entity", "Une erreur est survenue lors de la sauvegarde. Merci d'essayer de nouveau."));
 				universityForm.setLogoUrl(currentLogoUrl);
 				return "universities_edit";	
 			}

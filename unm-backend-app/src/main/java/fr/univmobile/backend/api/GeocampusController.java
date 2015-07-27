@@ -94,9 +94,44 @@ public class GeocampusController {
 		data.setBonPlansCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getBonPlansLegacy()));
 		data.setLibrariesCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getLibrariesLegacy()));
 		data.setImagesCategories(categoryRepository.findByLegacyStartingWithOrderByLegacyAsc(Category.getImageMapsLegacy()));
-		data.setImageMaps(imageMapRepository.findAll());
 
 		return data;
+	}
+	
+	@RequestMapping(value = "/filterImageMap", method = RequestMethod.GET)
+	@ResponseBody
+	public List<ImageMap> getFilteredImageMaps(
+			@RequestParam(value = "universityId", required = false) Long universityId,
+			HttpServletRequest request, HttpServletResponse response) throws IOException {
+		User currentUser = getCurrentUser(request);
+		
+		if (currentUser == null || currentUser.isStudent()) {
+			response.sendError(HttpServletResponse.SC_FORBIDDEN);
+			return null;
+		}
+		
+		if (universityId == null) {
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			log.warn("getFilteredImageMaps - A value is mandatory for universityId");
+			return null;
+		}
+
+		List<ImageMap> selectedImages = null;
+
+		if (currentUser.isSuperAdmin()) {
+			if (universityId != null) {
+				selectedImages = imageMapRepository.findByUniversity(universityId);
+			}
+		} else {
+			if (currentUser.isLibrarian()) {
+				response.sendError(HttpServletResponse.SC_FORBIDDEN);
+				return null;
+			} else {
+				selectedImages = imageMapRepository.findByUniversity(currentUser.getUniversity().getId());
+			}
+		}
+
+		return selectedImages;
 	}
 
 	@RequestMapping(value = "/filter", method = RequestMethod.GET)
@@ -124,7 +159,8 @@ public class GeocampusController {
 				response.sendError(HttpServletResponse.SC_NOT_FOUND);
 				return null;
 			}
-			return im.getPois();
+			log.warn("Nombre de POIs pour image ID " + imageMapId + " : " + im.getPois().size());
+			return new ArrayList<Poi>(im.getPois());
 		}
 		
 		String rootCategoryLegacy;
@@ -267,12 +303,19 @@ public class GeocampusController {
 	
 	@RequestMapping(value = "/imagemap", method = RequestMethod.POST)
 	@ResponseBody
-	private ImageMap manageImageMap(@RequestParam(value = "id", required = false) Long id, @RequestParam("name") String name, @RequestParam("file") MultipartFile file, HttpServletRequest request, HttpServletResponse response) throws IOException {
+	private ImageMap manageImageMap(@RequestParam(value = "universityId", required = false) Long universityId,  @RequestParam(value = "id", required = false) Long id, @RequestParam("name") String name, @RequestParam("file") MultipartFile file, HttpServletRequest request, HttpServletResponse response) throws IOException {
 		User currentUser = getCurrentUser(request);
 		
 		if (currentUser == null || currentUser.isStudent()) {
 			response.sendError(HttpServletResponse.SC_FORBIDDEN);
 			return null;
+		}
+		
+		if (universityId == null && id == null) {
+			// The university is required for an image map
+    		log.error("The university ID is required to submit a new Image Map.");
+        	response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+        	return null;
 		}
 		
         try {
@@ -285,6 +328,13 @@ public class GeocampusController {
         		}
         	} else {
         		im = new ImageMap();
+        		University university = universityRepository.findOne(universityId);
+        		if (university == null) {
+        			log.error("Impossible to create the image map, the university of id : " + universityId + " is not found.");
+        			response.sendError(HttpServletResponse.SC_NOT_FOUND);
+                	return null;
+        		}
+        		im.setUniversity(university);
         	}
 
         	// We allow only image files
@@ -312,6 +362,69 @@ public class GeocampusController {
         	response.sendError(HttpServletResponse.SC_BAD_REQUEST);
         	return null;
         }
+	}
+	
+	@RequestMapping(value = "/imagemapdelete", method = RequestMethod.POST)
+	@ResponseBody
+	private Boolean removeImageMap(
+			@RequestParam(value = "universityId", required = true) Long universityId,
+			@RequestParam(value = "id", required = true) Long id,
+			HttpServletRequest request, HttpServletResponse response)
+			throws IOException {
+		// We check that the university of the image map is the same univesity
+		// than the one given in parameter
+		try {
+			ImageMap im;
+			im = imageMapRepository.findOne(id);
+			if (im == null) {
+				log.error("Impossible to find the image Map of id " + id);
+				response.sendError(HttpServletResponse.SC_NOT_FOUND);
+				return null;
+			}
+			University university = universityRepository.findOne(universityId);
+			if (university == null) {
+				log.error("Impossible to delete the image map, the university of id : "
+						+ universityId + " is not found.");
+				response.sendError(HttpServletResponse.SC_NOT_FOUND);
+				return null;
+			}
+			if (im.getUniversity().getId().equals(university.getId())) {
+				imageMapRepository.delete(im);
+			}
+			return Boolean.TRUE;
+		} catch (Exception e) {
+			log.error(String.format(
+					"There was an error deleting the imageMap of id : %s", id));
+			log.error(e);
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return null;
+		}
+	}
+
+	@RequestMapping(value = "/poidelete", method = RequestMethod.POST)
+	@ResponseBody
+	private Boolean removeImageMap(
+			@RequestParam(value = "id", required = true) Long id,
+			HttpServletRequest request, HttpServletResponse response)
+			throws IOException {
+		// We check that the poi is a leaf POI, the other one can not be deleted
+		// The comments and bookmarks should be removed automatically
+		try {
+			Poi poi = poiRepository.findOne(id);
+			if (poi == null) {
+				log.error("Impossible to find the poi of id " + id);
+				response.sendError(HttpServletResponse.SC_NOT_FOUND);
+				return null;
+			}
+			poiRepository.delete(poi);
+			return Boolean.TRUE;
+		} catch (Exception e) {
+			log.error(String.format(
+					"There was an error deleting the poi of id : %s", id));
+			log.error(e);
+			response.sendError(HttpServletResponse.SC_BAD_REQUEST);
+			return null;
+		}
 	}
 
 	private String handleFileUpload(MultipartFile file) {
@@ -341,7 +454,6 @@ public class GeocampusController {
 		private	List<Category> bonPlansCategories;
 		private	List<Category> librariesCategories;
 		private	List<Category> imagesCategories;
-		private	Iterable<ImageMap> imageMaps;
 
 		public List<University> getUniversities() {
 			return universities;
@@ -383,13 +495,6 @@ public class GeocampusController {
 			this.imagesCategories = imagesCategories;
 		}
 
-		public Iterable<ImageMap> getImageMaps() {
-			return imageMaps;
-		}
-
-		public void setImageMaps(Iterable<ImageMap> imageMaps) {
-			this.imageMaps = imageMaps;
-		}
 	}
 	
 	private User getCurrentUser(HttpServletRequest request) {

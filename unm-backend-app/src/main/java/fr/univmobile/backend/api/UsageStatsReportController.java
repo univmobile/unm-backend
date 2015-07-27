@@ -49,7 +49,7 @@ public class UsageStatsReportController {
 		University queriedUniversity = null;
 
 		if (getPrincipal().isSuperAdmin()) {
-			universities = universityRepository.findAll();
+			universities = universityRepository.findAllWithoutCROUS();
 			queriedUniversity = statsForm.getUniversity() == null ? null : universityRepository.findOne(statsForm.getUniversity());
 		} else {
 			University userUniversity = universityRepository.findOne(getPrincipal().getUniversity().getId());
