@@ -112,6 +112,7 @@ var Poi = function(data) {
     this.imageMap = ko.observable();
     this.qrCode = ko.observable();
     this.active = ko.observable();
+    this.leaf = ko.observable();
 
     // Library supporting fields
     this.publicWelcome = ko.observable();
@@ -333,9 +334,36 @@ var DataSource = function(baseUrl) {
         }
         return categories;
     };
-    this.getImages = function () {
+    /** Get the images of the selected University */
+    this.getImages = function (filters) {
+        var images = [];
+        var self = this;
+        var params;
+
+        var universityId = filters.university && filters.university.id ? filters.university.id : '';
+
+        params = { universityId: universityId };
+            
+        var serviceUrl = this.getFullPath('api/admin/geocampus/filterImageMap');
+        $.getJSON(serviceUrl, params).done(function(json) {
+        	var localImages = [];
+			if (json && json.length > 0) {
+				for (var i in json) {
+                    var sanitizeImage = json[i];
+                    localImages.push(new ImageMap(sanitizeImage));
+				}
+			}
+			myViewModel.images(localImages);
+		}).fail(function(jqxhr, textStatus, error) {
+			var err = textStatus + ", " + error;
+			console.log("Request Failed: " + err);
+			// TODO: Report error
+		});
+        return images;
+    }
+/*    this.getImages = function () {
         return this.cache && this.cache['imageMaps'] ? this.adaptImageMaps(this.cache['imageMaps']) : [];
-    };
+    };*/
     this.adaptImageMaps = function(ims) {
         var adaptedIms = [];
         for (var im in ims) {
@@ -406,7 +434,7 @@ var DataSource = function(baseUrl) {
                 myViewModel.lastError(false);
             })
             .fail(function( data ) {
-                myViewModel.lastError("Erreur de création de QR . se il vous plaît donner votre avis");
+                myViewModel.lastError("Erreur de création de QR. Veuillez réssayer. Si l'erreur persiste, merci de contacter l'administrateur.");
         });
     };
     this.toggleComment = function(comment) {
@@ -448,7 +476,7 @@ var MyViewModel = function(ds) {
     self.categoriesBonplans = ko.observableArray(self.ds.getCategories('bonplans'));
     self.categoriesLibraries = ko.observableArray(self.ds.getCategories('libraries'));
     self.categoriesImages = ko.observableArray(self.ds.getCategories('images'));
-    self.images = ko.observableArray(self.ds.getImages());
+    self.images = ko.observableArray([]);
     self.pois = ko.observableArray([]);
     self.poiComments = ko.observableArray([]);
     self.universities = ko.observableArray(self.ds.getUniversities());
@@ -472,9 +500,14 @@ var MyViewModel = function(ds) {
         self.categoriesBonplans(self.ds.getCategories('bonplans'));
         self.categoriesLibraries(self.ds.getCategories('libraries'));
         self.categoriesImages(self.ds.getCategories('images'));
-        self.images(self.ds.getImages());
+        self.images([]);
         self.pois([]);
         self.poiComments([]);
+        if (imageOverlay) {
+            imageOverlay.setMap(null);
+            delete imageOverlay;
+            imageOverlay = null;
+        }
     }
     
     self.resetActivePoi = function() {
@@ -604,9 +637,15 @@ var MyViewModel = function(ds) {
     });
 
     self.activeUniversity.subscribe(function(newValue) {
-        self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
+    	if (self.activeTab() != 'images') {
+    		self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
+    	} else {
+    		/** Charge les images de l'universite active, plus d'image active */
+    		self.images(self.ds.getImages( { university: self.activeUniversity() }));
+    		//self.activeImage(ko.observable({name: '', id : 0}));
+    	}
     });
-
+    
     self.activeCategoryUniversities.subscribe(function(newValue) {
         self.pois(self.ds.getPois(self.activeTab(), { university: self.activeUniversity(), category: self.getActiveCategory() }));
     });
@@ -665,6 +704,13 @@ var MyViewModel = function(ds) {
         }       
     }
     
+    self.canRemovePoi = function() {
+   		if (self.activePoi().id() && self.activePoi().leaf()) {
+   			return true;
+   		}
+    	return false;
+    }
+    
 };
   
 function getPoiByUid(id, pois) {
@@ -688,6 +734,11 @@ function loadTree(pois) {
         if (myViewModel.activePoi() == null || (myViewModel.activePoi().id() != data.node.data.id)) {
             var poi = getPoiByUid(data.node.data.id, myViewModel.pois())
             selectNode(poi);
+            if (data.instance) {
+            	poi.leaf(data.instance.is_leaf(data.node));
+            }
+        } else {
+        	editPoi();
         }
     })
     .on('deselect_node.jstree', function (e, data) {
@@ -775,15 +826,78 @@ function createImageMap() {
     myViewModel.changeImage(new ImageMap());
     openImageMapModal('create');
 }
+
+function removePoi() {
+	openPoiDeleteModal();
+}
+
+function removePoiConfirmed() {
+	if (myViewModel.activePoi().id() && myViewModel.activeUniversity().id) {
+		$.ajax({
+			   url: ds.getFullPath('api/admin/geocampus/poidelete'),
+			   type: "POST",
+			   data: 'id=' + myViewModel.activePoi().id(),
+			   success: function(response) {
+					myViewModel.reload();
+					myViewModel.changeUniversity(myViewModel.activeUniversity());
+					closePoiDeleteModal();
+			   },
+			   error: function(response) {
+				   // Inform the failure
+				   myViewModel.lastError("Une erreur est survenue lors de la suppression de l'image.");
+			   }
+			});
+	}
+}
+
+function removeImageMap() {
+	openImageMapDeleteModal();
+}
+
+function removeImageMapConfirmed() {
+	$tree.jstree(true).deselect_all(true);
+	// request to delete the Map
+	if (myViewModel.activeImage().id() && myViewModel.activeUniversity().id) {
+		$.ajax({
+			   url: ds.getFullPath('api/admin/geocampus/imagemapdelete'),
+			   type: "POST",
+			   data: 'universityId=' + myViewModel.activeUniversity().id + '&id=' + myViewModel.activeImage().id(),
+			   success: function(response) {
+					myViewModel.reload();
+					myViewModel.changeUniversity(myViewModel.activeUniversity());
+					closeImageMapDeleteModal();
+					// Remove image overlay
+				    if (imageOverlay != null) {
+				        imageOverlay.setMap(null);
+				        delete imageOverlay;
+				        imageOverlay = null;
+				    } 
+			   },
+			   error: function(response) {
+				   // Inform the failure
+				   myViewModel.lastError("Une erreur est survenue lors de la suppression de l'image.");
+			   }
+			});
+	}
+}
         
 function editPoi() {
     openPoiModal('edit');
 }
 
+function openPoiDeleteModal() {
+	var options = { backdrop: 'static' };
+	$poiDeleteModal.modal(options);
+}
 
 function openImageMapModal(action) {
     var options = { backdrop: 'static' };
     $imageMapModal.modal(options);
+}
+
+function openImageMapDeleteModal() {
+	var options = { backdrop: 'static' };
+	$imageMapDeleteModal.modal(options);
 }
 
 function closePoiModal() {
@@ -791,8 +905,18 @@ function closePoiModal() {
     myViewModel.lastError(false);
 }
 
+function closePoiDeleteModal() {
+	$poiDeleteModal.modal('hide');
+	myViewModel.lastError(false);
+}
+
 function closeImageMapModal() {
     $imageMapModal.modal('hide');
+}
+
+function closeImageMapDeleteModal() {
+	$imageMapDeleteModal.modal('hide');
+	myViewModel.lastError(false);
 }
 
 function buildTree(pois) {
@@ -832,9 +956,11 @@ function updateNode(nodeId, nodeText) {
 }
 
 function addNode(nodeId, nodeText, nodeData) {
-    var parentId = nodeData.parent() ? nodeData.parent() : '#';
-    var newNode = buildNode(nodeId, nodeText, parentId, nodeData);
-    $tree.jstree(true).create_node(parentId, newNode);
+	if (!$tree.jstree(true).get_node(nodeId)) {
+	    var parentId = nodeData.parent() ? nodeData.parent() : '#';
+	    var newNode = buildNode(nodeId, nodeText, parentId, nodeData);
+	    $tree.jstree(true).create_node(parentId, newNode);
+	}
 }
 
 function handleNewPoiMarker(e) {
@@ -1008,14 +1134,18 @@ var imageMmap;
 var myViewModel;
 var $tree;
 var $poiModal;
+var $poiDeleteModal;
 var $imageMapModal;
+var $imageMapDeleteModal;
 var ds;
 
 $(function () {
     gmap = initGmaps(gmapsCanvasId, gmapsDefaultLat, gmapsDefaultLng);    
     $tree = $('#jstree1');
     $poiModal = $('#poiModal');
+    $poiDeleteModal = $('#poiDeleteModal');
     $imageMapModal = $('#imageMapModal');
+    $imageMapDeleteModal = $('#imageMapDeleteModal');
     $poiModal.on('hide.bs.modal', function(e) {
         myViewModel.activePoi().name.valueHasMutated();
         myViewModel.activePoi().revert();
@@ -1048,9 +1178,9 @@ $(function () {
             if (!myViewModel.activeImage().id()) {
                 myViewModel.activeImage().update(data.result);
                 myViewModel.activeImage().commit();
-                myViewModel.ds.cache['imageMaps'].push(myViewModel.activeImage().serialize());
-                myViewModel.reload();
+                myViewModel.images.push(myViewModel.activeImage());
                 closeImageMapModal();
+                myViewModel.changeUniversity(myViewModel.activeUniversity());
                 myViewModel.changeImage(myViewModel.activeImage());
                 myViewModel.lastError(false);
             }

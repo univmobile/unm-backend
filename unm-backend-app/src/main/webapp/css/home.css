@@ -1,0 +1,35 @@
+h1, h2.homeMenu {
+text-transform: uppercase;
+color: #238553;
+}
+
+html, body {
+height: 100%;
+background-color: #F2F4F5;
+}
+
+#div-entered {
+background-color: ;
+}
+
+body.admin ul.homeMenu li {
+border: 1px solid #000;
+border-radius: 8px;
+}
+
+body.admin ul.homeMenu li.clear {
+border: none;
+}
+
+body.admin ul.homeMenu a:link, body.admin ul.homeMenu a:visited {
+height: 80px;
+width: 125px;
+background-color: #238553;
+color: #FFF;
+text-transform: uppercase;
+border-radius: 5px;
+}
+
+body.admin ul.homeMenu li:hover a:link, body.admin ul.homeMenu li:hover a:visited {
+background-color: #299E63;
+}
