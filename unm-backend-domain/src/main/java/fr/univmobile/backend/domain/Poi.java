@@ -2,6 +2,7 @@ package fr.univmobile.backend.domain;
 
 import java.util.Collection;
 import java.util.Date;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -29,6 +30,7 @@ public class Poi extends AuditableEntityWithLegacy {
 	private String description;
 	private Double lat;
 	private Double lng;
+	//@JsonIgnore
 	@Column(name = "markertype")
 	private String markerType;
 	@Column(nullable = false)
@@ -48,12 +50,16 @@ public class Poi extends AuditableEntityWithLegacy {
 	private String email;
 	private String url;
 
+	//@JsonIgnore
 	@Column(name = "attachmentid")
 	private Integer attachmentId;
+	//@JsonIgnore
 	@Column(name = "attachmenttype")
 	private String attachmentType;
+	//@JsonIgnore
 	@Column(name = "attachmenttitle")
 	private String attachmentTitle;
+	//@JsonIgnore
 	@Column(name = "attachmenturl")
 	private String attachmentUrl;
 
@@ -83,9 +89,11 @@ public class Poi extends AuditableEntityWithLegacy {
 	@Column(name = "qrcode")
 	private String qrCode;
 	
+	//@JsonIgnore
 	private String restoMenuUrl;
 	private String restoId;
 	
+	//@JsonIgnore
 	private Long externalId;
 	private Date expDate;
 	
@@ -103,6 +111,16 @@ public class Poi extends AuditableEntityWithLegacy {
 	@Column(name = "closinghours", columnDefinition = "TEXT")
 	private String closingHours;
 	// Library supporting fields
+	
+	// The comments of a POI should be removed when a POI is removed, we do not insert the comments in the JSON file
+	@OneToMany(orphanRemoval=true, mappedBy = "poi", cascade = CascadeType.REMOVE)
+	@JsonIgnore
+	private Set<Comment> comments;
+	
+	// The bookmarks of a POI should me removed when a POI is removed. We do not insert he bookmarks in the JSON file
+	@OneToMany(orphanRemoval=true, mappedBy = "poi", cascade = CascadeType.REMOVE)
+	@JsonIgnore
+	private Set<Bookmark> bookmarks;
 
 	@Override
 	public String toString() {
@@ -296,6 +314,10 @@ public class Poi extends AuditableEntityWithLegacy {
 	public Collection<Poi> getChildren() {
 		return children;
 	}
+	
+	public boolean getLeaf() {
+		return false;
+	}
 
 	public Category getCategory() {
 		return category;
@@ -450,6 +472,22 @@ public class Poi extends AuditableEntityWithLegacy {
 
 	public void setIconRuedesfacs(boolean iconRuedesfacs) {
 		this.iconRuedesfacs = iconRuedesfacs;
+	}
+
+	public Set<Comment> getComments() {
+		return comments;
+	}
+
+	public void setComments(Set<Comment> comments) {
+		this.comments = comments;
+	}
+
+	public Set<Bookmark> getBookmarks() {
+		return bookmarks;
+	}
+
+	public void setBookmarks(Set<Bookmark> bookmarks) {
+		this.bookmarks = bookmarks;
 	}
 	
 }

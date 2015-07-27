@@ -1,6 +1,6 @@
 package fr.univmobile.backend.domain;
 
-import java.util.List;
+import java.util.Set;
 
 import javax.persistence.*;
 
@@ -18,9 +18,15 @@ public class ImageMap extends AuditableEntity {
 	private String description;
 	@Column(nullable = false)
 	private boolean active = true;
+	
+	@ManyToOne
+	@JoinColumn(nullable = false)
+	private University university;
 
-	@OneToMany(fetch = FetchType.EAGER, mappedBy = "imageMap")
-	private List<Poi> pois;
+	// The pois of an imageMap are used only in that imageMap, they should be removed at the same time than the imageMap
+	@OneToMany(fetch = FetchType.EAGER, mappedBy = "imageMap", orphanRemoval = true, cascade = CascadeType.REMOVE)
+	@OrderBy("id ASC")
+	private Set<Poi> pois;
 
 	public Long getId() {
 		return id;
@@ -67,8 +73,16 @@ public class ImageMap extends AuditableEntity {
 		return String.format("ImageMap[id='%s', name='%s']", id, name);
 	}
 
-	public List<Poi> getPois() {
+	public Set<Poi> getPois() {
 		return pois;
+	}
+
+	public University getUniversity() {
+		return university;
+	}
+
+	public void setUniversity(University university) {
+		this.university = university;
 	}
 	
 }

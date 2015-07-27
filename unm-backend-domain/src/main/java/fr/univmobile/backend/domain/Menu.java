@@ -1,5 +1,7 @@
 package fr.univmobile.backend.domain;
 
+import java.util.Set;
+
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -39,6 +41,9 @@ public class Menu extends AuditableEntity {
 	@ManyToOne
 	@JoinColumn(name = "university_id", nullable = true)
 	private University university;
+	
+	@OneToMany(mappedBy = "menu")
+	private Set<InactiveMenu> inactiveMenus;
 
 	public Long getId() {
 		return id;
@@ -110,6 +115,14 @@ public class Menu extends AuditableEntity {
 			universityId = university.getId();
 		}
 		return universityId;
+	}
+
+	public Set<InactiveMenu> getInactiveMenus() {
+		return inactiveMenus;
+	}
+
+	public void setInactiveMenus(Set<InactiveMenu> inactiveMenus) {
+		this.inactiveMenus = inactiveMenus;
 	}
 
 }

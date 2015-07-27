@@ -8,6 +8,10 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.security.access.prepost.PostFilter;
 
 public interface UniversityRepository extends JpaRepository<University, Long> {
+
+	@Query("select u from University u order by u.title")
+	@Override
+	public java.util.List<University> findAll();
 	
 	@Query("select u from University u where u.active = TRUE and u.crous = FALSE order by u.region.id, u.title")
 	public java.util.List<University> findAllActiveWithoutCrous();
@@ -39,6 +43,7 @@ public interface UniversityRepository extends JpaRepository<University, Long> {
 	@Query("select u from University u where u.active = TRUE and u.crous = FALSE and u.region.id = :regionId order by u.title")
 	List<University> findAllActiveWithoutCrousByRegion(@Param("regionId") Long regionId);
 
-	List<University> findAllByRegion_Id(Long regionId);
+	@Query("select u from University u where u.region.id = :regionId order by u.title")
+	List<University> findAllByRegion_Id(@Param("regionId") Long regionId);
 
 }
