@@ -34,6 +34,7 @@ public class CustomRepositoryRestMcvConfiguration extends RepositoryRestMvcConfi
                 Feed.class,
                 ImageMap.class,
                 Menu.class,
+                InactiveMenu.class,
                 News.class,
                 Notification.class,
                 Poi.class,
