@@ -17,11 +17,11 @@ halApp.controller( 'CtrlLinks', [ '$rootScope', '$scope', '$location', 'linkServ
     } );
 
     $scope.handleDeleteClick = function( item ) {
-        halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprim&eacute; Mediathèque?', function() {
+        halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprimer la  M&eacute;diathèque?', function() {
             linkService.remove( item, function() {
                 $scope.pagerCache.links = null;
                 halApp.hideDialog();
-                halApp.showAlert("Mediathèque supprim&eacute;!");
+                halApp.showAlert("Mediathèque supprim&eacute;e !");
                 $scope.loadItems();
             } );
         } )
@@ -56,10 +56,10 @@ halApp.controller( 'CtrlLinkEdit', [ '$scope', '$routeParams', '$validator', 'li
                 if ( isNew ) {
                     location.hash = "#/links/" + res.id + "/edit";
                     setTimeout( function() {
-                        halApp.showAlert( "Mediathèque &eacute;tabli!" );
+                        halApp.showAlert( "M&eacute;diathèque cr&eacute;e !" );
                     }, 0 )
                 } else {
-                    halApp.showAlert( "Mediathèque sauv&eacute;!" );
+                    halApp.showAlert( "Mediathèque sauv&eacute;e !" );
                 }
                 location.hash = "#/links";
             } );

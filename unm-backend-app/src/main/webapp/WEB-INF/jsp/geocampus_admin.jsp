@@ -128,9 +128,14 @@ display: block;
 						<div class="btn-toolbar" role="toolbar">
 							<div class="btn-group btn-group-xs pull-right" role="group">
 								<button type="button" class="btn btn-default"
+									data-bind="enable: canRemovePoi(), click: removePoi"
+									title="Supprimer le POI">
+									<span class="glyphicon glyphicon-remove" aria-label="Supprimer le POI"></span>
+								</button>
+								<button type="button" class="btn btn-default"
 									data-bind="enable: canAddPoi(true), click: createRootPoi"
 									title="Ajouter un POI racine">
-									<span class="glyphicon glyphicon-plus" aria-label="Add root"></span>
+									<span class="glyphicon glyphicon-plus" aria-label="Ajouter un POI racine"></span>
 								</button>
 								<button type="button" class="btn btn-default"
 									data-bind="enable: canAddPoi(false), click: createPoi"
@@ -235,7 +240,12 @@ display: block;
 		<div id="imgView"
 			class="col-sm-8 col-sm-offset-2 col-md-9 col-md-offset-3 main"
 			data-bind="visible: activeTab() == 'images'">
-			<div class="btn-group pull-right">
+			<div class="btn-group pull-right" data-bind="visible: activeUniversity().id">
+				<button type="button" class="btn btn-default"
+					data-bind="visible: activeImage().id, click: removeImageMap"
+					title="Srupprimer le plan intra-batiment">
+					<span class="glyphicon glyphicon-remove" aria-label="Remove image"></span>
+				</button>
 				<button type="button" class="btn btn-default"
 					data-bind="click: createImageMap">
 					<span class="glyphicon glyphicon-plus"></span>
@@ -250,8 +260,24 @@ display: block;
 						data-bind="text: name, click: $parent.changeImage"></a></li>
 				</ul>
 			</div>
+				<div class="btn-group pull-right"
+					data-bind="visible:  universities().length > 1">
+					<button type="button" class="btn btn-default dropdown-toggle"
+						data-toggle="dropdown" aria-expanded="false">
+						Universit&eacute; <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu"
+						data-bind="foreach: universities">
+						<li role="presentation" class="dropdown-header"
+							data-bind="visible: $index() == 0 || ($data.regionName != $parent.universities()[$index()-1].regionName)"><strong
+							class="text-uppercase" style="color: #000"
+							data-bind="text: regionName"></strong></li>
+						<li><a href="#"
+							data-bind="text: title, click: $parent.changeUniversity"></a></li>
+					</ul>
+				</div>
 			<h2 class="page-header pull-left">
-				Images <small data-bind="text: activeImage().name"></small>
+				Image <small data-bind="text: activeUniversity().title"></small> - <small data-bind="text: activeImage().name"></small>
 			</h2>
 			<div class="row placeholders">
 				<div id="img_canvas"></div>
@@ -262,6 +288,10 @@ display: block;
 		<div class="modal-dialog">
 			<div class="modal-content">
 				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
 					<h4 class="modal-title">
 						<span data-bind="text: activePoi().name()">POI nom</span><span
 							data-bind="if: !activePoi().name()">POI nom</span>
@@ -513,6 +543,61 @@ display: block;
 		<!-- /.modal-dialog -->
 	</div>
 	<!-- /.modal -->
+	<div id="poiDeleteModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Veuillez confirmer</h4>
+				</div>
+				<div class="modal-body">
+					<div class="alert alert-danger" data-bind="visible: lastError()"
+						role="alert">
+						<strong>Erreur ! </strong> <span data-bind="text: lastError()"></span>
+					</div>
+					<p>Êtes-vous sûr de vouloir supprimer le POI "<span
+								data-bind="text: activePoi().name"></span>" ? Cette action est irréversible.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+					<button type="button" class="btn btn-primary" data-bind="click: removePoiConfirmed">Supprimer</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
+	<div id="imageMapDeleteModal" class="modal fade">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"
+						aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+					<h4 class="modal-title">Veuillez confirmer</h4>
+				</div>
+				<div class="modal-body">
+					<div class="alert alert-danger" data-bind="visible: lastError()"
+						role="alert">
+						<strong>Erreur ! </strong> <span data-bind="text: lastError()"></span>
+					</div>
+					<p>Êtes-vous sûr de vouloir supprimer l'image ? Cette action est irréversible, les POIs de cette image seront également supprimés.</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Annuler</button>
+					<button type="button" class="btn btn-primary" data-bind="click: removeImageMapConfirmed">Supprimer</button>
+				</div>
+			</div>
+			<!-- /.modal-content -->
+		</div>
+		<!-- /.modal-dialog -->
+	</div>
+	<!-- /.modal -->
 	<div id="imageMapModal" class="modal fade">
 		<div class="modal-dialog">
 			<div class="modal-content">
@@ -533,6 +618,7 @@ display: block;
 						action="${baseURL}/api/admin/geocampus/imagemap" method="POST"
 						enctype="multipart/form-data">
 						<input type="hidden" name="id" data-bind="value: activeImage().id">
+						<input type="hidden" name="universityId" data-bind="value: activeUniversity().id">
 						<div class="form-group">
 							<label for="inputEmail3" class="col-sm-2 control-label">Nom</label>
 							<div class="col-sm-10">
@@ -544,7 +630,7 @@ display: block;
 						<div class="form-group">
 							<label for="inputEmail3" class="col-sm-2 control-label">Image</label>
 							<div class="col-sm-10">
-								<input type="file" name="file" style="display: none" accept="image/gif, image/jpeg, image/png"> <span
+								<input type="file" name="file" style="display: none" accept="image/gif, image/jpeg, image/png" required="required"> <span
 									data-bind="text: activeImage().temporalImageFile"
 									style="line-height: 34px"></span>
 							</div>

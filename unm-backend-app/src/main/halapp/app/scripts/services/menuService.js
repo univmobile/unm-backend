@@ -89,6 +89,7 @@ var Menu = function( raw ) {
     this.ordinal = raw ? raw.ordinal : 0;
     this.url = raw ? raw.url : '';
     this.content = raw ? raw.content : '';
+    this.inactiveMenus = raw ? raw.inactiveMenus : null;
 };
 
 Menu.prototype.toObject = function() {
@@ -107,6 +108,7 @@ Menu.prototype.toObject = function() {
 Menu.prototype.getUni = function() {
     return getListItemByField( halApp.model.universities, 'id', this.universityId );
 };
+
 Menu.prototype.getLink = function( isShort ) {
     return ( isShort ? "" : halApp.URL_PREF ) + "api/menues/"+this.id;
 };

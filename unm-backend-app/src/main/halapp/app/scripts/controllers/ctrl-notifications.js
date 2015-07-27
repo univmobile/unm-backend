@@ -17,11 +17,11 @@ halApp.controller( 'CtrlNotifications', [ '$rootScope', '$scope', '$location', '
     } );
 
     $scope.handleDeleteClick = function( item ) {
-        halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprim&eacute; notification?', function() {
+        halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprimer la notification ?', function() {
             notificationService.remove( item, function() {
                 $scope.pagerCache.notifications = null;
                 halApp.hideDialog();
-                halApp.showAlert( "Notification supprim&eacute;!" );
+                halApp.showAlert( "Notification supprim&eacute;e !" );
                 $scope.loadItems();
             } );
         } )
@@ -56,7 +56,7 @@ halApp.controller( 'CtrlNotificationEdit', [ '$scope', '$routeParams', '$validat
                 if ( isNew ) {
                     location.hash = "#/notifications/" + res.id + "/edit";
                     setTimeout( function() {
-                        halApp.showAlert( "Notification &eacute;tabli!" );
+                        halApp.showAlert( "Notification cr&eacute;e !" );
                     }, 0 )
                 } else {
                     halApp.showAlert( "Notification sauv&eacute;!" );

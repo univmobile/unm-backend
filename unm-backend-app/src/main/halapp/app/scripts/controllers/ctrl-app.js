@@ -37,7 +37,7 @@ angular.module( 'halSearchApp' ).controller( "CtrlApp", ["$rootScope", "$scope",
 } ] );
 
 var Pager = function() {
-    this.pageSize = 10;
+    this.pageSize = 50;
     this.page = 1;
     this.totalCount = null;
     this.numPages = null;

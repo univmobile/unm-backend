@@ -66,6 +66,7 @@ halApp.factory( 'universityService', [ '$resource', function( $resource ) {
 var University = function( raw ) {
     this.id = raw ? raw.id : 0;
     this.title = raw ? raw.title : '';
+    this.active = raw ? raw.active : false;
     this.regionName = raw ? raw.regionName : '';
 };
 University.prototype.getLink = function() {

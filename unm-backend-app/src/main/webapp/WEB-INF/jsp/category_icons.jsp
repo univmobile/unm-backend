@@ -71,7 +71,7 @@
          <td>
          	${categoryForm.activeIconUrl}<br/>
          	<form:hidden id="activeIconUrl" path="activeIconUrl" />
-         	<input type="checkbox" onclick="$('#activeIconUrl').val(this.checked ? '' : '${categoryForm.activeIconUrl}')" /> clair
+         	<input type="checkbox" onclick="$('#activeIconUrl').val(this.checked ? '' : '${categoryForm.activeIconUrl}')" /> effacer
          </td>   
       </tr>
 	  </c:if>
@@ -83,31 +83,13 @@
          </td>   
       </tr>
       
-	  <c:if test="${not empty categoryForm.inactiveIconUrl}">
-      <tr>
-         <th>Icône inactive courante</th>
-         <td>
-         	${categoryForm.inactiveIconUrl}<br/>
-         	<form:hidden id="inactiveIconUrl" path="inactiveIconUrl" />
-         	<input type="checkbox" onclick="$('#inactiveIconUrl').val(this.checked ? '' : '${categoryForm.inactiveIconUrl}')" /> clair
-         </td>   
-      </tr>
-	  </c:if>
-	  
-      <tr>
-         <th>Chosir une nouvelle icône inactive</th>
-         <td>
-         	<input type="file" name="file2" />
-         </td>   
-      </tr>
-      
 	  <c:if test="${not empty categoryForm.markerIconUrl}">
       <tr>
          <th>Icône marqueur carte courante</th>
          <td>
          	${categoryForm.markerIconUrl}<br/>
          	<form:hidden id="markerIconUrl" path="markerIconUrl" />
-         	<input type="checkbox" onclick="$('#markerIconUrl').val(this.checked ? '' : '${categoryForm.markerIconUrl}')" /> clair
+         	<input type="checkbox" onclick="$('#markerIconUrl').val(this.checked ? '' : '${categoryForm.markerIconUrl}')" /> effacer
          </td>   
       </tr>
 	  </c:if>

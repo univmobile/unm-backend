@@ -12,7 +12,7 @@ halApp.controller( 'CtrlMenus', [ '$rootScope', '$scope', '$location', 'menuServ
         } );
     };
     
-    universityService.loadItems( function( unis ) {
+    universityService.loadItemsWithoutCrous( function( unis ) {
         $scope.loadItems();
     } );
 
@@ -34,8 +34,8 @@ halApp.controller( 'CtrlMenus', [ '$rootScope', '$scope', '$location', 'menuServ
     
 } ] );
 
-halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'menuService', 'universityService', 'textAngularManager', function(
-    $scope, $routeParams, $validator, menuService, universityService, textAngularManager ) {
+halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'menuService', 'inactiveMenuService', 'universityService', 'textAngularManager', function(
+    $scope, $routeParams, $validator, menuService, inactiveMenuService, universityService, textAngularManager ) {
 
     $scope.uploadUrl = baseUrl + '/api/admin/menu/upload';
     
@@ -50,16 +50,32 @@ halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'me
 
     $scope.itemId = parseInt( $routeParams.itemId );
     $scope.unis = null;
+    $scope.inactiveMenus = null;
     $scope.temporalImageFile = '';
     
-    universityService.loadItems( function( unis ) {
+    universityService.loadItemsWithoutCrous( function( unis ) {
+        for ( var j = 0; j < unis.length; j++ ) {
+        	unis[j].inactiveMenu = new InactiveMenu();
+        	unis[j].inactiveMenu.active = true;
+        }
         $scope.unis = unis;
         menuService.getItem( $scope.itemId, function( item ) {
             $scope.item = $.extend( {}, item );
-	    if ($scope.itemId == 0 && !isSuperAdmin) {
-	      $scope.item.universityId = universityId;
-	    }
+		    if ($scope.itemId == 0 && !isSuperAdmin) {
+		      $scope.item.universityId = universityId;
+		    }
         } );
+        inactiveMenuService.loadItems(isSuperAdmin, $scope.itemId, universityId, function(inactiveMenus) {
+        	$scope.inactiveMenus = inactiveMenus;
+        	for ( var i = 0; i < inactiveMenus.length; i++ ) {
+        		for ( var j = 0; j < unis.length; j++ ) {
+                	if (unis[j].id == inactiveMenus[i].universityId) {
+                		unis[j].inactiveMenu = inactiveMenus[i];
+                		inactiveMenus[i].active = false;
+                	}
+                }
+        	}
+        });
     });
 
     $scope.validateUrlOrContent = function( item ) {
@@ -68,27 +84,53 @@ halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'me
         return (urlPresent && !contentPresent) || (contentPresent && !urlPresent);
     };
     
-    $scope.handleSaveClicked = function( item ) {
+    $scope.handleSaveClicked = function( item, unis ) {
         $scope.submitTracking = true;
         var isNew = !item.id;
         $validator.validate( $scope, 'item' ).success( function() {
             if ( $scope.validateUrlOrContent(item) ) {
-                menuService.save( item, function( res ) {
-                    if ( isNew ) {
-                        location.hash = "#/menus/" + res.id + "/edit";
-                        setTimeout( function() {
-                            halApp.showAlert( "Menu &eacute;tabli!" );
-                        }, 0 )
-                    } else {
-                        halApp.showAlert( "Menu sauv&eacute;!" );
-                    }
-                    location.hash = "#/menus";
-                } );
-            } else {
-                // Nothing to do
+                // Update the list of saved items
+                for ( var j = 0; j < unis.length; j++ ) {
+                	if (unis[j].inactiveMenu.id > 0 && (unis[j].inactiveMenu.active || item.universityId)) {
+                		inactiveMenuService.remove(unis[j].inactiveMenu, function(res) {
+                			// nothing to do
+                		});
+                	}
+                	if (!item.universityId && unis[j].inactiveMenu.id == 0 && !unis[j].inactiveMenu.active) {
+                		unis[j].inactiveMenu.universityId = unis[j].id;
+                		unis[j].inactiveMenu.universityLink = unis[j].getLink();
+                		unis[j].inactiveMenu.menuId = item.id;
+                		unis[j].inactiveMenu.menuLink = item.getLink(false);
+                		inactiveMenuService.save(unis[j].inactiveMenu, function(res) {
+                			// nothing to do
+                		});
+                	}
+                }
+                if (isSuperAdmin || item.universityId) {
+	                menuService.save( item, function( res ) {
+	                    if ( isNew ) {
+	                        location.hash = "#/menus/" + res.id + "/edit";
+	                        setTimeout( function() {
+	                            halApp.showAlert( "Menu cr&eacute;&eacute; !" );
+	                        }, 0 )
+	                    } else {
+	                        halApp.showAlert( "Menu sauv&eacute;!" );
+	                    }
+	                    location.hash = "#/menus";
+	                } );
+                } else {
+                    // Nothing to do
+                	halApp.showAlert( "Menu sauv&eacute;!" );
+                }
             }
         });
     };
+    
+    $scope.handleUniversityChanged = function( item ) {
+    	if (!item.universityId) {
+    		// We display the block permitting to choose the universities
+    	}
+    }
 
     $scope.isSuperAdmin = function() {
       return isSuperAdmin;

@@ -35,55 +35,21 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.web.context.WebApplicationContext;
 import org.springframework.web.context.support.WebApplicationContextUtils;
 
-import fr.univmobile.backend.admin.GeocampusJSONController;
 import fr.univmobile.backend.admin.GeocampusPoiManageJSONController;
-import fr.univmobile.backend.admin.GeocampusPoisByRegionAndCategoryJSONController;
 import fr.univmobile.backend.client.AbstractClientFromLocal;
-import fr.univmobile.backend.client.CommentClient;
-import fr.univmobile.backend.client.CommentClientFromLocal;
-import fr.univmobile.backend.client.ImageMapClient;
-import fr.univmobile.backend.client.ImageMapClientFromLocal;
-import fr.univmobile.backend.client.PoiCategoryClient;
-import fr.univmobile.backend.client.PoiCategoryClientFromLocal;
-import fr.univmobile.backend.client.PoiClient;
-import fr.univmobile.backend.client.PoiClientFromLocal;
-import fr.univmobile.backend.client.RegionClient;
-import fr.univmobile.backend.client.RegionClientFromLocal;
 import fr.univmobile.backend.client.SessionClient;
 import fr.univmobile.backend.client.SessionClientFromLocal;
-import fr.univmobile.backend.client.json.CommentJSONClient;
-import fr.univmobile.backend.client.json.CommentJSONClientImpl;
-import fr.univmobile.backend.client.json.ImageMapJSONClient;
-import fr.univmobile.backend.client.json.ImageMapJSONClientImpl;
-import fr.univmobile.backend.client.json.PoiCategoryJSONClient;
-import fr.univmobile.backend.client.json.PoiCategoryJSONClientImpl;
-import fr.univmobile.backend.client.json.PoiJSONClient;
-import fr.univmobile.backend.client.json.PoiJSONClientImpl;
-import fr.univmobile.backend.client.json.RegionJSONClient;
-import fr.univmobile.backend.client.json.RegionJSONClientImpl;
 import fr.univmobile.backend.client.json.SessionJSONClient;
 import fr.univmobile.backend.client.json.SessionJSONClientImpl;
-import fr.univmobile.backend.core.CommentDataSource;
-import fr.univmobile.backend.core.CommentManager;
-import fr.univmobile.backend.core.ImageMapDataSource;
-import fr.univmobile.backend.core.PoiCategoryDataSource;
 //import fr.univmobile.backend.core.CommentThreadDataSource;
-import fr.univmobile.backend.core.PoiDataSource;
-import fr.univmobile.backend.core.RegionDataSource;
-import fr.univmobile.backend.core.SearchManager;
 import fr.univmobile.backend.core.SessionManager;
 import fr.univmobile.backend.core.UploadManager;
 import fr.univmobile.backend.core.UploadNotFoundException;
-import fr.univmobile.backend.core.UserDataSource;
-import fr.univmobile.backend.core.impl.CommentManagerImpl;
 import fr.univmobile.backend.core.impl.LogQueueDbImpl;
-import fr.univmobile.backend.core.impl.SearchManagerImpl;
 import fr.univmobile.backend.core.impl.SessionManagerImpl;
-import fr.univmobile.backend.core.impl.UploadManagerImpl;
 import fr.univmobile.backend.history.LogQueue;
 import fr.univmobile.backend.twitter.ApplicationOnly;
 import fr.univmobile.backend.twitter.TwitterAccess;
-import fr.univmobile.commons.datasource.impl.BackendDataSourceFileSystem;
 import fr.univmobile.web.commons.AbstractUnivMobileServlet;
 import fr.univmobile.web.commons.BuildInfoUtils;
 import fr.univmobile.web.commons.PageNotFoundException;
@@ -500,13 +466,15 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		if (remoteUser == null) {
 
-			log.fatal("remoteAddr: "
+			log.warn("remoteAddr: "
 					+ remoteAddr
 					+ ", 403 Cannot find REMOTE_USER."
 					+ " Shibboleth seems to be missing and filters not applied.");
 
-			UnivMobileHttpUtils.sendError403(request, response,
-					"Cannot find REMOTE_USER");
+			// We redirect to the login page
+			response.sendRedirect(getBaseURL() + "/");
+			//UnivMobileHttpUtils.sendError403(request, response,
+			//		"Cannot find REMOTE_USER");
 
 			return;
 		}

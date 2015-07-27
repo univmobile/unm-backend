@@ -35,6 +35,13 @@ angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource'
         };
 
         $scope.showCurrentTab = function( fromPager ) {
+        	if (!$scope.items) {
+        		var pagerCats = new Pager()
+        		pagerCats.pageSize = 9999;
+        		categoryService.search( "", pagerCats, function( items ) {
+                    $scope.cats = items;
+                } );
+        	}
             if ( getCurrentMode() == "categories" ) {
                 $scope.showCats( fromPager );
             } else if ( getCurrentMode() == "comments" ) {
@@ -68,6 +75,14 @@ angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource'
                 usSpinnerService.spin( 'tab-spinner' );
             poiService.search( $scope.searchText, isSuperAdmin, universityId, $scope.pager, function( items ) {
                 $scope.pois = items;
+                for (i = 0; i < $scope.pois.length; i++) {
+                	for (j = 0; i < $scope.cats.length; j++) {
+                		if ($scope.pois[i].categoryId == $scope.cats[j].id) {
+                			$scope.pois[i].categoryName = $scope.cats[j].name;
+                			break;
+                		}
+                	}
+                }
                 usSpinnerService.stop( 'tab-spinner' );
             } );
         };

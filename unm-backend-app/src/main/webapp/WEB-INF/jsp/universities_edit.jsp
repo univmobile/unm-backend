@@ -91,7 +91,7 @@
       <tr>
          <th>Logo actuel</th>
          <td>
-         	<a id="logoThumbnail" href="${logoBaseDir}${universityForm.logoUrl}"></a>
+         	<img src="${logoBaseDir}/${universityForm.logoUrl}" style="width:300px;"/>
          	${universityForm.logoUrl}<br/>
          	<form:hidden id="logoUrl" path="logoUrl" />
          	<input type="checkbox" onclick="$('#logoUrl').val(this.checked ? '' : '${universityForm.logoUrl}')" /> effacer

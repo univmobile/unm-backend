@@ -17,7 +17,7 @@ halApp.controller( 'CtrlFeeds', [ '$rootScope', '$scope', '$location', 'feedServ
     } );
 
     $scope.handleDeleteClick = function( item ) {
-        halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprim&eacute; Flux?', function() {
+        halApp.showDialog( 'Confirmez l\'op&eacute;ration', 'Supprimer le flux?', function() {
             feedService.remove( item, function() {
                 $scope.pagerCache.feeds = null;
                 halApp.hideDialog();
