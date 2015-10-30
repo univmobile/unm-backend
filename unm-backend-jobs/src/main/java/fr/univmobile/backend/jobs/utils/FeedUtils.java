@@ -94,9 +94,9 @@ public class FeedUtils {
 					}
 				}
 			}
-
-		} catch (Exception e) {
-			log.error("Exception occured building the rss object", e);
+			log.info("Rss object " + feed.getName() + " (" + feed.getUrl()+ ") processed successfully.");
+		} catch (Throwable e) {
+			log.error("Exception occured building the rss object " + feed.getName() + " (" + feed.getUrl()+ ")", e);
 		} finally {
 			if (is != null)
 				try {

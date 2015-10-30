@@ -42,7 +42,7 @@ public class Menu extends AuditableEntity {
 	@JoinColumn(name = "university_id", nullable = true)
 	private University university;
 	
-	@OneToMany(mappedBy = "menu")
+	@OneToMany(mappedBy = "menu", orphanRemoval = true)
 	private Set<InactiveMenu> inactiveMenus;
 
 	public Long getId() {

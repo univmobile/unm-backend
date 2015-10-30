@@ -6,6 +6,7 @@ import static com.google.common.base.Preconditions.checkNotNull;
 import static org.apache.commons.lang3.StringUtils.isBlank;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.annotation.Nullable;
 
@@ -77,9 +78,14 @@ public class PoiCategoriesModifyController extends AbstractBackendController {
 		if (!isBlank(form.name())) {
 			if (categoryRepository.findByName(form.name()) != null
 					&& !poicategory.getName().equals(form.name())) {
-				hasErrors = true;
-				setAttribute("err_duplicateName", true);
-				setAttribute("duplicateName", form.name());
+				List<Category> cats = categoryRepository.findByName(form.name());
+				for (Category cat : cats) {
+					if (cat != null && (cat.getParent() == poicategory.getParent()) || cat.getParent() != null && poicategory.getParent() != null && cat.getParent().getId() == poicategory.getParent().getId()) {
+						hasErrors = true;
+						setAttribute("err_duplicateName", true);
+						break;
+					}
+				}
 			} else
 				poicategory.setName(form.name());
 		} else {

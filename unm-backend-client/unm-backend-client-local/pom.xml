@@ -18,6 +18,10 @@
 		</dependency>	
 		<dependency>
 			<groupId>fr.univmobile</groupId>
+			<artifactId>unm-backend-domain</artifactId>
+		</dependency>	
+		<dependency>
+			<groupId>fr.univmobile</groupId>
 			<artifactId>unm-backend-client-api</artifactId>
 		</dependency>	
 		<dependency>
@@ -56,13 +60,15 @@
 			<url>http://www.gnu.org/licenses/lgpl-3.0.txt</url>
 		</license>
 	</licenses>
-	<distributionManagement>
-		<site>
-			<id>vswip</id>
-			<url>
-                dav:http://univmobile.vswip.com/nexus/content/sites/pub/${project.artifactId}/${project.version}
-            </url>
-		</site>
-	</distributionManagement>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>fr.univmobile</groupId>
+				<artifactId>unm-backend-domain</artifactId>
+				<version>0.1.1-SNAPSHOT</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
 
 </project>

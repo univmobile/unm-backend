@@ -1,5 +1,7 @@
 package fr.univmobile.backend.domain;
 
+import java.util.Set;
+
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
@@ -34,6 +36,10 @@ public class Feed extends AuditableEntity {
 	@Column(nullable = false)
 	private boolean active = true;
 
+	@OneToMany(mappedBy = "feed", orphanRemoval = true)
+	private Set<News> news;
+	
+	
 	public Long getId() {
 		return id;
 	}
@@ -85,4 +91,13 @@ public class Feed extends AuditableEntity {
 	public void setActive(boolean active) {
 		this.active = active;
 	}
+
+	public Set<News> getNews() {
+		return news;
+	}
+
+	public void setNews(Set<News> news) {
+		this.news = news;
+	}
+	
 }

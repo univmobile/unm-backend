@@ -182,18 +182,18 @@ public class MigrateXMLToDB {
 		} else {
 			// We do not process the pois without coordinates or the polygons
 			logger.log(Level.WARNING, "POI od id " + resultSet.getLong("id") + "has incorrect coordinates or is type of polygon.");
-			return null;
+			// return null;
 		}
 		
 		// TODO Copy the logo locally ! Only 4 logos, better to download manually
-		poi.setLogo(resultSet.getString("logo"));
+		// poi.setLogo(resultSet.getString("logo"));
 		poi.setMarkerType(resultSet.getString("type"));
 		poi.setName(resultSet.getString("name"));
 		poi.setOpeningHours(resultSet.getString("opening_hours"));
 		poi.setParent(parentPoi);
 		poi.setPhones(resultSet.getString("phone"));
 		poi.setUniversity(university);
-		poi.setUrl(resultSet.getString("phone"));
+		poi.setUrl(resultSet.getString("url"));
 		poi.setZipcode(resultSet.getString("zip"));
 		
 		processPoiAttachement(poi, resultSet.getLong("id"));
@@ -278,41 +278,45 @@ public class MigrateXMLToDB {
 	    ResultSet resultSet = statement
 	          .executeQuery();
 	    
+	    
 	    // ResultSet is initially before the first data set
 	    while (resultSet.next()) {
-	    	User user = new User();
-			user.setCreatedOn(resultSet.getDate("created_at"));
-			user.setCreatedBy(getUser(null));
-			user.setUpdatedOn(resultSet.getDate("updated_at"));
-			user.setUpdatedBy(getUser(null));
-			if (resultSet.getBoolean("is_super_admin")) {
-				user.setRole(User.SUPERADMIN);
-			} else {
-				user.setRole(User.ADMIN);
-			}
-			user.setClassicLoginAllowed(false);
-			String displayName = resultSet.getString("first_name") + " " + resultSet.getString("last_name");
-			if (displayName == null || displayName.trim().equals("")) {
-				displayName = resultSet.getString("username");
-			}
-			user.setDisplayName(displayName);
-			user.setEmail(resultSet.getString("email"));
-			user.setPassword(resultSet.getString("password"));
-			user.setRemoteUser(resultSet.getString("username"));
-			switch (resultSet.getInt("gender_id")) {
-				case 1:
-					user.setTitleCivilite("Mlle");
-					break;
-				case 2:
-					user.setTitleCivilite("Mme");
-					break;
-				case 3:
-					user.setTitleCivilite("Mr");
-					break;
-			}
-			user.setUsername(resultSet.getString("username"));
-			user.setUniversity(universityRepository.findOne(1L));
-			userRepository.save(user);
+	    	User user = userRepository.findByRemoteUser(resultSet.getString("username"));
+	    	if (user == null) {
+		    	user = new User();
+				user.setCreatedOn(resultSet.getDate("created_at"));
+				user.setCreatedBy(getUser(null));
+				user.setUpdatedOn(resultSet.getDate("updated_at"));
+				user.setUpdatedBy(getUser(null));
+				if (resultSet.getBoolean("is_super_admin")) {
+					user.setRole(User.SUPERADMIN);
+				} else {
+					user.setRole(User.ADMIN);
+				}
+				user.setClassicLoginAllowed(false);
+				String displayName = resultSet.getString("first_name") + " " + resultSet.getString("last_name");
+				if (displayName == null || displayName.trim().equals("")) {
+					displayName = resultSet.getString("username");
+				}
+				user.setDisplayName(displayName);
+				user.setEmail(resultSet.getString("email"));
+				user.setPassword(resultSet.getString("password"));
+				user.setRemoteUser(resultSet.getString("username"));
+				switch (resultSet.getInt("gender_id")) {
+					case 1:
+						user.setTitleCivilite("Mlle");
+						break;
+					case 2:
+						user.setTitleCivilite("Mme");
+						break;
+					case 3:
+						user.setTitleCivilite("Mr");
+						break;
+				}
+				user.setUsername(resultSet.getString("username"));
+				user.setUniversity(universityRepository.findOne(29L));
+				userRepository.save(user);
+	    	}
 			
 			this.users.put(user.getUsername(), user);
 	    }

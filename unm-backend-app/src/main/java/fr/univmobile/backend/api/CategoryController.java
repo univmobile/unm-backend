@@ -88,7 +88,7 @@ public class CategoryController {
 		}
     	
 		// Inactive Icon
-		if (categoryForm.getFile2().isEmpty()) {
+		/*if (categoryForm.getFile2().isEmpty()) {
 			existingCategory.setInactiveIconUrl(categoryForm.getInactiveIconUrl());
 		} else {
 			String fileName = handleFileUpload(categoryForm.getFile2(), String.format("cat_inactive_%s_", existingCategory.getId()));
@@ -98,7 +98,7 @@ public class CategoryController {
 			} else {
 				existingCategory.setInactiveIconUrl(fileName);
 			}
-		}
+		}*/
 		
 		// Marker Icon
 		if (categoryForm.getFile3().isEmpty()) {

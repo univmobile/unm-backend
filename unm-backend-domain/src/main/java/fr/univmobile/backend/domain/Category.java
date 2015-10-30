@@ -28,7 +28,7 @@ public class Category extends AuditableEntityWithLegacy {
 	@Id
 	@GeneratedValue(strategy = GenerationType.TABLE, generator = "category_generator")
 	private Long id;
-	@Column(unique = true, nullable = false)
+	@Column(unique = false, nullable = false)
 	private String name;
 	private String description;
 	@Column(nullable = false)

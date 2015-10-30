@@ -108,7 +108,7 @@ td span.error {
       <td>
          <select id="select-category" name="category">
             <c:forEach var="pc" items="${poiCategoriesData}">
-               <option value="${pc.name}">${pc.name}</option>
+               <option value="${pc.id}">${pc.name}</option>
             </c:forEach>
          </select>
          <c:if test="${err_poiadd_category}">

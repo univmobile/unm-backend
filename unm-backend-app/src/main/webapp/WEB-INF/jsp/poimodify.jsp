@@ -133,11 +133,11 @@ td span.error {
             <c:choose>
                
                <c:when test="${pc.id eq poimodify.category.id}">
-                  <option value="${pc.name}" selected>${pc.name}</option>
+                  <option value="${pc.id}" selected>${pc.name}</option>
                </c:when>
                
                <c:otherwise>
-                  <option value="${pc.name}">${pc.name}</option>
+                  <option value="${pc.id}">${pc.name}</option>
                </c:otherwise>
                
             </c:choose>   

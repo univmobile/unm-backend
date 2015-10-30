@@ -124,7 +124,7 @@ public class PoisModifyController extends AbstractBackendController {
 			setAttribute("err_incorrectFields", true);
 		}
 
-		poi.setCategory(categoryRepository.findByName(form.category()));
+		poi.setCategory(categoryRepository.findOne(Long.valueOf(form.category())));
 		if (isBlank(form.category())) {
 			hasErrors = true;
 			setAttribute("err_poimodify_category", true);

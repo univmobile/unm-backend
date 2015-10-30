@@ -98,9 +98,13 @@ public class PoiCategoriesAddController extends AbstractBackendController {
 
 		poicategory.setName(form.name());
 		if (!isBlank(form.name())) {
-			if (categoryRepository.findByName(form.name()) != null) {
-				hasErrors = true;
-				setAttribute("err_duplicateName", true);
+			List<Category> cats = categoryRepository.findByName(form.name());
+			for (Category cat : cats) {
+				if (cat != null && (cat.getParent() == poicategory.getParent()) || cat.getParent() != null && poicategory.getParent() != null && cat.getParent().getId() == poicategory.getParent().getId()) {
+					hasErrors = true;
+					setAttribute("err_duplicateName", true);
+					break;
+				}
 			}
 		} else {
 			hasErrors = true;

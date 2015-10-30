@@ -32,9 +32,19 @@ public class ShibbolethLoginJSONController extends AbstractJSONController {
         final JSONMap json = new JSONMap();
         if (login.isHttpValid()) {
             User user = userRepository.findByRemoteUser(getRemoteUser());
-            if (user == null){
-                json.put("error", "Wrong credentials");
-            } else {
+            if (user == null) {
+            	// The user is logged in via Shibboleth. If the user is not in the DB yet, we add it automatically
+            	String remoteUser = getRemoteUser();
+            	user = new User();
+            	user.setUsername(remoteUser);
+            	user.setRole(User.STUDENT);
+            	user.setRemoteUser(remoteUser);
+            	user.setDisplayName(String.valueOf(checkedRequest().getAttribute("displayName")));
+            	user.setEmail(remoteUser);
+            	userRepository.save(user);
+            	user = userRepository.findByRemoteUser(remoteUser);
+            } 
+            if (user != null) {
                 Token token = new Token();
                 token.setUser(user);
                 token.setToken(newUUID(40));

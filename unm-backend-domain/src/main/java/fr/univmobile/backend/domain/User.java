@@ -23,7 +23,7 @@ public class User extends AuditableEntity {
 	private Long id;
 	@Column(unique = true, nullable = false)
 	private String username;
-	@Column(unique = true, nullable = false)
+	@Column(nullable = false)
 	private String displayName;
 	@Column(nullable = false)
 	@JsonIgnore

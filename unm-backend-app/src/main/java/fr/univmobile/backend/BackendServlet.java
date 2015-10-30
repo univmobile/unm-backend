@@ -29,6 +29,7 @@ import javax.sql.DataSource;
 
 import fr.univmobile.backend.domain.*;
 import fr.univmobile.backend.json.*;
+
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -487,19 +488,35 @@ public final class BackendServlet extends AbstractUnivMobileServlet {
 
 		// 4. USER
 
-		final fr.univmobile.backend.domain.User user = userRepository
+		fr.univmobile.backend.domain.User user = userRepository
 				.findByRemoteUser(remoteUser);
 
 		if (user == null) {
 
-			log.fatal("remoteAddr: " + remoteAddr
-					+ ", 403 Unknown REMOTE_USER in the Database: "
-					+ remoteUser);
+			if (remoteUser != null && request.getParameter("loginToken") != null && tokenRepository.findByToken(request.getParameter("loginToken")) != null) {
 
-			UnivMobileHttpUtils.sendError403(request, response,
-					"Unknown REMOTE_USER in the Database: " + remoteUser);
+				// The user is logged in via Shibboleth. If the user is not in the DB yet, we add it automatically
+	        	user = new fr.univmobile.backend.domain.User();
+	        	user.setUsername(remoteUser);
+	        	user.setRole(User.STUDENT);
+	        	user.setRemoteUser(remoteUser);
+	        	user.setDisplayName(String.valueOf(request.getAttribute("displayName")));
+	        	user.setEmail(remoteUser);
+	        	user.setUniversity(universityRepository.getOne(29L));
+	        	user.setPassword("");
+	        	userRepository.save(user);
+	        	user = userRepository.findByRemoteUser(remoteUser);
+			} else {
 
-			return;
+				log.fatal("remoteAddr: " + remoteAddr
+						+ ", 403 Unknown REMOTE_USER in the Database: "
+						+ remoteUser);
+	
+				UnivMobileHttpUtils.sendError403(request, response,
+						"Unknown REMOTE_USER in the Database: " + remoteUser);
+	
+				return;
+			}
 		}
 
 		this.sessionAuditorAware.setSessionUser(user);
