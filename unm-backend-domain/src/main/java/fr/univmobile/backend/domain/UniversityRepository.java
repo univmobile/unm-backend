@@ -42,6 +42,9 @@ public interface UniversityRepository extends JpaRepository<University, Long> {
 	
 	@Query("select u from University u where u.active = TRUE and u.crous = FALSE and u.region.id = :regionId order by u.title")
 	List<University> findAllActiveWithoutCrousByRegion(@Param("regionId") Long regionId);
+	
+	@Query("select u from University u where u.crous = FALSE and u.region.id = :regionId order by u.title")
+	List<University> findAllWithoutCrousByRegion(@Param("regionId") Long regionId);
 
 	@Query("select u from University u where u.region.id = :regionId order by u.title")
 	List<University> findAllByRegion_Id(@Param("regionId") Long regionId);

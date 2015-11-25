@@ -12,3 +12,11 @@
 .main-tabs { margin-top: 15px; }
 
 .table-cats .alt-action { min-width: 200px; }
+
+.univInactive, a.univInactive { color: orange !important;font-style: italic !important;}
+
+.roleFilter .btn.btn-default.active {
+    background: none repeat scroll 0 0 #339d33;
+    border: medium none grey;
+    color: white;
+}

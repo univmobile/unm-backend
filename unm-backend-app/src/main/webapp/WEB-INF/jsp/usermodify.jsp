@@ -105,7 +105,10 @@ td span.error {
 <tr>
    <th>REMOTE_USER</th>
    <td>
-      <input readonly class="text" type="text" id="text-remoteUser" name="remoteUser" value="${usermodify.remoteUser}">
+      <input <c:if test="${role ne 'superadmin'}">readonly</c:if> class="text" type="text" id="text-remoteUser" name="remoteUser" value="${usermodify.remoteUser}">
+      <c:if test="${err_useradd_remoteUser}">
+	     <span class="error" title="Le champ est mal formé">Incorrect</span>
+	  </c:if>
    </td>
 </tr>
 
@@ -190,7 +193,7 @@ td span.error {
                   <c:choose>
                   
                      <c:when test="${ru.id eq usermodify.university.id}">
-                        <option value="${ru.id}" selected>${ru.title}</option>
+                        <option value="${ru.id}"  <c:if test="${not ru.active}">class="univInactive"</c:if> selected>${ru.title}</option>
                      </c:when>
                     
                      <c:otherwise>
@@ -198,12 +201,12 @@ td span.error {
                            
                            <c:when test="${role eq 'admin'}">
                               <c:if test="${userUnivId eq ru.id}">
-                                 <option value="${ru.id}">${ru.title}</option>
+                                 <option value="${ru.id}" <c:if test="${not ru.active}">class="univInactive"</c:if>>${ru.title}</option>
                               </c:if>
                            </c:when>
                            
                            <c:otherwise>
-                              <option value="${ru.id}">${ru.title}</option>   
+                              <option value="${ru.id}" <c:if test="${not ru.active}">class="univInactive"</c:if>>${ru.title}</option>   
                            </c:otherwise>
                         
                         </c:choose>
@@ -229,7 +232,7 @@ td span.error {
                      <c:choose>
                         
                         <c:when test="${ru.id eq usermodify.secondaryUniversity.id}">
-                           <option value="${ru.id}" selected>${ru.title}</option>
+                           <option value="${ru.id}"  <c:if test="${not ru.active}">class="univInactive"</c:if> selected>${ru.title}</option>
                         </c:when>
                         
                         <c:otherwise>
@@ -237,12 +240,12 @@ td span.error {
                            
                               <c:when test="${role eq 'admin'}">
                                  <c:if test="${userUnivId eq ru.id}">
-                                    <option value="${ru.id}">${ru.title}</option>
+                                    <option value="${ru.id}" <c:if test="${not ru.active}">class="univInactive"</c:if>>${ru.title}</option>
                                  </c:if>
                               </c:when>
                               
                               <c:otherwise>
-                                 <option value="${ru.id}">${ru.title}</option>   
+                                 <option value="${ru.id}" <c:if test="${not ru.active}">class="univInactive"</c:if>>${ru.title}</option>   
                               </c:otherwise>
                            
                            </c:choose>

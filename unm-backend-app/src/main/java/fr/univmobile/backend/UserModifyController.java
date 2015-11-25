@@ -111,11 +111,21 @@ public class UserModifyController extends AbstractBackendController {
 			setAttribute("err_usermodify_displayName", true);
 			setAttribute("err_incorrectFields", true);
 		}
+		
+		if (isBlank(form.remoteUser())) {
+			hasErrors = true;
+			setAttribute("err_useradd_remoteUser", true);
+			setAttribute("err_incorrectFields", true);
+		}
 
 		user.setClassicLoginAllowed(form.classicLoginAllowed() != null);
 
 		user.setPassword(form.password());
 		user.setEmail(form.email());
+		
+		if (getDelegationUser().isSuperAdmin()) {
+			user.setRemoteUser(form.remoteUser());
+		}
 		
 		if (getDelegationUser().isSuperAdmin()) {
 			user.setRole(form.role());

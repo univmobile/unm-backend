@@ -8,7 +8,13 @@ angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource'
         $scope.managedEntity = managedEntity;
         $scope.baseUrl = baseUrl;
         $scope.searchText = "";
+        $scope.searchRole = "";
         $scope.pager = new Pager();
+        $scope.displayRoleFilter = false;
+        $scope.superadminSearch = true;
+        $scope.adminSearch = true;
+        $scope.etudiantSearch = true;
+        $scope.biblioSearch = true;
 
         $scope.cats = [];
         $scope.comments = [];
@@ -16,6 +22,7 @@ angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource'
         $( '#main-tabs a' ).click( function( e ) {
             e.preventDefault();
             $scope.searchText = "";
+            // Display the filter by role only if the
             $scope.pager = new Pager();
             $( this ).tab( 'show' );
             $scope.showCurrentTab();
@@ -25,6 +32,15 @@ angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource'
             if (!$scope.managedEntity.showsAll) {
                 $( '#main-tabs li a[aria-controls="' + $scope.managedEntity.tab + '"]' ).click();
             }
+            if ($scope.managedEntity.tab == "users") {
+            	$scope.displayRoleFilter = true;
+            	$scope.superadminSearch = true;
+                $scope.adminSearch = true;
+                $scope.etudiantSearch = true;
+                $scope.biblioSearch = true;
+            } else {
+            	$scope.displayRoleFilter = false;
+            }
             $scope.showCurrentTab();
         } );
 
@@ -33,6 +49,14 @@ angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource'
             $scope.pager = new Pager();
             $scope.showCurrentTab();
         };
+        
+        $scope.tabChanged = function() {
+        	if ( getCurrentMode() == "users" ) {
+        		$scope.displayRoleFilter = true;
+            } else {
+            	$scope.displayRoleFilter = false;
+            }
+        }
 
         $scope.showCurrentTab = function( fromPager ) {
         	if (!$scope.items) {
@@ -89,7 +113,20 @@ angular.module( 'halSearchApp' ).controller( 'MainCtrl', [ '$scope', '$resource'
         $scope.showUsers = function( fromPager ) {
             if ( fromPager || !$scope.users || !$scope.users.length )
                 usSpinnerService.spin( 'tab-spinner' );
-            userService.search( $scope.searchText, isSuperAdmin, universityId, $scope.pager, function( items ) {
+            var selectedSearchFilterValues = [];
+            if ($scope.superadminSearch === true) {
+            	selectedSearchFilterValues.push("superadmin");
+            }
+            if ($scope.adminSearch === true) {
+            	selectedSearchFilterValues.push("admin");
+            }
+            if ($scope.etudiantSearch === true) {
+            	selectedSearchFilterValues.push("student");
+            }
+            if ($scope.biblioSearch === true) {
+            	selectedSearchFilterValues.push("librarian");
+            }
+            userService.search( $scope.searchText,selectedSearchFilterValues, isSuperAdmin, universityId, $scope.pager, function( items ) {
                 $scope.users = items;
                 usSpinnerService.stop( 'tab-spinner' );
             } );

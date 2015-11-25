@@ -775,3 +775,4 @@ body.entered #text-query {
 #body-logs #text-limit {
 	width: 4em;
 }
+.univInactive { color: orange !important;font-style: italic !important;}

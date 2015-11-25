@@ -37,6 +37,7 @@
                 <select class="form-control" id="university"
                         ng-model="selectedUniversityId"
                         ng-options="uni.id as uni.title group by uni.regionName for uni in unis"
+                        options-class="univInactive"
                         >
                 </select>
             </div>

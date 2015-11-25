@@ -65,8 +65,8 @@ td.id {
 <tbody>
    <c:forEach var="u" items="${universities}">
       <tr>
-	      <td class="title">
-	         ${u.title}
+	      <td class="title<c:if test="${!u.active}"> univInactive</c:if>">
+	         ${u.title}<c:if test="${!u.active}"> (INACTIVE)</c:if>
 	      </td>
 	      <td class="edit">
 	         <a href="${u.id}">Modifier…</a>

@@ -16,12 +16,16 @@
 
 	<context-param>
 		<param-name>baseURL</param-name>
-		<param-value>https://univmobile-dev.univ-paris1.fr/admin/</param-value>
+		<param-value>https://admin.unpidf.univmobile.fr/admin/</param-value>
 	</context-param>
 
 	<context-param>
+		<param-name>newsDefaultImageUrl</param-name>
+		<param-value>http://admin.unpidf.univmobile.fr/admin/files/default_new.jpg</param-value>
+	</context-param>
+	<context-param>
 		<param-name>menuImagesBaseUrl</param-name>
-		<param-value>http://univmobile-dev.univ-paris1.fr/admin/files/upload</param-value>
+		<param-value>http://admin.unpidf.univmobile.fr/admin/files/upload</param-value>
 	</context-param>
 	<context-param>
 		<param-name>menuImagesBaseDir</param-name>
@@ -30,12 +34,12 @@
 
         <context-param>
                 <param-name>qrCodesBaseUrl</param-name>
-                <param-value>http://univmobile-dev.univ-paris1.fr/admin/files/qrcodes</param-value>
+                <param-value>http://admin.unpidf.univmobile.fr/admin/files/qrcodes</param-value>
         </context-param>
 
         <context-param>
                 <param-name>imageMapsBaseUrl</param-name>
-                <param-value>http://univmobile-dev.univ-paris1.fr/admin/files/imagemaps</param-value>
+                <param-value>http://admin.unpidf.univmobile.fr/admin/files/imagemaps</param-value>
         </context-param>
 
         <context-param>
@@ -45,7 +49,7 @@
 
         <context-param>
                 <param-name>universitiesLogoBaseUrl</param-name>
-                <param-value>http://univmobile-dev.univ-paris1.fr/admin/files/universitieslogos</param-value>
+                <param-value>http://admin.unpidf.univmobile.fr/admin/files/universitieslogos</param-value>
         </context-param>
 
         <context-param>
@@ -55,7 +59,7 @@
 
         <context-param>
                 <param-name>categoriesIconsBaseUrl</param-name>
-                <param-value>http://univmobile-dev.univ-paris1.fr/admin/files/categoriesicons</param-value>
+                <param-value>http://admin.unpidf.univmobile.fr/admin/files/categoriesicons</param-value>
         </context-param>
 
         <context-param>
@@ -70,7 +74,7 @@
 
  <context-param>
                 <param-name>qrCodeLinkPattern</param-name>
-                <param-value>http://univmobile-dev.univ-paris1.fr/unm-mobileweb%LINK%</param-value>
+                <param-value>http://www.univmobile.fr%LINK%</param-value>
         <!--    <param-value>univmobile://show_image_map:%LINK%</param-value>-->
         </context-param>
 
@@ -86,7 +90,7 @@
                 <init-param>
                         <param-name>optional-jsonBaseURLs</param-name>
                         <param-value>
-                                https://univmobile-dev.univ-paris1.fr/admin/json/
+                                https://admin.unpidf.univmobile.fr/admin/json/
                                 http://127.0.0.1:8080/unm-backend/json/
                         </param-value>
                 </init-param>
@@ -104,15 +108,15 @@
                 </init-param>
                 <init-param>
                         <param-name>shibboleth.ssoBaseURL</param-name>
-                        <param-value>https://univmobile-dev.univ-paris1.fr/Shibboleth.sso/Login</param-value>
+                        <param-value>https://admin.unpidf.univmobile.fr/Shibboleth.sso/Login</param-value>
                 </init-param>
                 <init-param>
                         <param-name>shibboleth.targetBaseURL</param-name>
-                        <param-value>https://univmobile-dev.univ-paris1.fr/admin/</param-value>
+                        <param-value>https://admin.unpidf.univmobile.fr/admin/</param-value>
                 </init-param>
                 <init-param>
                         <param-name>shibboleth.callbackURL</param-name>
-                        <param-value>https://univmobile-dev.univ-paris1.fr/admin/success</param-value>
+                        <param-value>https://admin.unpidf.univmobile.fr/admin/success</param-value>
                 </init-param>
                 <load-on-startup>1</load-on-startup>
         </servlet>

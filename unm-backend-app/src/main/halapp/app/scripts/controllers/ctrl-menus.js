@@ -31,7 +31,11 @@ halApp.controller( 'CtrlMenus', [ '$rootScope', '$scope', '$location', 'menuServ
         $rootScope.pagerCache.menus = $scope.pager;
         $location.path('/menus/' + (item ? item.id : 0) + '/edit');
     }
-    
+
+    $scope.isSuperAdmin = function() {
+        return isSuperAdmin;
+      };
+      
 } ] );
 
 halApp.controller( 'CtrlMenuEdit', [ '$scope', '$routeParams', '$validator', 'menuService', 'inactiveMenuService', 'universityService', 'textAngularManager', function(

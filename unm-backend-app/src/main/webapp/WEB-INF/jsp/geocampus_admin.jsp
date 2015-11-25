@@ -216,12 +216,12 @@ display: block;
 							class="text-uppercase" style="color: #000"
 							data-bind="text: regionName"></strong></li>
 						<li><a href="#"
-							data-bind="text: title, click: $parent.changeUniversity"></a></li>
+							data-bind="text: title, click: $parent.changeUniversity, css: { 'univInactive' : !active }"></a></li>
 					</ul>
 					<ul class="dropdown-menu" role="menu"
 						data-bind="visible: activeTab() == 'bonplans', foreach: bonplansUniversities">
 						<li><a href="#"
-							data-bind="text: title, click: $parent.changeUniversity"></a></li>
+							data-bind="text: title, click: $parent.changeUniversity, css: { 'univInactive' : !active}" ></a></li>
 					</ul>
 				</div>
 				<h2 class="page-header text-left">
@@ -273,7 +273,7 @@ display: block;
 							class="text-uppercase" style="color: #000"
 							data-bind="text: regionName"></strong></li>
 						<li><a href="#"
-							data-bind="text: title, click: $parent.changeUniversity"></a></li>
+							data-bind="text: title, click: $parent.changeUniversity, css: { 'univInactive' : !active }"></a></li>
 					</ul>
 				</div>
 			<h2 class="page-header pull-left">

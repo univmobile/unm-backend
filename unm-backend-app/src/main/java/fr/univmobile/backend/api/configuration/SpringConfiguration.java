@@ -7,6 +7,7 @@ import fr.univmobile.backend.hateoas.assembler.*;
 import fr.univmobile.backend.hateoas.processor.CategoryResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.FeedResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.MenuResourceProcessor;
+import fr.univmobile.backend.hateoas.processor.NewsResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.NotificationResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.PoiResourceProcessor;
 import fr.univmobile.backend.hateoas.processor.UniversityResourceProcessor;
@@ -57,6 +58,11 @@ public class SpringConfiguration {
     @Bean
     public MenuResourceProcessor getUserResourceProcessor(){
         return new MenuResourceProcessor();
+    }
+    
+    @Bean
+    public NewsResourceProcessor getNewsResourceProcessor() {
+    	return new NewsResourceProcessor();
     }
 
     @Bean

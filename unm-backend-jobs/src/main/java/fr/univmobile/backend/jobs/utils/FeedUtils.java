@@ -182,26 +182,27 @@ public class FeedUtils {
 					
 					if (poi != null) {
 
-					NodeList menues = elem.getElementsByTagName("menu");
-
-					for (int j = 0; j < menues.getLength(); j++) {
-						Element menuElem = (Element) menues.item(j);
-
-						SimpleDateFormat sdf = new SimpleDateFormat(
-								"yyyy-MM-dd", Locale.US);
-						Date date = sdf.parse(menuElem.getAttribute("date"));
-
-
-						RestoMenu restoMenu = restoMenuRepository.findByPoiAndEffectiveDate(poi, date);
-						if (restoMenu == null){
-							restoMenu = new RestoMenu();
+						NodeList menues = elem.getElementsByTagName("menu");
+	
+						for (int j = 0; j < menues.getLength(); j++) {
+							Element menuElem = (Element) menues.item(j);
+	
+							SimpleDateFormat sdf = new SimpleDateFormat(
+									"yyyy-MM-dd", Locale.US);
+							Date date = sdf.parse(menuElem.getAttribute("date"));
+	
+	
+							RestoMenu restoMenu = restoMenuRepository.findByPoiAndEffectiveDate(poi, date);
+							if (restoMenu == null){
+								restoMenu = new RestoMenu();
+								restoMenu.setPoi(poi);
+								restoMenu.setEffectiveDate(date);
+							}
+							restoMenu.setDescription(menuElem.getTextContent());
+	
+							restoMenuRepository.save(restoMenu);
 						}
-						restoMenu.setPoi(poi);
-						restoMenu.setEffectiveDate(date);
-						restoMenu.setDescription(menuElem.getTextContent());
-
-						restoMenuRepository.save(restoMenu);
-					}
+						restoMenuRepository.flush();
 					}
 				}
 

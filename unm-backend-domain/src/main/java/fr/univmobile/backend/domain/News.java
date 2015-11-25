@@ -15,6 +15,8 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 @Entity
 @EntityListeners({ AuditingEntityListener.class })
 public class News extends AuditableEntity {
+	
+	public final static String DEFAULT_IMAGE_URL = "http://admin.unpidf.univmobile.fr/admin/files/defaut_news.jpg";
 
 	@Id
 	@GeneratedValue
@@ -98,7 +100,11 @@ public class News extends AuditableEntity {
 	}
 
 	public String getImageUrl() {
-		return imageUrl;
+		//if (imageUrl != null && !imageUrl.trim().isEmpty()) {
+			return imageUrl;
+		//} else {
+		//	return DEFAULT_IMAGE_URL;
+		//}
 	}
 
 	public void setImageUrl(String imageUrl) {

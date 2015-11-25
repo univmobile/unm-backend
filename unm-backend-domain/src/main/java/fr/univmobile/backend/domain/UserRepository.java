@@ -46,6 +46,20 @@ public interface UserRepository extends JpaRepository<User, Long> {
 			"order by u.displayName asc")
 	Page<User> searchValue(@Param("val") String val, @Param("universityId") Long universityId, Pageable pageable);
 	
+	@PreAuthorize(value="hasRole('superadmin') or (hasRole('admin') and principal.university.id == #universityId)")
+	@Query("Select u from User u " +
+			"where  u.university.id = :universityId and " +
+			"(u.username like CONCAT('%',:val,'%') " +
+			"or u.twitterScreenName like CONCAT('%',:val,'%') " +
+			"or u.title like CONCAT('%',:val,'%') " +
+			"or u.remoteUser like CONCAT('%',:val,'%') " +
+			"or u.email like CONCAT('%',:val,'%') " +
+			"or u.displayName like CONCAT('%',:val,'%') " +
+			"or u.description like CONCAT('%',:val,'%')) " +
+			"and u.role in :roles " +
+			"order by u.displayName asc")
+	Page<User> searchValueInRoles(@Param("val") String val, @Param("universityId") Long universityId, @Param("roles") String[] roles, Pageable pageable);
+	
 	@PreAuthorize(value="hasRole('superadmin')")
 	@Query("Select u from User u " +
 			"where  " +
@@ -58,5 +72,18 @@ public interface UserRepository extends JpaRepository<User, Long> {
 			"or u.description like CONCAT('%',:val,'%')) " +
 			"order by u.displayName asc")
 	Page<Poi> searchGlobalValue(@Param("val") String val, Pageable pageable);
+	
+	@Query("Select u from User u " +
+			"where  " +
+			"(u.username like CONCAT('%',:val,'%') " +
+			"or u.twitterScreenName like CONCAT('%',:val,'%') " +
+			"or u.title like CONCAT('%',:val,'%') " +
+			"or u.remoteUser like CONCAT('%',:val,'%') " +
+			"or u.email like CONCAT('%',:val,'%') " +
+			"or u.displayName like CONCAT('%',:val,'%') " +
+			"or u.description like CONCAT('%',:val,'%')) " +
+			"and u.role in :roles " +
+			"order by u.displayName asc")
+	Page<Poi> searchGlobalValueInRoles(@Param("val") String val, @Param("roles") String[] roles, Pageable pageable);
 	
 }

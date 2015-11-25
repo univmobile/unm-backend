@@ -1,8 +1,9 @@
-var Univ = function(id, title, allowBonplans, regionName) {
+var Univ = function(id, title, allowBonplans, regionName, active) {
     this.id = id;
     this.title = title;
     this.allowBonplans = allowBonplans;
     this.regionName = regionName;
+    this.active = active;
 };
 
 var Comment = function(data) {
@@ -422,7 +423,7 @@ var DataSource = function(baseUrl) {
         var univs = [];
 	for (var v in this.cache.universities) {
 	    var univ = this.cache.universities[v];
-	    univs.push(new Univ(univ.id, univ.title, univ.allowBonplans, univ.regionName));
+	    univs.push(new Univ(univ.id, univ.title, univ.allowBonplans, univ.regionName, univ.active));
         }
         return univs;
     };

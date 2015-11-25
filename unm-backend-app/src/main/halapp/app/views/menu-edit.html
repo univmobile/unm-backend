@@ -28,6 +28,7 @@
                     ng-model="item.universityId"
                     ng-options="uni.id as uni.title group by uni.regionName for uni in unis"
                     ng-disabled="!isSuperAdmin() && !item.universityId"
+                    options-class="univInactive"
                     >
 	      <option ng-if="isSuperAdmin()" value="">---</option>
             </select>
@@ -62,7 +63,7 @@
         
         <br/><br/><br/>
         
-        <div class="form-group" ng-hide="item.universityId > 0">
+        <div class="form-group" ng-hide="item.universityId > 0 || item.id <= 0">
         	<label>Menu actif pour les universit&eacute;s suivantes :</label>
         	<br/>
 	        <table class="table table-striped table-condensed table-menus">

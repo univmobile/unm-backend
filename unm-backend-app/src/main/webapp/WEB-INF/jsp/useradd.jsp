@@ -221,11 +221,11 @@ $(function () {
                   <c:choose>
                      <c:when test="${role eq 'admin'}">
                         <c:if test="${userUnivId eq u.id}">
-                           <option value="${u.id}">${u.title}</option>
+                           <option value="${u.id}" <c:if test="${not u.active}">class="univInactive"</c:if>>${u.title}</option>
                         </c:if>
                      </c:when>
                      <c:otherwise>
-                        <option value="${u.id}">${u.title}</option>   
+                        <option value="${u.id}" <c:if test="${not u.active}">class="univInactive"</c:if>>${u.title}</option>   
                      </c:otherwise>
                   </c:choose>
                </c:forEach>
@@ -247,11 +247,11 @@ $(function () {
                      <c:choose>
                         <c:when test="${role eq 'admin'}">
                            <c:if test="${userUnivId eq u.id}">
-                              <option value="${u.id}">${u.title}</option>
+                              <option value="${u.id}" <c:if test="${not u.active}">class="univInactive"</c:if>>${u.title}</option>
                            </c:if>
                         </c:when>
                         <c:otherwise>
-                           <option value="${u.id}">${u.title}</option>   
+                           <option value="${u.id}" <c:if test="${not u.active}">class="univInactive"</c:if>>${u.title}</option>   
                         </c:otherwise>
                      </c:choose>
                   </c:forEach>
