@@ -11,7 +11,7 @@ import javax.persistence.*;
 @EntityListeners({ AuditingEntityListener.class })
 public class Feed extends AuditableEntity {
 
-	public enum Type {
+	public static enum Type {
 		RSS, RESTO;
 	}
 
